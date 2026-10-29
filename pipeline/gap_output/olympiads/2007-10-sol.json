@@ -1,0 +1,167 @@
+{
+  "_meta": {
+    "pdf": "C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\Задачи_Минали_Години\\Областен\\OLI-2-Областен кръг-2007-10 кл-sol.pdf",
+    "paired_with": null,
+    "level": 1,
+    "type": "sol",
+    "analyzed_at": "2026-10-18T12:44:36.343657",
+    "model": "deepseek/deepseek-v3.2",
+    "text_length": 7506,
+    "paired_text_length": 0
+  },
+  "problems": [
+    {
+      "num": 10.1,
+      "topic": "algebra",
+      "theorems": [],
+      "techniques": [
+        "case analysis",
+        "squaring inequalities",
+        "domain determination"
+      ],
+      "concepts": [
+        "square root inequalities",
+        "quadratic inequalities",
+        "rational inequalities",
+        "domain of expression"
+      ],
+      "difficulty": "standard",
+      "notes": "Standard inequality involving square root and rational expression, solved by considering sign of denominator and squaring carefully."
+    },
+    {
+      "num": 10.2,
+      "topic": "geometry",
+      "theorems": [
+        "Ceva's theorem"
+      ],
+      "techniques": [
+        "standard triangle notation (semiperimeter p)",
+        "without loss of generality",
+        "cyclic quadrilateral properties"
+      ],
+      "concepts": [
+        "excircles",
+        "incenter",
+        "contact points",
+        "diameter of incircle",
+        "rectangle in circle",
+        "triangle perimeter relations"
+      ],
+      "difficulty": "olympic",
+      "notes": "Part (a) is direct Ceva. Part (b) uses a known property that diameter endpoints lie on lines from vertices to excenter contact points."
+    },
+    {
+      "num": 10.3,
+      "topic": "number_theory",
+      "theorems": [],
+      "techniques": [
+        "induction",
+        "case analysis",
+        "ordering variables",
+        "bounding variables"
+      ],
+      "concepts": [
+        "integer sequences",
+        "sum of fractions being integer",
+        "maximal element selection",
+        "modular reasoning implicit"
+      ],
+      "difficulty": "olympic",
+      "notes": "Inductive proof with careful handling of cases where b_n = 1 or 2. Uses substitution and bounding."
+    },
+    {
+      "num": 10.4,
+      "topic": "algebra",
+      "theorems": [],
+      "techniques": [
+        "substitution",
+        "quadratic analysis",
+        "sign analysis of quadratic",
+        "discriminant"
+      ],
+      "concepts": [
+        "logarithmic equations with variable base",
+        "domain restrictions (base > 0, base ≠ 1, argument > 0)",
+        "quadratic roots positioning",
+        "unique solution condition"
+      ],
+      "difficulty": "standard",
+      "notes": "Reduced to quadratic with conditions for unique solution. Uses sign of quadratic at boundary points."
+    },
+    {
+      "num": 10.5,
+      "topic": "number_theory",
+      "theorems": [],
+      "techniques": [
+        "modular arithmetic",
+        "exponentiation properties",
+        "congruence manipulation",
+        "parametric solution of linear Diophantine equation"
+      ],
+      "concepts": [
+        "modular inverses",
+        "order of element modulo prime (61)",
+        "factoring differences of powers",
+        "solving linear equations in integers",
+        "Chinese remainder type reasoning"
+      ],
+      "difficulty": "olympic",
+      "notes": "Uses 48^6 ≡ 1 mod 61 to deduce periodicity, then reduces to solving 3m+2n=1000 with parameter constraints."
+    },
+    {
+      "num": 10.6,
+      "topic": "combinatorics",
+      "theorems": [],
+      "techniques": [
+        "combinatorial reformulation",
+        "modular arithmetic",
+        "parity argument",
+        "case analysis",
+        "proof by contradiction"
+      ],
+      "concepts": [
+        "regular polygon",
+        "differences modulo n",
+        "multiset of differences covering residues",
+        "counting arguments",
+        "residue classes modulo 4"
+      ],
+      "difficulty": "olympic",
+      "notes": "Problem asks if a subset of vertices exists such that all chords (differences) are covered exactly twice. Solution uses counting of elements in residue classes mod 4 to show impossibility."
+    }
+  ],
+  "unique_concepts": [
+    "square root inequalities",
+    "quadratic inequalities",
+    "rational inequalities",
+    "domain of expression",
+    "Ceva's theorem",
+    "excircles",
+    "incenter",
+    "contact points",
+    "diameter of incircle",
+    "rectangle in circle",
+    "triangle perimeter relations",
+    "integer sequences",
+    "sum of fractions being integer",
+    "maximal element selection",
+    "induction",
+    "logarithmic equations with variable base",
+    "domain restrictions (base > 0, base ≠ 1, argument > 0)",
+    "quadratic roots positioning",
+    "unique solution condition",
+    "modular arithmetic",
+    "exponentiation properties",
+    "congruence manipulation",
+    "order of element modulo prime",
+    "factoring differences of powers",
+    "solving linear Diophantine equations",
+    "regular polygon",
+    "differences modulo n",
+    "multiset of differences covering residues",
+    "counting arguments",
+    "residue classes modulo 4",
+    "proof by contradiction"
+  ],
+  "confidence": 0.95
+}

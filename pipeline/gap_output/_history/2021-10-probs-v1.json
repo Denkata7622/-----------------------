@@ -1,0 +1,114 @@
+{
+  "_meta": {
+    "pdf": "C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\Задачи_Минали_Години\\Областен\\OLI-2-Областен кръг-2021-10 кл-probs.pdf",
+    "paired_with": "C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\Задачи_Минали_Години\\Областен\\OLI-2-Областен кръг-2021-10 кл-sol.pdf",
+    "level": 1,
+    "type": "probs",
+    "analyzed_at": "2026-10-16T21:28:18.145600",
+    "model": "deepseek/deepseek-v3.2",
+    "text_length": 1928,
+    "paired_text_length": 17201
+  },
+  "problems": [
+    {
+      "num": 1,
+      "topic": "algebra",
+      "theorems": [],
+      "techniques": [
+        "substitution",
+        "case analysis",
+        "discriminant analysis"
+      ],
+      "concepts": [
+        "system of equations",
+        "symmetry (if (x,y,z) is a solution, then (x,y,-z) is a solution)",
+        "quadratic equation",
+        "unique solution condition"
+      ],
+      "difficulty": "standard",
+      "notes": "Параметрична система. Решението използва симетрия, свеждане до случай z=0 и анализ на дискриминантата на получено квадратно уравнение за намиране на стойностите на параметъра a, за които системата има точно едно решение."
+    },
+    {
+      "num": 2,
+      "topic": "geometry",
+      "theorems": [
+        "Power of a point",
+        "Right triangle altitude theorem"
+      ],
+      "techniques": [
+        "auxiliary construction",
+        "similar triangles",
+        "segment length relations"
+      ],
+      "concepts": [
+        "incircle",
+        "tangent points",
+        "right triangles",
+        "collinearity",
+        "perpendicular lines"
+      ],
+      "difficulty": "standard",
+      "notes": "Задача за окръжност, вписана в триъгълник. Използва се построяване на перпендикуляр и свойства на правоъгълни триъгълници (метрични зависимости) за доказване, че дадена отсечка разполовява друга."
+    },
+    {
+      "num": 3,
+      "topic": "number_theory",
+      "theorems": [],
+      "techniques": [
+        "summation formula",
+        "infinite descent",
+        "inequality estimation",
+        "case checking"
+      ],
+      "concepts": [
+        "perfect squares",
+        "sum of arithmetic-geometric series",
+        "parity",
+        "consecutive integers"
+      ],
+      "difficulty": "hard",
+      "notes": "Задача за намиране на естествени n, за които даден израз е точен квадрат. Използва се формула за сумата, свеждане до равенство и оценка, която ограничава възможностите до малък брой случаи, проверявани директно."
+    },
+    {
+      "num": 4,
+      "topic": "combinatorics",
+      "theorems": [
+        "Pigeonhole principle"
+      ],
+      "techniques": [
+        "pigeonhole principle application",
+        "extremal principle",
+        "construction of example",
+        "inequality proof"
+      ],
+      "concepts": [
+        "grid coloring",
+        "monochromatic squares",
+        "existence proof"
+      ],
+      "difficulty": "olympic",
+      "notes": "Задача за оцветяване на голяма квадратна дъска и гарантирано съществуване на монохроматичен квадрат. Решението използва принципа на Дирихле за доказване на долна граница за размера на квадрата и конструкция за горна граница, като по този начин се определя точната стойност."
+    }
+  ],
+  "unique_concepts": [
+    "system of equations",
+    "symmetry in solutions",
+    "quadratic equation discriminant",
+    "unique solution condition",
+    "incircle",
+    "tangent points",
+    "power of a point",
+    "right triangle altitude theorem",
+    "collinearity",
+    "perfect squares",
+    "sum of arithmetic-geometric series",
+    "infinite descent",
+    "inequality estimation",
+    "pigeonhole principle",
+    "grid coloring",
+    "monochromatic squares",
+    "extremal principle",
+    "existence proof"
+  ],
+  "confidence": 0.95
+}

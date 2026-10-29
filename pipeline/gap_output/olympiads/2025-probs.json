@@ -1,0 +1,164 @@
+{
+  "_meta": {
+    "pdf": "C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\Задачи_Минали_Години\\Национален\\OLI-3-Национален кръг-2025-9-12 кл-probs.pdf",
+    "paired_with": "C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\Задачи_Минали_Години\\Национален\\OLI-3-Национален кръг-2025-9-12 кл-sol.pdf",
+    "level": 2,
+    "type": "probs",
+    "analyzed_at": "2026-10-16T21:11:03.555439",
+    "model": "deepseek/deepseek-v3.2",
+    "text_length": 14739,
+    "paired_text_length": 54488
+  },
+  "problems": [
+    {
+      "num": 1,
+      "topic": "algebra",
+      "theorems": [],
+      "techniques": [
+        "substitution",
+        "induction",
+        "coefficient_comparison",
+        "case_analysis"
+      ],
+      "concepts": [
+        "functional_equations",
+        "sequences",
+        "parity_arguments",
+        "quadratic_forms"
+      ],
+      "difficulty": "olympic",
+      "notes": "Задача за намиране на всички редици, удовлетворяващи функционално уравнение за всички четни m и n. Решенията са константи или линейни функции."
+    },
+    {
+      "num": 2,
+      "topic": "combinatorics",
+      "theorems": [],
+      "techniques": [
+        "construction",
+        "bounds",
+        "asymptotic_analysis",
+        "grid_arguments"
+      ],
+      "concepts": [
+        "graph_connectivity",
+        "grid_coloring",
+        "minimization",
+        "floor_function",
+        "square_root_estimates"
+      ],
+      "difficulty": "olympic",
+      "notes": "Задача за минимален брой клетки за оцветяване в квадратна таблица, така че черните клетки да станат свързани. Включва намиране на асимптотичен порядък."
+    },
+    {
+      "num": 3,
+      "topic": "number_theory",
+      "theorems": [
+        "Chinese_Remainder_Theorem"
+      ],
+      "techniques": [
+        "infinite_descent",
+        "contradiction",
+        "prime_factorization",
+        "p-adic_valuation"
+      ],
+      "concepts": [
+        "squarefree_numbers",
+        "arithmetic_progressions",
+        "divisibility",
+        "polynomials_with_integer_coefficients"
+      ],
+      "difficulty": "olympic",
+      "notes": "Задача, доказваща, че безкрайно много прости числа делят поне един член на дадена редица. Използва p-адични оценки и китайска теорема за остатъци."
+    },
+    {
+      "num": 4,
+      "topic": "geometry",
+      "theorems": [
+        "Menelaus",
+        "Ceva",
+        "Power_of_a_Point",
+        "cyclic_quadrilaterals"
+      ],
+      "techniques": [
+        "angle_chasing",
+        "similar_triangles",
+        "auxiliary_points",
+        "circle_properties"
+      ],
+      "concepts": [
+        "orthocenter",
+        "circumcircle",
+        "tangency",
+        "midpoint",
+        "perpendicular_lines"
+      ],
+      "difficulty": "olympic",
+      "notes": "Сложна геометрична задача с остроъгълен триъгълник, височини, окръжности и перпендикулярност. Изисква построяване на помощни точки и използване на множество циклични четириъгълници."
+    },
+    {
+      "num": 5,
+      "topic": "combinatorics",
+      "theorems": [],
+      "techniques": [
+        "counting",
+        "inequalities",
+        "interval_analysis",
+        "pigeonhole_principle"
+      ],
+      "concepts": [
+        "squarefree_numbers_in_intervals",
+        "function_bounds",
+        "existence_proof"
+      ],
+      "difficulty": "olympic",
+      "notes": "Задача за броя на числата, свободни от квадрати, в интервал с дадена дължина. Доказва се, че функцията е ограничена отгоре и отдолу с n^(3/2)."
+    },
+    {
+      "num": 6,
+      "topic": "combinatorics",
+      "theorems": [],
+      "techniques": [
+        "game_strategy",
+        "tree_structures",
+        "minimax",
+        "weight_assignment"
+      ],
+      "concepts": [
+        "graph_connectivity",
+        "spanning_trees",
+        "leaves",
+        "path_lengths",
+        "resource_allocation"
+      ],
+      "difficulty": "olympic",
+      "notes": "Игра на двама играчи върху граф. Трябва да се определи оптимална стратегия за единия играч, като се минимизира максималното средно по път в дърво."
+    }
+  ],
+  "unique_concepts": [
+    "functional_equations",
+    "sequences",
+    "parity_arguments",
+    "grid_coloring",
+    "graph_connectivity",
+    "asymptotic_analysis",
+    "squarefree_numbers",
+    "p-adic_valuation",
+    "Chinese_Remainder_Theorem",
+    "cyclic_quadrilaterals",
+    "Power_of_a_Point",
+    "orthocenter",
+    "tangency",
+    "game_strategy",
+    "spanning_trees",
+    "minimax",
+    "interval_counting",
+    "angle_chasing",
+    "similar_triangles",
+    "coefficient_comparison",
+    "construction",
+    "bounds",
+    "infinite_descent",
+    "prime_factorization"
+  ],
+  "confidence": 0.95
+}

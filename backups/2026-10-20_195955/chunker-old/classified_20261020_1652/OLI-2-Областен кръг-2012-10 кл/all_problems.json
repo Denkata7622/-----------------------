@@ -1,0 +1,124 @@
+{
+  "pdf": "OLI-2-Областен кръг-2012-10 кл",
+  "problems": [
+    {
+      "num": 1,
+      "year": 2012,
+      "grade": 10,
+      "grade_range": null,
+      "round": "oblasten",
+      "statement": "Да се намерят стойностите на реалния параметър a, за които уравнението\n√3 1+3x+√3 1 3x = a\n−\nима решение.",
+      "solution": null,
+      "answer": null,
+      "page": 1,
+      "point_id": "5.11",
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": "medium",
+      "techniques": [
+        "irrational_equation",
+        "domain_analysis",
+        "squaring"
+      ],
+      "reasoning": "Задачата изисква намиране на параметъра a за който уравнението с корени има решение – типична ирационална (радикална) уравнение с параметър, което попада в точка 5.11 от плана."
+    },
+    {
+      "num": 2,
+      "year": 2012,
+      "grade": 10,
+      "grade_range": null,
+      "round": "oblasten",
+      "statement": "Даден е △ABC. Външновписаната окръжност към страната BC има център J и се допира до правите AB и AC съответно в точки E и F. Ако BJ и CJ пресичат EF съответно в точки P и Q, и BC = 2PQ, да се намери <) BAC.",
+      "solution": null,
+      "answer": null,
+      "page": 1,
+      "point_id": "1.4",
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": "medium",
+      "techniques": [
+        "power_of_point",
+        "similar_triangles"
+      ],
+      "reasoning": "Задачата се решава чрез степен на точка (power of a point) спрямо външновписаната окръжност и използване на подобие на тръгващи от точките P и Q триъгълници, което е основната техника за тази конфигурация."
+    },
+    {
+      "num": 3,
+      "year": 2012,
+      "grade": 10,
+      "grade_range": null,
+      "round": "oblasten",
+      "statement": "Нека a е естествено число, а p е просто число. Да се докаже, че съществуват безбройно много естествени числа n, за които числото apn + pn има поне два различни прости делителя.",
+      "solution": null,
+      "answer": null,
+      "page": 1,
+      "point_id": "3.9",
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": "medium",
+      "techniques": [
+        "sum_of_powers_factorization",
+        "lte"
+      ],
+      "reasoning": "Задачата се решава чрез факторизация на a^{pn}+p^{n} като сума от степени (за нечетни n) и използване на p‑адични оценки (LTE) за доказване, че получените множители съдържат поне два различни прости делителя. Това съответства на точка 3.9 – p‑адични оценки (LTE)."
+    },
+    {
+      "num": 4,
+      "year": 2012,
+      "grade": 10,
+      "grade_range": null,
+      "round": "oblasten",
+      "statement": "Дадени са полиномите f(x) = x3 + ax + b и g(x) = x3 + a2x2 + b2, където a и b са реални параметри. Да се намерят всички стойности на a и b, за които точно едно от числата 2, 1 и −1 е общ корен за f(x) и g(x).",
+      "solution": null,
+      "answer": null,
+      "page": 2,
+      "point_id": "5.1",
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": "medium",
+      "techniques": [
+        "substitution",
+        "system_of_equations",
+        "vieta_formulas"
+      ],
+      "reasoning": "Задачата изисква да се проверят дали дадени числа са корени на двата полинома, което се прави чрез подмяна (substitution) и решаване на система от уравнения за параметрите a и b. Това е типична задача за прилагане на формули на Виет (vieta_formulas) и решаване на система от линейни уравнения."
+    },
+    {
+      "num": 5,
+      "year": 2012,
+      "grade": 10,
+      "grade_range": null,
+      "round": "oblasten",
+      "statement": "Даден е △ABC с центрове Ia и Ib на външновписаните окръжности към страните BC и AC съответно. Ако M е среда на страната AB и правите MIa и MIb пресичат страните BC и AC съответно в точки Q и P, да се докаже, че правата PQ е успоредна на AB и минава през центъра I на вписаната в △ABC окръжност.",
+      "solution": null,
+      "answer": null,
+      "page": 2,
+      "point_id": "1.4",
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": "medium",
+      "techniques": [
+        "power_of_point",
+        "radical_axis"
+      ],
+      "reasoning": "Задачата се решава чрез използване на степен на точка – точката M има еднаква степен спрямо вписаната и външновписаната окръжност, което дава радикалната ос PQ. Тази ос е успоредна на AB и минава през центъра I на вписаната окръжност."
+    },
+    {
+      "num": 6,
+      "year": 2012,
+      "grade": 10,
+      "grade_range": null,
+      "round": "oblasten",
+      "statement": "Дадена е компания от n души, n нечетно, в която има поне двама, които не се познават, и в която всички имат един и същ брой познати. Колко най-малко хора трябва да си тръгнат, за да остане група, в която всеки двама се познават?",
+      "solution": null,
+      "answer": null,
+      "page": 2,
+      "point_id": null,
+      "point_confidence": "off",
+      "alternative_points": [],
+      "difficulty": null,
+      "techniques": [],
+      "reasoning": "не е олимпиадна задача"
+    }
+  ]
+}

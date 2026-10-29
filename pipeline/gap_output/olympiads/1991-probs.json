@@ -1,0 +1,158 @@
+{
+  "_meta": {
+    "pdf": "C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\Задачи_Минали_Години\\Национален\\OLI-3-Национален кръг-1991-9-12 кл-probs.pdf",
+    "paired_with": "C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\Задачи_Минали_Години\\Национален\\OLI-3-Национален кръг-1991-9-12 кл-sol.pdf",
+    "level": 2,
+    "type": "probs",
+    "analyzed_at": "2026-10-18T11:46:22.455594",
+    "model": "deepseek/deepseek-v3.2",
+    "text_length": 2952,
+    "paired_text_length": 14267
+  },
+  "problems": [
+    {
+      "num": 1,
+      "topic": "geometry",
+      "theorems": [],
+      "techniques": [
+        "angle chasing",
+        "trigonometric manipulation",
+        "inequality optimization"
+      ],
+      "concepts": [
+        "orthocenter",
+        "circumcenter",
+        "incenter",
+        "cyclic quadrilaterals",
+        "right triangles",
+        "similar triangles",
+        "trigonometric identities",
+        "Euler's inequality (r ≤ R/2)"
+      ],
+      "difficulty": "hard",
+      "notes": "Non-standard geometry problem combining orthocenter, circumcenter, incenter, and a point on altitude with projections. Uses cyclic quadrilateral properties and trigonometric relations to derive CD = R+r, then optimizes a ratio using Euler's inequality."
+    },
+    {
+      "num": 2,
+      "topic": "combinatorics",
+      "theorems": [],
+      "techniques": [
+        "counting",
+        "pigeonhole principle",
+        "inequality estimation"
+      ],
+      "concepts": [
+        "cube dissection",
+        "layers (rows/columns)",
+        "coloring",
+        "selection of distinct colors",
+        "combinatorial counting",
+        "factorials"
+      ],
+      "difficulty": "olympic",
+      "notes": "Combinatorial geometry problem on a cube. Uses counting of valid selections and an upper bound on 'bad' selections to show existence via inequality 2n² - 7n + 2 > 0 for n≥4."
+    },
+    {
+      "num": 3,
+      "topic": "number_theory",
+      "theorems": [
+        "Lucas' theorem (implicitly)",
+        "binomial identities"
+      ],
+      "techniques": [
+        "induction",
+        "modular arithmetic",
+        "congruence manipulation",
+        "summation of squares"
+      ],
+      "concepts": [
+        "binomial coefficients",
+        "prime divisibility",
+        "p-adic valuation",
+        "mod p arithmetic",
+        "Wilson's theorem (implicitly)",
+        "sum of squares formula"
+      ],
+      "difficulty": "olympic",
+      "notes": "Deep divisibility property of binomial coefficients by p³. Part (a) uses expansion and manipulation modulo p³, including sum of squares of certain fractions. Part (b) uses a clever binomial identity and induction."
+    },
+    {
+      "num": 4,
+      "topic": "algebra",
+      "theorems": [],
+      "techniques": [
+        "logarithmic differentiation",
+        "derivative analysis"
+      ],
+      "concepts": [
+        "polynomial with real roots",
+        "derivatives of polynomials",
+        "sum of reciprocals",
+        "inequality proof"
+      ],
+      "difficulty": "standard",
+      "notes": "Classical inequality for polynomials with all real roots. Solved via expressing f'/f as sum of 1/(x−x_i) and showing its derivative is negative."
+    },
+    {
+      "num": 5,
+      "topic": "geometry",
+      "theorems": [],
+      "techniques": [
+        "coordinate geometry",
+        "trigonometry",
+        "optimization (derivative)",
+        "limit computation"
+      ],
+      "concepts": [
+        "unit circle",
+        "central angle",
+        "tangent line",
+        "right triangle area",
+        "similar triangles",
+        "function minimization",
+        "limit of trigonometric expression"
+      ],
+      "difficulty": "hard",
+      "notes": "Geometry optimization problem. Part (a) minimizes area of a right triangle cut by a tangent, showing minimum occurs when tangent point bisects hypotenuse. Part (b) computes limit of S/α³ as α→0, requiring careful trigonometric expansion."
+    },
+    {
+      "num": 6,
+      "topic": "combinatorics",
+      "theorems": [],
+      "techniques": [
+        "invariant",
+        "parity argument",
+        "graph representation"
+      ],
+      "concepts": [
+        "chessboard adjacency",
+        "coloring flipping",
+        "parity of degrees",
+        "edge counting",
+        "invariant (parity of removed edges)"
+      ],
+      "difficulty": "olympic",
+      "notes": "Game on an n×n board with color flipping. Solution uses a graph where vertices are centers of squares and edges connect adjacent squares. The parity of the number of edges removed at each move leads to an invariant ensuring at least one black piece remains."
+    }
+  ],
+  "unique_concepts": [
+    "orthocenter",
+    "circumcenter",
+    "incenter",
+    "cyclic quadrilaterals",
+    "Euler's inequality",
+    "cube layers",
+    "coloring selection",
+    "binomial coefficient divisibility",
+    "p-adic valuation",
+    "sum of squares modulo p",
+    "polynomial logarithmic derivative",
+    "real roots inequality",
+    "tangent optimization",
+    "limit of trigonometric area ratio",
+    "parity invariant",
+    "edge removal parity",
+    "graph representation of board"
+  ],
+  "confidence": 0.95
+}

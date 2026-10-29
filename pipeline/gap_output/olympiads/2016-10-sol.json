@@ -1,0 +1,114 @@
+{
+  "_meta": {
+    "pdf": "C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\Задачи_Минали_Години\\Областен\\OLI-2-Областен кръг-2016-10 кл-sol.pdf",
+    "paired_with": null,
+    "level": 1,
+    "type": "sol",
+    "analyzed_at": "2026-10-16T21:15:23.551088",
+    "model": "deepseek/deepseek-v3.2",
+    "text_length": 4017,
+    "paired_text_length": 0
+  },
+  "problems": [
+    {
+      "num": 1,
+      "topic": "algebra",
+      "theorems": [],
+      "techniques": [
+        "substitution",
+        "quadratic equation analysis",
+        "casework"
+      ],
+      "concepts": [
+        "exponential equations",
+        "quadratic functions",
+        "parameter analysis",
+        "real roots condition",
+        "domain restriction"
+      ],
+      "difficulty": "standard",
+      "notes": "Standard parameter problem involving an exponential equation reduced to a quadratic with a restricted domain."
+    },
+    {
+      "num": 2,
+      "topic": "geometry",
+      "theorems": [
+        "Incenter properties",
+        "Cyclic quadrilateral properties"
+      ],
+      "techniques": [
+        "similar triangles",
+        "angle chasing",
+        "algebraic manipulation from geometry"
+      ],
+      "concepts": [
+        "inscribed circle",
+        "circumscribed circle",
+        "angle bisector",
+        "similar triangles",
+        "power of a point (implicit in AD*BD=DI^2)"
+      ],
+      "difficulty": "olympic",
+      "notes": "Combines incenter, circumcircle, and similarity to derive an equality leading to isosceles triangle."
+    },
+    {
+      "num": 3,
+      "topic": "combinatorics",
+      "theorems": [],
+      "techniques": [
+        "recursion",
+        "Fibonacci sequence identification",
+        "initial condition analysis"
+      ],
+      "concepts": [
+        "permutations with restrictions",
+        "recurrence relations",
+        "Fibonacci numbers",
+        "combinatorial reasoning"
+      ],
+      "difficulty": "olympic",
+      "notes": "The problem cleverly reduces to the Fibonacci sequence via a recursive argument on the first element."
+    },
+    {
+      "num": 4,
+      "topic": "number_theory",
+      "theorems": [],
+      "techniques": [
+        "prime factorization",
+        "poset theory / Dilworth's lemma concept",
+        "construction of antichain"
+      ],
+      "concepts": [
+        "divisors",
+        "prime factorization (2016=2^5*3^2*7)",
+        "antichain in product of chains",
+        "maximal set of incomparable elements",
+        "coordinate representation of divisors"
+      ],
+      "difficulty": "hard",
+      "notes": "Essentially asks for the size of a maximum antichain in the product of three chains (lengths 5n+1, 2n+1, n+1). The solution uses the LYM inequality idea or a simple product bound and construction."
+    }
+  ],
+  "unique_concepts": [
+    "exponential equations",
+    "quadratic functions",
+    "parameter analysis",
+    "domain restriction",
+    "inscribed circle",
+    "circumscribed circle",
+    "angle bisector",
+    "similar triangles",
+    "power of a point",
+    "permutations with restrictions",
+    "recurrence relations",
+    "Fibonacci numbers",
+    "prime factorization",
+    "divisors",
+    "antichain",
+    "incomparable elements",
+    "coordinate representation",
+    "Dilworth's lemma concept",
+    "construction of extremal set"
+  ],
+  "confidence": 0.95
+}

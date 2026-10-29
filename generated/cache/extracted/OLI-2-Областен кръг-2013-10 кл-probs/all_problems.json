@@ -1,0 +1,53 @@
+{
+  "pdf": "OLI-2-Областен кръг-2013-10 кл-probs",
+  "problems": [
+    {
+      "num": 1,
+      "year": 2013,
+      "grade": 10,
+      "round": "oblasten",
+      "statement": "Да се намерят стойностите на реалния параметър a, за които уравнението x³ + ax² − (1 − a)² = 0 има три различни реални корена x₁, x₂, x₃, изпълняващи неравенството x₁/(x₂x₃) + x₂/(x₃x₁) + x₃/(x₁x₂) > 3/2.",
+      "solution": null,
+      "answer": null,
+      "page": 1,
+      "pdf": "OLI-2-Областен кръг-2013-10 кл-probs",
+      "chunk": 1
+    },
+    {
+      "num": 2,
+      "year": 2013,
+      "grade": 10,
+      "round": "oblasten",
+      "statement": "Даден е △ABC с ∠ACB > 90°. Нека CH е височината от върха C (H ∈ AB), а AL е ъглополовящата на ∠BAC (L ∈ BC). Да се намери ∠ALC, ако е известно, че ∠ALC = ∠BHL.",
+      "solution": null,
+      "answer": null,
+      "page": 1,
+      "pdf": "OLI-2-Областен кръг-2013-10 кл-probs",
+      "chunk": 1
+    },
+    {
+      "num": 3,
+      "year": 2013,
+      "grade": 10,
+      "round": "oblasten",
+      "statement": "Да се намерят всички естествени числа n, за които 2^{n+1} дели 7^{n!} − 3^{n!}.\n(С n! се означава произведението на естествените числа от 1 до n.)",
+      "solution": null,
+      "answer": null,
+      "page": 1,
+      "pdf": "OLI-2-Областен кръг-2013-10 кл-probs",
+      "chunk": 1
+    },
+    {
+      "num": 4,
+      "year": 2013,
+      "grade": 10,
+      "round": "oblasten",
+      "statement": "Нека A(n,k) е броят на k-орките (a₁,...,aₖ) от цели числа, за които е изпълнено\n a₁ + ... + aₖ₋₁ ≤ n,\n a₁ + ... + aₖ₋₁ + aₖ > n,\n 1 ≤ aᵢ ≤ n, i = 1,...,k.\nЗа кое k стойността на A(12,k) е максимална?",
+      "solution": null,
+      "answer": null,
+      "page": 1,
+      "pdf": "OLI-2-Областен кръг-2013-10 кл-probs",
+      "chunk": 1
+    }
+  ]
+}

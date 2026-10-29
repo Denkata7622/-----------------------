@@ -1,0 +1,272 @@
+{
+  "_meta": {
+    "pdf": "C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\Материали_БГ\\OT_2012.pdf",
+    "paired_with": null,
+    "level": 3,
+    "type": "combined",
+    "analyzed_at": "2026-10-16T22:01:45.256527",
+    "model": "deepseek/deepseek-v3.2",
+    "text_length": 118886,
+    "paired_text_length": 0
+  },
+  "problems": [
+    {
+      "num": 1,
+      "topic": "number_theory",
+      "theorems": [
+        "Chinese Remainder Theorem",
+        "Bézout's Theorem",
+        "Gauss's Lemma"
+      ],
+      "techniques": [
+        "induction",
+        "contradiction",
+        "polynomial manipulation"
+      ],
+      "concepts": [
+        "irreducible polynomials",
+        "GCD of polynomials",
+        "prime divisors of polynomial values",
+        "canonical factorization",
+        "Schur's Lemma"
+      ],
+      "difficulty": "olympic",
+      "notes": "Focus on divisors of values of integer-coefficient polynomials. Uses deep number theory and polynomial algebra."
+    },
+    {
+      "num": 2,
+      "topic": "combinatorics",
+      "theorems": [],
+      "techniques": [
+        "pigeonhole principle",
+        "extremal principle",
+        "case analysis"
+      ],
+      "concepts": [
+        "graph theory (acquaintance)",
+        "maximal independent set",
+        "Ramsey-type reasoning"
+      ],
+      "difficulty": "olympic",
+      "notes": "Classical combinatorial problem about acquaintances in a group, leading to a conclusion about groups of 7."
+    },
+    {
+      "num": 3,
+      "topic": "combinatorics",
+      "theorems": [],
+      "techniques": [
+        "extremal principle",
+        "construction",
+        "pigeonhole principle"
+      ],
+      "concepts": [
+        "graph connectivity",
+        "cycles in graphs",
+        "spanning trees",
+        "graph degrees"
+      ],
+      "difficulty": "olympic",
+      "notes": "Graph theory problem about connectivity and cycles. Uses properties of trees and edge counts."
+    },
+    {
+      "num": 4,
+      "topic": "combinatorics",
+      "theorems": [],
+      "techniques": [
+        "induction",
+        "construction",
+        "graph traversal"
+      ],
+      "concepts": [
+        "graph connectivity",
+        "cycles",
+        "spanning trees",
+        "graph degrees",
+        "parity"
+      ],
+      "difficulty": "olympic",
+      "notes": "Proves that in a connected graph with even vertices, edges can be deleted to make all degrees odd."
+    },
+    {
+      "num": 5,
+      "topic": "combinatorics",
+      "theorems": [],
+      "techniques": [
+        "contradiction",
+        "cycle analysis",
+        "coloring",
+        "graph traversal"
+      ],
+      "concepts": [
+        "colored graphs",
+        "cycles",
+        "graph connectivity",
+        "degree conditions",
+        "bipartite-like structure"
+      ],
+      "difficulty": "olympic",
+      "notes": "Complex graph coloring problem from a Martian cities scenario, proving existence of a long cycle."
+    },
+    {
+      "num": 6,
+      "topic": "combinatorics",
+      "theorems": [],
+      "techniques": [
+        "extremal construction",
+        "case analysis",
+        "parity argument"
+      ],
+      "concepts": [
+        "colored graphs",
+        "cycle length",
+        "complete graphs",
+        "graph degrees"
+      ],
+      "difficulty": "olympic",
+      "notes": "Finds minimal possible length of the longest cycle in a specifically colored and connected graph."
+    },
+    {
+      "num": 7,
+      "topic": "geometry",
+      "theorems": [],
+      "techniques": [
+        "geometric construction",
+        "optimization",
+        "symmetry",
+        "similar triangles"
+      ],
+      "concepts": [
+        "shortest path",
+        "reflection principle",
+        "river crossing",
+        "speed ratios",
+        "angle optimization"
+      ],
+      "difficulty": "hard",
+      "notes": "Path optimization problem (Eskimo) crossing a river. Uses geometric optics-like reflection and similarity."
+    },
+    {
+      "num": 8,
+      "topic": "geometry",
+      "theorems": [],
+      "techniques": [
+        "similar triangles",
+        "circumscribed circles",
+        "angle chasing"
+      ],
+      "concepts": [
+        "cyclic quadrilaterals",
+        "inscribed circle",
+        "tangential quadrilateral",
+        "midpoints",
+        "arc midpoints"
+      ],
+      "difficulty": "standard",
+      "notes": "Inequality in a tangential quadrilateral using properties of inscribed circles and circumscribed circles of subtriangles."
+    },
+    {
+      "num": 9,
+      "topic": "geometry",
+      "theorems": [],
+      "techniques": [
+        "angle sum",
+        "spatial reasoning",
+        "contradiction"
+      ],
+      "concepts": [
+        "circumradius",
+        "hexagon",
+        "sum of angles",
+        "spatial unfolding",
+        "pyramid net"
+      ],
+      "difficulty": "hard",
+      "notes": "Problem about a hexagon with unit sides. Uses a clever spatial argument to bound a circumradius."
+    },
+    {
+      "num": 10,
+      "topic": "geometry",
+      "theorems": [],
+      "techniques": [
+        "angle ordering",
+        "cyclic quadrilateral",
+        "case analysis"
+      ],
+      "concepts": [
+        "triangle centers (centroid, incenter, orthocenter)",
+        "angle between centers",
+        "obtuse angle proof",
+        "circumcircle of midpoint-orthocenter diameter"
+      ],
+      "difficulty": "olympic",
+      "notes": "Proves angle MIH is obtuse. Uses ordering of cevians and containment in a circle with diameter MH."
+    },
+    {
+      "num": 11,
+      "topic": "geometry",
+      "theorems": [
+        "Stewart's Theorem"
+      ],
+      "techniques": [
+        "triangle inequality",
+        "side length comparison",
+        "algebraic manipulation"
+      ],
+      "concepts": [
+        "excircles",
+        "triangle inequality for cevians",
+        "side lengths in terms of triangle sides",
+        "acute triangle construction"
+      ],
+      "difficulty": "olympic",
+      "notes": "Shows segments from vertices to corresponding excenters form a triangle (and even an acute one)."
+    }
+  ],
+  "unique_concepts": [
+    "Chinese Remainder Theorem",
+    "Bézout's Theorem",
+    "Gauss's Lemma",
+    "irreducible polynomials",
+    "GCD of polynomials",
+    "prime divisors of polynomial values",
+    "canonical factorization",
+    "Schur's Lemma",
+    "pigeonhole principle",
+    "extremal principle",
+    "graph theory (acquaintance)",
+    "maximal independent set",
+    "Ramsey-type reasoning",
+    "graph connectivity",
+    "cycles in graphs",
+    "spanning trees",
+    "graph degrees",
+    "parity",
+    "colored graphs",
+    "graph traversal",
+    "bipartite-like structure",
+    "complete graphs",
+    "shortest path",
+    "reflection principle",
+    "river crossing",
+    "speed ratios",
+    "angle optimization",
+    "cyclic quadrilaterals",
+    "inscribed circle",
+    "tangential quadrilateral",
+    "midpoints",
+    "arc midpoints",
+    "circumradius",
+    "hexagon",
+    "sum of angles",
+    "spatial unfolding",
+    "pyramid net",
+    "triangle centers (centroid, incenter, orthocenter)",
+    "angle between centers",
+    "obtuse angle proof",
+    "circumcircle of midpoint-orthocenter diameter",
+    "excircles",
+    "triangle inequality for cevians",
+    "Stewart's Theorem"
+  ],
+  "confidence": 0.95
+}

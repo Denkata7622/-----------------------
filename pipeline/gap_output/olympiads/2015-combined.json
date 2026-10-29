@@ -1,0 +1,229 @@
+{
+  "_meta": {
+    "pdf": "C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\Материали_БГ\\NOM_2015-2016.pdf",
+    "paired_with": null,
+    "level": 2,
+    "type": "combined",
+    "analyzed_at": "2026-10-16T21:59:46.099682",
+    "model": "deepseek/deepseek-v3.2",
+    "text_length": 196798,
+    "paired_text_length": 0
+  },
+  "problems": [
+    {
+      "num": 1,
+      "topic": "geometry",
+      "theorems": [
+        "Power of a Point",
+        "Pythagorean theorem"
+      ],
+      "techniques": [
+        "inequality manipulation",
+        "substitution"
+      ],
+      "concepts": [
+        "tangent circles",
+        "common external tangent",
+        "segment lengths on a line"
+      ],
+      "difficulty": "standard",
+      "notes": "A classic inequality problem involving three externally tangent circles and a common tangent. The solution likely uses the fact that the distances between tangency points are expressed in terms of the radii."
+    },
+    {
+      "num": 2,
+      "topic": "combinatorics",
+      "theorems": [],
+      "techniques": [
+        "adversary argument",
+        "worst-case analysis",
+        "information theory"
+      ],
+      "concepts": [
+        "comparison sorting",
+        "partial order",
+        "query complexity",
+        "tournament ranking"
+      ],
+      "difficulty": "hard",
+      "notes": "This is a problem about determining a guaranteed length of a decreasing subsequence using a specific query model. It relates to sorting and selection under limited information."
+    },
+    {
+      "num": 3,
+      "topic": "geometry",
+      "theorems": [
+        "Radical Axis",
+        "Simson Line",
+        "Cyclic Quadrilaterals"
+      ],
+      "techniques": [
+        "angle chasing",
+        "perpendicularity conditions"
+      ],
+      "concepts": [
+        "cyclic quadrilateral",
+        "intersecting chords",
+        "midpoint",
+        "perpendicular lines",
+        "concyclic points"
+      ],
+      "difficulty": "standard",
+      "notes": "A synthetic geometry problem with a cyclic quadrilateral and perpendicularity conditions. The key is likely to show that E lies on the radical axis or that certain points are concyclic."
+    },
+    {
+      "num": 4,
+      "topic": "number_theory",
+      "theorems": [
+        "Infinite Descent",
+        "Modular Arithmetic",
+        "Properties of Squares mod 4 or mod 8"
+      ],
+      "techniques": [
+        "algebraic manipulation",
+        "factoring",
+        "case analysis"
+      ],
+      "concepts": [
+        "Pell-type equation",
+        "difference of squares",
+        "primes",
+        "representation as square or twice a square"
+      ],
+      "difficulty": "olympic",
+      "notes": "The condition p^2 = (u^2+v^2)/2 leads to 2p^2 = u^2+v^2. Analyzing this Diophantine equation modulo small primes (like 2, 4, 8) is crucial to determine the form of 2p-u-v."
+    },
+    {
+      "num": 5,
+      "topic": "algebra",
+      "theorems": [
+        "AM-GM",
+        "Cauchy-Schwarz"
+      ],
+      "techniques": [
+        "substitution",
+        "symmetry",
+        "homogenization"
+      ],
+      "concepts": [
+        "inequalities",
+        "positive reals",
+        "product condition abc=1"
+      ],
+      "difficulty": "standard",
+      "notes": "A standard inequality problem. The solution likely uses the substitution a=x/y, b=y/z, c=z/x or similar, followed by AM-GM or known inequalities."
+    },
+    {
+      "num": 6,
+      "topic": "combinatorics",
+      "theorems": [
+        "Pigeonhole Principle"
+      ],
+      "techniques": [
+        "averaging",
+        "double counting",
+        "extremal principle"
+      ],
+      "concepts": [
+        "combinatorial geometry",
+        "lattice points",
+        "midpoints of segments",
+        "grid"
+      ],
+      "difficulty": "hard",
+      "notes": "A combinatorial geometry problem on a grid. The key is to use the Pigeonhole Principle on the coordinates of segment midpoints."
+    },
+    {
+      "num": 7,
+      "topic": "geometry",
+      "theorems": [
+        "Incircle properties",
+        "Angle Bisector Theorem",
+        "Cyclic Quadrilaterals"
+      ],
+      "techniques": [
+        "angle chasing",
+        "trigonometry (possibly)",
+        "using midpoints"
+      ],
+      "concepts": [
+        "incircle",
+        "tangency points",
+        "concyclic points",
+        "midpoint of hypotenuse"
+      ],
+      "difficulty": "standard",
+      "notes": "A problem involving the incircle of a triangle and points on the excircle. The goal is to show four points are concyclic, likely using angle properties related to the incircle and the right angle at D."
+    },
+    {
+      "num": 8,
+      "topic": "number_theory",
+      "theorems": [
+        "Wilson's Theorem",
+        "Modular Arithmetic"
+      ],
+      "techniques": [
+        "floor function manipulation",
+        "congruence calculations"
+      ],
+      "concepts": [
+        "factorials",
+        "primes",
+        "Legendre's formula (for p-adic valuation)",
+        "parity"
+      ],
+      "difficulty": "olympic",
+      "notes": "The condition n+1 prime suggests using Wilson's theorem ((n)! ≡ -1 mod (n+1)). The problem reduces to analyzing the p-adic valuation (specifically the 2-adic valuation) of the expression."
+    },
+    {
+      "num": 9,
+      "topic": "combinatorics",
+      "theorems": [],
+      "techniques": [
+        "counting",
+        "inclusion-exclusion",
+        "generating functions (possible)"
+      ],
+      "concepts": [
+        "matrix filling",
+        "product conditions on rows and columns",
+        "combinatorial enumeration"
+      ],
+      "difficulty": "hard",
+      "notes": "A counting problem on m x n matrices with entries from {±1, ±2} and fixed row/column products. This is a variant of sign matrix problems, often solved by considering parity and transformations."
+    }
+  ],
+  "unique_concepts": [
+    "tangent circles",
+    "common external tangent",
+    "comparison sorting",
+    "query complexity",
+    "cyclic quadrilateral",
+    "radical axis",
+    "Pell-type equation",
+    "difference of squares",
+    "inequalities with product condition",
+    "lattice points and midpoints",
+    "incircle and tangency points",
+    "Wilson's theorem",
+    "factorials and primes",
+    "matrix enumeration with product constraints",
+    "power of a point",
+    "adversary argument",
+    "angle chasing",
+    "modular arithmetic",
+    "pigeonhole principle",
+    "AM-GM inequality",
+    "angle bisector theorem",
+    "concyclic points",
+    "perpendicularity",
+    "information theory",
+    "infinite descent",
+    "algebraic manipulation",
+    "substitution",
+    "double counting",
+    "extremal principle",
+    "floor function",
+    "Legendre's formula",
+    "generating functions"
+  ],
+  "confidence": 0.95
+}

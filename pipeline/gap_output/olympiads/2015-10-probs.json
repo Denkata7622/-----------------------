@@ -1,0 +1,116 @@
+{
+  "_meta": {
+    "pdf": "C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\Задачи_Минали_Години\\Областен\\OLI-2-Областен кръг-2015-10 кл-probs.pdf",
+    "paired_with": "C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\Задачи_Минали_Години\\Областен\\OLI-2-Областен кръг-2015-10 кл-sol.pdf",
+    "level": 1,
+    "type": "probs",
+    "analyzed_at": "2026-10-18T15:50:25.461892",
+    "model": "deepseek/deepseek-v3.2",
+    "text_length": 921,
+    "paired_text_length": 3053
+  },
+  "problems": [
+    {
+      "num": 1,
+      "topic": "algebra",
+      "theorems": [
+        "Vieta's_formulas"
+      ],
+      "techniques": [
+        "system_of_equations",
+        "substitution"
+      ],
+      "concepts": [
+        "quadratic_polynomial",
+        "real_roots",
+        "sum_and_product_of_roots",
+        "evaluating_polynomials"
+      ],
+      "difficulty": "standard",
+      "notes": "Uses given f(1), f(2) and a condition on the roots (4x1^2 - 12x1x2 + 4x2^2 = 15) to find coefficients. The condition can be rewritten in terms of sum and product of roots via Vieta."
+    },
+    {
+      "num": 2,
+      "topic": "geometry",
+      "theorems": [
+        "Ceva's_theorem",
+        "Midpoint_theorem"
+      ],
+      "techniques": [
+        "vector_method",
+        "coordinate_geometry",
+        "mass_points",
+        "homothety"
+      ],
+      "concepts": [
+        "midpoints",
+        "centroid",
+        "concurrency",
+        "similar_triangles",
+        "homothety_center"
+      ],
+      "difficulty": "standard",
+      "notes": "Standard concurrency problem. Lines AQ, BP, CN are medians of triangle formed by midpoints or can be shown to concur using Ceva or by proving they are concurrent at the centroid of a related triangle."
+    },
+    {
+      "num": 3,
+      "topic": "number_theory",
+      "theorems": [
+        "Chinese_Remainder_Theorem",
+        "Fermat's_little_theorem"
+      ],
+      "techniques": [
+        "modular_arithmetic",
+        "case_analysis"
+      ],
+      "concepts": [
+        "divisibility",
+        "modular_congruences",
+        "solving_congruence_systems"
+      ],
+      "difficulty": "standard",
+      "notes": "Requires considering divisibility by 5, 7, 13 separately. Solution involves two cases for n parity. The minimal a is found by solving CRT systems."
+    },
+    {
+      "num": 4,
+      "topic": "combinatorics",
+      "theorems": [],
+      "techniques": [
+        "bijection",
+        "invariance",
+        "symmetry_argument"
+      ],
+      "concepts": [
+        "subsets",
+        "sum_modulo_m",
+        "cyclic_permutation",
+        "equidistribution_of_sums"
+      ],
+      "difficulty": "hard",
+      "notes": "Key idea: using a cyclic shift (permutation) on the set {1,...,2015} to show the numbers of n-subsets with each sum residue mod 5 are equal. The answer is total subsets divided by 5."
+    }
+  ],
+  "unique_concepts": [
+    "Vieta's_formulas",
+    "real_roots",
+    "sum_and_product_of_roots",
+    "Ceva's_theorem",
+    "Midpoint_theorem",
+    "midpoints",
+    "centroid",
+    "concurrency",
+    "similar_triangles",
+    "homothety",
+    "Chinese_Remainder_Theorem",
+    "Fermat's_little_theorem",
+    "modular_arithmetic",
+    "divisibility",
+    "solving_congruence_systems",
+    "bijection",
+    "subsets",
+    "sum_modulo_m",
+    "cyclic_permutation",
+    "equidistribution_of_sums"
+  ],
+  "confidence": 0.95
+}

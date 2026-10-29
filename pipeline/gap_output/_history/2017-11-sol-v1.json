@@ -1,0 +1,120 @@
+{
+  "_meta": {
+    "pdf": "C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\Задачи_Минали_Години\\Областен\\OLI-2-Областен кръг-2017-11 кл-sol.pdf",
+    "paired_with": null,
+    "level": 1,
+    "type": "sol",
+    "analyzed_at": "2026-10-16T21:18:44.533194",
+    "model": "deepseek/deepseek-v3.2",
+    "text_length": 6975,
+    "paired_text_length": 0
+  },
+  "problems": [
+    {
+      "num": 1,
+      "topic": "algebra",
+      "theorems": [],
+      "techniques": [
+        "substitution",
+        "homogeneous_equation",
+        "trigonometric_identity"
+      ],
+      "concepts": [
+        "quadratic_equation",
+        "trigonometric_equation",
+        "cos2x_identity",
+        "interval_analysis"
+      ],
+      "difficulty": "standard",
+      "notes": "Стандартна комбинация от алгебрично и тригонометрично уравнение. Ключови стъпки: решаване на хомогенно уравнение и използване на cos2x = cos2y."
+    },
+    {
+      "num": 2,
+      "topic": "geometry",
+      "theorems": [],
+      "techniques": [
+        "similar_triangles",
+        "parallel_lines",
+        "midpoint",
+        "cyclic_quadrilaterals"
+      ],
+      "concepts": [
+        "orthocenter",
+        "altitudes",
+        "similarity",
+        "parallelogram",
+        "homothety"
+      ],
+      "difficulty": "hard",
+      "notes": "Задача за ортоцентър и успоредници. Ключово е да се докаже, че построените точки са среди на перпендикуляри от H, и че образуваният триъгълник е хомотетичен на дадения."
+    },
+    {
+      "num": 3,
+      "topic": "combinatorics",
+      "theorems": [],
+      "techniques": [
+        "strategy",
+        "pigeonhole_principle",
+        "contradiction",
+        "interval_analysis"
+      ],
+      "concepts": [
+        "game_theory",
+        "divisibility",
+        "powers_of_two",
+        "interval_covering"
+      ],
+      "difficulty": "olympic",
+      "notes": "Комбинаторна игра с делимост. Печелившата стратегия се основава на избора на числа от вида 2^k+1, които предотвратяват делимост на съседни числа в наредената редица."
+    },
+    {
+      "num": 4,
+      "topic": "combinatorics",
+      "theorems": [],
+      "techniques": [
+        "extremal_principle",
+        "graph_theory",
+        "induction",
+        "contradiction"
+      ],
+      "concepts": [
+        "graph_model",
+        "edges_and_vertices",
+        "matching",
+        "sum_constraint",
+        "inequality"
+      ],
+      "difficulty": "olympic",
+      "notes": "Екстремална комбинаторна задача, моделирана с графи. Доказва се, че максималният брой двойки се достига при специфично разпределение на числата, използвайки индукция за съществуване на съвърсено съвпадение в граф."
+    }
+  ],
+  "unique_concepts": [
+    "quadratic_equation",
+    "trigonometric_equation",
+    "cos2x_identity",
+    "interval_analysis",
+    "homogeneous_equation",
+    "orthocenter",
+    "altitudes",
+    "similarity",
+    "parallelogram",
+    "homothety",
+    "midpoint",
+    "parallel_lines",
+    "cyclic_quadrilaterals",
+    "game_theory",
+    "divisibility",
+    "powers_of_two",
+    "interval_covering",
+    "strategy",
+    "pigeonhole_principle",
+    "graph_model",
+    "edges_and_vertices",
+    "matching",
+    "sum_constraint",
+    "inequality",
+    "extremal_principle",
+    "induction"
+  ],
+  "confidence": 0.95
+}

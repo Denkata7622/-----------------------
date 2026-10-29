@@ -1,0 +1,79 @@
+{
+  "point_id": "5.10",
+  "total": 5,
+  "by_difficulty": {
+    "easy": 0,
+    "medium": 5,
+    "hard": 0
+  },
+  "problems": [
+    {
+      "source": "OLI-2-Областен кръг-2012-11 кл · 2012-11 · Зад. 1",
+      "statement": "Да се намерят всички цели стойности на параметъра a, за които уравнението\nsin x + a sin 2x + sin 5x = 2a\nима решение.",
+      "solution": "Решение. Имаме\n\n$$2|a| = |\\sin x + a \\sin 2x + \\sin 5x| \\le |\\sin x| + |a||\\sin 2x| + |\\sin 5x| \\le 2 + |a|, \\tag{1}$$\n\nоткъдето $|a| \\le 2$.\n\nДиректно проверяваме, че $x=0$ е решение при $a=0$ и $x=\\pm 90^\\circ$ е решение при $a=\\pm 1$.\n\nПри $a=2$ уравнението става $\\sin x + 2\\sin 2x + \\sin 5x = 4$ и (1) показва, че $\\sin x = \\sin 2x = 1$. Това е невъзможно, защото при $\\sin x = 1$ имаме $\\cos x = 0$ и $\\sin 2x = 2\\sin x \\cos x = 0$.\n\nПри $a=-2$ уравнението става $\\sin x - 2\\sin 2x + \\sin 5x = -4$ и (1) показва, че $\\sin x = -1$, $\\sin 2x = 1$. Това е невъзможно, защото при $\\sin x = -1$ имаме $\\cos x = 0$ и $\\sin 2x = 2\\sin x \\cos x = 0$.",
+      "answer": "a ∈ {-1, 0, 1}",
+      "difficulty": "medium",
+      "techniques": [
+        "trig_equations",
+        "inequality_bounds"
+      ],
+      "confidence": "exact",
+      "reasoning": "Uses |sin|≤1 to bound parameter a and checks few cases; typical trig equation solving."
+    },
+    {
+      "source": "OLI-2-Областен кръг-2016-11 кл · 2016-11 · Зад. 1",
+      "statement": "Да се намерят всички стойности на реалния параметър a, за които уравнението a sin²x − 3 sin x cos x + cos²x = 0 има две различни решения в интервала (π/6, π/4).",
+      "solution": "Решение. След полагане y = cos x/sin x уравнението става y² − 3y + a = 0. От x ∈ (π/6, π/4) следва y ∈ (1, √3). Тъй като 1 < 3/2 < √3, условията уравнението f(y) = y² − 3y + a = 0 да има два корена в интервала (1, √3) са: D > 0, f(1) > 0, f(√3) > 0. Оттук a < 9/4, a > 2 и a > 3√3 − 3 с решение a ∈ (3√3 − 3, 9/4).",
+      "answer": "a ∈ (3√3 − 3, 9/4)",
+      "difficulty": "medium",
+      "techniques": [
+        "trig_equation",
+        "parameter_analysis",
+        "quadratic_discriminant"
+      ],
+      "confidence": "exact",
+      "reasoning": "Substitutes y = cot x, reduces to quadratic in y, uses discriminant and sign conditions on interval (1,√3) to find a."
+    },
+    {
+      "source": "OLI-2-Областен кръг-2017-11 кл · 2017-11 · Зад. 1",
+      "statement": "Да се реши системата:\n\n$$\\begin{cases} x^{2} + 6y^{2} = 5xy \\\\ \\cos^{2} x + \\sin^{2} y = 1 \\end{cases},$$\n\nкъдето $x, y \\in [0, \\pi]$.",
+      "solution": "Решение. Ако y = 0, от първото уравнение следва, че x = 0. Двойката (0,0) е решение и на второто уравнение. При y ≠ 0 от уравнението x² + 6y² = 5xy получаваме (x/y)² − 5x/y + 6 = 0 с решения x/y = 2 и x/y = 3. Следователно x = 2y или x = 3y.\nТъй като cos²x = 1 − sin²y = cos²y и x,y ∈ [0,π], то x = y или x + y = π. Поради x = 2y или x = 3y и y ≠ 0 първото равенство е невъзможно.\nКогато x + y = π получаваме x = 2π/3, y = π/3 и x = 3π/4, y = π/4.",
+      "answer": "(x,y) ∈ {(0,0), (2π/3,π/3), (3π/4,π/4)}.",
+      "difficulty": "medium",
+      "techniques": [
+        "ratio_substitution",
+        "trigonometric_identity",
+        "case_analysis"
+      ],
+      "confidence": "exact",
+      "reasoning": "System reduces to ratio x/y = 2 or 3 and trig identity cos²x = cos²y → cases x=y or x+y=π. Requires case analysis and trig identities."
+    },
+    {
+      "source": "OLI-2-Областен кръг-2019-11 кл · 2019-11 · Зад. 2",
+      "statement": "Да се намерят ъглите $\\alpha$, $\\beta$ и $\\gamma$ на остроъгълен триъгълник $ABC$, ако:\n\n$$\\sin \\gamma + \\cos \\beta = \\frac{\\sqrt{3} + \\sqrt{2}}{2} \\quad \\text{и} \\quad \\cos \\gamma + \\sin \\beta = \\frac{\\sqrt{2} + 1}{2}.$$",
+      "solution": "Решение. Повдигаме на втора степен двете равенства и ги събираме:\n(sin γ + cos β)² + (cos γ + sin β)² = 2 + (√6 + √2)/2 ⇔ sin γ cos β + cos γ sin β = (√6 + √2)/4.\nТъй като sin α = sin(γ + β) = sin γ cos β + cos γ sin β = (√6 + √2)/4 = sin 75°, то α = 75° или α = 105°. Тъй като ABC е остроъгълен, то α = 75°.\nДиректно се проверява, че γ = 60° и β = 45° удовлетворяват двете равенства от условието.\nАко γ > 60°, то β < 45°, то sin γ > √3/2 и cos β > √2/2 и следователно първото равенство не е вярно. Аналогично се разглежда и случаят γ < 60° и β > 45°.",
+      "answer": "α = 75°, β = 45°, γ = 60°.",
+      "difficulty": "medium",
+      "techniques": [
+        "trigonometric_identities",
+        "angle_chasing"
+      ],
+      "confidence": "exact",
+      "reasoning": "Квадратите на уравненията се сумират, получава се sinγ cosβ+cosγ sinβ = sin75°, от което се извличат ъглите."
+    },
+    {
+      "source": "OLI-3-Национален кръг-2001-9-12 кл · 2001-None · Зад. 5",
+      "statement": "Да се намерят всички реални числа $t$, за които съществуват положителни реални числа $x, y, z$ такива, че\n\n$$3x^2 + 3xz + z^2 = 1, \\quad 3y^2 + 3yz + z^2 = 4, \\quad x^2 - xy + y^2 = t.$$",
+      "solution": "Решение: Ще докажем, че $t \\in (\\frac{3 - \\sqrt{5}}{2}, 1)$.\n\nНека $x, y, t, \\alpha$ изпълняват условието на задачата. Да разгледаме четири точки $A, B, C, D$ в равнината, за които $AO = x, BO = y, CO = \\frac{2}{\\sqrt{3}}$ и $\\angle AOB = 60^\\circ$, $\\angle BOC = \\angle COA = 150^\\circ$. От косинусовата теорема следва, че $t > 0, AB = \\sqrt{t}, BC = \\frac{2}{\\sqrt{3}}, CA = \\frac{1}{\\sqrt{3}}$. Тъй като $\\angle ACB < \\angle AOB = 60^\\circ$ $\\angle BAC < \\angle BOC = 150^\\circ$, то\n\n$$\\frac{\\left(\\frac{1}{\\sqrt{3}}\\right)^2 + \\left(\\frac{2}{\\sqrt{3}}\\right)^2 - (\\sqrt{t})^2}{2 \\frac{1}{\\sqrt{3}} \\frac{2}{\\sqrt{3}}} = \\cos \\angle ACB > \\frac{1}{2}, \\tag{1}$$\n\n$$\\frac{(\\sqrt{t})^2 + \\left(\\frac{1}{\\sqrt{3}}\\right)^2 - \\left(\\frac{2}{\\sqrt{3}}\\right)^2}{2 \\sqrt{\\alpha} \\frac{2}{\\sqrt{3}}} = \\cos \\angle BAC > -\\frac{\\sqrt{3}}{2}. \\tag{2}$$\n\nТези неравенства са еквивалентни на $t < 1$ и $t + \\sqrt{t} - 1 > 0$, т.е. $t \\in (\\frac{3 - \\sqrt{5}}{2}, 1)$.\n\nОбратно, нека $t \\in \\left(\\frac{3 - \\sqrt{5}}{2}, 1\\right)$. Да построим $\\triangle ABC$ такъв, че $AB = \\sqrt{t}, BC = \\frac{2}{\\sqrt{3}}, CA = \\frac{1}{\\sqrt{3}}$. От (1) и (2) следва, че $\\angle ACB < 60^\\circ$ и $\\angle ABC < \\angle BAC < 150^\\circ$. Нека $k_A$ е окръжността през $B$ и $C$, за която дъгата $BC$, лежаща в полуравнината относно $BC$, съдържаща точката $A$, е равна на $60^\\circ$. Да означим с $k_B$ аналогичната окръжност през $A$ и $C$. Лесно се вижда, че втората пресечна точка $O$ на $k_A$ и $k_B$ лежи във вътрешността на $\\triangle ABC$. (Наистина, да допуснем противното. Ако $O$ лежи в $\\angle ACB$, то $\\angle AOB = \\angle AOC + \\angle BOC = 150^\\circ + 150^\\circ = 300^\\circ$, което е невъзможно. Ако $O$ лежи в противоположния ъгъл на $\\angle ACB$, то $\\angle AOB = \\angle AOC + \\angle BOC = 30^\\circ + 30^\\circ = 60^\\circ$, което противоречи на неравенствата $\\angle AOB < \\angle ACB < 60^\\circ$. Другите случаи за положението на $O$ се отхвърлят по подобен начин.) Следователно $\\angle AOB = 360^\\circ - \\angle AOC - \\angle BOC = 360^\\circ - 150^\\circ - 150^\\circ = 60^\\circ$. Полагаме $x = AO, y = BO, z = CO\\sqrt{3}$. Като приложим косинусовата теорема за тривъгълниците $AOB, BOC, COA$, заключаваме, че $x, y, z, t$ изпълняват условията на задачата.",
+      "answer": "$t \\in \\left(\\frac{3-\\sqrt{5}}{2},1\\right)$.",
+      "difficulty": "medium",
+      "techniques": [
+        "cosine_law",
+        "geometric_construction",
+        "inequalities"
+      ],
+      "confidence": "exact",
+      "reasoning": "Transforms the algebraic system into a triangle with given sides; applies cosine law to obtain bounds for t."
+    }
+  ]
+}

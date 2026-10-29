@@ -1,0 +1,161 @@
+{
+  "_meta": {
+    "pdf": "C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\Задачи_Минали_Години\\Национален\\OLI-3-Национален кръг-1984-9-12 кл-sol.pdf",
+    "paired_with": null,
+    "level": 2,
+    "type": "sol",
+    "analyzed_at": "2026-10-18T11:34:21.434044",
+    "model": "deepseek/deepseek-v3.2",
+    "text_length": 6916,
+    "paired_text_length": 0
+  },
+  "problems": [
+    {
+      "num": 1,
+      "topic": "number_theory",
+      "theorems": [],
+      "techniques": [
+        "modular_arithmetic",
+        "case_analysis",
+        "factorization",
+        "coprime_arguments"
+      ],
+      "concepts": [
+        "diophantine_equation",
+        "exponential_diophantine",
+        "modular_congruences",
+        "gcd_properties"
+      ],
+      "difficulty": "standard",
+      "notes": "Уравнение от вида a^x * b^y + c = d^z. Стандартен подход с модулна аритметика и разлагане."
+    },
+    {
+      "num": 2,
+      "topic": "geometry",
+      "theorems": [
+        "Menelaus",
+        "area_ratio"
+      ],
+      "techniques": [
+        "auxiliary_point",
+        "ratio_chasing",
+        "area_calculation"
+      ],
+      "concepts": [
+        "trapezoid",
+        "angle_bisectors",
+        "intersecting_lines",
+        "similar_triangles",
+        "area_of_triangle",
+        "ratio_of_segments"
+      ],
+      "difficulty": "hard",
+      "notes": "Използва се хитро построение на точка P' за да се приложи Менелай. Решението води до квадратно уравнение."
+    },
+    {
+      "num": 3,
+      "topic": "combinatorics",
+      "theorems": [],
+      "techniques": [
+        "space_partitioning",
+        "pairing_argument",
+        "invariant",
+        "proof_by_contradiction"
+      ],
+      "concepts": [
+        "points_in_space",
+        "tetrahedron",
+        "half-spaces",
+        "unique_correspondence",
+        "parity"
+      ],
+      "difficulty": "olympic",
+      "notes": "Комбинаторна геометрия в пространството. Ключът е да се построи еднозначно съответствие между точки от двете полупространства."
+    },
+    {
+      "num": 4,
+      "topic": "algebra",
+      "theorems": [
+        "Vieta",
+        "AM-HM_inequality",
+        "Cauchy-Schwarz_inequality_for_reciprocals"
+      ],
+      "techniques": [
+        "inequality_manipulation",
+        "equality_condition"
+      ],
+      "concepts": [
+        "polynomial_roots",
+        "symmetric_sums",
+        "inequality_between_arithmetic_and_harmonic_means"
+      ],
+      "difficulty": "standard",
+      "notes": "Стандартна задача с Виет и неравенство между сума и сума на реципрочните. Равенството в неравенството води до всички корени равни."
+    },
+    {
+      "num": 5,
+      "topic": "algebra",
+      "theorems": [],
+      "techniques": [
+        "induction",
+        "algebraic_manipulation",
+        "substitution"
+      ],
+      "concepts": [
+        "inequality_proof",
+        "product_of_variables",
+        "binomial-like_inequality",
+        "real_numbers_in_[0,1]"
+      ],
+      "difficulty": "hard",
+      "notes": "Доказателство с индукция. Ключовата лема е (1-a^m)(1-b^m) >= 1 - (a+b-ab)^m за a, b в [0,1]."
+    },
+    {
+      "num": 6,
+      "topic": "geometry",
+      "theorems": [],
+      "techniques": [
+        "vector_analysis",
+        "parameterization",
+        "linear_independence",
+        "discriminant_analysis"
+      ],
+      "concepts": [
+        "parallelogram_pyramid",
+        "section_by_moving_plane",
+        "vector_representation",
+        "line_parallel_to_plane",
+        "locus_of_points",
+        "segment_length"
+      ],
+      "difficulty": "olympic",
+      "notes": "Задача с аналитична геометрия (вектори) в пространството. Параметризира се равнината, изразява се условието за успоредност и се намира диапазон на параметър чрез дискриминанта."
+    }
+  ],
+  "unique_concepts": [
+    "diophantine_equation",
+    "modular_arithmetic",
+    "coprime_arguments",
+    "Menelaus_theorem",
+    "angle_bisectors",
+    "area_ratio",
+    "space_partitioning",
+    "pairing_argument",
+    "parity",
+    "Vieta_formulas",
+    "AM-HM_inequality",
+    "polynomial_roots",
+    "induction",
+    "inequality_proof",
+    "vector_analysis",
+    "linear_independence",
+    "locus_of_points",
+    "section_by_plane",
+    "trapezoid",
+    "tetrahedron",
+    "points_in_space",
+    "real_numbers_in_[0,1]",
+    "discriminant_analysis"
+  ],
+  "confidence": 0.95
+}

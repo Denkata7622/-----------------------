@@ -1,0 +1,153 @@
+{
+  "_meta": {
+    "pdf": "C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\Задачи_Минали_Години\\Областен\\OLI-2-Областен кръг-2019-11 кл-sol.pdf",
+    "paired_with": null,
+    "level": 1,
+    "type": "sol",
+    "analyzed_at": "2026-10-16T21:25:18.938819",
+    "model": "deepseek/deepseek-v3.2",
+    "text_length": 9378,
+    "paired_text_length": 0
+  },
+  "problems": [
+    {
+      "num": 1,
+      "topic": "algebra",
+      "theorems": [],
+      "techniques": [
+        "substitution",
+        "contradiction",
+        "cyclic_permutation"
+      ],
+      "concepts": [
+        "symmetric_equations",
+        "cyclic_sums",
+        "inequalities",
+        "case_analysis"
+      ],
+      "difficulty": "olympic",
+      "notes": "Уравнението е симетрично и циклично. Решението използва разглеждане на случаи за подреждане на променливите и достигане до равенство."
+    },
+    {
+      "num": 2,
+      "topic": "geometry",
+      "theorems": [
+        "vector_median_center"
+      ],
+      "techniques": [
+        "vector_method",
+        "section_formula"
+      ],
+      "concepts": [
+        "centroid",
+        "vectors",
+        "ratio_of_segments"
+      ],
+      "difficulty": "olympic",
+      "notes": "Задачата се решава с векторен метод, използвайки свойството на медицентъра и намиране на точка, която дели отсечка в дадено отношение."
+    },
+    {
+      "num": 3,
+      "topic": "algebra",
+      "theorems": [],
+      "techniques": [
+        "squaring",
+        "trigonometric_identities"
+      ],
+      "concepts": [
+        "trigonometric_equations",
+        "sum_of_angles",
+        "sine_and_cosine",
+        "acute_triangle"
+      ],
+      "difficulty": "olympic",
+      "notes": "Използва се повдигане на квадрат и тригонометрични тъждества за намиране на ъгъл. Има проверка за остроъгълен триъгълник."
+    },
+    {
+      "num": 4,
+      "topic": "number_theory",
+      "theorems": [
+        "Euclidean_algorithm"
+      ],
+      "techniques": [
+        "invariant",
+        "Euclidean_algorithm_application"
+      ],
+      "concepts": [
+        "rational_numbers",
+        "irrational_numbers",
+        "coprime_numbers",
+        "square_free_numbers",
+        "set_selection"
+      ],
+      "difficulty": "hard",
+      "notes": "Задачата дефинира 'добра' двойка и използва инварианта - рационалността на частното. Решението включва избор на числа, които са корени от произведения на различни прости числа."
+    },
+    {
+      "num": 5,
+      "topic": "geometry",
+      "theorems": [
+        "power_of_a_point",
+        "similar_triangles"
+      ],
+      "techniques": [
+        "auxiliary_points",
+        "similarity",
+        "algebraic_manipulation"
+      ],
+      "concepts": [
+        "cyclic_quadrilateral",
+        "tangent_lines",
+        "diametrically_opposite_points",
+        "distance_from_point_to_line"
+      ],
+      "difficulty": "hard",
+      "notes": "Въвеждат се допълнителни точки (диаметрално противоположни). Използва се свойство на допирателни и подобни триъгълници за доказване на съвпадение на точки."
+    },
+    {
+      "num": 6,
+      "topic": "algebra",
+      "theorems": [],
+      "techniques": [
+        "induction",
+        "product_manipulation",
+        "limit_calculation"
+      ],
+      "concepts": [
+        "recurrence_relation",
+        "explicit_formula",
+        "infinite_product",
+        "sequence_limit"
+      ],
+      "difficulty": "olympic",
+      "notes": "Задачата включва намиране на явен вид на редица от рекурентна зависимост и след това изчисляване на граница на произведение."
+    }
+  ],
+  "unique_concepts": [
+    "symmetric_equations",
+    "cyclic_sums",
+    "vector_median_center",
+    "centroid",
+    "ratio_of_segments",
+    "trigonometric_identities",
+    "sum_of_angles",
+    "acute_triangle",
+    "Euclidean_algorithm",
+    "rational_numbers",
+    "irrational_numbers",
+    "coprime_numbers",
+    "square_free_numbers",
+    "set_selection",
+    "power_of_a_point",
+    "similar_triangles",
+    "cyclic_quadrilateral",
+    "tangent_lines",
+    "diametrically_opposite_points",
+    "distance_from_point_to_line",
+    "recurrence_relation",
+    "explicit_formula",
+    "infinite_product",
+    "sequence_limit"
+  ],
+  "confidence": 0.95
+}

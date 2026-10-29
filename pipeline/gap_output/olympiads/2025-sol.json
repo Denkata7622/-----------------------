@@ -1,0 +1,94 @@
+{
+  "_meta": {
+    "pdf": "C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\Задачи_Минали_Години\\Национален\\OLI-3-Национален кръг-2025-9-12 кл-sol.pdf",
+    "paired_with": null,
+    "level": 2,
+    "type": "sol",
+    "analyzed_at": "2026-10-16T21:11:21.280168",
+    "model": "deepseek/deepseek-v3.2",
+    "text_length": 54488,
+    "paired_text_length": 0
+  },
+  "problems": [
+    {
+      "num": 1,
+      "topic": "number_theory",
+      "theorems": [],
+      "techniques": [
+        "substitution",
+        "case_analysis",
+        "contradiction",
+        "arithmetic_progression_analysis",
+        "polynomial_equation_solving"
+      ],
+      "concepts": [
+        "functional_equation_on_sequences",
+        "parity_considerations",
+        "finding_all_solutions",
+        "testing_candidate_solutions"
+      ],
+      "difficulty": "olympic",
+      "notes": "Задача за намиране на всички безкрайни редици, удовлетворяващи функционално уравнение за всички естествени m, n. Решението използва задълбочен анализ на случаи за a1, a2 и свойства на четност."
+    },
+    {
+      "num": 2,
+      "topic": "combinatorics",
+      "theorems": [],
+      "techniques": [
+        "construction",
+        "counting",
+        "inequality_manipulation",
+        "asymptotic_analysis",
+        "floor_function"
+      ],
+      "concepts": [
+        "grid_coloring",
+        "graph_connectivity",
+        "min-max_problems",
+        "upper_and_lower_bounds",
+        "square_root_scaling"
+      ],
+      "difficulty": "olympic",
+      "notes": "Комбинаторна задача за оцветяване на квадратна таблица. Изисква намиране на порядъка на функцията f(n) (минимален брой черни клетки, така че всяка черна да е свързана с всяка друга). Решението дава горна и долна граница от порядък n^(3/2)."
+    },
+    {
+      "num": 3,
+      "topic": "number_theory",
+      "theorems": [
+        "Dirichlet's_theorem_on_primes_in_arithmetic_progressions"
+      ],
+      "techniques": [
+        "polynomial_evaluation",
+        "infinite_descent",
+        "contradiction",
+        "modular_arithmetic"
+      ],
+      "concepts": [
+        "integer_polynomials",
+        "prime_divisors",
+        "sequences_of_integers",
+        "infinitely_many_primes",
+        "gcd_considerations"
+      ],
+      "difficulty": "olympic",
+      "notes": "Задача, използваща теоремата на Дирихле за безкрайно много прости числа в аритметична прогресия. Целта е да се докаже, че за даден полином P с цели коефициенти и старши коефициент 1, съществуват безкрайно много прости числа, делители на членовете на редицата bn = P(n)*an + 1."
+    }
+  ],
+  "unique_concepts": [
+    "functional_equation_on_sequences",
+    "parity_considerations",
+    "arithmetic_progression_analysis",
+    "grid_coloring",
+    "graph_connectivity",
+    "min-max_problems",
+    "asymptotic_analysis",
+    "square_root_scaling",
+    "Dirichlet's_theorem_on_primes_in_arithmetic_progressions",
+    "integer_polynomials",
+    "prime_divisors",
+    "sequences_of_integers",
+    "infinite_descent",
+    "polynomial_evaluation"
+  ],
+  "confidence": 0.95
+}

@@ -1,0 +1,13 @@
+Пълен архитектурен map
+10 файла (workers + infrastructure)
+#	Файл	Роля	Статус
+1	pipeline.py	Генерира статии (summary + deep + verify) за всяка точка	✅ Работи
+2	problem_generator.py	9 задачи/точка + решения + hints + dual verify + arbiter + escalation	✅ Работи (fixes приложени)
+3	pdf_chunker.py	4 фази: extract → merge → classify → aggregate → real_problems/	✅ Работи (182 задачи)
+4	gap_worker.py	Анализира гапове в плана, предлага нови теми	⚠️ Работи, но "глупав" — не мисли като учител
+5	integrate.py	Чете output/ и пише в index.html	✅ Работи, но не поддържа generated_tasks[]
+6	scan_queue.py	Чете STEPS от HTML	✅ Работи
+7	master_orchestrator.py	Пуска всички workers, следи ги, рестартва, scheduler	📝 Код готов, не е инсталиран
+8	daily_verifier.py	Дневен одит на всички модули + diff с вчера	📝 Код готов, не е инсталиран
+9	personas.py	Централизирани AI роли (13 personas)	⚠️ Частично — 5-6 роли са интегрирани
+10	recover_state.py	Utility за възстановяване на state	✅ Работи

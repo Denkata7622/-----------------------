@@ -1,0 +1,174 @@
+{
+  "_meta": {
+    "pdf": "C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\Задачи_Минали_Години\\Национален\\OLI-3-Национален кръг-1983-9-12 кл-probs.pdf",
+    "paired_with": "C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\Задачи_Минали_Години\\Национален\\OLI-3-Национален кръг-1983-9-12 кл-sol.pdf",
+    "level": 2,
+    "type": "probs",
+    "analyzed_at": "2026-10-18T11:32:27.671981",
+    "model": "deepseek/deepseek-v3.2",
+    "text_length": 1645,
+    "paired_text_length": 8867
+  },
+  "problems": [
+    {
+      "num": 1,
+      "topic": "number_theory",
+      "theorems": [],
+      "techniques": [
+        "construction",
+        "modular_arithmetic",
+        "contradiction"
+      ],
+      "concepts": [
+        "permutations",
+        "modular residues",
+        "prime numbers",
+        "composite numbers",
+        "existence proof"
+      ],
+      "difficulty": "olympic",
+      "notes": "Requires constructing a specific permutation for primes and checking small cases like n=4. The solution uses the idea of multiplicative inverses modulo a prime."
+    },
+    {
+      "num": 2,
+      "topic": "algebra",
+      "theorems": [],
+      "techniques": [
+        "induction",
+        "inequality_manipulation",
+        "pairing"
+      ],
+      "concepts": [
+        "rearrangement inequality",
+        "pairwise products",
+        "non-negative numbers",
+        "permutation of a multiset"
+      ],
+      "difficulty": "hard",
+      "notes": "The proof uses an inductive swapping argument to show the sorted pairing maximizes the product for any t>=0."
+    },
+    {
+      "num": 3,
+      "topic": "geometry",
+      "theorems": [],
+      "techniques": [
+        "vector_methods",
+        "parameterization",
+        "optimization"
+      ],
+      "concepts": [
+        "regular triangular pyramid",
+        "midpoints",
+        "section by a plane",
+        "area of quadrilateral",
+        "minimization"
+      ],
+      "difficulty": "standard",
+      "notes": "Uses vector algebra to establish a proportional division and then minimizes the area of a quadrilateral via a quadratic function."
+    },
+    {
+      "num": 4,
+      "topic": "geometry",
+      "theorems": [
+        "Pigeonhole Principle"
+      ],
+      "techniques": [
+        "pigeonhole_principle",
+        "bounding",
+        "construction"
+      ],
+      "concepts": [
+        "circle packing in a square",
+        "distance between centers",
+        "non-overlapping circles",
+        "optimal arrangement"
+      ],
+      "difficulty": "olympic",
+      "notes": "Classical packing problem. The solution shrinks the square by the radius, divides into four smaller squares, and applies the pigeonhole principle to force two centers close, leading to a lower bound. A matching construction is given."
+    },
+    {
+      "num": 5,
+      "topic": "algebra",
+      "theorems": [
+        "Rational Root Theorem"
+      ],
+      "techniques": [
+        "assumption of common root",
+        "algebraic manipulation",
+        "contradiction"
+      ],
+      "concepts": [
+        "polynomials with rational coefficients",
+        "common complex roots",
+        "irrationality",
+        "elimination of variables"
+      ],
+      "difficulty": "hard",
+      "notes": "Shows that if they shared a root, it would lead to a rational number satisfying a specific polynomial with no rational roots, a contradiction."
+    },
+    {
+      "num": 6,
+      "topic": "number_theory",
+      "theorems": [
+        "Kronecker's Approximation Theorem"
+      ],
+      "techniques": [
+        "floor function manipulation",
+        "limit argument",
+        "case analysis (rational/irrational)",
+        "contradiction"
+      ],
+      "concepts": [
+        "fractional parts",
+        "floor and ceiling",
+        "density of fractional parts",
+        "linear combinations"
+      ],
+      "difficulty": "olympic",
+      "notes": "Reduces the problem to showing that if both fractional parts are non-zero, the equality [an]+[bn]=[(a+b)n] must fail for some n. Uses Kronecker's theorem for the irrational case and direct calculation for the rational case."
+    }
+  ],
+  "unique_concepts": [
+    "permutations",
+    "modular residues",
+    "prime numbers",
+    "composite numbers",
+    "existence proof",
+    "rearrangement inequality",
+    "pairwise products",
+    "non-negative numbers",
+    "induction",
+    "vector methods",
+    "parameterization",
+    "optimization",
+    "regular triangular pyramid",
+    "midpoints",
+    "section by a plane",
+    "area of quadrilateral",
+    "circle packing",
+    "pigeonhole principle",
+    "distance between centers",
+    "non-overlapping circles",
+    "optimal arrangement",
+    "Rational Root Theorem",
+    "polynomials with rational coefficients",
+    "common complex roots",
+    "irrationality",
+    "elimination",
+    "floor function",
+    "fractional parts",
+    "Kronecker's Approximation Theorem",
+    "density",
+    "linear combinations",
+    "contradiction",
+    "construction",
+    "modular arithmetic",
+    "inequality manipulation",
+    "pairing",
+    "bounding",
+    "algebraic manipulation",
+    "limit argument",
+    "case analysis"
+  ],
+  "confidence": 0.95
+}

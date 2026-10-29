@@ -1,0 +1,138 @@
+{
+  "pdf": "OLI-2-Областен кръг-1995-11 кл",
+  "problems": [
+    {
+      "num": 1,
+      "grade": 11,
+      "year": 1995,
+      "round": "nacionalen",
+      "statement": "Let $p$ and $q$ be positive numbers such that the parabola $y = x^2 - 2px + q$ has no common point with the $x$-axis. Prove that there exist points $A$ and $B$ on the parabola such that the segment $AB$ is parallel to the $x$-axis and $\\angle AOB = 90^\\circ$ ($O$ is the coordinate origin) if and only if $p^2 < q \\leq \\frac{1}{4}$. Find the values of $p$ and $q$ for which the points $A$ and $B$ are defined in an unique way.",
+      "solution": "Solution. Since the parabola has no common point with the $x$-axis, then the roots of the equation $x^2 - 2px + q = 0$ are not real and hence $p^2 < q$. Let the points $A(x_1, y_0)$ and $B(x_2, y_0)$ (Figure 1) be with the required properties. Then $x_1$ and $x_2$ are the roots of the equation $x^2 - 2px + q - y_0 = 0$ and $y_0 > q - p^2$, because the vertex of the parabola has coordinates $(p, q - p^2)$. On the other hand $OA^2 = x_1^2 + y_0^2$, $OB^2 = x_2^2 + y_0^2$, $AB^2 = (x_1 - x_2)^2$ and it follows from the Pythagorean theorem that $y_0^2 + x_1x_2 = 0$. But $x_1x_2 = q - y_0$ and thus $y_0^2 - y_0 + q = 0$. Consequently the existence of the points $A$ and $B$ is equivalent to the assertion that the equation $f(y) = y^2 - y + q = 0$ has a solution $y_0 > q - p^2$. ($A$ and $B$ are defined in an unique way if this is the only solution.) A necessary condition is that the discriminant of the equation is not negative, i.e. $q \\leq \\frac{1}{4}$. The last condition is sufficient because $f(q - p^2) = (q - p^2) + p^2 > 0$ and $\\frac{1}{2} > \\frac{1}{4} \\geq q - p^2$. The corresponding solution $y_0$ is unique iff $q = \\frac{1}{4}$.",
+      "answer": "$q = \\frac{1}{4}$, $0 < p < \\frac{1}{2}$.",
+      "page": 1,
+      "source": "OLI-2-Областен кръг-1995-11 кл · 1995-11 · Зад. 1",
+      "point_id": "5.1",
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": "medium",
+      "techniques": [
+        "vieta_formulas",
+        "discriminant_analysis"
+      ],
+      "reasoning": "Solution uses Vieta relations for roots of quadratic and discriminant conditions to derive required inequality.",
+      "_paired": true,
+      "_grade_source": "filename"
+    },
+    {
+      "num": 2,
+      "grade": 11,
+      "year": 1995,
+      "round": "nacionalen",
+      "statement": "Let $A_1A_2A_3A_4A_5A_6A_7$, $B_1B_2B_3B_4B_5B_6B_7$, $C_1C_2C_3C_4C_5C_6C_7$ be regular heptagons with areas $S_A$, $S_B$ and $S_C$, respectively. Let $A_1A_2 = B_1B_3 = C_1C_4$. Prove that\n\n$$\\frac{1}{2} < \\frac{S_B + S_C}{S_A} < 2 - \\sqrt{2}.$$",
+      "solution": "Solution. Let $A_1A_2 = a$, $A_1A_3 = b$, $A_1A_4 = c$ (Figure 2). By the Ptolomeus theorem for the quadrangle $A_1A_3A_4A_5$ it follows that $ab + ac = bc$, i.e. $\\frac{a}{b} + \\frac{a}{c} = 1$. Since $\\triangle A_1A_2A_3 \\cong \\triangle B_1B_2B_3$, then $\\frac{B_1B_2}{B_1B_3} = \\frac{a}{b}$ and hence $B_1B_2 = \\frac{a^2}{b}$. Analogously $C_1C_2 = \\frac{a^2}{c}$. Therefore $\\frac{S_B + S_C}{S_A} = \\frac{a^2}{b^2} + \\frac{a^2}{c^2}$. Then $\\frac{a^2}{b} + \\frac{a^2}{c} > \\frac{1}{2}(\\frac{a}{b} + \\frac{a}{c})^2 = \\frac{1}{2}$ (equality is not possible because $\\frac{a}{b} \\neq \\frac{a}{c}$). On the other hand\n\n$$\\frac{a^2}{b^2} + \\frac{a^2}{c^2} = \\left(\\frac{a}{b} + \\frac{a}{c}\\right)^2 - \\frac{2a^2}{bc} = 1 - \\frac{2a^2}{bc}. \\tag{1}$$\n\nBy the sine theorem we get $\\frac{a^2}{bc} = \\frac{\\sin^2\\frac{\\pi}{7}}{\\sin^2\\frac{\\pi}{7}\\sin\\frac{4\\pi}{7}} = \\frac{1}{4\\cos\\frac{2\\pi}{7}(1 + \\cos\\frac{2\\pi}{7})}$. Since $\\cos \\frac{2\\pi}{7} < \\cos \\frac{\\pi}{4} = \\frac{\\sqrt{2}}{2}$, then $\\frac{a^2}{bc} > \\frac{1}{4\\frac{\\sqrt{2}}{2}(1 + \\frac{\\sqrt{2}}{2})} = \\sqrt{2} - 1$. From here and from (1) we get the right hand side inequality of the problem.",
+      "answer": null,
+      "page": 1,
+      "source": "OLI-2-Областен кръг-1995-11 кл · 1995-11 · Зад. 2",
+      "point_id": "1.3",
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": "medium",
+      "techniques": [
+        "ptolemy_theorem",
+        "trigonometric_area_ratio"
+      ],
+      "reasoning": "Key step is applying Ptolemy's theorem to a quadrilateral formed by vertices of the heptagon.",
+      "_paired": true,
+      "_grade_source": "filename"
+    },
+    {
+      "num": 3,
+      "grade": 11,
+      "year": 1995,
+      "round": "nacionalen",
+      "statement": "Let $n > 1$ be an integer. Find the number of the permutations $(a_1, a_2, \\ldots, a_n)$ of the numbers $1, 2, \\ldots, n$ with the following property: there exists only one index $i \\in \\{1, 2, \\ldots, n - 1\\}$ such that $a_i > a_{i+1}$.",
+      "solution": "Solution. Denote by $p_n$ the number of the permutations with the given properties. Obviously, $p_1 = 0$ and $p_2 = 1$. Let $n \\geq 2$. The number of the permutations with $a_n = n$ is equal to $p_{n-1}$. Consider all the permutations $(a_1, a_2, \\ldots, a_n)$ with $a_i = n$, where $1 \\leq i \\leq n-1$ is fixed. Their number is $\\binom{n-1}{i-1}$. Consequently\n\n$$p_n = p_{n-1} + \\sum_{i = 1}^{n - 1} \\binom{n - 1}{i - 1} = p_{n - 1} + 2^{n - 1} - 1.$$\n\nFrom here\n\n$$\\begin{array}{l} p_n = (2^{n - 1} - 1) + (2^{n - 2} - 1) + \\dots + (2 - 1) \\\\ = 2^n - n - 1. \\\\ \\end{array}$$",
+      "answer": "$2^n - n - 1$.",
+      "page": 1,
+      "source": "OLI-2-Областен кръг-1995-11 кл · 1995-11 · Зад. 3",
+      "point_id": "8.8",
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": "easy",
+      "techniques": [
+        "recurrence_relation",
+        "binomial_sum"
+      ],
+      "reasoning": "Derives a recurrence p_n = p_{n-1}+2^{n-1}-1 and sums it; only two logical steps.",
+      "_paired": true,
+      "_grade_source": "filename"
+    },
+    {
+      "num": 4,
+      "grade": 11,
+      "year": 1995,
+      "round": "nacionalen",
+      "statement": "Let $n \\geq 2$ and $0 \\leq x_i \\leq 1$ for $i = 1, 2, \\ldots, n$. Prove the inequality\n\n$$(x_1 + x_2 + \\cdots + x_n) - (x_1x_2 + x_2x_3 + \\cdots + x_{n-1}x_n + x_nx_1) \\leq \\left[ \\frac{n}{2} \\right].$$\n\nWhen is there an equality?",
+      "solution": "Solution. Denote by $S(x_1,x_2,\\ldots,x_n)$ the left hand side of the inequality. This function is linear with respect to each of the variables $x_i$. Particularly,\n\n$$S\\left(x_1, x_2, \\dots, x_n\\right) \\leq \\max\\left(S\\left(0, x_2, \\dots, x_n\\right), S\\left(1, x_2, \\dots, x_n\\right)\\right).$$\n\nFrom here it follows by induction that it is enough to prove the inequality when all $x_i$ are equal to 0 or 1. On the other hand for arbitrary $x_i$ we have\n\n$$\\begin{array}{l} 2S\\left(x_1, x_2, \\dots, x_n\\right) = n - \\left(1 - x_1\\right)\\left(1 - x_2\\right) - \\left(1 - x_2\\right)\\left(1 - x_3\\right) - \\dots - \\\\ - (1 - x_n)(1 - x_1) - x_1x_2 - x_2x_3 - \\dots - x_nx_1 \\\\ \\end{array} \\tag{*}$$\n\ni.e. $S(x_1,x_2,\\ldots,x_n) \\leq \\frac{n}{2}$, when $x_i \\in [0,1]$. In the case when $x_i$ are equal to 0 or 1, the left hand side of the last inequality is an integer. Consequently $S(x_1,x_2,\\ldots,x_n) \\leq \\left[\\frac{n}{2}\\right]$. It follows from (*) that\n\n- when $n$ is even, the equality is satisfied iff $(x_1, x_2, \\ldots, x_n) = (0, 1, 0, 1, \\ldots, 0, 1)$;\n- when $n$ is odd, the equality is satisfied iff $(x_1, x_2, \\ldots, x_n) = (x, 0, 1, 0, 1, \\ldots, 0, 1)$, where $x \\in [0, 1]$ is arbitrary.",
+      "answer": "When $n$ is even: $(x_1, x_2, \\ldots, x_n) = (0, 1, 0, 1, \\ldots, 0, 1)$. When $n$ is odd: $(x_1, x_2, \\ldots, x_n) = (x, 0, 1, 0, 1, \\ldots, 0, 1)$, where $x \\in [0,1]$ is arbitrary.",
+      "page": 1,
+      "source": "OLI-2-Областен кръг-1995-11 кл · 1995-11 · Зад. 4",
+      "point_id": null,
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": "medium",
+      "techniques": [
+        "linearization",
+        "induction",
+        "extremal_case_analysis"
+      ],
+      "reasoning": "Solution linearises the expression, reduces to 0/1 variables and finishes by induction; no single listed step matches exactly.",
+      "_paired": true,
+      "_grade_source": "filename"
+    },
+    {
+      "num": 5,
+      "grade": 11,
+      "year": 1995,
+      "round": "nacionalen",
+      "statement": "The points $A_1$, $B_1$, $C_1$ lie on the sides $BC$, $CA$, $AB$ of the triangle $ABC$ respectively and the lines $AA_1$, $BB_1$, $CC_1$ have a common point $M$. Prove that if the point $M$ is center of gravity of $\\triangle A_1B_1C_1$, then $M$ is the center of gravity of $\\triangle ABC$.",
+      "solution": "Solution. Let $M$ be the center of gravity of $\\triangle A_1 B_1 C_1$. Let $A_2$ be a point on $MA^-$ such that $B_1 A_1 C_1 A_2$ is a parallelogram. The points $B_2$ and $C_2$ are constructed analogously. Since $A_1 C_1 \\| A_1 B_1 \\| C_1 B_2$, then the points $A_2$, $C_1$, $B_2$ are colinear and $C_1$ is the midpoint of $A_2 B_2$. The same is true for the points $A_2$, $B_1$, $C_2$ and $C_2$, $A_1$, $B_2$. We shall prove that $A_2 = A$, $B_2 = B$ and $C_2 = C$, which will solve the problem.\n\nAssume that $A_2 \\neq A$ and let $A$ be between $A_2$ and $M$. Then $C_2$ is between $C$ and $M$, $B$ is between $B_2$ and $M$ and consequently $A_2$ is between $A$ and $M$, which is a contradiction.",
+      "answer": null,
+      "page": 1,
+      "source": "OLI-2-Областен кръг-1995-11 кл · 1995-11 · Зад. 5",
+      "point_id": "12.2",
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": "medium",
+      "techniques": [
+        "barycentric_coordinates",
+        "centroid_properties"
+      ],
+      "reasoning": "Uses centroid (center of gravity) relations and parallelism, naturally expressed with barycentric coordinates.",
+      "_paired": true,
+      "_grade_source": "filename"
+    },
+    {
+      "num": 6,
+      "grade": 11,
+      "year": 1995,
+      "round": "nacionalen",
+      "statement": "Find all pairs of positive integers $(x, y)$ for which $\\frac{x^2 + y^2}{x - y}$ is an integer which is a divisor of 1995.",
+      "solution": "Solution. It is enough to find all pairs $(x, y)$ for which $x > y$ and $x^2 + y^2 = k(x - y)$, where $k$ divides 1995 = 3.5.7.19. We shall use the following well-known fact: if $p$ is a prime number of the type $4q + 3$ and if it divides $x^2 + y^2$, then $p$ divides $x$ and $y$. (For $p = 3, 7, 19$ this can be proved directly.) If $k$ is divisible by 3 then $x$ and $y$ are divisible by 3 too. Simplifying by 9 we get an equality $x_1^2 + x_1^2 = k_1(x_1 - y_1)$, where $k_1$ divides 5.7.19. Considering 7 and 19 in an analogous way we get an equality $a^2 + b^2 = 5(a - b)$ (it is not possible to get an equality $a^2 + b^2 = (a - b)$), where $a > b$. From here $(2a - 5)^2 + (2b - 5)^2 = 50$, i.e. $a = 3$, $b = 1$ or $a = 2$, $b = 1$.\n\nThe above considerations imply that the pairs we are looking for are of the type $(3c, c)$, $(2c, c)$, $(c, 3c)$, $(c, 2c)$, where $c = 1, 3, 7, 19, 3.7, 3.19, 7.19, 3.7.19$.",
+      "answer": "$(x,y) = (3c,c), (2c,c), (c,3c), (c,2c)$, where $c \\in \\{1,3,7,19,21,57,133,399\\}$.",
+      "page": 1,
+      "source": "OLI-2-Областен кръг-1995-11 кл · 1995-11 · Зад. 6",
+      "point_id": "4.2",
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": "medium",
+      "techniques": [
+        "quadratic_diophantine",
+        "prime_factor_analysis"
+      ],
+      "reasoning": "Transforms the condition into a quadratic Diophantine equation and analyses prime factors of 1995.",
+      "_paired": true,
+      "_grade_source": "filename"
+    }
+  ]
+}

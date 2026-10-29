@@ -1,0 +1,111 @@
+{
+  "_meta": {
+    "pdf": "C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\Задачи_Минали_Години\\Областен\\OLI-2-Областен кръг-2013-10 кл-probs.pdf",
+    "paired_with": "C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\Задачи_Минали_Години\\Областен\\OLI-2-Областен кръг-2013-10 кл-sol.pdf",
+    "level": 1,
+    "type": "probs",
+    "analyzed_at": "2026-10-18T15:43:02.278714",
+    "model": "deepseek/deepseek-v3.2",
+    "text_length": 1040,
+    "paired_text_length": 0
+  },
+  "problems": [
+    {
+      "num": 1,
+      "topic": "algebra",
+      "theorems": [
+        "Vieta's formulas"
+      ],
+      "techniques": [
+        "substitution",
+        "inequality manipulation",
+        "analysis of cubic discriminant"
+      ],
+      "concepts": [
+        "cubic equations",
+        "real roots condition",
+        "symmetric sums",
+        "parameter analysis"
+      ],
+      "difficulty": "olympic",
+      "notes": "The problem involves a cubic with a parameter. The condition on the roots is a symmetric inequality. Using Vieta's formulas to express the symmetric sum in terms of the parameter is key. The discriminant condition for three distinct real roots must also be considered."
+    },
+    {
+      "num": 2,
+      "topic": "geometry",
+      "theorems": [
+        "Angle Bisector Theorem",
+        "properties of right triangles"
+      ],
+      "techniques": [
+        "angle chasing",
+        "introducing variables for angles",
+        "solving angle equations"
+      ],
+      "concepts": [
+        "triangle geometry",
+        "altitude",
+        "angle bisector",
+        "angle equality condition",
+        "obtuse triangle"
+      ],
+      "difficulty": "olympic",
+      "notes": "The triangle is given with an obtuse angle at C (>90°). The condition relates angles in triangles ALC and BHL, which share the point L on BC and H on AB. Careful angle marking and use of the angle bisector property is needed."
+    },
+    {
+      "num": 3,
+      "topic": "number_theory",
+      "theorems": [
+        "Legendre's formula (for prime factors in factorial)",
+        "Euler's theorem / Fermat's little theorem (for modulo powers of 2)"
+      ],
+      "techniques": [
+        "modular arithmetic",
+        "analysis of exponent of 2 in factorial",
+        "case analysis based on n"
+      ],
+      "concepts": [
+        "divisibility by powers of 2",
+        "factorial properties",
+        "modular exponentiation",
+        "congruences"
+      ],
+      "difficulty": "olympic",
+      "notes": "The expression is 7^(n!) - 3^(n!). We need the highest power of 2 dividing this difference. The exponent of 2 in n! (v2(n!)) determines the divisibility condition. The problem reduces to analyzing when 7^(n!) ≡ 3^(n!) (mod 2^(n+1))."
+    },
+    {
+      "num": 4,
+      "topic": "combinatorics",
+      "theorems": [],
+      "techniques": [
+        "combinatorial interpretation",
+        "stars and bars (with restrictions)",
+        "transformation of inequality conditions",
+        "maximization over parameter k"
+      ],
+      "concepts": [
+        "integer compositions/partitions",
+        "ordered k-tuples with bounds",
+        "sum constraints",
+        "counting functions",
+        "optimization of a discrete function"
+      ],
+      "difficulty": "olympic",
+      "notes": "A(n,k) counts ordered k-tuples of integers between 1 and n such that the sum of the first k-1 is ≤ n, but adding the k-th makes it > n. This is related to the number of compositions of numbers just exceeding n into k parts. For fixed n=12, we need to find k maximizing A(12,k)."
+    }
+  ],
+  "unique_concepts": [
+    "Vieta's formulas for cubic",
+    "discriminant of cubic",
+    "symmetric sums of roots",
+    "angle bisector theorem",
+    "angle chasing in obtuse triangle",
+    "Legendre's formula (v2(n!))",
+    "modular exponentiation with factorial exponent",
+    "divisibility by powers of 2",
+    "integer compositions with sum constraints",
+    "stars and bars method",
+    "optimization of a combinatorial count"
+  ],
+  "confidence": 0.95
+}

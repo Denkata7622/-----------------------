@@ -1,0 +1,111 @@
+{
+  "_meta": {
+    "pdf": "C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\Задачи_Минали_Години\\Областен\\OLI-2-Областен кръг-2022-11 кл-sol.pdf",
+    "paired_with": null,
+    "level": 1,
+    "type": "sol",
+    "analyzed_at": "2026-10-16T21:34:23.418627",
+    "model": "deepseek/deepseek-v3.2",
+    "text_length": 6545,
+    "paired_text_length": 0
+  },
+  "problems": [
+    {
+      "num": 1,
+      "topic": "algebra",
+      "theorems": [],
+      "techniques": [
+        "substitution",
+        "inequality_manipulation",
+        "quadratic_inequality_analysis"
+      ],
+      "concepts": [
+        "trigonometric_inequalities",
+        "function_monotonicity",
+        "sine_range"
+      ],
+      "difficulty": "standard",
+      "notes": "Неравенство с тригонометрична функция, решено чрез заместване и анализ на квадратно неравенство."
+    },
+    {
+      "num": 2,
+      "topic": "geometry",
+      "theorems": [
+        "Thales",
+        "Ceva"
+      ],
+      "techniques": [
+        "auxiliary_lines",
+        "parallel_lines",
+        "segment_ratio_analysis"
+      ],
+      "concepts": [
+        "triangle_geometry",
+        "intersecting_lines",
+        "ratio_of_segments"
+      ],
+      "difficulty": "standard",
+      "notes": "Задача за намиране на отношения на отсечки в триъгълник с помощта на успоредни прави и теоремата на Талес."
+    },
+    {
+      "num": 3,
+      "topic": "number_theory",
+      "theorems": [],
+      "techniques": [
+        "divisibility_argument",
+        "reference_to_similar_problem"
+      ],
+      "concepts": [
+        "divisibility_of_products",
+        "integer_exponents"
+      ],
+      "difficulty": "standard",
+      "notes": "Задача за делимост на произведения на изрази от вида a^k - 1. Решението се отнася към друга задача."
+    },
+    {
+      "num": 4,
+      "topic": "combinatorics",
+      "theorems": [],
+      "techniques": [
+        "counting",
+        "pigeonhole_principle",
+        "construction",
+        "double_counting"
+      ],
+      "concepts": [
+        "binary_sequences",
+        "set_cardinality",
+        "lower_and_upper_bounds"
+      ],
+      "difficulty": "hard",
+      "notes": "Комбинаторна задача за минималния размер на 'добро' множество от двоични редици. Включва двойно преброяване и конструкция."
+    }
+  ],
+  "unique_concepts": [
+    "trigonometric_inequalities",
+    "function_monotonicity",
+    "sine_range",
+    "Thales",
+    "Ceva",
+    "triangle_geometry",
+    "intersecting_lines",
+    "ratio_of_segments",
+    "divisibility_of_products",
+    "integer_exponents",
+    "binary_sequences",
+    "set_cardinality",
+    "lower_and_upper_bounds",
+    "counting",
+    "pigeonhole_principle",
+    "construction",
+    "double_counting",
+    "substitution",
+    "inequality_manipulation",
+    "quadratic_inequality_analysis",
+    "auxiliary_lines",
+    "parallel_lines",
+    "segment_ratio_analysis",
+    "divisibility_argument"
+  ],
+  "confidence": 0.9
+}

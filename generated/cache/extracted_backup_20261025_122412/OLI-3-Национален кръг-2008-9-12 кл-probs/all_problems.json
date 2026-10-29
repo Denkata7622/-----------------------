@@ -1,0 +1,101 @@
+{
+  "pdf": "OLI-3-Национален кръг-2008-9-12 кл-probs",
+  "problems": [
+    {
+      "num": 1,
+      "year": 2008,
+      "grade": null,
+      "round": "nacionalen",
+      "statement": "Нека $\\triangle ABC$ е остроъгълен с вътрешна ъглополовяща $CL, L \\in AB$. Точка P принадлежи на отсечката CL така, че $\\angle APB = \\pi - \\frac{1}{2} \\angle ACB$. Нека $k_1$ и $k_2$ са описаните окръжности съответно около $\\triangle APC$ и $\\triangle BPC$. $BP \\cap k_1 = Q, AP \\cap k_2 = R$. Допирателните към $k_1$ в Q и към $k_2$ в B се пресичат в точка S, допирателните към $k_1$ в A и към $k_2$ в R се пресичат в точка T. Да се докаже, че $|AS|=|BT|$.",
+      "solution": null,
+      "answer": null,
+      "page": 1,
+      "pdf": "OLI-3-Национален кръг-2008-9-12 кл-probs",
+      "chunk": 1,
+      "grade_range": [
+        9,
+        12
+      ]
+    },
+    {
+      "num": 2,
+      "year": 2008,
+      "grade": null,
+      "round": "nacionalen",
+      "statement": "Съществуват ли 2008 непресичащи се аритметични прогресии от естествени числа, такива че всяка от тях съдържа просто число, по-голямо от 2008 и числата, които не принадлежат на нито една от тях са краен брой?",
+      "solution": null,
+      "answer": null,
+      "page": 1,
+      "pdf": "OLI-3-Национален кръг-2008-9-12 кл-probs",
+      "chunk": 1,
+      "grade_range": [
+        9,
+        12
+      ]
+    },
+    {
+      "num": 3,
+      "year": 2008,
+      "grade": null,
+      "round": "nacionalen",
+      "statement": "Нека $n \\in N$ и $0 \\le \\alpha_1 \\le \\alpha_2 \\le \\dots \\le \\alpha_n \\le \\pi$ и $b_1, b_2, \\dots, b_n$ са реални числа, за които неравенството $\\left| \\sum_{i=1}^n b_i \\cos(k\\alpha_i) \\right| < \\frac{1}{k}$ е в сила за всяко $k \\in N$. Да се докаже, че $b_1 = b_2 = \\dots b_n = 0$.",
+      "solution": null,
+      "answer": null,
+      "page": 1,
+      "pdf": "OLI-3-Национален кръг-2008-9-12 кл-probs",
+      "chunk": 1,
+      "grade_range": [
+        9,
+        12
+      ]
+    },
+    {
+      "num": 4,
+      "year": 2008,
+      "grade": null,
+      "round": "nacionalen",
+      "statement": "Да се намери най-малкото естествено k такова че съществуват такива естествени числа m и n, че $1324 + 279m + 5^n$ е точна k-та степен на естествено число.",
+      "solution": null,
+      "answer": null,
+      "page": 1,
+      "pdf": "OLI-3-Национален кръг-2008-9-12 кл-probs",
+      "chunk": 1,
+      "grade_range": [
+        9,
+        12
+      ]
+    },
+    {
+      "num": 5,
+      "year": 2008,
+      "grade": null,
+      "round": "nacionalen",
+      "statement": "Нека n е фиксирано естествено число. Да се намерят всички естествени числа m, такива че $\\frac{1}{a^n} + \\frac{1}{b^n} \\ge a^m + b^m$ е в сила за всеки положителни a и b със сума 2.",
+      "solution": null,
+      "answer": null,
+      "page": 1,
+      "pdf": "OLI-3-Национален кръг-2008-9-12 кл-probs",
+      "chunk": 1,
+      "grade_range": [
+        9,
+        12
+      ]
+    },
+    {
+      "num": 6,
+      "year": 2008,
+      "grade": null,
+      "round": "nacionalen",
+      "statement": "Нека M е множеството на целите числа от интервала [-n,n]. Подмножеството P на M се нарича базисно, ако всяко число от M може да се представи като сума на някои n различни числа от P. Да се намери най-малкото естествено k, такова че всеки k числа от M образуват базисно множество.",
+      "solution": null,
+      "answer": null,
+      "page": 1,
+      "pdf": "OLI-3-Национален кръг-2008-9-12 кл-probs",
+      "chunk": 1,
+      "grade_range": [
+        9,
+        12
+      ]
+    }
+  ]
+}

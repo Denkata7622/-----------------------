@@ -1,0 +1,77 @@
+{
+  "pdf": "OLI-2-Областен кръг-1996-11 кл-probs",
+  "problems": [
+    {
+      "num": 1,
+      "year": 1996,
+      "grade": 11,
+      "round": "nacionalen",
+      "statement": "Prove that for all positive integers $n \\geq 3$ there exist an odd positive integers $x_n$ and $y_n$, such that\n\n$$7x_n^2 + y_n^2 = 2^n.$$",
+      "solution": null,
+      "answer": null,
+      "page": 1,
+      "pdf": "OLI-2-Областен кръг-1996-11 кл-probs",
+      "chunk": 1
+    },
+    {
+      "num": 2,
+      "year": 1996,
+      "grade": 11,
+      "round": "nacionalen",
+      "statement": "The circles $k_1$ and $k_2$ with centers $O_1$ and $O_2$ respectively are externally tangent at the point $C$, while the circle $k$ with center $O$ is externally tangent to $k_1$ and $k_2$. Let $\\ell$ be the common tangent of $k_1$ and $k_2$ at the point $C$ and let $AB$ be the diameter of $k$, which is perpendicular to $\\ell$, the points $A$ and $O_1$ lie in one and the same semiplane with respect to the line $\\ell$. Prove that the lines $AO_2$, $BO_1$ and $\\ell$ have a common point.",
+      "solution": null,
+      "answer": null,
+      "page": 1,
+      "pdf": "OLI-2-Областен кръг-1996-11 кл-probs",
+      "chunk": 1
+    },
+    {
+      "num": 3,
+      "year": 1996,
+      "grade": 11,
+      "round": "nacionalen",
+      "statement": "a) Find the maximal value of the function $y = |4x^3 - 3x|$ in the interval $[-1, 1]$. b) Let $a$, $b$ and $c$ be real numbers and $M$ be the maximal value of the function $y = |4x^3 + ax^2 + bx + c|$ in the interval $[-1, 1]$. Prove that $M \\geq 1$. For which $a$, $b$, $c$ is the equality reached?",
+      "solution": null,
+      "answer": null,
+      "page": 1,
+      "pdf": "OLI-2-Областен кръг-1996-11 кл-probs",
+      "chunk": 1
+    },
+    {
+      "num": 4,
+      "year": 1996,
+      "grade": 11,
+      "round": "nacionalen",
+      "statement": "The real numbers $a_1, a_2, \\ldots, a_n$ ($n \\geq 3$) form an arithmetic progression. There exists a permutation $a_{i_1}, a_{i_2}, \\ldots, a_{i_n}$ of the same numbers, which is a geometric progression. Find the numbers $a_1, a_2, \\ldots, a_n$, if they are pairwise different and the biggest among them is equal to 1996.",
+      "solution": null,
+      "answer": null,
+      "page": 1,
+      "pdf": "OLI-2-Областен кръг-1996-11 кл-probs",
+      "chunk": 1
+    },
+    {
+      "num": 5,
+      "year": 1996,
+      "grade": 11,
+      "round": "nacionalen",
+      "statement": "A convex quadrilateral $ABCD$, for which $\\angle ABC + \\angle BCD < 180^\\circ$, is given. The common point of the lines $AB$ and $CD$ is $E$. Prove that $\\angle ABC = \\angle ADC$ if and only if\n\n$$AC^2 = CD \\cdot CE - AB \\cdot AE.$$",
+      "solution": null,
+      "answer": null,
+      "page": 1,
+      "pdf": "OLI-2-Областен кръг-1996-11 кл-probs",
+      "chunk": 1
+    },
+    {
+      "num": 6,
+      "year": 1996,
+      "grade": 11,
+      "round": "nacionalen",
+      "statement": "A rectangle $m \\times n$ ($m > 1$, $n > 1$) is divided into $mn$ squares $1 \\times 1$ with lines, parallel to its sides. In how many ways could two of the squares be canceled and the remaining part be covered with dominoes $2 \\times 1$?",
+      "solution": null,
+      "answer": null,
+      "page": 1,
+      "pdf": "OLI-2-Областен кръг-1996-11 кл-probs",
+      "chunk": 1
+    }
+  ]
+}

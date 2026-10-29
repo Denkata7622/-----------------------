@@ -1,0 +1,105 @@
+{
+  "_meta": {
+    "pdf": "C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\Задачи_Минали_Години\\Национален\\OLI-3-Национален кръг-2015-9-12 кл-sol.pdf",
+    "paired_with": null,
+    "level": 2,
+    "type": "sol",
+    "analyzed_at": "2026-10-16T20:46:28.179673",
+    "model": "deepseek/deepseek-v3.2",
+    "text_length": 70647,
+    "paired_text_length": 0
+  },
+  "problems": [
+    {
+      "num": 1,
+      "topic": "geometry",
+      "theorems": [
+        "Law of Sines",
+        "Similar Triangles"
+      ],
+      "techniques": [
+        "trigonometric substitution",
+        "ratio manipulation",
+        "similarity construction"
+      ],
+      "concepts": [
+        "cyclic hexagon",
+        "intersecting chords",
+        "power of a point",
+        "inscribed angles",
+        "similar triangles",
+        "ratio equality"
+      ],
+      "difficulty": "olympic",
+      "notes": "Two solutions provided: one using trigonometric substitution with sines of half-arcs, another using construction of point T and similar triangles."
+    },
+    {
+      "num": 2,
+      "topic": "combinatorics",
+      "theorems": [],
+      "techniques": [
+        "induction",
+        "contradiction",
+        "invariant reasoning",
+        "case analysis"
+      ],
+      "concepts": [
+        "table coloring",
+        "rectangle partition",
+        "unique proper partition",
+        "grid dissection",
+        "vertical/horizontal cuts",
+        "combinatorial geometry"
+      ],
+      "difficulty": "olympic",
+      "notes": "Problem about coloring squares of an n×n table and partitioning it into rectangles containing exactly one colored square. Solution uses induction on the number of colored squares and analysis of partition lines."
+    },
+    {
+      "num": 3,
+      "topic": "number_theory",
+      "theorems": [
+        "Infinite Descent",
+        "Modular Arithmetic"
+      ],
+      "techniques": [
+        "infinite descent",
+        "modular analysis (mod 4)",
+        "factorization",
+        "parity analysis"
+      ],
+      "concepts": [
+        "recurrence sequences",
+        "perfect powers",
+        "Diophantine equation",
+        "minimal solution",
+        "coprime factors",
+        "Pell-type equations"
+      ],
+      "difficulty": "olympic",
+      "notes": "Shows that no term of the sequence is a perfect power. Uses lemma that equation 2x^(2k)+1=y^2 has no solutions in natural numbers for k≥2, proven via infinite descent and factorization into coprime factors."
+    }
+  ],
+  "unique_concepts": [
+    "cyclic hexagon",
+    "Law of Sines",
+    "Similar Triangles",
+    "power of a point",
+    "intersecting chords",
+    "trigonometric substitution",
+    "ratio manipulation",
+    "table coloring",
+    "rectangle partition",
+    "unique proper partition",
+    "grid dissection",
+    "induction",
+    "invariant reasoning",
+    "recurrence sequences",
+    "perfect powers",
+    "Diophantine equation",
+    "infinite descent",
+    "modular arithmetic",
+    "factorization into coprime factors",
+    "Pell-type equations"
+  ],
+  "confidence": 0.95
+}

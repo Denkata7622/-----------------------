@@ -1,0 +1,24 @@
+{
+  "point_id": "R.10",
+  "total": 1,
+  "by_difficulty": {
+    "easy": 0,
+    "medium": 1,
+    "hard": 0
+  },
+  "problems": [
+    {
+      "source": "OLI-2-Областен кръг-2025-11 кл · 2025-11 · Зад. 2",
+      "statement": "Даден е триъгълник ABC. Окръжност k минава през върха C, допира се до правата AB в точка A, пресича отсечката BC в точка P и медианата CM в точка Q. Правата BQ пресича k в точка R. Да се докаже, че PR е успоредна на AB.",
+      "solution": "Решение. Имаме $MB^2 = MA^2 = MQ.MC$, откъдето\n\n$$\\frac{MB}{MQ} = \\frac{MC}{MB}. \\tag{1}$$\n\nОт това равенство получаваме, че $\\triangle MBQ \\sim \\triangle MCB$. Следователно $\\angle MBC = \\angle MQB$, откъдето намираме:\n\n$$\\frac{\\widehat{RC}}{2} = \\angle RQC = \\angle MQB = \\angle MBC = \\frac{\\widehat{RC}}{2} + \\frac{\\widehat{RA}}{2} - \\frac{\\widehat{AP}}{2}. \\tag{2}$$\n\nОт (2) следва $\\widehat{RA} = \\widehat{AP}$, т.е. $RP \\parallel AB$.",
+      "answer": null,
+      "difficulty": "medium",
+      "techniques": [
+        "power_of_a_point",
+        "similar_triangles"
+      ],
+      "confidence": "exact",
+      "reasoning": "Uses equality MB^2 = MA^2 = MQ·MC (power of point) and derives similarity of triangles to get PR ∥ AB."
+    }
+  ]
+}

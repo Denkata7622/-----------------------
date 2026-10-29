@@ -1,0 +1,103 @@
+{
+  "_meta": {
+    "pdf": "C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\Задачи_Минали_Години\\Областен\\OLI-2-Областен кръг-2022-11 кл-sol.pdf",
+    "paired_with": null,
+    "level": 1,
+    "type": "sol",
+    "analyzed_at": "2026-10-16T21:33:15.218252",
+    "model": "deepseek/deepseek-v3.2",
+    "text_length": 6545,
+    "paired_text_length": 0
+  },
+  "problems": [
+    {
+      "num": 1,
+      "topic": "algebra",
+      "theorems": [],
+      "techniques": [
+        "substitution",
+        "inequality_manipulation"
+      ],
+      "concepts": [
+        "trigonometric_inequalities",
+        "quadratic_inequalities",
+        "function_monotonicity",
+        "sine_range"
+      ],
+      "difficulty": "standard",
+      "notes": "Trigonometric inequality solved via substitution t=2sinx and analyzing a quadratic inequality."
+    },
+    {
+      "num": 2,
+      "topic": "geometry",
+      "theorems": [
+        "Thales"
+      ],
+      "techniques": [
+        "auxiliary_lines",
+        "parallel_lines",
+        "segment_ratios"
+      ],
+      "concepts": [
+        "triangle_cevians",
+        "ratio_segments",
+        "similar_triangles"
+      ],
+      "difficulty": "standard",
+      "notes": "Problem about ratios in a triangle with intersecting cevians, solved using multiple applications of Thales' theorem via constructed parallel lines."
+    },
+    {
+      "num": 3,
+      "topic": "number_theory",
+      "theorems": [],
+      "techniques": [
+        "divisibility",
+        "referencing"
+      ],
+      "concepts": [
+        "product_divisibility",
+        "integer_powers"
+      ],
+      "difficulty": "standard",
+      "notes": "Divisibility of products of numbers of the form (a^k - 1). Solution references another problem (10.3)."
+    },
+    {
+      "num": 4,
+      "topic": "combinatorics",
+      "theorems": [],
+      "techniques": [
+        "counting",
+        "pigeonhole_principle",
+        "construction"
+      ],
+      "concepts": [
+        "binary_sequences",
+        "covering_codes",
+        "lower_upper_bounds"
+      ],
+      "difficulty": "olympic",
+      "notes": "Problem about minimal size of a 'good' set of binary sequences of length n-1 that can generate all sequences of length n by inserting one bit. Involves proving bounds using counting arguments."
+    }
+  ],
+  "unique_concepts": [
+    "trigonometric_inequalities",
+    "quadratic_inequalities",
+    "function_monotonicity",
+    "sine_range",
+    "Thales",
+    "triangle_cevians",
+    "ratio_segments",
+    "similar_triangles",
+    "auxiliary_lines",
+    "parallel_lines",
+    "divisibility",
+    "product_divisibility",
+    "integer_powers",
+    "binary_sequences",
+    "covering_codes",
+    "lower_upper_bounds",
+    "counting",
+    "pigeonhole_principle"
+  ],
+  "confidence": 0.95
+}

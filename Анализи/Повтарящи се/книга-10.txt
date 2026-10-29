@@ -1,0 +1,99 @@
+```js
+// ─── КНИГА ───
+{
+  file: "Материали_EN/book-10.pdf",
+  title: "Introduction to Algebra",
+  author: "Richard Rusczyk (AoPS)",
+  year: 2007,
+  language: "EN",
+  total_pages: 658,  // PDF страници (book pages 1–636 + 17 front matter + closing)
+  total_book_pages: 636,
+  pdf_offset: 17,   // PDF page = book page + 17
+  read_status: "ПРОЧЕТЕНИ: предговор + TOC (стр. 1–17) + глави 1–7 (PDF 18–200). НЕ ПРОЧЕТЕНИ (PDF text layer празен): глави 8–22 и Hints/Index (PDF 201–658). Структурата на глави 8–22 е взета от TOC (book стр. 10–15), не от съдържание.",
+  topics: ["Algebra", "Equations", "Inequalities", "Functions", "Sequences", "Complex Numbers", "Polynomials", "Exponents/Logs"],
+  level: "introductory — под олимпиадно ниво, подходяща като фундамент",
+  structure: [
+    { chapter: "Ch 1", title: "Follow the Rules", book_pages: "1-30", pdf_pages: "18-47", topic: "Комутативност, асоциативност, дистрибутивност, свойства на равенството", plan_step: null, plan_points: [], priority_regional: "low", priority_national: "low", note: "Елементарна аритметика — под нивото на плана" },
+    { chapter: "Ch 2", title: "x Marks the Spot", book_pages: "31-57", pdf_pages: "48-74", topic: "Изрази с променливи, степени, събиране на едночлени", plan_step: 5, plan_points: [], priority_regional: "low", priority_national: "low", note: "Фундамент за полиноми, но под олимпиадно ниво" },
+    { chapter: "Ch 3", title: "One-Variable Linear Equations", book_pages: "58-83", pdf_pages: "75-100", topic: "Линейни уравнения, задачи с думи, уравнения в прикрит вид (радикали, дроби)", plan_step: 5, plan_points: [], priority_regional: "low", priority_national: "low", note: "Базова техника — релевантна като подготвителна" },
+    { chapter: "Ch 4", title: "More Variables", book_pages: "84-103", pdf_pages: "101-120", topic: "Многочленни изрази, дистрибутивност, факторизиране, дроби с променливи", plan_step: 5, plan_points: ["5.3"], priority_regional: "low", priority_national: "low", note: "Полезно за формиране на навици за символна манипулация" },
+    { chapter: "Ch 5", title: "Multi-Variable Linear Equations", book_pages: "104-137", pdf_pages: "121-154", topic: "Системи линейни уравнения — заместване, елиминация, задачи с думи", plan_step: 4, plan_points: ["4.1"], priority_regional: "med", priority_national: "med", note: "База за линейни диофантови системи; под олимпиадно ниво, но полезно" },
+    { chapter: "Ch 6", title: "Ratios and Percents", book_pages: "138-167", pdf_pages: "155-184", topic: "Пропорции, проценти, преобразуване на единици, смеси", plan_step: null, plan_points: [], priority_regional: "low", priority_national: "low", note: "Не е в 96-те точки — по-скоро MATHCOUNTS/AMC материал" },
+    { chapter: "Ch 7", title: "Proportion", book_pages: "168-188", pdf_pages: "185-205", topic: "Пряка/обратна/съвместна пропорционалност, задачи за движение и работа (rt=d)", plan_step: 7, plan_points: [], priority_regional: "low", priority_national: "low", note: "Класически задачи; не в 96-те точки" },
+    { chapter: "Ch 8", title: "Graphing Lines", book_pages: "189-232", pdf_pages: "206-249", topic: "Декартова равнина, наклони, прави, сравняване на прави", plan_step: null, plan_points: [], priority_regional: "low", priority_national: "low", note: "Аналитична геометрия — не покрита в 96-те точки" },
+    { chapter: "Ch 9", title: "Introduction to Inequalities", book_pages: "233-266", pdf_pages: "250-283", topic: "Основни неравенства, линейни неравенства, оптимизация", plan_step: 6, plan_points: ["6.1", "6.2", "6.3"], priority_regional: "med", priority_national: "med", note: "Само основи на AM-GM/AM-HM/AM-QM; не стига до Коши/Йенсен" },
+    { chapter: "Ch 10", title: "Quadratic Equations — Part 1", book_pages: "267-304", pdf_pages: "284-321", topic: "Квадратни уравнения, факторизация, суми и произведения на корени (Виет)", plan_step: 5, plan_points: ["5.1", "5.4", "5.5"], priority_regional: "med", priority_national: "med", note: "Полезно за Виет и рационални корени — но под олимпиадно ниво" },
+    { chapter: "Ch 11", title: "Special Factorizations", book_pages: "305-337", pdf_pages: "322-354", topic: "Разлика на квадрати, сбор/разлика на кубове, рационализиране, SFFT", plan_step: 5, plan_points: ["5.3", "5.5", "5.7"], priority_regional: "med", priority_national: "med", note: "Simon's Favorite Factoring Trick — практично за ТЧ/полиноми" },
+    { chapter: "Ch 12", title: "Complex Numbers", book_pages: "338-352", pdf_pages: "355-369", topic: "Въведение в имагинерни и комплексни числа, аритметика с тях", plan_step: null, plan_points: [], does_not_fit: true, priority_regional: "low", priority_national: "low", note: "Комплексни числа НЕ са в 96-те точки — виж suggested_new_step по-долу" },
+    { chapter: "Ch 13", title: "Quadratic Equations — Part 2", book_pages: "353-384", pdf_pages: "370-401", topic: "Допълване до точен квадрат, квадратна формула, приложения", plan_step: 5, plan_points: ["5.1", "5.5"], priority_regional: "low", priority_national: "low", note: "Стандартен материал, покрит в българските учебници" },
+    { chapter: "Ch 14", title: "Graphing Quadratics", book_pages: "385-405", pdf_pages: "402-422", topic: "Параболи, окръжности, геометрични интерпретации", plan_step: null, plan_points: [], priority_regional: "low", priority_national: "low", note: "Аналитична геометрия — не е фокус" },
+    { chapter: "Ch 15", title: "More Inequalities", book_pages: "406-431", pdf_pages: "423-448", topic: "Квадратни неравенства, Trivial Inequality, квадратна оптимизация", plan_step: 6, plan_points: ["6.1", "6.10"], priority_regional: "med", priority_national: "med", note: "Trivial Inequality (x² ≥ 0) — полезно, но основно ниво" },
+    { chapter: "Ch 16", title: "Functions", book_pages: "432-464", pdf_pages: "449-481", topic: "Функции, композиция, обратни функции, операции с функции", plan_step: 7, plan_points: ["7.1", "7.2", "7.3", "7.4", "7.5"], priority_regional: "med", priority_national: "high", note: "Функционални уравнения — база; но липсват истински олимпиадни ФУ" },
+    { chapter: "Ch 17", title: "Graphing Functions", book_pages: "465-493", pdf_pages: "482-510", topic: "Трансформации на графики, обратни функции, интерпретации", plan_step: 7, plan_points: ["7.3", "7.4"], priority_regional: "low", priority_national: "med", note: "Интуиция за трансформации, не е пряко в плана" },
+    { chapter: "Ch 18", title: "Polynomials", book_pages: "494-505", pdf_pages: "511-522", topic: "Събиране, изваждане, умножение на полиноми", plan_step: 5, plan_points: ["5.1", "5.3", "5.7"], priority_regional: "med", priority_national: "med", note: "Само базови операции — не покрива неразложими/Лагранж" },
+    { chapter: "Ch 19", title: "Exponents and Logarithms", book_pages: "506-539", pdf_pages: "523-556", topic: "Експоненциални функции, лихви, логаритми", plan_step: null, plan_points: [], priority_regional: "low", priority_national: "low", note: "Логаритми рядко се падат на областен/национален в БГ" },
+    { chapter: "Ch 20", title: "Special Functions", book_pages: "540-570", pdf_pages: "557-587", topic: "Радикали, абсолютна стойност, floor/ceiling, рационални и късчести функции", plan_step: 7, plan_points: ["7.2", "7.5"], priority_regional: "low", priority_national: "med", note: "Floor/ceiling полезно за ТЧ задачи, но под нивото на плана" },
+    { chapter: "Ch 21", title: "Sequences & Series", book_pages: "571-609", pdf_pages: "588-626", topic: "Аритметични/геометрични редици, телескопиращи суми", plan_step: 7, plan_points: ["7.6", "7.7", "8.9"], priority_regional: "med", priority_national: "high", note: "Телескопиране — класически похват; добро допълнение" },
+    { chapter: "Ch 22", title: "Special Manipulations", book_pages: "610-620", pdf_pages: "627-637", topic: "Повдигане на степени, self-similarity, симетрия", plan_step: 7, plan_points: ["7.5", "7.8"], priority_regional: "low", priority_national: "med", note: "По-скоро общи похвати, не конкретен раздел" },
+    { chapter: "Hints", title: "Hints to Selected Problems", book_pages: "625", pdf_pages: "642", topic: "Сборник с подсказки", plan_step: null, plan_points: [], priority_regional: "low", priority_national: "low" },
+    { chapter: "Index", title: "Index", book_pages: "636", pdf_pages: "653", topic: "Показалец", plan_step: null, plan_points: [], priority_regional: "low", priority_national: "low" }
+  ],
+  duplicates: [],  // CHECK: не мога да потвърдя без достъп до book-1..12; препоръчвам да се сравни ISBN 978-1-934124-01-7 срещу останалите AoPS файлове
+  recommended_action: "add-as-bonus",
+  rationale: "Книгата е ВЪВЕДЕНИЕ в алгебрата (AoPS Introductory series за 6–10 клас). Тя е ПОД олимпиадното ниво за 11 клас в БГ — не съдържа Коши, Мюрхед, Йенсен, LTE, Pell, инверсия и др. Полезните глави (5, 9, 10, 11, 15, 16, 18, 21) могат да служат като ДОПЪЛНИТЕЛНА литература за затвърждаване на база, но не могат да заместят основните материали. Най-добро използване: bonus към конкретни точки.",
+  best_mapping: [
+    { step_id: 5, point_ids: ["5.1", "5.3", "5.4", "5.5", "5.7"], chapters: ["Ch 4", "Ch 10", "Ch 11", "Ch 13", "Ch 18"], pdf_pages: "101-120, 284-321, 322-354, 370-401, 511-522" },
+    { step_id: 6, point_ids: ["6.1", "6.2", "6.3", "6.10"], chapters: ["Ch 9", "Ch 15"], pdf_pages: "250-283, 423-448" },
+    { step_id: 7, point_ids: ["7.1", "7.2", "7.3", "7.4", "7.5", "7.6", "7.7"], chapters: ["Ch 16", "Ch 17", "Ch 20", "Ch 21", "Ch 22"], pdf_pages: "449-481, 482-510, 557-587, 588-626, 627-637" },
+    { step_id: 4, point_ids: ["4.1"], chapters: ["Ch 5"], pdf_pages: "121-154" }
+  ]
+}
+```
+
+```js
+// ─── НОВА СТЪПКА (по избор — виж по-долу дали да се приложи) ───
+// ПРЕДЛОЖЕНИЕ: комплексни числа не фигурират в 96-те точки, но Ch 12
+// (Introduction to Complex Numbers) е твърде елементарен за олимпиада.
+// Ако все пак искаш да покриеш темата (за национален кръг), използвай:
+{
+  id: "12.1",
+  title: "Комплексни числа",
+  desc: "Алгебрична и тригонометрична форма, формула на Моавър, корени на комплексни числа.",
+  source: "Rusczyk, Introduction to Algebra (AoPS)",
+  pdf: "Материали_EN/book-10",
+  page: 355,                    // PDF стр. на Ch 12
+  problems_page: 360,           // CHECK: не е прочетена — приблизително
+  solutions_page: null,
+  tasks: [
+    { label: "Ch 12 Exercises (PDF ~366)", pdf: "Материали_EN/book-10", page: 366 }
+  ],
+  bonus: [],
+  explanation: "ФОРМУЛИРОВКА: z = a + bi = r(cos θ + i sin θ).\n\nКОГА: Геометрични доказателства, ротации, корени на полиноми.\n\nСВОЙСТВА: |z₁z₂| = |z₁||z₂|, arg(z₁z₂) = arg z₁ + arg z₂ (mod 2π).\n\nТРИК: Представяне чрез комплексни числа на равнинни конфигурации; въртене = умножение с e^{iθ}. Книгата дава само основи — за олимпиада допълни с Andreescu & Andrica, Complex Numbers from A to Z."
+}
+```
+
+### RECOMMENDED CHANGES TO index.html
+
+**В STEPS (bonus полета към съществуващи точки):**
+- [ ] Точка `5.1` (Виет): нов `bonus` = `{ label: "Rusczyk, Intro to Algebra — Ch 10 (Sums/Products of Roots)", pdf: "Материали_EN/book-10", page: 306 }`
+- [ ] Точка `5.3` (Симетрични): нов `bonus` = `{ label: "Rusczyk, Intro to Algebra — Ch 4 (Distribution & Factoring)", pdf: "Материали_EN/book-10", page: 101 }`
+- [ ] Точка `5.5` (Неразложими): нов `bonus` = `{ label: "Rusczyk, Intro to Algebra — Ch 11 (Special Factorizations + SFFT)", pdf: "Материали_EN/book-10", page: 322 }`
+- [ ] Точка `5.7` (Делимост на полиноми): нов `bonus` = `{ label: "Rusczyk, Intro to Algebra — Ch 11 & Ch 18", pdf: "Материали_EN/book-10", page: 322 }`
+- [ ] Точка `6.1` (AM-GM): нов `bonus` = `{ label: "Rusczyk, Intro to Algebra — Ch 9 & Ch 15 (Inequalities intro + Trivial Ineq.)", pdf: "Материали_EN/book-10", page: 250 }`
+- [ ] Точка `7.1` (Коши ФУ): нов `bonus` = `{ label: "Rusczyk, Intro to Algebra — Ch 16 (Functions)", pdf: "Материали_EN/book-10", page: 449 }`
+- [ ] Точка `7.5` (Общи техники ФУ): нов `bonus` = `{ label: "Rusczyk, Intro to Algebra — Ch 16 & Ch 17 & Ch 20", pdf: "Материали_EN/book-10", page: 449 }`
+- [ ] Точка `7.6` (Линейни рекурсии): нов `bonus` = `{ label: "Rusczyk, Intro to Algebra — Ch 21 (Sequences & Series, Telescoping)", pdf: "Материали_EN/book-10", page: 588 }`
+- [ ] Точка `7.8` (Сходимост): нов `bonus` = `{ label: "Rusczyk, Intro to Algebra — Ch 22 (Special Manipulations)", pdf: "Материали_EN/book-10", page: 627 }`
+- [ ] Точка `4.1` (Линейни диофантови): нов `bonus` = `{ label: "Rusczyk, Intro to Algebra — Ch 5 (Systems of Linear Equations)", pdf: "Материали_EN/book-10", page: 121 }`
+
+**В `bonus` поле на Step 11 (`11.4` Доп. сборници):**
+- [ ] Добави `{ label: "Rusczyk, Introduction to Algebra (AoPS) — фундаментален курс по алгебра", pdf: "Материали_EN/book-10", page: 18 }`
+
+**НЕ се препоръчва:**
+- [ ] ❌ Да се създава Step 12 с тази книга — тя е под олимпиадно ниво, а не разширение над 96-те точки.
+- [ ] ❌ Да се добавят глави 1, 2, 3, 6, 7, 8, 14, 19 — те са под нивото на областен/национален кръг и не съответстват на нито една от 96-те точки.
+
+**Друго:**
+- [ ] Провери за дубликати: `book-10.pdf` има ISBN `978-1-934124-01-7`. Сравни срещу `book-1..12.pdf` — ако има друг AoPS "Introduction to Algebra" с различен файл, маркирай го като дубликат и го изтрий.
+- [ ] Обмисли: ако `book-10` е единственият файл от AoPS Introductory series, може да е полезно да добавиш и `Introduction to Counting & Probability` и `Introduction to Number Theory` от същата серия (споменати на PDF стр. 6) — те са по-близо до олимпиадните теми (Стъпки 3 и 8), отколкото този том.
+- [ ] Няма промени в `PLAN_PHASES` или в конфигурацията на exam dates.

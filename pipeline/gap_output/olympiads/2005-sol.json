@@ -1,0 +1,132 @@
+{
+  "_meta": {
+    "pdf": "C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\Задачи_Минали_Години\\Национален\\OLI-3-Национален кръг-2005-9-12 кл-sol.pdf",
+    "paired_with": null,
+    "level": 2,
+    "type": "sol",
+    "analyzed_at": "2026-10-18T12:03:49.737580",
+    "model": "deepseek/deepseek-v3.2",
+    "text_length": 23150,
+    "paired_text_length": 0
+  },
+  "problems": [
+    {
+      "num": 1,
+      "topic": "number_theory",
+      "theorems": [],
+      "techniques": [
+        "rationalizing",
+        "descent",
+        "case analysis",
+        "system solving"
+      ],
+      "concepts": [
+        "rationality of square roots",
+        "coprime numbers",
+        "Pythagorean triples",
+        "sum of reciprocals"
+      ],
+      "difficulty": "olympic",
+      "notes": "The problem first proves a lemma: if sum of square roots is rational, each is rational. Then uses representation as sqrt(2005/(x+y)) rational to deduce x+y = 2005*b^2 etc. Final analysis of 1/b+1/c+1/d = 1 leads to specific solutions."
+    },
+    {
+      "num": 2,
+      "topic": "geometry",
+      "theorems": [
+        "Inscribed angles",
+        "Power of a point",
+        "Similar triangles",
+        "Exterior angle bisector"
+      ],
+      "techniques": [
+        "angle chasing",
+        "cyclic quadrilaterals",
+        "similarity",
+        "directed angles"
+      ],
+      "concepts": [
+        "tangent circles",
+        "midpoint of arc",
+        "cyclic quadrilateral",
+        "excenter",
+        "homothety/rotation"
+      ],
+      "difficulty": "olympic",
+      "notes": "Part (a) uses angle chasing to show CTIY cyclic. Part (b) uses power of point and similarity to prove I is excenter of triangle ABC opposite side BC."
+    },
+    {
+      "num": 3,
+      "topic": "combinatorics",
+      "theorems": [],
+      "techniques": [
+        "infinite descent",
+        "contradiction",
+        "density argument",
+        "binary representation"
+      ],
+      "concepts": [
+        "sums of distinct numbers",
+        "rational numbers",
+        "infinite sets",
+        "interval partitioning"
+      ],
+      "difficulty": "hard",
+      "notes": "Constructive proof by contradiction. Assumes such a set A exists, then shows elements must be of form a1/2^i, leading to contradiction because not all rationals with odd denominator coprime to a1's denominator can be represented."
+    },
+    {
+      "num": 4,
+      "topic": "geometry",
+      "theorems": [
+        "Law of Cosines",
+        "Euler's quadrilateral theorem",
+        "Median formula"
+      ],
+      "techniques": [
+        "coordinate geometry/trigonometry",
+        "algebraic manipulation",
+        "rotation"
+      ],
+      "concepts": [
+        "similar triangles",
+        "equilateral triangles",
+        "60-degree rotation",
+        "medians",
+        "quadrilateral diagonals"
+      ],
+      "difficulty": "olympic",
+      "notes": "Uses similarity to get scaling factor k, then equates EM and FM via median/Euler formulas to deduce k=1 (equilateral). Then proves EF=EM using Law of Cosines and trig identities, showing angle EMF = 60°."
+    },
+    {
+      "num": 5,
+      "topic": "combinatorics",
+      "theorems": [],
+      "techniques": [
+        "strategy stealing",
+        "invariant",
+        "inequality manipulation",
+        "parameter analysis"
+      ],
+      "concepts": [
+        "combinatorial game theory",
+        "winning/losing positions",
+        "number theory inequality",
+        "parametric solution"
+      ],
+      "difficulty": "hard",
+      "notes": "Two-part problem. First part: game theory with (t,a,b)-game, proves if (t,a,b) winning for a player then (t+a+b,a,b) also winning for same player. Second part: number theory inequality leading to specific solution for a,b."
+    }
+  ],
+  "unique_concepts": [
+    "rationality of square roots",
+    "sum of reciprocals equals 1",
+    "tangent circles and arc midpoints",
+    "excenter via angle bisector",
+    "sums of distinct numbers representation",
+    "infinite set density argument",
+    "Euler's quadrilateral theorem for medians",
+    "60-degree rotation and equilateral triangles",
+    "combinatorial game strategy stealing",
+    "parametric solution from inequality"
+  ],
+  "confidence": 0.95
+}

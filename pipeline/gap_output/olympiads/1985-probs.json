@@ -1,0 +1,158 @@
+{
+  "_meta": {
+    "pdf": "C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\Задачи_Минали_Години\\Национален\\OLI-3-Национален кръг-1985-9-12 кл-probs.pdf",
+    "paired_with": "C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\Задачи_Минали_Години\\Национален\\OLI-3-Национален кръг-1985-9-12 кл-sol.pdf",
+    "level": 2,
+    "type": "probs",
+    "analyzed_at": "2026-10-18T11:35:40.136458",
+    "model": "deepseek/deepseek-v3.2",
+    "text_length": 2156,
+    "paired_text_length": 11042
+  },
+  "problems": [
+    {
+      "num": 1,
+      "topic": "number_theory",
+      "theorems": [],
+      "techniques": [
+        "induction",
+        "strengthening_the_induction_hypothesis",
+        "polynomial_growth"
+      ],
+      "concepts": [
+        "prime_factor_count",
+        "polynomial_with_integer_coefficients",
+        "strictly_increasing_function_for_large_x",
+        "infinite_sequence_construction",
+        "product_of_numbers",
+        "existence_of_prime_factor"
+      ],
+      "difficulty": "olympic",
+      "notes": "Uses an inductive construction to increase the number of prime factors. The solution mentions an alternative approach using the Chinese Remainder Theorem."
+    },
+    {
+      "num": 2,
+      "topic": "algebra",
+      "theorems": [],
+      "techniques": [
+        "substitution",
+        "function_analysis",
+        "finding_minimum"
+      ],
+      "concepts": [
+        "symmetric_polynomial",
+        "rational_function",
+        "domain_analysis",
+        "local_minima",
+        "real_roots_condition"
+      ],
+      "difficulty": "standard",
+      "notes": "The equation is reciprocal. The problem reduces to studying the minimum of a rational function derived from the original polynomial."
+    },
+    {
+      "num": 3,
+      "topic": "geometry",
+      "theorems": [],
+      "techniques": [
+        "auxiliary_points",
+        "area_relations",
+        "similar_triangles",
+        "trigonometric_equations",
+        "orthogonal_projection"
+      ],
+      "concepts": [
+        "circumscribed_sphere",
+        "pyramid",
+        "foot_of_perpendicular",
+        "tangential_quadrilateral",
+        "rhombus_base",
+        "dihedral_angle",
+        "area_ratio",
+        "angle_between_planes"
+      ],
+      "difficulty": "hard",
+      "notes": "Complex 3D geometry problem. The conditions force the base to be a rhombus with an incircle. The solution involves detailed area and angle calculations."
+    },
+    {
+      "num": 4,
+      "topic": "combinatorics",
+      "theorems": [],
+      "techniques": [
+        "pigeonhole_principle",
+        "case_analysis",
+        "construction_of_counterexample"
+      ],
+      "concepts": [
+        "graph_coloring",
+        "complete_graph_K7",
+        "monochromatic_triangle",
+        "disjoint_triangles",
+        "Ramsey_theory_implicit"
+      ],
+      "difficulty": "olympic",
+      "notes": "A combinatorial geometry problem. Proves existence for 7 points via systematic case analysis. Provides a counterexample configuration for 6 points."
+    },
+    {
+      "num": 5,
+      "topic": "geometry",
+      "theorems": [
+        "Angle_Bisector_Theorem",
+        "Law_of_Cosines"
+      ],
+      "techniques": [
+        "trigonometric_calculations",
+        "cyclic_quadrilateral_properties",
+        "parallelogram_identification"
+      ],
+      "concepts": [
+        "median",
+        "angle_bisector_concurrency",
+        "circumcircle",
+        "power_of_a_point",
+        "inscribed_angles",
+        "angle_chasing"
+      ],
+      "difficulty": "hard",
+      "notes": "The key step is showing PM * CM = constant, leading to the discovery that a quadrilateral is a parallelogram."
+    },
+    {
+      "num": 6,
+      "topic": "number_theory",
+      "theorems": [],
+      "techniques": [
+        "summation_rearrangement",
+        "floor_function_manipulation",
+        "double_inequality",
+        "limit_squeeze_theorem"
+      ],
+      "concepts": [
+        "largest_odd_divisor",
+        "binary_representation_implicit",
+        "floor_function_counts",
+        "harmonic-like_sum",
+        "sequence_convergence"
+      ],
+      "difficulty": "olympic",
+      "notes": "The sum is cleverly rewritten by grouping numbers based on the highest power of 2 dividing them. The limit is found by bounding the sum."
+    }
+  ],
+  "unique_concepts": [
+    "prime_factor_count",
+    "polynomial_with_integer_coefficients",
+    "strictly_increasing_function_for_large_x",
+    "symmetric_polynomial",
+    "rational_function_minimum",
+    "circumscribed_sphere",
+    "tangential_quadrilateral",
+    "dihedral_angle",
+    "graph_coloring",
+    "monochromatic_triangle",
+    "Ramsey_theory_implicit",
+    "angle_bisector_concurrency",
+    "power_of_a_point",
+    "largest_odd_divisor",
+    "floor_function_counts",
+    "squeeze_theorem"
+  ],
+  "confidence": 0.95
+}

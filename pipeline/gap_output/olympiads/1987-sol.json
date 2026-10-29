@@ -1,0 +1,154 @@
+{
+  "_meta": {
+    "pdf": "C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\Задачи_Минали_Години\\Национален\\OLI-3-Национален кръг-1987-9-12 кл-sol.pdf",
+    "paired_with": null,
+    "level": 2,
+    "type": "sol",
+    "analyzed_at": "2026-10-18T11:39:33.556777",
+    "model": "deepseek/deepseek-v3.2",
+    "text_length": 12156,
+    "paired_text_length": 0
+  },
+  "problems": [
+    {
+      "num": 1,
+      "topic": "algebra",
+      "theorems": [
+        "Vieta's formulas"
+      ],
+      "techniques": [
+        "substitution",
+        "inequality manipulation",
+        "proof by contradiction",
+        "bounding"
+      ],
+      "concepts": [
+        "polynomial roots",
+        "symmetric sums",
+        "real coefficients",
+        "interval containment"
+      ],
+      "difficulty": "olympic",
+      "notes": "Uses an auxiliary lemma about real numbers with given sum and sum of pairwise products to bound the smallest number, then applies to reciprocals of roots."
+    },
+    {
+      "num": 2,
+      "topic": "geometry",
+      "theorems": [],
+      "techniques": [
+        "pigeonhole principle",
+        "modular argument"
+      ],
+      "concepts": [
+        "rotation",
+        "polygon invariance",
+        "finite set",
+        "rational multiple of pi"
+      ],
+      "difficulty": "standard",
+      "notes": "Shows that the rotation angles must be rational multiples of π by considering orbits of vertices under repeated rotation."
+    },
+    {
+      "num": 3,
+      "topic": "geometry",
+      "theorems": [],
+      "techniques": [
+        "orthogonal projection",
+        "maximization under constraints",
+        "inequality (AM-GM)"
+      ],
+      "concepts": [
+        "pyramid",
+        "perpendicular planes",
+        "inscribed circle radius",
+        "maximal inscribed sphere",
+        "right triangle geometry"
+      ],
+      "difficulty": "hard",
+      "notes": "Reduces problem to comparing inradii of two triangles in orthogonal projections, then maximizes expression under constraint xy=2."
+    },
+    {
+      "num": 4,
+      "topic": "number_theory",
+      "theorems": [],
+      "techniques": [
+        "auxiliary sequence",
+        "induction",
+        "identity verification"
+      ],
+      "concepts": [
+        "recurrence relations",
+        "perfect squares",
+        "integer sequences",
+        "Cassini-like identity"
+      ],
+      "difficulty": "standard",
+      "notes": "Defines an auxiliary linear recurrence whose squares satisfy the given nonlinear recurrence."
+    },
+    {
+      "num": 5,
+      "topic": "geometry",
+      "theorems": [
+        "Simson line",
+        "cyclic quadrilateral"
+      ],
+      "techniques": [
+        "auxiliary construction",
+        "angle chasing",
+        "properties of isosceles triangle"
+      ],
+      "concepts": [
+        "perpendiculars",
+        "angle bisector",
+        "concyclic points",
+        "midpoint",
+        "orthocenter projection"
+      ],
+      "difficulty": "standard",
+      "notes": "Two approaches: one using cyclic quadrilaterals and angle equality, another using Simson line and circumcircle."
+    },
+    {
+      "num": 6,
+      "topic": "combinatorics",
+      "theorems": [
+        "order of an element modulo n",
+        "LCM property"
+      ],
+      "techniques": [
+        "modular arithmetic",
+        "recursive angle transformation",
+        "pigeonhole principle",
+        "construction of counterexample"
+      ],
+      "concepts": [
+        "triangle angles",
+        "pedal triangle",
+        "iterated function",
+        "periodicity",
+        "mod 180 arithmetic",
+        "exponent of 2 modulo 45"
+      ],
+      "difficulty": "olympic",
+      "notes": "Analyzes how angles transform under f, uses order of 2 modulo 45 to show period 12 up to sign, then proves f^14 = f^2. Minimal n=14 shown via extreme triangle."
+    }
+  ],
+  "unique_concepts": [
+    "Vieta's formulas",
+    "symmetric sums",
+    "rotation invariance",
+    "rational multiple of pi",
+    "orthogonal projection",
+    "inscribed circle radius",
+    "maximization under constraint",
+    "recurrence relations",
+    "perfect squares",
+    "Simson line",
+    "cyclic quadrilateral",
+    "angle bisector",
+    "modular arithmetic",
+    "order of an element",
+    "iterated function on triangles",
+    "periodicity in angle transformations"
+  ],
+  "confidence": 0.95
+}

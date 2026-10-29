@@ -1,0 +1,78 @@
+{
+  "_meta": {
+    "pdf": "C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\Задачи_Минали_Години\\Национален\\OLI-3-Национален кръг-2014-9-12 кл-sol.pdf",
+    "paired_with": null,
+    "level": 2,
+    "type": "sol",
+    "analyzed_at": "2026-10-18T12:13:45.829271",
+    "model": "deepseek/deepseek-v3.2",
+    "text_length": 2128,
+    "paired_text_length": 0
+  },
+  "problems": [
+    {
+      "num": 4,
+      "topic": "number_theory",
+      "theorems": [],
+      "techniques": [
+        "case analysis",
+        "inequality bounding",
+        "gcd manipulation",
+        "contradiction"
+      ],
+      "concepts": [
+        "prime numbers",
+        "divisibility",
+        "gcd properties",
+        "difference of squares/cubes factorization",
+        "inequality constraints"
+      ],
+      "difficulty": "olympic",
+      "notes": "Uses factorization p^6-1 and q^3+1, careful analysis of divisibility conditions and size bounds to derive contradiction."
+    },
+    {
+      "num": 5,
+      "topic": "algebra",
+      "theorems": [],
+      "techniques": [
+        "functional equation",
+        "substitution (g=1/f)",
+        "induction",
+        "polynomial root finding",
+        "deducing values on natural numbers",
+        "extending to rationals"
+      ],
+      "concepts": [
+        "functional equations on Q+",
+        "transformation of variables",
+        "solving for specific values (f(1))",
+        "deriving recurrence relations",
+        "verification of candidate solutions"
+      ],
+      "difficulty": "olympic",
+      "notes": "Standard approach for multiplicative-to-additive type functional equations via reciprocal substitution and testing integer values."
+    }
+  ],
+  "unique_concepts": [
+    "prime numbers",
+    "divisibility",
+    "gcd properties",
+    "difference of squares/cubes factorization",
+    "inequality constraints",
+    "case analysis",
+    "inequality bounding",
+    "contradiction",
+    "functional equation",
+    "substitution (g=1/f)",
+    "induction",
+    "polynomial root finding",
+    "deducing values on natural numbers",
+    "extending to rationals",
+    "functional equations on Q+",
+    "transformation of variables",
+    "solving for specific values (f(1))",
+    "deriving recurrence relations",
+    "verification of candidate solutions"
+  ],
+  "confidence": 0.95
+}

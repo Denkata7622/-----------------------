@@ -1,0 +1,119 @@
+{
+  "_meta": {
+    "pdf": "C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\Задачи_Минали_Години\\Областен\\OLI-2-Областен кръг-2015-11 кл-probs.pdf",
+    "paired_with": "C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\Задачи_Минали_Години\\Областен\\OLI-2-Областен кръг-2015-11 кл-sol.pdf",
+    "level": 1,
+    "type": "probs",
+    "analyzed_at": "2026-10-18T15:51:44.585806",
+    "model": "deepseek/deepseek-v3.2",
+    "text_length": 1088,
+    "paired_text_length": 5181
+  },
+  "problems": [
+    {
+      "num": 1,
+      "topic": "algebra",
+      "theorems": [],
+      "techniques": [
+        "substitution",
+        "factorization",
+        "case analysis"
+      ],
+      "concepts": [
+        "exponential equations",
+        "real parameter",
+        "number of real roots",
+        "exponential function properties"
+      ],
+      "difficulty": "standard",
+      "notes": "Standard exponential equation solved by factoring and analyzing the bases. Requires careful case analysis for the parameter a."
+    },
+    {
+      "num": 2,
+      "topic": "geometry",
+      "theorems": [
+        "Power of a Point",
+        "Inscribed Angle Theorem",
+        "Cyclic Quadrilateral properties"
+      ],
+      "techniques": [
+        "symmetry",
+        "angle chasing",
+        "similar triangles"
+      ],
+      "concepts": [
+        "incircle center",
+        "circumcircle center",
+        "angle bisector",
+        "symmetry with respect to a line",
+        "cyclic quadrilaterals",
+        "similar triangles",
+        "diameter perpendicular to chord"
+      ],
+      "difficulty": "olympic",
+      "notes": "Synthetic geometry problem combining incircle, circumcircle, and symmetry. Key step is proving DI^2 = DP·DO using Power of a Point and cyclic quadrilaterals."
+    },
+    {
+      "num": 3,
+      "topic": "algebra",
+      "theorems": [
+        "AM-GM inequality"
+      ],
+      "techniques": [
+        "substitution",
+        "normalization",
+        "inequality manipulation",
+        "summation of inequalities"
+      ],
+      "concepts": [
+        "product equals 1 condition",
+        "power means",
+        "rational exponents",
+        "homogenization"
+      ],
+      "difficulty": "hard",
+      "notes": "Inequality for rational exponents. The solution reduces the problem to integer exponents via substitution and uses a clever application of AM-GM on each term, then sums."
+    },
+    {
+      "num": 4,
+      "topic": "number_theory",
+      "theorems": [],
+      "techniques": [
+        "inductive construction",
+        "contradiction",
+        "modular arithmetic",
+        "digit analysis"
+      ],
+      "concepts": [
+        "complete residue system modulo a power of 2",
+        "parity of digits",
+        "appending digits",
+        "recursive construction",
+        "pigeonhole principle (implicit)"
+      ],
+      "difficulty": "olympic",
+      "notes": "Combinatorial number theory problem about minimal digits in a complete residue system modulo 2^n. Solution involves constructing an example with 4 digits and proving 3 digits are insufficient by a backward induction/contradiction on the number of digits."
+    }
+  ],
+  "unique_concepts": [
+    "exponential equations",
+    "real parameter analysis",
+    "factorization",
+    "Power of a Point",
+    "cyclic quadrilaterals",
+    "similar triangles",
+    "symmetry in geometry",
+    "incircle and circumcircle centers",
+    "angle bisector properties",
+    "AM-GM inequality",
+    "product equals 1 normalization",
+    "rational exponents",
+    "summation of inequalities",
+    "complete residue system modulo 2^n",
+    "modular arithmetic",
+    "parity of digits",
+    "digit appending construction",
+    "contradiction/induction on number of digits"
+  ],
+  "confidence": 0.98
+}

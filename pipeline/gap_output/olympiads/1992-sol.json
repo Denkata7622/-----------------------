@@ -1,0 +1,151 @@
+{
+  "_meta": {
+    "pdf": "C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\Задачи_Минали_Години\\Национален\\OLI-3-Национален кръг-1992-9-12 кл-sol.pdf",
+    "paired_with": null,
+    "level": 2,
+    "type": "sol",
+    "analyzed_at": "2026-10-18T11:48:12.433796",
+    "model": "deepseek/deepseek-v3.2",
+    "text_length": 14161,
+    "paired_text_length": 0
+  },
+  "problems": [
+    {
+      "num": 1,
+      "topic": "geometry",
+      "theorems": [],
+      "techniques": [
+        "vector algebra",
+        "dot product"
+      ],
+      "concepts": [
+        "regular tetrahedron",
+        "parallel planes",
+        "centroid",
+        "orthocenter",
+        "vector representation",
+        "scalar product"
+      ],
+      "difficulty": "olympic",
+      "notes": "Uses vector coordinates and dot product to prove orthogonality independent of parameter."
+    },
+    {
+      "num": 2,
+      "topic": "combinatorics",
+      "theorems": [],
+      "techniques": [
+        "case analysis",
+        "modular arithmetic",
+        "construction"
+      ],
+      "concepts": [
+        "arithmetic progression",
+        "modular residues",
+        "prime numbers",
+        "set construction"
+      ],
+      "difficulty": "olympic",
+      "notes": "Constructs a subset avoiding 41-term arithmetic progressions using properties of modulus 41."
+    },
+    {
+      "num": 3,
+      "topic": "combinatorics",
+      "theorems": [],
+      "techniques": [
+        "bijection",
+        "permutation counting"
+      ],
+      "concepts": [
+        "lattice paths",
+        "coordinate conditions",
+        "bijective proof",
+        "factorial counting"
+      ],
+      "difficulty": "olympic",
+      "notes": "Establishes a bijection between point arrangements and permutations of colored balls."
+    },
+    {
+      "num": 4,
+      "topic": "number_theory",
+      "theorems": [
+        "Sum of squares divisibility for primes 4k+3",
+        "Canonical decomposition property"
+      ],
+      "techniques": [
+        "proof by contradiction",
+        "modular arithmetic",
+        "gcd reduction"
+      ],
+      "concepts": [
+        "Diophantine equation",
+        "Fermat's Last Theorem special case",
+        "coprime reduction",
+        "mod 4 analysis"
+      ],
+      "difficulty": "olympic",
+      "notes": "Uses two known lemmas about primes of form 4k+3 and sum of squares."
+    },
+    {
+      "num": 5,
+      "topic": "geometry",
+      "theorems": [
+        "Menelaus",
+        "Thales",
+        "Angle bisector theorem"
+      ],
+      "techniques": [
+        "parallel lines",
+        "segment ratios",
+        "trapezoid properties"
+      ],
+      "concepts": [
+        "midpoints",
+        "angle bisectors",
+        "parallel lines",
+        "trapezoid diagonals",
+        "segment equality"
+      ],
+      "difficulty": "olympic",
+      "notes": "Applies Menelaus theorem and properties of midlines to prove segment equality."
+    },
+    {
+      "num": 6,
+      "topic": "combinatorics",
+      "theorems": [],
+      "techniques": [
+        "induction",
+        "unique construction",
+        "invariant analysis"
+      ],
+      "concepts": [
+        "redistribution process",
+        "unique initial configuration",
+        "inductive definition"
+      ],
+      "difficulty": "olympic",
+      "notes": "Inductive construction of unique initial distribution for the ball-moving process."
+    }
+  ],
+  "unique_concepts": [
+    "regular tetrahedron",
+    "vector algebra",
+    "parallel planes",
+    "arithmetic progression avoidance",
+    "modular residues",
+    "bijection",
+    "lattice paths",
+    "permutation counting",
+    "sum of squares divisibility",
+    "primes of form 4k+3",
+    "Diophantine equation",
+    "Menelaus theorem",
+    "angle bisector theorem",
+    "Thales theorem",
+    "midpoints",
+    "trapezoid properties",
+    "inductive construction",
+    "redistribution process",
+    "unique configuration"
+  ],
+  "confidence": 0.95
+}

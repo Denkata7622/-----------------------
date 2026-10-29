@@ -1,0 +1,189 @@
+{
+  "_meta": {
+    "pdf": "C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\Задачи_Минали_Години\\Областен\\OLI-2-Областен кръг-2019-10 кл-sol.pdf",
+    "paired_with": null,
+    "level": 1,
+    "type": "sol",
+    "analyzed_at": "2026-10-16T21:23:16.265192",
+    "model": "deepseek/deepseek-v3.2",
+    "text_length": 13997,
+    "paired_text_length": 0
+  },
+  "problems": [
+    {
+      "num": 1,
+      "topic": "combinatorics",
+      "theorems": [],
+      "techniques": [
+        "construction",
+        "contradiction",
+        "parity argument",
+        "tiling"
+      ],
+      "concepts": [
+        "parity",
+        "coloring",
+        "central symmetry",
+        "tiling with copies",
+        "modular arithmetic (mod 2)"
+      ],
+      "difficulty": "olympic",
+      "notes": "Задача за оцветяване на таблица с 4 цвята, отговарящо на условия за централна симетрия и еднакъв брой клетки от всеки цвят във всеки ред/стълб. Решението използва четност и конструкция чрез копиране на малка таблица 12x12."
+    },
+    {
+      "num": 2,
+      "topic": "geometry",
+      "theorems": [
+        "Menelaus",
+        "Ceva",
+        "Van Aubel"
+      ],
+      "techniques": [
+        "vector methods",
+        "mass point geometry",
+        "ratio chasing",
+        "auxiliary point construction"
+      ],
+      "concepts": [
+        "centroid",
+        "midpoints",
+        "concurrency",
+        "collinearity",
+        "ratio division",
+        "vector decomposition"
+      ],
+      "difficulty": "olympic",
+      "notes": "Задача за четириъгълник и пресечни точки на медицентрове. Решението използва вектори и въвеждане на спомагателна точка L, която дели отсечка в дадено отношение, за да докаже, че три точки лежат на една права."
+    },
+    {
+      "num": 3,
+      "topic": "geometry",
+      "theorems": [
+        "Ceva",
+        "Desargues",
+        "Incircle/Excircle lemmas"
+      ],
+      "techniques": [
+        "trigonometric Ceva",
+        "length chasing",
+        "symmetry",
+        "using incircle properties"
+      ],
+      "concepts": [
+        "incircle",
+        "excircle",
+        "touchpoints",
+        "concurrency",
+        "trilinear coordinates",
+        "triangle centers"
+      ],
+      "difficulty": "olympic",
+      "notes": "Задача за триъгълник с инкръжност и точки на допиране. Доказва се, че прави през върховете и допирни точки на външно вписани окръжности се пресичат в една точка (чрез теорема на Чева) и че съответните допирни точки лежат на една права (чрез теорема на Дезарг)."
+    },
+    {
+      "num": 4,
+      "topic": "combinatorics",
+      "theorems": [],
+      "techniques": [
+        "pigeonhole principle",
+        "counting",
+        "construction",
+        "parity argument"
+      ],
+      "concepts": [
+        "diagonals in a grid",
+        "even/odd count",
+        "maximization",
+        "non-intersecting sets"
+      ],
+      "difficulty": "standard",
+      "notes": "Задача за максимален брой единици в таблица n x n при условие, че във всеки ред, стълб и диагонал броят им е четен. Решението използва факта, че има 2n диагонала с нечетен брой клетки, които не се пресичат, и оттам получава горна оценка n² - 2n, след което дава конструкция."
+    },
+    {
+      "num": 5,
+      "topic": "algebra",
+      "theorems": [],
+      "techniques": [
+        "coefficient analysis",
+        "modular arithmetic",
+        "bounding",
+        "synthetic division",
+        "base representation"
+      ],
+      "concepts": [
+        "polynomials with nonnegative integer coefficients",
+        "evaluation at integers",
+        "mod 2 and mod 3 constraints",
+        "uniqueness",
+        "digit representation in base 3"
+      ],
+      "difficulty": "olympic",
+      "notes": "Задача за намиране на полином с неотрицателни цели коефициенти, даващ определени стойности в точки 1,2,3. Решението използва последователно определяне на коефициенти чрез условия за четност и делимост на 3, или алтернативно разглеждане на троично представяне."
+    },
+    {
+      "num": 6,
+      "topic": "algebra",
+      "theorems": [],
+      "techniques": [
+        "algebraic manipulation",
+        "discriminant analysis",
+        "parameterization"
+      ],
+      "concepts": [
+        "arithmetic and geometric progressions",
+        "conditions for three terms to be in GP",
+        "perfect square discriminant",
+        "quadratic equations with integer solutions"
+      ],
+      "difficulty": "standard",
+      "notes": "Задача за аритметична прогресия, в която определени три члена образуват геометрична прогресия. Условието се свежда до квадратно уравнение с естествен корен, чийто дискриминант трябва да е точен квадрат."
+    },
+    {
+      "num": 7,
+      "topic": "geometry",
+      "theorems": [],
+      "techniques": [
+        "trigonometric identities",
+        "squaring and adding equations",
+        "bounding angles",
+        "case analysis"
+      ],
+      "concepts": [
+        "sine and cosine in acute triangle",
+        "sum of angles",
+        "solving trigonometric systems",
+        "angle values (30°, 45°, 60°, 75°)"
+      ],
+      "difficulty": "standard",
+      "notes": "Задача за намиране на ъгли в остроъгълен триъгълник по дадени две линейни комбинации на синуси и косинуси. Решението използва събиране на квадратите на уравненията, за да получи sin(γ+β), и след това анализ за определяне на конкретните стойности."
+    }
+  ],
+  "unique_concepts": [
+    "parity",
+    "coloring",
+    "central symmetry",
+    "tiling",
+    "vector methods",
+    "mass point geometry",
+    "centroid",
+    "concurrency",
+    "collinearity",
+    "incircle",
+    "excircle",
+    "touchpoints",
+    "trilinear coordinates",
+    "pigeonhole principle",
+    "counting diagonals",
+    "maximization",
+    "polynomials with nonnegative coefficients",
+    "modular arithmetic (mod 2, mod 3)",
+    "base representation",
+    "arithmetic progression",
+    "geometric progression",
+    "perfect square discriminant",
+    "trigonometric identities",
+    "solving trigonometric systems",
+    "angle values"
+  ],
+  "confidence": 0.95
+}

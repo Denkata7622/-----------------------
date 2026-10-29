@@ -1,0 +1,49 @@
+{
+  "verdict": "approve",
+  "score": 8,
+  "issues": [
+    {
+      "severity": "major",
+      "section": "1. Защо е важно и 4.3 Hard examples",
+      "description": "Използване на нереални олимпиадни задачи (ОЛИ-3 Национален кръг 2025 г. зад.5). 2025 е бъдеща година, задачата не може да е реална. Това намалява достоверността."
+    },
+    {
+      "severity": "minor",
+      "section": "4.3 Hard examples",
+      "description": "Пример 4.7 се базира на нереална задача, което може да обърка учениците при проверка на източниците."
+    }
+  ],
+  "strengths": [
+    "Изчерпателно покриване на теорията, включително edge cases и множество гледни точки",
+    "Отлични илюстративни примери с подробни решения и проверки",
+    "Спазване на структурата с CHECK-ове за самопроверка между нивата",
+    "Добър баланс между easy, medium и hard примери (3/3/2)"
+  ],
+  "suggestions": [
+    "Замени нереалните задачи (напр. 2025) с реални олимпиадни задачи от минали години. Например, вместо ОЛИ-3-2025-зад.5, използвай ОЛИ-3-2023-зад.4 или друг реален източник.",
+    "В секция 'Защо е важно' избери само реални и вече проведени олимпиади (до 2024 г.)."
+  ],
+  "math_errors": [],
+  "missing_topics": [],
+  "structure_check": {
+    "section_1_why_important": true,
+    "section_2_objectives": true,
+    "section_3_theory": true,
+    "section_4_examples_3_levels": true,
+    "section_5_recognition": true,
+    "section_6_mistakes": true,
+    "section_7_mastery": true,
+    "section_8_quiz": true,
+    "section_9_recall": true,
+    "check_marks_present": true
+  },
+  "examples_check": {
+    "real_olympiad": false,
+    "easy_count": 3,
+    "medium_count": 3,
+    "hard_count": 2
+  },
+  "verdict_reasoning": "Статията е математически коректна и покрива изискваната структура, но използва нереални олимпиадни задачи (2025), което намалява релевантността. Все пак, качеството на обясненията и покритието на темата са на високо ниво.",
+  "_tokens": 16037,
+  "_model": "deepseek/deepseek-r1-0528"
+}

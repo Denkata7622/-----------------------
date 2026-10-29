@@ -1,0 +1,60 @@
+{
+  "verdict": "approve",
+  "score": 8,
+  "issues": [
+    {
+      "severity": "minor",
+      "section": "3.2 Формално определение",
+      "description": "Дефиницията за вътрешна точка е неточна; трябва да се опише конструктивно как се получава полярата."
+    },
+    {
+      "severity": "major",
+      "section": "4.3 Hard examples",
+      "description": "Решение на Пример 7 е непълно (липсва ключова стъпка за доказване, че Q лежи на AB)."
+    },
+    {
+      "severity": "critical",
+      "section": "4.3 Hard examples",
+      "description": "Пример 8 няма решение, само наброени идеи."
+    }
+  ],
+  "strengths": [
+    "Отлична олимпиадна релевантност с реални примери",
+    "Пълно покритие на структурата, включително CHECK-ове",
+    "Добри обяснения на основните концепции (особено в секция 3.1)"
+  ],
+  "suggestions": [
+    "Добави пълно геометрично решение на Пример 7 и 8",
+    "В секция 3.2 добави конструкция за поляра при вътрешна точка (напр. с две хорди)",
+    "Оптимизирай доказателството на Теорема 1 (секция 3.3) – избегни координати, ако е възможно"
+  ],
+  "math_errors": [
+    {
+      "formula": "Дефиниция за вътрешна точка",
+      "problem": "Не е ясно как се построява полярата при вътрешна точка",
+      "fix": "Добави конструкция: през P да се прекарат две хорди, допирателните в краищата им да се пресекат, и получената права да е полярата."
+    }
+  ],
+  "missing_topics": [],
+  "structure_check": {
+    "section_1_why_important": true,
+    "section_2_objectives": true,
+    "section_3_theory": true,
+    "section_4_examples_3_levels": true,
+    "section_5_recognition": true,
+    "section_6_mistakes": true,
+    "section_7_mastery": true,
+    "section_8_quiz": true,
+    "section_9_recall": true,
+    "check_marks_present": true
+  },
+  "examples_check": {
+    "real_olympiad": true,
+    "easy_count": 3,
+    "medium_count": 3,
+    "hard_count": 2
+  },
+  "verdict_reasoning": "Статията е математически коректна с отлични реални примери, но има сериозни пропуски в решенията на hard задачите. Оценка 8 поради силна олимпиадна релевантност и пълна структура.",
+  "_tokens": 18234,
+  "_model": "deepseek/deepseek-r1-0528"
+}

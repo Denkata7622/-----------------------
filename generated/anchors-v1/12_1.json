@@ -1,0 +1,24 @@
+{
+  "point_id": "12.1",
+  "total": 1,
+  "by_difficulty": {
+    "easy": 0,
+    "medium": 1,
+    "hard": 0
+  },
+  "problems": [
+    {
+      "source": "OLI-2-Областен кръг-2004-10 кл · 2004-10 · Зад. 5",
+      "statement": "Нека O е център на описаната окръжност за △ABC, M е средата на страната AB, а G е медицентърът на △ACM. Ако OG ⊥ CM, да се докаже, че △ABC е равнобедрен.",
+      "solution": "Нека означим a⃗ = →OA, b⃗ = →OB, c⃗ = →OC. Имаме →OM = (1/2)(a⃗ + b⃗), значи →OG = (1/6)(3a⃗ + b⃗ + 2c⃗). От друга страна →CM = (1/2)(a⃗ + b⃗ − 2c⃗). Тогава\n0 = →OG·→CM = (3a⃗ + b⃗ + 2c⃗)(a⃗ + b⃗ − 2c⃗) = 3R² + 3a⃗·b⃗ − 6a⃗·c⃗ + a⃗·b⃗ + R² − 2b⃗·c⃗ + 2a⃗·c⃗ + 2b⃗·c⃗ − 4R².\nИ така, 0 = 4a⃗·(b⃗ − c⃗), следователно OA ⟂ BC, т.е. AB = AC.",
+      "answer": "AB = AC",
+      "difficulty": "medium",
+      "techniques": [
+        "vector_method",
+        "perpendicular_condition"
+      ],
+      "confidence": "exact",
+      "reasoning": "Writes OG and CM as vectors, dot product zero ⇒ OA⊥BC ⇒ AB=AC."
+    }
+  ]
+}

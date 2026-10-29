@@ -1,0 +1,134 @@
+[Стр. 1]
+# BULGARIAN NATIONAL OLYMPIAD IN MATHEMATICS
+
+Fourth round
+
+1996
+
+Problem 1. Find all primary numbers $p$ and $q$, for which $\frac{(5^p - 2^p)(5^q - 2^q)}{pq}$ is an integer. Solution. Let $p$ be prime number and $p|(5^p - 2^p)$. It follows by the Fermat theorem that $5^p - 2^p \equiv 3 \pmod{p}$. Consequently $p = 3$.
+
+Let now $p$ and $q$ be such prime numbers that $\frac{(5^p - 2^p)(5^q - 2^q)}{pq}$ is an integer. If $p|(5^p - 2^p)$, then $p = 3$. Since $5^3 - 2^3 = 3 \cdot 3 \cdot 13$, then either $q|(5^q - 2^q)$, i.e. $q = 3$, or $q = 13$. Therefore the pairs $(3,3)$, $(3,13)$, $(13,3)$ satisfy the problem condition. It remains the case when $p \neq 3, q \neq 3$. Now $p|(5^q - 2^q)$ and $q|(5^p - 2^p)$. We can assume that $p > q$. It is clear that $(p, q - 1) = 1$ and consequently, there are positive integers $a$ and $b$, for which $ap - b(q - 1) = 1$ (Bezou theorem). Since $(q, 5) = (q, 2) = 1$, it follows by the Fermat theorem that $5^{q-1} \equiv 2^{q-1} \pmod{q}$. From $5^p \equiv 2^p \pmod{q}$ we deduce that $5^{ap} \equiv 2^{ap} \pmod{q}$ and therefore, $5^{b(q-1)+1} \equiv 2^{b(q-1)+1} \pmod{q}$. But $5^{b(q-1)+1} \equiv 5 \pmod{q}$ and $2^{b(q-1)+1} \equiv 2 \pmod{q}$. Thus, $q = 3$, which is a contradiction. Finally, $(p, q) = (3, 3), (3, 13), (13, 3)$.
+
+Problem 2. Find the side length of the smallest equilateral triangle in which three disks with radii 2, 3 and 4 without common inner points can be placed.
+
+Solution. Let in a equilateral $\triangle ABC$ two disks with radii 3 and 4 without common inner points be placed. It is clear that a line $\ell$ exists, which separates them, i.e. the disks are in different semiplanes with respect to $\ell$ (Figure 1).
+
+Figure 1.
+
+![img-0.jpeg](img-0.jpeg)
+
+Figure 2.
+
+![img-1.jpeg](img-1.jpeg)
+
+This line divides the triangle into a triangle and a quadrilateral or into two triangles. In both cases the disks can be replaced in the figure in a way that each of them is tangent to two of the sides of $\triangle ABC$. It is clear that the new disks have no common inner point. Let the disks be inscribed in $\angle A$ and $\angle B$ of $\triangle ABC$, respectively. We translate the side $BC$ parallelly to itself towards the point $A$, till the disk which is inscribed in $\angle B$ touches the disk which is inscribed in $\angle A$ (Figure 2). Thus, we get an equilateral $\triangle A_1 B_1 C_1$ with a smaller sides, in which two disks with radii 3 and 4 and without common inner points are placed.
+
+Let $A_1 B_1 = x$, $I$ be the incenter of $\triangle A_1 B_1 C_1$, while $O_1$ and $O_2$ be the centers of the two disks. Then $A_1 I = B_1 I = \frac{x}{\sqrt{3}}$, $A_1 O_1 = 6$, $B_1 O_2 = 8$. Since the disk with radius 4 is
+
+Downloaded from Klasirane.com
+
+[Стр. 2]
+![img-2.jpeg](img-2.jpeg)
+
+inside the $\triangle A_1B_1C_1$, then $O_2 \in IB_1$. Thus, $B_1O_2 \leq B_1I$, i.e. $x \geq 8\sqrt{3}$. On the other hand $O_1I = \frac{x}{\sqrt{3}} - 6$, $O_2I = \frac{x}{\sqrt{3}} - 8$, $O_1O_2 = 7$ and by the cosine theorem for $\triangle O_1O_2I$ we find that $\left(\frac{x}{\sqrt{3}} - 6\right)^2 + \left(\frac{x}{\sqrt{3}} - 8\right)^2 + \left(\frac{x}{\sqrt{3}} - 6\right)\left(\frac{x}{\sqrt{3}} - 8\right) = 49$. But $x \geq 8\sqrt{3}$, and from here $x = 11\sqrt{3}$. Consequently, $AB \geq 11\sqrt{3}$. On the other hand in the equilateral $\triangle ABC$ with side length $11\sqrt{3}$ three disks with radii 2, 3 and 4 (without common inner points) can be placed inscribing circles with these radii in the angles of the triangle (Figure 3).
+
+Note that the disks wit radii 3 and 4 are tangent to each other. It follows from the above considerations that the solution of the problem is $11\sqrt{3}$.
+
+**Problem 3.** The quadratic functions $f(x)$ and $g(x)$ are with real coefficients and have the following property: if the number $g(x)$ is integer for a positive $x$, then the number $f(x)$ is integer too. Prove that there are such integers $m$ and $n$, that $f(x) = mg(x) + n$ for all real $x$.
+
+Solution. Let $g(x) = px^2 + qx + r$. We can assume that $p > 0$. Since $g(x) = p(x + \frac{q}{2p})^2 + r - \frac{q^2}{4p}$ after the variable change of $x$ by $x + \frac{q}{2p}$ we reduce the problem for the following quadratic functions $f(x) = ax^2 + bx + c$ and $g(x) = px^2 + s, p > 0$. Let $k$ be such an integer that $k > s$ and $\sqrt{\frac{k - s}{p}} > \frac{q}{2p}$. Since $g\left(\sqrt{\frac{k - s}{p}}\right) = k$ is integer, then $f\left(\sqrt{\frac{k - s}{p}}\right) = \frac{a(k - s)}{p} + b\sqrt{\frac{k - s}{p}} + c$ is an integer too. Consequently, the number
+
+$$f\left(\sqrt{\frac{k + 1 - s}{p}}\right) - f\left(\sqrt{\frac{k - s}{p}}\right) = \frac{b}{\sqrt{p}} \cdot \frac{1}{\sqrt{k + 1 - s} + \sqrt{k - s}} + \frac{a}{p} \tag{1}$$
+
+is an integer for all $k$ which are sufficiently big. It follows from here that $\frac{a}{p}$ is an integer. Indeed, suppose that $\frac{a}{p}$ is not an integer. If $b > 0$, we chose $k$ in a way that
+
+$$\frac{b}{\sqrt{p}} \cdot \frac{1}{\sqrt{k + 1 - s} + \sqrt{k - 1}} < \left[\frac{a}{p}\right] + 1 - \frac{a}{p},$$
+
+and if $b < 0$, we chose $k$ in a way that
+
+$$\frac{b}{\sqrt{p}} \cdot \frac{1}{\sqrt{k + 1 - s} + \sqrt{k - 1}} > \left[\frac{a}{p}\right] - \frac{a}{p}.$$
+
+In both cases there is a contradiction with the fact that (1) is an integer. Now, it follows that
+
+$$\frac{b}{\sqrt{p}} \cdot \frac{1}{\sqrt{k + 1 - s} + \sqrt{k - s}}$$
+
+for all $k$, which are sufficiently big. This is possible only when $b = 0$.
+
+Let $\frac{a}{p} = m$. Then, $f\left(\sqrt{\frac{k - s}{p}}\right) = m(k - s) + c$ is an integer (when $k$ is sufficiently big), i.e. $c - ms$ is an integer. Let $n = c - ms$. Now it is clear that $f(x) = mg(x) + n$ for all $x$.
+
+**Problem 4.** The sequence $\{a_n\}_{n=1}^{\infty}$ is defined by
+
+$$a_1 = 1, \quad a_{n+1} = \frac{a_n}{n} + \frac{n}{a_n}, \quad n \geq 1.$$
+
+Prove that $\lfloor a_n^2 \rfloor = n$ when $n \geq 4$ (it is denoted by $\lfloor x \rfloor$ the integer part of the number $x$).
+
+Downloaded from Klasirane.com
+
+[Стр. 3]
+Problem 4. The sequence $\{a_n\}_{n=1}^{\infty}$ is defined by
+
+$$a_1 = 1, \quad a_{n+1} = \frac{a_n}{n} + \frac{n}{a_n}, \quad n \ge 1.$$
+
+Prove that $\lfloor a_n^2 \rfloor = n$ when $n \ge 4$ (it is denoted by $\lfloor x \rfloor$ the integer part of the number $x$).
+
+Solution. Let $f(x) = \frac{x}{n} + \frac{n}{x}$. Since $f(a) - f(b) = \frac{(a-b)(ab-n^2)}{abn}$, it follows that the function $f(x)$ is decreasing in the interval $(0, n)$.
+
+Firstly, by induction we shall prove that $\sqrt{n} \le a_n \le \frac{n}{\sqrt{n-1}}$ when $n \ge 3$. We have $a_1 = 1, a_2 = 2$ and $a_3 = 2$, i.e. $\sqrt{3} \le a_3 \le \frac{3}{\sqrt{2}}$. Let $\sqrt{n} \le a_n \le \frac{n}{\sqrt{n-1}}$ for an integer $n \ge 3$. Then, $a_{n+1} = f(a_n) \le f(\sqrt{n}) = \frac{n+1}{\sqrt{n}}$ and $a_{n+1} = f(a_n) \ge f\left(\frac{n}{\sqrt{n-1}}\right) = \frac{n}{\sqrt{n-1}} > \sqrt{n+1}$ and thus the induction finishes.
+
+Since $a_n \ge \sqrt{n}$, it remains to prove, that $a_n < \sqrt{n+1}$. We have $a_{n+1} = f(a_n) \ge f\left(\frac{n}{\sqrt{n-1}}\right) = \frac{n}{\sqrt{n-1}}$ when $n \ge 3$. Consequently, $a_n \ge \frac{n-1}{\sqrt{n-2}}$ when $n \ge 4$. Then,
+
+$$a_{n+1} = f(a_n) < f\left(\frac{n-1}{\sqrt{n-2}}\right) = \frac{(n-1)^2 + n^2(n-2)}{(n-1)n\sqrt{n-2}} < \sqrt{n+2}$$
+
+when $n \ge 4$. (The last inequality is equivalent to $2n^2(n-3) + 4n - 1 > 0$.) Therefore, $\sqrt{n} \le a_n < \sqrt{n+1}$ when $n \ge 4$, i.e. $\lfloor a_n^2 \rfloor = n$.
+
+Problem 5. The quadrilateral $ABCD$ is inscribed in a circle. The lines $AB$ and $CD$ meet each other in the point $E$, while the diagonals $AC$ and $BD$ — in the point $F$. The circumcircles of the triangles $AFD$ and $BFC$ have a second common point, which is denoted by $H$. Prove that $\angle EHF = 90^\circ$.
+
+Solution. Let $O$ be the circumcenter of $ABCD$. We shall prove that $O$ is the second common point of the circumcircles of $\triangle AHB$ and $\triangle CHD$. (Since $AB$ and $CD$ are not parallel, then $O \ne H$.) After that we shall prove that the points $E, H$ and $O$ are colinear and $\angle OHF = 90^\circ$.
+
+We shall consider the possible positions of $H$.
+
+Let $G$ be the common point of $AD$ and $BC$ (these lines are not parallel because the circumcircles of $\triangle AFD$ and $\triangle BFC$ are not tangent). It is clear that $H$ is in the interior of $\angle AGB$.
+
+1) \(H\) is in \(\triangle CGD\). Then, \(\angle CHD = \angle CHF + \angle DHF = 180^{\circ} - \angle CBF + 180^{\circ} - \angle DAF = 360^{\circ} - \widehat{CD} > 180^{\circ}\) (from \(\widehat{CD} < \widehat{AB}\) and \(\widehat{AB} + \widehat{CD} < 360^{\circ}\)), which is impossible.
+2) \(H\) is in \(\triangle CFD\). Then, \(\angle CHD = 360^{\circ} - \angle CHF - \angle DHF = \angle CBF + \angle DAF = \widehat{CD} = \angle COD\) and \(\angle AHB = \angle AHF + \angle BHF = \angle ADF + \angle BCF = \widehat{AB} = \angle AOB\).
+3) \(H\) is in \(\triangle ABF\). Analogously, \(\angle CHD = \angle COD\) and \(\angle AHB = \angle AOB\).
+4) \(H\) is on \(AB\). Again \(\angle CHD = \angle COD\) and \(180^{\circ} = \angle AHB = \angle AOB\). Consequently, \(O\) is the midpoint of \(AB\).
+5) \(H\) is not in \(\triangle ABG\). Then \(\angle CHD = \angle COD\) and \(\angle AHB = 360^{\circ} - \angle AOB\).
+
+Note that in the cases 2), 3) and 5) the points $O$ and $H$ are in one and the same semiplane with respect to the line $AB$ and with respect to the line $CD$. Consequently, the points $A, B, H$ and $O$ are concyclic. We have the same for the points $C, D, H$ and $O$.
+
+Now we shall prove that the line $EH$ passes through the point $O$. Let this line meet the circumcircles of $\triangle AHB$ and $\triangle CHD$ at the points $O_1$ and $O_2$, respectively. Since these points lie on the ray $EH^-$, it follows from the equalities $EH.EO_1 = EA.EB = EC.ED = EH.EO_2$ that $O_1 \equiv O_2 \equiv O$.
+
+The points $O$ and $H$ are in one and the same semiplane with respect to $CD$ and we can assume that the quadrilateral $COHD$ is convex. Let $H$ be in $\triangle CFD$. Then, $\angle OHF = \angle FHC - \angle OHC = 180^\circ - \angle FBC - \angle ODC = 180^\circ - \frac{1}{2} \angle COD - (90^\circ - \frac{1}{2} \angle COD) = 90^\circ$. The other possibility for $H$ is to be inside $\angle AGB$ and outside the non-convex quadrilateral $AFBG$.
+
+Hence $\angle OHF = \angle OHC + \angle FHC = \angle ODC + \angle FBC = 90^\circ$.
+
+Downloaded from Klasirane.com
+
+[Стр. 4]
+**Problem 6.** A square table of size $7 \times 7$ with the four corner squares deleted is given.
+
+Figure 4.
+
+a) What is the smallest number of squares which need to be colored black so that a 5-square entirely uncolored Greek cross (Figure 4) cannot be found on the table?
+b) Prove that it is possible to write integers in each square in a way that the sum of the integers in each Greek cross is negative while the sum of all integers in the square table is positive.
+
+![img-3.jpeg](img-3.jpeg)
+
+Solution. Denote the square in row $i$ and column $j$ by $(i, j)$. Note that a cross is uniquely determined by its central cell. The cross with central cell
+
+$(i, j)$ is denoted by $C_{ij}$, $2 \leq i, j \leq 6$. The number of all crosses is 25.
+
+a) The squares $(1, i)$, $(i, 1)$, $(7, i)$, $(i, 7)$, $i = 2, \ldots, 6$, are included in exactly one cross; the squares $(2, 2)$, $(2, 6)$, $(6, 2)$, $(6, 6)$ are included in exactly 3 crosses; the squares $(2, i)$, $(i, 2)$, $(6, i)$, $(i, 6)$, $i = 3, 4, 5$ — in exactly 4 crosses and finally, the squares $(i, j)$, $3 \leq i, j \leq 5$, are included in exactly 5 crosses. Since $C_{22}$ contains a colored square, then at least one of $(1, 2)$, $(2, 1)$, $(2, 2)$, $(2, 3)$, $(3, 2)$ should be colored. Similarly, at least one of $(2, 7)$, $(1, 6)$, $(2, 6)$, $(2, 5)$, $(3, 6)$, at least one of $(7, 2)$, $(6, 1)$, $(6, 2)$, $(5, 2)$, $(6, 3)$ and at least one of $(6, 7)$, $(7, 6)$, $(6, 6)$, $(6, 5)$, $(5, 6)$ are colored. Any of them is contained in at most four crosses (the first two in each quintuple in 1 cross, the third one in 3 crosses and the remaining two — in 4 crosses). Denote by $x$ the number of the colored squares among $(i, j)$, $3 \leq i, j \leq 5$. The number of crosses containing a colored square is not greater than $4.4 + 5x$, whence
+
+$$16 + 5x \geq 25. \tag{1}$$
+
+Thus, $x \geq 2$ and the number of the colored cells is at least 6.
+
+Suppose that the number of the colored squares is 6. Then $x = 2$. Moreover, according (1) there exists at most one Greek cross containing more than one colored square. If two squares with a common side or a common vertex are colored, then it is easy to check that there are two crosses with at least two colored squares each. Therefore, the squares $(4, 4)$, $(3, 3)$, $(3, 5)$, $(5, 3)$, $(5, 5)$ should be uncolored. With no loss of generality, let the two colored squares be $(4, 3)$ and $(4, 5)$. But now the crosses $C_{34}$ and $C_{54}$ do not contain colored squares.
+
+To prove that the minimal number of colored squares is 7, color for example the squares $(2, 5)$, $(3, 2)$, $(3, 3)$, $(4, 6)$, $(5, 4)$, $(6, 2)$, $(6, 5)$.
+
+b) Let us write $-5$ in each of the colored squares from a) and 1 in the remaining squares. Since every Greek cross contains a colored square, the sum of the numbers in its squares does not exceed $1 + 1 + 1 + 1 - 5 = -1 < 0$. The sum of all numbers in the table is $7.(-5) + (45 - 7).1 = 3 > 0$ and we are done.
+
+Downloaded from Klasirane.com

@@ -1,0 +1,154 @@
+{
+  "_meta": {
+    "pdf": "C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\Задачи_Минали_Години\\Национален\\OLI-3-Национален кръг-2016-9-12 кл-probs.pdf",
+    "paired_with": "C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\Задачи_Минали_Години\\Национален\\OLI-3-Национален кръг-2016-9-12 кл-sol.pdf",
+    "level": 2,
+    "type": "probs",
+    "analyzed_at": "2026-10-16T20:51:08.785104",
+    "model": "deepseek/deepseek-v3.2",
+    "text_length": 66584,
+    "paired_text_length": 23139
+  },
+  "problems": [
+    {
+      "num": 1,
+      "topic": "number_theory",
+      "theorems": [
+        "Lifting The Exponent Lemma (LTE)",
+        "Order of an element modulo p"
+      ],
+      "techniques": [
+        "modular arithmetic",
+        "proof by contradiction",
+        "case analysis"
+      ],
+      "concepts": [
+        "divisibility",
+        "prime numbers",
+        "greatest common divisor (gcd)",
+        "order of 2 modulo p",
+        "properties of Fermat numbers (2^(2^k)+1)"
+      ],
+      "difficulty": "olympic",
+      "notes": "The core idea is to show that if m>1, any prime divisor p of m also divides 2^(2^m)+1, leading to a contradiction regarding the order of 2 modulo p. This forces m=1, reducing the problem to finding n such that n divides 5(2^(2n)+1). Uses properties of gcd(n, 2^(2n)+1)."
+    },
+    {
+      "num": 2,
+      "topic": "combinatorics",
+      "theorems": [],
+      "techniques": [
+        "pigeonhole principle",
+        "counting",
+        "extremal principle"
+      ],
+      "concepts": [
+        "combinatorial configurations",
+        "maximum possible value",
+        "existence proofs"
+      ],
+      "difficulty": "olympic",
+      "notes": "A problem about the maximum possible number of students (n) in a test scenario where answers are limited, ensuring a specific condition on identical answers. Requires combinatorial reasoning and application of the pigeonhole principle."
+    },
+    {
+      "num": 3,
+      "topic": "algebra",
+      "theorems": [
+        "AM-GM inequality",
+        "Weighted AM-GM inequality"
+      ],
+      "techniques": [
+        "inequality manipulation",
+        "substitution",
+        "symmetry"
+      ],
+      "concepts": [
+        "arithmetic mean - geometric mean (AM-GM)",
+        "n-variable generalization",
+        "homogeneous inequalities"
+      ],
+      "difficulty": "olympic",
+      "notes": "The solution cleverly defines R as the left-hand side and applies a chain of inequalities comparing R to weighted arithmetic means. It's a specific case (n=4) of a more general inequality valid for any n positive numbers."
+    },
+    {
+      "num": 4,
+      "topic": "number_theory",
+      "theorems": [],
+      "techniques": [
+        "counting",
+        "estimation",
+        "bounding sums",
+        "constructive example"
+      ],
+      "concepts": [
+        "sums of three squares",
+        "representation of numbers",
+        "density of integer sets",
+        "upper and lower bounds"
+      ],
+      "difficulty": "olympic",
+      "notes": "The problem asks for the existence of a number below 10^9 representable in over 1000 ways as a sum of three distinct natural squares. The solution counts the number of representations for numbers up to N and finds an N (18003) where the average representation count exceeds 1000, implying existence."
+    },
+    {
+      "num": 5,
+      "topic": "geometry",
+      "theorems": [
+        "Cyclic quadrilaterals",
+        "Inscribed angles",
+        "Properties of isosceles triangles",
+        "Symmetry"
+      ],
+      "techniques": [
+        "angle chasing",
+        "auxiliary construction (parallel lines)",
+        "symmetry arguments",
+        "proving concyclicity"
+      ],
+      "concepts": [
+        "concyclic points",
+        "angle equality",
+        "midpoint",
+        "circle through four points",
+        "intersecting chords (implicitly)"
+      ],
+      "difficulty": "olympic",
+      "notes": "A complex geometry problem requiring the construction of a line parallel to AB through D, introducing points Q and K, and extensive angle chasing to show two sets of four points are concyclic, ultimately proving A, P, M, N are concyclic."
+    },
+    {
+      "num": 6,
+      "topic": "combinatorics",
+      "theorems": [],
+      "techniques": [
+        "pigeonhole principle",
+        "double counting",
+        "averaging argument",
+        "coloring",
+        "tiling"
+      ],
+      "concepts": [
+        "square tiling",
+        "coloring argument",
+        "combinatorial geometry",
+        "existence for sufficiently large n"
+      ],
+      "difficulty": "hard",
+      "notes": "A tiling/coloring problem. The solution describes a coloring strategy for an n x n square divided into unit squares. It uses an averaging argument on the number of colored unit squares a larger x x x square can cover, proving that for large enough n, any such square must contain unit squares of at least 4 different colors."
+    }
+  ],
+  "unique_concepts": [
+    "Lifting The Exponent Lemma (LTE)",
+    "Order of an element modulo p",
+    "Fermat number properties",
+    "Pigeonhole Principle",
+    "Extremal Principle",
+    "AM-GM Inequality (and weighted)",
+    "Sum of three squares representation",
+    "Density/Bounding arguments",
+    "Cyclic Quadrilaterals",
+    "Angle Chasing",
+    "Auxiliary Construction in Geometry",
+    "Concyclicity proofs",
+    "Tiling and Coloring",
+    "Double Counting/Averaging"
+  ],
+  "confidence": 0.95
+}

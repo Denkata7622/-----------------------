@@ -1,0 +1,352 @@
+{
+  "_meta": {
+    "generated_at": "2026-10-18T15:53:38.853758",
+    "olympiads_analyzed": 128,
+    "concepts_total": 2595,
+    "concepts_above_threshold": 100,
+    "min_frequency": 2
+  },
+  "well_covered": [
+    {
+      "concept": "Menelaus",
+      "frequency": 30,
+      "topics": [
+        "1.1"
+      ]
+    },
+    {
+      "concept": "Ceva",
+      "frequency": 17,
+      "topics": [
+        "1.2"
+      ]
+    },
+    {
+      "concept": "power of a point",
+      "frequency": 36,
+      "topics": [
+        "1.4"
+      ]
+    },
+    {
+      "concept": "inscribed angles",
+      "frequency": 20,
+      "topics": [
+        "1.5"
+      ]
+    },
+    {
+      "concept": "law of sines",
+      "frequency": 21,
+      "topics": [
+        "1.6"
+      ]
+    },
+    {
+      "concept": "incircle",
+      "frequency": 30,
+      "topics": [
+        "1.10"
+      ]
+    },
+    {
+      "concept": "Fermat's little theorem",
+      "frequency": 13,
+      "topics": [
+        "3.3"
+      ]
+    },
+    {
+      "concept": "Chinese remainder theorem",
+      "frequency": 8,
+      "topics": [
+        "3.6"
+      ]
+    },
+    {
+      "concept": "LTE (lifting the exponent)",
+      "frequency": 6,
+      "topics": [
+        "3.9"
+      ]
+    },
+    {
+      "concept": "prime numbers",
+      "frequency": 26,
+      "topics": [
+        "4.5"
+      ]
+    },
+    {
+      "concept": "Vieta's formulas",
+      "frequency": 21,
+      "topics": [
+        "5.1"
+      ]
+    },
+    {
+      "concept": "rational root theorem",
+      "frequency": 5,
+      "topics": [
+        "5.4"
+      ]
+    },
+    {
+      "concept": "AM-GM inequality",
+      "frequency": 13,
+      "topics": [
+        "6.1"
+      ]
+    },
+    {
+      "concept": "Cauchy-Schwarz inequality",
+      "frequency": 11,
+      "topics": [
+        "6.4"
+      ]
+    },
+    {
+      "concept": "functional equations",
+      "frequency": 8,
+      "topics": [
+        "7.1",
+        "7.5"
+      ]
+    },
+    {
+      "concept": "pigeonhole principle",
+      "frequency": 22,
+      "topics": [
+        "8.1"
+      ]
+    },
+    {
+      "concept": "binomial coefficients",
+      "frequency": 9,
+      "topics": [
+        "8.5"
+      ]
+    },
+    {
+      "concept": "graph theory",
+      "frequency": 6,
+      "topics": [
+        "9.1"
+      ]
+    }
+  ],
+  "partially_covered": [
+    {
+      "concept": "cyclic quadrilateral",
+      "frequency": 27,
+      "existing_topic": "1.5",
+      "gap_description": "Споменат е в тема за вписани ъгли, но не се разглеждат подробно свойствата и критериите за цикличност."
+    },
+    {
+      "concept": "angle bisector theorem",
+      "frequency": 8,
+      "existing_topic": "1.10",
+      "gap_description": "Обобщената теорема за ъглополовящата е в 2.10, но стандартната теорема не е изрично застъпена в основните теми."
+    },
+    {
+      "concept": "modular arithmetic",
+      "frequency": 13,
+      "existing_topic": "3.2",
+      "gap_description": "Покрива основите, но не разглежда задълбочено техники за решаване на задачи (напр. модулни уравнения, степенуване)."
+    },
+    {
+      "concept": "Diophantine equation",
+      "frequency": 15,
+      "existing_topic": "4.1, 4.2, 4.3",
+      "gap_description": "Има теми за линейни, квадратни и кубични, но липсва систематично покритие на общи стратегии и специални форми (напр. Пел)."
+    },
+    {
+      "concept": "inequalities",
+      "frequency": 15,
+      "existing_topic": "6.1-6.10",
+      "gap_description": "Много неравенства са покрити, но липсва фокус върху прилагане в геометрични и комбинаторни контексти."
+    },
+    {
+      "concept": "coloring",
+      "frequency": 10,
+      "existing_topic": "9.7",
+      "gap_description": "Оцветяванията на графи са покрити, но не се разглеждат класическите задачи за оцветяване на равнината или решетки (комбинаторна геометрия)."
+    }
+  ],
+  "missing_candidates": [
+    {
+      "concept": "homothety",
+      "frequency": 11,
+      "suggested_id": "R.1",
+      "suggested_title": "Хомотетия и приложения в геометрията",
+      "suggested_level": 2,
+      "why": "Често срещана в задачи, но не е изрично тема в плана. Полезно за доказателства на конфигурации и построения.",
+      "related_existing": [
+        "1.4",
+        "2.4"
+      ],
+      "examples": [
+        "1986-probs Зад 5",
+        "1986-sol Зад 5",
+        "1993-sol Зад 2"
+      ],
+      "confidence": 0.9
+    },
+    {
+      "concept": "radical axis",
+      "frequency": 8,
+      "suggested_id": "R.2",
+      "suggested_title": "Радикална ос и радикален център",
+      "suggested_level": 2,
+      "why": "Спомената е в 1.4 (степен на точка), но не се разглеждат подробно свойствата и приложенията на радикалната ос в сложни конфигурации.",
+      "related_existing": [
+        "1.4"
+      ],
+      "examples": [
+        "1984-combined Зад 55",
+        "1984-combined Зад 75",
+        "1984-combined Зад 78"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "concept": "parameter analysis",
+      "frequency": 14,
+      "suggested_id": "R.3",
+      "suggested_title": "Анализ на параметри в уравнения и неравенства",
+      "suggested_level": 1,
+      "why": "Често се изисква в задачи с параметри, но не е систематизирана тема. Обхваща дискриминанта, интервали, екстремални стойности.",
+      "related_existing": [
+        "5.11"
+      ],
+      "examples": [
+        "1988-sol Зад 1",
+        "2004-11-probs Зад 12.2",
+        "2009-10-probs Зад 1"
+      ],
+      "confidence": 0.85
+    },
+    {
+      "concept": "existence proof",
+      "frequency": 8,
+      "suggested_id": "R.4",
+      "suggested_title": "Доказателства за съществуване (конструктивни и неконструктивни)",
+      "suggested_level": 2,
+      "why": "Важен тип задачи в комбинаториката и теорията на числата, който не е изрично покрит.",
+      "related_existing": [
+        "8.12",
+        "9.8"
+      ],
+      "examples": [
+        "1983-probs Зад 1",
+        "2003-10-sol Зад 2",
+        "2003-10-sol Зад 6"
+      ],
+      "confidence": 0.75
+    },
+    {
+      "concept": "combinatorial geometry",
+      "frequency": 6,
+      "suggested_id": "R.5",
+      "suggested_title": "Комбинаторна геометрия",
+      "suggested_level": 3,
+      "why": "Задачи, свързани с точки, прави, разрези и оцветявания в равнината, не са достатъчно покрити.",
+      "related_existing": [
+        "1.11",
+        "9.7"
+      ],
+      "examples": [
+        "1993-probs Зад 3",
+        "1993-sol Зад 3",
+        "2015-combined Зад 6"
+      ],
+      "confidence": 0.7
+    },
+    {
+      "concept": "handshaking lemma",
+      "frequency": 9,
+      "suggested_id": "R.6",
+      "suggested_title": "Лема за ръкостисканията и приложения в теория на графите",
+      "suggested_level": 1,
+      "why": "Основен инструмент в теорията на графите, но не е подробно разгледан в съществуващите теми.",
+      "related_existing": [
+        "9.1"
+      ],
+      "examples": [
+        "2004-10-probs Зад 3",
+        "2004-10-probs Зад 6",
+        "2004-11-probs Зад 10.6"
+      ],
+      "confidence": 0.9
+    },
+    {
+      "concept": "perfect squares",
+      "frequency": 9,
+      "suggested_id": "R.7",
+      "suggested_title": "Свойства на точните квадрати в задачи",
+      "suggested_level": 1,
+      "why": "Често срещана подтема в теория на числата и диофантови уравнения, която заслужава отделно внимание.",
+      "related_existing": [
+        "4.4"
+      ],
+      "examples": [
+        "1984-combined Зад 74",
+        "1987-probs Зад 4",
+        "1987-sol Зад 4"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "concept": "tangent circles",
+      "frequency": 8,
+      "suggested_id": "R.8",
+      "suggested_title": "Допирателни окръжности и конфигурации",
+      "suggested_level": 2,
+      "why": "Честа геометрична конфигурация, която не е подробно разгледана в съществуващите теми.",
+      "related_existing": [
+        "1.10"
+      ],
+      "examples": [
+        "1984-combined Зад 39",
+        "1984-combined Зад 55",
+        "2005-10-probs Зад 9.2"
+      ],
+      "confidence": 0.75
+    },
+    {
+      "concept": "recurrence sequences",
+      "frequency": 5,
+      "suggested_id": "R.9",
+      "suggested_title": "Рекурентни редици (нелинейни и комбинаторни)",
+      "suggested_level": 2,
+      "why": "Покрити са линейни рекурентни редици (7.6), но нелинейните и комбинаторните приложения не са застъпени.",
+      "related_existing": [
+        "7.6",
+        "7.7"
+      ],
+      "examples": [
+        "1984-combined Зад 11",
+        "2015-probs Зад 3",
+        "2015-sol Зад 3"
+      ],
+      "confidence": 0.65
+    },
+    {
+      "concept": "excircles",
+      "frequency": 7,
+      "suggested_id": "R.10",
+      "suggested_title": "Външновписани окръжности и свойства",
+      "suggested_level": 2,
+      "why": "Споменати са в 1.10, но не са разгледани подробно техните свойства и връзки с други елементи на триъгълника.",
+      "related_existing": [
+        "1.10"
+      ],
+      "examples": [
+        "1989-probs Зад 1",
+        "1989-sol Зад 1",
+        "2007-10-probs Зад 2"
+      ],
+      "confidence": 0.7
+    }
+  ]
+}

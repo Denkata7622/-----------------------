@@ -1,0 +1,27 @@
+[Стр. 1]
+# XLVII National Mathematics Olympiad: 3rd round, 25–26 April 1998
+
+Problem 1. Find the least positive integer number $n$ ($n \ge 3$) with the following property: for any colouring of $n$ different points $A_1, A_2, \ldots, A_n$ on a line and such that $A_1A_2 = A_2A_3 = \ldots = A_{n-1}A_n$ in two colours, there are three points $A_i, A_j, A_{2j-i} (1 \le i < 2j - i \le n)$ which have the same colour.
+
+Problem 2. Let $ABCD$ be a quadrilateral such that $AD = CD$ and $\angle DAB = \angle ABC < 90^\circ$. The line passing through $D$ and the midpoint of the segment $BC$ intersects the line $AB$ at the point $E$. Prove that $\angle BEC = \angle DAC$.
+
+Problem 3. Let $\mathbb{R}^+$ be the set of all positive real numbers. Prove that there is no function $f : \mathbb{R}^+ \to \mathbb{R}^+$ such that
+
+$$(f(x))^2 \ge f(x+y)(f(x)+y)$$
+
+for arbitrary positive real numbers $x$ and $y$.
+
+Problem 4. Let $f(x) = x^3 - 3x + 1$. Find the number of different real solutions of the equation $f(f(x)) = 0$.
+
+Problem 5. The convex pentagon $ABCDE$ is inscribed in a circle with radius $R$. The inradii of the triangles $ABC, ABD, AEC$ and $AED$ are denoted by $r_{ABC}, r_{ABD}, r_{AEC}$ and $r_{AED}$. Prove that
+
+a.) \(\cos \angle CAB + \cos \angle ABC + \cos \angle BCA = 1 + \frac{r_{ABC}}{R}\)
+b.) If \( r_{ABC} = r_{AED} \) and \( r_{ABD} = r_{AEC} \), then \( \triangle ABC \cong \triangle AED \).
+
+Problem 6. Show that the equation
+
+$$x^2y^2 = z^2(z^2 - x^2 - y^2)$$
+
+has no solution in positive integer numbers.
+
+Downloaded from Klasirane.com

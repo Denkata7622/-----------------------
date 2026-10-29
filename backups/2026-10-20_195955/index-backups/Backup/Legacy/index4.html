@@ -1,0 +1,2145 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>OLYMPIAD PREP TERMINAL</title>
+<link href="https://fonts.googleapis.com/css2?family=VT323&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+
+<!-- ═══════════════════════════════════════════════════════════════
+     MODULE: CSS
+     ═══════════════════════════════════════════════════════════════ -->
+<style>
+/* ──────────────────────────────────────────────────────────────
+   1. RESET & THEME VARIABLES
+   ────────────────────────────────────────────────────────────── */
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{height:100%;overflow:hidden}
+body{
+  --bg:#000; --surface:#061006; --surface-2:#0a1a0a; --surface-3:#0f240f; --surface-4:#142e14;
+  --border:#143014; --border-2:#1f4a1f;
+  --accent:#00ff44; --accent-2:#00cc36; --accent-dim:#0b4a1a; --accent-glow:rgba(0,255,68,0.35);
+  --text:#b8ffb8; --text-2:#7bea7b; --text-3:#4a8a4a;
+  --warn:#ddff00; --danger:#ff4444; --star:#ffdd00;
+  --sidebar-w:300px; --topbar-h:56px;
+  background:var(--bg); color:var(--text);
+  font-family:'VT323','JetBrains Mono',monospace; font-size:17px; letter-spacing:.5px;
+  -webkit-font-smoothing:antialiased;
+  transition:background .2s, color .2s;
+}
+body[data-theme="contrast"]{
+  --surface:#0a0a0a; --surface-2:#101010; --surface-3:#181818; --surface-4:#202020;
+  --border:#1a1a1a; --border-2:#2a2a2a;
+  --text:#f5f5f5; --text-2:#d4d4d4; --text-3:#8a8a8a;
+  --accent-glow:rgba(0,255,102,.4);
+}
+body[data-theme="high"]{
+  --surface:#000; --surface-2:#0a0a0a; --surface-3:#141414; --surface-4:#1e1e1e;
+  --border:#222; --border-2:#333;
+  --text:#fff; --text-2:#e8e8e8; --text-3:#999;
+  --accent:#00ff88; --accent-2:#00e070; --accent-glow:rgba(0,255,136,.5);
+}
+body.scanlines::after{
+  content:""; position:fixed; inset:0; pointer-events:none; z-index:9000;
+  background:repeating-linear-gradient(to bottom,rgba(0,255,68,0) 0,rgba(0,255,68,.02) 2px,rgba(0,255,68,.035) 3px);
+}
+
+/* ──────────────────────────────────────────────────────────────
+   2. APP LAYOUT
+   ────────────────────────────────────────────────────────────── */
+.app{display:flex;height:100vh;width:100vw;overflow:hidden}
+
+/* ──────────────────────────────────────────────────────────────
+   3. SIDEBAR
+   ────────────────────────────────────────────────────────────── */
+.sidebar{
+  width:var(--sidebar-w); background:var(--surface); border-right:1px solid var(--border);
+  display:flex; flex-direction:column; flex-shrink:0; transition:margin-left .25s ease;
+}
+.sidebar.collapsed{margin-left:calc(-1 * var(--sidebar-w))}
+.sidebar-header{
+  padding:14px 16px; border-bottom:1px solid var(--border);
+  display:flex; align-items:center; gap:10px;
+}
+.sidebar-header .logo{font-size:20px;color:var(--accent);text-shadow:0 0 8px var(--accent-glow)}
+.sidebar-header .title{
+  font-size:15px; color:var(--accent); letter-spacing:2px; flex:1;
+  text-shadow:0 0 6px var(--accent-glow);
+}
+.sidebar-header .collapse-btn{
+  background:transparent; border:1px solid var(--border-2); color:var(--text-2);
+  padding:2px 8px; font-family:inherit; font-size:14px; cursor:pointer; border-radius:3px;
+}
+.sidebar-header .collapse-btn:hover{color:var(--accent);border-color:var(--accent)}
+.sidebar-stats{padding:12px 16px;border-bottom:1px solid var(--border);background:var(--surface-2)}
+.streak-row{display:flex;align-items:center;gap:8px;font-size:14px}
+.streak-row .fire{font-size:18px}
+.streak-row .streak-num{color:var(--accent);font-size:20px;text-shadow:0 0 6px var(--accent-glow)}
+.streak-row .streak-label{color:var(--text-3);font-size:12px;letter-spacing:1px}
+.sidebar-nav{flex:1;overflow-y:auto;padding:8px}
+.sidebar-nav::-webkit-scrollbar{width:6px}
+.sidebar-nav::-webkit-scrollbar-thumb{background:var(--border-2);border-radius:3px}
+.nav-step{
+  display:flex; align-items:center; gap:10px; padding:8px 10px;
+  border-radius:4px; cursor:pointer; margin-bottom:2px;
+  border:1px solid transparent; transition:all .15s;
+  background:none; font-family:inherit; width:100%; text-align:left;
+}
+.nav-step:hover{background:var(--surface-2);border-color:var(--border-2)}
+.nav-step.active{background:var(--surface-3);border-color:var(--accent-2)}
+.nav-step .num{color:var(--accent);font-size:15px;min-width:24px;text-shadow:0 0 4px var(--accent-glow)}
+.nav-step .label{
+  flex:1; color:var(--text-2); font-size:13px; letter-spacing:.5px;
+  overflow:hidden; text-overflow:ellipsis; white-space:nowrap;
+}
+.nav-step.active .label{color:var(--accent)}
+.nav-step .ring{
+  width:26px; height:26px; border-radius:50%; flex-shrink:0;
+  display:flex; align-items:center; justify-content:center;
+  position:relative; font-size:9px;
+  background:conic-gradient(var(--accent) var(--pct,0%),var(--surface-4) 0);
+}
+.nav-step .ring::before{content:"";position:absolute;inset:3px;border-radius:50%;background:var(--surface)}
+.nav-step .ring span{position:relative;z-index:1;font-size:9px;color:var(--text-2)}
+
+/* ──────────────────────────────────────────────────────────────
+   4. MAIN AREA
+   ────────────────────────────────────────────────────────────── */
+.main{flex:1;display:flex;flex-direction:column;min-width:0;overflow:hidden}
+
+/* ──────────────────────────────────────────────────────────────
+   5. TOPBAR
+   ────────────────────────────────────────────────────────────── */
+.topbar{
+  height:var(--topbar-h); min-height:var(--topbar-h);
+  display:flex; align-items:center; gap:10px; padding:0 16px;
+  background:var(--surface); border-bottom:1px solid var(--border);
+}
+.menu-toggle{
+  display:none; background:transparent; border:1px solid var(--border-2);
+  color:var(--text-2); padding:4px 10px; font-family:inherit;
+  font-size:16px; cursor:pointer; border-radius:3px;
+}
+.menu-toggle:hover{color:var(--accent);border-color:var(--accent)}
+.search-wrap{
+  flex:1; max-width:460px; position:relative;
+  display:flex; align-items:center;
+  background:var(--surface-2); border:1px solid var(--border-2);
+  border-radius:4px; padding:0 10px; height:36px;
+  transition:border-color .15s;
+}
+.search-wrap:focus-within{border-color:var(--accent);box-shadow:0 0 0 2px var(--accent-glow)}
+.search-wrap .icon{color:var(--accent);font-size:15px;margin-right:6px}
+.search-wrap input{
+  flex:1; background:transparent; border:none; color:var(--text);
+  font-family:inherit; font-size:15px; outline:none; letter-spacing:.5px;
+}
+.search-wrap input::placeholder{color:var(--text-3)}
+.kbd-hint{
+  font-size:11px; color:var(--text-3); border:1px solid var(--border-2);
+  padding:1px 5px; border-radius:3px;
+}
+.kbd-hint.hidden{display:none}
+.filter-chips{display:flex;gap:3px;flex-shrink:0}
+.chip{
+  background:var(--surface-2); border:1px solid var(--border-2);
+  color:var(--text-2); padding:5px 10px; font-family:inherit;
+  font-size:12px; cursor:pointer; border-radius:3px;
+  letter-spacing:1px; transition:all .15s; white-space:nowrap;
+}
+.chip:hover{color:var(--accent);border-color:var(--accent)}
+.chip.active{background:var(--accent);color:#000;border-color:var(--accent);box-shadow:0 0 8px var(--accent-glow)}
+.topbar-right{display:flex;align-items:center;gap:6px;margin-left:auto}
+.icon-btn{
+  width:36px; height:36px;
+  background:var(--surface-2); border:1px solid var(--border-2);
+  color:var(--text-2); font-family:inherit; font-size:15px;
+  cursor:pointer; border-radius:3px;
+  display:flex; align-items:center; justify-content:center;
+  transition:all .15s;
+}
+.icon-btn:hover{color:var(--accent);border-color:var(--accent)}
+.icon-btn.active{background:var(--accent);color:#000;border-color:var(--accent)}
+.theme-btn{font-size:12px;letter-spacing:1px;padding:0 8px;width:auto;min-width:42px}
+
+/* ──────────────────────────────────────────────────────────────
+   6. STATS BAR
+   ────────────────────────────────────────────────────────────── */
+.stats-bar{
+  padding:10px 20px; background:var(--surface-2); border-bottom:1px solid var(--border);
+  display:flex; align-items:center; gap:20px; flex-wrap:wrap; font-size:14px;
+}
+.stat{display:flex;align-items:baseline;gap:6px}
+.stat .v{color:var(--accent);font-size:18px;text-shadow:0 0 5px var(--accent-glow)}
+.stat .l{color:var(--text-3);font-size:11px;letter-spacing:1.5px}
+.progress-wrap{
+  flex:1; min-width:150px; height:6px;
+  background:var(--surface-4); border-radius:3px; overflow:hidden;
+}
+.progress-fill{
+  height:100%; border-radius:3px;
+  background:linear-gradient(90deg,var(--accent-2),var(--accent));
+  transition:width .5s cubic-bezier(.4,0,.2,1);
+  box-shadow:0 0 8px var(--accent-glow);
+}
+
+/* ──────────────────────────────────────────────────────────────
+   7. CONTENT
+   ────────────────────────────────────────────────────────────── */
+.content{flex:1;overflow-y:auto;padding:20px;scroll-behavior:smooth}
+.content::-webkit-scrollbar{width:10px}
+.content::-webkit-scrollbar-track{background:var(--surface)}
+.content::-webkit-scrollbar-thumb{background:var(--border-2);border-radius:5px}
+.content::-webkit-scrollbar-thumb:hover{background:var(--accent-2)}
+.empty{padding:60px 20px;text-align:center;color:var(--text-3);letter-spacing:2px}
+.empty .big{font-size:40px;color:var(--accent-2);margin-bottom:12px;opacity:.5}
+
+/* ──────────────────────────────────────────────────────────────
+   8. STEP + POINT CARDS
+   ────────────────────────────────────────────────────────────── */
+.step{
+  background:var(--surface); border:1px solid var(--border);
+  border-radius:6px; margin-bottom:16px; overflow:hidden; scroll-margin-top:16px;
+}
+.step-header{
+  padding:14px 18px; display:flex; align-items:center; gap:12px;
+  cursor:pointer; user-select:none;
+  background:var(--surface-2); border-bottom:1px solid var(--border);
+  transition:background .15s;
+}
+.step-header:hover{background:var(--surface-3)}
+.step-toggle{color:var(--accent);font-size:13px;transition:transform .2s;width:14px;display:inline-block}
+.step.collapsed .step-toggle{transform:rotate(-90deg)}
+.step.collapsed .step-body{display:none}
+.step-num{color:var(--accent);font-size:22px;min-width:40px;letter-spacing:1px;text-shadow:0 0 6px var(--accent-glow)}
+.step-title{flex:1;font-size:18px;letter-spacing:1.5px;color:var(--accent);text-shadow:0 0 4px var(--accent-glow)}
+.step-badge{
+  font-size:12px; color:var(--text-2); border:1px solid var(--border-2);
+  padding:2px 9px; border-radius:3px; letter-spacing:1px;
+  background:var(--surface-4); white-space:nowrap;
+}
+.step-badge.done{background:var(--accent);color:#000;border-color:var(--accent);box-shadow:0 0 6px var(--accent-glow)}
+.step-reset{
+  background:transparent; border:1px solid transparent; color:var(--text-3);
+  font-family:inherit; font-size:15px; cursor:pointer; padding:2px 8px; border-radius:3px;
+}
+.step-reset:hover{color:var(--danger);border-color:var(--danger)}
+.step-body{padding:12px}
+
+.point{
+  background:var(--surface-2); border:1px solid var(--border-2);
+  border-radius:5px; margin-bottom:8px;
+  transition:all .15s; position:relative; overflow:hidden;
+}
+.point:hover{border-color:var(--accent-2)}
+.point.done{opacity:.55}
+.point.done .point-title{text-decoration:line-through;color:var(--text-3)}
+.point.fav{border-color:var(--star)}
+.point.fav::before{content:"";position:absolute;left:0;top:0;bottom:0;width:2px;background:var(--star)}
+.point.highlight{animation:highlight 1.2s ease}
+@keyframes highlight{
+  0%,100%{background:var(--surface-2)}
+  50%{background:var(--surface-4);box-shadow:0 0 15px var(--accent-glow)}
+}
+.point-row{padding:11px 14px;display:flex;gap:12px;align-items:flex-start}
+.point-check{
+  flex-shrink:0; width:22px; height:22px;
+  border:2px solid var(--accent-2); border-radius:3px;
+  background:var(--surface); color:var(--text-3);
+  font-family:inherit; font-size:14px; line-height:1;
+  cursor:pointer; display:flex; align-items:center; justify-content:center;
+  margin-top:2px; transition:all .15s;
+}
+.point-check:hover{border-color:var(--accent);color:var(--accent)}
+.point-check.checked{background:var(--accent);border-color:var(--accent);color:#000;box-shadow:0 0 8px var(--accent-glow)}
+.point-main{flex:1;min-width:0}
+.point-num{font-size:11px;color:var(--text-3);letter-spacing:2px;margin-bottom:2px}
+.point-title{font-size:16px;color:var(--text);margin-bottom:4px;letter-spacing:.5px}
+.point-desc{font-size:13px;color:var(--text-2);line-height:1.5;margin-bottom:8px}
+.point-tags{display:flex;flex-wrap:wrap;gap:5px;align-items:center}
+.tag{
+  font-size:11px; padding:2px 7px;
+  background:var(--surface-3); border:1px solid var(--border-2);
+  border-radius:3px; color:var(--text-2); letter-spacing:.5px;
+}
+.tag.src{color:var(--text-3)}
+.tag.page{color:var(--accent-2);border-color:var(--accent-dim);background:var(--accent-dim)}
+.pdf-btn{
+  font-size:11px; padding:3px 9px;
+  background:var(--accent-dim); border:1px solid var(--accent-2);
+  border-radius:3px; color:var(--accent);
+  text-decoration:none; letter-spacing:1px;
+  transition:all .15s; display:inline-flex; align-items:center; gap:4px;
+}
+.pdf-btn:hover{background:var(--accent);color:#000;box-shadow:0 0 8px var(--accent-glow)}
+.pdf-btn.bonus{background:#1a0a30;border-color:#6a30c0;color:#b88aff}
+.pdf-btn.bonus:hover{background:#6a30c0;color:#fff}
+.point-actions{display:flex;gap:3px;flex-shrink:0;align-items:flex-start}
+.mini-btn{
+  width:26px; height:26px;
+  background:transparent; border:1px solid var(--border-2);
+  color:var(--text-3); font-family:inherit; font-size:14px;
+  cursor:pointer; border-radius:3px;
+  display:flex; align-items:center; justify-content:center;
+  transition:all .15s;
+}
+.mini-btn:hover{color:var(--accent);border-color:var(--accent)}
+.mini-btn.active{color:var(--star);border-color:var(--star)}
+.diff-group{display:flex;gap:2px}
+.diff-btn{
+  font-size:10px; width:20px; height:26px;
+  background:transparent; border:1px solid var(--border-2);
+  color:var(--text-3); font-family:inherit;
+  cursor:pointer; border-radius:3px; transition:all .15s;
+}
+.diff-btn:hover{color:var(--accent);border-color:var(--accent)}
+.diff-btn.active.easy{color:#7dff7d;border-color:#7dff7d;background:rgba(125,255,125,.1)}
+.diff-btn.active.med{color:var(--warn);border-color:var(--warn);background:rgba(221,255,0,.1)}
+.diff-btn.active.hard{color:var(--danger);border-color:var(--danger);background:rgba(255,68,68,.1)}
+.point-expand{
+  border-top:1px solid var(--border); background:var(--surface);
+  padding:0; max-height:0; overflow:hidden;
+  transition:max-height .35s ease;
+}
+.point.expanded .point-expand{max-height:2000px}
+.point-expand-inner{padding:14px}
+.section-label{font-size:10px;color:var(--text-3);letter-spacing:2px;margin-bottom:6px;text-transform:uppercase}
+.explanation{
+  font-size:14px; color:var(--text); line-height:1.7;
+  padding:10px 14px; background:var(--surface-2);
+  border-left:2px solid var(--accent-dim);
+  border-radius:3px; margin-bottom:12px; white-space:pre-wrap;
+}
+.notes-area{
+  width:100%; min-height:80px;
+  background:var(--surface-2); border:1px solid var(--border-2);
+  color:var(--text); font-family:inherit; font-size:14px;
+  padding:8px 10px; border-radius:3px; resize:vertical;
+  outline:none; line-height:1.5; transition:border-color .15s;
+}
+.notes-area:focus{border-color:var(--accent);box-shadow:0 0 0 2px var(--accent-glow)}
+.notes-area::placeholder{color:var(--text-3)}
+.bonus-row{
+  margin-top:10px; padding-top:10px;
+  border-top:1px dashed var(--border-2);
+  display:flex; flex-wrap:wrap; gap:5px;
+}
+.notes-badge{font-size:10px;color:var(--warn);border:1px solid var(--warn);padding:1px 5px;border-radius:2px;margin-left:4px;letter-spacing:1px}
+
+/* ──────────────────────────────────────────────────────────────
+   9. POINT MODAL
+   ────────────────────────────────────────────────────────────── */
+.modal-overlay{
+  position:fixed; inset:0; background:rgba(0,0,0,.92);
+  backdrop-filter:blur(6px); z-index:5000;
+  display:none; align-items:center; justify-content:center; padding:16px;
+}
+.modal-overlay.open{display:flex}
+.point-modal{
+  width:100%; max-width:1500px; height:100%; max-height:920px;
+  background:var(--surface); border:1px solid var(--accent-2);
+  border-radius:8px; display:flex; flex-direction:column;
+  box-shadow:0 0 60px var(--accent-glow); overflow:hidden;
+}
+.pm-header{
+  padding:12px 18px; border-bottom:1px solid var(--border); background:var(--surface-2);
+  display:flex; align-items:center; gap:12px; flex-wrap:wrap;
+}
+.pm-title-area{flex:1;min-width:200px}
+.pm-id{font-size:11px;color:var(--text-3);letter-spacing:2px}
+.pm-title{
+  font-size:20px; color:var(--accent); letter-spacing:1px;
+  text-shadow:0 0 6px var(--accent-glow);
+  white-space:nowrap; overflow:hidden; text-overflow:ellipsis;
+}
+.pm-actions{display:flex;gap:4px;align-items:center;flex-wrap:wrap}
+.pm-btn{
+  background:var(--surface-3); border:1px solid var(--border-2);
+  color:var(--text-2); font-family:inherit; font-size:13px;
+  padding:6px 10px; border-radius:3px; cursor:pointer;
+  transition:all .15s; display:inline-flex; align-items:center; gap:5px;
+  white-space:nowrap;
+}
+.pm-btn:hover{color:var(--accent);border-color:var(--accent)}
+.pm-btn.active{background:var(--accent);color:#000;border-color:var(--accent)}
+.pm-btn.fav.active{background:var(--star);color:#000;border-color:var(--star)}
+.pm-btn.close{background:transparent;font-size:18px;padding:4px 10px}
+.pm-btn.close:hover{background:var(--danger);color:#fff;border-color:var(--danger)}
+.pm-btn.diff-btn.easy.active{color:#7dff7d;border-color:#7dff7d;background:rgba(125,255,125,.15)}
+.pm-btn.diff-btn.med.active{color:var(--warn);border-color:var(--warn);background:rgba(221,255,0,.15)}
+.pm-btn.diff-btn.hard.active{color:var(--danger);border-color:var(--danger);background:rgba(255,68,68,.15)}
+.pm-body{flex:1;display:flex;overflow:hidden}
+.pm-left{width:420px;flex-shrink:0;border-right:1px solid var(--border);overflow-y:auto;padding:16px}
+.pm-left::-webkit-scrollbar{width:6px}
+.pm-left::-webkit-scrollbar-thumb{background:var(--border-2);border-radius:3px}
+.pm-right{flex:1;display:flex;flex-direction:column;min-width:0}
+.pm-section{margin-bottom:18px}
+.pm-label{font-size:10px;color:var(--text-3);letter-spacing:2px;margin-bottom:6px;text-transform:uppercase}
+.pm-desc{font-size:13px;color:var(--text-2);line-height:1.5}
+.pm-explanation{
+  font-size:13px; color:var(--text); line-height:1.7;
+  padding:10px 12px; background:var(--surface-2);
+  border-left:3px solid var(--accent-dim); border-radius:3px;
+  white-space:pre-wrap; max-height:400px; overflow-y:auto;
+}
+.pm-notes{
+  width:100%; min-height:110px;
+  background:var(--surface-2); border:1px solid var(--border-2);
+  color:var(--text); font-family:inherit; font-size:13px;
+  padding:8px 10px; border-radius:3px; resize:vertical;
+  outline:none; line-height:1.5;
+}
+.pm-notes:focus{border-color:var(--accent)}
+.pm-meta-tags{display:flex;flex-wrap:wrap;gap:5px}
+.pm-pdf-tabs{
+  display:flex; gap:0; border-bottom:1px solid var(--border);
+  background:var(--surface-2); padding:0 12px; overflow-x:auto;
+}
+.pm-tab{
+  padding:10px 14px; background:transparent; border:none;
+  border-bottom:2px solid transparent; color:var(--text-3);
+  font-family:inherit; font-size:13px; cursor:pointer;
+  letter-spacing:1px; display:flex; align-items:center; gap:6px;
+  transition:all .15s; white-space:nowrap;
+}
+.pm-tab:hover{color:var(--accent)}
+.pm-tab.active{color:var(--accent);border-bottom-color:var(--accent);background:var(--surface)}
+.pm-tab .badge{font-size:10px;color:var(--text-3);background:var(--surface-4);padding:1px 6px;border-radius:2px}
+.pm-tab.external{margin-left:auto}
+.pm-pdf-container{flex:1;position:relative;background:#111;min-height:300px}
+.pm-pdf-frame{width:100%;height:100%;border:none;background:#111}
+.pm-footer{
+  padding:8px 16px; border-top:1px solid var(--border); background:var(--surface-2);
+  display:flex; align-items:center; gap:8px; font-size:11px; flex-wrap:wrap;
+}
+.pm-pomo-inline{display:flex;align-items:center;gap:10px;margin-left:auto}
+.pm-pomo-time{
+  font-size:18px; color:var(--accent); text-shadow:0 0 6px var(--accent-glow);
+  letter-spacing:1px; min-width:50px; text-align:center;
+}
+.pm-task-item{
+  display:flex; align-items:center; gap:8px;
+  padding:7px 10px; background:var(--surface-2);
+  border:1px solid var(--border-2); border-radius:3px;
+  font-size:12px; cursor:pointer; transition:all .15s; margin-bottom:4px;
+}
+.pm-task-item:hover{border-color:var(--accent);background:var(--surface-3)}
+.pm-task-item .label{flex:1;color:var(--text-2)}
+.pm-task-item .pg{color:var(--accent-2);font-size:11px}
+.pm-task-item .go{color:var(--accent);font-size:14px}
+
+/* ──────────────────────────────────────────────────────────────
+   10. POMODORO
+   ────────────────────────────────────────────────────────────── */
+.pomodoro{
+  position:fixed; bottom:20px; right:20px;
+  background:var(--surface); border:1px solid var(--accent-2);
+  border-radius:6px; padding:10px 14px;
+  display:flex; align-items:center; gap:12px;
+  box-shadow:0 0 20px var(--accent-glow); z-index:500; font-size:14px;
+}
+.pomodoro .time{
+  font-size:24px; color:var(--accent); text-shadow:0 0 8px var(--accent-glow);
+  min-width:72px; text-align:center; letter-spacing:2px;
+}
+.pomodoro .time.break{color:var(--warn);text-shadow:0 0 8px rgba(221,255,0,.5)}
+.pomodoro .mode{font-size:10px;color:var(--text-3);letter-spacing:2px;text-align:center}
+.pomo-btn{
+  width:30px; height:30px;
+  background:var(--surface-2); border:1px solid var(--border-2);
+  color:var(--text-2); font-family:inherit; font-size:14px;
+  cursor:pointer; border-radius:3px;
+  display:flex; align-items:center; justify-content:center;
+  transition:all .15s;
+}
+.pomo-btn:hover{color:var(--accent);border-color:var(--accent)}
+.pomo-btn.play{background:var(--accent);color:#000;border-color:var(--accent)}
+.pomo-count{
+  font-size:11px; color:var(--text-3); letter-spacing:1px;
+  border-left:1px solid var(--border); padding-left:12px; text-align:center;
+}
+
+/* ──────────────────────────────────────────────────────────────
+   11. COMMAND PALETTE
+   ────────────────────────────────────────────────────────────── */
+.palette-overlay{
+  position:fixed; inset:0; background:rgba(0,0,0,.75);
+  backdrop-filter:blur(4px); z-index:2000;
+  display:none; align-items:flex-start; justify-content:center; padding-top:15vh;
+}
+.palette-overlay.open{display:flex}
+.palette{
+  width:90%; max-width:560px;
+  background:var(--surface); border:1px solid var(--accent-2);
+  border-radius:6px; box-shadow:0 0 40px var(--accent-glow); overflow:hidden;
+}
+.palette-input{
+  width:100%; background:var(--surface-2); border:none;
+  border-bottom:1px solid var(--border); color:var(--accent);
+  font-family:inherit; font-size:18px; padding:14px 18px;
+  outline:none; letter-spacing:1px;
+}
+.palette-input::placeholder{color:var(--text-3)}
+.palette-results{max-height:50vh;overflow-y:auto}
+.palette-results::-webkit-scrollbar{width:6px}
+.palette-results::-webkit-scrollbar-thumb{background:var(--border-2);border-radius:3px}
+.palette-item{
+  padding:10px 18px; cursor:pointer;
+  display:flex; gap:12px; align-items:center;
+  border-bottom:1px solid var(--border); transition:background .1s;
+}
+.palette-item:hover,.palette-item.selected{
+  background:var(--surface-3); border-left:3px solid var(--accent);
+  padding-left:15px;
+}
+.palette-item .pnum{font-size:12px;color:var(--text-3);min-width:40px;letter-spacing:1px}
+.palette-item .ptitle{flex:1;font-size:14px;color:var(--text)}
+.palette-item .pstep{font-size:11px;color:var(--accent-2);letter-spacing:1px}
+.palette-empty{padding:30px;text-align:center;color:var(--text-3);font-size:14px;letter-spacing:2px}
+
+/* ──────────────────────────────────────────────────────────────
+   12. DROPDOWN, HELP, TOAST
+   ────────────────────────────────────────────────────────────── */
+.dropdown{position:relative}
+.dropdown-menu{
+  position:absolute; top:calc(100% + 6px); right:0;
+  background:var(--surface); border:1px solid var(--accent-2);
+  border-radius:5px; padding:6px; min-width:220px;
+  box-shadow:0 4px 20px rgba(0,0,0,.6), 0 0 15px var(--accent-glow);
+  z-index:300; display:none;
+}
+.dropdown-menu.open{display:block}
+.dropdown-item{
+  display:flex; align-items:center; gap:10px;
+  padding:8px 12px; color:var(--text-2);
+  font-family:inherit; font-size:13px; cursor:pointer;
+  border-radius:3px; background:transparent; border:none;
+  width:100%; text-align:left; letter-spacing:.5px;
+  transition:all .1s;
+}
+.dropdown-item:hover{background:var(--surface-3);color:var(--accent)}
+.dropdown-item .ic{color:var(--accent);min-width:16px;text-align:center}
+.dropdown-item.danger{color:var(--danger)}
+.dropdown-item.danger .ic{color:var(--danger)}
+.dropdown-item.danger:hover{background:rgba(255,68,68,.1);color:var(--danger)}
+.dropdown-sep{height:1px;background:var(--border);margin:4px 0}
+.help-overlay{
+  position:fixed; inset:0; background:rgba(0,0,0,.8);
+  z-index:2100; display:none; align-items:center; justify-content:center;
+}
+.help-overlay.open{display:flex}
+.help-box{
+  background:var(--surface); border:1px solid var(--accent-2);
+  border-radius:6px; padding:24px 28px;
+  max-width:480px; width:90%; box-shadow:0 0 30px var(--accent-glow);
+}
+.help-box h2{
+  color:var(--accent); font-size:20px; letter-spacing:2px;
+  margin-bottom:18px; text-shadow:0 0 6px var(--accent-glow);
+}
+.help-row{
+  display:flex; justify-content:space-between; align-items:center;
+  padding:8px 0; border-bottom:1px solid var(--border); font-size:14px;
+}
+.help-row:last-child{border-bottom:none}
+.help-row .lbl{color:var(--text-2)}
+.help-row kbd{
+  background:var(--surface-2); border:1px solid var(--border-2);
+  border-bottom-width:2px; padding:2px 8px; border-radius:3px;
+  color:var(--accent); font-family:inherit; font-size:12px; letter-spacing:1px;
+}
+.toast{
+  position:fixed; bottom:24px; left:50%;
+  transform:translate(-50%,80px);
+  background:var(--surface); border:1px solid var(--accent);
+  color:var(--accent); padding:10px 18px; border-radius:4px;
+  font-size:14px; letter-spacing:1px;
+  box-shadow:0 0 20px var(--accent-glow);
+  z-index:3000; opacity:0; transition:all .3s; pointer-events:none;
+}
+.toast.show{transform:translate(-50%,0);opacity:1}
+
+/* ──────────────────────────────────────────────────────────────
+   13. RESPONSIVE
+   ────────────────────────────────────────────────────────────── */
+@media (max-width:900px){
+  .sidebar{position:fixed;top:0;left:0;bottom:0;z-index:1000}
+  .menu-toggle{display:flex}
+  .stats-bar{padding:8px 14px;gap:12px}
+  .stat .v{font-size:15px}
+  .point-row{padding:10px 12px}
+  .point-title{font-size:15px}
+  .point-desc{font-size:12.5px}
+  .content{padding:14px}
+  .pomodoro{bottom:12px;right:12px;padding:8px 11px}
+  .pomodoro .time{font-size:20px;min-width:60px}
+  .pm-body{flex-direction:column}
+  .pm-left{width:100%;max-height:45%;border-right:none;border-bottom:1px solid var(--border)}
+  .pm-pdf-container{min-height:400px}
+  .pm-title{font-size:15px}
+  .pm-btn{font-size:11px;padding:5px 7px}
+  .pm-btn .btn-label{display:none}
+}
+@media (max-width:600px){
+  .filter-chips{overflow-x:auto;max-width:100%}
+  .chip{font-size:11px;padding:4px 8px}
+  .kbd-hint{display:none}
+  .step-title{font-size:15px}
+  .step-num{font-size:18px;min-width:32px}
+  .step-badge{font-size:11px}
+  .pomodoro .pomo-count{display:none}
+}
+</style>
+</head>
+
+<body>
+
+<!-- ═══════════════════════════════════════════════════════════════
+     MODULE: HTML STRUCTURE
+     ═══════════════════════════════════════════════════════════════ -->
+
+<div class="app">
+  <!-- ═══ SIDEBAR ═══ -->
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-header">
+      <div class="logo">▣</div>
+      <div class="title">PREP TERMINAL</div>
+      <button class="collapse-btn" onclick="UI.toggleSidebar()" title="Скрий">◀</button>
+    </div>
+    <div class="sidebar-stats">
+      <div class="streak-row">
+        <span class="fire">🔥</span>
+        <span class="streak-num" id="streakNum">0</span>
+        <span class="streak-label">ДНИ ПОРЕД</span>
+      </div>
+    </div>
+    <div class="sidebar-nav" id="sidebarNav"></div>
+  </aside>
+
+  <!-- ═══ MAIN ═══ -->
+  <main class="main">
+    <div class="topbar">
+      <button class="menu-toggle" onclick="UI.toggleSidebar()">☰</button>
+      <div class="search-wrap">
+        <span class="icon">⌕</span>
+        <input type="text" id="searchInput" placeholder="Търси тема, теорема, бележка...">
+        <span class="kbd-hint" id="kbdHint">/</span>
+      </div>
+      <div class="filter-chips" id="filters">
+        <button class="chip active" data-filter="all">ВСИЧКИ</button>
+        <button class="chip" data-filter="todo">ЗА УЧЕНЕ</button>
+        <button class="chip" data-filter="done">ГОТОВИ</button>
+        <button class="chip" data-filter="fav">★</button>
+        <button class="chip" data-filter="hard">⚠ ТРУДНИ</button>
+      </div>
+      <div class="topbar-right">
+        <button class="icon-btn theme-btn" id="themeBtn" onclick="Theme.cycle()" title="Смяна на тема (G)">GREEN</button>
+        <button class="icon-btn" onclick="Palette.open()" title="Command Palette (Ctrl+K)">⌘</button>
+        <div class="dropdown">
+          <button class="icon-btn" id="menuBtn" title="Меню">⋯</button>
+          <div class="dropdown-menu" id="menuDropdown">
+            <button class="dropdown-item" onclick="Content.expandAll();UI.closeMenu()"><span class="ic">▾</span> Разгъни всички</button>
+            <button class="dropdown-item" onclick="Content.collapseAll();UI.closeMenu()"><span class="ic">▸</span> Сгъни всички</button>
+            <div class="dropdown-sep"></div>
+            <button class="dropdown-item" onclick="Store.exportJSON();UI.closeMenu()"><span class="ic">↓</span> Експорт (JSON)</button>
+            <button class="dropdown-item" onclick="document.getElementById('importFile').click();UI.closeMenu()"><span class="ic">↑</span> Импорт (JSON)</button>
+            <input type="file" id="importFile" accept=".json" style="display:none" onchange="Store.importJSON(event)">
+            <div class="dropdown-sep"></div>
+            <button class="dropdown-item" id="scanToggleItem" onclick="UI.toggleScanlines();UI.closeMenu()"><span class="ic">◫</span> Scanlines: ИЗКЛ</button>
+            <button class="dropdown-item" onclick="Help.open();UI.closeMenu()"><span class="ic">?</span> Клавишни shortcut-и</button>
+            <div class="dropdown-sep"></div>
+            <button class="dropdown-item danger" onclick="Store.resetAll();UI.closeMenu()"><span class="ic">⌫</span> Нулирай всичко</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="stats-bar">
+      <div class="stat"><span class="v" id="statDone">0</span><span class="l">ГОТОВИ</span></div>
+      <div class="stat"><span class="v" id="statTotal">0</span><span class="l">ОБЩО</span></div>
+      <div class="stat"><span class="v" id="statPercent">0%</span><span class="l">НАПРЕДЪК</span></div>
+      <div class="stat"><span class="v" id="statPomos">0</span><span class="l">ПОМОДОРО</span></div>
+      <div class="progress-wrap"><div class="progress-fill" id="progressFill" style="width:0%"></div></div>
+    </div>
+
+    <div class="content" id="content">
+      <div id="stepsContainer"></div>
+    </div>
+  </main>
+</div>
+
+<!-- ═══ POMODORO ═══ -->
+<div class="pomodoro" id="pomodoro">
+  <div>
+    <div class="time" id="pomoTime">25:00</div>
+    <div class="mode" id="pomoMode">ФОКУС</div>
+  </div>
+  <button class="pomo-btn play" id="pomoPlay" onclick="Pomodoro.toggle()" title="Старт/Пауза (T)">▶</button>
+  <button class="pomo-btn" onclick="Pomodoro.reset()" title="Рестарт">↺</button>
+  <div class="pomo-count">
+    <div id="pomoDone">0</div>
+    <div style="font-size:9px;letter-spacing:1.5px;">СЕСИИ</div>
+  </div>
+</div>
+
+<!-- ═══ COMMAND PALETTE ═══ -->
+<div class="palette-overlay" id="paletteOverlay" onclick="if(event.target===this)Palette.close()">
+  <div class="palette">
+    <input type="text" class="palette-input" id="paletteInput" placeholder="Скок до точка... (Enter за избор)" autocomplete="off">
+    <div class="palette-results" id="paletteResults"></div>
+  </div>
+</div>
+
+<!-- ═══ HELP ═══ -->
+<div class="help-overlay" id="helpOverlay" onclick="if(event.target===this)Help.close()">
+  <div class="help-box">
+    <h2>⌨ КЛАВИШНИ SHORTCUT-И</h2>
+    <div class="help-row"><span class="lbl">Фокус върху търсене</span><kbd>/</kbd></div>
+    <div class="help-row"><span class="lbl">Command palette</span><kbd>Ctrl + K</kbd></div>
+    <div class="help-row"><span class="lbl">Следваща / предишна</span><kbd>J / K</kbd></div>
+    <div class="help-row"><span class="lbl">Отвори текущата точка</span><kbd>Enter</kbd></div>
+    <div class="help-row"><span class="lbl">Маркирай текущата</span><kbd>Space</kbd></div>
+    <div class="help-row"><span class="lbl">Отвори бележки</span><kbd>N</kbd></div>
+    <div class="help-row"><span class="lbl">Помодоро старт/пауза</span><kbd>T</kbd></div>
+    <div class="help-row"><span class="lbl">Смяна на тема</span><kbd>G</kbd></div>
+    <div class="help-row"><span class="lbl">Разгъни / сгъни всички</span><kbd>E / C</kbd></div>
+    <div class="help-row"><span class="lbl">Затвори</span><kbd>Esc</kbd></div>
+    <div class="help-row"><span class="lbl">Това меню</span><kbd>?</kbd></div>
+  </div>
+</div>
+
+<!-- ═══ POINT MODAL ═══ -->
+<div class="modal-overlay" id="pointModal" onclick="if(event.target===this)Modal.close()">
+  <div class="point-modal">
+    <div class="pm-header">
+      <div class="pm-title-area">
+        <div class="pm-id" id="pmId">ТОЧКА</div>
+        <div class="pm-title" id="pmTitle">—</div>
+      </div>
+      <div class="pm-actions">
+        <button class="pm-btn" onclick="Modal.navigate(-1)" title="Предишна (K)">◀ <span class="btn-label">Назад</span></button>
+        <button class="pm-btn" onclick="Modal.navigate(1)" title="Следваща (J)"><span class="btn-label">Напред</span> ▶</button>
+        <button class="pm-btn" id="pmFav" onclick="Modal.toggleFav()" title="★">☆</button>
+        <button class="pm-btn diff-btn easy" id="pmDiffEasy" onclick="Modal.setDiff('easy')">E</button>
+        <button class="pm-btn diff-btn med" id="pmDiffMed" onclick="Modal.setDiff('med')">M</button>
+        <button class="pm-btn diff-btn hard" id="pmDiffHard" onclick="Modal.setDiff('hard')">H</button>
+        <button class="pm-btn" id="pmDone" onclick="Modal.toggleDone()">✓ <span class="btn-label">Готово</span></button>
+        <button class="pm-btn close" onclick="Modal.close()">✕</button>
+      </div>
+    </div>
+    <div class="pm-body">
+      <div class="pm-left">
+        <div class="pm-section">
+          <div class="pm-label">▸ Описание</div>
+          <div class="pm-desc" id="pmDesc">—</div>
+        </div>
+        <div class="pm-section">
+          <div class="pm-label">▸ Източник</div>
+          <div class="pm-meta-tags" id="pmSource">—</div>
+        </div>
+        <div class="pm-section">
+          <div class="pm-label">▸ Бърз достъп</div>
+          <div id="pmTasks"></div>
+        </div>
+        <div class="pm-section">
+          <div class="pm-label">▸ Подробни бележки</div>
+          <div class="pm-explanation" id="pmExplanation">—</div>
+        </div>
+        <div class="pm-section">
+          <div class="pm-label">▸ Лични бележки</div>
+          <textarea class="pm-notes" id="pmNotes" placeholder="Твои идеи, леми, трикове..."></textarea>
+        </div>
+      </div>
+      <div class="pm-right">
+        <div class="pm-pdf-tabs" id="pmTabs"></div>
+        <div class="pm-pdf-container">
+          <iframe class="pm-pdf-frame" id="pmPdfFrame" src="about:blank"></iframe>
+        </div>
+      </div>
+    </div>
+    <div class="pm-footer">
+      <span style="color:var(--text-3);">J/K · Space · N · T · G · Esc</span>
+      <div class="pm-pomo-inline">
+        <span style="color:var(--text-3);font-size:10px;">ПОМОДОРО:</span>
+        <span class="pm-pomo-time" id="pmPomoTime">25:00</span>
+        <button class="pm-btn" onclick="Pomodoro.toggle()" id="pmPomoToggle">▶</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<!-- ═══════════════════════════════════════════════════════════════
+     MODULE: JAVASCRIPT
+     ═══════════════════════════════════════════════════════════════ -->
+<script>
+
+/* ═══════════════════════════════════════════════════════════════
+   MODULE: CONFIG
+   ═══════════════════════════════════════════════════════════════ */
+const CONFIG = {
+  storeKey: 'olympiad_v4',
+  legacyKeys: ['olympiad_v3', 'olympiad_v2', 'olympiad_progress'],
+  themeKey: 'olympiad_theme',
+  themes: ['green', 'contrast', 'high'],
+  themeLabels: { green: 'GREEN', contrast: 'SOFT', high: 'HIGH' },
+  pomo: { focus: 25*60, shortBreak: 5*60, longBreak: 15*60 },
+};
+
+/* ═══════════════════════════════════════════════════════════════
+   MODULE: DATA
+   ───────────────────────────────────────────────────────────────
+   Формат на точка:
+     id              – уникален (напр. "1.1")
+     title           – кратко заглавие
+     desc            – едно изречение
+     source          – откъде е (книга + автор)
+     pdf             – път до PDF (без .pdf)
+     page            – начална страница на теорията
+     problems_page   – (опц.) начална страница на задачите
+     solutions_page  – (опц.) начална страница на решенията
+     tasks           – (опц.) списък с конкретни задачи [{label, pdf, page}]
+     bonus           – (опц.) допълнителни PDF-и
+     explanation     – подробни бележки (multi-line)
+   ═══════════════════════════════════════════════════════════════ */
+const STEPS = [
+/* ─── STEP 1: ГЕОМЕТРИЯ – ОСНОВНИ ТЕОРЕМИ ─── */
+{ id:1, icon:"◆", title:"ГЕОМЕТРИЯ – ОСНОВНИ ТЕОРЕМИ", points:[
+  { id:"1.1", title:"Теорема на Менелай", desc:"Колинеарни точки върху страните на триъгълник",
+    source:"OT_2012, Симедиани (Ст. Боев)", pdf:"Материали_БГ/OT_2012", page:67,
+    explanation:"ФОРМУЛИРОВКА: Нека M, N, P са точки съответно на правите BC, CA, AB на △ABC. Тогава M, N, P са колинеарни ⇔ (BM/MC)·(CN/NA)·(AP/PB) = 1 (ориентирани отношения).\n\nКОГА: За доказване на колинеарност; за намиране на отношения при дадена колинеарност; като част от хармонично отношение.\n\nСВОЙСТВА: Работи и за точки на продълженията. Обратната посока е много полезна. Двойствена на Чева.\n\nВНИМАНИЕ: Използвай ориентирани отношения, не само дължини.\n\nТРИК: Видиш ли 3 колинеарни точки и отношение – Менелай." },
+  { id:"1.2", title:"Теорема на Чева", desc:"Конкурентни чевиани",
+    source:"OT_2012, Симедиани", pdf:"Материали_БГ/OT_2012", page:67,
+    explanation:"ФОРМУЛИРОВКА: M ∈ BC, N ∈ CA, P ∈ AB. AM, BN, CP конкурентни ⇔ (BM/MC)·(CN/NA)·(AP/PB) = 1.\n\nТРИГОНОМЕТРИЧНА ФОРМА: (sin∠BAM/sin∠MAC)·(sin∠CBN/sin∠NBA)·(sin∠ACP/sin∠PCB) = 1.\n\nКОГА: За доказване, че 3 прави се пресичат в една точка; за медиани, ъглополовящи, височини, симедиани.\n\nТРИК: Тригонометричната форма е полезна, когато знаеш ъгли, а не отсечки." },
+  { id:"1.3", title:"Теорема на Птолемей", desc:"Вписан четириъгълник; неравенство",
+    source:"OT_2012, Геом. неравенства (Н. Белухов)", pdf:"Материали_БГ/OT_2012", page:14,
+    explanation:"РАВЕНСТВО: За вписан ABCD: AC·BD = AB·CD + BC·AD.\n\nНЕРАВЕНСТВО: За произволен ABCD: AC·BD ≤ AB·CD + BC·AD, равенство ⇔ ABCD вписан.\n\nКОГА: Метрични зависимости; доказване на неравенства; комбиниране с инверсия и спирално подобие.\n\nТРИК: Вписаният четириъгълник максимизира произведението на диагоналите при дадени страни." },
+  { id:"1.4", title:"Степен на точка. Радикална ос", desc:"Инструмент за окръжности",
+    source:"OT_2010, Приложения окръжност (Н. Белухов)", pdf:"Материали_БГ/OT_2010", page:31,
+    explanation:"ОПРЕДЕЛЕНИЕ: Pow(P) = OP² − R². Положителна за външни, отрицателна за вътрешни, 0 на окръжността.\n\nСВОЙСТВО: Ако права през P пресича k в A, B: PA·PB = |Pow(P)|. Ако P е външна и PT е допирателна: Pow(P) = PT².\n\nРАДИКАЛНА ОС: Точки с равни степени спрямо 2 окръжности – винаги права, перпендикулярна на линията на центровете.\n\nРАДИКАЛЕН ЦЕНТЪР: 3 окръжности → 3 радикални оси → пресичат се в една точка.\n\nТРИК: За доказване на колинеарност – покажи, че 3 точки лежат на радикална ос." },
+  { id:"1.5", title:"Вписани ъгли, Талес, симетрали", desc:"Базови свойства",
+    source:"BMC_2003-2006, геом. задачи", pdf:"Материали_БГ/BMC_2003-2006", page:14,
+    explanation:"ВПИСАН ЪГЪЛ: Половината от централния, който обхваща същата дъга. Всички вписани ъгли на една дъга са равни.\n\nТАЛЕС: Ъгъл, опрян на диаметър = 90°.\n\nСИМЕТРАЛА: Геометрично място на равноотдалечените. Пресечната на 3 симетрали = център на описаната.\n\nСЛЕДСТВИЯ: Равни дъги → равни хорди. Равни вписани ъгли → точки на една окръжност. Ъгъл между хорда и допирателна = вписан ъгъл." },
+  { id:"1.6", title:"Синусова и косинусова теорема", desc:"Олимпийски приложения",
+    source:"BMS_2012-2015", pdf:"Материали_БГ/BMS_2012-2015", page:30,
+    explanation:"СИНУСОВА: a/sinA = b/sinB = c/sinC = 2R.\n\nКОСИНУСОВА: c² = a² + b² − 2ab·cosC.\n\nПРИЛОЖЕНИЯ: (1) Намиране на дължини от ъгли. (2) Медиани: m_a² = (2b²+2c²−a²)/4. (3) Ъглополовящи: l_a = 2bc·cos(A/2)/(b+c). (4) Височини.\n\nТРИК: Превърни отношения на страни в отношения на синуси." },
+  { id:"1.7", title:"Формули за лице. Херон", desc:"S = pr, S = abc/4R, Херон",
+    source:"BMC_2003-2006", pdf:"Материали_БГ/BMC_2003-2006", page:14,
+    explanation:"ФОРМУЛИ: S = (1/2)ab·sinC = abc/(4R) = rs = √(s(s−a)(s−b)(s−c)), където s = (a+b+c)/2.\n\nРАДИУСИ: r = S/s, R = abc/(4S), r_a = S/(s−a).\n\nКОГА: За неравенства (R ≥ 2r); задачи с вписани/описани окръжности.\n\nТЪЖДЕСТВА: 1/r = 1/r_a + 1/r_b + 1/r_c. r_a r_b + r_b r_c + r_c r_a = s²." },
+  { id:"1.8", title:"Теорема на Ойлер (I,O)", desc:"IO² = R² − 2Rr; окръжност на 9 точки",
+    source:"BMS_2012-2015", pdf:"Материали_БГ/BMS_2012-2015", page:30,
+    explanation:"ТЕОРЕМА: IO² = R² − 2Rr. Следствие: R ≥ 2r.\n\nОЙЛЕРОВА ПРАВА: O, G, H са колинеарни, OG:GH = 1:2. OH² = 9R² − (a²+b²+c²).\n\nОКРЪЖНОСТ НА 9-ТЕ: Среди на страните (3), пети на височините (3), среди на AH, BH, CH (3). Център: средата на OH. Радиус: R/2.\n\nФОЙЕРБАХ: Допира се вътрешно до вписаната и външно до 3-те външновписани." },
+  { id:"1.9", title:"Теорема на Микел", desc:"Обща точка на 4 окръжности",
+    source:"OT_2010", pdf:"Материали_БГ/OT_2010", page:31,
+    explanation:"ФОРМУЛИРОВКА: 4 прави образуват пълен четириъгълник. Описаните окръжности на 4-те триъгълника минават през обща точка (точка на Микел).\n\nПО-ОБЩО: ABC с M ∈ BC, N ∈ CA, P ∈ AB → описаните окръжности на △AMN, △BNP, △CPM минават през обща точка.\n\nТРИК: За доказване на пресичане на окръжности – намери трета през същата точка." },
+  { id:"1.10", title:"Вписана и външновписани окръжности", desc:"Допирни точки, дължини, ъгли",
+    source:"OT_2010 / BMC_2003-2006", pdf:"Материали_БГ/OT_2010", page:31,
+    explanation:"ВПИСАНА: център I, радиус r. От върха A до допирните точки на AB и AC: s − a.\n\nВЪНШНОВПИСАНИ: I_a, I_b, I_c. Радиуси: r_a = S/(s−a).\n\nФОРМУЛИ: 1/r = 1/r_a + 1/r_b + 1/r_c. r_a r_b + r_b r_c + r_c r_a = s².\n\nКЛЮЧОВО: I_a I_b ⊥ CI_c. I I_a I_b I_c – правоъгълен триъгълник в I." }
+]},
+
+/* ─── STEP 2: ГЕОМЕТРИЯ – НАПРЕДНАЛИ ─── */
+{ id:2, icon:"◆", title:"ГЕОМЕТРИЯ – НАПРЕДНАЛИ", points:[
+  { id:"2.1", title:"Хармонично отношение", desc:"Пълна статия",
+    source:"OT_2010, Хармонично отношение (Ст. Боев)", pdf:"Материали_БГ/OT_2010", page:76,
+    explanation:"ОПРЕДЕЛЕНИЕ: 4 точки A, B, C, D на права са хармонични, ако (A, B; C, D) = −1, т.е. AC/CB ÷ AD/DB = −1.\n\nСВОЙСТВА: (1) Средата на AB е спрегната на безкрайността. (2) 2/AB = 1/AC + 1/AD. (3) Пълният четириъгълник дава хармонични четворки.\n\nПРИЛОЖЕНИЯ: (1) Поляри. (2) Симедианата и медианата пресичат BC в хармонично спрегнати точки. (3) Ъглополовящи (вътрешна и външна).\n\nТРИК: Видиш ли ъглополовящи, вписана + външновписана, или симедиана – мисли хармонично." },
+  { id:"2.2", title:"Симедиани", desc:"Свойства, точка на Лемоан",
+    source:"OT_2012, Симедиани (Ст. Боев)", pdf:"Материали_БГ/OT_2012", page:67,
+    explanation:"ОПРЕДЕЛЕНИЕ: Изогонална на медианата. A' ∈ BC: BA'/A'C = c²/b².\n\nСВОЙСТВА: (1) 3-те симедиани се пресичат в точката на Лемоан K. (2) K = пресечна на допирателните към описаната в A, B, C. (3) K е изогонално спрегната на медицентъра G. (4) Медианата и симедианата са хармонично спрегнати спрямо AB, AC.\n\nТРИК: Задача с медиани + симетрия, или допирателни към описаната – симедиана." },
+  { id:"2.3", title:"Инверсия", desc:"Окръжности в прави",
+    source:"OT_2012 / BMC_2003-2006", pdf:"Материали_БГ/OT_2012", page:67,
+    explanation:"ОПРЕДЕЛЕНИЕ: OX · OX' = r². Точка O не се преобразува.\n\nСВОЙСТВА: (1) Права през O → себе си. (2) Права без O → окръжност през O. (3) Окръжност през O → права. (4) Окръжност без O → окръжност. (5) Конформно – запазва ъгли.\n\nТРИК: Задача с обща точка на много окръжности – инвертирай в нея.\n\nВНИМАНИЕ: Не е линейна – не работи за числови дължини." },
+  { id:"2.4", title:"Спирално подобие", desc:"Ротация + хомотетия",
+    source:"OT_2012", pdf:"Материали_БГ/OT_2012", page:67,
+    explanation:"ОПРЕДЕЛЕНИЕ: Ротация + хомотетия с общ център. В комплексни числа: z → k·e^(iθ)(z − O) + O.\n\nСВОЙСТВА: (1) Конформно. (2) Отсечка → отсечка с отношение k. (3) Център = фиксирана точка.\n\nКЛЮЧОВО: За отсечки AB и CD съществува ЕДИНСТВЕНО спирално подобие A→C, B→D. Център = пресечна на описаните окръжности на △ACD и △BCD.\n\nПРИЛОЖЕНИЕ: Точка на Микел = център на спирално подобие." },
+  { id:"2.5", title:"Полюси и поляри", desc:"За окръжност",
+    source:"OT_2010, Хармонично отношение", pdf:"Материали_БГ/OT_2010", page:76,
+    explanation:"ОПРЕДЕЛЕНИЕ: Полярата на P – права през допирните точки на допирателните от P.\n\nСВОЙСТВО: Ако права през P пресича k в A, B и полярата в Q: (P, Q; A, B) = −1.\n\nДВОЙСТВЕНОСТ: Точка → права. P ∈ k → допирателната. Център → безкрайност.\n\nТЕОРЕМА ЛА ПОЛ: Спрегнати точки (всяка на полярата на другата) → правите към центъра са перпендикулярни.\n\nТРИК: Задача с 3 допирателни – поляри." },
+  { id:"2.6", title:"Теорема на Паскал", desc:"Вписан шестоъгълник",
+    source:"OT_2012 / BMC_2003-2006", pdf:"Материали_БГ/OT_2012", page:67,
+    explanation:"ФОРМУЛИРОВКА: A, B, C, D, E, F на коника. Пресечните точки на AB и DE, BC и EF, CD и FA са колинеарни.\n\nОБОБЩЕНИЕ: За всяка коника.\n\nИЗРОДЕНИ: Ако 2 точки съвпадат → твърдение с допирателна.\n\nДВОЙСТВЕНО: Брианшон." },
+  { id:"2.7", title:"Теорема на Брианшон", desc:"Описан шестоъгълник",
+    source:"OT_2012", pdf:"Материали_БГ/OT_2012", page:67,
+    explanation:"ФОРМУЛИРОВКА: ABCDEF описан около коника. Главните диагонали AD, BE, CF са конкурентни.\n\nДВОЙСТВЕНО: На Паскал. 'Точка на коника' → 'допирателна', 'колинеарни' → 'конкурентни'." },
+  { id:"2.8", title:"Геометрични неравенства", desc:"Ердьош-Мордел, Птолемей",
+    source:"OT_2012, Геом. неравенства (Н. Белухов)", pdf:"Материали_БГ/OT_2012", page:14,
+    explanation:"ОЙЛЕР: R ≥ 2r.\n\nЕРДЬОШ-МОРДЕЛ: R + r ≥ 2(r_a + r_b + r_c).\n\nПТОЛЕМЕЙ: AC·BD ≤ AB·CD + BC·AD.\n\nВАЙЦЕНБОК: a² + b² + c² ≥ 4√3·S.\n\nСУБСТИТУЦИЯ НА РАВИ: x = s−a, y = s−b, z = s−c. Тогава S² = s·xyz, r² = xyz/(x+y+z)." }
+]},
+
+/* ─── STEP 3: ТЧ – ОСНОВИ ─── */
+{ id:3, icon:"◆", title:"ТЕОРИЯ НА ЧИСЛАТА – ОСНОВИ", points:[
+  { id:"3.1", title:"Делимост. НОД/НОК", desc:"Базови понятия",
+    source:"OT_2010, ТЧ (П. Бойваленков)", pdf:"Материали_БГ/OT_2010", page:46,
+    explanation:"ОСНОВНА ТЕОРЕМА: Всяко n > 1 се разлага еднозначно на прости.\n\nНОД·НОК = a·b. Алгоритъм на Евклид: НОД(a,b) = НОД(b, a mod b).\n\nСВОЙСТВА: (1) НОД(a,b) = НОД(a−b, b). (2) Теорема на Безу: съществуват x, y с ax+by = НОД(a,b). (3) Лема на Евклид: НОД(a,b)=1 и a | bc ⇒ a | c.",
+    bonus:[{label:"NT_Training_01",pdf:"Бонус/lectures-navid/NT_Training_01"},{label:"NT_Training_02",pdf:"Бонус/lectures-navid/NT_Training_02"},{label:"Number_Theoretic_Flavor",pdf:"Бонус/lectures-navid/Number_Theoretic_Flavor"}] },
+  { id:"3.2", title:"Сравнения по модул", desc:"a ≡ b (mod m)",
+    source:"OT_2010, ТЧ (Ал. Иванов)", pdf:"Материали_БГ/OT_2010", page:4,
+    explanation:"ОПРЕДЕЛЕНИЕ: a ≡ b ⇔ m | (a−b).\n\nОПЕРАЦИИ: ± и · са свободни. Деление само ако НОД(делител, m) = 1.\n\nСВОЙСТВА: Класове 0..m−1. Ако a ≡ b (mod m) и d | m → a ≡ b (mod d).\n\nТРИК: Първа идея за всяка ТЧ задача – сведи до подходящ модул. За точни квадрати: mod 4, 8, 3, 9, 16, 7." },
+  { id:"3.3", title:"Малка теорема на Ферма", desc:"aᵖ ≡ a (mod p)",
+    source:"OT_2010, ТЧ (Ал. Иванов)", pdf:"Материали_БГ/OT_2010", page:4,
+    explanation:"ФОРМУЛИРОВКА: За просто p: a^p ≡ a (mod p). За НОД(a,p)=1: a^(p−1) ≡ 1.\n\nДОКАЗАТЕЛСТВО: a, 2a, ..., (p−1)a образуват пермутация на 1..p−1 mod p. ⇒ a^(p−1)·(p−1)! ≡ (p−1)!. Съкрати.\n\nПРИЛОЖЕНИЯ: (1) Свеждане на степени: a^n ≡ a^(n mod (p−1)). (2) Делимост.\n\nВНИМАНИЕ: Обратното не е вярно (числа на Кармайкъл)." },
+  { id:"3.4", title:"Теорема на Ойлер", desc:"a^φ(n) ≡ 1 (mod n)",
+    source:"OT_2010, ТЧ (Ал. Иванов)", pdf:"Материали_БГ/OT_2010", page:4,
+    explanation:"φ(n): брой на числата в [1,n], взаимно прости с n.\n\nСВОЙСТВА: (1) φ(p) = p−1. (2) φ(p^k) = p^(k−1)(p−1). (3) Мултипликативна. (4) φ(n) = n·∏(1−1/p).\n\nТЕОРЕМА: НОД(a,n)=1 ⇒ a^φ(n) ≡ 1 (mod n).\n\nВНИМАНИЕ: Условието НОД(a,n)=1 е критично." },
+  { id:"3.5", title:"Теорема на Уилсън", desc:"(p−1)! ≡ −1 (mod p)",
+    source:"OT_2010, ТЧ (П. Бойваленков)", pdf:"Материали_БГ/OT_2010", page:46,
+    explanation:"ФОРМУЛИРОВКА: p просто ⇔ (p−1)! ≡ −1 (mod p).\n\nДОКАЗАТЕЛСТВО: Всяко a от 1..p−1 има обратно. Само 1 и p−1 са равни на обратните си. Останалите се групират по двойки (a, a⁻¹) с произведение 1. ⇒ (p−1)! ≡ 1·(p−1) ≡ −1.\n\nОБОБЩЕНИЕ: За n > 4 съставно: (n−1)! ≡ 0 (mod n)." },
+  { id:"3.6", title:"Китайска теорема", desc:"Система сравнения",
+    source:"OT_2010, ТЧ (Ал. Иванов)", pdf:"Материали_БГ/OT_2010", page:4,
+    explanation:"ФОРМУЛИРОВКА: m₁, ..., m_k взаимно прости. Системата x ≡ a_i (mod m_i) има единствено решение по модул M = ∏m_i.\n\nКОНСТРУКЦИЯ: x = Σ a_i · M_i · y_i, M_i = M/m_i, y_i = (M_i)^(−1) mod m_i.\n\nТРИК: Модул m·n с НОД(m,n)=1 → разложи на mod m и mod n, слепи с CRT.\n\nВНИМАНИЕ: Нужна е съвместимост: a_i ≡ a_j (mod НОД(m_i, m_j))." },
+  { id:"3.7", title:"Показател. Примитивни корени", desc:"Ред на елемент mod n",
+    source:"OT_2010, ТЧ (Ал. Иванов)", pdf:"Материали_БГ/OT_2010", page:4,
+    explanation:"ОПРЕДЕЛЕНИЕ: ord_n(a) = най-малкото k с a^k ≡ 1 (mod n).\n\nСВОЙСТВА: (1) ord | φ(n). (2) a^k ≡ 1 ⇔ ord | k. (3) ord(a^m) = ord(a)/НОД(ord, m).\n\nПРИМИТИВЕН КОРЕН: ord = φ(n). Съществува ⇔ n ∈ {1, 2, 4, p^k, 2p^k}." },
+  { id:"3.8", title:"Квадратични остатъци. Лежандър", desc:"(a/p) = ±1",
+    source:"OT_2010, ТЧ (Ал. Иванов)", pdf:"Материали_БГ/OT_2010", page:4,
+    explanation:"ОПРЕДЕЛЕНИЕ: a е квадратичен остатък mod p ако x² ≡ a има решение.\n\nСИМВОЛ НА ЛЕЖАНДЪР: (a/p) = 1 / −1 / 0.\n\nСВОЙСТВА: (1) Мултипликативен. (2) Критерий на Ойлер: (a/p) ≡ a^((p−1)/2) (mod p). (3) (−1/p) = (−1)^((p−1)/2). (4) (2/p) = (−1)^((p²−1)/8).\n\nРЕЦИПРОЧНОСТ: (p/q)(q/p) = (−1)^((p−1)(q−1)/4)." },
+  { id:"3.9", title:"p-адични оценки. LTE", desc:"v_p(n); v_p(aⁿ − bⁿ)",
+    source:"OT_2010, ТЧ (П. Бойваленков)", pdf:"Материали_БГ/OT_2010", page:46,
+    explanation:"ОПРЕДЕЛЕНИЕ: v_p(n) = степен на p в n.\n\nСВОЙСТВА: (1) v_p(mn) = v_p(m) + v_p(n). (2) v_p(m+n) ≥ min(v_p(m), v_p(n)), равенство при различни.\n\nLTE: p | (x−y), p ∤ xy, p нечетно: v_p(x^n − y^n) = v_p(x−y) + v_p(n).\n\nТРИК: Доказване, че израз НЕ е точен квадрат/куб." },
+  { id:"3.10", title:"Уравнение на Пел", desc:"x² − Dy² = 1",
+    source:"OT_2010, ТЧ (П. Бойваленков)", pdf:"Материали_БГ/OT_2010", page:46,
+    explanation:"ОПРЕДЕЛЕНИЕ: D > 0, не точен квадрат. Търсим цели положителни решения.\n\nСЪЩЕСТВУВАНЕ: Безкрайно много. Най-малкото = фундаментално (x₁, y₁).\n\nСТРУКТУРА: x_n + y_n√D = (x₁ + y₁√D)^n.\n\nНАМИРАНЕ: Чрез верижни дроби на √D.\n\nПРИМЕР: D=2: (3,2), (17,12), ... D=3: (2,1), (7,4), ..." }
+]},
+
+/* ─── STEP 4: ТЧ – НАПРЕДНАЛИ ─── */
+{ id:4, icon:"◆", title:"ТЕОРИЯ НА ЧИСЛАТА – НАПРЕДНАЛИ", points:[
+  { id:"4.1", title:"Диофантови – линейни", desc:"ax + by = c",
+    source:"OT_2010, ТЧ (П. Бойваленков)", pdf:"Материали_БГ/OT_2010", page:46,
+    explanation:"УСЛОВИЕ: НОД(a,b) | c.\n\nОБЩО РЕШЕНИЕ: d = НОД(a,b). Частно (x₀, y₀) чрез разширен Евклид. Всички: x = x₀ + (b/d)t, y = y₀ − (a/d)t.\n\nТРИК: Сведи до ax ≡ c (mod b)." },
+  { id:"4.2", title:"Диофантови – квадратни", desc:"Питагорови тройки",
+    source:"OT_2010, ТЧ (П. Бойваленков)", pdf:"Материали_БГ/OT_2010", page:46,
+    explanation:"ПАРАМЕТРИЗАЦИЯ: x = m²−n², y = 2mn, z = m²+n² с m > n > 0, НОД(m,n)=1, различна четност.\n\nОБЩИ: умножени по k.\n\nТРИК: x² + y² = z² → параметризирай." },
+  { id:"4.3", title:"Диофантови – кубични", desc:"x³ + y³ = z³",
+    source:"OT_2010, ТЧ (П. Бойваленков)", pdf:"Материали_БГ/OT_2010", page:46,
+    explanation:"ФЕРМА n = 3: няма нетривиални решения. Доказано от Ойлер чрез безкраен спуск в ℤ[ω].\n\nТЕХНИКИ: Безкраен спуск; работа в разширения; факторизация a³+b³ = (a+b)(a²−ab+b²); p-адични оценки." },
+  { id:"4.4", title:"Точни квадрати и степени", desc:"Заключване между квадрати",
+    source:"OT_2010, Толкова много квадрати (Н. Събева)", pdf:"Материали_БГ/OT_2010", page:23,
+    explanation:"МЕТОД: n² < x < (n+1)² ⇒ x не е точен квадрат.\n\nПОДХОДИ: (1) Оценки. (2) Сравнения по модул (квадрати mod 4: {0,1}; mod 8: {0,1,4}; mod 9: {0,1,4,7}). (3) p-адични оценки. (4) Теория на квадратичните форми.\n\nТРИК: Ако x = P(n) расте бавно – заключи между последователни квадрати/кубове.",
+    bonus:[{label:"NT_Training_03",pdf:"Бонус/lectures-navid/NT_Training_03"},{label:"NT_Training_04",pdf:"Бонус/lectures-navid/NT_Training_04"},{label:"NT_Training_05",pdf:"Бонус/lectures-navid/NT_Training_05"}] },
+  { id:"4.5", title:"Прости числа", desc:"Безкрайност; формули",
+    source:"OT_2010, ТЧ (П. Бойваленков)", pdf:"Материали_БГ/OT_2010", page:46,
+    explanation:"БЕЗКРАЙНОСТ (Евклид): допусни p₁..p_n всички прости. N = p₁···p_n + 1 има нов прост делител.\n\nФОРМУЛИ: Мерсен 2^p − 1 (просто само при p просто). Ферма 2^(2^n) + 1.\n\nРАЗПРЕДЕЛЕНИЕ: π(x) ~ x/ln x. Между n и 2n винаги има прост.\n\nТРИК: 'Безкрайно много прости p ≡ a (mod d)' → Дирихле." },
+  { id:"4.6", title:"Суми на степени", desc:"1ᵏ + 2ᵏ + ... + nᵏ",
+    source:"OT_2010, ТЧ (П. Бойваленков)", pdf:"Материали_БГ/OT_2010", page:46,
+    explanation:"ФОРМУЛИ: ∑i = n(n+1)/2, ∑i² = n(n+1)(2n+1)/6, ∑i³ = (n(n+1)/2)².\n\nОБЩА: чрез полиноми на Бернули.\n\nМЕТОДИ: Индукция, телескопични суми, биномна теорема, генериращи функции.\n\nТРИК: Ако сумата е точен k-ти квадрат – p-адични оценки или оценки." },
+  { id:"4.7", title:"Мултипликативни функции", desc:"φ(n), τ(n), σ(n)",
+    source:"OT_2010, ТЧ (Ал. Иванов)", pdf:"Материали_БГ/OT_2010", page:4,
+    explanation:"ОПРЕДЕЛЕНИЕ: f(mn) = f(m)f(n) за НОД(m,n)=1.\n\nПРИМЕРИ: φ(n), τ(n) (брой делители), σ(n) (сума), μ(n) (Мьобиус).\n\nИЗЧИСЛЕНИЕ: n = ∏p_i^α_i ⇒ φ = ∏p_i^(α_i−1)(p_i−1); τ = ∏(α_i+1); σ = ∏(p_i^(α_i+1)−1)/(p_i−1).\n\nИНВЕРСИЯ: g(n) = Σ_{d|n} f(d) ⇒ f(n) = Σ μ(d)g(n/d)." },
+  { id:"4.8", title:"Факториели и C(n,k)", desc:"p-адични оценки; делимост",
+    source:"OT_2010, ТЧ (П. Бойваленков)", pdf:"Материали_БГ/OT_2010", page:46,
+    explanation:"ЛЬОЖАНДЪР: v_p(n!) = ∑⌊n/p^k⌋.\n\nБИНОМНИ: C(n,k) = n!/(k!(n−k)!).\n\nКУМЪР: C(n,k) нечетно ⇔ k & (n−k) = 0 (в двоична).\n\nТРИК: 'n! + 1' или 'n! − 1': всички p ≤ n делят n!, значи p ∤ (n! ± 1)." }
+]},
+
+/* ─── STEP 5: АЛГЕБРА – ПОЛИНОМИ ─── */
+{ id:5, icon:"◆", title:"АЛГЕБРА – ПОЛИНОМИ", points:[
+  { id:"5.1", title:"Формули на Виет", desc:"Корени на полином",
+    source:"OT_2012, Полиноми (Р. Рафаилов)", pdf:"Материали_БГ/OT_2012", page:50,
+    explanation:"КВАДРАТЕН: x² + px + q: x₁+x₂ = −p, x₁x₂ = q.\n\nКУБИЧЕН: x₁+x₂+x₃ = −p, x₁x₂+x₂x₃+x₃x₁ = q, x₁x₂x₃ = −r.\n\nОБЩ: σ_k = (−1)^k a_{n−k}.\n\nПРИЛОЖЕНИЯ: Намиране на отношения; доказване на вида на корените; симетрични изрази." },
+  { id:"5.2", title:"Формули на Нютон", desc:"Суми на степени на корени",
+    source:"OT_2012, Полиноми", pdf:"Материали_БГ/OT_2012", page:50,
+    explanation:"ОПРЕДЕЛЕНИЕ: S_k = x₁^k + ... + x_n^k.\n\nФОРМУЛИ: S_k + a₁S_{k−1} + ... + k a_k = 0 за k ≤ n. S_k + a₁S_{k−1} + ... + a_n S_{k−n} = 0 за k > n.\n\nПРИМЕР: За x²−x−1: S_k = S_{k−1} + S_{k−2} (Lucas числа)." },
+  { id:"5.3", title:"Симетрични полиноми", desc:"Елементарни; основна теорема",
+    source:"OT_2012, Полиноми", pdf:"Материали_БГ/OT_2012", page:50,
+    explanation:"ОСНОВНА ТЕОРЕМА: Всеки симетричен полином се изразява еднозначно чрез σ₁, ..., σ_n.\n\nПРИМЕРИ: ∑x₁² = σ₁² − 2σ₂. ∑x₁³ = σ₁³ − 3σ₁σ₂ + 3σ₃.\n\nТРИК: Симетричен израз в корени → изрази чрез коефициентите." },
+  { id:"5.4", title:"Рационални корени. Гаус", desc:"Полиноми с цели коефициенти",
+    source:"OT_2012, Делители на полиноми (Ал. Иванов)", pdf:"Материали_БГ/OT_2012", page:4,
+    explanation:"ТЕОРЕМА: p/q (несъкратима) корен на P ⇒ p | a_0 и q | a_n.\n\nСЛЕДСТВИЕ: Monic ⇒ всеки рационален корен е цяло.\n\nЛЕМА НА ГАУС: P ∈ ℤ[x] дели Q ∈ ℚ[x] ⇒ дели и на Q' ∈ ℤ[x].\n\nАЙЗЕНЩАЙН: p | a_i (i<n), p ∤ a_n, p² ∤ a_0 ⇒ P неразложим.",
+    bonus:[{label:"Polynomials_Problems_2015-16",pdf:"Бонус/lectures-navid/Polynomials_Problems_2015-16"}] },
+  { id:"5.5", title:"Неразложими полиноми", desc:"Над Z, Q, R, C",
+    source:"OT_2012, Делители на полиноми", pdf:"Материали_БГ/OT_2012", page:4,
+    explanation:"НАД ℂ: Само линейни. Основна теорема на алгебрата.\n\nНАД ℝ: Линейни + квадратни с отр. дискриминанта.\n\nНАД ℚ: Айзенщайн; редукция mod p; рационални корени (степен ≤ 3).\n\nПРИМЕР: x^n − 2 неразложим (Айзенщайн с p = 2)." },
+  { id:"5.6", title:"Полиноми на Чебишев", desc:"Tₙ(cos θ) = cos nθ",
+    source:"OT_2012, Полиноми", pdf:"Материали_БГ/OT_2012", page:50,
+    explanation:"ОПРЕДЕЛЕНИЕ: T_n(x) = cos(n·arccos x).\n\nРЕКУРЕНЦИЯ: T_{n+1} = 2x T_n − T_{n−1}.\n\nСВОЙСТВА: Старши коефициент 2^{n−1}. T_n(1) = 1.\n\nЕКСТРЕМАЛНО: Сред полиномите от степен n с водещ коефициент 1, 2^{1−n}T_n минимизира max|P| на [−1,1]." },
+  { id:"5.7", title:"Делимост на полиноми", desc:"Остатък; Хорнер; НОД",
+    source:"OT_2012, Делители на полиноми", pdf:"Материали_БГ/OT_2012", page:4,
+    explanation:"ТЕОРЕМА ЗА ОСТАТЪКА: Остатък от P(x)/(x−a) = P(a).\n\nОБОБЩЕНА: (x−a)^k | P(x) ⇔ P(a) = P'(a) = ... = P^{(k−1)}(a) = 0.\n\nХОРНЕР: Ефективно делене чрез коефициенти.\n\nНОД: Алгоритъм на Евклид – НОД(P, Q) = НОД(Q, P mod Q)." },
+  { id:"5.8", title:"Интерполация на Лагранж", desc:"Полином през n точки",
+    source:"OT_2012, Полиноми", pdf:"Материали_БГ/OT_2012", page:50,
+    explanation:"ТЕОРЕМА: За n точки с различни x_i има единствен полином от степен ≤ n−1.\n\nФОРМУЛА: P(x) = Σ y_i · ∏_{j≠i}(x−x_j)/(x_i−x_j).\n\nПРИЛОЖЕНИЯ: Намиране на полином; доказване на тъждества; формули за суми." }
+]},
+
+/* ─── STEP 6: АЛГЕБРА – НЕРАВЕНСТВА ─── */
+{ id:6, icon:"◆", title:"АЛГЕБРА – НЕРАВЕНСТВА", points:[
+  { id:"6.1", title:"САСГ (AM-GM)", desc:"Аритметично ≥ геометрично",
+    source:"OT_2012, Неравенства (Н. Николов)", pdf:"Материали_БГ/OT_2012", page:26,
+    explanation:"ФОРМУЛИРОВКА: (a₁+...+a_n)/n ≥ ⁿ√(a₁...a_n) за a_i ≥ 0. Равенство ⇔ всички равни.\n\nСЛЕДСТВИЯ: x + 1/x ≥ 2; (a+b)(1/a+1/b) ≥ 4; при a+b+c = const, abc е макс. при равни.\n\nТЕХНИКИ: Substitution; групиране; добавяне на 1; умножаване с подходящо.\n\nВНИМАНИЕ: Условие a_i ≥ 0 е критично." },
+  { id:"6.2", title:"САСХ (AM-HM)", desc:"Аритметично ≥ хармонично",
+    source:"OT_2012, Неравенства", pdf:"Материали_БГ/OT_2012", page:26,
+    explanation:"ФОРМУЛИРОВКА: (∑a_i)/n ≥ n/(∑1/a_i).\n\nЧЕСТА: (a₁+...+a_n)(1/a₁+...+1/a_n) ≥ n².\n\nСЛЕДСТВИЕ: 1/a + 1/b ≥ 4/(a+b).\n\nТРИК: При дроби – използвай тази форма." },
+  { id:"6.3", title:"САСК (AM-QM)", desc:"Аритметично ≥ квадратично",
+    source:"OT_2012, Неравенства", pdf:"Материали_БГ/OT_2012", page:26,
+    explanation:"ФОРМУЛИРОВКА: √((∑a_i²)/n) ≥ (∑a_i)/n. Еквивалентно: n∑a_i² ≥ (∑a_i)².\n\nВЕРИГА: QM ≥ AM ≥ GM ≥ HM.\n\nТРИК: За 'минимум на ∑x² при ∑x = const'." },
+  { id:"6.4", title:"Коши-Буняковски", desc:"Всички форми",
+    source:"OT_2012, Неравенства", pdf:"Материали_БГ/OT_2012", page:26,
+    explanation:"СТАНДАРТНА: (∑a_i b_i)² ≤ (∑a_i²)(∑b_i²).\n\nИНЖЕНЕРНА: (∑a_i)² ≤ n∑a_i².\n\nДРОБНА: ∑a_i²/x_i ≥ (∑a_i)²/(∑x_i). МНОГО полезна.\n\nТРИК: За дроби – превърни в сбор от квадрати." },
+  { id:"6.5", title:"Неравенство на Йенсен", desc:"Изпъкнали функции",
+    source:"OT_2012, Неравенства", pdf:"Материали_БГ/OT_2012", page:26,
+    explanation:"ОПРЕДЕЛЕНИЕ: f е изпъкнала ⇔ f''(x) ≥ 0.\n\nЙЕНСЕН: f((∑x_i)/n) ≤ (∑f(x_i))/n за изпъкнала f. Обратно за вдлъбната.\n\nИЗПЪКНАЛИ: x², e^x, x log x, 1/x. ВДЛЪБНАТИ: log x, √x, sin x на [0,π].\n\nПРИЛОЖЕНИЯ: Тригонометрия; експоненциали; AM-GM чрез log." },
+  { id:"6.6", title:"Неравенство на Чебишев", desc:"Монотонни редици",
+    source:"OT_2012, Неравенства", pdf:"Материали_БГ/OT_2012", page:26,
+    explanation:"ФОРМУЛИРОВКА: a₁ ≤ ... ≤ a_n, b₁ ≤ ... ≤ b_n ⇒ n∑a_i b_i ≥ (∑a_i)(∑b_i).\n\nОБРАТНО при противоположно монотонни.\n\nПРИМЕР: a₁ ≤ a₂, b₁ ≤ b₂: 2(a₁b₁+a₂b₂) ≥ (a₁+a₂)(b₁+b₂)." },
+  { id:"6.7", title:"Rearrangement", desc:"Пренареждане",
+    source:"OT_2012, Неравенства", pdf:"Материали_БГ/OT_2012", page:26,
+    explanation:"ФОРМУЛИРОВКА: За монотонни a, b: ∑a_i b_i ≥ ∑a_i b_{π(i)} ≥ ∑a_i b_{n+1−i}.\n\nМАКСИМУМ при еднакво подредени; МИНИМУМ при обратно.\n\nТРИК: Сортирай редиците и виж съответствието." },
+  { id:"6.8", title:"Неравенство на Мюрхед", desc:"Симетрични суми",
+    source:"OT_2012, Неравенства", pdf:"Материали_БГ/OT_2012", page:26,
+    explanation:"ОПРЕДЕЛЕНИЕ: a ≻ b ако ∑a_i = ∑b_i и ∑(първи k) a_i ≥ ∑(първи k) b_i след сортиране.\n\nТЕОРЕМА: a ≻ b, x_i > 0 ⇒ ∑_{sym} x^a ≥ ∑_{sym} x^b.\n\nПРИМЕР: (3,0,0) ≻ (2,1,0) ≻ (1,1,1) ⇒ ∑x³ ≥ ∑x²y·2 ≥ 6xyz.\n\nТРИК: Симетрично и хомогенно неравенство – опитай Мюрхед." },
+  { id:"6.9", title:"Неравенство на Шур", desc:"x³+y³+z³+3xyz ≥ ∑x²y",
+    source:"OT_2012, Неравенства", pdf:"Материали_БГ/OT_2012", page:26,
+    explanation:"ФОРМУЛИРОВКА: x³+y³+z³+3xyz ≥ xy(x+y) + yz(y+z) + zx(z+x).\n\nДРУГА: x(x−y)(x−z) + y(y−z)(y−x) + z(z−x)(z−y) ≥ 0.\n\nОБОБЩЕНИЕ: x^r(x−y)(x−z) + ... ≥ 0." },
+  { id:"6.10", title:"Бернули, Хьолдер, Минковски", desc:"Класически неравенства",
+    source:"OT_2012, Неравенства", pdf:"Материали_БГ/OT_2012", page:26,
+    explanation:"БЕРНУЛИ: (1+x)^n ≥ 1+nx за x ≥ −1.\n\nХЬОЛДЕР: (∑a_i b_i c_i)³ ≤ (∑a_i³)(∑b_i³)(∑c_i³).\n\nМИНКОВСКИ: (∑(a_i+b_i)^p)^(1/p) ≤ (∑a_i^p)^(1/p) + (∑b_i^p)^(1/p).\n\nТРИК: Коши не стига → Хьолдер." }
+]},
+
+/* ─── STEP 7: ФУ И РЕДИЦИ ─── */
+{ id:7, icon:"◆", title:"ФУНКЦИОНАЛНИ УРАВНЕНИЯ И РЕДИЦИ", points:[
+  { id:"7.1", title:"Уравнение на Коши", desc:"f(x+y) = f(x) + f(y)",
+    source:"OT_2010, ФУ (Н. Николов)", pdf:"Материали_БГ/OT_2010", page:40,
+    explanation:"ФОРМУЛИРОВКА: Адитивност.\n\nРЕШЕНИЯ: Без доп. условия има патологични. С: (1) Непрекъснатост в точка. (2) Монотонност. (3) Ограниченост в интервал → f(x) = cx.\n\nДОКАЗАТЕЛСТВО: f(q) = cq за рационални, после приближение + монотонност.\n\nСВЪРЗАНИ: Мултипликативно f(xy) = f(x)f(y); Коши-експоненциално; Йенсен.",
+    bonus:[{label:"FE_Lecture_01",pdf:"Бонус/lectures-navid/Functional_Equations_Lecture_01"},{label:"FE_Lecture_02",pdf:"Бонус/lectures-navid/Functional_Equations_Lecture_02"},{label:"FE_Lecture_03",pdf:"Бонус/lectures-navid/Functional_Equations_Lecture_03"},{label:"f_eq_nt_pres",pdf:"Бонус/lectures-peter/f_eq_nt_pres"},{label:"f_eq_nt_pres-2",pdf:"Бонус/lectures-peter/f_eq_nt_pres-2"}] },
+  { id:"7.2", title:"ФУ с ограниченост", desc:"Ограниченост върху интервал",
+    source:"OT_2010, ФУ", pdf:"Материали_БГ/OT_2010", page:40,
+    explanation:"ТЕОРЕМА: Адитивна + ограничена в интервал с положителна дължина ⇒ линейна.\n\nИДЕЯ: Пренасяне на ограниченост в (−ε, ε); |f(x)| ≤ nM за подходящо n; непрекъснатост в 0.\n\nПРИЛОЖЕНИЯ: f(x) ≥ 0 за x > 0 ⇒ ограниченост." },
+  { id:"7.3", title:"ФУ с монотонност", desc:"Монотонност + адитивност",
+    source:"OT_2010, ФУ", pdf:"Материали_БГ/OT_2010", page:40,
+    explanation:"ТЕОРЕМА: Адитивна + монотонна ⇒ f(x) = cx.\n\nДОКАЗАТЕЛСТВО: c = f(1). Рационални q: f(q) = cq. Реални x: q_n ↑ x, r_n ↓ x рационални ⇒ c q_n ≤ f(x) ≤ c r_n → f(x) = cx." },
+  { id:"7.4", title:"ФУ с инволюция", desc:"f(f(x)) = x",
+    source:"OT_2010, ФУ", pdf:"Материали_БГ/OT_2010", page:40,
+    explanation:"ОПРЕДЕЛЕНИЕ: f е инволюция ⇒ f е биекция, обратна на себе си.\n\nПРИМЕРИ: −x, 1/x, 1−x, c/x.\n\nТЕХНИКИ: Приложи f от двете страни; замести x с f(x); търси фиксирани точки.\n\nТИПИЧНА: f(f(x)) = x и f(f(x)+y) = f(x)+f(y) ⇒ f(x) = ±x." },
+  { id:"7.5", title:"Общи техники за ФУ", desc:"Заместване, инективност",
+    source:"OT_2010, ФУ", pdf:"Материали_БГ/OT_2010", page:40,
+    explanation:"СТЪПКИ: (1) Конкретни стойности: x=y=0, y=−x, y=x, x=1. (2) Доказване на инективност (f(a)=f(b) ⇒ a=b). (3) Сюрективност. (4) Определяне на f(0). (5) Четност/нечетност.\n\nТИПИЧНА: f(x+f(y)) = f(x) + y ⇒ f(x) = x." },
+  { id:"7.6", title:"Линейни рекурентни редици", desc:"Характеристично уравнение",
+    source:"BMS_2012-2015", pdf:"Материали_БГ/BMS_2012-2015", page:30,
+    explanation:"ОПРЕДЕЛЕНИЕ: a_{n+k} = c₁a_{n+k−1} + ... + c_k a_n.\n\nХАР. УРАВНЕНИЕ: r^k = c₁r^{k−1} + ... + c_k.\n\nОБЩО РЕШЕНИЕ: Различни корени r_i ⇒ a_n = Σ A_i r_i^n. Кратни: (A + Bn + ...)r^n.\n\nПРИМЕР: Фибоначи: r² = r+1, r = (1±√5)/2." },
+  { id:"7.7", title:"Нелинейни рекурентни редици", desc:"aₙ₊₁ = f(aₙ)",
+    source:"BMS_2012-2015", pdf:"Материали_БГ/BMS_2012-2015", page:30,
+    explanation:"ТЕХНИКИ: (1) Инвариант: g(a_{n+1}) = g(a_n). (2) Монотонност. (3) Ограниченост. (4) Сходимост. (5) Граница L = f(L). (6) Периодичност.\n\nПРИМЕР: a_{n+1} = √(2+a_n) ⇒ L = 2." },
+  { id:"7.8", title:"Сходимост и граници", desc:"Монотонност + ограниченост",
+    source:"BMS_2012-2015", pdf:"Материали_БГ/BMS_2012-2015", page:30,
+    explanation:"ВАЙЕРЩРАС: Монотонна + ограничена ⇒ сходяща.\n\nСХЕМА: (1) Докажи a_n ≥ 0. (2) Монотонност. (3) Ограниченост. (4) Сходимост. (5) L = f(L).\n\nЧЕСТИ ГРАНИЦИ: (1+1/n)^n → e; (∑1/k) − ln n → γ.\n\nВНИМАНИЕ: Провери монотонност И ограниченост." }
+]},
+
+/* ─── STEP 8: КОМБИНАТОРИКА – ОСНОВИ ─── */
+{ id:8, icon:"◆", title:"КОМБИНАТОРИКА – ОСНОВИ", points:[
+  { id:"8.1", title:"Принцип на Дирихле", desc:"Всички форми",
+    source:"OT_2010, Комб. и графи (Ст. Герджиков)", pdf:"Материали_БГ/OT_2010", page:60,
+    explanation:"ОСНОВНА: n+1 обекта в n кутии ⇒ ≥ 2 в една.\n\nОБОБЩЕНА: kn+1 в n ⇒ ≥ k+1.\n\nФУНКЦИОНАЛНА: |A| > |B| ⇒ f: A → B не е инективна.\n\nПРИМЕРИ: 13 души → 2 с рожден ден в месец. 5 числа → 2 с еднакъв остатък mod 4." },
+  { id:"8.2", title:"Включване и изключване", desc:"|A∪B∪C| формула",
+    source:"OT_2010, Комб. тъждества (Ем. Колев)", pdf:"Материали_БГ/OT_2010", page:8,
+    explanation:"ФОРМУЛА: |A∪B∪C| = |A|+|B|+|C| − |A∩B|−|B∩C|−|C∩A| + |A∩B∩C|.\n\nОБЩО: Σ|A_i| − Σ|A_i∩A_j| + ... + (−1)^{n+1}|∩A_i|.\n\nПРИЛОЖЕНИЯ: Числа, делящи се на поне едно; безпорядъци: D_n = n!Σ(−1)^k/k!." },
+  { id:"8.3", title:"Двойно броене", desc:"Броене по два начина",
+    source:"OT_2010, Комб. тъждества", pdf:"Материали_БГ/OT_2010", page:8,
+    explanation:"ИДЕЯ: Преброи едно и също множество по 2 начина. Резултатът е еднакъв.\n\nПРИМЕР: Лема за ръкостискане: ∑deg(v) = 2|E|.\n\nПРИЛОЖЕНИЯ: Доказване на тъждества (∑C(n,k) = 2^n, ∑kC(n,k) = n·2^{n−1}, ∑C(n,k)² = C(2n,n))." },
+  { id:"8.4", title:"Комбинаторни тъждества", desc:"Биномни коефициенти",
+    source:"OT_2010, Комб. тъждества", pdf:"Материали_БГ/OT_2010", page:8,
+    explanation:"ОСНОВНИ: C(n,k) = C(n−1,k−1)+C(n−1,k). ∑C(n,k) = 2^n. ∑(−1)^kC(n,k) = 0.\n\nВАНДЕРМОНД: C(m+n,k) = ΣC(m,i)C(n,k−i).\n\nТРИК: За суми с полиноми в k – разложи чрез падащи факториели.",
+    bonus:[{label:"Enumerative_Problems",pdf:"Бонус/lectures-navid/Enumerative_Problems_Final"}] },
+  { id:"8.5", title:"Биномни коефициенти", desc:"Свойства",
+    source:"OT_2010, Комб. тъждества", pdf:"Материали_БГ/OT_2010", page:8,
+    explanation:"ОПРЕДЕЛЕНИЕ: C(n,k) = n!/(k!(n−k)!) – брой k-подмножества.\n\nСВОЙСТВА: C(n,k) = C(n,n−k). C(n,1) = n. C(n,2) = n(n−1)/2.\n\nПФ: (1+x)^n = ΣC(n,k)x^k.\n\nМУЛТИМНОЖЕСТВО: C(n+k−1, k)." },
+  { id:"8.6", title:"Пермутации и комбинации", desc:"С/без повторение",
+    source:"OT_2010, Комб. тъждества", pdf:"Материали_БГ/OT_2010", page:8,
+    explanation:"ПЕРМУТАЦИИ: n! (без повторение); n!/(n₁!...n_k!) (с).\n\nКОМБИНАЦИИ: C(n,k) (без); C(n+k−1,k) (с).\n\nТРИК: Ред важен ли е? Повторение разрешено ли е? – 4 формули." },
+  { id:"8.7", title:"Мултимножества", desc:"Комбинации с повторение",
+    source:"OT_2010, Комб. тъждества", pdf:"Материали_БГ/OT_2010", page:8,
+    explanation:"БРОЙ: k-елементни мултимножества от n типа = C(n+k−1, k). Доказателство чрез 'stars and bars'.\n\nПРИМЕР: 10 топки в 4 кутии: C(13, 10) = 286.\n\nТРИК: 'Разпределения на еднакви обекти в различни кутии' = stars and bars.\n\nС ОГРАНИЧЕНИЯ: 'x_i ≥ 1' → замени x_i' = x_i − 1." },
+  { id:"8.8", title:"Рекурентни връзки", desc:"Фибоначи, Каталан",
+    source:"OT_2010, Релации (Ив. Кортезов)", pdf:"Материали_БГ/OT_2010", page:16,
+    explanation:"ФИБОНАЧИ: F_{n+2} = F_{n+1} + F_n. Формула: F_n = (φ^n − ψ^n)/√5.\n\nСВОЙСТВА: gcd(F_m, F_n) = F_gcd. F_{m+n} = F_m F_{n+1} + F_{m−1}F_n.\n\nКАТАЛАН: C_n = C(2n,n)/(n+1). Стойности: 1, 1, 2, 5, 14, 42, 132.\n\nБРОЕНЕ: Правилни скоби; пътища без пресичане; бинарни дървета; триангулации." },
+  { id:"8.9", title:"Производящи функции", desc:"Основи",
+    source:"OT_2012, Комбинаторика (Ем. Колев)", pdf:"Материали_БГ/OT_2012", page:8,
+    explanation:"ОПРЕДЕЛЕНИЕ: A(x) = ∑a_n x^n.\n\nОСНОВНИ: ∑x^n = 1/(1−x). (1+x)^n = ΣC(n,k)x^k. ∑x^n/n! = e^x. Фибоначи: x/(1−x−x²).\n\nТЕХНИКИ: За рекурсия a_n = f(предишни) → A(x) = g(x)A(x) + h(x). Коефициент [x^n]A(x) = отговор.\n\nПРИМЕР: Каталан: C(x) = 1 + xC(x)² ⇒ C(x) = (1−√(1−4x))/(2x)." },
+  { id:"8.10", title:"Индукция в комбинаториката", desc:"Обикновена, силна, двойна",
+    source:"OT_2010, Релации", pdf:"Материали_БГ/OT_2010", page:16,
+    explanation:"ОБИКНОВЕНА: P(1) + P(k)→P(k+1).\n\nСИЛНА: P(1..k)→P(k+1).\n\nДВОЙНА: по два параметъра (лексикографски).\n\nСТРУКТУРНА: за рекурсивно дефинирани обекти.\n\nПРИМЕР (силна): Всяко n ≥ 2 се разлага на прости.",
+    bonus:[{label:"Induction Problems",pdf:"Бонус/lectures-navid/Induction Problems"},{label:"Induction Problems-2",pdf:"Бонус/lectures-navid/Induction Problems-2"}] }
+]},
+
+/* ─── STEP 9: КОМБИНАТОРИКА – ГРАФИ И ИГРИ ─── */
+{ id:9, icon:"◆", title:"КОМБИНАТОРИКА – ГРАФИ И ИГРИ", points:[
+  { id:"9.1", title:"Основи на графите", desc:"Върхове, ребра, степени",
+    source:"OT_2010, Комб. и графи (Ст. Герджиков)", pdf:"Материали_БГ/OT_2010", page:60,
+    explanation:"ГРАФ: G = (V, E). deg(v) = брой ребра.\n\nЛЕМА ЗА РЪКОСТИСКАНЕ: ∑deg(v) = 2|E|. Следствие: нечетните степени са четен брой.\n\nПЪЛЕН: K_n: |E| = n(n−1)/2.\n\nСВЪРЗАНОСТ: Път между всеки 2 върха.\n\nДОПЪЛНЕНИЕ: Ḡ – всички възможни ребра." },
+  { id:"9.2", title:"Дървета", desc:"Свързани без цикли",
+    source:"OT_2010, Комб. и графи", pdf:"Материали_БГ/OT_2010", page:60,
+    explanation:"ОПРЕДЕЛЕНИЕ: Свързан без цикли.\n\nЕКВИВАЛЕНТНО: (1) |E| = |V|−1 и свързан. (2) Уникален път между всеки 2. (3) Минимално свързан.\n\nКЕЙЛИ: n^{n−2} дървета с n етикетирани върха.\n\nСВОЙСТВО: Поне 2 листа." },
+  { id:"9.3", title:"Ойлерови и Хамилтонови пътища", desc:"Условия",
+    source:"OT_2010, Комб. и графи", pdf:"Материали_БГ/OT_2010", page:60,
+    explanation:"ОЙЛЕРОВ ЦИКЪЛ: Минава всяко ребро веднъж. Съществува ⇔ свързан + всички степени четни.\n\nОЙЛЕРОВ ПЪТ: Точно 2 нечетни степени.\n\nХАМИЛТОНОВ: През всеки връх веднъж. NP-пълен. Достатъчно: Дирак (deg ≥ n/2)." },
+  { id:"9.4", title:"Клики и независими множества", desc:"Максимални клики",
+    source:"OT_2010, Комб. и графи", pdf:"Материали_БГ/OT_2010", page:60,
+    explanation:"КЛИКА: Всички върхове свързани. ω(G) = макс. размер.\n\nНЕЗАВИСИМО: Никои 2 не са свързани. α(G) = макс. размер.\n\nВРЪЗКА: α(G) = ω(Ḡ).\n\nR(3,3) = 6: Сред всеки 6 души – 3 познати или 3 непознати." },
+  { id:"9.5", title:"Теорема на Туран", desc:"Макс. ребра без K_{r+1}",
+    source:"OT_2010, Релации (Ив. Кортезов)", pdf:"Материали_БГ/OT_2010", page:16,
+    explanation:"ФОРМУЛИРОВКА: ex(n, K_{r+1}) = (1−1/r)·n²/2.\n\nЕКСТРЕМАЛЕН: Пълен r-делен граф T(n, r).\n\nПРИМЕР: r=1: 0. r=2 (без K_3): n²/4. r=3 (без K_4): n²/3.\n\nТРИК: 'Максимум ребра без пълен подграф' → Туран." },
+  { id:"9.6", title:"Теорема на Рамзи", desc:"R(3,3) = 6",
+    source:"OT_2010, Релации", pdf:"Материали_БГ/OT_2010", page:16,
+    explanation:"ОПРЕДЕЛЕНИЕ: R(s,t) = най-малко n: всеки граф с n върха има K_s или независимо t.\n\nR(3,3) = 6. R(3,4) = 9. R(4,4) = 18. R(5,5) ∈ [43, 48].\n\nТРИК: 'Гарантирано съществуване' с цветове → Рамзи." },
+  { id:"9.7", title:"Оцветявания на графи", desc:"Хроматично число",
+    source:"OT_2010, Комб. и графи", pdf:"Материали_БГ/OT_2010", page:60,
+    explanation:"ОПРЕДЕЛЕНИЕ: χ(G) = мин. брой цветове с различни за съседни.\n\nПРИМЕРИ: χ(K_n) = n. χ(C_n) = 2/3. χ(дърво) ≤ 2. χ(планарен) ≤ 4.\n\nБРУКС: χ ≤ Δ освен за пълен/нечетен цикъл.\n\nДВУДЕЛЕН ⇔ χ ≤ 2 ⇔ няма нечетен цикъл." },
+  { id:"9.8", title:"Игри – инварианти/моноварианти", desc:"Печеливши стратегии",
+    source:"BMS_2012-2015", pdf:"Материали_БГ/BMS_2012-2015", page:30,
+    explanation:"ИНВАРИАНТ: Не се променя. За доказване на невъзможност.\n\nМОНОВАРИАНТ: Монотонно. За доказване, че играта свършва.\n\nТРИК: Търси 'сума mod k', 'произведение', 'брой', 'четност'." },
+  { id:"9.9", title:"Игри – симетрия", desc:"Стратегия на копиране",
+    source:"BMS_2012-2015", pdf:"Материали_БГ/BMS_2012-2015", page:30,
+    explanation:"MIRROR: Ако конфигурацията има огледална симетрия, вторият отговаря огледално.\n\nАко има фиксирана точка – първият я заема, после играе огледално.\n\nПРИМЕР: Монети на кръгла маса – първият в центъра." },
+  { id:"9.10", title:"Игри – печеливши стратегии", desc:"Позиционни игри",
+    source:"BMS_2012-2015", pdf:"Материали_БГ/BMS_2012-2015", page:30,
+    explanation:"КЛАСИФИКАЦИЯ: N-позиции (печели на ход); P-позиции (губи на ход).\n\nПРАВИЛА: (1) Терминална = P. (2) Има ход до P ⇒ N. (3) Всички ходове до N ⇒ P.\n\nПРИМЕР: 1 купчина, махаш 1-3: P ⇔ n mod 4 = 0.\n\nНИМ: XOR на размерите = 0 ⇒ P." }
+]},
+
+/* ─── STEP 10: СМЕСЕНИ – НАЦИОНАЛНИ КРЪГОВЕ ─── */
+{ id:10, icon:"◆", title:"СМЕСЕНИ – НАЦИОНАЛНИ КРЪГОВЕ", points:[
+  { id:"10.1", title:"НОМ национален кръг 2012", desc:"11. клас, 6 задачи",
+    source:"BMS_2012-2015", pdf:"Материали_БГ/BMS_2012-2015", page:14,
+    explanation:"ЗАДАЧА 1 (ТЧ/редици): a_{n+1} = a_n + 2τ(n). Възможно ли е 2 последователни члена да са точни квадрати? Не.\n\nЗАДАЧА 2 (Комб.): Оцветяване на естествените числа в 2 цвята. p^n, p^{n+1}, p^{n+2} не са едноцветни; няма безкрайна едноцветна геом. прогресия.\n\nЗАДАЧА 3 (Игри/полиноми): Игра с x⁴ + ⋆x³ + ⋆x² + ⋆x + ⋆ = 0.\n\nЗАДАЧА 4 (Комб.): Разделяне на ненулеви редици от 0/1 на тройки.\n\nЗАДАЧА 5 (Алгебра): Q(x) квадратен тричлен, x²Q(x) растяща.\n\nЗАДАЧА 6 (Геометрия): Симетрии на точки от описаната." },
+  { id:"10.2", title:"НОМ национален кръг 2013", desc:"11. клас, 6 задачи",
+    source:"BMS_2012-2015", pdf:"Материали_БГ/BMS_2012-2015", page:30,
+    explanation:"ЗАДАЧА 1 (ТЧ): p^{q+1} + q^{p+1} = □.\n\nЗАДАЧА 2 (ФУ): x²f(x) − y²f(y) = (x²−y²)f(x+y) − xyf(x−y), ограничена в (0,1).\n\nЗАДАЧА 3 (Комб./геом.): Оцветяване на цели точки в 3 цвята. Едноцветен триъгълник с лице S.\n\nЗАДАЧА 4 (Тригонометрия): tan α + tan β + tan γ ≤ 3 ⇒ cos 2α + cos 2β + cos 2γ ≥ 0.\n\nЗАДАЧА 5 (Геометрия): Остроъгълен △ABC с височини.\n\nЗАДАЧА 6 (ТЧ): m² + n² + p² − 2mn − 2mp − 2np = □." },
+  { id:"10.3", title:"НОМ национален кръг 2014", desc:"11. клас, 6 задачи",
+    source:"BMS_2012-2015", pdf:"Материали_БГ/BMS_2012-2015", page:46,
+    explanation:"ЗАДАЧА 1 (Геом.): Окръжност, точка A извън нея, BC диаметър. ГМТ на ортоцентъра.\n\nЗАДАЧА 2 (Комб.): Шахматна дъска m×n, оцветена с 4 цвята, всяко 2×2 съдържа всички.\n\nЗАДАЧА 3 (Алг./геом.): Числа в пространството, център на вписана сфера = произведение.\n\nЗАДАЧА 4 (ТЧ): p² | q³+1 и q² | p⁶−1.\n\nЗАДАЧА 5 (ФУ): f(xy) = f(x+y)(f(x)+f(y)) на ℚ⁺.\n\nЗАДАЧА 6 (Геом.): Вписан ABCD, центрове на вписани окръжности." },
+  { id:"10.4", title:"НОМ национален кръг 2015", desc:"11. клас, 6 задачи",
+    source:"BMS_2012-2015", pdf:"Материали_БГ/BMS_2012-2015", page:61,
+    explanation:"ЗАДАЧА 1 (Геом.): ABCDEF вписан. NL·KP·MQ = KM·PN·LQ.\n\nЗАДАЧА 2 (Комб.): 101 сини клетки в n×n. Единствен начин за разрязване.\n\nЗАДАЧА 3 (ТЧ/редици): a_{n+1} = 6a_n − a_{n−1}. Никой член не е точна степен.\n\nЗАДАЧА 4 (ФУ): f(x+y) ≥ f(x)+y и f(f(x)) ≤ x. Решение: f(x) = x.\n\nЗАДАЧА 5 (Геом.): △ABC, PCQL успоредник. AQ, BP, LT конкурентни.\n\nЗАДАЧА 6 (Комб.): Ученици с рейтинг по 4 теми." },
+    { id:"10.5", title:"Контролни за БОМ 2012–2015", desc:"4 години × 4 задачи",
+    source:"BMS_2012-2015, стр. 15 / 31 / 47 / 62", pdf:"Материали_БГ/BMS_2012-2015", page:15,
+    problems_page:15,
+    tasks:[
+      { label:"Контролно за БОМ 2012", pdf:"Материали_БГ/BMS_2012-2015", page:15 },
+      { label:"Контролно за БОМ 2013", pdf:"Материали_БГ/BMS_2012-2015", page:31 },
+      { label:"Контролно за БОМ 2014 (прод. на стр. 48)", pdf:"Материали_БГ/BMS_2012-2015", page:47 },
+      { label:"Контролно за БОМ 2015", pdf:"Материали_БГ/BMS_2012-2015", page:62 }
+    ],
+    explanation:"КАКВО: Изборни състезания за отбора на България за Балканската олимпиада. Ниво близко до националния кръг.\n\nСТРУКТУРА: 4 задачи за 4 часа.\n\nТЕМИ: ТЧ, Геометрия, Комбинаторика, Алгебра.\n\nСТРАТЕГИЯ: Решавай под ред, без да гледаш решенията. Води си тетрадка с нови техники.\n\nСТРАНИЦИ В PDF:\n• 2012 → стр. 15\n• 2013 → стр. 31\n• 2014 → стр. 47 (+ 48)\n• 2015 → стр. 62" },
+
+  { id:"10.6", title:"Контролни за МОМ 2012–2015", desc:"4 години × 4 задачи",
+    source:"BMS_2012-2015, стр. 16 / 32 / 49 / 63", pdf:"Материали_БГ/BMS_2012-2015", page:16,
+    problems_page:16,
+    tasks:[
+      { label:"Контролно за МОМ 2012", pdf:"Материали_БГ/BMS_2012-2015", page:16 },
+      { label:"Контролно за МОМ 2013", pdf:"Материали_БГ/BMS_2012-2015", page:32 },
+      { label:"Контролно за МОМ 2014", pdf:"Материали_БГ/BMS_2012-2015", page:49 },
+      { label:"Контролно за МОМ 2015", pdf:"Материали_БГ/BMS_2012-2015", page:63 }
+    ],
+    explanation:"КАКВО: Изборни състезания за отбора на България за Международната олимпиада. НАЙ-ТРУДНИТЕ задачи.\n\nСТРУКТУРА: 6 задачи в 2 дни по 3, 4.5ч на ден (като IMO).\n\nСТРАТЕГИЯ: (1) Използвай за симулации. (2) 2-3 решени задачи е добре. (3) Анализирай решенията.\n\nВНИМАНИЕ: Ако не можеш да ги решиш – нормално.\n\nСТРАНИЦИ В PDF:\n• 2012 → стр. 16\n• 2013 → стр. 32\n• 2014 → стр. 49\n• 2015 → стр. 63",
+    bonus:[{label:"Exam_01_Problems",pdf:"Бонус/lectures-navid/Exam_01_Problems"},{label:"Exam_02_Problems",pdf:"Бонус/lectures-navid/Exam_02_Problems"}] },
+  { id:"10.7", title:"NOM_2013 – избрани", desc:"Русия, Китай, САЩ, Иран",
+    source:"NOM_2013", pdf:"Материали_БГ/NOM_2013", page:15,
+    explanation:"СТИЛОВЕ: (1) Русия: класически, елегантни. (2) Китай: технически, изчисления. (3) САЩ: разнообразни, комбинаторика. (4) Иран: силни геометрия/ТЧ.\n\nСТРАТЕГИЯ: Избери 2-3 държави. Реши задачите за 11. клас. Фокус върху геометрия и комбинаторика.\n\nВРЕМЕ: 30-45 мин на задача преди решение." },
+  { id:"10.8", title:"NOM_2014 – избрани", desc:"Русия, Китай, САЩ, Иран",
+    source:"NOM_2014", pdf:"Материали_БГ/NOM_2014", page:10,
+    explanation:"СЪЩОТО: Продължи с избраните държави. Сравни стиловете между годините.\n\nТЕМИ: Геометрия (1-2 задачи); Комбинаторика (разнообразна); ТЧ (често при Китай и Русия)." },
+  { id:"10.9", title:"NOM_2015-2016 – избрани", desc:"Русия, Китай, САЩ, Иран",
+    source:"NOM_2015-2016", pdf:"Материали_БГ/NOM_2015-2016", page:16,
+    explanation:"НАЙ-НОВИ: Използвай за последен етап. По-модерен стил.\n\nСИМУЛАЦИИ: 3 задачи за 4.5ч без прекъсване.\n\nФИНАЛ: Сравни с националните кръгове." },
+  { id:"10.10", title:"BMC_2003-2006 – избрани", desc:"Национален кръг, контролни",
+    source:"BMC_2003-2006", pdf:"Материали_БГ/BMC_2003-2006", page:14,
+    explanation:"СТРУКТУРА: По години 2003-2006. Секции: Winter, Spring, Regional, National, BMO, IMO.\n\nЗАДАЧИ 11 КЛАС: в съответната секция, започват с 11.1.\n\nНАЦИОНАЛНИ КРЪГОВЕ: 2003: стр. 14; 2004: стр. 24; 2005: стр. 38; 2006: стр. 50.\n\nСТРАТЕГИЯ: Класически техники. Реши националните кръгове за 11 клас." }
+]},
+
+/* ─── STEP 11: БОНУС ─── */
+{ id:11, icon:"◆", title:"БОНУС – ЛЕКЦИИ И ТЕМИ", points:[
+  { id:"11.1", title:"Лекции на Петър – PAMP 2019", desc:"4 лекции – общ преглед",
+    source:"Бонус/lectures-peter", pdf:"Бонус/lectures-peter/lekcia1-pamp2019", page:1,
+    explanation:"4 лекции от PAMP 2019. Общ преглед на олимпийски теми.\n\nСЪДЪРЖАНИЕ: Широка гама – геометрия, комбинаторика, алгебра, ТЧ.\n\nИЗПОЛЗВАНЕ: (1) Прочети всяка лекция. (2) Реши задачите. (3) Запиши ключовите идеи.\n\nПОЛЕЗНИ ЗА: Преговор. Алтернативно обяснение.",
+    bonus:[{label:"lekcia1",pdf:"Бонус/lectures-peter/lekcia1-pamp2019"},{label:"lekcia2",pdf:"Бонус/lectures-peter/lekcia2-pamp2019"},{label:"lekcia3",pdf:"Бонус/lectures-peter/lekcia3-pamp2019"},{label:"lekcia4",pdf:"Бонус/lectures-peter/lekcia4-pamp2019"},{label:"qrl_pres-1",pdf:"Бонус/lectures-peter/qrl_pres-1"}] },
+  { id:"11.2", title:"Тема на седмицата 1–4", desc:"Тема + решения",
+    source:"Бонус/tema-na-sedmicata", pdf:"Бонус/tema-na-sedmicata/week1-theme", page:1,
+    explanation:"Седмични теми с решения (week1-4).\n\nИЗПОЛЗВАНЕ: Прочети темата. Реши задачите САМ. Виж решенията. Анализирай грешките.\n\nПОЛЕЗНИ ЗА: Допълнителна практика.",
+    bonus:[{label:"week1-theme",pdf:"Бонус/tema-na-sedmicata/week1-theme"},{label:"week1-sol",pdf:"Бонус/tema-na-sedmicata/week1-solutions"},{label:"week2-theme",pdf:"Бонус/tema-na-sedmicata/week2-theme"},{label:"week2-sol",pdf:"Бонус/tema-na-sedmicata/week2-solutions"},{label:"week3-theme",pdf:"Бонус/tema-na-sedmicata/week3-theme"},{label:"week3-sol",pdf:"Бонус/tema-na-sedmicata/week3-solutions"},{label:"week4-theme",pdf:"Бонус/tema-na-sedmicata/week4-theme"},{label:"week4-sol",pdf:"Бонус/tema-na-sedmicata/week4-solutions"}] },
+  { id:"11.3", title:"Теми с лекции (Tema 1–6)", desc:"Различни автори",
+    source:"Теми с Лекции", pdf:"Теми с Лекции/Tema1-MarinHristov", page:1,
+    explanation:"6 теми от български олимпийци: Marin Hristov, Borislav Kirilov (+presentation, solutions), Petko Lazarov, Veselin Markovich, Bozhidar Dimitrov, Ilias/Bilyana.\n\nИЗПОЛЗВАНЕ: Прочети темата. Реши задачите. Виж presentation ако има.",
+    bonus:[{label:"Tema1-MarinHristov",pdf:"Теми с Лекции/Tema1-MarinHristov"},{label:"Tema2-BorislavKirilov",pdf:"Теми с Лекции/Tema2-BorislavKirilov"},{label:"Tema2-presentation",pdf:"Теми с Лекции/Tema2-presentation"},{label:"Tema2-solutions",pdf:"Теми с Лекции/Tema2-solutions"},{label:"Tema3-PetkoLazarov",pdf:"Теми с Лекции/Tema3-PetkoLazarov"},{label:"Tema4-VeselinMarkovich",pdf:"Теми с Лекции/Tema4-VeselinMarkovich"},{label:"Tema5-BozhidarDimitrov",pdf:"Теми с Лекции/Tema5-BozhidarDimitrov"},{label:"Tema6-Ilias-Bilyana",pdf:"Теми с Лекции/Tema6-Ilias-Bilyana"}] },
+  { id:"11.4", title:"Допълнителни сборници", desc:"BMO_1984-2006, BMS_2003-2005",
+    source:"Материали_БГ", pdf:"Материали_БГ/BMO_1984-2006", page:1,
+    explanation:"BMO_1984-2006: Балкански олимпиади. Ниво национален кръг+\n\nBMS_2003-2005: Български състезания (предишни години).\n\nИЗПОЛЗВАНЕ: Разнообразие. Допълнителни симулации.",
+    bonus:[{label:"BMO_1984-2006",pdf:"Материали_БГ/BMO_1984-2006"},{label:"BMS_2003-2005",pdf:"Материали_БГ/BMS_2003-2005"}] }
+]}
+];
+
+/* ═══════════════════════════════════════════════════════════════
+   MODULE: STORE (localStorage)
+   ═══════════════════════════════════════════════════════════════ */
+const Store = {
+  state: null,
+
+  defaults() {
+    return {
+      progress: {},
+      ui: { filter: 'all', collapsed: {}, scanlines: false },
+      streak: { count: 0, lastDate: null },
+      pomodoroSessions: 0,
+    };
+  },
+
+  load() {
+    try {
+      const raw = localStorage.getItem(CONFIG.storeKey);
+      if (raw) {
+        const s = JSON.parse(raw);
+        s.progress = s.progress || {};
+        s.ui = s.ui || { filter: 'all', collapsed: {}, scanlines: false };
+        s.streak = s.streak || { count: 0, lastDate: null };
+        s.pomodoroSessions = s.pomodoroSessions || 0;
+        return s;
+      }
+    } catch (e) {}
+    // Migration
+    for (const key of CONFIG.legacyKeys) {
+      try {
+        const raw = localStorage.getItem(key);
+        if (!raw) continue;
+        const old = JSON.parse(raw);
+        const s = this.defaults();
+        if (old.progress) s.progress = old.progress;
+        else Object.keys(old).forEach(id => {
+          if (old[id]) s.progress[id] = { done: true, fav: false, diff: null, notes: '' };
+        });
+        return s;
+      } catch (e) {}
+    }
+    return this.defaults();
+  },
+
+  save() {
+    try { localStorage.setItem(CONFIG.storeKey, JSON.stringify(this.state)); } catch (e) {}
+  },
+
+  getPoint(id) {
+    if (!this.state.progress[id]) {
+      this.state.progress[id] = { done: false, fav: false, diff: null, notes: '' };
+    }
+    return this.state.progress[id];
+  },
+
+  exportJSON() {
+    const data = JSON.stringify(this.state, null, 2);
+    const blob = new Blob([data], { type: 'application/json' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'olympiad-progress-' + Utils.todayStr() + '.json';
+    a.click();
+    URL.revokeObjectURL(url);
+    Utils.toast('↓ Експортирано');
+  },
+
+  importJSON(e) {
+    const file = e.target.files[0];
+    if (!file) return;
+    const r = new FileReader();
+    r.onload = ev => {
+      try {
+        const data = JSON.parse(ev.target.result);
+        if (!data.progress) throw new Error('Invalid');
+        this.state = data;
+        this.save();
+        Sidebar.render(); Content.render(); Stats.update();
+        if (this.state.ui.scanlines) document.body.classList.add('scanlines');
+        Utils.toast('↑ Импортирано');
+      } catch (err) { alert('Грешен формат'); }
+    };
+    r.readAsText(file);
+    e.target.value = '';
+  },
+
+  resetAll() {
+    if (!confirm('Нулирай ЦЕЛИЯ прогрес?')) return;
+    this.state = this.defaults();
+    this.save();
+    Sidebar.render(); Content.render(); Stats.update();
+    Utils.toast('⌫ Всичко е нулирано');
+  },
+};
+
+/* ═══════════════════════════════════════════════════════════════
+   MODULE: UTILS
+   ═══════════════════════════════════════════════════════════════ */
+const Utils = {
+  pdfUrl(path, page) {
+    if (!path) return '';
+    const url = path.split('/').map(encodeURIComponent).join('/') + '.pdf';
+    return page ? url + '#page=' + page : url;
+  },
+  escapeHtml(s) {
+    return String(s).replace(/[&<>"']/g, c => ({
+      '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
+    }[c]));
+  },
+  todayStr() {
+    const d = new Date();
+    return d.getFullYear() + '-' + String(d.getMonth()+1).padStart(2,'0') + '-' + String(d.getDate()).padStart(2,'0');
+  },
+  fmtTime(s) {
+    const m = Math.floor(s / 60);
+    const sec = s % 60;
+    return String(m).padStart(2, '0') + ':' + String(sec).padStart(2, '0');
+  },
+  toast(msg) {
+    const t = document.getElementById('toast');
+    t.textContent = msg;
+    t.classList.add('show');
+    clearTimeout(Utils._toastTimer);
+    Utils._toastTimer = setTimeout(() => t.classList.remove('show'), 1600);
+  },
+};
+
+/* ═══════════════════════════════════════════════════════════════
+   MODULE: THEME
+   ═══════════════════════════════════════════════════════════════ */
+const Theme = {
+  apply(theme) {
+    if (theme === 'green') document.body.removeAttribute('data-theme');
+    else document.body.setAttribute('data-theme', theme);
+    document.getElementById('themeBtn').textContent = CONFIG.themeLabels[theme] || 'GREEN';
+    localStorage.setItem(CONFIG.themeKey, theme);
+  },
+  cycle() {
+    const cur = localStorage.getItem(CONFIG.themeKey) || 'green';
+    const idx = CONFIG.themes.indexOf(cur);
+    const next = CONFIG.themes[(idx + 1) % CONFIG.themes.length];
+    this.apply(next);
+    Utils.toast('Тема: ' + CONFIG.themeLabels[next]);
+  },
+  init() {
+    this.apply(localStorage.getItem(CONFIG.themeKey) || 'green');
+  },
+};
+
+/* ═══════════════════════════════════════════════════════════════
+   MODULE: UI (глобални UI helper-и)
+   ═══════════════════════════════════════════════════════════════ */
+const UI = {
+  toggleSidebar() {
+    document.getElementById('sidebar').classList.toggle('collapsed');
+  },
+  closeMenu() {
+    document.getElementById('menuDropdown').classList.remove('open');
+  },
+  toggleScanlines() {
+    Store.state.ui.scanlines = !Store.state.ui.scanlines;
+    document.body.classList.toggle('scanlines', Store.state.ui.scanlines);
+    document.getElementById('scanToggleItem').innerHTML =
+      '<span class="ic">◫</span> Scanlines: ' + (Store.state.ui.scanlines ? 'ВКЛ' : 'ИЗКЛ');
+    Store.save();
+  },
+};
+
+/* ═══════════════════════════════════════════════════════════════
+   MODULE: HELPERS (глобални функции за данни)
+   ═══════════════════════════════════════════════════════════════ */
+function getPoint(id) {
+  for (const s of STEPS) for (const p of s.points) if (p.id === id) return p;
+  return null;
+}
+function getFlatPoints() {
+  const arr = [];
+  for (const s of STEPS) for (const p of s.points) arr.push({ step: s, point: p });
+  return arr;
+}
+function matchFilter(p) {
+  const meta = Store.getPoint(p.id);
+  const f = Store.state.ui.filter;
+  if (f === 'all') return true;
+  if (f === 'done') return meta.done;
+  if (f === 'todo') return !meta.done;
+  if (f === 'fav') return meta.fav;
+  if (f === 'hard') return meta.diff === 'hard';
+  return true;
+}
+function matchSearch(p) {
+  const q = State.searchQuery;
+  if (!q) return true;
+  const lq = q.toLowerCase();
+  const meta = Store.getPoint(p.id);
+  return p.title.toLowerCase().includes(lq) ||
+         p.desc.toLowerCase().includes(lq) ||
+         p.source.toLowerCase().includes(lq) ||
+         (p.explanation || '').toLowerCase().includes(lq) ||
+         (meta.notes || '').toLowerCase().includes(lq) ||
+         p.id.includes(lq);
+}
+
+/* Глобален state (извън Store) */
+const State = {
+  searchQuery: '',
+  currentModalId: null,
+  currentIndex: -1,
+};
+
+/* ═══════════════════════════════════════════════════════════════
+   MODULE: STATS (прогрес, streak)
+   ═══════════════════════════════════════════════════════════════ */
+const Stats = {
+  update() {
+    let total = 0, done = 0;
+    STEPS.forEach(s => s.points.forEach(p => {
+      total++;
+      if (Store.getPoint(p.id).done) done++;
+    }));
+    const pct = total ? Math.round(done / total * 100) : 0;
+    document.getElementById('statDone').textContent = done;
+    document.getElementById('statTotal').textContent = total;
+    document.getElementById('statPercent').textContent = pct + '%';
+    document.getElementById('statPomos').textContent = Store.state.pomodoroSessions;
+    document.getElementById('progressFill').style.width = pct + '%';
+    this.renderStreak();
+  },
+
+  checkStreak() {
+    const today = Utils.todayStr();
+    if (Store.state.streak.lastDate === today) return;
+    const y = new Date();
+    y.setDate(y.getDate() - 1);
+    const yesterday = y.getFullYear() + '-' + String(y.getMonth()+1).padStart(2,'0') + '-' + String(y.getDate()).padStart(2,'0');
+    if (Store.state.streak.lastDate === yesterday) Store.state.streak.count++;
+    else Store.state.streak.count = 1;
+    Store.state.streak.lastDate = today;
+    Store.save();
+    this.renderStreak();
+  },
+
+  renderStreak() {
+    document.getElementById('streakNum').textContent = Store.state.streak.count || 0;
+  },
+
+  updateStepBadges() {
+    document.querySelectorAll('.step').forEach(sec => {
+      const stepId = parseInt(sec.id.replace('step-', ''));
+      const step = STEPS.find(s => s.id === stepId);
+      if (!step) return;
+      const done = step.points.filter(p => Store.getPoint(p.id).done).length;
+      const total = step.points.length;
+      const pct = Math.round(done / total * 100);
+      const badge = sec.querySelector('.step-badge');
+      if (badge) {
+        badge.textContent = `${done}/${total} · ${pct}%`;
+        badge.classList.toggle('done', done === total);
+      }
+    });
+  },
+
+  updateSidebarRings() {
+    document.querySelectorAll('.nav-step').forEach(btn => {
+      const stepId = parseInt(btn.dataset.step);
+      const step = STEPS.find(s => s.id === stepId);
+      if (!step) return;
+      const done = step.points.filter(p => Store.getPoint(p.id).done).length;
+      const pct = Math.round(done / step.points.length * 100);
+      btn.querySelector('.ring').style.setProperty('--pct', pct + '%');
+      btn.querySelector('.ring span').textContent = done + '/' + step.points.length;
+    });
+  },
+};
+
+/* ═══════════════════════════════════════════════════════════════
+   MODULE: SIDEBAR
+   ═══════════════════════════════════════════════════════════════ */
+const Sidebar = {
+  render() {
+    const nav = document.getElementById('sidebarNav');
+    nav.innerHTML = '';
+    STEPS.forEach(step => {
+      const done = step.points.filter(p => Store.getPoint(p.id).done).length;
+      const pct = Math.round(done / step.points.length * 100);
+      const btn = document.createElement('button');
+      btn.className = 'nav-step';
+      btn.dataset.step = step.id;
+      btn.innerHTML = `
+        <span class="num">${String(step.id).padStart(2,'0')}</span>
+        <span class="label">${step.title}</span>
+        <span class="ring" style="--pct:${pct}%"><span>${done}/${step.points.length}</span></span>
+      `;
+      btn.addEventListener('click', () => {
+        Content.scrollToStep(step.id);
+        if (window.innerWidth <= 900) document.getElementById('sidebar').classList.add('collapsed');
+      });
+      nav.appendChild(btn);
+    });
+  },
+};
+
+/* ═══════════════════════════════════════════════════════════════
+   MODULE: CONTENT (рендер на стъпки и точки)
+   ═══════════════════════════════════════════════════════════════ */
+const Content = {
+  render() {
+    const container = document.getElementById('stepsContainer');
+    container.innerHTML = '';
+    const flat = getFlatPoints();
+    const filter = Store.state.ui.filter;
+    let visible = 0;
+
+    STEPS.forEach(step => {
+      const pts = step.points.filter(p => matchFilter(p) && matchSearch(p));
+      if (pts.length === 0 && (State.searchQuery || filter !== 'all')) return;
+      visible++;
+
+      const sec = document.createElement('div');
+      sec.className = 'step' + (Store.state.ui.collapsed[step.id] ? ' collapsed' : '');
+      sec.id = 'step-' + step.id;
+
+      const total = step.points.length;
+      const done = step.points.filter(p => Store.getPoint(p.id).done).length;
+      const pct = Math.round(done / total * 100);
+
+      sec.innerHTML = `
+        <div class="step-header" onclick="Content.toggleStep(${step.id}, event)">
+          <span class="step-toggle">▾</span>
+          <span class="step-num">${String(step.id).padStart(2,'0')}</span>
+          <span class="step-title">${step.title}</span>
+          <span class="step-badge ${done===total?'done':''}">${done}/${total} · ${pct}%</span>
+          <button class="step-reset" onclick="Content.resetStep(${step.id}, event)" title="Нулирай стъпката">⌫</button>
+        </div>
+        <div class="step-body"></div>
+      `;
+
+      const body = sec.querySelector('.step-body');
+      pts.forEach(p => body.appendChild(this.buildPointEl(p, flat)));
+      container.appendChild(sec);
+    });
+
+    if (visible === 0) {
+      container.innerHTML = `
+        <div class="empty">
+          <div class="big">⌕</div>
+          <div>НЯМА РЕЗУЛТАТИ</div>
+          <div style="margin-top:10px;font-size:13px;">Промени филтъра или търсенето</div>
+        </div>`;
+    }
+  },
+
+  buildPointEl(p, flat) {
+    const meta = Store.getPoint(p.id);
+    const idx = flat.findIndex(x => x.point.id === p.id);
+    const el = document.createElement('div');
+    el.className = 'point';
+    if (meta.done) el.classList.add('done');
+    if (meta.fav) el.classList.add('fav');
+    el.id = 'point-' + p.id.replace('.', '-');
+    el.dataset.pid = p.id;
+    el.dataset.idx = idx;
+
+    const pdfBtn = p.pdf
+      ? `<a href="${Utils.pdfUrl(p.pdf, p.page)}" target="_blank" class="pdf-btn" onclick="event.stopPropagation()">▸ PDF${p.page ? ' · стр. ' + p.page : ''}</a>`
+      : '';
+    const pageTag = p.page ? `<span class="tag page">стр. ${p.page}</span>` : '';
+    const notesBadge = meta.notes ? `<span class="notes-badge">✎</span>` : '';
+
+    let bonusHtml = '';
+    if (p.bonus && p.bonus.length) {
+      bonusHtml = `<div class="bonus-row"><span class="section-label" style="margin-right:8px;">ОЩЕ:</span>${p.bonus.map(b => `<a href="${Utils.pdfUrl(b.pdf)}" target="_blank" class="pdf-btn bonus" onclick="event.stopPropagation()">▸ ${b.label}</a>`).join('')}</div>`;
+    }
+
+    el.innerHTML = `
+      <div class="point-row">
+        <button class="point-check ${meta.done?'checked':''}" onclick="PointActions.toggleDone('${p.id}', event)">${meta.done?'✓':''}</button>
+        <div class="point-main">
+          <div class="point-num">ТОЧКА ${p.id}${notesBadge}</div>
+          <div class="point-title">${p.title}</div>
+          <div class="point-desc">${p.desc}</div>
+          <div class="point-tags">
+            <span class="tag src">${p.source}</span>
+            ${pageTag}
+            ${pdfBtn}
+          </div>
+        </div>
+        <div class="point-actions">
+          <button class="mini-btn" onclick="Modal.open('${p.id}');event.stopPropagation()" title="Отвори (Enter)">⤢</button>
+          <div class="diff-group">
+            <button class="diff-btn easy ${meta.diff==='easy'?'active':''}" onclick="PointActions.setDiff('${p.id}','easy',event)" title="Лесно">E</button>
+            <button class="diff-btn med ${meta.diff==='med'?'active':''}" onclick="PointActions.setDiff('${p.id}','med',event)" title="Средно">M</button>
+            <button class="diff-btn hard ${meta.diff==='hard'?'active':''}" onclick="PointActions.setDiff('${p.id}','hard',event)" title="Трудно">H</button>
+          </div>
+          <button class="mini-btn ${meta.fav?'active':''}" onclick="PointActions.toggleFav('${p.id}', event)" title="Маркирай за преговор">${meta.fav?'★':'☆'}</button>
+          <button class="mini-btn" onclick="PointActions.toggleExpand('${p.id}', event)" title="Разгъни">▾</button>
+        </div>
+      </div>
+      <div class="point-expand">
+        <div class="point-expand-inner">
+          <div class="section-label">▸ Подробни бележки</div>
+          <div class="explanation">${Utils.escapeHtml(p.explanation || '')}</div>
+          <div class="section-label">▸ Лични бележки</div>
+          <textarea class="notes-area" placeholder="Напиши свои идеи, лема, нещо, което си научил..." oninput="PointActions.saveNotes('${p.id}', this.value)" onclick="event.stopPropagation()">${Utils.escapeHtml(meta.notes||'')}</textarea>
+          ${bonusHtml}
+        </div>
+      </div>
+    `;
+
+    return el;
+  },
+
+  toggleStep(stepId, e) {
+    if (e && e.target.closest('.step-reset')) return;
+    Store.state.ui.collapsed[stepId] = !Store.state.ui.collapsed[stepId];
+    Store.save();
+    const sec = document.getElementById('step-' + stepId);
+    if (sec) sec.classList.toggle('collapsed', Store.state.ui.collapsed[stepId]);
+  },
+
+  resetStep(stepId, e) {
+    e.stopPropagation();
+    if (!confirm('Нулирай всички точки в тази стъпка?')) return;
+    const step = STEPS.find(s => s.id === stepId);
+    step.points.forEach(p => {
+      if (Store.state.progress[p.id]) {
+        Store.state.progress[p.id].done = false;
+        Store.state.progress[p.id].fav = false;
+        Store.state.progress[p.id].diff = null;
+      }
+    });
+    Store.save();
+    this.render();
+    Sidebar.render();
+    Stats.update();
+    Utils.toast('⌫ Стъпката е нулирана');
+  },
+
+  scrollToStep(id) {
+    const el = document.getElementById('step-' + id);
+    if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  },
+
+  scrollToPoint(pid) {
+    const el = document.querySelector(`[data-pid="${pid}"]`);
+    if (!el) return;
+    const sec = el.closest('.step');
+    if (sec && sec.classList.contains('collapsed')) {
+      const sid = parseInt(sec.id.replace('step-', ''));
+      Store.state.ui.collapsed[sid] = false;
+      Store.save();
+      sec.classList.remove('collapsed');
+    }
+    el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    el.classList.add('highlight');
+    el.classList.add('expanded');
+    setTimeout(() => el.classList.remove('highlight'), 1300);
+  },
+
+  expandAll() {
+    STEPS.forEach(s => Store.state.ui.collapsed[s.id] = false);
+    Store.save();
+    document.querySelectorAll('.step').forEach(el => el.classList.remove('collapsed'));
+    document.querySelectorAll('.point').forEach(el => el.classList.add('expanded'));
+  },
+
+  collapseAll() {
+    STEPS.forEach(s => Store.state.ui.collapsed[s.id] = true);
+    Store.save();
+    document.querySelectorAll('.step').forEach(el => el.classList.add('collapsed'));
+    document.querySelectorAll('.point').forEach(el => el.classList.remove('expanded'));
+  },
+};
+
+/* ═══════════════════════════════════════════════════════════════
+   MODULE: POINT ACTIONS (toggle done/fav/diff, notes)
+   ═══════════════════════════════════════════════════════════════ */
+const PointActions = {
+  toggleDone(id, e) {
+    if (e) e.stopPropagation();
+    const meta = Store.getPoint(id);
+    meta.done = !meta.done;
+    if (meta.done) Stats.checkStreak();
+    Store.save();
+    this.updatePointEl(id);
+    Stats.update(); Stats.updateSidebarRings(); Stats.updateStepBadges();
+    if (meta.done) Utils.toast('✓ Готово: ' + id);
+  },
+
+  toggleFav(id, e) {
+    e.stopPropagation();
+    const meta = Store.getPoint(id);
+    meta.fav = !meta.fav;
+    Store.save();
+    this.updatePointEl(id);
+    if (meta.fav) Utils.toast('★ Маркирано за преговор');
+  },
+
+  setDiff(id, diff, e) {
+    e.stopPropagation();
+    const meta = Store.getPoint(id);
+    meta.diff = meta.diff === diff ? null : diff;
+    Store.save();
+    this.updatePointEl(id);
+  },
+
+  saveNotes(id, val) {
+    const meta = Store.getPoint(id);
+    meta.notes = val;
+    Store.save();
+    this.updatePointEl(id, true);
+  },
+
+  toggleExpand(id, e) {
+    if (e) e.stopPropagation();
+    const el = document.querySelector(`[data-pid="${id}"]`);
+    if (el) el.classList.toggle('expanded');
+  },
+
+  updatePointEl(id, onlyNotesBadge) {
+    const el = document.querySelector(`[data-pid="${id}"]`);
+    if (!el) return;
+    const meta = Store.getPoint(id);
+    if (!onlyNotesBadge) {
+      el.classList.toggle('done', meta.done);
+      el.classList.toggle('fav', meta.fav);
+      const chk = el.querySelector('.point-check');
+      chk.classList.toggle('checked', meta.done);
+      chk.textContent = meta.done ? '✓' : '';
+      el.querySelectorAll('.diff-btn').forEach(b => {
+        const isActive = b.classList.contains(meta.diff);
+        b.classList.toggle('active', isActive);
+      });
+      const favBtn = el.querySelectorAll('.mini-btn')[1];
+      if (favBtn) { favBtn.classList.toggle('active', meta.fav); favBtn.textContent = meta.fav ? '★' : '☆'; }
+    }
+    const num = el.querySelector('.point-num');
+    const existing = num.querySelector('.notes-badge');
+    if (meta.notes && !existing) num.insertAdjacentHTML('beforeend', ' <span class="notes-badge">✎</span>');
+    else if (!meta.notes && existing) existing.remove();
+  },
+};
+
+/* ═══════════════════════════════════════════════════════════════
+   MODULE: MODAL (голям преглед + PDF viewer)
+   ═══════════════════════════════════════════════════════════════ */
+const Modal = {
+  open(id) {
+    State.currentModalId = id;
+    const p = getPoint(id);
+    if (!p) return;
+    const meta = Store.getPoint(id);
+    const step = STEPS.find(s => s.points.some(x => x.id === id));
+
+    document.getElementById('pmId').textContent = 'ТОЧКА ' + id + ' · ' + (step ? step.title : '');
+    document.getElementById('pmTitle').textContent = p.title;
+    document.getElementById('pmDesc').textContent = p.desc || '';
+    document.getElementById('pmExplanation').textContent = p.explanation || '';
+    const notesEl = document.getElementById('pmNotes');
+    notesEl.value = meta.notes || '';
+    notesEl.oninput = (e) => {
+      meta.notes = e.target.value;
+      Store.save();
+      PointActions.updatePointEl(id, true);
+    };
+
+    document.getElementById('pmSource').innerHTML =
+      `<span class="tag src">${p.source}</span>` +
+      (p.page ? `<span class="tag page">стр. ${p.page}</span>` : '');
+
+    // Tasks
+    const tasks = p.tasks || (p.pdf ? [
+      { label: '📖 Теория (начало на статията)', pdf: p.pdf, page: p.page || 1 },
+      { label: '✏ Задачи (край на статията)', pdf: p.pdf, page: Math.max(1, (p.page || 1) + 8) },
+      { label: '✓ Решения', pdf: p.pdf, page: Math.max(1, (p.page || 1) + 12) }
+    ] : []);
+    const tasksEl = document.getElementById('pmTasks');
+    tasksEl.innerHTML = tasks.length ? tasks.map(t =>
+      `<div class="pm-task-item" onclick="Modal.openPdfTab('${t.pdf}', ${t.page||1})">
+        <span class="label">${t.label}</span>
+        <span class="pg">стр. ${t.page||'?'}</span>
+        <span class="go">▸</span>
+      </div>`
+    ).join('') : '<div style="color:var(--text-3);font-size:12px;">Няма налични PDF задачи</div>';
+
+    // Tabs
+    const tabs = [];
+    if (p.page) tabs.push({ key: 'theory', label: '📖 Теория', page: p.page });
+    if (p.problems_page) tabs.push({ key: 'problems', label: '✏ Задачи', page: p.problems_page });
+    if (p.solutions_page) tabs.push({ key: 'solutions', label: '✓ Решения', page: p.solutions_page });
+    if (!tabs.length && p.pdf) tabs.push({ key: 'theory', label: '📄 PDF', page: 1 });
+
+    const tabsEl = document.getElementById('pmTabs');
+    tabsEl.innerHTML = tabs.map(t =>
+      `<button class="pm-tab" data-tab="${t.key}" onclick="Modal.switchTab('${t.key}',${t.page})">${t.label} <span class="badge">${t.page}</span></button>`
+    ).join('') + (p.pdf ?
+      `<button class="pm-tab external" onclick="Modal.openPdfTab('${p.pdf}',${p.page||1})">↗ Отвори в нов таб</button>` : '');
+
+    if (tabs.length) this.switchTab(tabs[0].key, tabs[0].page);
+    else this.loadPdf(p.pdf, 1);
+
+    this.updateButtons();
+    document.getElementById('pointModal').classList.add('open');
+    document.body.style.overflow = 'hidden';
+    Pomodoro.syncModal();
+  },
+
+  loadPdf(pdf, page) {
+    const frame = document.getElementById('pmPdfFrame');
+    if (!pdf) { frame.src = 'about:blank'; return; }
+    frame.src = Utils.pdfUrl(pdf, page);
+  },
+
+  switchTab(key, page) {
+    document.querySelectorAll('.pm-tab').forEach(t => t.classList.remove('active'));
+    const tab = document.querySelector(`.pm-tab[data-tab="${key}"]`);
+    if (tab) tab.classList.add('active');
+    const p = getPoint(State.currentModalId);
+    if (p) this.loadPdf(p.pdf, page);
+  },
+
+  openPdfTab(pdf, page) {
+    window.open(Utils.pdfUrl(pdf, page), '_blank');
+  },
+
+  close() {
+    document.getElementById('pointModal').classList.remove('open');
+    document.body.style.overflow = '';
+    State.currentModalId = null;
+  },
+
+  navigate(delta) {
+    const flat = getFlatPoints();
+    const visibleIds = flat.filter(x => matchFilter(x.point) && matchSearch(x.point)).map(x => x.point.id);
+    if (!visibleIds.length) return;
+    let pos = visibleIds.indexOf(State.currentModalId);
+    if (pos === -1) pos = 0;
+    else pos = Math.max(0, Math.min(visibleIds.length - 1, pos + delta));
+    this.open(visibleIds[pos]);
+  },
+
+  toggleDone() {
+    if (!State.currentModalId) return;
+    PointActions.toggleDone(State.currentModalId);
+    this.updateButtons();
+  },
+
+  toggleFav() {
+    if (!State.currentModalId) return;
+    PointActions.toggleFav(State.currentModalId);
+    this.updateButtons();
+  },
+
+  setDiff(d) {
+    if (!State.currentModalId) return;
+    PointActions.setDiff(State.currentModalId, d);
+    this.updateButtons();
+  },
+
+  updateButtons() {
+    if (!State.currentModalId) return;
+    const meta = Store.getPoint(State.currentModalId);
+    document.getElementById('pmDone').classList.toggle('active', meta.done);
+    const fav = document.getElementById('pmFav');
+    fav.classList.toggle('active', meta.fav);
+    fav.textContent = meta.fav ? '★' : '☆';
+    document.getElementById('pmDiffEasy').classList.toggle('active', meta.diff === 'easy');
+    document.getElementById('pmDiffMed').classList.toggle('active', meta.diff === 'med');
+    document.getElementById('pmDiffHard').classList.toggle('active', meta.diff === 'hard');
+  },
+};
+
+/* ═══════════════════════════════════════════════════════════════
+   MODULE: POMODORO
+   ═══════════════════════════════════════════════════════════════ */
+const Pomodoro = {
+  mode: 'focus',
+  remaining: CONFIG.pomo.focus,
+  running: false,
+  interval: null,
+  sessions: 0,
+
+  toggle() {
+    if (this.running) {
+      clearInterval(this.interval);
+      this.running = false;
+    } else {
+      this.running = true;
+      this.interval = setInterval(() => this.tick(), 1000);
+    }
+    this.render();
+  },
+
+  tick() {
+    this.remaining--;
+    if (this.remaining <= 0) {
+      clearInterval(this.interval);
+      this.running = false;
+      if (this.mode === 'focus') {
+        Store.state.pomodoroSessions++;
+        Store.save();
+        Utils.toast('🍅 Помодоро завършено!');
+        this.sessions++;
+        this.mode = (this.sessions % 4 === 0) ? 'longBreak' : 'shortBreak';
+        this.remaining = this.mode === 'longBreak' ? CONFIG.pomo.longBreak : CONFIG.pomo.shortBreak;
+      } else {
+        Utils.toast('▶ Обратно към работа');
+        this.mode = 'focus';
+        this.remaining = CONFIG.pomo.focus;
+      }
+      Stats.update();
+    }
+    this.render();
+  },
+
+  reset() {
+    clearInterval(this.interval);
+    this.running = false;
+    this.mode = 'focus';
+    this.remaining = CONFIG.pomo.focus;
+    this.render();
+  },
+
+  render() {
+    document.getElementById('pomoTime').textContent = Utils.fmtTime(this.remaining);
+    const modeEl = document.getElementById('pomoMode');
+    const timeEl = document.getElementById('pomoTime');
+    if (this.mode === 'focus') { modeEl.textContent = 'ФОКУС'; timeEl.classList.remove('break'); }
+    else if (this.mode === 'shortBreak') { modeEl.textContent = 'ПОЧИВКА'; timeEl.classList.add('break'); }
+    else { modeEl.textContent = 'ДЪЛГА ПОЧИВКА'; timeEl.classList.add('break'); }
+    const playBtn = document.getElementById('pomoPlay');
+    playBtn.textContent = this.running ? '❚❚' : '▶';
+    playBtn.classList.toggle('play', !this.running);
+    document.getElementById('pomoDone').textContent = Store.state.pomodoroSessions;
+    this.syncModal();
+  },
+
+  syncModal() {
+    const mt = document.getElementById('pmPomoTime');
+    const mtg = document.getElementById('pmPomoToggle');
+    if (mt) mt.textContent = Utils.fmtTime(this.remaining);
+    if (mtg) mtg.textContent = this.running ? '❚❚' : '▶';
+  },
+};
+
+/* ═══════════════════════════════════════════════════════════════
+   MODULE: PALETTE (command palette)
+   ═══════════════════════════════════════════════════════════════ */
+const Palette = {
+  open() {
+    document.getElementById('paletteOverlay').classList.add('open');
+    const inp = document.getElementById('paletteInput');
+    inp.value = '';
+    this.renderResults('');
+    setTimeout(() => inp.focus(), 30);
+  },
+
+  close() {
+    document.getElementById('paletteOverlay').classList.remove('open');
+  },
+
+  renderResults(q) {
+    const res = document.getElementById('paletteResults');
+    const flat = getFlatPoints();
+    const query = q.toLowerCase().trim();
+    let matches = flat;
+    if (query) {
+      matches = flat.filter(x =>
+        x.point.title.toLowerCase().includes(query) ||
+        x.point.id.includes(query) ||
+        x.step.title.toLowerCase().includes(query) ||
+        (Store.getPoint(x.point.id).notes || '').toLowerCase().includes(query)
+      );
+    }
+    matches = matches.slice(0, 30);
+    if (matches.length === 0) {
+      res.innerHTML = '<div class="palette-empty">НЯМА РЕЗУЛТАТИ</div>';
+      return;
+    }
+    res.innerHTML = matches.map((x, i) => {
+      const meta = Store.getPoint(x.point.id);
+      return `<div class="palette-item ${i===0?'selected':''}" data-pid="${x.point.id}">
+        <span class="pnum">${x.point.id}</span>
+        <span class="ptitle">${meta.done?'✓ ':''}${x.point.title}</span>
+        <span class="pstep">STEP ${x.step.id}</span>
+      </div>`;
+    }).join('');
+    res.querySelectorAll('.palette-item').forEach(el => {
+      el.addEventListener('click', () => {
+        this.close();
+        Content.scrollToPoint(el.dataset.pid);
+      });
+    });
+  },
+};
+
+/* ═══════════════════════════════════════════════════════════════
+   MODULE: HELP
+   ═══════════════════════════════════════════════════════════════ */
+const Help = {
+  open() { document.getElementById('helpOverlay').classList.add('open'); },
+  close() { document.getElementById('helpOverlay').classList.remove('open'); },
+};
+
+/* ═══════════════════════════════════════════════════════════════
+   MODULE: KEYS (keyboard shortcuts)
+   ═══════════════════════════════════════════════════════════════ */
+const Keys = {
+  init() {
+    document.addEventListener('keydown', e => this.handle(e));
+  },
+
+  handle(e) {
+    const tag = (e.target.tagName || '').toLowerCase();
+    const inField = tag === 'input' || tag === 'textarea';
+    const paletteOpen = document.getElementById('paletteOverlay').classList.contains('open');
+    const helpOpen = document.getElementById('helpOverlay').classList.contains('open');
+    const modalOpen = document.getElementById('pointModal').classList.contains('open');
+
+    // Esc – винаги първо
+    if (e.key === 'Escape') {
+      if (paletteOpen) { Palette.close(); return; }
+      if (helpOpen) { Help.close(); return; }
+      if (modalOpen) { Modal.close(); return; }
+      if (inField) { e.target.blur(); return; }
+      return;
+    }
+
+    if (helpOpen) return;
+
+    // Command palette
+    if (e.ctrlKey && e.key.toLowerCase() === 'k') {
+      e.preventDefault();
+      Palette.open();
+      return;
+    }
+
+    // Modal context
+    if (modalOpen) {
+      if (inField) return;
+      if (e.key === 'j' || e.key === 'J') { Modal.navigate(1); return; }
+      if (e.key === 'k' || e.key === 'K') { Modal.navigate(-1); return; }
+      if (e.key === ' ') { e.preventDefault(); Modal.toggleDone(); return; }
+      if (e.key === 'n' || e.key === 'N') { document.getElementById('pmNotes').focus(); e.preventDefault(); return; }
+      if (e.key === 't' || e.key === 'T') { Pomodoro.toggle(); return; }
+      if (e.key === 'g' || e.key === 'G') { Theme.cycle(); return; }
+      return;
+    }
+
+    // Global
+    if (inField) return;
+    if (e.key === '/') { e.preventDefault(); document.getElementById('searchInput').focus(); return; }
+    if (e.key === '?') { Help.open(); return; }
+    if (e.key === 'j' || e.key === 'J') { this.navigate(1); return; }
+    if (e.key === 'k' || e.key === 'K') { this.navigate(-1); return; }
+    if (e.key === 't' || e.key === 'T') { Pomodoro.toggle(); return; }
+    if (e.key === 'g' || e.key === 'G') { Theme.cycle(); return; }
+    if (e.key === 'e' || e.key === 'E') { Content.expandAll(); return; }
+    if (e.key === 'c' || e.key === 'C') { Content.collapseAll(); return; }
+    if (e.key === 'Enter') {
+      const el = document.elementFromPoint(window.innerWidth / 2, window.innerHeight / 2);
+      const card = el && el.closest('.point');
+      if (card) { Modal.open(card.dataset.pid); e.preventDefault(); return; }
+    }
+    if (e.key === ' ') {
+      e.preventDefault();
+      const el = document.elementFromPoint(window.innerWidth / 2, window.innerHeight / 2);
+      const card = el && el.closest('.point');
+      if (card) {
+        PointActions.toggleDone(card.dataset.pid);
+        State.currentIndex = parseInt(card.dataset.idx);
+      }
+      return;
+    }
+    if (e.key === 'n' || e.key === 'N') {
+      const el = document.elementFromPoint(window.innerWidth / 2, window.innerHeight / 2);
+      const card = el && el.closest('.point');
+      if (card) {
+        card.classList.add('expanded');
+        const ta = card.querySelector('.notes-area');
+        if (ta) ta.focus();
+      }
+      return;
+    }
+  },
+
+  navigate(delta) {
+    const flat = getFlatPoints();
+    const visibleIds = flat.filter(x => matchFilter(x.point) && matchSearch(x.point)).map(x => x.point.id);
+    if (!visibleIds.length) return;
+    let pos = visibleIds.indexOf(flat[State.currentIndex]?.point.id);
+    if (pos === -1) pos = 0;
+    else pos = Math.max(0, Math.min(visibleIds.length - 1, pos + delta));
+    const targetId = visibleIds[pos];
+    State.currentIndex = flat.findIndex(x => x.point.id === targetId);
+    Content.scrollToPoint(targetId);
+  },
+};
+
+/* ═══════════════════════════════════════════════════════════════
+   MODULE: EVENTS (глобални слушатели)
+   ═══════════════════════════════════════════════════════════════ */
+const Events = {
+  init() {
+    // Search
+    const searchInp = document.getElementById('searchInput');
+    searchInp.addEventListener('input', e => {
+      State.searchQuery = e.target.value;
+      document.getElementById('kbdHint').classList.toggle('hidden', !!State.searchQuery);
+      Content.render();
+    });
+
+    // Filters
+    document.getElementById('filters').addEventListener('click', e => {
+      if (!e.target.classList.contains('chip')) return;
+      document.querySelectorAll('.chip').forEach(c => c.classList.remove('active'));
+      e.target.classList.add('active');
+      Store.state.ui.filter = e.target.dataset.filter;
+      Store.save();
+      Content.render();
+    });
+    document.querySelectorAll('.chip').forEach(c =>
+      c.classList.toggle('active', c.dataset.filter === Store.state.ui.filter));
+
+    // Menu button
+    document.getElementById('menuBtn').addEventListener('click', e => {
+      e.stopPropagation();
+      document.getElementById('menuDropdown').classList.toggle('open');
+    });
+    document.addEventListener('click', () => UI.closeMenu());
+
+    // Palette input
+    const palInp = document.getElementById('paletteInput');
+    palInp.addEventListener('input', e => Palette.renderResults(e.target.value));
+    palInp.addEventListener('keydown', e => {
+      const items = document.querySelectorAll('.palette-item');
+      if (e.key === 'Enter') {
+        if (items.length > 0) {
+          const sel = document.querySelector('.palette-item.selected') || items[0];
+          Palette.close();
+          Content.scrollToPoint(sel.dataset.pid);
+        }
+      } else if (e.key === 'ArrowDown' || e.key === 'ArrowUp') {
+        e.preventDefault();
+        const cur = document.querySelector('.palette-item.selected');
+        let idx = cur ? Array.from(items).indexOf(cur) : -1;
+        idx += (e.key === 'ArrowDown' ? 1 : -1);
+        if (idx < 0) idx = items.length - 1;
+        if (idx >= items.length) idx = 0;
+        items.forEach(it => it.classList.remove('selected'));
+        items[idx].classList.add('selected');
+        items[idx].scrollIntoView({ block: 'nearest' });
+      }
+    });
+  },
+};
+
+/* ═══════════════════════════════════════════════════════════════
+   MODULE: INIT
+   ═══════════════════════════════════════════════════════════════ */
+function init() {
+  Store.state = Store.load();
+  Theme.init();
+
+  if (Store.state.ui.scanlines) document.body.classList.add('scanlines');
+  document.getElementById('scanToggleItem').innerHTML =
+    '<span class="ic">◫</span> Scanlines: ' + (Store.state.ui.scanlines ? 'ВКЛ' : 'ИЗКЛ');
+
+  Sidebar.render();
+  Content.render();
+  Stats.update();
+  Pomodoro.render();
+  Events.init();
+  Keys.init();
+}
+
+init();
+</script>
+</body>
+</html>

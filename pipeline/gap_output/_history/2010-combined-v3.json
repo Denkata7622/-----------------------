@@ -1,0 +1,101 @@
+{
+  "_meta": {
+    "pdf": "C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\Материали_БГ\\OT_2010.pdf",
+    "paired_with": null,
+    "level": 3,
+    "type": "combined",
+    "analyzed_at": "2026-10-16T21:57:37.798885",
+    "model": "deepseek/deepseek-v3.2",
+    "text_length": 202326,
+    "paired_text_length": 0
+  },
+  "problems": [
+    {
+      "num": 1,
+      "topic": "number_theory",
+      "theorems": [
+        "Fermat's Little Theorem",
+        "Legendre symbol",
+        "Law of Quadratic Reciprocity",
+        "Lucas sequence",
+        "Fibonacci sequence"
+      ],
+      "techniques": [
+        "modular arithmetic",
+        "exponent properties",
+        "congruence manipulation",
+        "binomial theorem modulo p",
+        "infinite descent (infinite sequence argument)"
+      ],
+      "concepts": [
+        "quadratic residues/non-residues",
+        "finite fields",
+        "complex numbers modulo p",
+        "order of an element",
+        "recurrence sequences",
+        "rational numbers representation"
+      ],
+      "difficulty": "olympic",
+      "notes": "Introduces 'complex numbers' in finite arithmetic (mod p) with j^2 = t, a quadratic non-residue. Proves properties like z^p = conjugate(z). Applies to Fibonacci/Lucas sequences and solves an IMO Shortlist problem (2003)."
+    },
+    {
+      "num": 2,
+      "topic": "combinatorics",
+      "theorems": [
+        "Binomial Theorem"
+      ],
+      "techniques": [
+        "combinatorial proof",
+        "double counting",
+        "bijection",
+        "case analysis",
+        "summation manipulation"
+      ],
+      "concepts": [
+        "binomial coefficients",
+        "subsets",
+        "even/odd subsets",
+        "committees with chairperson",
+        "selection with restrictions",
+        "lattice paths/counting tables"
+      ],
+      "difficulty": "standard",
+      "notes": "Classical combinatorial identities proved via double counting and bijective arguments. Includes Vandermonde's identity and other sum identities."
+    },
+    {
+      "num": 3,
+      "topic": "combinatorics",
+      "theorems": [],
+      "techniques": [
+        "equivalence relations",
+        "contradiction",
+        "case analysis",
+        "graph interpretation"
+      ],
+      "concepts": [
+        "reflexive, symmetric, transitive relations",
+        "equivalence classes",
+        "partitioning",
+        "tournament graphs",
+        "cycles in tournaments"
+      ],
+      "difficulty": "standard",
+      "notes": "Defines relations and equivalence relations. Uses them to solve combinatorial geometry (triangles in n-gon) and tournament problems. Highlights independence of relation properties."
+    }
+  ],
+  "unique_concepts": [
+    "Legendre symbol",
+    "finite fields (complex numbers mod p)",
+    "order of an element modulo p",
+    "Lucas/Fibonacci sequences modulo p",
+    "quadratic reciprocity",
+    "combinatorial proof (double counting)",
+    "binomial coefficients identities",
+    "equivalence relations and classes",
+    "tournament graphs and cycles",
+    "modular arithmetic with algebraic structures",
+    "rational numbers representation as sums of reciprocals",
+    "infinite descent argument for rational representation"
+  ],
+  "confidence": 0.95
+}

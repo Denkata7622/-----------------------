@@ -1,0 +1,133 @@
+{
+  "_meta": {
+    "pdf": "C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\Задачи_Минали_Години\\Областен\\OLI-2-Областен кръг-2025-11 кл-probs.pdf",
+    "paired_with": "C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\Задачи_Минали_Години\\Областен\\OLI-2-Областен кръг-2025-11 кл-sol.pdf",
+    "level": 1,
+    "type": "probs",
+    "analyzed_at": "2026-10-16T21:42:46.937149",
+    "model": "deepseek/deepseek-v3.2",
+    "text_length": 4376,
+    "paired_text_length": 0
+  },
+  "problems": [
+    {
+      "num": 1,
+      "topic": "algebra",
+      "theorems": [
+        "Rational Root Theorem",
+        "Descartes' Rule of Signs"
+      ],
+      "techniques": [
+        "polynomial analysis",
+        "parameter discussion",
+        "root location",
+        "substitution"
+      ],
+      "concepts": [
+        "cubic equations",
+        "real roots",
+        "positive roots",
+        "coefficient relationships",
+        "geometric progression of roots"
+      ],
+      "difficulty": "standard",
+      "notes": "Задачата изисква намиране на всички реални стойности на параметър k, за които корените на кубично уравнение са реални и положителни и образуват геометрична прогресия. Това води до система от условия (Viète formulas) и неравенства за реалност и положителност на корените."
+    },
+    {
+      "num": 2,
+      "topic": "geometry",
+      "theorems": [
+        "Power of a Point",
+        "Thales' Theorem",
+        "Basic Proportionality Theorem"
+      ],
+      "techniques": [
+        "angle chasing",
+        "cyclic quadrilaterals",
+        "similar triangles",
+        "parallel lines proof"
+      ],
+      "concepts": [
+        "circle tangent to a line",
+        "median",
+        "intersecting chords",
+        "collinearity",
+        "parallel lines"
+      ],
+      "difficulty": "standard",
+      "notes": "Конфигурация с окръжност, минаваща през връх на триъгълник и допираща се до противоположната страна, пресичаща медиана. Доказателство за успоредност чрез ъгли или подобни триъгълници, вероятно използвайки степента на точка."
+    },
+    {
+      "num": 3,
+      "topic": "combinatorics",
+      "theorems": [],
+      "techniques": [
+        "rearrangement inequality",
+        "pairing",
+        "maximization/minimization",
+        "case analysis"
+      ],
+      "concepts": [
+        "permutations",
+        "absolute value sums",
+        "rearrangement of numbers",
+        "minimizing sum of absolute deviations"
+      ],
+      "difficulty": "standard",
+      "notes": "Задача за намиране на максималната възможна стойност на сума от абсолютни разлики за пермутация на числата 1,...,n при нечетно n. Използва се идея за максимално 'разминаване', например пермутацията n,1,2,...,n-1 или подобна."
+    },
+    {
+      "num": 4,
+      "topic": "number_theory",
+      "theorems": [
+        "Fermat's Little Theorem",
+        "Euler's Theorem",
+        "Existence of Primitive Roots"
+      ],
+      "techniques": [
+        "existence proof",
+        "prime divisors",
+        "order of an element modulo p"
+      ],
+      "concepts": [
+        "prime numbers",
+        "order modulo p",
+        "divisibility",
+        "existence of primes with given conditions",
+        "2n divides p-1"
+      ],
+      "difficulty": "hard",
+      "notes": "Задача за доказателство, че за всяко естествено n съществува просто число p < 2^(2n), такова че 2n дели p-1. Това е нетривиална теоретико-числова задача, изискваща познания за разпределението на простите числа и/или прилагане на теореми като Дирихле (за аритметични прогресии) или конструктивни аргументи."
+    }
+  ],
+  "unique_concepts": [
+    "cubic equations",
+    "real and positive roots",
+    "geometric progression of roots",
+    "Rational Root Theorem",
+    "Descartes' Rule of Signs",
+    "polynomial analysis",
+    "parameter discussion",
+    "circle tangent to a line",
+    "Power of a Point",
+    "Thales' Theorem",
+    "Basic Proportionality Theorem",
+    "angle chasing",
+    "cyclic quadrilaterals",
+    "similar triangles",
+    "median",
+    "parallel lines proof",
+    "permutations",
+    "absolute value sums",
+    "rearrangement inequality",
+    "maximizing sum of absolute deviations",
+    "prime numbers",
+    "order modulo p",
+    "Fermat's Little Theorem",
+    "Euler's Theorem",
+    "existence of primes",
+    "divisibility conditions",
+    "primitive roots"
+  ],
+  "confidence": 0.9
+}

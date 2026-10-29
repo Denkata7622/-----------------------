@@ -1,0 +1,118 @@
+{
+  "_meta": {
+    "pdf": "C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\Задачи_Минали_Години\\Областен\\OLI-2-Областен кръг-2018-10 кл-probs.pdf",
+    "paired_with": "C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\Задачи_Минали_Години\\Областен\\OLI-2-Областен кръг-2018-10 кл-sol.pdf",
+    "level": 1,
+    "type": "probs",
+    "analyzed_at": "2026-10-16T21:20:38.370010",
+    "model": "deepseek/deepseek-v3.2",
+    "text_length": 1263,
+    "paired_text_length": 6424
+  },
+  "problems": [
+    {
+      "num": 1,
+      "topic": "algebra",
+      "theorems": [],
+      "techniques": [
+        "substitution",
+        "squaring",
+        "case analysis",
+        "verification of solutions"
+      ],
+      "concepts": [
+        "quadratic function",
+        "function symmetry (axis of parabola)",
+        "domain restrictions",
+        "absolute value",
+        "square root equations"
+      ],
+      "difficulty": "standard",
+      "notes": "Standard equation involving a quadratic function and a square root. Key is to consider cases where arguments are equal or symmetric about the parabola's axis."
+    },
+    {
+      "num": 2,
+      "topic": "algebra",
+      "theorems": [
+        "Polynomial Remainder Theorem"
+      ],
+      "techniques": [
+        "substitution of polynomial roots",
+        "solving linear systems"
+      ],
+      "concepts": [
+        "polynomial division",
+        "remainder",
+        "roots of a polynomial",
+        "irrational numbers in equations"
+      ],
+      "difficulty": "standard",
+      "notes": "Standard application of the Remainder Theorem by evaluating at the roots of the divisor."
+    },
+    {
+      "num": 3,
+      "topic": "number_theory",
+      "theorems": [
+        "Chinese Remainder Theorem"
+      ],
+      "techniques": [
+        "pigeonhole principle",
+        "construction of counterexample",
+        "modular arithmetic analysis"
+      ],
+      "concepts": [
+        "coprime numbers",
+        "prime numbers",
+        "residue classes",
+        "parity",
+        "divisibility by 2 and 3",
+        "existence proofs"
+      ],
+      "difficulty": "olympic",
+      "notes": "Combinatorial number theory problem. Requires proving an upper bound (10 impossible) via a constructed set, and a lower bound (9 always possible) using the Pigeonhole Principle and CRT."
+    },
+    {
+      "num": 4,
+      "topic": "geometry",
+      "theorems": [
+        "Inscribed Angle Theorem",
+        "Cyclic Quadrilateral Theorem",
+        "Exterior Angle Theorem"
+      ],
+      "techniques": [
+        "angle chasing",
+        "cyclic quadrilaterals",
+        "introduction of auxiliary point (intersection of circles)",
+        "proof that a point is an incenter"
+      ],
+      "concepts": [
+        "tangent to a circle",
+        "inscribed angles",
+        "cyclic quadrilaterals",
+        "angle bisector",
+        "incenter",
+        "circle centered at a vertex",
+        "concyclic points"
+      ],
+      "difficulty": "hard",
+      "notes": "Complex geometry problem requiring multiple steps of angle chasing, proving concyclicity, and identifying an intersection point as the incenter."
+    }
+  ],
+  "unique_concepts": [
+    "quadratic function symmetry",
+    "domain restrictions for square roots",
+    "Polynomial Remainder Theorem",
+    "Chinese Remainder Theorem",
+    "pigeonhole principle in number theory",
+    "construction of counterexamples",
+    "coprime sets",
+    "tangent to a circle",
+    "inscribed angles",
+    "cyclic quadrilaterals",
+    "angle bisector",
+    "incenter",
+    "concyclic points",
+    "circle centered at a vertex"
+  ],
+  "confidence": 1.0
+}

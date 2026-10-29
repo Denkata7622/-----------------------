@@ -1,0 +1,77 @@
+{
+  "pdf": "OLI-2-Областен кръг-1997-10 кл-sol",
+  "problems": [
+    {
+      "num": 1,
+      "year": 1997,
+      "grade": 10,
+      "round": "nacionalen",
+      "statement": "Find all natural numbers $a$, $b$ and $c$ such that the roots of the equation\n\n$$\\begin{array}{l} x^{2}-2 a x+b=0 \\\\ x^{2}-2 b x+c=0 \\\\ x^{2}-2 c x+a=0 \\end{array}$$\n\nare natural numbers.",
+      "solution": "Solution: Let $\\{x_{1},x_{2}\\}$, $\\{x_{3},x_{4}\\}$ and $\\{x_{5},x_{6}\\}$ be the roots of the first, second and third equation respectively, and let all of them be natural numbers.\n\nAssume that $x_{i} \\geq 2$ for all $i=1,2,\\ldots,6$. Then $2 a=x_{1}+x_{2} \\leq x_{1} x_{2}=b, 2 b=x_{3}+x_{4} \\leq x_{3} x_{4}=c$ and $2 c=x_{5}+x_{6} \\leq x_{5} x_{6}=a$. Thus $2(a+b+c) \\leq a+b+c$, which is impossible, since $a, b, c$ are natural numbers.\n\nTherefore at least one of the numbers $x_{i}$ equals 1. Without loss of generality suppose $x_{1}=1$, so $1-2 a+b=0$.\n\nIf $x_{i} \\geq 2$ for $i=3,4,5,6$, then\n\n$$2(b+c)=(x_{3}+x_{4})+(x_{5}+x_{6}) \\leq x_{3} x_{4}+x_{5} x_{6}=c+a,$$\n\nwhence $2(2 a-1+c) \\leq c+a \\Rightarrow c \\leq 2-3 a$, which is impossible when $a, b, c$ are natural numbers.\n\nSo at least one of $x_{3}, x_{4}, x_{5}, x_{6}$ equals 1. Let $x_{3}=1$. Now $1-2 b+c=0$. Assuming that $x_{5} \\geq 2$ and $x_{6} \\geq 2$, we get $2 c=x_{5}+x_{6} \\leq a$, so $2(2 b-1) \\leq \\frac{b+1}{2}$. Thus $7 b \\leq 5$, a contradiction.\n\nTherefore at least one of the numbers $x_{5}, x_{6}$ is 1 and it follows that $1-2 c+a=0$. Further\n\n$$0=(1-2 a+b)+(1-2 b+c)+(1-2 c+a)=3-(a+b+c)$$\n\nand since $a, b, c$ are natural numbers, it follows that $a=b=c=1$.\n\nDirect verification shows that $a=b=c=1$ satisfy the conditions of the problem.",
+      "answer": "$a=b=c=1$.",
+      "page": 1,
+      "pdf": "OLI-2-Областен кръг-1997-10 кл-sol",
+      "chunk": 1
+    },
+    {
+      "num": 2,
+      "year": 1997,
+      "grade": 10,
+      "round": "nacionalen",
+      "statement": "Given a convex quadrilateral $ABCD$ which can be inscribed in a circle. Let $F$ be the intersecting point of diagonals $AC$ and $BD$ and $E$ be the intersecting point of the lines $AD$ and $BC$. If $M$ and $N$ are the midpoints of $AB$ and $CD$, prove that\n\n$$\\frac{MN}{EF} = \\frac{1}{2} \\cdot \\left| \\frac{AB}{CD} - \\frac{CD}{AB} \\right|.$$",
+      "solution": "Solution: Let $\\angle AEB = \\gamma$, $EC = c$, $ED = d$, $\\overrightarrow{i} = \\frac{1}{c} \\cdot \\overrightarrow{EC}$ and $\\overrightarrow{j} = \\frac{1}{d} \\cdot \\overrightarrow{ED}$. Since $ABCD$ is an inscribed quadrilateral, $\\frac{AB}{CD} = \\frac{AE}{CE} = \\frac{BE}{DE} = k$. Therefore $\\overrightarrow{EA} = kc\\overrightarrow{j}$ and $\\overrightarrow{EB} = kd\\overrightarrow{i}$. Since $F \\in AC$ and $F \\in BD$ there exist $x$ and $y$ such that\n\n$$\\overrightarrow{EF} = x\\overrightarrow{EA} + (1 - x)\\overrightarrow{EC} = xkc\\overrightarrow{j} + (1 - x)c\\overrightarrow{i}$$\n\nand\n\n$$\\overrightarrow{EF} = y\\overrightarrow{EB} + (1 - y)\\overrightarrow{ED} = ykd\\overrightarrow{i} + (1 - y)d\\overrightarrow{j}.$$\n\nComparing the coefficients of $\\overrightarrow{i}$ and $\\overrightarrow{j}$ in these equalities gives $xkc = (1 - y)d$ and $ykd = (1 - x)c$. This implies $x = \\frac{kd - c}{(k^2 - 1)c}$. Therefore\n\n$$\\overrightarrow{EF} = \\frac{k}{k^2 - 1} \\left( (kd - c)\\overrightarrow{j} + (kc - d)\\overrightarrow{i} \\right)$$\n\nand thus\n\n$$EF^2 = \\left( \\frac{k}{k^2 - 1} \\right)^2 \\left( (kd - c)^2 + (kc - d)^2 + 2(kd - c)(kc - d)\\cos \\gamma \\right).$$\n\nOn the other hand\n\n$$\\begin{aligned} \\overrightarrow{MN} &= \\frac{1}{2} \\cdot \\left( \\overrightarrow{AD} + \\overrightarrow{BC} \\right) = \\frac{1}{2} \\cdot \\left( \\overrightarrow{ED} - \\overrightarrow{EA} + \\overrightarrow{EC} - \\overrightarrow{EB} \\right) \\\\ &= \\frac{1}{2} \\cdot \\left( (d - kc)\\overrightarrow{j} + (c - kd)\\overrightarrow{i} \\right) \\end{aligned}$$\n\nand it follows that\n\n$$MN^2 = \\frac{1}{4} \\cdot \\left( (d - kc)^2 + (c - kd)^2 + 2(d - kc)(c - kd)\\cos \\gamma \\right).$$\n\nTherefore $\\frac{MN^2}{EF^2} = \\frac{1}{4} \\left( \\frac{k^2 - 1}{k} \\right)^2 = \\frac{1}{4} \\left( k - \\frac{1}{k} \\right)^2$ and so\n\n$$\\frac{MN}{EF} = \\frac{1}{2} \\cdot \\left| \\frac{AB}{CD} - \\frac{CD}{AB} \\right|$$",
+      "answer": null,
+      "page": 2,
+      "pdf": "OLI-2-Областен кръг-1997-10 кл-sol",
+      "chunk": 1
+    },
+    {
+      "num": 3,
+      "year": 1997,
+      "grade": 10,
+      "round": "nacionalen",
+      "statement": "Prove that the equation\n\n$$x^2 + y^2 + z^2 + 3(x + y + z) + 5 = 0$$\n\nhas no solution in rational numbers.",
+      "solution": "Solution: It is easy to see that the equation is equivalent to\n\n$$(2x + 3)^2 + (2y + 3)^2 + (2z + 3)^2 = 7.$$\n\nIt has a solution in rational numbers if and only if there exist integer numbers $a, b, c$ and a natural number $m$ such that\n\n(*) $$a^2 + b^2 + c^2 = 7m^2.$$\n\nSuppose such numbers exist and give $m$ its smallest possible value. There are two cases:\n\n(I) $m = 2n$ is an even number. Now $a^2 + b^2 + c^2$ is divisible by 4. This implies that all numbers $a, b, c$ are even ones, so $a = 2a_1$, $b = 2b_1$, $c = c_1$. It follows now that $a_1^2 + b_1^2 + c_1^2 = 7n^2$, which contradicts the way $m$ have been chosen.\n\n(II) $m = 2n + 1$ is an odd number. Now $m^2 \\equiv 1 \\pmod 8$ and therefore $a^2 + b^2 + c^2 \\equiv 7 \\pmod 8$, which is impossible when $a, b, c$ are integer.",
+      "answer": "The equation has no solution in rational numbers.",
+      "page": 3,
+      "pdf": "OLI-2-Областен кръг-1997-10 кл-sol",
+      "chunk": 1
+    },
+    {
+      "num": 4,
+      "year": 1997,
+      "grade": 10,
+      "round": "nacionalen",
+      "statement": "Find all continuous functions $f(x)$ defined in the set of real numbers and such that\n\n$$f(x) = f\\left(x^2 + \\frac{1}{4}\\right)$$\n\nfor all real $x$.",
+      "solution": "Solution: Let $f(x)$ be a function satisfying the conditions of the problem. Obviously $f(x)$ is an even function.\n\nLet $x_0 \\ge 0$. There are two cases:\n\n(I) $0 \\le x_0 \\le \\frac{1}{2}$. Consider the sequence\n\n(1) $$x_0, x_1, \\dots, x_n, \\dots$$\n\ndefined by the equalities $x_{n+1} = x_n^2 + \\frac{1}{4}$.\n\nIt is easy to see by induction that $0 \\le x_n \\le \\frac{1}{2}$ for all $n$. Moreover\n\n$$x_{n+1} - x_n = x_n^2 - x_n + \\frac{1}{4} = \\left(x_n - \\frac{1}{2}\\right)^2 \\ge 0,$$\n\nwhich implies that (1) is a monotone increasing function. Since it is bounded, it follows that it is a convergent function. Let $\\lim_{n\\to\\infty} x_n = \\alpha$.\n\nNow $\\alpha^2 - \\alpha + \\frac{1}{4} = 0$, so $\\alpha = \\frac{1}{2}$.\n\nOn the other hand, since $f(x)$ is a continuous function,\n\n$$\\lim_{n\\to\\infty} f(x_n) = f\\left(\\frac{1}{2}\\right).$$\n\nBut\n\n$$f(x_{n+1}) = f\\left(x_n^2 + \\frac{1}{4}\\right) = f(x_n)$$\n\nfor all $n$. Thus $f(x_0) = f(x_1) = \\cdots$ which means that $f(x_0) = f\\left(\\frac{1}{2}\\right)$ for all $x_0 \\in \\left[0, \\frac{1}{2}\\right]$.\n\n(II) $x_0 > \\frac{1}{2}$. Consider the following sequence:\n\n(2) $x_0, x_1, \\ldots, x_n, \\ldots$\n\ndefined by $x_{n+1} = \\sqrt{x_n - \\frac{1}{4}}$.\n\nAs in the previous case, we show that (2) is a convergent function and $\\lim_{n\\to\\infty} x_n = \\frac{1}{2}$. Further $\\lim_{n\\to\\infty} f(x_n) = f\\left(\\frac{1}{2}\\right)$ and since\n\n$$f(x_{n+1}) = f\\left(x_{n+1}^2 + \\frac{1}{4}\\right) = f(x_n)$$\n\nfor all $n$ we get that $f(x_0) = f\\left(\\frac{1}{2}\\right)$.\n\nTherefore $f(x)$ is a constant function in the interval $[0, +\\infty)$, and since it is even, it is a constant for all $x$.\n\nConversely, any constant function satisfies the conditions of the problem.",
+      "answer": "$f(x)=C$ for all $x\\in\\mathbb{R}$, where $C\\in\\mathbb{R}$ is arbitrary.",
+      "page": 3,
+      "pdf": "OLI-2-Областен кръг-1997-10 кл-sol",
+      "chunk": 1
+    },
+    {
+      "num": 5,
+      "year": 1997,
+      "grade": 10,
+      "round": "nacionalen",
+      "statement": "Two squares $K_1$ and $K_2$ with centres $M$ and $N$ and sides of length 1 are placed in the plane in a way that $MN = 4$, two of the sides of $K_1$ are parallel to $MN$ and one of the diagonals of $K_2$ lies on the line $MN$. Find the locus of midpoints of segments $XY$ where $X$ is an interior point for $K_1$ and $Y$ is an interior point for $K_2$.",
+      "solution": "Solution: The locus is the interior of a regular hexagon centred at the midpoint of the segment $MN$ and with a side length of $\\frac{1}{2}$.\n\nTo prove this, proceed as follows.\n\nFix the point $Y$ in the interior of $K_2$. When $X$ varies in the interior of $K_1$ the locus of the midpoints of $XY$ is a square $K_1'$ which is homothetic to $K_1$ by homothecy with centre $Y$ and coefficient $\\frac{1}{2}$.\n\nObviously the side of this square is $\\frac{1}{2}$ and its centre is the midpoint of $MY$. When $Y$ varies in the interior of $K_2$ then the locus of the midpoints of $MY$ is a square $K_2'$ which is homothetic to $K_2$ by homothecy with centre $M$ and coefficient $\\frac{1}{2}$. The side of this square equals $\\frac{1}{2}$ and its centre $Q$ is the midpoint of $MN$. Finally, when the centres of $K_1'$ vary in the interior of $K_2'$, the squares vary in the interior of a regular hexagon centred at $Q$ and with a side length of $\\frac{1}{2}$.",
+      "answer": "The interior of a regular hexagon centred at the midpoint of $MN$ and with a side length of $\\frac{1}{2}$.",
+      "page": 4,
+      "pdf": "OLI-2-Областен кръг-1997-10 кл-sol",
+      "chunk": 1
+    },
+    {
+      "num": 6,
+      "year": 1997,
+      "grade": 10,
+      "round": "nacionalen",
+      "statement": "Find the number of non-empty sets of $S_n = \\{1, 2, \\ldots, n\\}$ such that there are no two consecutive numbers in one and the same set.",
+      "solution": "Solution: Denote the required number by $f_n$. It is easy to see that $f_1 = 1$, $f_2 = 2$, $f_3 = 4$.\n\nDivide the subsets of $S_n$ having no two consecutive numbers into two groups—those that do not contain the element $n$ and those that do. Obviously the number of subsets in the first group is $f_{n-1}$.\n\nLet $T$ be a set of the second group. Therefore either $T = \\{n\\}$ or $T = \\{a_1, \\ldots, a_{k-1}, n\\}$, where $k > 1$. It is clear that $a_{k-1} \\neq n - 1$, so $\\{a_1, \\ldots a_{k-1}\\} \\subset S_{n-2}$, whence the number of sets in the second group is $f_{n-2} + 1$. Therefore\n\n$$f_n = f_{n-1} + f_{n-2} + 1.$$\n\nAfter substituting $u_n = f_n + 1$ we get\n\n$$u_1 = 2, u_2 = 3, \\qquad u_n = u_{n-1} + u_{n-2}.$$\n\nTherefore the sequence $\\{u_n\\}_{n=1}^{\\infty}$ coincides with the Fibonacci sequence from its third number onwards. Thus we obtain\n\n$$f_n = \\frac{1}{\\sqrt{5}} \\left( \\left( \\frac{1 + \\sqrt{5}}{2} \\right)^{n+2} - \\left( \\frac{1 - \\sqrt{5}}{2} \\right)^{n+2} \\right) - 1.$$",
+      "answer": "$f_n = \\frac{1}{\\sqrt{5}} \\left( \\left( \\frac{1 + \\sqrt{5}}{2} \\right)^{n+2} - \\left( \\frac{1 - \\sqrt{5}}{2} \\right)^{n+2} \\right) - 1$.",
+      "page": 5,
+      "pdf": "OLI-2-Областен кръг-1997-10 кл-sol",
+      "chunk": 1
+    }
+  ]
+}

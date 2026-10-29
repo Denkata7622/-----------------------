@@ -1,0 +1,158 @@
+{
+  "_meta": {
+    "pdf": "C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\Задачи_Минали_Години\\Национален\\OLI-3-Национален кръг-1990-9-12 кл-probs.pdf",
+    "paired_with": "C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\Задачи_Минали_Години\\Национален\\OLI-3-Национален кръг-1990-9-12 кл-sol.pdf",
+    "level": 2,
+    "type": "probs",
+    "analyzed_at": "2026-10-18T11:44:15.681184",
+    "model": "deepseek/deepseek-v3.2",
+    "text_length": 2183,
+    "paired_text_length": 16398
+  },
+  "problems": [
+    {
+      "num": 1,
+      "topic": "combinatorics",
+      "theorems": [],
+      "techniques": [
+        "arithmetic progression manipulation",
+        "positional analysis",
+        "digit counting"
+      ],
+      "concepts": [
+        "digit concatenation",
+        "iterative deletion",
+        "binary representation (implicit)",
+        "number of digits in a range"
+      ],
+      "difficulty": "hard",
+      "notes": "The solution involves tracking the indices of digits through successive deletions, effectively simulating a process related to binary representation. The core idea is to follow the arithmetic progression of remaining positions."
+    },
+    {
+      "num": 2,
+      "topic": "algebra",
+      "theorems": [],
+      "techniques": [
+        "coordinate geometry",
+        "system of equations",
+        "analysis of discriminant",
+        "uniqueness proof"
+      ],
+      "concepts": [
+        "parabola",
+        "perpendicular vectors",
+        "dot product condition",
+        "chord properties",
+        "family of lines through a point"
+      ],
+      "difficulty": "standard",
+      "notes": "The problem reduces to finding a point P such that for any chord AB through P, the product of the roots (abscissas) is constant. The unique point is the vertex of the parabola's 'orthoptic' property."
+    },
+    {
+      "num": 3,
+      "topic": "number_theory",
+      "theorems": [
+        "Little Fermat Theorem",
+        "Order of an integer modulo p",
+        "Properties of cyclotomic polynomials"
+      ],
+      "techniques": [
+        "Möbius inversion (implicit)",
+        "combinatorial counting of roots",
+        "analysis of prime exponents",
+        "modular arithmetic"
+      ],
+      "concepts": [
+        "roots of unity",
+        "cyclotomic polynomial",
+        "prime factorization",
+        "inclusion-exclusion principle",
+        "polynomial with integer coefficients",
+        "order of 2 modulo p"
+      ],
+      "difficulty": "olympic",
+      "notes": "Part (a) essentially shows F_n(x) is the cyclotomic polynomial Φ_n(x). Part (b) is a deep number-theoretic result about prime divisors of Φ_n(2)."
+    },
+    {
+      "num": 4,
+      "topic": "number_theory",
+      "theorems": [
+        "Coin Problem (Frobenius)"
+      ],
+      "techniques": [
+        "proof by contradiction",
+        "representation of large numbers",
+        "properties of infinite sets"
+      ],
+      "concepts": [
+        "infinite set with additive property",
+        "complement set M'",
+        "common divisor",
+        "coprime numbers",
+        "linear combinations with natural coefficients"
+      ],
+      "difficulty": "hard",
+      "notes": "The solution uses a known lemma (often called the Chicken McNugget theorem or Frobenius coin problem for two numbers, generalized) that if numbers are coprime, all sufficiently large integers are representable as a natural combination."
+    },
+    {
+      "num": 5,
+      "topic": "geometry",
+      "theorems": [
+        "Thales' theorem",
+        "Properties of similar triangles"
+      ],
+      "techniques": [
+        "geometric optimization",
+        "calculus (derivative)",
+        "symmetry argument",
+        "geometric construction"
+      ],
+      "concepts": [
+        "covering an arc with a triangle",
+        "isosceles triangle of minimal area",
+        "tangent properties",
+        "circle geometry",
+        "function minimization"
+      ],
+      "difficulty": "hard",
+      "notes": "The problem is a classic geometric optimization. The minimal area triangle covering a circular arc is isosceles, with its equal sides tangent to the arc and bisected by the points of tangency."
+    },
+    {
+      "num": 6,
+      "topic": "geometry",
+      "theorems": [
+        "Properties of inversion",
+        "Spherical geometry"
+      ],
+      "techniques": [
+        "inversion",
+        "volume transformation",
+        "inequality (AM-GM implicit)",
+        "geometric interpretation"
+      ],
+      "concepts": [
+        "tetrahedron with equilateral base",
+        "circumscribed sphere radius",
+        "volume inequality",
+        "inversion in 3D",
+        "triangle formed by lateral edges"
+      ],
+      "difficulty": "olympic",
+      "notes": "The solution uses a clever 3D inversion to relate the volume, circumradius, and area of the triangle formed by the lateral edges. Equality holds when the base plane passes through the sphere's center."
+    }
+  ],
+  "unique_concepts": [
+    "iterative deletion",
+    "digit concatenation",
+    "parabola orthoptic point",
+    "cyclotomic polynomial",
+    "prime divisors of cyclotomic values",
+    "infinite set with additive closure property",
+    "Frobenius coin problem application",
+    "geometric covering problem",
+    "minimal area triangle covering an arc",
+    "3D geometric inversion",
+    "tetrahedron volume-sphere radius inequality"
+  ],
+  "confidence": 0.95
+}

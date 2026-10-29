@@ -1,0 +1,101 @@
+{
+  "pdf": "OLI-3-Национален кръг-2003-9-12 кл-probs",
+  "problems": [
+    {
+      "num": 1,
+      "year": 2003,
+      "grade": null,
+      "round": "nacionalen",
+      "statement": "Find the least positive integer $n$ with the following property: if $n$ distinct sums of the form $x_p + x_q + x_r$, $1 \\le p < q < r \\le 5$, equal 0, then $x_1 = x_2 = x_3 = x_4 = x_5 = 0$.",
+      "solution": null,
+      "answer": null,
+      "page": 1,
+      "pdf": "OLI-3-Национален кръг-2003-9-12 кл-probs",
+      "chunk": 1,
+      "grade_range": [
+        9,
+        12
+      ]
+    },
+    {
+      "num": 2,
+      "year": 2003,
+      "grade": null,
+      "round": "nacionalen",
+      "statement": "Let $H$ be a point on the altitude $CP$ ($P \\in AB$) of an acute $\\triangle ABC$. The lines $AH$ and $BH$ intersect $BC$ and $AC$ at points $M$ and $N$, respectively.\n\na) Prove that $\\angle MPC = \\angle NPC$.\n\nb) The lines $MN$ and $CP$ intersect at $O$. A line through $O$ meets the sides of the quadrilateral $CNHM$ at points $D$ and $E$. Prove that $\\angle DPC = \\angle EPC$.",
+      "solution": null,
+      "answer": null,
+      "page": 1,
+      "pdf": "OLI-3-Национален кръг-2003-9-12 кл-probs",
+      "chunk": 1,
+      "grade_range": [
+        9,
+        12
+      ]
+    },
+    {
+      "num": 3,
+      "year": 2003,
+      "grade": null,
+      "round": "nacionalen",
+      "statement": "Consider the sequence\n\n$$y_1 = y_2 = 1, \\ y_{n+2} = (4k - 5)y_{n+1} - y_n + 4 - 2k, \\ n \\ge 1.$$\n\nFind all integers $k$ such that any term of the sequence is a perfect square.",
+      "solution": null,
+      "answer": null,
+      "page": 1,
+      "pdf": "OLI-3-Национален кръг-2003-9-12 кл-probs",
+      "chunk": 1,
+      "grade_range": [
+        9,
+        12
+      ]
+    },
+    {
+      "num": 4,
+      "year": 2003,
+      "grade": null,
+      "round": "nacionalen",
+      "statement": "A set of at least three positive integers is called uniform if removing any of its elements the remaining set can be disjoint into two subsets with equal sums of elements. Find the minimal cardinality of a uniform set.",
+      "solution": null,
+      "answer": null,
+      "page": 1,
+      "pdf": "OLI-3-Национален кръг-2003-9-12 кл-probs",
+      "chunk": 1,
+      "grade_range": [
+        9,
+        12
+      ]
+    },
+    {
+      "num": 5,
+      "year": 2003,
+      "grade": null,
+      "round": "nacionalen",
+      "statement": "Let $a$, $b$ and $c$ be rational numbers such that $a + b + c$ and $a^2 + b^2 + c^2$ are equal integers. Prove that the number $abc$ can be written as a ratio of a perfect cube and a perfect square that are coprime.",
+      "solution": null,
+      "answer": null,
+      "page": 1,
+      "pdf": "OLI-3-Национален кръг-2003-9-12 кл-probs",
+      "chunk": 1,
+      "grade_range": [
+        9,
+        12
+      ]
+    },
+    {
+      "num": 6,
+      "year": 2003,
+      "grade": null,
+      "round": "nacionalen",
+      "statement": "Find all polynomials $P(x)$ with integer coefficients such that for any positive integer $n$ the equation $P(x) = 2^n$ has an integer solution.",
+      "solution": null,
+      "answer": null,
+      "page": 1,
+      "pdf": "OLI-3-Национален кръг-2003-9-12 кл-probs",
+      "chunk": 1,
+      "grade_range": [
+        9,
+        12
+      ]
+    }
+  ]
+}

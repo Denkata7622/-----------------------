@@ -1,0 +1,124 @@
+{
+  "_meta": {
+    "pdf": "C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\Задачи_Минали_Години\\Областен\\OLI-2-Областен кръг-2018-11 кл-probs.pdf",
+    "paired_with": "C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\Задачи_Минали_Години\\Областен\\OLI-2-Областен кръг-2018-11 кл-sol.pdf",
+    "level": 1,
+    "type": "probs",
+    "analyzed_at": "2026-10-16T21:21:27.809692",
+    "model": "deepseek/deepseek-v3.2",
+    "text_length": 1189,
+    "paired_text_length": 5183
+  },
+  "problems": [
+    {
+      "num": 1,
+      "topic": "algebra",
+      "theorems": [],
+      "techniques": [
+        "substitution",
+        "inequality_analysis",
+        "interval_method"
+      ],
+      "concepts": [
+        "exponential_inequalities",
+        "monotonic_functions",
+        "domain_restriction"
+      ],
+      "difficulty": "standard",
+      "notes": "Standard exponential inequality. Key step is factoring and analyzing sign based on monotonicity of 2^x and 1/x."
+    },
+    {
+      "num": 2,
+      "topic": "number_theory",
+      "theorems": [],
+      "techniques": [
+        "construction",
+        "algebraic_manipulation",
+        "contradiction"
+      ],
+      "concepts": [
+        "rational_numbers",
+        "geometric_progression",
+        "arithmetic_progression",
+        "necessary_and_sufficient_condition"
+      ],
+      "difficulty": "standard",
+      "notes": "Necessity and sufficiency proof. Construction for rational r, and algebraic derivation showing r must be rational."
+    },
+    {
+      "num": 3,
+      "topic": "geometry",
+      "theorems": [
+        "Thales",
+        "similar_triangles"
+      ],
+      "techniques": [
+        "auxiliary_construction",
+        "parallel_lines",
+        "angle_chasing"
+      ],
+      "concepts": [
+        "orthocenter",
+        "angle_bisector",
+        "cyclic_quadrilaterals",
+        "isosceles_triangle",
+        "diameter_subtends_right_angle",
+        "parallelogram",
+        "midpoint"
+      ],
+      "difficulty": "hard",
+      "notes": "Complex geometry problem. Key steps: showing triangle ADE is isosceles, then AK is diameter, leading to parallel lines, then constructing a parallelogram to prove HK bisects BC."
+    },
+    {
+      "num": 4,
+      "topic": "combinatorics",
+      "theorems": [],
+      "techniques": [
+        "induction",
+        "greedy_algorithm",
+        "contradiction"
+      ],
+      "concepts": [
+        "coloring",
+        "combinatorial_design",
+        "pigeonhole_principle_idea",
+        "row_column_constraints"
+      ],
+      "difficulty": "olympic",
+      "notes": "Combinatorial coloring/existence proof. Algorithmic/inductive approach on columns. The contradiction uses the given condition about no two rows having exactly one common white column."
+    }
+  ],
+  "unique_concepts": [
+    "exponential_inequalities",
+    "monotonic_functions",
+    "domain_restriction",
+    "rational_numbers",
+    "geometric_progression",
+    "arithmetic_progression",
+    "necessary_and_sufficient_condition",
+    "orthocenter",
+    "angle_bisector",
+    "cyclic_quadrilaterals",
+    "isosceles_triangle",
+    "diameter_subtends_right_angle",
+    "parallelogram",
+    "midpoint",
+    "Thales",
+    "similar_triangles",
+    "coloring",
+    "combinatorial_design",
+    "pigeonhole_principle_idea",
+    "row_column_constraints",
+    "substitution",
+    "interval_method",
+    "construction",
+    "algebraic_manipulation",
+    "contradiction",
+    "auxiliary_construction",
+    "parallel_lines",
+    "angle_chasing",
+    "induction",
+    "greedy_algorithm"
+  ],
+  "confidence": 1.0
+}

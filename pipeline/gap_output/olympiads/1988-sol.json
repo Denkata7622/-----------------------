@@ -1,0 +1,156 @@
+{
+  "_meta": {
+    "pdf": "C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\Задачи_Минали_Години\\Национален\\OLI-3-Национален кръг-1988-9-12 кл-sol.pdf",
+    "paired_with": null,
+    "level": 2,
+    "type": "sol",
+    "analyzed_at": "2026-10-18T11:41:14.974699",
+    "model": "deepseek/deepseek-v3.2",
+    "text_length": 9735,
+    "paired_text_length": 0
+  },
+  "problems": [
+    {
+      "num": 1,
+      "topic": "algebra",
+      "theorems": [],
+      "techniques": [
+        "completing the square",
+        "quadratic discriminant",
+        "function range analysis",
+        "inequality manipulation"
+      ],
+      "concepts": [
+        "polynomial equations",
+        "real roots",
+        "parameter analysis",
+        "quadratic in quadratic form",
+        "squaring inequalities"
+      ],
+      "difficulty": "standard",
+      "notes": "Standard problem about finding parameter range for a quartic to have four real roots, solved by reducing to two quadratics and analyzing conditions."
+    },
+    {
+      "num": 2,
+      "topic": "number_theory",
+      "theorems": [
+        "Fermat–Euler theorem",
+        "Lifting The Exponent (LTE)"
+      ],
+      "techniques": [
+        "modular arithmetic",
+        "order of an element",
+        "proof by contradiction"
+      ],
+      "concepts": [
+        "canonical exponent of prime",
+        "Fermat numbers",
+        "order modulo prime power",
+        "divisibility"
+      ],
+      "difficulty": "olympic",
+      "notes": "Uses properties of the exponent of 2 modulo prime powers and a clever factorization to show equality of exponents."
+    },
+    {
+      "num": 3,
+      "topic": "geometry",
+      "theorems": [],
+      "techniques": [
+        "geometric inequality",
+        "volume decomposition",
+        "projection",
+        "summation of inequalities"
+      ],
+      "concepts": [
+        "tetrahedron",
+        "volume",
+        "distance to a plane",
+        "orthocentric tetrahedron",
+        "barycentric coordinates (implicit)"
+      ],
+      "difficulty": "hard",
+      "notes": "Inequality relating weighted distances from a point to faces to the volume; equality for orthocentric tetrahedron and its orthocenter."
+    },
+    {
+      "num": 4,
+      "topic": "geometry",
+      "theorems": [
+        "Menelaus",
+        "Law of Sines"
+      ],
+      "techniques": [
+        "vector method",
+        "similar triangles",
+        "angle chasing",
+        "invariant point identification"
+      ],
+      "concepts": [
+        "incircle",
+        "tangency points",
+        "angle bisector",
+        "fixed point",
+        "directed segments"
+      ],
+      "difficulty": "standard",
+      "notes": "Shows that the line joining tangency points of an incircle passes through a fixed midpoint independent of moving point D."
+    },
+    {
+      "num": 5,
+      "topic": "combinatorics",
+      "theorems": [],
+      "techniques": [
+        "construction",
+        "barycenter transformation",
+        "coloring argument",
+        "symmetry"
+      ],
+      "concepts": [
+        "two‑coloring of space",
+        "tetrahedron",
+        "centroid",
+        "monochromatic configuration",
+        "affine transformation"
+      ],
+      "difficulty": "olympic",
+      "notes": "Uses a transformation that maps vertices of a monochromatic tetrahedron to a new tetrahedron with same centroid to force a monochromatic tetrahedron with monochromatic centroid."
+    },
+    {
+      "num": 6,
+      "topic": "algebra",
+      "theorems": [],
+      "techniques": [
+        "functional equation for polynomials",
+        "coefficient comparison",
+        "limit analysis",
+        "root analysis (complex numbers)"
+      ],
+      "concepts": [
+        "polynomial identity",
+        "roots of unity",
+        "degree analysis",
+        "uniqueness theorem for polynomials"
+      ],
+      "difficulty": "hard",
+      "notes": "Three different solutions: via substitution and degree analysis, via limit of growth, and via complex roots and invariance under cube‑root transformation."
+    }
+  ],
+  "unique_concepts": [
+    "completing the square",
+    "quadratic discriminant",
+    "function range analysis",
+    "Fermat–Euler theorem",
+    "Lifting The Exponent (LTE)",
+    "order modulo prime power",
+    "geometric inequality in tetrahedron",
+    "volume decomposition",
+    "orthocentric tetrahedron",
+    "incircle tangency points",
+    "fixed point under geometric transformation",
+    "two‑coloring of space",
+    "monochromatic centroid configuration",
+    "polynomial functional equation",
+    "roots of unity invariance",
+    "growth comparison for polynomials"
+  ],
+  "confidence": -1.0
+}

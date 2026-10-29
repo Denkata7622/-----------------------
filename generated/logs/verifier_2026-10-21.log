@@ -1,0 +1,50 @@
+2026-10-21 21:09:00,891 [VERIFIER] INFO 🔍 DRY RUN — без AI calls
+2026-10-21 21:09:00,892 [VERIFIER] INFO Plan: Week 2/25, Phase 1
+2026-10-21 21:09:00,905 [VERIFIER] INFO Budget: $1.41 / $2.70
+2026-10-21 21:09:00,906 [VERIFIER] INFO Verifier cap: $0.35
+2026-10-21 21:09:00,906 [VERIFIER] INFO Previous audit: yesterday
+2026-10-21 21:09:00,908 [VERIFIER] INFO 
+Anchors:    0 problems available
+2026-10-21 21:09:00,934 [VERIFIER] INFO Articles:   160 available
+2026-10-21 21:09:00,935 [VERIFIER] INFO Problems:   1 available
+2026-10-21 21:09:01,540 [VERIFIER] INFO 
+Нови за последните 24h:
+2026-10-21 21:09:01,546 [VERIFIER] INFO   Articles: 0
+2026-10-21 21:09:01,546 [VERIFIER] INFO   Problems: 0
+2026-10-21 21:09:11,564 [VERIFIER] INFO 
+▶ Audit start — budget $1.46
+2026-10-21 21:09:11,565 [VERIFIER] INFO 
+▶ Модул: ANCHORS (1 samples)
+2026-10-21 21:09:11,567 [VERIFIER] INFO ════════════════════════════════════════════════════════════
+2026-10-21 21:09:11,567 [VERIFIER] INFO SUMMARY
+2026-10-21 21:09:11,568 [VERIFIER] INFO   anchors       score    0/10  audited 0
+2026-10-21 21:09:11,568 [VERIFIER] INFO 
+  Session cost: $0.0000
+2026-10-21 21:09:11,581 [VERIFIER] INFO   Budget: $1.46 → $1.46
+2026-10-21 21:09:11,582 [VERIFIER] INFO ════════════════════════════════════════════════════════════
+2026-10-21 21:09:19,130 [VERIFIER] INFO 
+▶ Audit start — budget $1.46
+2026-10-21 21:09:19,131 [VERIFIER] INFO 
+▶ Модул: ANCHORS (10 samples)
+2026-10-21 21:09:19,132 [VERIFIER] INFO 
+▶ Модул: ARTICLES (2 samples)
+2026-10-21 21:09:38,050 [VERIFIER] INFO [article/5.3] score=2 verdict=unusable
+2026-10-21 21:09:57,821 [VERIFIER] INFO [article/7.7] score=2 verdict=unusable
+2026-10-21 21:09:57,822 [VERIFIER] INFO 
+▶ Модул: PROBLEMS (3 samples)
+2026-10-21 21:10:13,555 [VERIFIER] INFO [problem/1.4-E3] score=5 solvable=True
+2026-10-21 21:10:35,509 [VERIFIER] INFO [problem/1.4-M5] score=6 solvable=True
+2026-10-21 21:10:35,509 [VERIFIER] INFO 
+▶ Модул: OVERALL
+2026-10-21 21:10:53,033 [VERIFIER] INFO ════════════════════════════════════════════════════════════
+2026-10-21 21:10:53,033 [VERIFIER] INFO SUMMARY
+2026-10-21 21:10:53,033 [VERIFIER] INFO   anchors       score    0/10  audited 0
+2026-10-21 21:10:53,035 [VERIFIER] INFO   articles      score  2.0/10  audited 2
+2026-10-21 21:10:53,035 [VERIFIER] INFO   problems      score  5.5/10  audited 2
+2026-10-21 21:10:53,035 [VERIFIER] INFO   OVERALL       score    3/10  behind
+2026-10-21 21:10:53,035 [VERIFIER] INFO 
+  Session cost: $0.3100
+2026-10-21 21:10:53,046 [VERIFIER] INFO   Budget: $1.46 → $1.65
+2026-10-21 21:10:53,046 [VERIFIER] INFO ════════════════════════════════════════════════════════════
+2026-10-21 21:10:53,067 [VERIFIER] INFO 
+📄 C:\Users\denis\Downloads\Материали Олимпиада МАТ\generated\audit\2026-10-21\report.md

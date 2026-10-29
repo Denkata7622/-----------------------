@@ -1,0 +1,177 @@
+{
+  "_meta": {
+    "pdf": "C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\Задачи_Минали_Години\\Национален\\OLI-3-Национален кръг-2023-9-12 кл-sol.pdf",
+    "paired_with": null,
+    "level": 2,
+    "type": "sol",
+    "analyzed_at": "2026-10-16T21:07:53.194626",
+    "model": "deepseek/deepseek-v3.2",
+    "text_length": 44813,
+    "paired_text_length": 0
+  },
+  "problems": [
+    {
+      "num": 1,
+      "topic": "combinatorics",
+      "theorems": [],
+      "techniques": [
+        "contradiction",
+        "maximal path argument",
+        "gcd properties",
+        "cycle construction"
+      ],
+      "concepts": [
+        "graph theory",
+        "cycles in graphs",
+        "vertex degree",
+        "bipartite graphs",
+        "greatest common divisor of cycle lengths",
+        "adjacent common vertices in cycles"
+      ],
+      "difficulty": "olympic",
+      "notes": "Graph theory problem focusing on the gcd of lengths of all cycles in a graph with minimum degree 3. Uses construction of two cycles sharing exactly two adjacent vertices to force d|2."
+    },
+    {
+      "num": 2,
+      "topic": "geometry",
+      "theorems": [],
+      "techniques": [
+        "congruent triangles",
+        "cyclic quadrilaterals",
+        "angle chasing",
+        "symmetry"
+      ],
+      "concepts": [
+        "excircles",
+        "circumcircle",
+        "arc midpoints",
+        "angle bisectors",
+        "parallel lines",
+        "concurrency"
+      ],
+      "difficulty": "olympic",
+      "notes": "Geometry problem involving excircles and circumcircles. Key step shows a constructed point lies on the circumcircle of a triangle formed by excircle tangency points, leading to concurrency at the circumcenter of the original triangle."
+    },
+    {
+      "num": 3,
+      "topic": "number_theory",
+      "theorems": [],
+      "techniques": [
+        "contradiction",
+        "lemma on sums of powers modulo n",
+        "complete residue systems",
+        "primitive roots",
+        "infinite descent (on prime divisors)"
+      ],
+      "concepts": [
+        "polynomials with integer coefficients",
+        "gcd",
+        "sums over complete residue systems",
+        "modular arithmetic",
+        "prime divisibility",
+        "bounding arguments"
+      ],
+      "difficulty": "hard",
+      "notes": "Number theory problem requiring showing that for sufficiently large m, gcd(m, g(m)) is greater than a given large number. Uses a lemma about sums of polynomial values over complete residue systems and analysis of prime divisors."
+    },
+    {
+      "num": 4,
+      "topic": "geometry",
+      "theorems": [],
+      "techniques": [
+        "algebraic manipulation",
+        "coordinate geometry",
+        "oriented area",
+        "quadratic equation analysis",
+        "inequality (AM-GM type)"
+      ],
+      "concepts": [
+        "area of triangles",
+        "quadrilaterals",
+        "parallel lines",
+        "oriented area formula",
+        "distance from a point to a line",
+        "function continuity"
+      ],
+      "difficulty": "olympic",
+      "notes": "Geometry problem about a point on a side of a quadrilateral satisfying an area condition. Solved via algebraic manipulation leading to a quadratic, or via coordinate geometry. The condition forces sides to be parallel."
+    },
+    {
+      "num": 5,
+      "topic": "algebra",
+      "theorems": [],
+      "techniques": [
+        "induction",
+        "triangle inequality",
+        "optimization (minimization)",
+        "function analysis (convexity/compactness)",
+        "substitution"
+      ],
+      "concepts": [
+        "absolute value sums",
+        "minimization under constraint",
+        "recursive relations",
+        "specific constructed example",
+        "norm inequalities"
+      ],
+      "difficulty": "olympic",
+      "notes": "Minimization problem of an expression involving absolute values of partial sums. Solved by induction using a strengthened triangle inequality, or by variational methods fixing all but two variables. The minimum is 2^(1-n)."
+    },
+    {
+      "num": 6,
+      "topic": "combinatorics",
+      "theorems": [],
+      "techniques": [
+        "pigeonhole principle",
+        "averaging argument",
+        "double counting"
+      ],
+      "concepts": [
+        "grading systems",
+        "discrepancy",
+        "combinatorial assignment",
+        "ensuring difference in scores"
+      ],
+      "difficulty": "standard",
+      "notes": "Problem about assigning grades to a 26th student after 25 have been graded, so that the new student's grades differ from each of the others in at least two subjects. Likely uses pigeonhole principle on the possible grade tuples."
+    }
+  ],
+  "unique_concepts": [
+    "graph theory",
+    "cycles in graphs",
+    "vertex degree",
+    "bipartite graphs",
+    "greatest common divisor of cycle lengths",
+    "adjacent common vertices in cycles",
+    "excircles",
+    "circumcircle",
+    "arc midpoints",
+    "angle bisectors",
+    "parallel lines",
+    "concurrency",
+    "polynomials with integer coefficients",
+    "gcd",
+    "sums over complete residue systems",
+    "modular arithmetic",
+    "prime divisibility",
+    "bounding arguments",
+    "area of triangles",
+    "quadrilaterals",
+    "oriented area formula",
+    "distance from a point to a line",
+    "function continuity",
+    "absolute value sums",
+    "minimization under constraint",
+    "recursive relations",
+    "specific constructed example",
+    "norm inequalities",
+    "grading systems",
+    "discrepancy",
+    "combinatorial assignment",
+    "ensuring difference in scores",
+    "pigeonhole principle",
+    "averaging argument",
+    "double counting"
+  ],
+  "confidence": 0.95
+}

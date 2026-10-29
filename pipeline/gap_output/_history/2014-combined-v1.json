@@ -1,0 +1,1441 @@
+{
+  "_meta": {
+    "pdf": "C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\Материали_БГ\\NOM_2014.pdf",
+    "paired_with": null,
+    "level": 2,
+    "type": "combined",
+    "analyzed_at": "2026-10-16T21:55:55.038054",
+    "model": "deepseek/deepseek-v3.2",
+    "text_length": 118701,
+    "paired_text_length": 0
+  },
+  "problems": [
+    {
+      "num": 1,
+      "topic": "combinatorics",
+      "theorems": [],
+      "techniques": [
+        "pigeonhole principle",
+        "coloring",
+        "construction"
+      ],
+      "concepts": [
+        "regular polygon",
+        "diagonals",
+        "intersecting diagonals",
+        "minimum number of colors"
+      ],
+      "difficulty": "olympic",
+      "notes": "Regular 2014-gon, coloring diagonals so intersecting ones have different colors. Lower bound via main diagonals, construction exists."
+    },
+    {
+      "num": 2,
+      "topic": "algebra",
+      "theorems": [],
+      "techniques": [
+        "assume contrary",
+        "polynomial roots",
+        "analysis of function"
+      ],
+      "concepts": [
+        "rectangular parallelepiped",
+        "perimeter",
+        "surface area",
+        "volume",
+        "equal numbers",
+        "cubic equation",
+        "discriminant"
+      ],
+      "difficulty": "standard",
+      "notes": "Prove no rectangular parallelepiped exists with perimeter, total surface area, and volume equal to the same real number."
+    },
+    {
+      "num": 3,
+      "topic": "number_theory",
+      "theorems": [],
+      "techniques": [
+        "induction",
+        "sequence analysis",
+        "divisibility arguments"
+      ],
+      "concepts": [
+        "recurrence sequence",
+        "prime divisors",
+        "infinite primes dividing sequence",
+        "infinite primes not dividing sequence",
+        "coprime numbers"
+      ],
+      "difficulty": "olympic",
+      "notes": "Sequence a_0=4, a_n = a_{n-1}^2 - a_{n-1}. Part (a): infinitely many primes divide some term. Part (b): infinitely many primes divide no term."
+    },
+    {
+      "num": 4,
+      "topic": "geometry",
+      "theorems": [
+        "Desargues' theorem"
+      ],
+      "techniques": [
+        "inversion",
+        "symmetry",
+        "homothety"
+      ],
+      "concepts": [
+        "triangle",
+        "circumcircle",
+        "circumcenter",
+        "concurrent lines",
+        "isogonal lines",
+        "similar triangles"
+      ],
+      "difficulty": "hard",
+      "notes": "Complex configuration with points defined via circumcircles. Proof uses inversion or homothety showing triangles are homothetic."
+    },
+    {
+      "num": 1,
+      "topic": "number_theory",
+      "theorems": [],
+      "techniques": [
+        "decimal representation",
+        "divisibility",
+        "case analysis"
+      ],
+      "concepts": [
+        "concatenation of numbers",
+        "coprime numbers",
+        "digit count"
+      ],
+      "difficulty": "standard",
+      "notes": "Find coprime natural numbers a,b such that b,a (concatenation) equals a/b. Leads to equation a = b^2 + 1."
+    },
+    {
+      "num": 2,
+      "topic": "combinatorics",
+      "theorems": [],
+      "techniques": [
+        "induction",
+        "greedy algorithm"
+      ],
+      "concepts": [
+        "complete set of weights",
+        "integer representation as sum of weights",
+        "removing largest weight"
+      ],
+      "difficulty": "standard",
+      "notes": "Set of weights is complete if every number less than total sum is representable. Prove removing the largest weight keeps set complete."
+    },
+    {
+      "num": 3,
+      "topic": "geometry",
+      "theorems": [],
+      "techniques": [
+        "angle chasing",
+        "parallel lines",
+        "midpoint of arc"
+      ],
+      "concepts": [
+        "triangle",
+        "circumcircle",
+        "altitude",
+        "arc midpoint",
+        "parallel lines",
+        "equal segments"
+      ],
+      "difficulty": "hard",
+      "notes": "Prove NK = NL using properties of circumcircle, midpoint of arc, and parallel lines."
+    },
+    {
+      "num": 4,
+      "topic": "geometry",
+      "theorems": [],
+      "techniques": [
+        "angle chasing",
+        "symmetry",
+        "cyclic quadrilaterals"
+      ],
+      "concepts": [
+        "tangents",
+        "circumcircle",
+        "cyclic quadrilateral",
+        "symmetry point",
+        "equal angles"
+      ],
+      "difficulty": "standard",
+      "notes": "Prove angle equality using cyclic quadrilaterals and symmetry."
+    },
+    {
+      "num": 5,
+      "topic": "combinatorics",
+      "theorems": [],
+      "techniques": [
+        "invariant",
+        "linear algebra",
+        "modular arithmetic"
+      ],
+      "concepts": [
+        "n x m table",
+        "operations on rows, columns, diagonals",
+        "3x3 subtable zero",
+        "making entire table zero"
+      ],
+      "difficulty": "olympic",
+      "notes": "Operations: add/subtract 1 to all cells in a row, column, or diagonal. If any 3x3 subtable can be zeroed, then whole table can be zeroed."
+    },
+    {
+      "num": 6,
+      "topic": "number_theory",
+      "theorems": [],
+      "techniques": [
+        "floor function analysis",
+        "sequence bounds",
+        "finite checking"
+      ],
+      "concepts": [
+        "sequence recurrence with floor",
+        "integer part",
+        "bounded sequence",
+        "existence of specific term"
+      ],
+      "difficulty": "hard",
+      "notes": "Sequence defined with floor functions. Prove exists m such that a_m = 4 and a_{m+1} in {3,4}."
+    },
+    {
+      "num": 1,
+      "topic": "geometry",
+      "theorems": [],
+      "techniques": [
+        "angle chasing",
+        "condition equivalence"
+      ],
+      "concepts": [
+        "triangle",
+        "angle bisector",
+        "cyclic quadrilateral",
+        "circumcenter",
+        "incenter",
+        "segment length condition"
+      ],
+      "difficulty": "hard",
+      "notes": "Prove circumcenter of DEF coincides with incenter of ABC iff BE+CF=BC."
+    },
+    {
+      "num": 2,
+      "topic": "number_theory",
+      "techniques": [
+        "construction",
+        "set intersection"
+      ],
+      "concepts": [
+        "divisor set difference",
+        "intersection of sets",
+        "existence for any k"
+      ],
+      "difficulty": "olympic",
+      "notes": "D(n) = {a-b | n=ab, a>b}. For any k>1, exist k different n_i such that intersection of D(n_i) has at least two elements."
+    },
+    {
+      "num": 3,
+      "topic": "combinatorics",
+      "theorems": [],
+      "techniques": [
+        "recursive function analysis",
+        "uniqueness proof",
+        "finding pattern"
+      ],
+      "concepts": [
+        "function recursion",
+        "natural numbers",
+        "uniqueness",
+        "evaluation for powers of 2"
+      ],
+      "difficulty": "hard",
+      "notes": "Prove unique function f: N->N with f(1)=f(2)=1 and recursion. Find f(2^m)."
+    },
+    {
+      "num": 4,
+      "topic": "number_theory",
+      "theorems": [],
+      "techniques": [
+        "probabilistic method or construction",
+        "inequality"
+      ],
+      "concepts": [
+        "prime omega functions ω(n) and Ω(n)",
+        "ratio conditions",
+        "existence for any parameters"
+      ],
+      "difficulty": "olympic",
+      "notes": "Given k, α, β>0, does there exist n such that ω(n+k)/ω(n) > α and Ω(n+k)/Ω(n) < β? Prove or disprove."
+    },
+    {
+      "num": 5,
+      "topic": "combinatorics",
+      "theorems": [],
+      "techniques": [
+        "extremal principle",
+        "set theory",
+        "function properties"
+      ],
+      "concepts": [
+        "function on finite set",
+        "fixed-point free",
+        "intersection condition",
+        "covering set",
+        "minimal k"
+      ],
+      "difficulty": "olympic",
+      "notes": "Find minimal k such that for any f: X->X (X={1,...,100}) with f(x)≠x and A∩f(A)≠∅ for |A|=40, there exists B with |B|=k and B∪f(B)=X."
+    },
+    {
+      "num": 6,
+      "topic": "combinatorics",
+      "theorems": [],
+      "techniques": [
+        "probabilistic method",
+        "construction",
+        "set sums"
+      ],
+      "concepts": [
+        "sumset A+B",
+        "doubling set D+D",
+        "subset size lower bound",
+        "2(A+B)"
+      ],
+      "difficulty": "olympic",
+      "notes": "For subsets A,B of {1,...,n}, prove exists subset D of A+B with D+D ⊆ 2(A+B) and |D| ≥ |A|·|B|/(2n)."
+    },
+    {
+      "num": 9.1,
+      "topic": "number_theory",
+      "theorems": [],
+      "techniques": [
+        "pigeonhole principle",
+        "modular arithmetic"
+      ],
+      "concepts": [
+        "numbers on circle",
+        "neighbor differences",
+        "divisibility by 3"
+      ],
+      "difficulty": "standard",
+      "notes": "99 natural numbers on circle, neighbor differences are 1,2, or one is double the other. Prove at least one divisible by 3."
+    },
+    {
+      "num": 9.2,
+      "topic": "algebra",
+      "theorems": [],
+      "techniques": [
+        "algebraic manipulation",
+        "discriminant"
+      ],
+      "concepts": [
+        "products of numbers",
+        "perfect squares",
+        "max count of squares"
+      ],
+      "difficulty": "standard",
+      "notes": "Given a, a+2, b, b+2, form all six pairwise products. Find maximum number of perfect squares on board."
+    },
+    {
+      "num": 9.3,
+      "topic": "combinatorics",
+      "theorems": [],
+      "techniques": [
+        "maximization",
+        "graph theory interpretation"
+      ],
+      "concepts": [
+        "convex polygon",
+        "diagonals",
+        "intersecting diagonals",
+        "good diagonal definition",
+        "maximum count"
+      ],
+      "difficulty": "hard",
+      "notes": "In convex n-gon, several diagonals drawn. A good diagonal intersects exactly one other drawn diagonal. Find maximum possible number of good diagonals."
+    },
+    {
+      "num": 9.4,
+      "topic": "geometry",
+      "theorems": [],
+      "techniques": [
+        "angle chasing",
+        "cyclic quadrilaterals",
+        "tangent properties"
+      ],
+      "concepts": [
+        "triangle",
+        "circumcircle",
+        "tangents",
+        "midpoint",
+        "right angle"
+      ],
+      "difficulty": "hard",
+      "notes": "Prove angle CKM = 90° using configuration with circumcircle, tangents, and midpoint."
+    },
+    {
+      "num": 9.5,
+      "topic": "number_theory",
+      "theorems": [],
+      "techniques": [
+        "divisor analysis",
+        "equation solving"
+      ],
+      "concepts": [
+        "largest proper divisor",
+        "sum equals power of ten"
+      ],
+      "difficulty": "standard",
+      "notes": "Find all natural N such that N plus its largest proper divisor equals a power of ten."
+    },
+    {
+      "num": 9.6,
+      "topic": "geometry",
+      "theorems": [],
+      "techniques": [
+        "angle chasing",
+        "symmetry",
+        "cyclic quadrilaterals"
+      ],
+      "concepts": [
+        "cyclic trapezoid",
+        "circle through two points",
+        "symmetric points",
+        "concyclic points"
+      ],
+      "difficulty": "hard",
+      "notes": "Prove points A, B, A2, B2 are concyclic using symmetry and circle properties."
+    },
+    {
+      "num": 9.7,
+      "topic": "number_theory",
+      "theorems": [],
+      "techniques": [
+        "density argument",
+        "irrational numbers",
+        "bounded usage"
+      ],
+      "concepts": [
+        "coin denominations",
+        "irrational amounts",
+        "paying any natural sum",
+        "limited usage per denomination"
+      ],
+      "difficulty": "olympic",
+      "notes": "Coins of 1 and α^k leva, α>2, α^k irrational for k≥1. Is it possible that every natural sum can be paid using each denomination at most 6 times?"
+    },
+    {
+      "num": 9.8,
+      "topic": "combinatorics",
+      "theorems": [],
+      "techniques": [
+        "graph theory",
+        "directed cycle",
+        "decreasing prices"
+      ],
+      "concepts": [
+        "complete graph",
+        "different edge weights",
+        "travel with strictly decreasing cost",
+        "existence of path"
+      ],
+      "difficulty": "olympic",
+      "notes": "n cities, complete graph with distinct edge weights (symmetric). Prove traveler can start and travel n-1 edges with strictly decreasing cost."
+    },
+    {
+      "num": 10.1,
+      "topic": "number_theory",
+      "theorems": [],
+      "techniques": [
+        "modular arithmetic",
+        "contradiction"
+      ],
+      "concepts": [
+        "good number definition",
+        "consecutive good numbers",
+        "prime divisors count"
+      ],
+      "difficulty": "standard",
+      "notes": "Good number: among its divisors there are exactly two primes. Can 18 consecutive numbers all be good?"
+    },
+    {
+      "num": 10.2,
+      "topic": "algebra",
+      "theorems": [],
+      "techniques": [
+        "inequality analysis",
+        "squaring",
+        "bounds"
+      ],
+      "concepts": [
+        "functional inequality",
+        "range of function",
+        "bounded between 0 and 1"
+      ],
+      "difficulty": "standard",
+      "notes": "f: R->R such that for x>y, (f(x))^2 ≤ f(y). Prove range of f is subset of [0,1]."
+    },
+    {
+      "num": 10.3,
+      "topic": "combinatorics",
+      "theorems": [],
+      "techniques": [
+        "sorting algorithm analysis",
+        "cost estimation"
+      ],
+      "concepts": [
+        "permutation",
+        "swap cost",
+        "total cost bound",
+        "rearrangement"
+      ],
+      "difficulty": "standard",
+      "notes": "Permutation a_i of {1,...,n}. Swapping cards x and y costs 2|x-y|. Prove can return to identity with cost ≤ sum |a_i - i|."
+    },
+    {
+      "num": 10.4,
+      "topic": "geometry",
+      "theorems": [],
+      "techniques": [
+        "angle chasing",
+        "incenter",
+        "excenter",
+        "arc midpoint"
+      ],
+      "concepts": [
+        "triangle",
+        "circumcircle",
+        "incenter",
+        "excenter",
+        "equidistant from points"
+      ],
+      "difficulty": "hard",
+      "notes": "Prove midpoint of arc ABC of circumcircle Ω is equidistant from incenter of triangle AMK and excenter of triangle CNK."
+    },
+    {
+      "num": 10.6,
+      "topic": "geometry",
+      "theorems": [],
+      "techniques": [
+        "angle chasing",
+        "cyclic quadrilaterals"
+      ],
+      "concepts": [
+        "midpoint",
+        "circumcircle",
+        "inscribed quadrilateral"
+      ],
+      "difficulty": "hard",
+      "notes": "Prove quadrilateral BXMY is cyclic using circumcircles and midpoint."
+    },
+    {
+      "num": 10.8,
+      "topic": "geometry",
+      "theorems": [
+        "Helly's theorem"
+      ],
+      "techniques": [
+        "homothety",
+        "intersection of convex sets"
+      ],
+      "concepts": [
+        "convex k-gons",
+        "pairwise intersecting",
+        "homothety",
+        "point in many polygons"
+      ],
+      "difficulty": "olympic",
+      "notes": "n convex k-gons, each two have common interior point, each can be mapped to any other by homothety with positive ratio. Prove exists point in at least 1 + (n-1)/(2k) of them."
+    },
+    {
+      "num": 11.1,
+      "topic": "algebra",
+      "theorems": [],
+      "techniques": [
+        "inequality",
+        "counterexample or proof"
+      ],
+      "concepts": [
+        "trigonometric inequality",
+        "absolute cosine",
+        "sum of sines"
+      ],
+      "difficulty": "standard",
+      "notes": "Does there exist a>0 such that for all real x, |cos x| + |cos ax| > sin x + sin ax?"
+    },
+    {
+      "num": 11.2,
+      "topic": "combinatorics",
+      "theorems": [],
+      "techniques": [
+        "strategy stealing",
+        "symmetry",
+        "invariant"
+      ],
+      "concepts": [
+        "board game",
+        "rook movement",
+        "recoloring cells",
+        "winning strategy"
+      ],
+      "difficulty": "olympic",
+      "notes": "Game on n x n board, one black corner with rook. Players move rook horizontally/vertically, all traversed cells become black. Cannot move onto/through black cells. Who has winning strategy?"
+    },
+    {
+      "num": 11.3,
+      "topic": "number_theory",
+      "theorems": [],
+      "techniques": [
+        "decimal period analysis",
+        "modular arithmetic"
+      ],
+      "concepts": [
+        "rational numbers",
+        "decimal expansion period",
+        "length of period",
+        "sum of numbers"
+      ],
+      "difficulty": "hard",
+      "notes": "a,b rational with decimal period length 30, a-b has period length 15. Find minimal k such that a+kb can also have period length 15."
+    },
+    {
+      "num": 11.5,
+      "topic": "number_theory",
+      "theorems": [],
+      "techniques": [
+        "divisor analysis",
+        "equation solving"
+      ],
+      "concepts": [
+        "nice number definition",
+        "divisor plus 1 divides n+1",
+        "find all nice numbers"
+      ],
+      "difficulty": "standard",
+      "notes": "Nice number: every natural divisor d of n, d+1 divides n+1. Find all nice numbers."
+    },
+    {
+      "num": 11.6,
+      "topic": "geometry",
+      "theorems": [],
+      "techniques": [
+        "3D geometry",
+        "symmetry",
+        "sphere intersection"
+      ],
+      "concepts": [
+        "sphere",
+        "pyramid",
+        "circumsphere",
+        "symmetric points",
+        "points on sphere"
+      ],
+      "difficulty": "hard",
+      "notes": "Prove points A, B, C, A2, B2, C2 lie on a sphere using symmetry and sphere intersection."
+    },
+    {
+      "num": 11.7,
+      "topic": "algebra",
+      "theorems": [],
+      "techniques": [
+        "polynomial operations",
+        "invariant",
+        "irreducibility"
+      ],
+      "concepts": [
+        "polynomial generation",
+        "allowed operations",
+        "polynomial x^n - 1",
+        "impossibility"
+      ],
+      "difficulty": "olympic",
+      "notes": "Starting polynomials x^3-3x^2+5 and x^2-4x, allowed operations: add/subtract, multiply, compose, multiply by constant. Can we get x^n - 1?"
+    },
+    {
+      "num": 11.8,
+      "topic": "combinatorics",
+      "theorems": [],
+      "techniques": [
+        "strategy",
+        "pairing",
+        "non-transitive comparison"
+      ],
+      "concepts": [
+        "card game",
+        "non-transitive strength",
+        "arranging cards",
+        "forcing one player to lose all cards"
+      ],
+      "difficulty": "olympic",
+      "notes": "Deck of n distinct pairs, non-transitive strength. Players show top card, stronger takes both. Prove players can collude so one eventually loses all cards."
+    },
+    {
+      "num": 1,
+      "topic": "algebra",
+      "theorems": [
+        "Vieta's formulas"
+      ],
+      "techniques": [
+        "AM-GM inequality",
+        "minimization"
+      ],
+      "concepts": [
+        "polynomial with real roots",
+        "product of (x_i^2+1)",
+        "minimum value"
+      ],
+      "difficulty": "hard",
+      "notes": "Quartic polynomial with four real roots, b-d ≥ 5. Find minimum possible value of product (x_i^2+1)."
+    },
+    {
+      "num": 2,
+      "topic": "algebra",
+      "theorems": [],
+      "techniques": [
+        "functional equation",
+        "substitution",
+        "injective check"
+      ],
+      "concepts": [
+        "function Z->Z",
+        "functional equation",
+        "find all functions"
+      ],
+      "difficulty": "olympic",
+      "notes": "Find all functions f: Z->Z satisfying given equation for all integers x,y, x≠0."
+    },
+    {
+      "num": 3,
+      "topic": "combinatorics",
+      "theorems": [],
+      "techniques": [
+        "construction",
+        "infinite set"
+      ],
+      "concepts": [
+        "collinearity condition",
+        "infinite points in plane",
+        "condition a+b+c=2014"
+      ],
+      "difficulty": "olympic",
+      "notes": "Prove exists infinite set of points P_a indexed by integers such that P_a, P_b, P_c collinear iff a+b+c=2014."
+    },
+    {
+      "num": 4,
+      "topic": "combinatorics",
+      "theorems": [],
+      "techniques": [
+        "strategy",
+        "hexagonal grid",
+        "blocking"
+      ],
+      "concepts": [
+        "hexagonal grid game",
+        "placing markers",
+        "removing markers",
+        "k in a row",
+        "winning strategy"
+      ],
+      "difficulty": "olympic",
+      "notes": "Game on infinite hexagonal grid. Player A places two markers in empty adjacent cells, player B removes any marker. A wins if k consecutive markers in a line appear. Find minimal k for which A cannot force win."
+    },
+    {
+      "num": 5,
+      "topic": "geometry",
+      "theorems": [],
+      "techniques": [
+        "angle chasing",
+        "circumcircles",
+        "orthocenter"
+      ],
+      "concepts": [
+        "triangle",
+        "circumcircle",
+        "orthocenter",
+        "angle bisector",
+        "segment length equals circumradius"
+      ],
+      "difficulty": "hard",
+      "notes": "Prove XY equals circumradius of triangle ABC."
+    },
+    {
+      "num": 6,
+      "topic": "number_theory",
+      "theorems": [],
+      "techniques": [
+        "pigeonhole principle",
+        "prime gaps",
+        "bounds"
+      ],
+      "concepts": [
+        "coprime condition on grid",
+        "lower bound for min(a,b)",
+        "combinatorial number theory"
+      ],
+      "difficulty": "olympic",
+      "notes": "If for all i,j in {0,...,n}, gcd(a+i, b+j) > 1, then min(a,b) > c n log n. Prove existence of constant c>0."
+    },
+    {
+      "num": 1,
+      "topic": "geometry",
+      "theorems": [],
+      "techniques": [
+        "angle chasing",
+        "similar triangles"
+      ],
+      "concepts": [
+        "isosceles triangle",
+        "angle 100°",
+        "equal segments",
+        "product equality"
+      ],
+      "difficulty": "standard",
+      "notes": "Prove BC·DE = BD·CE using angle chasing in isosceles triangle with angle 100°."
+    },
+    {
+      "num": 2,
+      "topic": "algebra",
+      "theorems": [],
+      "techniques": [
+        "functional equation",
+        "substitution",
+        "guess and check"
+      ],
+      "concepts": [
+        "function R->R",
+        "find all functions"
+      ],
+      "difficulty": "standard",
+      "notes": "Find all functions f: R->R satisfying f(xy-1) + f(x)f(y) = 2xy - 1."
+    },
+    {
+      "num": 3,
+      "topic": "combinatorics",
+      "theorems": [],
+      "techniques": [
+        "invariant",
+        "summation"
+      ],
+      "concepts": [
+        "lattice path",
+        "signed distance to axis",
+        "sum of signed distances zero"
+      ],
+      "difficulty": "standard",
+      "notes": "Path from (0,N) to (M,0) with steps parallel to axes, recording signed distance to axis. Prove total sum is zero."
+    },
+    {
+      "num": 4,
+      "topic": "algebra",
+      "theorems": [],
+      "techniques": [
+        "polynomial evaluation",
+        "divisibility",
+        "finite checking"
+      ],
+      "concepts": [
+        "integer polynomial",
+        "divisibility condition",
+        "constants 2557 and 213·2014"
+      ],
+      "difficulty": "hard",
+      "notes": "Find all integer polynomials P such that P(n) divides 2557n + 213·2014 for every natural n."
+    },
+    {
+      "num": 5,
+      "topic": "algebra",
+      "theorems": [
+        "AM-GM inequality"
+      ],
+      "techniques": [
+        "inequality optimization",
+        "homogenization"
+      ],
+      "concepts": [
+        "symmetric inequality",
+        "maximum constant k",
+        "positive reals"
+      ],
+      "difficulty": "hard",
+      "notes": "Find largest real k such that inequality holds for all positive a,b,c."
+    },
+    {
+      "num": 6,
+      "topic": "number_theory",
+      "theorems": [],
+      "techniques": [
+        "modular arithmetic",
+        "cubic equation"
+      ],
+      "concepts": [
+        "prime p",
+        "2p^2-3p-1 is perfect cube",
+        "find all primes"
+      ],
+      "difficulty": "standard",
+      "notes": "Find all primes p such that 2p^2 - 3p - 1 is a perfect cube."
+    },
+    {
+      "num": 7,
+      "topic": "geometry",
+      "theorems": [],
+      "techniques": [
+        "locus of circumcenters",
+        "fixed point"
+      ],
+      "concepts": [
+        "convex quadrilateral",
+        "shortest and longest sides",
+        "circumcenters of triangles",
+        "independent of point choice"
+      ],
+      "difficulty": "hard",
+      "notes": "On longest side CD, choose point E such that distance between circumcenters of triangles APD and BPE is constant for any P≠E on CD."
+    },
+    {
+      "num": 8,
+      "topic": "combinatorics",
+      "theorems": [],
+      "techniques": [
+        "greedy algorithm",
+        "factorial number system"
+      ],
+      "concepts": [
+        "factorials",
+        "representing numbers as sum of factorials",
+        "minimal number of factorials"
+      ],
+      "difficulty": "standard",
+      "notes": "For given n, find minimal number of factorials needed so that every t ≤ n! is sum of some of them."
+    },
+    {
+      "num": 1,
+      "topic": "combinatorics",
+      "theorems": [],
+      "techniques": [
+        "pigeonhole principle",
+        "coloring"
+      ],
+      "concepts": [
+        "n x n grid",
+        "black-white coloring",
+        "condition on 2x2 subarrays",
+        "maximum n"
+      ],
+      "difficulty": "standard",
+      "notes": "Find largest n such that an n x n grid can be colored black/white so that in any two rows and two columns, the four cells are not all same color."
+    },
+    {
+      "num": 2,
+      "topic": "algebra",
+      "theorems": [],
+      "techniques": [
+        "system of equations",
+        "substitution"
+      ],
+      "concepts": [
+        "system of three equations",
+        "real solutions"
+      ],
+      "difficulty": "standard",
+      "notes": "Solve system: x+y-z=-1, x^2-y^2+z^2=1, -x^3+y^3+z^3=-1."
+    },
+    {
+      "num": 3,
+      "topic": "geometry",
+      "theorems": [],
+      "techniques": [
+        "angle chasing",
+        "parallel lines",
+        "isosceles triangles"
+      ],
+      "concepts": [
+        "quadrilateral with parallel sides",
+        "equal segments",
+        "angle bisector",
+        "find angle"
+      ],
+      "difficulty": "standard",
+      "notes": "Find angle ABC given conditions on sides and diagonals."
+    },
+    {
+      "num": 4,
+      "topic": "number_theory",
+      "theorems": [],
+      "techniques": [
+        "divisor product formula",
+        "inequality"
+      ],
+      "concepts": [
+        "product of positive divisors P(n)",
+        "equation P(n)=15n",
+        "P(n)=15n^2 impossible"
+      ],
+      "difficulty": "standard",
+      "notes": "(a) Find all n with P(n)=15n. (b) Prove no n with P(n)=15n^2."
+    },
+    {
+      "num": 5,
+      "topic": "number_theory",
+      "theorems": [],
+      "techniques": [
+        "digit sum",
+        "arithmetic series"
+      ],
+      "concepts": [
+        "decimal representation",
+        "counting digit 5",
+        "sum of arithmetic progression"
+      ],
+      "difficulty": "standard",
+      "notes": "Count how many times digit 5 appears in decimal of S = sum of arithmetic series."
+    },
+    {
+      "num": 1,
+      "topic": "number_theory",
+      "theorems": [],
+      "techniques": [
+        "algebraic manipulation",
+        "parity"
+      ],
+      "concepts": [
+        "integer equations",
+        "sum and sum of squares",
+        "find nonnegative integers n"
+      ],
+      "difficulty": "standard",
+      "notes": "Find nonnegative integers n such that exist integers a,b with n^2=a+b and n^3=a^2+b^2."
+    },
+    {
+      "num": 2,
+      "topic": "algebra",
+      "theorems": [],
+      "techniques": [
+        "functional equation",
+        "substitution"
+      ],
+      "concepts": [
+        "function R\\{0}->R",
+        "find all functions"
+      ],
+      "difficulty": "standard",
+      "notes": "Find all functions f: R\\{0}->R satisfying x f(xy) + f(-y) = x f(x)."
+    },
+    {
+      "num": 3,
+      "topic": "geometry",
+      "theorems": [],
+      "techniques": [
+        "angle chasing",
+        "power of a point",
+        "similar triangles"
+      ],
+      "concepts": [
+        "incenter",
+        "circle tangent to line",
+        "equal products"
+      ],
+      "difficulty": "hard",
+      "notes": "Prove AR·BQ = PI^2 using circle through B tangent to AI at I."
+    },
+    {
+      "num": 4,
+      "topic": "number_theory",
+      "theorems": [],
+      "techniques": [
+        "prime factorization",
+        "maximal d"
+      ],
+      "concepts": [
+        "factorial divisibility",
+        "largest d dividing n! but not divisible by any k in range"
+      ],
+      "difficulty": "hard",
+      "notes": "Given m≥3, n>m(m-2), find largest d such that d divides n! and no k in {m,...,n} divides d."
+    },
+    {
+      "num": 5,
+      "topic": "combinatorics",
+      "theorems": [],
+      "techniques": [
+        "pigeonhole principle",
+        "covering design"
+      ],
+      "concepts": [
+        "cards with numbers on both sides",
+        "flipping cards",
+        "seeing all numbers",
+        "minimal number of cards"
+      ],
+      "difficulty": "olympic",
+      "notes": "Find minimal k such that Maria can always win regardless of how Daniel writes numbers on k cards."
+    },
+    {
+      "num": 1,
+      "topic": "algebra",
+      "theorems": [
+        "Cauchy-Schwarz inequality"
+      ],
+      "techniques": [
+        "inequality proof",
+        "homogenization"
+      ],
+      "concepts": [
+        "symmetric inequality",
+        "positive reals sum 1",
+        "prove A ≥ B^2"
+      ],
+      "difficulty": "hard",
+      "notes": "Prove inequality A ≥ B^2 for given expressions A and B."
+    },
+    {
+      "num": 2,
+      "topic": "geometry",
+      "theorems": [],
+      "techniques": [
+        "angle chasing",
+        "cyclic quadrilaterals",
+        "condition equivalence"
+      ],
+      "concepts": [
+        "isosceles triangle",
+        "midpoints",
+        "perpendicular bisector",
+        "orthocenter",
+        "concyclic points"
+      ],
+      "difficulty": "hard",
+      "notes": "Prove AW = BW iff B, E, F, M are concyclic."
+    },
+    {
+      "num": 3,
+      "topic": "combinatorics",
+      "theorems": [],
+      "techniques": [
+        "permutation analysis",
+        "cycle structure"
+      ],
+      "concepts": [
+        "circular arrangement",
+        "permutation of cards",
+        "operation",
+        "count initial distributions"
+      ],
+      "difficulty": "olympic",
+      "notes": "n students in circle, each holds a card with a name. Operation: if a student holds own card, leaves, others pass card to right. Count initial distributions where after 4 operations not all have left."
+    },
+    {
+      "num": 4,
+      "topic": "geometry",
+      "theorems": [],
+      "techniques": [
+        "angle chasing",
+        "tangent properties",
+        "condition equivalence"
+      ],
+      "concepts": [
+        "isosceles triangle",
+        "circumcircles",
+        "tangency",
+        "perpendicular condition"
+      ],
+      "difficulty": "hard",
+      "notes": "Prove FG is tangent to circle O iff DG is perpendicular to FO."
+    },
+    {
+      "num": 5,
+      "topic": "number_theory",
+      "theorems": [],
+      "techniques": [
+        "quadratic residues",
+        "representation as sum of squares"
+      ],
+      "concepts": [
+        "prime p>5",
+        "k^2+5 divisible by p",
+        "p^2 = m^2+5n^2"
+      ],
+      "difficulty": "standard",
+      "notes": "If p>5 prime and exists k with p|k^2+5, then exist m,n with p^2 = m^2+5n^2."
+    },
+    {
+      "num": 6,
+      "topic": "combinatorics",
+      "theorems": [
+        "Hall's marriage theorem"
+      ],
+      "techniques": [
+        "graph theory",
+        "bipartite matching"
+      ],
+      "concepts": [
+        "two countries with castles",
+        "generals movement",
+        "inequality conditions",
+        "equivalence of statements"
+      ],
+      "difficulty": "olympic",
+      "notes": "Graph with castles in two sets A and B. Prove equivalence of two statements about moving generals and counting conditions."
+    }
+  ],
+  "unique_concepts": [
+    "regular polygon",
+    "diagonals",
+    "intersecting diagonals",
+    "minimum number of colors",
+    "rectangular parallelepiped",
+    "perimeter",
+    "surface area",
+    "volume",
+    "equal numbers",
+    "cubic equation",
+    "discriminant",
+    "recurrence sequence",
+    "prime divisors",
+    "infinite primes dividing sequence",
+    "infinite primes not dividing sequence",
+    "coprime numbers",
+    "triangle",
+    "circumcircle",
+    "circumcenter",
+    "concurrent lines",
+    "isogonal lines",
+    "similar triangles",
+    "Desargues' theorem",
+    "inversion",
+    "homothety",
+    "concatenation of numbers",
+    "digit count",
+    "complete set of weights",
+    "integer representation as sum of weights",
+    "removing largest weight",
+    "angle chasing",
+    "parallel lines",
+    "midpoint of arc",
+    "altitude",
+    "equal segments",
+    "tangents",
+    "cyclic quadrilateral",
+    "symmetry point",
+    "equal angles",
+    "n x m table",
+    "operations on rows, columns, diagonals",
+    "3x3 subtable zero",
+    "making entire table zero",
+    "invariant",
+    "linear algebra",
+    "sequence recurrence with floor",
+    "integer part",
+    "bounded sequence",
+    "existence of specific term",
+    "angle bisector",
+    "cyclic quadrilateral",
+    "incenter",
+    "circumcenter",
+    "segment length condition",
+    "divisor set difference",
+    "intersection of sets",
+    "existence for any k",
+    "function recursion",
+    "natural numbers",
+    "uniqueness",
+    "evaluation for powers of 2",
+    "prime omega functions ω(n) and Ω(n)",
+    "ratio conditions",
+    "existence for any parameters",
+    "function on finite set",
+    "fixed-point free",
+    "intersection condition",
+    "covering set",
+    "minimal k",
+    "sumset A+B",
+    "doubling set D+D",
+    "subset size lower bound",
+    "2(A+B)",
+    "numbers on circle",
+    "neighbor differences",
+    "divisibility by 3",
+    "products of numbers",
+    "perfect squares",
+    "max count of squares",
+    "convex polygon",
+    "diagonals",
+    "intersecting diagonals",
+    "good diagonal definition",
+    "maximum count",
+    "tangent properties",
+    "right angle",
+    "largest proper divisor",
+    "sum equals power of ten",
+    "cyclic trapezoid",
+    "circle through two points",
+    "symmetric points",
+    "concyclic points",
+    "coin denominations",
+    "irrational amounts",
+    "paying any natural sum",
+    "limited usage per denomination",
+    "complete graph",
+    "different edge weights",
+    "travel with strictly decreasing cost",
+    "existence of path",
+    "good number definition",
+    "consecutive good numbers",
+    "prime divisors count",
+    "functional inequality",
+    "range of function",
+    "bounded between 0 and 1",
+    "permutation",
+    "swap cost",
+    "total cost bound",
+    "rearrangement",
+    "excenter",
+    "arc midpoint",
+    "equidistant from points",
+    "midpoint",
+    "circumcircle",
+    "inscribed quadrilateral",
+    "convex k-gons",
+    "pairwise intersecting",
+    "homothety",
+    "point in many polygons",
+    "Helly's theorem",
+    "trigonometric inequality",
+    "absolute cosine",
+    "sum of sines",
+    "board game",
+    "rook movement",
+    "recoloring cells",
+    "winning strategy",
+    "rational numbers",
+    "decimal expansion period",
+    "length of period",
+    "sum of numbers",
+    "nice number definition",
+    "divisor plus 1 divides n+1",
+    "find all nice numbers",
+    "sphere",
+    "pyramid",
+    "circumsphere",
+    "symmetric points",
+    "points on sphere",
+    "polynomial generation",
+    "allowed operations",
+    "polynomial x^n - 1",
+    "impossibility",
+    "card game",
+    "non-transitive strength",
+    "arranging cards",
+    "forcing one player to lose all cards",
+    "polynomial with real roots",
+    "product of (x_i^2+1)",
+    "minimum value",
+    "Vieta's formulas",
+    "AM-GM inequality",
+    "function Z->Z",
+    "functional equation",
+    "find all functions",
+    "collinearity condition",
+    "infinite points in plane",
+    "condition a+b+c=2014",
+    "hexagonal grid game",
+    "placing markers",
+    "removing markers",
+    "k in a row",
+    "winning strategy",
+    "orthocenter",
+    "segment length equals circumradius",
+    "coprime condition on grid",
+    "lower bound for min(a,b)",
+    "combinatorial number theory",
+    "isosceles triangle",
+    "angle 100°",
+    "equal segments",
+    "product equality",
+    "function R->R",
+    "find all functions",
+    "lattice path",
+    "signed distance to axis",
+    "sum of signed distances zero",
+    "integer polynomial",
+    "divisibility condition",
+    "constants 2557 and 213·2014",
+    "symmetric inequality",
+    "maximum constant k",
+    "positive reals",
+    "AM-GM inequality",
+    "prime p",
+    "2p^2-3p-1 is perfect cube",
+    "find all primes",
+    "convex quadrilateral",
+    "shortest and longest sides",
+    "circumcenters of triangles",
+    "independent of point choice",
+    "locus of circumcenters",
+    "fixed point",
+    "factorials",
+    "representing numbers as sum of factorials",
+    "minimal number of factorials",
+    "n x n grid",
+    "black-white coloring",
+    "condition on 2x2 subarrays",
+    "maximum n",
+    "system of three equations",
+    "real solutions",
+    "quadrilateral with parallel sides",
+    "equal segments",
+    "angle bisector",
+    "find angle",
+    "product of positive divisors P(n)",
+    "equation P(n)=15n",
+    "P(n)=15n^2 impossible",
+    "decimal representation",
+    "counting digit 5",
+    "sum of arithmetic progression",
+    "integer equations",
+    "sum and sum of squares",
+    "find nonnegative integers n",
+    "function R\\{0}->R",
+    "find all functions",
+    "incenter",
+    "circle tangent to line",
+    "equal products",
+    "power of a point",
+    "factorial divisibility",
+    "largest d dividing n! but not divisible by any k in range",
+    "cards with numbers on both sides",
+    "flipping cards",
+    "seeing all numbers",
+    "minimal number of cards",
+    "pigeonhole principle",
+    "covering design",
+    "symmetric inequality",
+    "positive reals sum 1",
+    "prove A ≥ B^2",
+    "Cauchy-Schwarz inequality",
+    "midpoints",
+    "perpendicular bisector",
+    "orthocenter",
+    "concyclic points",
+    "circular arrangement",
+    "permutation of cards",
+    "operation",
+    "count initial distributions",
+    "cycle structure",
+    "circumcircles",
+    "tangency",
+    "perpendicular condition",
+    "quadratic residues",
+    "representation as sum of squares",
+    "prime p>5",
+    "k^2+5 divisible by p",
+    "p^2 = m^2+5n^2",
+    "two countries with castles",
+    "generals movement",
+    "inequality conditions",
+    "equivalence of statements",
+    "Hall's marriage theorem",
+    "graph theory",
+    "bipartite matching"
+  ],
+  "confidence": 0.95
+}

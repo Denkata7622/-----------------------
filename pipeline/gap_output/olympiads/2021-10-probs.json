@@ -1,0 +1,114 @@
+{
+  "_meta": {
+    "pdf": "C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\Задачи_Минали_Години\\Областен\\OLI-2-Областен кръг-2021-10 кл-probs.pdf",
+    "paired_with": "C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\Задачи_Минали_Години\\Областен\\OLI-2-Областен кръг-2021-10 кл-sol.pdf",
+    "level": 1,
+    "type": "probs",
+    "analyzed_at": "2026-10-16T21:28:57.672938",
+    "model": "deepseek/deepseek-v3.2",
+    "text_length": 1928,
+    "paired_text_length": 17201
+  },
+  "problems": [
+    {
+      "num": 1,
+      "topic": "algebra",
+      "theorems": [],
+      "techniques": [
+        "substitution",
+        "case analysis",
+        "discriminant analysis",
+        "symmetry (if (x,y,z) is solution, then (x,y,-z) is solution)"
+      ],
+      "concepts": [
+        "systems of equations",
+        "quadratic equations",
+        "discriminant",
+        "parameter analysis",
+        "rational solutions"
+      ],
+      "difficulty": "standard",
+      "notes": "Standard parameter analysis in a system of equations. The key observation is symmetry leading to z=0."
+    },
+    {
+      "num": 2,
+      "topic": "geometry",
+      "theorems": [
+        "Power of a point",
+        "Right triangle altitude theorem"
+      ],
+      "techniques": [
+        "auxiliary construction",
+        "similar triangles",
+        "segment length manipulation"
+      ],
+      "concepts": [
+        "incircle",
+        "tangent points",
+        "right triangles",
+        "collinearity",
+        "perpendicular lines",
+        "circle geometry"
+      ],
+      "difficulty": "standard",
+      "notes": "Classical geometry problem using power of a point and properties of the incircle and right triangles."
+    },
+    {
+      "num": 3,
+      "topic": "number_theory",
+      "theorems": [],
+      "techniques": [
+        "summation formula",
+        "substitution",
+        "inequality estimation",
+        "case checking"
+      ],
+      "concepts": [
+        "sum of arithmetic-geometric series",
+        "perfect squares",
+        "Diophantine equations",
+        "parity",
+        "consecutive integers"
+      ],
+      "difficulty": "hard",
+      "notes": "Requires finding all n such that a specific sum is a perfect square. Uses a known summation formula and a clever bounding argument."
+    },
+    {
+      "num": 4,
+      "topic": "combinatorics",
+      "theorems": [
+        "Pigeonhole Principle"
+      ],
+      "techniques": [
+        "pigeonhole principle",
+        "construction",
+        "contradiction",
+        "grid coloring/tiling"
+      ],
+      "concepts": [
+        "grid problems",
+        "existence proofs",
+        "combinatorial geometry",
+        "square covering"
+      ],
+      "difficulty": "olympic",
+      "notes": "A non-standard combinatorial geometry problem on a grid. Requires proving the existence of a square of a certain size and finding its exact minimal dimension using the pigeonhole principle and a constructive argument."
+    }
+  ],
+  "unique_concepts": [
+    "systems of equations with parameter",
+    "discriminant analysis",
+    "symmetry in solutions",
+    "incircle geometry",
+    "power of a point",
+    "right triangle altitude theorem",
+    "sum of arithmetic-geometric series",
+    "Diophantine equations for perfect squares",
+    "inequality estimation in number theory",
+    "pigeonhole principle in grid problems",
+    "combinatorial geometry",
+    "existence proofs",
+    "square covering/tiling"
+  ],
+  "confidence": 0.95
+}

@@ -1,0 +1,101 @@
+{
+  "pdf": "OLI-3-Национален кръг-1999-9-12 кл-sol",
+  "problems": [
+    {
+      "num": 1,
+      "year": 1999,
+      "grade": null,
+      "round": "nacionalen",
+      "statement": "The faces of an orthogonal parallelepiped whose dimensions are natural numbers are painted green. The parallelepiped is partitioned into unit cubes by planes parallel to its faces. Find the dimensions of the parallelepiped if the number of cubes having no green face is one third of the total number of cubes.",
+      "solution": "Solution: Let $x \\leq y \\leq z$ be the dimensions of the parallelepiped. It follows from the conditions of the problem that $x \\geq 3$ and $(x - 2)(y - 2)(z - 2) = \\frac{xyz}{3}$. Since $\\frac{x - 2}{x} \\leq \\frac{y - 2}{y} \\leq \\frac{z - 2}{z}$, when $x \\geq 7$, we obtain that $\\frac{(x - 2)(y - 2)(z - 2)}{xyz} \\geq (\\frac{5}{7})^3 > \\frac{1}{3}$. Therefore $x \\leq 6$ and thus $x = 3$, $x = 4$, $x = 5$ or $x = 6$.\n\n1. If $x = 3$, then $(y - 2)(z - 2) = yz$, which is impossible.\n2. If $x = 4$, then $2(y - 2)(z - 2) = \\frac{4yz}{3}$, so $(y - 6)(z - 6) = 24$. In this case the only solutions are $(4, 7, 30)$, $(4, 8, 18)$, $(4, 9, 14)$ and $(4, 10, 12)$.\n3. If $x = 5$, then $3(y - 2)(z - 2) = \\frac{5yz}{3}$, so $(2y - 9)(2z - 9) = 45$. Therefore the solutions are $(5, 5, 27)$, $(5, 6, 12)$ and $(5, 7, 9)$.\n4. If $x = 6$, then $4(y - 2)(z - 2) = 2yz$, so $(y - 4)(z - 4) = 8$. Thus there is an unique solution $(6, 6, 8)$.\n\nAnswer: The problem has 8 solutions—$(4, 7, 30)$, $(4, 8, 18)$, $(4, 9, 14)$, $(4, 10, 12)$, $(5, 5, 27)$, $(5, 6, 12)$, $(5, 7, 9)$ and $(6, 6, 8)$.",
+      "answer": "$(4, 7, 30)$, $(4, 8, 18)$, $(4, 9, 14)$, $(4, 10, 12)$, $(5, 5, 27)$, $(5, 6, 12)$, $(5, 7, 9)$ and $(6, 6, 8)$.",
+      "page": 1,
+      "pdf": "OLI-3-Национален кръг-1999-9-12 кл-sol",
+      "chunk": 1,
+      "grade_range": [
+        9,
+        12
+      ]
+    },
+    {
+      "num": 2,
+      "year": 1999,
+      "grade": null,
+      "round": "nacionalen",
+      "statement": "Let $\\{a_n\\}_{n=1}^{\\infty}$ be a sequence of integer numbers such that\n\n$$(n - 1)a_{n+1} = (n + 1)a_n - 2(n - 1)$$\n\nfor any $n \\geq 1$. If 2000 divides $a_{1999}$, find the smallest $n \\geq 2$ such that 2000 divides $a_n$.",
+      "solution": "Solution: It is obvious that $a_1 = 0$ and $a_{n+1} = \\frac{n + 1}{n - 1}a_n - 2$ when $n \\geq 2$. Therefore the sequence is uniquely determined by its second term. Furthermore the sequence $a_n = (n - 1)(cn + 2)$ (where $c = \\frac{a_2}{2} - 1$ is an arbitrary real number) satisfies the equality from the conditions of the problem. We conclude now that all sequences which satisfy this equality are of the kind given above. Since all terms are integer numbers and 2000 divides $a_{1999}$, it is easy to see that $c$ is integer and $c = 1000m + 2$. Therefore 2000 divides $a_n$ if and only if 1000 divides $(n-1)(n+1)$. Thus $n = 2k+1$ and $k(k+1)$ is divisible by $250 = 5^3 \\cdot 2$. Since $k$ and $k+1$ are relatively prime, we get that the smallest $n \\geq 2$ equals $2 \\cdot 124 + 1 = 249$.",
+      "answer": "$n = 249$.",
+      "page": 1,
+      "pdf": "OLI-3-Национален кръг-1999-9-12 кл-sol",
+      "chunk": 1,
+      "grade_range": [
+        9,
+        12
+      ]
+    },
+    {
+      "num": 3,
+      "year": 1999,
+      "grade": null,
+      "round": "nacionalen",
+      "statement": "The vertices of a triangle have integer coordinates and one of its sides is of length $\\sqrt{n}$, where $n$ is a square-free natural number. Prove that the ratio of the circumradius and the inradius is an irrational number.",
+      "solution": "Solution: Suppose that $\\frac{R}{r} = q$, where $q$ is a rational number. Without loss of generality assume that one of the ends of the side of length $\\sqrt{n}$ is at the origin of the coordinate system. Let the remaining two vertices have coordinates $(x, y)$ and $(z, t)$, where $x, y, z$ and $t$ are integers. The sides of our triangle have lengths $a = \\sqrt{A}$, $b = \\sqrt{B}$ and $c = \\sqrt{C}$, where $n = A = x^2 + y^2$, $B = z^2 + t^2$ and $C = (x - z)^2 + (y - t)^2$. It follows from the conditions of the problem that\n\n$$q = \\frac{R}{r} = \\frac{abc}{4S} \\cdot \\frac{p}{S} = \\frac{abc(a + b + c)}{8S^2},$$\n\nwhere $S$ is the area of the triangle. Since $S$ is rational (prove it!), it follows that $\\sqrt{ABC}(\\sqrt{A} + \\sqrt{B} + \\sqrt{C}) = 8S^2q$ is a rational number. Therefore $A\\sqrt{BC} + B\\sqrt{AC} = 8S^2q - C\\sqrt{AB}$ and after squaring we obtain that $\\sqrt{AB}$ is a rational number. Thus $AB$ is a perfect square. By analogy both $BC$ and $CA$ are perfect squares. Let $AB = E^2$, $BC = F^2$ and $CA = G^2$, where $E$, $F$ and $G$ are integer. Write $A, B$ and $C$ in the following form: $A = a_1a_2^2$, $B = b_1b_2^2$ and $C = c_1c_2^2$, where $a_1, b_1$ and $c_1$ are square-free integers. So $a_1b_1(a_2b_2)^2 = m^2$ and therefore $a_1b_1$ is a perfect square, whence $a_1 = b_1$. By analogy $a_1 = c_1$. Thus $A = ma_1^2$, $B = mb_1^2$, $C = mc_1^2$, where $m$ is square-free. It follows from $ma_1^2 = n$ that $m = n$, $a_1 = 1$ and we obtain\n\n$$\\begin{vmatrix} x^2 & + & y^2 & = & n \\\\ z^2 & + & t^2 & = & nb_1^2 \\\\ (x - z)^2 & + & (y - t)^2 & = & nc_1^2 \\end{vmatrix}$$\n\nSince both $b_1$ and $c_1$ are integer, it follows from the Triangle Inequality that $1 + b_1 > c_1$ and $1 + c_1 > b_1$, whence $b_1 = c_1$. It is easy to determine now that $x^2 + y^2 = 2(xz + yt)$ and consequently $2(xz + yt) = n$. Let $2(xt - yz) = k$. Then $n^2 + k^2 = 4(x^2 + y^2)(z^2 + t^2) = 4n^2b_1^2$, so $k^2 = n^2(4b_1^2 - 1)$. Therefore $4b_1^2 - 1$ is a perfect square, which is impossible.",
+      "answer": null,
+      "page": 2,
+      "pdf": "OLI-3-Национален кръг-1999-9-12 кл-sol",
+      "chunk": 1,
+      "grade_range": [
+        9,
+        12
+      ]
+    },
+    {
+      "num": 4,
+      "year": 1999,
+      "grade": null,
+      "round": "nacionalen",
+      "statement": "Find the number of all natural numbers $n, 4 \\leq n \\leq 1023$, such that their binary representations do not contain three consecutive equal digits.",
+      "solution": "Solution: Denote by $a_n, n \\geq 3$, the number of sequences of zeroes and ones of length $n$ which begin with 1 and do not contain three consecutive equal digits. Also, for any $a, b \\in \\{0, 1\\}$ denote by $x_{ab}^n$ the number of sequences of zeroes and ones of length $n$ which begin with 1 and do not contain three consecutive equal digits, such that the last two terms are respectively $a$ and $b$. It is easy to see that for $n \\geq 5$\n\n$$x_{00}^n = x_{10}^{n-1}; x_{01}^n = x_{00}^{n-1} + x_{10}^{n-1}; x_{10}^n = x_{11}^{n-1} + x_{01}^{n-1}; x_{11}^n = x_{01}^{n-1}.$$\n\nAdding up the above equalities, we obtain $a_n = a_{n-1} + x_{10}^{n-1} + x_{01}^{n-1} = a_{n-1} + a_{n-2}$. Since $a_3 = 3$ and $a_4 = 5$, it follows that $a_5 = 8$, $a_6 = 13$, $a_7 = 21$, $a_8 = 34$, $a_9 = 55$ and $a_{10} = 89$.\n\nSince the required number is equal to $a_3 + a_4 + \\ldots + a_{10}$, it follows from the above that the answer is 228.",
+      "answer": "228",
+      "page": 2,
+      "pdf": "OLI-3-Национален кръг-1999-9-12 кл-sol",
+      "chunk": 1,
+      "grade_range": [
+        9,
+        12
+      ]
+    },
+    {
+      "num": 5,
+      "year": 1999,
+      "grade": null,
+      "round": "nacionalen",
+      "statement": "The vertices $A$, $B$ and $C$ of an acute triangle $ABC$ lie on the sides $B_1C_1, C_1A_1$ and $A_1B_1$ of $\\triangle A_1B_1C_1$ and $\\angle ABC = \\angle A_1B_1C_1$, $\\angle BCA = \\angle B_1C_1A_1$, $\\angle CAB = \\angle C_1A_1B_1$. Prove that the orthocentres of $\\triangle ABC$ and $\\triangle A_1B_1C_1$ are equally remote from the circumcentre of $\\triangle ABC$.",
+      "solution": "Solution: Denote by $H$ the orthocentre of $\\triangle ABC$. Since $\\angle CHB = 180^\\circ - \\angle CAB = 180^\\circ - \\angle C_1A_1B_1$, we have that $A_1$ lies on the circumcircle $k_1$ of $\\triangle BHC$. Similarly, $B_1$ and $C_1$ lie on circumcircles $k_2$ and $k_3$ of $\\triangle CHA$ and $\\triangle AHB$. Therefore $\\angle B_1HC_1 = \\angle B_1HA + \\angle C_1HA = \\angle B_1CA + \\angle C_1BA = 2\\angle B_1A_1C_1$ and likewise $\\angle C_1HA_1 = 2\\angle C_1B_1A_1$ and $\\angle A_1HB_1 = 2\\angle A_1C_1B_1$, so $H$ is the circumcentre of $\\triangle A_1B_1C_1$.\n\nLet us draw straight lines passing through the vertices of $\\triangle ABC$ and parallel to the corresponding sides and denote their points of intersection by $A_0$, $B_0$ and $C_0$. Since $\\angle A_0B_0C_0 = \\angle A_1B_1C_1$, $\\angle B_0C_0A_0 = \\angle B_1C_1A_1$ and $\\angle C_0A_0B_0 = \\angle C_1A_1B_1$, it follows from the above that the segments $A_0H, B_0H$ and $C_0H$ are of equal length and are diameters of $k_1, k_2$ and $k_3$. It is clear now that there exists a composition of a rotation and a homothecy, both centred at $H$, such that the image of $\\triangle A_1B_1C_1$ is $\\triangle A_0B_0C_0$. Therefore the image of orthocentre $H_1$ of $\\triangle A_1B_1C_1$ is the orthocentre $H_0$ of $\\triangle A_0B_0C_0$. Thus $\\angle HH_1H_0 = \\angle HA_1A_0 = 90^\\circ$, and to solve the problem we have to show that the circumcentre $O$ of $\\triangle ABC$ is the midpoint of $HH_0$.\n\nIndeed, the image of $\\triangle ABC$ by a homothecy centred at the centroid of $\\triangle ABC$ and with coefficient $-2$ is $\\triangle A_0B_0C_0$. Therefore $\\overrightarrow{MH_0} = -2\\overrightarrow{MH}$ and since $\\overrightarrow{MH} = -2\\overrightarrow{MO}$, we obtain $\\overrightarrow{OH_0} = -\\overrightarrow{OH}$.",
+      "answer": null,
+      "page": 3,
+      "pdf": "OLI-3-Национален кръг-1999-9-12 кл-sol",
+      "chunk": 1,
+      "grade_range": [
+        9,
+        12
+      ]
+    },
+    {
+      "num": 6,
+      "year": 1999,
+      "grade": null,
+      "round": "nacionalen",
+      "statement": "Prove that the equation\n\n$$x^3 + y^3 + z^3 + t^3 = 1999$$\n\nhas infinitely many integer solutions.",
+      "solution": "Solution: Since $10^3 + 10^3 + (-1)^3 + 0^3 = 1999$, we are looking for solutions of the form $x = 10 - k, y = 10 + k, z = -1 - l, t = l$, where $k$ and $l$ are integer. After simple calculations we obtain that our equation is equivalent to $l(l+1) = 20k^2$, whence $(2l+1)^2 - 80k^2 = 1$. The latter is Pell's equality. Since $l = 4, k = 1$ is a solution, all solutions are of the form $(l_n, k_n)$, where $2l_n + 1 + k_n\\sqrt{80} = (9 + \\sqrt{80})^n, n = 1, 2, \\dots$. Therefore the original equation has infinitely many integer solutions.",
+      "answer": null,
+      "page": 4,
+      "pdf": "OLI-3-Национален кръг-1999-9-12 кл-sol",
+      "chunk": 1,
+      "grade_range": [
+        9,
+        12
+      ]
+    }
+  ]
+}

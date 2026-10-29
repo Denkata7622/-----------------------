@@ -1,0 +1,146 @@
+{
+  "_meta": {
+    "pdf": "C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\Задачи_Минали_Години\\Национален\\OLI-3-Национален кръг-2009-9-12 кл-sol.pdf",
+    "paired_with": null,
+    "level": 2,
+    "type": "sol",
+    "analyzed_at": "2026-10-18T12:08:45.580792",
+    "model": "deepseek/deepseek-v3.2",
+    "text_length": 10677,
+    "paired_text_length": 0
+  },
+  "problems": [
+    {
+      "num": 1,
+      "topic": "number_theory",
+      "theorems": [],
+      "techniques": [
+        "proof by contradiction",
+        "infinite descent (variant)",
+        "subtraction of equations"
+      ],
+      "concepts": [
+        "coprime numbers",
+        "prime divisibility",
+        "exponent valuation (v_p)",
+        "properties of (a^n-1)/(a-1)"
+      ],
+      "difficulty": "olympic",
+      "notes": "Uses valuation v_p(n) to track exact power of a prime dividing a number. Key step is showing v_p(a)=v_p(b) and then deducing a=b from two distinct solutions."
+    },
+    {
+      "num": 2,
+      "topic": "geometry",
+      "theorems": [
+        "Ceva (trigonometric form)"
+      ],
+      "techniques": [
+        "symmetry",
+        "distance ratios"
+      ],
+      "concepts": [
+        "incircle",
+        "tangent points",
+        "distance from point to line",
+        "concurrency of lines"
+      ],
+      "difficulty": "olympic",
+      "notes": "Uses distances from symmetric points to sides. Shows equalities of distances via symmetry and properties of incircle tangency."
+    },
+    {
+      "num": 3,
+      "topic": "combinatorics",
+      "theorems": [],
+      "techniques": [
+        "proof by contradiction",
+        "pigeonhole principle (implicit)",
+        "constructive coloring"
+      ],
+      "concepts": [
+        "3D grid coloring",
+        "divisibility conditions",
+        "modular arithmetic",
+        "coordinate remainders"
+      ],
+      "difficulty": "hard",
+      "notes": "Combinatorial geometry in 3D. Proves necessary condition (a|b, b|c) by contradiction, then constructs a coloring using remainders and nested divisibility."
+    },
+    {
+      "num": 4,
+      "topic": "algebra",
+      "theorems": [],
+      "techniques": [
+        "degree analysis",
+        "coefficient comparison",
+        "system of equations",
+        "cyclic indices"
+      ],
+      "concepts": [
+        "polynomial identities",
+        "degree of polynomials",
+        "quadratic polynomials",
+        "cyclic functional equations"
+      ],
+      "difficulty": "olympic",
+      "notes": "Shows all polynomials must be quadratic with degree 2, then proves coefficients are equal and ultimately f_k(x)=x^2."
+    },
+    {
+      "num": 5,
+      "topic": "combinatorics",
+      "theorems": [],
+      "techniques": [
+        "induction",
+        "graph operations (flips)",
+        "constructive algorithm"
+      ],
+      "concepts": [
+        "triangulation of polygon",
+        "diagonal flips",
+        "reachability in flip graph",
+        "fan triangulation"
+      ],
+      "difficulty": "olympic",
+      "notes": "Graph theory on triangulations. Shows any diagonal can be made green via a sequence of diagonal flips, using induction on polygon size."
+    },
+    {
+      "num": 6,
+      "topic": "algebra",
+      "theorems": [
+        "Cauchy-Schwarz inequality"
+      ],
+      "techniques": [
+        "function method (auxiliary function)",
+        "differentiation",
+        "integral representation"
+      ],
+      "concepts": [
+        "symmetric sums",
+        "inequalities",
+        "generating functions",
+        "positive sums"
+      ],
+      "difficulty": "olympic",
+      "notes": "Two solutions: first uses auxiliary function f(x) and differentiation, second uses integral form of Cauchy-Schwarz."
+    }
+  ],
+  "unique_concepts": [
+    "coprime numbers",
+    "prime valuation (v_p)",
+    "Ceva's theorem (trigonometric)",
+    "incircle and tangency",
+    "distance ratios",
+    "3D grid coloring",
+    "divisibility conditions",
+    "modular arithmetic (remainders)",
+    "polynomial degree analysis",
+    "cyclic functional equations",
+    "triangulation of polygons",
+    "diagonal flips",
+    "induction on polygons",
+    "symmetric sums",
+    "Cauchy-Schwarz inequality",
+    "generating function method",
+    "integral representation of sums"
+  ],
+  "confidence": 0.95
+}

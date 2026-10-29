@@ -1,0 +1,112 @@
+{
+  "_meta": {
+    "pdf": "C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\Задачи_Минали_Години\\Областен\\OLI-2-Областен кръг-2018-10 кл-probs.pdf",
+    "paired_with": "C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\Задачи_Минали_Години\\Областен\\OLI-2-Областен кръг-2018-10 кл-sol.pdf",
+    "level": 1,
+    "type": "probs",
+    "analyzed_at": "2026-10-16T21:19:58.827934",
+    "model": "deepseek/deepseek-v3.2",
+    "text_length": 1263,
+    "paired_text_length": 6424
+  },
+  "problems": [
+    {
+      "num": 1,
+      "topic": "algebra",
+      "theorems": [],
+      "techniques": [
+        "substitution",
+        "squaring",
+        "case analysis",
+        "verification of solutions"
+      ],
+      "concepts": [
+        "quadratic function",
+        "function symmetry (axis of parabola)",
+        "domain of equation (|x| ≤ |a|)"
+      ],
+      "difficulty": "standard",
+      "notes": "Standard equation solving with parameter, involves considering two cases for arguments of a quadratic function: equal or symmetric about the vertex."
+    },
+    {
+      "num": 2,
+      "topic": "algebra",
+      "theorems": [
+        "Polynomial Remainder Theorem"
+      ],
+      "techniques": [
+        "evaluation at roots",
+        "system of equations"
+      ],
+      "concepts": [
+        "polynomial division",
+        "roots of divisor",
+        "solving for coefficients"
+      ],
+      "difficulty": "standard",
+      "notes": "Direct application of the Remainder Theorem by plugging in the roots of the divisor polynomial."
+    },
+    {
+      "num": 3,
+      "topic": "number_theory",
+      "theorems": [
+        "Chinese Remainder Theorem"
+      ],
+      "techniques": [
+        "pigeonhole principle",
+        "construction of counterexample",
+        "modular arithmetic analysis"
+      ],
+      "concepts": [
+        "coprime numbers",
+        "prime divisors",
+        "residues modulo primes",
+        "parity",
+        "extremal combinatorics"
+      ],
+      "difficulty": "olympic",
+      "notes": "Combinatorial number theory problem. Requires proving an upper bound (n≤9) by constructing a set of 20 numbers where no 10 work, and a lower bound (n≥9) by showing 9 can always be chosen using parity and residues mod 3."
+    },
+    {
+      "num": 4,
+      "topic": "geometry",
+      "theorems": [],
+      "techniques": [
+        "angle chasing",
+        "cyclic quadrilaterals",
+        "inscribed angles",
+        "angle bisector properties"
+      ],
+      "concepts": [
+        "tangent-chord theorem",
+        "cyclic quadrilateral (MLNC)",
+        "points concyclic (P, Q, L on circle centered at C)",
+        "incenter as intersection of angle bisectors",
+        "intersection of circumcircles"
+      ],
+      "difficulty": "hard",
+      "notes": "Synthetic geometry problem with multiple steps: proving MLNC cyclic, showing CP = CQ = CL, introducing point I as second intersection of circumcircles of PML and QNL, and proving I is the incenter of triangle MNL."
+    }
+  ],
+  "unique_concepts": [
+    "quadratic function symmetry",
+    "domain of equation",
+    "Polynomial Remainder Theorem",
+    "evaluation at roots",
+    "Chinese Remainder Theorem",
+    "pigeonhole principle",
+    "construction of counterexample",
+    "coprime numbers",
+    "residues modulo primes",
+    "parity",
+    "extremal combinatorics",
+    "tangent-chord theorem",
+    "cyclic quadrilateral",
+    "points concyclic",
+    "angle chasing",
+    "angle bisector properties",
+    "incenter",
+    "intersection of circumcircles"
+  ],
+  "confidence": 1.0
+}

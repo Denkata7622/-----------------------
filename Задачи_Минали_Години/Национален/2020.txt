@@ -1,0 +1,431 @@
+### Част 1: ЗАДАЧИ (10 кл)
+
+```js
+// ─── ЗАДАЧИ: 2020-10 ───
+{
+  source_pdf_probs: "Задачи_Минали_Години/OLI-2-Областен кръг-2020-10 кл-probs.pdf",
+  source_pdf_sols:  "Задачи_Минали_Години/OLI-2-Областен кръг-2020-10 кл-sol.pdf",
+  year: 2020,
+  grade: 10,
+  exam_type: "областен",
+  problems: [
+    {
+      num: 1,
+      topic: "Геометрия",
+      subtopic: "Трапец, медицентър, лице",
+      difficulty: 4,
+      probs_page: 1,
+      sol_page: 1,
+      summary: "Да се намери лицето на трапец по дължини от пресечната точка на диагоналите до средите на страните.",
+      plan_step: 1,
+      plan_point: "1.7",
+      related_points: ["1.5", "1.6"],
+      prerequisites: ["1.7"],
+      add_as_task_to: ["1.7"],
+      required_knowledge: [
+        { point_id: "1.7", technique: "Херонова формула", why_needed: "За лице на триъгълник EFN" },
+        { point_id: "1.7", technique: "Медицентър и медиани", why_needed: "O е медицентър на ∆EFN, дели медианата 2:1" },
+        { point_id: null, technique: "Свеждане на трапец до триъгълник чрез среди", why_needed: "Равенство на лица при симетрия" }
+      ],
+      techniques_not_in_plan: [],
+      gap_severity: "none",
+      estimated_time_minutes: 40,
+      common_pitfalls: "Не се досещат да построят E и F и да сведат трапеца до ∆EFN; бъркат кое отношение е 2:1.",
+      recommended_for_simulation: false,
+      prerequisite_review: "Преговори 1.7 (лице, Херон) и свойства на медианите."
+    },
+    {
+      num: 2,
+      topic: "Алгебра",
+      subtopic: "Радикални уравнения, полагане",
+      difficulty: 2,
+      probs_page: 1,
+      sol_page: 1,
+      summary: "Да се решат радикално уравнение чрез полагане t=x²+x и рационализация.",
+      plan_step: 6,
+      plan_point: "6.1",
+      related_points: ["6.4"],
+      prerequisites: ["6.1"],
+      add_as_task_to: ["6.1"],
+      required_knowledge: [
+        { point_id: "6.1", technique: "Оценки на радикали", why_needed: "Доказване, че изразът в скобите не е 0" },
+        { point_id: null, technique: "Полагане и рационализация", why_needed: "Свеждане до t" }
+      ],
+      techniques_not_in_plan: ["Радикални уравнения с полагане"],
+      gap_severity: "minor",
+      estimated_time_minutes: 25,
+      common_pitfalls: "Не проверяват дефиниционното множество; не доказват, че вторият множител не е нула.",
+      recommended_for_simulation: false,
+      prerequisite_review: "Преговори 6.1 и основни оценки на sqrt."
+    },
+    {
+      num: 3,
+      topic: "Комбинаторика",
+      subtopic: "Инварианти, монотонност, индукция",
+      difficulty: 4,
+      probs_page: 1,
+      sol_page: 2,
+      summary: "Операция върху числа 1..2020 с НОК/НОД; да се докаже завършване с единици и да се намери максимален брой ходове.",
+      plan_step: 9,
+      plan_point: "9.8",
+      related_points: ["8.10", "3.1"],
+      prerequisites: ["9.8", "8.10", "3.1"],
+      add_as_task_to: ["9.8", "8.10"],
+      required_knowledge: [
+        { point_id: "9.8", technique: "Инвариант (произведение)", why_needed: "Произведението се запазва" },
+        { point_id: "9.8", technique: "Монотонност (сума намалява)", why_needed: "Доказва краен брой ходове и горна граница" },
+        { point_id: "8.10", technique: "Индукция", why_needed: "Доказва максимален брой C(n,2)" },
+        { point_id: "3.1", technique: "НОД/НОК", why_needed: "Разбиране на операцията" }
+      ],
+      techniques_not_in_plan: [],
+      gap_severity: "none",
+      estimated_time_minutes: 45,
+      common_pitfalls: "Не доказват, че сумата намалява с поне 1; объркват кога a/b е цяло.",
+      recommended_for_simulation: false,
+      prerequisite_review: "Преговори 9.8 (инварианти) и 8.10 (индукция)."
+    },
+    {
+      num: 4,
+      topic: "Алгебра",
+      subtopic: "Неравенства, средни, Коши-Шварц",
+      difficulty: 4,
+      probs_page: 1,
+      sol_page: 3,
+      summary: "Да се намерят всички редици, за които сумата на квадратите на средните е 4 пъти сумата на квадратите на членовете.",
+      plan_step: 6,
+      plan_point: "6.4",
+      related_points: ["6.1", "6.6"],
+      prerequisites: ["6.4", "6.1"],
+      add_as_task_to: ["6.4"],
+      required_knowledge: [
+        { point_id: "6.4", technique: "Коши-Шварц-Буняковски", why_needed: "Оценка ∑anbn ≤ √∑an²√∑bn²" },
+        { point_id: "6.1", technique: "Телескопична оценка", why_needed: "Неравенство (1) чрез изразяване на an" },
+        { point_id: "6.4", technique: "Анализ на равенство", why_needed: "Равенство в Коши и в телескопичната сума" }
+      ],
+      techniques_not_in_plan: [],
+      gap_severity: "none",
+      estimated_time_minutes: 40,
+      common_pitfalls: "Пропускат да анализират кога се достига равенство; не забелязват b2020=0.",
+      recommended_for_simulation: false,
+      prerequisite_review: "Преговори 6.4 (Коши) и 6.1."
+    }
+  ],
+  difficulty_distribution: { easy: 1, medium: 1, hard: 2 },
+  recommended_action: "add-to-step10",
+  recommended_for_simulation: []
+}
+```
+
+### Част 2: ЗАДАЧИ (11 кл)
+
+```js
+// ─── ЗАДАЧИ: 2020-11 ───
+{
+  source_pdf_probs: "Задачи_Минали_Години/OLI-2-Областен кръг-2020-11 кл-probs.pdf",
+  source_pdf_sols:  "Задачи_Минали_Години/OLI-2-Областен кръг-2020-11 кл-sol.pdf",
+  year: 2020,
+  grade: 11,
+  exam_type: "областен",
+  problems: [
+    {
+      num: 1,
+      topic: "Алгебра",
+      subtopic: "Полиноми, Виет, прогресии",
+      difficulty: 3,
+      probs_page: 1,
+      sol_page: 1,
+      summary: "Да се намери частното на геометрична прогресия a,b,c, ако корените на дадено кубично уравнение образуват аритметична прогресия.",
+      plan_step: 5,
+      plan_point: "5.1",
+      related_points: ["7.6", "5.2"],
+      prerequisites: ["5.1", "7.6"],
+      add_as_task_to: ["5.1"],
+      required_knowledge: [
+        { point_id: "5.1", technique: "Формули на Виет", why_needed: "За корените на квадратното след изнасяне на x" },
+        { point_id: "7.6", technique: "Аритметична и геометрична прогресия", why_needed: "Изразяване b=aq, c=aq² и x2=2x1" },
+        { point_id: null, technique: "Изнасяне на общ множител x", why_needed: "Корен 0" }
+      ],
+      techniques_not_in_plan: [],
+      gap_severity: "none",
+      estimated_time_minutes: 30,
+      common_pitfalls: "Забравят корена 0; разглеждат 0 като среден член на АП и стигат до противоречие, но не изчерпват случаите.",
+      recommended_for_simulation: true,
+      prerequisite_review: "Преговори 5.1 (Виет) и 7.6 (прогресии)."
+    },
+    {
+      num: 2,
+      topic: "Геометрия",
+      subtopic: "Вписани ъгли, синусова теорема, вписан четириъгълник",
+      difficulty: 4,
+      probs_page: 1,
+      sol_page: 1,
+      summary: "Да се намерят ъглите на остроъгълен триъгълник при дадени точки и равни отсечки, ако радиусът на описаната окръжност около △AOC е R.",
+      plan_step: 1,
+      plan_point: "1.5",
+      related_points: ["1.6", "1.7"],
+      prerequisites: ["1.5", "1.6"],
+      add_as_task_to: ["1.5", "1.6"],
+      required_knowledge: [
+        { point_id: "1.5", technique: "Вписани ъгли", why_needed: "∠AOC=2β, ∠AXC=2β" },
+        { point_id: "1.6", technique: "Синусова теорема", why_needed: "b/sinβ = b/sin2β ⇒ β=60°" },
+        { point_id: "1.5", technique: "Признак за вписан четириъгълник", why_needed: "AOXC е вписан" },
+        { point_id: null, technique: "Ъглополовяща", why_needed: "AX е ъглополовяща на ∠OAC" }
+      ],
+      techniques_not_in_plan: [],
+      gap_severity: "none",
+      estimated_time_minutes: 45,
+      common_pitfalls: "Не забелязват, че AOXC е вписан; бъркат ъгли при дъги.",
+      recommended_for_simulation: true,
+      prerequisite_review: "Преговори 1.5 и 1.6."
+    },
+    {
+      num: 3,
+      topic: "ТЧ",
+      subtopic: "Делимост, взаимно прости, оценки",
+      difficulty: 5,
+      probs_page: 1,
+      sol_page: 2,
+      summary: "Да се намерят всички цели стойности на n = xy+yz−xz−y за естествени x,y,z.",
+      plan_step: 3,
+      plan_point: "3.1",
+      related_points: ["4.1", "4.4"],
+      prerequisites: ["3.1", "4.1"],
+      add_as_task_to: ["3.1", "4.1"],
+      required_knowledge: [
+        { point_id: "3.1", technique: "НОД и взаимно прости", why_needed: "WLOG x,y взаимно прости" },
+        { point_id: "3.1", technique: "Несъкратими дроби", why_needed: "Ако a/b + c/d е цяло и дробите са несъкратими, b=±d" },
+        { point_id: "4.1", technique: "Диофантови уравнения и оценки", why_needed: "Изразяване zx-y = y² и получаване n≤3" }
+      ],
+      techniques_not_in_plan: [],
+      gap_severity: "none",
+      estimated_time_minutes: 50,
+      common_pitfalls: "Не опростяват с WLOG; не разглеждат знаци; трудно доказват n≤3.",
+      recommended_for_simulation: true,
+      prerequisite_review: "Преговори 3.1 (НОД, взаимно прости) и 4.1."
+    },
+    {
+      num: 4,
+      topic: "Комбинаторика",
+      subtopic: "Проекции на множества, двоични редици, двойно броене",
+      difficulty: 5,
+      probs_page: 1,
+      sol_page: 1,
+      summary: "Да се докаже, че при |A| ≤ ⌈3n/2⌉ съществува (n−1)-проекция с размер поне |A|−1.",
+      plan_step: 8,
+      plan_point: "8.3",
+      related_points: ["8.1", "9.8"],
+      prerequisites: ["8.3", "8.1"],
+      add_as_task_to: ["8.3"],
+      required_knowledge: [
+        { point_id: "8.3", technique: "Двойно броене", why_needed: "Покриване на единиците на e_i от думите с две единици" },
+        { point_id: "8.1", technique: "Принцип на Дирихле", why_needed: "Съществува позиция i, чиято единица не е покрита" },
+        { point_id: null, technique: "Проекции/сенки на множества от редици", why_needed: "Разбиране на A_S и t_k" }
+      ],
+      techniques_not_in_plan: ["Проекции на множества от двоични редици", "Екстремална теория на множества (shadow)"],
+      gap_severity: "minor",
+      estimated_time_minutes: 50,
+      common_pitfalls: "Не разбират дефиницията на A_S; не виждат двойното броене на покрития.",
+      recommended_for_simulation: true,
+      prerequisite_review: "Преговори 8.3 (двойно броене) и 8.1 (Дирихле)."
+    }
+  ],
+  difficulty_distribution: { easy: 0, medium: 1, hard: 3 },
+  recommended_action: "add-to-step10",
+  recommended_for_simulation: [1, 2, 3]
+}
+```
+
+### Част 3: АРХИВ (готов за copy-paste в Step 10)
+
+```js
+{ 
+  id: "10.11", 
+  title: "Областен кръг 2020 – 10 клас",
+  desc: "4 задачи: 1 Геом, 2 Алг, 1 Комб",
+  source: "Областен кръг 2020",
+  pdf: "Задачи_Минали_Години/OLI-2-Областен кръг-2020-10 кл-probs",
+  page: 1,
+  problems_page: 1,
+  solutions_page: 1,
+  tasks: [
+    { label: "Зад 1 — Трапец, медицентър", pdf: "Задачи_Минали_Години/OLI-2-Областен кръг-2020-10 кл-probs", page: 1, knowledge: ["1.7"] },
+    { label: "Зад 2 — Радикални уравнения", pdf: "Задачи_Минали_Години/OLI-2-Областен кръг-2020-10 кл-probs", page: 1, knowledge: ["6.1"] },
+    { label: "Зад 3 — Инварианти, НОК/НОД", pdf: "Задачи_Минали_Години/OLI-2-Областен кръг-2020-10 кл-probs", page: 1, knowledge: ["9.8", "8.10", "3.1"] },
+    { label: "Зад 4 — Коши-Шварц", pdf: "Задачи_Минали_Години/OLI-2-Областен кръг-2020-10 кл-probs", page: 1, knowledge: ["6.4"] }
+  ],
+  bonus: [
+    { label: "Решения", pdf: "Задачи_Минали_Години/OLI-2-Областен кръг-2020-10 кл-sol" }
+  ],
+  explanation: "Геометрия с медицентър и Херон; радикално уравнение с полагане; комбинаторна операция с инвариант и индукция; неравенство с Коши-Шварц."
+}
+```
+
+```js
+{ 
+  id: "10.12", 
+  title: "Областен кръг 2020 – 11 клас",
+  desc: "4 задачи: 1 Геом, 1 Алг, 1 ТЧ, 1 Комб",
+  source: "Областен кръг 2020",
+  pdf: "Задачи_Минали_Години/OLI-2-Областен кръг-2020-11 кл-probs",
+  page: 1,
+  problems_page: 1,
+  solutions_page: 1,
+  tasks: [
+    { label: "Зад 1 — Виет и прогресии", pdf: "Задачи_Минали_Години/OLI-2-Областен кръг-2020-11 кл-probs", page: 1, knowledge: ["5.1", "7.6"] },
+    { label: "Зад 2 — Вписани ъгли и синусова теорема", pdf: "Задачи_Минали_Години/OLI-2-Областен кръг-2020-11 кл-probs", page: 1, knowledge: ["1.5", "1.6"] },
+    { label: "Зад 3 — Делимост и взаимно прости", pdf: "Задачи_Минали_Години/OLI-2-Областен кръг-2020-11 кл-probs", page: 1, knowledge: ["3.1", "4.1"] },
+    { label: "Зад 4 — Проекции и двойно броене", pdf: "Задачи_Минали_Години/OLI-2-Областен кръг-2020-11 кл-probs", page: 1, knowledge: ["8.3", "8.1"] }
+  ],
+  bonus: [
+    { label: "Решения", pdf: "Задачи_Минали_Години/OLI-2-Областен кръг-2020-11 кл-sol" }
+  ],
+  explanation: "Класическа алгебра с Виет; геометрия с вписани ъгли и синусова теорема; ТЧ с несъкратими дроби; комбинаторика с проекции и двойно броене."
+}
+```
+
+### Част 4: TASKS ЗА ТЕМАТИЧНИ ТОЧКИ
+
+```js
+// Точка 1.5 в STEPS[0].points:
+{ id: "1.5",
+  tasks: [
+    { label: "ОИ 2020/11 кл, Зад 2 (Вписани ъгли)", pdf: "Задачи_Минали_Години/OLI-2-Областен кръг-2020-11 кл-probs", page: 1, difficulty: 4, requires_also: ["1.6"], prerequisite_review: "Преговори 1.5 и 1.6" }
+  ]
+}
+
+// Точка 1.6 в STEPS[0].points:
+{ id: "1.6",
+  tasks: [
+    { label: "ОИ 2020/11 кл, Зад 2 (Синусова теорема)", pdf: "Задачи_Минали_Години/OLI-2-Областен кръг-2020-11 кл-probs", page: 1, difficulty: 4, requires_also: ["1.5"], prerequisite_review: "Преговори 1.5 и 1.6" }
+  ]
+}
+
+// Точка 1.7 в STEPS[0].points:
+{ id: "1.7",
+  tasks: [
+    { label: "ОИ 2020/10 кл, Зад 1 (Трапец, медицентър)", pdf: "Задачи_Минали_Години/OLI-2-Областен кръг-2020-10 кл-probs", page: 1, difficulty: 4, requires_also: ["1.5"], prerequisite_review: "Преговори 1.7 и медиани" }
+  ]
+}
+
+// Точка 3.1 в STEPS[2].points:
+{ id: "3.1",
+  tasks: [
+    { label: "ОИ 2020/11 кл, Зад 3 (Делимост и взаимно прости)", pdf: "Задачи_Минали_Години/OLI-2-Областен кръг-2020-11 кл-probs", page: 1, difficulty: 5, requires_also: ["4.1"], prerequisite_review: "Преговори 3.1 и 4.1" },
+    { label: "ОИ 2020/10 кл, Зад 3 (НОК/НОД)", pdf: "Задачи_Минали_Години/OLI-2-Областен кръг-2020-10 кл-probs", page: 1, difficulty: 4, requires_also: ["9.8", "8.10"], prerequisite_review: "Преговори 3.1, 9.8, 8.10" }
+  ]
+}
+
+// Точка 4.1 в STEPS[3].points:
+{ id: "4.1",
+  tasks: [
+    { label: "ОИ 2020/11 кл, Зад 3 (Диофантови оценки)", pdf: "Задачи_Минали_Години/OLI-2-Областен кръг-2020-11 кл-probs", page: 1, difficulty: 5, requires_also: ["3.1"], prerequisite_review: "Преговори 3.1 и 4.1" }
+  ]
+}
+
+// Точка 5.1 в STEPS[4].points:
+{ id: "5.1",
+  tasks: [
+    { label: "ОИ 2020/11 кл, Зад 1 (Виет и прогресии)", pdf: "Задачи_Минали_Години/OLI-2-Областен кръг-2020-11 кл-probs", page: 1, difficulty: 3, requires_also: ["7.6"], prerequisite_review: "Преговори 5.1 и 7.6" }
+  ]
+}
+
+// Точка 6.1 в STEPS[5].points:
+{ id: "6.1",
+  tasks: [
+    { label: "ОИ 2020/10 кл, Зад 2 (Радикално уравнение)", pdf: "Задачи_Минали_Години/OLI-2-Областен кръг-2020-10 кл-probs", page: 1, difficulty: 2, requires_also: ["6.4"], prerequisite_review: "Преговори 6.1" }
+  ]
+}
+
+// Точка 6.4 в STEPS[5].points:
+{ id: "6.4",
+  tasks: [
+    { label: "ОИ 2020/10 кл, Зад 4 (Коши-Шварц)", pdf: "Задачи_Минали_Години/OLI-2-Областен кръг-2020-10 кл-probs", page: 1, difficulty: 4, requires_also: ["6.1"], prerequisite_review: "Преговори 6.4 и 6.1" }
+  ]
+}
+
+// Точка 8.3 в STEPS[7].points:
+{ id: "8.3",
+  tasks: [
+    { label: "ОИ 2020/11 кл, Зад 4 (Проекции и двойно броене)", pdf: "Задачи_Минали_Години/OLI-2-Областен кръг-2020-11 кл-probs", page: 1, difficulty: 5, requires_also: ["8.1"], prerequisite_review: "Преговори 8.3 и 8.1" }
+  ]
+}
+
+// Точка 8.10 в STEPS[7].points:
+{ id: "8.10",
+  tasks: [
+    { label: "ОИ 2020/10 кл, Зад 3 (Индукция)", pdf: "Задачи_Минали_Години/OLI-2-Областен кръг-2020-10 кл-probs", page: 1, difficulty: 4, requires_also: ["9.8", "3.1"], prerequisite_review: "Преговори 8.10, 9.8, 3.1" }
+  ]
+}
+
+// Точка 9.8 в STEPS[8].points:
+{ id: "9.8",
+  tasks: [
+    { label: "ОИ 2020/10 кл, Зад 3 (Инварианти и монотонност)", pdf: "Задачи_Минали_Години/OLI-2-Областен кръг-2020-10 кл-probs", page: 1, difficulty: 4, requires_also: ["8.10", "3.1"], prerequisite_review: "Преговори 9.8, 8.10, 3.1" }
+  ]
+}
+```
+
+### Част 5: KNOWLEDGE PROFILE ЗА ГОДИНАТА
+
+```js
+// ─── KNOWLEDGE PROFILE: 2020 ───
+{
+  year: 2020,
+  total_problems_analyzed: 8,
+  most_used_points: [
+    { point_id: "3.1", count: 2, examples: [10.3, 11.3] },
+    { point_id: "1.5", count: 1, examples: [11.2] },
+    { point_id: "1.6", count: 1, examples: [11.2] },
+    { point_id: "1.7", count: 1, examples: [10.1] },
+    { point_id: "6.4", count: 1, examples: [10.4] },
+    { point_id: "8.3", count: 1, examples: [11.4] },
+    { point_id: "9.8", count: 1, examples: [10.3] }
+  ],
+  techniques_used: [
+    "Херонова формула", "Медицентър", "Полагане и рационализация",
+    "Инвариант", "Монотонност", "Индукция", "Коши-Шварц-Буняковски",
+    "Формули на Виет", "Аритметична и геометрична прогресия",
+    "Вписани ъгли", "Синусова теорема", "Вписан четириъгълник",
+    "НОД/НОК", "Несъкратими дроби", "Двойно броене", "Принцип на Дирихле"
+  ],
+  gaps_identified: [
+    { technique: "Радикални уравнения с полагане", appeared_in: ["10 кл зад 2"], recommendation: "Добави като пример в 6.1 или 7.5; не е критично." },
+    { technique: "Проекции на множества от двоични редици", appeared_in: ["11 кл зад 4"], recommendation: "Добави като допълнение към 8.3 (двойно броене) или нова точка 8.11." }
+  ],
+  study_priority: [
+    "3.1 — НОД/делимост (2 задачи)",
+    "1.5/1.6 — Вписани ъгли и синусова теорема (1 задача, но комбинирана)",
+    "6.4 — Коши-Шварц (1 задача)",
+    "8.3 — Двойно броене (1 задача)"
+  ],
+  summary: "2020: 4 геом, 2 алг, 2 ТЧ, 2 комб. Доминира геометрията и ТЧ. Липсват две второстепенни техники: радикални уравнения с полагане и проекции на двоични редици."
+}
+```
+
+### Част 6: RECOMMENDED CHANGES
+
+```markdown
+### RECOMMENDED CHANGES TO index.html
+
+**В STEPS:**
+- [ ] Добави `10.11` (Областен кръг 2020 – 10 клас) в Step 10
+- [ ] Добави `10.12` (Областен кръг 2020 – 11 клас) в Step 10
+- [ ] Актуализирай точка `1.5` с нова задача от 11 кл, Зад 2
+- [ ] Актуализирай точка `1.6` с нова задача от 11 кл, Зад 2
+- [ ] Актуализирай точка `1.7` с нова задача от 10 кл, Зад 1
+- [ ] Актуализирай точка `3.1` с нови задачи от 10 кл, Зад 3 и 11 кл, Зад 3
+- [ ] Актуализирай точка `4.1` с нова задача от 11 кл, Зад 3
+- [ ] Актуализирай точка `5.1` с нова задача от 11 кл, Зад 1
+- [ ] Актуализирай точка `6.1` с нова задача от 10 кл, Зад 2
+- [ ] Актуализирай точка `6.4` с нова задача от 10 кл, Зад 4
+- [ ] Актуализирай точка `8.3` с нова задача от 11 кл, Зад 4
+- [ ] Актуализирай точка `8.10` с нова задача от 10 кл, Зад 3
+- [ ] Актуализирай точка `9.8` с нова задача от 10 кл, Зад 3
+
+**В PLAN_PHASES:**
+- [ ] Няма промени (2020 не е приоритетна година за симулации, но задачите са добри за тренировка)
+
+**Нови точки/стъпки:**
+- [ ] Няма major gaps. Препоръчително: добави `8.11 Проекции на множества` като разширение на 8.3 (minor).
+```
+```

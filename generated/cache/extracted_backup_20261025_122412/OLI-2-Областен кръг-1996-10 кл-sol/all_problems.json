@@ -1,0 +1,77 @@
+{
+  "pdf": "OLI-2-Областен кръг-1996-10 кл-sol",
+  "problems": [
+    {
+      "num": 1,
+      "year": 1996,
+      "grade": 10,
+      "round": "nacionalen",
+      "statement": "Prove that for all positive integers $n \\geq 3$ there exist an odd positive integers $x_n$ and $y_n$, such that\n\n$$7x_n^2 + y_n^2 = 2^n.$$",
+      "solution": "Solution. If $n = 3$ we have $x_3 = y_3 = 1$.\n\nSuppose that for an integer $n \\geq 3$ there are odd positive integers $x_n, y_n$, such that $7x_n^2 + y_n^2 = 2^n$. We shall prove that for each pair\n\n$$\\left(X = \\frac{x_n + y_n}{2}, Y = \\frac{|7x_n - y_n|}{2}\\right) \\quad \\text{and} \\quad \\left(X = \\frac{|x_n - y_n|}{2}, Y = \\frac{7x_n + y_n}{2}\\right)$$\n\nwe have $7X^2 + Y^2 = 2^{n+1}$. Indeed,\n\n$$7 \\left(\\frac{x_n \\pm y_n}{2}\\right)^2 + \\left(\\frac{7x_n \\mp y_n}{2}\\right)^2 = 2 \\left(7x_n^2 + y_n^2\\right) = 2 \\cdot 2^n = 2^{n+1}.$$\n\nSince $x_n$ and $y_n$ are odd, i.e. $x_n = 2k + 1$ and $y_n = 2l + 1$ ($k, l$ are integers), then $\\frac{x_n + y_n}{2} = k + l + 1$ and $\\frac{|x_n - y_n|}{2} = |k - l|$, which shows that one of the numbers $\\frac{x_n + y_n}{2}$ and $\\frac{|x_n - y_n|}{2}$ is odd. Thus, for $n + 1$ there are odd natural numbers $x_{n+1}$ and $y_{n+1}$ with the required property.",
+      "answer": null,
+      "page": 1,
+      "pdf": "OLI-2-Областен кръг-1996-10 кл-sol",
+      "chunk": 1
+    },
+    {
+      "num": 2,
+      "year": 1996,
+      "grade": 10,
+      "round": "nacionalen",
+      "statement": "The circles $k_1$ and $k_2$ with centers $O_1$ and $O_2$ respectively are externally tangent at the point $C$, while the circle $k$ with center $O$ is externally tangent to $k_1$ and $k_2$. Let $\\ell$ be the common tangent of $k_1$ and $k_2$ at the point $C$ and let $AB$ be the diameter of $k$, which is perpendicular to $\\ell$, the points $A$ and $O_1$ lie in one and the same semiplane with respect to the line $\\ell$. Prove that the lines $AO_2$, $BO_1$ and $\\ell$ have a common point.",
+      "solution": "Solution. Denote by $r, r_1$ and $r_2$ the radii of $k, k_1$ and $k_2$, by $M$ and $N$ the tangent points of $k$ with $k_1$ and $k_2$, respectively and by $P$ the common point of $\\ell$ and $AB$ (Figure 1).\n\nIt follows from $O_1O_2 \\perp \\ell$ and $AB \\perp \\ell$ that $\\triangle BON \\sim \\triangle CO_2N$. Then $\\angle CNO_2 = \\angle ONB$, and consequently the points $C, N$ and $B$ are colinear. Also, $\\frac{BN}{CN} = \\frac{BO}{CO_2} = \\frac{r}{r_2}$. Analogously, $A, M$ and $C$ are colinear and $\\frac{AM}{MC} = \\frac{r}{r_1}$.\n\nThe lines $AN, BM$ and $\\ell$ have a common point $H$, which is the altitude center of $\\triangle ABC$. By Ceva's theorem we have: $\\frac{AP}{PB} \\cdot \\frac{BN}{NC} \\cdot \\frac{CM}{MA} = \\frac{AP}{PB} \\cdot \\frac{r}{r_2} \\cdot \\frac{r_1}{r} = 1$, from where:\n\n$$\\frac{r_1}{PB} = \\frac{r_2}{AP}. \\tag{1}$$\n\nLet now $D_1$ and $D_2$ be the common points of the line $\\ell$ with the lines $BO_1$ and $AO_2$, respectively. Obviously, $\\triangle O_1CD_1 \\sim \\triangle BPD_1$ (Figure 2), from where $\\frac{CD_1}{D_1P} = \\frac{r_1}{PB}$. Analogously, $\\frac{CD_2}{D_2P} = \\frac{r_2}{AP}$ and according to (1) we have $\\frac{CD_1}{D_1P} = \\frac{CD_2}{D_2P}$, which shows that $D_1 \\equiv D_2$. Thus, the lines $AO_2$, $BO_1$ and $\\ell$ have a common point.",
+      "answer": null,
+      "page": 1,
+      "pdf": "OLI-2-Областен кръг-1996-10 кл-sol",
+      "chunk": 1
+    },
+    {
+      "num": 3,
+      "year": 1996,
+      "grade": 10,
+      "round": "nacionalen",
+      "statement": "a) Find the maximal value of the function $y = |4x^3 - 3x|$ in the interval $[-1, 1]$. b) Let $a$, $b$ and $c$ be real numbers and $M$ be the maximal value of the function $y = |4x^3 + ax^2 + bx + c|$ in the interval $[-1, 1]$. Prove that $M \\geq 1$. For which $a$, $b$, $c$ is the equality reached?",
+      "solution": "Solution. a) Using that $\\left(4x^3 - 3x\\right)' = 12x^2 - 3 = 12\\left(x - \\frac{1}{2}\\right)\\left(x + \\frac{1}{2}\\right)$, we find that the function\n\n$$y = |4x^3 - 3x|$$\n\nhas a local maximums when $x = \\pm \\frac{1}{2}$. Then its maximal value in the interval $[-1, 1]$ is the biggest among the numbers $y(-1)$, $y(1)$, $y\\left(-\\frac{1}{2}\\right)$ and $y\\left(\\frac{1}{2}\\right)$ (Figure 3).\n\nBut $y(-1) = y\\left(-\\frac{1}{2}\\right) = y\\left(\\frac{1}{2}\\right) = y(1) = 1$, thus the maximal value is equal to 1.\n\nb) Let $f(x) = 4x^3 + ax^2 + bx + c$. Assume that there exist numbers $a$, $b$, $c$, for which the maximal value $M$ of the function $y = |f(x)|$ in $[-1, 1]$ is less than 1, i.e. $M < 1$. Then $-1 < f(x) < 1$ for all $x \\in [-1, 1]$.\n\nConsider the function $g(x) = f(x) - (4x^3 - 3x) = ax^2 + (b + 3)x + c$. We have $g(-1) > 0$, $g\\left(-\\frac{1}{2}\\right) < 0$, $g\\left(\\frac{1}{2}\\right) > 0$ and $g(1) < 0$. Consequently $g(x)$ changes its sign at least 3 times, which means that the quadratic equation $ax^2 + (b + 3)x + c = 0$ has at least 3 different roots. This is possible only if $a = b + 3 = c = 0$, i.e. if $f(x) = 4x^3 - 3x$. According to a) the maximal value of $y = |4x^3 - 3x|$ is $\\leq 1$.\n\nThe equality $M = 1$ is reached only when $a = 0$, $b = -3$ and $c = 0$.",
+      "answer": "a) $1$. b) $M \\geq 1$, with equality only for $a = 0$, $b = -3$, $c = 0$.",
+      "page": 2,
+      "pdf": "OLI-2-Областен кръг-1996-10 кл-sol",
+      "chunk": 1
+    },
+    {
+      "num": 4,
+      "year": 1996,
+      "grade": 10,
+      "round": "nacionalen",
+      "statement": "The real numbers $a_1, a_2, \\dots, a_n$ ($n \\geq 3$) form an arithmetic progression. There exists a permutation $a_{i_1}, a_{i_2}, \\dots, a_{i_n}$ of the same numbers, which is a geometric progression. Find the numbers $a_1, a_2, \\dots, a_n$, if they are pairwise different and the biggest among them is equal to 1996.",
+      "solution": "Solution. Let $a_1 < a_2 < \\dots < a_n = 1996$ and $q$ be the quotient of the geometric progression $a_{i_1}, a_{i_2}, \\dots, a_{i_n}$. We have $q \\neq 0$ and $q \\neq 1$. The numbers $a_{i_n}, a_{i_{n-1}}, \\dots, a_{i_1}$ form also a geometric progression which quotient is $\\frac{1}{q}$. Thus, we can assume that $|q| > 1$, i.e. $q > 1$ or $q < -1$. Then $|a_{i_1}| < |a_{i_2}| < \\dots < |a_{i_n}|$, from where $a_i \\neq 0$ for all $i$.\n\nMore exactly, either all numbers are positive ($q > 1$) and then $a_{i_1} < a_{i_2} < \\dots < a_{i_n}$, which together with $a_1 < a_2 < \\dots < a_n$ shows that $a_{i_k} = a_k$, i.e. the numbers $a_1, a_2, \\dots, a_n$ form an arithmetic as well as a geometric progression, or the numbers $a_{i_1}, a_{i_2}, \\dots, a_{i_n}$ change their signs alternatively ($q < -1$) and then the positive ones form an increasing geometric progression with quotient $q^2$, and the order is the same as in the arithmetic progression. (The numbers $a_1, a_2, \\dots, a_n$ could not be all negative, because $a_n = 1996 > 0$.)\n\nAssume now that 3 among the numbers $a_1, a_2, \\dots, a_n$ are positive. Then $0 < a_{n-2} < a_{n-1} < a_n$ and they form a geometric as well as an arithmetic progression. Therefore $2a_{n-1} = a_{n-2} + a_n$ and $a_{n-1}^2 = a_{n-2}a_n$. From here $a_{n-2} = a_{n-1} = a_n$, which is a contradiction.\n\nThus at most two among the numbers are positive. Analogously, at most two among the numbers are negative. Consequently, $n \\leq 4$.\n\nLet $n = 4$. Then $a_1 < a_2 < 0 < a_3 < a_4$ and $2a_2 = a_1 + a_3$, $2a_3 = a_2 + a_4$. But $q < -1$ and the geometric progression is either $a_3, a_2, a_4, a_1$ or $a_2, a_3, a_1, a_4$. Let it be $a_3, a_2, a_4, a_1$. Then $a_2 = a_3q$, $a_4 = a_3q^2$ and $a_1 = a_3q^3$. Thus, $2a_3q = a_3q^3 + a_3$ and $2a_3 = a_3q + a_3q^2$. From here $q = 1$, which contradicts to $q < -1$.\n\nSo $n = 3$. There are two possibilities:\n\nI. $a_1 < a_2 < 0 < a_3 = 1996$. Then the geometric progression is $a_2$, $a_3 = a_2q$, $a_1 = a_2q^2$. It follows from $2a_2 = a_1 + a_3$ that $2a_2 = a_2q^2 + a_2q$, i.e. $q^2 + q - 2 = 0$. Thus, $q = -2$, $-2a_2 = 1996$, $a_2 = -998$ and the numbers are $(-3992; -998; 1996)$.\n\nII. $a_1 < 0 < a_2 < a_3 = 1996$. Now the geometric progression is $a_2$, $a_1 = a_2q$, $a_3 = a_2q^2$. From $2a_2 = a_1 + a_3$ we obtain $2a_2 = a_2q + a_2q^2$, i.e. again $q = -2$. Therefore, $a_3 = 4a_2 = 1996$ and $a_2 = 499$. The numbers are $(-998; 499; 1996)$.",
+      "answer": "$n = 3$; the numbers in increasing order are $(-3992; -998; 1996)$ or $(-998; 499; 1996)$.",
+      "page": 2,
+      "pdf": "OLI-2-Областен кръг-1996-10 кл-sol",
+      "chunk": 1
+    },
+    {
+      "num": 5,
+      "year": 1996,
+      "grade": 10,
+      "round": "nacionalen",
+      "statement": "A convex quadrilateral $ABCD$, for which $\\angle ABC + \\angle BCD < 180^\\circ$, is given. The common point of the lines $AB$ and $CD$ is $E$. Prove that $\\angle ABC = \\angle ADC$ if and only if\n\n$$AC^2 = CD \\cdot CE - AB \\cdot AE.$$",
+      "solution": "Solution. Let $\\angle ABC = \\beta$, $\\angle ADC = \\delta$, $\\angle BAC = \\varphi$ and $\\angle CAD = \\psi$ (Figure 4). The point $A$ is between $E$ and $B$ and the point $D$ is between $E$ and $C$. Also, $\\angle AEC = \\delta + \\varphi + \\psi - 180^\\circ$.\n\nApplying the sine theorem to the triangles $ACD, ACE, ABC$ and again to $\\triangle ACE$, we obtain:\n\n$$\\begin{array}{l} \\frac{CD}{AC} = \\frac{\\sin \\psi}{\\sin \\delta}, \\\\ \\frac{CE}{AC} = -\\frac{\\sin \\varphi}{\\sin (\\delta + \\varphi + \\psi)}, \\\\ \\frac{AB}{AC} = \\frac{\\sin (\\beta + \\varphi)}{\\sin \\beta}, \\\\ \\frac{AE}{AC} = -\\frac{\\sin (\\delta + \\psi)}{\\sin (\\delta + \\varphi + \\psi)}. \\end{array}$$\n\nFrom here the equation $AC^2 = CD \\cdot CE - AB \\cdot AE$ is equivalent to the equations:\n\n$$\\frac{CD}{AC} \\cdot \\frac{CE}{AC} - \\frac{AB}{AC} \\cdot \\frac{AE}{AC} - 1 = 0;$$\n\n$$\\sin (\\beta + \\varphi) \\sin (\\delta + \\psi) \\sin \\delta - \\sin \\psi \\sin \\varphi \\sin \\beta$$\n\n$$- \\sin \\delta \\sin \\beta \\sin (\\varphi + \\psi + \\delta) = 0;$$\n\n$$\\begin{array}{l} (\\cos (\\beta + \\varphi - \\delta - \\psi) - \\cos (\\beta + \\varphi + \\delta + \\psi)) \\sin \\delta \\\\ - (\\cos (\\varphi - \\psi) - \\cos (\\varphi + \\psi)) \\sin \\beta \\\\ - (\\cos (\\beta - \\delta) - \\cos (\\beta + \\delta)) \\sin (\\varphi + \\psi + \\delta) = 0 \\end{array}$$\n\n$$\\begin{array}{l} \\sin (\\beta + \\varphi + \\psi) - \\sin (2\\delta + \\varphi + \\psi - \\beta) \\\\ + \\sin (2\\delta + \\psi - \\beta - \\varphi) - \\sin (\\beta + \\psi - \\varphi) = 0; \\end{array}$$\n\n$$\\sin (\\beta - \\delta) \\cos (\\delta + \\varphi + \\psi) + \\sin (\\delta - \\beta) \\cos (\\delta + \\psi - \\varphi) = 0;$$\n\n$$\\sin (\\beta - \\delta) \\sin (\\delta + \\psi) \\sin \\varphi = 0$$\n\nBut $\\sin \\varphi \\neq 0$ and $\\sin (\\delta + \\psi) \\neq 0$. Consequently, $\\sin (\\beta - \\delta) = 0$ and $\\beta = \\delta$.",
+      "answer": null,
+      "page": 3,
+      "pdf": "OLI-2-Областен кръг-1996-10 кл-sol",
+      "chunk": 1
+    },
+    {
+      "num": 6,
+      "year": 1996,
+      "grade": 10,
+      "round": "nacionalen",
+      "statement": "A rectangle $m \\times n$ ($m > 1$, $n > 1$) is divided into $mn$ squares $1 \\times 1$ with lines, parallel to its sides. In how many ways could two of the squares be canceled and the remaining part be covered with dominoes $2 \\times 1$?",
+      "solution": "Solution. Denote by $F(m, n)$ the number we are looking for. Since every domino covers exactly two squares, then $F(m, n) = 0$ if $m$ and $n$ are odd.\n\nLet at least one of the numbers $m$ and $n$ be even. We color the squares in two colors — white and black in such a way that every two neighbor squares (with common side) are of different colors (Figure 5). The number $S_0$ of the white squares is equal to the number $S_1$ of the black ones and $S_0 = S_1 = \\frac{mn}{2}$.\n\nEach domino covers one white and one black square. If two white or two black squares are canceled, then it is impossible to cover by dominoes the remaining part of the rectangle. Now we shall show that if one white and one black squares are canceled then the remaining part can be covered by dominoes.\n\nSince $mn$ is even, then $mn = 2t$, where $t \\ge 2$. We make induction with respect to $t$. The case $t = 2$ is obvious. Let $t_0 > 2$ and the proposition is true for all $2 \\le t \\le t_0$. Let $mn = 2(t_0 + 1)$. Denote by $T_1$ the rectangle consisted of the first two rows of the considered rectangle, and by $T_2$ — the rectangle consisted of the remaining rows. If the two canceled squares are in $T_1$ or in $T_2$, then we can cover each of the rectangles by dominoes and consequently we can cover the given rectangle.\n\nLet one of the canceled squares be in $T_1$, and the other — in $T_2$. We place a domino in such a way that it covers one square from $T_1$ and one square from $T_2$. It is also possible that the canceled square from $T_1$ and the covered square from $T_1$ are of different colors. Thus, the canceled square from $T_2$ and the covered square from $T_2$ are of different colors. According to the inductive assumption the remaining part of $T_1$ and the remaining part of $T_2$ can be covered. Thus, the rectangle can be covered too.\n\nFinally one white and one black squares can be chosen in $S_0 \\cdot S_1 = \\left(\\frac{mn}{2}\\right)^2$ ways. Therefore, in this case $F(m, n) = \\frac{m^2 n^2}{4}$.",
+      "answer": "$F(m,n)=0$ if both $m$ and $n$ are odd; otherwise $F(m,n)=\\frac{m^2n^2}{4}$.",
+      "page": 4,
+      "pdf": "OLI-2-Областен кръг-1996-10 кл-sol",
+      "chunk": 1
+    }
+  ]
+}

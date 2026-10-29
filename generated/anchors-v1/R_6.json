@@ -1,0 +1,25 @@
+{
+  "point_id": "R.6",
+  "total": 1,
+  "by_difficulty": {
+    "easy": 0,
+    "medium": 1,
+    "hard": 0
+  },
+  "problems": [
+    {
+      "source": "OLI-2-Областен кръг-2004-11 кл · 2004-11 · Зад. 1",
+      "statement": "За кои стойности на x ∈ (−π, π) числата 2^(sin x), 2 − 2^(sin x + cos x) и 2^(cos x) са последователни членове на геометрична прогресия?",
+      "solution": "Необходимо и достатъчно условие дадените числа да образуват геометрична прогресия е\n2^{sin x} · 2^{cos x} = (2 − 2^{sin x+cos x})²,\nоткъдето след преобразуване получаваме\n4^{sin x+cos x} − 5 · 2^{sin x+cos x} + 4 = 0.\nПолагането y = 2^{sin x+cos x} свежда уравнението до квадратно y² − 5y + 4 = 0 с корени y₁ = 4 и y₂ = 1.\nПри 2^{sin x+cos x} = 4 получаваме sin x + cos x = 2, т.е. sin(x + π/4) = √2, което очевидно няма решение.\nПри 2^{sin x+cos x} = 1 получаваме sin x + cos x = 0, т.е. sin(x + π/4) = 0.\nОттук x = −π/4 + kπ, където k е цяло число. От тези корени в интервала (−π, π) се намират −π/4 и 3π/4.",
+      "answer": "x = −π/4 или x = 3π/4.",
+      "difficulty": "medium",
+      "techniques": [
+        "substitution",
+        "quadratic_equation",
+        "parameter_analysis"
+      ],
+      "confidence": "exact",
+      "reasoning": "Uses substitution y=2^{sin x+cos x}, reduces to quadratic, checks cases."
+    }
+  ]
+}

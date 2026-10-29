@@ -1,0 +1,174 @@
+{
+  "_meta": {
+    "pdf": "C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\Задачи_Минали_Години\\Национален\\OLI-3-Национален кръг-1985-9-12 кл-sol.pdf",
+    "paired_with": null,
+    "level": 2,
+    "type": "sol",
+    "analyzed_at": "2026-10-18T11:36:00.150725",
+    "model": "deepseek/deepseek-v3.2",
+    "text_length": 11042,
+    "paired_text_length": 0
+  },
+  "problems": [
+    {
+      "num": 1,
+      "topic": "number_theory",
+      "theorems": [],
+      "techniques": [
+        "induction",
+        "strengthening_the_induction_hypothesis",
+        "polynomial_properties",
+        "infinite_descent_modification"
+      ],
+      "concepts": [
+        "prime_factor_count",
+        "polynomial_with_integer_coefficients",
+        "strictly_increasing_function",
+        "existence_of_consecutive_values",
+        "divisibility_construction"
+      ],
+      "difficulty": "olympic",
+      "notes": "Uses a clever inductive construction by shifting by the product of previous values. Also solvable by Chinese Remainder Theorem."
+    },
+    {
+      "num": 2,
+      "topic": "algebra",
+      "theorems": [],
+      "techniques": [
+        "substitution",
+        "function_analysis",
+        "finding_minima"
+      ],
+      "concepts": [
+        "polynomial_equation",
+        "real_roots_condition",
+        "rational_function",
+        "domain_analysis",
+        "local_extrema"
+      ],
+      "difficulty": "standard",
+      "notes": "Standard problem of finding parameter range for real roots via studying a rational function derived from the polynomial."
+    },
+    {
+      "num": 3,
+      "topic": "geometry",
+      "theorems": [],
+      "techniques": [
+        "auxiliary_points",
+        "area_equality_conditions",
+        "similar_triangles",
+        "trigonometric_relations",
+        "orthogonal_projection"
+      ],
+      "concepts": [
+        "circumscribed_sphere",
+        "pyramid",
+        "tangential_quadrilateral",
+        "rhombus",
+        "dihedral_angle",
+        "area_ratio",
+        "section_areas",
+        "angle_between_planes"
+      ],
+      "difficulty": "hard",
+      "notes": "Complex solid geometry problem combining conditions from a circumscribed sphere and area bisections to deduce the base is a rhombus and compute angles."
+    },
+    {
+      "num": 4,
+      "topic": "combinatorics",
+      "theorems": [],
+      "techniques": [
+        "pigeonhole_principle",
+        "case_analysis",
+        "contradiction"
+      ],
+      "concepts": [
+        "graph_coloring",
+        "monochromatic_triangle",
+        "Ramsey_theory_elementary",
+        "points_in_space",
+        "no_four_coplanar"
+      ],
+      "difficulty": "olympic",
+      "notes": "A Ramsey-type problem for 7 points in space, guaranteeing two edge-disjoint monochromatic triangles (possibly of different colors). The claim is false for 6 points."
+    },
+    {
+      "num": 5,
+      "topic": "geometry",
+      "theorems": [
+        "Law_of_Cosines",
+        "angle_bisector_theorem"
+      ],
+      "techniques": [
+        "trigonometric_calculations",
+        "cyclic_quadrilateral_properties",
+        "parallelogram_identification"
+      ],
+      "concepts": [
+        "median",
+        "angle_bisectors_concurrency",
+        "circumcircle",
+        "power_of_a_point",
+        "parallelogram",
+        "supplementary_angles"
+      ],
+      "difficulty": "hard",
+      "notes": "Uses algebraic manipulation with Law of Cosines to find a key length relation leading to a parallelogram and angle determination."
+    },
+    {
+      "num": 6,
+      "topic": "number_theory",
+      "theorems": [],
+      "techniques": [
+        "summation_rearrangement",
+        "floor_function_manipulation",
+        "inequality_squeeze"
+      ],
+      "concepts": [
+        "largest_odd_divisor",
+        "binary_representation",
+        "summation_over_floor",
+        "limit_of_sequence",
+        "convergence_by_bounding"
+      ],
+      "difficulty": "olympic",
+      "notes": "Clever counting based on the exponent of 2 in each number, leading to a telescoping sum and limit via squeeze theorem."
+    }
+  ],
+  "unique_concepts": [
+    "prime_factor_count",
+    "polynomial_with_integer_coefficients",
+    "strictly_increasing_function",
+    "existence_of_consecutive_values",
+    "divisibility_construction",
+    "real_roots_condition",
+    "rational_function",
+    "domain_analysis",
+    "local_extrema",
+    "circumscribed_sphere",
+    "pyramid",
+    "tangential_quadrilateral",
+    "rhombus",
+    "dihedral_angle",
+    "area_ratio",
+    "section_areas",
+    "angle_between_planes",
+    "graph_coloring",
+    "monochromatic_triangle",
+    "Ramsey_theory_elementary",
+    "points_in_space",
+    "no_four_coplanar",
+    "median",
+    "angle_bisectors_concurrency",
+    "circumcircle",
+    "power_of_a_point",
+    "parallelogram",
+    "supplementary_angles",
+    "largest_odd_divisor",
+    "binary_representation",
+    "summation_over_floor",
+    "limit_of_sequence",
+    "convergence_by_bounding"
+  ],
+  "confidence": 0.95
+}

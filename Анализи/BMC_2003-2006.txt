@@ -1,0 +1,149 @@
+# АНАЛИЗ: BMC_2003-2006.pdf
+
+## 1. ПЪЛНА ТАБЛИЦА ПО СЕКЦИИ
+
+| Година | Секция | Стр. задачи | Стр. решения | Plan step | Plan points | Reg. | Nat. | Действие |
+|---|---|---|---|---|---|---|---|---|
+| 2003 | Winter | 8 | 48 | 1, 5 | 1.4, 1.5, 5.1, 5.4, 8.3 | high | high | add-as-tasks |
+| 2003 | Spring | 10 | 56 | 3, 7, 8 | 3.4, 7.3, 8.1, 8.3 | high | high | add-as-tasks |
+| 2003 | Regional | 12 | 65 | 1, 3, 5 | 1.1, 1.7, 3.2, 5.1 | high | med | add-as-tasks |
+| 2003 | National | 14 | 68 | 4, 5, 7, 8 | 4.5, 4.7, 5.4, 7.6, 8.3 | med | high | add-as-tasks |
+| 2003 | BMO | 15 | 72 | 1, 5, 6, 8 | 1.6, 5.5, 6.1, 8.3 | med | high | add-as-tasks |
+| 2003 | IMO | 16 | 75 | 4, 6, 7, 8 | 4.4, 6.1, 7.1, 8.3 | low | high | add-as-tasks |
+| 2004 | Winter | 19 | 79 | 1, 5, 8, 9 | 1.5, 1.8, 1.10, 5.1, 7.5, 8.1, 8.6, 9.1 | high | high | add-as-tasks |
+| 2004 | Spring | 22 | 85 | 1, 4, 5, 6 | 1.2, 1.6, 1.7, 4.1, 4.3, 5.1, 6.1, 7.6 | high | high | add-as-tasks |
+| 2004 | Regional | 21 | 93 | 1, 4, 5, 6, 9 | 1.2, 1.7, 4.3, 5.1, 6.1, 9.7 | high | med | add-as-tasks |
+| 2004 | National | 24 | 104 | 3, 4, 8, 9 | 3.2, 4.5, 8.3, 9.1 | med | high | add-as-tasks |
+| 2004 | BMO | 26 | 108 | 2, 4, 6, 9 | 2.3, 4.4, 6.1, 9.4 | med | high | add-as-tasks |
+| 2004 | IMO | 27 | 112 | 5, 6, 7 | 5.5, 6.1, 7.1 | low | high | add-as-tasks |
+| 2005 | Winter | 31 | 119 | 1, 3, 5, 7 | 1.6, 1.7, 1.8, 3.2, 3.3, 5.1, 7.6 | high | high | add-as-tasks |
+| 2005 | Spring | 34 | 129 | 1, 3, 4, 7 | 1.4, 1.5, 3.4, 4.4, 7.3 | high | high | add-as-tasks |
+| 2005 | Regional | 38 | 139 | 1, 3, 5, 6 | 1.5, 1.6, 3.3, 5.1, 6.1 | high | med | add-as-tasks |
+| 2005 | National | 41 | 150 | 3, 4, 7, 8 | 3.2, 4.5, 7.8, 8.3 | med | high | add-as-tasks |
+| 2005 | BMO | 44 | 155 | 2, 4, 6, 9 | 2.4, 4.4, 6.1, 9.10 | med | high | add-as-tasks |
+| 2005 | IMO | 45 | 160 | 3, 5, 8 | 3.4, 5.1, 8.3 | low | high | add-as-tasks |
+| 2006 | Winter | 50 | 165 | 1, 4, 5, 7 | 1.6, 1.10, 4.4, 5.1, 7.6 | high | high | add-as-tasks |
+| 2006 | Spring | 53 | 173 | 1, 3, 5, 7 | 1.5, 1.7, 3.3, 5.1, 7.6 | high | high | add-as-tasks |
+| 2006 | Regional | 55 | 182 | 1, 3, 5, 6 | 1.7, 3.3, 5.1, 5.4, 6.1 | high | med | add-as-tasks |
+| 2006 | National | 59 | 190 | 3, 4, 7, 8 | 3.3, 4.5, 7.1, 8.3 | med | high | add-as-tasks |
+| 2006 | BMO | 63 | 194 | 1, 4, 6, 9 | 1.4, 4.4, 6.1, 9.1 | med | high | add-as-tasks |
+| 2006 | IMO | 64 | 197 | 3, 4, 5, 7 | 3.3, 4.5, 5.1, 7.1 | low | high | add-as-tasks |
+
+---
+
+## 2. NATIONAL ROUND ЗАДАЧИ, ПОДХОДЯЩИ ЗА 11. КЛАС (ниво ≥ 4)
+
+### 2003 National Round (стр. 14)
+| № | Тема | Plan point | Difficulty | Защо е подходяща |
+|---|---|---|---|---|
+| 1 | Алгебра/Комб. | 8.3 | 4 | Суми x_p+x_q+x_r=0 — двойно броене |
+| 2 | Геометрия | 1.4, 1.5 | 4 | Височина, ъгли — вписани ъгли |
+| 3 | Алгебра/ТЧ | 7.6 | 5 | Рекурентна редица, точни квадрати |
+| 4 | Комбинаторика | 8.3 | 4 | Униформно множество |
+| 5 | ТЧ | 4.7 | 5 | Рационални числа, abc |
+| 6 | Алгебра | 5.4 | 5 | Полиноми с цели коефициенти |
+
+### 2004 National Round (стр. 24)
+| № | Тема | Plan point | Difficulty | Защо е подходяща |
+|---|---|---|---|---|
+| 1 | Геометрия | 1.10 | 5 | Вписана окръжност, перпендикулярни симетрали |
+| 2 | ТЧ | 3.2 | 4 | Хармонична сума, p_n/q_n |
+| 3 | Комбинаторика | 9.1 | 4 | Граф на туристи |
+| 4 | Комбинаторика | 8.3 | 4 | Думи с букви a,b |
+| 5 | ТЧ | 4.5 | 5 | Наредени двойки (x,y) |
+| 6 | ТЧ | 4.5 | 4 | Прости числа, остатъци |
+
+### 2005 National Round (стр. 41)
+| № | Тема | Plan point | Difficulty | Защо е подходяща |
+|---|---|---|---|---|
+| 1 | ТЧ | 4.4 | 4 | Тройки (x,y,z) — точни квадрати |
+| 2 | Геометрия | 1.5 | 5 | Допиращи се окръжности |
+| 3 | Комбинаторика | 8.3 | 5 | Множество M от рационални |
+| 4 | Геометрия | 2.4 | 4 | Ротация, симетрия |
+| 5 | Комбинаторика | 9.10 | 4 | Игра (t;a,b) |
+| 6 | ТЧ | 4.7 | 5 | Делимост, c(c²-c+1) |
+
+### 2006 National Round (стр. 59)
+| № | Тема | Plan point | Difficulty | Защо е подходяща |
+|---|---|---|---|---|
+| 1 | Комбинаторика | 8.3 | 4 | Подмножества на {1,...,2^n} |
+| 2 | Алгебра | 7.1 | 4 | Функционално уравнение |
+| 3 | Комбинаторика | 8.1 | 4 | Безкрайна редица от цифри |
+| 4 | ТЧ | 3.3 | 5 | p² | 2^{p-1}-1 |
+| 5 | Геометрия | 1.6 | 4 | Триъгълник с 30°, 45° |
+| 6 | Геометрия | 1.4 | 5 | Множества от точки |
+
+---
+
+## 3. JS БЛОКОВЕ ЗА HIGH-PRIORITY СЕКЦИИ
+
+```js
+// ─── BMC 2003-2006: NATIONAL ROUNDS ───
+{
+  file: "Материали_БГ/BMC_2003-2006.pdf",
+  title: "Bulgarian Mathematical Competitions 2003-2006",
+  authors: ["Peter Boyvalenkov", "Emil Kolev", "Oleg Mushkarov", "Nikolai Nikolov"],
+  year: 2007,
+  language: "EN",
+  total_pages: 220,
+  topics: ["Algebra", "Number Theory", "Geometry", "Combinatorics"],
+  structure: [
+    { chapter: "2003 National", pages: "14-15", sol_pages: "68-72",
+      plan_step: 10, plan_points: ["10.10"],
+      priority_regional: "medium", priority_national: "high" },
+    { chapter: "2004 National", pages: "24-25", sol_pages: "104-108",
+      plan_step: 10, plan_points: ["10.10"],
+      priority_regional: "medium", priority_national: "high" },
+    { chapter: "2005 National", pages: "41-43", sol_pages: "150-155",
+      plan_step: 10, plan_points: ["10.10"],
+      priority_regional: "medium", priority_national: "high" },
+    { chapter: "2006 National", pages: "59-62", sol_pages: "190-194",
+      plan_step: 10, plan_points: ["10.10"],
+      priority_regional: "medium", priority_national: "high" },
+    { chapter: "2003-2006 BMO/IMO selections", pages: "15-16, 26-27, 44-45, 63-64",
+      sol_pages: "72-78, 108-112, 155-160, 194-197",
+      plan_step: 10, plan_points: ["10.10"],
+      priority_regional: "low", priority_national: "high" }
+  ],
+  duplicates: [],
+  is_duplicate_of: null,
+  recommended_action: "add-as-tasks",
+  best_mapping: [
+    { step_id: 10, point_ids: ["10.10"], chapters: ["National Rounds 2003-2006"], pages: "14-62" },
+    { step_id: 1, point_ids: ["1.4","1.5","1.6","1.7","1.8","1.10"], chapters: ["Geometry problems"], pages: "8-62" },
+    { step_id: 3, point_ids: ["3.2","3.3","3.4"], chapters: ["NT problems"], pages: "8-62" },
+    { step_id: 4, point_ids: ["4.4","4.5","4.7"], chapters: ["NT advanced"], pages: "8-62" },
+    { step_id: 5, point_ids: ["5.1","5.4","5.5"], chapters: ["Algebra"], pages: "8-62" },
+    { step_id: 6, point_ids: ["6.1"], chapters: ["Inequalities"], pages: "8-62" },
+    { step_id: 7, point_ids: ["7.1","7.3","7.6"], chapters: ["Functional eqs"], pages: "8-62" },
+    { step_id: 8, point_ids: ["8.1","8.3","8.6"], chapters: ["Combinatorics"], pages: "8-62" },
+    { step_id: 9, point_ids: ["9.1","9.4","9.7","9.10"], chapters: ["Graphs/games"], pages: "8-62" }
+  ]
+}
+```
+
+---
+
+## 4. RECOMMENDED CHANGES TO index.html
+
+### В STEPS:
+- [ ] Добавяне на нови `tasks` в точка **10.10** (BMC 2003-2006) — 24 задачи от National Rounds
+- [ ] Добавяне на нови `tasks` в точки **1.4, 1.5, 1.6, 1.7, 1.8, 1.10** — геометрични задачи от BMC
+- [ ] Добавяне на нови `tasks` в точки **3.2, 3.3, 3.4** — ТЧ задачи от BMC
+- [ ] Добавяне на нови `tasks` в точки **4.4, 4.5, 4.7** — ТЧ напреднали от BMC
+- [ ] Добавяне на нови `tasks` в точки **5.1, 5.4, 5.5** — алгебра от BMC
+- [ ] Добавяне на нови `tasks` в точка **6.1** — неравенства от BMC
+- [ ] Добавяне на нови `tasks` в точки **7.1, 7.3, 7.6** — ФУ и редици от BMC
+- [ ] Добавяне на нови `tasks` в точки **8.1, 8.3, 8.6** — комбинаторика от BMC
+- [ ] Добавяне на нови `tasks` в точки **9.1, 9.4, 9.7, 9.10** — графи и игри от BMC
+- [ ] Добавяне на `bonus` записи за BMO/IMO селекциите
+
+### В PLAN_PHASES:
+- [ ] Обновяване на Week 13-17: "Симулация с BMC National Round задачи"
+- [ ] Обновяване на Week 18-25: "BMC BMO/IMO селекции за напреднали"
+
+### Друго:
+- [ ] Идентифицирани gaps: няма нови (всички техники са в 100+ точки)
+- [ ] Страниците в `Индекси_страници.txt` съвпадат с PDF маркерите — потвърдено
+- [ ] National Round задачите не са разделени по класове — всички 24 са подходящи за 11 кл
+- [ ] **Забележка:** BMC_2003-2006.pdf е голям (220 стр.) — препоръчва се разделяне на 4 файла по години при интеграция

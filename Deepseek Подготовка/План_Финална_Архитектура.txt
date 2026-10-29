@@ -1,0 +1,941 @@
+# Архитектурен анализ — преди да пиша какъвто и да е код
+
+## 1. Какво имаме сега (файлова карта)
+
+```
+┌─────────────────────────────────────────────────────────────┐
+│  data/                                                       │
+│  ├── steps.js          (160 STEPS точки)                     │
+│  ├── tasks_data.js     (4 tasks с toolkit per task)          │
+│  └── plan_phases.js    (25 седмици, main + secondary)        │
+└─────────────────────────────────────────────────────────────┘
+                            ↑
+                    (никой backend не чете!)
+
+pipeline/
+├── config.py               ← paths (единствен source of truth)
+├── config.json             ← AI models, budgets
+├── personas.py             ← AI personas
+├── prompts.py              ← article prompts
+│
+├── pdf_chunker.py          ← STEPS: чете директно от data/steps.js
+├── pipeline.py             ← STEPS: чете от data/steps.js
+├── problem_generator.py    ← STEPS: чете от data/steps.js  
+├── gap_worker.py           ← STEPS: чете от data/steps.js
+├── daily_verifier.py       ← STEPS: чете от data/steps.js  
+│                          ⚠ hardcoded week→phase logic (НЕ ползва PLAN_PHASES)
+├── master_orchestrator.py  ← чете state files, НЕ знае за план
+│
+└── (липсва plan.py!)       ← никой не чете tasks_data.js / plan_phases.js
+```
+
+## 2. Проблеми, които виждам
+
+| # | Проблем | Последица |
+|---|---|---|
+| 1 | 5 файла парсват `data/steps.js` независимо | DRY violation. Ако regex-ът се счупи, 5 файла се чупят |
+| 2 | `tasks_data.js` и `plan_phases.js` = **само UI** | Backend не знае за Task/Level/Phase |
+| 3 | `daily_verifier` hardcode-ва `week→phase` | "Седмица 2 = Phase 1" в код, не от `plan_phases.js` |
+| 4 | `pipeline.py` генерира по STEPS ID в азбучен ред | Не знае кой е P1 (regional) и кой е P4 (extra) |
+| 5 | Никой не проверява "Task 1 е готов" | Verifier проверява "10 случайни" |
+| 6 | `master_orchestrator` не знае "днес какво е приоритет" | Пуска всичко в един ред без оглед на фокус |
+
+## 3. Предложена архитектура
+
+### Нов файл `pipeline/plan.py` — single source of truth за всичко план-свързано
+
+```
+pipeline/plan.py  (≈ 250 реда)
+├── Парсва data/steps.js        → steps_points: dict[id → {title, desc}]
+├── Парсва data/tasks_data.js   → tasks: dict[num → {name, toolkit, ...}]
+├── Парсва data/plan_phases.js  → phases: list[{num, weeks, ...}]
+│
+├── API:
+│   get_all_points()                    → list[160 ids]
+│   get_toolkit(task_num)               → list[ids] (за Task 1 = 1.1-1.11)
+│   get_level_points(level_id)          → list[ids] (за Level 1 = всички regional)
+│   get_priority(level_id)              → list[ids] (union на toolkits ∩ level)
+│   get_task_for_week(week)             → task_num  (от PLAN_PHASES)
+│   get_current_week()                  → int  (дни от planStartDate / 7)
+│   get_current_focus()                 → "Task 1"  (task_for_week + план)
+│   get_exam_dates()                    → {regional, national}
+│
+└── Кешира резултатите при първо извикване
+```
+
+### Кой какво вика
+
+| Файл | Днес | След `plan.py` |
+|---|---|---|
+| `pdf_chunker.py` | `load_steps_info()` — свой парсер | `plan.get_all_points()` — за classify context |
+| `pipeline.py` | Свой парс на STEPS | `plan.get_toolkit(task)` за `--task 1`; `plan.get_priority(level)` за `--priority p1` |
+| `problem_generator.py` | Свой парс | Същото |
+| `daily_verifier.py` | Hardcoded week→phase | `plan.get_current_focus()` + `plan.get_toolkit(task)` за `audit_task_completion()` |
+| `gap_worker.py` | Свой парс | `plan.get_all_points()` за coverage |
+| `master_orchestrator.py` | Не знае за план | `plan.get_current_focus()` — "днес фокус = Task 1" |
+
+### Какво остава в `config.py` vs `config.json` vs `plan.py`
+
+| Файл | Отговорност |
+|---|---|
+| `config.py` | **Пътища** (data/, generated/, state/) |
+| `config.json` | **AI models, budgets, watch folders** |
+| `plan.py` | **Учебен план** (STEPS, TASKS, PHASES, priority) |
+
+Ясна граница. `plan.py` е read-only от `data/`.
+
+## 4. Въпроси, които трябва да решим ПРЕДИ код
+
+### Q1: Кой е "current target level"?
+
+`plan.current_focus()` трябва да знае за кого се готви student-ът. 3 варианта:
+
+| Опция | Как работи | Кога е ок |
+|---|---|---|
+| **A. Calendar-driven** | `< 60 дни до regional` → focus Level 1; `< 60 дни до national` → Level 2; иначе Level 1 | Просто, но brute-force |
+| **B. Config-driven** | `config.json: "target_level": "regional"` | Ясно, но ръчно сменяне |
+| **C. UI-driven** | `data/steps.js` има `currentLevel` поле | Правилно, но изисква синхронизация |
+
+**Моята препоръка: A + B.** Calendar-driven по подразбиране, config override ако искаш.
+
+### Q2: Какво значи "Task 1 е готов"?
+
+Възможни дефиниции:
+
+| Опция | Дефиниция | Cost за проверка |
+|---|---|---|
+| **A. Article ready** | Всички toolkit точки имат `status=new` статия | 0 API calls |
+| **B. Anchors ready** | Всички имат ≥3 verified anchors | 0 API calls |
+| **C. Full ready** | A + B + ≥3 practice problems + verifier score ≥7 | малко API |
+| **D. Student-ready** | C + AI симулира "ученик може да реши 2/3 задачи" | много API |
+
+**Моята препоръка: C за начало.** A+B е твърде плитко. D е скъпо.
+
+### Q3: Персистира ли се task completion?
+
+| Опция | Какво | Pros / Cons |
+|---|---|---|
+| **A. Derived** | Verifier проверява файловете всеки път | Fresh, но ~100ms за 160 точки |
+| **B. Persisted** | `generated/plan_state.json` — `{task: 1, complete: false}` | Fast, но старее |
+
+**Моята препоръка: A.** 100ms е нищо. Никога не старее.
+
+### Q4: Какво прави orchestrator-ът с plan-а?
+
+| Опция | Какво | Пример |
+|---|---|---|
+| **A. Plan-aware** | Orchestrator решава "днес — P1"; пуска pipeline с `--priority p1` | Интелигентно, но orchestrator става сложен |
+| **B. Dumb orchestrator** | Пуска `pipeline.py --priority auto` и pipeline сам решава | По-чисто разделение |
+| **C. Orchestrator не знае** | Просто `pipeline.py --all` — regen всички | Сегашното поведение |
+
+**Моята препоръка: A.** Orchestrator трябва да знае фокуса — това е смисълът на master worker.
+
+### Q5: Data model — разширяваме ли `tasks_data.js`?
+
+Проблем: `tasks_data.js` има само един `toolkit` на Task. Реално toolkit-ът **зависи от level**:
+
+- Task 1 × Regional = `1.1-1.11`
+- Task 1 × National = `2.1-2.12` (не е дефинирано в момента!)
+
+| Опция | Какво | Pros / Cons |
+|---|---|---|
+| **A. Без промяна** | Derive from `TASKS_DATA.toolkit` (само regional) | Работи сега; не покрива national |
+| **B. Разшири `tasks_data.js`** | Добави `toolkit_by_level: {0: [], 1: [...], 2: [...]}` | Ясно; изисква промяна в UI |
+| **C. Derive от LEVELS groups** | Task 1 (geometry) = всички "Геометрия" групи от всички levels | Работи; но fragile (name matching) |
+
+**Моята препоръка: B** — но не веднага. Първо пусни **A** (работи за regional, което е 109 дни напред). Ако решиш, че Task 1 national е приоритет, тогава разшири.
+
+## 5. Предложен план за имплементация
+
+### Фаза 1: `plan.py` (0 API, 45 мин)
+
+1. Напиши `plan.py` — парсва 3 data файла, 6 API функции
+2. Напиши `tests/test_plan.py` — 15 unit теста
+3. Провери ръчно: `python -c "from plan import get_toolkit; print(get_toolkit(1))"`
+4. **Не пипай нищо друго още** — plan.py е standalone
+
+### Фаза 2: Интеграция в `pipeline.py` (0 API, 15 мин)
+
+1. `pipeline.py --task 1` → филтър по `plan.get_toolkit(1)`
+2. `pipeline.py --priority p1` → филтър по `plan.get_priority(1)`
+3. `pipeline.py --level 1` → филтър по `plan.get_level_points(1)`
+4. Тест: dry-run, виждаш правилните точки
+
+### Фаза 3: Интеграция в `daily_verifier.py` (0 API + 1 API call)
+
+1. `audit_task_completion(task_num, level_id)` → нов метод
+2. Замени hardcoded week→phase с `plan.get_current_focus()`
+3. Тест: 1 API call, виждаш отчета
+
+### Фаза 4: Интеграция в `master_orchestrator.py` (0 API)
+
+1. Прочети `plan.get_current_focus()` в началото на деня
+2. Ако фокус = Task 1 → приоритет P1
+3. Логика: ако `task_completion(1, regional)` не е complete → регенерирай P1; иначе P2
+4. Тест: dry-run
+
+### Фаза 5: Интеграция в `pdf_chunker.py` / `problem_generator.py` (0 API)
+
+1. Замени `load_steps_info()` със `plan.get_all_points()`
+2. Добави `--task` и `--priority` флагове
+3. Тест: dry-run
+
+### Фаза 6 (опционално, ако решиш): Разшири data model
+
+1. Добави `toolkit_by_level` в `tasks_data.js`
+2. Обнови `plan.get_toolkit(task, level)` да чете оттам
+3. UI-ят може да покаже "Task 1 × National = 12 точки"
+
+## 6. Какво НЕ променям
+
+- `config.py`, `config.json` — остават
+- Data файлове (освен ако Q5 = B)
+- Съществуващите extract/classify стадии
+- Статиите — само се регенерират, не се променя генерирането
+
+## Какво трябва да решим преди да пиша `plan.py`
+
+Отговори на 5-те въпроса:
+
+1. **Q1 — target level:** calendar-driven, config, или UI?
+2. **Q2 — "готов" значи:** article ready, anchors ready, full ready, или student-ready?
+3. **Q3 — persist:** derived (fresh) или persisted (fast)?
+4. **Q4 — orchestrator:** plan-aware, dumb, или doesn't know?
+5. **Q5 — data model:** без промяна, разшири `tasks_data.js`, или derive от LEVELS?
+
+**Моите препоръки (ако искаш просто да потвърдиш):**
+- Q1 = A+B (calendar default + config override)
+- Q2 = C (full ready — article + anchors + problems + verifier score)
+- Q3 = A (derived)
+- Q4 = A (plan-aware orchestrator)
+- Q5 = A сега, B по-късно (ако решиш)
+
+**Като ми кажеш отговорите, ще напиша:**
+1. `plan.py` — 250 реда
+2. `tests/test_plan.py` — 15 теста
+3. `patch_pipeline_plan.py` — за инжектиране на `--task/--priority/--level` в pipeline.py
+4. `patch_verifier_plan.py` — за audit_task_completion
+5. `patch_orchestrator_plan.py` — за current_focus
+
+Без да пипам нищо друго. Всяка стъпка е обратима (backup + restore).
+
+# Архитектурен анализ — преди да пиша какъвто и да е код
+
+## 1. Какво имаме сега (файлова карта)
+
+```
+┌─────────────────────────────────────────────────────────────┐
+│  data/                                                       │
+│  ├── steps.js          (160 STEPS точки)                     │
+│  ├── tasks_data.js     (4 tasks с toolkit per task)          │
+│  └── plan_phases.js    (25 седмици, main + secondary)        │
+└─────────────────────────────────────────────────────────────┘
+                            ↑
+                    (никой backend не чете!)
+
+pipeline/
+├── config.py               ← paths (единствен source of truth)
+├── config.json             ← AI models, budgets
+├── personas.py             ← AI personas
+├── prompts.py              ← article prompts
+│
+├── pdf_chunker.py          ← STEPS: чете директно от data/steps.js
+├── pipeline.py             ← STEPS: чете от data/steps.js
+├── problem_generator.py    ← STEPS: чете от data/steps.js  
+├── gap_worker.py           ← STEPS: чете от data/steps.js
+├── daily_verifier.py       ← STEPS: чете от data/steps.js  
+│                          ⚠ hardcoded week→phase logic (НЕ ползва PLAN_PHASES)
+├── master_orchestrator.py  ← чете state files, НЕ знае за план
+│
+└── (липсва plan.py!)       ← никой не чете tasks_data.js / plan_phases.js
+```
+
+## 2. Проблеми, които виждам
+
+| # | Проблем | Последица |
+|---|---|---|
+| 1 | 5 файла парсват `data/steps.js` независимо | DRY violation. Ако regex-ът се счупи, 5 файла се чупят |
+| 2 | `tasks_data.js` и `plan_phases.js` = **само UI** | Backend не знае за Task/Level/Phase |
+| 3 | `daily_verifier` hardcode-ва `week→phase` | "Седмица 2 = Phase 1" в код, не от `plan_phases.js` |
+| 4 | `pipeline.py` генерира по STEPS ID в азбучен ред | Не знае кой е P1 (regional) и кой е P4 (extra) |
+| 5 | Никой не проверява "Task 1 е готов" | Verifier проверява "10 случайни" |
+| 6 | `master_orchestrator` не знае "днес какво е приоритет" | Пуска всичко в един ред без оглед на фокус |
+
+## 3. Предложена архитектура
+
+### Нов файл `pipeline/plan.py` — single source of truth за всичко план-свързано
+
+```
+pipeline/plan.py  (≈ 250 реда)
+├── Парсва data/steps.js        → steps_points: dict[id → {title, desc}]
+├── Парсва data/tasks_data.js   → tasks: dict[num → {name, toolkit, ...}]
+├── Парсва data/plan_phases.js  → phases: list[{num, weeks, ...}]
+│
+├── API:
+│   get_all_points()                    → list[160 ids]
+│   get_toolkit(task_num)               → list[ids] (за Task 1 = 1.1-1.11)
+│   get_level_points(level_id)          → list[ids] (за Level 1 = всички regional)
+│   get_priority(level_id)              → list[ids] (union на toolkits ∩ level)
+│   get_task_for_week(week)             → task_num  (от PLAN_PHASES)
+│   get_current_week()                  → int  (дни от planStartDate / 7)
+│   get_current_focus()                 → "Task 1"  (task_for_week + план)
+│   get_exam_dates()                    → {regional, national}
+│
+└── Кешира резултатите при първо извикване
+```
+
+### Кой какво вика
+
+| Файл | Днес | След `plan.py` |
+|---|---|---|
+| `pdf_chunker.py` | `load_steps_info()` — свой парсер | `plan.get_all_points()` — за classify context |
+| `pipeline.py` | Свой парс на STEPS | `plan.get_toolkit(task)` за `--task 1`; `plan.get_priority(level)` за `--priority p1` |
+| `problem_generator.py` | Свой парс | Същото |
+| `daily_verifier.py` | Hardcoded week→phase | `plan.get_current_focus()` + `plan.get_toolkit(task)` за `audit_task_completion()` |
+| `gap_worker.py` | Свой парс | `plan.get_all_points()` за coverage |
+| `master_orchestrator.py` | Не знае за план | `plan.get_current_focus()` — "днес фокус = Task 1" |
+
+### Какво остава в `config.py` vs `config.json` vs `plan.py`
+
+| Файл | Отговорност |
+|---|---|
+| `config.py` | **Пътища** (data/, generated/, state/) |
+| `config.json` | **AI models, budgets, watch folders** |
+| `plan.py` | **Учебен план** (STEPS, TASKS, PHASES, priority) |
+
+Ясна граница. `plan.py` е read-only от `data/`.
+
+## 4. Въпроси, които трябва да решим ПРЕДИ код
+
+### Q1: Кой е "current target level"?
+
+`plan.current_focus()` трябва да знае за кого се готви student-ът. 3 варианта:
+
+| Опция | Как работи | Кога е ок |
+|---|---|---|
+| **A. Calendar-driven** | `< 60 дни до regional` → focus Level 1; `< 60 дни до national` → Level 2; иначе Level 1 | Просто, но brute-force |
+| **B. Config-driven** | `config.json: "target_level": "regional"` | Ясно, но ръчно сменяне |
+| **C. UI-driven** | `data/steps.js` има `currentLevel` поле | Правилно, но изисква синхронизация |
+
+**Моята препоръка: A + B.** Calendar-driven по подразбиране, config override ако искаш.
+
+### Q2: Какво значи "Task 1 е готов"?
+
+Възможни дефиниции:
+
+| Опция | Дефиниция | Cost за проверка |
+|---|---|---|
+| **A. Article ready** | Всички toolkit точки имат `status=new` статия | 0 API calls |
+| **B. Anchors ready** | Всички имат ≥3 verified anchors | 0 API calls |
+| **C. Full ready** | A + B + ≥3 practice problems + verifier score ≥7 | малко API |
+| **D. Student-ready** | C + AI симулира "ученик може да реши 2/3 задачи" | много API |
+
+**Моята препоръка: C за начало.** A+B е твърде плитко. D е скъпо.
+
+### Q3: Персистира ли се task completion?
+
+| Опция | Какво | Pros / Cons |
+|---|---|---|
+| **A. Derived** | Verifier проверява файловете всеки път | Fresh, но ~100ms за 160 точки |
+| **B. Persisted** | `generated/plan_state.json` — `{task: 1, complete: false}` | Fast, но старее |
+
+**Моята препоръка: A.** 100ms е нищо. Никога не старее.
+
+### Q4: Какво прави orchestrator-ът с plan-а?
+
+| Опция | Какво | Пример |
+|---|---|---|
+| **A. Plan-aware** | Orchestrator решава "днес — P1"; пуска pipeline с `--priority p1` | Интелигентно, но orchestrator става сложен |
+| **B. Dumb orchestrator** | Пуска `pipeline.py --priority auto` и pipeline сам решава | По-чисто разделение |
+| **C. Orchestrator не знае** | Просто `pipeline.py --all` — regen всички | Сегашното поведение |
+
+**Моята препоръка: A.** Orchestrator трябва да знае фокуса — това е смисълът на master worker.
+
+### Q5: Data model — разширяваме ли `tasks_data.js`?
+
+Проблем: `tasks_data.js` има само един `toolkit` на Task. Реално toolkit-ът **зависи от level**:
+
+- Task 1 × Regional = `1.1-1.11`
+- Task 1 × National = `2.1-2.12` (не е дефинирано в момента!)
+
+| Опция | Какво | Pros / Cons |
+|---|---|---|
+| **A. Без промяна** | Derive from `TASKS_DATA.toolkit` (само regional) | Работи сега; не покрива national |
+| **B. Разшири `tasks_data.js`** | Добави `toolkit_by_level: {0: [], 1: [...], 2: [...]}` | Ясно; изисква промяна в UI |
+| **C. Derive от LEVELS groups** | Task 1 (geometry) = всички "Геометрия" групи от всички levels | Работи; но fragile (name matching) |
+
+**Моята препоръка: B** — но не веднага. Първо пусни **A** (работи за regional, което е 109 дни напред). Ако решиш, че Task 1 national е приоритет, тогава разшири.
+
+## 5. Предложен план за имплементация
+
+### Фаза 1: `plan.py` (0 API, 45 мин)
+
+1. Напиши `plan.py` — парсва 3 data файла, 6 API функции
+2. Напиши `tests/test_plan.py` — 15 unit теста
+3. Провери ръчно: `python -c "from plan import get_toolkit; print(get_toolkit(1))"`
+4. **Не пипай нищо друго още** — plan.py е standalone
+
+### Фаза 2: Интеграция в `pipeline.py` (0 API, 15 мин)
+
+1. `pipeline.py --task 1` → филтър по `plan.get_toolkit(1)`
+2. `pipeline.py --priority p1` → филтър по `plan.get_priority(1)`
+3. `pipeline.py --level 1` → филтър по `plan.get_level_points(1)`
+4. Тест: dry-run, виждаш правилните точки
+
+### Фаза 3: Интеграция в `daily_verifier.py` (0 API + 1 API call)
+
+1. `audit_task_completion(task_num, level_id)` → нов метод
+2. Замени hardcoded week→phase с `plan.get_current_focus()`
+3. Тест: 1 API call, виждаш отчета
+
+### Фаза 4: Интеграция в `master_orchestrator.py` (0 API)
+
+1. Прочети `plan.get_current_focus()` в началото на деня
+2. Ако фокус = Task 1 → приоритет P1
+3. Логика: ако `task_completion(1, regional)` не е complete → регенерирай P1; иначе P2
+4. Тест: dry-run
+
+### Фаза 5: Интеграция в `pdf_chunker.py` / `problem_generator.py` (0 API)
+
+1. Замени `load_steps_info()` със `plan.get_all_points()`
+2. Добави `--task` и `--priority` флагове
+3. Тест: dry-run
+
+### Фаза 6 (опционално, ако решиш): Разшири data model
+
+1. Добави `toolkit_by_level` в `tasks_data.js`
+2. Обнови `plan.get_toolkit(task, level)` да чете оттам
+3. UI-ят може да покаже "Task 1 × National = 12 точки"
+
+## 6. Какво НЕ променям
+
+- `config.py`, `config.json` — остават
+- Data файлове (освен ако Q5 = B)
+- Съществуващите extract/classify стадии
+- Статиите — само се регенерират, не се променя генерирането
+
+## Какво трябва да решим преди да пиша `plan.py`
+
+Отговори на 5-те въпроса:
+
+1. **Q1 — target level:** calendar-driven, config, или UI?
+2. **Q2 — "готов" значи:** article ready, anchors ready, full ready, или student-ready?
+3. **Q3 — persist:** derived (fresh) или persisted (fast)?
+4. **Q4 — orchestrator:** plan-aware, dumb, или doesn't know?
+5. **Q5 — data model:** без промяна, разшири `tasks_data.js`, или derive от LEVELS?
+
+**Моите препоръки (ако искаш просто да потвърдиш):**
+- Q1 = A+B (calendar default + config override)
+- Q2 = C (full ready — article + anchors + problems + verifier score)
+- Q3 = A (derived)
+- Q4 = A (plan-aware orchestrator)
+- Q5 = A сега, B по-късно (ако решиш)
+
+**Като ми кажеш отговорите, ще напиша:**
+1. `plan.py` — 250 реда
+2. `tests/test_plan.py` — 15 теста
+3. `patch_pipeline_plan.py` — за инжектиране на `--task/--priority/--level` в pipeline.py
+4. `patch_verifier_plan.py` — за audit_task_completion
+5. `patch_orchestrator_plan.py` — за current_focus
+
+Без да пипам нищо друго. Всяка стъпка е обратима (backup + restore).
+
+# Архитектура — преди код
+
+## Потвърждавам отговорите
+
+| Q | Отговор | Какво значи |
+|---|---|---|
+| Q1 | **Областен, 109 дни**, overreach към национален | P1 = Regional, P2 = National, P3 = Simulations |
+| Q2 | Article + ≥3 anchors + ≥3 practice + score ≥7 | 4 условия, не "student-ready" |
+| Q3 | Derived | Fresh всеки път, без state файл |
+| Q4 | **Dumb orchestrator** + long-term verify/regen | Pipeline решава приоритет, orchestrator пуска |
+| Q5 | **2 нива** (regional + national) | Експлицитен data файл |
+
+## 4-те пласта (метафората ти, формализирана)
+
+```
+┌──────────────────────────────────────────────────────────┐
+│  STEPS (160 точки)              = Учебник                │
+│  "Какво съществува"                                       │
+└──────────────────────────────────────────────────────────┘
+                         ×
+┌──────────────────────────────────────────────────────────┐
+│  PRIORITIES (2 нива)            = Курс                   │
+│  regional: {1: [...], 2: [...], 3: [...], 4: [...]}      │
+│  national: {1: [...], 2: [...], 3: [...], 4: [...]}      │
+│  "Какво влиза в изпита"                                   │
+└──────────────────────────────────────────────────────────┘
+                         ×
+┌──────────────────────────────────────────────────────────┐
+│  PLAN_PHASES (25 седмици)       = Разписание             │
+│  "Кога"                                                   │
+└──────────────────────────────────────────────────────────┘
+                         ↓
+┌──────────────────────────────────────────────────────────┐
+│  Point Status (derived)         = Напредък               │
+│  {article: new?, anchors: N?, practice: N?, score: N?}   │
+└──────────────────────────────────────────────────────────┘
+```
+
+## File dependency graph — СЕГА
+
+```
+data/
+├── steps.js           ──┐
+├── tasks_data.js      ──┼─ (никой backend не чете)
+└── plan_phases.js     ──┘
+                            ↓
+pdf_chunker.py ─── свой парсер на steps.js
+pipeline.py ─────── свой парсер на steps.js
+problem_generator.py  свой парсер на steps.js
+gap_worker.py ─────── свой парсер на steps.js
+daily_verifier.py ─── свой парсер на steps.js + hardcoded week→phase
+
+master_orchestrator.py ── нищо не знае за план
+```
+
+**5 различни парсера на steps.js. Никой не чете tasks_data.js или plan_phases.js. Verifier hardcode-ва week→phase.**
+
+## File dependency graph — СЛЕД
+
+```
+data/
+├── steps.js            ─┐
+├── tasks_data.js       ─┤
+├── plan_phases.js      ─┼──→ plan.py ──→ всички консуматори
+├── priorities.js  (НОВ)─┤
+└── (index.html LEVELS) ─┘
+                            ↑
+                     single source of truth
+                            ↓
+┌───────────────────┬──────────────────────┬─────────────────┐
+│  pdf_chunker.py   │  pipeline.py          │  daily_verifier │
+│  classify ctx     │  --priority auto      │  audit_task()   │
+│                   │  --task 1             │                 │
+├───────────────────┼──────────────────────┼─────────────────┤
+│ problem_gen.py    │  gap_worker.py        │  orchestrator   │
+│  --priority auto  │  coverage check       │  current_focus  │
+└───────────────────┴──────────────────────┴─────────────────┘
+
+┌──────────────────────────────────────────────────┐
+│  point_status.py  (НОВ)                          │
+│  read/write unified status per point             │
+│  (verifier пише, plan/pipeline чете)             │
+└──────────────────────────────────────────────────┘
+```
+
+## Какво пиша (файлове + редове)
+
+### Нови файлове
+
+| Файл | Редове | Отговорност |
+|---|---|---|
+| `data/priorities.js` | 60 | 2 нива × 4 tasks × toolkit |
+| `pipeline/plan.py` | 220 | Парсва 4 data файла; 8 API функции; cache |
+| `pipeline/point_status.py` | 150 | Чете/пише `generated/status/<point>.json` |
+| `tests/test_plan.py` | 180 | 25 unit теста (без API) |
+| `tests/test_point_status.py` | 100 | 10 unit теста |
+
+### Модификации (патчове, не rewrite)
+
+| Файл | Редове промяна | Какво |
+|---|---|---|
+| `pipeline.py` | +80 | `--task`, `--level`, `--priority auto` |
+| `daily_verifier.py` | +120 | `audit_task_completion()`, чете plan.py, пише point_status |
+| `master_orchestrator.py` | +40 | Преди extract: чете `plan.get_current_focus()`; след aggregate: `pipeline --priority auto` |
+| `pdf_chunker.py` | +15 | `load_steps_info()` → `plan.get_all_points()` |
+| `problem_generator.py` | +20 | Същото + `--priority auto` |
+| `index.html` | +3 | `<script src="data/priorities.js"></script>` |
+
+**Няма breaking changes.** Всички pat-ове са backwards-compatible.
+
+## Ключов дизайн — `point_status.py`
+
+Защо отделен файл вместо да се чете от `audit/<date>/report.json`?
+
+**Защото "статус на точка" е composed от 5 източника:**
+
+| Източник | Какво дава |
+|---|---|
+| `articles/_manifest.json` | `status: old/new` |
+| `anchors/<point>.json` | `total`, `by_difficulty` |
+| `problems/<point>/problems.json` | брой practice |
+| `audit/<date>/report.json` | последен verifier score |
+| `audit/<date>/report.json` | последен anchor accuracy |
+
+Ако pipeline чете всички тези всеки път, става бавно и кодът се повтаря.
+
+**Решение:** `point_status.py` има единствена функция `compute(point_id) → dict`:
+```python
+{
+    "point_id": "1.4",
+    "article": {"status": "new", "words": 3100, "sections": 9, "checks": 3},
+    "anchors": {"total": 5, "verified": 4, "accuracy_pct": 80},
+    "practice": {"total": 9, "easy": 3, "medium": 3, "hard": 3},
+    "audit": {"article_score": 8, "anchors_score": 7, "audited_at": "2026-10-22"},
+    "ready": True,           # всичките 4 условия Q2
+    "blocking_issues": []    # кое липсва
+}
+```
+
+Pipeline вика `point_status.compute(pid)` за да реши дали да генерира. Verifier вика `point_status.write(pid, {...})` след одит.
+
+## Ден 1-2 — имплементационен план
+
+### Ден 1 (утре, $3):
+1. ✅ Завършваме BMC extract (~$1.15)
+2. ✅ Extract 5-6 малки PDF-а (~$0.30)
+3. ✅ Merge + classify + aggregate (~$0.25)
+4. Пиша `data/priorities.js` (0 API)
+5. Пиша `pipeline/plan.py` + тестове (0 API)
+6. Тест: `python -c "from plan import get_toolkit; print(get_toolkit(1, 'regional'))"` → `[1.1, ..., 1.11]`
+
+### Ден 2 ($3):
+1. Пиша `point_status.py` + тестове
+2. Patch-вам `pipeline.py` → `--priority auto`
+3. Regenerate **P1 Task 1** (11 точки, ~$0.77)
+4. Patch-вам `daily_verifier.py` → `audit_task_completion(1, 'regional')`
+5. Първи реален audit на Task 1 → виждаш "Task 1 готов?" 
+
+### Ден 3+:
+- Regenerate rest of P1 (~45 точки, ~$3.15)
+- Pipeline става auto
+- Orchestrator става plan-aware
+
+## Какво НЕ пипам
+
+- `pdf_chunker.py` extract/merge/classify логика — работи
+- `config.py`, `config.json` — остават
+- Съществуващите data файлове (steps.js, tasks_data.js, plan_phases.js) — **само чета**
+- UI-ят — priorities.js се зарежда с 1 ред, нищо друго
+- Статиите regenerate — същият prompt, само избираме **кои** да регенерираме
+
+## Едно уточнение преди старт
+
+За `data/priorities.js` — да потвърдиш ли, че съм разбрал правилно?
+
+**Regional Task 3** (от `tasks_data.js`): `5.1-5.12` (полиноми) + `6.1-6.6` (неравенства основи) = **18 точки** ✓
+
+**National Task 3** (моя интерпретация от `LEVELS[2]`): `6.7-6.10` (неравенства напреднали) + `7.1-7.9` (ФУ) = **13 точки**
+
+**Но** — полиномите (5.x) не се повтарят в National. Значи National Task 3 = regional Task 3 (5.x, 6.1-6.6) **+** advanced (6.7-6.10, 7.x) = **31 точки**? Или National Task 3 = **само** advanced частите, защото regional вече е покрито?
+
+Логически: **National включва всичко от Regional + надграждане**. Значи `priorities.national[3] = priorities.regional[3] ∪ advanced_parts`. Същото за всички tasks.
+
+**Съгласен ли си?** Ако да — `priorities.js` ще бъде:
+- `regional`: както е в `tasks_data.js` днес
+- `national`: regional + advanced (Superset)
+
+Това значи, че ако генерираш P1 (regional) → след това P2 (national) ще регенерира ~30 точки (advanced-only), не всичките 96. По-ефективно.
+
+## Shal I start?
+
+Ако потвърдиш горното уточнение (national = superset на regional), започвам с:
+1. `data/priorities.js` — 60 реда, експлицитен
+2. `pipeline/plan.py` — 220 реда, парсва 4 файла
+3. `tests/test_plan.py` — 25 теста
+
+**Без да пипам нищо друго.** След като ги пуснеш и тестовете минат, показвам следващите 3 файла. Поетапно, за да не се объркаш и да можеш да провериш всяка стъпка.
+
+# Отговор на 3-те въпроса
+
+## 1. Достатъчно ли е сканирането?
+
+**Да.** Виждам:
+- `data/steps.js` (4135 KB) — 160 точки
+- `data/tasks_data.js` (6.5 KB) — 4 tasks
+- `data/plan_phases.js` (5.7 KB) — 25 седмици
+- `index.html` (288 KB) — LEVELS дефиниции
+- `pipeline/` — всички workers
+- `generated/` (не се вижда, но знаем от по-рано) — articles 160, anchors 0, cache
+
+Всичко нужно за архитектурния план е тук. Не трябва ново сканиране.
+
+## 2. Ще стане ли професионално?
+
+**Да, ако** имплементираме правилно. Професионално значи:
+
+| Критерий | Какво трябва |
+|---|---|
+| Single source of truth | 1 `plan.py`, не 5 парсера |
+| Derived status | `point_status.py` изчислява, не пази |
+| Idempotent | Rerun не чупи нищо |
+| Auditable | Всяко действие в `audit/` |
+| Testable | Unit тестове за `plan.py` |
+| Observable | Daily report + task completion |
+| Self-correcting | Verifier flags → orchestrator re-does |
+
+Ако тези 7 са налични → professional. Ако не → поредният hack.
+
+## 3. Готов ли е планът?
+
+**Ето го целия, подреден:**
+
+---
+
+# MASTER PLAN — Olympiad Prep v6
+
+## А. Архитектурни слоеве
+
+```
+┌─────────────────────────────────────────────────────────────┐
+│ LAYER 1: СЪДЪРЖАНИЕ (учебник)                               │
+│   data/steps.js → 160 точки                                 │
+│   "Какво съществува"                                        │
+└─────────────────────────────────────────────────────────────┘
+                            ×
+┌─────────────────────────────────────────────────────────────┐
+│ LAYER 2: ПРОГРАМА (syllabus)                                │
+│   data/priorities.js (НОВ) → 2 нива × 4 tasks × toolkit     │
+│   regional: каквото се пада на областен                     │
+│   national: regional + advanced                             │
+│   "Какво влиза в изпита"                                    │
+└─────────────────────────────────────────────────────────────┘
+                            ×
+┌─────────────────────────────────────────────────────────────┐
+│ LAYER 3: РАЗПИСАНИЕ (schedule)                              │
+│   data/plan_phases.js → 25 седмици                         │
+│   "Кога"                                                    │
+└─────────────────────────────────────────────────────────────┘
+                            ↓
+┌─────────────────────────────────────────────────────────────┐
+│ LAYER 4: НАПРЕДЪК (derived status)                          │
+│   pipeline/point_status.py (НОВ) → изчислява при заявка     │
+│   {article, anchors, practice, audit_score}                 │
+│   "Колко е готово"                                          │
+└─────────────────────────────────────────────────────────────┘
+```
+
+## Б. Файлове — какво добавяме, какво patch-ваме
+
+### Нови файлове (4)
+
+| Файл | Редове | Отговорност |
+|---|---|---|
+| `data/priorities.js` | ~80 | 2 нива × 4 tasks × toolkit IDs |
+| `pipeline/plan.py` | ~220 | Single source of truth, парсва 4 data файла |
+| `pipeline/point_status.py` | ~150 | Derived status от files |
+| `tests/test_plan.py` | ~180 | 25 unit теста |
+
+### Patches (5 файла, backward-compatible)
+
+| Файл | + реда | Какво добавя |
+|---|---|---|
+| `pipeline/pipeline.py` | +80 | `--task N`, `--level L`, `--priority auto` |
+| `pipeline/daily_verifier.py` | +120 | `audit_task_completion()`, чете plan.py |
+| `pipeline/master_orchestrator.py` | +40 | `plan.get_current_focus()`, план-aware цикъл |
+| `pipeline/pdf_chunker.py` | +15 | `load_steps_info()` → `plan.get_all_points()` |
+| `pipeline/problem_generator.py` | +20 | Същото + `--priority auto` |
+| `index.html` | +1 | `<script src="data/priorities.js"></script>` |
+
+### НЕ пипаме
+
+- `config.py`, `config.json` — работят
+- `personas.py`, `prompts.py` — работят
+- `pdf_chunker.py` extract/merge/classify логика — работи
+- `data/steps.js`, `data/tasks_data.js`, `data/plan_phases.js` — само четем
+- UI-ят — 1 script tag
+
+## В. Data flow (кой кого вика)
+
+```
+data/steps.js ─┐
+data/tasks_data.js ─┤
+data/plan_phases.js ─┼─→ plan.py ─→ всички консуматори
+data/priorities.js ─┘     ↑
+                     cache в паметта
+
+consumers на plan.py:
+├── pdf_chunker.py    — get_all_points() за classify context
+├── pipeline.py       — get_toolkit() / get_priority() за --task/--priority
+├── problem_generator.py — same
+├── daily_verifier.py — get_current_focus() + get_toolkit() за audit_task_completion
+├── master_orchestrator.py — get_current_focus() за plan-aware цикъл
+└── gap_worker.py     — get_all_points() за coverage
+
+files на диска:
+├── generated/articles/         → articles
+├── generated/anchors/          → anchors
+├── pipeline/problems/          → practice
+├── generated/audit/<date>/     → verifier scores
+                    ↓
+         point_status.compute(pid) → {ready, blocking}
+                    ↓
+    {pipeline: should I generate?, verifier: what's missing?, orchestrator: is task done?}
+```
+
+## Г. Какво прави всеки worker
+
+### `plan.py` — read-only API
+
+```python
+get_all_points()                    → list[160 ids]
+get_toolkit(task_num, level)        → list[ids]  # Task 1 regional = 1.1-1.11
+get_level_points(level)             → list[ids]  # Level 1 = 56 точки
+get_priority(level)                 → dict[task, list[ids]]  # за auto-priority
+get_current_week()                  → int
+get_current_focus()                 → {task: 1, level: "regional", phase: 2}
+get_exam_dates()                    → {regional: ..., national: ...}
+```
+
+### `point_status.py` — derived
+
+```python
+compute(pid)         → dict # {article, anchors, practice, audit, ready, blocking}
+is_ready(pid)        → (bool, list[str])  # Q2 criteria
+write(pid, data)     → None  # verifier пише след одит
+```
+
+### `daily_verifier.py` — long-term recheck
+
+**Стари модули:**
+- `audit_anchors()`, `audit_articles()`, `audit_problems()` — остават
+
+**Нов модул:**
+- `audit_task_completion(task, level)` — за всяка точка от toolkit:
+  - article new? ≥3 anchors? ≥3 practice? score ≥7?
+  - Пише в `point_status.write(pid, ...)`
+  - Връща `{X/Y ready, gaps}` → `audit/<date>/task_completion.json`
+  - `reclassify.json` за orchestrator (flagged sources)
+
+### `pipeline.py` — генериране
+
+**Нов флаг:**
+- `--priority auto` → `plan.get_current_focus()` → генерира само точките от toolkit на текущия Task
+- `--task N --level regional` → генерира само toolkit на Task N
+- Без флаг → старото поведение (всички по ред)
+
+### `master_orchestrator.py` — dumb orchestrator
+
+**Планът (Q4 = B):**
+
+```
+00:01 Daily cycle:
+  1. Read plan.get_current_focus() → "Task 1, regional"
+  2. Read yesterday's audit_task_completion.json → "8/14 ready"
+  3. Reclassify flagged (from reclassify.json)
+  4. Extract pending PDFs
+  5. Merge + classify + aggregate
+  6. pipeline --priority auto → regenerates not-ready P1 points
+  7. verifier → audits today's work
+  8. If task_completion = 100% → log "Task 1 READY"
+```
+
+**Не знае какво да генерира** — `pipeline --priority auto` решава. Orchestrator само редува фази.
+
+## Д. Q2 критерии — какво значи "готова точка"
+
+```
+✓ article.status == "new"
+✓ anchors.total >= 3 AND anchors.verified_accuracy >= 70%
+✓ practice.total >= 3
+✓ audit.article_score >= 7
+✓ audit.anchors_score >= 7
+
+ready = all of the above
+```
+
+Ако `ready = False` → `blocking: ["anchors_2_of_3", "no_article"]`
+`pipeline --priority auto` пропуска ready-тата, генера само not-ready.
+
+## Е. Timeline
+
+### Седмица 1 (дни 1-7)
+
+| Ден | Работа | Cost |
+|---|---|---|
+| 1 | `priorities.js` + `plan.py` + тестове | $0 |
+| 2 | `point_status.py` + тестове | $0 |
+| 3 | Patch `pipeline.py` + `daily_verifier.py` | $0 |
+| 4 | Patch `orchestrator.py` + `chunker`/`gen` | $0 |
+| 5 | BMC extract + малки PDF-ове | ~$1.50 |
+| 6 | Merge + classify + aggregate | ~$0.30 |
+| 7 | Verifier audit anchors + regenerate 5 P1 | ~$0.40 |
+
+### Седмица 2 — Task 1 (Regional, 11 точки)
+
+- Regenerate 6 останали P1 Task 1 статии
+- Audit → ако не 100%, regen
+- Task 1 DONE
+
+### Седмица 3 — Task 2, Task 3, Task 4 (Regional)
+
+- Regenerate 45 статии (по 15 на Task)
+- ~$3 на ден
+
+### Седмица 4 — National level
+
+- 30 new статии за advanced точки
+- Verifier: Task 1 National готов?
+
+## Ж. Очакван резултат след 4 седмици
+
+```
+regional × Task 1:  11/11 ready ✓
+regional × Task 2:  12/12 ready ✓
+regional × Task 3:  18/18 ready ✓
+regional × Task 4:  15/15 ready ✓
+─────────────────────────────────
+Regional total:    56/56 ready ✓  ← student готов за областен
+
+national × Task 1:  12/12 ready ✓
+national × Task 2:  10/10 ready ✓
+national × Task 3:  13/13 ready ✓
+national × Task 4:  15/15 ready ✓
+─────────────────────────────────
+National total:    50/50 ready ✓  ← student готов за национален
+```
+
+Verifier показва "56/56 ready" всеки ден. Orchestrator знае кога да смени Task.
+
+## З. Когато нещо се счупи
+
+| Симптом | Какво прави |
+|---|---|
+| Article score < 7 | Orchestrator regenerate следващ цикъл |
+| Anchors accuracy < 70% | reclassify с gpt-6.1-sol |
+| Practice < 3 | problem_generator regen |
+| 402 budget | Спира чисто, чака утре |
+| Article старее (5 дни) | Verifier re-audit, mark not-ready |
+
+## И. Защо това е "professional"
+
+1. **Single source of truth**: `plan.py` — не 5 парсера
+2. **Derived status**: `point_status.py` — не stale state
+3. **Idempotent**: rerun не чупи, verifier само проверява
+4. **Auditable**: всяко решение → `audit/<date>/*.json`
+5. **Testable**: 35 unit теста, без API
+6. **Observable**: daily report показва "Task 1: 8/14 ready"
+7. **Self-correcting**: verifier flags → orchestrator re-does same day
+
+---
+
+## Какво трябва от теб преди код
+
+**Едно нещо:** Потвърди, че **National = superset на Regional** (тоест `priorities.national[3] = priorities.regional[3] ∪ advanced_parts`).
+
+Ако да → `priorities.js` ще е:
+
+```javascript
+window.PRIORITIES = {
+  regional: {
+    1: ["1.1", ..., "1.11"],           // 11 точки
+    2: ["3.1", ..., "3.12"],           // 12
+    3: ["5.1", ..., "5.12", "6.1", ..., "6.6"], // 18
+    4: ["8.1", ..., "8.15"],           // 15
+  },
+  national: {
+    1: ["1.1", ..., "1.11", "2.1", ..., "2.12"],  // 23 (regional + advanced)
+    2: ["3.1", ..., "3.12", "4.1", ..., "4.10"],  // 22
+    3: [...regional, "6.7", ..., "6.10", "7.1", ..., "7.9"], // 31
+    4: [...regional, "8.9", "8.11", ..., "8.14", "9.1", ..., "9.11"], // ~30
+  }
+}
+```
+
+**Това е целият план.** Потвърди `national = superset` и започвам с:
+1. `data/priorities.js` (5 мин)
+2. `pipeline/plan.py` + `tests/test_plan.py` (45 мин)
+
+Без да пипам друго. След това верифицираме заедно и продължаваме.

@@ -1,0 +1,191 @@
+{
+  "_meta": {
+    "pdf": "C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\Задачи_Минали_Години\\Национален\\OLI-3-Национален кръг-2026-9-12 кл-sol.pdf",
+    "paired_with": null,
+    "level": 2,
+    "type": "sol",
+    "analyzed_at": "2026-10-16T21:13:18.440835",
+    "model": "deepseek/deepseek-v3.2",
+    "text_length": 17317,
+    "paired_text_length": 0
+  },
+  "problems": [
+    {
+      "num": 1,
+      "topic": "combinatorics",
+      "theorems": [],
+      "techniques": [
+        "induction",
+        "pigeonhole_principle",
+        "counting"
+      ],
+      "concepts": [
+        "coin_system",
+        "representable_sums",
+        "factorial_basis",
+        "upper_bound_on_representable_numbers"
+      ],
+      "difficulty": "olympic",
+      "notes": "Classical coin problem (postage stamp problem) variant with specific multiplicities. Optimal construction uses factorial bases."
+    },
+    {
+      "num": 2,
+      "topic": "algebra",
+      "theorems": [],
+      "techniques": [
+        "monotonicity",
+        "function_analysis",
+        "inequality_manipulation"
+      ],
+      "concepts": [
+        "real_numbers",
+        "function_monotonicity",
+        "symmetric_condition",
+        "product_maximization"
+      ],
+      "difficulty": "standard",
+      "notes": "Problem reduces to analyzing monotonicity of f(x)=(x-1)^n/x for odd n."
+    },
+    {
+      "num": 3,
+      "topic": "algebra",
+      "theorems": [
+        "cyclotomic_polynomial",
+        "polynomial_remainder_theorem",
+        "roots_of_unity"
+      ],
+      "techniques": [
+        "polynomial_division",
+        "substitution_with_roots_of_unity",
+        "modular_arithmetic_on_polynomials"
+      ],
+      "concepts": [
+        "cyclotomic_polynomials",
+        "primitive_roots_of_unity",
+        "polynomial_identities_modulo_cyclotomic",
+        "remainder_theorem"
+      ],
+      "difficulty": "olympic",
+      "notes": "Elegant problem connecting product of (a^i-1) to cyclotomic polynomial evaluation. Two distinct solutions provided."
+    },
+    {
+      "num": 4,
+      "topic": "geometry",
+      "theorems": [
+        "tangent_angle_theorem",
+        "inscribed_angles",
+        "cyclic_quadrilaterals"
+      ],
+      "techniques": [
+        "angle_chasing",
+        "inversion",
+        "directed_angles",
+        "parallel_lines"
+      ],
+      "concepts": [
+        "tangent_circles",
+        "angle_bisector",
+        "power_of_a_point",
+        "homothety_of_tangent_circles",
+        "configuration_with_two_circles_and_a_triangle"
+      ],
+      "difficulty": "hard",
+      "notes": "Synthetic geometry problem with multiple solutions: angle chasing, arc measures, and inversion."
+    },
+    {
+      "num": 5,
+      "topic": "combinatorics",
+      "theorems": [
+        "pigeonhole_principle",
+        "divergence_of_harmonic_series"
+      ],
+      "techniques": [
+        "counting_products",
+        "estimating_sums",
+        "double_counting",
+        "averaging_argument"
+      ],
+      "concepts": [
+        "bounded_differences_sequence",
+        "product_set",
+        "Dirichlet_principle_application",
+        "lower_bound_counting"
+      ],
+      "difficulty": "hard",
+      "notes": "Combinatorial number theory problem. Requires clever counting of products to force a collision."
+    },
+    {
+      "num": 6,
+      "topic": "combinatorics",
+      "theorems": [],
+      "techniques": [
+        "graph_coloring",
+        "induction",
+        "binary_representation",
+        "XOR_operation",
+        "degree_counting"
+      ],
+      "concepts": [
+        "hypercube_graph",
+        "edge_labeling",
+        "in-degree_constraints",
+        "out-degree_constraints",
+        "necessary_condition_divisibility",
+        "construction_for_powers_of_two"
+      ],
+      "difficulty": "olympic",
+      "notes": "Graph labeling problem on the n-dimensional hypercube. Necessity: n must divide 2^n (so n is a power of 2). Sufficiency: construction using XOR of bit positions."
+    }
+  ],
+  "unique_concepts": [
+    "coin_system",
+    "representable_sums",
+    "factorial_basis",
+    "upper_bound_on_representable_numbers",
+    "real_numbers",
+    "function_monotonicity",
+    "symmetric_condition",
+    "product_maximization",
+    "cyclotomic_polynomials",
+    "primitive_roots_of_unity",
+    "polynomial_identities_modulo_cyclotomic",
+    "remainder_theorem",
+    "tangent_circles",
+    "angle_bisector",
+    "power_of_a_point",
+    "homothety_of_tangent_circles",
+    "configuration_with_two_circles_and_a_triangle",
+    "bounded_differences_sequence",
+    "product_set",
+    "Dirichlet_principle_application",
+    "lower_bound_counting",
+    "hypercube_graph",
+    "edge_labeling",
+    "in-degree_constraints",
+    "out-degree_constraints",
+    "necessary_condition_divisibility",
+    "construction_for_powers_of_two",
+    "induction",
+    "pigeonhole_principle",
+    "counting",
+    "monotonicity",
+    "function_analysis",
+    "inequality_manipulation",
+    "polynomial_division",
+    "substitution_with_roots_of_unity",
+    "modular_arithmetic_on_polynomials",
+    "angle_chasing",
+    "inversion",
+    "directed_angles",
+    "parallel_lines",
+    "counting_products",
+    "estimating_sums",
+    "double_counting",
+    "averaging_argument",
+    "graph_coloring",
+    "binary_representation",
+    "XOR_operation",
+    "degree_counting"
+  ],
+  "confidence": 0.95
+}

@@ -1,0 +1,916 @@
+2026-10-18 12:10:29,741 [PROBLEM_GEN] INFO Чета C:\Users\denis\Downloads\Материали Олимпиада МАТ\index.html
+2026-10-18 12:10:34,131 [PROBLEM_GEN] INFO Намерени 160 точки в HTML
+2026-10-18 12:10:34,294 [PROBLEM_GEN] INFO Ще обработя 1 точки
+2026-10-18 12:10:34,361 [PROBLEM_GEN] INFO Plan: Week 1/25, Phase 1 (Task 1)
+2026-10-18 12:10:34,361 [PROBLEM_GEN] INFO Дни до областен: 112, до национален: 166
+2026-10-18 12:10:34,362 [PROBLEM_GEN] INFO Бюджет днес: $3.00 / $3.00
+2026-10-18 12:10:34,362 [PROBLEM_GEN] INFO ════════════════════════════════════════════════════════════
+2026-10-18 12:10:34,363 [PROBLEM_GEN] INFO 
+[1/1] 1.4 — Степен на точка. Радикална ос
+2026-10-18 12:10:34,363 [PROBLEM_GEN] ERROR [1.4] '\n  "problems"'
+Traceback (most recent call last):
+  File "C:\Users\denis\Downloads\Материали Олимпиада МАТ\pipeline\problem_generator.py", line 960, in main
+    if process_point(ai_gen, ai_ver, point, plan_ctx, state, redry=args.redry):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\denis\Downloads\Материали Олимпиада МАТ\pipeline\problem_generator.py", line 743, in process_point
+    gen_result = generate_problems(ai_gen, point, plan_ctx)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\denis\Downloads\Материали Олимпиада МАТ\pipeline\problem_generator.py", line 414, in generate_problems
+    user = GENERATION_PROMPT.format(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyError: '\n  "problems"'
+2026-10-18 12:10:34,366 [PROBLEM_GEN] INFO 
+════════════════════════════════════════════════════════════
+2026-10-18 12:10:34,367 [PROBLEM_GEN] INFO КРАЙ: 0 успешни, 1 грешки, 0 пропуснати
+2026-10-18 12:10:34,367 [PROBLEM_GEN] INFO Бюджет: $0.000 / $3.00
+2026-10-18 12:10:34,367 [PROBLEM_GEN] INFO ════════════════════════════════════════════════════════════
+2026-10-18 12:12:25,996 [PROBLEM_GEN] INFO Чета C:\Users\denis\Downloads\Материали Олимпиада МАТ\index.html
+2026-10-18 12:12:30,554 [PROBLEM_GEN] INFO Намерени 160 точки в HTML
+2026-10-18 12:12:30,691 [PROBLEM_GEN] INFO Ще обработя 1 точки
+2026-10-18 12:12:30,759 [PROBLEM_GEN] INFO Plan: Week 1/25, Phase 1 (Task 1)
+2026-10-18 12:12:30,760 [PROBLEM_GEN] INFO Дни до областен: 112, до национален: 166
+2026-10-18 12:12:30,760 [PROBLEM_GEN] INFO Бюджет днес: $3.00 / $3.00
+2026-10-18 12:12:30,760 [PROBLEM_GEN] INFO ════════════════════════════════════════════════════════════
+2026-10-18 12:12:30,760 [PROBLEM_GEN] INFO 
+[1/1] 1.4 — Степен на точка. Радикална ос
+2026-10-18 12:12:30,762 [PROBLEM_GEN] ERROR [1.4] ' '
+Traceback (most recent call last):
+  File "C:\Users\denis\Downloads\Материали Олимпиада МАТ\pipeline\problem_generator.py", line 960, in main
+    if process_point(ai_gen, ai_ver, point, plan_ctx, state, redry=args.redry):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\denis\Downloads\Материали Олимпиада МАТ\pipeline\problem_generator.py", line 743, in process_point
+    gen_result = generate_problems(ai_gen, point, plan_ctx)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\denis\Downloads\Материали Олимпиада МАТ\pipeline\problem_generator.py", line 414, in generate_problems
+    user = GENERATION_PROMPT.format(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyError: ' '
+2026-10-18 12:12:30,765 [PROBLEM_GEN] INFO 
+════════════════════════════════════════════════════════════
+2026-10-18 12:12:30,765 [PROBLEM_GEN] INFO КРАЙ: 0 успешни, 1 грешки, 0 пропуснати
+2026-10-18 12:12:30,765 [PROBLEM_GEN] INFO Бюджет: $0.000 / $3.00
+2026-10-18 12:12:30,765 [PROBLEM_GEN] INFO ════════════════════════════════════════════════════════════
+2026-10-18 12:15:40,736 [PROBLEM_GEN] INFO Чета C:\Users\denis\Downloads\Материали Олимпиада МАТ\index.html
+2026-10-18 12:15:45,100 [PROBLEM_GEN] INFO Намерени 160 точки в HTML
+2026-10-18 12:15:45,226 [PROBLEM_GEN] INFO Ще обработя 1 точки
+2026-10-18 12:15:45,294 [PROBLEM_GEN] INFO Plan: Week 1/25, Phase 1 (Task 1)
+2026-10-18 12:15:45,296 [PROBLEM_GEN] INFO Дни до областен: 112, до национален: 166
+2026-10-18 12:15:45,296 [PROBLEM_GEN] INFO Бюджет днес: $3.00 / $3.00
+2026-10-18 12:15:45,296 [PROBLEM_GEN] INFO ════════════════════════════════════════════════════════════
+2026-10-18 12:15:45,296 [PROBLEM_GEN] INFO 
+[1/1] 1.4 — Степен на точка. Радикална ос
+2026-10-18 12:15:45,298 [PROBLEM_GEN] INFO [1.4] генерирам 9 задачи...
+2026-10-18 12:21:59,410 [PROBLEM_GEN] INFO [1.4] генерирани 8 задачи
+2026-10-18 12:21:59,411 [PROBLEM_GEN] INFO [1.4] верифицирам 8 задачи...
+2026-10-18 12:23:40,077 [PROBLEM_GEN] INFO [1.4] retry 1/2 за задачи [6, 7, 8]
+2026-10-18 12:23:40,078 [PROBLEM_GEN] INFO [1.4] регенерирам [6, 7, 8]
+2026-10-18 12:25:26,371 [PROBLEM_GEN] INFO [1.4] верифицирам 3 задачи...
+2026-10-18 12:25:39,890 [PROBLEM_GEN] INFO [1.4] retry 2/2 за задачи [7]
+2026-10-18 12:25:39,891 [PROBLEM_GEN] INFO [1.4] регенерирам [7]
+2026-10-18 12:26:21,054 [PROBLEM_GEN] INFO [1.4] верифицирам 1 задачи...
+2026-10-18 12:26:31,930 [PROBLEM_GEN] INFO ✓ [1.4] 7/8 shipped → C:\Users\denis\Downloads\Материали Олимпиада МАТ\pipeline\problems\1_4
+2026-10-18 12:26:31,938 [PROBLEM_GEN] INFO [1.4] Готово за 646.6s | $0.0390 | 7/8 shipped
+2026-10-18 12:26:31,938 [PROBLEM_GEN] INFO 
+════════════════════════════════════════════════════════════
+2026-10-18 12:26:31,939 [PROBLEM_GEN] INFO КРАЙ: 1 успешни, 0 грешки
+2026-10-18 12:26:31,940 [PROBLEM_GEN] INFO Бюджет: $0.039 / $3.00
+2026-10-18 12:26:31,941 [PROBLEM_GEN] INFO ════════════════════════════════════════════════════════════
+2026-10-18 12:29:28,184 [PROBLEM_GEN] INFO Чета C:\Users\denis\Downloads\Материали Олимпиада МАТ\index.html
+2026-10-18 12:29:32,275 [PROBLEM_GEN] INFO Намерени 160 точки в HTML
+2026-10-18 12:29:32,481 [PROBLEM_GEN] INFO Ще обработя 1 точки
+2026-10-18 12:29:32,552 [PROBLEM_GEN] INFO Plan: Week 1/25, Phase 1 (Task 1)
+2026-10-18 12:29:32,553 [PROBLEM_GEN] INFO Дни до областен: 112, до национален: 166
+2026-10-18 12:29:32,553 [PROBLEM_GEN] INFO Бюджет днес: $2.96 / $3.00
+2026-10-18 12:29:32,553 [PROBLEM_GEN] INFO ════════════════════════════════════════════════════════════
+2026-10-18 12:29:32,554 [PROBLEM_GEN] INFO 
+[1/1] 1.4 — Степен на точка. Радикална ос
+2026-10-18 12:29:32,554 [PROBLEM_GEN] INFO [1.4] skip (готово)
+2026-10-18 12:29:32,555 [PROBLEM_GEN] INFO 
+════════════════════════════════════════════════════════════
+2026-10-18 12:29:32,555 [PROBLEM_GEN] INFO КРАЙ: 1 успешни, 0 грешки
+2026-10-18 12:29:32,555 [PROBLEM_GEN] INFO Бюджет: $0.039 / $3.00
+2026-10-18 12:29:32,556 [PROBLEM_GEN] INFO ════════════════════════════════════════════════════════════
+2026-10-18 12:33:47,944 [PROBLEM_GEN] INFO Чета C:\Users\denis\Downloads\Материали Олимпиада МАТ\index.html
+2026-10-18 12:33:52,797 [PROBLEM_GEN] INFO Намерени 160 точки в HTML
+2026-10-18 12:33:52,929 [PROBLEM_GEN] INFO Ще обработя 1 точки
+2026-10-18 12:33:52,995 [PROBLEM_GEN] INFO Plan: Week 1/25, Phase 1 (Task 1)
+2026-10-18 12:33:52,996 [PROBLEM_GEN] INFO Дни до областен: 112, до национален: 166
+2026-10-18 12:33:52,996 [PROBLEM_GEN] INFO Бюджет днес: $2.96 / $3.00
+2026-10-18 12:33:52,996 [PROBLEM_GEN] INFO ════════════════════════════════════════════════════════════
+2026-10-18 12:33:52,996 [PROBLEM_GEN] INFO 
+[1/1] 1.4 — Степен на точка. Радикална ос
+2026-10-18 12:33:52,999 [PROBLEM_GEN] INFO [1.4] генерирам 9 задачи...
+2026-10-18 12:35:26,256 [PROBLEM_GEN] WARNING [1.4] само 4 задачи вместо 9
+2026-10-18 12:35:26,256 [PROBLEM_GEN] INFO [1.4] генерирани 4 задачи
+2026-10-18 12:35:26,258 [PROBLEM_GEN] INFO [1.4] верифицирам 4 задачи...
+2026-10-18 12:35:33,188 [PROBLEM_GEN] INFO [1.4] retry 1/2 за задачи [4]
+2026-10-18 12:35:33,188 [PROBLEM_GEN] INFO [1.4] регенерирам [4]
+2026-10-18 12:35:53,692 [PROBLEM_GEN] INFO [1.4] верифицирам 1 задачи...
+2026-10-18 12:36:30,328 [PROBLEM_GEN] INFO ✓ [1.4] 4/4 shipped → C:\Users\denis\Downloads\Материали Олимпиада МАТ\pipeline\problems\1_4
+2026-10-18 12:36:30,335 [PROBLEM_GEN] INFO [1.4] Готово за 157.3s | $0.0260 | 4/4 shipped
+2026-10-18 12:36:30,336 [PROBLEM_GEN] INFO 
+════════════════════════════════════════════════════════════
+2026-10-18 12:36:30,336 [PROBLEM_GEN] INFO КРАЙ: 1 успешни, 0 грешки
+2026-10-18 12:36:30,337 [PROBLEM_GEN] INFO Бюджет: $0.065 / $3.00
+2026-10-18 12:36:30,337 [PROBLEM_GEN] INFO ════════════════════════════════════════════════════════════
+2026-10-18 12:53:13,101 [PROBLEM_GEN] INFO Чета C:\Users\denis\Downloads\Материали Олимпиада МАТ\index.html
+2026-10-18 12:53:17,719 [PROBLEM_GEN] INFO Намерени 160 точки в HTML
+2026-10-18 12:53:17,898 [PROBLEM_GEN] INFO Ще обработя 1 точки
+2026-10-18 12:53:17,979 [PROBLEM_GEN] INFO Plan: Week 1/25, Phase 1 (Task 1)
+2026-10-18 12:53:17,979 [PROBLEM_GEN] INFO Дни до областен: 112, до национален: 166
+2026-10-18 12:53:17,981 [PROBLEM_GEN] INFO Бюджет днес: $2.94 / $3.00
+2026-10-18 12:53:17,981 [PROBLEM_GEN] INFO ════════════════════════════════════════════════════════════
+2026-10-18 12:53:17,982 [PROBLEM_GEN] INFO 
+[1/1] 1.4 — Степен на точка. Радикална ос
+2026-10-18 12:53:17,986 [PROBLEM_GEN] INFO [1.4] генерирам 9 задачи...
+2026-10-18 15:41:40,714 [PROBLEM_GEN] WARNING [1.4] HTTPSConnectionPool(host='ai.hackclub.com', port=443): Read timed out.
+2026-10-18 15:45:15,546 [PROBLEM_GEN] INFO [1.4] генерирани 6 задачи
+2026-10-18 15:45:15,548 [PROBLEM_GEN] INFO [1.4] верифицирам 6 задачи...
+2026-10-18 15:45:26,809 [PROBLEM_GEN] INFO [1.4] retry 1/2 за задачи [5, 6]
+2026-10-18 15:45:26,809 [PROBLEM_GEN] INFO [1.4] регенерирам [5, 6]
+2026-10-18 17:04:19,212 [PROBLEM_GEN] INFO Чета C:\Users\denis\Downloads\Материали Олимпиада МАТ\index.html
+2026-10-18 17:04:21,116 [PROBLEM_GEN] INFO Намерени 160 точки в HTML
+2026-10-18 17:04:22,283 [PROBLEM_GEN] INFO Ще обработя 1 точки
+2026-10-18 17:04:22,317 [PROBLEM_GEN] INFO Plan: Week 1/25, Phase 1 (Task 1)
+2026-10-18 17:04:22,318 [PROBLEM_GEN] INFO Дни до областен: 112, до национален: 166
+2026-10-18 17:04:22,318 [PROBLEM_GEN] INFO Бюджет днес: $2.94 / $3.00
+2026-10-18 17:04:22,318 [PROBLEM_GEN] INFO ════════════════════════════════════════════════════════════
+2026-10-18 17:04:22,318 [PROBLEM_GEN] INFO 
+[1/1] 1.4 — Степен на точка. Радикална ос
+2026-10-18 17:04:22,319 [PROBLEM_GEN] INFO [1.4] PHASE 1: генерирам 9 условия...
+2026-10-18 17:04:42,335 [PROBLEM_GEN] INFO [1.4] phase 1... 20s
+2026-10-18 17:05:02,348 [PROBLEM_GEN] INFO [1.4] phase 1... 40s
+2026-10-18 17:05:22,359 [PROBLEM_GEN] INFO [1.4] phase 1... 60s
+2026-10-18 17:05:42,363 [PROBLEM_GEN] INFO [1.4] phase 1... 80s
+2026-10-18 17:06:02,373 [PROBLEM_GEN] INFO [1.4] phase 1... 100s
+2026-10-18 17:06:22,385 [PROBLEM_GEN] INFO [1.4] phase 1... 120s
+2026-10-18 17:06:39,480 [PROBLEM_GEN] INFO [1.4] PHASE 1 готово: 9 условия (137s)
+2026-10-18 17:06:39,480 [PROBLEM_GEN] INFO [1.4] калибрация: easy=[1, 2, 3], medium=[4, 5, 6], hard=[7, 8, 9]
+2026-10-18 17:06:39,481 [PROBLEM_GEN] INFO [1.4] PHASE 2: стартирам паралелни call-ове...
+2026-10-18 17:06:39,492 [PROBLEM_GEN] INFO [1.4] PHASE 2 easy: 3 решения...
+2026-10-18 17:06:39,492 [PROBLEM_GEN] INFO [1.4] PHASE 2 medium: 3 решения...
+2026-10-18 17:06:39,493 [PROBLEM_GEN] INFO [1.4] PHASE 2 hard: 3 решения...
+2026-10-18 17:07:16,422 [PROBLEM_GEN] INFO [1.4] PHASE 2 easy готово: 3 решения (36s)
+2026-10-18 17:08:49,227 [PROBLEM_GEN] INFO [1.4] PHASE 2 hard готово: 3 решения (129s)
+2026-10-18 17:08:54,140 [PROBLEM_GEN] INFO [1.4] PHASE 2 medium готово: 3 решения (134s)
+2026-10-18 17:08:54,141 [PROBLEM_GEN] INFO [1.4] генерирани 9 задачи (условия + решения)
+2026-10-18 17:08:54,142 [PROBLEM_GEN] INFO [1.4] генерирани 9 задачи
+2026-10-18 17:08:54,142 [PROBLEM_GEN] ERROR [1.4] name 'verify_problems' is not defined
+Traceback (most recent call last):
+  File "C:\Users\denis\Downloads\Материали Олимпиада МАТ\pipeline\problem_generator.py", line 1216, in main
+    if process_point(ai_gen, ai_ver, point, plan_ctx, state, redry=args.redry):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\denis\Downloads\Материали Олимпиада МАТ\pipeline\problem_generator.py", line 1021, in process_point
+    ver_result = verify_problems(ai_ver, point, problems)
+                 ^^^^^^^^^^^^^^^
+NameError: name 'verify_problems' is not defined. Did you mean: 'diff_problems'?
+2026-10-18 17:08:54,155 [PROBLEM_GEN] INFO 
+════════════════════════════════════════════════════════════
+2026-10-18 17:08:54,155 [PROBLEM_GEN] INFO КРАЙ: 0 успешни, 1 грешки
+2026-10-18 17:08:54,155 [PROBLEM_GEN] INFO Бюджет: $0.065 / $3.00
+2026-10-18 17:08:54,156 [PROBLEM_GEN] INFO ════════════════════════════════════════════════════════════
+2026-10-18 17:10:29,843 [PROBLEM_GEN] INFO Чета C:\Users\denis\Downloads\Материали Олимпиада МАТ\index.html
+2026-10-18 17:10:31,866 [PROBLEM_GEN] INFO Намерени 160 точки в HTML
+2026-10-18 17:10:31,994 [PROBLEM_GEN] INFO Ще обработя 1 точки
+2026-10-18 17:10:32,044 [PROBLEM_GEN] INFO Plan: Week 1/25, Phase 1 (Task 1)
+2026-10-18 17:10:32,044 [PROBLEM_GEN] INFO Дни до областен: 112, до национален: 166
+2026-10-18 17:10:32,044 [PROBLEM_GEN] INFO Бюджет днес: $2.94 / $3.00
+2026-10-18 17:10:32,045 [PROBLEM_GEN] INFO ════════════════════════════════════════════════════════════
+2026-10-18 17:10:32,045 [PROBLEM_GEN] INFO 
+[1/1] 1.4 — Степен на точка. Радикална ос
+2026-10-18 17:10:32,045 [PROBLEM_GEN] INFO [1.4] PHASE 1: генерирам 9 условия...
+2026-10-18 17:10:52,055 [PROBLEM_GEN] INFO [1.4] phase 1... 20s
+2026-10-18 17:11:12,070 [PROBLEM_GEN] INFO [1.4] phase 1... 40s
+2026-10-18 17:11:32,073 [PROBLEM_GEN] INFO [1.4] phase 1... 60s
+2026-10-18 17:11:52,074 [PROBLEM_GEN] INFO [1.4] phase 1... 80s
+2026-10-18 17:12:12,074 [PROBLEM_GEN] INFO [1.4] phase 1... 100s
+2026-10-18 17:12:32,079 [PROBLEM_GEN] INFO [1.4] phase 1... 120s
+2026-10-18 17:12:52,084 [PROBLEM_GEN] INFO [1.4] phase 1... 140s
+2026-10-18 17:12:59,575 [PROBLEM_GEN] INFO [1.4] PHASE 1 готово: 9 условия (147s)
+2026-10-18 17:12:59,576 [PROBLEM_GEN] INFO [1.4] калибрация: easy=[1, 2, 3], medium=[4, 5, 6], hard=[7, 8, 9]
+2026-10-18 17:12:59,576 [PROBLEM_GEN] INFO [1.4] PHASE 2: стартирам паралелни call-ове...
+2026-10-18 17:12:59,578 [PROBLEM_GEN] INFO [1.4] PHASE 2 easy: 3 решения...
+2026-10-18 17:12:59,579 [PROBLEM_GEN] INFO [1.4] PHASE 2 medium: 3 решения...
+2026-10-18 17:12:59,580 [PROBLEM_GEN] INFO [1.4] PHASE 2 hard: 3 решения...
+2026-10-18 17:15:09,866 [PROBLEM_GEN] INFO [1.4] PHASE 2 easy готово: 2 решения (130s)
+2026-10-18 17:15:13,666 [PROBLEM_GEN] INFO [1.4] PHASE 2 hard готово: 2 решения (134s)
+2026-10-18 17:15:15,791 [PROBLEM_GEN] INFO [1.4] PHASE 2 medium готово: 2 решения (136s)
+2026-10-18 17:15:15,792 [PROBLEM_GEN] WARNING [1.4] липсват решения за nums [3, 6, 9]
+2026-10-18 17:15:15,792 [PROBLEM_GEN] INFO [1.4] PHASE 2 missing: 3 решения...
+2026-10-18 17:15:35,794 [PROBLEM_GEN] INFO [1.4] fill solutions... 20s
+2026-10-18 17:15:55,797 [PROBLEM_GEN] INFO [1.4] fill solutions... 40s
+2026-10-18 17:16:15,798 [PROBLEM_GEN] INFO [1.4] fill solutions... 60s
+2026-10-18 17:16:35,806 [PROBLEM_GEN] INFO [1.4] fill solutions... 80s
+2026-10-18 17:16:55,817 [PROBLEM_GEN] INFO [1.4] fill solutions... 100s
+2026-10-18 17:17:15,829 [PROBLEM_GEN] INFO [1.4] fill solutions... 120s
+2026-10-18 17:17:22,651 [PROBLEM_GEN] WARNING [1.4] без решение: [9]
+2026-10-18 17:17:22,651 [PROBLEM_GEN] INFO [1.4] генерирани 9 задачи (условия + решения)
+2026-10-18 17:17:22,651 [PROBLEM_GEN] INFO [1.4] генерирани 9 задачи
+2026-10-18 17:17:22,653 [PROBLEM_GEN] INFO [1.4] верифицирам 9 задачи...
+2026-10-18 17:17:42,655 [PROBLEM_GEN] INFO [1.4] verify... 20s
+2026-10-18 17:18:02,661 [PROBLEM_GEN] INFO [1.4] verify... 40s
+2026-10-18 17:18:12,023 [PROBLEM_GEN] INFO [1.4] verifier отговор (49s)
+2026-10-18 17:18:12,023 [PROBLEM_GEN] INFO [1.4] retry 1/2 за задачи [2, 4, 5, 6, 8, 9]
+2026-10-18 17:18:12,058 [PROBLEM_GEN] INFO [1.4] regen 1 задача #2 (easy)
+2026-10-18 17:18:32,068 [PROBLEM_GEN] INFO [1.4] regen #2... 20s
+2026-10-18 17:18:38,926 [PROBLEM_GEN] INFO [1.4] regen 1 задача #4 (medium)
+2026-10-18 17:18:58,940 [PROBLEM_GEN] INFO [1.4] regen #4... 20s
+2026-10-18 17:19:18,946 [PROBLEM_GEN] INFO [1.4] regen #4... 40s
+2026-10-18 17:19:34,935 [PROBLEM_GEN] INFO [1.4] regen 1 задача #5 (medium)
+2026-10-18 17:19:54,936 [PROBLEM_GEN] INFO [1.4] regen #5... 20s
+2026-10-18 17:20:14,940 [PROBLEM_GEN] INFO [1.4] regen #5... 40s
+2026-10-18 17:20:34,954 [PROBLEM_GEN] INFO [1.4] regen #5... 60s
+2026-10-18 17:20:54,961 [PROBLEM_GEN] INFO [1.4] regen #5... 80s
+2026-10-18 17:21:14,966 [PROBLEM_GEN] INFO [1.4] regen #5... 100s
+2026-10-18 17:21:34,970 [PROBLEM_GEN] INFO [1.4] regen #5... 120s
+2026-10-18 17:21:54,986 [PROBLEM_GEN] INFO [1.4] regen #5... 140s
+2026-10-18 17:22:14,998 [PROBLEM_GEN] INFO [1.4] regen #5... 160s
+2026-10-18 17:22:34,998 [PROBLEM_GEN] INFO [1.4] regen #5... 180s
+2026-10-18 17:22:55,004 [PROBLEM_GEN] INFO [1.4] regen #5... 200s
+2026-10-18 17:23:15,007 [PROBLEM_GEN] INFO [1.4] regen #5... 220s
+2026-10-18 17:23:35,019 [PROBLEM_GEN] INFO [1.4] regen #5... 240s
+2026-10-18 17:23:55,027 [PROBLEM_GEN] INFO [1.4] regen #5... 260s
+2026-10-18 17:24:15,029 [PROBLEM_GEN] INFO [1.4] regen #5... 280s
+2026-10-18 17:24:35,031 [PROBLEM_GEN] INFO [1.4] regen #5... 300s
+2026-10-18 17:24:50,573 [PROBLEM_GEN] INFO [1.4] regen 1 задача #6 (medium)
+2026-10-18 17:25:10,588 [PROBLEM_GEN] INFO [1.4] regen #6... 20s
+2026-10-18 17:25:30,602 [PROBLEM_GEN] INFO [1.4] regen #6... 40s
+2026-10-18 17:25:50,603 [PROBLEM_GEN] INFO [1.4] regen #6... 60s
+2026-10-18 17:26:10,611 [PROBLEM_GEN] INFO [1.4] regen #6... 80s
+2026-10-18 17:26:30,625 [PROBLEM_GEN] INFO [1.4] regen #6... 100s
+2026-10-18 17:26:50,630 [PROBLEM_GEN] INFO [1.4] regen #6... 120s
+2026-10-18 17:27:10,631 [PROBLEM_GEN] INFO [1.4] regen #6... 140s
+2026-10-18 17:27:30,647 [PROBLEM_GEN] INFO [1.4] regen #6... 160s
+2026-10-18 17:27:50,650 [PROBLEM_GEN] INFO [1.4] regen #6... 180s
+2026-10-18 17:28:10,663 [PROBLEM_GEN] INFO [1.4] regen #6... 200s
+2026-10-18 17:28:30,671 [PROBLEM_GEN] INFO [1.4] regen #6... 220s
+2026-10-18 17:28:50,677 [PROBLEM_GEN] INFO [1.4] regen #6... 240s
+2026-10-18 17:29:10,683 [PROBLEM_GEN] INFO [1.4] regen #6... 260s
+2026-10-18 17:29:30,683 [PROBLEM_GEN] INFO [1.4] regen #6... 280s
+2026-10-18 17:29:50,685 [PROBLEM_GEN] INFO [1.4] regen #6... 300s
+2026-10-18 17:29:59,084 [PROBLEM_GEN] INFO [1.4] regen 1 задача #8 (hard)
+2026-10-18 17:30:19,091 [PROBLEM_GEN] INFO [1.4] regen #8... 20s
+2026-10-18 17:30:39,094 [PROBLEM_GEN] INFO [1.4] regen #8... 40s
+2026-10-18 17:30:59,103 [PROBLEM_GEN] INFO [1.4] regen #8... 60s
+2026-10-18 17:31:00,711 [PROBLEM_GEN] INFO [1.4] regen 1 задача #9 (hard)
+2026-10-18 17:31:20,719 [PROBLEM_GEN] INFO [1.4] regen #9... 20s
+2026-10-18 17:31:40,734 [PROBLEM_GEN] INFO [1.4] regen #9... 40s
+2026-10-18 17:32:00,742 [PROBLEM_GEN] INFO [1.4] regen #9... 60s
+2026-10-18 17:32:20,749 [PROBLEM_GEN] INFO [1.4] regen #9... 80s
+2026-10-18 17:32:40,750 [PROBLEM_GEN] INFO [1.4] regen #9... 100s
+2026-10-18 17:33:00,753 [PROBLEM_GEN] INFO [1.4] regen #9... 120s
+2026-10-18 17:33:20,759 [PROBLEM_GEN] INFO [1.4] regen #9... 140s
+2026-10-18 17:33:40,760 [PROBLEM_GEN] INFO [1.4] regen #9... 160s
+2026-10-18 17:34:00,768 [PROBLEM_GEN] INFO [1.4] regen #9... 180s
+2026-10-18 17:34:20,770 [PROBLEM_GEN] INFO [1.4] regen #9... 200s
+2026-10-18 17:34:40,772 [PROBLEM_GEN] INFO [1.4] regen #9... 220s
+2026-10-18 17:35:00,776 [PROBLEM_GEN] INFO [1.4] regen #9... 240s
+2026-10-18 17:35:20,790 [PROBLEM_GEN] INFO [1.4] regen #9... 260s
+2026-10-18 17:35:40,791 [PROBLEM_GEN] INFO [1.4] regen #9... 280s
+2026-10-18 17:35:53,062 [PROBLEM_GEN] INFO [1.4] верифицирам 6 задачи...
+2026-10-18 17:36:13,066 [PROBLEM_GEN] INFO [1.4] verify... 20s
+2026-10-18 17:36:33,078 [PROBLEM_GEN] INFO [1.4] verify... 40s
+2026-10-18 17:36:53,088 [PROBLEM_GEN] INFO [1.4] verify... 60s
+2026-10-18 17:37:13,092 [PROBLEM_GEN] INFO [1.4] verify... 80s
+2026-10-18 17:37:33,100 [PROBLEM_GEN] INFO [1.4] verify... 100s
+2026-10-18 17:37:53,102 [PROBLEM_GEN] INFO [1.4] verify... 120s
+2026-10-18 17:38:13,110 [PROBLEM_GEN] INFO [1.4] verify... 140s
+2026-10-18 17:38:27,018 [PROBLEM_GEN] INFO [1.4] verifier отговор (153s)
+2026-10-18 17:38:27,019 [PROBLEM_GEN] INFO [1.4] retry 2/2 за задачи [5, 6, 9]
+2026-10-18 17:38:27,054 [PROBLEM_GEN] INFO [1.4] regen 1 задача #5 (medium)
+2026-10-18 17:38:47,058 [PROBLEM_GEN] INFO [1.4] regen #5... 20s
+2026-10-18 17:39:07,059 [PROBLEM_GEN] INFO [1.4] regen #5... 40s
+2026-10-18 17:39:17,936 [PROBLEM_GEN] INFO [1.4] regen 1 задача #6 (medium)
+2026-10-18 17:39:37,942 [PROBLEM_GEN] INFO [1.4] regen #6... 20s
+2026-10-18 17:39:57,954 [PROBLEM_GEN] INFO [1.4] regen #6... 40s
+2026-10-18 17:40:13,027 [PROBLEM_GEN] INFO [1.4] regen 1 задача #9 (hard)
+2026-10-18 17:40:33,037 [PROBLEM_GEN] INFO [1.4] regen #9... 20s
+2026-10-18 17:40:53,047 [PROBLEM_GEN] INFO [1.4] regen #9... 40s
+2026-10-18 17:41:13,058 [PROBLEM_GEN] INFO [1.4] regen #9... 60s
+2026-10-18 17:41:33,059 [PROBLEM_GEN] INFO [1.4] regen #9... 80s
+2026-10-18 17:41:53,068 [PROBLEM_GEN] INFO [1.4] regen #9... 100s
+2026-10-18 17:42:13,075 [PROBLEM_GEN] INFO [1.4] regen #9... 120s
+2026-10-18 17:42:33,087 [PROBLEM_GEN] INFO [1.4] regen #9... 140s
+2026-10-18 17:42:53,096 [PROBLEM_GEN] INFO [1.4] regen #9... 160s
+2026-10-18 17:43:13,111 [PROBLEM_GEN] INFO [1.4] regen #9... 180s
+2026-10-18 17:43:33,125 [PROBLEM_GEN] INFO [1.4] regen #9... 200s
+2026-10-18 17:43:53,126 [PROBLEM_GEN] INFO [1.4] regen #9... 220s
+2026-10-18 17:44:13,141 [PROBLEM_GEN] INFO [1.4] regen #9... 240s
+2026-10-18 17:44:33,144 [PROBLEM_GEN] INFO [1.4] regen #9... 260s
+2026-10-18 17:44:53,150 [PROBLEM_GEN] INFO [1.4] regen #9... 280s
+2026-10-18 17:45:13,158 [PROBLEM_GEN] INFO [1.4] regen #9... 300s
+2026-10-18 17:45:33,163 [PROBLEM_GEN] INFO [1.4] regen #9... 320s
+2026-10-18 17:45:53,175 [PROBLEM_GEN] INFO [1.4] regen #9... 340s
+2026-10-18 17:45:55,852 [PROBLEM_GEN] INFO [1.4] верифицирам 3 задачи...
+2026-10-18 17:46:15,859 [PROBLEM_GEN] INFO [1.4] verify... 20s
+2026-10-18 17:46:35,865 [PROBLEM_GEN] INFO [1.4] verify... 40s
+2026-10-18 17:46:55,866 [PROBLEM_GEN] INFO [1.4] verify... 60s
+2026-10-18 17:47:15,871 [PROBLEM_GEN] INFO [1.4] verify... 80s
+2026-10-18 17:47:29,550 [PROBLEM_GEN] INFO [1.4] verifier отговор (93s)
+2026-10-18 17:47:29,559 [PROBLEM_GEN] INFO ✓ [1.4] 8/9 shipped → C:\Users\denis\Downloads\Материали Олимпиада МАТ\pipeline\problems\1_4
+2026-10-18 17:47:29,563 [PROBLEM_GEN] INFO [1.4] Готово за 2217.5s | $0.0390 | 8/9 shipped
+2026-10-18 17:47:29,563 [PROBLEM_GEN] INFO 
+════════════════════════════════════════════════════════════
+2026-10-18 17:47:29,563 [PROBLEM_GEN] INFO КРАЙ: 1 успешни, 0 грешки
+2026-10-18 17:47:29,565 [PROBLEM_GEN] INFO Бюджет: $0.104 / $3.00
+2026-10-18 17:47:29,565 [PROBLEM_GEN] INFO ════════════════════════════════════════════════════════════
+2026-10-18 18:02:46,868 [PROBLEM_GEN] INFO Чета C:\Users\denis\Downloads\Материали Олимпиада МАТ\index.html
+2026-10-18 18:02:49,152 [PROBLEM_GEN] INFO Намерени 160 точки в HTML
+2026-10-18 18:02:49,280 [PROBLEM_GEN] INFO Ще обработя 1 точки
+2026-10-18 18:02:49,372 [PROBLEM_GEN] INFO Plan: Week 1/25, Phase 1 (Task 1)
+2026-10-18 18:02:49,382 [PROBLEM_GEN] INFO Дни до областен: 112, до национален: 166
+2026-10-18 18:02:49,383 [PROBLEM_GEN] INFO Бюджет днес: $2.90 / $3.00
+2026-10-18 18:02:49,383 [PROBLEM_GEN] INFO ════════════════════════════════════════════════════════════
+2026-10-18 18:02:49,384 [PROBLEM_GEN] INFO 
+[1/1] 1.4 — Степен на точка. Радикална ос
+2026-10-18 18:02:49,384 [PROBLEM_GEN] INFO [1.4] PHASE 1: генерирам 9 условия...
+2026-10-18 18:03:09,392 [PROBLEM_GEN] INFO [1.4] phase 1... 20s
+2026-10-18 18:03:29,399 [PROBLEM_GEN] INFO [1.4] phase 1... 40s
+2026-10-18 18:03:49,402 [PROBLEM_GEN] INFO [1.4] phase 1... 60s
+2026-10-18 18:04:09,412 [PROBLEM_GEN] INFO [1.4] phase 1... 80s
+2026-10-18 18:04:29,422 [PROBLEM_GEN] INFO [1.4] phase 1... 100s
+2026-10-18 18:04:49,437 [PROBLEM_GEN] INFO [1.4] phase 1... 120s
+2026-10-18 18:04:58,559 [PROBLEM_GEN] INFO [1.4] PHASE 1 готово: 9 условия (129s)
+2026-10-18 18:04:58,559 [PROBLEM_GEN] INFO [1.4] калибрация: easy=[1, 2, 3], medium=[4, 5, 6], hard=[7, 8, 9]
+2026-10-18 18:04:58,560 [PROBLEM_GEN] INFO [1.4] PHASE 2: стартирам паралелни call-ове...
+2026-10-18 18:04:58,562 [PROBLEM_GEN] INFO [1.4] PHASE 2 easy: 3 решения...
+2026-10-18 18:04:58,562 [PROBLEM_GEN] INFO [1.4] PHASE 2 medium: 3 решения...
+2026-10-18 18:04:58,563 [PROBLEM_GEN] INFO [1.4] PHASE 2 hard: 3 решения...
+2026-10-18 18:06:06,888 [PROBLEM_GEN] INFO [1.4] PHASE 2 easy готово: 3 решения (68s)
+2026-10-18 18:07:16,294 [PROBLEM_GEN] INFO [1.4] PHASE 2 hard готово: 2 решения (137s)
+2026-10-18 18:07:18,563 [PROBLEM_GEN] INFO [1.4] PHASE 2 medium готово: 1 решения (139s)
+2026-10-18 18:07:18,564 [PROBLEM_GEN] WARNING [1.4] липсват решения за nums [5, 6, 9]
+2026-10-18 18:07:18,564 [PROBLEM_GEN] INFO [1.4] PHASE 2 missing: 3 решения...
+2026-10-18 18:07:38,576 [PROBLEM_GEN] INFO [1.4] fill solutions... 20s
+2026-10-18 18:07:58,581 [PROBLEM_GEN] INFO [1.4] fill solutions... 40s
+2026-10-18 18:08:18,584 [PROBLEM_GEN] INFO [1.4] fill solutions... 60s
+2026-10-18 18:08:38,590 [PROBLEM_GEN] INFO [1.4] fill solutions... 80s
+2026-10-18 18:08:58,599 [PROBLEM_GEN] INFO [1.4] fill solutions... 100s
+2026-10-18 18:09:18,613 [PROBLEM_GEN] INFO [1.4] fill solutions... 120s
+2026-10-18 18:09:38,621 [PROBLEM_GEN] INFO [1.4] fill solutions... 140s
+2026-10-18 18:09:42,968 [PROBLEM_GEN] WARNING [1.4] без решение: [6, 9]
+2026-10-18 18:09:42,968 [PROBLEM_GEN] INFO [1.4] генерирани 9 задачи (условия + решения)
+2026-10-18 18:09:42,968 [PROBLEM_GEN] INFO [1.4] генерирани 9 задачи
+2026-10-18 18:09:42,970 [PROBLEM_GEN] INFO [1.4] верифицирам 9 задачи...
+2026-10-18 18:10:02,973 [PROBLEM_GEN] INFO [1.4] verify... 20s
+2026-10-18 18:10:22,980 [PROBLEM_GEN] INFO [1.4] verify... 40s
+2026-10-18 18:10:42,982 [PROBLEM_GEN] INFO [1.4] verify... 60s
+2026-10-18 18:11:02,983 [PROBLEM_GEN] INFO [1.4] verify... 80s
+2026-10-18 18:11:22,989 [PROBLEM_GEN] INFO [1.4] verify... 100s
+2026-10-18 18:11:43,002 [PROBLEM_GEN] INFO [1.4] verify... 120s
+2026-10-18 18:12:00,933 [PROBLEM_GEN] INFO [1.4] verifier отговор (137s)
+2026-10-18 18:12:00,934 [PROBLEM_GEN] INFO [1.4] retry 1/2 за задачи [4, 5, 6, 8, 9]
+2026-10-18 18:12:00,934 [PROBLEM_GEN] INFO [1.4] регенерирам паралелно 5 задачи: [4, 5, 6, 8, 9]
+2026-10-18 18:12:01,004 [PROBLEM_GEN] INFO [1.4] regen #4 (medium)
+2026-10-18 18:12:01,047 [PROBLEM_GEN] INFO [1.4] regen #5 (medium)
+2026-10-18 18:12:01,049 [PROBLEM_GEN] INFO [1.4] regen #6 (medium)
+2026-10-18 18:12:01,089 [PROBLEM_GEN] INFO [1.4] regen #8 (hard)
+2026-10-18 18:12:21,101 [PROBLEM_GEN] INFO [1.4] regen #4... 20s
+2026-10-18 18:12:21,101 [PROBLEM_GEN] INFO [1.4] regen #5... 20s
+2026-10-18 18:12:21,101 [PROBLEM_GEN] INFO [1.4] regen #8... 20s
+2026-10-18 18:12:21,101 [PROBLEM_GEN] INFO [1.4] regen #6... 20s
+2026-10-18 18:12:41,110 [PROBLEM_GEN] INFO [1.4] regen #4... 40s
+2026-10-18 18:12:41,110 [PROBLEM_GEN] INFO [1.4] regen #5... 40s
+2026-10-18 18:12:41,110 [PROBLEM_GEN] INFO [1.4] regen #6... 40s
+2026-10-18 18:12:41,110 [PROBLEM_GEN] INFO [1.4] regen #8... 40s
+2026-10-18 18:12:54,685 [PROBLEM_GEN] INFO [1.4] regen #4 (medium) OK
+2026-10-18 18:12:54,720 [PROBLEM_GEN] INFO [1.4] regen #9 (hard)
+2026-10-18 18:13:01,012 [PROBLEM_GEN] INFO [1.4] regen #6 (medium) OK
+2026-10-18 18:13:01,126 [PROBLEM_GEN] INFO [1.4] regen #5... 60s
+2026-10-18 18:13:01,126 [PROBLEM_GEN] INFO [1.4] regen #8... 60s
+2026-10-18 18:13:14,725 [PROBLEM_GEN] INFO [1.4] regen #9... 20s
+2026-10-18 18:13:21,141 [PROBLEM_GEN] INFO [1.4] regen #5... 80s
+2026-10-18 18:13:21,141 [PROBLEM_GEN] INFO [1.4] regen #8... 80s
+2026-10-18 18:13:34,728 [PROBLEM_GEN] INFO [1.4] regen #9... 40s
+2026-10-18 18:13:41,145 [PROBLEM_GEN] INFO [1.4] regen #8... 100s
+2026-10-18 18:13:41,145 [PROBLEM_GEN] INFO [1.4] regen #5... 100s
+2026-10-18 18:13:54,732 [PROBLEM_GEN] INFO [1.4] regen #9... 60s
+2026-10-18 18:14:01,157 [PROBLEM_GEN] INFO [1.4] regen #5... 120s
+2026-10-18 18:14:01,157 [PROBLEM_GEN] INFO [1.4] regen #8... 120s
+2026-10-18 18:14:14,739 [PROBLEM_GEN] INFO [1.4] regen #9... 80s
+2026-10-18 18:14:20,411 [PROBLEM_GEN] INFO [1.4] regen #5 (medium) OK
+2026-10-18 18:14:21,158 [PROBLEM_GEN] INFO [1.4] regen #8... 140s
+2026-10-18 18:14:34,754 [PROBLEM_GEN] INFO [1.4] regen #9... 100s
+2026-10-18 18:14:41,170 [PROBLEM_GEN] INFO [1.4] regen #8... 160s
+2026-10-18 18:14:54,767 [PROBLEM_GEN] INFO [1.4] regen #9... 120s
+2026-10-18 18:15:01,179 [PROBLEM_GEN] INFO [1.4] regen #8... 180s
+2026-10-18 18:15:14,782 [PROBLEM_GEN] INFO [1.4] regen #9... 140s
+2026-10-18 18:15:21,182 [PROBLEM_GEN] INFO [1.4] regen #8... 200s
+2026-10-18 18:15:34,784 [PROBLEM_GEN] INFO [1.4] regen #9... 160s
+2026-10-18 18:15:41,190 [PROBLEM_GEN] INFO [1.4] regen #8... 220s
+2026-10-18 18:15:54,785 [PROBLEM_GEN] INFO [1.4] regen #9... 180s
+2026-10-18 18:16:01,201 [PROBLEM_GEN] INFO [1.4] regen #8... 240s
+2026-10-18 18:16:14,789 [PROBLEM_GEN] INFO [1.4] regen #9... 200s
+2026-10-18 18:16:21,209 [PROBLEM_GEN] INFO [1.4] regen #8... 260s
+2026-10-18 18:16:21,844 [PROBLEM_GEN] INFO [1.4] regen #8 (hard) OK
+2026-10-18 18:16:34,804 [PROBLEM_GEN] INFO [1.4] regen #9... 220s
+2026-10-18 18:16:54,813 [PROBLEM_GEN] INFO [1.4] regen #9... 240s
+2026-10-18 18:17:14,828 [PROBLEM_GEN] INFO [1.4] regen #9... 260s
+2026-10-18 18:17:34,834 [PROBLEM_GEN] INFO [1.4] regen #9... 280s
+2026-10-18 18:17:46,595 [PROBLEM_GEN] INFO [1.4] regen #9 (hard) OK
+2026-10-18 18:17:46,596 [PROBLEM_GEN] INFO [1.4] верифицирам 5 задачи...
+2026-10-18 18:18:06,610 [PROBLEM_GEN] INFO [1.4] verify... 20s
+2026-10-18 18:18:26,619 [PROBLEM_GEN] INFO [1.4] verify... 40s
+2026-10-18 18:18:46,628 [PROBLEM_GEN] INFO [1.4] verify... 60s
+2026-10-18 18:19:06,643 [PROBLEM_GEN] INFO [1.4] verify... 80s
+2026-10-18 18:19:26,658 [PROBLEM_GEN] INFO [1.4] verify... 100s
+2026-10-18 18:19:46,661 [PROBLEM_GEN] INFO [1.4] verify... 120s
+2026-10-18 18:20:06,667 [PROBLEM_GEN] INFO [1.4] verify... 140s
+2026-10-18 18:20:12,872 [PROBLEM_GEN] INFO [1.4] verifier отговор (146s)
+2026-10-18 18:20:12,872 [PROBLEM_GEN] INFO [1.4] retry 2/2 за задачи [5, 8, 9]
+2026-10-18 18:20:12,872 [PROBLEM_GEN] INFO [1.4] регенерирам паралелно 3 задачи: [5, 8, 9]
+2026-10-18 18:20:12,988 [PROBLEM_GEN] INFO [1.4] regen #9 (hard)
+2026-10-18 18:20:13,030 [PROBLEM_GEN] INFO [1.4] regen #8 (hard)
+2026-10-18 18:20:13,032 [PROBLEM_GEN] INFO [1.4] regen #5 (medium)
+2026-10-18 18:20:33,034 [PROBLEM_GEN] INFO [1.4] regen #9... 20s
+2026-10-18 18:20:33,034 [PROBLEM_GEN] INFO [1.4] regen #5... 20s
+2026-10-18 18:20:33,034 [PROBLEM_GEN] INFO [1.4] regen #8... 20s
+2026-10-18 18:20:53,048 [PROBLEM_GEN] INFO [1.4] regen #8... 40s
+2026-10-18 18:20:53,048 [PROBLEM_GEN] INFO [1.4] regen #5... 40s
+2026-10-18 18:20:53,048 [PROBLEM_GEN] INFO [1.4] regen #9... 40s
+2026-10-18 18:21:13,051 [PROBLEM_GEN] INFO [1.4] regen #9... 60s
+2026-10-18 18:21:13,051 [PROBLEM_GEN] INFO [1.4] regen #5... 60s
+2026-10-18 18:21:13,051 [PROBLEM_GEN] INFO [1.4] regen #8... 60s
+2026-10-18 18:21:33,051 [PROBLEM_GEN] INFO [1.4] regen #9... 80s
+2026-10-18 18:21:33,067 [PROBLEM_GEN] INFO [1.4] regen #8... 80s
+2026-10-18 18:21:33,067 [PROBLEM_GEN] INFO [1.4] regen #5... 80s
+2026-10-18 18:21:53,067 [PROBLEM_GEN] INFO [1.4] regen #9... 100s
+2026-10-18 18:21:53,067 [PROBLEM_GEN] INFO [1.4] regen #8... 100s
+2026-10-18 18:21:53,083 [PROBLEM_GEN] INFO [1.4] regen #5... 100s
+2026-10-18 18:22:04,432 [PROBLEM_GEN] INFO [1.4] regen #8 (hard) OK
+2026-10-18 18:22:13,072 [PROBLEM_GEN] INFO [1.4] regen #9... 120s
+2026-10-18 18:22:13,088 [PROBLEM_GEN] INFO [1.4] regen #5... 120s
+2026-10-18 18:22:33,086 [PROBLEM_GEN] INFO [1.4] regen #9... 140s
+2026-10-18 18:22:33,101 [PROBLEM_GEN] INFO [1.4] regen #5... 140s
+2026-10-18 18:22:53,100 [PROBLEM_GEN] INFO [1.4] regen #9... 160s
+2026-10-18 18:22:53,115 [PROBLEM_GEN] INFO [1.4] regen #5... 160s
+2026-10-18 18:23:06,265 [PROBLEM_GEN] INFO [1.4] regen #5 (medium) OK
+2026-10-18 18:23:13,106 [PROBLEM_GEN] INFO [1.4] regen #9... 180s
+2026-10-18 18:23:33,117 [PROBLEM_GEN] INFO [1.4] regen #9... 200s
+2026-10-18 18:23:53,118 [PROBLEM_GEN] INFO [1.4] regen #9... 220s
+2026-10-18 18:24:13,121 [PROBLEM_GEN] INFO [1.4] regen #9... 240s
+2026-10-18 18:24:33,128 [PROBLEM_GEN] INFO [1.4] regen #9... 260s
+2026-10-18 18:24:53,143 [PROBLEM_GEN] INFO [1.4] regen #9... 280s
+2026-10-18 18:25:13,144 [PROBLEM_GEN] INFO [1.4] regen #9... 300s
+2026-10-18 18:25:25,149 [PROBLEM_GEN] INFO [1.4] regen #9 (hard) OK
+2026-10-18 18:25:25,150 [PROBLEM_GEN] INFO [1.4] верифицирам 3 задачи...
+2026-10-18 18:25:45,158 [PROBLEM_GEN] INFO [1.4] verify... 20s
+2026-10-18 18:26:05,164 [PROBLEM_GEN] INFO [1.4] verify... 40s
+2026-10-18 18:26:25,174 [PROBLEM_GEN] INFO [1.4] verify... 60s
+2026-10-18 18:26:45,178 [PROBLEM_GEN] INFO [1.4] verify... 80s
+2026-10-18 18:27:05,185 [PROBLEM_GEN] INFO [1.4] verify... 100s
+2026-10-18 18:27:25,195 [PROBLEM_GEN] INFO [1.4] verify... 120s
+2026-10-18 18:27:45,205 [PROBLEM_GEN] INFO [1.4] verify... 140s
+2026-10-18 18:28:05,212 [PROBLEM_GEN] INFO [1.4] verify... 160s
+2026-10-18 18:28:25,222 [PROBLEM_GEN] INFO [1.4] verify... 180s
+2026-10-18 18:28:45,228 [PROBLEM_GEN] INFO [1.4] verify... 200s
+2026-10-18 18:29:05,230 [PROBLEM_GEN] INFO [1.4] verify... 220s
+2026-10-18 18:29:25,236 [PROBLEM_GEN] INFO [1.4] verify... 240s
+2026-10-18 18:29:45,246 [PROBLEM_GEN] INFO [1.4] verify... 260s
+2026-10-18 18:30:05,253 [PROBLEM_GEN] INFO [1.4] verify... 280s
+2026-10-18 18:30:25,256 [PROBLEM_GEN] INFO [1.4] verify... 300s
+2026-10-18 18:30:45,263 [PROBLEM_GEN] INFO [1.4] verify... 320s
+2026-10-18 18:31:05,264 [PROBLEM_GEN] INFO [1.4] verify... 340s
+2026-10-18 18:31:12,972 [PROBLEM_GEN] INFO [1.4] verifier отговор (347s)
+2026-10-18 18:31:12,978 [PROBLEM_GEN] INFO ✓ [1.4] 6/9 shipped → C:\Users\denis\Downloads\Материали Олимпиада МАТ\pipeline\problems\1_4
+2026-10-18 18:31:12,983 [PROBLEM_GEN] INFO [1.4] Готово за 1703.6s | $0.0390 | 6/9 shipped
+2026-10-18 18:31:12,984 [PROBLEM_GEN] INFO 
+════════════════════════════════════════════════════════════
+2026-10-18 18:31:12,984 [PROBLEM_GEN] INFO КРАЙ: 1 успешни, 0 грешки
+2026-10-18 18:31:12,984 [PROBLEM_GEN] INFO Бюджет: $0.143 / $3.00
+2026-10-18 18:31:12,984 [PROBLEM_GEN] INFO ════════════════════════════════════════════════════════════
+2026-10-18 18:48:08,565 [PROBLEM_GEN] INFO Чета C:\Users\denis\Downloads\Материали Олимпиада МАТ\index.html
+2026-10-18 18:48:13,197 [PROBLEM_GEN] INFO Намерени 160 точки в HTML
+2026-10-18 18:48:13,334 [PROBLEM_GEN] INFO Ще обработя 1 точки
+2026-10-18 18:48:13,415 [PROBLEM_GEN] INFO Plan: Week 1/25, Phase 1 (Task 1)
+2026-10-18 18:48:13,416 [PROBLEM_GEN] INFO Дни до областен: 112, до национален: 166
+2026-10-18 18:48:13,416 [PROBLEM_GEN] INFO Бюджет днес: $2.86 / $3.00
+2026-10-18 18:48:13,416 [PROBLEM_GEN] INFO ════════════════════════════════════════════════════════════
+2026-10-18 18:48:13,417 [PROBLEM_GEN] INFO 
+[1/1] 1.4 — Степен на точка. Радикална ос
+2026-10-18 18:48:13,417 [PROBLEM_GEN] INFO [1.4] PHASE 1: генерирам 9 условия...
+2026-10-18 18:48:33,430 [PROBLEM_GEN] INFO [1.4] phase 1... 20s
+2026-10-18 18:48:53,445 [PROBLEM_GEN] INFO [1.4] phase 1... 40s
+2026-10-18 18:49:13,450 [PROBLEM_GEN] INFO [1.4] phase 1... 60s
+2026-10-18 18:49:33,458 [PROBLEM_GEN] INFO [1.4] phase 1... 80s
+2026-10-18 18:49:53,461 [PROBLEM_GEN] INFO [1.4] phase 1... 100s
+2026-10-18 18:50:13,464 [PROBLEM_GEN] INFO [1.4] phase 1... 120s
+2026-10-18 18:50:26,345 [PROBLEM_GEN] INFO [1.4] PHASE 1 готово: 9 условия (132s)
+2026-10-18 18:50:26,346 [PROBLEM_GEN] INFO [1.4] калибрация: easy=[1, 2, 3], medium=[4, 5, 6], hard=[7, 8, 9]
+2026-10-18 18:50:26,346 [PROBLEM_GEN] INFO [1.4] PHASE 2: стартирам паралелни call-ове...
+2026-10-18 18:50:26,350 [PROBLEM_GEN] INFO [1.4] PHASE 2 easy: 3 решения...
+2026-10-18 18:50:26,350 [PROBLEM_GEN] INFO [1.4] PHASE 2 medium: 3 решения...
+2026-10-18 18:50:26,355 [PROBLEM_GEN] INFO [1.4] PHASE 2 hard: 3 решения...
+2026-10-18 18:51:33,741 [PROBLEM_GEN] INFO [1.4] PHASE 2 easy готово: 3 решения (67s)
+2026-10-18 18:54:20,614 [PROBLEM_GEN] INFO [1.4] PHASE 2 medium готово: 2 решения (234s)
+2026-10-18 18:54:32,926 [PROBLEM_GEN] INFO [1.4] PHASE 2 hard готово: 3 решения (246s)
+2026-10-18 18:54:32,927 [PROBLEM_GEN] WARNING [1.4] липсват решения за nums [6]
+2026-10-18 18:54:32,927 [PROBLEM_GEN] INFO [1.4] PHASE 2 missing: 1 решения...
+2026-10-18 18:54:52,930 [PROBLEM_GEN] INFO [1.4] fill solutions... 20s
+2026-10-18 18:55:12,933 [PROBLEM_GEN] INFO [1.4] fill solutions... 40s
+2026-10-18 18:55:32,948 [PROBLEM_GEN] INFO [1.4] fill solutions... 60s
+2026-10-18 18:55:52,957 [PROBLEM_GEN] INFO [1.4] fill solutions... 80s
+2026-10-18 18:56:12,960 [PROBLEM_GEN] INFO [1.4] fill solutions... 100s
+2026-10-18 18:56:32,961 [PROBLEM_GEN] INFO [1.4] fill solutions... 120s
+2026-10-18 18:56:52,976 [PROBLEM_GEN] INFO [1.4] fill solutions... 140s
+2026-10-18 18:57:12,986 [PROBLEM_GEN] INFO [1.4] fill solutions... 160s
+2026-10-18 18:57:33,002 [PROBLEM_GEN] INFO [1.4] fill solutions... 180s
+2026-10-18 18:57:53,016 [PROBLEM_GEN] INFO [1.4] fill solutions... 200s
+2026-10-18 18:58:13,027 [PROBLEM_GEN] INFO [1.4] fill solutions... 220s
+2026-10-18 18:58:33,036 [PROBLEM_GEN] INFO [1.4] fill solutions... 240s
+2026-10-18 18:58:53,052 [PROBLEM_GEN] INFO [1.4] fill solutions... 260s
+2026-10-18 18:59:13,066 [PROBLEM_GEN] INFO [1.4] fill solutions... 280s
+2026-10-18 18:59:33,068 [PROBLEM_GEN] INFO [1.4] fill solutions... 300s
+2026-10-18 18:59:53,073 [PROBLEM_GEN] INFO [1.4] fill solutions... 320s
+2026-10-18 19:00:13,089 [PROBLEM_GEN] INFO [1.4] fill solutions... 340s
+2026-10-18 19:00:33,097 [PROBLEM_GEN] INFO [1.4] fill solutions... 360s
+2026-10-18 19:00:53,104 [PROBLEM_GEN] INFO [1.4] fill solutions... 380s
+2026-10-18 19:01:13,109 [PROBLEM_GEN] INFO [1.4] fill solutions... 400s
+2026-10-18 19:01:33,111 [PROBLEM_GEN] INFO [1.4] fill solutions... 420s
+2026-10-18 19:01:53,118 [PROBLEM_GEN] INFO [1.4] fill solutions... 440s
+2026-10-18 19:02:13,131 [PROBLEM_GEN] INFO [1.4] fill solutions... 460s
+2026-10-18 19:02:33,137 [PROBLEM_GEN] INFO [1.4] fill solutions... 480s
+2026-10-18 19:02:53,138 [PROBLEM_GEN] INFO [1.4] fill solutions... 500s
+2026-10-18 19:03:13,150 [PROBLEM_GEN] INFO [1.4] fill solutions... 520s
+2026-10-18 19:03:33,164 [PROBLEM_GEN] INFO [1.4] fill solutions... 540s
+2026-10-18 19:03:53,168 [PROBLEM_GEN] INFO [1.4] fill solutions... 560s
+2026-10-18 19:04:13,183 [PROBLEM_GEN] INFO [1.4] fill solutions... 580s
+2026-10-18 19:04:29,416 [PROBLEM_GEN] WARNING [1.4] без решение: [6]
+2026-10-18 19:04:29,416 [PROBLEM_GEN] INFO [1.4] генерирани 9 задачи (условия + решения)
+2026-10-18 19:04:29,418 [PROBLEM_GEN] INFO [1.4] 9 задачи генерирани
+2026-10-18 19:04:29,418 [PROBLEM_GEN] INFO [1.4] ⚡ V1(DeepSeek) + V2(gpt-oss) паралелно...
+2026-10-18 19:04:29,429 [PROBLEM_GEN] INFO [1.4] верифицирам 9 задачи...
+2026-10-18 19:04:29,431 [PROBLEM_GEN] INFO [1.4] верифицирам 9 задачи...
+2026-10-18 19:04:49,440 [PROBLEM_GEN] INFO [1.4] verify... 20s
+2026-10-18 19:04:49,440 [PROBLEM_GEN] INFO [1.4] verify... 20s
+2026-10-18 19:04:54,085 [PROBLEM_GEN] INFO [1.4] verifier отговор (24s)
+2026-10-18 19:05:09,444 [PROBLEM_GEN] INFO [1.4] verify... 40s
+2026-10-18 19:05:29,458 [PROBLEM_GEN] INFO [1.4] verify... 60s
+2026-10-18 19:05:49,469 [PROBLEM_GEN] INFO [1.4] verify... 80s
+2026-10-18 19:06:09,483 [PROBLEM_GEN] INFO [1.4] verify... 100s
+2026-10-18 19:06:29,498 [PROBLEM_GEN] INFO [1.4] verify... 120s
+2026-10-18 19:06:49,504 [PROBLEM_GEN] INFO [1.4] verify... 140s
+2026-10-18 19:07:09,509 [PROBLEM_GEN] INFO [1.4] verify... 160s
+2026-10-18 19:07:29,513 [PROBLEM_GEN] INFO [1.4] verify... 180s
+2026-10-18 19:07:49,529 [PROBLEM_GEN] INFO [1.4] verify... 200s
+2026-10-18 19:08:09,533 [PROBLEM_GEN] INFO [1.4] verify... 220s
+2026-10-18 19:08:29,539 [PROBLEM_GEN] INFO [1.4] verify... 240s
+2026-10-18 19:08:49,543 [PROBLEM_GEN] INFO [1.4] verify... 260s
+2026-10-18 19:09:09,548 [PROBLEM_GEN] INFO [1.4] verify... 280s
+2026-10-18 19:09:29,453 [PROBLEM_GEN] ERROR [1.4] V1 exception: 
+2026-10-18 19:09:29,555 [PROBLEM_GEN] INFO [1.4] verify... 300s
+2026-10-18 19:09:49,563 [PROBLEM_GEN] INFO [1.4] verify... 320s
+2026-10-18 19:39:21,090 [PROBLEM_GEN] INFO [1.4] verify... 2091s
+2026-10-18 19:39:41,092 [PROBLEM_GEN] INFO [1.4] verify... 2111s
+2026-10-18 19:40:01,100 [PROBLEM_GEN] INFO [1.4] verify... 2131s
+2026-10-18 19:40:21,109 [PROBLEM_GEN] INFO [1.4] verify... 2151s
+2026-10-18 19:40:41,125 [PROBLEM_GEN] INFO [1.4] verify... 2171s
+2026-10-18 19:41:01,129 [PROBLEM_GEN] INFO [1.4] verify... 2191s
+2026-10-18 19:41:21,142 [PROBLEM_GEN] INFO [1.4] verify... 2211s
+2026-10-18 19:41:41,156 [PROBLEM_GEN] INFO [1.4] verify... 2231s
+2026-10-18 19:42:01,158 [PROBLEM_GEN] INFO [1.4] verify... 2251s
+2026-10-18 19:42:21,162 [PROBLEM_GEN] INFO [1.4] verify... 2271s
+2026-10-18 19:42:41,171 [PROBLEM_GEN] INFO [1.4] verify... 2291s
+2026-10-18 19:43:01,182 [PROBLEM_GEN] INFO [1.4] verify... 2311s
+2026-10-18 19:48:23,717 [PROBLEM_GEN] INFO Чета C:\Users\denis\Downloads\Материали Олимпиада МАТ\index.html
+2026-10-18 19:48:28,510 [PROBLEM_GEN] INFO Намерени 160 точки в HTML
+2026-10-18 19:48:28,655 [PROBLEM_GEN] INFO Ще обработя 1 точки
+2026-10-18 19:48:28,726 [PROBLEM_GEN] INFO Plan: Week 1/25, Phase 1 (Task 1)
+2026-10-18 19:48:28,726 [PROBLEM_GEN] INFO Дни до областен: 112, до национален: 166
+2026-10-18 19:48:28,727 [PROBLEM_GEN] INFO Бюджет днес: $2.86 / $3.00
+2026-10-18 19:48:28,727 [PROBLEM_GEN] INFO ════════════════════════════════════════════════════════════
+2026-10-18 19:48:28,727 [PROBLEM_GEN] INFO 
+[1/1] 1.4 — Степен на точка. Радикална ос
+2026-10-18 19:48:28,728 [PROBLEM_GEN] INFO [1.4] PHASE 1: генерирам 9 условия...
+2026-10-18 19:48:48,740 [PROBLEM_GEN] INFO [1.4] phase 1... 20s
+2026-10-18 19:49:08,745 [PROBLEM_GEN] INFO [1.4] phase 1... 40s
+2026-10-18 19:49:28,757 [PROBLEM_GEN] INFO [1.4] phase 1... 60s
+2026-10-18 19:49:48,773 [PROBLEM_GEN] INFO [1.4] phase 1... 80s
+2026-10-18 19:50:08,788 [PROBLEM_GEN] INFO [1.4] phase 1... 100s
+2026-10-18 19:50:28,794 [PROBLEM_GEN] INFO [1.4] phase 1... 120s
+2026-10-18 19:50:48,796 [PROBLEM_GEN] INFO [1.4] phase 1... 140s
+2026-10-18 19:50:48,870 [PROBLEM_GEN] INFO [1.4] PHASE 1 готово: 9 условия (140s)
+2026-10-18 19:50:48,871 [PROBLEM_GEN] INFO [1.4] калибрация: easy=[1, 2, 3], medium=[4, 5, 6], hard=[7, 8, 9]
+2026-10-18 19:50:48,872 [PROBLEM_GEN] INFO [1.4] PHASE 2: стартирам паралелни call-ове...
+2026-10-18 19:50:48,879 [PROBLEM_GEN] INFO [1.4] PHASE 2 easy: 3 решения...
+2026-10-18 19:50:48,884 [PROBLEM_GEN] INFO [1.4] PHASE 2 medium: 3 решения...
+2026-10-18 19:50:48,885 [PROBLEM_GEN] INFO [1.4] PHASE 2 hard: 3 решения...
+2026-10-18 19:52:33,412 [PROBLEM_GEN] INFO [1.4] PHASE 2 easy готово: 3 решения (104s)
+2026-10-18 19:55:21,450 [PROBLEM_GEN] INFO [1.4] PHASE 2 medium готово: 3 решения (272s)
+2026-10-18 19:55:35,532 [PROBLEM_GEN] INFO [1.4] PHASE 2 hard готово: 1 решения (286s)
+2026-10-18 19:55:35,533 [PROBLEM_GEN] WARNING [1.4] липсват решения за nums [8, 9]
+2026-10-18 19:55:35,534 [PROBLEM_GEN] INFO [1.4] PHASE 2 missing: 2 решения...
+2026-10-18 19:55:55,546 [PROBLEM_GEN] INFO [1.4] fill solutions... 20s
+2026-10-18 19:56:15,559 [PROBLEM_GEN] INFO [1.4] fill solutions... 40s
+2026-10-18 19:56:35,561 [PROBLEM_GEN] INFO [1.4] fill solutions... 60s
+2026-10-18 19:56:55,564 [PROBLEM_GEN] INFO [1.4] fill solutions... 80s
+2026-10-18 19:57:15,565 [PROBLEM_GEN] INFO [1.4] fill solutions... 100s
+2026-10-18 19:57:35,577 [PROBLEM_GEN] INFO [1.4] fill solutions... 120s
+2026-10-18 19:57:55,591 [PROBLEM_GEN] INFO [1.4] fill solutions... 140s
+2026-10-18 19:58:15,605 [PROBLEM_GEN] INFO [1.4] fill solutions... 160s
+2026-10-18 19:58:35,609 [PROBLEM_GEN] INFO [1.4] fill solutions... 180s
+2026-10-18 19:58:55,612 [PROBLEM_GEN] INFO [1.4] fill solutions... 200s
+2026-10-18 19:59:15,620 [PROBLEM_GEN] INFO [1.4] fill solutions... 220s
+2026-10-18 19:59:35,615 [PROBLEM_GEN] INFO [1.4] генерирани 9 задачи (условия + решения)
+2026-10-18 19:59:35,615 [PROBLEM_GEN] INFO [1.4] 9 задачи генерирани
+2026-10-18 19:59:35,617 [PROBLEM_GEN] INFO [1.4] ⚡ V1(DeepSeek) + V2(gpt-oss) паралелно...
+2026-10-18 19:59:35,622 [PROBLEM_GEN] INFO [1.4] верифицирам 9 задачи...
+2026-10-18 19:59:35,625 [PROBLEM_GEN] INFO [1.4] верифицирам 9 задачи...
+2026-10-18 19:59:54,321 [PROBLEM_GEN] INFO [1.4] verifier отговор (18s)
+2026-10-18 19:59:55,639 [PROBLEM_GEN] INFO [1.4] verify... 20s
+2026-10-18 20:00:15,645 [PROBLEM_GEN] INFO [1.4] verify... 40s
+2026-10-18 20:00:35,658 [PROBLEM_GEN] INFO [1.4] verify... 60s
+2026-10-18 20:00:55,665 [PROBLEM_GEN] INFO [1.4] verify... 80s
+2026-10-18 20:01:15,675 [PROBLEM_GEN] INFO [1.4] verify... 100s
+2026-10-18 20:01:35,681 [PROBLEM_GEN] INFO [1.4] verify... 120s
+2026-10-18 20:01:43,709 [PROBLEM_GEN] INFO [1.4] verifier отговор (128s)
+2026-10-18 20:01:43,709 [PROBLEM_GEN] INFO [1.4] и двата verifier-а отговориха (128s)
+2026-10-18 20:01:43,710 [PROBLEM_GEN] INFO [1.4] съгласие: 8/9 | разногласия: 1
+2026-10-18 20:01:43,711 [PROBLEM_GEN] INFO [1.4] ⚖ арбитер за 1 разногласия...
+2026-10-18 20:02:03,715 [PROBLEM_GEN] INFO [1.4] arbiter... 20s
+2026-10-18 20:02:23,725 [PROBLEM_GEN] INFO [1.4] arbiter... 40s
+2026-10-18 20:02:43,738 [PROBLEM_GEN] INFO [1.4] arbiter... 60s
+2026-10-18 20:02:57,130 [PROBLEM_GEN] INFO [1.4] арбитер готово (73s)
+2026-10-18 20:02:57,138 [PROBLEM_GEN] INFO [1.4] retry 1/1 за задачи [5, 7, 8, 9]
+2026-10-18 20:02:57,138 [PROBLEM_GEN] INFO [1.4] регенерирам паралелно 4 задачи: [5, 7, 8, 9]
+2026-10-18 20:02:57,426 [PROBLEM_GEN] INFO [1.4] regen #5 (medium)
+2026-10-18 20:02:57,430 [PROBLEM_GEN] INFO [1.4] regen #7 (hard)
+2026-10-18 20:02:57,434 [PROBLEM_GEN] INFO [1.4] regen #9 (hard)
+2026-10-18 20:02:57,439 [PROBLEM_GEN] INFO [1.4] regen #8 (hard)
+2026-10-18 20:03:17,455 [PROBLEM_GEN] INFO [1.4] regen #5... 20s
+2026-10-18 20:03:17,455 [PROBLEM_GEN] INFO [1.4] regen #9... 20s
+2026-10-18 20:03:17,455 [PROBLEM_GEN] INFO [1.4] regen #8... 20s
+2026-10-18 20:03:17,455 [PROBLEM_GEN] INFO [1.4] regen #7... 20s
+2026-10-18 20:03:37,467 [PROBLEM_GEN] INFO [1.4] regen #7... 40s
+2026-10-18 20:03:37,467 [PROBLEM_GEN] INFO [1.4] regen #8... 40s
+2026-10-18 20:03:37,467 [PROBLEM_GEN] INFO [1.4] regen #5... 40s
+2026-10-18 20:03:37,468 [PROBLEM_GEN] INFO [1.4] regen #9... 40s
+2026-10-18 20:03:57,480 [PROBLEM_GEN] INFO [1.4] regen #9... 60s
+2026-10-18 20:03:57,480 [PROBLEM_GEN] INFO [1.4] regen #8... 60s
+2026-10-18 20:03:57,480 [PROBLEM_GEN] INFO [1.4] regen #7... 60s
+2026-10-18 20:03:57,480 [PROBLEM_GEN] INFO [1.4] regen #5... 60s
+2026-10-18 20:04:17,483 [PROBLEM_GEN] INFO [1.4] regen #5... 80s
+2026-10-18 20:04:17,483 [PROBLEM_GEN] INFO [1.4] regen #9... 80s
+2026-10-18 20:04:17,483 [PROBLEM_GEN] INFO [1.4] regen #7... 80s
+2026-10-18 20:04:17,483 [PROBLEM_GEN] INFO [1.4] regen #8... 80s
+2026-10-18 20:04:37,495 [PROBLEM_GEN] INFO [1.4] regen #9... 100s
+2026-10-18 20:04:37,495 [PROBLEM_GEN] INFO [1.4] regen #7... 100s
+2026-10-18 20:04:37,495 [PROBLEM_GEN] INFO [1.4] regen #8... 100s
+2026-10-18 20:04:37,495 [PROBLEM_GEN] INFO [1.4] regen #5... 100s
+2026-10-18 20:04:57,505 [PROBLEM_GEN] INFO [1.4] regen #5... 120s
+2026-10-18 20:04:57,505 [PROBLEM_GEN] INFO [1.4] regen #9... 120s
+2026-10-18 20:04:57,505 [PROBLEM_GEN] INFO [1.4] regen #7... 120s
+2026-10-18 20:04:57,505 [PROBLEM_GEN] INFO [1.4] regen #8... 120s
+2026-10-18 20:05:17,519 [PROBLEM_GEN] INFO [1.4] regen #8... 140s
+2026-10-18 20:05:17,519 [PROBLEM_GEN] INFO [1.4] regen #5... 140s
+2026-10-18 20:05:17,519 [PROBLEM_GEN] INFO [1.4] regen #9... 140s
+2026-10-18 20:05:17,519 [PROBLEM_GEN] INFO [1.4] regen #7... 140s
+2026-10-18 20:05:25,796 [PROBLEM_GEN] INFO [1.4] regen #7 (hard) OK
+2026-10-18 20:05:37,535 [PROBLEM_GEN] INFO [1.4] regen #5... 160s
+2026-10-18 20:05:37,535 [PROBLEM_GEN] INFO [1.4] regen #9... 160s
+2026-10-18 20:05:37,535 [PROBLEM_GEN] INFO [1.4] regen #8... 160s
+2026-10-18 20:05:57,545 [PROBLEM_GEN] INFO [1.4] regen #9... 180s
+2026-10-18 20:05:57,545 [PROBLEM_GEN] INFO [1.4] regen #5... 180s
+2026-10-18 20:05:57,545 [PROBLEM_GEN] INFO [1.4] regen #8... 180s
+2026-10-18 20:06:11,486 [PROBLEM_GEN] INFO [1.4] regen #9 (hard) OK
+2026-10-18 20:06:17,555 [PROBLEM_GEN] INFO [1.4] regen #8... 200s
+2026-10-18 20:06:17,555 [PROBLEM_GEN] INFO [1.4] regen #5... 200s
+2026-10-18 20:06:37,564 [PROBLEM_GEN] INFO [1.4] regen #8... 220s
+2026-10-18 20:06:37,564 [PROBLEM_GEN] INFO [1.4] regen #5... 220s
+2026-10-18 20:06:57,580 [PROBLEM_GEN] INFO [1.4] regen #8... 240s
+2026-10-18 20:06:57,580 [PROBLEM_GEN] INFO [1.4] regen #5... 240s
+2026-10-18 20:07:17,587 [PROBLEM_GEN] INFO [1.4] regen #8... 260s
+2026-10-18 20:07:17,587 [PROBLEM_GEN] INFO [1.4] regen #5... 260s
+2026-10-18 20:07:37,595 [PROBLEM_GEN] INFO [1.4] regen #8... 280s
+2026-10-18 20:07:37,596 [PROBLEM_GEN] INFO [1.4] regen #5... 280s
+2026-10-18 20:07:57,611 [PROBLEM_GEN] INFO [1.4] regen #5... 300s
+2026-10-18 20:07:57,611 [PROBLEM_GEN] INFO [1.4] regen #8... 300s
+2026-10-18 20:08:17,616 [PROBLEM_GEN] INFO [1.4] regen #5... 320s
+2026-10-18 20:08:17,617 [PROBLEM_GEN] INFO [1.4] regen #8... 320s
+2026-10-18 20:08:37,622 [PROBLEM_GEN] INFO [1.4] regen #8... 340s
+2026-10-18 20:08:37,622 [PROBLEM_GEN] INFO [1.4] regen #5... 340s
+2026-10-18 20:08:57,635 [PROBLEM_GEN] INFO [1.4] regen #8... 360s
+2026-10-18 20:08:57,635 [PROBLEM_GEN] INFO [1.4] regen #5... 360s
+2026-10-18 20:09:17,645 [PROBLEM_GEN] INFO [1.4] regen #8... 380s
+2026-10-18 20:09:17,645 [PROBLEM_GEN] INFO [1.4] regen #5... 380s
+2026-10-18 20:09:35,877 [PROBLEM_GEN] INFO [1.4] regen #5 (medium) OK
+2026-10-18 20:09:37,661 [PROBLEM_GEN] INFO [1.4] regen #8... 400s
+2026-10-18 20:09:57,661 [PROBLEM_GEN] INFO [1.4] regen #8... 420s
+2026-10-18 20:10:01,202 [PROBLEM_GEN] INFO [1.4] regen #8 (hard) OK
+2026-10-18 20:10:01,203 [PROBLEM_GEN] INFO [1.4] ⚡ V1(DeepSeek) + V2(gpt-oss) паралелно...
+2026-10-18 20:10:01,206 [PROBLEM_GEN] INFO [1.4] верифицирам 4 задачи...
+2026-10-18 20:10:01,208 [PROBLEM_GEN] INFO [1.4] верифицирам 4 задачи...
+2026-10-18 20:10:21,222 [PROBLEM_GEN] INFO [1.4] verify... 20s
+2026-10-18 20:10:21,222 [PROBLEM_GEN] INFO [1.4] verify... 20s
+2026-10-18 20:10:41,233 [PROBLEM_GEN] INFO [1.4] verify... 40s
+2026-10-18 20:10:41,233 [PROBLEM_GEN] INFO [1.4] verify... 40s
+2026-10-18 20:11:01,242 [PROBLEM_GEN] INFO [1.4] verify... 60s
+2026-10-18 20:11:01,242 [PROBLEM_GEN] INFO [1.4] verify... 60s
+2026-10-18 20:11:21,242 [PROBLEM_GEN] INFO [1.4] verify... 80s
+2026-10-18 20:11:21,258 [PROBLEM_GEN] INFO [1.4] verify... 80s
+2026-10-18 20:11:41,253 [PROBLEM_GEN] INFO [1.4] verify... 100s
+2026-10-18 20:11:41,268 [PROBLEM_GEN] INFO [1.4] verify... 100s
+2026-10-18 20:12:01,263 [PROBLEM_GEN] INFO [1.4] verify... 120s
+2026-10-18 20:12:01,279 [PROBLEM_GEN] INFO [1.4] verify... 120s
+2026-10-18 20:12:21,269 [PROBLEM_GEN] INFO [1.4] verify... 140s
+2026-10-18 20:12:21,285 [PROBLEM_GEN] INFO [1.4] verify... 140s
+2026-10-18 20:12:41,274 [PROBLEM_GEN] INFO [1.4] verify... 160s
+2026-10-18 20:12:41,289 [PROBLEM_GEN] INFO [1.4] verify... 160s
+2026-10-18 20:13:01,278 [PROBLEM_GEN] INFO [1.4] verify... 180s
+2026-10-18 20:13:01,294 [PROBLEM_GEN] INFO [1.4] verify... 180s
+2026-10-18 20:13:21,280 [PROBLEM_GEN] INFO [1.4] verify... 200s
+2026-10-18 20:13:21,295 [PROBLEM_GEN] INFO [1.4] verify... 200s
+2026-10-18 20:13:41,287 [PROBLEM_GEN] INFO [1.4] verify... 220s
+2026-10-18 20:13:41,302 [PROBLEM_GEN] INFO [1.4] verify... 220s
+2026-10-18 20:14:01,295 [PROBLEM_GEN] INFO [1.4] verify... 240s
+2026-10-18 20:14:01,311 [PROBLEM_GEN] INFO [1.4] verify... 240s
+2026-10-18 20:14:21,299 [PROBLEM_GEN] INFO [1.4] verify... 260s
+2026-10-18 20:14:21,315 [PROBLEM_GEN] INFO [1.4] verify... 260s
+2026-10-18 20:14:40,923 [PROBLEM_GEN] INFO [1.4] verifier отговор (279s)
+2026-10-18 20:14:41,301 [PROBLEM_GEN] INFO [1.4] verify... 280s
+2026-10-18 20:15:01,224 [PROBLEM_GEN] ERROR [1.4] V1 exception: 
+2026-10-18 20:15:01,302 [PROBLEM_GEN] INFO [1.4] verify... 300s
+2026-10-18 20:15:21,310 [PROBLEM_GEN] INFO [1.4] verify... 320s
+2026-10-18 20:15:27,216 [PROBLEM_GEN] INFO [1.4] verifier отговор (326s)
+2026-10-18 20:15:27,217 [PROBLEM_GEN] INFO [1.4] и двата verifier-а отговориха (326s)
+2026-10-18 20:15:27,217 [PROBLEM_GEN] WARNING [1.4] само V2 — връщам V2 verdict
+2026-10-18 20:15:27,230 [PROBLEM_GEN] INFO ✓ [1.4] 6/9 shipped → C:\Users\denis\Downloads\Материали Олимпиада МАТ\pipeline\problems\1_4
+2026-10-18 20:15:27,238 [PROBLEM_GEN] INFO [1.4] Готово за 1618.5s | $0.0870 | 6/9 shipped
+2026-10-18 20:15:27,239 [PROBLEM_GEN] INFO 
+════════════════════════════════════════════════════════════
+2026-10-18 20:15:27,240 [PROBLEM_GEN] INFO КРАЙ: 1 успешни, 0 грешки
+2026-10-18 20:15:27,241 [PROBLEM_GEN] INFO Бюджет: $0.230 / $3.00
+2026-10-18 20:15:27,242 [PROBLEM_GEN] INFO ════════════════════════════════════════════════════════════
+2026-10-18 20:32:52,167 [PROBLEM_GEN] INFO Чета C:\Users\denis\Downloads\Материали Олимпиада МАТ\index.html
+2026-10-18 20:32:56,055 [PROBLEM_GEN] INFO Намерени 160 точки в HTML
+2026-10-18 20:32:58,182 [PROBLEM_GEN] INFO Ще обработя 1 точки
+2026-10-18 20:32:58,259 [PROBLEM_GEN] INFO Plan: Week 1/25, Phase 1 (Task 1)
+2026-10-18 20:32:58,260 [PROBLEM_GEN] INFO Дни до областен: 112, до национален: 166
+2026-10-18 20:32:58,260 [PROBLEM_GEN] INFO Бюджет днес: $2.77 / $3.00
+2026-10-18 20:32:58,260 [PROBLEM_GEN] INFO ════════════════════════════════════════════════════════════
+2026-10-18 20:32:58,260 [PROBLEM_GEN] INFO 
+[1/1] 1.4 — Степен на точка. Радикална ос
+2026-10-18 20:32:58,261 [PROBLEM_GEN] INFO [1.4] PHASE 1: генерирам 9 условия...
+2026-10-18 20:33:18,275 [PROBLEM_GEN] INFO [1.4] phase 1... 20s
+2026-10-18 20:33:38,281 [PROBLEM_GEN] INFO [1.4] phase 1... 40s
+2026-10-18 20:33:58,292 [PROBLEM_GEN] INFO [1.4] phase 1... 60s
+2026-10-18 20:34:18,299 [PROBLEM_GEN] INFO [1.4] phase 1... 80s
+2026-10-18 20:34:38,302 [PROBLEM_GEN] INFO [1.4] phase 1... 100s
+2026-10-18 20:34:58,315 [PROBLEM_GEN] INFO [1.4] phase 1... 120s
+2026-10-18 20:35:18,316 [PROBLEM_GEN] INFO [1.4] phase 1... 140s
+2026-10-18 20:35:33,607 [PROBLEM_GEN] INFO [1.4] PHASE 1 готово: 9 условия (155s)
+2026-10-18 20:35:33,607 [PROBLEM_GEN] INFO [1.4] калибрация: easy=[1, 2, 3], medium=[4, 5, 6], hard=[7, 8, 9]
+2026-10-18 20:35:33,608 [PROBLEM_GEN] INFO [1.4] PHASE 2: 9 individual call-а...
+2026-10-18 20:35:33,620 [PROBLEM_GEN] INFO [1.4] PHASE 2 #1 (easy) старт...
+2026-10-18 20:35:33,620 [PROBLEM_GEN] INFO [1.4] PHASE 2 #2 (easy) старт...
+2026-10-18 20:35:33,622 [PROBLEM_GEN] INFO [1.4] PHASE 2 #3 (easy) старт...
+2026-10-18 20:35:33,627 [PROBLEM_GEN] INFO [1.4] PHASE 2 #4 (medium) старт...
+2026-10-18 20:35:33,632 [PROBLEM_GEN] INFO [1.4] PHASE 2 #5 (medium) старт...
+2026-10-18 20:35:33,634 [PROBLEM_GEN] INFO [1.4] PHASE 2 #6 (medium) старт...
+2026-10-18 20:35:56,829 [PROBLEM_GEN] INFO [1.4] PHASE 2 #1 (easy) OK (23s)
+2026-10-18 20:35:56,829 [PROBLEM_GEN] INFO [1.4] PHASE 2 #7 (hard) старт...
+2026-10-18 20:36:03,892 [PROBLEM_GEN] INFO [1.4] PHASE 2 #3 (easy) OK (30s)
+2026-10-18 20:36:03,892 [PROBLEM_GEN] INFO [1.4] PHASE 2 #8 (hard) старт...
+2026-10-18 20:36:12,337 [PROBLEM_GEN] INFO [1.4] PHASE 2 #2 (easy) OK (38s)
+2026-10-18 20:36:12,338 [PROBLEM_GEN] INFO [1.4] PHASE 2 #9 (hard) старт...
+2026-10-18 20:37:04,391 [PROBLEM_GEN] INFO [1.4] PHASE 2 #7 (hard) OK (67s)
+2026-10-18 20:38:18,830 [PROBLEM_GEN] INFO [1.4] PHASE 2 #9 (hard) OK (126s)
+2026-10-18 20:39:15,428 [PROBLEM_GEN] INFO [1.4] PHASE 2 #8 (hard) OK (191s)
+2026-10-18 20:39:30,395 [PROBLEM_GEN] INFO [1.4] PHASE 2 #4 (medium) OK (236s)
+2026-10-18 20:39:31,518 [PROBLEM_GEN] INFO [1.4] PHASE 2 #6 (medium) OK (237s)
+2026-10-18 20:43:25,952 [PROBLEM_GEN] INFO [1.4] PHASE 2 #5 (medium) OK (472s)
+2026-10-18 20:43:25,954 [PROBLEM_GEN] INFO [1.4] генерирани 9 задачи (условия + решения)
+2026-10-18 20:43:25,954 [PROBLEM_GEN] INFO [1.4] 9 задачи генерирани
+2026-10-18 20:43:25,954 [PROBLEM_GEN] INFO [1.4] ⚡ V1(DeepSeek) + V2(gpt-oss) паралелно...
+2026-10-18 20:43:25,958 [PROBLEM_GEN] INFO [1.4] верифицирам 9 задачи...
+2026-10-18 20:43:25,961 [PROBLEM_GEN] INFO [1.4] верифицирам 9 задачи...
+2026-10-18 20:43:45,974 [PROBLEM_GEN] INFO [1.4] verify... 20s
+2026-10-18 20:43:45,974 [PROBLEM_GEN] INFO [1.4] verify... 20s
+2026-10-18 20:44:05,978 [PROBLEM_GEN] INFO [1.4] verify... 40s
+2026-10-18 20:44:05,978 [PROBLEM_GEN] INFO [1.4] verify... 40s
+2026-10-18 20:44:25,993 [PROBLEM_GEN] INFO [1.4] verify... 60s
+2026-10-18 20:44:25,993 [PROBLEM_GEN] INFO [1.4] verify... 60s
+2026-10-18 20:44:39,787 [PROBLEM_GEN] INFO [1.4] verifier отговор (73s)
+2026-10-18 20:44:44,926 [PROBLEM_GEN] INFO [1.4] verifier отговор (78s)
+2026-10-18 20:44:44,928 [PROBLEM_GEN] INFO [1.4] и двата verifier-а отговориха (78s)
+2026-10-18 20:44:44,928 [PROBLEM_GEN] INFO [1.4] съгласие: 7/9 | разногласия: 2
+2026-10-18 20:44:44,929 [PROBLEM_GEN] INFO [1.4] ⚖ арбитер за 2 разногласия...
+2026-10-18 20:45:04,940 [PROBLEM_GEN] INFO [1.4] arbiter... 20s
+2026-10-18 20:45:24,951 [PROBLEM_GEN] INFO [1.4] arbiter... 40s
+2026-10-18 20:45:44,957 [PROBLEM_GEN] INFO [1.4] arbiter... 60s
+2026-10-18 20:46:04,968 [PROBLEM_GEN] INFO [1.4] arbiter... 80s
+2026-10-18 20:46:24,972 [PROBLEM_GEN] INFO [1.4] arbiter... 100s
+2026-10-18 20:46:44,977 [PROBLEM_GEN] INFO [1.4] arbiter... 120s
+2026-10-18 20:47:04,981 [PROBLEM_GEN] INFO [1.4] arbiter... 140s
+2026-10-18 20:47:24,996 [PROBLEM_GEN] INFO [1.4] arbiter... 160s
+2026-10-18 20:47:44,996 [PROBLEM_GEN] INFO [1.4] arbiter... 180s
+2026-10-18 20:48:05,001 [PROBLEM_GEN] INFO [1.4] arbiter... 200s
+2026-10-18 20:48:25,009 [PROBLEM_GEN] INFO [1.4] arbiter... 220s
+2026-10-18 20:48:45,012 [PROBLEM_GEN] INFO [1.4] arbiter... 240s
+2026-10-18 20:49:05,019 [PROBLEM_GEN] INFO [1.4] arbiter... 260s
+2026-10-18 20:49:25,029 [PROBLEM_GEN] INFO [1.4] arbiter... 280s
+2026-10-18 20:49:45,045 [PROBLEM_GEN] INFO [1.4] arbiter... 300s
+2026-10-18 20:50:05,048 [PROBLEM_GEN] INFO [1.4] arbiter... 320s
+2026-10-18 20:50:25,058 [PROBLEM_GEN] INFO [1.4] arbiter... 340s
+2026-10-18 20:50:45,071 [PROBLEM_GEN] INFO [1.4] arbiter... 360s
+2026-10-18 20:51:05,072 [PROBLEM_GEN] INFO [1.4] arbiter... 380s
+2026-10-18 20:51:25,082 [PROBLEM_GEN] INFO [1.4] arbiter... 400s
+2026-10-18 20:51:45,085 [PROBLEM_GEN] INFO [1.4] arbiter... 420s
+2026-10-18 20:51:55,036 [PROBLEM_GEN] INFO [1.4] арбитер готово (430s)
+2026-10-18 20:51:55,036 [PROBLEM_GEN] INFO [1.4] retry 1/1 за задачи [4, 6, 9, 5, 8]
+2026-10-18 20:51:55,037 [PROBLEM_GEN] INFO [1.4] регенерирам паралелно 5 задачи: [4, 6, 9, 5, 8]
+2026-10-18 20:51:55,158 [PROBLEM_GEN] INFO [1.4] regen #9 (hard)
+2026-10-18 20:51:55,310 [PROBLEM_GEN] INFO [1.4] regen #4 (medium)
+2026-10-18 20:51:55,314 [PROBLEM_GEN] INFO [1.4] regen #5 (medium)
+2026-10-18 20:51:55,318 [PROBLEM_GEN] INFO [1.4] regen #6 (medium)
+2026-10-18 20:52:15,320 [PROBLEM_GEN] INFO [1.4] regen #9... 20s
+2026-10-18 20:52:15,320 [PROBLEM_GEN] INFO [1.4] regen #4... 20s
+2026-10-18 20:52:15,335 [PROBLEM_GEN] INFO [1.4] regen #5... 20s
+2026-10-18 20:52:15,335 [PROBLEM_GEN] INFO [1.4] regen #6... 20s
+2026-10-18 20:52:35,322 [PROBLEM_GEN] INFO [1.4] regen #4... 40s
+2026-10-18 20:52:35,322 [PROBLEM_GEN] INFO [1.4] regen #9... 40s
+2026-10-18 20:52:35,337 [PROBLEM_GEN] INFO [1.4] regen #5... 40s
+2026-10-18 20:52:35,337 [PROBLEM_GEN] INFO [1.4] regen #6... 40s
+2026-10-18 20:52:43,933 [PROBLEM_GEN] INFO [1.4] regen #6 (medium) OK
+2026-10-18 20:52:44,006 [PROBLEM_GEN] INFO [1.4] regen #8 (hard)
+2026-10-18 20:52:55,332 [PROBLEM_GEN] INFO [1.4] regen #9... 60s
+2026-10-18 20:52:55,332 [PROBLEM_GEN] INFO [1.4] regen #4... 60s
+2026-10-18 20:52:55,348 [PROBLEM_GEN] INFO [1.4] regen #5... 60s
+2026-10-18 20:53:03,387 [PROBLEM_GEN] INFO [1.4] regen #4 (medium) OK
+2026-10-18 20:53:04,014 [PROBLEM_GEN] INFO [1.4] regen #8... 20s
+2026-10-18 20:53:15,341 [PROBLEM_GEN] INFO [1.4] regen #9... 80s
+2026-10-18 20:53:15,357 [PROBLEM_GEN] INFO [1.4] regen #5... 80s
+2026-10-18 20:53:24,024 [PROBLEM_GEN] INFO [1.4] regen #8... 40s
+2026-10-18 20:53:35,355 [PROBLEM_GEN] INFO [1.4] regen #9... 100s
+2026-10-18 20:53:35,370 [PROBLEM_GEN] INFO [1.4] regen #5... 100s
+2026-10-18 20:53:42,910 [PROBLEM_GEN] INFO [1.4] regen #9 (hard) OK
+2026-10-18 20:53:44,031 [PROBLEM_GEN] INFO [1.4] regen #8... 60s
+2026-10-18 20:53:55,372 [PROBLEM_GEN] INFO [1.4] regen #5... 120s
+2026-10-18 20:54:04,034 [PROBLEM_GEN] INFO [1.4] regen #8... 80s
+2026-10-18 20:54:15,386 [PROBLEM_GEN] INFO [1.4] regen #5... 140s
+2026-10-18 20:54:24,040 [PROBLEM_GEN] INFO [1.4] regen #8... 100s
+2026-10-18 20:54:30,899 [PROBLEM_GEN] INFO [1.4] regen #8 (hard) OK
+2026-10-18 20:54:35,402 [PROBLEM_GEN] INFO [1.4] regen #5... 160s
+2026-10-18 20:54:55,417 [PROBLEM_GEN] INFO [1.4] regen #5... 180s
+2026-10-18 20:54:56,462 [PROBLEM_GEN] INFO [1.4] regen #5 (medium) OK
+2026-10-18 20:54:56,463 [PROBLEM_GEN] INFO [1.4] ⚡ V1(DeepSeek) + V2(gpt-oss) паралелно...
+2026-10-18 20:54:56,464 [PROBLEM_GEN] INFO [1.4] верифицирам 5 задачи...
+2026-10-18 20:54:56,465 [PROBLEM_GEN] INFO [1.4] верифицирам 5 задачи...
+2026-10-18 20:55:16,473 [PROBLEM_GEN] INFO [1.4] verify... 20s
+2026-10-18 20:55:16,473 [PROBLEM_GEN] INFO [1.4] verify... 20s
+2026-10-18 20:55:36,481 [PROBLEM_GEN] INFO [1.4] verify... 40s
+2026-10-18 20:55:36,481 [PROBLEM_GEN] INFO [1.4] verify... 40s
+2026-10-18 20:55:56,495 [PROBLEM_GEN] INFO [1.4] verify... 60s
+2026-10-18 20:55:56,495 [PROBLEM_GEN] INFO [1.4] verify... 60s
+2026-10-18 20:56:16,502 [PROBLEM_GEN] INFO [1.4] verify... 80s
+2026-10-18 20:56:16,502 [PROBLEM_GEN] INFO [1.4] verify... 80s
+2026-10-18 20:56:36,513 [PROBLEM_GEN] INFO [1.4] verify... 100s
+2026-10-18 20:56:36,513 [PROBLEM_GEN] INFO [1.4] verify... 100s
+2026-10-18 20:56:56,517 [PROBLEM_GEN] INFO [1.4] verify... 120s
+2026-10-18 20:56:56,517 [PROBLEM_GEN] INFO [1.4] verify... 120s
+2026-10-18 20:57:16,524 [PROBLEM_GEN] INFO [1.4] verify... 140s
+2026-10-18 20:57:16,524 [PROBLEM_GEN] INFO [1.4] verify... 140s
+2026-10-18 20:57:36,531 [PROBLEM_GEN] INFO [1.4] verify... 160s
+2026-10-18 20:57:36,531 [PROBLEM_GEN] INFO [1.4] verify... 160s
+2026-10-18 20:57:46,741 [PROBLEM_GEN] INFO [1.4] verifier отговор (170s)
+2026-10-18 20:57:56,536 [PROBLEM_GEN] INFO [1.4] verify... 180s
+2026-10-18 20:58:16,545 [PROBLEM_GEN] INFO [1.4] verify... 200s
+2026-10-18 20:58:36,560 [PROBLEM_GEN] INFO [1.4] verify... 220s
+2026-10-18 20:58:56,565 [PROBLEM_GEN] INFO [1.4] verify... 240s
+2026-10-18 20:59:16,574 [PROBLEM_GEN] INFO [1.4] verify... 260s
+2026-10-18 20:59:36,584 [PROBLEM_GEN] INFO [1.4] verify... 280s
+2026-10-18 20:59:56,595 [PROBLEM_GEN] INFO [1.4] verify... 300s
+2026-10-18 20:59:59,740 [PROBLEM_GEN] INFO [1.4] verifier отговор (303s)
+2026-10-18 20:59:59,741 [PROBLEM_GEN] INFO [1.4] и двата verifier-а отговориха (303s)
+2026-10-18 20:59:59,742 [PROBLEM_GEN] INFO [1.4] съгласие: 3/5 | разногласия: 2
+2026-10-18 20:59:59,742 [PROBLEM_GEN] INFO [1.4] ⚖ арбитер за 2 разногласия...
+2026-10-18 21:00:19,751 [PROBLEM_GEN] INFO [1.4] arbiter... 20s
+2026-10-18 21:00:39,757 [PROBLEM_GEN] INFO [1.4] arbiter... 40s
+2026-10-18 21:00:59,772 [PROBLEM_GEN] INFO [1.4] arbiter... 60s
+2026-10-18 21:01:19,779 [PROBLEM_GEN] INFO [1.4] arbiter... 80s
+2026-10-18 21:01:39,782 [PROBLEM_GEN] INFO [1.4] arbiter... 100s
+2026-10-18 21:01:59,790 [PROBLEM_GEN] INFO [1.4] arbiter... 120s
+2026-10-18 21:02:19,805 [PROBLEM_GEN] INFO [1.4] arbiter... 140s
+2026-10-18 21:02:39,807 [PROBLEM_GEN] INFO [1.4] arbiter... 160s
+2026-10-18 21:02:59,816 [PROBLEM_GEN] INFO [1.4] arbiter... 180s
+2026-10-18 21:03:19,821 [PROBLEM_GEN] INFO [1.4] arbiter... 200s
+2026-10-18 21:03:39,831 [PROBLEM_GEN] INFO [1.4] arbiter... 220s
+2026-10-18 21:03:59,844 [PROBLEM_GEN] INFO [1.4] arbiter... 240s
+2026-10-18 21:04:19,859 [PROBLEM_GEN] INFO [1.4] arbiter... 260s
+2026-10-18 21:04:39,869 [PROBLEM_GEN] INFO [1.4] arbiter... 280s
+2026-10-18 21:04:59,876 [PROBLEM_GEN] INFO [1.4] arbiter... 300s
+2026-10-18 21:05:19,889 [PROBLEM_GEN] INFO [1.4] arbiter... 320s
+2026-10-18 21:05:39,901 [PROBLEM_GEN] INFO [1.4] arbiter... 340s
+2026-10-18 21:05:59,910 [PROBLEM_GEN] INFO [1.4] arbiter... 360s
+2026-10-18 21:06:19,921 [PROBLEM_GEN] INFO [1.4] arbiter... 380s
+2026-10-18 21:06:39,936 [PROBLEM_GEN] INFO [1.4] arbiter... 400s
+2026-10-18 21:06:59,940 [PROBLEM_GEN] INFO [1.4] arbiter... 420s
+2026-10-18 21:07:19,945 [PROBLEM_GEN] INFO [1.4] arbiter... 440s
+2026-10-18 21:07:26,881 [PROBLEM_GEN] ERROR [1.4] арбитер fail (447s)
+2026-10-18 21:07:26,892 [PROBLEM_GEN] INFO ✓ [1.4] 5/9 shipped → C:\Users\denis\Downloads\Материали Олимпиада МАТ\pipeline\problems\1_4
+2026-10-18 21:07:26,902 [PROBLEM_GEN] INFO [1.4] Готово за 2068.6s | $0.1170 | 5/9 shipped
+2026-10-18 21:07:26,903 [PROBLEM_GEN] INFO 
+════════════════════════════════════════════════════════════
+2026-10-18 21:07:26,904 [PROBLEM_GEN] INFO КРАЙ: 1 успешни, 0 грешки
+2026-10-18 21:07:26,904 [PROBLEM_GEN] INFO Бюджет: $0.347 / $3.00
+2026-10-18 21:07:26,905 [PROBLEM_GEN] INFO ════════════════════════════════════════════════════════════

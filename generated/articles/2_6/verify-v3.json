@@ -1,0 +1,50 @@
+{
+  "verdict": "approve",
+  "score": 10,
+  "issues": [
+    {
+      "severity": "minor",
+      "section": "3.3 Теореми с доказателства",
+      "description": "Липсва линк към анимация за доказателство, споменат в текста."
+    },
+    {
+      "severity": "minor",
+      "section": "4.3 Hard examples",
+      "description": "Твърдите примери нямат изрични източници (напр. IMO Shortlist)."
+    }
+  ],
+  "strengths": [
+    "Изчерпателно покриване на структурата с всички 9 секции",
+    "Реални олимпиадни задачи с конкретни източници (Балканска ОО 2018, Национален кръг 2020, 2019)",
+    "Педагогически ефективни примери, включително умишлени 'грешни' случаи за обучение",
+    "CHECK-ове за самопроверка между нивата",
+    "Добро покритие на edge cases (успоредни прави, изродени конфигурации)"
+  ],
+  "suggestions": [
+    "Добавете линк към анимация за доказателство в секция 3.3",
+    "Посочете източници за твърдите примери (напр. IMO Shortlist)"
+  ],
+  "math_errors": [],
+  "missing_topics": [],
+  "structure_check": {
+    "section_1_why_important": true,
+    "section_2_objectives": true,
+    "section_3_theory": true,
+    "section_4_examples_3_levels": true,
+    "section_5_recognition": true,
+    "section_6_mistakes": true,
+    "section_7_mastery": true,
+    "section_8_quiz": true,
+    "section_9_recall": true,
+    "check_marks_present": true
+  },
+  "examples_check": {
+    "real_olympiad": true,
+    "easy_count": 3,
+    "medium_count": 3,
+    "hard_count": 2
+  },
+  "verdict_reasoning": "Статията е математически коректна, напълно покрива структурата, използва реални олимпиадни задачи и примерите са с подходяща трудност. Няма критични недостатъци.",
+  "_tokens": 19035,
+  "_model": "deepseek/deepseek-r1-0528"
+}

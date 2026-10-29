@@ -1,0 +1,294 @@
+{
+  "_meta": {
+    "pdf": "C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\Материали_БГ\\BMS_2003-2005.pdf",
+    "paired_with": null,
+    "level": 2,
+    "type": "combined",
+    "analyzed_at": "2026-10-16T21:47:35.994239",
+    "model": "deepseek/deepseek-v3.2",
+    "text_length": 267355,
+    "paired_text_length": 0
+  },
+  "problems": [
+    {
+      "num": 9.1,
+      "topic": "geometry",
+      "theorems": [
+        "Power of a point",
+        "Thales' theorem"
+      ],
+      "techniques": [
+        "coordinate geometry",
+        "analytic geometry",
+        "symmetry"
+      ],
+      "concepts": [
+        "tangent to a circle",
+        "isosceles triangle",
+        "collinearity",
+        "reflection"
+      ],
+      "difficulty": "standard",
+      "notes": "Problem involves proving collinearity of points from tangents to a circle inscribed in an isosceles triangle."
+    },
+    {
+      "num": 9.2,
+      "topic": "algebra",
+      "theorems": [
+        "Vieta's formulas"
+      ],
+      "techniques": [
+        "substitution",
+        "rational equation simplification",
+        "system of equations"
+      ],
+      "concepts": [
+        "rational equations",
+        "real roots condition",
+        "parameter analysis"
+      ],
+      "difficulty": "standard",
+      "notes": "Problem involves solving a rational equation with parameter and relating roots via a given condition."
+    },
+    {
+      "num": 9.3,
+      "topic": "number_theory",
+      "theorems": [
+        "Fermat's Little Theorem",
+        "Euler's theorem"
+      ],
+      "techniques": [
+        "modular arithmetic",
+        "exponent manipulation"
+      ],
+      "concepts": [
+        "divisibility",
+        "modular congruences",
+        "exponential diophantine"
+      ],
+      "difficulty": "olympic",
+      "notes": "Problem requires finding numbers a such that n^3 + a is divisible by a large power of 3."
+    },
+    {
+      "num": 10.1,
+      "topic": "algebra",
+      "theorems": [],
+      "techniques": [
+        "substitution",
+        "domain analysis",
+        "squaring equations"
+      ],
+      "concepts": [
+        "irrational equations",
+        "parameter analysis",
+        "unique solution condition"
+      ],
+      "difficulty": "standard",
+      "notes": "Problem involves solving an irrational equation with parameter and requiring a unique solution."
+    },
+    {
+      "num": 10.2,
+      "topic": "geometry",
+      "theorems": [
+        "Power of a point",
+        "Inversion",
+        "Menelaus",
+        "Ptolemy"
+      ],
+      "techniques": [
+        "analytic geometry",
+        "coordinate geometry",
+        "similar triangles"
+      ],
+      "concepts": [
+        "tangent circles",
+        "radical axis",
+        "concyclic points",
+        "fixed point",
+        "minimization"
+      ],
+      "difficulty": "hard",
+      "notes": "Multi-part problem involving circles tangent internally/externally, proving a fixed point, concyclicity, and minimizing a segment."
+    },
+    {
+      "num": 10.3,
+      "topic": "combinatorics",
+      "theorems": [],
+      "techniques": [
+        "pigeonhole principle",
+        "construction",
+        "extremal principle"
+      ],
+      "concepts": [
+        "Hamming distance",
+        "binary sequences",
+        "covering property",
+        "minimal set"
+      ],
+      "difficulty": "olympic",
+      "notes": "Problem about binary sequences of length 4 and a covering property; finding minimal size of set M."
+    },
+    {
+      "num": 11.1,
+      "topic": "algebra",
+      "theorems": [
+        "AM-GM inequality",
+        "Cesàro-Stolz",
+        "limit theorems"
+      ],
+      "techniques": [
+        "induction",
+        "inequality manipulation",
+        "limit evaluation"
+      ],
+      "concepts": [
+        "sequence convergence",
+        "recurrence relations",
+        "asymptotic behavior"
+      ],
+      "difficulty": "hard",
+      "notes": "Two-part problem: proving bounds for a sequence defined by recurrence and showing its limit behavior."
+    },
+    {
+      "num": 11.2,
+      "topic": "geometry",
+      "theorems": [
+        "Ceva's theorem",
+        "Menelaus",
+        "area ratios"
+      ],
+      "techniques": [
+        "mass points",
+        "area method",
+        "coordinate geometry"
+      ],
+      "concepts": [
+        "concurrency",
+        "area ratios",
+        "midpoint",
+        "triangle cevians"
+      ],
+      "difficulty": "hard",
+      "notes": "Problem involves cevians and area conditions to prove a midpoint equivalence."
+    },
+    {
+      "num": 11.3,
+      "topic": "algebra",
+      "rational_root_theorem": [
+        "Rational Root Theorem"
+      ],
+      "techniques": [
+        "strategy stealing",
+        "modular arithmetic",
+        "game theory"
+      ],
+      "concepts": [
+        "polynomial roots",
+        "integer roots",
+        "two-player game",
+        "strategy"
+      ],
+      "difficulty": "olympic",
+      "notes": "Game theory problem about filling coefficients of a quartic polynomial to force an integer root."
+    },
+    {
+      "num": 12.1,
+      "topic": "algebra",
+      "theorems": [
+        "Descartes' rule of signs",
+        "Intermediate Value Theorem",
+        "derivative analysis"
+      ],
+      "techniques": [
+        "polynomial factorization",
+        "derivative sign analysis",
+        "solving quartic"
+      ],
+      "concepts": [
+        "polynomial roots",
+        "local extrema",
+        "sign of derivative",
+        "quartic equations"
+      ],
+      "difficulty": "hard",
+      "notes": "Two-part problem: analyzing derivative extrema and finding real roots of a quartic polynomial."
+    },
+    {
+      "num": 12.2,
+      "topic": "geometry",
+      "theorems": [
+        "Ceva's theorem",
+        "Menelaus",
+        "area ratios",
+        "centroid properties"
+      ],
+      "techniques": [
+        "vector geometry",
+        "coordinate geometry",
+        "area comparison"
+      ],
+      "concepts": [
+        "parallel lines",
+        "centroid",
+        "area inequality",
+        "triangle subdivision"
+      ],
+      "difficulty": "hard",
+      "notes": "Two-part problem: proving centroid condition and area inequality for a triangle with parallels."
+    },
+    {
+      "num": 12.3,
+      "topic": "combinatorics",
+      "theorems": [
+        "Turán's theorem",
+        "handshaking lemma"
+      ],
+      "techniques": [
+        "extremal graph theory",
+        "double counting",
+        "inequality manipulation"
+      ],
+      "concepts": [
+        "graph theory",
+        "acquaintances",
+        "triangles in graphs",
+        "minimum number of triangles"
+      ],
+      "difficulty": "olympic",
+      "notes": "Graph theory problem: given condition on acquaintances, find minimum number of triangles."
+    }
+  ],
+  "unique_concepts": [
+    "tangent to a circle",
+    "isosceles triangle",
+    "collinearity",
+    "rational equations",
+    "parameter analysis",
+    "divisibility",
+    "modular arithmetic",
+    "irrational equations",
+    "unique solution",
+    "tangent circles",
+    "radical axis",
+    "concyclic points",
+    "fixed point",
+    "minimization",
+    "Hamming distance",
+    "binary sequences",
+    "covering property",
+    "sequence convergence",
+    "recurrence relations",
+    "area ratios",
+    "midpoint",
+    "game theory",
+    "integer roots",
+    "polynomial roots",
+    "local extrema",
+    "centroid",
+    "area inequality",
+    "graph theory",
+    "acquaintances",
+    "triangles in graphs"
+  ],
+  "confidence": 0.95
+}

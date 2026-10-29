@@ -1,0 +1,169 @@
+{
+  "_meta": {
+    "pdf": "C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\Задачи_Минали_Години\\Областен\\OLI-2-Областен кръг-2010-11 кл-probs.pdf",
+    "paired_with": "C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\Задачи_Минали_Години\\Областен\\OLI-2-Областен кръг-2010-11 кл-sol.pdf",
+    "level": 1,
+    "type": "probs",
+    "analyzed_at": "2026-10-18T12:53:32.829308",
+    "model": "deepseek/deepseek-v3.2",
+    "text_length": 874,
+    "paired_text_length": 8176
+  },
+  "problems": [
+    {
+      "num": 1,
+      "topic": "algebra",
+      "theorems": [],
+      "techniques": [
+        "substitution",
+        "quadratic inequality analysis",
+        "case analysis"
+      ],
+      "concepts": [
+        "exponential equations",
+        "inequalities",
+        "parameter analysis",
+        "quadratic in disguise"
+      ],
+      "difficulty": "standard",
+      "notes": "Standard exponential inequality solved via substitution 2^ax = y, leading to a quadratic inequality. The solution requires careful case analysis based on the parameter a."
+    },
+    {
+      "num": 2,
+      "topic": "algebra",
+      "theorems": [
+        "monotone convergence theorem"
+      ],
+      "techniques": [
+        "monotonicity",
+        "boundedness",
+        "induction",
+        "limit calculation",
+        "inequality manipulation"
+      ],
+      "concepts": [
+        "sequence convergence",
+        "recursive sequences",
+        "limit of sequence",
+        "upper/lower bounds"
+      ],
+      "difficulty": "standard",
+      "notes": "Part (a) shows the sequence is decreasing and bounded below, hence convergent. Part (b) uses an inductive estimate based on the recurrence."
+    },
+    {
+      "num": 3,
+      "topic": "combinatorics",
+      "theorems": [],
+      "techniques": [
+        "strategy stealing",
+        "invariant",
+        "parity argument",
+        "contradiction"
+      ],
+      "concepts": [
+        "two-player game",
+        "polynomial coefficients",
+        "integer roots",
+        "strategic filling",
+        "sum of coefficients (evaluation at 1 and -1)"
+      ],
+      "difficulty": "olympic",
+      "notes": "A combinatorial game on polynomial coefficients. The winning strategy for Deni involves maintaining balance between coefficients at odd and even powers to force a root at 1 or -1 at the end."
+    },
+    {
+      "num": 4,
+      "topic": "geometry",
+      "theorems": [
+        "Cosine Rule",
+        "Law of Sines",
+        "area formula (r = area/semiperimeter)"
+      ],
+      "techniques": [
+        "parallel lines",
+        "midsegment theorem",
+        "similar triangles",
+        "ratio chasing",
+        "trigonometric calculation"
+      ],
+      "concepts": [
+        "triangle geometry",
+        "medians",
+        "altitudes",
+        "circumradius",
+        "inradius",
+        "similar triangles",
+        "segment ratios"
+      ],
+      "difficulty": "hard",
+      "notes": "Involves multiple steps: finding segment ratios via midsegment and similarity, applying trigonometry (cosine rule, sine rule), and finally computing R and r."
+    },
+    {
+      "num": 5,
+      "topic": "combinatorics",
+      "theorems": [],
+      "techniques": [
+        "coloring argument",
+        "parity",
+        "induction",
+        "case analysis",
+        "existence proof"
+      ],
+      "concepts": [
+        "checkerboard coloring",
+        "domino tiling",
+        "bipartite graphs",
+        "matching",
+        "invariant (color balance)",
+        "odd board dimensions"
+      ],
+      "difficulty": "olympic",
+      "notes": "A tiling problem on an odd×odd chessboard. The maximal k is 3. Proof uses coloring parity and induction, with careful handling of boundary cases."
+    },
+    {
+      "num": 6,
+      "topic": "number_theory",
+      "theorems": [
+        "Chinese Remainder Theorem"
+      ],
+      "techniques": [
+        "proof by contradiction",
+        "construction",
+        "modular arithmetic",
+        "prime divisors"
+      ],
+      "concepts": [
+        "polynomials with integer coefficients",
+        "coprimality condition",
+        "existence of prime divisor",
+        "modular congruence",
+        "infinite descent / construction"
+      ],
+      "difficulty": "olympic",
+      "notes": "Requires a non-trivial application of the Chinese Remainder Theorem to construct numbers with specific properties regarding prime divisors of polynomial values, leading to a contradiction if no universal prime divisor exists."
+    }
+  ],
+  "unique_concepts": [
+    "exponential equations",
+    "parameter analysis",
+    "sequence convergence",
+    "recursive sequences",
+    "limit of sequence",
+    "two-player game",
+    "strategy stealing",
+    "polynomial coefficients",
+    "integer roots",
+    "triangle geometry",
+    "circumradius",
+    "inradius",
+    "similar triangles",
+    "checkerboard coloring",
+    "domino tiling",
+    "bipartite graphs",
+    "matching",
+    "Chinese Remainder Theorem",
+    "polynomials with integer coefficients",
+    "coprimality condition",
+    "universal prime divisor"
+  ],
+  "confidence": 0.95
+}

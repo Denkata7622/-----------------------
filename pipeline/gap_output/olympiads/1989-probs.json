@@ -1,0 +1,164 @@
+{
+  "_meta": {
+    "pdf": "C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\Задачи_Минали_Години\\Национален\\OLI-3-Национален кръг-1989-9-12 кл-probs.pdf",
+    "paired_with": "C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\Задачи_Минали_Години\\Национален\\OLI-3-Национален кръг-1989-9-12 кл-sol.pdf",
+    "level": 2,
+    "type": "probs",
+    "analyzed_at": "2026-10-18T11:42:35.325477",
+    "model": "deepseek/deepseek-v3.2",
+    "text_length": 2271,
+    "paired_text_length": 11467
+  },
+  "problems": [
+    {
+      "num": 1,
+      "topic": "geometry",
+      "theorems": [
+        "Law of Cosines",
+        "Thales' theorem"
+      ],
+      "techniques": [
+        "trigonometric identities",
+        "area calculations",
+        "auxiliary constructions"
+      ],
+      "concepts": [
+        "excircles",
+        "incenter and excenters",
+        "semiperimeter",
+        "triangle area formulas",
+        "parallel lines",
+        "distance from a point to a line"
+      ],
+      "difficulty": "hard",
+      "notes": "Involves properties of excircles and their contact points. The key step is showing MN ∥ BC using area relations and the given condition."
+    },
+    {
+      "num": 2,
+      "topic": "number_theory",
+      "theorems": [],
+      "techniques": [
+        "binary representation",
+        "induction",
+        "summation manipulation",
+        "squeeze theorem"
+      ],
+      "concepts": [
+        "floor and fractional part functions",
+        "convergence of sequences",
+        "limit evaluation",
+        "binary digits"
+      ],
+      "difficulty": "standard",
+      "notes": "The problem cleverly relates the sum to binary expansion and uses properties of binomial coefficients modulo 2."
+    },
+    {
+      "num": 3,
+      "topic": "algebra",
+      "theorems": [
+        "Vieta's formulas",
+        "Fermat's Little Theorem (implicit in bounding)"
+      ],
+      "techniques": [
+        "proof by contradiction",
+        "inequality manipulation",
+        "modular arithmetic",
+        "bounding roots"
+      ],
+      "concepts": [
+        "polynomial roots",
+        "complex modulus",
+        "irreducibility over integers",
+        "prime numbers"
+      ],
+      "difficulty": "olympic",
+      "notes": "Part (a) uses a tricky inequality to bound roots. Part (b) is a classic irreducibility argument using size of roots and Vieta."
+    },
+    {
+      "num": 4,
+      "topic": "combinatorics",
+      "theorems": [
+        "Binomial Theorem modulo 2",
+        "Lucas' theorem (implicit)"
+      ],
+      "techniques": [
+        "induction",
+        "constructing specific initial configuration",
+        "modular arithmetic (mod 2)"
+      ],
+      "concepts": [
+        "iterative transformations",
+        "binary sequences on a circle",
+        "powers of two",
+        "invariants"
+      ],
+      "difficulty": "hard",
+      "notes": "The operation is equivalent to a cellular automaton. The solution uses a clever initial setup and properties of binomial coefficients for powers of 2."
+    },
+    {
+      "num": 5,
+      "topic": "geometry",
+      "theorems": [
+        "Properties of centroid",
+        "Central symmetry"
+      ],
+      "techniques": [
+        "mass point geometry",
+        "symmetry arguments",
+        "transformation geometry"
+      ],
+      "concepts": [
+        "tetrahedron",
+        "perpendiculars from midpoints",
+        "circumsphere center",
+        "centroid of tetrahedron and base",
+        "midpoints of edges"
+      ],
+      "difficulty": "olympic",
+      "notes": "Uses a nice transformation: central symmetry with respect to the tetrahedron's centroid maps foot of perpendiculars to perpendicular bisectors."
+    },
+    {
+      "num": 6,
+      "topic": "number_theory",
+      "theorems": [
+        "Fermat's Little Theorem",
+        "Binomial theorem modulo q",
+        "Properties of primitive roots (implicit)"
+      ],
+      "techniques": [
+        "proof by contradiction",
+        "modular arithmetic",
+        "exponent manipulation",
+        "gcd and divisibility arguments"
+      ],
+      "concepts": [
+        "coprime integers",
+        "prime numbers",
+        "modular inverses",
+        "orders of elements modulo q",
+        "Fermat's Last Theorem related conditions"
+      ],
+      "difficulty": "olympic",
+      "notes": "A sophisticated problem resembling some steps in FLT proofs. Uses conditions on q not dividing 6p and properties of cubic residues modulo q."
+    }
+  ],
+  "unique_concepts": [
+    "excircles and contact points",
+    "floor and fractional part functions",
+    "binary representation of numbers",
+    "polynomial irreducibility over integers",
+    "bounding complex roots",
+    "iterative transformations on a circle",
+    "cellular automaton-like process",
+    "central symmetry in geometry",
+    "mass point geometry",
+    "perpendiculars from midpoints in tetrahedron",
+    "circumsphere center alignment",
+    "modular arithmetic with prime moduli",
+    "orders of elements modulo a prime",
+    "cubic residues",
+    "coprime conditions",
+    "Fermat's Last Theorem related techniques"
+  ],
+  "confidence": 0.95
+}

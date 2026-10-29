@@ -1,0 +1,157 @@
+```js
+// ─── КНИГА ───
+{
+  file: "Материали_EN/book-12.pdf",
+  title: "Intermediate Counting & Probability",
+  author: "David Patrick",
+  year: 2007,
+  language: "EN",
+  total_pages: 404,
+  topics: ["Combinatorics", "Probability", "Generating Functions", "Graph Theory", "Recursion"],
+  structure: [
+    { chapter: "Ch 1", title: "Review of Counting & Probability Basics", pages: "17-26", plan_step: 8, plan_points: ["8.5","8.6"], priority_regional: "high", priority_national: "med" },
+    { chapter: "Ch 2", title: "Sets and Logic", pages: "43-64", plan_step: 11, plan_points: [], priority_regional: "low", priority_national: "low" },
+    { chapter: "Ch 3", title: "A Piece of PIE (Inclusion-Exclusion)", pages: "65-98", plan_step: 8, plan_points: ["8.2","8.3"], priority_regional: "high", priority_national: "high" },
+    { chapter: "Ch 4", title: "Constructive Counting and 1-1 Correspondences", pages: "99-133", plan_step: 8, plan_points: ["8.3","8.5"], priority_regional: "high", priority_national: "med" },
+    { chapter: "Ch 5", title: "The Pigeonhole Principle", pages: "134-145", plan_step: 8, plan_points: ["8.1"], priority_regional: "high", priority_national: "med" },
+    { chapter: "Ch 6", title: "Constructive Expectation", pages: "146-160", plan_step: 11, plan_points: [], priority_regional: "low", priority_national: "med" },
+    { chapter: "Ch 7", title: "Distributions", pages: "161-176", plan_step: 8, plan_points: ["8.7"], priority_regional: "high", priority_national: "med" },
+    { chapter: "Ch 8", title: "Mathematical Induction", pages: "177-187", plan_step: 8, plan_points: ["8.10"], priority_regional: "med", priority_national: "high" },
+    { chapter: "Ch 9", title: "Fibonacci Numbers", pages: "188-207", plan_step: 7, plan_points: ["7.6","7.7","7.8"], priority_regional: "med", priority_national: "high" },
+    { chapter: "Ch 10", title: "Recursion", pages: "208-242", plan_step: 7, plan_points: ["7.6","7.7","7.8"], priority_regional: "med", priority_national: "high" },
+    { chapter: "Ch 11", title: "Conditional Probability", pages: "243-258", plan_step: 11, plan_points: [], priority_regional: "low", priority_national: "med" },
+    { chapter: "Ch 12", title: "Combinatorial Identities", pages: "259-280", plan_step: 8, plan_points: ["8.4","8.5"], priority_regional: "high", priority_national: "high" },
+    { chapter: "Ch 13", title: "Events With States", pages: "281-313", plan_step: 9, plan_points: ["9.10"], priority_regional: "med", priority_national: "high" },
+    { chapter: "Ch 14", title: "Generating Functions", pages: "314-346", plan_step: 8, plan_points: ["8.9"], priority_regional: "med", priority_national: "high" },
+    { chapter: "Ch 15", title: "Graph Theory", pages: "347-378", plan_step: 9, plan_points: ["9.1","9.2","9.3","9.4","9.5","9.6","9.7","9.8"], priority_regional: "med", priority_national: "high" },
+    { chapter: "Ch 16", title: "Challenge Problems (Mixed)", pages: "379-382", plan_step: 11, plan_points: [], priority_regional: "med", priority_national: "med" }
+  ],
+  duplicates: [],
+  recommended_action: "add-as-bonus",
+  best_mapping: [
+    { step_id: 8, point_ids: ["8.1","8.2","8.3","8.4","8.5","8.6","8.7","8.8","8.9","8.10"], chapters: ["Ch 1","Ch 3","Ch 4","Ch 5","Ch 7","Ch 8","Ch 12","Ch 14"], pages: "17-346" },
+    { step_id: 7, point_ids: ["7.6","7.7","7.8"], chapters: ["Ch 9","Ch 10"], pages: "188-242" },
+    { step_id: 9, point_ids: ["9.1","9.2","9.3","9.4","9.5","9.6","9.7","9.8","9.10"], chapters: ["Ch 13","Ch 15"], pages: "281-378" },
+    { step_id: 11, point_ids: [], chapters: ["Ch 2","Ch 6","Ch 11","Ch 16"], pages: "43-64, 146-160, 243-258, 379-382" }
+  ]
+}
+```
+
+```js
+// ─── АКТУАЛИЗАЦИЯ ───
+// Тази книга не изисква нови точки. Тя е мощен допълнителен ресурс
+// за Стъпки 7, 8, 9, 11. Препоръчвам да се добави като bonus към
+// следните точки:
+
+// Точка 8.1 (Дирихле) в STEPS[7].points[0]:
+{ id: "8.1",
+  bonus: [
+    { label: "Patrick, Intermediate C&P — Ch 5 (Pigeonhole)", pdf: "Материали_EN/book-12", page: 134 }
+  ]
+}
+
+// Точка 8.2 (Вкл/Изкл) в STEPS[7].points[1]:
+{ id: "8.2",
+  bonus: [
+    { label: "Patrick, Intermediate C&P — Ch 3 (PIE)", pdf: "Материали_EN/book-12", page: 65 }
+  ]
+}
+
+// Точка 8.3 (Двойно броене) в STEPS[7].points[2]:
+{ id: "8.3",
+  bonus: [
+    { label: "Patrick, Intermediate C&P — Ch 4 (1-1 Correspondences)", pdf: "Материали_EN/book-12", page: 99 }
+  ]
+}
+
+// Точка 8.4 (Комб. тъждества) в STEPS[7].points[3]:
+{ id: "8.4",
+  bonus: [
+    { label: "Patrick, Intermediate C&P — Ch 12 (Combinatorial Identities)", pdf: "Материали_EN/book-12", page: 259 }
+  ]
+}
+
+// Точка 8.7 (Мултимножества) в STEPS[7].points[6]:
+{ id: "8.7",
+  bonus: [
+    { label: "Patrick, Intermediate C&P — Ch 7 (Distributions)", pdf: "Материали_EN/book-12", page: 161 }
+  ]
+}
+
+// Точка 8.9 (Генериращи функции) в STEPS[7].points[8]:
+{ id: "8.9",
+  bonus: [
+    { label: "Patrick, Intermediate C&P — Ch 14 (Generating Functions)", pdf: "Материали_EN/book-12", page: 314 }
+  ]
+}
+
+// Точка 8.10 (Индукция) в STEPS[7].points[9]:
+{ id: "8.10",
+  bonus: [
+    { label: "Patrick, Intermediate C&P — Ch 8 (Mathematical Induction)", pdf: "Материали_EN/book-12", page: 177 }
+  ]
+}
+
+// Точка 7.6 (Линейни рекурсии) в STEPS[6].points[5]:
+{ id: "7.6",
+  bonus: [
+    { label: "Patrick, Intermediate C&P — Ch 9-10 (Fibonacci, Recursion)", pdf: "Материали_EN/book-12", page: 188 }
+  ]
+}
+
+// Точка 7.8 (Сходимост) в STEPS[6].points[7]:
+{ id: "7.8",
+  bonus: [
+    { label: "Patrick, Intermediate C&P — Ch 13 (Events with States)", pdf: "Материали_EN/book-12", page: 281 }
+  ]
+}
+
+// Точка 9.1 (Основи на графи) в STEPS[8].points[0]:
+{ id: "9.1",
+  bonus: [
+    { label: "Patrick, Intermediate C&P — Ch 15 (Graph Theory)", pdf: "Материали_EN/book-12", page: 347 }
+  ]
+}
+
+// Точка 9.10 (Игри) в STEPS[8].points[9]:
+{ id: "9.10",
+  bonus: [
+    { label: "Patrick, Intermediate C&P — Ch 13.4 (Two-player Strategy Games)", pdf: "Материали_EN/book-12", page: 284 }
+  ]
+}
+
+// Точка 11.4 (Доп. сборници) в STEPS[10].points[3]:
+{ id: "11.4",
+  bonus: [
+    { label: "Patrick, Intermediate C&P — Challenge Problems", pdf: "Материали_EN/book-12", page: 379 },
+    { label: "Patrick, Intermediate C&P — Sets & Logic (Ch 2)", pdf: "Материали_EN/book-12", page: 43 },
+    { label: "Patrick, Intermediate C&P — Conditional Probability (Ch 11)", pdf: "Материали_EN/book-12", page: 243 }
+  ]
+}
+```
+
+### RECOMMENDED CHANGES TO index.html
+
+**В STEPS:**
+- [ ] Точка 8.1: добавяне на `bonus` = "Patrick, Intermediate C&P — Ch 5 (Pigeonhole)" (стр. 134)
+- [ ] Точка 8.2: добавяне на `bonus` = "Patrick, Intermediate C&P — Ch 3 (PIE)" (стр. 65)
+- [ ] Точка 8.3: добавяне на `bonus` = "Patrick, Intermediate C&P — Ch 4 (1-1 Correspondences)" (стр. 99)
+- [ ] Точка 8.4: добавяне на `bonus` = "Patrick, Intermediate C&P — Ch 12 (Combinatorial Identities)" (стр. 259)
+- [ ] Точка 8.7: добавяне на `bonus` = "Patrick, Intermediate C&P — Ch 7 (Distributions)" (стр. 161)
+- [ ] Точка 8.9: добавяне на `bonus` = "Patrick, Intermediate C&P — Ch 14 (Generating Functions)" (стр. 314)
+- [ ] Точка 8.10: добавяне на `bonus` = "Patrick, Intermediate C&P — Ch 8 (Mathematical Induction)" (стр. 177)
+- [ ] Точка 7.6: добавяне на `bonus` = "Patrick, Intermediate C&P — Ch 9-10 (Fibonacci, Recursion)" (стр. 188)
+- [ ] Точка 7.8: добавяне на `bonus` = "Patrick, Intermediate C&P — Ch 13 (Events with States)" (стр. 281)
+- [ ] Точка 9.1: добавяне на `bonus` = "Patrick, Intermediate C&P — Ch 15 (Graph Theory)" (стр. 347)
+- [ ] Точка 9.10: добавяне на `bonus` = "Patrick, Intermediate C&P — Ch 13.4 (Two-player Strategy Games)" (стр. 284)
+- [ ] Точка 11.4: добавяне на 3 нови `bonus` записа (Challenge Problems, Sets & Logic, Conditional Probability)
+
+**В PLAN_PHASES:**
+- [ ] Обновяване на Week 10-12 (Фаза 2 — Разширяване): добавяне на "Patrick Ch 3, 4, 5, 7" като допълнителен ресурс за Комбинаторика
+- [ ] Обновяване на Week 13-17 (Фаза 3 — Пред-областен): добавяне на "Patrick Ch 12, 14" за Комбинаторни тъждества и генериращи функции
+- [ ] Обновяване на Week 18-25 (Фаза 4 — Между-национален): добавяне на "Patrick Ch 9, 10, 13, 15" за рекурсии, състояния и графи
+
+**Друго:**
+- [ ] Няма нови точки — книгата е допълващ ресурс, не изисква Стъпка 12 (всички теми се припокриват със съществуващите 11 стъпки)
+- [ ] Няма дубликати — `book-12.pdf` е уникален (не е дубликат на други EN книги в проекта)
+- [ ] Няма промени в конфигурацията на exam dates

@@ -1,0 +1,65 @@
+{
+  "point_id": "R.11",
+  "total": 4,
+  "by_difficulty": {
+    "easy": 1,
+    "medium": 1,
+    "hard": 2
+  },
+  "problems": [
+    {
+      "source": "OLI-3-Национален кръг-1988-9-12 кл · 1988-None · Зад. 5",
+      "statement": "Точките от пространството са оцветени в два цвята (бял и червен). Да се докаже, че може да се намери тетраедър, чиито върхове и център на тежестта са оцветени в един и същ цвят.",
+      "solution": "Решение. Нека ABCD е тетраедър, върховете на който са едноцветни (например бели) и [неразчетено] е произволна точка от пространството. От равенството\nвектор OA₁ = 4 вектор OA − вектор OB − вектор OC − вектор OD\nопределяме точка A₁. Ако тя е бяла, то тетраедърът A₁BCD заедно с центъра на тежестта си — точката A — удовлетворява условието на задачата. Затова нека точката A₁ е оцветена в червено. Аналогично определяме точките B₁, C₁ и D₁ и можем да смятаме, че те също са оцветени в червено. Тогава от равенството\n(1/4)(вектор OA₁ + вектор OB₁ + вектор OC₁ + вектор OD₁) = (1/4)(вектор OA + вектор OB + вектор OC + вектор OD)\nследва, че центровете на тежестта на тетраедрите ABCD и A₁B₁C₁D₁ съвпадат, откъдето веднага следва твърдението на задачата.",
+      "answer": null,
+      "difficulty": "easy",
+      "techniques": [
+        "vector_method",
+        "centroid_coloring",
+        "pigeonhole_principle"
+      ],
+      "confidence": "exact",
+      "reasoning": "Simple vector equality gives a tetrahedron whose vertices and centroid share a colour."
+    },
+    {
+      "source": "OLI-2-Областен кръг-1997-10 кл · 1997-10 · Зад. 2",
+      "statement": "Given a convex quadrilateral ABCD which can be inscribed in a circle. Let F be the intersecting point of diagonals AC and BD and E be the intersecting point of the lines AD and BC. If M and N are the midpoints of AB and CD, prove that\n\n$$\\frac{M N}{E F}=\\frac{1}{2} \\cdot\\left|\\frac{A B}{C D}-\\frac{C D}{A B}\\right| .$$",
+      "solution": "Solution: Let $\\angle AEB = \\gamma$, $EC = c$, $ED = d$, $\\overrightarrow{i} = \\frac{1}{c} \\cdot \\overrightarrow{EC}$ and $\\overrightarrow{j} = \\frac{1}{d} \\cdot \\overrightarrow{ED}$. Since $ABCD$ is an inscribed quadrilateral, $\\frac{AB}{CD} = \\frac{AE}{CE} = \\frac{BE}{DE} = k$. Therefore $\\overrightarrow{EA} = kc\\overrightarrow{j}$ and $\\overrightarrow{EB} = kd\\overrightarrow{i}$. Since $F \\in AC$ and $F \\in BD$ there exist $x$ and $y$ such that\n\n$$\\overrightarrow{EF} = x\\overrightarrow{EA} + (1 - x)\\overrightarrow{EC} = xkc\\overrightarrow{j} + (1 - x)c\\overrightarrow{i}$$\n\nand\n\n$$\\overrightarrow{EF} = y\\overrightarrow{EB} + (1 - y)\\overrightarrow{ED} = ykd\\overrightarrow{i} + (1 - y)d\\overrightarrow{j}.$$\n\nComparing the coefficients of $\\overrightarrow{i}$ and $\\overrightarrow{j}$ in these equalities gives $xkc = (1 - y)d$ and $ykd = (1 - x)c$. This implies $x = \\frac{kd - c}{(k^2 - 1)c}$. Therefore\n\n$$\\overrightarrow{EF} = \\frac{k}{k^2 - 1} \\left( (kd - c)\\overrightarrow{j} + (kc - d)\\overrightarrow{i} \\right)$$\n\nand thus\n\n$$EF^2 = \\left( \\frac{k}{k^2 - 1} \\right)^2 \\left( (kd - c)^2 + (kc - d)^2 + 2(kd - c)(kc - d)\\cos \\gamma \\right).$$\n\nOn the other hand\n\n$$\\begin{aligned} \\overrightarrow{MN} &= \\frac{1}{2} \\cdot \\left( \\overrightarrow{AD} + \\overrightarrow{BC} \\right) = \\frac{1}{2} \\cdot \\left( \\overrightarrow{ED} - \\overrightarrow{EA} + \\overrightarrow{EC} - \\overrightarrow{EB} \\right) \\\\ &= \\frac{1}{2} \\cdot \\left( (d - kc)\\overrightarrow{j} + (c - kd)\\overrightarrow{i} \\right) \\end{aligned}$$\n\nand it follows that\n\n$$MN^2 = \\frac{1}{4} \\cdot \\left( (d - kc)^2 + (c - kd)^2 + 2(d - kc)(c - kd)\\cos \\gamma \\right).$$\n\nTherefore $\\frac{MN^2}{EF^2} = \\frac{1}{4} \\left( \\frac{k^2 - 1}{k} \\right)^2 = \\frac{1}{4} \\left( k - \\frac{1}{k} \\right)^2$ and so\n\n$$\\frac{MN}{EF} = \\frac{1}{2} \\cdot \\left| \\frac{AB}{CD} - \\frac{CD}{AB} \\right|$$",
+      "answer": null,
+      "difficulty": "medium",
+      "techniques": [
+        "vectors"
+      ],
+      "confidence": "exact",
+      "reasoning": "Expresses all relevant segments as vectors, exploits cyclic quadrilateral ratios, and computes MN/EF."
+    },
+    {
+      "source": "OLI-3-Национален кръг-1984-9-12 кл · 1984-None · Зад. 6",
+      "statement": "Дадена е пирамидата SABCD, основата на която е успоредника ABCD. Нека N е средата на отсечката BC. Равнина λ се движи по такъв начин, че пресича правите SC, SA и AB съответно в точките P, Q и R, така че\nCP/CS = SQ/SA = AR/AB.\nТочката M от правата SD е такава, че правата MN е успоредна на равнината λ. Да се докаже, че геометричното място на точката M, когато λ описва всички възможни положения, е отсечка с дължина (√5/2)SD.",
+      "solution": "Решение. Нека CP/CS = SQ/SA = AR/AB = t. Тогава (черт. 2), ако векторите SA = a⃗, SB = b⃗, SC = c⃗, то\nSP = (1 − t)c⃗,\nSQ = ta⃗,\nSR = (1 − t)a⃗ + tb⃗,\nSD = a⃗ − b⃗ + c⃗,\nSN = (1/2)(b⃗ + c⃗),\nSM = m(a⃗ − b⃗ + c⃗)\nи MN = ma⃗ − (m + 1/2)b⃗ + (m − 1/2)c⃗.\nОт друга страна, понеже векторът MN е колинеарен с λ, то\nMN = αPQ + βPR = [αt + β(1 − t)]a⃗ + βtb⃗ − [(α + β)(1 − t)]c⃗.\nТъй като a⃗, b⃗, c⃗ са линейно независими, то\nm = αt + β(1 − t),\n−m − 1/2 = βt,\nm − 1/2 = −(α + β)(1 − t),\nоткъдето получаваме\n(1) m = (−t² + 3t − 1)/(2(2t² − 2t + 1)).\nТъй като 2t² − 2t + 1 > 0 за всяко t и\nlim_(t→±∞) (−t² + 3t − 1)/(2(2t² − 2t + 1)) = −1/4,\nтърсеното геометрично място е отсечка. От (1) получаваме\n(2) (4m + 1)t² − (4m + 3)t + 2m + [неразчетено] = 0.\nПонеже t е реално число, дискриминантата D на (2) трябва да е неотрицателна. Имаме\nD = (4m + 3)² − 4(4m + 1)(2m + 1) = 5 − 16m²,\nт.е. −√5/4 ≤ m ≤ √5/4. Следователно за краищата на отсечката M₁ и M₂ имаме векторите SM₁ = −(√5/4)SD и SM₂ = (√5/4)SD, откъдето векторът M₁M₂ = (√5/2)SD или M₁M₂ = (√5/2)SD, с което задачата е решена.",
+      "answer": "Геометричното място е отсечката M₁M₂ с вектори SM₁ = −(√5/4)SD и SM₂ = (√5/4)SD и дължина M₁M₂ = (√5/2)SD.",
+      "difficulty": "hard",
+      "techniques": [
+        "vector_method",
+        "analytic_geometry"
+      ],
+      "confidence": "exact",
+      "reasoning": "Vector parametrisation, solving a quadratic discriminant; requires several algebraic manipulations."
+    },
+    {
+      "source": "OLI-3-Национален кръг-1993-9-12 кл · 1993-None · Зад. 5",
+      "statement": "Нека Oxy е фиксирана правоъгълна координатна система в равнината. На всяка наредена двойка точки A₁, A₂ от същата равнина, които са различни от O и имат съответно координати (x₁, y₁) и (x₂, y₂), е съпоставено реално число f(A₁, A₂), като са изпълнени условията:\n(а) Ако OA₁ = OB₁, OA₂ = OB₂ и A₁A₂ = B₁B₂, то f(A₁, A₂) = f(B₁, B₂).\n(б) Съществува такъв полином от втора степен F(u, v, w, z), че f(A₁, A₂) = F(x₁, y₁, x₂, y₂) за всяка наредена двойка точки A₁, A₂.\n(в) Съществува такова число φ ∈ (0, π), че за всеки две точки A₁, A₂, за които ∠A₁OA₂ = φ, е изпълнено f(A₁, A₂) = 0.\n(г) Ако точките A₁, A₂ са такива, че △OA₁A₂ е равностранен със страна 1, то f(A₁, A₂) = 1/2.\nДа се докаже, че f(A₁, A₂) = \\overrightarrow{OA₁} · \\overrightarrow{OA₂} за всяка наредена двойка точки A₁, A₂.",
+      "solution": "Решение. Нека полиномът F(u, v, w, z) има вида\nF(u, v, w, z) = a₁₁u²+a₂₂v²+a₃₃w²+a₄₁z²+a₁₂uv+a₁₃uw+a₁₄uz+a₂₃vw+a₂₄vz+a₃₄wz+a₁u+a₂v+a₃w+a₄z+a.\nОт точките A₁(x₁, y₁), A₂(x₂, y₂) при симетрията относно Ox се получават точките B₁(x₁, −y₁) и B₂(x₂, −y₂). Освен това C₁(−x₁, −y₁), C₂(−x₂, −y₂) са симетрични на A₁, A₂ относно координатното начало. Условието а) показва, че f(A₁, A₂) = f(B₁, B₂) = f(C₁, C₂), така че са налице тъждествата\n(1) F(x₁, y₁, x₂, y₂) = F(x₁, −y₁, x₂, −y₂),\n(2) F(x₁, y₁, x₂, y₂) = F(−x₁, −y₁, −x₂, −y₂).\nОт (2) следва, че a₁x₁+a₂y₁+a₃x₂+a₁y₂ = 0 за произволни x₁, y₁, x₂, y₂, което е възможно само при a₁ = a₂ = a₃ = a₄ = 0. Аналогично, от (1) получаваме тъждеството a₁₂x₁y₁+a₁₄x₁y₂+a₂₃x₂y₁+a₃₄x₂y₂ = 0, откъдето a₁₂ = a₁₄ = a₂₃ = a₃₄ = 0. Следователно\n(3) F(u, v, w, z) = a₁₁u²+a₂₂v²+a₃₃w²+a₄₄z²+a₁₃uw+a₂₄vz+a.\nОтново от а) имаме F(1, 1, −1, 1) = F(1, −1, 1, 1), F(1, 0, 1, 1) = F(0, 1, −1, 1), F(1, −1, 1, 0) = F(1, 1, 0, 1), от които намираме последователно a₁₃ = a₂₄, a₁₁ = a₂₂, a₃₃ = a₄₁. Тогава от (3) се вижда, че за всеки две точки A₁, A₂ имаме\nf(A₁, A₂) = a₁₁OA₁²+a₃₃OA₂²+a₁₃ OA₁⃗ · OA₂⃗+a.\nСега да изберем A₁ и A₂ така, че ∠A₁OA₂ = φ. Тъй като f(A₁, A₂) = 0 съгласно в), равенството a₁₁OA₁²+a₃₃OA₂²+a₁₃OA₁·OA₂ cos φ+a = 0 е изпълнено за произволни стойности на дължините OA₁ и A₂. Оттук a₁₁ = a₃₃ = a = 0, така че f(A₁, A₂) = a₁₃ OA₁⃗ · OA₂⃗ за произволни точки A₁, A₂.\nНай-после, като вземем предвид г), намираме a₁₃ = 1, с което твърдението е доказано.",
+      "answer": "f(A₁, A₂) = OA₁⃗ · OA₂⃗.",
+      "difficulty": "hard",
+      "techniques": [
+        "vectors",
+        "dot_product",
+        "polynomial_symmetry",
+        "geometric_invariants"
+      ],
+      "confidence": "exact",
+      "reasoning": "Derives the explicit form of a second‑degree polynomial invariant under rotations and reflections, leading to f(A1,A2)=OA1·OA2. Main framework is vector/coordinate geometry (R.11)."
+    }
+  ]
+}

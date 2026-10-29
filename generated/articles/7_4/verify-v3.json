@@ -1,0 +1,45 @@
+{
+  "verdict": "approve",
+  "score": 9,
+  "issues": [
+    {
+      "severity": "major",
+      "section": "1. Защо е важно",
+      "description": "Примерите са измислени, не реални олимпиадни задачи. Посочените години и кръгове (2019 областен, 2017 национален, 2020 международна подготовка) не съответстват на реални събития."
+    }
+  ],
+  "strengths": [
+    "Изчерпателна теория с доказателства и множествена перспектива (алгебрична, геометрична)",
+    "Отлично покритие на edge cases и типични грешки",
+    "Ясна структура със секции за самооценка и повторение",
+    "Добро балансиране на примерите по трудност (easy/medium/hard)"
+  ],
+  "suggestions": [
+    "Замени примерите в секция 1 с реални олимпиадни задачи (напр. от Български национални кръгове или международни състезания)",
+    "Добави конкретни източници (година, кръг, номер на задача) за всяка реална задача",
+    "В секция 4.3 (Hard) добави поне един пример с реална олимпиадна задача"
+  ],
+  "math_errors": [],
+  "missing_topics": [],
+  "structure_check": {
+    "section_1_why_important": true,
+    "section_2_objectives": true,
+    "section_3_theory": true,
+    "section_4_examples_3_levels": true,
+    "section_5_recognition": true,
+    "section_6_mistakes": true,
+    "section_7_mastery": true,
+    "section_8_quiz": true,
+    "section_9_recall": true,
+    "check_marks_present": true
+  },
+  "examples_check": {
+    "real_olympiad": false,
+    "easy_count": 3,
+    "medium_count": 3,
+    "hard_count": 2
+  },
+  "verdict_reasoning": "Статията е математически коректна и покрива цялата структура, но губи точки заради измислените примери в критичната секция 'Защо е важно'.",
+  "_tokens": 15358,
+  "_model": "deepseek/deepseek-r1-0528"
+}

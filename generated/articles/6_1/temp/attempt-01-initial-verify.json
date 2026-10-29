@@ -1,0 +1,54 @@
+{
+  "verdict": "revise",
+  "score": 7,
+  "issues": [
+    {
+      "severity": "critical",
+      "section": "4.2 Пример 4",
+      "description": "Грешка в логиката на решението: d² ≥ c² не следва от условията. Решението трябва да се преработи."
+    },
+    {
+      "severity": "minor",
+      "section": "3.3 Теореми с доказателства",
+      "description": "Доказателството с индукция за общия случай е твърде сложно за средношколци. Препоръчително е да се опрости или да се посочи като незадължително."
+    }
+  ],
+  "strengths": [
+    "Отлична интуитивна мотивация преди формални дефиниции",
+    "Добро покритие на edge cases и чести грешки",
+    "Реални олимпиадни примери с източници"
+  ],
+  "suggestions": [
+    "Преработете решението на Пример 4 (Областен кръг 2002, зад.5) с коректен математически подход",
+    "Добавете още един medium пример за компенсация на грешния",
+    "Опростете доказателството с индукция в секция 3.3 или го маркирайте като допълнителен материал"
+  ],
+  "math_errors": [
+    {
+      "formula": "$d^2 \\geq c^2$",
+      "problem": "В Пример 4 се твърди, че от $c \\geq a+b$ и $d=1/(4ab)$ следва $d^2 \\geq c^2$, което не е вярно. Контрапример: a=1,b=1,c=2 → d=0.25, d²=0.0625 < c²=4.",
+      "fix": "Коректното следване е: $c \\geq a+b \\implies c^2 \\geq (a+b)^2 \\geq 4ab = 1/d$. Следователно $c^2 \\geq 1/d$, но не и $d^2 \\geq c^2$."
+    }
+  ],
+  "missing_topics": [],
+  "structure_check": {
+    "section_1_why_important": true,
+    "section_2_objectives": true,
+    "section_3_theory": true,
+    "section_4_examples_3_levels": true,
+    "section_5_recognition": true,
+    "section_6_mistakes": true,
+    "section_7_mastery": true,
+    "section_8_quiz": true,
+    "section_9_recall": true,
+    "check_marks_present": true
+  },
+  "examples_check": {
+    "real_olympiad": true,
+    "easy_count": 3,
+    "medium_count": 3,
+    "hard_count": 2
+  },
+  "verdict_reasoning": "Статията има отлични структура и релевантност, но съдържа критична математическа грешка в Пример 4. Това намалява значително оценката. След корекция ще бъде високо оценена.",
+  "_tokens": 17189
+}

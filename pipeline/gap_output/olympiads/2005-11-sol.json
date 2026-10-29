@@ -1,0 +1,251 @@
+{
+  "_meta": {
+    "pdf": "C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\Задачи_Минали_Години\\Областен\\OLI-2-Областен кръг-2005-11 кл-sol.pdf",
+    "paired_with": null,
+    "level": 1,
+    "type": "sol",
+    "analyzed_at": "2026-10-18T12:41:04.120840",
+    "model": "deepseek/deepseek-v3.2",
+    "text_length": 21347,
+    "paired_text_length": 0
+  },
+  "problems": [
+    {
+      "num": 1,
+      "topic": "algebra",
+      "theorems": [],
+      "techniques": [
+        "polynomial division",
+        "substitution",
+        "solving system of equations"
+      ],
+      "concepts": [
+        "polynomial remainder theorem",
+        "roots of polynomials"
+      ],
+      "difficulty": "standard",
+      "notes": "Задачата се свежда до намиране на параметри, при които даден полином се дели на (x^2-1). Решението използва заместване на корените x=1 и x=-1."
+    },
+    {
+      "num": 2,
+      "topic": "combinatorics",
+      "theorems": [],
+      "techniques": [
+        "pigeonhole principle",
+        "averaging argument",
+        "constructive example"
+      ],
+      "concepts": [
+        "sum of numbers",
+        "arrangements",
+        "inequalities"
+      ],
+      "difficulty": "olympic",
+      "notes": "Задачата изисква да се докаже, че за всяко подреждане на числата от 1 до 1000, съществува поредица от 50 последователни числа със сума най-малко 25025. Използва се принципът на Дирихле (принцип на чекмеджетата) чрез средноаритметичното."
+    },
+    {
+      "num": 3,
+      "topic": "geometry",
+      "theorems": [
+        "similar triangles",
+        "power of a point"
+      ],
+      "techniques": [
+        "construction",
+        "proportional segments"
+      ],
+      "concepts": [
+        "circles and chords",
+        "radical axis",
+        "midpoint"
+      ],
+      "difficulty": "hard",
+      "notes": "Задачата разглежда три окръжности, две от които са с общ ъгъл и трета, която ги пресича. Доказва се, че центърът на третата окръжност е среда на разстоянието между центровете на първите две."
+    },
+    {
+      "num": 4,
+      "topic": "algebra",
+      "theorems": [],
+      "techniques": [
+        "trigonometric substitution",
+        "quadratic equation analysis",
+        "interval analysis"
+      ],
+      "concepts": [
+        "trigonometric equations",
+        "roots in an interval",
+        "parameter range"
+      ],
+      "difficulty": "hard",
+      "notes": "Задачата включва тригонометрично уравнение с параметър. Решението използва заместване и анализ на квадратен тричлен, за да се определят стойностите на параметъра, при които уравнението има решение в даден интервал."
+    },
+    {
+      "num": 5,
+      "topic": "number_theory",
+      "theorems": [],
+      "techniques": [
+        "infinite descent",
+        "divisibility by powers of 2"
+      ],
+      "concepts": [
+        "integer solutions",
+        "even and odd numbers",
+        "sum of squares"
+      ],
+      "difficulty": "olympic",
+      "notes": "Задачата доказва, че ако даден израз е точен квадрат, то числата са равни. Използва се метод на безкрайното спускане, като се показва, че разликите се делят на произволно голяма степен на 2."
+    },
+    {
+      "num": 6,
+      "topic": "geometry",
+      "theorems": [
+        "Law of Sines",
+        "similar triangles"
+      ],
+      "techniques": [
+        "angle chasing",
+        "cyclic quadrilaterals"
+      ],
+      "concepts": [
+        "orthocenter",
+        "circumcenter",
+        "inscribed and circumscribed circles",
+        "similarity ratio"
+      ],
+      "difficulty": "olympic",
+      "notes": "Задачата разглежда триъгълник с избрани точки, образуващи подобен триъгълник. Доказва се, че ортоцентърът на големия триъгълник е център на описаната окръжност на малкия. Втората част използва отношение на лица."
+    },
+    {
+      "num": 7,
+      "topic": "algebra",
+      "theorems": [],
+      "techniques": [
+        "inequality manipulation",
+        "proof by contradiction"
+      ],
+      "concepts": [
+        "symmetric expressions",
+        "necessary and sufficient conditions"
+      ],
+      "difficulty": "standard",
+      "notes": "Задачата доказва необходимост и достатъчност на условие за четири числа. Решението използва преобразуване на неравенства и довеждане до противоречие."
+    },
+    {
+      "num": 8,
+      "topic": "combinatorics",
+      "theorems": [],
+      "techniques": [
+        "case analysis",
+        "construction of counterexample"
+      ],
+      "concepts": [
+        "parallel lines in polygons",
+        "isosceles triangles",
+        "regular polygons"
+      ],
+      "difficulty": "olympic",
+      "notes": "Комбинаторна геометрична задача. Разглеждат се различни случаи на успоредни прави в петоъгълник, вписан в правилен 13-ъгълник. Доказва се, че сред 9 върха винаги има 3, които образуват равнобедрен триъгълник, и се дава пример с 8 върха, които не го правят."
+    },
+    {
+      "num": 9,
+      "topic": "algebra",
+      "theorems": [],
+      "techniques": [
+        "logarithmic transformation",
+        "quadratic substitution"
+      ],
+      "concepts": [
+        "logarithmic equations",
+        "domain restrictions",
+        "extraneous solutions"
+      ],
+      "difficulty": "standard",
+      "notes": "Логаритмично уравнение с параметър. Решението използва свойства на логаритмите и свеждане до квадратно уравнение чрез подходящо заместване."
+    },
+    {
+      "num": 10,
+      "topic": "geometry",
+      "theorems": [
+        "Law of Sines"
+      ],
+      "techniques": [
+        "trigonometric identities",
+        "length calculation"
+      ],
+      "concepts": [
+        "altitude in triangle",
+        "inradius",
+        "circumradius",
+        "trigonometric ratios"
+      ],
+      "difficulty": "hard",
+      "notes": "Задачата доказва, че височина в определен триъгълник е равна на вписания радиус на друг триъгълник. Използва се синусова теорема и връзка между радиусите и ъглите."
+    },
+    {
+      "num": 11,
+      "topic": "geometry",
+      "theorems": [],
+      "techniques": [
+        "coordinate geometry",
+        "distance formula",
+        "analysis of intersections"
+      ],
+      "concepts": [
+        "distance from a point to a line",
+        "incenter",
+        "concurrency"
+      ],
+      "difficulty": "olympic",
+      "notes": "Задачата доказва, че инцентърът на триъгълник лежи на определени прави, построени от среди на страни. Използва се разстояние от точка до права и свойства на инцентъра."
+    },
+    {
+      "num": 12,
+      "topic": "algebra",
+      "theorems": [],
+      "techniques": [
+        "Vieta's formulas",
+        "geometric interpretation (power of a point)"
+      ],
+      "concepts": [
+        "double root",
+        "graph intersection with axes",
+        "right triangle condition"
+      ],
+      "difficulty": "hard",
+      "notes": "Задачата изисква кубичен полином да има двоен корен и определена геометрична интерпретация (върхове на триъгълник). Използват се формули на Виет и условието за прав ъгъл чрез степента на точка."
+    }
+  ],
+  "unique_concepts": [
+    "polynomial remainder theorem",
+    "pigeonhole principle",
+    "similar triangles",
+    "power of a point",
+    "radical axis",
+    "trigonometric substitution",
+    "roots in an interval",
+    "infinite descent",
+    "divisibility by powers of 2",
+    "angle chasing",
+    "cyclic quadrilaterals",
+    "orthocenter",
+    "circumcenter",
+    "similarity ratio",
+    "inequality manipulation",
+    "necessary and sufficient conditions",
+    "parallel lines in polygons",
+    "isosceles triangles",
+    "regular polygons",
+    "logarithmic equations",
+    "domain restrictions",
+    "inradius",
+    "circumradius",
+    "Law of Sines",
+    "distance from a point to a line",
+    "incenter",
+    "concurrency",
+    "Vieta's formulas",
+    "double root",
+    "geometric interpretation (power of a point)"
+  ],
+  "confidence": 0.9
+}

@@ -1,0 +1,111 @@
+{
+  "_meta": {
+    "pdf": "C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\Задачи_Минали_Години\\Национален\\OLI-3-Национален кръг-2022-9-12 кл-sol.pdf",
+    "paired_with": null,
+    "level": 2,
+    "type": "sol",
+    "analyzed_at": "2026-10-16T21:06:01.977080",
+    "model": "deepseek/deepseek-v3.2",
+    "text_length": 65229,
+    "paired_text_length": 0
+  },
+  "problems": [
+    {
+      "num": 1,
+      "topic": "combinatorics",
+      "theorems": [],
+      "techniques": [
+        "parity argument",
+        "graph theory encoding",
+        "modular arithmetic (mod 2)",
+        "counting"
+      ],
+      "concepts": [
+        "graph theory",
+        "vertices and edges",
+        "degree of a vertex",
+        "handshaking lemma",
+        "parity",
+        "set selection",
+        "invariance"
+      ],
+      "difficulty": "olympic",
+      "notes": "Задачата се свежда до лема за графи: ако в граф G някои върхове са оцветени в черно, а Б пита за четността на черните върхове в множество S, то той може еднозначно да определи четността на броя на разноцветните двойки съседни върхове в G. Доказателството използва модул 2 аритметика (сумата на степените на черните върхове). След това се преброяват клетките с нечетен брой съседи в триъгълна решетка."
+    },
+    {
+      "num": 2,
+      "topic": "geometry",
+      "theorems": [
+        "Brocard's theorem (for cyclic quadrilaterals)",
+        "Inversion",
+        "Properties of cyclic quadrilaterals",
+        "Symmetry"
+      ],
+      "techniques": [
+        "cyclic quadrilateral identification",
+        "angle chasing",
+        "inversion",
+        "symmetry",
+        "diameter perpendicular to tangent"
+      ],
+      "concepts": [
+        "cyclic quadrilaterals",
+        "kite (deltoid)",
+        "circumcircles",
+        "intersection of circles",
+        "collinearity",
+        "perpendicular lines",
+        "diameter",
+        "tangent"
+      ],
+      "difficulty": "olympic",
+      "notes": "Има две решения: едното използва ъглови аргументи и установява, че AKQC е вписан, след което доказва, че OM е перпендикулярна на MT (където O е център на описаната около AKQC окръжност). Второто решение използва инверсия и симетрия."
+    },
+    {
+      "num": 3,
+      "topic": "number_theory",
+      "theorems": [],
+      "techniques": [
+        "construction",
+        "modular contradiction",
+        "algebraic manipulation"
+      ],
+      "concepts": [
+        "coprime integers",
+        "perfect squares",
+        "Diophantine condition",
+        "interval selection",
+        "gcd properties"
+      ],
+      "difficulty": "olympic",
+      "notes": "Задачата е конструктивна. Дадено е, че xy+x+y е точен квадрат. Конструира се z = x+y+2√(xy+x+y)+1, което попада в необходимия интервал. След това се проверява, че xy+yz+zx и xy+yz+zx+x+y+z са последователни квадрати, което води до противоречие при допускане на общ прост делител на x+y+z и x²+xy+y²."
+    },
+    {
+      "num": 4,
+      "topic": "mixed",
+      "theorems": [],
+      "techniques": [],
+      "concepts": [],
+      "difficulty": "standard",
+      "notes": "Текстът на задача 4 не е предоставен напълно в извадката, така че не мога да извлека концепции. Confidence е нисък."
+    }
+  ],
+  "unique_concepts": [
+    "graph theory",
+    "parity argument",
+    "handshaking lemma",
+    "modular arithmetic (mod 2)",
+    "counting in triangular grid",
+    "cyclic quadrilaterals",
+    "Brocard's theorem",
+    "inversion",
+    "kite (deltoid)",
+    "circumcircles intersection",
+    "perpendicular diameter",
+    "construction in number theory",
+    "coprime condition from consecutive squares",
+    "Diophantine condition with perfect square",
+    "gcd contradiction"
+  ],
+  "confidence": 0.9
+}

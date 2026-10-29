@@ -1,0 +1,118 @@
+{
+  "_meta": {
+    "pdf": "C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\Задачи_Минали_Години\\Областен\\OLI-2-Областен кръг-2018-11 кл-sol.pdf",
+    "paired_with": null,
+    "level": 1,
+    "type": "sol",
+    "analyzed_at": "2026-10-16T21:21:41.578691",
+    "model": "deepseek/deepseek-v3.2",
+    "text_length": 5183,
+    "paired_text_length": 0
+  },
+  "problems": [
+    {
+      "num": 1,
+      "topic": "algebra",
+      "theorems": [],
+      "techniques": [
+        "substitution",
+        "inequality_analysis",
+        "interval_method"
+      ],
+      "concepts": [
+        "exponential_inequalities",
+        "monotonic_functions",
+        "domain_restrictions"
+      ],
+      "difficulty": "standard",
+      "notes": "Преобразуване на експоненциално неравенство чрез заместване и анализ на знаци на множители, използвайки монотонност."
+    },
+    {
+      "num": 2,
+      "topic": "number_theory",
+      "theorems": [],
+      "techniques": [
+        "construction",
+        "contradiction",
+        "algebraic_manipulation"
+      ],
+      "concepts": [
+        "rational_numbers",
+        "geometric_progression",
+        "arithmetic_progression"
+      ],
+      "difficulty": "standard",
+      "notes": "Двупосочно доказателство, изискващо конструкция за достатъчност и алгебрична манипулация за необходимост."
+    },
+    {
+      "num": 3,
+      "topic": "geometry",
+      "theorems": [
+        "Thales",
+        "similar_triangles"
+      ],
+      "techniques": [
+        "auxiliary_construction",
+        "parallel_lines",
+        "angle_chasing"
+      ],
+      "concepts": [
+        "orthocenter",
+        "angle_bisector",
+        "circumcircle",
+        "isosceles_triangle",
+        "parallelogram",
+        "midpoint"
+      ],
+      "difficulty": "hard",
+      "notes": "Сложна конфигурация с ортоцентър, външни ъглополовящи и описани окръжности. Използва се допълнително построение и паралелни прави."
+    },
+    {
+      "num": 4,
+      "topic": "combinatorics",
+      "theorems": [],
+      "techniques": [
+        "induction",
+        "algorithmic_construction",
+        "contradiction"
+      ],
+      "concepts": [
+        "coloring",
+        "combinatorial_design",
+        "row_column_constraints"
+      ],
+      "difficulty": "olympic",
+      "notes": "Неконструктивно доказателство, използващо индуктивен алгоритъм за оцветяване и довеждане до противоречие."
+    }
+  ],
+  "unique_concepts": [
+    "exponential_inequalities",
+    "monotonic_functions",
+    "domain_restrictions",
+    "rational_numbers",
+    "geometric_progression",
+    "arithmetic_progression",
+    "orthocenter",
+    "angle_bisector",
+    "circumcircle",
+    "isosceles_triangle",
+    "parallelogram",
+    "midpoint",
+    "Thales_theorem",
+    "similar_triangles",
+    "coloring",
+    "combinatorial_design",
+    "row_column_constraints",
+    "substitution",
+    "interval_method",
+    "construction",
+    "algebraic_manipulation",
+    "auxiliary_construction",
+    "parallel_lines",
+    "angle_chasing",
+    "induction",
+    "algorithmic_construction",
+    "contradiction"
+  ],
+  "confidence": 0.95
+}

@@ -1,0 +1,145 @@
+{
+  "_meta": {
+    "pdf": "C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\Задачи_Минали_Години\\Национален\\OLI-3-Национален кръг-1994-9-12 кл-sol.pdf",
+    "paired_with": null,
+    "level": 2,
+    "type": "sol",
+    "analyzed_at": "2026-10-18T11:51:25.889024",
+    "model": "deepseek/deepseek-v3.2",
+    "text_length": 3839,
+    "paired_text_length": 0
+  },
+  "problems": [
+    {
+      "num": 1,
+      "topic": "geometry",
+      "theorems": [],
+      "techniques": [
+        "trigonometric expressions",
+        "algebraic manipulation"
+      ],
+      "concepts": [
+        "tangent lines",
+        "circles",
+        "power of a point",
+        "inscribed and circumscribed quadrilaterals"
+      ],
+      "difficulty": "olympic",
+      "notes": "Involves a specific condition for a quadrilateral inscribed in one circle and circumscribed around another."
+    },
+    {
+      "num": 2,
+      "topic": "algebra",
+      "theorems": [],
+      "techniques": [
+        "functional equations",
+        "linear functions",
+        "collinearity of points"
+      ],
+      "concepts": [
+        "graph of a function",
+        "linear functions"
+      ],
+      "difficulty": "standard",
+      "notes": "The solution uses a geometric interpretation: points on the graph are collinear, implying the function is linear."
+    },
+    {
+      "num": 3,
+      "topic": "number_theory",
+      "theorems": [
+        "Binomial Theorem",
+        "Lifting The Exponent (LTE)"
+      ],
+      "techniques": [
+        "case analysis",
+        "modular arithmetic",
+        "binomial expansion"
+      ],
+      "concepts": [
+        "prime numbers",
+        "Diophantine equations",
+        "gcd conditions",
+        "binomial coefficients divisibility"
+      ],
+      "difficulty": "olympic",
+      "notes": "Solves x^p + y^p = p^z. Uses properties of binomial coefficients modulo p and specific cases for p=2, p=3."
+    },
+    {
+      "num": 4,
+      "topic": "geometry",
+      "theorems": [
+        "Menelaus",
+        "external angle bisectors"
+      ],
+      "techniques": [
+        "collinearity",
+        "cyclic quadrilaterals"
+      ],
+      "concepts": [
+        "incenter",
+        "incircle",
+        "tangency points",
+        "circumcircles",
+        "angle bisectors"
+      ],
+      "difficulty": "olympic",
+      "notes": "Shows that centers of circumcircles of triangles involving incenter and touchpoints are collinear."
+    },
+    {
+      "num": 5,
+      "topic": "number_theory",
+      "theorems": [
+        "Lucas' Theorem"
+      ],
+      "techniques": [
+        "modular arithmetic",
+        "periodicity of sequences"
+      ],
+      "concepts": [
+        "binomial coefficients modulo k",
+        "periodic sequences"
+      ],
+      "difficulty": "olympic",
+      "notes": "Seeks k for which the sequence of remainders of C(2n, n) modulo k is eventually periodic. Solution references Lucas' Theorem and IMO 1985 problem."
+    },
+    {
+      "num": 6,
+      "topic": "combinatorics",
+      "theorems": [
+        "Sperner's Theorem"
+      ],
+      "techniques": [
+        "extremal set theory"
+      ],
+      "concepts": [
+        "antichains",
+        "subsets",
+        "maximal size"
+      ],
+      "difficulty": "standard",
+      "notes": "Direct application of Sperner's Theorem: maximal antichain size is C(n, floor(n/2))."
+    }
+  ],
+  "unique_concepts": [
+    "tangent lines",
+    "power of a point",
+    "inscribed and circumscribed quadrilaterals",
+    "functional equations",
+    "linear functions",
+    "prime numbers",
+    "Diophantine equations",
+    "binomial coefficients divisibility",
+    "Lifting The Exponent (LTE)",
+    "incenter",
+    "incircle",
+    "circumcircles",
+    "angle bisectors",
+    "Menelaus' theorem",
+    "Lucas' Theorem",
+    "periodic sequences",
+    "Sperner's Theorem",
+    "antichains",
+    "extremal set theory"
+  ],
+  "confidence": 0.95
+}

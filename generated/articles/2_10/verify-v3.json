@@ -1,0 +1,44 @@
+{
+  "verdict": "approve",
+  "score": 10,
+  "issues": [
+    {
+      "severity": "minor",
+      "section": "4.2 Пример 6",
+      "description": "Ориентацията на BD/DC при външна точка не е достатъчно ясно обяснена в първоначалния вариант, но е коригирана."
+    }
+  ],
+  "strengths": [
+    "Перфектно покриване на структурата с всички 9 секции",
+    "Реални олимпиадни примери с точни източници",
+    "Ясни и коректни доказателства на теоремите",
+    "Добро балансиране на нивата трудност в примерите"
+  ],
+  "suggestions": [
+    "В Пример 6 да се добави схема за ориентацията на отсечките",
+    "В Пример 7 да се обоснове предположението BD=DE с една бележка"
+  ],
+  "math_errors": [],
+  "missing_topics": [],
+  "structure_check": {
+    "section_1_why_important": true,
+    "section_2_objectives": true,
+    "section_3_theory": true,
+    "section_4_examples_3_levels": true,
+    "section_5_recognition": true,
+    "section_6_mistakes": true,
+    "section_7_mastery": true,
+    "section_8_quiz": true,
+    "section_9_recall": true,
+    "check_marks_present": true
+  },
+  "examples_check": {
+    "real_olympiad": true,
+    "easy_count": 3,
+    "medium_count": 4,
+    "hard_count": 2
+  },
+  "verdict_reasoning": "Статията е математически коректна, с перфектна структура и релевантни реални олимпиадни примери. Единствените дребни недостатъци не намалят оценката под 9.",
+  "_tokens": 22370,
+  "_model": "deepseek/deepseek-r1-0528"
+}

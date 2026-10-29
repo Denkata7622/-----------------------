@@ -1,0 +1,143 @@
+{
+  "_meta": {
+    "pdf": "C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\Задачи_Минали_Години\\Национален\\OLI-3-Национален кръг-2005-9-12 кл-probs.pdf",
+    "paired_with": "C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\Задачи_Минали_Години\\Национален\\OLI-3-Национален кръг-2005-9-12 кл-sol.pdf",
+    "level": 2,
+    "type": "probs",
+    "analyzed_at": "2026-10-18T12:03:30.486262",
+    "model": "deepseek/deepseek-v3.2",
+    "text_length": 1757,
+    "paired_text_length": 23150
+  },
+  "problems": [
+    {
+      "num": 1,
+      "topic": "number_theory",
+      "theorems": [],
+      "techniques": [
+        "rationalization",
+        "case analysis",
+        "system solving"
+      ],
+      "concepts": [
+        "rational numbers",
+        "square roots",
+        "divisibility",
+        "Pythagorean triples (implied)"
+      ],
+      "difficulty": "olympic",
+      "notes": "Key step: proving that if sum of three square roots of rationals is rational, then each is rational. Then parameterizing using perfect squares."
+    },
+    {
+      "num": 2,
+      "topic": "geometry",
+      "theorems": [
+        "Power of a point",
+        "Inscribed angles",
+        "Similar triangles"
+      ],
+      "techniques": [
+        "angle chasing",
+        "cyclic quadrilaterals",
+        "proving concyclicity"
+      ],
+      "concepts": [
+        "tangent circles",
+        "common tangent",
+        "arc midpoint",
+        "excircle center",
+        "external angle bisector"
+      ],
+      "difficulty": "olympic",
+      "notes": "Part (a): prove C, T, Y, I concyclic via angle chase. Part (b): prove I is excenter of triangle ABC opposite side BC by showing it lies on external bisector of angle ABC and internal bisector of external angle at C."
+    },
+    {
+      "num": 3,
+      "topic": "combinatorics",
+      "theorems": [],
+      "techniques": [
+        "proof by contradiction",
+        "infinite descent",
+        "density argument"
+      ],
+      "concepts": [
+        "representation as sum of distinct numbers",
+        "rational numbers in (0,1)",
+        "uniqueness of representation",
+        "binary expansion (implied)"
+      ],
+      "difficulty": "olympic",
+      "notes": "Shows no such subset A exists. Uses argument that if such A existed, its elements would have to decay like powers of 1/2, leaving most rationals unrepresentable."
+    },
+    {
+      "num": 4,
+      "topic": "geometry",
+      "theorems": [
+        "Law of Cosines",
+        "Euler's quadrilateral theorem (for medians)",
+        "Similar triangles"
+      ],
+      "techniques": [
+        "coordinate-free calculation",
+        "rotation",
+        "side length computation"
+      ],
+      "concepts": [
+        "rotation",
+        "medians",
+        "triangle side lengths",
+        "60-degree angle"
+      ],
+      "difficulty": "hard",
+      "notes": "Condition EM = FM forces the rotation to be 60 degrees, leading to angle EMF = 60 degrees. Uses similarity of triangles formed by rotation centers."
+    },
+    {
+      "num": 5,
+      "topic": "combinatorics",
+      "theorems": [],
+      "techniques": [
+        "strategy stealing",
+        "invariance/modulo analysis",
+        "inductive argument"
+      ],
+      "concepts": [
+        "two-player game",
+        "winning strategy",
+        "modular arithmetic (implied)",
+        "infinite family of solutions"
+      ],
+      "difficulty": "olympic",
+      "notes": "Proves that if first player has winning strategy for t, then also for t+a+b. Constructs infinite family t = 2004 + 2005s where first player wins by subtracting b initially."
+    },
+    {
+      "num": 6,
+      "topic": "number_theory",
+      "theorems": [],
+      "techniques": [
+        "inequality manipulation",
+        "parameterization",
+        "divisibility arguments"
+      ],
+      "concepts": [
+        "divisibility",
+        "coprime numbers",
+        "system of equations",
+        "matching sets"
+      ],
+      "difficulty": "olympic",
+      "notes": "Uses bound xy/(x+y) > c-1 and a lemma to force equality case, which then implies sets are equal. Involves symmetric conditions on a, b, c."
+    }
+  ],
+  "unique_concepts": [
+    "rationalization of nested radicals",
+    "concyclicity via angle chase",
+    "excircle and external angle bisector",
+    "unique sum representation of rationals",
+    "Euler's quadrilateral theorem for medians",
+    "rotation geometry",
+    "strategy stealing in combinatorial games",
+    "parameterization using divisibility",
+    "matching sets via extremal inequality"
+  ],
+  "confidence": 0.95
+}

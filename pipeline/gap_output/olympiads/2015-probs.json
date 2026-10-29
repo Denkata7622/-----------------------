@@ -1,0 +1,145 @@
+{
+  "_meta": {
+    "pdf": "C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\Задачи_Минали_Години\\Национален\\OLI-3-Национален кръг-2015-9-12 кл-probs.pdf",
+    "paired_with": "C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\Задачи_Минали_Години\\Национален\\OLI-3-Национален кръг-2015-9-12 кл-sol.pdf",
+    "level": 2,
+    "type": "probs",
+    "analyzed_at": "2026-10-16T20:46:14.645242",
+    "model": "deepseek/deepseek-v3.2",
+    "text_length": 31030,
+    "paired_text_length": 70647
+  },
+  "problems": [
+    {
+      "num": 1,
+      "topic": "geometry",
+      "theorems": [
+        "Menelaus",
+        "Ceva"
+      ],
+      "techniques": [
+        "trigonometric ratios",
+        "similar triangles",
+        "cyclic quadrilateral properties"
+      ],
+      "concepts": [
+        "cyclic hexagon",
+        "intersecting chords",
+        "directed segments",
+        "sine rule in circle",
+        "power of a point"
+      ],
+      "difficulty": "olympic",
+      "notes": "Two solutions provided: one using trigonometric ratios of arcs, another using auxiliary point and similar triangles. Requires deep understanding of cyclic quadrilaterals and segment ratios."
+    },
+    {
+      "num": 2,
+      "topic": "combinatorics",
+      "theorems": [],
+      "techniques": [
+        "induction",
+        "pigeonhole principle",
+        "constructive proof",
+        "invariant"
+      ],
+      "concepts": [
+        "tiling",
+        "dissection",
+        "rectangular grid",
+        "coloring",
+        "cutting",
+        "minimality"
+      ],
+      "difficulty": "olympic",
+      "notes": "Problem about cutting a square table into rectangles each containing exactly one blue square. Requires combinatorial reasoning about cuts and induction."
+    },
+    {
+      "num": 3,
+      "topic": "number_theory",
+      "theorems": [
+        "Pell equation",
+        "infinite descent"
+      ],
+      "techniques": [
+        "descent",
+        "modular arithmetic",
+        "factorization",
+        "recurrence relations"
+      ],
+      "concepts": [
+        "Diophantine equations",
+        "recurrence sequences",
+        "minimal solution",
+        "parity",
+        "coprime factors"
+      ],
+      "difficulty": "olympic",
+      "notes": "Recurrence defined; need to prove no term is a perfect power. Uses lemma about equation 2x^{2k}+1=y^2 and infinite descent."
+    },
+    {
+      "num": 4,
+      "topic": "algebra",
+      "theorems": [],
+      "techniques": [
+        "functional inequalities",
+        "monotonicity",
+        "limit arguments",
+        "substitution"
+      ],
+      "concepts": [
+        "functional equations",
+        "increasing functions",
+        "limits",
+        "identity function"
+      ],
+      "difficulty": "olympic",
+      "notes": "Find all functions f: R+ -> R+ satisfying two inequalities. Solution shows f(x)=x is the only one, using monotonicity and limits."
+    },
+    {
+      "num": 5,
+      "topic": "geometry",
+      "theorems": [
+        "homothety",
+        "symmetry"
+      ],
+      "techniques": [
+        "area ratios",
+        "parallel lines",
+        "concurrency",
+        "homothety center"
+      ],
+      "concepts": [
+        "parallelogram",
+        "concurrent lines",
+        "midpoint",
+        "diameter",
+        "circle intersection"
+      ],
+      "difficulty": "olympic",
+      "notes": "Geometry problem with parallelogram and circles; prove three lines are concurrent using area ratios and homothety."
+    }
+  ],
+  "unique_concepts": [
+    "cyclic hexagon",
+    "directed segments",
+    "sine rule in circle",
+    "dissection of grid",
+    "coloring argument",
+    "invariant in cutting",
+    "Pell equation",
+    "infinite descent",
+    "functional inequalities",
+    "monotonicity and limits",
+    "homothety in geometry",
+    "area ratios for concurrency",
+    "parallelogram properties",
+    "circle diameter intersection",
+    "recurrence sequences",
+    "perfect powers",
+    "Diophantine equations",
+    "constructive combinatorial proof",
+    "trigonometric solution for geometry",
+    "auxiliary point construction"
+  ],
+  "confidence": 0.95
+}

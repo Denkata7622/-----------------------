@@ -1,0 +1,105 @@
+{
+  "point_id": "1.2",
+  "total": 7,
+  "by_difficulty": {
+    "easy": 0,
+    "medium": 6,
+    "hard": 1
+  },
+  "problems": [
+    {
+      "source": "OLI-2-Областен кръг-1996-11 кл · 1996-11 · Зад. 2",
+      "statement": "The circles $k_1$ and $k_2$ with centers $O_1$ and $O_2$ respectively are externally tangent at the point $C$, while the circle $k$ with center $O$ is externally tangent to $k_1$ and $k_2$. Let $\\ell$ be the common tangent of $k_1$ and $k_2$ at the point $C$ and let $AB$ be the diameter of $k$, which is perpendicular to $\\ell$, the points $A$ and $O_1$ lie in one and the same semiplane with respect to the line $\\ell$. Prove that the lines $AO_2$, $BO_1$ and $\\ell$ have a common point.",
+      "solution": "Solution. Denote by $r, r_1$ and $r_2$ the radii of $k, k_1$ and $k_2$, by $M$ and $N$ the tangent points of $k$ with $k_1$ and $k_2$, respectively and by $P$ the common point of $\\ell$ and $AB$ (Figure 1).\n\nIt follows from $O_1O_2 \\perp \\ell$ and $AB \\perp \\ell$ that $\\triangle BON \\sim \\triangle CO_2N$. Then $\\angle CNO_2 = \\angle ONB$, and consequently the points $C, N$ and $B$ are colinear. Also, $\\frac{BN}{CN} = \\frac{BO}{CO_2} = \\frac{r}{r_2}$. Analogously, $A, M$ and $C$ are colinear and $\\frac{AM}{MC} = \\frac{r}{r_1}$.\n\nThe lines $AN, BM$ and $\\ell$ have a common point $H$, which is the altitude center of $\\triangle ABC$. By Ceva's theorem we have: $\\frac{AP}{PB} \\cdot \\frac{BN}{NC} \\cdot \\frac{CM}{MA} = \\frac{AP}{PB} \\cdot \\frac{r}{r_2} \\cdot \\frac{r_1}{r} = 1$, from where:\n\n$$\\frac{r_1}{PB} = \\frac{r_2}{AP}. \\tag{1}$$\n\nLet now $D_1$ and $D_2$ be the common points of the line $\\ell$ with the lines $BO_1$ and $AO_2$, respectively. Obviously, $\\triangle O_1CD_1 \\sim \\triangle BPD_1$ (Figure 2), from where $\\frac{CD_1}{D_1P} = \\frac{r_1}{PB}$. Analogously, $\\frac{CD_2}{D_2P} = \\frac{r_2}{AP}$ and according to (1) we have $\\frac{CD_1}{D_1P} = \\frac{CD_2}{D_2P}$, which shows that $D_1 \\equiv D_2$. Thus, the lines $AO_2$, $BO_1$ and $\\ell$ have a common point.",
+      "answer": null,
+      "difficulty": "medium",
+      "techniques": [
+        "ceva_theorem",
+        "similar_triangles",
+        "ratio_chasing"
+      ],
+      "confidence": "exact",
+      "reasoning": "Concurrency of AO₂, BO₁ and ℓ is proved via Ceva after establishing several similarity ratios."
+    },
+    {
+      "source": "OLI-2-Областен кръг-2007-10 кл · 2007-10 · Зад. 2",
+      "statement": "Даден е △ABC. Нека D, E и F са допирните точки на външновписаните окръжности съответно към страните BC, CA и AB.\nа) Да се докаже, че правите AD, BE и CF се пресичат в една точка.\nб) Ако тази точка лежи на вписаната за триъгълника окръжност, да се докаже, че периметърът му е четири пъти по-голям от най-малката му страна.",
+      "solution": "а) При стандартните означения за елементите на △ABC имаме, че AF = p − b, BF = p − a, BD = p − c, CD = p − b, CE = p − a, AE = p − c и твърдението следва от теоремата на Чева.\nб) Без ограничение на общността нека b е най-малката страна в △ABC. Да означим пресечната точка на AD, BE и CF с N. Нека освен това Q и R са допирните точки на вписаната окръжност съответно със страните BC и AC. Известно е, че ако QQ′ е диаметър на тази окръжност, то Q′ лежи на AD (докажете!). Аналогично RN е диаметър. Следователно RQ′NQ е правоъгълник. Сега ∠CAD = ∠CDA, откъдето p − b = b и 2p = 4b.",
+      "answer": null,
+      "difficulty": "medium",
+      "techniques": [
+        "cevian_theorem",
+        "excentral_circles",
+        "perimeter_relation"
+      ],
+      "confidence": "exact",
+      "reasoning": "Конкурентността на AD, BE, CF се доказва чрез теоремата на Чева; второто твърдение използва свойства на външновписаните окръжности и вписаната окръжност, което е типично за геометрични задачи с Чева."
+    },
+    {
+      "source": "OLI-2-Областен кръг-2008-11 кл · 2008-11 · Зад. 2",
+      "statement": "Във вътрешността на равностранен тригълник $ABC$ е избрана точка $O$. Симетричните точки на $O$ спрямо страните $BC$, $CA$ и $AB$ са означени съответно с $A_1$, $B_1$ и $C_1$. Да се докаже, че правите $AA_1$, $BB_1$ и $CC_1$ се пресичат в една точка.",
+      "solution": "Ще покажем, че\n\n$$K = \\frac{\\sin \\angle CAA_1}{\\sin \\angle BAA_1} \\frac{\\sin \\angle ABB_1}{\\sin \\angle CBB_1} \\frac{\\sin \\angle BCC_1}{\\sin \\angle ACC_1} = 1$$\n\nи твърдението ще следва от синусовия вариант на теоремата на Чева. От синусовата теорема за $\\triangle AA_1C$ и $\\triangle AA_1B$ получаваме\n\n$$\\sin \\angle CAA_1 = \\frac{CA_1 \\sin(60^\\circ + \\gamma_2)}{AA_1}; \\quad \\sin \\angle BAA_1 = \\frac{BA_1 \\sin(60^\\circ + \\beta_1)}{AA_1}.$$\n\nОттук намираме\n\n$$\\frac{\\sin \\angle CAA_1}{\\sin \\angle BAA_1} = \\frac{CA_1 \\sin(60^\\circ + \\gamma_2)}{BA_1 \\sin(60^\\circ + \\beta_1)} = \\frac{OC}{OB} \\frac{\\sin(60^\\circ + \\gamma_2)}{\\sin(60^\\circ + \\beta_1)}.$$\n\nСлед аналогични пресмятания за $\\frac{\\sin \\angle ABB_1}{\\sin \\angle CBB_1}$ и $\\frac{\\sin \\angle BCC_1}{\\sin \\angle ACC_1}$, получаваме\n\n$$K = \\frac{OC}{OB} \\frac{OA}{OC} \\frac{OB}{OC} \\frac{\\sin(60^\\circ + \\gamma_2) \\sin(60^\\circ + \\alpha_2) \\sin(60^\\circ + \\beta_2)}{\\sin(60^\\circ + \\gamma_1) \\sin(60^\\circ + \\alpha_1) \\sin(60^\\circ + \\beta_1)} = 1,$$\n\nноради $60^\\circ + \\gamma_1 + 60^\\circ + \\gamma_2 = 180^\\circ$ и аналогичните равенства за останалите ъгли.",
+      "answer": null,
+      "difficulty": "medium",
+      "techniques": [
+        "cevian_theorem",
+        "trigonometric_cevian",
+        "symmetry"
+      ],
+      "confidence": "exact",
+      "reasoning": "Applies sinus version of Ceva (K = 1) to prove concurrency of AA1, BB1, CC1. Direct use of Теорема на Чева → medium."
+    },
+    {
+      "source": "OLI-3-Национален кръг-2003-9-12 кл · 2003-None · Зад. 2",
+      "statement": "Let $H$ be a point on the altitude $CP$ ($P \\in AB$) of an acute $\\triangle ABC$. The lines $AH$ and $BH$ intersect $BC$ and $AC$ at points $M$ and $N$, respectively.\n\na) Prove that $\\angle MPC = \\angle NPC$.\n\nb) The lines $MN$ and $CP$ intersect at $O$. A line through $O$ meets the sides of the quadrilateral $CNHM$ at points $D$ and $E$. Prove that $\\angle DPC = \\angle EPC$.",
+      "solution": "a) Set $\\angle NPC = \\varphi_1$ and $\\angle MPC = \\varphi_2$. Then\n\n$$\\frac{CN}{AN} = \\frac{S_{NPC}}{S_{NPA}} = \\frac{CP \\sin \\varphi_1}{AP \\sin(90^\\circ - \\varphi_1)}$$\n\nand hence\n\n$$\\tan \\varphi_1 = \\frac{CN \\cdot AP}{AN \\cdot CP}.$$\n\nAnalogously\n\n$$\\tan \\varphi_2 = \\frac{CM \\cdot BP}{BM \\cdot CP}.$$\n\nHence the equality $\\varphi_1 = \\varphi_2$ is equivalent to\n\n$$\\frac{CN \\cdot AP \\cdot BM}{AN \\cdot BP \\cdot CM} = 1$$\n\nwhich follows from Ceva's theorem for $\\triangle ABC$ and the lines $AM$, $BN$ and $CP$.\n\nb) Set $\\angle NPC = \\angle MPC = \\varphi$, $\\angle EPO = x$ and $\\angle DPO = y$. It is easy to see that\n\n$$x = y \\iff \\cot x = \\cot y \\iff \\frac{\\sin(\\varphi - x)}{\\sin x} = \\frac{\\sin(\\varphi - y)}{\\sin y}.$$\n\n![img-0.jpeg](img-0.jpeg)\n\nAssume that $E \\in NH$ and $D \\in CM$. Then\n\n$$\\frac{ME}{EH} = \\frac{S_{MEP}}{S_{HEP}} = \\frac{MP \\sin(\\varphi - x)}{PH \\sin x} \\iff \\frac{\\sin(\\varphi - x)}{\\sin x} = \\frac{ME.PH}{EH.MP}.$$\n\nSimilarly $\\frac{\\sin(\\varphi - y)}{\\sin y} = \\frac{DN.CP}{CD.PN}$. Hence using that $PO$ is the bisector of $\\angle NPM$, i.e., $\\frac{PM}{PN} = \\frac{MO}{NO}$ we have to prove that\n\n$$\\frac{ME}{EH} \\cdot \\frac{CD}{DN} \\cdot \\frac{PH}{CP} \\cdot \\frac{NO}{MO} = 1.$$\n\nSet $\\angle NOD = \\delta$ and $\\angle EOP = \\psi$. Then\n\n$$\\frac{ME}{EH} = \\frac{S_{MEO}}{S_{HEO}} = \\frac{MO \\sin \\delta}{OH \\sin \\psi} \\text{ and } \\frac{CD}{DN} = \\frac{S_{CDO}}{S_{DNO}} = \\frac{CO \\sin \\psi}{ON \\sin \\delta}.$$\n\nHence it remains to show that $\\frac{OC.PH}{OH.PC} = 1$.\n\nApplying the Menelaus theorem for $\\triangle BHC$ and the line $MN$, $\\triangle CHM$ and the line $AB$, and $\\triangle BHM$ and the line $AC$, we get that\n\n$$\\frac{BN.HO.CM}{NH.OC.MB} = 1, \\quad \\frac{CP.HA.MB}{PH.AM.BC} = 1 \\text{ and } \\frac{HN.BC.MA}{BN.CM.HA} = 1.$$\n\nMultiplying these equalities gives the desired result.",
+      "answer": null,
+      "difficulty": "medium",
+      "techniques": [
+        "ceva_theorem",
+        "menelaus_theorem"
+      ],
+      "confidence": "exact",
+      "reasoning": "Part (a) is proved via Ceva’s theorem; part (b) uses Menelaus together with angle‑bisector relations."
+    },
+    {
+      "source": "OLI-3-Национален кръг-2009-9-12 кл · 2009-None · Зад. 2",
+      "statement": "Вписаната в $\\triangle ABC$ окръжност е с център $I$ и допира страните му $BC$, $AC$ и $AB$ съответно в точки $A_1$, $B_1$ и $C_1$. През $I$ е построена права $\\ell$. Точките $A'$, $B'$ и $C'$ са симетрични съответно на $A_1$, $B_1$ и $C_1$ относно $\\ell$. Да се докаже, че правите $AA'$, $BB'$ и $CC'$ се пресичат в една точка.",
+      "solution": "Решение. Да означим разстоянието от точката X до правата AB с d_c(X). Аналогично означение въвеждаме и за правите BC и CA. Не е трудно да се види, че от синусовия вариант на теоремата на Чева следва, че равенството\n[d_b(A′)/d_c(A′)] · [d_c(B′)/d_a(B′)] · [d_a(C′)/d_b(C′)] = 1\nе необходимо и достатъчно условие за пресичане в една точка на правите AA′, BB′ и CC′.\nДа забележим, че B₁A′ = A₁B′. Освен това, понеже правите CB и CA допират вписаната окръжност, ∠B′A₁B = ½ дъга B′A₁ = ½ дъга A′B₁ = ∠A′B₁C. Оттук d_a(B′) = A₁B′ sin ∠B′A₁B = B₁A′ sin ∠A′B₁C = d_b(A′). Аналогично получаваме и d_b(C′) = d_c(B′) и d_c(A′) = d_a(C′), с което исканото равенство е доказано.",
+      "answer": null,
+      "difficulty": "medium",
+      "techniques": [
+        "ceva_theorem"
+      ],
+      "confidence": "exact",
+      "reasoning": "Concurrency proved via product of ratios =1, i.e. Ceva’s theorem in its sine form."
+    },
+    {
+      "source": "OLI-3-Национален кръг-2022-9-12 кл · 2022-None · Зад. 5",
+      "statement": "Даден е равнобедрен триъгълник ABC със страни AB = 4, BC = AC = 6. Върху страната AB са избрани последователно точки X₁, X₂, X₃, ..., за които отсечките AX₁, X₁X₂, X₂X₃, ... образуват безкрайна геометрична прогресия с първи член 3 и частно 1/4.\nВърху страната CB са избрани последователно точки Y₁, Y₂, Y₃, ..., за които отсечките CY₁, Y₁Y₂, Y₂Y₃, ... образуват безкрайна геометрична прогресия с първи член 3 и частно 1/2.\nВърху страната AC са избрани последователно точки Z₁, Z₂, Z₃, ..., за които отсечките AZ₁, Z₁Z₂, Z₂Z₃, ... образуват безкрайна геометрична прогресия с първи член 3 и частно 1/2.\nДа се намерят всички тройки (a, b, c) от естествени числа, за които отсечките AYₐ, BZᵦ и CX꜀ се пресичат в една точка.",
+      "solution": "Решение. Нека n > 1 е естествено число. Върху отсечка PQ с дължина a₁/(1 − 1/n) са избрани точки T₁, T₂, ···, за които отсечките PT₁, T₁T₂, T₂T₃, ··· образуват геометрична прогресия с първи член a₁ и частно 1/n. Ще докажем, че PTₛ/TₛQ = nˢ − 1. Наистина, от PTₛ = a₁(1 − (1/n)ˢ)/(1 − 1/n) и PQ = a₁/(1 − 1/n) получаваме\nPTₛ/TₛQ = [a₁(1 − (1/n)ˢ)/(1 − 1/n)]/[a₁/(1 − 1/n) − a₁(1 − (1/n)ˢ)/(1 − 1/n)] = nˢ − 1.\nКато приложим това твърдение и теоремата на Чева, получаваме:\n1 = (AX꜀/X꜀B)·(BYₐ/YₐC)·(CZᵦ/ZᵦA) = (4ᶜ − 1)/[(2ᵃ − 1)(2ᵇ − 1)]\nи следователно 4ᶜ − 1 = (2ᵃ − 1)(2ᵇ − 1) ⇔ 4ᶜ = 2ᵃ⁺ᵇ − 2ᵃ − 2ᵇ + 2. Тъй като a, b, c ≥ 1 от последното равенство следва, че a = 1 (без ограничение a ≤ b). Тогава 4ᶜ = 2ᵃ⁺ᵇ − 2ᵃ − 2ᵇ + 2 ⇒ 4ᶜ = 2ᵇ ⇔ b = 2c и така получаваме (a, b, c) = (1, 2k, k) или (a, b, c) = (2k, 1, k) за k ∈ N.",
+      "answer": "(a, b, c) = (1, 2k, k) или (2k, 1, k), k ∈ N.",
+      "difficulty": "medium",
+      "techniques": [
+        "ceva_theorem",
+        "geometric_progression"
+      ],
+      "confidence": "exact",
+      "reasoning": "Applies Ceva’s theorem to the three concurrent cevians formed by the GP‑defined points; reduces to an exponential Diophantine equation."
+    },
+    {
+      "source": "OLI-3-Национален кръг-2019-9-12 кл · 2019-None · Зад. 6",
+      "statement": "Даден е [неразчетено] шестоъгълник ABCDEF, вписан в окръжност, за който |AB| · |CD| · |EF| = |BC| · |DE| · |AF|. Нека точките B и B₁ са симетрични относно правата AC, D и D₁ са симетрични относно CE, F и F₁ са симетрични относно EA. Да се докаже, че △B₁D₁F₁ е подобен на △BDF.",
+      "solution": "Решение. Първи начин. От условието |AB|·|CD|·|EF|=|BC|·|DE|·|AF| лесно се вижда, че AD, BE и CF се пресичат в една точка. Това може да се види от триъгълник ACE, в който:\nsin∠DAC/sin∠DAE=|DC|/|DE|, sin∠AEB/sin∠CEB=|AB|/|BC| и sin∠ECF/sin∠ACF=|EF|/|AF|.\nКато умножим трите равенства и използваме условието на задачата, получаваме\n(sin∠DAC sin∠AEB sin∠ECF)/(sin∠DAE sin∠CEB sin∠ACF)=1.\nОттук по синусовия вариант на Теоремата на Чева следва, че AD, BE и CF се пресичат в една точка. Нека тази точка означим с P.\nСега да разгледаме △AF₁P и △CD₁P. Като използваме, че F₁ и D₁ са симетрични на F и D относно AE и CE и това, че шестоъгълникът е вписан, имаме, че:\n∠PAF₁=|∠PAE−∠F₁AE|=|∠DAE−∠FAE|=|∠DCE−∠FCE|=|∠D₁CE−∠PCE|=∠PCD₁.\nДа обърнем внимание, че горното изразяване показва, че D и D₁ са от различна страни на CF точно когато F и F₁ са в една и съща полуравнина относно AD.\nОсвен това като използваме, че △APF∼△CPD и |AF₁|=|AF| и |CD₁|=|CD| получаваме:\n|AF₁|/|CD₁|=|AF|/|CD|=|AP|/|CP|.\nСледователно △AF₁P∼△CD₁P. Оттук ∠APF₁=∠CPD₁ и |F₁P|/|D₁P|=|AP|/|CP|=|FP|/|DP|, където последното равенство отново е от подобните △APF∼△CPD. Освен това, тъй като D₁ е извън ∠PCD точно когато F₁ е в ∠FAP, то ∠F₁PD₁=∠APC=∠FPD. С това имаме, че |F₁P|/|D₁P|=|FP|/|DP| и ∠F₁PD₁=∠FPD₁.\nСледователно, △F₁D₁P∼△FDP. Това показва, че |F₁D₁|/|FD|=|F₁P|/|FP|=|D₁P|/|DP|. Аналогично се доказва, че |D₁B₁|/|DB|=|D₁P|/|DP|=|F₁D₁|/|FD| и |F₁B₁|/|FB|=|F₁P|/|FP|=|F₁D₁|/|FD|. Следователно △F₁D₁B₁∼△FDB.\nВтори начин. Както по-горе виждаме, че диагоналите AD, BE и CF се пресичат в една точка P.\nЦелта е да докажем, че |B₁D₁|/|BD|=|D₁F₁|/|DF|=|F₁B₁|/|FB|. За това първо ще изразим отношението |B₁D₁|²/|BD|². Като че ли, най-удобно това става с косинусова теорема за триъгълниците BCD и B₁CD₁, защото |BC|=|B₁C| и |DC|=|D₁C|. Имаме следното:\n|BD|²=|BC|²−2|BC||DC|cos∠BCD+|DC|²,\n|B₁D₁|²=|B₁C|²−2|B₁C||D₁C|cos∠B₁CD₁+|D₁C|².\nВадим от първото равенство второто и използваме равенството на отсечките |BC|=|B₁C| и |DC|=|D₁C|:\n|BD|²−|B₁D₁|²=2|BC||DC|(cos∠B₁CD₁−cos∠BCD)\n=2|BC||DC|·2sin((∠B₁CD₁+∠BCD)/2)sin((∠BCD−∠B₁CD₁)/2), (1)\nкъдето използвахме основно тригонометрично тъждество.\nСега искаме да изразим (∠B₁CD₁+∠BCD)/2 и (∠BCD−∠B₁CD₁)/2 чрез ъглите на шестоъгълника. Това обаче зависи от разположението точките B, D, B₁ и D₁ около C. Възможни са два случая: B,B₁,D₁ и D се срещат в този ред в по-малкия ъгъл ∠BCD, или B,D₁,B₁ и D се срещат в този ред в по-малкия ъгъл ∠BCD. В първия случай: ∠BCD=∠B₁CD₁+∠BCB₁+∠DCD₁, докато във втория: ∠BCD=−∠B₁CD₁+∠BCB₁+∠DCD₁. Това показва, че (∠B₁CD₁+∠BCD)/2 се изразява както (∠B₁CD₁−∠BCD)/2 във втория случай и обратното. Това показва, че резултатът от изразяването на sin((∠B₁CD₁+∠BCD)/2)sin((∠BCD−∠B₁CD₁)/2) няма да зависи от това, в кой от двата случая се намираме. Поради това е достатъчно да разгледаме само първия случай.\nТогава (∠B₁CD₁+∠BCD)/2=∠ACD, докато за (∠BCD−∠B₁CD₁)/2 имаме:\n(∠BCD−∠B₁CD₁)/2=(∠BCB₁+∠DCD₁)/2=∠BCA+∠DCE=∠BEA+∠DAE=∠PEA+∠PAE=180°−∠APE.\nКато заместим тези равенства в израза за |BD|²−|B₁D₁|², получаваме:\n|BD|²−|B₁D₁|²=2|BC||DC|·2sin∠ACE sin∠APE\n=4|BC||DC|·(|AE|/(2R))·(|AE|/|AP|)sin∠AEP\n=4|BC||DC|·(|AE|²/(2R|AP|))·(|AB|/(2R)), (2)\nкъдето R е радиусът на описаната окръжност. Тук използвахме последователно синусови теореми за △ACE, △APE и накрая за △ABE. Като преобразуваме горния израз, така че да изразим |B₁D₁|²/|BD|² получаваме:\n|B₁D₁|²/|BD|²=1−|AB||BC||CD||AE|²/(|AP|R²|BD|²).\nОт подобието на △APE и △BPD имаме |AE|/|BD|=|AP|/|BP|=|EP|/|DP|, откъдето |AE|²/|BD|²=|AP||EP|/(|BP||DP|). След като заместим в израза за |B₁D₁|²/|BD|² получаваме:\n|B₁D₁|²/|BD|²=1−|AB||BC||CD||AP||EP|/(|AP|R²|BP||DP|)=1−|AB||BC||CD||EP|/(R²|BP||DP|). (3)\nАналогично се доказва, (циклично през два върха в шестоъгълника), че:\n|D₁F₁|²/|DF|²=1−|CD||DE||EF||AP|/(R²|DP||FP|).\nСледователно, достатъчно е да докажем, че:\n|AB||BC||CD||EP|/(R²|BP||DP|)=|CD||DE||EF||AP|/(R²|DP||FP|),\nкоето, като съкратим на равните дължини на отсечки, е еквивалентно на:\n|AB||BC||EP|/|BP|=|DE||EF||AP|/|FP|. (4)\nСега △ABP∼△EDP, откъдето |AB|/|AP|=|DE|/|EP|, или |AB||EP|=|DE||AP|. Това прави горното равенство еквивалентно на:\n|BC|/|BP|=|EF|/|FP|. (5)\nПоследното обаче е очевидно, защото △BCP∼△FEP. С това |B₁D₁|/|BD|=|D₁F₁|/|DF|. Равенството |D₁F₁|/|DF|=|F₁B₁|/|FB| следва от съображения за аналогия, тоест циклична ротация на върховете. Следователно △BDF∼△B₁D₁F₁.",
+      "answer": null,
+      "difficulty": "hard",
+      "techniques": [
+        "cevian_theorem",
+        "similarity",
+        "trigonometric_relations"
+      ],
+      "confidence": "exact",
+      "reasoning": "Applies sine‑Ceva, symmetry and similarity to prove △B₁D₁F₁ ∼ △BDF."
+    }
+  ]
+}

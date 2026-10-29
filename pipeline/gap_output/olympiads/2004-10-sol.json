@@ -1,0 +1,220 @@
+{
+  "_meta": {
+    "pdf": "C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\Задачи_Минали_Години\\Областен\\OLI-2-Областен кръг-2004-10 кл-sol.pdf",
+    "paired_with": null,
+    "level": 1,
+    "type": "sol",
+    "analyzed_at": "2026-10-18T12:34:42.175577",
+    "model": "deepseek/deepseek-v3.2",
+    "text_length": 9089,
+    "paired_text_length": 0
+  },
+  "problems": [
+    {
+      "num": 1,
+      "topic": "combinatorics",
+      "theorems": [],
+      "techniques": [
+        "casework",
+        "pigeonhole_principle"
+      ],
+      "concepts": [
+        "coloring",
+        "combinatorial_geometry",
+        "rectangle_vertices"
+      ],
+      "difficulty": "standard",
+      "notes": "Задача за оцветяване на решетка. Разглеждат се случаи за броя черни квадратчета в редове."
+    },
+    {
+      "num": 2,
+      "topic": "algebra",
+      "theorems": [],
+      "techniques": [
+        "substitution",
+        "analysis_of_quadratic"
+      ],
+      "concepts": [
+        "floor_function",
+        "fractional_part",
+        "quadratic_equation_discriminant"
+      ],
+      "difficulty": "standard",
+      "notes": "Уравнение с цела и дробна част. Свежда се до квадратно уравнение за дробната част."
+    },
+    {
+      "num": 3,
+      "topic": "algebra",
+      "theorems": [],
+      "techniques": [
+        "inequality_manipulation",
+        "substitution"
+      ],
+      "concepts": [
+        "quadratic_inequalities",
+        "parameter_analysis",
+        "real_roots_conditions"
+      ],
+      "difficulty": "standard",
+      "notes": "Параметрично квадратно неравенство. Анализ на дискриминанта и знак на квадратния тричлен."
+    },
+    {
+      "num": 4,
+      "topic": "geometry",
+      "theorems": [
+        "Law_of_Cosines"
+      ],
+      "techniques": [
+        "trigonometric_identities",
+        "cotangent_sum_formula"
+      ],
+      "concepts": [
+        "triangle_geometry",
+        "medians",
+        "cotangent_in_triangle",
+        "area_formula"
+      ],
+      "difficulty": "hard",
+      "notes": "Задача за ъгъл между медиани. Използва се косинусова теорема и формула за сбор на котангенси."
+    },
+    {
+      "num": 5,
+      "topic": "geometry",
+      "theorems": [],
+      "techniques": [
+        "vector_algebra",
+        "dot_product"
+      ],
+      "concepts": [
+        "vectors",
+        "orthogonality",
+        "circumcircle",
+        "triangle_centroid"
+      ],
+      "difficulty": "standard",
+      "notes": "Векторна задача. Условието за перпендикулярност на вектори води до равенство на страни."
+    },
+    {
+      "num": 6,
+      "topic": "combinatorics",
+      "theorems": [],
+      "techniques": [
+        "double_counting",
+        "inequality_manipulation",
+        "Cauchy_Schwarz_inequality"
+      ],
+      "concepts": [
+        "graph_theory",
+        "triangles_in_graph",
+        "vertex_degree",
+        "handshaking_lemma"
+      ],
+      "difficulty": "olympic",
+      "notes": "Задача за теория на графите. Доказва се долна граница за броя триъгълници в граф с дадени върхове и ребра."
+    },
+    {
+      "num": 7,
+      "topic": "number_theory",
+      "theorems": [],
+      "techniques": [
+        "infinite_descent",
+        "substitution",
+        "coprime_numbers"
+      ],
+      "concepts": [
+        "diophantine_equation",
+        "coprime_factors",
+        "perfect_squares",
+        "Fibonacci_sequence"
+      ],
+      "difficulty": "olympic",
+      "notes": "Диофантово уравнение, свеждащо се до разлагане на точен квадрат. Решенията са свързани с редицата на Фибоначи."
+    },
+    {
+      "num": 8,
+      "topic": "algebra",
+      "theorems": [],
+      "techniques": [
+        "polynomial_factorization",
+        "analysis_of_roots",
+        "parameter_analysis"
+      ],
+      "concepts": [
+        "cubic_equation",
+        "quadratic_trinomial",
+        "discriminant",
+        "root_conditions"
+      ],
+      "difficulty": "hard",
+      "notes": "Параметрично кубично уравнение. Разлага се на множители и се анализират корените на квадратен тричлен."
+    },
+    {
+      "num": 9,
+      "topic": "geometry",
+      "theorems": [],
+      "techniques": [
+        "inequality_manipulation",
+        "AM_GM_inequality",
+        "QM_AM_inequality"
+      ],
+      "concepts": [
+        "triangle_area",
+        "semiperimeter",
+        "Herons_formula",
+        "geometric_inequalities"
+      ],
+      "difficulty": "olympic",
+      "notes": "Неравенство за лицето на триъгълник. Използват се неравенства между средни стойности и формула на Херон."
+    }
+  ],
+  "unique_concepts": [
+    "coloring",
+    "combinatorial_geometry",
+    "rectangle_vertices",
+    "floor_function",
+    "fractional_part",
+    "quadratic_equation_discriminant",
+    "quadratic_inequalities",
+    "parameter_analysis",
+    "real_roots_conditions",
+    "Law_of_Cosines",
+    "triangle_geometry",
+    "medians",
+    "cotangent_in_triangle",
+    "area_formula",
+    "vectors",
+    "orthogonality",
+    "circumcircle",
+    "triangle_centroid",
+    "graph_theory",
+    "triangles_in_graph",
+    "vertex_degree",
+    "handshaking_lemma",
+    "double_counting",
+    "Cauchy_Schwarz_inequality",
+    "diophantine_equation",
+    "coprime_factors",
+    "perfect_squares",
+    "Fibonacci_sequence",
+    "infinite_descent",
+    "polynomial_factorization",
+    "analysis_of_roots",
+    "cubic_equation",
+    "quadratic_trinomial",
+    "triangle_area",
+    "semiperimeter",
+    "Herons_formula",
+    "geometric_inequalities",
+    "AM_GM_inequality",
+    "QM_AM_inequality",
+    "casework",
+    "pigeonhole_principle",
+    "substitution",
+    "inequality_manipulation",
+    "trigonometric_identities",
+    "cotangent_sum_formula",
+    "vector_algebra",
+    "dot_product"
+  ],
+  "confidence": 0.95
+}

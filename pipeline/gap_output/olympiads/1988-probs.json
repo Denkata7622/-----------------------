@@ -1,0 +1,167 @@
+{
+  "_meta": {
+    "pdf": "C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\Задачи_Минали_Години\\Национален\\OLI-3-Национален кръг-1988-9-12 кл-probs.pdf",
+    "paired_with": "C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\Задачи_Минали_Години\\Национален\\OLI-3-Национален кръг-1988-9-12 кл-sol.pdf",
+    "level": 2,
+    "type": "probs",
+    "analyzed_at": "2026-10-18T11:40:57.265127",
+    "model": "deepseek/deepseek-v3.2",
+    "text_length": 1558,
+    "paired_text_length": 9735
+  },
+  "problems": [
+    {
+      "num": 1,
+      "topic": "algebra",
+      "theorems": [],
+      "techniques": [
+        "completing the square",
+        "quadratic discriminant analysis",
+        "function range analysis",
+        "inequality manipulation"
+      ],
+      "concepts": [
+        "polynomial equations",
+        "real roots condition",
+        "parameter range",
+        "quadratic in quadratic form",
+        "max/min of functions on interval"
+      ],
+      "difficulty": "hard",
+      "notes": "Requires rewriting the quartic as a difference of squares and analyzing conditions for two quadratics to have real roots, then finding q such that there exists p in [0,1] satisfying inequalities."
+    },
+    {
+      "num": 2,
+      "topic": "number_theory",
+      "theorems": [
+        "Fermat's little theorem",
+        "Euler's theorem",
+        "Lifting the Exponent Lemma (LTE) ideas"
+      ],
+      "techniques": [
+        "modular arithmetic",
+        "order of an element",
+        "proof by contradiction",
+        "canonical exponent"
+      ],
+      "concepts": [
+        "prime factorization",
+        "exponent of prime",
+        "order modulo prime power",
+        "divisibility",
+        "Fermat numbers (22n+1)"
+      ],
+      "difficulty": "olympic",
+      "notes": "Involves understanding the order of 2 modulo pk and its relation to p-1. Uses subtle divisibility argument to show pk does not divide a certain sum."
+    },
+    {
+      "num": 3,
+      "topic": "geometry",
+      "theorems": [],
+      "techniques": [
+        "volume decomposition",
+        "inequality (AM-GM type)",
+        "geometric inequality",
+        "projection"
+      ],
+      "concepts": [
+        "tetrahedron volume",
+        "area of faces",
+        "distance from point to plane",
+        "volume of subtetrahedra",
+        "orthocentric tetrahedron",
+        "centroid not involved here"
+      ],
+      "difficulty": "hard",
+      "notes": "Key idea: Express volume via altitudes and use triangle inequality for distances. Equality holds for orthocentric tetrahedron and its orthocenter."
+    },
+    {
+      "num": 4,
+      "topic": "geometry",
+      "theorems": [
+        "Menelaus' theorem",
+        "sine law"
+      ],
+      "techniques": [
+        "vector method",
+        "analytic geometry",
+        "invariant point",
+        "angle bisector properties"
+      ],
+      "concepts": [
+        "incircle",
+        "tangency points",
+        "angle bisector",
+        "perpendicular to angle bisector",
+        "fixed point independent of D",
+        "similar triangles"
+      ],
+      "difficulty": "hard",
+      "notes": "Multiple solutions possible. Uses vector computation to show EF passes through midpoint of segment constructed from AB=AL. The fixed point lies on angle bisector of ∠BAC."
+    },
+    {
+      "num": 5,
+      "topic": "combinatorics",
+      "theorems": [],
+      "techniques": [
+        "construction",
+        "coloring argument",
+        "centroid transformation",
+        "pigeonhole principle idea"
+      ],
+      "concepts": [
+        "2-coloring of space",
+        "tetrahedron",
+        "centroid (center of mass)",
+        "monochromatic configuration",
+        "affine transformation/vector construction"
+      ],
+      "difficulty": "olympic",
+      "notes": "Combinatorial geometry. Constructs new points from a monochromatic tetrahedron. If all new points are of the other color, their centroid coincides with the original's, giving a monochromatic tetrahedron with its centroid."
+    },
+    {
+      "num": 6,
+      "topic": "algebra",
+      "theorems": [],
+      "techniques": [
+        "substitution",
+        "comparison of coefficients",
+        "limit analysis",
+        "complex numbers (roots in polar form)",
+        "functional equation for polynomials"
+      ],
+      "concepts": [
+        "polynomial identity",
+        "roots analysis",
+        "degree analysis",
+        "uniqueness of polynomial determined by infinite points",
+        "transformation f(x)=p(x+1)"
+      ],
+      "difficulty": "olympic",
+      "notes": "Three solutions provided. Common step: set f(x)=p(x+1) to get f(x3)=f3(x). Solutions use: coefficient comparison, limit evaluation using 33n, or complex root analysis to force roots to be 1."
+    }
+  ],
+  "unique_concepts": [
+    "real roots condition for quartic",
+    "canonical exponent of prime",
+    "order modulo prime power",
+    "tetrahedron volume inequality",
+    "orthocentric tetrahedron",
+    "incircle tangency points",
+    "fixed point in geometry problem",
+    "2-coloring of space for monochromatic tetrahedron with centroid",
+    "polynomial functional equation p(x^3+1)=p^3(x+1)",
+    "roots analysis via complex numbers",
+    "lifting the exponent ideas",
+    "Menelaus theorem",
+    "vector methods in geometry",
+    "completing the square for quartic",
+    "function range on interval",
+    "Fermat numbers",
+    "angle bisector properties",
+    "centroid transformation",
+    "coefficient comparison for polynomials",
+    "limit evaluation for polynomial identity"
+  ],
+  "confidence": 0.95
+}

@@ -1,0 +1,173 @@
+{
+  "_meta": {
+    "pdf": "C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\Задачи_Минали_Години\\Областен\\OLI-2-Областен кръг-2007-11 кл-probs.pdf",
+    "paired_with": "C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\Задачи_Минали_Години\\Областен\\OLI-2-Областен кръг-2007-11 кл-sol.pdf",
+    "level": 1,
+    "type": "probs",
+    "analyzed_at": "2026-10-18T12:44:52.084773",
+    "model": "deepseek/deepseek-v3.2",
+    "text_length": 2058,
+    "paired_text_length": 8551
+  },
+  "problems": [
+    {
+      "num": 1,
+      "topic": "algebra",
+      "theorems": [],
+      "techniques": [
+        "squaring and adding equations",
+        "trigonometric identities",
+        "bounding sine function"
+      ],
+      "concepts": [
+        "trigonometric equations",
+        "range of sine function",
+        "system of equations with parameters"
+      ],
+      "difficulty": "standard",
+      "notes": "Standard trigonometric manipulation using sin(x+y) identity and bounding."
+    },
+    {
+      "num": 2,
+      "topic": "algebra",
+      "theorems": [
+        "AM-GM inequality"
+      ],
+      "techniques": [
+        "expanding product",
+        "symmetry",
+        "analysis of equality case"
+      ],
+      "concepts": [
+        "inequalities",
+        "positive real numbers",
+        "arithmetic mean - geometric mean"
+      ],
+      "difficulty": "standard",
+      "notes": "Clever expansion and application of AM-GM to many terms."
+    },
+    {
+      "num": 3,
+      "topic": "combinatorics",
+      "theorems": [],
+      "techniques": [
+        "induction",
+        "pigeonhole principle",
+        "extreme principle"
+      ],
+      "concepts": [
+        "sumset (A+A)",
+        "difference set (A-A)",
+        "arithmetic progression",
+        "minimal sumset size",
+        "combinatorial number theory"
+      ],
+      "difficulty": "olympic",
+      "notes": "Classical result: minimal sumset size 2n-1 forces an arithmetic progression."
+    },
+    {
+      "num": 4,
+      "topic": "algebra",
+      "theorems": [],
+      "techniques": [
+        "solving linear recurrence",
+        "limit calculation",
+        "algebraic manipulation",
+        "rationalization"
+      ],
+      "concepts": [
+        "sequences",
+        "linear recurrence relations",
+        "convergence",
+        "limits",
+        "rationalizing denominators"
+      ],
+      "difficulty": "standard",
+      "notes": "Straightforward recurrence solving and limit evaluation."
+    },
+    {
+      "num": 5,
+      "topic": "geometry",
+      "theorems": [
+        "Menelaus' theorem",
+        "converse of Menelaus",
+        "properties of incenter and excenter",
+        "cyclic quadrilaterals"
+      ],
+      "techniques": [
+        "symmetry",
+        "angle chasing",
+        "power of a point",
+        "proving concurrency/collinearity"
+      ],
+      "concepts": [
+        "incenter",
+        "excenter",
+        "angle bisectors",
+        "symmetry with respect to a line",
+        "concyclic points",
+        "isosceles triangle condition"
+      ],
+      "difficulty": "hard",
+      "notes": "Synthetic geometry involving incenters, excenters, and Menelaus."
+    },
+    {
+      "num": 6,
+      "topic": "number_theory",
+      "theorems": [
+        "properties of primes of the form 4k+3",
+        "sum of two squares theorem"
+      ],
+      "techniques": [
+        "induction",
+        "descent",
+        "algebraic identity",
+        "infinite descent",
+        "modular arithmetic"
+      ],
+      "concepts": [
+        "Diophantine equations",
+        "primes of form 4k+3",
+        "divisibility arguments",
+        "sum of two squares",
+        "parameterization"
+      ],
+      "difficulty": "olympic",
+      "notes": "Uses a classical identity and properties of primes dividing sums of squares."
+    }
+  ],
+  "unique_concepts": [
+    "trigonometric equations",
+    "range of sine",
+    "AM-GM inequality",
+    "sumset (A+A)",
+    "difference set (A-A)",
+    "arithmetic progression",
+    "linear recurrence relations",
+    "limits",
+    "rationalization",
+    "Menelaus' theorem",
+    "incenter",
+    "excenter",
+    "cyclic quadrilaterals",
+    "symmetry",
+    "Diophantine equations",
+    "primes of form 4k+3",
+    "sum of two squares theorem",
+    "modular arithmetic",
+    "induction",
+    "pigeonhole principle",
+    "extreme principle",
+    "angle chasing",
+    "power of a point",
+    "algebraic identities",
+    "bounding",
+    "system of equations with parameters",
+    "positive real numbers",
+    "convergence",
+    "concurrency/collinearity",
+    "isosceles triangle condition",
+    "descent"
+  ],
+  "confidence": 0.95
+}

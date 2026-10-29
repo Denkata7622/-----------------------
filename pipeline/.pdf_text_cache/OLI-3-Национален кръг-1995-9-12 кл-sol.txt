@@ -1,0 +1,69 @@
+[Стр. 1]
+# BULGARIAN NATIONAL OLYMPIAD IN MATHEMATICS
+
+Fourth round
+
+1995
+
+**Problem 1.** Find the number of all integers $n > 1$, for which the number $a^{25} - a$ is divisible by $n$ for every integer $a$.
+
+**Solution.** Let $n$ be with the required property. Then $p^2$ ($p$ prime) does not divide $n$ since $p^2$ does not divide $p^{25} - p$. Hence $n$ is a product of pairwise different prime numbers. On the other hand $2^{25} - 2 = 2 \cdot 3^2 \cdot 5 \cdot 7 \cdot 13 \cdot 17 \cdot 241$. But $n$ is not divisible by 17 and 241 because $3^{25} \equiv -3 \pmod{17}$ and $3^{25} \equiv 32 \pmod{241}$. The Fermat theorem implies that $a^{25} \equiv a \pmod{p}$ when $p = 2, 3, 5, 7, 13$. Thus $n$ should be equal to the divisor of $2 \cdot 3 \cdot 5 \cdot 7 \cdot 13$, different from 1. Therefore the number we are looking for is $2^5 - 1 = 31$.
+
+**Problem 2.** A triangle $ABC$ with semiperimeter $p$ is given. Points $E$ and $F$ lie on the line $AB$ and $CE = CF = p$. Prove that the excircle $k_1$ of $\triangle ABC$ to the side $AB$ touches the circumcircle $k$ of $\triangle EFC$.
+
+**Solution.** Let $P$ and $Q$ be the tangent points of $k_1$ with the lines $CA$ and $CB$, respectively. Since $CP = CQ = p$, then the points $E, P, Q$ and $F$ lie on the circle with center $C$ and radius $p$. We denote by $i$ the inversion defined by this circle. Since $i(P) = P$, $i(Q) = Q$, then $i(k_1) = k_1$. On the other hand $i(E) = E$ and $i(F) = F$. Hence $i(k)$ is the line $AB$. But $k_1$ touches $AB$ and thus $k$ touches $k_1$.
+
+**Problem 3.** Two players $\mathbf{A}$ and $\mathbf{B}$ take stones one after the other from a heap with $n \geq 2$ stones. $\mathbf{A}$ begins the game and takes at least 1 stone but no more than $n - 1$ stones. Each player on his turn must take at least 1 stone but no more than the other player has taken before him. The player who takes the last stone is the winner. Find who of the players has a winning strategy.
+
+**Solution.** Consider the pair $(m, l)$, where $m$ is the number of the stones in the heap and $l$ is the maximal number of stones that could be taken by the player on turn. We must find for which $n$ the position $(n, n - 1)$ is winning (i.e. $\mathbf{A}$ wins) and for which $n$ it is losing ($\mathbf{B}$ wins). We shall apply the following assertion several times: If $(m, l)$ is a losing position and $l_1 < l$, then $(m, l_1)$ is losing too.
+
+Now we shall prove that $(n, n - 1)$ is a losing position iff $n$ is a power of 2.
+
+**Sufficiency:** Let $n = 2^k$, $k \geq 1$. If $k = 1$ then $\mathbf{B}$ wins on his first move. Assume that $(2^k, 2^k - 1)$ is a losing position and let consider the position $(2^{k+1}, 2^{k+1} - 1)$. If $\mathbf{A}$ takes at least $2^k$ stones on his first move, then $\mathbf{B}$ wins at ones. Let $\mathbf{A}$ take $l$ stones, where $1 \leq l < 2^k$. By the inductive assumption $\mathbf{B}$ could play in such a way that he could win the game $(2^k, l)$ since $l \leq 2^k - 1$; the last move will be the move of $\mathbf{B}$. After this move we get the position $(2^k, m)$ with $m \leq l$, which is losing for $\mathbf{A}$, according to the inductive assumption.
+
+**Necessity:** It is enough to prove that if $n$ is not a power of 2, then $(n, n - 1)$ is a winning position. Let $n = 2^k + r$, where $1 \leq r \leq 2^k - 1$. On his first move $\mathbf{A}$ takes $r$ stones and $\mathbf{B}$ is faced to the position $(2^k, r)$, which is losing for $\mathbf{B}$.
+
+Downloaded from Klasirane.com
+
+[Стр. 2]
+Problem 4. The points $C_1$, $A_1$ and $B_1$ lie on the sides $AB$, $BC$ and $CA$ of the equilateral triangle $ABC$ respectively in such a way that the inradii of the triangles $C_1AB_1$, $B_1CA_1$, $A_1BC_1$ and $A_1B_1C_1$ are equal. Prove that $A_1$, $B_1$ and $C_1$ are the midpoints of the corresponding sides.
+
+Solution. We shall prove that $BA_1 = CB_1 = AC_1$ (Figure 1). Assume the contrary and let $BA_1 \ge CB_1 > AC_1$. Let $\rho$ be the rotation at $120^\circ$ which center coincides with the in center of the incircle of $\triangle ABC$. This rotation transforms the incircles of the triangles $C_1BA_1$, $A_1CB_1$ and $B_1AC_1$ to the incircles of the triangles $A_1CB_1$, $B_1AC_1$ and $C_1BA_1$, respectively. Let $A_2 = \rho(A_1)$, $B_2 = \rho(B_1)$ and $C_2 = \rho(C_1)$. It follows that $BB_2 < BC_1$ and $BC_2 < BA_1$. But the incircles of the triangles $BC_1A_1$ and $BC_2B_2$ have equal radii (because $\rho(\triangle AC_1B_1) = \triangle BC_2B_2$), which is a contradiction.
+
+Let $r$ be the radius of the incircles of the triangles $C_1AB_1$, $B_1CA_1$, $A_1BC_1$ and $A_1B_1C_1$. From the triangle $B_1AC_1$ we have $r = \frac{1 - B_1C_1}{2} \cdot \frac{\sqrt{3}}{3}$, and from $\triangle A_1B_1C_1$ which is equilateral we
+
+have $r = B_1C_1 \cdot \frac{\sqrt{3}}{6}$. From here $B_1C_1 = \frac{1}{2}$ and consequently $A_1$, $B_1$, $C_1$ are midpoints of the corresponding sides.
+
+Problem 5. Let $A = \{1, 2, \ldots, m + n\}$, where $m$ and $n$ are positive integers and let the function $f : A \to A$ be defined by the equations:
+
+$$f(i) = i + 1 \quad \text{for} \quad i = 1, 2, \ldots, m - 1, m + 1, \ldots, m + n - 1$$
+
+$$f(m) = 1 \quad \text{and} \quad f(m + n) = m + 1.$$
+
+a) Prove that if $m$ and $n$ are odd then there exists a function $g : A \to A$ such that $g(g(a)) = f(a)$ for all $a \in A$.
+b) Prove that if $m$ is even then $m = n$ iff there exists a function $g : A \to A$ such that $g(g(a)) = f(a)$ for all $a \in A$.
+
+Solution. a) Let $m = 2p + 1$, $n = 2q + 1$ and $g(i) = p + i + 1$ for $i = 1, 2, \ldots, p$; $g(i) = q + i + 1$ for $i = m + 1, m + 2, \ldots, m + q$; $g(2p + 1) = p + 1$; $g(p + 1) = 1$; $g(m + 2q + 1) = m + q + 1$; $g(m + q + 1) = m + 1$. It is easy to check that $g(g(a)) = f(a)$ for all $a \in A$.
+
+b) Let $m = n$ and $g(i) = m + i$ for $i = 1, 2, \ldots, m$; $g(m + i) = i + 1$ for $i = 1, 2, \ldots, m - 1$; $g(2m) = 1$.
+
+For the converse let $M = \{1, 2, \ldots, m\}$. It follows by the definition of $f$ that the elements of $M$ remain in $M$ after applying the powers of $f$ with respect to superposition. Moreover, these powers scoop out the whole $M$. The same is true for the set $A \setminus M$. The function $f$ is bijective in $A$ and if there exists $g$ verifying the condition, then $g$ is bijective too. We shall prove that $g(M) \cap M = \emptyset$. It follows from the contrary that there exists $i \in M$ such that $g(i) \in M$. Consider the sequence $i, g(i), g^2(i), \ldots$ and the subsequence $i, f(i), f^2(i), \ldots$. It is easy to see that $g(M) = M$. We deduce that there exists a permutation $a_1, a_2, \ldots, a_m$ of elements of $M$, such that $g(a_i) = a_{i+1}$ for $i = 1, 2, \ldots, m - 1$; $g(a_m) = a_1$ and $f(a_{2i-1}) = a_{2i+1}$ for $i = 1, 2, \ldots, s - 1$; $f(a_{2s-1}) = a_1$, where $m = 2s$. The last contradicts to the properties of $f$ which were mentioned already. Thus $g(M) \cap M = \emptyset$. Analogously $g(A \setminus M) = A \setminus M$, if $g(i) \in A \setminus M$ for $i \in A \setminus M$. At last let us observe that when starting from an element of $M$ and applying $g$ we go to $A \setminus M$, but when applying $g$ for a second time we go back to $M$. The same is true for the set $A \setminus M$. From here and from the bijectivity of $g$ it follows that $M$ and $A \setminus M$ have one and the same number of elements, i.e. $n = m$.
+
+Figure 1.
+
+![img-0.jpeg](img-0.jpeg)
+
+Downloaded from Klasirane.com
+
+[Стр. 3]
+**Problem 6.** Let $x$ and $y$ be different real numbers such that $\frac{x^n - y^n}{x - y}$ is an integer for some four consecutive positive integers $n$. Prove that $\frac{x^n - y^n}{x - y}$ is integer for all positive integers $n$.
+
+*Solution.* Let $t_n = \frac{x^n - y^n}{x - y}$. Then $t_{n+2} + b.t_{n+1} + c.t_n = 0$ for $b = -(x + y)$, $c = xy$, where $t_0 = 0$, $t_1 = 1$. We shall show that $b, c \in \mathbb{Z}$. Let $t_n \in \mathbb{Z}$ for $n = m, m + 1, m + 2, m + 3$. Since $c^n = (xy)^n = t_{n+1}^2 - t_n.t_{n+2} \in \mathbb{Z}$ when $n = m, m + 1$, then $c^m, c^{m+1} \in \mathbb{Z}$. Therefore $c$ is rational and from $c^{m+1} \in \mathbb{Z}$ it follows that $c \in \mathbb{Z}$. On the other hand
+
+$$b = \frac{t_m t_{m+3} - t_{m+1} t_{m+2}}{c^m},$$
+
+i.e. $b$ is rational. From the recurrence equation it follows by induction that $t_n$ could be represented in the following way $t_n = f_{n-1}(b)$, where $f_{n-1}(X)$ is a monic polynomial with integer coefficients and $\deg f_{n-1} = n - 1$. Since $b$ is a root of the equation $f_m(X) = t_{m+1}$, then $b \in \mathbb{Z}$. Now from the recurrence equation it follows that $t_n \in \mathbb{Z}$ for all $n$.
+
+3
+
+Downloaded from Klasirane.com

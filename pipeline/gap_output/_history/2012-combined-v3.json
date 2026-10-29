@@ -1,0 +1,367 @@
+{
+  "_meta": {
+    "pdf": "C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\Материали_БГ\\NOM_2012.pdf",
+    "paired_with": null,
+    "level": 2,
+    "type": "combined",
+    "analyzed_at": "2026-10-16T21:52:02.949670",
+    "model": "deepseek/deepseek-v3.2",
+    "text_length": 137879,
+    "paired_text_length": 0
+  },
+  "problems": [
+    {
+      "num": 1,
+      "topic": "combinatorics",
+      "theorems": [
+        "Lucas theorem",
+        "Kummer's theorem"
+      ],
+      "techniques": [
+        "parity analysis",
+        "induction"
+      ],
+      "concepts": [
+        "binomial coefficients",
+        "parity",
+        "powers of two"
+      ],
+      "difficulty": "olympic",
+      "notes": "Uses properties of binomial coefficients modulo 2 and characterization of n such that all binomial coefficients are odd."
+    },
+    {
+      "num": 2,
+      "topic": "geometry",
+      "theorems": [
+        "harmonic division",
+        "angle bisector theorem"
+      ],
+      "techniques": [
+        "cyclic quadrilaterals",
+        "angle chasing"
+      ],
+      "concepts": [
+        "circumcircle",
+        "incenter",
+        "arc midpoint",
+        "harmonic points",
+        "symmedians"
+      ],
+      "difficulty": "olympic",
+      "notes": "Involves harmonic division and properties of the symmedian point."
+    },
+    {
+      "num": 3,
+      "topic": "combinatorics",
+      "theorems": [],
+      "techniques": [
+        "polynomial method",
+        "linear independence"
+      ],
+      "concepts": [
+        "covering points with lines",
+        "polynomial space dimension"
+      ],
+      "difficulty": "olympic",
+      "notes": "Uses polynomial interpolation and linear algebra to bound the size of the set."
+    },
+    {
+      "num": 4,
+      "topic": "combinatorics",
+      "theorems": [],
+      "techniques": [
+        "double counting",
+        "Eulerian path/circuit"
+      ],
+      "concepts": [
+        "grid graph",
+        "closed tour",
+        "turn counting",
+        "cell classification"
+      ],
+      "difficulty": "hard",
+      "notes": "Combinatorial geometry on a grid; involves counting turns and cell sides."
+    },
+    {
+      "num": 5,
+      "topic": "algebra",
+      "theorems": [],
+      "techniques": [
+        "induction",
+        "inequality manipulation"
+      ],
+      "concepts": [
+        "functional equations",
+        "subadditivity",
+        "multiplicative functions"
+      ],
+      "difficulty": "olympic",
+      "notes": "Proves subadditivity from given conditions; uses bounding via powers of two."
+    },
+    {
+      "num": 6,
+      "topic": "geometry",
+      "theorems": [],
+      "techniques": [
+        "symmetry",
+        "area ratios",
+        "circle inversion"
+      ],
+      "concepts": [
+        "circumcircle",
+        "reflection",
+        "area of polygons",
+        "cyclic pentagon"
+      ],
+      "difficulty": "olympic",
+      "notes": "Involves symmetric circles and area ratio bounds; likely uses inversion or complex numbers."
+    },
+    {
+      "num": 7,
+      "topic": "combinatorics",
+      "theorems": [],
+      "techniques": [
+        "graph labeling",
+        "divisibility constraints"
+      ],
+      "concepts": [
+        "complete graph",
+        "edge labeling",
+        "gcd condition",
+        "path/cycle conditions"
+      ],
+      "difficulty": "olympic",
+      "notes": "Labeling edges of a complete graph with consecutive numbers satisfying a divisibility condition on triangles."
+    },
+    {
+      "num": 8,
+      "topic": "algebra",
+      "theorems": [],
+      "techniques": [
+        "functional equations",
+        "fixed points",
+        "injectivity/surjectivity"
+      ],
+      "concepts": [
+        "polynomial functions",
+        "iterative functional equations",
+        "uniqueness"
+      ],
+      "difficulty": "olympic",
+      "notes": "Functional equation with polynomial; likely leads to linear solutions."
+    },
+    {
+      "num": 9,
+      "topic": "geometry",
+      "theorems": [
+        "Descartes' circle theorem",
+        "inversion"
+      ],
+      "techniques": [
+        "circle packing",
+        "symmetry",
+        "tangential quadrilaterals"
+      ],
+      "concepts": [
+        "incircles",
+        "excircles",
+        "parallelogram",
+        "tangent circles",
+        "Soddy circles"
+      ],
+      "difficulty": "olympic",
+      "notes": "Circle packing problem in a parallelogram; uses inversion or Apollonian circles."
+    },
+    {
+      "num": 10,
+      "topic": "algebra",
+      "theorems": [
+        "Cauchy-Schwarz inequality",
+        "AM-GM inequality"
+      ],
+      "techniques": [
+        "substitution",
+        "homogenization",
+        "symmetric sums"
+      ],
+      "concepts": [
+        "symmetric inequalities",
+        "constrained optimization",
+        "radical expressions"
+      ],
+      "difficulty": "hard",
+      "notes": "Inequality with symmetric condition ab+bc+ca=1; uses standard inequalities and possibly substitution."
+    },
+    {
+      "num": 11,
+      "topic": "geometry",
+      "theorems": [
+        "radical axis",
+        "Miquel point",
+        "cyclic quadrilaterals"
+      ],
+      "techniques": [
+        "angle chasing",
+        "power of a point",
+        "spiral similarity"
+      ],
+      "concepts": [
+        "circumcircle",
+        "tangents",
+        "spiral similarity",
+        "orthogonality"
+      ],
+      "difficulty": "olympic",
+      "notes": "Complex configuration with circles and tangents; uses spiral similarity and radical axes."
+    },
+    {
+      "num": 12,
+      "topic": "combinatorics",
+      "theorems": [],
+      "techniques": [
+        "double counting",
+        "extremal combinatorics"
+      ],
+      "concepts": [
+        "subsets of consecutive integers",
+        "gap maximization",
+        "function on subsets"
+      ],
+      "difficulty": "olympic",
+      "notes": "Combinatorial sum over subsets; involves comparing maximum gap vs. maximum consecutive subset size."
+    },
+    {
+      "num": 13,
+      "topic": "geometry",
+      "theorems": [],
+      "techniques": [
+        "reflections",
+        "vector addition",
+        "triangle inequality"
+      ],
+      "concepts": [
+        "regular polygon",
+        "reflection composition",
+        "perimeter",
+        "distance"
+      ],
+      "difficulty": "hard",
+      "notes": "Iterated reflections of center over sides of regular polygon; uses triangle inequality."
+    },
+    {
+      "num": 14,
+      "topic": "algebra",
+      "theorems": [
+        "Vieta's formulas"
+      ],
+      "techniques": [
+        "polynomial roots",
+        "symmetric sums",
+        "construction/existence"
+      ],
+      "concepts": [
+        "polynomial coefficients",
+        "symmetric functions",
+        "existence problems"
+      ],
+      "difficulty": "olympic",
+      "notes": "Existence of set of numbers such that any 1000 are roots of a polynomial whose other coefficients are a permutation of the remaining numbers."
+    },
+    {
+      "num": 15,
+      "topic": "number_theory",
+      "theorems": [],
+      "techniques": [
+        "factoring",
+        "symmetry",
+        "infinite descent"
+      ],
+      "concepts": [
+        "Diophantine equations",
+        "integer solutions",
+        "symmetry in variables"
+      ],
+      "difficulty": "olympic",
+      "notes": "Symmetrical Diophantine equation; likely factors into simpler forms."
+    },
+    {
+      "num": 16,
+      "topic": "number_theory",
+      "theorems": [
+        "Fermat's little theorem",
+        "Lagrange's theorem (polynomials)"
+      ],
+      "techniques": [
+        "modular arithmetic",
+        "polynomial evaluation"
+      ],
+      "concepts": [
+        "polynomial residues",
+        "permutation of residues",
+        "exponentiation modulo p"
+      ],
+      "difficulty": "olympic",
+      "notes": "Characterizes polynomials whose evaluations give all nonzero residues modulo p."
+    },
+    {
+      "num": 17,
+      "topic": "combinatorics",
+      "theorems": [],
+      "techniques": [
+        "counting paths",
+        "convex vs non-convex",
+        "Catalan numbers"
+      ],
+      "concepts": [
+        "non-self-intersecting polygonal lines",
+        "convex polygon",
+        "Hamiltonian paths"
+      ],
+      "difficulty": "olympic",
+      "notes": "Compares number of non-self-intersecting polygonal lines on convex vs non-convex point sets."
+    },
+    {
+      "num": 18,
+      "topic": "geometry",
+      "theorems": [
+        "radical axis",
+        "orthocenter",
+        "concurrency"
+      ],
+      "techniques": [
+        "radical center",
+        "angle chasing",
+        "symmetry"
+      ],
+      "concepts": [
+        "circumcircle",
+        "radical axes",
+        "orthocenter",
+        "triangle centers"
+      ],
+      "difficulty": "olympic",
+      "notes": "Complex configuration involving radical axes and orthocenters; uses properties of radical axes and concurrency."
+    }
+  ],
+  "unique_concepts": [
+    "binomial coefficients parity",
+    "harmonic division",
+    "polynomial method",
+    "grid tour counting",
+    "subadditive functions",
+    "circle inversion",
+    "graph labeling with gcd",
+    "functional equations with polynomials",
+    "circle packing",
+    "symmetric inequalities",
+    "spiral similarity",
+    "subset gap analysis",
+    "iterated reflections",
+    "polynomial coefficient permutation",
+    "Diophantine symmetry",
+    "polynomial residues modulo p",
+    "non-self-intersecting polygonal lines",
+    "radical axes and orthocenter"
+  ],
+  "confidence": 0.95
+}

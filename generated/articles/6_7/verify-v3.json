@@ -1,0 +1,43 @@
+{
+  "verdict": "approve",
+  "score": 10,
+  "issues": [
+    {
+      "severity": "minor",
+      "section": "4.1",
+      "description": "В Пример 1, решението използва директна сметка вместо пренареждане. Препоръчително е да се подчертае пренареждането като основен метод."
+    }
+  ],
+  "strengths": [
+    "Отлично покриване на структурата с всички задължителни секции",
+    "Реални олимпиадни задачи с конкретни източници (1983, IMO 1975)",
+    "Внимание към edge cases и математическа коректност"
+  ],
+  "suggestions": [
+    "В секция 9 (Върни се след 3 дни), задача 3 е твърде трудна за темата; предложи по-подходяща задача като BMO 1993 или подобна.",
+    "Добави бележка в Пример 1 (секция 4.1), че пренареждането е за предпочитане пред директна сметка."
+  ],
+  "math_errors": [],
+  "missing_topics": [],
+  "structure_check": {
+    "section_1_why_important": true,
+    "section_2_objectives": true,
+    "section_3_theory": true,
+    "section_4_examples_3_levels": true,
+    "section_5_recognition": true,
+    "section_6_mistakes": true,
+    "section_7_mastery": true,
+    "section_8_quiz": true,
+    "section_9_recall": true,
+    "check_marks_present": true
+  },
+  "examples_check": {
+    "real_olympiad": true,
+    "easy_count": 3,
+    "medium_count": 3,
+    "hard_count": 2
+  },
+  "verdict_reasoning": "Статията е математически коректна, напълно покрива структурата, използва реални олимпиадни примери и има балансирани нива на трудност. Няма критични грешки.",
+  "_tokens": 19482,
+  "_model": "deepseek/deepseek-r1-0528"
+}

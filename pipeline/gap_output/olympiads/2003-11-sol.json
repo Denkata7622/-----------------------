@@ -1,0 +1,140 @@
+{
+  "_meta": {
+    "pdf": "C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\Задачи_Минали_Години\\Областен\\OLI-2-Областен кръг-2003-11 кл-sol.pdf",
+    "paired_with": null,
+    "level": 1,
+    "type": "sol",
+    "analyzed_at": "2026-10-18T12:32:58.481657",
+    "model": "deepseek/deepseek-v3.2",
+    "text_length": 4102,
+    "paired_text_length": 0
+  },
+  "problems": [
+    {
+      "num": 1,
+      "topic": "geometry",
+      "theorems": [],
+      "techniques": [
+        "algebraic manipulation",
+        "solving quadratic equations"
+      ],
+      "concepts": [
+        "trapezoid area",
+        "incircle in trapezoid",
+        "tangent segments",
+        "similar triangles"
+      ],
+      "difficulty": "standard",
+      "notes": "Problem about a trapezoid with an incircle and a line creating two trapezoids each with an incircle. Solution uses algebraic relations from tangency and area."
+    },
+    {
+      "num": 2,
+      "topic": "combinatorics",
+      "theorems": [
+        "Pigeonhole Principle"
+      ],
+      "techniques": [
+        "strategy analysis",
+        "modular arithmetic",
+        "subset sums"
+      ],
+      "concepts": [
+        "game theory",
+        "subset sums modulo prime",
+        "existence proof"
+      ],
+      "difficulty": "olympic",
+      "notes": "Combinatorial game where a player chooses numbers and the other assigns signs. Winning strategy based on number of subsets exceeding a modulus (2003)."
+    },
+    {
+      "num": 3,
+      "topic": "algebra",
+      "theorems": [],
+      "techniques": [
+        "limit analysis",
+        "floor function manipulation",
+        "substitution"
+      ],
+      "concepts": [
+        "sequences defined by floor function",
+        "asymptotic behavior",
+        "irrational numbers in sequences"
+      ],
+      "difficulty": "hard",
+      "notes": "Functional equation involving floor functions. Solution finds parameter via limits and verifies."
+    },
+    {
+      "num": 4,
+      "topic": "geometry",
+      "theorems": [],
+      "techniques": [
+        "angle chasing",
+        "proportional sides"
+      ],
+      "concepts": [
+        "cyclic quadrilaterals",
+        "similar triangles",
+        "intersecting chords",
+        "angle equalities"
+      ],
+      "difficulty": "standard",
+      "notes": "Geometry problem with cyclic quadrilateral and intersecting lines. Uses similarity and angle equalities."
+    },
+    {
+      "num": 5,
+      "topic": "algebra",
+      "theorems": [],
+      "techniques": [
+        "substitution",
+        "symmetric sums",
+        "polynomial factorization"
+      ],
+      "concepts": [
+        "system of symmetric equations",
+        "real solutions",
+        "cubic polynomial"
+      ],
+      "difficulty": "hard",
+      "notes": "Symmetric system in three variables. Reduced via substitution to polynomial in sum and product."
+    },
+    {
+      "num": 6,
+      "topic": "number_theory",
+      "theorems": [
+        "Chinese Remainder Theorem"
+      ],
+      "techniques": [
+        "contradiction",
+        "pigeonhole principle",
+        "modular analysis"
+      ],
+      "concepts": [
+        "prime divisors of differences",
+        "residue classes",
+        "sum of residues",
+        "good set property"
+      ],
+      "difficulty": "olympic",
+      "notes": "Set of integers where every prime divisor of a difference appears in sums. Uses CRT and counting residues."
+    }
+  ],
+  "unique_concepts": [
+    "trapezoid area",
+    "incircle in trapezoid",
+    "tangent segments",
+    "similar triangles",
+    "game theory",
+    "subset sums modulo prime",
+    "pigeonhole principle",
+    "sequences with floor function",
+    "asymptotic behavior",
+    "cyclic quadrilaterals",
+    "angle chasing",
+    "system of symmetric equations",
+    "polynomial factorization",
+    "chinese remainder theorem",
+    "residue classes",
+    "prime divisors of differences"
+  ],
+  "confidence": 0.95
+}

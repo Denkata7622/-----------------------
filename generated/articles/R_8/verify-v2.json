@@ -1,0 +1,60 @@
+{
+  "verdict": "approve",
+  "score": 8,
+  "issues": [
+    {
+      "severity": "minor",
+      "section": "4.1 Easy examples",
+      "description": "Липсва 1 easy пример (изискват се 3, дадени са 2)."
+    },
+    {
+      "severity": "major",
+      "section": "4.3 Hard examples",
+      "description": "Само 1 пълен hard пример (Пример 11), останалите са пропуснати. Трябва поне 2-3."
+    },
+    {
+      "severity": "minor",
+      "section": "4.1 Пример 1",
+      "description": "Грешка в опростяването: $\\sqrt{592} = \\sqrt{16 \\cdot 37} = 4\\sqrt{37}$, а не $\\sqrt{148}$ (което е $2\\sqrt{37}$). Числовата стойност е същата, но формално е грешно."
+    }
+  ],
+  "strengths": [
+    "Теорията е изчерпателна с доказателства и edge cases.",
+    "Честите грешки са добре обяснени с практични съвети.",
+    "Секцията 'Защо е важно' използва реални олимпиадни задачи."
+  ],
+  "suggestions": [
+    "Добави още един easy пример за височина (напр. в правоъгълен триъгълник).",
+    "Разшири hard примерите с поне още един пълен (напр. комбинация от медиана и симетрала).",
+    "Поправи опростяването в Пример 1."
+  ],
+  "math_errors": [
+    {
+      "formula": "$\\sqrt{592}$",
+      "problem": "Погрешно опростяване до $\\sqrt{148}$ вместо $4\\sqrt{37}$.",
+      "fix": "Коректно: $\\sqrt{592} = \\sqrt{16 \\cdot 37} = 4\\sqrt{37}$."
+    }
+  ],
+  "missing_topics": [],
+  "structure_check": {
+    "section_1_why_important": true,
+    "section_2_objectives": true,
+    "section_3_theory": true,
+    "section_4_examples_3_levels": false,
+    "section_5_recognition": true,
+    "section_6_mistakes": true,
+    "section_7_mastery": true,
+    "section_8_quiz": true,
+    "section_9_recall": true,
+    "check_marks_present": true
+  },
+  "examples_check": {
+    "real_olympiad": true,
+    "easy_count": 2,
+    "medium_count": 3,
+    "hard_count": 1
+  },
+  "verdict_reasoning": "Статията е добра с малки недостатъци в примерите. Формулите са коректни, структурата почти изпълнена. Оценка 8/10 поради липса на един easy пример и недостатъчни hard примери.",
+  "_tokens": 20045,
+  "_model": "deepseek/deepseek-r1-0528"
+}

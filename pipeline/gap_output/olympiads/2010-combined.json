@@ -1,0 +1,154 @@
+{
+  "_meta": {
+    "pdf": "C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\Материали_БГ\\OT_2010.pdf",
+    "paired_with": null,
+    "level": 3,
+    "type": "combined",
+    "analyzed_at": "2026-10-16T22:00:13.283499",
+    "model": "deepseek/deepseek-v3.2",
+    "text_length": 202326,
+    "paired_text_length": 0
+  },
+  "problems": [
+    {
+      "num": 1,
+      "topic": "number_theory",
+      "theorems": [
+        "Fermat's Little Theorem",
+        "Legendre symbol",
+        "Quadratic reciprocity",
+        "Lucas-Lehmer theorem (Lucas)"
+      ],
+      "techniques": [
+        "modular arithmetic",
+        "finite fields",
+        "exponent properties",
+        "contradiction"
+      ],
+      "concepts": [
+        "quadratic residues/non-residues",
+        "complex numbers in finite arithmetic",
+        "Fibonacci/Lucas sequences",
+        "order of an element modulo p",
+        "congruence modulo p"
+      ],
+      "difficulty": "olympic",
+      "notes": "Uses 'complex numbers' over finite fields (extension with j^2 = t, a quadratic non-residue). Applies to sequences like Fibonacci/Lucas. The main theorem is a version of Lucas's theorem for Mersenne primes."
+    },
+    {
+      "num": 2,
+      "topic": "algebra",
+      "theorems": [],
+      "techniques": [
+        "contradiction",
+        "infinite descent",
+        "limit argument",
+        "stabilization of sequences"
+      ],
+      "concepts": [
+        "rational numbers representation",
+        "Egyptian fractions",
+        "infinite sequences",
+        "convergence"
+      ],
+      "difficulty": "olympic",
+      "notes": "Shows impossibility of representing all rationals as a fixed bounded sum of unit fractions with integer denominators. Uses an infinite sequence argument and stabilization of denominators."
+    },
+    {
+      "num": 3,
+      "topic": "combinatorics",
+      "theorems": [],
+      "techniques": [
+        "double counting",
+        "bijective proof",
+        "combinatorial interpretation"
+      ],
+      "concepts": [
+        "binomial coefficients",
+        "subsets",
+        "committee selection",
+        "even/odd subsets",
+        "Pascal's identity"
+      ],
+      "difficulty": "standard",
+      "notes": "Standard combinatorial identities proved via double counting (e.g., choosing subsets, committees with chairperson, pairs of subsets)."
+    },
+    {
+      "num": 4,
+      "topic": "combinatorics",
+      "theorems": [],
+      "techniques": [
+        "double counting",
+        "case analysis",
+        "summation"
+      ],
+      "concepts": [
+        "binomial coefficients",
+        "subsets",
+        "ordered pairs",
+        "inclusion-exclusion idea"
+      ],
+      "difficulty": "standard",
+      "notes": "More advanced combinatorial identities involving sums of products of binomial coefficients, proved by counting tables or committees in two ways."
+    },
+    {
+      "num": 5,
+      "topic": "combinatorics",
+      "theorems": [],
+      "techniques": [
+        "equivalence relations",
+        "contradiction",
+        "pigeonhole principle"
+      ],
+      "concepts": [
+        "equivalence relation (reflexive, symmetric, transitive)",
+        "equivalence classes",
+        "graph of triangles",
+        "common vertices"
+      ],
+      "difficulty": "olympic",
+      "notes": "Defines an equivalence relation on triangles based on sharing at least two vertices. Uses properties of equivalence classes to get a contradiction about the number of triangles."
+    },
+    {
+      "num": 6,
+      "topic": "combinatorics",
+      "theorems": [],
+      "techniques": [
+        "graph theory interpretation",
+        "equivalence relations",
+        "partial order"
+      ],
+      "concepts": [
+        "tournament graph",
+        "paths and cycles",
+        "equivalence relation on vertices",
+        "strongly connected components",
+        "transitive closure"
+      ],
+      "difficulty": "olympic",
+      "notes": "Applies equivalence relations to tournament graphs. Shows that each equivalence class (strongly connected component) with more than one vertex is a cycle, and classes are totally ordered by 'strength'."
+    }
+  ],
+  "unique_concepts": [
+    "Legendre symbol",
+    "quadratic reciprocity",
+    "finite field extensions",
+    "Fibonacci/Lucas sequences modulo p",
+    "order of an element",
+    "Mersenne primes",
+    "Egyptian fractions",
+    "double counting",
+    "binomial coefficients",
+    "combinatorial identities",
+    "equivalence relations",
+    "equivalence classes",
+    "tournament graphs",
+    "strongly connected components",
+    "partial order",
+    "contradiction",
+    "infinite descent",
+    "modular arithmetic",
+    "quadratic residues"
+  ],
+  "confidence": 0.95
+}

@@ -1,0 +1,53 @@
+{
+  "verdict": "revise",
+  "score": 7,
+  "issues": [
+    {
+      "severity": "critical",
+      "section": "4.1 Пример 1",
+      "description": "При n=1 и a1≠0, уравнението няма ненулев корен, което противоречи на твърдението. Оригиналната задача вероятно изисква n≥2 или допълнителни условия."
+    },
+    {
+      "severity": "minor",
+      "section": "4.3 Пример 7",
+      "description": "Има объркване между P(x)+P(y)+P(z) и P(x+y)+P(-x)+P(-y), но статията правилно идентифицира и коригира проблема."
+    }
+  ],
+  "strengths": [
+    "Отлична структура с всички необходими секции",
+    "Реални олимпиадни примери с автентични източници",
+    "Добро покритие на edge cases и типични грешки"
+  ],
+  "suggestions": [
+    "Коригирай Пример 1: Добави условие n≥2 или провери оригиналната задача",
+    "В Пример 7 изясни прехода между P(x)+P(y)+P(-x-y) и P(x+y)+P(-x)+P(-y)"
+  ],
+  "math_errors": [
+    {
+      "formula": "$\\sum_{i=1}^n \\sqrt{1 + a_i x} = n$",
+      "problem": "При n=1, a1=3: единственият корен е x=0, но твърди се, че има най-много един ненулев корен",
+      "fix": "Добави условие, че n≥2 или че някои ai са различни по знак"
+    }
+  ],
+  "missing_topics": [],
+  "structure_check": {
+    "section_1_why_important": true,
+    "section_2_objectives": true,
+    "section_3_theory": true,
+    "section_4_examples_3_levels": true,
+    "section_5_recognition": true,
+    "section_6_mistakes": true,
+    "section_7_mastery": true,
+    "section_8_quiz": true,
+    "section_9_recall": true,
+    "check_marks_present": true
+  },
+  "examples_check": {
+    "real_olympiad": true,
+    "easy_count": 3,
+    "medium_count": 4,
+    "hard_count": 2
+  },
+  "verdict_reasoning": "Статията има отлична структура и релевантни примери, но съдържа критична математическа грешка в Пример 1. Необходима е ревизия преди публикуване.",
+  "_tokens": 22683
+}

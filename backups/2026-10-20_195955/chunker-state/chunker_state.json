@@ -1,0 +1,590 @@
+{
+  "extracted": {
+    "OLI-2-Областен кръг-1995-10 кл-sol": {
+      "chunks_done": {
+        "1": 0
+      },
+      "status": "done",
+      "problems": 0
+    },
+    "OLI-2-Областен кръг-1995-11 кл-sol": {
+      "chunks_done": {
+        "1": 0
+      },
+      "status": "done",
+      "problems": 0
+    },
+    "OLI-2-Областен кръг-1996-10 кл-sol": {
+      "chunks_done": {
+        "1": 0
+      },
+      "status": "done",
+      "problems": 0
+    },
+    "OLI-2-Областен кръг-1996-11 кл-sol": {
+      "chunks_done": {
+        "1": 0
+      },
+      "status": "done",
+      "problems": 0
+    },
+    "OLI-2-Областен кръг-1997-10 кл-sol": {
+      "chunks_done": {
+        "1": 0
+      },
+      "status": "done",
+      "problems": 0
+    },
+    "OLI-2-Областен кръг-1997-11 кл-sol": {
+      "chunks_done": {
+        "1": 0
+      },
+      "status": "done",
+      "problems": 0
+    },
+    "OLI-2-Областен кръг-1998-10 кл-sol": {
+      "chunks_done": {
+        "1": 0
+      },
+      "status": "done",
+      "problems": 0
+    },
+    "OLI-2-Областен кръг-1998-11 кл-sol": {
+      "chunks_done": {
+        "1": 0
+      },
+      "status": "done",
+      "problems": 0
+    },
+    "OLI-2-Областен кръг-1999-10 кл-sol": {
+      "chunks_done": {
+        "1": 0
+      },
+      "status": "done",
+      "problems": 0
+    },
+    "OLI-2-Областен кръг-1999-11 кл-sol": {
+      "chunks_done": {
+        "1": 0
+      },
+      "status": "done",
+      "problems": 0
+    },
+    "OLI-2-Областен кръг-2000-10 кл-sol": {
+      "chunks_done": {
+        "1": 0
+      },
+      "status": "done",
+      "problems": 0
+    },
+    "OLI-2-Областен кръг-2000-11 кл-sol": {
+      "chunks_done": {
+        "1": 0
+      },
+      "status": "done",
+      "problems": 0
+    },
+    "OLI-2-Областен кръг-2001-10 кл-sol": {
+      "chunks_done": {
+        "1": 0
+      },
+      "status": "done",
+      "problems": 0
+    },
+    "OLI-2-Областен кръг-2001-11 кл-sol": {
+      "chunks_done": {
+        "1": 0
+      },
+      "status": "done",
+      "problems": 0
+    },
+    "OLI-2-Областен кръг-2002-10 кл-sol": {
+      "chunks_done": {
+        "1": 0
+      },
+      "status": "done",
+      "problems": 0
+    },
+    "OLI-2-Областен кръг-2002-11 кл-sol": {
+      "chunks_done": {
+        "1": 0
+      },
+      "status": "done",
+      "problems": 0
+    },
+    "OLI-2-Областен кръг-2003-10 кл-sol": {
+      "chunks_done": {
+        "1": 6
+      },
+      "status": "done",
+      "problems": 6
+    },
+    "OLI-2-Областен кръг-2003-11 кл-sol": {
+      "chunks_done": {
+        "1": 6
+      },
+      "status": "done",
+      "problems": 6
+    },
+    "OLI-2-Областен кръг-2004-10 кл-sol": {
+      "chunks_done": {
+        "1": 10
+      },
+      "status": "done",
+      "problems": 10
+    },
+    "OLI-2-Областен кръг-2004-11 кл-sol": {
+      "chunks_done": {
+        "1": 9
+      },
+      "status": "done",
+      "problems": 9
+    },
+    "OLI-2-Областен кръг-2005-10 кл-sol": {
+      "chunks_done": {
+        "1": 13
+      },
+      "status": "done",
+      "problems": 13
+    },
+    "OLI-2-Областен кръг-2005-11 кл-sol": {
+      "status": "partial",
+      "failed_chunks": 1,
+      "total_chunks": 1
+    },
+    "OLI-2-Областен кръг-2006-10 кл-sol": {
+      "status": "partial",
+      "failed_chunks": 1,
+      "total_chunks": 1
+    },
+    "OLI-2-Областен кръг-2006-11 кл-sol": {
+      "status": "partial",
+      "failed_chunks": 1,
+      "total_chunks": 1
+    },
+    "OLI-2-Областен кръг-2007-10 кл-sol": {
+      "status": "partial",
+      "failed_chunks": 1,
+      "total_chunks": 1
+    },
+    "OLI-2-Областен кръг-2007-11 кл-sol": {
+      "status": "partial",
+      "failed_chunks": 1,
+      "total_chunks": 1
+    },
+    "OLI-2-Областен кръг-2008-10 кл-sol": {
+      "status": "partial",
+      "failed_chunks": 1,
+      "total_chunks": 1
+    },
+    "OLI-2-Областен кръг-2008-11 кл-sol": {
+      "status": "partial",
+      "failed_chunks": 1,
+      "total_chunks": 1
+    },
+    "OLI-2-Областен кръг-2009-10 кл-sol": {
+      "status": "partial",
+      "failed_chunks": 1,
+      "total_chunks": 1
+    },
+    "OLI-2-Областен кръг-2009-11 кл-sol": {
+      "status": "partial",
+      "failed_chunks": 1,
+      "total_chunks": 1
+    },
+    "OLI-2-Областен кръг-2010-10 кл-sol": {
+      "status": "partial",
+      "failed_chunks": 1,
+      "total_chunks": 1
+    },
+    "OLI-2-Областен кръг-2010-11 кл-sol": {
+      "status": "partial",
+      "failed_chunks": 1,
+      "total_chunks": 1
+    },
+    "OLI-2-Областен кръг-2011-10 кл-sol": {
+      "status": "partial",
+      "failed_chunks": 1,
+      "total_chunks": 1
+    },
+    "OLI-2-Областен кръг-2011-11 кл-sol": {
+      "status": "partial",
+      "failed_chunks": 1,
+      "total_chunks": 1
+    },
+    "OLI-2-Областен кръг-2012-10 кл-sol": {
+      "status": "partial",
+      "failed_chunks": 1,
+      "total_chunks": 1
+    },
+    "OLI-2-Областен кръг-2012-11 кл-sol": {
+      "status": "partial",
+      "failed_chunks": 1,
+      "total_chunks": 1
+    },
+    "OLI-2-Областен кръг-2013-10 кл-sol": {
+      "status": "partial",
+      "failed_chunks": 1,
+      "total_chunks": 1
+    },
+    "OLI-2-Областен кръг-2013-11 кл-sol": {
+      "status": "partial",
+      "failed_chunks": 1,
+      "total_chunks": 1
+    },
+    "OLI-2-Областен кръг-2014-10 кл-sol": {
+      "status": "partial",
+      "failed_chunks": 1,
+      "total_chunks": 1
+    },
+    "OLI-2-Областен кръг-2014-11 кл-sol": {
+      "status": "partial",
+      "failed_chunks": 1,
+      "total_chunks": 1
+    },
+    "OLI-2-Областен кръг-2015-10 кл-sol": {
+      "status": "partial",
+      "failed_chunks": 1,
+      "total_chunks": 1
+    },
+    "OLI-2-Областен кръг-2015-11 кл-sol": {
+      "status": "partial",
+      "failed_chunks": 1,
+      "total_chunks": 1
+    },
+    "OLI-2-Областен кръг-2016-10 кл-sol": {
+      "status": "partial",
+      "failed_chunks": 1,
+      "total_chunks": 1
+    },
+    "OLI-2-Областен кръг-2016-11 кл-sol": {
+      "status": "partial",
+      "failed_chunks": 1,
+      "total_chunks": 1
+    },
+    "OLI-2-Областен кръг-2017-10 кл-sol": {
+      "status": "partial",
+      "failed_chunks": 1,
+      "total_chunks": 1
+    },
+    "OLI-2-Областен кръг-2017-11 кл-sol": {
+      "status": "partial",
+      "failed_chunks": 1,
+      "total_chunks": 1
+    },
+    "OLI-2-Областен кръг-2018-10 кл-sol": {
+      "status": "partial",
+      "failed_chunks": 1,
+      "total_chunks": 1
+    },
+    "OLI-2-Областен кръг-2018-11 кл-sol": {
+      "status": "partial",
+      "failed_chunks": 1,
+      "total_chunks": 1
+    },
+    "OLI-2-Областен кръг-2019-10 кл-sol": {
+      "status": "partial",
+      "failed_chunks": 1,
+      "total_chunks": 1
+    },
+    "OLI-2-Областен кръг-2019-11 кл-sol": {
+      "status": "partial",
+      "failed_chunks": 1,
+      "total_chunks": 1
+    },
+    "OLI-2-Областен кръг-2020-10 кл-sol": {
+      "status": "partial",
+      "failed_chunks": 1,
+      "total_chunks": 1
+    },
+    "OLI-2-Областен кръг-2020-11 кл-sol": {
+      "status": "partial",
+      "failed_chunks": 1,
+      "total_chunks": 1
+    },
+    "OLI-2-Областен кръг-2021-10 кл-sol": {
+      "status": "partial",
+      "failed_chunks": 1,
+      "total_chunks": 1
+    },
+    "OLI-2-Областен кръг-2021-11 кл-sol": {
+      "status": "partial",
+      "failed_chunks": 1,
+      "total_chunks": 1
+    },
+    "OLI-2-Областен кръг-2022-10 кл-sol": {
+      "status": "partial",
+      "failed_chunks": 1,
+      "total_chunks": 1
+    },
+    "OLI-2-Областен кръг-2022-11 кл-sol": {
+      "status": "partial",
+      "failed_chunks": 1,
+      "total_chunks": 1
+    },
+    "OLI-2-Областен кръг-2023-10 кл-sol (1)": {
+      "status": "partial",
+      "failed_chunks": 1,
+      "total_chunks": 1
+    },
+    "OLI-2-Областен кръг-2023-11 кл-sol": {
+      "status": "partial",
+      "failed_chunks": 1,
+      "total_chunks": 1
+    },
+    "OLI-2-Областен кръг-2024-10 кл-sol (1)": {
+      "status": "partial",
+      "failed_chunks": 1,
+      "total_chunks": 1
+    },
+    "OLI-2-Областен кръг-2024-11 кл-sol": {
+      "status": "partial",
+      "failed_chunks": 1,
+      "total_chunks": 1
+    },
+    "OLI-2-Областен кръг-2025-10 кл-sol (1)": {
+      "status": "partial",
+      "failed_chunks": 1,
+      "total_chunks": 1
+    },
+    "OLI-2-Областен кръг-2025-11 кл-sol": {
+      "status": "partial",
+      "failed_chunks": 1,
+      "total_chunks": 1
+    },
+    "OLI-2-Областен кръг-2026-10 кл-sol": {
+      "status": "partial",
+      "failed_chunks": 1,
+      "total_chunks": 1
+    },
+    "OLI-3-Национален кръг-1983-9-12 кл-sol": {
+      "status": "partial",
+      "failed_chunks": 1,
+      "total_chunks": 1
+    },
+    "OLI-3-Национален кръг-1984-9-12 кл-sol": {
+      "status": "partial",
+      "failed_chunks": 1,
+      "total_chunks": 1
+    },
+    "OLI-3-Национален кръг-1985-9-12 кл-sol": {
+      "status": "partial",
+      "failed_chunks": 1,
+      "total_chunks": 1
+    },
+    "OLI-3-Национален кръг-1986-9-12 кл-sol": {
+      "status": "partial",
+      "failed_chunks": 1,
+      "total_chunks": 1
+    },
+    "OLI-3-Национален кръг-1987-9-12 кл-sol": {
+      "status": "partial",
+      "failed_chunks": 1,
+      "total_chunks": 1
+    },
+    "OLI-3-Национален кръг-1988-9-12 кл-sol": {
+      "status": "partial",
+      "failed_chunks": 1,
+      "total_chunks": 1
+    },
+    "OLI-3-Национален кръг-1989-9-12 кл-sol": {
+      "status": "partial",
+      "failed_chunks": 1,
+      "total_chunks": 1
+    },
+    "OLI-3-Национален кръг-1990-9-12 кл-sol": {
+      "status": "partial",
+      "failed_chunks": 1,
+      "total_chunks": 1
+    },
+    "OLI-3-Национален кръг-1991-9-12 кл-sol": {
+      "status": "partial",
+      "failed_chunks": 1,
+      "total_chunks": 1
+    },
+    "OLI-3-Национален кръг-1992-9-12 кл-sol": {
+      "chunks_done": {
+        "1": 6
+      },
+      "status": "done",
+      "problems": 6
+    },
+    "OLI-3-Национален кръг-1993-9-12 кл-sol": {
+      "status": "partial",
+      "failed_chunks": 1,
+      "total_chunks": 1
+    },
+    "OLI-3-Национален кръг-1994-9-12 кл-sol": {
+      "status": "partial",
+      "failed_chunks": 1,
+      "total_chunks": 1
+    },
+    "OLI-3-Национален кръг-1995-9-12 кл-sol": {
+      "status": "partial",
+      "failed_chunks": 1,
+      "total_chunks": 1
+    },
+    "OLI-3-Национален кръг-1996-9-12 кл-sol": {
+      "status": "partial",
+      "failed_chunks": 1,
+      "total_chunks": 1
+    },
+    "OLI-3-Национален кръг-1997-9-12 кл-sol": {
+      "status": "partial",
+      "failed_chunks": 1,
+      "total_chunks": 1
+    },
+    "OLI-3-Национален кръг-1998-9-12 кл-sol": {
+      "status": "partial",
+      "failed_chunks": 1,
+      "total_chunks": 1
+    },
+    "OLI-3-Национален кръг-1999-9-12 кл-sol": {
+      "status": "partial",
+      "failed_chunks": 1,
+      "total_chunks": 1
+    },
+    "OLI-3-Национален кръг-2000-9-12 кл-sol": {
+      "status": "partial",
+      "failed_chunks": 1,
+      "total_chunks": 1
+    },
+    "OLI-3-Национален кръг-2001-9-12 кл-sol": {
+      "status": "partial",
+      "failed_chunks": 1,
+      "total_chunks": 1
+    },
+    "OLI-3-Национален кръг-2002-9-12 кл-sol": {
+      "status": "partial",
+      "failed_chunks": 1,
+      "total_chunks": 1
+    },
+    "OLI-3-Национален кръг-2003-9-12 кл-sol": {
+      "status": "partial",
+      "failed_chunks": 1,
+      "total_chunks": 1
+    },
+    "OLI-3-Национален кръг-2004-9-12 кл-sol": {
+      "status": "partial",
+      "failed_chunks": 1,
+      "total_chunks": 1
+    },
+    "OLI-3-Национален кръг-2005-9-12 кл-sol": {
+      "status": "partial",
+      "failed_chunks": 1,
+      "total_chunks": 1
+    },
+    "OLI-3-Национален кръг-2006-9-12 кл-sol": {
+      "status": "partial",
+      "failed_chunks": 1,
+      "total_chunks": 1
+    },
+    "OLI-3-Национален кръг-2007-9-12 кл-sol": {
+      "status": "partial",
+      "failed_chunks": 1,
+      "total_chunks": 1
+    },
+    "OLI-3-Национален кръг-2008-9-12 кл-sol": {
+      "status": "partial",
+      "failed_chunks": 1,
+      "total_chunks": 1
+    },
+    "OLI-3-Национален кръг-2009-9-12 кл-sol": {
+      "status": "partial",
+      "failed_chunks": 1,
+      "total_chunks": 1
+    },
+    "OLI-3-Национален кръг-2010-9-12 кл-sol": {
+      "status": "partial",
+      "failed_chunks": 1,
+      "total_chunks": 1
+    },
+    "OLI-3-Национален кръг-2011-9-12 кл-sol": {
+      "status": "partial",
+      "failed_chunks": 1,
+      "total_chunks": 1
+    },
+    "OLI-3-Национален кръг-2012-9-12 кл-sol": {
+      "status": "partial",
+      "failed_chunks": 1,
+      "total_chunks": 1
+    },
+    "OLI-3-Национален кръг-2013-9-12 кл-sol": {
+      "status": "partial",
+      "failed_chunks": 1,
+      "total_chunks": 1
+    },
+    "OLI-3-Национален кръг-2014-9-12 кл-sol": {
+      "status": "partial",
+      "failed_chunks": 1,
+      "total_chunks": 1
+    },
+    "OLI-3-Национален кръг-2015-9-12 кл-sol": {
+      "status": "partial",
+      "failed_chunks": 1,
+      "total_chunks": 1
+    },
+    "OLI-3-Национален кръг-2016-9-12 кл-sol": {
+      "status": "partial",
+      "failed_chunks": 1,
+      "total_chunks": 1
+    },
+    "OLI-3-Национален кръг-2017-9-12 кл-sol": {
+      "status": "partial",
+      "failed_chunks": 1,
+      "total_chunks": 1
+    },
+    "OLI-3-Национален кръг-2018-9-12 кл-sol": {
+      "status": "partial",
+      "failed_chunks": 1,
+      "total_chunks": 1
+    },
+    "OLI-3-Национален кръг-2019-9-12 кл-sol": {
+      "status": "partial",
+      "failed_chunks": 1,
+      "total_chunks": 1
+    },
+    "OLI-3-Национален кръг-2020-9-12 кл-sol": {
+      "status": "partial",
+      "failed_chunks": 1,
+      "total_chunks": 1
+    },
+    "OLI-3-Национален кръг-2021-9-12 кл-sol": {
+      "status": "partial",
+      "failed_chunks": 1,
+      "total_chunks": 1
+    },
+    "OLI-3-Национален кръг-2022-9-12 кл-sol": {
+      "status": "partial",
+      "failed_chunks": 1,
+      "total_chunks": 1
+    },
+    "OLI-3-Национален кръг-2023-9-12 кл-sol": {
+      "status": "partial",
+      "failed_chunks": 1,
+      "total_chunks": 1
+    },
+    "OLI-3-Национален кръг-2024-9-12 кл-sol": {
+      "status": "partial",
+      "failed_chunks": 1,
+      "total_chunks": 1
+    },
+    "OLI-3-Национален кръг-2025-9-12 кл-sol": {
+      "status": "partial",
+      "failed_chunks": 1,
+      "total_chunks": 1
+    },
+    "OLI-3-Национален кръг-2026-9-12 кл-sol": {
+      "status": "partial",
+      "failed_chunks": 1,
+      "total_chunks": 1
+    }
+  },
+  "merged": {},
+  "classified": {},
+  "budget": {
+    "date": "2026-10-20",
+    "spent_usd": 0.1760000000000001,
+    "calls": 22
+  }
+}

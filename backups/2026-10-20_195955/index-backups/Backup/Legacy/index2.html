@@ -1,0 +1,1978 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>OLYMPIAD PREP TERMINAL</title>
+<link href="https://fonts.googleapis.com/css2?family=VT323&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #000;
+  --surface: #061006;
+  --surface-2: #0a1a0a;
+  --surface-3: #0f240f;
+  --surface-4: #142e14;
+  --border: #143014;
+  --border-2: #1f4a1f;
+  --accent: #00ff44;
+  --accent-2: #00cc36;
+  --accent-dim: #0b4a1a;
+  --accent-glow: rgba(0,255,68,0.35);
+  --text: #b8ffb8;
+  --text-2: #7bea7b;
+  --text-3: #4a8a4a;
+  --warn: #ddff00;
+  --danger: #ff4444;
+  --star: #ffdd00;
+  --sidebar-w: 300px;
+  --topbar-h: 56px;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html, body { height: 100%; overflow: hidden; }
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'VT323', 'JetBrains Mono', monospace;
+  font-size: 17px;
+  letter-spacing: 0.5px;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Subtle scanlines overlay (toggleable) */
+body.scanlines::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: repeating-linear-gradient(
+    to bottom,
+    rgba(0,255,68,0) 0px,
+    rgba(0,255,68,0.025) 2px,
+    rgba(0,255,68,0.04) 3px
+  );
+  pointer-events: none;
+  z-index: 9000;
+}
+
+/* ===== APP LAYOUT ===== */
+.app {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+/* ===== SIDEBAR ===== */
+.sidebar {
+  width: var(--sidebar-w);
+  background: var(--surface);
+  border-right: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  transition: margin-left 0.25s ease;
+}
+.sidebar.collapsed { margin-left: calc(-1 * var(--sidebar-w)); }
+
+.sidebar-header {
+  padding: 14px 16px;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.sidebar-header .logo {
+  font-size: 20px;
+  color: var(--accent);
+  text-shadow: 0 0 8px var(--accent-glow);
+}
+.sidebar-header .title {
+  font-size: 15px;
+  color: var(--accent);
+  letter-spacing: 2px;
+  flex: 1;
+  text-shadow: 0 0 6px var(--accent-glow);
+}
+.sidebar-header .collapse-btn {
+  background: transparent;
+  border: 1px solid var(--border-2);
+  color: var(--text-2);
+  padding: 2px 8px;
+  font-family: inherit;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 3px;
+}
+.sidebar-header .collapse-btn:hover { color: var(--accent); border-color: var(--accent); }
+
+.sidebar-stats {
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--border);
+  background: var(--surface-2);
+}
+.streak-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+.streak-row .fire { font-size: 18px; }
+.streak-row .streak-num {
+  color: var(--accent);
+  font-size: 20px;
+  text-shadow: 0 0 6px var(--accent-glow);
+}
+.streak-row .streak-label { color: var(--text-3); font-size: 12px; letter-spacing: 1px; }
+
+.sidebar-nav {
+  flex: 1;
+  overflow-y: auto;
+  padding: 8px;
+}
+.sidebar-nav::-webkit-scrollbar { width: 6px; }
+.sidebar-nav::-webkit-scrollbar-track { background: transparent; }
+.sidebar-nav::-webkit-scrollbar-thumb { background: var(--border-2); border-radius: 3px; }
+
+.nav-step {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-bottom: 2px;
+  border: 1px solid transparent;
+  transition: all 0.15s;
+  background: none;
+  font-family: inherit;
+  width: 100%;
+  text-align: left;
+}
+.nav-step:hover {
+  background: var(--surface-2);
+  border-color: var(--border-2);
+}
+.nav-step.active {
+  background: var(--surface-3);
+  border-color: var(--accent-2);
+}
+.nav-step .num {
+  color: var(--accent);
+  font-size: 15px;
+  min-width: 24px;
+  text-shadow: 0 0 4px var(--accent-glow);
+}
+.nav-step .label {
+  flex: 1;
+  color: var(--text-2);
+  font-size: 13px;
+  letter-spacing: 0.5px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.nav-step.active .label { color: var(--accent); }
+
+.nav-step .ring {
+  width: 26px; height: 26px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  font-size: 9px;
+  color: var(--accent);
+  background: conic-gradient(var(--accent) var(--pct, 0%), var(--surface-4) 0);
+}
+.nav-step .ring::before {
+  content: "";
+  position: absolute;
+  inset: 3px;
+  border-radius: 50%;
+  background: var(--surface);
+}
+.nav-step .ring span {
+  position: relative;
+  z-index: 1;
+  font-size: 9px;
+  color: var(--text-2);
+}
+
+/* ===== MAIN ===== */
+.main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  overflow: hidden;
+}
+
+/* ===== TOPBAR ===== */
+.topbar {
+  height: var(--topbar-h);
+  min-height: var(--topbar-h);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0 16px;
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+}
+.menu-toggle {
+  display: none;
+  background: transparent;
+  border: 1px solid var(--border-2);
+  color: var(--text-2);
+  padding: 4px 10px;
+  font-family: inherit;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 3px;
+}
+.menu-toggle:hover { color: var(--accent); border-color: var(--accent); }
+
+.search-wrap {
+  flex: 1;
+  max-width: 460px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  background: var(--surface-2);
+  border: 1px solid var(--border-2);
+  border-radius: 4px;
+  padding: 0 10px;
+  height: 36px;
+  transition: border-color 0.15s;
+}
+.search-wrap:focus-within { border-color: var(--accent); box-shadow: 0 0 0 2px var(--accent-glow); }
+.search-wrap .icon { color: var(--accent); font-size: 15px; margin-right: 6px; }
+.search-wrap input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  color: var(--text);
+  font-family: inherit;
+  font-size: 15px;
+  outline: none;
+  letter-spacing: 0.5px;
+}
+.search-wrap input::placeholder { color: var(--text-3); }
+.search-wrap .kbd-hint {
+  font-size: 11px;
+  color: var(--text-3);
+  border: 1px solid var(--border-2);
+  padding: 1px 5px;
+  border-radius: 3px;
+}
+.search-wrap input:focus ~ .kbd-hint { display: none; }
+
+.filter-chips {
+  display: flex;
+  gap: 3px;
+  flex-shrink: 0;
+}
+.chip {
+  background: var(--surface-2);
+  border: 1px solid var(--border-2);
+  color: var(--text-2);
+  padding: 5px 10px;
+  font-family: inherit;
+  font-size: 12px;
+  cursor: pointer;
+  border-radius: 3px;
+  letter-spacing: 1px;
+  transition: all 0.15s;
+  white-space: nowrap;
+}
+.chip:hover { color: var(--accent); border-color: var(--accent); }
+.chip.active {
+  background: var(--accent);
+  color: #000;
+  border-color: var(--accent);
+  box-shadow: 0 0 8px var(--accent-glow);
+}
+
+.topbar-right {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-left: auto;
+}
+
+.icon-btn {
+  width: 36px; height: 36px;
+  background: var(--surface-2);
+  border: 1px solid var(--border-2);
+  color: var(--text-2);
+  font-family: inherit;
+  font-size: 15px;
+  cursor: pointer;
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.15s;
+}
+.icon-btn:hover { color: var(--accent); border-color: var(--accent); }
+.icon-btn.active { background: var(--accent); color: #000; border-color: var(--accent); }
+
+/* ===== STATS BAR ===== */
+.stats-bar {
+  padding: 10px 20px;
+  background: var(--surface-2);
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  font-size: 14px;
+}
+.stat {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+}
+.stat .v {
+  color: var(--accent);
+  font-size: 18px;
+  text-shadow: 0 0 5px var(--accent-glow);
+}
+.stat .l { color: var(--text-3); font-size: 11px; letter-spacing: 1.5px; }
+
+.progress-wrap {
+  flex: 1;
+  min-width: 150px;
+  height: 6px;
+  background: var(--surface-4);
+  border-radius: 3px;
+  overflow: hidden;
+  position: relative;
+}
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--accent-2), var(--accent));
+  border-radius: 3px;
+  transition: width 0.5s cubic-bezier(.4,0,.2,1);
+  box-shadow: 0 0 8px var(--accent-glow);
+}
+
+/* ===== CONTENT ===== */
+.content {
+  flex: 1;
+  overflow-y: auto;
+  padding: 20px;
+  scroll-behavior: smooth;
+}
+.content::-webkit-scrollbar { width: 10px; }
+.content::-webkit-scrollbar-track { background: var(--surface); }
+.content::-webkit-scrollbar-thumb { background: var(--border-2); border-radius: 5px; }
+.content::-webkit-scrollbar-thumb:hover { background: var(--accent-2); }
+
+/* ===== STEP SECTION ===== */
+.step {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  margin-bottom: 16px;
+  overflow: hidden;
+  scroll-margin-top: 16px;
+}
+.step-header {
+  padding: 14px 18px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  user-select: none;
+  background: var(--surface-2);
+  border-bottom: 1px solid var(--border);
+  transition: background 0.15s;
+}
+.step-header:hover { background: var(--surface-3); }
+.step-toggle {
+  color: var(--accent);
+  font-size: 13px;
+  transition: transform 0.2s;
+  width: 14px;
+  display: inline-block;
+}
+.step.collapsed .step-toggle { transform: rotate(-90deg); }
+.step.collapsed .step-body { display: none; }
+
+.step-num {
+  color: var(--accent);
+  font-size: 22px;
+  min-width: 40px;
+  text-shadow: 0 0 6px var(--accent-glow);
+  letter-spacing: 1px;
+}
+.step-title {
+  flex: 1;
+  font-size: 18px;
+  letter-spacing: 1.5px;
+  color: var(--accent);
+  text-shadow: 0 0 4px var(--accent-glow);
+}
+.step-badge {
+  font-size: 12px;
+  color: var(--text-2);
+  border: 1px solid var(--border-2);
+  padding: 2px 9px;
+  border-radius: 3px;
+  letter-spacing: 1px;
+  background: var(--surface-4);
+  white-space: nowrap;
+}
+.step-badge.done {
+  background: var(--accent);
+  color: #000;
+  border-color: var(--accent);
+  box-shadow: 0 0 6px var(--accent-glow);
+}
+.step-reset {
+  background: transparent;
+  border: 1px solid transparent;
+  color: var(--text-3);
+  font-family: inherit;
+  font-size: 15px;
+  cursor: pointer;
+  padding: 2px 8px;
+  border-radius: 3px;
+}
+.step-reset:hover { color: var(--danger); border-color: var(--danger); }
+
+.step-body { padding: 12px; }
+
+/* ===== POINT CARD ===== */
+.point {
+  background: var(--surface-2);
+  border: 1px solid var(--border-2);
+  border-radius: 5px;
+  margin-bottom: 8px;
+  transition: all 0.15s;
+  position: relative;
+  overflow: hidden;
+}
+.point:hover { border-color: var(--accent-2); }
+.point.done { opacity: 0.55; }
+.point.done .point-title { text-decoration: line-through; color: var(--text-3); }
+.point.fav { border-color: var(--star); }
+.point.fav::before {
+  content: "";
+  position: absolute;
+  left: 0; top: 0; bottom: 0;
+  width: 2px;
+  background: var(--star);
+}
+.point.highlight { animation: highlight 1.2s ease; }
+@keyframes highlight {
+  0%, 100% { background: var(--surface-2); }
+  50% { background: var(--surface-4); box-shadow: 0 0 15px var(--accent-glow); }
+}
+
+.point-row {
+  padding: 11px 14px;
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.point-check {
+  flex-shrink: 0;
+  width: 22px; height: 22px;
+  border: 2px solid var(--accent-2);
+  border-radius: 3px;
+  background: var(--surface);
+  color: var(--text-3);
+  font-family: inherit;
+  font-size: 14px;
+  line-height: 1;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2px;
+  transition: all 0.15s;
+}
+.point-check:hover { border-color: var(--accent); color: var(--accent); }
+.point-check.checked {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #000;
+  box-shadow: 0 0 8px var(--accent-glow);
+}
+
+.point-main { flex: 1; min-width: 0; }
+.point-num {
+  font-size: 11px;
+  color: var(--text-3);
+  letter-spacing: 2px;
+  margin-bottom: 2px;
+}
+.point-title {
+  font-size: 16px;
+  color: var(--text);
+  margin-bottom: 4px;
+  letter-spacing: 0.5px;
+}
+.point-desc {
+  font-size: 13px;
+  color: var(--text-2);
+  line-height: 1.5;
+  margin-bottom: 8px;
+}
+
+.point-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  align-items: center;
+}
+.tag {
+  font-size: 11px;
+  padding: 2px 7px;
+  background: var(--surface-3);
+  border: 1px solid var(--border-2);
+  border-radius: 3px;
+  color: var(--text-2);
+  letter-spacing: 0.5px;
+}
+.tag.src { color: var(--text-3); }
+.pdf-btn {
+  font-size: 11px;
+  padding: 3px 9px;
+  background: var(--accent-dim);
+  border: 1px solid var(--accent-2);
+  border-radius: 3px;
+  color: var(--accent);
+  text-decoration: none;
+  letter-spacing: 1px;
+  transition: all 0.15s;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+.pdf-btn:hover {
+  background: var(--accent);
+  color: #000;
+  box-shadow: 0 0 8px var(--accent-glow);
+}
+.pdf-btn.bonus {
+  background: #1a0a30;
+  border-color: #6a30c0;
+  color: #b88aff;
+}
+.pdf-btn.bonus:hover { background: #6a30c0; color: #fff; }
+
+.point-actions {
+  display: flex;
+  gap: 3px;
+  flex-shrink: 0;
+  align-items: flex-start;
+}
+.mini-btn {
+  width: 26px; height: 26px;
+  background: transparent;
+  border: 1px solid var(--border-2);
+  color: var(--text-3);
+  font-family: inherit;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.15s;
+}
+.mini-btn:hover { color: var(--accent); border-color: var(--accent); }
+.mini-btn.active { color: var(--star); border-color: var(--star); }
+
+/* Difficulty */
+.diff-group {
+  display: flex;
+  gap: 2px;
+}
+.diff-btn {
+  font-size: 10px;
+  width: 20px; height: 26px;
+  background: transparent;
+  border: 1px solid var(--border-2);
+  color: var(--text-3);
+  font-family: inherit;
+  cursor: pointer;
+  border-radius: 3px;
+  transition: all 0.15s;
+}
+.diff-btn:hover { color: var(--accent); border-color: var(--accent); }
+.diff-btn.active.easy { color: #7dff7d; border-color: #7dff7d; background: rgba(125,255,125,0.1); }
+.diff-btn.active.med { color: var(--warn); border-color: var(--warn); background: rgba(221,255,0,0.1); }
+.diff-btn.active.hard { color: var(--danger); border-color: var(--danger); background: rgba(255,68,68,0.1); }
+
+/* Expanded panel: explanation + notes */
+.point-expand {
+  border-top: 1px solid var(--border);
+  background: var(--surface);
+  padding: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+.point.expanded .point-expand { max-height: 900px; }
+.point-expand-inner { padding: 12px 14px; }
+
+.section-label {
+  font-size: 10px;
+  color: var(--text-3);
+  letter-spacing: 2px;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+}
+.explanation {
+  font-size: 13px;
+  color: var(--text-2);
+  line-height: 1.6;
+  padding: 8px 12px;
+  background: var(--surface-2);
+  border-left: 2px solid var(--accent-dim);
+  border-radius: 3px;
+  margin-bottom: 10px;
+}
+.notes-area {
+  width: 100%;
+  min-height: 80px;
+  background: var(--surface-2);
+  border: 1px solid var(--border-2);
+  color: var(--text);
+  font-family: inherit;
+  font-size: 14px;
+  padding: 8px 10px;
+  border-radius: 3px;
+  resize: vertical;
+  outline: none;
+  line-height: 1.5;
+  transition: border-color 0.15s;
+}
+.notes-area:focus { border-color: var(--accent); box-shadow: 0 0 0 2px var(--accent-glow); }
+.notes-area::placeholder { color: var(--text-3); }
+
+.bonus-row {
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px dashed var(--border-2);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.notes-badge {
+  font-size: 10px;
+  color: var(--warn);
+  border: 1px solid var(--warn);
+  padding: 1px 5px;
+  border-radius: 2px;
+  margin-left: 4px;
+  letter-spacing: 1px;
+}
+
+/* ===== POMODORO ===== */
+.pomodoro {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: var(--surface);
+  border: 1px solid var(--accent-2);
+  border-radius: 6px;
+  padding: 10px 14px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  box-shadow: 0 0 20px rgba(0,255,68,0.25);
+  z-index: 500;
+  font-size: 14px;
+}
+.pomodoro .time {
+  font-size: 24px;
+  color: var(--accent);
+  text-shadow: 0 0 8px var(--accent-glow);
+  min-width: 72px;
+  text-align: center;
+  letter-spacing: 2px;
+}
+.pomodoro .time.break { color: var(--warn); text-shadow: 0 0 8px rgba(221,255,0,0.5); }
+.pomodoro .mode {
+  font-size: 10px;
+  color: var(--text-3);
+  letter-spacing: 2px;
+  text-align: center;
+}
+.pomo-btn {
+  width: 30px; height: 30px;
+  background: var(--surface-2);
+  border: 1px solid var(--border-2);
+  color: var(--text-2);
+  font-family: inherit;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.15s;
+}
+.pomo-btn:hover { color: var(--accent); border-color: var(--accent); }
+.pomo-btn.play { background: var(--accent); color: #000; border-color: var(--accent); }
+.pomo-count {
+  font-size: 11px;
+  color: var(--text-3);
+  letter-spacing: 1px;
+  border-left: 1px solid var(--border);
+  padding-left: 12px;
+  text-align: center;
+}
+
+/* ===== COMMAND PALETTE ===== */
+.palette-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.75);
+  backdrop-filter: blur(4px);
+  z-index: 2000;
+  display: none;
+  align-items: flex-start;
+  justify-content: center;
+  padding-top: 15vh;
+}
+.palette-overlay.open { display: flex; }
+.palette {
+  width: 90%;
+  max-width: 560px;
+  background: var(--surface);
+  border: 1px solid var(--accent-2);
+  border-radius: 6px;
+  box-shadow: 0 0 40px rgba(0,255,68,0.3);
+  overflow: hidden;
+}
+.palette-input {
+  width: 100%;
+  background: var(--surface-2);
+  border: none;
+  border-bottom: 1px solid var(--border);
+  color: var(--accent);
+  font-family: inherit;
+  font-size: 18px;
+  padding: 14px 18px;
+  outline: none;
+  letter-spacing: 1px;
+}
+.palette-input::placeholder { color: var(--text-3); }
+.palette-results {
+  max-height: 50vh;
+  overflow-y: auto;
+}
+.palette-results::-webkit-scrollbar { width: 6px; }
+.palette-results::-webkit-scrollbar-thumb { background: var(--border-2); border-radius: 3px; }
+.palette-item {
+  padding: 10px 18px;
+  cursor: pointer;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  border-bottom: 1px solid var(--border);
+  transition: background 0.1s;
+}
+.palette-item:hover, .palette-item.selected {
+  background: var(--surface-3);
+  border-left: 3px solid var(--accent);
+  padding-left: 15px;
+}
+.palette-item .pnum {
+  font-size: 12px;
+  color: var(--text-3);
+  min-width: 40px;
+  letter-spacing: 1px;
+}
+.palette-item .ptitle {
+  flex: 1;
+  font-size: 14px;
+  color: var(--text);
+}
+.palette-item .pstep {
+  font-size: 11px;
+  color: var(--accent-2);
+  letter-spacing: 1px;
+}
+.palette-empty {
+  padding: 30px;
+  text-align: center;
+  color: var(--text-3);
+  font-size: 14px;
+  letter-spacing: 2px;
+}
+
+/* ===== MENU DROPDOWN ===== */
+.dropdown {
+  position: relative;
+}
+.dropdown-menu {
+  position: absolute;
+  top: calc(100% + 6px);
+  right: 0;
+  background: var(--surface);
+  border: 1px solid var(--accent-2);
+  border-radius: 5px;
+  padding: 6px;
+  min-width: 200px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.6), 0 0 15px rgba(0,255,68,0.15);
+  z-index: 300;
+  display: none;
+}
+.dropdown-menu.open { display: block; }
+.dropdown-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 12px;
+  color: var(--text-2);
+  font-family: inherit;
+  font-size: 13px;
+  cursor: pointer;
+  border-radius: 3px;
+  background: transparent;
+  border: none;
+  width: 100%;
+  text-align: left;
+  letter-spacing: 0.5px;
+  transition: all 0.1s;
+}
+.dropdown-item:hover {
+  background: var(--surface-3);
+  color: var(--accent);
+}
+.dropdown-item .ic { color: var(--accent); min-width: 16px; text-align: center; }
+.dropdown-item.danger { color: var(--danger); }
+.dropdown-item.danger .ic { color: var(--danger); }
+.dropdown-item.danger:hover { background: rgba(255,68,68,0.1); color: var(--danger); }
+.dropdown-sep {
+  height: 1px;
+  background: var(--border);
+  margin: 4px 0;
+}
+
+/* ===== SHORTCUTS HELP ===== */
+.help-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.8);
+  z-index: 2100;
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+.help-overlay.open { display: flex; }
+.help-box {
+  background: var(--surface);
+  border: 1px solid var(--accent-2);
+  border-radius: 6px;
+  padding: 24px 28px;
+  max-width: 480px;
+  width: 90%;
+  box-shadow: 0 0 30px rgba(0,255,68,0.3);
+}
+.help-box h2 {
+  color: var(--accent);
+  font-size: 20px;
+  letter-spacing: 2px;
+  margin-bottom: 18px;
+  text-shadow: 0 0 6px var(--accent-glow);
+}
+.help-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+  border-bottom: 1px solid var(--border);
+  font-size: 14px;
+}
+.help-row:last-child { border-bottom: none; }
+.help-row .lbl { color: var(--text-2); }
+.help-row kbd {
+  background: var(--surface-2);
+  border: 1px solid var(--border-2);
+  border-bottom-width: 2px;
+  padding: 2px 8px;
+  border-radius: 3px;
+  color: var(--accent);
+  font-family: inherit;
+  font-size: 12px;
+  letter-spacing: 1px;
+}
+
+/* ===== TOAST ===== */
+.toast {
+  position: fixed;
+  bottom: 24px;
+  left: 50%;
+  transform: translate(-50%, 80px);
+  background: var(--surface);
+  border: 1px solid var(--accent);
+  color: var(--accent);
+  padding: 10px 18px;
+  border-radius: 4px;
+  font-size: 14px;
+  letter-spacing: 1px;
+  box-shadow: 0 0 20px rgba(0,255,68,0.4);
+  z-index: 3000;
+  opacity: 0;
+  transition: all 0.3s;
+  pointer-events: none;
+}
+.toast.show {
+  transform: translate(-50%, 0);
+  opacity: 1;
+}
+
+/* ===== EMPTY ===== */
+.empty {
+  padding: 60px 20px;
+  text-align: center;
+  color: var(--text-3);
+  letter-spacing: 2px;
+}
+.empty .big {
+  font-size: 40px;
+  color: var(--accent-2);
+  margin-bottom: 12px;
+  opacity: 0.5;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 900px) {
+  .sidebar { position: fixed; top: 0; left: 0; bottom: 0; z-index: 1000; }
+  .sidebar.collapsed { margin-left: calc(-1 * var(--sidebar-w)); }
+  .menu-toggle { display: flex; }
+  .stats-bar { padding: 8px 14px; gap: 12px; }
+  .stat .v { font-size: 15px; }
+  .point-row { padding: 10px 12px; }
+  .point-title { font-size: 15px; }
+  .point-desc { font-size: 12.5px; }
+  .content { padding: 14px; }
+  .pomodoro { bottom: 12px; right: 12px; padding: 8px 11px; }
+  .pomodoro .time { font-size: 20px; min-width: 60px; }
+}
+@media (max-width: 600px) {
+  .filter-chips { overflow-x: auto; max-width: 100%; }
+  .chip { font-size: 11px; padding: 4px 8px; }
+  .search-wrap .kbd-hint { display: none; }
+  .step-title { font-size: 15px; }
+  .step-num { font-size: 18px; min-width: 32px; }
+  .step-badge { font-size: 11px; }
+  .pomodoro .pomo-count { display: none; }
+}
+
+/* Smooth hide for kbd-hint inside search when typing handled via JS */
+.kbd-hint.hidden { display: none; }
+</style>
+</head>
+<body>
+
+<div class="app">
+  <!-- SIDEBAR -->
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-header">
+      <div class="logo">▣</div>
+      <div class="title">PREP TERMINAL</div>
+      <button class="collapse-btn" onclick="toggleSidebar()" title="Скрий">◀</button>
+    </div>
+    <div class="sidebar-stats">
+      <div class="streak-row">
+        <span class="fire">🔥</span>
+        <span class="streak-num" id="streakNum">0</span>
+        <span class="streak-label">ДНИ ПОРЕД</span>
+      </div>
+    </div>
+    <div class="sidebar-nav" id="sidebarNav"></div>
+  </aside>
+
+  <!-- MAIN -->
+  <main class="main">
+    <div class="topbar">
+      <button class="menu-toggle" onclick="toggleSidebar()">☰</button>
+      <div class="search-wrap">
+        <span class="icon">⌕</span>
+        <input type="text" id="searchInput" placeholder="Търси тема, теорема, бележка...">
+        <span class="kbd-hint" id="kbdHint">/</span>
+      </div>
+      <div class="filter-chips" id="filters">
+        <button class="chip active" data-filter="all">ВСИЧКИ</button>
+        <button class="chip" data-filter="todo">ЗА УЧЕНЕ</button>
+        <button class="chip" data-filter="done">ГОТОВИ</button>
+        <button class="chip" data-filter="fav">★</button>
+        <button class="chip" data-filter="hard">⚠ ТРУДНИ</button>
+      </div>
+      <div class="topbar-right">
+        <button class="icon-btn" onclick="openPalette()" title="Command Palette (Ctrl+K)">⌘</button>
+        <div class="dropdown">
+          <button class="icon-btn" id="menuBtn" title="Меню">⋯</button>
+          <div class="dropdown-menu" id="menuDropdown">
+            <button class="dropdown-item" onclick="expandAll();closeMenu()"><span class="ic">▾</span> Разгъни всички</button>
+            <button class="dropdown-item" onclick="collapseAll();closeMenu()"><span class="ic">▸</span> Сгъни всички</button>
+            <div class="dropdown-sep"></div>
+            <button class="dropdown-item" onclick="exportProgress();closeMenu()"><span class="ic">↓</span> Експорт (JSON)</button>
+            <button class="dropdown-item" onclick="document.getElementById('importFile').click();closeMenu()"><span class="ic">↑</span> Импорт (JSON)</button>
+            <input type="file" id="importFile" accept=".json" style="display:none" onchange="importProgress(event)">
+            <div class="dropdown-sep"></div>
+            <button class="dropdown-item" id="scanToggleItem" onclick="toggleScanlines();closeMenu()"><span class="ic">◫</span> Scanlines: ИЗКЛ</button>
+            <button class="dropdown-item" onclick="openHelp();closeMenu()"><span class="ic">?</span> Клавишни shortcut-и</button>
+            <div class="dropdown-sep"></div>
+            <button class="dropdown-item danger" onclick="resetAll();closeMenu()"><span class="ic">⌫</span> Нулирай всичко</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="stats-bar">
+      <div class="stat"><span class="v" id="statDone">0</span><span class="l">ГОТОВИ</span></div>
+      <div class="stat"><span class="v" id="statTotal">0</span><span class="l">ОБЩО</span></div>
+      <div class="stat"><span class="v" id="statPercent">0%</span><span class="l">НАПРЕДЪК</span></div>
+      <div class="stat"><span class="v" id="statPomos">0</span><span class="l">ПОМОДОРО</span></div>
+      <div class="progress-wrap"><div class="progress-fill" id="progressFill" style="width:0%"></div></div>
+    </div>
+
+    <div class="content" id="content">
+      <div id="stepsContainer"></div>
+    </div>
+  </main>
+</div>
+
+<!-- POMODORO -->
+<div class="pomodoro" id="pomodoro">
+  <div>
+    <div class="time" id="pomoTime">25:00</div>
+    <div class="mode" id="pomoMode">ФОКУС</div>
+  </div>
+  <button class="pomo-btn play" id="pomoPlay" onclick="togglePomodoro()" title="Старт/Пауза (t)">▶</button>
+  <button class="pomo-btn" onclick="resetPomodoro()" title="Рестарт">↺</button>
+  <div class="pomo-count">
+    <div id="pomoDone">0</div>
+    <div style="font-size:9px;letter-spacing:1.5px;">СЕСИИ</div>
+  </div>
+</div>
+
+<!-- COMMAND PALETTE -->
+<div class="palette-overlay" id="paletteOverlay" onclick="if(event.target===this)closePalette()">
+  <div class="palette">
+    <input type="text" class="palette-input" id="paletteInput" placeholder="Скок до точка... (Enter за избор, Esc за затваряне)" autocomplete="off">
+    <div class="palette-results" id="paletteResults"></div>
+  </div>
+</div>
+
+<!-- HELP -->
+<div class="help-overlay" id="helpOverlay" onclick="if(event.target===this)closeHelp()">
+  <div class="help-box">
+    <h2>⌨ КЛАВИШНИ SHORTCUT-И</h2>
+    <div class="help-row"><span class="lbl">Фокус върху търсене</span><kbd>/</kbd></div>
+    <div class="help-row"><span class="lbl">Command palette</span><kbd>Ctrl + K</kbd></div>
+    <div class="help-row"><span class="lbl">Следваща / предишна точка</span><kbd>J / K</kbd></div>
+    <div class="help-row"><span class="lbl">Маркирай текущата точка</span><kbd>Space</kbd></div>
+    <div class="help-row"><span class="lbl">Отвори бележки на текущата</span><kbd>N</kbd></div>
+    <div class="help-row"><span class="lbl">Помодоро старт/пауза</span><kbd>T</kbd></div>
+    <div class="help-row"><span class="lbl">Разгъни / сгъни всички</span><kbd>E / C</kbd></div>
+    <div class="help-row"><span class="lbl">Затвори / изчисти</span><kbd>Esc</kbd></div>
+    <div class="help-row"><span class="lbl">Това меню</span><kbd>?</kbd></div>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script>
+// ===== PDF HELPER =====
+function pdfUrl(path) {
+  return path.split('/').map(encodeURIComponent).join('/') + '.pdf';
+}
+
+// ===== DATA =====
+const STEPS = [
+{ id:1, icon:"◆", title:"ГЕОМЕТРИЯ – ОСНОВНИ ТЕОРЕМИ",
+  points:[
+    { id:"1.1", title:"Теорема на Менелай", desc:"За колинеарни точки върху страните на триъгълник", source:"OT_2012, Симедиани", pdf:"Материали_БГ/OT_2012", explanation:"Ако M, N, P лежат на BC, CA, AB на △ABC, то те са колинеарни ⇔ (BM/MC)·(CN/NA)·(AP/PB) = 1." },
+    { id:"1.2", title:"Теорема на Чева", desc:"Конкурентни чевиани; тригонометрична форма", source:"OT_2012, Симедиани", pdf:"Материали_БГ/OT_2012", explanation:"AM, BN, CP конкурентни ⇔ (BM/MC)·(CN/NA)·(AP/PB) = 1. Тригонометрична: sin∠BAM/sin∠MAC · ... = 1." },
+    { id:"1.3", title:"Теорема на Птолемей", desc:"Вписан четириъгълник; неравенство", source:"OT_2012, Геом. неравенства", pdf:"Материали_БГ/OT_2012", explanation:"Вписан ABCD: AC·BD = AB·CD + BC·AD. Неравенство: AC·BD ≤ AB·CD + BC·AD." },
+    { id:"1.4", title:"Степен на точка. Радикална ос", desc:"Инструмент за окръжности", source:"OT_2010, Приложения окръжност", pdf:"Материали_БГ/OT_2010", explanation:"Pow(P) = OP² − R². Радикална ос – точки с равни степени. Радикален център – пресечна на три оси." },
+    { id:"1.5", title:"Вписани ъгли, Талес, симетрали", desc:"Базови свойства", source:"BMC_2003-2006", pdf:"Материали_БГ/BMC_2003-2006", explanation:"Вписан = половината от централния. Талес: 90° на диаметър. Симетрала – равноотдалечени." },
+    { id:"1.6", title:"Синусова и косинусова теорема", desc:"Олимпийски приложения", source:"BMS_2012-2015", pdf:"Материали_БГ/BMS_2012-2015", explanation:"a/sinA = b/sinB = c/sinC = 2R. c² = a² + b² − 2ab·cosC." },
+    { id:"1.7", title:"Формули за лице. Херон", desc:"S = pr, S = abc/4R, Херон", source:"BMC_2003-2006", pdf:"Материали_БГ/BMC_2003-2006", explanation:"S = (1/2)ab·sinC = abc/(4R) = pr = √(p(p−a)(p−b)(p−c))." },
+    { id:"1.8", title:"Теорема на Ойлер (I,O)", desc:"IO² = R² − 2Rr; окръжност на 9 точки", source:"BMS_2012-2015 / OT_2012", pdf:"Материали_БГ/BMS_2012-2015", explanation:"IO² = R² − 2Rr. Ойлерова права: O, G, H колинеарни, OG:GH = 1:2." },
+    { id:"1.9", title:"Теорема на Микел", desc:"Обща точка на 4 окръжности", source:"OT_2010", pdf:"Материали_БГ/OT_2010", explanation:"Четири прави образуват 4 триъгълника → описаните им окръжности минават през една точка." },
+    { id:"1.10", title:"Вписана и външновписани окръжности", desc:"Допирни точки, дължини, ъгли", source:"OT_2010 / BMC_2003-2006", pdf:"Материали_БГ/OT_2010", explanation:"r = S/p, r_a = S/(p−a). Отсечките от върха до допирните точки са равни." }
+  ]
+},
+{ id:2, icon:"◆", title:"ГЕОМЕТРИЯ – НАПРЕДНАЛИ",
+  points:[
+    { id:"2.1", title:"Хармонично отношение", desc:"Пълна статия", source:"OT_2010, Хармонично отношение", pdf:"Материали_БГ/OT_2010", explanation:"(A,B;C,D) = −1. Приложения: поляри, симедиани, пълни четириъгълници." },
+    { id:"2.2", title:"Симедиани", desc:"Свойства, точка на Лемоан", source:"OT_2012, Симедиани", pdf:"Материали_БГ/OT_2012", explanation:"Изогонална на медианата. Пресичат се в точката на Лемоан." },
+    { id:"2.3", title:"Инверсия", desc:"Окръжности в прави", source:"OT_2012 / BMC_2003-2006", pdf:"Материали_БГ/OT_2012", explanation:"OX·OX' = r². Окръжност през O → права. Инструмент за окръжности и допирателни." },
+    { id:"2.4", title:"Спирално подобие", desc:"Ротация + хомотетия", source:"OT_2012 / BMS_2012-2015", pdf:"Материали_БГ/OT_2012", explanation:"Запазва ъгли. Приложения: подобни триъгълници, точка на Микел." },
+    { id:"2.5", title:"Полюси и поляри", desc:"За окръжност", source:"OT_2010, Хармонично отношение", pdf:"Материали_БГ/OT_2010", explanation:"Полярата на P – права през допирните точки на допирателните от P." },
+    { id:"2.6", title:"Теорема на Паскал", desc:"Вписан шестоъгълник", source:"OT_2012 / BMC_2003-2006", pdf:"Материали_БГ/OT_2012", explanation:"За вписан ABCDEF: AB∩DE, BC∩EF, CD∩FA са колинеарни." },
+    { id:"2.7", title:"Теорема на Брианшон", desc:"Описан шестоъгълник", source:"OT_2012", pdf:"Материали_БГ/OT_2012", explanation:"Главните диагонали AD, BE, CF са конкурентни." },
+    { id:"2.8", title:"Геометрични неравенства", desc:"Ердьош-Мордел, Птолемей", source:"OT_2012, Геом. неравенства", pdf:"Материали_БГ/OT_2012", explanation:"R + r ≥ 2r_a + 2r_b + 2r_c. Неравенство на Птолемей." }
+  ]
+},
+{ id:3, icon:"◆", title:"ТЕОРИЯ НА ЧИСЛАТА – ОСНОВИ",
+  points:[
+    { id:"3.1", title:"Делимост. НОД/НОК. Основна теорема", desc:"Базови понятия", source:"OT_2010, ТЧ (Бойваленков)", pdf:"Материали_БГ/OT_2010", explanation:"n > 1 → еднозначно разлагане на прости. НОД·НОК = a·b. Алгоритъм на Евклид.",
+      bonus:[{label:"NT_Training_01",pdf:"Бонус/lectures-navid/NT_Training_01"},{label:"NT_Training_02",pdf:"Бонус/lectures-navid/NT_Training_02"},{label:"Number_Theoretic_Flavor",pdf:"Бонус/lectures-navid/Number_Theoretic_Flavor"}] },
+    { id:"3.2", title:"Сравнения по модул", desc:"a ≡ b (mod m)", source:"OT_2010, ТЧ (Иванов)", pdf:"Материали_БГ/OT_2010", explanation:"a ≡ b ⇔ m | (a−b). Деление само ако НОД(делител, m) = 1." },
+    { id:"3.3", title:"Малка теорема на Ферма", desc:"aᵖ ≡ a (mod p)", source:"OT_2010, ТЧ (Иванов)", pdf:"Материали_БГ/OT_2010", explanation:"За просто p, НОД(a,p)=1: a^(p−1) ≡ 1. За всяко a: a^p ≡ a." },
+    { id:"3.4", title:"Теорема на Ойлер", desc:"a^φ(n) ≡ 1 (mod n)", source:"OT_2010, ТЧ (Иванов)", pdf:"Материали_БГ/OT_2010", explanation:"φ(n) – брой взаимно прости ≤ n. a^φ(n) ≡ 1 за НОД(a,n)=1." },
+    { id:"3.5", title:"Теорема на Уилсън", desc:"(p−1)! ≡ −1 (mod p)", source:"OT_2010, ТЧ (Бойваленков)", pdf:"Материали_БГ/OT_2010", explanation:"p просто ⇔ (p−1)! ≡ −1 (mod p)." },
+    { id:"3.6", title:"Китайска теорема", desc:"Система сравнения", source:"OT_2010, ТЧ (Иванов)", pdf:"Материали_БГ/OT_2010", explanation:"m_i взаимно прости → единствено решение по модул m₁·...·m_k." },
+    { id:"3.7", title:"Показател. Примитивни корени", desc:"Най-малко k с aᵏ ≡ 1", source:"OT_2010, ТЧ (Иванов)", pdf:"Материали_БГ/OT_2010", explanation:"Ред на a mod n. Примитивен корен – ред φ(n). Съществува за n = 1,2,4,p^k,2p^k." },
+    { id:"3.8", title:"Квадратични остатъци. Лежандър", desc:"(a/p) = ±1", source:"OT_2010, ТЧ (Иванов)", pdf:"Материали_БГ/OT_2010", explanation:"(a/p) = 1 ако x² ≡ a има решение. Квадратичен закон за реципрочност." },
+    { id:"3.9", title:"p-адични оценки. LTE", desc:"v_p(n); v_p(aⁿ − bⁿ)", source:"OT_2010, ТЧ (Бойваленков)", pdf:"Материали_БГ/OT_2010", explanation:"v_p(n) – степен на p в n. LTE формули за v_p(a^n − b^n) при p | (a−b)." },
+    { id:"3.10", title:"Уравнение на Пел", desc:"x² − Dy² = 1", source:"OT_2010, ТЧ (Бойваленков)", pdf:"Материали_БГ/OT_2010", explanation:"D – не точен квадрат. Безкрайно много решения от фундаменталното." }
+  ]
+},
+{ id:4, icon:"◆", title:"ТЕОРИЯ НА ЧИСЛАТА – НАПРЕДНАЛИ",
+  points:[
+    { id:"4.1", title:"Диофантови – линейни", desc:"ax + by = c", source:"OT_2010, ТЧ (Бойваленков)", pdf:"Материали_БГ/OT_2010", explanation:"Решение ⇔ НОД(a,b) | c. Общо: x = x₀ + (b/d)t, y = y₀ − (a/d)t." },
+    { id:"4.2", title:"Диофантови – квадратни", desc:"Питагорови тройки", source:"OT_2010, ТЧ (Бойваленков)", pdf:"Материали_БГ/OT_2010", explanation:"x = k(m²−n²), y = k(2mn), z = k(m²+n²)." },
+    { id:"4.3", title:"Диофантови – кубични", desc:"x³ + y³ = z³", source:"OT_2010, ТЧ (Бойваленков)", pdf:"Материали_БГ/OT_2010", explanation:"Безкраен спуск, сравнения, p-адични оценки, заключване между кубове." },
+    { id:"4.4", title:"Точни квадрати и степени", desc:"Заключване между квадрати", source:"OT_2010, Толкова много квадрати", pdf:"Материали_БГ/OT_2010", explanation:"n² < x < (n+1)² → x не е точен квадрат.",
+      bonus:[{label:"NT_Training_03",pdf:"Бонус/lectures-navid/NT_Training_03"},{label:"NT_Training_04",pdf:"Бонус/lectures-navid/NT_Training_04"},{label:"NT_Training_05",pdf:"Бонус/lectures-navid/NT_Training_05"}] },
+    { id:"4.5", title:"Прости числа", desc:"Безкрайност; формули", source:"OT_2010, ТЧ (Бойваленков)", pdf:"Материали_БГ/OT_2010", explanation:"Безкрайно много прости (Евклид). Мерсен: 2^p − 1. Ферма: 2^(2^n) + 1." },
+    { id:"4.6", title:"Суми на степени", desc:"1ᵏ + 2ᵏ + ... + nᵏ", source:"OT_2010, ТЧ (Бойваленков)", pdf:"Материали_БГ/OT_2010", explanation:"∑i = n(n+1)/2, ∑i² = n(n+1)(2n+1)/6, ∑i³ = (n(n+1)/2)²." },
+    { id:"4.7", title:"Мултипликативни функции", desc:"φ(n), τ(n), σ(n)", source:"OT_2010, ТЧ (Иванов)", pdf:"Материали_БГ/OT_2010", explanation:"Мултипликативни: f(mn) = f(m)f(n) за НОД(m,n)=1." },
+    { id:"4.8", title:"Факториели и C(n,k)", desc:"p-адични оценки; делимост", source:"OT_2010, ТЧ (Бойваленков)", pdf:"Материали_БГ/OT_2010", explanation:"v_p(n!) = ∑⌊n/p^k⌋ (Льожандър). C(n,k) = n!/(k!(n−k)!)." }
+  ]
+},
+{ id:5, icon:"◆", title:"АЛГЕБРА – ПОЛИНОМИ",
+  points:[
+    { id:"5.1", title:"Формули на Виет", desc:"Корени на полином", source:"OT_2012, Полиноми", pdf:"Материали_БГ/OT_2012", explanation:"x² + px + q: x₁+x₂ = −p, x₁x₂ = q. Обобщение за n-та степен." },
+    { id:"5.2", title:"Формули на Нютон", desc:"Суми на степени на корени", source:"OT_2012, Полиноми", pdf:"Материали_БГ/OT_2012", explanation:"Връзка между S_k = x₁^k + ... + x_n^k и елементарните симетрични." },
+    { id:"5.3", title:"Симетрични полиноми", desc:"Елементарни; основна теорема", source:"OT_2012, Полиноми", pdf:"Материали_БГ/OT_2012", explanation:"Всеки симетричен се изразява чрез σ₁, ..., σ_n." },
+    { id:"5.4", title:"Рационални корени. Гаус", desc:"Полиноми с цели коефициенти", source:"OT_2012, Делители на полиноми", pdf:"Материали_БГ/OT_2012", explanation:"p/q корен ⇒ p | свободен член, q | старши коефициент.",
+      bonus:[{label:"Polynomials_Problems_2015-16",pdf:"Бонус/lectures-navid/Polynomials_Problems_2015-16"}] },
+    { id:"5.5", title:"Неразложими полиноми", desc:"Над Z, Q, R, C", source:"OT_2012, Делители на полиноми", pdf:"Материали_БГ/OT_2012", explanation:"Над C – линейни. Над Q – Айзенщайн, редукция mod p." },
+    { id:"5.6", title:"Полиноми на Чебишев", desc:"Tₙ(cos θ) = cos nθ", source:"OT_2012, Полиноми", pdf:"Материали_БГ/OT_2012", explanation:"Минимална норма сред полиномите с даден старши коефициент." },
+    { id:"5.7", title:"Делимост на полиноми", desc:"Остатък; Хорнер; НОД", source:"OT_2012, Делители на полиноми", pdf:"Материали_БГ/OT_2012", explanation:"Остатък от P(x)/(x−a) е P(a). Схема на Хорнер." },
+    { id:"5.8", title:"Интерполация на Лагранж", desc:"Полином през n точки", source:"OT_2012, Полиноми", pdf:"Материали_БГ/OT_2012", explanation:"P(x) = ∑ y_i · ∏(x−x_j)/(x_i−x_j). Единствен от степен ≤ n−1." }
+  ]
+},
+{ id:6, icon:"◆", title:"АЛГЕБРА – НЕРАВЕНСТВА",
+  points:[
+    { id:"6.1", title:"САСГ (AM-GM)", desc:"Аритметично ≥ геометрично", source:"OT_2012, Неравенства", pdf:"Материали_БГ/OT_2012", explanation:"(a₁+...+a_n)/n ≥ ⁿ√(a₁...a_n), равенство ⇔ всички равни." },
+    { id:"6.2", title:"САСХ (AM-HM)", desc:"Аритметично ≥ хармонично", source:"OT_2012, Неравенства", pdf:"Материали_БГ/OT_2012", explanation:"(∑a_i)/n ≥ n/(∑1/a_i)." },
+    { id:"6.3", title:"САСК (AM-QM)", desc:"Аритметично ≥ квадратично", source:"OT_2012, Неравенства", pdf:"Материали_БГ/OT_2012", explanation:"Верига: QM ≥ AM ≥ GM ≥ HM." },
+    { id:"6.4", title:"Коши-Буняковски", desc:"Всички форми", source:"OT_2012, Неравенства", pdf:"Материали_БГ/OT_2012", explanation:"(∑a_i b_i)² ≤ (∑a_i²)(∑b_i²). Инженерна: (∑a_i)² ≤ n∑a_i²." },
+    { id:"6.5", title:"Неравенство на Йенсен", desc:"Изпъкнали функции", source:"OT_2012, Неравенства", pdf:"Материали_БГ/OT_2012", explanation:"f((x₁+...+x_n)/n) ≤ (f(x₁)+...+f(x_n))/n за изпъкнала f." },
+    { id:"6.6", title:"Неравенство на Чебишев", desc:"Монотонни редици", source:"OT_2012, Неравенства", pdf:"Материали_БГ/OT_2012", explanation:"a₁ ≤ ... ≤ a_n, b₁ ≤ ... ≤ b_n ⇒ n∑a_i b_i ≥ (∑a_i)(∑b_i)." },
+    { id:"6.7", title:"Rearrangement", desc:"Пренареждане", source:"OT_2012, Неравенства", pdf:"Материали_БГ/OT_2012", explanation:"∑a_i b_i максимална при еднакво подредени." },
+    { id:"6.8", title:"Неравенство на Мюрхед", desc:"Симетрични суми", source:"OT_2012, Неравенства", pdf:"Материали_БГ/OT_2012", explanation:"(a) majorizes (b) ⇒ ∑x^a ≥ ∑x^b." },
+    { id:"6.9", title:"Неравенство на Шур", desc:"x³+y³+z³+3xyz ≥ ∑x²y", source:"OT_2012, Неравенства", pdf:"Материали_БГ/OT_2012", explanation:"Обобщение: x^r(x−y)(x−z) + ... ≥ 0." },
+    { id:"6.10", title:"Бернули, Хьолдер, Минковски", desc:"Класически неравенства", source:"OT_2012, Неравенства", pdf:"Материали_БГ/OT_2012", explanation:"Бернули: (1+x)^n ≥ 1+nx. Хьолдер, Минковски." }
+  ]
+},
+{ id:7, icon:"◆", title:"ФУНКЦИОНАЛНИ УРАВНЕНИЯ И РЕДИЦИ",
+  points:[
+    { id:"7.1", title:"Уравнение на Коши", desc:"f(x+y) = f(x) + f(y)", source:"OT_2010, Функц. уравнения", pdf:"Материали_БГ/OT_2010", explanation:"С монотонност/ограниченост: f(x) = cx.",
+      bonus:[{label:"FE_Lecture_01",pdf:"Бонус/lectures-navid/Functional_Equations_Lecture_01"},{label:"FE_Lecture_02",pdf:"Бонус/lectures-navid/Functional_Equations_Lecture_02"},{label:"FE_Lecture_03",pdf:"Бонус/lectures-navid/Functional_Equations_Lecture_03"},{label:"f_eq_nt_pres",pdf:"Бонус/lectures-peter/f_eq_nt_pres"},{label:"f_eq_nt_pres-2",pdf:"Бонус/lectures-peter/f_eq_nt_pres-2"}] },
+    { id:"7.2", title:"ФУ с ограниченост", desc:"Ограниченост върху интервал", source:"OT_2010, Функц. уравнения", pdf:"Материали_БГ/OT_2010", explanation:"Адитивна + ограничена → линейна." },
+    { id:"7.3", title:"ФУ с монотонност", desc:"Монотонност + адитивност", source:"OT_2010, Функц. уравнения", pdf:"Материали_БГ/OT_2010", explanation:"Адитивна + монотонна → f(x) = cx." },
+    { id:"7.4", title:"ФУ с инволюция", desc:"f(f(x)) = x", source:"OT_2010, Функц. уравнения", pdf:"Материали_БГ/OT_2010", explanation:"Инволюция – обратна на себе си. Биективност, фиксирани точки." },
+    { id:"7.5", title:"Общи техники за ФУ", desc:"Заместване, инективност", source:"OT_2010, Функц. уравнения", pdf:"Материали_БГ/OT_2010", explanation:"Конкретни стойности, инективност, сюрективност, симетрия, индукция." },
+    { id:"7.6", title:"Линейни рекурентни редици", desc:"Характеристично уравнение", source:"BMS_2012-2015", pdf:"Материали_БГ/BMS_2012-2015", explanation:"r^k = c₁r^{k−1} + ... + c_k. Решение: линейна комбинация от r^n." },
+    { id:"7.7", title:"Нелинейни рекурентни редици", desc:"aₙ₊₁ = f(aₙ)", source:"BMS_2012-2015", pdf:"Материали_БГ/BMS_2012-2015", explanation:"Инвариант, монотонност, ограниченост, сходимост, периодичност." },
+    { id:"7.8", title:"Сходимост и граници", desc:"Монотонност + ограниченост", source:"BMS_2012-2015", pdf:"Материали_БГ/BMS_2012-2015", explanation:"Теорема на Вайерщрас. Граница чрез уравнение." }
+  ]
+},
+{ id:8, icon:"◆", title:"КОМБИНАТОРИКА – ОСНОВИ",
+  points:[
+    { id:"8.1", title:"Принцип на Дирихле", desc:"Всички форми", source:"OT_2010, Комб. и графи", pdf:"Материали_БГ/OT_2010", explanation:"n+1 обекта в n кутии ⇒ ≥ 2 в една. Обобщение: kn+1 в n ⇒ ≥ k+1." },
+    { id:"8.2", title:"Включване и изключване", desc:"|A∪B∪C| формула", source:"OT_2010, Комб. тъждества", pdf:"Материали_БГ/OT_2010", explanation:"|A∪B∪C| = |A|+|B|+|C| − |A∩B|−|B∩C|−|C∩A| + |A∩B∩C|." },
+    { id:"8.3", title:"Двойно броене", desc:"Броене по два начина", source:"OT_2010, Комб. тъждества", pdf:"Материали_БГ/OT_2010", explanation:"Броим едно и също множество по два начина и приравняваме." },
+    { id:"8.4", title:"Комбинаторни тъждества", desc:"Биномни коефициенти", source:"OT_2010, Комб. тъждества", pdf:"Материали_БГ/OT_2010", explanation:"C(n,k) = C(n−1,k−1) + C(n−1,k). ∑C(n,k) = 2^n. Вандермонд.",
+      bonus:[{label:"Enumerative_Problems",pdf:"Бонус/lectures-navid/Enumerative_Problems_Final"}] },
+    { id:"8.5", title:"Биномни коефициенти", desc:"Свойства", source:"OT_2010, Комб. тъждества", pdf:"Материали_БГ/OT_2010", explanation:"C(n,k) = n!/(k!(n−k)!). (1+x)^n = ∑C(n,k)x^k." },
+    { id:"8.6", title:"Пермутации и комбинации", desc:"С/без повторение", source:"OT_2010, Комб. тъждества", pdf:"Материали_БГ/OT_2010", explanation:"Пермутации: n! / n^k. Комбинации: C(n,k) / C(n+k−1,k)." },
+    { id:"8.7", title:"Мултимножества", desc:"Комбинации с повторение", source:"OT_2010, Комб. тъждества", pdf:"Материали_БГ/OT_2010", explanation:"Брой начини k от n типа с повторение: C(n+k−1,k)." },
+    { id:"8.8", title:"Рекурентни връзки", desc:"Фибоначи, Каталан", source:"OT_2010, Релации", pdf:"Материали_БГ/OT_2010", explanation:"Фибоначи: F_{n+2} = F_{n+1} + F_n. Каталан: C_n = C(2n,n)/(n+1)." },
+    { id:"8.9", title:"Производящи функции", desc:"Основи", source:"OT_2012, Комбинаторика", pdf:"Материали_БГ/OT_2012", explanation:"A(x) = ∑a_n x^n. За рекурентни връзки и тъждества." },
+    { id:"8.10", title:"Индукция в комбинаториката", desc:"Обикновена, силна, двойна", source:"OT_2010, Релации", pdf:"Материали_БГ/OT_2010", explanation:"P(1) + P(k)→P(k+1). Силна: P(1..k)→P(k+1). Двойна: по 2 параметъра.",
+      bonus:[{label:"Induction Problems",pdf:"Бонус/lectures-navid/Induction Problems"},{label:"Induction Problems-2",pdf:"Бонус/lectures-navid/Induction Problems-2"}] }
+  ]
+},
+{ id:9, icon:"◆", title:"КОМБИНАТОРИКА – ГРАФИ И ИГРИ",
+  points:[
+    { id:"9.1", title:"Основи на графите", desc:"Върхове, ребра, степени", source:"OT_2010, Комб. и графи", pdf:"Материали_БГ/OT_2010", explanation:"G = (V,E). Лема за ръкостискане: ∑deg(v) = 2|E|." },
+    { id:"9.2", title:"Дървета", desc:"Свързани без цикли", source:"OT_2010, Комб. и графи", pdf:"Материали_БГ/OT_2010", explanation:"|E| = |V| − 1. Формула на Кейли: n^{n−2}." },
+    { id:"9.3", title:"Ойлерови и Хамилтонови пътища", desc:"Условия", source:"OT_2010, Комб. и графи", pdf:"Материали_БГ/OT_2010", explanation:"Ойлеров: 0 или 2 върха с нечетна степен. Хамилтонов: NP-пълен." },
+    { id:"9.4", title:"Клики и независими множества", desc:"Максимални клики", source:"OT_2010, Комб. и графи", pdf:"Материали_БГ/OT_2010", explanation:"α(G) = ω(Ḡ)." },
+    { id:"9.5", title:"Теорема на Туран", desc:"Макс. ребра без K_{r+1}", source:"OT_2010, Релации", pdf:"Материали_БГ/OT_2010", explanation:"Максимум (1 − 1/r)n²/2. Екстремален: пълен r-делен." },
+    { id:"9.6", title:"Теорема на Рамзи", desc:"R(3,3) = 6", source:"OT_2010, Релации", pdf:"Материали_БГ/OT_2010", explanation:"R(s,t) – най-малкото n с клика s или независимо t." },
+    { id:"9.7", title:"Оцветявания на графи", desc:"Хроматично число", source:"OT_2010, Комб. и графи", pdf:"Материали_БГ/OT_2010", explanation:"χ(G) – мин. брой цветове с различни за съседни." },
+    { id:"9.8", title:"Игри – инварианти/моноварианти", desc:"Печеливши стратегии", source:"BMS_2012-2015", pdf:"Материали_БГ/BMS_2012-2015", explanation:"Инвариант – не се променя. Моновариант – монотонно." },
+    { id:"9.9", title:"Игри – симетрия", desc:"Стратегия на копиране", source:"BMS_2012-2015", pdf:"Материали_БГ/BMS_2012-2015", explanation:"Симетрична игра → първият печели с mirror strategy." },
+    { id:"9.10", title:"Игри – печеливши стратегии", desc:"Позиционни игри", source:"BMS_2012-2015", pdf:"Материали_БГ/BMS_2012-2015", explanation:"P-позиции: всички ходове водят до N. N: съществува ход до P." }
+  ]
+},
+{ id:10, icon:"◆", title:"СМЕСЕНИ – НАЦИОНАЛНИ КРЪГОВЕ",
+  points:[
+    { id:"10.1", title:"НОМ национален кръг 2012", desc:"11. клас, 6 задачи", source:"BMS_2012-2015", pdf:"Материали_БГ/BMS_2012-2015", explanation:"ТЧ/редици, Комбинаторика, Игри/полиноми, Комбинаторика, Алгебра/неравенства, Геометрия." },
+    { id:"10.2", title:"НОМ национален кръг 2013", desc:"11. клас, 6 задачи", source:"BMS_2012-2015", pdf:"Материали_БГ/BMS_2012-2015", explanation:"ТЧ, ФУ, Комбинаторика/геометрия, Тригонометрия/неравенства, Геометрия, ТЧ." },
+    { id:"10.3", title:"НОМ национален кръг 2014", desc:"11. клас, 6 задачи", source:"BMS_2012-2015", pdf:"Материали_БГ/BMS_2012-2015", explanation:"Геометрия, Комбинаторика, Алгебра/геометрия, ТЧ, ФУ, Геометрия." },
+    { id:"10.4", title:"НОМ национален кръг 2015", desc:"11. клас, 6 задачи", source:"BMS_2012-2015", pdf:"Материали_БГ/BMS_2012-2015", explanation:"Геометрия, Комбинаторика, ТЧ/редици, ФУ/неравенства, Геометрия, Комбинаторика." },
+    { id:"10.5", title:"Контролни за БОМ 2012–2015", desc:"6 задачи × 4 години", source:"BMS_2012-2015", pdf:"Материали_БГ/BMS_2012-2015", explanation:"Ниво близко до националния кръг." },
+    { id:"10.6", title:"Контролни за МОМ 2012–2015", desc:"6 задачи × 4 години", source:"BMS_2012-2015", pdf:"Материали_БГ/BMS_2012-2015", explanation:"Най-трудните. Използвай за симулации.",
+      bonus:[{label:"Exam_01_Problems",pdf:"Бонус/lectures-navid/Exam_01_Problems"},{label:"Exam_02_Problems",pdf:"Бонус/lectures-navid/Exam_02_Problems"}] },
+    { id:"10.7", title:"NOM_2013 – избрани", desc:"Русия, Китай, САЩ, Иран", source:"NOM_2013", pdf:"Материали_БГ/NOM_2013", explanation:"Избери 2–3 държави. Фокус върху геометрия и комбинаторика." },
+    { id:"10.8", title:"NOM_2014 – избрани", desc:"Русия, Китай, САЩ, Иран", source:"NOM_2014", pdf:"Материали_БГ/NOM_2014", explanation:"Сравни стиловете. Записвай нови техники." },
+    { id:"10.9", title:"NOM_2015-2016 – избрани", desc:"Русия, Китай, САЩ, Иран", source:"NOM_2015-2016", pdf:"Материали_БГ/NOM_2015-2016", explanation:"Най-новите. Симулирай състезателни условия." },
+    { id:"10.10", title:"BMC_2003-2006 – избрани", desc:"Национален кръг, контролни", source:"BMC_2003-2006", pdf:"Материали_БГ/BMC_2003-2006", explanation:"Класически задачи. Сравни с решенията." }
+  ]
+},
+{ id:11, icon:"◆", title:"БОНУС – ЛЕКЦИИ И ТЕМИ",
+  points:[
+    { id:"11.1", title:"Лекции на Петър – PAMP 2019", desc:"4 лекции – общ преглед", source:"Бонус/lectures-peter", pdf:"Бонус/lectures-peter/lekcia1-pamp2019", explanation:"Общи лекции – подходящи за преговор.",
+      bonus:[{label:"lekcia1",pdf:"Бонус/lectures-peter/lekcia1-pamp2019"},{label:"lekcia2",pdf:"Бонус/lectures-peter/lekcia2-pamp2019"},{label:"lekcia3",pdf:"Бонус/lectures-peter/lekcia3-pamp2019"},{label:"lekcia4",pdf:"Бонус/lectures-peter/lekcia4-pamp2019"},{label:"qrl_pres-1",pdf:"Бонус/lectures-peter/qrl_pres-1"}] },
+    { id:"11.2", title:"Тема на седмицата 1–4", desc:"Тема + решения", source:"Бонус/tema-na-sedmicata", pdf:"Бонус/tema-na-sedmicata/week1-theme", explanation:"Седмични теми с решения.",
+      bonus:[{label:"week1-theme",pdf:"Бонус/tema-na-sedmicata/week1-theme"},{label:"week1-sol",pdf:"Бонус/tema-na-sedmicata/week1-solutions"},{label:"week2-theme",pdf:"Бонус/tema-na-sedmicata/week2-theme"},{label:"week2-sol",pdf:"Бонус/tema-na-sedmicata/week2-solutions"},{label:"week3-theme",pdf:"Бонус/tema-na-sedmicata/week3-theme"},{label:"week3-sol",pdf:"Бонус/tema-na-sedmicata/week3-solutions"},{label:"week4-theme",pdf:"Бонус/tema-na-sedmicata/week4-theme"},{label:"week4-sol",pdf:"Бонус/tema-na-sedmicata/week4-solutions"}] },
+    { id:"11.3", title:"Теми с лекции (Tema 1–6)", desc:"Различни автори", source:"Теми с Лекции", pdf:"Теми с Лекции/Tema1-MarinHristov", explanation:"Разнообразни теми от български олимпийци.",
+      bonus:[{label:"Tema1-MarinHristov",pdf:"Теми с Лекции/Tema1-MarinHristov"},{label:"Tema2-BorislavKirilov",pdf:"Теми с Лекции/Tema2-BorislavKirilov"},{label:"Tema2-presentation",pdf:"Теми с Лекции/Tema2-presentation"},{label:"Tema2-solutions",pdf:"Теми с Лекции/Tema2-solutions"},{label:"Tema3-PetkoLazarov",pdf:"Теми с Лекции/Tema3-PetkoLazarov"},{label:"Tema4-VeselinMarkovich",pdf:"Теми с Лекции/Tema4-VeselinMarkovich"},{label:"Tema5-BozhidarDimitrov",pdf:"Теми с Лекции/Tema5-BozhidarDimitrov"},{label:"Tema6-Ilias-Bilyana",pdf:"Теми с Лекции/Tema6-Ilias-Bilyana"}] },
+    { id:"11.4", title:"Допълнителни сборници", desc:"BMO_1984-2006, BMS_2003-2005", source:"Материали_БГ", pdf:"Материали_БГ/BMO_1984-2006", explanation:"Класически задачи за разнообразие.",
+      bonus:[{label:"BMO_1984-2006",pdf:"Материали_БГ/BMO_1984-2006"},{label:"BMS_2003-2005",pdf:"Материали_БГ/BMS_2003-2005"}] }
+  ]
+}
+];
+
+// ===== STATE =====
+const STORE_KEY = 'olympiad_v2';
+const LEGACY_KEY = 'olympiad_progress';
+
+function defaultState() {
+  return {
+    progress: {}, // { [id]: { done, fav, diff, notes, pomodoros } }
+    ui: { filter:'all', collapsed: {}, scanlines:false },
+    streak: { count:0, lastDate:null },
+    pomodoroSessions: 0,
+  };
+}
+
+let state = loadState();
+let searchQuery = '';
+let currentIndex = -1; // index into flat points array
+
+function loadState() {
+  try {
+    const raw = localStorage.getItem(STORE_KEY);
+    if (raw) {
+      const s = JSON.parse(raw);
+      s.progress = s.progress || {};
+      s.ui = s.ui || { filter:'all', collapsed:{}, scanlines:false };
+      s.streak = s.streak || { count:0, lastDate:null };
+      s.pomodoroSessions = s.pomodoroSessions || 0;
+      return s;
+    }
+  } catch(e) {}
+  // Migrate legacy
+  const legacy = localStorage.getItem(LEGACY_KEY);
+  const s = defaultState();
+  if (legacy) {
+    try {
+      const old = JSON.parse(legacy);
+      Object.keys(old).forEach(id => {
+        if (old[id]) s.progress[id] = { done:true, fav:false, diff:null, notes:'' };
+      });
+    } catch(e) {}
+  }
+  return s;
+}
+
+function saveState() {
+  try { localStorage.setItem(STORE_KEY, JSON.stringify(state)); } catch(e) {}
+}
+
+function getPoint(id) {
+  for (const s of STEPS) for (const p of s.points) if (p.id === id) return p;
+  return null;
+}
+function getPointMeta(id) {
+  if (!state.progress[id]) state.progress[id] = { done:false, fav:false, diff:null, notes:'' };
+  return state.progress[id];
+}
+function getFlatPoints() {
+  const arr = [];
+  for (const s of STEPS) for (const p of s.points) arr.push({ step:s, point:p });
+  return arr;
+}
+
+// ===== INIT =====
+function init() {
+  if (state.ui.scanlines) document.body.classList.add('scanlines');
+  document.getElementById('scanToggleItem').innerHTML = '<span class="ic">◫</span> Scanlines: ' + (state.ui.scanlines ? 'ВКЛ' : 'ИЗКЛ');
+  renderSidebar();
+  renderContent();
+  updateStats();
+  renderStreak();
+  setupEvents();
+}
+
+// ===== SIDEBAR =====
+function renderSidebar() {
+  const nav = document.getElementById('sidebarNav');
+  nav.innerHTML = '';
+  STEPS.forEach(step => {
+    const done = step.points.filter(p => getPointMeta(p.id).done).length;
+    const pct = Math.round(done / step.points.length * 100);
+    const btn = document.createElement('button');
+    btn.className = 'nav-step';
+    btn.dataset.step = step.id;
+    btn.innerHTML = `
+      <span class="num">${String(step.id).padStart(2,'0')}</span>
+      <span class="label">${step.title}</span>
+      <span class="ring" style="--pct:${pct}%"><span>${done}/${step.points.length}</span></span>
+    `;
+    btn.addEventListener('click', () => {
+      scrollToStep(step.id);
+      if (window.innerWidth <= 900) document.getElementById('sidebar').classList.add('collapsed');
+    });
+    nav.appendChild(btn);
+  });
+}
+
+function updateSidebarRings() {
+  document.querySelectorAll('.nav-step').forEach(btn => {
+    const stepId = parseInt(btn.dataset.step);
+    const step = STEPS.find(s => s.id === stepId);
+    if (!step) return;
+    const done = step.points.filter(p => getPointMeta(p.id).done).length;
+    const pct = Math.round(done / step.points.length * 100);
+    btn.querySelector('.ring').style.setProperty('--pct', pct + '%');
+    btn.querySelector('.ring span').textContent = done + '/' + step.points.length;
+  });
+}
+
+// ===== CONTENT =====
+function renderContent() {
+  const container = document.getElementById('stepsContainer');
+  container.innerHTML = '';
+
+  const flat = getFlatPoints();
+  const filter = state.ui.filter;
+  let visible = 0;
+
+  STEPS.forEach(step => {
+    const pts = step.points.filter(p => matchFilter(p) && matchSearch(p));
+    if (pts.length === 0 && (searchQuery || filter !== 'all')) return;
+    visible++;
+
+    const sec = document.createElement('div');
+    sec.className = 'step' + (state.ui.collapsed[step.id] ? ' collapsed' : '');
+    sec.id = 'step-' + step.id;
+
+    const total = step.points.length;
+    const done = step.points.filter(p => getPointMeta(p.id).done).length;
+    const pct = Math.round(done / total * 100);
+
+    sec.innerHTML = `
+      <div class="step-header" onclick="toggleStep(${step.id}, event)">
+        <span class="step-toggle">▾</span>
+        <span class="step-num">${String(step.id).padStart(2,'0')}</span>
+        <span class="step-title">${step.title}</span>
+        <span class="step-badge ${done===total?'done':''}">${done}/${total} · ${pct}%</span>
+        <button class="step-reset" onclick="resetStep(${step.id}, event)" title="Нулирай стъпката">⌫</button>
+      </div>
+      <div class="step-body"></div>
+    `;
+
+    const body = sec.querySelector('.step-body');
+    pts.forEach(p => body.appendChild(buildPointEl(p, flat)));
+
+    container.appendChild(sec);
+  });
+
+  if (visible === 0) {
+    container.innerHTML = `<div class="empty"><div class="big">⌕</div><div>НЯМА РЕЗУЛТАТИ</div><div style="margin-top:10px;font-size:13px;">Промени филтъра или търсенето</div></div>`;
+  }
+}
+
+function buildPointEl(p, flat) {
+  const meta = getPointMeta(p.id);
+  const idx = flat.findIndex(x => x.point.id === p.id);
+  const el = document.createElement('div');
+  el.className = 'point';
+  if (meta.done) el.classList.add('done');
+  if (meta.fav) el.classList.add('fav');
+  el.id = 'point-' + p.id.replace('.', '-');
+  el.dataset.pid = p.id;
+  el.dataset.idx = idx;
+
+  const pdfBtn = p.pdf ? `<a href="${pdfUrl(p.pdf)}" target="_blank" class="pdf-btn" onclick="event.stopPropagation()">▸ PDF</a>` : '';
+  const notesBadge = meta.notes ? `<span class="notes-badge">✎</span>` : '';
+
+  let bonusHtml = '';
+  if (p.bonus && p.bonus.length) {
+    bonusHtml = `<div class="bonus-row"><span class="section-label" style="margin-right:8px;">ОЩЕ:</span>${p.bonus.map(b => `<a href="${pdfUrl(b.pdf)}" target="_blank" class="pdf-btn bonus" onclick="event.stopPropagation()">▸ ${b.label}</a>`).join('')}</div>`;
+  }
+
+  el.innerHTML = `
+    <div class="point-row">
+      <button class="point-check ${meta.done?'checked':''}" onclick="toggleDone('${p.id}', event)">${meta.done?'✓':''}</button>
+      <div class="point-main">
+        <div class="point-num">ТОЧКА ${p.id}${notesBadge}</div>
+        <div class="point-title">${p.title}</div>
+        <div class="point-desc">${p.desc}</div>
+        <div class="point-tags">
+          <span class="tag src">${p.source}</span>
+          ${pdfBtn}
+        </div>
+      </div>
+      <div class="point-actions">
+        <div class="diff-group">
+          <button class="diff-btn easy ${meta.diff==='easy'?'active':''}" onclick="setDiff('${p.id}','easy',event)" title="Лесно">E</button>
+          <button class="diff-btn med ${meta.diff==='med'?'active':''}" onclick="setDiff('${p.id}','med',event)" title="Средно">M</button>
+          <button class="diff-btn hard ${meta.diff==='hard'?'active':''}" onclick="setDiff('${p.id}','hard',event)" title="Трудно">H</button>
+        </div>
+        <button class="mini-btn ${meta.fav?'active':''}" onclick="toggleFav('${p.id}', event)" title="Маркирай за преговор">${meta.fav?'★':'☆'}</button>
+        <button class="mini-btn" onclick="toggleExpand('${p.id}', event)" title="Разгъни">▾</button>
+      </div>
+    </div>
+    <div class="point-expand">
+      <div class="point-expand-inner">
+        <div class="section-label">▸ Обяснение</div>
+        <div class="explanation">${p.explanation}</div>
+        <div class="section-label">▸ Лични бележки</div>
+        <textarea class="notes-area" placeholder="Напиши свои идеи, лема, нещо, което си научил..." oninput="saveNotes('${p.id}', this.value)" onclick="event.stopPropagation()">${escapeHtml(meta.notes||'')}</textarea>
+        ${bonusHtml}
+      </div>
+    </div>
+  `;
+
+  return el;
+}
+
+function escapeHtml(s) {
+  return String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+}
+
+function matchFilter(p) {
+  const meta = getPointMeta(p.id);
+  const f = state.ui.filter;
+  if (f === 'all') return true;
+  if (f === 'done') return meta.done;
+  if (f === 'todo') return !meta.done;
+  if (f === 'fav') return meta.fav;
+  if (f === 'hard') return meta.diff === 'hard';
+  return true;
+}
+
+function matchSearch(p) {
+  if (!searchQuery) return true;
+  const q = searchQuery.toLowerCase();
+  const meta = getPointMeta(p.id);
+  return p.title.toLowerCase().includes(q) ||
+         p.desc.toLowerCase().includes(q) ||
+         p.source.toLowerCase().includes(q) ||
+         p.explanation.toLowerCase().includes(q) ||
+         (meta.notes||'').toLowerCase().includes(q) ||
+         p.id.includes(q);
+}
+
+// ===== ACTIONS =====
+function toggleDone(id, e) {
+  if (e) e.stopPropagation();
+  const meta = getPointMeta(id);
+  meta.done = !meta.done;
+  if (meta.done) checkStreak();
+  saveState();
+  updatePointEl(id);
+  updateStats();
+  updateSidebarRings();
+  updateStepBadges();
+  if (meta.done) toast('✓ Готово: ' + id);
+}
+
+function toggleFav(id, e) {
+  e.stopPropagation();
+  const meta = getPointMeta(id);
+  meta.fav = !meta.fav;
+  saveState();
+  updatePointEl(id);
+  if (meta.fav) toast('★ Маркирано за преговор');
+}
+
+function setDiff(id, diff, e) {
+  e.stopPropagation();
+  const meta = getPointMeta(id);
+  meta.diff = meta.diff === diff ? null : diff;
+  saveState();
+  updatePointEl(id);
+}
+
+function saveNotes(id, val) {
+  const meta = getPointMeta(id);
+  meta.notes = val;
+  saveState();
+  updatePointEl(id, true);
+}
+
+function toggleExpand(id, e) {
+  if (e) e.stopPropagation();
+  const el = document.querySelector(`[data-pid="${id}"]`);
+  if (el) el.classList.toggle('expanded');
+}
+
+function updatePointEl(id, onlyNotesBadge) {
+  const el = document.querySelector(`[data-pid="${id}"]`);
+  if (!el) return;
+  const meta = getPointMeta(id);
+  if (!onlyNotesBadge) {
+    el.classList.toggle('done', meta.done);
+    el.classList.toggle('fav', meta.fav);
+    const chk = el.querySelector('.point-check');
+    chk.classList.toggle('checked', meta.done);
+    chk.textContent = meta.done ? '✓' : '';
+    el.querySelectorAll('.diff-btn').forEach(b => {
+      const isActive = b.classList.contains(meta.diff);
+      b.classList.toggle('active', isActive);
+    });
+    const favBtn = el.querySelector('.mini-btn');
+    if (favBtn) { favBtn.classList.toggle('active', meta.fav); favBtn.textContent = meta.fav ? '★' : '☆'; }
+  }
+  // Notes badge
+  const num = el.querySelector('.point-num');
+  const existing = num.querySelector('.notes-badge');
+  if (meta.notes && !existing) num.insertAdjacentHTML('beforeend', ' <span class="notes-badge">✎</span>');
+  else if (!meta.notes && existing) existing.remove();
+}
+
+function toggleStep(stepId, e) {
+  if (e && e.target.closest('.step-reset')) return;
+  state.ui.collapsed[stepId] = !state.ui.collapsed[stepId];
+  saveState();
+  const sec = document.getElementById('step-' + stepId);
+  if (sec) sec.classList.toggle('collapsed', state.ui.collapsed[stepId]);
+}
+
+function resetStep(stepId, e) {
+  e.stopPropagation();
+  if (!confirm('Нулирай всички точки в тази стъпка?')) return;
+  const step = STEPS.find(s => s.id === stepId);
+  step.points.forEach(p => {
+    if (state.progress[p.id]) {
+      state.progress[p.id].done = false;
+      state.progress[p.id].fav = false;
+      state.progress[p.id].diff = null;
+    }
+  });
+  saveState();
+  renderContent();
+  renderSidebar();
+  updateStats();
+  toast('⌫ Стъпката е нулирана');
+}
+
+function expandAll() {
+  STEPS.forEach(s => state.ui.collapsed[s.id] = false);
+  saveState();
+  document.querySelectorAll('.step').forEach(el => el.classList.remove('collapsed'));
+  document.querySelectorAll('.point').forEach(el => el.classList.add('expanded'));
+}
+function collapseAll() {
+  STEPS.forEach(s => state.ui.collapsed[s.id] = true);
+  saveState();
+  document.querySelectorAll('.step').forEach(el => el.classList.add('collapsed'));
+  document.querySelectorAll('.point').forEach(el => el.classList.remove('expanded'));
+}
+
+// ===== STATS =====
+function updateStats() {
+  let total = 0, done = 0;
+  STEPS.forEach(s => s.points.forEach(p => { total++; if (getPointMeta(p.id).done) done++; }));
+  const pct = total ? Math.round(done / total * 100) : 0;
+  document.getElementById('statDone').textContent = done;
+  document.getElementById('statTotal').textContent = total;
+  document.getElementById('statPercent').textContent = pct + '%';
+  document.getElementById('statPomos').textContent = state.pomodoroSessions;
+  document.getElementById('progressFill').style.width = pct + '%';
+}
+
+function updateStepBadges() {
+  document.querySelectorAll('.step').forEach(sec => {
+    const stepId = parseInt(sec.id.replace('step-',''));
+    const step = STEPS.find(s => s.id === stepId);
+    if (!step) return;
+    const done = step.points.filter(p => getPointMeta(p.id).done).length;
+    const total = step.points.length;
+    const pct = Math.round(done / total * 100);
+    const badge = sec.querySelector('.step-badge');
+    if (badge) {
+      badge.textContent = `${done}/${total} · ${pct}%`;
+      badge.classList.toggle('done', done === total);
+    }
+  });
+}
+
+// ===== STREAK =====
+function todayStr() {
+  const d = new Date();
+  return d.getFullYear() + '-' + String(d.getMonth()+1).padStart(2,'0') + '-' + String(d.getDate()).padStart(2,'0');
+}
+function checkStreak() {
+  const today = todayStr();
+  if (state.streak.lastDate === today) return;
+  const y = new Date();
+  y.setDate(y.getDate() - 1);
+  const yesterday = y.getFullYear() + '-' + String(y.getMonth()+1).padStart(2,'0') + '-' + String(y.getDate()).padStart(2,'0');
+  if (state.streak.lastDate === yesterday) state.streak.count++;
+  else state.streak.count = 1;
+  state.streak.lastDate = today;
+  saveState();
+  renderStreak();
+}
+function renderStreak() {
+  document.getElementById('streakNum').textContent = state.streak.count || 0;
+}
+
+// ===== SCROLL / NAVIGATION =====
+function scrollToStep(id) {
+  const el = document.getElementById('step-' + id);
+  if (el) el.scrollIntoView({ behavior:'smooth', block:'start' });
+}
+function scrollToPoint(pid) {
+  const el = document.querySelector(`[data-pid="${pid}"]`);
+  if (!el) return;
+  // expand parent step
+  const sec = el.closest('.step');
+  if (sec && sec.classList.contains('collapsed')) {
+    const sid = parseInt(sec.id.replace('step-',''));
+    state.ui.collapsed[sid] = false;
+    saveState();
+    sec.classList.remove('collapsed');
+  }
+  el.scrollIntoView({ behavior:'smooth', block:'center' });
+  el.classList.add('highlight');
+  setTimeout(() => el.classList.remove('highlight'), 1300);
+}
+
+function navigate(delta) {
+  const flat = getFlatPoints();
+  const visibleIds = flat.filter(x => matchFilter(x.point) && matchSearch(x.point)).map(x => x.point.id);
+  if (visibleIds.length === 0) return;
+  let pos = visibleIds.indexOf(flat[currentIndex]?.point.id);
+  if (pos === -1) pos = 0;
+  else pos = Math.max(0, Math.min(visibleIds.length - 1, pos + delta));
+  const targetId = visibleIds[pos];
+  currentIndex = flat.findIndex(x => x.point.id === targetId);
+  scrollToPoint(targetId);
+}
+
+// ===== SIDEBAR TOGGLE =====
+function toggleSidebar() {
+  const sb = document.getElementById('sidebar');
+  sb.classList.toggle('collapsed');
+}
+
+// ===== SCANLINES =====
+function toggleScanlines() {
+  state.ui.scanlines = !state.ui.scanlines;
+  document.body.classList.toggle('scanlines', state.ui.scanlines);
+  document.getElementById('scanToggleItem').innerHTML = '<span class="ic">◫</span> Scanlines: ' + (state.ui.scanlines ? 'ВКЛ' : 'ИЗКЛ');
+  saveState();
+}
+
+// ===== MENU =====
+function closeMenu() { document.getElementById('menuDropdown').classList.remove('open'); }
+
+// ===== EXPORT / IMPORT =====
+function exportProgress() {
+  const data = JSON.stringify(state, null, 2);
+  const blob = new Blob([data], { type:'application/json' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = 'olympiad-progress-' + todayStr() + '.json';
+  a.click();
+  URL.revokeObjectURL(url);
+  toast('↓ Експортирано');
+}
+function importProgress(e) {
+  const file = e.target.files[0];
+  if (!file) return;
+  const r = new FileReader();
+  r.onload = ev => {
+    try {
+      const data = JSON.parse(ev.target.result);
+      if (!data.progress) throw new Error('Invalid format');
+      state = data;
+      saveState();
+      renderSidebar(); renderContent(); updateStats(); renderStreak();
+      if (state.ui.scanlines) document.body.classList.add('scanlines');
+      toast('↑ Импортирано успешно');
+    } catch(err) {
+      alert('Грешен формат на файла');
+    }
+  };
+  r.readAsText(file);
+  e.target.value = '';
+}
+function resetAll() {
+  if (!confirm('Нулирай ЦЕЛИЯ прогрес? Това не може да се отмени.')) return;
+  state = defaultState();
+  saveState();
+  renderSidebar(); renderContent(); updateStats(); renderStreak();
+  document.getElementById('statPomos').textContent = 0;
+  toast('⌫ Всичко е нулирано');
+}
+
+// ===== TOAST =====
+let toastTimer;
+function toast(msg) {
+  const t = document.getElementById('toast');
+  t.textContent = msg;
+  t.classList.add('show');
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(() => t.classList.remove('show'), 1600);
+}
+
+// ===== POMODORO =====
+const POMO = {
+  focus: 25 * 60,
+  shortBreak: 5 * 60,
+  longBreak: 15 * 60,
+  sessions: 0,
+  mode: 'focus',
+  remaining: 25 * 60,
+  running: false,
+  interval: null,
+};
+
+function fmtTime(s) {
+  const m = Math.floor(s / 60);
+  const sec = s % 60;
+  return String(m).padStart(2,'0') + ':' + String(sec).padStart(2,'0');
+}
+function renderPomodoro() {
+  document.getElementById('pomoTime').textContent = fmtTime(POMO.remaining);
+  const modeEl = document.getElementById('pomoMode');
+  const timeEl = document.getElementById('pomoTime');
+  if (POMO.mode === 'focus') { modeEl.textContent = 'ФОКУС'; timeEl.classList.remove('break'); }
+  else if (POMO.mode === 'shortBreak') { modeEl.textContent = 'ПОЧИВКА'; timeEl.classList.add('break'); }
+  else { modeEl.textContent = 'ДЪЛГА ПОЧИВКА'; timeEl.classList.add('break'); }
+  document.getElementById('pomoPlay').textContent = POMO.running ? '❚❚' : '▶';
+  document.getElementById('pomoPlay').classList.toggle('play', !POMO.running);
+  document.getElementById('pomoDone').textContent = state.pomodoroSessions;
+}
+function togglePomodoro() {
+  if (POMO.running) {
+    clearInterval(POMO.interval);
+    POMO.running = false;
+  } else {
+    POMO.running = true;
+    POMO.interval = setInterval(tickPomodoro, 1000);
+  }
+  renderPomodoro();
+}
+function tickPomodoro() {
+  POMO.remaining--;
+  if (POMO.remaining <= 0) {
+    clearInterval(POMO.interval);
+    POMO.running = false;
+    if (POMO.mode === 'focus') {
+      state.pomodoroSessions++;
+      saveState();
+      toast('🍅 Помодоро завършено!');
+      POMO.sessions++;
+      POMO.mode = (POMO.sessions % 4 === 0) ? 'longBreak' : 'shortBreak';
+      POMO.remaining = POMO.mode === 'longBreak' ? POMO.longBreak : POMO.shortBreak;
+    } else {
+      toast('▶ Обратно към работа');
+      POMO.mode = 'focus';
+      POMO.remaining = POMO.focus;
+    }
+    updateStats();
+  }
+  renderPomodoro();
+}
+function resetPomodoro() {
+  clearInterval(POMO.interval);
+  POMO.running = false;
+  POMO.mode = 'focus';
+  POMO.remaining = POMO.focus;
+  renderPomodoro();
+}
+
+// ===== COMMAND PALETTE =====
+function openPalette() {
+  document.getElementById('paletteOverlay').classList.add('open');
+  const inp = document.getElementById('paletteInput');
+  inp.value = '';
+  renderPaletteResults('');
+  setTimeout(() => inp.focus(), 30);
+}
+function closePalette() {
+  document.getElementById('paletteOverlay').classList.remove('open');
+}
+function renderPaletteResults(q) {
+  const res = document.getElementById('paletteResults');
+  const flat = getFlatPoints();
+  const query = q.toLowerCase().trim();
+  let matches = flat;
+  if (query) {
+    matches = flat.filter(x =>
+      x.point.title.toLowerCase().includes(query) ||
+      x.point.id.includes(query) ||
+      x.step.title.toLowerCase().includes(query) ||
+      (getPointMeta(x.point.id).notes||'').toLowerCase().includes(query)
+    );
+  }
+  matches = matches.slice(0, 30);
+  if (matches.length === 0) {
+    res.innerHTML = '<div class="palette-empty">НЯМА РЕЗУЛТАТИ</div>';
+    return;
+  }
+  res.innerHTML = matches.map((x, i) => {
+    const meta = getPointMeta(x.point.id);
+    return `<div class="palette-item ${i===0?'selected':''}" data-pid="${x.point.id}">
+      <span class="pnum">${x.point.id}</span>
+      <span class="ptitle">${meta.done?'✓ ':''}${x.point.title}</span>
+      <span class="pstep">STEP ${x.step.id}</span>
+    </div>`;
+  }).join('');
+  res.querySelectorAll('.palette-item').forEach(el => {
+    el.addEventListener('click', () => {
+      const pid = el.dataset.pid;
+      closePalette();
+      scrollToPoint(pid);
+    });
+  });
+}
+
+// ===== HELP =====
+function openHelp() { document.getElementById('helpOverlay').classList.add('open'); }
+function closeHelp() { document.getElementById('helpOverlay').classList.remove('open'); }
+
+// ===== EVENTS =====
+function setupEvents() {
+  // Search
+  const searchInp = document.getElementById('searchInput');
+  searchInp.addEventListener('input', e => {
+    searchQuery = e.target.value;
+    document.getElementById('kbdHint').classList.toggle('hidden', !!searchQuery);
+    renderContent();
+  });
+
+  // Filters
+  document.getElementById('filters').addEventListener('click', e => {
+    if (!e.target.classList.contains('chip')) return;
+    document.querySelectorAll('.chip').forEach(c => c.classList.remove('active'));
+    e.target.classList.add('active');
+    state.ui.filter = e.target.dataset.filter;
+    saveState();
+    renderContent();
+  });
+  // Restore filter chip
+  document.querySelectorAll('.chip').forEach(c => {
+    c.classList.toggle('active', c.dataset.filter === state.ui.filter);
+  });
+
+  // Menu button
+  document.getElementById('menuBtn').addEventListener('click', e => {
+    e.stopPropagation();
+    document.getElementById('menuDropdown').classList.toggle('open');
+  });
+  document.addEventListener('click', () => closeMenu());
+
+  // Palette input
+  const palInp = document.getElementById('paletteInput');
+  palInp.addEventListener('input', e => renderPaletteResults(e.target.value));
+  palInp.addEventListener('keydown', e => {
+    const items = document.querySelectorAll('.palette-item');
+    if (e.key === 'Enter') {
+      if (items.length > 0) {
+        const sel = document.querySelector('.palette-item.selected') || items[0];
+        const pid = sel.dataset.pid;
+        closePalette();
+        scrollToPoint(pid);
+      }
+    } else if (e.key === 'ArrowDown' || e.key === 'ArrowUp') {
+      e.preventDefault();
+      const cur = document.querySelector('.palette-item.selected');
+      let idx = cur ? Array.from(items).indexOf(cur) : -1;
+      idx += (e.key === 'ArrowDown' ? 1 : -1);
+      if (idx < 0) idx = items.length - 1;
+      if (idx >= items.length) idx = 0;
+      items.forEach(it => it.classList.remove('selected'));
+      items[idx].classList.add('selected');
+      items[idx].scrollIntoView({ block:'nearest' });
+    } else if (e.key === 'Escape') {
+      closePalette();
+    }
+  });
+
+  // Global keyboard shortcuts
+  document.addEventListener('keydown', e => {
+    // Ignore if typing in input/textarea
+    const tag = (e.target.tagName || '').toLowerCase();
+    const inField = tag === 'input' || tag === 'textarea';
+    const paletteOpen = document.getElementById('paletteOverlay').classList.contains('open');
+    const helpOpen = document.getElementById('helpOverlay').classList.contains('open');
+
+    if (e.key === 'Escape') {
+      if (paletteOpen) { closePalette(); return; }
+      if (helpOpen) { closeHelp(); return; }
+      if (inField) { e.target.blur(); return; }
+      return;
+    }
+    if (helpOpen) return;
+
+    if (e.ctrlKey && e.key.toLowerCase() === 'k') {
+      e.preventDefault();
+      openPalette();
+      return;
+    }
+    if (inField) return;
+
+    if (e.key === '/') {
+      e.preventDefault();
+      searchInp.focus();
+      return;
+    }
+    if (e.key === '?') { openHelp(); return; }
+    if (e.key === 'j' || e.key === 'J') { navigate(1); return; }
+    if (e.key === 'k' || e.key === 'K') { navigate(-1); return; }
+    if (e.key === 't' || e.key === 'T') { togglePomodoro(); return; }
+    if (e.key === 'e' || e.key === 'E') { expandAll(); return; }
+    if (e.key === 'c' || e.key === 'C') { collapseAll(); return; }
+    if (e.key === ' ') {
+      // Toggle current highlighted point (find by viewport center)
+      e.preventDefault();
+      const el = document.elementFromPoint(window.innerWidth/2, window.innerHeight/2);
+      const card = el && el.closest('.point');
+      if (card) {
+        const pid = card.dataset.pid;
+        toggleDone(pid);
+        currentIndex = parseInt(card.dataset.idx);
+      }
+      return;
+    }
+    if (e.key === 'n' || e.key === 'N') {
+      const el = document.elementFromPoint(window.innerWidth/2, window.innerHeight/2);
+      const card = el && el.closest('.point');
+      if (card) {
+        card.classList.add('expanded');
+        const ta = card.querySelector('.notes-area');
+        if (ta) ta.focus();
+      }
+      return;
+    }
+  });
+}
+
+// ===== START =====
+init();
+renderPomodoro();
+</script>
+</body>
+</html>

@@ -1,0 +1,178 @@
+{
+  "_meta": {
+    "pdf": "C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\Задачи_Минали_Години\\Областен\\OLI-2-Областен кръг-2011-11 кл-sol.pdf",
+    "paired_with": null,
+    "level": 1,
+    "type": "sol",
+    "analyzed_at": "2026-10-18T15:40:05.907766",
+    "model": "deepseek/deepseek-v3.2",
+    "text_length": 7676,
+    "paired_text_length": 0
+  },
+  "problems": [
+    {
+      "num": 1,
+      "topic": "algebra",
+      "theorems": [],
+      "techniques": [
+        "substitution",
+        "quadratic equation analysis",
+        "boundary value analysis"
+      ],
+      "concepts": [
+        "trigonometric equation",
+        "cosine range",
+        "quadratic discriminant",
+        "root location in interval"
+      ],
+      "difficulty": "standard",
+      "notes": "Уравнение с параметър, свеждащо се до квадратно чрез подходяща субституция. Анализ на броя на корените в даден интервал."
+    },
+    {
+      "num": 2,
+      "topic": "geometry",
+      "theorems": [
+        "Law of Sines",
+        "Euler's formula for OI distance"
+      ],
+      "techniques": [
+        "angle chasing",
+        "trigonometric substitution",
+        "solving quadratic equation"
+      ],
+      "concepts": [
+        "circumcircle",
+        "incircle",
+        "angle bisector",
+        "central and inscribed angles",
+        "trigonometric identities (double angle)"
+      ],
+      "difficulty": "olympic",
+      "notes": "Използване на свойството DI = DA и формулата OI^2 = R(R-2r)."
+    },
+    {
+      "num": 3,
+      "topic": "number_theory",
+      "theorems": [],
+      "techniques": [
+        "prime factorization",
+        "contrapositive proof",
+        "constructing counterexample",
+        "analysis of binomial coefficient divisibility"
+      ],
+      "concepts": [
+        "gcd",
+        "divisibility",
+        "prime numbers",
+        "binomial coefficients",
+        "Legendre's formula (implicitly for prime power divisibility)"
+      ],
+      "difficulty": "hard",
+      "notes": "Задача върху делимост на произведение от биномни коефициенти. Обратната посока изисква конструкция на специфично n."
+    },
+    {
+      "num": 4,
+      "topic": "combinatorics",
+      "theorems": [],
+      "techniques": [
+        "double counting",
+        "pigeonhole principle",
+        "construction of example"
+      ],
+      "concepts": [
+        "set cover problem",
+        "3-element subsets",
+        "counting pairs",
+        "lower bound argument"
+      ],
+      "difficulty": "standard",
+      "notes": "Класическа задача за покриване на двойки с тройки. Долна оценка чрез двойно броене и конструкция."
+    },
+    {
+      "num": 5,
+      "topic": "algebra",
+      "theorems": [],
+      "techniques": [
+        "substitution (specific values)",
+        "case analysis",
+        "proof by contradiction"
+      ],
+      "concepts": [
+        "functional inequality",
+        "constant function",
+        "range bounding"
+      ],
+      "difficulty": "hard",
+      "notes": "Нестандартна функционална задача. Ключово е да се използват специфични стойности за y и z, за да се ограничи f(x)."
+    },
+    {
+      "num": 6,
+      "topic": "number_theory",
+      "theorems": [
+        "Fermat's theorem on sums of two squares"
+      ],
+      "techniques": [
+        "induction",
+        "modular arithmetic",
+        "quadratic residues"
+      ],
+      "concepts": [
+        "primes of the form 4k+3",
+        "quadratic residues modulo p",
+        "sequence divisibility",
+        "infinite set of prime divisors"
+      ],
+      "difficulty": "olympic",
+      "notes": "Използва се фактът, че просто число от вида 4k+3, делищо x^2+y^2, дели и x, и y. Доказателство с индукция върху множество от степени."
+    },
+    {
+      "num": 12.1,
+      "topic": "geometry",
+      "theorems": [],
+      "techniques": [
+        "coordinate geometry",
+        "system of equations",
+        "symmetry argument"
+      ],
+      "concepts": [
+        "tangent to parabola",
+        "slope",
+        "distance formula",
+        "equilateral triangle properties"
+      ],
+      "difficulty": "standard",
+      "notes": "Задача от областен кръг за 12 клас, включена в документа. Решава се с аналитична геометрия."
+    }
+  ],
+  "unique_concepts": [
+    "trigonometric equation",
+    "cosine range",
+    "quadratic discriminant",
+    "root location",
+    "Law of Sines",
+    "Euler's OI distance",
+    "circumcircle",
+    "incircle",
+    "angle bisector",
+    "central and inscribed angles",
+    "trigonometric identities",
+    "gcd",
+    "divisibility",
+    "prime numbers",
+    "binomial coefficients",
+    "Legendre's formula",
+    "set cover",
+    "double counting",
+    "pigeonhole principle",
+    "functional inequality",
+    "constant function",
+    "Fermat's sum of two squares theorem",
+    "primes of form 4k+3",
+    "quadratic residues",
+    "sequence divisibility",
+    "coordinate geometry",
+    "tangent to parabola",
+    "equilateral triangle properties"
+  ],
+  "confidence": 0.95
+}

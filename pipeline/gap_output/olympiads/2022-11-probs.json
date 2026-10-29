@@ -1,0 +1,181 @@
+{
+  "_meta": {
+    "pdf": "C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\Задачи_Минали_Години\\Областен\\OLI-2-Областен кръг-2022-11 кл-probs.pdf",
+    "paired_with": "C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\Задачи_Минали_Години\\Областен\\OLI-2-Областен кръг-2022-11 кл-sol.pdf",
+    "level": 1,
+    "type": "probs",
+    "analyzed_at": "2026-10-16T21:34:10.299129",
+    "model": "deepseek/deepseek-v3.2",
+    "text_length": 8744,
+    "paired_text_length": 6545
+  },
+  "problems": [
+    {
+      "num": 1,
+      "topic": "number_theory",
+      "theorems": [
+        "Pigeonhole_Principle"
+      ],
+      "techniques": [
+        "construction",
+        "contradiction",
+        "case_analysis"
+      ],
+      "concepts": [
+        "subnumbers_of_digits",
+        "rich_numbers",
+        "existence_proof"
+      ],
+      "difficulty": "olympic",
+      "notes": "Problem about constructing/analyzing 'rich' numbers containing all 4-digit numbers with digits 1 and 2 as subnumbers. Uses combinatorial reasoning and the Pigeonhole Principle."
+    },
+    {
+      "num": 2,
+      "topic": "algebra",
+      "theorems": [],
+      "techniques": [
+        "inequality_manipulation",
+        "substitution",
+        "case_analysis"
+      ],
+      "concepts": [
+        "rational_inequalities",
+        "domain_restrictions",
+        "sign_analysis"
+      ],
+      "difficulty": "standard",
+      "notes": "Solving a rational inequality. Requires considering the domain and analyzing signs of factors."
+    },
+    {
+      "num": 3,
+      "topic": "geometry",
+      "theorems": [
+        "Ceva",
+        "Menelaus",
+        "Thales"
+      ],
+      "techniques": [
+        "auxiliary_lines",
+        "ratio_chasing",
+        "trigonometry"
+      ],
+      "concepts": [
+        "angle_bisector",
+        "trigonometric_ratios",
+        "triangle_geometry",
+        "segment_ratios"
+      ],
+      "difficulty": "hard",
+      "notes": "Geometry problem involving an angle bisector and proving a specific angle measure (30°). Solved via trigonometric relations or geometric constructions with Ceva/Menelaus."
+    },
+    {
+      "num": 4,
+      "topic": "number_theory",
+      "theorems": [],
+      "techniques": [
+        "induction",
+        "divisibility_arguments"
+      ],
+      "concepts": [
+        "divisibility",
+        "product_of_differences",
+        "exponent_properties"
+      ],
+      "difficulty": "standard",
+      "notes": "Divisibility problem for products of terms of the form (a^k - 1). Likely uses properties of cyclotomic polynomials or simple factorization and induction."
+    },
+    {
+      "num": 5,
+      "topic": "combinatorics",
+      "theorems": [],
+      "techniques": [
+        "double_counting",
+        "counting_argument",
+        "induction"
+      ],
+      "concepts": [
+        "binary_sequences",
+        "generating_sets",
+        "minimal_set_size",
+        "combinatorial_optimization"
+      ],
+      "difficulty": "olympic",
+      "notes": "Combinatorial problem about 'good' sets of binary sequences of length n-1 that can generate all sequences of length n by adding one digit. Involves establishing upper and lower bounds."
+    },
+    {
+      "num": 6,
+      "topic": "algebra",
+      "theorems": [],
+      "techniques": [
+        "substitution",
+        "quadratic_inequality"
+      ],
+      "concepts": [
+        "trigonometric_inequality",
+        "quadratic_analysis",
+        "function_monotonicity"
+      ],
+      "difficulty": "standard",
+      "notes": "Trigonometric inequality solved by substitution t = 2 sin x, reducing to a quadratic inequality."
+    },
+    {
+      "num": 7,
+      "topic": "geometry",
+      "theorems": [
+        "Thales",
+        "Ceva",
+        "Menelaus"
+      ],
+      "techniques": [
+        "auxiliary_lines",
+        "parallel_lines",
+        "ratio_chasing"
+      ],
+      "concepts": [
+        "triangle_centers",
+        "segment_ratios",
+        "parallel_lines_in_triangles"
+      ],
+      "difficulty": "hard",
+      "notes": "Geometry problem in triangle with given ratios on sides and a cevian. Requires constructing parallel lines and applying Thales' theorem repeatedly to find unknown ratios."
+    }
+  ],
+  "unique_concepts": [
+    "Pigeonhole_Principle",
+    "subnumbers_of_digits",
+    "rich_numbers",
+    "rational_inequalities",
+    "domain_restrictions",
+    "sign_analysis",
+    "Ceva",
+    "Menelaus",
+    "Thales",
+    "angle_bisector",
+    "trigonometric_ratios",
+    "triangle_geometry",
+    "segment_ratios",
+    "divisibility",
+    "product_of_differences",
+    "exponent_properties",
+    "binary_sequences",
+    "generating_sets",
+    "minimal_set_size",
+    "combinatorial_optimization",
+    "double_counting",
+    "trigonometric_inequality",
+    "quadratic_analysis",
+    "function_monotonicity",
+    "triangle_centers",
+    "parallel_lines_in_triangles",
+    "ratio_chasing",
+    "construction",
+    "contradiction",
+    "case_analysis",
+    "inequality_manipulation",
+    "substitution",
+    "auxiliary_lines",
+    "induction",
+    "counting_argument"
+  ],
+  "confidence": 0.95
+}

@@ -1,0 +1,166 @@
+{
+  "_meta": {
+    "pdf": "C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\Задачи_Минали_Години\\Областен\\OLI-2-Областен кръг-2003-11 кл-probs.pdf",
+    "paired_with": "C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\Задачи_Минали_Години\\Областен\\OLI-2-Областен кръг-2003-11 кл-sol.pdf",
+    "level": 1,
+    "type": "probs",
+    "analyzed_at": "2026-10-18T12:31:43.782535",
+    "model": "deepseek/deepseek-v3.2",
+    "text_length": 1578,
+    "paired_text_length": 4102
+  },
+  "problems": [
+    {
+      "num": 1,
+      "topic": "geometry",
+      "theorems": [],
+      "techniques": [
+        "algebraic_manipulation",
+        "system_of_equations"
+      ],
+      "concepts": [
+        "trapezoid_area",
+        "inscribed_circle_in_trapezoid",
+        "right_trapezoid",
+        "tangential_quadrilateral",
+        "side_lengths_relation"
+      ],
+      "difficulty": "standard",
+      "notes": "Стандартна задача за трапец с вписани окръжности. Използва се условието за вписана окръжност в трапец (сумата на основите = сумата на бедрата) и формула за лице."
+    },
+    {
+      "num": 2,
+      "topic": "combinatorics",
+      "theorems": [
+        "Pigeonhole_Principle"
+      ],
+      "techniques": [
+        "strategy",
+        "modular_arithmetic",
+        "subset_sums"
+      ],
+      "concepts": [
+        "winning_strategy",
+        "divisibility",
+        "subset_selection",
+        "remainders_modulo_prime"
+      ],
+      "difficulty": "olympic",
+      "notes": "Задача за печеливша стратегия, използваща принципа на Дирихле за подмножества и суми по модул просто число (2003)."
+    },
+    {
+      "num": 3,
+      "topic": "number_theory",
+      "theorems": [],
+      "techniques": [
+        "floor_function_manipulation",
+        "inequality_squeezing",
+        "limit_analysis",
+        "substitution"
+      ],
+      "concepts": [
+        "floor_function",
+        "integer_part",
+        "functional_equation_in_n",
+        "quadratic_irrationals"
+      ],
+      "difficulty": "hard",
+      "notes": "Функционално уравнение за всички естествени n с функция цяла част. Решава се чрез граничен преход и проверка."
+    },
+    {
+      "num": 4,
+      "topic": "geometry",
+      "theorems": [],
+      "techniques": [
+        "parallel_lines",
+        "similar_triangles",
+        "angle_chasing"
+      ],
+      "concepts": [
+        "triangle",
+        "parallel_segments",
+        "similar_triangles",
+        "angle_equality",
+        "isosceles_triangle_property"
+      ],
+      "difficulty": "standard",
+      "notes": "Стандартна геометрична задача за доказване на равенство на ъгли, използваща успоредни прави и подобни триъгълници."
+    },
+    {
+      "num": 5,
+      "topic": "algebra",
+      "theorems": [],
+      "techniques": [
+        "symmetry_exploitation",
+        "variable_substitution",
+        "system_elimination",
+        "polynomial_factorization"
+      ],
+      "concepts": [
+        "symmetric_polynomials",
+        "system_of_equations",
+        "real_solutions",
+        "homogenization",
+        "root_analysis"
+      ],
+      "difficulty": "hard",
+      "notes": "Симетрична система уравнения. Решава се чрез полагане и свеждане до полиномиално уравнение."
+    },
+    {
+      "num": 6,
+      "topic": "number_theory",
+      "theorems": [
+        "Chinese_Remainder_Theorem"
+      ],
+      "techniques": [
+        "proof_by_contradiction",
+        "pigeonhole_principle",
+        "modular_analysis",
+        "sum_analysis"
+      ],
+      "concepts": [
+        "good_set_definition",
+        "coprime_condition",
+        "prime_divisors",
+        "remainders_modulo_prime",
+        "sum_of_elements",
+        "removal_of_element"
+      ],
+      "difficulty": "olympic",
+      "notes": "Комбинаторна задача върху множества от естествени числа с условие за взаимна простота. Използва се Китайска теорема за остатъците и анализ на остатъците по модул прости числа."
+    }
+  ],
+  "unique_concepts": [
+    "trapezoid_area",
+    "inscribed_circle_in_trapezoid",
+    "right_trapezoid",
+    "tangential_quadrilateral",
+    "side_lengths_relation",
+    "winning_strategy",
+    "divisibility",
+    "subset_selection",
+    "remainders_modulo_prime",
+    "Pigeonhole_Principle",
+    "floor_function",
+    "integer_part",
+    "functional_equation_in_n",
+    "quadratic_irrationals",
+    "parallel_lines",
+    "similar_triangles",
+    "angle_chasing",
+    "angle_equality",
+    "isosceles_triangle_property",
+    "symmetric_polynomials",
+    "system_of_equations",
+    "real_solutions",
+    "homogenization",
+    "root_analysis",
+    "good_set_definition",
+    "coprime_condition",
+    "prime_divisors",
+    "Chinese_Remainder_Theorem",
+    "removal_of_element",
+    "sum_of_elements"
+  ],
+  "confidence": 0.95
+}

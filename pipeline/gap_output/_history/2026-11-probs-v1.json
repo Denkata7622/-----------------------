@@ -1,0 +1,110 @@
+{
+  "_meta": {
+    "pdf": "C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\Задачи_Минали_Години\\Областен\\OLI-2-Областен кръг-2026-11 кл-probs.pdf",
+    "paired_with": null,
+    "level": 1,
+    "type": "probs",
+    "analyzed_at": "2026-10-16T21:45:13.540880",
+    "model": "deepseek/deepseek-v3.2",
+    "text_length": 1385,
+    "paired_text_length": 0
+  },
+  "problems": [
+    {
+      "num": 1,
+      "topic": "algebra",
+      "theorems": [],
+      "techniques": [
+        "substitution",
+        "factoring",
+        "domain_analysis"
+      ],
+      "concepts": [
+        "rational_equations",
+        "domain_restrictions",
+        "polynomial_equations"
+      ],
+      "difficulty": "standard",
+      "notes": "Уравнението съдържа квадратен корен в знаменател, така че трябва да се определи областта на допустимите стойности (4 - x^2 > 0). След това се рационализира и се решава полиномно уравнение."
+    },
+    {
+      "num": 2,
+      "topic": "geometry",
+      "theorems": [
+        "Law_of_Cosines",
+        "Area_formula_trapezoid"
+      ],
+      "techniques": [
+        "auxiliary_construction",
+        "coordinate_geometry_or_trigonometry"
+      ],
+      "concepts": [
+        "isosceles_trapezoid",
+        "angle_chasing",
+        "area_calculation",
+        "triangle_similarity_or_congruence"
+      ],
+      "difficulty": "hard",
+      "notes": "Трябва да се намерят основите и височината на трапеца, използвайки дадените отсечки и ъгъл. Може да се използва тригонометрия или координати, като се свърже условието за ъгъла AED."
+    },
+    {
+      "num": 3,
+      "topic": "number_theory",
+      "theorems": [],
+      "techniques": [
+        "bounding_arguments",
+        "inequality_analysis"
+      ],
+      "concepts": [
+        "quadratic_polynomials",
+        "discriminant",
+        "integer_coefficients",
+        "evaluation_at_rational_points",
+        "finite_sets"
+      ],
+      "difficulty": "olympic",
+      "notes": "Трябва да се покаже, че има само краен брой квадратни полиноми с фиксиран дискриминант D и отрицателен водещ коефициент, за които P(p/q) >= 0. Ключово е да се използва ограничеността, произтичаща от условието за дискриминанта и коефициентите."
+    },
+    {
+      "num": 4,
+      "topic": "combinatorics",
+      "theorems": [],
+      "techniques": [
+        "pigeonhole_principle",
+        "extremal_principle",
+        "path_construction"
+      ],
+      "concepts": [
+        "grid_paths",
+        "sum_inequalities",
+        "permutations_of_numbers",
+        "worst_case_analysis"
+      ],
+      "difficulty": "olympic",
+      "notes": "Комбинаторна задача за съществуване на път в квадратна таблица с дадени числа, удовлетворяващ неравенство за сумата. Изисква стратегическо мислене и вероятно използване на принципа на Дирихле или анализ на средната стойност."
+    }
+  ],
+  "unique_concepts": [
+    "rational_equations",
+    "domain_restrictions",
+    "polynomial_equations",
+    "isosceles_trapezoid",
+    "angle_chasing",
+    "area_calculation",
+    "Law_of_Cosines",
+    "auxiliary_construction",
+    "quadratic_polynomials",
+    "discriminant",
+    "integer_coefficients",
+    "evaluation_at_rational_points",
+    "finite_sets",
+    "bounding_arguments",
+    "grid_paths",
+    "sum_inequalities",
+    "permutations_of_numbers",
+    "pigeonhole_principle",
+    "extremal_principle",
+    "path_construction"
+  ],
+  "confidence": 0.9
+}

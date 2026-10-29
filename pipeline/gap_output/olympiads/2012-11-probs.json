@@ -1,0 +1,213 @@
+{
+  "_meta": {
+    "pdf": "C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\Задачи_Минали_Години\\Областен\\OLI-2-Областен кръг-2012-11 кл-probs.pdf",
+    "paired_with": "C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\Задачи_Минали_Години\\Областен\\OLI-2-Областен кръг-2012-11 кл-sol.pdf",
+    "level": 1,
+    "type": "probs",
+    "analyzed_at": "2026-10-18T15:41:47.039826",
+    "model": "deepseek/deepseek-v3.2",
+    "text_length": 1434,
+    "paired_text_length": 0
+  },
+  "problems": [
+    {
+      "num": 1,
+      "topic": "algebra",
+      "theorems": [],
+      "techniques": [
+        "substitution",
+        "trigonometric_identities",
+        "inequality_analysis",
+        "range_analysis"
+      ],
+      "concepts": [
+        "trigonometric_equations",
+        "sine_range",
+        "double_angle_formula",
+        "parameter_analysis",
+        "integer_solutions"
+      ],
+      "difficulty": "standard",
+      "notes": "Уравнение с параметър и тригонометрични функции. Използва се ограниченост на синус и преобразуване чрез формули."
+    },
+    {
+      "num": 2,
+      "topic": "geometry",
+      "theorems": [
+        "Menelaus",
+        "Ceva",
+        "Law_of_Sines"
+      ],
+      "techniques": [
+        "trigonometric_analysis",
+        "ratio_computation",
+        "collinearity_proof",
+        "foot_of_perpendicular"
+      ],
+      "concepts": [
+        "triangle_geometry",
+        "orthocenter",
+        "midpoint",
+        "angle_bisector",
+        "trigonometric_ratios_in_triangles",
+        "concurrency",
+        "cyclic_quadrilaterals",
+        "power_of_a_point"
+      ],
+      "difficulty": "hard",
+      "notes": "Сложна планиметрична задача с използване на тригонометрични отношения и теореми за съотношения."
+    },
+    {
+      "num": 3,
+      "topic": "combinatorics",
+      "theorems": [],
+      "techniques": [
+        "pigeonhole_principle",
+        "double_counting",
+        "tiling",
+        "extremal_principle"
+      ],
+      "concepts": [
+        "combinatorial_geometry",
+        "grid_tiling",
+        "overlap_condition",
+        "maximum_packing",
+        "infinite_board"
+      ],
+      "difficulty": "olympic",
+      "notes": "Нетрадиционна комбинаторна задача за разполагане на фигури (ъгли) в решетка с условие за припокриване."
+    },
+    {
+      "num": 4,
+      "topic": "algebra",
+      "theorems": [],
+      "techniques": [
+        "logarithm_properties",
+        "domain_analysis",
+        "parameter_discussion",
+        "function_monotonicity",
+        "derivative_analysis"
+      ],
+      "concepts": [
+        "logarithmic_equations",
+        "real_parameter",
+        "unique_solution",
+        "cubic_equations",
+        "function_transformations"
+      ],
+      "difficulty": "standard",
+      "notes": "Уравнение с логаритми и параметър. Изисква внимателен анализ на дефиниционната област и поведението на функциите."
+    },
+    {
+      "num": 5,
+      "topic": "number_theory",
+      "theorems": [
+        "Fermat_Little_Theorem",
+        "Lifting_The_Exponent_Lemma_(LTE)",
+        "modular_arithmetic"
+      ],
+      "techniques": [
+        "modular_analysis",
+        "casework",
+        "congruences",
+        "divisibility"
+      ],
+      "concepts": [
+        "prime_numbers",
+        "exponential_diophantine_equation",
+        "divisibility_conditions",
+        "p_and_q_primes",
+        "small_prime_check"
+      ],
+      "difficulty": "olympic",
+      "notes": "Диофантов проблем с прости числа и делимост на експоненциални изрази. Използва се модулна аритметика и специални леми."
+    },
+    {
+      "num": 6,
+      "topic": "algebra",
+      "theorems": [],
+      "techniques": [
+        "polynomial_identity",
+        "coefficient_comparison",
+        "degree_analysis",
+        "contradiction"
+      ],
+      "concepts": [
+        "functional_equation_for_polynomials",
+        "polynomial_degrees",
+        "real_coefficients",
+        "iterative_substitution",
+        "leading_coefficient"
+      ],
+      "difficulty": "hard",
+      "notes": "Функционално уравнение за полином. Решава се чрез сравняване на степени и водещи коефициенти."
+    }
+  ],
+  "unique_concepts": [
+    "trigonometric_equations",
+    "sine_range",
+    "double_angle_formula",
+    "parameter_analysis",
+    "integer_solutions",
+    "triangle_geometry",
+    "orthocenter",
+    "midpoint",
+    "angle_bisector",
+    "trigonometric_ratios_in_triangles",
+    "concurrency",
+    "cyclic_quadrilaterals",
+    "power_of_a_point",
+    "combinatorial_geometry",
+    "grid_tiling",
+    "overlap_condition",
+    "maximum_packing",
+    "infinite_board",
+    "logarithmic_equations",
+    "real_parameter",
+    "unique_solution",
+    "cubic_equations",
+    "function_transformations",
+    "prime_numbers",
+    "exponential_diophantine_equation",
+    "divisibility_conditions",
+    "p_and_q_primes",
+    "small_prime_check",
+    "functional_equation_for_polynomials",
+    "polynomial_degrees",
+    "real_coefficients",
+    "iterative_substitution",
+    "leading_coefficient",
+    "Menelaus",
+    "Ceva",
+    "Law_of_Sines",
+    "Fermat_Little_Theorem",
+    "Lifting_The_Exponent_Lemma_(LTE)",
+    "modular_arithmetic",
+    "substitution",
+    "trigonometric_identities",
+    "inequality_analysis",
+    "range_analysis",
+    "trigonometric_analysis",
+    "ratio_computation",
+    "collinearity_proof",
+    "foot_of_perpendicular",
+    "pigeonhole_principle",
+    "double_counting",
+    "tiling",
+    "extremal_principle",
+    "logarithm_properties",
+    "domain_analysis",
+    "parameter_discussion",
+    "function_monotonicity",
+    "derivative_analysis",
+    "modular_analysis",
+    "casework",
+    "congruences",
+    "divisibility",
+    "polynomial_identity",
+    "coefficient_comparison",
+    "degree_analysis",
+    "contradiction"
+  ],
+  "confidence": 0.95
+}

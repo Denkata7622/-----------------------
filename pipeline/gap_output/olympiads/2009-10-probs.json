@@ -1,0 +1,170 @@
+{
+  "_meta": {
+    "pdf": "C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\Задачи_Минали_Години\\Областен\\OLI-2-Областен кръг-2009-10 кл-probs.pdf",
+    "paired_with": "C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\Задачи_Минали_Години\\Областен\\OLI-2-Областен кръг-2009-10 кл-sol.pdf",
+    "level": 1,
+    "type": "probs",
+    "analyzed_at": "2026-10-18T12:48:37.107271",
+    "model": "deepseek/deepseek-v3.2",
+    "text_length": 1457,
+    "paired_text_length": 12530
+  },
+  "problems": [
+    {
+      "num": 1,
+      "topic": "algebra",
+      "theorems": [],
+      "techniques": [
+        "case analysis",
+        "squaring inequalities",
+        "method of intervals"
+      ],
+      "concepts": [
+        "rational inequalities",
+        "domain of inequality",
+        "parameter analysis"
+      ],
+      "difficulty": "standard",
+      "notes": "Standard inequality solving with parameter analysis and casework based on the position of x relative to a and b."
+    },
+    {
+      "num": 2,
+      "topic": "geometry",
+      "theorems": [
+        "triangle similarity",
+        "Power of a Point (tangent-secant)"
+      ],
+      "techniques": [
+        "proof of equivalence (if and only if)",
+        "angle chasing"
+      ],
+      "concepts": [
+        "parallelogram",
+        "rhombus",
+        "cyclic quadrilateral",
+        "tangent to a circle",
+        "inscribed angles",
+        "congruent triangles"
+      ],
+      "difficulty": "olympic",
+      "notes": "Requires proving that AM is tangent to the circumcircle of triangle AEF if and only if ABCD is a rhombus. Uses properties of parallelograms, cyclic quadrilaterals, and tangent conditions."
+    },
+    {
+      "num": 3,
+      "topic": "algebra",
+      "theorems": [
+        "Binomial Theorem",
+        "Mathematical Induction"
+      ],
+      "techniques": [
+        "substitution (x=y=1)",
+        "solving exponential equations",
+        "inequality proof (Bernoulli or induction)"
+      ],
+      "concepts": [
+        "polynomial identities",
+        "exponential equations",
+        "inequality comparison"
+      ],
+      "difficulty": "hard",
+      "notes": "Involves checking for which natural n the given identity holds. Uses substitution to derive an exponential equation and then proves that only n=1,2,3 work via inequality analysis."
+    },
+    {
+      "num": 4,
+      "topic": "algebra",
+      "theorems": [
+        "Vieta's formulas"
+      ],
+      "techniques": [
+        "root separation condition (f(x3)f(x4)<0)",
+        "substitution using polynomial relations",
+        "quadratic inequality analysis"
+      ],
+      "concepts": [
+        "quadratic equations",
+        "root interlacing",
+        "parameter conditions",
+        "discriminant (implicitly)"
+      ],
+      "difficulty": "standard",
+      "notes": "Standard problem about the relative positions of roots of two quadratic equations. Can be solved via the condition f(x3)f(x4)<0 or by analyzing the intersection point of the graphs."
+    },
+    {
+      "num": 5,
+      "topic": "geometry",
+      "theorems": [
+        "Law of Sines",
+        "trigonometric identities"
+      ],
+      "techniques": [
+        "angle manipulation",
+        "trigonometric substitution",
+        "quadratic function optimization"
+      ],
+      "concepts": [
+        "triangle angles and sides",
+        "sine rule",
+        "cosine function properties",
+        "maximization of quadratic expression"
+      ],
+      "difficulty": "olympic",
+      "notes": "Given a linear relation between angles, prove a linear inequality between sides. Uses the Law of Sines to express the ratio (a+b)/c as a quadratic in cos γ and then finds its maximum."
+    },
+    {
+      "num": 6,
+      "topic": "number_theory",
+      "theorems": [
+        "Fermat's Little Theorem",
+        "modular arithmetic"
+      ],
+      "techniques": [
+        "modular analysis",
+        "proof by contradiction",
+        "rewriting expressions"
+      ],
+      "concepts": [
+        "product of consecutive integers",
+        "modular residues",
+        "perfect squares modulo p",
+        "Diophantine equations"
+      ],
+      "difficulty": "olympic",
+      "notes": "Requires proving that N + m^9 = 2008 has no integer solutions. Uses the identity n(n+1)(n+2)(n+3) = (n^2+3n+1)^2 - 1 and then analyzes modulo 19, leveraging Fermat's Little Theorem and quadratic residues."
+    }
+  ],
+  "unique_concepts": [
+    "rational inequalities",
+    "domain of inequality",
+    "parameter analysis",
+    "case analysis",
+    "parallelogram",
+    "rhombus",
+    "cyclic quadrilateral",
+    "tangent to a circle",
+    "Power of a Point",
+    "triangle similarity",
+    "proof of equivalence",
+    "angle chasing",
+    "polynomial identities",
+    "Binomial Theorem",
+    "exponential equations",
+    "mathematical induction",
+    "inequality proof",
+    "quadratic equations",
+    "root interlacing",
+    "Vieta's formulas",
+    "Law of Sines",
+    "trigonometric identities",
+    "angle manipulation",
+    "trigonometric substitution",
+    "quadratic optimization",
+    "product of consecutive integers",
+    "modular arithmetic",
+    "Fermat's Little Theorem",
+    "modular residues",
+    "perfect squares modulo p",
+    "Diophantine equations",
+    "proof by contradiction"
+  ],
+  "confidence": 0.95
+}

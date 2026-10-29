@@ -1,0 +1,115 @@
+{
+  "_meta": {
+    "pdf": "C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\Задачи_Минали_Години\\Областен\\OLI-2-Областен кръг-2021-10 кл-sol.pdf",
+    "paired_with": null,
+    "level": 1,
+    "type": "sol",
+    "analyzed_at": "2026-10-16T21:29:16.616257",
+    "model": "deepseek/deepseek-v3.2",
+    "text_length": 17201,
+    "paired_text_length": 0
+  },
+  "problems": [
+    {
+      "num": 1,
+      "topic": "algebra",
+      "theorems": [],
+      "techniques": [
+        "substitution",
+        "case analysis",
+        "discriminant analysis",
+        "symmetry"
+      ],
+      "concepts": [
+        "system of equations",
+        "parameter analysis",
+        "quadratic equation",
+        "unique solution condition",
+        "symmetric solutions"
+      ],
+      "difficulty": "standard",
+      "notes": "Система с параметър. Използва се симетрия (ако (x0,y0,z0) е решение, то и (x0,y0,-z0) е решение), което води до случая z=0. След това се анализира квадратно уравнение спрямо параметъра a."
+    },
+    {
+      "num": 2,
+      "topic": "geometry",
+      "theorems": [
+        "Power of a Point",
+        "Right Triangle Altitude Theorem"
+      ],
+      "techniques": [
+        "auxiliary construction",
+        "similar triangles",
+        "length chasing"
+      ],
+      "concepts": [
+        "incircle",
+        "tangent points",
+        "right triangles",
+        "collinearity",
+        "segment ratios"
+      ],
+      "difficulty": "standard",
+      "notes": "Задача за вписана окръжност. Използва се построяване на перпендикуляр и свойства на правоъгълни триъгълници (височина към хипотенуза) за доказване на равенства на отсечки."
+    },
+    {
+      "num": 3,
+      "topic": "number_theory",
+      "theorems": [],
+      "techniques": [
+        "summation formula",
+        "infinite descent",
+        "parity argument",
+        "bounding",
+        "case checking"
+      ],
+      "concepts": [
+        "perfect square",
+        "sum of weighted powers of 2",
+        "Diophantine equation",
+        "product of consecutive integers",
+        "inequality estimation"
+      ],
+      "difficulty": "hard",
+      "notes": "Диофантово уравнение, търсят се n, за които сумата е точен квадрат. Използва се формула за сумата, след което се свежда до (n-1)*2^(n-3)=s(s+1). Чрез оценка се ограничава n≤5 и се проверяват случаите."
+    },
+    {
+      "num": 4,
+      "topic": "combinatorics",
+      "theorems": [
+        "Pigeonhole Principle"
+      ],
+      "techniques": [
+        "construction",
+        "pigeonhole principle",
+        "double counting",
+        "inequality"
+      ],
+      "concepts": [
+        "grid coloring",
+        "monochromatic squares",
+        "guaranteed existence",
+        "extremal principle"
+      ],
+      "difficulty": "olympic",
+      "notes": "Задача за оцветяване на квадратна дъска и гарантирано съществуване на монохромен квадрат. Решението дава долна (k≥1920) и горна (k≤1920) оценка, следователно k=1920. Използва се принцип на Дирихле и конструкция."
+    }
+  ],
+  "unique_concepts": [
+    "system of equations with parameter",
+    "discriminant analysis",
+    "symmetric solutions",
+    "incircle geometry",
+    "tangent points",
+    "Power of a Point",
+    "Right Triangle Altitude Theorem",
+    "Diophantine equation for perfect square",
+    "summation of weighted powers",
+    "infinite descent idea",
+    "pigeonhole principle on a grid",
+    "monochromatic squares",
+    "extremal combinatorial geometry",
+    "construction and existence proof"
+  ],
+  "confidence": 0.95
+}

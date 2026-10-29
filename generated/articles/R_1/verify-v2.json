@@ -1,0 +1,44 @@
+{
+  "verdict": "approve",
+  "score": 10,
+  "issues": [
+    {
+      "severity": "minor",
+      "section": "4.3 Hard examples",
+      "description": "Пример 8 не е пряко от олимпиада, а полезна лема. Препоръчително е да се посочи източник или да се маркира като 'стандартна техника'."
+    }
+  ],
+  "strengths": [
+    "Пълна математическа коректност при всички формули и примери, проверени с конкретни числа",
+    "Отлична структура, покриваща всички изисквани секции",
+    "Реални олимпиадни примери с точни източници",
+    "Ясни обяснения на честите грешки с практически насоки за избягването им"
+  ],
+  "suggestions": [
+    "В Пример 8 (hard) да се добави бележка, че това е стандартна техника, използвана в задачи като [конкретен пример от олимпиада]",
+    "В секция 9 (Върни се след 3 дни) да се включи препратка към формулата за a⁴+b⁴ като полезна за задачи с по-високи степени"
+  ],
+  "math_errors": [],
+  "missing_topics": [],
+  "structure_check": {
+    "section_1_why_important": true,
+    "section_2_objectives": true,
+    "section_3_theory": true,
+    "section_4_examples_3_levels": true,
+    "section_5_recognition": true,
+    "section_6_mistakes": true,
+    "section_7_mastery": true,
+    "section_8_quiz": true,
+    "section_9_recall": true,
+    "check_marks_present": true
+  },
+  "examples_check": {
+    "real_olympiad": true,
+    "easy_count": 3,
+    "medium_count": 3,
+    "hard_count": 2
+  },
+  "verdict_reasoning": "Статията е изключително добре структурирана, с безупречна математическа коректност и реални олимпиадни примери. Единственият недостатък е незначителен.",
+  "_tokens": 13995,
+  "_model": "deepseek/deepseek-r1-0528"
+}

@@ -1,0 +1,387 @@
+{
+  "_meta": {
+    "pdf": "C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\Задачи_Минали_Години\\Областен\\OLI-2-Областен кръг-2005-11 кл-probs.pdf",
+    "paired_with": "C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\Задачи_Минали_Години\\Областен\\OLI-2-Областен кръг-2005-11 кл-sol.pdf",
+    "level": 1,
+    "type": "probs",
+    "analyzed_at": "2026-10-18T12:39:29.836781",
+    "model": "deepseek/deepseek-v3.2",
+    "text_length": 4736,
+    "paired_text_length": 21347
+  },
+  "problems": [
+    {
+      "num": 10.2,
+      "topic": "geometry",
+      "theorems": [
+        "Ptolemy",
+        "Triangle inequality"
+      ],
+      "techniques": [
+        "algebraic manipulation",
+        "inequality"
+      ],
+      "concepts": [
+        "quadrilateral sides and diagonals",
+        "Ptolemy's inequality",
+        "Euler's quadrilateral theorem",
+        "cyclic quadrilateral"
+      ],
+      "difficulty": "standard",
+      "notes": "Part (a) is Euler's quadrilateral theorem (a²+b²+c²+d² ≥ e²+f²). Part (b) uses Ptolemy's theorem for cyclic quadrilateral."
+    },
+    {
+      "num": 10.3,
+      "topic": "number_theory",
+      "theorems": [
+        "LCM properties",
+        "gcd-lcm relation"
+      ],
+      "techniques": [
+        "prime factorization",
+        "case analysis",
+        "exponent comparison"
+      ],
+      "concepts": [
+        "least common multiple",
+        "greatest common divisor",
+        "properties of consecutive integers",
+        "powers of 2"
+      ],
+      "difficulty": "hard",
+      "notes": "Involves solving LCM equation with consecutive numbers and powers of 2."
+    },
+    {
+      "num": 10.4,
+      "topic": "algebra",
+      "theorems": [],
+      "techniques": [
+        "function analysis",
+        "inequality",
+        "root counting",
+        "substitution"
+      ],
+      "concepts": [
+        "quadratic equations",
+        "trigonometric substitution (sinx+cosx)",
+        "discriminant",
+        "interval analysis"
+      ],
+      "difficulty": "olympic",
+      "notes": "Two equations compared for number of solutions; involves trigonometric substitution and analysis of quadratic in sinx+cosx."
+    },
+    {
+      "num": 10.5,
+      "topic": "geometry",
+      "theorems": [
+        "Simson line",
+        "properties of orthocenter"
+      ],
+      "techniques": [
+        "angle chasing",
+        "collinearity proof"
+      ],
+      "concepts": [
+        "orthocenter",
+        "angle bisectors (internal/external)",
+        "projections",
+        "midpoint",
+        "collinear points"
+      ],
+      "difficulty": "olympic",
+      "notes": "Projections of orthocenter onto internal and external angle bisectors are collinear with midpoint."
+    },
+    {
+      "num": 10.6,
+      "topic": "combinatorics",
+      "theorems": [
+        "Pigeonhole principle"
+      ],
+      "techniques": [
+        "extremal principle",
+        "construction of example"
+      ],
+      "concepts": [
+        "sums of consecutive terms",
+        "permutations",
+        "max-min problem"
+      ],
+      "difficulty": "olympic",
+      "notes": "Find maximum A such that in any permutation of 1..1000, there exist 50 consecutive numbers with sum ≥ A."
+    },
+    {
+      "num": 9.1,
+      "topic": "algebra",
+      "theorems": [
+        "Polynomial remainder theorem"
+      ],
+      "techniques": [
+        "polynomial division",
+        "system of equations"
+      ],
+      "concepts": [
+        "polynomial division with remainder",
+        "equating coefficients",
+        "solving for parameters"
+      ],
+      "difficulty": "standard",
+      "notes": "Given remainder of polynomial division, find parameters a,b."
+    },
+    {
+      "num": 9.2,
+      "topic": "geometry",
+      "theorems": [
+        "Similar triangles",
+        "Power of a point"
+      ],
+      "techniques": [
+        "construction of perpendiculars",
+        "proportional segments"
+      ],
+      "concepts": [
+        "tangent circles",
+        "incircle/excircle configuration",
+        "collinearity",
+        "midpoint"
+      ],
+      "difficulty": "standard",
+      "notes": "Two circles tangent to angle sides; prove third circle with center on segment between centers passes through other intersection point."
+    },
+    {
+      "num": 9.3,
+      "topic": "number_theory",
+      "theorems": [
+        "GCD properties",
+        "Euclidean algorithm"
+      ],
+      "techniques": [
+        "contradiction",
+        "modular arithmetic",
+        "infinite descent"
+      ],
+      "concepts": [
+        "Diophantine equation",
+        "consecutive integer solutions",
+        "perfect powers"
+      ],
+      "difficulty": "olympic",
+      "notes": "If a^k x - b^k y = a - b has consecutive integer solution, then |a-b| is perfect k-th power."
+    },
+    {
+      "num": 9.4,
+      "topic": "algebra",
+      "theorems": [
+        "Vieta's formulas"
+      ],
+      "techniques": [
+        "absolute value equations",
+        "system of equations",
+        "parameter elimination"
+      ],
+      "concepts": [
+        "quadratic equations with absolute value",
+        "sum of squares of roots",
+        "real roots condition"
+      ],
+      "difficulty": "standard",
+      "notes": "Find parameter p such that equation has four real roots with given sum of squares."
+    },
+    {
+      "num": 9.5,
+      "topic": "geometry",
+      "theorems": [
+        "Ptolemy",
+        "Power of a point",
+        "Ceva",
+        "Menelaus"
+      ],
+      "techniques": [
+        "ratio chasing",
+        "similar triangles",
+        "mass points"
+      ],
+      "concepts": [
+        "cyclic quadrilateral",
+        "tangent",
+        "centroid",
+        "intersecting chords"
+      ],
+      "difficulty": "hard",
+      "notes": "Complex configuration with cyclic quadrilateral, tangent, and centroid; find ratio of segments."
+    },
+    {
+      "num": 9.6,
+      "topic": "combinatorics",
+      "theorems": [],
+      "techniques": [
+        "counting",
+        "pigeonhole principle"
+      ],
+      "concepts": [
+        "round-robin scheduling",
+        "maximizing games played"
+      ],
+      "difficulty": "standard",
+      "notes": "Optimization problem: 25 people, 5-player game, one deck; maximize number of games so each plays equally."
+    },
+    {
+      "num": 10.1,
+      "topic": "algebra",
+      "theorems": [],
+      "techniques": [
+        "substitution",
+        "system solving"
+      ],
+      "concepts": [
+        "exponential equations",
+        "logarithmic equations",
+        "system of two equations"
+      ],
+      "difficulty": "standard",
+      "notes": "System with exponential and logarithmic terms."
+    },
+    {
+      "num": 11.2,
+      "topic": "geometry",
+      "theorems": [
+        "Similar triangles",
+        "Cyclic quadrilaterals",
+        "Law of sines"
+      ],
+      "techniques": [
+        "angle chasing",
+        "similarity ratio",
+        "trigonometry"
+      ],
+      "concepts": [
+        "orthocenter",
+        "circumcenter",
+        "similar triangles",
+        "angle conditions",
+        "area ratio"
+      ],
+      "difficulty": "olympic",
+      "notes": "Points on sides with equal angles; intersection points form triangle similar to original; its circumcenter is orthocenter of original."
+    },
+    {
+      "num": 11.3,
+      "topic": "number_theory",
+      "theorems": [],
+      "techniques": [
+        "inequality manipulation",
+        "contradiction",
+        "combinatorial counting"
+      ],
+      "concepts": [
+        "Diophantine equation",
+        "max among four numbers",
+        "combinatorial number of solutions",
+        "binomial coefficients"
+      ],
+      "difficulty": "olympic",
+      "notes": "Part (a): prove d = a+b+c from product equality. Part (b): count number of ordered quadruples."
+    },
+    {
+      "num": 11.4,
+      "topic": "algebra",
+      "theorems": [],
+      "techniques": [
+        "logarithmic transformation",
+        "quadratic substitution",
+        "domain analysis"
+      ],
+      "concepts": [
+        "logarithmic equations",
+        "exponential equations",
+        "change of variable",
+        "parameter conditions"
+      ],
+      "difficulty": "hard",
+      "notes": "Logarithmic equation with parameter; solve for x=1, then condition ax≠1."
+    },
+    {
+      "num": 11.5,
+      "topic": "geometry",
+      "theorems": [
+        "Law of sines",
+        "Incircle-excircle relations"
+      ],
+      "techniques": [
+        "trigonometric identities",
+        "parallel lines",
+        "distance equality"
+      ],
+      "concepts": [
+        "angle bisectors",
+        "circumcircle intersections",
+        "inradius",
+        "parallel lines",
+        "concurrency"
+      ],
+      "difficulty": "olympic",
+      "notes": "Complex configuration with angle bisectors intersecting circumcircle; prove inradius equals altitude, and three lines concur at incenter."
+    },
+    {
+      "num": 11.6,
+      "topic": "combinatorics",
+      "theorems": [
+        "Pigeonhole principle"
+      ],
+      "techniques": [
+        "case analysis",
+        "construction of counterexample"
+      ],
+      "concepts": [
+        "regular polygon",
+        "isosceles triangles",
+        "parallel chords",
+        "vertex selection"
+      ],
+      "difficulty": "olympic",
+      "notes": "For regular 26-gon, any 9 vertices contain an isosceles triangle; false for 8 vertices (counterexample given)."
+    }
+  ],
+  "unique_concepts": [
+    "quadrilateral sides and diagonals",
+    "Ptolemy's inequality",
+    "cyclic quadrilateral",
+    "least common multiple",
+    "greatest common divisor",
+    "powers of 2",
+    "trigonometric substitution",
+    "discriminant",
+    "root counting",
+    "orthocenter",
+    "angle bisectors",
+    "collinearity",
+    "Simson line",
+    "pigeonhole principle",
+    "sums of consecutive terms",
+    "polynomial remainder theorem",
+    "tangent circles",
+    "similar triangles",
+    "power of a point",
+    "Diophantine equations",
+    "perfect powers",
+    "absolute value equations",
+    "Vieta's formulas",
+    "centroid",
+    "ratio chasing",
+    "round-robin scheduling",
+    "exponential equations",
+    "logarithmic equations",
+    "similar triangles",
+    "circumcenter",
+    "area ratio",
+    "combinatorial counting",
+    "binomial coefficients",
+    "logarithmic transformation",
+    "inradius",
+    "parallel lines",
+    "concurrency",
+    "regular polygon",
+    "isosceles triangles",
+    "parallel chords"
+  ],
+  "confidence": 0.95
+}

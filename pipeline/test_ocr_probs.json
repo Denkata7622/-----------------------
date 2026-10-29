@@ -1,0 +1,135 @@
+{
+  "pages": [
+    {
+      "index": 0,
+      "markdown": "Министерство на образованието и науката\n\n## 73. Национална олимпиада по математика\nОбластен кръг\n\n11 февруари 2024 г.\n\n**Задача 11.1.** Да се намерят стойностите на реалния параметър $a$, за които уравнението\n\n$$3x^5 + x^4 + (a - 2)x^3 + (a - 2)x^2 + x + 3 = 0$$\n\nима три различни реални корена.\n\n**Задача 11.2.** Трапецът $ABCD$ ($AB \\parallel CD$, $AB > CD$) е вписан в окръжност с радиус 9 cm. Петата на перпендикуляра от върха $C$ към основата $AB$ я разделя в отношение $2 : 1$, считано от върха $A$. Ако дължината на диагонала $AC$ е равна на дължината на основата $AB$, то да се намери лицето на трапеца.\n\n**Задача 11.3.** Естествено число $n$ се нарича *добро*, ако $n$ има четен брой делители:\n\n$$1 = d_1 < d_2 < \\dots < d_{2k-1} < d_{2k} = n,$$\n\nза които $d_{k+1} - d_k = 2$ и $d_{k+2} - d_{k-1} = 65$. Да се намери най-малкото добро число.\n\n**Задача 11.4.** В клетките на квадратна таблица $2025 \\times 2025$ са записани числата $1, 2, 3, \\dots, 2024, 2025$, всяко по 2025 пъти. Да се докаже, че в някой ред или в някоя колона на таблицата се срещат поне 45 различни числа.\n\nСвалено от Klasirane.com",
+      "images": [],
+      "tables": [],
+      "hyperlinks": [],
+      "header": null,
+      "footer": null,
+      "dimensions": {
+        "dpi": 87,
+        "height": 1018,
+        "width": 719
+      },
+      "confidence_scores": null,
+      "blocks": [
+        {
+          "top_left_x": 201,
+          "top_left_y": 152,
+          "bottom_right_x": 520,
+          "bottom_right_y": 170,
+          "content": "Министерство на образованието и науката",
+          "confidence_scores": null,
+          "type": "header"
+        },
+        {
+          "top_left_x": 53,
+          "top_left_y": 266,
+          "bottom_right_x": 670,
+          "bottom_right_y": 333,
+          "content": "## 73. Национална олимпиада по математика\nОбластен кръг",
+          "confidence_scores": null,
+          "type": "title"
+        },
+        {
+          "top_left_x": 291,
+          "top_left_y": 374,
+          "bottom_right_x": 430,
+          "bottom_right_y": 391,
+          "content": "11 февруари 2024 г.",
+          "confidence_scores": null,
+          "type": "text"
+        },
+        {
+          "top_left_x": 83,
+          "top_left_y": 417,
+          "bottom_right_x": 626,
+          "bottom_right_y": 434,
+          "content": "**Задача 11.1.** Да се намерят стойностите на реалния параметър $a$, за които уравнението",
+          "confidence_scores": null,
+          "type": "text"
+        },
+        {
+          "top_left_x": 227,
+          "top_left_y": 443,
+          "bottom_right_x": 491,
+          "bottom_right_y": 462,
+          "content": "$$3x^5 + x^4 + (a - 2)x^3 + (a - 2)x^2 + x + 3 = 0$$",
+          "confidence_scores": null,
+          "type": "equation"
+        },
+        {
+          "top_left_x": 83,
+          "top_left_y": 474,
+          "bottom_right_x": 289,
+          "bottom_right_y": 489,
+          "content": "има три различни реални корена.",
+          "confidence_scores": null,
+          "type": "text"
+        },
+        {
+          "top_left_x": 81,
+          "top_left_y": 512,
+          "bottom_right_x": 634,
+          "bottom_right_y": 577,
+          "content": "**Задача 11.2.** Трапецът $ABCD$ ($AB \\parallel CD$, $AB > CD$) е вписан в окръжност с радиус 9 cm. Петата на перпендикуляра от върха $C$ към основата $AB$ я разделя в отношение $2 : 1$, считано от върха $A$. Ако дължината на диагонала $AC$ е равна на дължината на основата $AB$, то да се намери лицето на трапеца.",
+          "confidence_scores": null,
+          "type": "text"
+        },
+        {
+          "top_left_x": 81,
+          "top_left_y": 599,
+          "bottom_right_x": 588,
+          "bottom_right_y": 615,
+          "content": "**Задача 11.3.** Естествено число $n$ се нарича *добро*, ако $n$ има четен брой делители:",
+          "confidence_scores": null,
+          "type": "text"
+        },
+        {
+          "top_left_x": 249,
+          "top_left_y": 629,
+          "bottom_right_x": 466,
+          "bottom_right_y": 645,
+          "content": "$$1 = d_1 < d_2 < \\dots < d_{2k-1} < d_{2k} = n,$$",
+          "confidence_scores": null,
+          "type": "equation"
+        },
+        {
+          "top_left_x": 81,
+          "top_left_y": 658,
+          "bottom_right_x": 583,
+          "bottom_right_y": 676,
+          "content": "за които $d_{k+1} - d_k = 2$ и $d_{k+2} - d_{k-1} = 65$. Да се намери най-малкото добро число.",
+          "confidence_scores": null,
+          "type": "text"
+        },
+        {
+          "top_left_x": 81,
+          "top_left_y": 700,
+          "bottom_right_x": 634,
+          "bottom_right_y": 749,
+          "content": "**Задача 11.4.** В клетките на квадратна таблица $2025 \\times 2025$ са записани числата $1, 2, 3, \\dots, 2024, 2025$, всяко по 2025 пъти. Да се докаже, че в някой ред или в някоя колона на таблицата се срещат поне 45 различни числа.",
+          "confidence_scores": null,
+          "type": "text"
+        },
+        {
+          "top_left_x": 417,
+          "top_left_y": 984,
+          "bottom_right_x": 653,
+          "bottom_right_y": 1005,
+          "content": "Свалено от Klasirane.com",
+          "confidence_scores": null,
+          "type": "footer"
+        }
+      ]
+    }
+  ],
+  "model": "mistral-ocr-latest",
+  "document_annotation": null,
+  "usage_info": {
+    "pages_processed": 1,
+    "doc_size_bytes": 88446
+  }
+}

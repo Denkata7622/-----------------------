@@ -1,0 +1,184 @@
+{
+  "_meta": {
+    "pdf": "C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\Задачи_Минали_Години\\Областен\\OLI-2-Областен кръг-2020-11 кл-sol.pdf",
+    "paired_with": null,
+    "level": 1,
+    "type": "sol",
+    "analyzed_at": "2026-10-16T21:27:40.153560",
+    "model": "deepseek/deepseek-v3.2",
+    "text_length": 12635,
+    "paired_text_length": 0
+  },
+  "problems": [
+    {
+      "num": 1,
+      "topic": "algebra",
+      "theorems": [
+        "Cauchy-Schwarz inequality",
+        "AM-GM inequality"
+      ],
+      "techniques": [
+        "summation",
+        "inequality manipulation",
+        "equality case analysis"
+      ],
+      "concepts": [
+        "sequences",
+        "inequalities",
+        "sum of squares"
+      ],
+      "difficulty": "olympic",
+      "notes": "Problem involves proving an inequality for sequences and analyzing equality conditions. Uses Cauchy-Schwarz and summation tricks."
+    },
+    {
+      "num": 2,
+      "topic": "geometry",
+      "theorems": [
+        "Midsegment theorem",
+        "Inscribed angle theorem",
+        "Law of Sines"
+      ],
+      "techniques": [
+        "auxiliary points (midpoints)",
+        "angle chasing",
+        "cyclic quadrilateral identification"
+      ],
+      "concepts": [
+        "triangle geometry",
+        "cyclic quadrilaterals",
+        "angle bisector",
+        "circumscribed circle radius"
+      ],
+      "difficulty": "olympic",
+      "notes": "Construction with midpoints leads to proving a cyclic quadrilateral and an angle bisector. Uses Law of Sines on circumcircles."
+    },
+    {
+      "num": 3,
+      "topic": "number_theory",
+      "theorems": [],
+      "techniques": [
+        "coprime assumption",
+        "substitution",
+        "contradiction",
+        "case analysis"
+      ],
+      "concepts": [
+        "Diophantine equation",
+        "coprime numbers",
+        "integer solutions",
+        "fraction addition to integer"
+      ],
+      "difficulty": "olympic",
+      "notes": "Diophantine problem where sum of two fractions is integer. Uses lemma: if a/b + c/d is integer and fractions are reduced, then b = ±d."
+    },
+    {
+      "num": 4,
+      "topic": "combinatorics",
+      "theorems": [],
+      "techniques": [
+        "pigeonhole principle",
+        "double counting",
+        "extremal principle",
+        "set manipulation"
+      ],
+      "concepts": [
+        "binary sequences",
+        "set families closed under operation",
+        "maximal size",
+        "combinatorial bounds"
+      ],
+      "difficulty": "olympic",
+      "notes": "Combinatorial problem about sets of binary sequences closed under replacing 1s with 0s. Involves finding a bound on the size of such a set."
+    },
+    {
+      "num": 5,
+      "topic": "algebra",
+      "theorems": [
+        "Vieta's formulas"
+      ],
+      "techniques": [
+        "substitution",
+        "progressions manipulation",
+        "solving equations"
+      ],
+      "concepts": [
+        "geometric progression",
+        "arithmetic progression",
+        "roots of quadratic",
+        "parameter elimination"
+      ],
+      "difficulty": "standard",
+      "notes": "Relates coefficients of a quadratic (forming geometric progression) to its roots forming an arithmetic progression. Uses Vieta's formulas."
+    },
+    {
+      "num": 6,
+      "topic": "algebra",
+      "theorems": [
+        "Vieta's formulas"
+      ],
+      "techniques": [
+        "discriminant analysis",
+        "case analysis",
+        "integer root finding"
+      ],
+      "concepts": [
+        "quadratic equations",
+        "natural number roots",
+        "symmetric equations",
+        "discriminant conditions"
+      ],
+      "difficulty": "olympic",
+      "notes": "Two quadratic equations with swapped coefficients. Finds all natural number pairs (b,c) such that both have natural roots."
+    },
+    {
+      "num": 7,
+      "topic": "algebra",
+      "theorems": [],
+      "techniques": [
+        "derivative",
+        "critical points analysis",
+        "function monotonicity"
+      ],
+      "concepts": [
+        "polynomial functions",
+        "extrema",
+        "increasing/decreasing intervals",
+        "cubic functions"
+      ],
+      "difficulty": "standard",
+      "notes": "Standard calculus problem: find extrema and monotonicity intervals of a cubic polynomial."
+    }
+  ],
+  "unique_concepts": [
+    "Cauchy-Schwarz inequality",
+    "AM-GM inequality",
+    "Midsegment theorem",
+    "Inscribed angle theorem",
+    "Law of Sines",
+    "cyclic quadrilaterals",
+    "angle bisector",
+    "circumscribed circle radius",
+    "Diophantine equation",
+    "coprime numbers",
+    "integer solutions",
+    "fraction addition to integer",
+    "binary sequences",
+    "set families closed under operation",
+    "combinatorial bounds",
+    "pigeonhole principle",
+    "double counting",
+    "extremal principle",
+    "Vieta's formulas",
+    "geometric progression",
+    "arithmetic progression",
+    "roots of quadratic",
+    "discriminant analysis",
+    "natural number roots",
+    "symmetric equations",
+    "derivative",
+    "critical points",
+    "function monotonicity",
+    "cubic functions"
+  ],
+  "confidence": 0.95
+}

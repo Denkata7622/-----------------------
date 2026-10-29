@@ -1,0 +1,18 @@
+{
+  "processed": {
+    "R.9": {
+      "status": "done",
+      "cost": 0.006859591706,
+      "tokens": 116873,
+      "ts": 1793012875.9666748
+    }
+  },
+  "budget": {
+    "date": "2026-10-26",
+    "spent_usd": 0.006859591706,
+    "calls": 1
+  },
+  "started_at": 1793012198.217706,
+  "total_calls": 1,
+  "total_cost_usd": 0.006859591706
+}

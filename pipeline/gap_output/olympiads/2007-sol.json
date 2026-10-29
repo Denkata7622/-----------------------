@@ -1,0 +1,151 @@
+{
+  "_meta": {
+    "pdf": "C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\Задачи_Минали_Години\\Национален\\OLI-3-Национален кръг-2007-9-12 кл-sol.pdf",
+    "paired_with": null,
+    "level": 2,
+    "type": "sol",
+    "analyzed_at": "2026-10-18T12:06:27.161311",
+    "model": "deepseek/deepseek-v3.2",
+    "text_length": 13281,
+    "paired_text_length": 0
+  },
+  "problems": [
+    {
+      "num": 1,
+      "topic": "geometry",
+      "theorems": [],
+      "techniques": [
+        "triangle congruence",
+        "similar triangles",
+        "angle chasing"
+      ],
+      "concepts": [
+        "incircle",
+        "tangent points",
+        "angle sum condition",
+        "parallel lines",
+        "segment equality",
+        "product of segments"
+      ],
+      "difficulty": "standard",
+      "notes": "Uses properties of incircle and tangent segments. Key step is proving triangles IMX and INY are congruent, leading to parallel lines and similar triangles."
+    },
+    {
+      "num": 2,
+      "topic": "combinatorics",
+      "theorems": [],
+      "techniques": [
+        "pigeonhole principle",
+        "construction",
+        "parity adjustment",
+        "counting columns"
+      ],
+      "concepts": [
+        "digit manipulation",
+        "exponential counting",
+        "existence construction",
+        "upper bound proof"
+      ],
+      "difficulty": "hard",
+      "notes": "Involves clever transformation of digits and counting of possible columns. The answer is expressed in terms of exponentials (5^2007 - 2^2007 + 1)."
+    },
+    {
+      "num": 3,
+      "topic": "algebra",
+      "theorems": [
+        "Euler's totient function",
+        "Gauss's Lemma"
+      ],
+      "techniques": [
+        "polynomial manipulation",
+        "assumption of specific form",
+        "contradiction",
+        "rational root test"
+      ],
+      "concepts": [
+        "cosine values",
+        "minimal polynomial",
+        "algebraic numbers",
+        "field extensions Q(√q)",
+        "representation in radicals"
+      ],
+      "difficulty": "olympic",
+      "notes": "Uses properties of minimal polynomials of cos(π/n). The proof shows cos(π/7) cannot be expressed in the given radical form over Q."
+    },
+    {
+      "num": 4,
+      "topic": "combinatorics",
+      "theorems": [],
+      "techniques": [
+        "coloring",
+        "construction",
+        "extremal principle"
+      ],
+      "concepts": [
+        "sum-free sets modulo coloring",
+        "arithmetic progressions",
+        "parity-based coloring"
+      ],
+      "difficulty": "standard",
+      "notes": "A Ramsey-type coloring problem. The optimal t is 2k-2, proven by construction for all a and a counterexample for larger t."
+    },
+    {
+      "num": 5,
+      "topic": "geometry",
+      "theorems": [],
+      "techniques": [
+        "covering",
+        "area comparison",
+        "inequality manipulation",
+        "case analysis"
+      ],
+      "concepts": [
+        "equilateral triangles",
+        "sum of areas",
+        "geometric covering",
+        "side length relations"
+      ],
+      "difficulty": "hard",
+      "notes": "A geometric covering problem. The minimal total area m is 2. Proof uses both a counterexample construction and a covering argument."
+    },
+    {
+      "num": 6,
+      "topic": "algebra",
+      "theorems": [
+        "Gauss's Lemma"
+      ],
+      "techniques": [
+        "polynomial completion of square",
+        "infinite descent (via growth)",
+        "contradiction"
+      ],
+      "concepts": [
+        "monic polynomial",
+        "perfect square values",
+        "polynomial identity",
+        "coefficient matching",
+        "rational coefficients becoming integer"
+      ],
+      "difficulty": "olympic",
+      "notes": "Uses the fact that if a monic even-degree polynomial takes square values infinitely often, it must be a square of a polynomial. Key step is writing f(x) = h(x)^2 + r(x) and showing r(x) must be zero."
+    }
+  ],
+  "unique_concepts": [
+    "incircle and tangent properties",
+    "congruent and similar triangles",
+    "digit manipulation and parity",
+    "exponential counting and construction",
+    "minimal polynomial and algebraic numbers",
+    "radical expressions over Q",
+    "coloring and sum-free sets",
+    "geometric covering and area",
+    "polynomial as perfect square (square of polynomial)",
+    "infinite square values implying polynomial square",
+    "Gauss's Lemma",
+    "rational root test",
+    "Euler's totient function",
+    "pigeonhole principle",
+    "extremal principle"
+  ],
+  "confidence": 0.95
+}

@@ -1,0 +1,380 @@
+{
+  "_meta": {
+    "pdf": "C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\Задачи_Минали_Години\\Областен\\OLI-2-Областен кръг-2004-11 кл-probs.pdf",
+    "paired_with": "C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\Задачи_Минали_Години\\Областен\\OLI-2-Областен кръг-2004-11 кл-sol.pdf",
+    "level": 1,
+    "type": "probs",
+    "analyzed_at": "2026-10-18T12:35:33.191600",
+    "model": "deepseek/deepseek-v3.2",
+    "text_length": 4714,
+    "paired_text_length": 10270
+  },
+  "problems": [
+    {
+      "num": 9.1,
+      "topic": "algebra",
+      "theorems": [],
+      "techniques": [
+        "substitution",
+        "trigonometric substitution",
+        "solving quadratic equations"
+      ],
+      "concepts": [
+        "trigonometric identities",
+        "solving trigonometric equations",
+        "geometric progression condition",
+        "range of sine and cosine"
+      ],
+      "difficulty": "standard",
+      "notes": "Условието за три последователни члена на геометрична прогресия води до уравнение, което след заместване се свежда до квадратно относно комбинация от sin и cos."
+    },
+    {
+      "num": 9.2,
+      "topic": "geometry",
+      "theorems": [],
+      "techniques": [
+        "similar triangles",
+        "angle chasing"
+      ],
+      "concepts": [
+        "similar triangles criteria",
+        "properties of isosceles triangles",
+        "midpoint",
+        "angle relationships"
+      ],
+      "difficulty": "standard",
+      "notes": "Задачата използва подобни триъгълници, получени от дадените пропорции и равенства на ъгли."
+    },
+    {
+      "num": 9.3,
+      "topic": "algebra",
+      "theorems": [
+        "Cauchy-Schwarz inequality",
+        "Chebyshev's inequality (or rearrangement)"
+      ],
+      "techniques": [
+        "inequality manipulation",
+        "substitution"
+      ],
+      "concepts": [
+        "symmetric inequalities",
+        "sum of fractions",
+        "condition a+b+c=1"
+      ],
+      "difficulty": "hard",
+      "notes": "Неравенството изглежда нестандартно и изисква съобразителност. Може да се използва някаква форма на неравенство на Чебишов или Кош-Шварц след подходящо преобразуване."
+    },
+    {
+      "num": 9.4,
+      "topic": "number_theory",
+      "theorems": [],
+      "techniques": [
+        "factoring",
+        "infinite descent",
+        "modular arithmetic analysis"
+      ],
+      "concepts": [
+        "Diophantine equations",
+        "sum of cubes",
+        "integer solutions"
+      ],
+      "difficulty": "olympic",
+      "notes": "Уравнението е x^3 + 101x = y^3 + 6y^2. Преобразуването до разлика на кубове или факторизиране вероятно е ключово. Може да се използва безкраен спускане или анализ по модул."
+    },
+    {
+      "num": 9.5,
+      "topic": "combinatorics",
+      "theorems": [],
+      "techniques": [
+        "pigeonhole principle",
+        "graph theory interpretation",
+        "extremal principle"
+      ],
+      "concepts": [
+        "graph theory (acquaintance model)",
+        "Ramsey theory basics",
+        "pigeonhole principle application"
+      ],
+      "difficulty": "olympic",
+      "notes": "Задачата е класическа комбинаторна задача за познати/непознати, която се свежда до принципа на Дирихле или елементарна теория на графи."
+    },
+    {
+      "num": 10.1,
+      "topic": "algebra",
+      "theorems": [],
+      "techniques": [
+        "squaring equations",
+        "analysis of integer and fractional parts",
+        "substitution"
+      ],
+      "concepts": [
+        "floor function [x]",
+        "solving equations with floor",
+        "integer solutions"
+      ],
+      "difficulty": "hard",
+      "notes": "Уравненията съдържат функция 'цяла част' ([x]). Решението изисква внимателен анализ на свойствата на тази функция и разглеждане на случаи."
+    },
+    {
+      "num": 10.2,
+      "topic": "geometry",
+      "theorems": [
+        "Law of Cosines",
+        "Stewart's theorem",
+        "AM-GM inequality",
+        "Cauchy-Schwarz inequality"
+      ],
+      "techniques": [
+        "trigonometric identities",
+        "inequality manipulation",
+        "area formulas"
+      ],
+      "concepts": [
+        "centroid",
+        "cotangent formula via sides and area",
+        "triangle inequalities",
+        "sum of cotangents inequality"
+      ],
+      "difficulty": "olympic",
+      "notes": "Част а) извежда формула за cotangent на ъгъл при медицентъра чрез страни и лице. Част б) изисква доказателство на неравенство, вероятно използвайки Коши-Шварц или сума на квадрати."
+    },
+    {
+      "num": 10.3,
+      "topic": "combinatorics",
+      "theorems": [],
+      "techniques": [
+        "counting",
+        "double counting",
+        "setting up equations"
+      ],
+      "concepts": [
+        "combinatorial identities",
+        "handshaking lemma type",
+        "graph theory (edges sent)"
+      ],
+      "difficulty": "standard",
+      "notes": "Задачата се свежда до преброяване на картичките (ребра в пълен граф) и решаване на уравнение за цели числа m и j."
+    },
+    {
+      "num": 10.4,
+      "topic": "algebra",
+      "theorems": [
+        "Factor theorem",
+        "Descartes' rule of signs",
+        "Vieta's formulas"
+      ],
+      "techniques": [
+        "polynomial factoring",
+        "parameter analysis",
+        "root location"
+      ],
+      "concepts": [
+        "polynomial roots",
+        "multiple roots",
+        "positive roots condition",
+        "cubic equations"
+      ],
+      "difficulty": "hard",
+      "notes": "Част а) е проверка. Част б) изисква намиране на параметър 'a', така че кубичният полином да има три различни положителни корена. Използва се факторизация и условия на Виет."
+    },
+    {
+      "num": 10.5,
+      "topic": "geometry",
+      "theorems": [
+        "Euler line",
+        "properties of centroid and circumcenter",
+        "right triangle properties"
+      ],
+      "techniques": [
+        "coordinate geometry",
+        "vector geometry",
+        "synthetic geometry with perpendicularity"
+      ],
+      "concepts": [
+        "circumcenter",
+        "centroid",
+        "midpoint",
+        "perpendicular lines",
+        "isosceles triangle criteria"
+      ],
+      "difficulty": "olympic",
+      "notes": "Условието OG ⟂ CM води до връзка между отсечки, която трябва да докаже, че триъгълникът е равнобедрен. Може да се използва координатна геометрия или свойства на Ойлеровата права."
+    },
+    {
+      "num": 10.6,
+      "topic": "combinatorics",
+      "theorems": [
+        "Turán's theorem (implicitly)",
+        "Handshaking lemma",
+        "double counting of triangles"
+      ],
+      "techniques": [
+        "extremal graph theory",
+        "combinatorial counting",
+        "inequality from edge count"
+      ],
+      "concepts": [
+        "graph theory",
+        "triangles in graphs",
+        "maximum edges without triangles",
+        "Mantel's theorem"
+      ],
+      "difficulty": "olympic",
+      "notes": "Задачата е класическа от екстремалната теория на графите. Използва се фактът, че граф с много ребра задължително съдържа триъгълници. Доказателството може да използва двойно преброяване или неравенство на Мантел."
+    },
+    {
+      "num": 11.2,
+      "topic": "geometry",
+      "theorems": [
+        "Law of Sines"
+      ],
+      "techniques": [
+        "trigonometric manipulation",
+        "angle chasing",
+        "using equal tangents"
+      ],
+      "concepts": [
+        "incircle",
+        "tangent points",
+        "angle bisectors (implicitly)",
+        "trigonometric identities in triangles"
+      ],
+      "difficulty": "standard",
+      "notes": "Задачата използва синусова теорема в множество триъгълници, за да достигне до равенство на тангенси, а оттам и на ъгли."
+    },
+    {
+      "num": 11.3,
+      "topic": "combinatorics",
+      "theorems": [
+        "Pigeonhole principle",
+        "Extremal principle"
+      ],
+      "techniques": [
+        "extremal construction",
+        "counterexample construction",
+        "averaging argument"
+      ],
+      "concepts": [
+        "acquaintance graph",
+        "maximal independent set",
+        "degree of vertices",
+        "bounds on edges/vertices"
+      ],
+      "difficulty": "olympic",
+      "notes": "Това е друга задача за познати/непознати с параметри m и n. Доказателството използва избора на максимална група хора, които не се познават, и последващо прилагане на принципа на Дирихле. Втората част изисква построяване на контрапример."
+    },
+    {
+      "num": 11.4,
+      "topic": "geometry",
+      "theorems": [],
+      "techniques": [
+        "area calculation",
+        "similar triangles",
+        "angle chasing"
+      ],
+      "concepts": [
+        "perpendicular bisectors",
+        "area of triangles (1/2 ab sinC)",
+        "similar triangles properties",
+        "cyclic quadrilaterals (possible)"
+      ],
+      "difficulty": "hard",
+      "notes": "Задачата използва подобие на триъгълници и изразяване на лица чрез страни и синуси, за да докаже равенство на лица."
+    },
+    {
+      "num": 11.5,
+      "topic": "number_theory",
+      "theorems": [
+        "Bézout's identity"
+      ],
+      "techniques": [
+        "Bézout's lemma application",
+        "modular arithmetic",
+        "constructive proof"
+      ],
+      "concepts": [
+        "coprime numbers",
+        "linear Diophantine equations",
+        "existence of solutions"
+      ],
+      "difficulty": "olympic",
+      "notes": "Задачата изисква конструктивно доказателство за съществуването на естествени числа x, y, z, удовлетворяващи дадено уравнение, базирано на взаимна простота. Ключът е прилагането на тъждеството на Безу и избор на подходящи кратни."
+    },
+    {
+      "num": 11.6,
+      "topic": "combinatorics",
+      "theorems": [],
+      "techniques": [
+        "mathematical induction",
+        "pairing argument",
+        "extremal principle"
+      ],
+      "concepts": [
+        "recursive subdivision",
+        "triangulation",
+        "pairing of triangles",
+        "area minimization"
+      ],
+      "difficulty": "olympic",
+      "notes": "Задачата е геометрично-комбинаторна. Част а) е просто преброяване. Част б) изисква индукция за двойкиране на триъгълници с обща страна. Заключението за минималната сума на лица в двойка използва средноаритметично-средногеометрично или директно пресмятане."
+    },
+    {
+      "num": 12.1,
+      "topic": "number_theory",
+      "theorems": [],
+      "techniques": [
+        "modular arithmetic",
+        "case analysis",
+        "bounding exponents"
+      ],
+      "concepts": [
+        "exponential Diophantine equations",
+        "modular residues (powers of 2 and 3)",
+        "solving in integers"
+      ],
+      "difficulty": "standard",
+      "notes": "Уравнението е 2^a + 8b^2 - 3^c = 283. Решението използва анализ по модул (например mod 8 или mod 3) за ограничаване на възможностите за a и c, последвано от проверка на случаи."
+    },
+    {
+      "num": 12.2,
+      "topic": "algebra",
+      "theorems": [],
+      "techniques": [
+        "calculus (derivatives)",
+        "inequality manipulation (AM-GM possible)",
+        "analysis of function's maximum"
+      ],
+      "concepts": [
+        "maxima and minima of functions",
+        "rational functions",
+        "parameter analysis"
+      ],
+      "difficulty": "hard",
+      "notes": "Задачата изисква намиране на параметър 'a', така че максималната стойност на дадена рационална функция да е 1. Може да се реши с производни или с подходящо неравенство (вероятно AM-GM след преобразуване)."
+    }
+  ],
+  "unique_concepts": [
+    "floor function [x]",
+    "centroid and cotangent formula",
+    "handshaking lemma / double counting",
+    "polynomial roots (Vieta)",
+    "circumcenter and centroid (Euler line)",
+    "extremal graph theory (triangles)",
+    "trigonometric substitution",
+    "similar triangles",
+    "symmetric inequalities",
+    "Diophantine equations (cubic)",
+    "acquaintance graph / Ramsey-type",
+    "Bézout's identity",
+    "recursive triangulation",
+    "exponential Diophantine equations",
+    "maxima of rational functions",
+    "geometric progression condition",
+    "perpendicular bisectors",
+    "area calculation via sine",
+    "modular arithmetic",
+    "mathematical induction",
+    "pigeonhole principle"
+  ],
+  "confidence": 0.95
+}

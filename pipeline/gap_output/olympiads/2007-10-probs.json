@@ -1,0 +1,152 @@
+{
+  "_meta": {
+    "pdf": "C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\Задачи_Минали_Години\\Областен\\OLI-2-Областен кръг-2007-10 кл-probs.pdf",
+    "paired_with": "C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\Задачи_Минали_Години\\Областен\\OLI-2-Областен кръг-2007-10 кл-sol.pdf",
+    "level": 1,
+    "type": "probs",
+    "analyzed_at": "2026-10-18T12:43:18.623640",
+    "model": "deepseek/deepseek-v3.2",
+    "text_length": 1559,
+    "paired_text_length": 7506
+  },
+  "problems": [
+    {
+      "num": 1,
+      "topic": "algebra",
+      "theorems": [],
+      "techniques": [
+        "domain analysis",
+        "case analysis",
+        "squaring inequalities"
+      ],
+      "concepts": [
+        "square root inequality",
+        "quadratic inequality",
+        "rational inequality"
+      ],
+      "difficulty": "standard",
+      "notes": "Standard inequality with square root and rational expression, requires careful domain and sign analysis."
+    },
+    {
+      "num": 2,
+      "topic": "geometry",
+      "theorems": [
+        "Ceva"
+      ],
+      "techniques": [
+        "trilinear coordinates",
+        "angle chasing",
+        "properties of incircle and excircles"
+      ],
+      "concepts": [
+        "excircles",
+        "incircle",
+        "touchpoints",
+        "triangle perimeter",
+        "diameter properties"
+      ],
+      "difficulty": "hard",
+      "notes": "Part (a) is a known result using Ceva. Part (b) requires additional insight about diameters and angle properties."
+    },
+    {
+      "num": 3,
+      "topic": "number_theory",
+      "theorems": [],
+      "techniques": [
+        "induction",
+        "case analysis",
+        "ordering variables"
+      ],
+      "concepts": [
+        "integer sequences",
+        "divisibility",
+        "max/min arguments"
+      ],
+      "difficulty": "olympic",
+      "notes": "Non-trivial induction with careful handling of the maximal element and parity of sums."
+    },
+    {
+      "num": 4,
+      "topic": "algebra",
+      "theorems": [],
+      "techniques": [
+        "substitution",
+        "quadratic analysis",
+        "parameter discussion"
+      ],
+      "concepts": [
+        "logarithmic equation",
+        "domain restrictions",
+        "quadratic roots",
+        "discriminant"
+      ],
+      "difficulty": "standard",
+      "notes": "Logarithm with variable base, transformed into quadratic with conditions on parameters."
+    },
+    {
+      "num": 5,
+      "topic": "number_theory",
+      "theorems": [
+        "Fermat's little theorem / modular arithmetic"
+      ],
+      "techniques": [
+        "modular exponentiation",
+        "congruence manipulation",
+        "linear Diophantine equation"
+      ],
+      "concepts": [
+        "modular arithmetic",
+        "order of an element",
+        "linear equations in integers"
+      ],
+      "difficulty": "hard",
+      "notes": "Combines modular congruence with a linear equation, requires finding order of 48 mod 61."
+    },
+    {
+      "num": 6,
+      "topic": "combinatorics",
+      "theorems": [],
+      "techniques": [
+        "combinatorial design",
+        "modular arithmetic",
+        "parity argument",
+        "exhaustion"
+      ],
+      "concepts": [
+        "regular polygon",
+        "rotational symmetry",
+        "difference sets",
+        "modular residues"
+      ],
+      "difficulty": "olympic",
+      "notes": "Problem about constructing a difference set in Z/16Z with specific multiplicity. Solution uses counting arguments modulo 4."
+    }
+  ],
+  "unique_concepts": [
+    "square root inequality",
+    "quadratic inequality",
+    "rational inequality",
+    "excircles",
+    "incircle",
+    "touchpoints",
+    "triangle perimeter",
+    "diameter properties",
+    "Ceva",
+    "integer sequences",
+    "divisibility",
+    "max/min arguments",
+    "induction",
+    "logarithmic equation",
+    "domain restrictions",
+    "discriminant",
+    "modular arithmetic",
+    "order of an element",
+    "linear Diophantine equation",
+    "regular polygon",
+    "rotational symmetry",
+    "difference sets",
+    "modular residues",
+    "combinatorial design"
+  ],
+  "confidence": 0.95
+}

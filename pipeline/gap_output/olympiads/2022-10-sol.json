@@ -1,0 +1,143 @@
+{
+  "_meta": {
+    "pdf": "C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\Задачи_Минали_Години\\Областен\\OLI-2-Областен кръг-2022-10 кл-sol.pdf",
+    "paired_with": null,
+    "level": 1,
+    "type": "sol",
+    "analyzed_at": "2026-10-16T21:32:47.774817",
+    "model": "deepseek/deepseek-v3.2",
+    "text_length": 12311,
+    "paired_text_length": 0
+  },
+  "problems": [
+    {
+      "num": 1,
+      "topic": "algebra",
+      "theorems": [],
+      "techniques": [
+        "symmetry_analysis",
+        "substitution",
+        "inequality_bounding"
+      ],
+      "concepts": [
+        "system_of_equations",
+        "absolute_value",
+        "parameter_analysis",
+        "necessary_and_sufficient_conditions",
+        "uniqueness_of_solution"
+      ],
+      "difficulty": "standard",
+      "notes": "Използва се симетрия (x,y) -> (-x,y) за да се наложи x=0. След това се намират кандидати за параметъра чрез заместване и се проверява единственост чрез оценка на изразите."
+    },
+    {
+      "num": 2,
+      "topic": "geometry",
+      "theorems": [],
+      "techniques": [
+        "symmetry_reflection",
+        "cyclic_quadrilaterals_identification",
+        "angle_chasing"
+      ],
+      "concepts": [
+        "triangle_geometry",
+        "altitudes",
+        "reflection_over_a_line",
+        "inscribed_angles",
+        "cyclic_quadrilaterals",
+        "angle_equality",
+        "collinearity"
+      ],
+      "difficulty": "hard",
+      "notes": "Ключовата идея е да се отрази точка P относно BC, за да се получи цикличност и да се докаже съвпадение на точки."
+    },
+    {
+      "num": 3,
+      "topic": "number_theory",
+      "theorems": [],
+      "techniques": [
+        "generalization",
+        "induction",
+        "recursive_definition",
+        "symmetry_argument"
+      ],
+      "concepts": [
+        "divisibility_of_products",
+        "integer_valued_functions",
+        "recursive_relations",
+        "symmetric_functions"
+      ],
+      "difficulty": "olympic",
+      "notes": "Задачата се свежда до доказване, че дадена рационална функция f(m,n) винаги приема цели стойности. Доказателството е по индукция, като се използва симетрия f(m,n)=f(n,m) и рекурентна връзка."
+    },
+    {
+      "num": 4,
+      "topic": "combinatorics",
+      "theorems": [
+        "pigeonhole_principle"
+      ],
+      "techniques": [
+        "exhaustive_listing",
+        "pigeonhole_principle",
+        "proof_by_contradiction",
+        "extension_of_sequence"
+      ],
+      "concepts": [
+        "strings_of_digits",
+        "substrings",
+        "de_bruijn_sequence_like",
+        "existence_construction",
+        "necessary_condition"
+      ],
+      "difficulty": "olympic",
+      "notes": "Част б) изисква комбинаторно разсъждение за поднизове (подчисла) и прилагане на принципа на Дирихле върху разширена последователност."
+    },
+    {
+      "num": 5,
+      "topic": "algebra",
+      "theorems": [],
+      "techniques": [
+        "case_analysis",
+        "rational_inequalities",
+        "domain_restrictions"
+      ],
+      "concepts": [
+        "inequalities_with_absolute_value",
+        "rational_inequalities",
+        "domain_of_expression",
+        "sign_analysis"
+      ],
+      "difficulty": "standard",
+      "notes": "Стандартно решаване на ирационално неравенство чрез разглеждане на случаи за знака на израза под модула и последващо опростяване до рационални неравенства."
+    }
+  ],
+  "unique_concepts": [
+    "system_of_equations",
+    "absolute_value",
+    "parameter_analysis",
+    "uniqueness_of_solution",
+    "symmetry_analysis",
+    "inequality_bounding",
+    "triangle_geometry",
+    "altitudes",
+    "reflection_over_a_line",
+    "cyclic_quadrilaterals",
+    "angle_chasing",
+    "collinearity",
+    "divisibility_of_products",
+    "integer_valued_functions",
+    "recursive_relations",
+    "symmetric_functions",
+    "induction",
+    "generalization",
+    "strings_of_digits",
+    "substrings",
+    "pigeonhole_principle",
+    "existence_construction",
+    "necessary_condition",
+    "proof_by_contradiction",
+    "rational_inequalities",
+    "domain_restrictions",
+    "case_analysis"
+  ],
+  "confidence": 0.95
+}

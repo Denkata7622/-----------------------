@@ -1,0 +1,135 @@
+{
+  "_meta": {
+    "pdf": "C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\Задачи_Минали_Години\\Национален\\OLI-3-Национален кръг-2024-9-12 кл-sol.pdf",
+    "paired_with": null,
+    "level": 2,
+    "type": "sol",
+    "analyzed_at": "2026-10-16T21:09:38.040974",
+    "model": "deepseek/deepseek-v3.2",
+    "text_length": 48193,
+    "paired_text_length": 0
+  },
+  "problems": [
+    {
+      "num": 1,
+      "topic": "number_theory",
+      "theorems": [
+        "Lifting The Exponent (LTE)"
+      ],
+      "techniques": [
+        "infinite descent",
+        "contradiction",
+        "arithmetic progression construction",
+        "case analysis (odd/even)"
+      ],
+      "concepts": [
+        "prime factorization",
+        "exponent valuation",
+        "gcd of numbers",
+        "difference of squares factorization",
+        "infinite arithmetic progression",
+        "perfect powers"
+      ],
+      "difficulty": "olympic",
+      "notes": "Problem asks to prove existence of an infinite arithmetic progression M_n such that n^m - 1 is not a perfect power for all m in M_n. Solution uses deep number theory: factorization n^(2^k)-1, careful analysis of prime exponents (especially 2 and odd primes), and construction of progression with difference 2^k * l."
+    },
+    {
+      "num": 2,
+      "topic": "geometry",
+      "theorems": [
+        "Menelaus",
+        "Law of Cosines",
+        "Power of a Point"
+      ],
+      "techniques": [
+        "auxiliary construction (point N, point T)",
+        "case analysis (angle >90, =90, <90)",
+        "coordinate-free computation",
+        "cyclic quadrilateral identification"
+      ],
+      "concepts": [
+        "parallelogram construction",
+        "angle chasing",
+        "right triangle properties",
+        "inscribed quadrilateral",
+        "segment length relations"
+      ],
+      "difficulty": "olympic",
+      "notes": "Two distinct solutions provided: one using Law of Cosines and case analysis on angle ABC, another using Menelaus and cyclic quadrilateral MTPO. The answer is angle ABC = 90 degrees."
+    },
+    {
+      "num": 3,
+      "topic": "algebra",
+      "theorems": [],
+      "techniques": [
+        "substitution",
+        "proving surjectivity/injectivity",
+        "functional equation analysis",
+        "solving for linear form",
+        "verification of candidate"
+      ],
+      "concepts": [
+        "functional equations on R+",
+        "surjectivity arguments",
+        "eventual linearity",
+        "reciprocal function"
+      ],
+      "difficulty": "olympic",
+      "notes": "Proves that the only solution is f(x)=1/x. Key steps: showing f is surjective on an interval, then proving f(c) must be of form 1/(zc+w) for large c, concluding z=1, w=0, and finally verifying for all arguments."
+    },
+    {
+      "num": 4,
+      "topic": "algebra",
+      "theorems": [],
+      "techniques": [
+        "cyclic sum manipulation",
+        "completing the square",
+        "case analysis on sign/range",
+        "contradiction using parity/divisibility"
+      ],
+      "concepts": [
+        "cyclic equations",
+        "sum of squares equal zero",
+        "reciprocal relations a + 1/b = 1",
+        "cycle of three possible ranges (a>1, a<0, 0<a<1)",
+        "divisibility argument (2024 not divisible by 3)"
+      ],
+      "difficulty": "hard",
+      "notes": "Equation simplifies to sum of squares, forcing each term to be zero, leading to a_i + 1/a_{i+1} = 1. Analysis shows numbers must cycle through three disjoint ranges, impossible for 2024 (not divisible by 3), so no nonzero real solutions exist."
+    },
+    {
+      "num": 5,
+      "topic": "combinatorics",
+      "theorems": [],
+      "techniques": [
+        "double counting",
+        "pigeonhole principle",
+        "inequality manipulation",
+        "averaging arguments"
+      ],
+      "concepts": [
+        "set families",
+        "intersection sizes",
+        "sum of intersections",
+        "properties of 4-element subsets",
+        "combinatorial identities"
+      ],
+      "difficulty": "olympic",
+      "notes": "Problem statement is incomplete in the provided text. Based on context, it likely involves a family F of 4-element subsets with certain intersection properties, requiring a combinatorial bound or existence proof. The solution would use double counting and pigeonhole principles."
+    }
+  ],
+  "unique_concepts": [
+    "Lifting The Exponent (LTE)",
+    "prime exponent valuation",
+    "infinite arithmetic progression construction",
+    "Menelaus theorem",
+    "cyclic quadrilateral",
+    "functional equation surjectivity",
+    "reciprocal function f(x)=1/x",
+    "cyclic equations and completing square",
+    "cycle of three ranges contradiction",
+    "double counting",
+    "set family intersection properties"
+  ],
+  "confidence": 0.95
+}

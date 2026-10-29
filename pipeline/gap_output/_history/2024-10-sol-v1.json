@@ -1,0 +1,184 @@
+{
+  "_meta": {
+    "pdf": "C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\Задачи_Минали_Години\\Областен\\OLI-2-Областен кръг-2024-10 кл-sol (1).pdf",
+    "paired_with": null,
+    "level": 1,
+    "type": "sol",
+    "analyzed_at": "2026-10-16T21:36:38.181694",
+    "model": "deepseek/deepseek-v3.2",
+    "text_length": 13243,
+    "paired_text_length": 0
+  },
+  "problems": [
+    {
+      "num": 9.4,
+      "topic": "combinatorics",
+      "theorems": [
+        "Mantel's theorem",
+        "Turán's theorem"
+      ],
+      "techniques": [
+        "graph theory modeling",
+        "bipartite graph",
+        "maximizing product",
+        "inequality between means"
+      ],
+      "concepts": [
+        "bipartite graph",
+        "even cycles",
+        "complete bipartite graph",
+        "maximizing edges",
+        "graph coloring"
+      ],
+      "difficulty": "olympic",
+      "notes": "Graph problem reduced to maximizing edges in a bipartite graph (no odd cycles). Uses Mantel's theorem (special case of Turán)."
+    },
+    {
+      "num": 10.1,
+      "topic": "algebra",
+      "theorems": [
+        "Vieta's formulas"
+      ],
+      "techniques": [
+        "substitution",
+        "solving quadratic",
+        "arithmetic and geometric progressions",
+        "system of equations"
+      ],
+      "concepts": [
+        "arithmetic progression",
+        "geometric progression",
+        "common difference",
+        "common ratio",
+        "sum of arithmetic progression",
+        "discriminant"
+      ],
+      "difficulty": "standard",
+      "notes": "Standard problem linking arithmetic and geometric progressions. Uses Vieta for roots."
+    },
+    {
+      "num": 10.2,
+      "topic": "geometry",
+      "theorems": [],
+      "techniques": [
+        "auxiliary construction",
+        "angle chasing",
+        "midpoint properties",
+        "vector addition",
+        "inequality proof"
+      ],
+      "concepts": [
+        "midpoint",
+        "cyclic quadrilateral",
+        "inscribed angles",
+        "perpendicular lines",
+        "parallelogram",
+        "triangle inequality",
+        "quadrilateral properties"
+      ],
+      "difficulty": "hard",
+      "notes": "Non-standard geometry with inequality and equality condition. Uses auxiliary point R and angle sum."
+    },
+    {
+      "num": 10.3,
+      "topic": "number_theory",
+      "theorems": [
+        "Pythagorean triples characterization"
+      ],
+      "techniques": [
+        "case analysis",
+        "modular arithmetic",
+        "gcd properties",
+        "infinite descent / parameterization"
+      ],
+      "concepts": [
+        "Diophantine equations",
+        "sum of squares",
+        "prime numbers",
+        "modular arithmetic (mod 4)",
+        "gcd",
+        "coprime numbers",
+        "probabilistic counting"
+      ],
+      "difficulty": "olympic",
+      "notes": "Number theory problem checking representation of primes as x²+ky². Uses properties of Pythagorean triples and modular arguments."
+    },
+    {
+      "num": 10.4,
+      "topic": "combinatorics",
+      "theorems": [
+        "Pigeonhole principle"
+      ],
+      "techniques": [
+        "induction",
+        "constructive proof",
+        "extremal principle",
+        "sum of remainders",
+        "tiling/coloring"
+      ],
+      "concepts": [
+        "subrectangle sums",
+        "divisibility by 5",
+        "remainders",
+        "induction on length",
+        "maximization/minimization",
+        "counterexample construction"
+      ],
+      "difficulty": "olympic",
+      "notes": "Combinatorial geometry with divisibility. Uses lemma via induction and pigeonhole on prefix sums."
+    },
+    {
+      "num": 11.1,
+      "topic": "algebra",
+      "theorems": [
+        "Vieta's formulas"
+      ],
+      "techniques": [
+        "polynomial factorization",
+        "symmetric substitution",
+        "quadratic in t=x+1/x",
+        "discriminant analysis",
+        "root counting"
+      ],
+      "concepts": [
+        "polynomial roots",
+        "symmetric expressions",
+        "substitution t=x+1/x",
+        "discriminant",
+        "real root conditions",
+        "polynomial division"
+      ],
+      "difficulty": "standard",
+      "notes": "Standard algebra problem using symmetry and substitution to reduce degree."
+    }
+  ],
+  "unique_concepts": [
+    "bipartite graph",
+    "even cycles",
+    "Mantel's theorem",
+    "arithmetic progression",
+    "geometric progression",
+    "midpoint",
+    "cyclic quadrilateral",
+    "vector addition",
+    "Diophantine equations",
+    "sum of squares",
+    "modular arithmetic",
+    "gcd",
+    "Pythagorean triples",
+    "pigeonhole principle",
+    "induction on length",
+    "subrectangle sums",
+    "divisibility by 5",
+    "polynomial factorization",
+    "symmetric substitution",
+    "discriminant",
+    "Vieta's formulas",
+    "graph theory modeling",
+    "auxiliary construction",
+    "case analysis",
+    "constructive proof",
+    "extremal principle"
+  ],
+  "confidence": 0.95
+}

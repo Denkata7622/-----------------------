@@ -1,0 +1,88 @@
+{
+  "pdf": "OLI-2-Областен кръг-2021-11 кл",
+  "problems": [
+    {
+      "num": 1,
+      "year": 2021,
+      "grade": 11,
+      "grade_range": null,
+      "round": "oblasten",
+      "statement": "За всяко реално число a намерете всички решения на уравнението 4^x + a.2^(x+2) = 2^(x-1) + 2a.",
+      "solution": null,
+      "answer": null,
+      "page": 1,
+      "point_id": "R.4",
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": "medium",
+      "techniques": [
+        "exponential_substitution",
+        "quadratic_equation",
+        "discriminant_analysis",
+        "case_analysis"
+      ],
+      "reasoning": "Уравнението се преобразува чрез замяна 2^x = t, получава се квадратично уравнение в t, което се решава чрез дискриминант и разглеждане на знаците, типично за задачи от категория \"Показателни и логаритмични уравнения\"."
+    },
+    {
+      "num": 2,
+      "year": 2021,
+      "grade": 11,
+      "grade_range": null,
+      "round": "oblasten",
+      "statement": "Даден е триъгълник ABC, за който ∠ACB = 60°. Точките P и Q вътре в страните BC и AC са такива, че четириъгълникът ABPQ е описан около окръжност с радиус r и разстоянието от върха C до окръжността е допирателната точка на вписаната в △ABC със страната BC. Да се намери отношението (BP + AQ - PQ) / r. Да се намери AB.",
+      "solution": null,
+      "answer": null,
+      "page": 1,
+      "point_id": "1.4",
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": "medium",
+      "techniques": [
+        "power_of_point",
+        "tangential_quadrilateral",
+        "incircle_properties"
+      ],
+      "reasoning": "Задачата изисква използване на степен на точка (радикална ос) за връзка между разстоянията от C до общата окръжност и страните на квадрилатерала, както и свойства на вписаните окръжности в триъгълник и вписан четириъгълник."
+    },
+    {
+      "num": 3,
+      "year": 2021,
+      "grade": 11,
+      "grade_range": null,
+      "round": "oblasten",
+      "statement": "За всяко естествено число n с f(n) означаваме сбора на всички естествени числа, които са по-малки от n и не са прости. Например f(5) = 1+4 = 5 и f(10) = 1+4+6+8+9 = 28. Да се намерят всички естествени числа, за които f(n) = (n^2 - 1)/4.",
+      "solution": null,
+      "answer": null,
+      "page": 1,
+      "point_id": "4.5",
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": "medium",
+      "techniques": [
+        "prime_numbers",
+        "sum_of_primes",
+        "diophantine_equation"
+      ],
+      "reasoning": "Задачата се свежда до сравнение на сума на прости числа с квадратична функция, което изисква техники от темата „Прости числа“ (4.5) и решаване на диофантова уравнение."
+    },
+    {
+      "num": 4,
+      "year": 2021,
+      "grade": 11,
+      "grade_range": null,
+      "round": "oblasten",
+      "statement": "Във всяка клетка на таблица 3×3 е записано едно от числата 1 и 2. Във всяка клетка a и b, имащи обща страна, a се дели на b, а b се дели на a. Колко са различните запълвания на таблицата?",
+      "solution": null,
+      "answer": null,
+      "page": 1,
+      "point_id": "3.1",
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": "easy",
+      "techniques": [
+        "divisibility"
+      ],
+      "reasoning": "Задачата се решава чрез свойството a|b и b|a ⇒ a=b, което е основна техника от раздела за делимост (3.1)."
+    }
+  ]
+}

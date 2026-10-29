@@ -1,0 +1,42 @@
+{
+  "verdict": "approve",
+  "score": 9,
+  "issues": [
+    {
+      "severity": "major",
+      "section": "4.2 Medium examples",
+      "description": "Липсва CHECK след средните примери, както се изисква в структурата. Това е задължителен елемент за самооценка между нивата."
+    }
+  ],
+  "strengths": [
+    "Математическата коректност е безупречна - всички формули и решения са проверени с конкретни числа и са верни.",
+    "Отлична олимпиадна релевантност - примерите са реални задачи от БОН, областни кръгове и IMO Shortlist.",
+    "Добре разработена секция за чести грешки с конкретни препоръки."
+  ],
+  "suggestions": [
+    "Добави CHECK точка след средните примери (например: '>>> CHECK: Medium mastery <<<') с 1-2 въпроса за самооценка.",
+    "В Пример 5 (Областен кръг 2020) посочи по-ясно в началото, че първоначалният подход е грешен, преди да предложиш правилното решение."
+  ],
+  "math_errors": [],
+  "missing_topics": [],
+  "structure_check": {
+    "section_1_why_important": true,
+    "section_2_objectives": true,
+    "section_3_theory": true,
+    "section_4_examples_3_levels": true,
+    "section_5_recognition": true,
+    "section_6_mistakes": true,
+    "section_7_mastery": true,
+    "section_8_quiz": true,
+    "section_9_recall": true,
+    "check_marks_present": false
+  },
+  "examples_check": {
+    "real_olympiad": true,
+    "easy_count": 3,
+    "medium_count": 3,
+    "hard_count": 2
+  },
+  "verdict_reasoning": "Статията е математически безупречна и използва реални олимпиадни примери, но липсва задължителния CHECK след средните примери, което намалява оценката за структура. Въпреки това, качеството е високо и може да бъде одобрена с препоръка за добавяне на CHECK.",
+  "_tokens": 17533
+}

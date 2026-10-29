@@ -1,0 +1,2158 @@
+{
+  "scanned_at": "2026-10-22",
+  "total": 215,
+  "readable": 189,
+  "empty": 26,
+  "files": [
+    {
+      "name": "OLI-2-Областен кръг-2026-10 кл-sol.pdf",
+      "year": 2026,
+      "kind": "sol",
+      "grade": "10",
+      "chars": 11657,
+      "words": 2199,
+      "source": "ocr_cache",
+      "status": "ok"
+    },
+    {
+      "name": "OLI-3-Национален кръг-2026-9-12 кл-sol.pdf",
+      "year": 2026,
+      "kind": "sol",
+      "grade": "12",
+      "chars": 17317,
+      "words": 3651,
+      "source": "pdfplumber",
+      "status": "ok"
+    },
+    {
+      "name": "OLI-2-Областен кръг-2026-10 кл-probs.pdf",
+      "year": 2026,
+      "kind": "probs",
+      "grade": "10",
+      "chars": 1452,
+      "words": 289,
+      "source": "pdfplumber",
+      "status": "ok"
+    },
+    {
+      "name": "OLI-2-Областен кръг-2026-11 кл-probs.pdf",
+      "year": 2026,
+      "kind": "probs",
+      "grade": "11",
+      "chars": 1385,
+      "words": 277,
+      "source": "pdfplumber",
+      "status": "ok"
+    },
+    {
+      "name": "OLI-3-Национален кръг-2026-9-12 кл-probs.pdf",
+      "year": 2026,
+      "kind": "probs",
+      "grade": "12",
+      "chars": 2529,
+      "words": 482,
+      "source": "pdfplumber",
+      "status": "ok"
+    },
+    {
+      "name": "OLI-2-Областен кръг-2025-10 кл-sol (1).pdf",
+      "year": 2025,
+      "kind": "sol",
+      "grade": "10",
+      "chars": 10713,
+      "words": 1894,
+      "source": "ocr_cache",
+      "status": "ok"
+    },
+    {
+      "name": "OLI-2-Областен кръг-2025-11 кл-sol.pdf",
+      "year": 2025,
+      "kind": "sol",
+      "grade": "11",
+      "chars": 7431,
+      "words": 1731,
+      "source": "ocr_cache",
+      "status": "ok"
+    },
+    {
+      "name": "OLI-3-Национален кръг-2025-9-12 кл-sol.pdf",
+      "year": 2025,
+      "kind": "sol",
+      "grade": "12",
+      "chars": 54488,
+      "words": 3864,
+      "source": "pdfplumber",
+      "status": "ok"
+    },
+    {
+      "name": "OLI-2-Областен кръг-2025-10 кл-probs (1).pdf",
+      "year": 2025,
+      "kind": "probs",
+      "grade": "10",
+      "chars": 6746,
+      "words": 227,
+      "source": "pdfplumber",
+      "status": "ok"
+    },
+    {
+      "name": "OLI-2-Областен кръг-2025-11 кл-probs.pdf",
+      "year": 2025,
+      "kind": "probs",
+      "grade": "11",
+      "chars": 4376,
+      "words": 154,
+      "source": "pdfplumber",
+      "status": "ok"
+    },
+    {
+      "name": "OLI-3-Национален кръг-2025-9-12 кл-probs.pdf",
+      "year": 2025,
+      "kind": "probs",
+      "grade": "12",
+      "chars": 14739,
+      "words": 3029,
+      "source": "pdfplumber",
+      "status": "ok"
+    },
+    {
+      "name": "OLI-2-Областен кръг-2024-10 кл-sol (1).pdf",
+      "year": 2024,
+      "kind": "sol",
+      "grade": "10",
+      "chars": 13243,
+      "words": 2119,
+      "source": "pdfplumber",
+      "status": "ok"
+    },
+    {
+      "name": "OLI-2-Областен кръг-2024-11 кл-sol.pdf",
+      "year": 2024,
+      "kind": "sol",
+      "grade": "11",
+      "chars": 10650,
+      "words": 2223,
+      "source": "pdfplumber",
+      "status": "ok"
+    },
+    {
+      "name": "OLI-3-Национален кръг-2024-9-12 кл-sol.pdf",
+      "year": 2024,
+      "kind": "sol",
+      "grade": "12",
+      "chars": 48193,
+      "words": 2212,
+      "source": "pdfplumber",
+      "status": "ok"
+    },
+    {
+      "name": "OLI-2-Областен кръг-2024-10 кл-probs (1).pdf",
+      "year": 2024,
+      "kind": "probs",
+      "grade": "10",
+      "chars": 1667,
+      "words": 283,
+      "source": "ocr_cache",
+      "status": "ok"
+    },
+    {
+      "name": "OLI-2-Областен кръг-2024-11 кл-probs.pdf",
+      "year": 2024,
+      "kind": "probs",
+      "grade": "11",
+      "chars": 1119,
+      "words": 202,
+      "source": "ocr_cache",
+      "status": "ok"
+    },
+    {
+      "name": "OLI-3-Национален кръг-2024-9-12 кл-probs.pdf",
+      "year": 2024,
+      "kind": "probs",
+      "grade": "12",
+      "chars": 17085,
+      "words": 2666,
+      "source": "pdfplumber",
+      "status": "ok"
+    },
+    {
+      "name": "OLI-2-Областен кръг-2023-10 кл-sol (1).pdf",
+      "year": 2023,
+      "kind": "sol",
+      "grade": "10",
+      "chars": 9568,
+      "words": 1826,
+      "source": "ocr_cache",
+      "status": "ok"
+    },
+    {
+      "name": "OLI-2-Областен кръг-2023-11 кл-sol.pdf",
+      "year": 2023,
+      "kind": "sol",
+      "grade": "11",
+      "chars": 5013,
+      "words": 918,
+      "source": "ocr_cache",
+      "status": "ok"
+    },
+    {
+      "name": "OLI-3-Национален кръг-2023-9-12 кл-sol.pdf",
+      "year": 2023,
+      "kind": "sol",
+      "grade": "12",
+      "chars": 44813,
+      "words": 3277,
+      "source": "pdfplumber",
+      "status": "ok"
+    },
+    {
+      "name": "OLI-2-Областен кръг-2023-10 кл-probs (1).pdf",
+      "year": 2023,
+      "kind": "probs",
+      "grade": "10",
+      "chars": 1201,
+      "words": 212,
+      "source": "ocr_cache",
+      "status": "ok"
+    },
+    {
+      "name": "OLI-2-Областен кръг-2023-11 кл-probs.pdf",
+      "year": 2023,
+      "kind": "probs",
+      "grade": "11",
+      "chars": 938,
+      "words": 150,
+      "source": "ocr_cache",
+      "status": "ok"
+    },
+    {
+      "name": "OLI-3-Национален кръг-2023-9-12 кл-probs.pdf",
+      "year": 2023,
+      "kind": "probs",
+      "grade": "12",
+      "chars": 15204,
+      "words": 3392,
+      "source": "pdfplumber",
+      "status": "ok"
+    },
+    {
+      "name": "OLI-2-Областен кръг-2022-10 кл-sol.pdf",
+      "year": 2022,
+      "kind": "sol",
+      "grade": "10",
+      "chars": 12311,
+      "words": 2687,
+      "source": "pdfplumber",
+      "status": "ok"
+    },
+    {
+      "name": "OLI-2-Областен кръг-2022-11 кл-sol.pdf",
+      "year": 2022,
+      "kind": "sol",
+      "grade": "11",
+      "chars": 6545,
+      "words": 1734,
+      "source": "pdfplumber",
+      "status": "ok"
+    },
+    {
+      "name": "OLI-3-Национален кръг-2022-9-12 кл-sol.pdf",
+      "year": 2022,
+      "kind": "sol",
+      "grade": "12",
+      "chars": 65229,
+      "words": 2862,
+      "source": "pdfplumber",
+      "status": "ok"
+    },
+    {
+      "name": "OLI-2-Областен кръг-2022-10 кл-probs.pdf",
+      "year": 2022,
+      "kind": "probs",
+      "grade": "10",
+      "chars": 11967,
+      "words": 3858,
+      "source": "pdfplumber",
+      "status": "ok"
+    },
+    {
+      "name": "OLI-2-Областен кръг-2022-11 кл-probs.pdf",
+      "year": 2022,
+      "kind": "probs",
+      "grade": "11",
+      "chars": 8744,
+      "words": 2544,
+      "source": "pdfplumber",
+      "status": "ok"
+    },
+    {
+      "name": "OLI-3-Национален кръг-2022-9-12 кл-probs.pdf",
+      "year": 2022,
+      "kind": "probs",
+      "grade": "12",
+      "chars": 20878,
+      "words": 4560,
+      "source": "pdfplumber",
+      "status": "ok"
+    },
+    {
+      "name": "OLI-2-Областен кръг-2021-10 кл-sol.pdf",
+      "year": 2021,
+      "kind": "sol",
+      "grade": "10",
+      "chars": 17201,
+      "words": 7882,
+      "source": "pdfplumber",
+      "status": "ok"
+    },
+    {
+      "name": "OLI-2-Областен кръг-2021-11 кл-sol.pdf",
+      "year": 2021,
+      "kind": "sol",
+      "grade": "11",
+      "chars": 6686,
+      "words": 1389,
+      "source": "ocr_cache",
+      "status": "ok"
+    },
+    {
+      "name": "OLI-3-Национален кръг-2021-9-12 кл-sol.pdf",
+      "year": 2021,
+      "kind": "sol",
+      "grade": "12",
+      "chars": 13620,
+      "words": 6398,
+      "source": "pdfplumber",
+      "status": "ok"
+    },
+    {
+      "name": "OLI-2-Областен кръг-2021-10 кл-probs.pdf",
+      "year": 2021,
+      "kind": "probs",
+      "grade": "10",
+      "chars": 1928,
+      "words": 935,
+      "source": "pdfplumber",
+      "status": "ok"
+    },
+    {
+      "name": "OLI-2-Областен кръг-2021-11 кл-probs.pdf",
+      "year": 2021,
+      "kind": "probs",
+      "grade": "11",
+      "chars": 1972,
+      "words": 960,
+      "source": "pdfplumber",
+      "status": "ok"
+    },
+    {
+      "name": "OLI-3-Национален кръг-2021-9-12 кл-probs.pdf",
+      "year": 2021,
+      "kind": "probs",
+      "grade": "12",
+      "chars": 16837,
+      "words": 7755,
+      "source": "pdfplumber",
+      "status": "ok"
+    },
+    {
+      "name": "OLI-2-Областен кръг-2020-10 кл-sol.pdf",
+      "year": 2020,
+      "kind": "sol",
+      "grade": "10",
+      "chars": 8846,
+      "words": 1428,
+      "source": "ocr_cache",
+      "status": "ok"
+    },
+    {
+      "name": "OLI-2-Областен кръг-2020-11 кл-sol.pdf",
+      "year": 2020,
+      "kind": "sol",
+      "grade": "11",
+      "chars": 12635,
+      "words": 2808,
+      "source": "pdfplumber",
+      "status": "ok"
+    },
+    {
+      "name": "OLI-3-Национален кръг-2020-9-12 кл-sol.pdf",
+      "year": 2020,
+      "kind": "sol",
+      "grade": "12",
+      "chars": 16638,
+      "words": 3329,
+      "source": "pdfplumber",
+      "status": "ok"
+    },
+    {
+      "name": "OLI-2-Областен кръг-2020-10 кл-probs.pdf",
+      "year": 2020,
+      "kind": "probs",
+      "grade": "10",
+      "chars": 1536,
+      "words": 272,
+      "source": "ocr_cache",
+      "status": "ok"
+    },
+    {
+      "name": "OLI-2-Областен кръг-2020-11 кл-probs.pdf",
+      "year": 2020,
+      "kind": "probs",
+      "grade": "11",
+      "chars": 1473,
+      "words": 244,
+      "source": "ocr_cache",
+      "status": "ok"
+    },
+    {
+      "name": "OLI-3-Национален кръг-2020-9-12 кл-probs.pdf",
+      "year": 2020,
+      "kind": "probs",
+      "grade": "12",
+      "chars": 27720,
+      "words": 10324,
+      "source": "pdfplumber",
+      "status": "ok"
+    },
+    {
+      "name": "OLI-2-Областен кръг-2019-10 кл-sol.pdf",
+      "year": 2019,
+      "kind": "sol",
+      "grade": "10",
+      "chars": 13997,
+      "words": 2812,
+      "source": "pdfplumber",
+      "status": "ok"
+    },
+    {
+      "name": "OLI-2-Областен кръг-2019-11 кл-sol.pdf",
+      "year": 2019,
+      "kind": "sol",
+      "grade": "11",
+      "chars": 9378,
+      "words": 1628,
+      "source": "pdfplumber",
+      "status": "ok"
+    },
+    {
+      "name": "OLI-3-Национален кръг-2019-9-12 кл-sol.pdf",
+      "year": 2019,
+      "kind": "sol",
+      "grade": "12",
+      "chars": 60542,
+      "words": 2597,
+      "source": "pdfplumber",
+      "status": "ok"
+    },
+    {
+      "name": "OLI-2-Областен кръг-2019-10 кл-probs.pdf",
+      "year": 2019,
+      "kind": "probs",
+      "grade": "10",
+      "chars": 1103,
+      "words": 189,
+      "source": "ocr_cache",
+      "status": "ok"
+    },
+    {
+      "name": "OLI-2-Областен кръг-2019-11 кл-probs.pdf",
+      "year": 2019,
+      "kind": "probs",
+      "grade": "11",
+      "chars": 1841,
+      "words": 328,
+      "source": "ocr_cache",
+      "status": "ok"
+    },
+    {
+      "name": "OLI-3-Национален кръг-2019-9-12 кл-probs.pdf",
+      "year": 2019,
+      "kind": "probs",
+      "grade": "12",
+      "chars": 29329,
+      "words": 5886,
+      "source": "pdfplumber",
+      "status": "ok"
+    },
+    {
+      "name": "OLI-2-Областен кръг-2018-10 кл-sol.pdf",
+      "year": 2018,
+      "kind": "sol",
+      "grade": "10",
+      "chars": 6424,
+      "words": 1259,
+      "source": "pdfplumber",
+      "status": "ok"
+    },
+    {
+      "name": "OLI-2-Областен кръг-2018-11 кл-sol.pdf",
+      "year": 2018,
+      "kind": "sol",
+      "grade": "11",
+      "chars": 5183,
+      "words": 989,
+      "source": "pdfplumber",
+      "status": "ok"
+    },
+    {
+      "name": "OLI-3-Национален кръг-2018-9-12 кл-sol.pdf",
+      "year": 2018,
+      "kind": "sol",
+      "grade": "12",
+      "chars": 19057,
+      "words": 8736,
+      "source": "pdfplumber",
+      "status": "ok"
+    },
+    {
+      "name": "OLI-2-Областен кръг-2018-10 кл-probs.pdf",
+      "year": 2018,
+      "kind": "probs",
+      "grade": "10",
+      "chars": 1263,
+      "words": 215,
+      "source": "pdfplumber",
+      "status": "ok"
+    },
+    {
+      "name": "OLI-2-Областен кръг-2018-11 кл-probs.pdf",
+      "year": 2018,
+      "kind": "probs",
+      "grade": "11",
+      "chars": 1189,
+      "words": 208,
+      "source": "pdfplumber",
+      "status": "ok"
+    },
+    {
+      "name": "OLI-3-Национален кръг-2018-9-12 кл-probs.pdf",
+      "year": 2018,
+      "kind": "probs",
+      "grade": "12",
+      "chars": 22518,
+      "words": 10298,
+      "source": "pdfplumber",
+      "status": "ok"
+    },
+    {
+      "name": "OLI-2-Областен кръг-2017-10 кл-sol.pdf",
+      "year": 2017,
+      "kind": "sol",
+      "grade": "10",
+      "chars": 6876,
+      "words": 1304,
+      "source": "pdfplumber",
+      "status": "ok"
+    },
+    {
+      "name": "OLI-2-Областен кръг-2017-11 кл-sol.pdf",
+      "year": 2017,
+      "kind": "sol",
+      "grade": "11",
+      "chars": 6975,
+      "words": 1433,
+      "source": "pdfplumber",
+      "status": "ok"
+    },
+    {
+      "name": "OLI-3-Национален кръг-2017-9-12 кл-sol.pdf",
+      "year": 2017,
+      "kind": "sol",
+      "grade": "12",
+      "chars": 10391,
+      "words": 1801,
+      "source": "pdfplumber",
+      "status": "ok"
+    },
+    {
+      "name": "OLI-2-Областен кръг-2017-10 кл-probs.pdf",
+      "year": 2017,
+      "kind": "probs",
+      "grade": "10",
+      "chars": 1282,
+      "words": 206,
+      "source": "ocr_cache",
+      "status": "ok"
+    },
+    {
+      "name": "OLI-2-Областен кръг-2017-11 кл-probs.pdf",
+      "year": 2017,
+      "kind": "probs",
+      "grade": "11",
+      "chars": 1445,
+      "words": 284,
+      "source": "ocr_cache",
+      "status": "ok"
+    },
+    {
+      "name": "OLI-3-Национален кръг-2017-9-12 кл-probs.pdf",
+      "year": 2017,
+      "kind": "probs",
+      "grade": "12",
+      "chars": 34118,
+      "words": 11256,
+      "source": "pdfplumber",
+      "status": "ok"
+    },
+    {
+      "name": "OLI-2-Областен кръг-2016-10 кл-sol.pdf",
+      "year": 2016,
+      "kind": "sol",
+      "grade": "10",
+      "chars": 4017,
+      "words": 835,
+      "source": "pdfplumber",
+      "status": "ok"
+    },
+    {
+      "name": "OLI-2-Областен кръг-2016-11 кл-sol.pdf",
+      "year": 2016,
+      "kind": "sol",
+      "grade": "11",
+      "chars": 3750,
+      "words": 816,
+      "source": "pdfplumber",
+      "status": "ok"
+    },
+    {
+      "name": "OLI-3-Национален кръг-2016-9-12 кл-sol.pdf",
+      "year": 2016,
+      "kind": "sol",
+      "grade": "12",
+      "chars": 23139,
+      "words": 924,
+      "source": "pdfplumber",
+      "status": "ok"
+    },
+    {
+      "name": "OLI-2-Областен кръг-2016-10 кл-probs.pdf",
+      "year": 2016,
+      "kind": "probs",
+      "grade": "10",
+      "chars": 946,
+      "words": 166,
+      "source": "pdfplumber",
+      "status": "ok"
+    },
+    {
+      "name": "OLI-2-Областен кръг-2016-11 кл-probs.pdf",
+      "year": 2016,
+      "kind": "probs",
+      "grade": "11",
+      "chars": 1064,
+      "words": 209,
+      "source": "pdfplumber",
+      "status": "ok"
+    },
+    {
+      "name": "OLI-3-Национален кръг-2016-9-12 кл-probs.pdf",
+      "year": 2016,
+      "kind": "probs",
+      "grade": "12",
+      "chars": 66584,
+      "words": 4289,
+      "source": "pdfplumber",
+      "status": "ok"
+    },
+    {
+      "name": "OLI-2-Областен кръг-2015-10 кл-sol.pdf",
+      "year": 2015,
+      "kind": "sol",
+      "grade": "10",
+      "chars": 3053,
+      "words": 634,
+      "source": "pdfplumber",
+      "status": "ok"
+    },
+    {
+      "name": "OLI-2-Областен кръг-2015-11 кл-sol.pdf",
+      "year": 2015,
+      "kind": "sol",
+      "grade": "11",
+      "chars": 5181,
+      "words": 905,
+      "source": "pdfplumber",
+      "status": "ok"
+    },
+    {
+      "name": "OLI-3-Национален кръг-2015-9-12 кл-sol.pdf",
+      "year": 2015,
+      "kind": "sol",
+      "grade": "12",
+      "chars": 70647,
+      "words": 2198,
+      "source": "pdfplumber",
+      "status": "ok"
+    },
+    {
+      "name": "OLI-2-Областен кръг-2015-10 кл-probs.pdf",
+      "year": 2015,
+      "kind": "probs",
+      "grade": "10",
+      "chars": 921,
+      "words": 159,
+      "source": "pdfplumber",
+      "status": "ok"
+    },
+    {
+      "name": "OLI-2-Областен кръг-2015-11 кл-probs.pdf",
+      "year": 2015,
+      "kind": "probs",
+      "grade": "11",
+      "chars": 1088,
+      "words": 199,
+      "source": "pdfplumber",
+      "status": "ok"
+    },
+    {
+      "name": "OLI-3-Национален кръг-2015-9-12 кл-probs.pdf",
+      "year": 2015,
+      "kind": "probs",
+      "grade": "12",
+      "chars": 31030,
+      "words": 5067,
+      "source": "pdfplumber",
+      "status": "ok"
+    },
+    {
+      "name": "OLI-2-Областен кръг-2014-10 кл-sol.pdf",
+      "year": 2014,
+      "kind": "sol",
+      "grade": "10",
+      "chars": 6159,
+      "words": 1034,
+      "source": "ocr_cache",
+      "status": "ok"
+    },
+    {
+      "name": "OLI-2-Областен кръг-2014-11 кл-sol.pdf",
+      "year": 2014,
+      "kind": "sol",
+      "grade": "11",
+      "chars": 6027,
+      "words": 1180,
+      "source": "ocr_cache",
+      "status": "ok"
+    },
+    {
+      "name": "OLI-3-Национален кръг-2014-9-12 кл-sol.pdf",
+      "year": 2014,
+      "kind": "sol",
+      "grade": "12",
+      "chars": 2128,
+      "words": 338,
+      "source": "pdfplumber",
+      "status": "ok"
+    },
+    {
+      "name": "OLI-2-Областен кръг-2014-10 кл-probs.pdf",
+      "year": 2014,
+      "kind": "probs",
+      "grade": "10",
+      "chars": 1291,
+      "words": 228,
+      "source": "pdfplumber",
+      "status": "ok"
+    },
+    {
+      "name": "OLI-2-Областен кръг-2014-11 кл-probs.pdf",
+      "year": 2014,
+      "kind": "probs",
+      "grade": "11",
+      "chars": 1253,
+      "words": 209,
+      "source": "pdfplumber",
+      "status": "ok"
+    },
+    {
+      "name": "OLI-3-Национален кръг-2014-9-12 кл-probs.pdf",
+      "year": 2014,
+      "kind": "probs",
+      "grade": "12",
+      "chars": 0,
+      "words": 0,
+      "source": null,
+      "status": "no_text"
+    },
+    {
+      "name": "OLI-2-Областен кръг-2013-10 кл-sol.pdf",
+      "year": 2013,
+      "kind": "sol",
+      "grade": "10",
+      "chars": 6937,
+      "words": 1484,
+      "source": "ocr_cache",
+      "status": "ok"
+    },
+    {
+      "name": "OLI-2-Областен кръг-2013-11 кл-sol.pdf",
+      "year": 2013,
+      "kind": "sol",
+      "grade": "11",
+      "chars": 5968,
+      "words": 1112,
+      "source": "ocr_cache",
+      "status": "ok"
+    },
+    {
+      "name": "OLI-3-Национален кръг-2013-9-12 кл-sol.pdf",
+      "year": 2013,
+      "kind": "sol",
+      "grade": "12",
+      "chars": 11432,
+      "words": 2113,
+      "source": "ocr_cache",
+      "status": "ok"
+    },
+    {
+      "name": "OLI-2-Областен кръг-2013-10 кл-probs.pdf",
+      "year": 2013,
+      "kind": "probs",
+      "grade": "10",
+      "chars": 1040,
+      "words": 235,
+      "source": "pdfplumber",
+      "status": "ok"
+    },
+    {
+      "name": "OLI-2-Областен кръг-2013-11 кл-probs.pdf",
+      "year": 2013,
+      "kind": "probs",
+      "grade": "11",
+      "chars": 1387,
+      "words": 271,
+      "source": "pdfplumber",
+      "status": "ok"
+    },
+    {
+      "name": "OLI-3-Национален кръг-2013-9-12 кл-probs.pdf",
+      "year": 2013,
+      "kind": "probs",
+      "grade": "12",
+      "chars": 0,
+      "words": 0,
+      "source": null,
+      "status": "no_text"
+    },
+    {
+      "name": "OLI-2-Областен кръг-2012-10 кл-sol.pdf",
+      "year": 2012,
+      "kind": "sol",
+      "grade": "10",
+      "chars": 7889,
+      "words": 1435,
+      "source": "ocr_cache",
+      "status": "ok"
+    },
+    {
+      "name": "OLI-2-Областен кръг-2012-11 кл-sol.pdf",
+      "year": 2012,
+      "kind": "sol",
+      "grade": "11",
+      "chars": 8191,
+      "words": 1508,
+      "source": "ocr_cache",
+      "status": "ok"
+    },
+    {
+      "name": "OLI-3-Национален кръг-2012-9-12 кл-sol.pdf",
+      "year": 2012,
+      "kind": "sol",
+      "grade": "12",
+      "chars": 10299,
+      "words": 1897,
+      "source": "pdfplumber",
+      "status": "ok"
+    },
+    {
+      "name": "OLI-2-Областен кръг-2012-10 кл-probs.pdf",
+      "year": 2012,
+      "kind": "probs",
+      "grade": "10",
+      "chars": 1702,
+      "words": 329,
+      "source": "pdfplumber",
+      "status": "ok"
+    },
+    {
+      "name": "OLI-2-Областен кръг-2012-11 кл-probs.pdf",
+      "year": 2012,
+      "kind": "probs",
+      "grade": "11",
+      "chars": 1434,
+      "words": 243,
+      "source": "pdfplumber",
+      "status": "ok"
+    },
+    {
+      "name": "OLI-3-Национален кръг-2012-9-12 кл-probs.pdf",
+      "year": 2012,
+      "kind": "probs",
+      "grade": "12",
+      "chars": 0,
+      "words": 0,
+      "source": null,
+      "status": "no_text"
+    },
+    {
+      "name": "OLI-2-Областен кръг-2011-10 кл-sol.pdf",
+      "year": 2011,
+      "kind": "sol",
+      "grade": "10",
+      "chars": 8908,
+      "words": 1675,
+      "source": "ocr_cache",
+      "status": "ok"
+    },
+    {
+      "name": "OLI-2-Областен кръг-2011-11 кл-sol.pdf",
+      "year": 2011,
+      "kind": "sol",
+      "grade": "11",
+      "chars": 7676,
+      "words": 1653,
+      "source": "pdfplumber",
+      "status": "ok"
+    },
+    {
+      "name": "OLI-3-Национален кръг-2011-9-12 кл-sol.pdf",
+      "year": 2011,
+      "kind": "sol",
+      "grade": "12",
+      "chars": 0,
+      "words": 0,
+      "source": null,
+      "status": "no_text"
+    },
+    {
+      "name": "OLI-2-Областен кръг-2011-10 кл-probs.pdf",
+      "year": 2011,
+      "kind": "probs",
+      "grade": "10",
+      "chars": 1678,
+      "words": 321,
+      "source": "pdfplumber",
+      "status": "ok"
+    },
+    {
+      "name": "OLI-2-Областен кръг-2011-11 кл-probs.pdf",
+      "year": 2011,
+      "kind": "probs",
+      "grade": "11",
+      "chars": 1665,
+      "words": 285,
+      "source": "pdfplumber",
+      "status": "ok"
+    },
+    {
+      "name": "OLI-3-Национален кръг-2011-9-12 кл-probs.pdf",
+      "year": 2011,
+      "kind": "probs",
+      "grade": "12",
+      "chars": 0,
+      "words": 0,
+      "source": null,
+      "status": "no_text"
+    },
+    {
+      "name": "OLI-2-Областен кръг-2010-10 кл-sol.pdf",
+      "year": 2010,
+      "kind": "sol",
+      "grade": "10",
+      "chars": 9425,
+      "words": 4292,
+      "source": "pdfplumber",
+      "status": "ok"
+    },
+    {
+      "name": "OLI-2-Областен кръг-2010-11 кл-sol.pdf",
+      "year": 2010,
+      "kind": "sol",
+      "grade": "11",
+      "chars": 8176,
+      "words": 1714,
+      "source": "pdfplumber",
+      "status": "ok"
+    },
+    {
+      "name": "OLI-3-Национален кръг-2010-9-12 кл-sol.pdf",
+      "year": 2010,
+      "kind": "sol",
+      "grade": "12",
+      "chars": 0,
+      "words": 0,
+      "source": null,
+      "status": "no_text"
+    },
+    {
+      "name": "OLI-2-Областен кръг-2010-10 кл-probs.pdf",
+      "year": 2010,
+      "kind": "probs",
+      "grade": "10",
+      "chars": 776,
+      "words": 158,
+      "source": "pdfplumber",
+      "status": "ok"
+    },
+    {
+      "name": "OLI-2-Областен кръг-2010-11 кл-probs.pdf",
+      "year": 2010,
+      "kind": "probs",
+      "grade": "11",
+      "chars": 874,
+      "words": 164,
+      "source": "pdfplumber",
+      "status": "ok"
+    },
+    {
+      "name": "OLI-3-Национален кръг-2010-9-12 кл-probs.pdf",
+      "year": 2010,
+      "kind": "probs",
+      "grade": "12",
+      "chars": 0,
+      "words": 0,
+      "source": null,
+      "status": "no_text"
+    },
+    {
+      "name": "OLI-2-Областен кръг-2009-10 кл-sol.pdf",
+      "year": 2009,
+      "kind": "sol",
+      "grade": "10",
+      "chars": 12530,
+      "words": 2775,
+      "source": "pdfplumber",
+      "status": "ok"
+    },
+    {
+      "name": "OLI-2-Областен кръг-2009-11 кл-sol.pdf",
+      "year": 2009,
+      "kind": "sol",
+      "grade": "11",
+      "chars": 18884,
+      "words": 4505,
+      "source": "pdfplumber",
+      "status": "ok"
+    },
+    {
+      "name": "OLI-3-Национален кръг-2009-9-12 кл-sol.pdf",
+      "year": 2009,
+      "kind": "sol",
+      "grade": "12",
+      "chars": 10677,
+      "words": 2090,
+      "source": "pdfplumber",
+      "status": "ok"
+    },
+    {
+      "name": "OLI-2-Областен кръг-2009-10 кл-probs.pdf",
+      "year": 2009,
+      "kind": "probs",
+      "grade": "10",
+      "chars": 1457,
+      "words": 268,
+      "source": "pdfplumber",
+      "status": "ok"
+    },
+    {
+      "name": "OLI-2-Областен кръг-2009-11 кл-probs.pdf",
+      "year": 2009,
+      "kind": "probs",
+      "grade": "11",
+      "chars": 1946,
+      "words": 343,
+      "source": "pdfplumber",
+      "status": "ok"
+    },
+    {
+      "name": "OLI-3-Национален кръг-2009-9-12 кл-probs.pdf",
+      "year": 2009,
+      "kind": "probs",
+      "grade": "12",
+      "chars": 0,
+      "words": 0,
+      "source": null,
+      "status": "no_text"
+    },
+    {
+      "name": "OLI-2-Областен кръг-2008-10 кл-sol.pdf",
+      "year": 2008,
+      "kind": "sol",
+      "grade": "10",
+      "chars": 6357,
+      "words": 1107,
+      "source": "ocr_cache",
+      "status": "ok"
+    },
+    {
+      "name": "OLI-2-Областен кръг-2008-11 кл-sol.pdf",
+      "year": 2008,
+      "kind": "sol",
+      "grade": "11",
+      "chars": 6551,
+      "words": 1040,
+      "source": "ocr_cache",
+      "status": "ok"
+    },
+    {
+      "name": "OLI-3-Национален кръг-2008-9-12 кл-sol.pdf",
+      "year": 2008,
+      "kind": "sol",
+      "grade": "12",
+      "chars": 0,
+      "words": 0,
+      "source": null,
+      "status": "no_text"
+    },
+    {
+      "name": "OLI-2-Областен кръг-2008-10 кл-probs.pdf",
+      "year": 2008,
+      "kind": "probs",
+      "grade": "10",
+      "chars": 1557,
+      "words": 269,
+      "source": "ocr_cache",
+      "status": "ok"
+    },
+    {
+      "name": "OLI-2-Областен кръг-2008-11 кл-probs.pdf",
+      "year": 2008,
+      "kind": "probs",
+      "grade": "11",
+      "chars": 1784,
+      "words": 305,
+      "source": "ocr_cache",
+      "status": "ok"
+    },
+    {
+      "name": "OLI-3-Национален кръг-2008-9-12 кл-probs.pdf",
+      "year": 2008,
+      "kind": "probs",
+      "grade": "12",
+      "chars": 0,
+      "words": 0,
+      "source": null,
+      "status": "no_text"
+    },
+    {
+      "name": "OLI-2-Областен кръг-2007-10 кл-sol.pdf",
+      "year": 2007,
+      "kind": "sol",
+      "grade": "10",
+      "chars": 7506,
+      "words": 1692,
+      "source": "pdfplumber",
+      "status": "ok"
+    },
+    {
+      "name": "OLI-2-Областен кръг-2007-11 кл-sol.pdf",
+      "year": 2007,
+      "kind": "sol",
+      "grade": "11",
+      "chars": 8551,
+      "words": 1862,
+      "source": "pdfplumber",
+      "status": "ok"
+    },
+    {
+      "name": "OLI-3-Национален кръг-2007-9-12 кл-sol.pdf",
+      "year": 2007,
+      "kind": "sol",
+      "grade": "12",
+      "chars": 13281,
+      "words": 3395,
+      "source": "pdfplumber",
+      "status": "ok"
+    },
+    {
+      "name": "OLI-2-Областен кръг-2007-10 кл-probs.pdf",
+      "year": 2007,
+      "kind": "probs",
+      "grade": "10",
+      "chars": 1559,
+      "words": 290,
+      "source": "pdfplumber",
+      "status": "ok"
+    },
+    {
+      "name": "OLI-2-Областен кръг-2007-11 кл-probs.pdf",
+      "year": 2007,
+      "kind": "probs",
+      "grade": "11",
+      "chars": 2058,
+      "words": 396,
+      "source": "pdfplumber",
+      "status": "ok"
+    },
+    {
+      "name": "OLI-3-Национален кръг-2007-9-12 кл-probs.pdf",
+      "year": 2007,
+      "kind": "probs",
+      "grade": "12",
+      "chars": 22239,
+      "words": 6410,
+      "source": "pdfplumber",
+      "status": "ok"
+    },
+    {
+      "name": "OLI-2-Областен кръг-2006-10 кл-sol.pdf",
+      "year": 2006,
+      "kind": "sol",
+      "grade": "10",
+      "chars": 5613,
+      "words": 976,
+      "source": "ocr_cache",
+      "status": "ok"
+    },
+    {
+      "name": "OLI-2-Областен кръг-2006-11 кл-sol.pdf",
+      "year": 2006,
+      "kind": "sol",
+      "grade": "11",
+      "chars": 6899,
+      "words": 1244,
+      "source": "ocr_cache",
+      "status": "ok"
+    },
+    {
+      "name": "OLI-3-Национален кръг-2006-9-12 кл-sol.pdf",
+      "year": 2006,
+      "kind": "sol",
+      "grade": "12",
+      "chars": 0,
+      "words": 0,
+      "source": null,
+      "status": "no_text"
+    },
+    {
+      "name": "OLI-2-Областен кръг-2006-10 кл-probs.pdf",
+      "year": 2006,
+      "kind": "probs",
+      "grade": "10",
+      "chars": 1590,
+      "words": 284,
+      "source": "ocr_cache",
+      "status": "ok"
+    },
+    {
+      "name": "OLI-2-Областен кръг-2006-11 кл-probs.pdf",
+      "year": 2006,
+      "kind": "probs",
+      "grade": "11",
+      "chars": 1455,
+      "words": 264,
+      "source": "ocr_cache",
+      "status": "ok"
+    },
+    {
+      "name": "OLI-3-Национален кръг-2006-9-12 кл-probs.pdf",
+      "year": 2006,
+      "kind": "probs",
+      "grade": "12",
+      "chars": 0,
+      "words": 0,
+      "source": null,
+      "status": "no_text"
+    },
+    {
+      "name": "OLI-2-Областен кръг-2005-10 кл-sol.pdf",
+      "year": 2005,
+      "kind": "sol",
+      "grade": "10",
+      "chars": 9880,
+      "words": 2397,
+      "source": "pdfplumber",
+      "status": "ok"
+    },
+    {
+      "name": "OLI-2-Областен кръг-2005-11 кл-sol.pdf",
+      "year": 2005,
+      "kind": "sol",
+      "grade": "11",
+      "chars": 21347,
+      "words": 5553,
+      "source": "pdfplumber",
+      "status": "ok"
+    },
+    {
+      "name": "OLI-3-Национален кръг-2005-9-12 кл-sol.pdf",
+      "year": 2005,
+      "kind": "sol",
+      "grade": "12",
+      "chars": 23150,
+      "words": 4981,
+      "source": "pdfplumber",
+      "status": "ok"
+    },
+    {
+      "name": "OLI-2-Областен кръг-2005-10 кл-probs.pdf",
+      "year": 2005,
+      "kind": "probs",
+      "grade": "10",
+      "chars": 4691,
+      "words": 844,
+      "source": "pdfplumber",
+      "status": "ok"
+    },
+    {
+      "name": "OLI-2-Областен кръг-2005-11 кл-probs.pdf",
+      "year": 2005,
+      "kind": "probs",
+      "grade": "11",
+      "chars": 4736,
+      "words": 959,
+      "source": "pdfplumber",
+      "status": "ok"
+    },
+    {
+      "name": "OLI-3-Национален кръг-2005-9-12 кл-probs.pdf",
+      "year": 2005,
+      "kind": "probs",
+      "grade": "12",
+      "chars": 1757,
+      "words": 263,
+      "source": "pdfplumber",
+      "status": "ok"
+    },
+    {
+      "name": "OLI-2-Областен кръг-2004-10 кл-sol.pdf",
+      "year": 2004,
+      "kind": "sol",
+      "grade": "10",
+      "chars": 9089,
+      "words": 1995,
+      "source": "pdfplumber",
+      "status": "ok"
+    },
+    {
+      "name": "OLI-2-Областен кръг-2004-11 кл-sol.pdf",
+      "year": 2004,
+      "kind": "sol",
+      "grade": "11",
+      "chars": 10270,
+      "words": 1856,
+      "source": "pdfplumber",
+      "status": "ok"
+    },
+    {
+      "name": "OLI-3-Национален кръг-2004-9-12 кл-sol.pdf",
+      "year": 2004,
+      "kind": "sol",
+      "grade": "12",
+      "chars": 12406,
+      "words": 2220,
+      "source": "pdfplumber",
+      "status": "ok"
+    },
+    {
+      "name": "OLI-2-Областен кръг-2004-10 кл-probs.pdf",
+      "year": 2004,
+      "kind": "probs",
+      "grade": "10",
+      "chars": 5627,
+      "words": 1098,
+      "source": "pdfplumber",
+      "status": "ok"
+    },
+    {
+      "name": "OLI-2-Областен кръг-2004-11 кл-probs.pdf",
+      "year": 2004,
+      "kind": "probs",
+      "grade": "11",
+      "chars": 4714,
+      "words": 857,
+      "source": "pdfplumber",
+      "status": "ok"
+    },
+    {
+      "name": "OLI-3-Национален кръг-2004-9-12 кл-probs.pdf",
+      "year": 2004,
+      "kind": "probs",
+      "grade": "12",
+      "chars": 1727,
+      "words": 290,
+      "source": "pdfplumber",
+      "status": "ok"
+    },
+    {
+      "name": "OLI-2-Областен кръг-2003-10 кл-sol.pdf",
+      "year": 2003,
+      "kind": "sol",
+      "grade": "10",
+      "chars": 4102,
+      "words": 914,
+      "source": "pdfplumber",
+      "status": "ok"
+    },
+    {
+      "name": "OLI-2-Областен кръг-2003-11 кл-sol.pdf",
+      "year": 2003,
+      "kind": "sol",
+      "grade": "11",
+      "chars": 4102,
+      "words": 914,
+      "source": "pdfplumber",
+      "status": "ok"
+    },
+    {
+      "name": "OLI-3-Национален кръг-2003-9-12 кл-sol.pdf",
+      "year": 2003,
+      "kind": "sol",
+      "grade": "12",
+      "chars": 0,
+      "words": 0,
+      "source": null,
+      "status": "no_text"
+    },
+    {
+      "name": "OLI-2-Областен кръг-2003-10 кл-probs.pdf",
+      "year": 2003,
+      "kind": "probs",
+      "grade": "10",
+      "chars": 1578,
+      "words": 300,
+      "source": "pdfplumber",
+      "status": "ok"
+    },
+    {
+      "name": "OLI-2-Областен кръг-2003-11 кл-probs.pdf",
+      "year": 2003,
+      "kind": "probs",
+      "grade": "11",
+      "chars": 1578,
+      "words": 300,
+      "source": "pdfplumber",
+      "status": "ok"
+    },
+    {
+      "name": "OLI-3-Национален кръг-2003-9-12 кл-probs.pdf",
+      "year": 2003,
+      "kind": "probs",
+      "grade": "12",
+      "chars": 0,
+      "words": 0,
+      "source": null,
+      "status": "no_text"
+    },
+    {
+      "name": "OLI-2-Областен кръг-2002-10 кл-sol.pdf",
+      "year": 2002,
+      "kind": "sol",
+      "grade": "10",
+      "chars": 8369,
+      "words": 1491,
+      "source": "ocr_cache",
+      "status": "ok"
+    },
+    {
+      "name": "OLI-2-Областен кръг-2002-11 кл-sol.pdf",
+      "year": 2002,
+      "kind": "sol",
+      "grade": "11",
+      "chars": 8372,
+      "words": 1491,
+      "source": "ocr_cache",
+      "status": "ok"
+    },
+    {
+      "name": "OLI-3-Национален кръг-2002-9-12 кл-sol.pdf",
+      "year": 2002,
+      "kind": "sol",
+      "grade": "12",
+      "chars": 0,
+      "words": 0,
+      "source": null,
+      "status": "no_text"
+    },
+    {
+      "name": "OLI-2-Областен кръг-2002-10 кл-probs.pdf",
+      "year": 2002,
+      "kind": "probs",
+      "grade": "10",
+      "chars": 1486,
+      "words": 272,
+      "source": "ocr_cache",
+      "status": "ok"
+    },
+    {
+      "name": "OLI-2-Областен кръг-2002-11 кл-probs.pdf",
+      "year": 2002,
+      "kind": "probs",
+      "grade": "11",
+      "chars": 1484,
+      "words": 272,
+      "source": "ocr_cache",
+      "status": "ok"
+    },
+    {
+      "name": "OLI-3-Национален кръг-2002-9-12 кл-probs.pdf",
+      "year": 2002,
+      "kind": "probs",
+      "grade": "12",
+      "chars": 0,
+      "words": 0,
+      "source": null,
+      "status": "no_text"
+    },
+    {
+      "name": "OLI-2-Областен кръг-2001-10 кл-sol.pdf",
+      "year": 2001,
+      "kind": "sol",
+      "grade": "10",
+      "chars": 11377,
+      "words": 2057,
+      "source": "ocr_cache",
+      "status": "ok"
+    },
+    {
+      "name": "OLI-2-Областен кръг-2001-11 кл-sol.pdf",
+      "year": 2001,
+      "kind": "sol",
+      "grade": "11",
+      "chars": 11377,
+      "words": 2057,
+      "source": "ocr_cache",
+      "status": "ok"
+    },
+    {
+      "name": "OLI-3-Национален кръг-2001-9-12 кл-sol.pdf",
+      "year": 2001,
+      "kind": "sol",
+      "grade": "12",
+      "chars": 0,
+      "words": 0,
+      "source": null,
+      "status": "no_text"
+    },
+    {
+      "name": "OLI-2-Областен кръг-2001-10 кл-probs.pdf",
+      "year": 2001,
+      "kind": "probs",
+      "grade": "10",
+      "chars": 1628,
+      "words": 285,
+      "source": "ocr_cache",
+      "status": "ok"
+    },
+    {
+      "name": "OLI-2-Областен кръг-2001-11 кл-probs.pdf",
+      "year": 2001,
+      "kind": "probs",
+      "grade": "11",
+      "chars": 1628,
+      "words": 285,
+      "source": "ocr_cache",
+      "status": "ok"
+    },
+    {
+      "name": "OLI-3-Национален кръг-2001-9-12 кл-probs.pdf",
+      "year": 2001,
+      "kind": "probs",
+      "grade": "12",
+      "chars": 0,
+      "words": 0,
+      "source": null,
+      "status": "no_text"
+    },
+    {
+      "name": "OLI-2-Областен кръг-2000-10 кл-sol.pdf",
+      "year": 2000,
+      "kind": "sol",
+      "grade": "10",
+      "chars": 8149,
+      "words": 1485,
+      "source": "ocr_cache",
+      "status": "ok"
+    },
+    {
+      "name": "OLI-2-Областен кръг-2000-11 кл-sol.pdf",
+      "year": 2000,
+      "kind": "sol",
+      "grade": "11",
+      "chars": 8149,
+      "words": 1485,
+      "source": "ocr_cache",
+      "status": "ok"
+    },
+    {
+      "name": "OLI-3-Национален кръг-2000-9-12 кл-sol.pdf",
+      "year": 2000,
+      "kind": "sol",
+      "grade": "12",
+      "chars": 0,
+      "words": 0,
+      "source": null,
+      "status": "no_text"
+    },
+    {
+      "name": "OLI-2-Областен кръг-2000-10 кл-probs.pdf",
+      "year": 2000,
+      "kind": "probs",
+      "grade": "10",
+      "chars": 0,
+      "words": 0,
+      "source": null,
+      "status": "no_text"
+    },
+    {
+      "name": "OLI-2-Областен кръг-2000-11 кл-probs.pdf",
+      "year": 2000,
+      "kind": "probs",
+      "grade": "11",
+      "chars": 1570,
+      "words": 284,
+      "source": "ocr_cache",
+      "status": "ok"
+    },
+    {
+      "name": "OLI-3-Национален кръг-2000-9-12 кл-probs.pdf",
+      "year": 2000,
+      "kind": "probs",
+      "grade": "12",
+      "chars": 0,
+      "words": 0,
+      "source": null,
+      "status": "no_text"
+    },
+    {
+      "name": "OLI-2-Областен кръг-1999-10 кл-sol.pdf",
+      "year": 1999,
+      "kind": "sol",
+      "grade": "10",
+      "chars": 6204,
+      "words": 1277,
+      "source": "ocr_cache",
+      "status": "ok"
+    },
+    {
+      "name": "OLI-2-Областен кръг-1999-11 кл-sol.pdf",
+      "year": 1999,
+      "kind": "sol",
+      "grade": "11",
+      "chars": 6204,
+      "words": 1277,
+      "source": "ocr_cache",
+      "status": "ok"
+    },
+    {
+      "name": "OLI-3-Национален кръг-1999-9-12 кл-sol.pdf",
+      "year": 1999,
+      "kind": "sol",
+      "grade": "12",
+      "chars": 0,
+      "words": 0,
+      "source": null,
+      "status": "no_text"
+    },
+    {
+      "name": "OLI-2-Областен кръг-1999-10 кл-probs.pdf",
+      "year": 1999,
+      "kind": "probs",
+      "grade": "10",
+      "chars": 1483,
+      "words": 262,
+      "source": "ocr_cache",
+      "status": "ok"
+    },
+    {
+      "name": "OLI-2-Областен кръг-1999-11 кл-probs.pdf",
+      "year": 1999,
+      "kind": "probs",
+      "grade": "11",
+      "chars": 1483,
+      "words": 262,
+      "source": "ocr_cache",
+      "status": "ok"
+    },
+    {
+      "name": "OLI-3-Национален кръг-1999-9-12 кл-probs.pdf",
+      "year": 1999,
+      "kind": "probs",
+      "grade": "12",
+      "chars": 0,
+      "words": 0,
+      "source": null,
+      "status": "no_text"
+    },
+    {
+      "name": "OLI-2-Областен кръг-1998-10 кл-sol.pdf",
+      "year": 1998,
+      "kind": "sol",
+      "grade": "10",
+      "chars": 7653,
+      "words": 1498,
+      "source": "ocr_cache",
+      "status": "ok"
+    },
+    {
+      "name": "OLI-2-Областен кръг-1998-11 кл-sol.pdf",
+      "year": 1998,
+      "kind": "sol",
+      "grade": "11",
+      "chars": 7680,
+      "words": 1495,
+      "source": "ocr_cache",
+      "status": "ok"
+    },
+    {
+      "name": "OLI-3-Национален кръг-1998-9-12 кл-sol.pdf",
+      "year": 1998,
+      "kind": "sol",
+      "grade": "12",
+      "chars": 0,
+      "words": 0,
+      "source": null,
+      "status": "no_text"
+    },
+    {
+      "name": "OLI-2-Областен кръг-1998-10 кл-probs.pdf",
+      "year": 1998,
+      "kind": "probs",
+      "grade": "10",
+      "chars": 1556,
+      "words": 276,
+      "source": "ocr_cache",
+      "status": "ok"
+    },
+    {
+      "name": "OLI-2-Областен кръг-1998-11 кл-probs.pdf",
+      "year": 1998,
+      "kind": "probs",
+      "grade": "11",
+      "chars": 1556,
+      "words": 276,
+      "source": "ocr_cache",
+      "status": "ok"
+    },
+    {
+      "name": "OLI-3-Национален кръг-1998-9-12 кл-probs.pdf",
+      "year": 1998,
+      "kind": "probs",
+      "grade": "12",
+      "chars": 0,
+      "words": 0,
+      "source": null,
+      "status": "no_text"
+    },
+    {
+      "name": "OLI-2-Областен кръг-1997-10 кл-sol.pdf",
+      "year": 1997,
+      "kind": "sol",
+      "grade": "10",
+      "chars": 9291,
+      "words": 1502,
+      "source": "ocr_cache",
+      "status": "ok"
+    },
+    {
+      "name": "OLI-2-Областен кръг-1997-11 кл-sol.pdf",
+      "year": 1997,
+      "kind": "sol",
+      "grade": "11",
+      "chars": 9291,
+      "words": 1502,
+      "source": "ocr_cache",
+      "status": "ok"
+    },
+    {
+      "name": "OLI-3-Национален кръг-1997-9-12 кл-sol.pdf",
+      "year": 1997,
+      "kind": "sol",
+      "grade": "12",
+      "chars": 2140,
+      "words": 569,
+      "source": "ocr_cache",
+      "status": "ok"
+    },
+    {
+      "name": "OLI-2-Областен кръг-1997-10 кл-probs.pdf",
+      "year": 1997,
+      "kind": "probs",
+      "grade": "10",
+      "chars": 1361,
+      "words": 245,
+      "source": "ocr_cache",
+      "status": "ok"
+    },
+    {
+      "name": "OLI-2-Областен кръг-1997-11 кл-probs.pdf",
+      "year": 1997,
+      "kind": "probs",
+      "grade": "11",
+      "chars": 1361,
+      "words": 245,
+      "source": "ocr_cache",
+      "status": "ok"
+    },
+    {
+      "name": "OLI-3-Национален кръг-1997-9-12 кл-probs.pdf",
+      "year": 1997,
+      "kind": "probs",
+      "grade": "12",
+      "chars": 0,
+      "words": 0,
+      "source": null,
+      "status": "no_text"
+    },
+    {
+      "name": "OLI-2-Областен кръг-1996-10 кл-sol.pdf",
+      "year": 1996,
+      "kind": "sol",
+      "grade": "10",
+      "chars": 11927,
+      "words": 2139,
+      "source": "ocr_cache",
+      "status": "ok"
+    },
+    {
+      "name": "OLI-2-Областен кръг-1996-11 кл-sol.pdf",
+      "year": 1996,
+      "kind": "sol",
+      "grade": "11",
+      "chars": 11927,
+      "words": 2139,
+      "source": "ocr_cache",
+      "status": "ok"
+    },
+    {
+      "name": "OLI-3-Национален кръг-1996-9-12 кл-sol.pdf",
+      "year": 1996,
+      "kind": "sol",
+      "grade": "12",
+      "chars": 13454,
+      "words": 2387,
+      "source": "ocr_cache",
+      "status": "ok"
+    },
+    {
+      "name": "OLI-2-Областен кръг-1996-10 кл-probs.pdf",
+      "year": 1996,
+      "kind": "probs",
+      "grade": "10",
+      "chars": 1896,
+      "words": 349,
+      "source": "ocr_cache",
+      "status": "ok"
+    },
+    {
+      "name": "OLI-2-Областен кръг-1996-11 кл-probs.pdf",
+      "year": 1996,
+      "kind": "probs",
+      "grade": "11",
+      "chars": 1896,
+      "words": 349,
+      "source": "ocr_cache",
+      "status": "ok"
+    },
+    {
+      "name": "OLI-3-Национален кръг-1996-9-12 кл-probs.pdf",
+      "year": 1996,
+      "kind": "probs",
+      "grade": "12",
+      "chars": 1771,
+      "words": 307,
+      "source": "ocr_cache",
+      "status": "ok"
+    },
+    {
+      "name": "OLI-2-Областен кръг-1995-10 кл-sol.pdf",
+      "year": 1995,
+      "kind": "sol",
+      "grade": "10",
+      "chars": 7925,
+      "words": 1504,
+      "source": "ocr_cache",
+      "status": "ok"
+    },
+    {
+      "name": "OLI-2-Областен кръг-1995-11 кл-sol.pdf",
+      "year": 1995,
+      "kind": "sol",
+      "grade": "11",
+      "chars": 7925,
+      "words": 1504,
+      "source": "ocr_cache",
+      "status": "ok"
+    },
+    {
+      "name": "OLI-3-Национален кръг-1995-9-12 кл-sol.pdf",
+      "year": 1995,
+      "kind": "sol",
+      "grade": "12",
+      "chars": 8650,
+      "words": 1659,
+      "source": "ocr_cache",
+      "status": "ok"
+    },
+    {
+      "name": "OLI-2-Областен кръг-1995-10 кл-probs.pdf",
+      "year": 1995,
+      "kind": "probs",
+      "grade": "10",
+      "chars": 1733,
+      "words": 309,
+      "source": "ocr_cache",
+      "status": "ok"
+    },
+    {
+      "name": "OLI-2-Областен кръг-1995-11 кл-probs.pdf",
+      "year": 1995,
+      "kind": "probs",
+      "grade": "11",
+      "chars": 1733,
+      "words": 309,
+      "source": "ocr_cache",
+      "status": "ok"
+    },
+    {
+      "name": "OLI-3-Национален кръг-1995-9-12 кл-probs.pdf",
+      "year": 1995,
+      "kind": "probs",
+      "grade": "12",
+      "chars": 2002,
+      "words": 387,
+      "source": "ocr_cache",
+      "status": "ok"
+    },
+    {
+      "name": "OLI-3-Национален кръг-1994-9-12 кл-sol.pdf",
+      "year": 1994,
+      "kind": "sol",
+      "grade": "12",
+      "chars": 3839,
+      "words": 770,
+      "source": "pdfplumber",
+      "status": "ok"
+    },
+    {
+      "name": "OLI-3-Национален кръг-1994-9-12 кл-probs.pdf",
+      "year": 1994,
+      "kind": "probs",
+      "grade": "12",
+      "chars": 1479,
+      "words": 285,
+      "source": "pdfplumber",
+      "status": "ok"
+    },
+    {
+      "name": "OLI-3-Национален кръг-1993-9-12 кл-sol.pdf",
+      "year": 1993,
+      "kind": "sol",
+      "grade": "12",
+      "chars": 10715,
+      "words": 2297,
+      "source": "pdfplumber",
+      "status": "ok"
+    },
+    {
+      "name": "OLI-3-Национален кръг-1993-9-12 кл-probs.pdf",
+      "year": 1993,
+      "kind": "probs",
+      "grade": "12",
+      "chars": 2430,
+      "words": 482,
+      "source": "pdfplumber",
+      "status": "ok"
+    },
+    {
+      "name": "OLI-3-Национален кръг-1992-9-12 кл-sol.pdf",
+      "year": 1992,
+      "kind": "sol",
+      "grade": "12",
+      "chars": 14161,
+      "words": 2899,
+      "source": "pdfplumber",
+      "status": "ok"
+    },
+    {
+      "name": "OLI-3-Национален кръг-1992-9-12 кл-probs.pdf",
+      "year": 1992,
+      "kind": "probs",
+      "grade": "12",
+      "chars": 2489,
+      "words": 482,
+      "source": "pdfplumber",
+      "status": "ok"
+    },
+    {
+      "name": "OLI-3-Национален кръг-1991-9-12 кл-sol.pdf",
+      "year": 1991,
+      "kind": "sol",
+      "grade": "12",
+      "chars": 14267,
+      "words": 2783,
+      "source": "pdfplumber",
+      "status": "ok"
+    },
+    {
+      "name": "OLI-3-Национален кръг-1991-9-12 кл-probs.pdf",
+      "year": 1991,
+      "kind": "probs",
+      "grade": "12",
+      "chars": 2952,
+      "words": 522,
+      "source": "pdfplumber",
+      "status": "ok"
+    },
+    {
+      "name": "OLI-3-Национален кръг-1990-9-12 кл-sol.pdf",
+      "year": 1990,
+      "kind": "sol",
+      "grade": "12",
+      "chars": 16398,
+      "words": 3478,
+      "source": "pdfplumber",
+      "status": "ok"
+    },
+    {
+      "name": "OLI-3-Национален кръг-1990-9-12 кл-probs.pdf",
+      "year": 1990,
+      "kind": "probs",
+      "grade": "12",
+      "chars": 2183,
+      "words": 399,
+      "source": "pdfplumber",
+      "status": "ok"
+    },
+    {
+      "name": "OLI-3-Национален кръг-1989-9-12 кл-sol.pdf",
+      "year": 1989,
+      "kind": "sol",
+      "grade": "12",
+      "chars": 11467,
+      "words": 2556,
+      "source": "pdfplumber",
+      "status": "ok"
+    },
+    {
+      "name": "OLI-3-Национален кръг-1989-9-12 кл-probs.pdf",
+      "year": 1989,
+      "kind": "probs",
+      "grade": "12",
+      "chars": 2271,
+      "words": 420,
+      "source": "pdfplumber",
+      "status": "ok"
+    },
+    {
+      "name": "OLI-3-Национален кръг-1988-9-12 кл-sol.pdf",
+      "year": 1988,
+      "kind": "sol",
+      "grade": "12",
+      "chars": 9735,
+      "words": 2072,
+      "source": "pdfplumber",
+      "status": "ok"
+    },
+    {
+      "name": "OLI-3-Национален кръг-1988-9-12 кл-probs.pdf",
+      "year": 1988,
+      "kind": "probs",
+      "grade": "12",
+      "chars": 1558,
+      "words": 293,
+      "source": "pdfplumber",
+      "status": "ok"
+    },
+    {
+      "name": "OLI-3-Национален кръг-1987-9-12 кл-sol.pdf",
+      "year": 1987,
+      "kind": "sol",
+      "grade": "12",
+      "chars": 12156,
+      "words": 2627,
+      "source": "pdfplumber",
+      "status": "ok"
+    },
+    {
+      "name": "OLI-3-Национален кръг-1987-9-12 кл-probs.pdf",
+      "year": 1987,
+      "kind": "probs",
+      "grade": "12",
+      "chars": 2033,
+      "words": 384,
+      "source": "pdfplumber",
+      "status": "ok"
+    },
+    {
+      "name": "OLI-3-Национален кръг-1986-9-12 кл-sol.pdf",
+      "year": 1986,
+      "kind": "sol",
+      "grade": "12",
+      "chars": 10299,
+      "words": 2101,
+      "source": "pdfplumber",
+      "status": "ok"
+    },
+    {
+      "name": "OLI-3-Национален кръг-1986-9-12 кл-probs.pdf",
+      "year": 1986,
+      "kind": "probs",
+      "grade": "12",
+      "chars": 1745,
+      "words": 310,
+      "source": "pdfplumber",
+      "status": "ok"
+    },
+    {
+      "name": "OLI-3-Национален кръг-1985-9-12 кл-sol.pdf",
+      "year": 1985,
+      "kind": "sol",
+      "grade": "12",
+      "chars": 11042,
+      "words": 2345,
+      "source": "pdfplumber",
+      "status": "ok"
+    },
+    {
+      "name": "OLI-3-Национален кръг-1985-9-12 кл-probs.pdf",
+      "year": 1985,
+      "kind": "probs",
+      "grade": "12",
+      "chars": 2156,
+      "words": 396,
+      "source": "pdfplumber",
+      "status": "ok"
+    },
+    {
+      "name": "OLI-3-Национален кръг-1984-9-12 кл-sol.pdf",
+      "year": 1984,
+      "kind": "sol",
+      "grade": "12",
+      "chars": 6916,
+      "words": 1488,
+      "source": "pdfplumber",
+      "status": "ok"
+    },
+    {
+      "name": "OLI-3-Национален кръг-1984-9-12 кл-probs.pdf",
+      "year": 1984,
+      "kind": "probs",
+      "grade": "12",
+      "chars": 1925,
+      "words": 395,
+      "source": "pdfplumber",
+      "status": "ok"
+    },
+    {
+      "name": "OLI-3-Национален кръг-1983-9-12 кл-sol.pdf",
+      "year": 1983,
+      "kind": "sol",
+      "grade": "12",
+      "chars": 8867,
+      "words": 1852,
+      "source": "pdfplumber",
+      "status": "ok"
+    },
+    {
+      "name": "OLI-3-Национален кръг-1983-9-12 кл-probs.pdf",
+      "year": 1983,
+      "kind": "probs",
+      "grade": "12",
+      "chars": 1645,
+      "words": 343,
+      "source": "pdfplumber",
+      "status": "ok"
+    }
+  ]
+}

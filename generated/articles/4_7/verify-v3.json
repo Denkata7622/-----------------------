@@ -1,0 +1,44 @@
+{
+  "verdict": "approve",
+  "score": 10,
+  "issues": [
+    {
+      "severity": "minor",
+      "section": "4.3 Hard examples",
+      "description": "Пример 9 (докажи, че φ(n) е четно за n>2) е по-скоро medium, отколкото hard трудност."
+    }
+  ],
+  "strengths": [
+    "Пълно покритие на структурата с всички 9 секции",
+    "Реални олимпиадни примери с автентични източници",
+    "Отлично обяснение на edge cases и чести грешки",
+    "CHECK-ове между нивата, които помагат за самооценка"
+  ],
+  "suggestions": [
+    "В Пример 8 да се добави кратко резюме на ключовите стъпки за по-лесно разбиране",
+    "В секция 3.3 да се съкрати леко доказателството за τ и σ, за да е по-фокусирано"
+  ],
+  "math_errors": [],
+  "missing_topics": [],
+  "structure_check": {
+    "section_1_why_important": true,
+    "section_2_objectives": true,
+    "section_3_theory": true,
+    "section_4_examples_3_levels": true,
+    "section_5_recognition": true,
+    "section_6_mistakes": true,
+    "section_7_mastery": true,
+    "section_8_quiz": true,
+    "section_9_recall": true,
+    "check_marks_present": true
+  },
+  "examples_check": {
+    "real_olympiad": true,
+    "easy_count": 3,
+    "medium_count": 4,
+    "hard_count": 2
+  },
+  "verdict_reasoning": "Статията е изключително добре структурирана, математически коректна, с реални олимпиадни примери и отлично покриване на всички изисквания. Няма критични грешки.",
+  "_tokens": 13840,
+  "_model": "deepseek/deepseek-r1-0528"
+}

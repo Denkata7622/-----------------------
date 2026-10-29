@@ -1,0 +1,4075 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>OLYMPIAD PREP TERMINAL</title>
+<link href="https://fonts.googleapis.com/css2?family=VT323&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+
+<style>
+/* ──────────────────────────────────────────────────────────────
+   1. RESET & THEME VARIABLES
+   ────────────────────────────────────────────────────────────── */
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{height:100%;overflow:hidden}
+body{
+  --bg:#000; --surface:#061006; --surface-2:#0a1a0a; --surface-3:#0f240f; --surface-4:#142e14;
+  --border:#143014; --border-2:#1f4a1f;
+  --accent:#00ff44; --accent-2:#00cc36; --accent-dim:#0b4a1a; --accent-glow:rgba(0,255,68,0.35);
+  --text:#b8ffb8; --text-2:#7bea7b; --text-3:#4a8a4a;
+  --warn:#ddff00; --danger:#ff4444; --star:#ffdd00;
+  --sidebar-w:300px; --topbar-h:60px;
+  background:var(--bg); color:var(--text);
+  font-family:'VT323','JetBrains Mono',monospace; font-size:17px; letter-spacing:.5px;
+  -webkit-font-smoothing:antialiased;
+  transition:background .2s, color .2s;
+}
+body[data-theme="contrast"]{
+  --surface:#0a0a0a; --surface-2:#101010; --surface-3:#181818; --surface-4:#202020;
+  --border:#1a1a1a; --border-2:#2a2a2a;
+  --text:#f5f5f5; --text-2:#d4d4d4; --text-3:#8a8a8a;
+  --accent-glow:rgba(0,255,102,.4);
+}
+body[data-theme="high"]{
+  --surface:#000; --surface-2:#0a0a0a; --surface-3:#141414; --surface-4:#1e1e1e;
+  --border:#222; --border-2:#333;
+  --text:#fff; --text-2:#e8e8e8; --text-3:#999;
+  --accent:#00ff88; --accent-2:#00e070; --accent-glow:rgba(0,255,136,.5);
+}
+body.scanlines::after{
+  content:""; position:fixed; inset:0; pointer-events:none; z-index:9000;
+  background:repeating-linear-gradient(to bottom,rgba(0,255,68,0) 0,rgba(0,255,68,.02) 2px,rgba(0,255,68,.035) 3px);
+}
+
+/* Global lucide svg sizing */
+svg.lucide { stroke-width: 2; }
+
+/* ──────────────────────────────────────────────────────────────
+   2. APP LAYOUT
+   ────────────────────────────────────────────────────────────── */
+.app{display:flex;height:100vh;width:100vw;overflow:hidden}
+.app.plan-mode .sidebar{display:none}
+.app.plan-mode .study-secondary{display:none}
+
+/* ──────────────────────────────────────────────────────────────
+   3. SIDEBAR
+   ────────────────────────────────────────────────────────────── */
+.sidebar{
+  width:var(--sidebar-w); background:var(--surface); border-right:1px solid var(--border);
+  display:flex; flex-direction:column; flex-shrink:0; transition:margin-left .25s ease;
+}
+.sidebar.collapsed{margin-left:calc(-1 * var(--sidebar-w))}
+.sidebar-header{
+  padding:12px 14px; border-bottom:1px solid var(--border);
+  display:flex; align-items:center; gap:10px;
+}
+.sidebar-header .lbl{
+  font-size:11px; color:var(--text-3); letter-spacing:2.5px; flex:1;
+}
+.sidebar-header .collapse-btn{
+  background:transparent; border:1px solid var(--border-2); color:var(--text-2);
+  padding:3px 6px; cursor:pointer; border-radius:3px;
+  display:flex; align-items:center; justify-content:center;
+}
+.sidebar-header .collapse-btn:hover{color:var(--accent);border-color:var(--accent)}
+.sidebar-header .collapse-btn svg{width:14px;height:14px}
+
+.sidebar-stats{padding:12px 16px;border-bottom:1px solid var(--border);background:var(--surface-2)}
+.streak-row{display:flex;align-items:center;gap:8px;font-size:13px}
+.streak-row .fire{color:#ff8a00;filter:drop-shadow(0 0 6px rgba(255,138,0,.6));display:flex}
+.streak-row .fire svg{width:20px;height:20px}
+.streak-row .streak-num{color:var(--accent);font-size:20px;text-shadow:0 0 6px var(--accent-glow)}
+.streak-row .streak-label{color:var(--text-3);font-size:11px;letter-spacing:1.5px}
+.sidebar-nav{flex:1;overflow-y:auto;padding:8px}
+.sidebar-nav::-webkit-scrollbar{width:6px}
+.sidebar-nav::-webkit-scrollbar-thumb{background:var(--border-2);border-radius:3px}
+.nav-step{
+  display:flex; align-items:center; gap:10px; padding:8px 10px;
+  border-radius:4px; cursor:pointer; margin-bottom:2px;
+  border:1px solid transparent; transition:all .15s;
+  background:none; font-family:inherit; width:100%; text-align:left;
+}
+.nav-step:hover{background:var(--surface-2);border-color:var(--border-2)}
+.nav-step.active{background:var(--surface-3);border-color:var(--accent-2)}
+.nav-step .num{color:var(--accent);font-size:15px;min-width:24px;text-shadow:0 0 4px var(--accent-glow)}
+.nav-step .label{
+  flex:1; color:var(--text-2); font-size:13px; letter-spacing:.5px;
+  overflow:hidden; text-overflow:ellipsis; white-space:nowrap;
+}
+.nav-step .ring{
+  width:26px; height:26px; border-radius:50%; flex-shrink:0;
+  display:flex; align-items:center; justify-content:center;
+  position:relative; font-size:9px;
+  background:conic-gradient(var(--accent) var(--pct,0%),var(--surface-4) 0);
+}
+.nav-step .ring::before{content:"";position:absolute;inset:3px;border-radius:50%;background:var(--surface)}
+.nav-step .ring span{position:relative;z-index:1;font-size:9px;color:var(--text-2)}
+
+/* ──────────────────────────────────────────────────────────────
+   4. MAIN AREA
+   ────────────────────────────────────────────────────────────── */
+.main{flex:1;display:flex;flex-direction:column;min-width:0;overflow:hidden}
+
+/* ──────────────────────────────────────────────────────────────
+   5. TOPBAR v2 (redesigned)
+   ────────────────────────────────────────────────────────────── */
+.topbar{
+  min-height:var(--topbar-h);
+  display:flex; align-items:center; gap:12px; padding:0 16px;
+  background:var(--surface); border-bottom:1px solid var(--border);
+  flex-wrap:nowrap;
+}
+.menu-toggle{
+  display:none; background:transparent; border:1px solid var(--border-2);
+  color:var(--text-2); padding:6px 8px; cursor:pointer; border-radius:3px;
+}
+.menu-toggle:hover{color:var(--accent);border-color:var(--accent)}
+.menu-toggle svg{width:16px;height:16px;display:block}
+
+.brand{
+  display:flex; align-items:center; gap:8px;
+  color:var(--accent); font-size:13px; letter-spacing:2.5px;
+  padding-right:14px; border-right:1px solid var(--border);
+  text-shadow:0 0 6px var(--accent-glow);
+  flex-shrink:0;
+}
+.brand svg{width:18px;height:18px}
+.brand span{white-space:nowrap}
+
+/* Tab navigation */
+.main-tabs{
+  display:flex; gap:2px;
+  background:var(--surface-2);
+  border:1px solid var(--border-2);
+  padding:3px; border-radius:6px;
+  flex-shrink:0;
+}
+.main-tab{
+  display:flex; align-items:center; gap:6px;
+  padding:6px 14px;
+  background:transparent; border:none;
+  color:var(--text-3);
+  font-family:inherit; font-size:12px; letter-spacing:1.8px;
+  cursor:pointer; border-radius:4px;
+  transition:all .15s;
+}
+.main-tab svg{width:14px;height:14px}
+.main-tab:hover{color:var(--text-2);background:var(--surface-3)}
+.main-tab.active{
+  color:#000; background:var(--accent);
+  box-shadow:0 0 10px var(--accent-glow);
+}
+
+/* Search */
+.search-wrap{
+  flex:1; max-width:520px; position:relative;
+  display:flex; align-items:center;
+  background:var(--surface-2); border:1px solid var(--border-2);
+  border-radius:4px; padding:0 10px; height:36px;
+  transition:border-color .15s;
+}
+.search-wrap:focus-within{border-color:var(--accent);box-shadow:0 0 0 2px var(--accent-glow)}
+.search-wrap .icon{color:var(--accent);display:flex;margin-right:6px}
+.search-wrap .icon svg{width:15px;height:15px}
+.search-wrap input{
+  flex:1; background:transparent; border:none; color:var(--text);
+  font-family:inherit; font-size:15px; outline:none; letter-spacing:.5px;
+}
+.search-wrap input::placeholder{color:var(--text-3)}
+.kbd-hint{
+  font-size:11px; color:var(--text-3); border:1px solid var(--border-2);
+  padding:1px 5px; border-radius:3px;
+}
+.kbd-hint.hidden{display:none}
+
+/* Right cluster */
+.topbar-actions{display:flex;align-items:center;gap:6px;margin-left:auto;flex-shrink:0}
+.icon-group{
+  display:flex; gap:2px;
+  background:var(--surface-2);
+  border:1px solid var(--border-2);
+  padding:3px; border-radius:6px;
+}
+.icon-btn{
+  width:32px; height:32px;
+  background:transparent; border:1px solid transparent;
+  color:var(--text-2); cursor:pointer; border-radius:4px;
+  display:flex; align-items:center; justify-content:center;
+  transition:all .15s;
+}
+.icon-btn svg{width:16px;height:16px}
+.icon-btn:hover{color:var(--accent);background:var(--surface-3);border-color:var(--border-2)}
+.icon-btn.active{background:var(--accent);color:#000;border-color:var(--accent)}
+
+/* Standalone dropdown icon buttons */
+.dropdown{position:relative}
+.dropdown > .icon-btn{
+  background:var(--surface-2); border:1px solid var(--border-2);
+}
+.dropdown > .icon-btn:hover{background:var(--surface-3);border-color:var(--accent)}
+
+/* Secondary bar (only on Study tab) */
+.study-secondary{
+  padding:8px 20px;
+  background:var(--surface-2); border-bottom:1px solid var(--border);
+  display:flex; align-items:center; gap:16px;
+}
+.filter-chips{display:flex;gap:3px;flex-shrink:0}
+.chip{
+  background:var(--surface); border:1px solid var(--border-2);
+  color:var(--text-2); padding:5px 12px; font-family:inherit;
+  font-size:12px; cursor:pointer; border-radius:3px;
+  letter-spacing:1px; transition:all .15s; white-space:nowrap;
+}
+.chip:hover{color:var(--accent);border-color:var(--accent)}
+.chip.active{background:var(--accent);color:#000;border-color:var(--accent);box-shadow:0 0 8px var(--accent-glow)}
+
+/* ──────────────────────────────────────────────────────────────
+   6. STATS BAR
+   ────────────────────────────────────────────────────────────── */
+.stats-bar{
+  padding:10px 20px; background:var(--surface-2); border-bottom:1px solid var(--border);
+  display:flex; align-items:center; gap:20px; flex-wrap:wrap; font-size:14px;
+}
+.stat{display:flex;align-items:baseline;gap:6px}
+.stat .v{color:var(--accent);font-size:18px;text-shadow:0 0 5px var(--accent-glow)}
+.stat .l{color:var(--text-3);font-size:11px;letter-spacing:1.5px}
+.progress-wrap{
+  flex:1; min-width:150px; height:6px;
+  background:var(--surface-4); border-radius:3px; overflow:hidden;
+}
+.progress-fill{
+  height:100%; border-radius:3px;
+  background:linear-gradient(90deg,var(--accent-2),var(--accent));
+  transition:width .5s cubic-bezier(.4,0,.2,1);
+  box-shadow:0 0 8px var(--accent-glow);
+}
+
+/* ──────────────────────────────────────────────────────────────
+   7. CONTENT VIEWS
+   ────────────────────────────────────────────────────────────── */
+.content-view{
+  display:flex; flex-direction:column; flex:1; min-height:0; overflow:hidden;
+}
+.content-view.hidden{display:none}
+
+.content{flex:1;overflow-y:auto;padding:20px;scroll-behavior:smooth}
+.content::-webkit-scrollbar{width:10px}
+.content::-webkit-scrollbar-track{background:var(--surface)}
+.content::-webkit-scrollbar-thumb{background:var(--border-2);border-radius:5px}
+.content::-webkit-scrollbar-thumb:hover{background:var(--accent-2)}
+.empty{padding:60px 20px;text-align:center;color:var(--text-3);letter-spacing:2px}
+.empty .big{color:var(--accent-2);margin-bottom:12px;opacity:.5;display:flex;justify-content:center}
+.empty .big svg{width:48px;height:48px}
+
+/* ──────────────────────────────────────────────────────────────
+   8. STEP + POINT CARDS
+   ────────────────────────────────────────────────────────────── */
+.step{
+  background:var(--surface); border:1px solid var(--border);
+  border-radius:6px; margin-bottom:16px; overflow:hidden; scroll-margin-top:16px;
+}
+.step-header{
+  padding:14px 18px; display:flex; align-items:center; gap:12px;
+  cursor:pointer; user-select:none;
+  background:var(--surface-2); border-bottom:1px solid var(--border);
+  transition:background .15s;
+}
+.step-header:hover{background:var(--surface-3)}
+.step-toggle{color:var(--accent);transition:transform .2s;display:flex}
+.step-toggle svg{width:14px;height:14px}
+.step.collapsed .step-toggle{transform:rotate(-90deg)}
+.step.collapsed .step-body{display:none}
+.step-num{color:var(--accent);font-size:22px;min-width:40px;letter-spacing:1px;text-shadow:0 0 6px var(--accent-glow)}
+.step-title{flex:1;font-size:18px;letter-spacing:1.5px;color:var(--accent);text-shadow:0 0 4px var(--accent-glow)}
+.step-badge{
+  font-size:12px; color:var(--text-2); border:1px solid var(--border-2);
+  padding:2px 9px; border-radius:3px; letter-spacing:1px;
+  background:var(--surface-4); white-space:nowrap;
+}
+.step-badge.done{background:var(--accent);color:#000;border-color:var(--accent);box-shadow:0 0 6px var(--accent-glow)}
+.step-reset{
+  background:transparent; border:1px solid transparent; color:var(--text-3);
+  cursor:pointer; padding:4px; border-radius:3px; display:flex; align-items:center;
+}
+.step-reset svg{width:14px;height:14px}
+.step-reset:hover{color:var(--danger);border-color:var(--danger)}
+.step-body{padding:12px}
+
+.point{
+  background:var(--surface-2); border:1px solid var(--border-2);
+  border-radius:5px; margin-bottom:8px;
+  transition:all .15s; position:relative; overflow:hidden;
+}
+.point:hover{border-color:var(--accent-2)}
+.point.done{opacity:.55}
+.point.done .point-title{text-decoration:line-through;color:var(--text-3)}
+.point.fav{border-color:var(--star)}
+.point.fav::before{content:"";position:absolute;left:0;top:0;bottom:0;width:2px;background:var(--star)}
+.point.highlight{animation:highlight 1.2s ease}
+@keyframes highlight{
+  0%,100%{background:var(--surface-2)}
+  50%{background:var(--surface-4);box-shadow:0 0 15px var(--accent-glow)}
+}
+.point-row{padding:11px 14px;display:flex;gap:12px;align-items:flex-start}
+.point-check{
+  flex-shrink:0; width:22px; height:22px;
+  border:2px solid var(--accent-2); border-radius:3px;
+  background:var(--surface); color:var(--text-3);
+  cursor:pointer; display:flex; align-items:center; justify-content:center;
+  margin-top:2px; transition:all .15s;
+}
+.point-check:hover{border-color:var(--accent);color:var(--accent)}
+.point-check.checked{background:var(--accent);border-color:var(--accent);color:#000;box-shadow:0 0 8px var(--accent-glow)}
+.point-check svg{width:14px;height:14px}
+.point-main{flex:1;min-width:0}
+.point-num{font-size:11px;color:var(--text-3);letter-spacing:2px;margin-bottom:2px;display:flex;align-items:center;gap:4px}
+.point-title{font-size:16px;color:var(--text);margin-bottom:4px;letter-spacing:.5px}
+.point-desc{font-size:13px;color:var(--text-2);line-height:1.5;margin-bottom:8px}
+.point-tags{display:flex;flex-wrap:wrap;gap:5px;align-items:center}
+.tag{
+  font-size:11px; padding:2px 7px;
+  background:var(--surface-3); border:1px solid var(--border-2);
+  border-radius:3px; color:var(--text-2); letter-spacing:.5px;
+}
+.tag.src{color:var(--text-3)}
+.tag.page{color:var(--accent-2);border-color:var(--accent-dim);background:var(--accent-dim)}
+.pdf-btn{
+  font-size:11px; padding:3px 9px;
+  background:var(--accent-dim); border:1px solid var(--accent-2);
+  border-radius:3px; color:var(--accent);
+  text-decoration:none; letter-spacing:1px;
+  transition:all .15s; display:inline-flex; align-items:center; gap:4px;
+}
+.pdf-btn svg{width:12px;height:12px}
+.pdf-btn:hover{background:var(--accent);color:#000;box-shadow:0 0 8px var(--accent-glow)}
+.pdf-btn.bonus{background:#1a0a30;border-color:#6a30c0;color:#b88aff}
+.pdf-btn.bonus:hover{background:#6a30c0;color:#fff}
+.point-actions{display:flex;gap:3px;flex-shrink:0;align-items:flex-start}
+.mini-btn{
+  width:26px; height:26px;
+  background:transparent; border:1px solid var(--border-2);
+  color:var(--text-3); cursor:pointer; border-radius:3px;
+  display:flex; align-items:center; justify-content:center;
+  transition:all .15s;
+}
+.mini-btn svg{width:14px;height:14px}
+.mini-btn:hover{color:var(--accent);border-color:var(--accent)}
+.mini-btn.active{color:var(--star);border-color:var(--star)}
+.diff-group{display:flex;gap:2px}
+.diff-btn{
+  font-size:10px; width:22px; height:26px;
+  background:transparent; border:1px solid var(--border-2);
+  color:var(--text-3); font-family:inherit;
+  cursor:pointer; border-radius:3px; transition:all .15s;
+  display:flex; align-items:center; justify-content:center;
+}
+.diff-btn:hover{color:var(--accent);border-color:var(--accent)}
+.diff-btn.active.easy{color:#7dff7d;border-color:#7dff7d;background:rgba(125,255,125,.1)}
+.diff-btn.active.med{color:var(--warn);border-color:var(--warn);background:rgba(221,255,0,.1)}
+.diff-btn.active.hard{color:var(--danger);border-color:var(--danger);background:rgba(255,68,68,.1)}
+.point-expand{
+  border-top:1px solid var(--border); background:var(--surface);
+  padding:0; max-height:0; overflow:hidden;
+  transition:max-height .35s ease;
+}
+.point.expanded .point-expand{max-height:2000px}
+.point-expand-inner{padding:14px}
+.section-label{font-size:10px;color:var(--text-3);letter-spacing:2px;margin-bottom:6px;text-transform:uppercase}
+.explanation{
+  font-size:14px; color:var(--text); line-height:1.7;
+  padding:10px 14px; background:var(--surface-2);
+  border-left:2px solid var(--accent-dim);
+  border-radius:3px; margin-bottom:12px; white-space:pre-wrap;
+}
+.notes-area{
+  width:100%; min-height:80px;
+  background:var(--surface-2); border:1px solid var(--border-2);
+  color:var(--text); font-family:inherit; font-size:14px;
+  padding:8px 10px; border-radius:3px; resize:vertical;
+  outline:none; line-height:1.5; transition:border-color .15s;
+}
+.notes-area:focus{border-color:var(--accent);box-shadow:0 0 0 2px var(--accent-glow)}
+.notes-area::placeholder{color:var(--text-3)}
+.bonus-row{
+  margin-top:10px; padding-top:10px;
+  border-top:1px dashed var(--border-2);
+  display:flex; flex-wrap:wrap; gap:5px;
+}
+.notes-badge{color:var(--warn);display:inline-flex}
+.notes-badge svg{width:12px;height:12px}
+
+/* ──────────────────────────────────────────────────────────────
+   9. PLAN VIEW (new)
+   ────────────────────────────────────────────────────────────── */
+.plan-view{
+  flex:1; overflow-y:auto; padding:32px 24px 60px;
+}
+.plan-view::-webkit-scrollbar{width:10px}
+.plan-view::-webkit-scrollbar-thumb{background:var(--border-2);border-radius:5px}
+
+.plan-hero{
+  max-width:1200px; margin:0 auto 32px;
+  text-align:center;
+}
+.plan-hero .eyebrow{
+  color:var(--accent-2); font-size:11px; letter-spacing:4px;
+  margin-bottom:12px; opacity:.85;
+}
+.plan-hero h1{
+  color:var(--accent); font-size:34px; letter-spacing:4px;
+  text-shadow:0 0 12px var(--accent-glow);
+  margin-bottom:10px;
+}
+.plan-hero p{
+  color:var(--text-3); font-size:14px; letter-spacing:1px;
+  max-width:680px; margin:0 auto; line-height:1.7;
+}
+.plan-hero .plan-stats{
+  display:flex; justify-content:center; gap:32px; margin-top:20px;
+  flex-wrap:wrap;
+}
+.plan-stat .val{color:var(--accent); font-size:24px; text-shadow:0 0 8px var(--accent-glow)}
+.plan-stat .lbl{color:var(--text-3); font-size:10px; letter-spacing:2px}
+
+/* Phase cards */
+.phase-card{
+  max-width:1200px; margin:0 auto 20px;
+  background:var(--surface); border:1px solid var(--border);
+  border-radius:8px; overflow:hidden;
+}
+.phase-header{
+  padding:16px 20px;
+  background:var(--surface-2);
+  border-bottom:1px solid var(--border);
+  display:flex; align-items:center; gap:16px;
+  cursor:pointer; user-select:none;
+  transition:background .15s;
+}
+.phase-header:hover{background:var(--surface-3)}
+.phase-num{
+  width:44px; height:44px; border-radius:50%;
+  background:var(--surface-4);
+  border:2px solid var(--accent);
+  color:var(--accent);
+  display:flex; align-items:center; justify-content:center;
+  font-size:20px; text-shadow:0 0 6px var(--accent-glow);
+  flex-shrink:0;
+}
+.phase-meta{flex:1; min-width:0}
+.phase-weeks{
+  color:var(--text-3); font-size:10px; letter-spacing:2.5px; margin-bottom:4px;
+}
+.phase-title{
+  color:var(--accent); font-size:18px; letter-spacing:2.5px;
+}
+.phase-goal{
+  color:var(--text-3); font-size:12px; max-width:400px; text-align:right;
+  line-height:1.5;
+}
+.phase-progress{
+  color:var(--accent-2); font-size:11px; letter-spacing:1.5px;
+  text-align:right; margin-top:4px;
+}
+.phase-body{
+  padding:12px;
+  display:grid;
+  grid-template-columns:repeat(auto-fill, minmax(280px, 1fr));
+  gap:8px;
+  max-height:2000px;
+  transition:max-height .35s ease, padding .35s ease;
+}
+.phase-card.collapsed .phase-body{
+  max-height:0; padding-top:0; padding-bottom:0;
+}
+.phase-card.collapsed .phase-header .phase-caret{transform:rotate(-90deg)}
+.phase-caret{
+  color:var(--accent); display:flex; transition:transform .2s;
+}
+.phase-caret svg{width:16px;height:16px}
+
+/* Week item */
+.week-item{
+  background:var(--surface-2);
+  border:1px solid var(--border-2);
+  border-radius:5px;
+  padding:11px 13px;
+  cursor:pointer;
+  transition:all .15s;
+  position:relative;
+}
+.week-item:hover{
+  border-color:var(--accent-2);
+  background:var(--surface-3);
+  transform:translateY(-1px);
+}
+.week-item.done{
+  border-color:var(--accent);
+  background:linear-gradient(135deg, var(--surface-2), rgba(0,255,68,.05));
+}
+.week-head{
+  display:flex; justify-content:space-between; align-items:center;
+  margin-bottom:8px;
+}
+.week-num{
+  color:var(--accent); font-size:12px; letter-spacing:2.5px;
+}
+.week-status{
+  display:flex; color:var(--text-3);
+}
+.week-status svg{width:14px;height:14px}
+.week-item.done .week-status{color:var(--accent)}
+.week-topics{
+  font-size:12px;
+  color:var(--text-2);
+  line-height:1.6;
+}
+.week-topics .topic-row{
+  display:flex; gap:6px; margin-bottom:2px; align-items:flex-start;
+}
+.week-topics .topic-badge{
+  color:var(--accent-2); font-size:10px; letter-spacing:1.5px;
+  min-width:32px; padding-top:2px; flex-shrink:0;
+}
+.week-topics .topic-text{flex:1; color:var(--text-2)}
+.week-topics .sec-topic .topic-badge{color:var(--text-3)}
+.week-topics .sec-topic .topic-text{color:var(--text-3); font-size:11px}
+
+/* Daily rhythm */
+.daily-grid{
+  padding:12px;
+  display:grid;
+  grid-template-columns:repeat(7, 1fr);
+  gap:8px;
+}
+.day-card{
+  background:var(--surface-2);
+  border:1px solid var(--border-2);
+  border-radius:6px;
+  padding:14px 10px;
+  text-align:center;
+  transition:all .15s;
+}
+.day-card:hover{border-color:var(--accent-2)}
+.day-card.today{
+  border-color:var(--accent);
+  box-shadow:0 0 14px var(--accent-glow);
+  background:linear-gradient(135deg, var(--surface-2), rgba(0,255,68,.06));
+}
+.day-card.rest{
+  background:var(--surface);
+  opacity:.8;
+}
+.day-name{
+  color:var(--accent); font-size:12px; letter-spacing:2.5px; margin-bottom:10px;
+}
+.day-icon{
+  color:var(--accent-2); margin-bottom:8px;
+  display:flex; justify-content:center;
+}
+.day-card.today .day-icon{color:var(--accent)}
+.day-icon svg{width:24px;height:24px}
+.day-activity{
+  color:var(--text-2); font-size:11px; line-height:1.4; margin-bottom:6px;
+  min-height:28px;
+}
+.day-duration{
+  color:var(--text-3); font-size:10px; letter-spacing:1px;
+}
+
+/* Legend */
+.plan-legend{
+  max-width:1200px; margin:24px auto 0;
+  display:flex; gap:16px; flex-wrap:wrap; justify-content:center;
+  color:var(--text-3); font-size:11px; letter-spacing:1px;
+}
+.plan-legend .lg{
+  display:flex; align-items:center; gap:6px;
+}
+.plan-legend .dot{
+  width:8px; height:8px; border-radius:50%; background:var(--accent);
+}
+.plan-legend .dot.pending{background:var(--text-3)}
+.plan-legend .dot.today{background:var(--accent); box-shadow:0 0 6px var(--accent-glow)}
+
+/* ──────────────────────────────────────────────────────────────
+   10. POINT MODAL
+   ────────────────────────────────────────────────────────────── */
+.modal-overlay{
+  position:fixed; inset:0; background:rgba(0,0,0,.92);
+  backdrop-filter:blur(6px); z-index:5000;
+  display:none; align-items:center; justify-content:center; padding:16px;
+}
+.modal-overlay.open{display:flex}
+.point-modal{
+  width:100%; max-width:1500px; height:100%; max-height:920px;
+  background:var(--surface); border:1px solid var(--accent-2);
+  border-radius:8px; display:flex; flex-direction:column;
+  box-shadow:0 0 60px var(--accent-glow); overflow:hidden;
+}
+.pm-header{
+  padding:12px 18px; border-bottom:1px solid var(--border); background:var(--surface-2);
+  display:flex; align-items:center; gap:12px; flex-wrap:wrap;
+}
+.pm-title-area{flex:1;min-width:200px}
+.pm-id{font-size:11px;color:var(--text-3);letter-spacing:2px}
+.pm-title{
+  font-size:20px; color:var(--accent); letter-spacing:1px;
+  text-shadow:0 0 6px var(--accent-glow);
+  white-space:nowrap; overflow:hidden; text-overflow:ellipsis;
+}
+.pm-actions{display:flex;gap:4px;align-items:center;flex-wrap:wrap}
+.pm-btn{
+  background:var(--surface-3); border:1px solid var(--border-2);
+  color:var(--text-2); font-family:inherit; font-size:13px;
+  padding:6px 10px; border-radius:3px; cursor:pointer;
+  transition:all .15s; display:inline-flex; align-items:center; gap:5px;
+  white-space:nowrap;
+}
+.pm-btn svg{width:14px;height:14px}
+.pm-btn:hover{color:var(--accent);border-color:var(--accent)}
+.pm-btn.active{background:var(--accent);color:#000;border-color:var(--accent)}
+.pm-btn.fav.active{background:var(--star);color:#000;border-color:var(--star)}
+.pm-btn.close{background:transparent;padding:4px 8px}
+.pm-btn.close:hover{background:var(--danger);color:#fff;border-color:var(--danger)}
+.pm-btn.diff-btn.easy.active{color:#7dff7d;border-color:#7dff7d;background:rgba(125,255,125,.15)}
+.pm-btn.diff-btn.med.active{color:var(--warn);border-color:var(--warn);background:rgba(221,255,0,.15)}
+.pm-btn.diff-btn.hard.active{color:var(--danger);border-color:var(--danger);background:rgba(255,68,68,.15)}
+.pm-body{flex:1;display:flex;overflow:hidden}
+.pm-left{width:420px;flex-shrink:0;border-right:1px solid var(--border);overflow-y:auto;padding:16px}
+.pm-left::-webkit-scrollbar{width:6px}
+.pm-left::-webkit-scrollbar-thumb{background:var(--border-2);border-radius:3px}
+.pm-right{flex:1;display:flex;flex-direction:column;min-width:0}
+.pm-section{margin-bottom:18px}
+.pm-label{font-size:10px;color:var(--text-3);letter-spacing:2px;margin-bottom:6px;text-transform:uppercase}
+.pm-desc{font-size:13px;color:var(--text-2);line-height:1.5}
+.pm-explanation{
+  font-size:13px; color:var(--text); line-height:1.7;
+  padding:10px 12px; background:var(--surface-2);
+  border-left:3px solid var(--accent-dim); border-radius:3px;
+  white-space:pre-wrap; max-height:400px; overflow-y:auto;
+}
+.pm-notes{
+  width:100%; min-height:110px;
+  background:var(--surface-2); border:1px solid var(--border-2);
+  color:var(--text); font-family:inherit; font-size:13px;
+  padding:8px 10px; border-radius:3px; resize:vertical;
+  outline:none; line-height:1.5;
+}
+.pm-notes:focus{border-color:var(--accent)}
+.pm-meta-tags{display:flex;flex-wrap:wrap;gap:5px}
+.pm-pdf-tabs{
+  display:flex; gap:0; border-bottom:1px solid var(--border);
+  background:var(--surface-2); padding:0 12px; overflow-x:auto;
+}
+.pm-tab{
+  padding:10px 14px; background:transparent; border:none;
+  border-bottom:2px solid transparent; color:var(--text-3);
+  font-family:inherit; font-size:13px; cursor:pointer;
+  letter-spacing:1px; display:flex; align-items:center; gap:6px;
+  transition:all .15s; white-space:nowrap;
+}
+.pm-tab svg{width:14px;height:14px}
+.pm-tab:hover{color:var(--accent)}
+.pm-tab.active{color:var(--accent);border-bottom-color:var(--accent);background:var(--surface)}
+.pm-tab .badge{font-size:10px;color:var(--text-3);background:var(--surface-4);padding:1px 6px;border-radius:2px}
+.pm-tab.external{margin-left:auto}
+.pm-pdf-container{flex:1;position:relative;background:#111;min-height:300px}
+.pm-pdf-frame{width:100%;height:100%;border:none;background:#111}
+.pm-footer{
+  padding:8px 16px; border-top:1px solid var(--border); background:var(--surface-2);
+  display:flex; align-items:center; gap:8px; font-size:11px; flex-wrap:wrap;
+}
+.pm-pomo-inline{display:flex;align-items:center;gap:10px;margin-left:auto}
+.pm-pomo-time{
+  font-size:18px; color:var(--accent); text-shadow:0 0 6px var(--accent-glow);
+  letter-spacing:1px; min-width:50px; text-align:center;
+}
+.pm-task-item{
+  display:flex; align-items:center; gap:8px;
+  padding:7px 10px; background:var(--surface-2);
+  border:1px solid var(--border-2); border-radius:3px;
+  font-size:12px; cursor:pointer; transition:all .15s; margin-bottom:4px;
+}
+.pm-task-item:hover{border-color:var(--accent);background:var(--surface-3)}
+.pm-task-item .label{flex:1;color:var(--text-2);display:flex;gap:6px;align-items:center}
+.pm-task-item .label svg{width:12px;height:12px}
+.pm-task-item .pg{color:var(--accent-2);font-size:11px}
+.pm-task-item .go{color:var(--accent);display:flex}
+.pm-task-item .go svg{width:14px;height:14px}
+
+/* ──────────────────────────────────────────────────────────────
+   11. POMODORO
+   ────────────────────────────────────────────────────────────── */
+.pomodoro{
+  position:fixed; bottom:20px; right:20px;
+  background:var(--surface); border:1px solid var(--accent-2);
+  border-radius:6px; padding:10px 14px;
+  display:flex; align-items:center; gap:12px;
+  box-shadow:0 0 20px var(--accent-glow); z-index:500; font-size:14px;
+}
+.pomodoro .time{
+  font-size:24px; color:var(--accent); text-shadow:0 0 8px var(--accent-glow);
+  min-width:72px; text-align:center; letter-spacing:2px;
+}
+.pomodoro .time.break{color:var(--warn);text-shadow:0 0 8px rgba(221,255,0,.5)}
+.pomodoro .mode{font-size:10px;color:var(--text-3);letter-spacing:2px;text-align:center}
+.pomo-btn{
+  width:30px; height:30px;
+  background:var(--surface-2); border:1px solid var(--border-2);
+  color:var(--text-2); cursor:pointer; border-radius:3px;
+  display:flex; align-items:center; justify-content:center;
+  transition:all .15s;
+}
+.pomo-btn svg{width:14px;height:14px}
+.pomo-btn:hover{color:var(--accent);border-color:var(--accent)}
+.pomo-btn.play{background:var(--accent);color:#000;border-color:var(--accent)}
+.pomo-count{
+  font-size:11px; color:var(--text-3); letter-spacing:1px;
+  border-left:1px solid var(--border); padding-left:12px; text-align:center;
+}
+
+/* ──────────────────────────────────────────────────────────────
+   12. COMMAND PALETTE
+   ────────────────────────────────────────────────────────────── */
+.palette-overlay{
+  position:fixed; inset:0; background:rgba(0,0,0,.75);
+  backdrop-filter:blur(4px); z-index:2000;
+  display:none; align-items:flex-start; justify-content:center; padding-top:15vh;
+}
+.palette-overlay.open{display:flex}
+.palette{
+  width:90%; max-width:560px;
+  background:var(--surface); border:1px solid var(--accent-2);
+  border-radius:6px; box-shadow:0 0 40px var(--accent-glow); overflow:hidden;
+}
+.palette-input{
+  width:100%; background:var(--surface-2); border:none;
+  border-bottom:1px solid var(--border); color:var(--accent);
+  font-family:inherit; font-size:18px; padding:14px 18px;
+  outline:none; letter-spacing:1px;
+}
+.palette-input::placeholder{color:var(--text-3)}
+.palette-results{max-height:50vh;overflow-y:auto}
+.palette-results::-webkit-scrollbar{width:6px}
+.palette-results::-webkit-scrollbar-thumb{background:var(--border-2);border-radius:3px}
+.palette-item{
+  padding:10px 18px; cursor:pointer;
+  display:flex; gap:12px; align-items:center;
+  border-bottom:1px solid var(--border); transition:background .1s;
+}
+.palette-item:hover,.palette-item.selected{
+  background:var(--surface-3); border-left:3px solid var(--accent);
+  padding-left:15px;
+}
+.palette-item .pnum{font-size:12px;color:var(--text-3);min-width:40px;letter-spacing:1px}
+.palette-item .ptitle{flex:1;font-size:14px;color:var(--text);display:flex;gap:6px;align-items:center}
+.palette-item .ptitle svg{width:14px;height:14px;color:var(--accent)}
+.palette-item .pstep{font-size:11px;color:var(--accent-2);letter-spacing:1px}
+.palette-empty{padding:30px;text-align:center;color:var(--text-3);font-size:14px;letter-spacing:2px}
+
+/* ──────────────────────────────────────────────────────────────
+   13. DROPDOWN, HELP, TOAST
+   ────────────────────────────────────────────────────────────── */
+.dropdown{position:relative}
+.dropdown-menu{
+  position:absolute; top:calc(100% + 6px); right:0;
+  background:var(--surface); border:1px solid var(--accent-2);
+  border-radius:5px; padding:6px; min-width:230px;
+  box-shadow:0 4px 20px rgba(0,0,0,.6), 0 0 15px var(--accent-glow);
+  z-index:300; display:none;
+}
+.dropdown-menu.open{display:block}
+.dropdown-item{
+  display:flex; align-items:center; gap:10px;
+  padding:8px 12px; color:var(--text-2);
+  font-family:inherit; font-size:13px; cursor:pointer;
+  border-radius:3px; background:transparent; border:none;
+  width:100%; text-align:left; letter-spacing:.5px;
+  transition:all .1s;
+}
+.dropdown-item svg{width:15px;height:15px;color:var(--accent);flex-shrink:0}
+.dropdown-item:hover{background:var(--surface-3);color:var(--accent)}
+.dropdown-item .shortcut{
+  margin-left:auto; font-size:10px; color:var(--text-3);
+  border:1px solid var(--border-2); padding:1px 5px; border-radius:2px;
+}
+.dropdown-item.danger{color:var(--danger)}
+.dropdown-item.danger svg{color:var(--danger)}
+.dropdown-item.danger:hover{background:rgba(255,68,68,.1);color:var(--danger)}
+.dropdown-sep{height:1px;background:var(--border);margin:4px 0}
+
+.help-overlay{
+  position:fixed; inset:0; background:rgba(0,0,0,.8);
+  z-index:2100; display:none; align-items:center; justify-content:center;
+}
+.help-overlay.open{display:flex}
+.help-box{
+  background:var(--surface); border:1px solid var(--accent-2);
+  border-radius:6px; padding:24px 28px;
+  max-width:520px; width:90%; box-shadow:0 0 30px var(--accent-glow);
+  max-height:90vh; overflow-y:auto;
+}
+.help-box h2{
+  color:var(--accent); font-size:20px; letter-spacing:2px;
+  margin-bottom:18px; text-shadow:0 0 6px var(--accent-glow);
+  display:flex; align-items:center; gap:10px;
+}
+.help-box h2 svg{width:22px;height:22px}
+.help-row{
+  display:flex; justify-content:space-between; align-items:center;
+  padding:8px 0; border-bottom:1px solid var(--border); font-size:14px;
+}
+.help-row:last-child{border-bottom:none}
+.help-row .lbl{color:var(--text-2)}
+.help-row kbd{
+  background:var(--surface-2); border:1px solid var(--border-2);
+  border-bottom-width:2px; padding:2px 8px; border-radius:3px;
+  color:var(--accent); font-family:inherit; font-size:12px; letter-spacing:1px;
+}
+.toast{
+  position:fixed; bottom:24px; left:50%;
+  transform:translate(-50%,80px);
+  background:var(--surface); border:1px solid var(--accent);
+  color:var(--accent); padding:10px 18px; border-radius:4px;
+  font-size:14px; letter-spacing:1px;
+  box-shadow:0 0 20px var(--accent-glow);
+  z-index:3000; opacity:0; transition:all .3s; pointer-events:none;
+  display:flex; align-items:center; gap:8px;
+}
+.toast svg{width:16px;height:16px}
+.toast.show{transform:translate(-50%,0);opacity:1}
+
+/* ──────────────────────────────────────────────────────────────
+   14. NEW FEATURES CSS
+   ────────────────────────────────────────────────────────────── */
+body.focus-mode .sidebar,
+body.focus-mode .topbar,
+body.focus-mode .study-secondary,
+body.focus-mode .stats-bar,
+body.focus-mode .pomodoro { display:none!important; }
+body.focus-mode .main { margin-left:0!important; }
+body.focus-mode .content { padding:40px max(20px, 8vw); }
+body.focus-mode .point-desc,
+body.focus-mode .point-tags,
+body.focus-mode .point-actions { opacity:0.35; transition:opacity .3s; }
+body.focus-mode .point:hover .point-desc,
+body.focus-mode .point:hover .point-tags,
+body.focus-mode .point:hover .point-actions { opacity:1; }
+body.focus-mode .step { border-color:transparent; margin-bottom:40px; }
+body.focus-mode .step-header { background:transparent; }
+
+.pm-breadcrumbs {
+  display:flex; align-items:center; gap:6px;
+  font-size:11px; color:var(--text-3);
+  letter-spacing:1px; margin-top:2px;
+}
+.pm-breadcrumbs .sep { opacity:0.5; }
+.pm-breadcrumbs .crumb { cursor:pointer; color:var(--accent-2); }
+.pm-breadcrumbs .crumb:hover { color:var(--accent); }
+
+.prereq-row {
+  display:flex; flex-wrap:wrap; gap:5px; align-items:center;
+  margin-top:6px; font-size:11px;
+}
+.prereq-chip {
+  padding:2px 8px; border-radius:3px;
+  background:var(--accent-dim); border:1px solid var(--accent-2);
+  color:var(--accent); cursor:pointer;
+  transition:all .15s;
+}
+.prereq-chip:hover { background:var(--accent); color:#000; }
+.prereq-chip.done { background:#0a3a10; border-color:#2a8a2a; color:#7dff7d; }
+
+/* Quiz overlay */
+.quiz-overlay {
+  position:fixed; inset:0; background:rgba(0,0,0,0.97);
+  z-index:5100; display:none; align-items:center; justify-content:center;
+  padding:40px;
+}
+.quiz-overlay.open { display:flex; }
+.quiz-card {
+  width:100%; max-width:800px; background:var(--surface);
+  border:1px solid var(--accent-2); border-radius:10px;
+  padding:40px; position:relative;
+  box-shadow:0 0 60px var(--accent-glow);
+}
+.quiz-close {
+  position:absolute; top:12px; right:12px;
+  background:transparent; border:1px solid var(--border-2);
+  color:var(--text-3); cursor:pointer;
+  padding:6px 10px; border-radius:4px;
+  display:flex; align-items:center; gap:6px;
+}
+.quiz-close svg{width:14px;height:14px}
+.quiz-close:hover { color:var(--danger); border-color:var(--danger); }
+.quiz-progress {
+  font-size:12px; color:var(--text-3);
+  letter-spacing:2px; margin-bottom:20px;
+  display:flex; justify-content:space-between;
+}
+.quiz-question {
+  font-size:24px; color:var(--accent); margin-bottom:30px;
+  letter-spacing:1px; line-height:1.4;
+}
+.quiz-answer {
+  font-size:16px; color:var(--text); line-height:1.7;
+  padding:20px; background:var(--surface-2);
+  border-left:3px solid var(--accent-dim);
+  border-radius:4px; white-space:pre-wrap;
+  max-height:400px; overflow-y:auto;
+  margin-bottom:20px; display:none;
+}
+.quiz-answer.show { display:block; }
+.quiz-actions { display:flex; gap:10px; flex-wrap:wrap; }
+.quiz-btn {
+  flex:1; min-width:120px;
+  padding:14px 20px; font-family:inherit;
+  font-size:16px; letter-spacing:1px;
+  border-radius:5px; cursor:pointer;
+  border:2px solid; background:transparent;
+  transition:all .15s;
+  display:flex; align-items:center; justify-content:center; gap:8px;
+}
+.quiz-btn svg{width:16px;height:16px}
+.quiz-btn.show { color:var(--accent); border-color:var(--accent); }
+.quiz-btn.show:hover { background:var(--accent); color:#000; }
+.quiz-btn.correct { color:#7dff7d; border-color:#7dff7d; }
+.quiz-btn.correct:hover { background:#7dff7d; color:#000; }
+.quiz-btn.wrong { color:var(--danger); border-color:var(--danger); }
+.quiz-btn.wrong:hover { background:var(--danger); color:#000; }
+.quiz-btn.skip { color:var(--text-3); border-color:var(--border-2); }
+.quiz-btn.skip:hover { color:var(--text-2); }
+.quiz-stats {
+  margin-top:20px; padding-top:20px;
+  border-top:1px solid var(--border);
+  font-size:13px; color:var(--text-3);
+  display:flex; gap:20px; flex-wrap:wrap;
+}
+.quiz-stats > span { display:flex; align-items:center; gap:6px; }
+.quiz-stats svg{width:14px;height:14px}
+
+/* Achievements modal */
+.ach-overlay {
+  position:fixed; inset:0; background:rgba(0,0,0,0.9);
+  z-index:5200; display:none; align-items:center; justify-content:center;
+  padding:24px;
+}
+.ach-overlay.open { display:flex; }
+.ach-box {
+  width:100%; max-width:980px; max-height:90vh;
+  background:var(--surface); border:1px solid var(--accent-2);
+  border-radius:8px; padding:24px; overflow-y:auto;
+  box-shadow:0 0 40px var(--accent-glow);
+}
+.ach-header { display:flex; justify-content:space-between; align-items:center; margin-bottom:20px; }
+.ach-header h2 { color:var(--accent); font-size:22px; letter-spacing:2px; display:flex; align-items:center; gap:10px; }
+.ach-header h2 svg { width:22px; height:22px; }
+.ach-header .hint { color:var(--text-3); font-size:12px; letter-spacing:1px; margin-top:4px; }
+.ach-grid { display:grid; grid-template-columns:repeat(auto-fill, minmax(220px, 1fr)); gap:12px; }
+.ach-item {
+  padding:14px; background:var(--surface-2);
+  border:1px solid var(--border-2); border-radius:6px;
+  display:flex; gap:14px; align-items:center;
+  opacity:0.42; transition:all .3s;
+  position:relative;
+}
+.ach-item.unlocked {
+  opacity:1; border-color:var(--accent);
+  box-shadow:0 0 14px var(--accent-glow), inset 0 0 20px rgba(0,255,68,.04);
+}
+.ach-item.unlocked::before {
+  content:"";
+  position:absolute; left:0; top:0; bottom:0; width:3px;
+  background:var(--accent); border-radius:6px 0 0 6px;
+}
+.ach-icon {
+  width:42px; height:42px; flex-shrink:0;
+  display:flex; align-items:center; justify-content:center;
+  border-radius:50%;
+  background:var(--surface-4);
+  border:1px solid var(--border-2);
+  color:var(--text-3);
+}
+.ach-icon svg { width:22px; height:22px; }
+.ach-item.unlocked .ach-icon {
+  color:var(--accent); border-color:var(--accent);
+  background:rgba(0,255,68,.08);
+  box-shadow:0 0 10px var(--accent-glow);
+}
+.ach-info { flex:1; min-width:0; }
+.ach-name {
+  font-size:14px; color:var(--text); margin-bottom:3px;
+  letter-spacing:1px; font-weight:600;
+}
+.ach-item.unlocked .ach-name { color:var(--accent); }
+.ach-desc { font-size:11px; color:var(--text-3); line-height:1.4; }
+
+/* Weekly report */
+.report-overlay {
+  position:fixed; inset:0; background:rgba(0,0,0,0.92);
+  z-index:5300; display:none; align-items:center; justify-content:center;
+  padding:24px;
+}
+.report-overlay.open { display:flex; }
+.report-box {
+  width:100%; max-width:640px; background:var(--surface);
+  border:1px solid var(--accent-2); border-radius:8px;
+  padding:28px; box-shadow:0 0 40px var(--accent-glow);
+  max-height:90vh; overflow-y:auto;
+}
+.report-box h2 { color:var(--accent); margin-bottom:6px; letter-spacing:2px; display:flex; align-items:center; gap:10px; }
+.report-box h2 svg { width:20px; height:20px; }
+.report-box .sub { color:var(--text-3); font-size:12px; margin-bottom:20px; letter-spacing:1px; }
+.report-stats {
+  display:grid; grid-template-columns:repeat(2, 1fr);
+  gap:12px; margin-bottom:20px;
+}
+.report-stat {
+  padding:12px; background:var(--surface-2);
+  border:1px solid var(--border-2); border-radius:5px;
+}
+.report-stat .val { color:var(--accent); font-size:24px; }
+.report-stat .lbl { color:var(--text-3); font-size:11px; letter-spacing:1px; }
+
+/* Calendar widget */
+.calendar-widget {
+  margin-top:12px; padding:10px;
+  background:var(--surface-2); border:1px solid var(--border);
+  border-radius:4px;
+}
+.calendar-label {
+  font-size:10px; color:var(--text-3);
+  letter-spacing:1.5px; margin-bottom:8px;
+  display:flex; justify-content:space-between;
+}
+.calendar-grid {
+  display:grid; grid-template-columns:repeat(30, 1fr);
+  gap:2px;
+}
+.calendar-cell {
+  aspect-ratio:1; border-radius:2px;
+  background:var(--surface-4);
+  transition:all .15s;
+}
+.calendar-cell.l1 { background:#0a3a0a; }
+.calendar-cell.l2 { background:#0f5a0f; }
+.calendar-cell.l3 { background:#16991c; }
+.calendar-cell.l4 { background:var(--accent); box-shadow:0 0 4px var(--accent-glow); }
+.calendar-cell.today { outline:1px solid var(--accent); outline-offset:1px; }
+
+/* Daily goal widget */
+.goal-widget {
+  margin-top:10px; padding:10px;
+  background:var(--surface-2); border:1px solid var(--border);
+  border-radius:4px;
+}
+.goal-row {
+  display:flex; justify-content:space-between;
+  font-size:11px; color:var(--text-3);
+  letter-spacing:1px; margin-bottom:5px;
+}
+.goal-bar {
+  height:6px; background:var(--surface-4);
+  border-radius:3px; overflow:hidden;
+}
+.goal-fill {
+  height:100%; background:linear-gradient(90deg, var(--accent-2), var(--accent));
+  transition:width .5s; box-shadow:0 0 6px var(--accent-glow);
+}
+.goal-fill.done { background:#7dff7d; }
+
+/* Formula of the day widget */
+.formula-of-day {
+  padding:6px 12px; background:var(--surface);
+  border:1px solid var(--border-2); border-radius:4px;
+  font-size:12px; color:var(--text-2);
+  max-width:380px; white-space:nowrap;
+  overflow:hidden; text-overflow:ellipsis;
+  margin-left:auto;
+}
+.formula-of-day .lbl { color:var(--accent); font-size:10px; letter-spacing:1px; margin-right:6px; }
+.formula-of-day .txt { color:var(--text-2); cursor:pointer; }
+.formula-of-day .txt:hover { color:var(--accent); }
+@media (max-width:1100px) { .formula-of-day { display:none; } }
+
+/* Continue where left off */
+.continue-btn {
+  position:fixed; bottom:20px; left:20px;
+  background:var(--surface); border:1px solid var(--accent-2);
+  color:var(--accent); padding:10px 16px; border-radius:6px;
+  font-family:inherit; font-size:13px; cursor:pointer;
+  box-shadow:0 0 20px var(--accent-glow);
+  z-index:490; letter-spacing:.5px;
+  display:none; max-width:340px;
+  text-align:left;
+}
+.continue-btn.show { display:flex; align-items:center; gap:10px; }
+.continue-btn svg { width:16px; height:16px; flex-shrink:0; }
+.continue-btn:hover { background:var(--surface-3); }
+.continue-btn .lbl { color:var(--text-3); font-size:10px; letter-spacing:1.5px; display:block; }
+.continue-btn .pt { color:var(--accent); display:block; margin-top:2px; }
+@media (max-width:600px) { .continue-btn { bottom:70px; left:12px; padding:8px 12px; font-size:11px; max-width:240px; } }
+
+/* Recent dropdown */
+.recent-panel {
+  position:absolute; top:calc(100% + 6px); right:0;
+  background:var(--surface); border:1px solid var(--accent-2);
+  border-radius:5px; padding:6px; min-width:300px;
+  max-height:400px; overflow-y:auto;
+  box-shadow:0 4px 20px rgba(0,0,0,0.6);
+  display:none; z-index:300;
+}
+.recent-panel.open { display:block; }
+.recent-item {
+  padding:8px 10px; border-radius:3px; cursor:pointer;
+  display:flex; gap:10px; align-items:center; font-size:12px;
+  color:var(--text-2); transition:background .1s;
+}
+.recent-item svg { width:12px; height:12px; color:var(--text-3); flex-shrink:0; }
+.recent-item:hover { background:var(--surface-3); color:var(--accent); }
+.recent-item:hover svg { color:var(--accent); }
+.recent-item .pn { color:var(--accent-2); font-size:11px; min-width:32px; letter-spacing:1px; }
+.recent-empty { padding:16px; text-align:center; color:var(--text-3); font-size:12px; letter-spacing:1px; }
+
+/* Formula sheet modal */
+.sheet-overlay {
+  position:fixed; inset:0; background:rgba(0,0,0,0.95);
+  z-index:5250; display:none; align-items:center; justify-content:center;
+  padding:20px;
+}
+.sheet-overlay.open { display:flex; }
+.sheet-box {
+  width:100%; max-width:900px; max-height:90vh;
+  background:var(--surface); border:1px solid var(--accent-2);
+  border-radius:8px; padding:24px; overflow-y:auto;
+  box-shadow:0 0 40px var(--accent-glow);
+}
+.sheet-header {
+  display:flex; justify-content:space-between; align-items:center;
+  margin-bottom:20px; padding-bottom:12px; border-bottom:1px solid var(--border);
+}
+.sheet-header h2 { color:var(--accent); font-size:20px; letter-spacing:2px; display:flex; align-items:center; gap:10px; }
+.sheet-header h2 svg { width:20px; height:20px; }
+.sheet-controls { display:flex; gap:8px; }
+.sheet-section { margin-bottom:24px; }
+.sheet-section h3 {
+  color:var(--accent-2); font-size:14px; letter-spacing:1.5px;
+  margin-bottom:10px; padding-bottom:6px;
+  border-bottom:1px dashed var(--border-2);
+}
+.sheet-formula {
+  padding:8px 12px; margin-bottom:4px;
+  background:var(--surface-2); border-left:2px solid var(--accent-dim);
+  font-family:'JetBrains Mono', monospace;
+  font-size:13px; color:var(--text); line-height:1.6;
+  white-space:pre-wrap;
+}
+.sheet-formula .source { color:var(--text-3); font-size:10px; margin-left:8px; cursor:pointer; }
+.sheet-formula .source:hover { color:var(--accent); }
+@media print {
+  body * { visibility:hidden; }
+  .sheet-overlay, .sheet-overlay *, .sheet-box, .sheet-box * { visibility:visible; }
+  .sheet-overlay { position:absolute; inset:0; background:#fff; }
+  .sheet-box { color:#000; background:#fff; border:none; box-shadow:none; }
+  .sheet-controls, .pm-btn { display:none!important; }
+  .sheet-formula { background:#f5f5f5; color:#000; }
+}
+
+/* Problem log modal */
+.plog-overlay {
+  position:fixed; inset:0; background:rgba(0,0,0,0.9);
+  z-index:5220; display:none; align-items:center; justify-content:center;
+  padding:24px;
+}
+.plog-overlay.open { display:flex; }
+.plog-box {
+  width:100%; max-width:850px; max-height:90vh;
+  background:var(--surface); border:1px solid var(--accent-2);
+  border-radius:8px; padding:24px; overflow-y:auto;
+  box-shadow:0 0 40px var(--accent-glow);
+}
+.plog-form {
+  display:grid; grid-template-columns:1fr 1fr auto; gap:8px;
+  margin-bottom:20px; padding:14px;
+  background:var(--surface-2); border-radius:5px;
+}
+.plog-form input, .plog-form select {
+  background:var(--surface); border:1px solid var(--border-2);
+  color:var(--text); font-family:inherit; font-size:13px;
+  padding:6px 10px; border-radius:3px; outline:none;
+}
+.plog-form input:focus, .plog-form select:focus { border-color:var(--accent); }
+.plog-entry {
+  display:flex; gap:12px; padding:10px 14px;
+  background:var(--surface-2); border:1px solid var(--border-2);
+  border-radius:4px; margin-bottom:6px;
+  font-size:13px; align-items:center;
+}
+.plog-entry .status {
+  padding:3px 8px; border-radius:3px;
+  font-size:11px; letter-spacing:1px;
+  display:flex; align-items:center; gap:5px;
+}
+.plog-entry .status svg { width:12px; height:12px; }
+.plog-entry .status.solved { background:#0a3a0a; color:#7dff7d; }
+.plog-entry .status.partial { background:#3a3a0a; color:var(--warn); }
+.plog-entry .status.failed { background:#3a0a0a; color:var(--danger); }
+.plog-entry .info { flex:1; min-width:0; }
+.plog-entry .del {
+  background:transparent; border:1px solid var(--border-2);
+  color:var(--text-3); cursor:pointer;
+  padding:4px; border-radius:3px; display:flex;
+}
+.plog-entry .del svg { width:12px; height:12px; }
+.plog-entry .del:hover { color:var(--danger); border-color:var(--danger); }
+
+/* ──────────────────────────────────────────────────────────────
+   15. RESPONSIVE
+   ────────────────────────────────────────────────────────────── */
+@media (max-width:1100px){
+  .brand span { display:none; }
+  .brand { padding-right:10px; }
+}
+@media (max-width:900px){
+  .sidebar{position:fixed;top:0;left:0;bottom:0;z-index:1000}
+  .menu-toggle{display:flex}
+  .main-tab span { display:none; }
+  .main-tab { padding:6px 10px; }
+  .study-secondary{padding:8px 12px;gap:8px;overflow-x:auto}
+  .stats-bar{padding:8px 14px;gap:12px}
+  .stat .v{font-size:15px}
+  .point-row{padding:10px 12px}
+  .point-title{font-size:15px}
+  .point-desc{font-size:12.5px}
+  .content{padding:14px}
+  .plan-view{padding:20px 14px 50px}
+  .plan-hero h1{font-size:24px;letter-spacing:3px}
+  .daily-grid{grid-template-columns:repeat(2, 1fr)}
+  .phase-header{flex-wrap:wrap;gap:10px}
+  .phase-goal{text-align:left;max-width:100%;flex-basis:100%}
+  .phase-progress{text-align:left;flex-basis:100%}
+  .pomodoro{bottom:12px;right:12px;padding:8px 11px}
+  .pomodoro .time{font-size:20px;min-width:60px}
+  .pm-body{flex-direction:column}
+  .pm-left{width:100%;max-height:45%;border-right:none;border-bottom:1px solid var(--border)}
+  .pm-pdf-container{min-height:400px}
+  .pm-title{font-size:15px}
+  .pm-btn{font-size:11px;padding:5px 7px}
+  .pm-btn .btn-label{display:none}
+}
+@media (max-width:600px){
+  .filter-chips{overflow-x:auto;max-width:100%}
+  .chip{font-size:11px;padding:4px 8px}
+  .kbd-hint{display:none}
+  .step-title{font-size:15px}
+  .step-num{font-size:18px;min-width:32px}
+  .step-badge{font-size:11px}
+  .pomodoro .pomo-count{display:none}
+  .topbar-actions .icon-group{display:none}
+}
+</style>
+</head>
+
+<body>
+
+<div class="app" id="appRoot">
+  <!-- ═══ SIDEBAR ═══ -->
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-header">
+      <span class="lbl">STEPS</span>
+      <button class="collapse-btn" onclick="UI.toggleSidebar()" title="Hide">
+        <i data-lucide="chevrons-left"></i>
+      </button>
+    </div>
+    <div class="sidebar-stats">
+      <div class="streak-row">
+        <span class="fire"><i data-lucide="flame"></i></span>
+        <span class="streak-num" id="streakNum">0</span>
+        <span class="streak-label">DAY STREAK</span>
+      </div>
+      <div class="goal-widget" id="goalWidget">
+        <div class="goal-row">
+          <span>DAILY GOAL</span>
+          <span id="goalLabel">0 / 120 MIN</span>
+        </div>
+        <div class="goal-bar"><div class="goal-fill" id="goalFill" style="width:0%"></div></div>
+      </div>
+      <div class="calendar-widget">
+        <div class="calendar-label">
+          <span>LAST 30 DAYS</span>
+          <span id="calTotal">0h</span>
+        </div>
+        <div class="calendar-grid" id="calendarGrid"></div>
+      </div>
+    </div>
+    <div class="sidebar-nav" id="sidebarNav"></div>
+  </aside>
+
+  <!-- ═══ MAIN ═══ -->
+  <main class="main">
+    <!-- TOPBAR -->
+    <div class="topbar">
+      <button class="menu-toggle" onclick="UI.toggleSidebar()">
+        <i data-lucide="menu"></i>
+      </button>
+
+      <div class="brand">
+        <i data-lucide="terminal"></i>
+        <span>PREP TERMINAL</span>
+      </div>
+
+      <nav class="main-tabs">
+        <button class="main-tab active" data-tab="study" onclick="Tabs.switch('study')">
+          <i data-lucide="book-open"></i><span>STUDY</span>
+        </button>
+        <button class="main-tab" data-tab="plan" onclick="Tabs.switch('plan')">
+          <i data-lucide="map"></i><span>PLAN</span>
+        </button>
+      </nav>
+
+      <div class="search-wrap">
+        <span class="icon"><i data-lucide="search"></i></span>
+        <input type="text" id="searchInput" placeholder="Search topics, theorems, notes...">
+        <span class="kbd-hint" id="kbdHint">/</span>
+      </div>
+
+      <div class="topbar-actions">
+        <div class="icon-group">
+          <button class="icon-btn" onclick="Quiz.open()" title="Quiz (Q)">
+            <i data-lucide="target"></i>
+          </button>
+          <button class="icon-btn" onclick="Focus.toggle()" title="Focus mode (F)">
+            <i data-lucide="eye"></i>
+          </button>
+          <div class="dropdown">
+            <button class="icon-btn" onclick="Recent.toggle();event.stopPropagation()" title="Recent (H)">
+              <i data-lucide="history"></i>
+            </button>
+            <div class="recent-panel" id="recentPanel" onclick="event.stopPropagation()"></div>
+          </div>
+          <button class="icon-btn" onclick="Random.jump()" title="Random point (R)">
+            <i data-lucide="dices"></i>
+          </button>
+        </div>
+
+        <div class="dropdown">
+          <button class="icon-btn" id="toolsBtn" onclick="UI.toggleDropdown('toolsDropdown', event)" title="Tools">
+            <i data-lucide="hammer"></i>
+          </button>
+          <div class="dropdown-menu" id="toolsDropdown">
+            <button class="dropdown-item" onclick="Achievements.open();UI.closeMenus()">
+              <i data-lucide="trophy"></i> Achievements
+            </button>
+            <button class="dropdown-item" onclick="Formulas.open();UI.closeMenus()">
+              <i data-lucide="ruler"></i> Formula Sheet
+            </button>
+            <button class="dropdown-item" onclick="ProblemLog.open();UI.closeMenus()">
+              <i data-lucide="notebook-pen"></i> Problem Log
+            </button>
+            <button class="dropdown-item" onclick="Report.open();UI.closeMenus()">
+              <i data-lucide="bar-chart-3"></i> Weekly Report
+            </button>
+          </div>
+        </div>
+
+        <div class="dropdown">
+          <button class="icon-btn" id="settingsBtn" onclick="UI.toggleDropdown('settingsDropdown', event)" title="Settings">
+            <i data-lucide="settings"></i>
+          </button>
+          <div class="dropdown-menu" id="settingsDropdown">
+            <button class="dropdown-item" onclick="Theme.cycle()">
+              <i data-lucide="palette"></i> Theme
+              <span class="shortcut" id="themeLabel">GREEN</span>
+            </button>
+            <button class="dropdown-item" onclick="UI.toggleScanlines();UI.closeMenus()">
+              <i data-lucide="scan-line"></i> Scanlines
+              <span class="shortcut" id="scanLabel">OFF</span>
+            </button>
+            <div class="dropdown-sep"></div>
+            <button class="dropdown-item" onclick="Content.expandAll();UI.closeMenus()">
+              <i data-lucide="chevrons-down"></i> Expand all
+            </button>
+            <button class="dropdown-item" onclick="Content.collapseAll();UI.closeMenus()">
+              <i data-lucide="chevrons-up"></i> Collapse all
+            </button>
+            <div class="dropdown-sep"></div>
+            <button class="dropdown-item" onclick="Store.exportJSON();UI.closeMenus()">
+              <i data-lucide="download"></i> Export JSON
+            </button>
+            <button class="dropdown-item" onclick="document.getElementById('importFile').click();UI.closeMenus()">
+              <i data-lucide="upload"></i> Import JSON
+            </button>
+            <input type="file" id="importFile" accept=".json" style="display:none" onchange="Store.importJSON(event)">
+            <div class="dropdown-sep"></div>
+            <button class="dropdown-item" onclick="Palette.open();UI.closeMenus()">
+              <i data-lucide="command"></i> Command Palette
+              <span class="shortcut">⌘K</span>
+            </button>
+            <button class="dropdown-item" onclick="Help.open();UI.closeMenus()">
+              <i data-lucide="help-circle"></i> Shortcuts
+              <span class="shortcut">?</span>
+            </button>
+            <div class="dropdown-sep"></div>
+            <button class="dropdown-item danger" onclick="Store.resetAll();UI.closeMenus()">
+              <i data-lucide="trash-2"></i> Reset all
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SECONDARY BAR (only on Study) -->
+    <div class="study-secondary">
+      <div class="filter-chips" id="filters">
+        <button class="chip active" data-filter="all">ALL</button>
+        <button class="chip" data-filter="todo">TO LEARN</button>
+        <button class="chip" data-filter="done">DONE</button>
+        <button class="chip" data-filter="fav">STARRED</button>
+        <button class="chip" data-filter="hard">HARD</button>
+      </div>
+      <div class="formula-of-day" id="formulaOfDay">
+        <span class="lbl">FORMULA:</span>
+        <span class="txt" id="fodText" onclick="FormulaOfDay.jump()">—</span>
+      </div>
+    </div>
+
+    <!-- STUDY VIEW -->
+    <div class="content-view" id="view-study">
+      <div class="stats-bar">
+        <div class="stat"><span class="v" id="statDone">0</span><span class="l">DONE</span></div>
+        <div class="stat"><span class="v" id="statTotal">0</span><span class="l">TOTAL</span></div>
+        <div class="stat"><span class="v" id="statPercent">0%</span><span class="l">PROGRESS</span></div>
+        <div class="stat"><span class="v" id="statPomos">0</span><span class="l">POMODOROS</span></div>
+        <div class="progress-wrap"><div class="progress-fill" id="progressFill" style="width:0%"></div></div>
+      </div>
+      <div class="content" id="content">
+        <div id="stepsContainer"></div>
+      </div>
+    </div>
+
+    <!-- PLAN VIEW -->
+    <div class="content-view hidden" id="view-plan">
+      <div class="plan-view" id="planContent"></div>
+    </div>
+  </main>
+</div>
+
+<!-- ═══ POMODORO ═══ -->
+<div class="pomodoro" id="pomodoro">
+  <div>
+    <div class="time" id="pomoTime">25:00</div>
+    <div class="mode" id="pomoMode">FOCUS</div>
+  </div>
+  <button class="pomo-btn play" id="pomoPlay" onclick="Pomodoro.toggle()" title="Start/Pause (T)">
+    <i data-lucide="play"></i>
+  </button>
+  <button class="pomo-btn" onclick="Pomodoro.reset()" title="Reset">
+    <i data-lucide="rotate-ccw"></i>
+  </button>
+  <div class="pomo-count">
+    <div id="pomoDone">0</div>
+    <div style="font-size:9px;letter-spacing:1.5px;">SESSIONS</div>
+  </div>
+</div>
+
+<!-- ═══ COMMAND PALETTE ═══ -->
+<div class="palette-overlay" id="paletteOverlay" onclick="if(event.target===this)Palette.close()">
+  <div class="palette">
+    <input type="text" class="palette-input" id="paletteInput" placeholder="Jump to point... (Enter to select)" autocomplete="off">
+    <div class="palette-results" id="paletteResults"></div>
+  </div>
+</div>
+
+<!-- ═══ HELP ═══ -->
+<div class="help-overlay" id="helpOverlay" onclick="if(event.target===this)Help.close()">
+  <div class="help-box">
+    <h2><i data-lucide="keyboard"></i> KEYBOARD SHORTCUTS</h2>
+    <div class="help-row"><span class="lbl">Focus search</span><kbd>/</kbd></div>
+    <div class="help-row"><span class="lbl">Command palette</span><kbd>Ctrl + K</kbd></div>
+    <div class="help-row"><span class="lbl">Next / previous point</span><kbd>J / K</kbd></div>
+    <div class="help-row"><span class="lbl">Open current point</span><kbd>Enter</kbd></div>
+    <div class="help-row"><span class="lbl">Mark current point</span><kbd>Space</kbd></div>
+    <div class="help-row"><span class="lbl">Open notes</span><kbd>N</kbd></div>
+    <div class="help-row"><span class="lbl">Pomodoro start/pause</span><kbd>T</kbd></div>
+    <div class="help-row"><span class="lbl">Cycle theme</span><kbd>G</kbd></div>
+    <div class="help-row"><span class="lbl">Expand / collapse all</span><kbd>E / C</kbd></div>
+    <div class="help-row"><span class="lbl">Quiz</span><kbd>Q</kbd></div>
+    <div class="help-row"><span class="lbl">Focus mode</span><kbd>F</kbd></div>
+    <div class="help-row"><span class="lbl">Random point</span><kbd>R</kbd></div>
+    <div class="help-row"><span class="lbl">Recent</span><kbd>H</kbd></div>
+    <div class="help-row"><span class="lbl">Close</span><kbd>Esc</kbd></div>
+    <div class="help-row"><span class="lbl">This menu</span><kbd>?</kbd></div>
+  </div>
+</div>
+
+<!-- ═══ POINT MODAL ═══ -->
+<div class="modal-overlay" id="pointModal" onclick="if(event.target===this)Modal.close()">
+  <div class="point-modal">
+    <div class="pm-header">
+      <div class="pm-title-area">
+        <div class="pm-id" id="pmId">POINT</div>
+        <div class="pm-title" id="pmTitle">—</div>
+      </div>
+      <div class="pm-actions">
+        <button class="pm-btn" onclick="Modal.addBookmark()" title="Bookmark (B)">
+          <i data-lucide="bookmark"></i>
+        </button>
+        <button class="pm-btn" onclick="Modal.navigate(-1)" title="Previous (K)">
+          <i data-lucide="chevron-left"></i> <span class="btn-label">Prev</span>
+        </button>
+        <button class="pm-btn" onclick="Modal.navigate(1)" title="Next (J)">
+          <span class="btn-label">Next</span> <i data-lucide="chevron-right"></i>
+        </button>
+        <button class="pm-btn fav" id="pmFav" onclick="Modal.toggleFav()" title="Star">
+          <i data-lucide="star"></i>
+        </button>
+        <button class="pm-btn diff-btn easy" id="pmDiffEasy" onclick="Modal.setDiff('easy')">E</button>
+        <button class="pm-btn diff-btn med" id="pmDiffMed" onclick="Modal.setDiff('med')">M</button>
+        <button class="pm-btn diff-btn hard" id="pmDiffHard" onclick="Modal.setDiff('hard')">H</button>
+        <button class="pm-btn" id="pmDone" onclick="Modal.toggleDone()">
+          <i data-lucide="check"></i> <span class="btn-label">Done</span>
+        </button>
+        <button class="pm-btn close" onclick="Modal.close()">
+          <i data-lucide="x"></i>
+        </button>
+      </div>
+    </div>
+    <div class="pm-body">
+      <div class="pm-left">
+        <div class="pm-section">
+          <div class="pm-label">▸ Description</div>
+          <div class="pm-desc" id="pmDesc">—</div>
+        </div>
+        <div class="pm-section">
+          <div class="pm-label">▸ Source</div>
+          <div class="pm-meta-tags" id="pmSource">—</div>
+        </div>
+        <div class="pm-section">
+          <div class="pm-label">▸ Quick Access</div>
+          <div id="pmTasks"></div>
+        </div>
+        <div class="pm-section">
+          <div class="pm-label">▸ Detailed Notes</div>
+          <div class="pm-explanation" id="pmExplanation">—</div>
+        </div>
+        <div class="pm-section">
+          <div class="pm-label">▸ Personal Notes</div>
+          <textarea class="pm-notes" id="pmNotes" placeholder="Your ideas, lemmas, tricks..."></textarea>
+        </div>
+      </div>
+      <div class="pm-right">
+        <div class="pm-pdf-tabs" id="pmTabs"></div>
+        <div class="pm-pdf-container">
+          <iframe class="pm-pdf-frame" id="pmPdfFrame" src="about:blank"></iframe>
+        </div>
+      </div>
+    </div>
+    <div class="pm-footer">
+      <span style="color:var(--text-3);">J/K · Space · N · T · G · B · P · Esc</span>
+      <div style="display:flex;gap:6px;align-items:center;">
+        <span style="color:var(--text-3);font-size:10px;">PDF:</span>
+        <input type="text" id="pdfSearch" placeholder="page or term..." style="background:var(--surface);border:1px solid var(--border-2);color:var(--text);font-family:inherit;font-size:11px;padding:3px 8px;border-radius:3px;outline:none;width:130px;" onkeydown="if(event.key==='Enter')Modal.pdfSearch()">
+        <button class="pm-btn" onclick="Modal.pdfSearch()" style="padding:3px 8px;">
+          <i data-lucide="arrow-right"></i>
+        </button>
+      </div>
+      <div class="pm-pomo-inline">
+        <span style="color:var(--text-3);font-size:10px;">POMODORO:</span>
+        <span class="pm-pomo-time" id="pmPomoTime">25:00</span>
+        <button class="pm-btn" onclick="Pomodoro.toggle()" id="pmPomoToggle">
+          <i data-lucide="play"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- QUIZ -->
+<div class="quiz-overlay" id="quizOverlay" onclick="if(event.target===this)Quiz.close()">
+  <div class="quiz-card">
+    <button class="quiz-close" onclick="Quiz.close()">
+      <i data-lucide="x"></i> ESC
+    </button>
+    <div class="quiz-progress">
+      <span id="quizProgress">0 / 0</span>
+      <span id="quizMode">REVIEW</span>
+    </div>
+    <div class="quiz-question" id="quizQuestion">—</div>
+    <div class="quiz-answer" id="quizAnswer">—</div>
+    <div class="quiz-actions" id="quizActions">
+      <button class="quiz-btn show" onclick="Quiz.showAnswer()">
+        <i data-lucide="eye"></i> SHOW (Space)
+      </button>
+    </div>
+    <div class="quiz-stats" id="quizStats"></div>
+  </div>
+</div>
+
+<!-- ACHIEVEMENTS -->
+<div class="ach-overlay" id="achOverlay" onclick="if(event.target===this)Achievements.close()">
+  <div class="ach-box">
+    <div class="ach-header">
+      <div>
+        <h2><i data-lucide="trophy"></i> ACHIEVEMENTS</h2>
+        <div class="hint" id="achCount">— / — unlocked</div>
+      </div>
+      <button class="pm-btn close" onclick="Achievements.close()">
+        <i data-lucide="x"></i>
+      </button>
+    </div>
+    <div class="ach-grid" id="achGrid"></div>
+  </div>
+</div>
+
+<!-- WEEKLY REPORT -->
+<div class="report-overlay" id="reportOverlay" onclick="if(event.target===this)Report.close()">
+  <div class="report-box">
+    <h2><i data-lucide="bar-chart-3"></i> WEEKLY REPORT</h2>
+    <div class="sub" id="reportPeriod">—</div>
+    <div class="report-stats" id="reportStats"></div>
+    <div class="pm-label" style="margin-top:20px;">▸ RECOMMENDATIONS</div>
+    <div id="reportTips" style="font-size:13px;color:var(--text-2);line-height:1.7;"></div>
+    <div style="text-align:right;margin-top:20px;">
+      <button class="pm-btn" onclick="Report.close()">CLOSE</button>
+    </div>
+  </div>
+</div>
+
+<!-- FORMULA SHEET -->
+<div class="sheet-overlay" id="sheetOverlay" onclick="if(event.target===this)Formulas.close()">
+  <div class="sheet-box">
+    <div class="sheet-header">
+      <h2><i data-lucide="ruler"></i> FORMULAS</h2>
+      <div class="sheet-controls">
+        <button class="pm-btn" onclick="Formulas.toggleFilter()" id="sheetFilterBtn">ALL</button>
+        <button class="pm-btn" onclick="window.print()">
+          <i data-lucide="printer"></i> PRINT
+        </button>
+        <button class="pm-btn close" onclick="Formulas.close()">
+          <i data-lucide="x"></i>
+        </button>
+      </div>
+    </div>
+    <div id="sheetContent"></div>
+  </div>
+</div>
+
+<!-- PROBLEM LOG -->
+<div class="plog-overlay" id="plogOverlay" onclick="if(event.target===this)ProblemLog.close()">
+  <div class="plog-box">
+    <div class="ach-header">
+      <h2><i data-lucide="notebook-pen"></i> PROBLEM LOG</h2>
+      <button class="pm-btn close" onclick="ProblemLog.close()">
+        <i data-lucide="x"></i>
+      </button>
+    </div>
+    <div class="plog-form">
+      <input type="text" id="plogLabel" placeholder="Problem (e.g. OT_2012 p. 78)..." />
+      <input type="text" id="plogNote" placeholder="Note (optional)..." />
+      <select id="plogStatus">
+        <option value="solved">Solved</option>
+        <option value="partial">Partial</option>
+        <option value="failed">Failed</option>
+      </select>
+      <button class="pm-btn" onclick="ProblemLog.add()" style="grid-column:1/-1;justify-content:center;">
+        <i data-lucide="plus"></i> ADD
+      </button>
+    </div>
+    <div id="plogList"></div>
+  </div>
+</div>
+
+<!-- CONTINUE BUTTON -->
+<button class="continue-btn" id="continueBtn" onclick="Recent.continueFrom()">
+  <i data-lucide="play"></i>
+  <span>
+    <span class="lbl">CONTINUE FROM</span>
+    <span class="pt" id="continuePt">—</span>
+  </span>
+</button>
+
+<div class="toast" id="toast"></div>
+
+<!-- ═══════════════════════════════════════════════════════════════
+     LUCIDE ICONS
+     ═══════════════════════════════════════════════════════════════ -->
+<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+
+<script>
+/* ═══════════════════════════════════════════════════════════════
+   MODULE: CONFIG
+   ═══════════════════════════════════════════════════════════════ */
+const CONFIG = {
+  storeKey: 'olympiad_v5',
+  legacyKeys: ['olympiad_v4', 'olympiad_v3', 'olympiad_v2', 'olympiad_progress'],
+  themeKey: 'olympiad_theme',
+  themes: ['green', 'contrast', 'high'],
+  themeLabels: { green: 'GREEN', contrast: 'SOFT', high: 'HIGH' },
+  pomo: { focus: 25*60, shortBreak: 5*60, longBreak: 15*60 },
+};
+
+/* ═══════════════════════════════════════════════════════════════
+   MODULE: DATA (STEPS)
+   ═══════════════════════════════════════════════════════════════ */
+const STEPS = [
+{ id:1, icon:"◆", title:"ГЕОМЕТРИЯ – ОСНОВНИ ТЕОРЕМИ", points:[
+  { id:"1.1", title:"Теорема на Менелай", desc:"Колинеарни точки върху страните на триъгълник",
+    source:"OT_2012, Симедиани (Ст. Боев)", pdf:"Материали_БГ/OT_2012", page:67,
+    explanation:"ФОРМУЛИРОВКА: Нека M, N, P са точки съответно на правите BC, CA, AB на △ABC. Тогава M, N, P са колинеарни ⇔ (BM/MC)·(CN/NA)·(AP/PB) = 1 (ориентирани отношения).\n\nКОГА: За доказване на колинеарност; за намиране на отношения при дадена колинеарност; като част от хармонично отношение.\n\nСВОЙСТВА: Работи и за точки на продълженията. Обратната посока е много полезна. Двойствена на Чева.\n\nВНИМАНИЕ: Използвай ориентирани отношения, не само дължини.\n\nТРИК: Видиш ли 3 колинеарни точки и отношение – Менелай." },
+  { id:"1.2", title:"Теорема на Чева", desc:"Конкурентни чевиани",
+    source:"OT_2012, Симедиани", pdf:"Материали_БГ/OT_2012", page:67,
+    explanation:"ФОРМУЛИРОВКА: M ∈ BC, N ∈ CA, P ∈ AB. AM, BN, CP конкурентни ⇔ (BM/MC)·(CN/NA)·(AP/PB) = 1.\n\nТРИГОНОМЕТРИЧНА ФОРМА: (sin∠BAM/sin∠MAC)·(sin∠CBN/sin∠NBA)·(sin∠ACP/sin∠PCB) = 1.\n\nКОГА: За доказване, че 3 прави се пресичат в една точка; за медиани, ъглополовящи, височини, симедиани.\n\nТРИК: Тригонометричната форма е полезна, когато знаеш ъгли, а не отсечки." },
+  { id:"1.3", title:"Теорема на Птолемей", desc:"Вписан четириъгълник; неравенство",
+    source:"OT_2012, Геом. неравенства (Н. Белухов)", pdf:"Материали_БГ/OT_2012", page:14,
+    explanation:"РАВЕНСТВО: За вписан ABCD: AC·BD = AB·CD + BC·AD.\n\nНЕРАВЕНСТВО: За произволен ABCD: AC·BD ≤ AB·CD + BC·AD, равенство ⇔ ABCD вписан.\n\nКОГА: Метрични зависимости; доказване на неравенства; комбиниране с инверсия и спирално подобие.\n\nТРИК: Вписаният четириъгълник максимизира произведението на диагоналите при дадени страни." },
+  { id:"1.4", title:"Степен на точка. Радикална ос", desc:"Инструмент за окръжности",
+    source:"OT_2010, Приложения окръжност (Н. Белухов)", pdf:"Материали_БГ/OT_2010", page:31,
+    explanation:"ОПРЕДЕЛЕНИЕ: Pow(P) = OP² − R².\n\nСВОЙСТВО: Ако права през P пресича k в A, B: PA·PB = |Pow(P)|.\n\nРАДИКАЛНА ОС: Точки с равни степени спрямо 2 окръжности – права, перпендикулярна на линията на центровете.\n\nРАДИКАЛЕН ЦЕНТЪР: 3 окръжности → 3 радикални оси → пресичат се в една точка.\n\nТРИК: За доказване на колинеарност – покажи, че 3 точки лежат на радикална ос." },
+  { id:"1.5", title:"Вписани ъгли, Талес, симетрали", desc:"Базови свойства",
+    source:"BMC_2003-2006, геом. задачи", pdf:"Материали_БГ/BMC_2003-2006", page:14,
+    explanation:"ВПИСАН ЪГЪЛ: Половината от централния. Всички вписани ъгли на една дъга са равни.\n\nТАЛЕС: Ъгъл, опрян на диаметър = 90°.\n\nСИМЕТРАЛА: ГМТ на равноотдалечените.\n\nСЛЕДСТВИЯ: Равни дъги → равни хорди. Равни вписани ъгли → точки на една окръжност." },
+  { id:"1.6", title:"Синусова и косинусова теорема", desc:"Олимпийски приложения",
+    source:"BMS_2012-2015", pdf:"Материали_БГ/BMS_2012-2015", page:30,
+    explanation:"СИНУСОВА: a/sinA = b/sinB = c/sinC = 2R.\n\nКОСИНУСОВА: c² = a² + b² − 2ab·cosC.\n\nПРИЛОЖЕНИЯ: (1) Дължини от ъгли. (2) Медиани: m_a² = (2b²+2c²−a²)/4. (3) Ъглополовящи: l_a = 2bc·cos(A/2)/(b+c).\n\nТРИК: Превърни отношения на страни в отношения на синуси." },
+  { id:"1.7", title:"Формули за лице. Херон", desc:"S = pr, S = abc/4R, Херон",
+    source:"BMC_2003-2006", pdf:"Материали_БГ/BMC_2003-2006", page:14,
+    explanation:"ФОРМУЛИ: S = (1/2)ab·sinC = abc/(4R) = rs = √(s(s−a)(s−b)(s−c)).\n\nРАДИУСИ: r = S/s, R = abc/(4S), r_a = S/(s−a).\n\nТЪЖДЕСТВА: 1/r = 1/r_a + 1/r_b + 1/r_c." },
+  { id:"1.8", title:"Теорема на Ойлер (I,O)", desc:"IO² = R² − 2Rr; окръжност на 9 точки",
+    source:"BMS_2012-2015", pdf:"Материали_БГ/BMS_2012-2015", page:30,
+    explanation:"ТЕОРЕМА: IO² = R² − 2Rr. Следствие: R ≥ 2r.\n\nОЙЛЕРОВА ПРАВА: O, G, H колинеарни, OG:GH = 1:2.\n\nОКРЪЖНОСТ НА 9-ТЕ: Среди на страните, пети на височините, среди на AH, BH, CH.\n\nФОЙЕРБАХ: Допира се вътрешно до вписаната." },
+  { id:"1.9", title:"Теорема на Микел", desc:"Обща точка на 4 окръжности",
+    source:"OT_2010", pdf:"Материали_БГ/OT_2010", page:31,
+    explanation:"ФОРМУЛИРОВКА: 4 прави образуват пълен четириъгълник. Описаните окръжности на 4-те триъгълника минават през обща точка.\n\nТРИК: За доказване на пресичане на окръжности – намери трета през същата точка." },
+  { id:"1.10", title:"Вписана и външновписани окръжности", desc:"Допирни точки, дължини, ъгли",
+    source:"OT_2010 / BMC_2003-2006", pdf:"Материали_БГ/OT_2010", page:31,
+    explanation:"ВПИСАНА: център I, радиус r. От A до допирните на AB, AC: s − a.\n\nВЪНШНОВПИСАНИ: I_a, I_b, I_c. Радиуси: r_a = S/(s−a).\n\nФОРМУЛИ: 1/r = 1/r_a + 1/r_b + 1/r_c." }
+]},
+
+{ id:2, icon:"◆", title:"ГЕОМЕТРИЯ – НАПРЕДНАЛИ", points:[
+  { id:"2.1", title:"Хармонично отношение", desc:"Пълна статия",
+    source:"OT_2010, Хармонично отношение (Ст. Боев)", pdf:"Материали_БГ/OT_2010", page:76,
+    explanation:"ОПРЕДЕЛЕНИЕ: 4 точки A, B, C, D на права са хармонични, ако (A, B; C, D) = −1.\n\nСВОЙСТВА: (1) Средата на AB е спрегната на безкрайността. (2) 2/AB = 1/AC + 1/AD.\n\nПРИЛОЖЕНИЯ: Поляри; симедианата и медианата; ъглополовящи.\n\nТРИК: Ъглополовящи, вписана + външновписана, симедиана – мисли хармонично." },
+  { id:"2.2", title:"Симедиани", desc:"Свойства, точка на Лемоан",
+    source:"OT_2012, Симедиани (Ст. Боев)", pdf:"Материали_БГ/OT_2012", page:67,
+    explanation:"ОПРЕДЕЛЕНИЕ: Изогонална на медианата. BA'/A'C = c²/b².\n\nСВОЙСТВА: (1) Точка на Лемоан K. (2) K = пресечна на допирателните в A, B, C към описаната. (3) K изогонално спрегната на G." },
+  { id:"2.3", title:"Инверсия", desc:"Окръжности в прави",
+    source:"OT_2012 / BMC_2003-2006", pdf:"Материали_БГ/OT_2012", page:67,
+    explanation:"ОПРЕДЕЛЕНИЕ: OX · OX' = r².\n\nСВОЙСТВА: Права през O → себе си. Права без O → окръжност през O. Окръжност през O → права. Конформно.\n\nТРИК: Задача с обща точка на много окръжности – инвертирай в нея." },
+  { id:"2.4", title:"Спирално подобие", desc:"Ротация + хомотетия",
+    source:"OT_2012", pdf:"Материали_БГ/OT_2012", page:67,
+    explanation:"ОПРЕДЕЛЕНИЕ: Ротация + хомотетия с общ център.\n\nКЛЮЧОВО: За отсечки AB и CD съществува ЕДИНСТВЕНО спирално подобие A→C, B→D. Център = пресечна на описаните на △ACD и △BCD.\n\nПРИЛОЖЕНИЕ: Точка на Микел = център на спирално подобие." },
+  { id:"2.5", title:"Полюси и поляри", desc:"За окръжност",
+    source:"OT_2010, Хармонично отношение", pdf:"Материали_БГ/OT_2010", page:76,
+    explanation:"ОПРЕДЕЛЕНИЕ: Полярата на P – права през допирните точки на допирателните от P.\n\nСВОЙСТВО: (P, Q; A, B) = −1.\n\nТЕОРЕМА ЛА ПОЛ: Спрегнати точки → правите към центъра са перпендикулярни.\n\nТРИК: Задача с 3 допирателни – поляри." },
+  { id:"2.6", title:"Теорема на Паскал", desc:"Вписан шестоъгълник",
+    source:"OT_2012 / BMC_2003-2006", pdf:"Материали_БГ/OT_2012", page:67,
+    explanation:"ФОРМУЛИРОВКА: A, B, C, D, E, F на коника. Пресечните на AB и DE, BC и EF, CD и FA са колинеарни.\n\nДВОЙСТВЕНО: Брианшон." },
+  { id:"2.7", title:"Теорема на Брианшон", desc:"Описан шестоъгълник",
+    source:"OT_2012", pdf:"Материали_БГ/OT_2012", page:67,
+    explanation:"ФОРМУЛИРОВКА: ABCDEF описан около коника. Главните диагонали AD, BE, CF са конкурентни." },
+  { id:"2.8", title:"Геометрични неравенства", desc:"Ердьош-Мордел, Птолемей",
+    source:"OT_2012, Геом. неравенства (Н. Белухов)", pdf:"Материали_БГ/OT_2012", page:14,
+    explanation:"ОЙЛЕР: R ≥ 2r.\n\nЕРДЬОШ-МОРДЕЛ: R + r ≥ 2(r_a + r_b + r_c).\n\nПТОЛЕМЕЙ: AC·BD ≤ AB·CD + BC·AD.\n\nВАЙЦЕНБОК: a² + b² + c² ≥ 4√3·S.\n\nСУБСТИТУЦИЯ НА РАВИ: x = s−a, y = s−b, z = s−c." }
+]},
+
+{ id:3, icon:"◆", title:"ТЕОРИЯ НА ЧИСЛАТА – ОСНОВИ", points:[
+  { id:"3.1", title:"Делимост. НОД/НОК", desc:"Базови понятия",
+    source:"OT_2010, ТЧ (П. Бойваленков)", pdf:"Материали_БГ/OT_2010", page:46,
+    explanation:"ОСНОВНА ТЕОРЕМА: Всяко n > 1 се разлага еднозначно на прости.\n\nНОД·НОК = a·b. НОД(a,b) = НОД(b, a mod b).\n\nСВОЙСТВА: Теорема на Безу: съществуват x, y с ax+by = НОД(a,b). Лема на Евклид." },
+  { id:"3.2", title:"Сравнения по модул", desc:"a ≡ b (mod m)",
+    source:"OT_2010, ТЧ (Ал. Иванов)", pdf:"Материали_БГ/OT_2010", page:4,
+    explanation:"ОПРЕДЕЛЕНИЕ: a ≡ b ⇔ m | (a−b).\n\nОПЕРАЦИИ: ± и · свободни. Деление само ако НОД(делител, m) = 1.\n\nТРИК: За точни квадрати: mod 4, 8, 3, 9, 16, 7." },
+  { id:"3.3", title:"Малка теорема на Ферма", desc:"aᵖ ≡ a (mod p)",
+    source:"OT_2010, ТЧ (Ал. Иванов)", pdf:"Материали_БГ/OT_2010", page:4,
+    explanation:"ФОРМУЛИРОВКА: За просто p: a^p ≡ a (mod p). За НОД(a,p)=1: a^(p−1) ≡ 1.\n\nПРИЛОЖЕНИЯ: Свеждане на степени: a^n ≡ a^(n mod (p−1)).\n\nВНИМАНИЕ: Обратното не е вярно (числа на Кармайкъл)." },
+  { id:"3.4", title:"Теорема на Ойлер", desc:"a^φ(n) ≡ 1 (mod n)",
+    source:"OT_2010, ТЧ (Ал. Иванов)", pdf:"Материали_БГ/OT_2010", page:4,
+    explanation:"φ(n): брой числа в [1,n] взаимно прости с n.\n\nСВОЙСТВА: φ(p) = p−1. φ(p^k) = p^(k−1)(p−1). Мултипликативна. φ(n) = n·∏(1−1/p).\n\nТЕОРЕМА: НОД(a,n)=1 ⇒ a^φ(n) ≡ 1 (mod n)." },
+  { id:"3.5", title:"Теорема на Уилсън", desc:"(p−1)! ≡ −1 (mod p)",
+    source:"OT_2010, ТЧ (П. Бойваленков)", pdf:"Материали_БГ/OT_2010", page:46,
+    explanation:"ФОРМУЛИРОВКА: p просто ⇔ (p−1)! ≡ −1 (mod p).\n\nОБОБЩЕНИЕ: За n > 4 съставно: (n−1)! ≡ 0 (mod n)." },
+  { id:"3.6", title:"Китайска теорема", desc:"Система сравнения",
+    source:"OT_2010, ТЧ (Ал. Иванов)", pdf:"Материали_БГ/OT_2010", page:4,
+    explanation:"ФОРМУЛИРОВКА: m_i взаимно прости. Системата x ≡ a_i (mod m_i) има единствено решение по модул M = ∏m_i.\n\nТРИК: Модул m·n с НОД=1 → разложи на mod m и mod n, слепи с CRT." },
+  { id:"3.7", title:"Показател. Примитивни корени", desc:"Ред на елемент mod n",
+    source:"OT_2010, ТЧ (Ал. Иванов)", pdf:"Материали_БГ/OT_2010", page:4,
+    explanation:"ОПРЕДЕЛЕНИЕ: ord_n(a) = най-малкото k с a^k ≡ 1 (mod n).\n\nСВОЙСТВА: ord | φ(n). a^k ≡ 1 ⇔ ord | k.\n\nПРИМИТИВЕН КОРЕН: ord = φ(n). Съществува ⇔ n ∈ {1, 2, 4, p^k, 2p^k}." },
+  { id:"3.8", title:"Квадратични остатъци. Лежандър", desc:"(a/p) = ±1",
+    source:"OT_2010, ТЧ (Ал. Иванов)", pdf:"Материали_БГ/OT_2010", page:4,
+    explanation:"СИМВОЛ НА ЛЕЖАНДЪР: (a/p) = 1 / −1 / 0.\n\nСВОЙСТВА: Мултипликативен. Критерий на Ойлер: (a/p) ≡ a^((p−1)/2).\n\nРЕЦИПРОЧНОСТ: (p/q)(q/p) = (−1)^((p−1)(q−1)/4)." },
+  { id:"3.9", title:"p-адични оценки. LTE", desc:"v_p(n); v_p(aⁿ − bⁿ)",
+    source:"OT_2010, ТЧ (П. Бойваленков)", pdf:"Материали_БГ/OT_2010", page:46,
+    explanation:"ОПРЕДЕЛЕНИЕ: v_p(n) = степен на p в n.\n\nLTE: p | (x−y), p ∤ xy, p нечетно: v_p(x^n − y^n) = v_p(x−y) + v_p(n).\n\nТРИК: Доказване, че израз НЕ е точен квадрат/куб." },
+  { id:"3.10", title:"Уравнение на Пел", desc:"x² − Dy² = 1",
+    source:"OT_2010, ТЧ (П. Бойваленков)", pdf:"Материали_БГ/OT_2010", page:46,
+    explanation:"ОПРЕДЕЛЕНИЕ: D > 0, не точен квадрат.\n\nСТРУКТУРА: x_n + y_n√D = (x₁ + y₁√D)^n.\n\nНАМИРАНЕ: Чрез верижни дроби на √D." }
+]},
+
+{ id:4, icon:"◆", title:"ТЕОРИЯ НА ЧИСЛАТА – НАПРЕДНАЛИ", points:[
+  { id:"4.1", title:"Диофантови – линейни", desc:"ax + by = c",
+    source:"OT_2010, ТЧ (П. Бойваленков)", pdf:"Материали_БГ/OT_2010", page:46,
+    explanation:"УСЛОВИЕ: НОД(a,b) | c.\n\nОБЩО РЕШЕНИЕ: x = x₀ + (b/d)t, y = y₀ − (a/d)t.\n\nТРИК: Сведи до ax ≡ c (mod b)." },
+  { id:"4.2", title:"Диофантови – квадратни", desc:"Питагорови тройки",
+    source:"OT_2010, ТЧ (П. Бойваленков)", pdf:"Материали_БГ/OT_2010", page:46,
+    explanation:"ПАРАМЕТРИЗАЦИЯ: x = m²−n², y = 2mn, z = m²+n² с m > n > 0, НОД(m,n)=1, различна четност." },
+  { id:"4.3", title:"Диофантови – кубични", desc:"x³ + y³ = z³",
+    source:"OT_2010, ТЧ (П. Бойваленков)", pdf:"Материали_БГ/OT_2010", page:46,
+    explanation:"ФЕРМА n = 3: няма нетривиални решения. Ойлер чрез безкраен спуск в ℤ[ω].\n\nТЕХНИКИ: Безкраен спуск; работа в разширения." },
+  { id:"4.4", title:"Точни квадрати и степени", desc:"Заключване между квадрати",
+    source:"OT_2010, Толкова много квадрати (Н. Събева)", pdf:"Материали_БГ/OT_2010", page:23,
+    explanation:"МЕТОД: n² < x < (n+1)² ⇒ x не е точен квадрат.\n\nПОДХОДИ: Оценки; сравнения по модул (mod 4: {0,1}; mod 8: {0,1,4}; mod 9: {0,1,4,7}); p-адични оценки." },
+  { id:"4.5", title:"Прости числа", desc:"Безкрайност; формули",
+    source:"OT_2010, ТЧ (П. Бойваленков)", pdf:"Материали_БГ/OT_2010", page:46,
+    explanation:"БЕЗКРАЙНОСТ (Евклид): N = p₁···p_n + 1 има нов прост делител.\n\nФОРМУЛИ: Мерсен 2^p − 1. Ферма 2^(2^n) + 1." },
+  { id:"4.6", title:"Суми на степени", desc:"1ᵏ + 2ᵏ + ... + nᵏ",
+    source:"OT_2010, ТЧ (П. Бойваленков)", pdf:"Материали_БГ/OT_2010", page:46,
+    explanation:"ФОРМУЛИ: ∑i = n(n+1)/2, ∑i² = n(n+1)(2n+1)/6, ∑i³ = (n(n+1)/2)².\n\nМЕТОДИ: Индукция, телескопични суми, генериращи функции." },
+  { id:"4.7", title:"Мултипликативни функции", desc:"φ(n), τ(n), σ(n)",
+    source:"OT_2010, ТЧ (Ал. Иванов)", pdf:"Материали_БГ/OT_2010", page:4,
+    explanation:"ОПРЕДЕЛЕНИЕ: f(mn) = f(m)f(n) за НОД(m,n)=1.\n\nИЗЧИСЛЕНИЕ: n = ∏p_i^α_i ⇒ φ = ∏p_i^(α_i−1)(p_i−1); τ = ∏(α_i+1)." },
+  { id:"4.8", title:"Факториели и C(n,k)", desc:"p-адични оценки; делимост",
+    source:"OT_2010, ТЧ (П. Бойваленков)", pdf:"Материали_БГ/OT_2010", page:46,
+    explanation:"ЛЬОЖАНДЪР: v_p(n!) = ∑⌊n/p^k⌋.\n\nКУМЪР: C(n,k) нечетно ⇔ k & (n−k) = 0 (в двоична)." }
+]},
+
+{ id:5, icon:"◆", title:"АЛГЕБРА – ПОЛИНОМИ", points:[
+  { id:"5.1", title:"Формули на Виет", desc:"Корени на полином",
+    source:"OT_2012, Полиноми (Р. Рафаилов)", pdf:"Материали_БГ/OT_2012", page:50,
+    explanation:"КВАДРАТЕН: x² + px + q: x₁+x₂ = −p, x₁x₂ = q.\n\nКУБИЧЕН: x₁+x₂+x₃ = −p, x₁x₂+x₂x₃+x₃x₁ = q, x₁x₂x₃ = −r.\n\nОБЩ: σ_k = (−1)^k a_{n−k}." },
+  { id:"5.2", title:"Формули на Нютон", desc:"Суми на степени на корени",
+    source:"OT_2012, Полиноми", pdf:"Материали_БГ/OT_2012", page:50,
+    explanation:"S_k = x₁^k + ... + x_n^k.\n\nФОРМУЛИ: S_k + a₁S_{k−1} + ... + k a_k = 0 за k ≤ n. S_k + a₁S_{k−1} + ... + a_n S_{k−n} = 0 за k > n." },
+  { id:"5.3", title:"Симетрични полиноми", desc:"Елементарни; основна теорема",
+    source:"OT_2012, Полиноми", pdf:"Материали_БГ/OT_2012", page:50,
+    explanation:"ОСНОВНА ТЕОРЕМА: Всеки симетричен полином се изразява еднозначно чрез σ₁, ..., σ_n.\n\nПРИМЕРИ: ∑x₁² = σ₁² − 2σ₂." },
+  { id:"5.4", title:"Рационални корени. Гаус", desc:"Полиноми с цели коефициенти",
+    source:"OT_2012, Делители на полиноми (Ал. Иванов)", pdf:"Материали_БГ/OT_2012", page:4,
+    explanation:"ТЕОРЕМА: p/q (несъкратима) корен на P ⇒ p | a_0 и q | a_n.\n\nАЙЗЕНЩАЙН: p | a_i (i<n), p ∤ a_n, p² ∤ a_0 ⇒ P неразложим." },
+  { id:"5.5", title:"Неразложими полиноми", desc:"Над Z, Q, R, C",
+    source:"OT_2012, Делители на полиноми", pdf:"Материали_БГ/OT_2012", page:4,
+    explanation:"НАД ℂ: Само линейни. Основна теорема на алгебрата.\n\nНАД ℝ: Линейни + квадратни с отр. дискриминанта.\n\nНАД ℚ: Айзенщайн; редукция mod p." },
+  { id:"5.6", title:"Полиноми на Чебишев", desc:"Tₙ(cos θ) = cos nθ",
+    source:"OT_2012, Полиноми", pdf:"Материали_БГ/OT_2012", page:50,
+    explanation:"ОПРЕДЕЛЕНИЕ: T_n(x) = cos(n·arccos x).\n\nРЕКУРЕНЦИЯ: T_{n+1} = 2x T_n − T_{n−1}.\n\nЕКСТРЕМАЛНО: Минимизира max|P| на [−1,1]." },
+  { id:"5.7", title:"Делимост на полиноми", desc:"Остатък; Хорнер; НОД",
+    source:"OT_2012, Делители на полиноми", pdf:"Материали_БГ/OT_2012", page:4,
+    explanation:"ТЕОРЕМА ЗА ОСТАТЪКА: Остатък от P(x)/(x−a) = P(a).\n\nОБОБЩЕНА: (x−a)^k | P(x) ⇔ P(a) = ... = P^{(k−1)}(a) = 0.\n\nХОРНЕР: Ефективно делене." },
+  { id:"5.8", title:"Интерполация на Лагранж", desc:"Полином през n точки",
+    source:"OT_2012, Полиноми", pdf:"Материали_БГ/OT_2012", page:50,
+    explanation:"ТЕОРЕМА: За n точки с различни x_i има единствен полином от степен ≤ n−1.\n\nФОРМУЛА: P(x) = Σ y_i · ∏_{j≠i}(x−x_j)/(x_i−x_j)." }
+]},
+
+{ id:6, icon:"◆", title:"АЛГЕБРА – НЕРАВЕНСТВА", points:[
+  { id:"6.1", title:"САСГ (AM-GM)", desc:"Аритметично ≥ геометрично",
+    source:"OT_2012, Неравенства (Н. Николов)", pdf:"Материали_БГ/OT_2012", page:26,
+    explanation:"ФОРМУЛИРОВКА: (a₁+...+a_n)/n ≥ ⁿ√(a₁...a_n) за a_i ≥ 0. Равенство ⇔ всички равни.\n\nСЛЕДСТВИЯ: x + 1/x ≥ 2; (a+b)(1/a+1/b) ≥ 4.\n\nВНИМАНИЕ: Условие a_i ≥ 0 е критично." },
+  { id:"6.2", title:"САСХ (AM-HM)", desc:"Аритметично ≥ хармонично",
+    source:"OT_2012, Неравенства", pdf:"Материали_БГ/OT_2012", page:26,
+    explanation:"ФОРМУЛИРОВКА: (∑a_i)/n ≥ n/(∑1/a_i).\n\nЧЕСТА: (a₁+...+a_n)(1/a₁+...+1/a_n) ≥ n².\n\nСЛЕДСТВИЕ: 1/a + 1/b ≥ 4/(a+b)." },
+  { id:"6.3", title:"САСК (AM-QM)", desc:"Аритметично ≥ квадратично",
+    source:"OT_2012, Неравенства", pdf:"Материали_БГ/OT_2012", page:26,
+    explanation:"ФОРМУЛИРОВКА: √((∑a_i²)/n) ≥ (∑a_i)/n. Еквивалентно: n∑a_i² ≥ (∑a_i)².\n\nВЕРИГА: QM ≥ AM ≥ GM ≥ HM." },
+  { id:"6.4", title:"Коши-Буняковски", desc:"Всички форми",
+    source:"OT_2012, Неравенства", pdf:"Материали_БГ/OT_2012", page:26,
+    explanation:"СТАНДАРТНА: (∑a_i b_i)² ≤ (∑a_i²)(∑b_i²).\n\nИНЖЕНЕРНА: (∑a_i)² ≤ n∑a_i².\n\nДРОБНА: ∑a_i²/x_i ≥ (∑a_i)²/(∑x_i). МНОГО полезна." },
+  { id:"6.5", title:"Неравенство на Йенсен", desc:"Изпъкнали функции",
+    source:"OT_2012, Неравенства", pdf:"Материали_БГ/OT_2012", page:26,
+    explanation:"ОПРЕДЕЛЕНИЕ: f е изпъкнала ⇔ f''(x) ≥ 0.\n\nЙЕНСЕН: f((∑x_i)/n) ≤ (∑f(x_i))/n за изпъкнала f.\n\nИЗПЪКНАЛИ: x², e^x, x log x, 1/x. ВДЛЪБНАТИ: log x, √x." },
+  { id:"6.6", title:"Неравенство на Чебишев", desc:"Монотонни редици",
+    source:"OT_2012, Неравенства", pdf:"Материали_БГ/OT_2012", page:26,
+    explanation:"ФОРМУЛИРОВКА: a₁ ≤ ... ≤ a_n, b₁ ≤ ... ≤ b_n ⇒ n∑a_i b_i ≥ (∑a_i)(∑b_i).\n\nОБРАТНО при противоположно монотонни." },
+  { id:"6.7", title:"Rearrangement", desc:"Пренареждане",
+    source:"OT_2012, Неравенства", pdf:"Материали_БГ/OT_2012", page:26,
+    explanation:"ФОРМУЛИРОВКА: За монотонни a, b: ∑a_i b_i ≥ ∑a_i b_{π(i)} ≥ ∑a_i b_{n+1−i}.\n\nМАКСИМУМ при еднакво подредени; МИНИМУМ при обратно." },
+  { id:"6.8", title:"Неравенство на Мюрхед", desc:"Симетрични суми",
+    source:"OT_2012, Неравенства", pdf:"Материали_БГ/OT_2012", page:26,
+    explanation:"ОПРЕДЕЛЕНИЕ: a ≻ b ако ∑a_i = ∑b_i и ∑(първи k) a_i ≥ ∑(първи k) b_i.\n\nТЕОРЕМА: a ≻ b, x_i > 0 ⇒ ∑_{sym} x^a ≥ ∑_{sym} x^b.\n\nТРИК: Симетрично и хомогенно неравенство – опитай Мюрхед." },
+  { id:"6.9", title:"Неравенство на Шур", desc:"x³+y³+z³+3xyz ≥ ∑x²y",
+    source:"OT_2012, Неравенства", pdf:"Материали_БГ/OT_2012", page:26,
+    explanation:"ФОРМУЛИРОВКА: x³+y³+z³+3xyz ≥ xy(x+y) + yz(y+z) + zx(z+x).\n\nДРУГА: x(x−y)(x−z) + y(y−z)(y−x) + z(z−x)(z−y) ≥ 0." },
+  { id:"6.10", title:"Бернули, Хьолдер, Минковски", desc:"Класически неравенства",
+    source:"OT_2012, Неравенства", pdf:"Материали_БГ/OT_2012", page:26,
+    explanation:"БЕРНУЛИ: (1+x)^n ≥ 1+nx за x ≥ −1.\n\nХЬОЛДЕР: (∑a_i b_i c_i)³ ≤ (∑a_i³)(∑b_i³)(∑c_i³).\n\nМИНКОВСКИ: (∑(a_i+b_i)^p)^(1/p) ≤ (∑a_i^p)^(1/p) + (∑b_i^p)^(1/p)." }
+]},
+
+{ id:7, icon:"◆", title:"ФУНКЦИОНАЛНИ УРАВНЕНИЯ И РЕДИЦИ", points:[
+  { id:"7.1", title:"Уравнение на Коши", desc:"f(x+y) = f(x) + f(y)",
+    source:"OT_2010, ФУ (Н. Николов)", pdf:"Материали_БГ/OT_2010", page:40,
+    explanation:"ФОРМУЛИРОВКА: Адитивност.\n\nРЕШЕНИЯ: Без доп. условия има патологични. С: Непрекъснатост; Монотонност; Ограниченост в интервал → f(x) = cx." },
+  { id:"7.2", title:"ФУ с ограниченост", desc:"Ограниченост върху интервал",
+    source:"OT_2010, ФУ", pdf:"Материали_БГ/OT_2010", page:40,
+    explanation:"ТЕОРЕМА: Адитивна + ограничена в интервал с положителна дължина ⇒ линейна.\n\nИДЕЯ: Пренасяне на ограниченост в (−ε, ε); |f(x)| ≤ nM." },
+  { id:"7.3", title:"ФУ с монотонност", desc:"Монотонност + адитивност",
+    source:"OT_2010, ФУ", pdf:"Материали_БГ/OT_2010", page:40,
+    explanation:"ТЕОРЕМА: Адитивна + монотонна ⇒ f(x) = cx.\n\nДОКАЗАТЕЛСТВО: c = f(1). Рационални q: f(q) = cq. Реални x: q_n ↑ x, r_n ↓ x рационални ⇒ c q_n ≤ f(x) ≤ c r_n → f(x) = cx." },
+  { id:"7.4", title:"ФУ с инволюция", desc:"f(f(x)) = x",
+    source:"OT_2010, ФУ", pdf:"Материали_БГ/OT_2010", page:40,
+    explanation:"ОПРЕДЕЛЕНИЕ: f е инволюция ⇒ f е биекция, обратна на себе си.\n\nПРИМЕРИ: −x, 1/x, 1−x, c/x.\n\nТИПИЧНА: f(f(x)) = x и f(f(x)+y) = f(x)+f(y) ⇒ f(x) = ±x." },
+  { id:"7.5", title:"Общи техники за ФУ", desc:"Заместване, инективност",
+    source:"OT_2010, ФУ", pdf:"Материали_БГ/OT_2010", page:40,
+    explanation:"СТЪПКИ: (1) Конкретни стойности. (2) Доказване на инективност. (3) Сюрективност. (4) Определяне на f(0). (5) Четност/нечетност." },
+  { id:"7.6", title:"Линейни рекурентни редици", desc:"Характеристично уравнение",
+    source:"BMS_2012-2015", pdf:"Материали_БГ/BMS_2012-2015", page:30,
+    explanation:"ОПРЕДЕЛЕНИЕ: a_{n+k} = c₁a_{n+k−1} + ... + c_k a_n.\n\nХАР. УРАВНЕНИЕ: r^k = c₁r^{k−1} + ... + c_k.\n\nОБЩО РЕШЕНИЕ: Различни корени r_i ⇒ a_n = Σ A_i r_i^n." },
+  { id:"7.7", title:"Нелинейни рекурентни редици", desc:"aₙ₊₁ = f(aₙ)",
+    source:"BMS_2012-2015", pdf:"Материали_БГ/BMS_2012-2015", page:30,
+    explanation:"ТЕХНИКИ: Инвариант; Монотонност; Ограниченост; Сходимост; Граница L = f(L); Периодичност.\n\nПРИМЕР: a_{n+1} = √(2+a_n) ⇒ L = 2." },
+  { id:"7.8", title:"Сходимост и граници", desc:"Монотонност + ограниченост",
+    source:"BMS_2012-2015", pdf:"Материали_БГ/BMS_2012-2015", page:30,
+    explanation:"ВАЙЕРЩРАС: Монотонна + ограничена ⇒ сходяща.\n\nСХЕМА: Докажи a_n ≥ 0. Монотонност. Ограниченост. Сходимост. L = f(L)." }
+]},
+
+{ id:8, icon:"◆", title:"КОМБИНАТОРИКА – ОСНОВИ", points:[
+  { id:"8.1", title:"Принцип на Дирихле", desc:"Всички форми",
+    source:"OT_2010, Комб. и графи (Ст. Герджиков)", pdf:"Материали_БГ/OT_2010", page:60,
+    explanation:"ОСНОВНА: n+1 обекта в n кутии ⇒ ≥ 2 в една.\n\nОБОБЩЕНА: kn+1 в n ⇒ ≥ k+1.\n\nПРИМЕРИ: 13 души → 2 с рожден ден в месец." },
+  { id:"8.2", title:"Включване и изключване", desc:"|A∪B∪C| формула",
+    source:"OT_2010, Комб. тъждества (Ем. Колев)", pdf:"Материали_БГ/OT_2010", page:8,
+    explanation:"ФОРМУЛА: |A∪B∪C| = |A|+|B|+|C| − |A∩B|−|B∩C|−|C∩A| + |A∩B∩C|.\n\nОБЩО: Σ|A_i| − Σ|A_i∩A_j| + ... + (−1)^{n+1}|∩A_i|." },
+  { id:"8.3", title:"Двойно броене", desc:"Броене по два начина",
+    source:"OT_2010, Комб. тъждества", pdf:"Материали_БГ/OT_2010", page:8,
+    explanation:"ИДЕЯ: Преброи едно и също множество по 2 начина.\n\nПРИМЕР: Лема за ръкостискане: ∑deg(v) = 2|E|.\n\nПРИЛОЖЕНИЯ: ∑C(n,k) = 2^n, ∑kC(n,k) = n·2^{n−1}." },
+  { id:"8.4", title:"Комбинаторни тъждества", desc:"Биномни коефициенти",
+    source:"OT_2010, Комб. тъждества", pdf:"Материали_БГ/OT_2010", page:8,
+    explanation:"ОСНОВНИ: C(n,k) = C(n−1,k−1)+C(n−1,k). ∑C(n,k) = 2^n.\n\nВАНДЕРМОНД: C(m+n,k) = ΣC(m,i)C(n,k−i)." },
+  { id:"8.5", title:"Биномни коефициенти", desc:"Свойства",
+    source:"OT_2010, Комб. тъждества", pdf:"Материали_БГ/OT_2010", page:8,
+    explanation:"C(n,k) = n!/(k!(n−k)!) – брой k-подмножества.\n\nСВОЙСТВА: C(n,k) = C(n,n−k). ПФ: (1+x)^n = ΣC(n,k)x^k.\n\nМУЛТИМНОЖЕСТВО: C(n+k−1, k)." },
+  { id:"8.6", title:"Пермутации и комбинации", desc:"С/без повторение",
+    source:"OT_2010, Комб. тъждества", pdf:"Материали_БГ/OT_2010", page:8,
+    explanation:"ПЕРМУТАЦИИ: n! (без); n!/(n₁!...n_k!) (с).\n\nКОМБИНАЦИИ: C(n,k) (без); C(n+k−1,k) (с).\n\nТРИК: Ред важен? Повторение разрешено? – 4 формули." },
+  { id:"8.7", title:"Мултимножества", desc:"Комбинации с повторение",
+    source:"OT_2010, Комб. тъждества", pdf:"Материали_БГ/OT_2010", page:8,
+    explanation:"БРОЙ: k-елементни мултимножества от n типа = C(n+k−1, k). Stars and bars.\n\nПРИМЕР: 10 топки в 4 кутии: C(13, 10) = 286." },
+  { id:"8.8", title:"Рекурентни връзки", desc:"Фибоначи, Каталан",
+    source:"OT_2010, Релации (Ив. Кортезов)", pdf:"Материали_БГ/OT_2010", page:16,
+    explanation:"ФИБОНАЧИ: F_{n+2} = F_{n+1} + F_n. Формула: F_n = (φ^n − ψ^n)/√5.\n\nКАТАЛАН: C_n = C(2n,n)/(n+1). Стойности: 1, 1, 2, 5, 14, 42, 132." },
+  { id:"8.9", title:"Производящи функции", desc:"Основи",
+    source:"OT_2012, Комбинаторика (Ем. Колев)", pdf:"Материали_БГ/OT_2012", page:8,
+    explanation:"ОПРЕДЕЛЕНИЕ: A(x) = ∑a_n x^n.\n\nОСНОВНИ: ∑x^n = 1/(1−x). (1+x)^n = ΣC(n,k)x^k. ∑x^n/n! = e^x.\n\nПРИМЕР: Каталан: C(x) = 1 + xC(x)²." },
+  { id:"8.10", title:"Индукция в комбинаториката", desc:"Обикновена, силна, двойна",
+    source:"OT_2010, Релации", pdf:"Материали_БГ/OT_2010", page:16,
+    explanation:"ОБИКНОВЕНА: P(1) + P(k)→P(k+1).\n\nСИЛНА: P(1..k)→P(k+1).\n\nДВОЙНА: по два параметъра.\n\nПРИМЕР (силна): Всяко n ≥ 2 се разлага на прости." }
+]},
+
+{ id:9, icon:"◆", title:"КОМБИНАТОРИКА – ГРАФИ И ИГРИ", points:[
+  { id:"9.1", title:"Основи на графите", desc:"Върхове, ребра, степени",
+    source:"OT_2010, Комб. и графи (Ст. Герджиков)", pdf:"Материали_БГ/OT_2010", page:60,
+    explanation:"ГРАФ: G = (V, E). deg(v) = брой ребра.\n\nЛЕМА ЗА РЪКОСТИСКАНЕ: ∑deg(v) = 2|E|.\n\nПЪЛЕН: K_n: |E| = n(n−1)/2." },
+  { id:"9.2", title:"Дървета", desc:"Свързани без цикли",
+    source:"OT_2010, Комб. и графи", pdf:"Материали_БГ/OT_2010", page:60,
+    explanation:"ОПРЕДЕЛЕНИЕ: Свързан без цикли.\n\nЕКВИВАЛЕНТНО: |E| = |V|−1 и свързан. Уникален път между всеки 2.\n\nКЕЙЛИ: n^{n−2} дървета с n етикетирани върха." },
+  { id:"9.3", title:"Ойлерови и Хамилтонови пътища", desc:"Условия",
+    source:"OT_2010, Комб. и графи", pdf:"Материали_БГ/OT_2010", page:60,
+    explanation:"ОЙЛЕРОВ ЦИКЪЛ: Съществува ⇔ свързан + всички степени четни.\n\nОЙЛЕРОВ ПЪТ: Точно 2 нечетни степени.\n\nХАМИЛТОНОВ: През всеки връх веднъж. NP-пълен. Достатъчно: Дирак (deg ≥ n/2)." },
+  { id:"9.4", title:"Клики и независими множества", desc:"Максимални клики",
+    source:"OT_2010, Комб. и графи", pdf:"Материали_БГ/OT_2010", page:60,
+    explanation:"КЛИКА: Всички върхове свързани. ω(G) = макс. размер.\n\nНЕЗАВИСИМО: Никои 2 не са свързани. α(G) = макс. размер.\n\nR(3,3) = 6." },
+  { id:"9.5", title:"Теорема на Туран", desc:"Макс. ребра без K_{r+1}",
+    source:"OT_2010, Релации (Ив. Кортезов)", pdf:"Материали_БГ/OT_2010", page:16,
+    explanation:"ФОРМУЛИРОВКА: ex(n, K_{r+1}) = (1−1/r)·n²/2.\n\nЕКСТРЕМАЛЕН: Пълен r-делен граф T(n, r).\n\nТРИК: 'Максимум ребра без пълен подграф' → Туран." },
+  { id:"9.6", title:"Теорема на Рамзи", desc:"R(3,3) = 6",
+    source:"OT_2010, Релации", pdf:"Материали_БГ/OT_2010", page:16,
+    explanation:"ОПРЕДЕЛЕНИЕ: R(s,t) = най-малко n: всеки граф с n върха има K_s или независимо t.\n\nR(3,3) = 6. R(3,4) = 9. R(4,4) = 18. R(5,5) ∈ [43, 48].\n\nТРИК: 'Гарантирано съществуване' с цветове → Рамзи." },
+  { id:"9.7", title:"Оцветявания на графи", desc:"Хроматично число",
+    source:"OT_2010, Комб. и графи", pdf:"Материали_БГ/OT_2010", page:60,
+    explanation:"ОПРЕДЕЛЕНИЕ: χ(G) = мин. брой цветове с различни за съседни.\n\nПРИМЕРИ: χ(K_n) = n. χ(C_n) = 2/3. χ(дърво) ≤ 2. χ(планарен) ≤ 4.\n\nДВУДЕЛЕН ⇔ χ ≤ 2." },
+  { id:"9.8", title:"Игри – инварианти/моноварианти", desc:"Печеливши стратегии",
+    source:"BMS_2012-2015", pdf:"Материали_БГ/BMS_2012-2015", page:30,
+    explanation:"ИНВАРИАНТ: Не се променя. За доказване на невъзможност.\n\nМОНОВАРИАНТ: Монотонно. За доказване, че играта свършва.\n\nТРИК: Търси 'сума mod k', 'произведение', 'брой', 'четност'." },
+  { id:"9.9", title:"Игри – симетрия", desc:"Стратегия на копиране",
+    source:"BMS_2012-2015", pdf:"Материали_БГ/BMS_2012-2015", page:30,
+    explanation:"MIRROR: Ако конфигурацията има огледална симетрия, вторият отговаря огледално.\n\nАко има фиксирана точка – първият я заема, после играе огледално.\n\nПРИМЕР: Монети на кръгла маса." },
+  { id:"9.10", title:"Игри – печеливши стратегии", desc:"Позиционни игри",
+    source:"BMS_2012-2015", pdf:"Материали_БГ/BMS_2012-2015", page:30,
+    explanation:"КЛАСИФИКАЦИЯ: N-позиции (печели на ход); P-позиции (губи на ход).\n\nПРАВИЛА: Терминална = P. Има ход до P ⇒ N. Всички ходове до N ⇒ P.\n\nНИМ: XOR на размерите = 0 ⇒ P." }
+]},
+
+{ id:10, icon:"◆", title:"СМЕСЕНИ – НАЦИОНАЛНИ КРЪГОВЕ", points:[
+  { id:"10.1", title:"НОМ национален кръг 2012", desc:"11. клас, 6 задачи",
+    source:"BMS_2012-2015", pdf:"Материали_БГ/BMS_2012-2015", page:14,
+    explanation:"ЗАДАЧА 1 (ТЧ/редици): a_{n+1} = a_n + 2τ(n).\n\nЗАДАЧА 2 (Комб.): Оцветяване в 2 цвята.\n\nЗАДАЧА 3 (Игри/полиноми): Игра с x⁴ + ⋆x³ + ⋆x² + ⋆x + ⋆ = 0.\n\nЗАДАЧА 4 (Комб.): Разделяне на ненулеви редици от 0/1 на тройки.\n\nЗАДАЧА 5 (Алгебра): Q(x) квадратен тричлен.\n\nЗАДАЧА 6 (Геометрия): Симетрии на точки от описаната." },
+  { id:"10.2", title:"НОМ национален кръг 2013", desc:"11. клас, 6 задачи",
+    source:"BMS_2012-2015", pdf:"Материали_БГ/BMS_2012-2015", page:30,
+    explanation:"ЗАДАЧА 1 (ТЧ): p^{q+1} + q^{p+1} = □.\n\nЗАДАЧА 2 (ФУ): x²f(x) − y²f(y) = (x²−y²)f(x+y) − xyf(x−y).\n\nЗАДАЧА 3 (Комб./геом.): Оцветяване в 3 цвята.\n\nЗАДАЧА 4 (Тригонометрия): tan α + tan β + tan γ ≤ 3.\n\nЗАДАЧА 5 (Геометрия): Остроъгълен △ABC.\n\nЗАДАЧА 6 (ТЧ): m² + n² + p² − 2mn − 2mp − 2np = □." },
+  { id:"10.3", title:"НОМ национален кръг 2014", desc:"11. клас, 6 задачи",
+    source:"BMS_2012-2015", pdf:"Материали_БГ/BMS_2012-2015", page:46,
+    explanation:"ЗАДАЧА 1 (Геом.): Окръжност, точка A извън нея, BC диаметър.\n\nЗАДАЧА 2 (Комб.): Шахматна дъска m×n, 4 цвята.\n\nЗАДАЧА 3 (Алг./геом.): Числа в пространството.\n\nЗАДАЧА 4 (ТЧ): p² | q³+1 и q² | p⁶−1.\n\nЗАДАЧА 5 (ФУ): f(xy) = f(x+y)(f(x)+f(y)).\n\nЗАДАЧА 6 (Геом.): Вписан ABCD." },
+  { id:"10.4", title:"НОМ национален кръг 2015", desc:"11. клас, 6 задачи",
+    source:"BMS_2012-2015", pdf:"Материали_БГ/BMS_2012-2015", page:61,
+    explanation:"ЗАДАЧА 1 (Геом.): ABCDEF вписан. NL·KP·MQ = KM·PN·LQ.\n\nЗАДАЧА 2 (Комб.): 101 сини клетки в n×n.\n\nЗАДАЧА 3 (ТЧ/редици): a_{n+1} = 6a_n − a_{n−1}.\n\nЗАДАЧА 4 (ФУ): f(x+y) ≥ f(x)+y и f(f(x)) ≤ x.\n\nЗАДАЧА 5 (Геом.): △ABC, PCQL успоредник.\n\nЗАДАЧА 6 (Комб.): Ученици с рейтинг по 4 теми." },
+  { id:"10.5", title:"Контролни за БОМ 2012–2015", desc:"4 години × 4 задачи",
+    source:"BMS_2012-2015", pdf:"Материали_БГ/BMS_2012-2015", page:15,
+    explanation:"КАКВО: Изборни състезания за отбора на България за Балканската олимпиада.\n\nСТРУКТУРА: 4 задачи за 4 часа.\n\nСТРАНИЦИ В PDF: 2012 → 15; 2013 → 31; 2014 → 47; 2015 → 62." },
+  { id:"10.6", title:"Контролни за МОМ 2012–2015", desc:"4 години × 4 задачи",
+    source:"BMS_2012-2015", pdf:"Материали_БГ/BMS_2012-2015", page:16,
+    explanation:"КАКВО: Изборни състезания за отбора за Международната олимпиада. НАЙ-ТРУДНИТЕ задачи.\n\nСТРУКТУРА: 6 задачи в 2 дни по 3, 4.5ч.\n\nСТРАНИЦИ В PDF: 2012 → 16; 2013 → 32; 2014 → 49; 2015 → 63." },
+  { id:"10.7", title:"NOM_2013 – избрани", desc:"Русия, Китай, САЩ, Иран",
+    source:"NOM_2013", pdf:"Материали_БГ/NOM_2013", page:15,
+    explanation:"СТИЛОВЕ: Русия: класически. Китай: технически. САЩ: разнообразни. Иран: силни геометрия/ТЧ.\n\nСТРАТЕГИЯ: Избери 2-3 държави. Реши задачите за 11. клас." },
+  { id:"10.8", title:"NOM_2014 – избрани", desc:"Русия, Китай, САЩ, Иран",
+    source:"NOM_2014", pdf:"Материали_БГ/NOM_2014", page:10,
+    explanation:"СЪЩОТО: Продължи с избраните държави. Сравни стиловете между годините." },
+  { id:"10.9", title:"NOM_2015-2016 – избрани", desc:"Русия, Китай, САЩ, Иран",
+    source:"NOM_2015-2016", pdf:"Материали_БГ/NOM_2015-2016", page:16,
+    explanation:"НАЙ-НОВИ: Използвай за последен етап. По-модерен стил.\n\nСИМУЛАЦИИ: 3 задачи за 4.5ч без прекъсване." },
+  { id:"10.10", title:"BMC_2003-2006 – избрани", desc:"Национален кръг, контролни",
+    source:"BMC_2003-2006", pdf:"Материали_БГ/BMC_2003-2006", page:14,
+    explanation:"СТРУКТУРА: По години 2003-2006.\n\nНАЦИОНАЛНИ КРЪГОВЕ: 2003 → 14; 2004 → 24; 2005 → 38; 2006 → 50." }
+]},
+
+{ id:11, icon:"◆", title:"БОНУС – ЛЕКЦИИ И ТЕМИ", points:[
+  { id:"11.1", title:"Лекции на Петър – PAMP 2019", desc:"4 лекции – общ преглед",
+    source:"Бонус/lectures-peter", pdf:"Бонус/lectures-peter/lekcia1-pamp2019", page:1,
+    explanation:"4 лекции от PAMP 2019. Общ преглед на олимпийски теми.\n\nПОЛЕЗНИ ЗА: Преговор. Алтернативно обяснение." },
+  { id:"11.2", title:"Тема на седмицата 1–4", desc:"Тема + решения",
+    source:"Бонус/tema-na-sedmicata", pdf:"Бонус/tema-na-sedmicata/week1-theme", page:1,
+    explanation:"Седмични теми с решения.\n\nИЗПОЛЗВАНЕ: Прочети темата. Реши задачите САМ. Виж решенията." },
+  { id:"11.3", title:"Теми с лекции (Tema 1–6)", desc:"Различни автори",
+    source:"Теми с Лекции", pdf:"Теми с Лекции/Tema1-MarinHristov", page:1,
+    explanation:"6 теми от български олимпийци: Marin Hristov, Borislav Kirilov, Petko Lazarov, Veselin Markovich, Bozhidar Dimitrov, Ilias/Bilyana." },
+  { id:"11.4", title:"Допълнителни сборници", desc:"BMO_1984-2006, BMS_2003-2005",
+    source:"Материали_БГ", pdf:"Материали_БГ/BMO_1984-2006", page:1,
+    explanation:"BMO_1984-2006: Балкански олимпиади.\n\nBMS_2003-2005: Български състезания (предишни години)." }
+]}
+];
+
+/* ═══════════════════════════════════════════════════════════════
+   PLAN DATA — 24-week progression plan
+   ═══════════════════════════════════════════════════════════════ */
+const PLAN_PHASES = [
+  {
+    num: 1, name: "ОСНОВИ", weeks: "СЕДМИЦИ 1–6",
+    goal: "Изграждане на стабилна основа в геометрията, докато алгебрата остава активна.",
+    weeks_data: [
+      { week: 1, main: "Стъпка 1: Геометрия – 1.1–1.3", sec: "Стъпка 5: Полиноми – 5.1–5.2" },
+      { week: 2, main: "Стъпка 1: Геометрия – 1.4–1.5", sec: "Стъпка 5: Полиноми – 5.3–5.4" },
+      { week: 3, main: "Стъпка 1: Геометрия – 1.6–1.7", sec: "Стъпка 6: Неравенства – 6.1–6.2" },
+      { week: 4, main: "Стъпка 1: Геометрия – 1.8–1.10", sec: "Стъпка 6: Неравенства – 6.3–6.4" },
+      { week: 5, main: "Стъпка 2: Геометрия – 2.1–2.2", sec: "Стъпка 6: Неравенства – 6.5–6.6" },
+      { week: 6, main: "Стъпка 2: Геометрия – 2.3–2.4", sec: "Стъпка 6: Неравенства – 6.7–6.8" },
+    ],
+  },
+  {
+    num: 2, name: "РАЗШИРЯВАНЕ", weeks: "СЕДМИЦИ 7–12",
+    goal: "Добавяне на теория на числата и комбинаторика, продължавайки геометрията.",
+    weeks_data: [
+      { week: 7, main: "Стъпка 2: Геометрия – 2.5–2.6", sec: "Стъпка 3: ТЧ – 3.1–3.3" },
+      { week: 8, main: "Стъпка 2: Геометрия – 2.7–2.8", sec: "Стъпка 3: ТЧ – 3.4–3.6" },
+      { week: 9, main: "Стъпка 3: ТЧ – 3.7–3.10", sec: "Стъпка 8: Комбинаторика – 8.1–8.3" },
+      { week: 10, main: "Стъпка 4: ТЧ – 4.1–4.3", sec: "Стъпка 8: Комбинаторика – 8.4–8.6" },
+      { week: 11, main: "Стъпка 4: ТЧ – 4.4–4.6", sec: "Стъпка 8: Комбинаторика – 8.7–8.8" },
+      { week: 12, main: "Стъпка 4: ТЧ – 4.7–4.8", sec: "Стъпка 8: Комбинаторика – 8.9–8.10" },
+    ],
+  },
+  {
+    num: 3, name: "ЗАТВЪРДЯВАНЕ", weeks: "СЕДМИЦИ 13–18",
+    goal: "Покриване на функционални уравнения, графи/игри и започване на смесени задачи.",
+    weeks_data: [
+      { week: 13, main: "Стъпка 7: ФУ – 7.1–7.4", sec: "Стъпка 9: Графи – 9.1–9.3" },
+      { week: 14, main: "Стъпка 7: ФУ – 7.5–7.8", sec: "Стъпка 9: Графи – 9.4–9.6" },
+      { week: 15, main: "Стъпка 9: Игри – 9.7–9.10", sec: "Стъпка 6: Неравенства – преговор" },
+      { week: 16, main: "Стъпка 10: НОМ 2012 + 2013", sec: "Стъпка 10: НОМ 2014" },
+      { week: 17, main: "Стъпка 10: НОМ 2015 + контролни БОМ", sec: "Стъпка 10: NOM_2013" },
+      { week: 18, main: "Стъпка 10: NOM_2014 + NOM_2015-2016", sec: "Стъпка 10: BMC_2003-2006" },
+    ],
+  },
+  {
+    num: 4, name: "СИМУЛАЦИИ", weeks: "СЕДМИЦИ 19–24",
+    goal: "Подготовка за реалното състезание с пълни времево ограничени симулации.",
+    weeks_data: [
+      { week: 19, main: "Симулация 1: Цял национален кръг 2012 + преговор", sec: "" },
+      { week: 20, main: "Симулация 2: Цял национален кръг 2013 + преговор", sec: "" },
+      { week: 21, main: "Симулация 3: Цял национален кръг 2014 + преговор", sec: "" },
+      { week: 22, main: "Симулация 4: Цял национален кръг 2015 + преговор", sec: "" },
+      { week: 23, main: "Симулация 5: NOM_2015-2016 + преговор на слаби теми", sec: "" },
+      { week: 24, main: "Леко: само преговор на теореми и леми", sec: "" },
+    ],
+  },
+];
+
+const PLAN_DAYS = [
+  { day: "MON", icon: "book-open", activity: "Основна тема – теория", duration: "30 мин + 1 задача (30 мин)" },
+  { day: "TUE", icon: "book-open", activity: "Основна тема – теория", duration: "30 мин + 1 задача (30 мин)" },
+  { day: "WED", icon: "pencil-ruler", activity: "Основна тема – практика", duration: "2 задачи (1 час)" },
+  { day: "THU", icon: "layers", activity: "Второстепенна тема – теория", duration: "30 мин + 1 задача (30 мин)" },
+  { day: "FRI", icon: "layers", activity: "Второстепенна тема – практика", duration: "2 задачи (1 час)" },
+  { day: "SAT", icon: "target", activity: "Смесени задачи", duration: "3 задачи (2 часа)" },
+  { day: "SUN", icon: "coffee", activity: "Почивка или леко четене", duration: "По избор", rest: true },
+];
+
+/* ═══════════════════════════════════════════════════════════════
+   ACHIEVEMENTS — English, cool names, Lucide icons
+   ═══════════════════════════════════════════════════════════════ */
+const ACHIEVEMENTS = [
+  { id: "first-point", icon: "sparkles", name: "First Light", desc: "Complete your first point", check: () => Stats.done() >= 1 },
+  { id: "10-points", icon: "zap", name: "Kindled", desc: "Complete 10 points", check: () => Stats.done() >= 10 },
+  { id: "25-points", icon: "trending-up", name: "Ascendant", desc: "Complete 25 points", check: () => Stats.done() >= 25 },
+  { id: "50-points", icon: "rocket", name: "To The Stars", desc: "Complete 50 points", check: () => Stats.done() >= 50 },
+  { id: "90-points", icon: "crown", name: "Olympian", desc: "Complete 90 points", check: () => Stats.done() >= 90 },
+  { id: "step1-done", icon: "compass", name: "Pathfinder", desc: "Complete all of Step 1", check: () => Stats.stepDone(1) },
+  { id: "step3-done", icon: "atom", name: "Number Alchemist", desc: "Complete all of Step 3", check: () => Stats.stepDone(3) },
+  { id: "step6-done", icon: "scale", name: "Equilibrium", desc: "Complete all of Step 6", check: () => Stats.stepDone(6) },
+  { id: "streak-3", icon: "waves", name: "Momentum", desc: "Reach a 3-day streak", check: () => Store.state.streak.count >= 3 },
+  { id: "streak-7", icon: "flame", name: "Blaze", desc: "Reach a 7-day streak", check: () => Store.state.streak.count >= 7 },
+  { id: "streak-30", icon: "mountain", name: "Titan", desc: "Reach a 30-day streak", check: () => Store.state.streak.count >= 30 },
+  { id: "first-quiz", icon: "target", name: "First Trial", desc: "Complete your first Quiz", check: () => Object.keys(Store.state.quiz).length >= 1 },
+  { id: "quiz-20", icon: "brain", name: "Keen Mind", desc: "Answer 20 Quiz questions", check: () => Object.keys(Store.state.quiz).length >= 20 },
+  { id: "quiz-perfect", icon: "gem", name: "Flawless", desc: "Score 100% on a Quiz (10+)", check: () => Quiz.stats.correct >= 10 && Quiz.stats.wrong === 0 },
+  { id: "time-1h", icon: "clock", name: "First Hour", desc: "Study for 1 hour total", check: () => Stats.totalTime() >= 3600 },
+  { id: "time-10h", icon: "hourglass", name: "Devoted", desc: "Study for 10 hours total", check: () => Stats.totalTime() >= 36000 },
+  { id: "time-50h", icon: "infinity", name: "Iron Will", desc: "Study for 50 hours total", check: () => Stats.totalTime() >= 180000 },
+  { id: "goal-1", icon: "check-circle-2", name: "Goal Slayer", desc: "Hit your daily goal once", check: () => {
+      const today = Utils.todayStr();
+      return (Store.state.dailyLog[today]?.seconds || 0) >= (Store.state.dailyGoalMinutes || 120) * 60;
+    }},
+  { id: "first-problem", icon: "pencil", name: "First Solve", desc: "Log your first problem", check: () => Store.state.problemLog.length >= 1 },
+  { id: "10-problems", icon: "book-marked", name: "Archivist", desc: "Log 10 problems", check: () => Store.state.problemLog.length >= 10 },
+];
+
+/* ═══════════════════════════════════════════════════════════════
+   MODULE: STORE
+   ═══════════════════════════════════════════════════════════════ */
+const Store = {
+  state: null,
+
+  defaults() {
+    return {
+      progress: {},
+      ui: { filter: 'all', collapsed: {}, scanlines: false, focus: false, tab: 'study' },
+      streak: { count: 0, lastDate: null, history: {} },
+      pomodoroSessions: 0,
+      sessions: [],
+      dailyLog: {},
+      dailyGoalMinutes: 120,
+      quiz: {},
+      achievements: [],
+      bookmarks: {},
+      problemLog: [],
+      recentPoints: [],
+      lastPoint: null,
+      formulaOfDay: null,
+      lastReportShown: null,
+      planProgress: {},
+    };
+  },
+
+  load() {
+    try {
+      const raw = localStorage.getItem(CONFIG.storeKey);
+      if (raw) {
+        const s = JSON.parse(raw);
+        const def = this.defaults();
+        return Object.assign(def, s, {
+          progress: s.progress || {},
+          ui: Object.assign(def.ui, s.ui || {}),
+          streak: Object.assign(def.streak, s.streak || {}),
+          dailyLog: s.dailyLog || {},
+          sessions: s.sessions || [],
+          quiz: s.quiz || {},
+          achievements: s.achievements || [],
+          bookmarks: s.bookmarks || {},
+          problemLog: s.problemLog || [],
+          recentPoints: s.recentPoints || [],
+          planProgress: s.planProgress || {},
+        });
+      }
+    } catch (e) {}
+    for (const key of CONFIG.legacyKeys) {
+      try {
+        const raw = localStorage.getItem(key);
+        if (!raw) continue;
+        const old = JSON.parse(raw);
+        const s = this.defaults();
+        if (old.progress) s.progress = old.progress;
+        else Object.keys(old).forEach(id => {
+          if (old[id]) s.progress[id] = { done: true, fav: false, diff: null, notes: '' };
+        });
+        if (old.ui) Object.assign(s.ui, old.ui);
+        if (old.streak) s.streak = old.streak;
+        return s;
+      } catch (e) {}
+    }
+    return this.defaults();
+  },
+
+  save() {
+    try { localStorage.setItem(CONFIG.storeKey, JSON.stringify(this.state)); } catch (e) {}
+  },
+
+  getPoint(id) {
+    if (!this.state.progress[id]) {
+      this.state.progress[id] = { done: false, fav: false, diff: null, notes: '' };
+    }
+    return this.state.progress[id];
+  },
+
+  exportJSON() {
+    const data = JSON.stringify(this.state, null, 2);
+    const blob = new Blob([data], { type: 'application/json' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'olympiad-progress-' + Utils.todayStr() + '.json';
+    a.click();
+    URL.revokeObjectURL(url);
+    Utils.toast('Exported', 'download');
+  },
+
+  importJSON(e) {
+    const file = e.target.files[0];
+    if (!file) return;
+    const r = new FileReader();
+    r.onload = ev => {
+      try {
+        const data = JSON.parse(ev.target.result);
+        if (!data.progress) throw new Error('Invalid');
+        this.state = Object.assign(this.defaults(), data);
+        this.save();
+        Sidebar.render(); Content.render(); Stats.update(); Plan.render();
+        if (this.state.ui.scanlines) document.body.classList.add('scanlines');
+        Utils.toast('Imported', 'upload');
+      } catch (err) { alert('Invalid format'); }
+    };
+    r.readAsText(file);
+    e.target.value = '';
+  },
+
+  resetAll() {
+    if (!confirm('Reset ALL progress?')) return;
+    this.state = this.defaults();
+    this.save();
+    Sidebar.render(); Content.render(); Stats.update(); Plan.render();
+    Utils.toast('Everything reset', 'trash-2');
+  },
+};
+
+/* ═══════════════════════════════════════════════════════════════
+   MODULE: UTILS
+   ═══════════════════════════════════════════════════════════════ */
+const Utils = {
+  pdfUrl(path, page) {
+    if (!path) return '';
+    const url = path.split('/').map(encodeURIComponent).join('/') + '.pdf';
+    return page ? url + '#page=' + page : url;
+  },
+  escapeHtml(s) {
+    return String(s).replace(/[&<>"']/g, c => ({
+      '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
+    }[c]));
+  },
+  todayStr() {
+    const d = new Date();
+    return d.getFullYear() + '-' + String(d.getMonth()+1).padStart(2,'0') + '-' + String(d.getDate()).padStart(2,'0');
+  },
+  fmtTime(s) {
+    const m = Math.floor(s / 60);
+    const sec = s % 60;
+    return String(m).padStart(2, '0') + ':' + String(sec).padStart(2, '0');
+  },
+  toast(msg, icon) {
+    const t = document.getElementById('toast');
+    if (icon) {
+      t.innerHTML = `<i data-lucide="${icon}"></i><span>${Utils.escapeHtml(msg)}</span>`;
+    } else {
+      t.textContent = msg;
+    }
+    t.classList.add('show');
+    Utils.refreshIcons();
+    clearTimeout(Utils._toastTimer);
+    Utils._toastTimer = setTimeout(() => t.classList.remove('show'), 1800);
+  },
+  refreshIcons() {
+    if (window.lucide) {
+      try { lucide.createIcons(); } catch (e) {}
+    }
+  },
+};
+
+/* ═══════════════════════════════════════════════════════════════
+   MODULE: THEME
+   ═══════════════════════════════════════════════════════════════ */
+const Theme = {
+  apply(theme) {
+    if (theme === 'green') document.body.removeAttribute('data-theme');
+    else document.body.setAttribute('data-theme', theme);
+    const lbl = document.getElementById('themeLabel');
+    if (lbl) lbl.textContent = CONFIG.themeLabels[theme] || 'GREEN';
+    localStorage.setItem(CONFIG.themeKey, theme);
+  },
+  cycle() {
+    const cur = localStorage.getItem(CONFIG.themeKey) || 'green';
+    const idx = CONFIG.themes.indexOf(cur);
+    const next = CONFIG.themes[(idx + 1) % CONFIG.themes.length];
+    this.apply(next);
+    Utils.toast('Theme: ' + CONFIG.themeLabels[next], 'palette');
+  },
+  init() {
+    this.apply(localStorage.getItem(CONFIG.themeKey) || 'green');
+  },
+};
+
+/* ═══════════════════════════════════════════════════════════════
+   MODULE: UI
+   ═══════════════════════════════════════════════════════════════ */
+const UI = {
+  toggleSidebar() {
+    document.getElementById('sidebar').classList.toggle('collapsed');
+  },
+  toggleDropdown(id, event) {
+    if (event) event.stopPropagation();
+    const el = document.getElementById(id);
+    const wasOpen = el.classList.contains('open');
+    this.closeMenus();
+    if (!wasOpen) el.classList.add('open');
+  },
+  closeMenus() {
+    document.querySelectorAll('.dropdown-menu.open').forEach(m => m.classList.remove('open'));
+    const rp = document.getElementById('recentPanel');
+    if (rp) rp.classList.remove('open');
+  },
+  toggleScanlines() {
+    Store.state.ui.scanlines = !Store.state.ui.scanlines;
+    document.body.classList.toggle('scanlines', Store.state.ui.scanlines);
+    const lbl = document.getElementById('scanLabel');
+    if (lbl) lbl.textContent = Store.state.ui.scanlines ? 'ON' : 'OFF';
+    Store.save();
+  },
+};
+
+/* ═══════════════════════════════════════════════════════════════
+   MODULE: TABS
+   ═══════════════════════════════════════════════════════════════ */
+const Tabs = {
+  current: 'study',
+  switch(tab) {
+    this.current = tab;
+    document.querySelectorAll('.main-tab').forEach(t =>
+      t.classList.toggle('active', t.dataset.tab === tab));
+    document.getElementById('view-study').classList.toggle('hidden', tab !== 'study');
+    document.getElementById('view-plan').classList.toggle('hidden', tab !== 'plan');
+    document.getElementById('appRoot').classList.toggle('plan-mode', tab === 'plan');
+    Store.state.ui.tab = tab;
+    Store.save();
+    if (tab === 'plan') Plan.render();
+    Utils.refreshIcons();
+  },
+  init() {
+    const saved = Store.state.ui.tab || 'study';
+    this.switch(saved);
+  },
+};
+
+/* ═══════════════════════════════════════════════════════════════
+   MODULE: HELPERS
+   ═══════════════════════════════════════════════════════════════ */
+function getPoint(id) {
+  for (const s of STEPS) for (const p of s.points) if (p.id === id) return p;
+  return null;
+}
+function getFlatPoints() {
+  const arr = [];
+  for (const s of STEPS) for (const p of s.points) arr.push({ step: s, point: p });
+  return arr;
+}
+function matchFilter(p) {
+  const meta = Store.getPoint(p.id);
+  const f = Store.state.ui.filter;
+  if (f === 'all') return true;
+  if (f === 'done') return meta.done;
+  if (f === 'todo') return !meta.done;
+  if (f === 'fav') return meta.fav;
+  if (f === 'hard') return meta.diff === 'hard';
+  return true;
+}
+function matchSearch(p) {
+  const q = State.searchQuery;
+  if (!q) return true;
+  const lq = q.toLowerCase();
+  const meta = Store.getPoint(p.id);
+  return p.title.toLowerCase().includes(lq) ||
+         p.desc.toLowerCase().includes(lq) ||
+         p.source.toLowerCase().includes(lq) ||
+         (p.explanation || '').toLowerCase().includes(lq) ||
+         (meta.notes || '').toLowerCase().includes(lq) ||
+         p.id.includes(lq);
+}
+
+const State = {
+  searchQuery: '',
+  currentModalId: null,
+  currentIndex: -1,
+};
+
+/* ═══════════════════════════════════════════════════════════════
+   MODULE: STATS
+   ═══════════════════════════════════════════════════════════════ */
+const Stats = {
+  update() {
+    let total = 0, done = 0;
+    STEPS.forEach(s => s.points.forEach(p => {
+      total++;
+      if (Store.getPoint(p.id).done) done++;
+    }));
+    const pct = total ? Math.round(done / total * 100) : 0;
+    document.getElementById('statDone').textContent = done;
+    document.getElementById('statTotal').textContent = total;
+    document.getElementById('statPercent').textContent = pct + '%';
+    document.getElementById('statPomos').textContent = Store.state.pomodoroSessions;
+    document.getElementById('progressFill').style.width = pct + '%';
+    this.renderStreak();
+  },
+  checkStreak() {
+    const today = Utils.todayStr();
+    if (Store.state.streak.lastDate === today) return;
+    const y = new Date();
+    y.setDate(y.getDate() - 1);
+    const yesterday = y.getFullYear() + '-' + String(y.getMonth()+1).padStart(2,'0') + '-' + String(y.getDate()).padStart(2,'0');
+    if (Store.state.streak.lastDate === yesterday) Store.state.streak.count++;
+    else Store.state.streak.count = 1;
+    Store.state.streak.lastDate = today;
+    Store.save();
+    this.renderStreak();
+  },
+  renderStreak() {
+    document.getElementById('streakNum').textContent = Store.state.streak.count || 0;
+  },
+  updateStepBadges() {
+    document.querySelectorAll('.step').forEach(sec => {
+      const stepId = parseInt(sec.id.replace('step-', ''));
+      const step = STEPS.find(s => s.id === stepId);
+      if (!step) return;
+      const done = step.points.filter(p => Store.getPoint(p.id).done).length;
+      const total = step.points.length;
+      const pct = Math.round(done / total * 100);
+      const badge = sec.querySelector('.step-badge');
+      if (badge) {
+        badge.textContent = `${done}/${total} · ${pct}%`;
+        badge.classList.toggle('done', done === total);
+      }
+    });
+  },
+  updateSidebarRings() {
+    document.querySelectorAll('.nav-step').forEach(btn => {
+      const stepId = parseInt(btn.dataset.step);
+      const step = STEPS.find(s => s.id === stepId);
+      if (!step) return;
+      const done = step.points.filter(p => Store.getPoint(p.id).done).length;
+      const pct = Math.round(done / step.points.length * 100);
+      btn.querySelector('.ring').style.setProperty('--pct', pct + '%');
+      btn.querySelector('.ring span').textContent = done + '/' + step.points.length;
+    });
+  },
+};
+Stats.done = function() {
+  let d = 0;
+  STEPS.forEach(s => s.points.forEach(p => { if (Store.getPoint(p.id).done) d++; }));
+  return d;
+};
+Stats.stepDone = function(stepId) {
+  const step = STEPS.find(s => s.id === stepId);
+  return step && step.points.every(p => Store.getPoint(p.id).done);
+};
+Stats.totalTime = function() {
+  return Object.values(Store.state.dailyLog).reduce((sum, d) => sum + (d.seconds || 0), 0);
+};
+
+/* ═══════════════════════════════════════════════════════════════
+   MODULE: SIDEBAR
+   ═══════════════════════════════════════════════════════════════ */
+const Sidebar = {
+  render() {
+    const nav = document.getElementById('sidebarNav');
+    nav.innerHTML = '';
+    STEPS.forEach(step => {
+      const done = step.points.filter(p => Store.getPoint(p.id).done).length;
+      const pct = Math.round(done / step.points.length * 100);
+      const btn = document.createElement('button');
+      btn.className = 'nav-step';
+      btn.dataset.step = step.id;
+      btn.innerHTML = `
+        <span class="num">${String(step.id).padStart(2,'0')}</span>
+        <span class="label">${step.title}</span>
+        <span class="ring" style="--pct:${pct}%"><span>${done}/${step.points.length}</span></span>
+      `;
+      btn.addEventListener('click', () => {
+        if (Tabs.current !== 'study') Tabs.switch('study');
+        Content.scrollToStep(step.id);
+        if (window.innerWidth <= 900) document.getElementById('sidebar').classList.add('collapsed');
+      });
+      nav.appendChild(btn);
+    });
+  },
+};
+
+/* ═══════════════════════════════════════════════════════════════
+   MODULE: CONTENT
+   ═══════════════════════════════════════════════════════════════ */
+const Content = {
+  render() {
+    const container = document.getElementById('stepsContainer');
+    container.innerHTML = '';
+    const flat = getFlatPoints();
+    const filter = Store.state.ui.filter;
+    let visible = 0;
+
+    STEPS.forEach(step => {
+      const pts = step.points.filter(p => matchFilter(p) && matchSearch(p));
+      if (pts.length === 0 && (State.searchQuery || filter !== 'all')) return;
+      visible++;
+
+      const sec = document.createElement('div');
+      sec.className = 'step' + (Store.state.ui.collapsed[step.id] ? ' collapsed' : '');
+      sec.id = 'step-' + step.id;
+
+      const total = step.points.length;
+      const done = step.points.filter(p => Store.getPoint(p.id).done).length;
+      const pct = Math.round(done / total * 100);
+
+      sec.innerHTML = `
+        <div class="step-header" onclick="Content.toggleStep(${step.id}, event)">
+          <span class="step-toggle"><i data-lucide="chevron-down"></i></span>
+          <span class="step-num">${String(step.id).padStart(2,'0')}</span>
+          <span class="step-title">${step.title}</span>
+          <span class="step-badge ${done===total?'done':''}">${done}/${total} · ${pct}%</span>
+          <button class="step-reset" onclick="Content.resetStep(${step.id}, event)" title="Reset step">
+            <i data-lucide="rotate-ccw"></i>
+          </button>
+        </div>
+        <div class="step-body"></div>
+      `;
+
+      const body = sec.querySelector('.step-body');
+      pts.forEach(p => body.appendChild(this.buildPointEl(p, flat)));
+      container.appendChild(sec);
+    });
+
+    if (visible === 0) {
+      container.innerHTML = `
+        <div class="empty">
+          <div class="big"><i data-lucide="search-x"></i></div>
+          <div>NO RESULTS</div>
+          <div style="margin-top:10px;font-size:13px;">Change the filter or search query</div>
+        </div>`;
+    }
+    Utils.refreshIcons();
+  },
+
+  buildPointEl(p, flat) {
+    const meta = Store.getPoint(p.id);
+    const idx = flat.findIndex(x => x.point.id === p.id);
+    const el = document.createElement('div');
+    el.className = 'point';
+    if (meta.done) el.classList.add('done');
+    if (meta.fav) el.classList.add('fav');
+    el.id = 'point-' + p.id.replace('.', '-');
+    el.dataset.pid = p.id;
+    el.dataset.idx = idx;
+
+    const pdfBtn = p.pdf
+      ? `<a href="${Utils.pdfUrl(p.pdf, p.page)}" target="_blank" class="pdf-btn" onclick="event.stopPropagation()"><i data-lucide="file-text"></i> PDF${p.page ? ' · p. ' + p.page : ''}</a>`
+      : '';
+    const pageTag = p.page ? `<span class="tag page">p. ${p.page}</span>` : '';
+    const notesBadge = meta.notes ? `<span class="notes-badge" title="Has notes"><i data-lucide="pencil"></i></span>` : '';
+
+    let bonusHtml = '';
+    if (p.bonus && p.bonus.length) {
+      bonusHtml = `<div class="bonus-row"><span class="section-label" style="margin-right:8px;">MORE:</span>${p.bonus.map(b => `<a href="${Utils.pdfUrl(b.pdf)}" target="_blank" class="pdf-btn bonus" onclick="event.stopPropagation()"><i data-lucide="link"></i> ${b.label}</a>`).join('')}</div>`;
+    }
+
+    el.innerHTML = `
+      <div class="point-row">
+        <button class="point-check ${meta.done?'checked':''}" onclick="PointActions.toggleDone('${p.id}', event)">
+          ${meta.done?'<i data-lucide="check"></i>':''}
+        </button>
+        <div class="point-main">
+          <div class="point-num">POINT ${p.id}${notesBadge}</div>
+          <div class="point-title">${p.title}</div>
+          <div class="point-desc">${p.desc}</div>
+          <div class="point-tags">
+            <span class="tag src">${p.source}</span>
+            ${pageTag}
+            ${pdfBtn}
+          </div>
+        </div>
+        <div class="point-actions">
+          <button class="mini-btn" onclick="Modal.open('${p.id}');event.stopPropagation()" title="Open (Enter)">
+            <i data-lucide="maximize-2"></i>
+          </button>
+          <div class="diff-group">
+            <button class="diff-btn easy ${meta.diff==='easy'?'active':''}" onclick="PointActions.setDiff('${p.id}','easy',event)" title="Easy">E</button>
+            <button class="diff-btn med ${meta.diff==='med'?'active':''}" onclick="PointActions.setDiff('${p.id}','med',event)" title="Medium">M</button>
+            <button class="diff-btn hard ${meta.diff==='hard'?'active':''}" onclick="PointActions.setDiff('${p.id}','hard',event)" title="Hard">H</button>
+          </div>
+          <button class="mini-btn ${meta.fav?'active':''}" onclick="PointActions.toggleFav('${p.id}', event)" title="Star for review">
+            <i data-lucide="${meta.fav?'star':'star'}"></i>
+          </button>
+          <button class="mini-btn" onclick="PointActions.toggleExpand('${p.id}', event)" title="Expand">
+            <i data-lucide="chevron-down"></i>
+          </button>
+        </div>
+      </div>
+      <div class="point-expand">
+        <div class="point-expand-inner">
+          <div class="section-label">▸ Detailed Notes</div>
+          <div class="explanation">${Utils.escapeHtml(p.explanation || '')}</div>
+          <div class="section-label">▸ Personal Notes</div>
+          <textarea class="notes-area" placeholder="Write your ideas, lemmas, tricks..." oninput="PointActions.saveNotes('${p.id}', this.value)" onclick="event.stopPropagation()">${Utils.escapeHtml(meta.notes||'')}</textarea>
+          ${bonusHtml}
+        </div>
+      </div>
+    `;
+
+    return el;
+  },
+
+  toggleStep(stepId, e) {
+    if (e && e.target.closest('.step-reset')) return;
+    Store.state.ui.collapsed[stepId] = !Store.state.ui.collapsed[stepId];
+    Store.save();
+    const sec = document.getElementById('step-' + stepId);
+    if (sec) sec.classList.toggle('collapsed', Store.state.ui.collapsed[stepId]);
+  },
+
+  resetStep(stepId, e) {
+    e.stopPropagation();
+    if (!confirm('Reset all points in this step?')) return;
+    const step = STEPS.find(s => s.id === stepId);
+    step.points.forEach(p => {
+      if (Store.state.progress[p.id]) {
+        Store.state.progress[p.id].done = false;
+        Store.state.progress[p.id].fav = false;
+        Store.state.progress[p.id].diff = null;
+      }
+    });
+    Store.save();
+    this.render();
+    Sidebar.render();
+    Stats.update();
+    Utils.toast('Step reset', 'rotate-ccw');
+  },
+
+  scrollToStep(id) {
+    const el = document.getElementById('step-' + id);
+    if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  },
+
+  scrollToPoint(pid) {
+    const el = document.querySelector(`[data-pid="${pid}"]`);
+    if (!el) return;
+    const sec = el.closest('.step');
+    if (sec && sec.classList.contains('collapsed')) {
+      const sid = parseInt(sec.id.replace('step-', ''));
+      Store.state.ui.collapsed[sid] = false;
+      Store.save();
+      sec.classList.remove('collapsed');
+    }
+    el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    el.classList.add('highlight', 'expanded');
+    setTimeout(() => el.classList.remove('highlight'), 1300);
+  },
+
+  expandAll() {
+    STEPS.forEach(s => Store.state.ui.collapsed[s.id] = false);
+    Store.save();
+    document.querySelectorAll('.step').forEach(el => el.classList.remove('collapsed'));
+    document.querySelectorAll('.point').forEach(el => el.classList.add('expanded'));
+  },
+
+  collapseAll() {
+    STEPS.forEach(s => Store.state.ui.collapsed[s.id] = true);
+    Store.save();
+    document.querySelectorAll('.step').forEach(el => el.classList.add('collapsed'));
+    document.querySelectorAll('.point').forEach(el => el.classList.remove('expanded'));
+  },
+};
+
+/* ═══════════════════════════════════════════════════════════════
+   MODULE: POINT ACTIONS
+   ═══════════════════════════════════════════════════════════════ */
+const PointActions = {
+  toggleDone(id, e) {
+    if (e) e.stopPropagation();
+    const meta = Store.getPoint(id);
+    meta.done = !meta.done;
+    if (meta.done) Stats.checkStreak();
+    Store.save();
+    this.updatePointEl(id);
+    Stats.update(); Stats.updateSidebarRings(); Stats.updateStepBadges();
+    if (meta.done) Utils.toast('Completed: ' + id, 'check');
+    Achievements.check();
+  },
+  toggleFav(id, e) {
+    if (e) e.stopPropagation();
+    const meta = Store.getPoint(id);
+    meta.fav = !meta.fav;
+    Store.save();
+    this.updatePointEl(id);
+    if (meta.fav) Utils.toast('Marked for review', 'star');
+  },
+  setDiff(id, diff, e) {
+    e.stopPropagation();
+    const meta = Store.getPoint(id);
+    meta.diff = meta.diff === diff ? null : diff;
+    Store.save();
+    this.updatePointEl(id);
+  },
+  saveNotes(id, val) {
+    const meta = Store.getPoint(id);
+    meta.notes = val;
+    Store.save();
+    this.updatePointEl(id, true);
+  },
+  toggleExpand(id, e) {
+    if (e) e.stopPropagation();
+    const el = document.querySelector(`[data-pid="${id}"]`);
+    if (el) el.classList.toggle('expanded');
+  },
+  updatePointEl(id, onlyNotesBadge) {
+    const el = document.querySelector(`[data-pid="${id}"]`);
+    if (!el) return;
+    const meta = Store.getPoint(id);
+    if (!onlyNotesBadge) {
+      el.classList.toggle('done', meta.done);
+      el.classList.toggle('fav', meta.fav);
+      const chk = el.querySelector('.point-check');
+      chk.classList.toggle('checked', meta.done);
+      chk.innerHTML = meta.done ? '<i data-lucide="check"></i>' : '';
+      el.querySelectorAll('.diff-btn').forEach(b => {
+        const isActive = b.classList.contains(meta.diff);
+        b.classList.toggle('active', isActive);
+      });
+      const favBtn = el.querySelectorAll('.mini-btn')[1];
+      if (favBtn) favBtn.classList.toggle('active', meta.fav);
+    }
+    const num = el.querySelector('.point-num');
+    const existing = num.querySelector('.notes-badge');
+    if (meta.notes && !existing) num.insertAdjacentHTML('beforeend', ' <span class="notes-badge" title="Has notes"><i data-lucide="pencil"></i></span>');
+    else if (!meta.notes && existing) existing.remove();
+    Utils.refreshIcons();
+  },
+};
+
+/* ═══════════════════════════════════════════════════════════════
+   MODULE: MODAL
+   ═══════════════════════════════════════════════════════════════ */
+const Modal = {
+  open(id) {
+    State.currentModalId = id;
+    const p = getPoint(id);
+    if (!p) return;
+    const meta = Store.getPoint(id);
+    const step = STEPS.find(s => s.points.some(x => x.id === id));
+
+    document.getElementById('pmId').textContent = 'POINT ' + id + ' · ' + (step ? step.title : '');
+    document.getElementById('pmTitle').textContent = p.title;
+    document.getElementById('pmDesc').textContent = p.desc || '';
+    document.getElementById('pmExplanation').textContent = p.explanation || '';
+    const notesEl = document.getElementById('pmNotes');
+    notesEl.value = meta.notes || '';
+    notesEl.oninput = (e) => {
+      meta.notes = e.target.value;
+      Store.save();
+      PointActions.updatePointEl(id, true);
+    };
+
+    document.getElementById('pmSource').innerHTML =
+      `<span class="tag src">${p.source}</span>` +
+      (p.page ? `<span class="tag page">p. ${p.page}</span>` : '');
+
+    const tasks = p.tasks || (p.pdf ? [
+      { label: '<i data-lucide="book-open"></i> Theory (start of article)', pdf: p.pdf, page: p.page || 1 },
+      { label: '<i data-lucide="pencil"></i> Problems (end of article)', pdf: p.pdf, page: Math.max(1, (p.page || 1) + 8) },
+      { label: '<i data-lucide="check-circle-2"></i> Solutions', pdf: p.pdf, page: Math.max(1, (p.page || 1) + 12) }
+    ] : []);
+    const tasksEl = document.getElementById('pmTasks');
+    tasksEl.innerHTML = tasks.length ? tasks.map(t =>
+      `<div class="pm-task-item" onclick="Modal.openPdfTab('${t.pdf}', ${t.page||1})">
+        <span class="label">${t.label}</span>
+        <span class="pg">p. ${t.page||'?'}</span>
+        <span class="go"><i data-lucide="arrow-right"></i></span>
+      </div>`
+    ).join('') : '<div style="color:var(--text-3);font-size:12px;">No PDF tasks available</div>';
+
+    const tabs = [];
+    if (p.page) tabs.push({ key: 'theory', label: '<i data-lucide="book-open"></i> Theory', page: p.page });
+    if (p.problems_page) tabs.push({ key: 'problems', label: '<i data-lucide="pencil"></i> Problems', page: p.problems_page });
+    if (p.solutions_page) tabs.push({ key: 'solutions', label: '<i data-lucide="check-circle-2"></i> Solutions', page: p.solutions_page });
+    if (!tabs.length && p.pdf) tabs.push({ key: 'theory', label: '<i data-lucide="file-text"></i> PDF', page: 1 });
+
+    const tabsEl = document.getElementById('pmTabs');
+    tabsEl.innerHTML = tabs.map(t =>
+      `<button class="pm-tab" data-tab="${t.key}" onclick="Modal.switchTab('${t.key}',${t.page})">${t.label} <span class="badge">${t.page}</span></button>`
+    ).join('') + (p.pdf ?
+      `<button class="pm-tab external" onclick="Modal.openPdfTab('${p.pdf}',${p.page||1})"><i data-lucide="external-link"></i> Open in new tab</button>` : '');
+
+    if (tabs.length) this.switchTab(tabs[0].key, tabs[0].page);
+    else this.loadPdf(p.pdf, 1);
+
+    this.updateButtons();
+
+    // Prerequisites
+    const prereqs = PREREQS[id];
+    if (prereqs && prereqs.length) {
+      const existing = document.querySelector('.pm-section.prereq-section');
+      if (existing) existing.remove();
+      const chips = prereqs.map(pid => {
+        const done = Store.getPoint(pid).done;
+        return `<span class="prereq-chip ${done?'done':''}" onclick="event.stopPropagation();Modal.close();setTimeout(()=>Content.scrollToPoint('${pid}'),100)">${pid}</span>`;
+      }).join('');
+      const el = document.getElementById('pmSource');
+      el.insertAdjacentHTML('afterend',
+        `<div class="pm-section prereq-section"><div class="pm-label">▸ Prerequisites</div><div class="prereq-row">${chips}</div></div>`);
+    }
+
+    // Breadcrumbs
+    const existingCrumb = document.querySelector('.pm-breadcrumbs');
+    if (existingCrumb) existingCrumb.remove();
+    if (step) {
+      const ta = document.querySelector('.pm-title-area');
+      ta.insertAdjacentHTML('beforeend',
+        `<div class="pm-breadcrumbs">
+          <span class="crumb" onclick="Modal.close();if(Tabs.current!=='study')Tabs.switch('study');Content.scrollToStep(${step.id})">Step ${step.id}</span>
+          <span class="sep">›</span>
+          <span>${step.title}</span>
+        </div>`);
+    }
+
+    this.renderBookmarks();
+    Recent.track(id);
+    TimeTracker.start(id);
+
+    document.getElementById('pointModal').classList.add('open');
+    document.body.style.overflow = 'hidden';
+    Pomodoro.syncModal();
+    Utils.refreshIcons();
+  },
+
+  loadPdf(pdf, page) {
+    const frame = document.getElementById('pmPdfFrame');
+    if (!pdf) { frame.src = 'about:blank'; return; }
+    frame.src = Utils.pdfUrl(pdf, page);
+  },
+
+  switchTab(key, page) {
+    document.querySelectorAll('.pm-tab').forEach(t => t.classList.remove('active'));
+    const tab = document.querySelector(`.pm-tab[data-tab="${key}"]`);
+    if (tab) tab.classList.add('active');
+    const p = getPoint(State.currentModalId);
+    if (p) this.loadPdf(p.pdf, page);
+  },
+
+  openPdfTab(pdf, page) {
+    window.open(Utils.pdfUrl(pdf, page), '_blank');
+  },
+
+  close() {
+    TimeTracker.end();
+    document.getElementById('pointModal').classList.remove('open');
+    document.body.style.overflow = '';
+    State.currentModalId = null;
+  },
+
+  navigate(delta) {
+    const flat = getFlatPoints();
+    const visibleIds = flat.filter(x => matchFilter(x.point) && matchSearch(x.point)).map(x => x.point.id);
+    if (!visibleIds.length) return;
+    let pos = visibleIds.indexOf(State.currentModalId);
+    if (pos === -1) pos = 0;
+    else pos = Math.max(0, Math.min(visibleIds.length - 1, pos + delta));
+    this.open(visibleIds[pos]);
+  },
+
+  toggleDone() {
+    if (!State.currentModalId) return;
+    PointActions.toggleDone(State.currentModalId);
+    this.updateButtons();
+  },
+  toggleFav() {
+    if (!State.currentModalId) return;
+    PointActions.toggleFav(State.currentModalId);
+    this.updateButtons();
+  },
+  setDiff(d) {
+    if (!State.currentModalId) return;
+    PointActions.setDiff(State.currentModalId, d);
+    this.updateButtons();
+  },
+  updateButtons() {
+    if (!State.currentModalId) return;
+    const meta = Store.getPoint(State.currentModalId);
+    document.getElementById('pmDone').classList.toggle('active', meta.done);
+    const fav = document.getElementById('pmFav');
+    fav.classList.toggle('active', meta.fav);
+    document.getElementById('pmDiffEasy').classList.toggle('active', meta.diff === 'easy');
+    document.getElementById('pmDiffMed').classList.toggle('active', meta.diff === 'med');
+    document.getElementById('pmDiffHard').classList.toggle('active', meta.diff === 'hard');
+  },
+
+  addBookmark() {
+    if (!State.currentModalId) return;
+    const frame = document.getElementById('pmPdfFrame');
+    let page = 1;
+    try {
+      const m = frame.src.match(/#page=(\d+)/);
+      if (m) page = parseInt(m[1]);
+    } catch (e) {}
+    const label = prompt('Bookmark name:', 'Page ' + page);
+    if (label) Bookmarks.add(State.currentModalId, page, label);
+  },
+
+  renderBookmarks() {
+    if (!State.currentModalId) return;
+    const bms = Store.state.bookmarks[State.currentModalId] || [];
+    const existing = document.getElementById('pmBookmarks');
+    if (existing) existing.remove();
+    if (!bms.length) return;
+    const html = `<div class="pm-section" id="pmBookmarks">
+      <div class="pm-label">▸ Bookmarks</div>
+      ${bms.map((b, i) => `<div class="pm-task-item" onclick="Modal.openPdfTab('${getPoint(State.currentModalId).pdf}', ${b.page})">
+        <span class="label"><i data-lucide="bookmark"></i> ${Utils.escapeHtml(b.label)}</span>
+        <span class="pg">p. ${b.page}</span>
+        <span class="go" onclick="event.stopPropagation();Bookmarks.remove('${State.currentModalId}', ${i})"><i data-lucide="x"></i></span>
+      </div>`).join('')}
+    </div>`;
+    const left = document.querySelector('.pm-left');
+    if (left) left.insertAdjacentHTML('beforeend', html);
+    Utils.refreshIcons();
+  },
+
+  pdfSearch() {
+    const q = document.getElementById('pdfSearch').value.trim();
+    if (!q) return;
+    const p = getPoint(State.currentModalId);
+    if (!p) return;
+    if (/^\d+$/.test(q)) {
+      this.loadPdf(p.pdf, parseInt(q));
+      return;
+    }
+    window.open(Utils.pdfUrl(p.pdf) + '#search=' + encodeURIComponent(q), '_blank');
+  },
+};
+
+/* ═══════════════════════════════════════════════════════════════
+   MODULE: POMODORO
+   ═══════════════════════════════════════════════════════════════ */
+const Pomodoro = {
+  mode: 'focus',
+  remaining: CONFIG.pomo.focus,
+  running: false,
+  interval: null,
+  sessions: 0,
+
+  toggle() {
+    if (this.running) {
+      clearInterval(this.interval);
+      this.running = false;
+    } else {
+      this.running = true;
+      this.interval = setInterval(() => this.tick(), 1000);
+    }
+    this.render();
+  },
+
+  tick() {
+    this.remaining--;
+    if (this.remaining <= 0) {
+      clearInterval(this.interval);
+      this.running = false;
+      if (this.mode === 'focus') {
+        Store.state.pomodoroSessions++;
+        Store.save();
+        Utils.toast('Pomodoro complete!', 'timer');
+        this.sessions++;
+        this.mode = (this.sessions % 4 === 0) ? 'longBreak' : 'shortBreak';
+        this.remaining = this.mode === 'longBreak' ? CONFIG.pomo.longBreak : CONFIG.pomo.shortBreak;
+      } else {
+        Utils.toast('Back to work', 'play');
+        this.mode = 'focus';
+        this.remaining = CONFIG.pomo.focus;
+      }
+      Stats.update();
+    }
+    this.render();
+  },
+
+  reset() {
+    clearInterval(this.interval);
+    this.running = false;
+    this.mode = 'focus';
+    this.remaining = CONFIG.pomo.focus;
+    this.render();
+  },
+
+  render() {
+    document.getElementById('pomoTime').textContent = Utils.fmtTime(this.remaining);
+    const modeEl = document.getElementById('pomoMode');
+    const timeEl = document.getElementById('pomoTime');
+    if (this.mode === 'focus') { modeEl.textContent = 'FOCUS'; timeEl.classList.remove('break'); }
+    else if (this.mode === 'shortBreak') { modeEl.textContent = 'BREAK'; timeEl.classList.add('break'); }
+    else { modeEl.textContent = 'LONG BREAK'; timeEl.classList.add('break'); }
+    const playBtn = document.getElementById('pomoPlay');
+    playBtn.innerHTML = this.running ? '<i data-lucide="pause"></i>' : '<i data-lucide="play"></i>';
+    playBtn.classList.toggle('play', !this.running);
+    document.getElementById('pomoDone').textContent = Store.state.pomodoroSessions;
+    this.syncModal();
+    Utils.refreshIcons();
+  },
+
+  syncModal() {
+    const mt = document.getElementById('pmPomoTime');
+    const mtg = document.getElementById('pmPomoToggle');
+    if (mt) mt.textContent = Utils.fmtTime(this.remaining);
+    if (mtg) mtg.innerHTML = this.running ? '<i data-lucide="pause"></i>' : '<i data-lucide="play"></i>';
+    Utils.refreshIcons();
+  },
+};
+
+/* ═══════════════════════════════════════════════════════════════
+   MODULE: PALETTE
+   ═══════════════════════════════════════════════════════════════ */
+const Palette = {
+  open() {
+    document.getElementById('paletteOverlay').classList.add('open');
+    const inp = document.getElementById('paletteInput');
+    inp.value = '';
+    this.renderResults('');
+    setTimeout(() => inp.focus(), 30);
+  },
+  close() {
+    document.getElementById('paletteOverlay').classList.remove('open');
+  },
+  renderResults(q) {
+    const res = document.getElementById('paletteResults');
+    const flat = getFlatPoints();
+    const query = q.toLowerCase().trim();
+    let matches = flat;
+    if (query) {
+      matches = flat.filter(x =>
+        x.point.title.toLowerCase().includes(query) ||
+        x.point.id.includes(query) ||
+        x.step.title.toLowerCase().includes(query) ||
+        (Store.getPoint(x.point.id).notes || '').toLowerCase().includes(query)
+      );
+    }
+    matches = matches.slice(0, 30);
+    if (matches.length === 0) {
+      res.innerHTML = '<div class="palette-empty">NO RESULTS</div>';
+      return;
+    }
+    res.innerHTML = matches.map((x, i) => {
+      const meta = Store.getPoint(x.point.id);
+      return `<div class="palette-item ${i===0?'selected':''}" data-pid="${x.point.id}">
+        <span class="pnum">${x.point.id}</span>
+        <span class="ptitle">${meta.done?'<i data-lucide="check"></i> ':''}${x.point.title}</span>
+        <span class="pstep">STEP ${x.step.id}</span>
+      </div>`;
+    }).join('');
+    res.querySelectorAll('.palette-item').forEach(el => {
+      el.addEventListener('click', () => {
+        this.close();
+        Content.scrollToPoint(el.dataset.pid);
+      });
+    });
+    Utils.refreshIcons();
+  },
+};
+
+/* ═══════════════════════════════════════════════════════════════
+   MODULE: HELP
+   ═══════════════════════════════════════════════════════════════ */
+const Help = {
+  open() { document.getElementById('helpOverlay').classList.add('open'); },
+  close() { document.getElementById('helpOverlay').classList.remove('open'); },
+};
+
+/* ═══════════════════════════════════════════════════════════════
+   MODULE: KEYS
+   ═══════════════════════════════════════════════════════════════ */
+const Keys = {
+  init() { document.addEventListener('keydown', e => this.handle(e)); },
+  handle(e) {
+    const tag = (e.target.tagName || '').toLowerCase();
+    const inField = tag === 'input' || tag === 'textarea' || tag === 'select';
+    const paletteOpen = document.getElementById('paletteOverlay').classList.contains('open');
+    const helpOpen = document.getElementById('helpOverlay').classList.contains('open');
+    const modalOpen = document.getElementById('pointModal').classList.contains('open');
+    const quizOpen = document.getElementById('quizOverlay').classList.contains('open');
+    const achOpen = document.getElementById('achOverlay').classList.contains('open');
+    const reportOpen = document.getElementById('reportOverlay').classList.contains('open');
+    const sheetOpen = document.getElementById('sheetOverlay').classList.contains('open');
+    const plogOpen = document.getElementById('plogOverlay').classList.contains('open');
+
+    if (e.key === 'Escape') {
+      if (paletteOpen) { Palette.close(); return; }
+      if (helpOpen) { Help.close(); return; }
+      if (quizOpen) { Quiz.close(); return; }
+      if (achOpen) { Achievements.close(); return; }
+      if (reportOpen) { Report.close(); return; }
+      if (sheetOpen) { Formulas.close(); return; }
+      if (plogOpen) { ProblemLog.close(); return; }
+      if (modalOpen) { Modal.close(); return; }
+      if (inField) { e.target.blur(); return; }
+      return;
+    }
+
+    if (quizOpen) {
+      if (e.key === ' ' && !Quiz.currentAnswerShown) { e.preventDefault(); Quiz.showAnswer(); return; }
+      if (e.key === '1') { Quiz.answer(true); return; }
+      if (e.key === '2') { Quiz.answer(false); return; }
+      if (e.key === '3') { Quiz.skip(); return; }
+      return;
+    }
+
+    if (helpOpen) return;
+
+    if (e.ctrlKey && e.key.toLowerCase() === 'k') {
+      e.preventDefault();
+      Palette.open();
+      return;
+    }
+
+    if (modalOpen) {
+      if (inField) return;
+      if (e.key === 'b' || e.key === 'B') { Modal.addBookmark(); return; }
+      if (e.key === 'p' || e.key === 'P') { document.getElementById('pdfSearch').focus(); e.preventDefault(); return; }
+      if (e.key === 'j' || e.key === 'J') { Modal.navigate(1); return; }
+      if (e.key === 'k' || e.key === 'K') { Modal.navigate(-1); return; }
+      if (e.key === ' ') { e.preventDefault(); Modal.toggleDone(); return; }
+      if (e.key === 'n' || e.key === 'N') { document.getElementById('pmNotes').focus(); e.preventDefault(); return; }
+      if (e.key === 't' || e.key === 'T') { Pomodoro.toggle(); return; }
+      if (e.key === 'g' || e.key === 'G') { Theme.cycle(); return; }
+      return;
+    }
+
+    if (inField) return;
+    if (e.key === '/') { e.preventDefault(); document.getElementById('searchInput').focus(); return; }
+    if (e.key === '?') { Help.open(); return; }
+    if (e.key === 'q' || e.key === 'Q') { Quiz.open(); return; }
+    if (e.key === 'f' || e.key === 'F') { Focus.toggle(); return; }
+    if (e.key === 'r' || e.key === 'R') { Random.jump(); return; }
+    if (e.key === 'h' || e.key === 'H') { Recent.toggle(); return; }
+    if (e.key === 'j' || e.key === 'J') { this.navigate(1); return; }
+    if (e.key === 'k' || e.key === 'K') { this.navigate(-1); return; }
+    if (e.key === 't' || e.key === 'T') { Pomodoro.toggle(); return; }
+    if (e.key === 'g' || e.key === 'G') { Theme.cycle(); return; }
+    if (e.key === 'e' || e.key === 'E') { Content.expandAll(); return; }
+    if (e.key === 'c' || e.key === 'C') { Content.collapseAll(); return; }
+    if (e.key === 'Enter') {
+      const el = document.elementFromPoint(window.innerWidth / 2, window.innerHeight / 2);
+      const card = el && el.closest('.point');
+      if (card) { Modal.open(card.dataset.pid); e.preventDefault(); return; }
+    }
+    if (e.key === ' ') {
+      e.preventDefault();
+      const el = document.elementFromPoint(window.innerWidth / 2, window.innerHeight / 2);
+      const card = el && el.closest('.point');
+      if (card) {
+        PointActions.toggleDone(card.dataset.pid);
+        State.currentIndex = parseInt(card.dataset.idx);
+      }
+      return;
+    }
+    if (e.key === 'n' || e.key === 'N') {
+      const el = document.elementFromPoint(window.innerWidth / 2, window.innerHeight / 2);
+      const card = el && el.closest('.point');
+      if (card) {
+        card.classList.add('expanded');
+        const ta = card.querySelector('.notes-area');
+        if (ta) ta.focus();
+      }
+      return;
+    }
+  },
+  navigate(delta) {
+    const flat = getFlatPoints();
+    const visibleIds = flat.filter(x => matchFilter(x.point) && matchSearch(x.point)).map(x => x.point.id);
+    if (!visibleIds.length) return;
+    let pos = visibleIds.indexOf(flat[State.currentIndex]?.point.id);
+    if (pos === -1) pos = 0;
+    else pos = Math.max(0, Math.min(visibleIds.length - 1, pos + delta));
+    const targetId = visibleIds[pos];
+    State.currentIndex = flat.findIndex(x => x.point.id === targetId);
+    Content.scrollToPoint(targetId);
+  },
+};
+
+/* ═══════════════════════════════════════════════════════════════
+   MODULE: EVENTS
+   ═══════════════════════════════════════════════════════════════ */
+const Events = {
+  init() {
+    const searchInp = document.getElementById('searchInput');
+    searchInp.addEventListener('input', e => {
+      State.searchQuery = e.target.value;
+      document.getElementById('kbdHint').classList.toggle('hidden', !!State.searchQuery);
+      if (Tabs.current !== 'study') Tabs.switch('study');
+      Content.render();
+    });
+
+    document.getElementById('filters').addEventListener('click', e => {
+      if (!e.target.classList.contains('chip')) return;
+      document.querySelectorAll('.chip').forEach(c => c.classList.remove('active'));
+      e.target.classList.add('active');
+      Store.state.ui.filter = e.target.dataset.filter;
+      Store.save();
+      Content.render();
+    });
+    document.querySelectorAll('.chip').forEach(c =>
+      c.classList.toggle('active', c.dataset.filter === Store.state.ui.filter));
+
+    document.addEventListener('click', () => UI.closeMenus());
+
+    const palInp = document.getElementById('paletteInput');
+    palInp.addEventListener('input', e => Palette.renderResults(e.target.value));
+    palInp.addEventListener('keydown', e => {
+      const items = document.querySelectorAll('.palette-item');
+      if (e.key === 'Enter') {
+        if (items.length > 0) {
+          const sel = document.querySelector('.palette-item.selected') || items[0];
+          Palette.close();
+          Content.scrollToPoint(sel.dataset.pid);
+        }
+      } else if (e.key === 'ArrowDown' || e.key === 'ArrowUp') {
+        e.preventDefault();
+        const cur = document.querySelector('.palette-item.selected');
+        let idx = cur ? Array.from(items).indexOf(cur) : -1;
+        idx += (e.key === 'ArrowDown' ? 1 : -1);
+        if (idx < 0) idx = items.length - 1;
+        if (idx >= items.length) idx = 0;
+        items.forEach(it => it.classList.remove('selected'));
+        items[idx].classList.add('selected');
+        items[idx].scrollIntoView({ block: 'nearest' });
+      }
+    });
+
+    const gw = document.getElementById('goalWidget');
+    if (gw) gw.addEventListener('dblclick', () => {
+      const cur = Store.state.dailyGoalMinutes || 120;
+      const val = prompt('Daily goal (minutes):', cur);
+      if (val && !isNaN(val)) Goal.setGoal(parseInt(val));
+    });
+  },
+};
+
+/* ═══════════════════════════════════════════════════════════════
+   PREREQS
+   ═══════════════════════════════════════════════════════════════ */
+const PREREQS = {
+  "1.2":["1.1"], "1.3":["1.1","1.2"], "1.4":["1.1"],
+  "1.8":["1.1","1.2","1.5"], "2.1":["1.3","1.4"], "2.2":["2.1"],
+  "2.3":["1.4"], "2.4":["2.2","2.3"], "2.5":["2.1","1.4"],
+  "3.2":["3.1"], "3.3":["3.2"], "3.4":["3.2","3.3"], "3.5":["3.3"],
+  "3.6":["3.2"], "3.7":["3.4"], "3.8":["3.3","3.4","3.7"],
+  "3.9":["3.2","3.3"], "3.10":["4.1"], "4.1":["3.1"], "4.2":["3.1"],
+  "4.4":["3.8","3.9"], "4.7":["3.1","3.4"], "4.8":["3.9"],
+  "5.1":["5.4"], "5.2":["5.1"], "5.3":["5.1","5.2"], "5.4":["5.3"],
+  "5.6":["5.1"], "5.8":["5.1","5.4"],
+  "6.2":["6.1"], "6.3":["6.1"], "6.4":["6.1"], "6.5":["6.1"],
+  "6.6":["6.1"], "6.7":["6.6"], "6.8":["6.1"], "6.9":["6.8"], "6.10":["6.4","6.5"],
+  "7.2":["7.1"], "7.3":["7.1"], "7.4":["7.1"], "7.5":["7.1"],
+  "7.6":["7.1"], "7.7":["7.1"], "7.8":["7.7"],
+  "8.2":["8.1"], "8.3":["8.1"], "8.4":["8.3"], "8.5":["8.4"],
+  "8.6":["8.5"], "8.7":["8.6"], "8.8":["8.3","8.5"], "8.9":["8.4"],
+  "9.2":["9.1"], "9.3":["9.1"], "9.4":["9.1"], "9.5":["9.4"],
+  "9.6":["9.4","9.5"], "9.7":["9.1","9.4"], "9.10":["9.8"],
+};
+
+/* ═══════════════════════════════════════════════════════════════
+   TIME TRACKER
+   ═══════════════════════════════════════════════════════════════ */
+const TimeTracker = {
+  sessionStart: null,
+  currentPointId: null,
+  interval: null,
+  start(pointId) {
+    if (this.sessionStart) this.end();
+    this.sessionStart = Date.now();
+    this.currentPointId = pointId;
+    if (!this.interval) this.interval = setInterval(() => this.tick(), 60000);
+  },
+  end() {
+    if (!this.sessionStart) return;
+    const duration = Math.floor((Date.now() - this.sessionStart) / 1000);
+    if (duration < 10) { this.sessionStart = null; this.currentPointId = null; return; }
+    const today = Utils.todayStr();
+    if (!Store.state.dailyLog[today]) Store.state.dailyLog[today] = { seconds: 0, points: [] };
+    Store.state.dailyLog[today].seconds += duration;
+    if (this.currentPointId && !Store.state.dailyLog[today].points.includes(this.currentPointId)) {
+      Store.state.dailyLog[today].points.push(this.currentPointId);
+    }
+    Store.state.sessions.push({ pointId: this.currentPointId, start: this.sessionStart, end: Date.now() });
+    if (Store.state.sessions.length > 200) Store.state.sessions = Store.state.sessions.slice(-200);
+    Store.state.streak.history[today] = (Store.state.streak.history[today] || 0) + duration;
+    Store.save();
+    this.sessionStart = null;
+    this.currentPointId = null;
+    Goal.render();
+    Calendar.render();
+    Achievements.check();
+  },
+  tick() {
+    if (!this.sessionStart) return;
+    const duration = Math.floor((Date.now() - this.sessionStart) / 1000);
+    const today = Utils.todayStr();
+    if (!Store.state.dailyLog[today]) Store.state.dailyLog[today] = { seconds: 0, points: [] };
+    const prev = Store.state.dailyLog[today].seconds;
+    Goal.renderLive(prev + duration);
+  },
+};
+
+/* ═══════════════════════════════════════════════════════════════
+   GOAL
+   ═══════════════════════════════════════════════════════════════ */
+const Goal = {
+  render() {
+    const today = Utils.todayStr();
+    const log = Store.state.dailyLog[today] || { seconds: 0 };
+    this._render(log.seconds);
+  },
+  renderLive(seconds) { this._render(seconds); },
+  _render(sec) {
+    const mins = Math.floor(sec / 60);
+    const goal = Store.state.dailyGoalMinutes || 120;
+    const pct = Math.min(100, Math.round(mins / goal * 100));
+    const el = document.getElementById('goalLabel');
+    const fill = document.getElementById('goalFill');
+    if (el) el.textContent = `${mins} / ${goal} MIN`;
+    if (fill) {
+      fill.style.width = pct + '%';
+      fill.classList.toggle('done', pct >= 100);
+    }
+  },
+  setGoal(minutes) {
+    Store.state.dailyGoalMinutes = minutes;
+    Store.save();
+    this.render();
+  },
+};
+
+/* ═══════════════════════════════════════════════════════════════
+   CALENDAR
+   ═══════════════════════════════════════════════════════════════ */
+const Calendar = {
+  render() {
+    const grid = document.getElementById('calendarGrid');
+    if (!grid) return;
+    grid.innerHTML = '';
+    const today = new Date();
+    let total = 0;
+    for (let i = 29; i >= 0; i--) {
+      const d = new Date(today);
+      d.setDate(today.getDate() - i);
+      const key = d.getFullYear() + '-' + String(d.getMonth()+1).padStart(2,'0') + '-' + String(d.getDate()).padStart(2,'0');
+      const sec = Store.state.streak.history[key] || 0;
+      total += sec;
+      const cell = document.createElement('div');
+      let lvl = 0;
+      if (sec > 3600) lvl = 4;
+      else if (sec > 1800) lvl = 3;
+      else if (sec > 600) lvl = 2;
+      else if (sec > 60) lvl = 1;
+      cell.className = 'calendar-cell' + (lvl ? ' l'+lvl : '') + (i === 0 ? ' today' : '');
+      cell.title = key + ' · ' + Math.floor(sec/60) + ' min';
+      grid.appendChild(cell);
+    }
+    const t = document.getElementById('calTotal');
+    if (t) t.textContent = Math.floor(total/3600) + 'h';
+  },
+};
+
+/* ═══════════════════════════════════════════════════════════════
+   FORMULA OF THE DAY
+   ═══════════════════════════════════════════════════════════════ */
+const FormulaOfDay = {
+  pool: [
+    { text: "Menelaus: (BM/MC)·(CN/NA)·(AP/PB) = 1", pointId: "1.1" },
+    { text: "Ceva: AM, BN, CP concurrent ⇔ product = 1", pointId: "1.2" },
+    { text: "Ptolemy: AC·BD = AB·CD + BC·AD (cyclic)", pointId: "1.3" },
+    { text: "Euler: IO² = R² − 2Rr", pointId: "1.8" },
+    { text: "Fermat: a^(p−1) ≡ 1 (mod p)", pointId: "3.3" },
+    { text: "Euler (NT): a^φ(n) ≡ 1 (mod n)", pointId: "3.4" },
+    { text: "Wilson: (p−1)! ≡ −1 (mod p)", pointId: "3.5" },
+    { text: "Vieta (quad): x₁+x₂ = −p, x₁x₂ = q", pointId: "5.1" },
+    { text: "Newton: S_k + a₁S_{k−1} + ... + k a_k = 0", pointId: "5.2" },
+    { text: "AM-GM: (∑a_i)/n ≥ ⁿ√(∏a_i)", pointId: "6.1" },
+    { text: "Cauchy: (∑a_ib_i)² ≤ (∑a_i²)(∑b_i²)", pointId: "6.4" },
+    { text: "Jensen: f(avg) ≤ avg(f) for convex f", pointId: "6.5" },
+    { text: "Schur: x³+y³+z³+3xyz ≥ xy(x+y)+...", pointId: "6.9" },
+    { text: "Dirichlet: n+1 objects, n boxes ⇒ 2 in one", pointId: "8.1" },
+    { text: "Linear Diophantine: ax+by=c ⇒ gcd(a,b) | c", pointId: "4.1" },
+    { text: "Pythagoras: x=m²−n², y=2mn, z=m²+n²", pointId: "4.2" },
+    { text: "Turán: ex(n,K_{r+1}) = (1−1/r)·n²/2", pointId: "9.5" },
+    { text: "Ramsey: R(3,3) = 6", pointId: "9.6" },
+  ],
+  current: null,
+  init() {
+    const today = Utils.todayStr();
+    if (Store.state.formulaOfDay && Store.state.formulaOfDay.date === today) {
+      this.current = this.pool.find(f => f.text === Store.state.formulaOfDay.text) || this.pool[0];
+    } else {
+      const seed = today.split('-').join('') | 0;
+      this.current = this.pool[seed % this.pool.length];
+      Store.state.formulaOfDay = { date: today, text: this.current.text };
+      Store.save();
+    }
+    const el = document.getElementById('fodText');
+    if (el) el.textContent = this.current.text;
+  },
+  jump() {
+    if (this.current) {
+      if (Tabs.current !== 'study') Tabs.switch('study');
+      Content.scrollToPoint(this.current.pointId);
+    }
+  },
+};
+
+/* ═══════════════════════════════════════════════════════════════
+   RECENT
+   ═══════════════════════════════════════════════════════════════ */
+const Recent = {
+  track(pointId) {
+    let r = Store.state.recentPoints.filter(x => x !== pointId);
+    r.unshift(pointId);
+    Store.state.recentPoints = r.slice(0, 20);
+    Store.state.lastPoint = pointId;
+    Store.save();
+    this.renderPanel();
+    this.renderContinue();
+  },
+  toggle() {
+    const panel = document.getElementById('recentPanel');
+    const wasOpen = panel.classList.contains('open');
+    UI.closeMenus();
+    if (!wasOpen) {
+      panel.classList.add('open');
+      this.renderPanel();
+    }
+  },
+  renderPanel() {
+    const panel = document.getElementById('recentPanel');
+    if (!panel) return;
+    const ids = Store.state.recentPoints;
+    if (!ids.length) {
+      panel.innerHTML = '<div class="recent-empty">No history yet</div>';
+      return;
+    }
+    panel.innerHTML = ids.map(id => {
+      const p = getPoint(id);
+      if (!p) return '';
+      return `<div class="recent-item" onclick="Recent.jump('${id}')">
+        <i data-lucide="dot"></i>
+        <span class="pn">${id}</span>
+        <span>${p.title}</span>
+      </div>`;
+    }).join('');
+    Utils.refreshIcons();
+  },
+  jump(id) {
+    document.getElementById('recentPanel').classList.remove('open');
+    if (Tabs.current !== 'study') Tabs.switch('study');
+    Content.scrollToPoint(id);
+  },
+  renderContinue() {
+    const btn = document.getElementById('continueBtn');
+    const pt = document.getElementById('continuePt');
+    if (!btn || !pt) return;
+    const id = Store.state.lastPoint;
+    if (!id) { btn.classList.remove('show'); return; }
+    const p = getPoint(id);
+    if (!p) { btn.classList.remove('show'); return; }
+    pt.textContent = id + ' · ' + p.title;
+    btn.classList.add('show');
+  },
+  continueFrom() {
+    const id = Store.state.lastPoint;
+    if (id) {
+      if (Tabs.current !== 'study') Tabs.switch('study');
+      Content.scrollToPoint(id);
+    }
+  },
+};
+
+/* ═══════════════════════════════════════════════════════════════
+   RANDOM
+   ═══════════════════════════════════════════════════════════════ */
+const Random = {
+  jump() {
+    const flat = getFlatPoints();
+    const notDone = flat.filter(x => !Store.getPoint(x.point.id).done);
+    const pool = notDone.length ? notDone : flat;
+    const pick = pool[Math.floor(Math.random() * pool.length)];
+    if (Tabs.current !== 'study') Tabs.switch('study');
+    Content.scrollToPoint(pick.point.id);
+    Utils.toast(pick.point.id, 'dices');
+  },
+};
+
+/* ═══════════════════════════════════════════════════════════════
+   FOCUS
+   ═══════════════════════════════════════════════════════════════ */
+const Focus = {
+  toggle() {
+    Store.state.ui.focus = !Store.state.ui.focus;
+    document.body.classList.toggle('focus-mode', Store.state.ui.focus);
+    Store.save();
+    Utils.toast(Store.state.ui.focus ? 'Focus mode ON' : 'Focus mode OFF', 'eye');
+  },
+  init() {
+    if (Store.state.ui.focus) document.body.classList.add('focus-mode');
+  },
+};
+
+/* ═══════════════════════════════════════════════════════════════
+   QUIZ
+   ═══════════════════════════════════════════════════════════════ */
+const Quiz = {
+  queue: [],
+  index: 0,
+  stats: { correct: 0, wrong: 0, skipped: 0 },
+  currentAnswerShown: false,
+  open() {
+    this.buildQueue();
+    if (!this.queue.length) {
+      Utils.toast('No points for Quiz', 'target');
+      return;
+    }
+    this.index = 0;
+    this.stats = { correct: 0, wrong: 0, skipped: 0 };
+    document.getElementById('quizOverlay').classList.add('open');
+    document.body.style.overflow = 'hidden';
+    this.render();
+  },
+  close() {
+    document.getElementById('quizOverlay').classList.remove('open');
+    document.body.style.overflow = '';
+  },
+  buildQueue() {
+    const now = Date.now();
+    const all = getFlatPoints();
+    const due = all.filter(x => {
+      const q = Store.state.quiz[x.point.id];
+      return q && q.nextReview && q.nextReview <= now;
+    });
+    const fresh = all.filter(x => !Store.state.quiz[x.point.id] && !Store.getPoint(x.point.id).done);
+    const weak = all.filter(x => {
+      const q = Store.state.quiz[x.point.id];
+      return q && q.correct < 3 && !due.includes(x);
+    });
+    const any = all.filter(x => Store.getPoint(x.point.id).done);
+    this.queue = [
+      ...this.shuffle(due),
+      ...this.shuffle(fresh),
+      ...this.shuffle(weak),
+    ].slice(0, 20);
+    if (!this.queue.length) this.queue = this.shuffle(any).slice(0, 10);
+  },
+  shuffle(arr) {
+    const a = [...arr];
+    for (let i = a.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [a[i], a[j]] = [a[j], a[i]];
+    }
+    return a;
+  },
+  render() {
+    if (this.index >= this.queue.length) return this.finish();
+    const item = this.queue[this.index];
+    const p = item.point;
+    document.getElementById('quizProgress').textContent = (this.index + 1) + ' / ' + this.queue.length;
+    document.getElementById('quizQuestion').textContent = p.title;
+    const ansEl = document.getElementById('quizAnswer');
+    ansEl.textContent = (p.explanation || p.desc || '').split('\n\n')[0];
+    ansEl.classList.remove('show');
+    this.currentAnswerShown = false;
+    document.getElementById('quizActions').innerHTML =
+      '<button class="quiz-btn show" onclick="Quiz.showAnswer()"><i data-lucide="eye"></i> SHOW (Space)</button>';
+    this.renderStats();
+    Utils.refreshIcons();
+  },
+  renderStats() {
+    const s = this.stats;
+    document.getElementById('quizStats').innerHTML =
+      `<span><i data-lucide="check-circle-2"></i> Correct: ${s.correct}</span>
+       <span><i data-lucide="x-circle"></i> Wrong: ${s.wrong}</span>
+       <span><i data-lucide="skip-forward"></i> Skipped: ${s.skipped}</span>`;
+    Utils.refreshIcons();
+  },
+  showAnswer() {
+    if (this.currentAnswerShown) return;
+    this.currentAnswerShown = true;
+    document.getElementById('quizAnswer').classList.add('show');
+    document.getElementById('quizActions').innerHTML = `
+      <button class="quiz-btn correct" onclick="Quiz.answer(true)">KNOW (1)</button>
+      <button class="quiz-btn wrong" onclick="Quiz.answer(false)">DON'T KNOW (2)</button>
+      <button class="quiz-btn skip" onclick="Quiz.skip()">SKIP (3)</button>
+    `;
+  },
+  answer(correct) {
+    const item = this.queue[this.index];
+    const id = item.point.id;
+    this.sm2(id, correct);
+    if (correct) this.stats.correct++;
+    else this.stats.wrong++;
+    Achievements.check();
+    this.index++;
+    this.render();
+  },
+  skip() {
+    this.stats.skipped++;
+    this.index++;
+    this.render();
+  },
+  sm2(id, correct) {
+    let q = Store.state.quiz[id] || { ease: 2.5, interval: 1, nextReview: 0, attempts: 0, correct: 0 };
+    q.attempts++;
+    if (correct) {
+      q.correct++;
+      q.interval = q.interval === 1 ? 1 : Math.round(q.interval * q.ease);
+      q.ease = Math.max(1.3, q.ease + 0.1);
+    } else {
+      q.interval = 1;
+      q.ease = Math.max(1.3, q.ease - 0.2);
+    }
+    q.nextReview = Date.now() + q.interval * 24 * 60 * 60 * 1000;
+    Store.state.quiz[id] = q;
+    Store.save();
+  },
+  finish() {
+    const total = this.stats.correct + this.stats.wrong + this.stats.skipped;
+    const pct = total ? Math.round(this.stats.correct / total * 100) : 0;
+    document.getElementById('quizProgress').textContent = 'FINISHED';
+    document.getElementById('quizQuestion').textContent = `Result: ${this.stats.correct}/${total} (${pct}%)`;
+    document.getElementById('quizAnswer').classList.remove('show');
+    document.getElementById('quizActions').innerHTML = `
+      <button class="quiz-btn show" onclick="Quiz.open()">TRY AGAIN</button>
+      <button class="quiz-btn skip" onclick="Quiz.close()">CLOSE</button>
+    `;
+  },
+};
+
+/* ═══════════════════════════════════════════════════════════════
+   ACHIEVEMENTS
+   ═══════════════════════════════════════════════════════════════ */
+const Achievements = {
+  check() {
+    let unlocked = false;
+    ACHIEVEMENTS.forEach(a => {
+      if (Store.state.achievements.includes(a.id)) return;
+      try {
+        if (a.check()) {
+          Store.state.achievements.push(a.id);
+          unlocked = true;
+          Utils.toast('Unlocked: ' + a.name, a.icon);
+        }
+      } catch (e) {}
+    });
+    if (unlocked) Store.save();
+  },
+  open() {
+    this.render();
+    document.getElementById('achOverlay').classList.add('open');
+  },
+  close() {
+    document.getElementById('achOverlay').classList.remove('open');
+  },
+  render() {
+    const grid = document.getElementById('achGrid');
+    grid.innerHTML = ACHIEVEMENTS.map(a => {
+      const unlocked = Store.state.achievements.includes(a.id);
+      return `<div class="ach-item ${unlocked?'unlocked':''}">
+        <div class="ach-icon"><i data-lucide="${a.icon}"></i></div>
+        <div class="ach-info">
+          <div class="ach-name">${a.name}</div>
+          <div class="ach-desc">${a.desc}</div>
+        </div>
+      </div>`;
+    }).join('');
+    const count = document.getElementById('achCount');
+    if (count) count.textContent = `${Store.state.achievements.length} / ${ACHIEVEMENTS.length} unlocked`;
+    Utils.refreshIcons();
+  },
+};
+
+/* ═══════════════════════════════════════════════════════════════
+   FORMULA SHEET
+   ═══════════════════════════════════════════════════════════════ */
+const Formulas = {
+  filter: 'all',
+  open() {
+    this.render();
+    document.getElementById('sheetOverlay').classList.add('open');
+  },
+  close() {
+    document.getElementById('sheetOverlay').classList.remove('open');
+  },
+  toggleFilter() {
+    this.filter = this.filter === 'all' ? 'done' : 'all';
+    document.getElementById('sheetFilterBtn').textContent = this.filter === 'all' ? 'ALL' : 'DONE ONLY';
+    this.render();
+  },
+  render() {
+    const container = document.getElementById('sheetContent');
+    let html = '';
+    STEPS.forEach(step => {
+      const formulas = [];
+      step.points.forEach(p => {
+        if (this.filter === 'done' && !Store.getPoint(p.id).done) return;
+        if (!p.explanation) return;
+        const lines = p.explanation.split('\n').filter(l =>
+          /[=≡⇔≥≤]/.test(l) && l.length < 120 && !l.startsWith('ФОРМУЛИРОВКА') && !l.startsWith('КОГА') && !l.startsWith('СВОЙСТВА') && !l.startsWith('ТРИК')
+        );
+        lines.slice(0, 3).forEach(line => {
+          formulas.push({ text: line.trim(), id: p.id });
+        });
+      });
+      if (!formulas.length) return;
+      html += `<div class="sheet-section">
+        <h3>${step.id}. ${step.title}</h3>
+        ${formulas.map(f => `<div class="sheet-formula">${Utils.escapeHtml(f.text)}<span class="source" onclick="Formulas.close();if(Tabs.current!=='study')Tabs.switch('study');Content.scrollToPoint('${f.id}')">${f.id}</span></div>`).join('')}
+      </div>`;
+    });
+    container.innerHTML = html || '<div style="text-align:center;padding:40px;color:var(--text-3);">No formulas</div>';
+  },
+};
+
+/* ═══════════════════════════════════════════════════════════════
+   PROBLEM LOG
+   ═══════════════════════════════════════════════════════════════ */
+const ProblemLog = {
+  open() {
+    this.render();
+    document.getElementById('plogOverlay').classList.add('open');
+  },
+  close() {
+    document.getElementById('plogOverlay').classList.remove('open');
+  },
+  add() {
+    const label = document.getElementById('plogLabel').value.trim();
+    if (!label) return;
+    const note = document.getElementById('plogNote').value.trim();
+    const status = document.getElementById('plogStatus').value;
+    Store.state.problemLog.unshift({ label, note, status, ts: Date.now() });
+    Store.save();
+    document.getElementById('plogLabel').value = '';
+    document.getElementById('plogNote').value = '';
+    this.render();
+    Achievements.check();
+  },
+  remove(idx) {
+    Store.state.problemLog.splice(idx, 1);
+    Store.save();
+    this.render();
+  },
+  render() {
+    const list = document.getElementById('plogList');
+    const log = Store.state.problemLog;
+    if (!log.length) {
+      list.innerHTML = '<div style="text-align:center;padding:30px;color:var(--text-3);">No problems logged</div>';
+      return;
+    }
+    const statusIcon = { solved: 'check-circle-2', partial: 'circle-dot', failed: 'x-circle' };
+    const statusLabel = { solved: 'SOLVED', partial: 'PARTIAL', failed: 'FAILED' };
+    list.innerHTML = log.map((e, i) => {
+      const d = new Date(e.ts);
+      const dateStr = d.getDate() + '.' + (d.getMonth()+1) + '.' + d.getFullYear();
+      return `<div class="plog-entry">
+        <span class="status ${e.status}"><i data-lucide="${statusIcon[e.status]}"></i> ${statusLabel[e.status]}</span>
+        <div class="info">
+          <div style="color:var(--text);">${Utils.escapeHtml(e.label)}</div>
+          ${e.note ? `<div style="color:var(--text-3);font-size:11px;margin-top:2px;">${Utils.escapeHtml(e.note)}</div>` : ''}
+          <div style="color:var(--text-3);font-size:10px;margin-top:2px;">${dateStr}</div>
+        </div>
+        <button class="del" onclick="ProblemLog.remove(${i})"><i data-lucide="x"></i></button>
+      </div>`;
+    }).join('');
+    Utils.refreshIcons();
+  },
+};
+
+/* ═══════════════════════════════════════════════════════════════
+   REPORT
+   ═══════════════════════════════════════════════════════════════ */
+const Report = {
+  open() {
+    this.render();
+    document.getElementById('reportOverlay').classList.add('open');
+  },
+  close() {
+    document.getElementById('reportOverlay').classList.remove('open');
+  },
+  render() {
+    const now = new Date();
+    const days = [];
+    for (let i = 6; i >= 0; i--) {
+      const d = new Date(now);
+      d.setDate(now.getDate() - i);
+      const key = d.getFullYear() + '-' + String(d.getMonth()+1).padStart(2,'0') + '-' + String(d.getDate()).padStart(2,'0');
+      days.push({ key, date: d, log: Store.state.dailyLog[key] || { seconds: 0, points: [] } });
+    }
+    const totalSec = days.reduce((s, d) => s + d.log.seconds, 0);
+    const uniquePoints = new Set();
+    days.forEach(d => d.log.points.forEach(p => uniquePoints.add(p)));
+    const sessions = Store.state.sessions.filter(s => s.end > now.getTime() - 7*24*60*60*1000);
+    const avgSession = sessions.length ? Math.round(sessions.reduce((s, x) => s + (x.end - x.start), 0) / sessions.length / 60000) : 0;
+    const stepCount = {};
+    uniquePoints.forEach(id => {
+      const step = STEPS.find(s => s.points.some(p => p.id === id));
+      if (step) stepCount[step.id] = (stepCount[step.id] || 0) + 1;
+    });
+    const topStep = Object.entries(stepCount).sort((a,b) => b[1]-a[1])[0];
+    const start = days[0].date;
+    const end = days[6].date;
+    document.getElementById('reportPeriod').textContent =
+      `${start.getDate()}.${start.getMonth()+1} – ${end.getDate()}.${end.getMonth()+1}.${end.getFullYear()}`;
+    document.getElementById('reportStats').innerHTML = `
+      <div class="report-stat"><div class="val">${Math.floor(totalSec/3600)}h ${Math.floor((totalSec%3600)/60)}m</div><div class="lbl">TOTAL TIME</div></div>
+      <div class="report-stat"><div class="val">${uniquePoints.size}</div><div class="lbl">DISTINCT POINTS</div></div>
+      <div class="report-stat"><div class="val">${sessions.length}</div><div class="lbl">SESSIONS</div></div>
+      <div class="report-stat"><div class="val">${avgSession}m</div><div class="lbl">AVG SESSION</div></div>
+      <div class="report-stat"><div class="val">${Store.state.streak.count}</div><div class="lbl">STREAK DAYS</div></div>
+      <div class="report-stat"><div class="val">${topStep ? 'Step ' + topStep[0] : '—'}</div><div class="lbl">TOP TOPIC</div></div>
+    `;
+    const tips = [];
+    if (totalSec < 3 * 3600) tips.push('Under 3 hours this week. Try adding one session per day.');
+    if (totalSec > 10 * 3600) tips.push('Excellent week! Over 10 hours.');
+    if (uniquePoints.size < 5) tips.push('Vary your topics — try Random (R).');
+    if (avgSession < 15) tips.push('Your sessions are short. Try Pomodoro 25/5.');
+    if (Store.state.streak.count === 0) tips.push('No active streak. Open a point and start.');
+    const weakSteps = STEPS.filter(s => {
+      const done = s.points.filter(p => Store.getPoint(p.id).done).length;
+      return done / s.points.length < 0.3;
+    }).slice(0, 2);
+    if (weakSteps.length) tips.push('Weak topics: ' + weakSteps.map(s => 'Step ' + s.id).join(', '));
+    document.getElementById('reportTips').innerHTML = tips.length ? tips.map(t => '<div>• ' + t + '</div>').join('') : '<div>• Keep going! 🚀</div>';
+  },
+  checkAutoShow() {
+    const now = new Date();
+    if (now.getDay() !== 1) return;
+    const week = now.getFullYear() + '-' + Math.ceil((now - new Date(now.getFullYear(),0,1)) / 604800000);
+    if (Store.state.lastReportShown === week) return;
+    Store.state.lastReportShown = week;
+    Store.save();
+    setTimeout(() => this.open(), 2000);
+  },
+};
+
+/* ═══════════════════════════════════════════════════════════════
+   BOOKMARKS
+   ═══════════════════════════════════════════════════════════════ */
+const Bookmarks = {
+  add(pointId, page, label) {
+    if (!Store.state.bookmarks[pointId]) Store.state.bookmarks[pointId] = [];
+    Store.state.bookmarks[pointId].push({ page, label, ts: Date.now() });
+    Store.save();
+    Utils.toast('Bookmarked page ' + page, 'bookmark');
+    if (State.currentModalId === pointId) Modal.renderBookmarks();
+  },
+  remove(pointId, idx) {
+    if (!Store.state.bookmarks[pointId]) return;
+    Store.state.bookmarks[pointId].splice(idx, 1);
+    Store.save();
+    if (State.currentModalId === pointId) Modal.renderBookmarks();
+  },
+};
+
+/* ═══════════════════════════════════════════════════════════════
+   PLAN MODULE — the new tab
+   ═══════════════════════════════════════════════════════════════ */
+const Plan = {
+  collapsed: {},
+  render() {
+    const container = document.getElementById('planContent');
+    if (!container) return;
+
+    // Compute overall progress
+    const totalWeeks = PLAN_PHASES.reduce((a, p) => a + p.weeks_data.length, 0);
+    const doneWeeks = Object.values(Store.state.planProgress || {}).filter(x => x.done).length;
+    const pct = Math.round(doneWeeks / totalWeeks * 100);
+
+    // Determine current week (based on planStartDate or first incomplete week)
+    let currentWeek = null;
+    for (const phase of PLAN_PHASES) {
+      for (const w of phase.weeks_data) {
+        if (!(Store.state.planProgress?.[w.week]?.done)) { currentWeek = w.week; break; }
+      }
+      if (currentWeek) break;
+    }
+
+    let html = `
+      <div class="plan-hero">
+        <div class="eyebrow">YOUR ROADMAP</div>
+        <h1>24-WEEK PROGRESSION PLAN</h1>
+        <p>Two parallel tracks each week — one primary (70%), one secondary (30%). Every week has a clear focus and a review day. Click any week to mark it complete.</p>
+        <div class="plan-stats">
+          <div class="plan-stat">
+            <div class="val">${doneWeeks}/${totalWeeks}</div>
+            <div class="lbl">WEEKS DONE</div>
+          </div>
+          <div class="plan-stat">
+            <div class="val">${pct}%</div>
+            <div class="lbl">COMPLETION</div>
+          </div>
+          <div class="plan-stat">
+            <div class="val">${currentWeek || '—'}</div>
+            <div class="lbl">CURRENT WEEK</div>
+          </div>
+          <div class="plan-stat">
+            <div class="val">~${totalWeeks - doneWeeks}w</div>
+            <div class="lbl">REMAINING</div>
+          </div>
+        </div>
+      </div>
+    `;
+
+    // Phase cards
+    PLAN_PHASES.forEach(phase => {
+      const phaseDone = phase.weeks_data.filter(w => Store.state.planProgress?.[w.week]?.done).length;
+      const phaseTotal = phase.weeks_data.length;
+      const collapsed = this.collapsed['phase-' + phase.num] ? 'collapsed' : '';
+      html += `
+        <div class="phase-card ${collapsed}" data-phase="${phase.num}">
+          <div class="phase-header" onclick="Plan.togglePhase(${phase.num})">
+            <span class="phase-caret"><i data-lucide="chevron-down"></i></span>
+            <div class="phase-num">${phase.num}</div>
+            <div class="phase-meta">
+              <div class="phase-weeks">PHASE ${phase.num} · ${phase.weeks}</div>
+              <div class="phase-title">${phase.name}</div>
+            </div>
+            <div>
+              <div class="phase-goal">${phase.goal}</div>
+              <div class="phase-progress">${phaseDone}/${phaseTotal} weeks complete</div>
+            </div>
+          </div>
+          <div class="phase-body">
+            ${phase.weeks_data.map(w => this.renderWeek(w)).join('')}
+          </div>
+        </div>
+      `;
+    });
+
+    // Daily rhythm
+    const todayIdx = (new Date().getDay() + 6) % 7; // Mon=0
+    const dailyCollapsed = this.collapsed['daily'] ? 'collapsed' : '';
+    html += `
+      <div class="phase-card ${dailyCollapsed}" data-phase="daily">
+        <div class="phase-header" onclick="Plan.togglePhase('daily')">
+          <span class="phase-caret"><i data-lucide="chevron-down"></i></span>
+          <div class="phase-num"><i data-lucide="calendar"></i></div>
+          <div class="phase-meta">
+            <div class="phase-weeks">EVERY WEEK</div>
+            <div class="phase-title">Weekly Rhythm</div>
+          </div>
+          <div>
+            <div class="phase-goal">1–2 hours per day · ~6–7 hours per week</div>
+            <div class="phase-progress">Balanced mix of theory, practice, and simulation</div>
+          </div>
+        </div>
+        <div class="phase-body" style="display:block;padding:12px;">
+          <div class="daily-grid">
+            ${PLAN_DAYS.map((d, i) => `
+              <div class="day-card ${i === todayIdx ? 'today' : ''} ${d.rest ? 'rest' : ''}">
+                <div class="day-name">${d.day}</div>
+                <div class="day-icon"><i data-lucide="${d.icon}"></i></div>
+                <div class="day-activity">${d.activity}</div>
+                <div class="day-duration">${d.duration}</div>
+              </div>
+            `).join('')}
+          </div>
+        </div>
+      </div>
+
+      <div class="plan-legend">
+        <div class="lg"><span class="dot pending"></span> Upcoming</div>
+        <div class="lg"><span class="dot today"></span> Today's activity</div>
+        <div class="lg"><span class="dot"></span> Completed</div>
+      </div>
+    `;
+
+    container.innerHTML = html;
+    Utils.refreshIcons();
+  },
+
+  renderWeek(w) {
+    const done = Store.state.planProgress?.[w.week]?.done;
+    return `
+      <div class="week-item ${done ? 'done' : ''}" onclick="Plan.toggleWeek(${w.week})">
+        <div class="week-head">
+          <span class="week-num">WEEK ${String(w.week).padStart(2, '0')}</span>
+          <span class="week-status">
+            <i data-lucide="${done ? 'check-circle-2' : 'circle'}"></i>
+          </span>
+        </div>
+        <div class="week-topics">
+          <div class="topic-row">
+            <span class="topic-badge">MAIN</span>
+            <span class="topic-text">${w.main}</span>
+          </div>
+          ${w.sec ? `
+            <div class="topic-row sec-topic">
+              <span class="topic-badge">SEC</span>
+              <span class="topic-text">${w.sec}</span>
+            </div>
+          ` : ''}
+        </div>
+      </div>
+    `;
+  },
+
+  toggleWeek(week) {
+    if (!Store.state.planProgress) Store.state.planProgress = {};
+    const cur = Store.state.planProgress[week]?.done;
+    Store.state.planProgress[week] = { done: !cur, ts: Date.now() };
+    Store.save();
+    this.render();
+  },
+
+  togglePhase(num) {
+    const key = 'phase-' + num;
+    this.collapsed[key] = !this.collapsed[key];
+    const el = document.querySelector(`.phase-card[data-phase="${num}"]`);
+    if (el) el.classList.toggle('collapsed', this.collapsed[key]);
+  },
+};
+
+/* ═══════════════════════════════════════════════════════════════
+   INIT
+   ═══════════════════════════════════════════════════════════════ */
+function init() {
+  Store.state = Store.load();
+  Theme.init();
+
+  if (Store.state.ui.scanlines) document.body.classList.add('scanlines');
+  const scanLbl = document.getElementById('scanLabel');
+  if (scanLbl) scanLbl.textContent = Store.state.ui.scanlines ? 'ON' : 'OFF';
+
+  Sidebar.render();
+  Content.render();
+  Stats.update();
+  Pomodoro.render();
+  Events.init();
+  Keys.init();
+
+  // New features init
+  Recent.renderPanel();
+  Recent.renderContinue();
+  Goal.render();
+  Calendar.render();
+  FormulaOfDay.init();
+  Focus.init();
+  Achievements.check();
+  Report.checkAutoShow();
+  Tabs.init();
+  Plan.render();
+
+  // Render Lucide icons after everything is mounted
+  Utils.refreshIcons();
+
+  setInterval(() => Achievements.check(), 30000);
+}
+
+init();
+</script>
+</body>
+</html>

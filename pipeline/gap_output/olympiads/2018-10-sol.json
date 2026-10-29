@@ -1,0 +1,115 @@
+{
+  "_meta": {
+    "pdf": "C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\Задачи_Минали_Години\\Областен\\OLI-2-Областен кръг-2018-10 кл-sol.pdf",
+    "paired_with": null,
+    "level": 1,
+    "type": "sol",
+    "analyzed_at": "2026-10-16T21:20:52.380214",
+    "model": "deepseek/deepseek-v3.2",
+    "text_length": 6424,
+    "paired_text_length": 0
+  },
+  "problems": [
+    {
+      "num": 1,
+      "topic": "algebra",
+      "theorems": [],
+      "techniques": [
+        "substitution",
+        "squaring",
+        "case analysis",
+        "checking conditions"
+      ],
+      "concepts": [
+        "quadratic function",
+        "parabola axis symmetry",
+        "function equation",
+        "domain of equation (|x| ≤ |a|)"
+      ],
+      "difficulty": "standard",
+      "notes": "Equation of the form √f(x) = f(√(a²−x²)). Key insight: equality of quadratic function values occurs either when arguments are equal or symmetric about the parabola's axis."
+    },
+    {
+      "num": 2,
+      "topic": "algebra",
+      "theorems": [
+        "Polynomial Remainder Theorem"
+      ],
+      "techniques": [
+        "polynomial division",
+        "substitution of roots",
+        "solving linear system"
+      ],
+      "concepts": [
+        "polynomial with parameters",
+        "remainder of polynomial division",
+        "roots of divisor",
+        "system of equations"
+      ],
+      "difficulty": "standard",
+      "notes": "Finding parameters so that the remainder of division is a given polynomial. Uses roots of divisor to set up equations."
+    },
+    {
+      "num": 3,
+      "topic": "number_theory",
+      "theorems": [
+        "Chinese Remainder Theorem"
+      ],
+      "techniques": [
+        "pigeonhole principle",
+        "construction of counterexample",
+        "modular arithmetic analysis"
+      ],
+      "concepts": [
+        "coprime numbers",
+        "prime divisibility",
+        "residues modulo prime",
+        "parity",
+        "maximal selection problem"
+      ],
+      "difficulty": "olympic",
+      "notes": "Combinatorial number theory problem. Requires proving maximal n=9 by showing both possibility for any 20 numbers and impossibility for n=10 via a constructed set."
+    },
+    {
+      "num": 4,
+      "topic": "geometry",
+      "theorems": [
+        "Inscribed Angle Theorem",
+        "Cyclic Quadrilateral Theorem"
+      ],
+      "techniques": [
+        "angle chasing",
+        "cyclic quadrilaterals",
+        "introduction of auxiliary point (I)",
+        "proving concyclicity"
+      ],
+      "concepts": [
+        "tangent-chord angle",
+        "inscribed quadrilateral",
+        "angle bisector",
+        "circumcircle",
+        "incenter",
+        "arc measures"
+      ],
+      "difficulty": "hard",
+      "notes": "Complex geometry problem. Key steps: proving MLNC cyclic, showing P, Q, L lie on circle centered at C, introducing I as second intersection of circumcircles of PML and QNL, proving I is the incenter of triangle MNL."
+    }
+  ],
+  "unique_concepts": [
+    "quadratic function symmetry",
+    "domain of equation",
+    "Polynomial Remainder Theorem",
+    "Chinese Remainder Theorem",
+    "pigeonhole principle",
+    "modular residues",
+    "coprime numbers",
+    "tangent-chord angle",
+    "cyclic quadrilateral",
+    "angle bisector",
+    "incenter",
+    "circumcircle",
+    "concyclicity",
+    "angle chasing"
+  ],
+  "confidence": 0.95
+}

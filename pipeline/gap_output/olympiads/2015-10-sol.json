@@ -1,0 +1,65 @@
+{
+  "_meta": {
+    "pdf": "C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\Задачи_Минали_Години\\Областен\\OLI-2-Областен кръг-2015-10 кл-sol.pdf",
+    "paired_with": null,
+    "level": 1,
+    "type": "sol",
+    "analyzed_at": "2026-10-18T15:51:31.486832",
+    "model": "deepseek/deepseek-v3.2",
+    "text_length": 3053,
+    "paired_text_length": 0
+  },
+  "problems": [
+    {
+      "num": 3,
+      "topic": "number_theory",
+      "theorems": [
+        "Chinese_remainder_theorem"
+      ],
+      "techniques": [
+        "modular_arithmetic",
+        "case_analysis"
+      ],
+      "concepts": [
+        "divisibility",
+        "modular_congruences",
+        "solving_congruence_systems"
+      ],
+      "difficulty": "standard",
+      "notes": "Standard problem using CRT and modular analysis on prime factors of 455."
+    },
+    {
+      "num": 4,
+      "topic": "combinatorics",
+      "theorems": [],
+      "techniques": [
+        "bijection",
+        "invariance",
+        "counting_invariants"
+      ],
+      "concepts": [
+        "subsets",
+        "sum_modulo",
+        "cyclic_permutation",
+        "equidistribution_of_sums_modulo_m"
+      ],
+      "difficulty": "olympic",
+      "notes": "Elegant combinatorial argument using a cyclic shift to show equal distribution of subset sums modulo 5."
+    }
+  ],
+  "unique_concepts": [
+    "Chinese_remainder_theorem",
+    "modular_arithmetic",
+    "divisibility",
+    "modular_congruences",
+    "solving_congruence_systems",
+    "bijection",
+    "invariance",
+    "counting_invariants",
+    "subsets",
+    "sum_modulo",
+    "cyclic_permutation",
+    "equidistribution_of_sums_modulo_m"
+  ],
+  "confidence": 0.95
+}

@@ -1,0 +1,127 @@
+{
+  "pdf": "OLI-2-Областен кръг-2012-11 кл",
+  "problems": [
+    {
+      "num": 1,
+      "year": 2012,
+      "grade": 11,
+      "grade_range": null,
+      "round": "oblasten",
+      "statement": "Да се намерят всички цели стойности на параметъра a, за които уравнението sinx+asin2x+sin5x = 2a има решение.",
+      "solution": null,
+      "answer": null,
+      "page": 1,
+      "point_id": "5.10",
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": "medium",
+      "techniques": [
+        "trigonometric_identities",
+        "range_analysis",
+        "parameter_elimination"
+      ],
+      "reasoning": "Задачата е типично тригонометрично уравнение с параметър, което се решава чрез прилагане на тригонометрични тъждества, преобразуване на израза и анализ на диапазона на лявата страна, за да се намерят допустимите стойности на a. Това съвпада с точка 5.10 – Тригонометрични уравнения."
+    },
+    {
+      "num": 2,
+      "year": 2012,
+      "grade": 11,
+      "grade_range": null,
+      "round": "oblasten",
+      "statement": "В остроъгълен △ABC с ортоцентър H и среда M на страната AB, ъглополовящата на <) ACB пресича HM в точка T. Да се докаже, че: а) HT/TM = 2cosγ/(1−cosγ), където γ =<) ACB. б) H лежи на отсечката с краища петите на перпендикулярите от T към AC и BC.",
+      "solution": null,
+      "answer": null,
+      "page": 1,
+      "point_id": "1.4",
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": "hard",
+      "techniques": [
+        "power_of_point",
+        "angle_bisector_theorem",
+        "orthocenter_properties"
+      ],
+      "reasoning": "Задачата изисква степен на точка (power of point) и свойства на ортоцентъра, както и ъглополовящата, за да се получи съотношението HT/TM и позицията на H."
+    },
+    {
+      "num": 3,
+      "year": 2012,
+      "grade": 11,
+      "grade_range": null,
+      "round": "oblasten",
+      "statement": "Разглеждаме ъгли, съставени от едно ъглово квадратче, 2012 хоризонтални съседни и 2012 вертикални съседни квадратчета. Колко най-много ъгли могат да се разположат върху безкрайна клетъчна дъска така, че всеки два ъгъла да имат поне едно общо квадратче?",
+      "solution": null,
+      "answer": null,
+      "page": 1,
+      "point_id": "8.15",
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": "medium",
+      "techniques": [
+        "extremal_principle",
+        "erdos_ko_rado"
+      ],
+      "reasoning": "Задачата изисква намиране на максимален брой ъгли с условие за взаимно пресичане – типичен пример за екстремален принцип (подобно на теоремата на Ердош‑Ко‑Радо)."
+    },
+    {
+      "num": 4,
+      "year": 2012,
+      "grade": 11,
+      "grade_range": null,
+      "round": "oblasten",
+      "statement": "Да се намерят стойностите на реалния параметър a, за които уравнението lg(lg(x³+ax+1)) = lg(lg(2x³+a)) има точно едно решение.",
+      "solution": null,
+      "answer": null,
+      "page": 2,
+      "point_id": "R.4",
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": "medium",
+      "techniques": [
+        "logarithmic_equations",
+        "domain_analysis",
+        "monotonicity"
+      ],
+      "reasoning": "Задачата изисква работа с вложени логаритми, определяне на областта на дефиниция и използване на монотонност за получаване на единствено решение – типични техники от точка R.4 (показателни и логаритмични уравнения)."
+    },
+    {
+      "num": 5,
+      "year": 2012,
+      "grade": 11,
+      "grade_range": null,
+      "round": "oblasten",
+      "statement": "Да се намерят всички прости числа p и q, за които pq дели 12p+q −1 и p = q+2.",
+      "solution": null,
+      "answer": null,
+      "page": 2,
+      "point_id": null,
+      "point_confidence": "off",
+      "alternative_points": [],
+      "difficulty": null,
+      "techniques": [],
+      "reasoning": "не е олимпиадна задача"
+    },
+    {
+      "num": 6,
+      "year": 2012,
+      "grade": 11,
+      "grade_range": null,
+      "round": "oblasten",
+      "statement": "Нека a е реално число и P(x) е неконстантен полином с реални коефициенти така, че P(x²+a) = (P(x))² за всяко реално число x. Да се докаже, че a = 0.",
+      "solution": null,
+      "answer": null,
+      "page": 2,
+      "point_id": "5.7",
+      "point_confidence": "partial",
+      "alternative_points": [
+        "5.3"
+      ],
+      "difficulty": "medium",
+      "techniques": [
+        "polynomial_degree",
+        "polynomial_divisibility"
+      ],
+      "reasoning": "Задачата изисква анализ на степента на полинома и използване на делимост/съотношения между полиноми, което съответства най‑близо на точка 5.7 (делимост на полиноми). Възможно е също да се разглеждат симетрични свойства (5.3), затова се дава частична увереност."
+    }
+  ]
+}

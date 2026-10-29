@@ -1,0 +1,149 @@
+{
+  "_meta": {
+    "pdf": "C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\Задачи_Минали_Години\\Национален\\OLI-3-Национален кръг-1984-9-12 кл-probs.pdf",
+    "paired_with": "C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\Задачи_Минали_Години\\Национален\\OLI-3-Национален кръг-1984-9-12 кл-sol.pdf",
+    "level": 2,
+    "type": "probs",
+    "analyzed_at": "2026-10-18T11:34:01.976868",
+    "model": "deepseek/deepseek-v3.2",
+    "text_length": 1925,
+    "paired_text_length": 6916
+  },
+  "problems": [
+    {
+      "num": 1,
+      "topic": "number_theory",
+      "theorems": [],
+      "techniques": [
+        "modular_arithmetic",
+        "case_analysis",
+        "factorization",
+        "coprime_arguments"
+      ],
+      "concepts": [
+        "exponential_diophantine_equation",
+        "modular_congruences",
+        "parity",
+        "gcd"
+      ],
+      "difficulty": "olympic",
+      "notes": "Equation: 5^x * 7^y + 4 = 3^z. Uses mod 3 and mod 5 to restrict variables, then factors difference of squares."
+    },
+    {
+      "num": 2,
+      "topic": "geometry",
+      "theorems": [
+        "Menelaus",
+        "properties_of_trapezoid_diagonals"
+      ],
+      "techniques": [
+        "auxiliary_points",
+        "ratio_manipulation",
+        "area_comparison"
+      ],
+      "concepts": [
+        "trapezoid",
+        "angle_bisectors",
+        "intersection_points",
+        "area_of_triangle",
+        "similar_triangles",
+        "ratio_of_segments"
+      ],
+      "difficulty": "hard",
+      "notes": "Uses constructed point P' to apply Menelaus, then finds ratios to compute area condition leading to quadratic in k."
+    },
+    {
+      "num": 3,
+      "topic": "combinatorics",
+      "theorems": [],
+      "techniques": [
+        "pairing_argument",
+        "space_partitioning",
+        "contradiction"
+      ],
+      "concepts": [
+        "points_in_space",
+        "tetrahedron_containment",
+        "no_four_coplanar",
+        "geometric_duality",
+        "involution"
+      ],
+      "difficulty": "olympic",
+      "notes": "Combinatorial geometry problem. Uses rotating half-plane to establish a one-to-one pairing of points, forcing even n."
+    },
+    {
+      "num": 4,
+      "topic": "algebra",
+      "theorems": [
+        "Vieta's_formulas",
+        "AM-HM_inequality"
+      ],
+      "techniques": [
+        "symmetric_sums",
+        "inequality_application"
+      ],
+      "concepts": [
+        "polynomial_roots",
+        "real_and_positive_roots",
+        "sum_and_sum_of_reciprocals",
+        "equality_case_in_inequality"
+      ],
+      "difficulty": "standard",
+      "notes": "Standard application of Vieta and the inequality between arithmetic and harmonic means (or Cauchy-Schwarz)."
+    },
+    {
+      "num": 5,
+      "topic": "algebra",
+      "theorems": [],
+      "techniques": [
+        "induction",
+        "algebraic_manipulation",
+        "substitution"
+      ],
+      "concepts": [
+        "inequality_proof",
+        "constraints_on_variables",
+        "product_and_powers",
+        "Bernoulli-type_inequality"
+      ],
+      "difficulty": "hard",
+      "notes": "Non-trivial inductive proof with careful algebraic factorization to show a key auxiliary inequality."
+    },
+    {
+      "num": 6,
+      "topic": "geometry",
+      "theorems": [],
+      "techniques": [
+        "vector_method",
+        "parameterization",
+        "linear_independence",
+        "discriminant_analysis"
+      ],
+      "concepts": [
+        "pyramid",
+        "parallelogram_base",
+        "section_by_moving_plane",
+        "parallelism_to_plane",
+        "locus_of_point",
+        "segment_length"
+      ],
+      "difficulty": "hard",
+      "notes": "Uses vector coordinates to express condition (MN parallel to plane λ), derives parameter relation, uses discriminant to find bounds for parameter m."
+    }
+  ],
+  "unique_concepts": [
+    "exponential_diophantine_equation",
+    "modular_arithmetic",
+    "Menelaus_theorem",
+    "angle_bisectors_in_trapezoid",
+    "area_comparison",
+    "pairing_argument_in_space",
+    "tetrahedron_containment",
+    "Vieta's_formulas",
+    "AM-HM_inequality",
+    "induction_for_inequalities",
+    "vector_methods_in_geometry",
+    "locus_via_discriminant"
+  ],
+  "confidence": 0.95
+}

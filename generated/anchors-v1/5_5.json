@@ -1,0 +1,108 @@
+{
+  "point_id": "5.5",
+  "total": 7,
+  "by_difficulty": {
+    "easy": 0,
+    "medium": 3,
+    "hard": 4
+  },
+  "problems": [
+    {
+      "source": "OLI-2-Областен кръг-2012-10 кл · 2012-10 · Зад. 3",
+      "statement": "Нека a е естествено число, а p е просто число. Да се докаже, че съществуват безбройно много естествени числа n, за които числото [неразчетено: apn+pn] има поне два различни прости делителя.",
+      "solution": "Решение. Ако $p|a$, имаме $a^{p^n} + p^n = p^n(pA + 1)$ и твърдението е очевидно. Оттук нататък ще считаме, че $(a, p) = 1$.\n\nНека $p$ е нечетно, $n = pk$ и $a^{p^{n-1}} = x$, $p^k = y$ за краткост. Тогава\n$$a^{p^n} + p^n = x^p + y^p = (x + y)(x^{p-1} - x^{p-2}y + \\dots - xy^{p-2} + y^{p-1})$$\nи да допуснем, че това число има не повече от един прост делител, т.е. е равно на $q^t$ за някое просто $q$ и някое естествено $t$. Очевидно $q \\neq p$. От $q|x + y$ следва, че $x \\equiv -y \\pmod q$ и тогава\n$$x^{p-1} - x^{p-2}y + \\dots - xy^{p-2} + y^{p-1} \\equiv py^{p-1} \\pmod q$$\nне се дели на $q$, противоречие.\n\nНека $p = 2$ и $n = 4k + 2$, $k \\in \\mathbb{N}$, $a^{2^{n-2}} = u$, $2^k = v$ за краткост. Тогава\n$$a^{2^n} + 2^n = u^4 + 4v^4 = (u^2 + 2uv + 2v^2)(u^2 - 2uv + 2v^2),$$\nкато лесно се доказва, че двата множителя отдясно са взаимно прости и по-големи от 1 и значи имат различни прости делители.",
+      "answer": null,
+      "difficulty": "medium",
+      "techniques": [
+        "factorization",
+        "prime_divisors",
+        "case_analysis"
+      ],
+      "confidence": "exact",
+      "reasoning": "Разлага се a^{p^n}+p^n чрез сума от степени, разглеждат се два случая (p|a и (a,p)=1) и се показва, че полученото число има поне два различни прости делителя."
+    },
+    {
+      "source": "OLI-3-Национален кръг-1989-9-12 кл · 1989-None · Зад. 3",
+      "statement": "Нека p > 1 е естествено число и f(x) = x^p − x + p. Да се докаже, че:\nа) Всеки корен α на полинома f(x) удовлетворява (като комплексно число) неравенството |α| < p^{1/(p−1)}.\nб) Ако p е просто число, то f(x) не може да се представи като произведение на два неконстантни полинома с цели коефициенти.",
+      "solution": "Решение.\nа) Да допуснем, че даденият полином има корен α, за който е |α| ≥ p^(1/(p−1)). От α^p − α + p = 0 следва, че |α−p| = |α^p| = |α|^(p−1)|α| ≥ p|α|. Оттук p|α| ≤ |α−p| ≤ |α|+p, така че |α| ≤ p/(p−1). Тогава\np^(1/(p−1)) ≤ p/(p−1) = 1+1/(p−1) и p ≤ (1+1/(p−1))^(p−1).\nНо (1+1/n)^n < 3 за всяко естествено число n. Следователно p < 3, т.е. p = 2. В този случай имаме α = (1±i√7)/2 и |α| = √2 < 2 = 2^(1/(2−1)), което е противоречие.\nб) Да допуснем, че f(x) = g(x)h(x), където g(x) и h(x) са неконстантни полиноми с цели коефициенти. Тъй като произведението от старшите коефициенти на g(x) и h(x) е равно на 1, а произведението от свободните им членове е равно на p, можем да считаме, че тези старши коефициенти са единици и свободният член на g(x) е ±p (а този на h(x) е ±1). Нека k е степента на g(x), 0 < k < p, а α₁, α₂, ..., α_k са корените му. Понеже всяко от числата α_i е корен и на f(x), имаме |α_i| < p^(1/(p−1)), i = 1, ..., k. Тогава от формулата на Виет α₁α₂...α_k = (−1)^k(±p) следва\np = |α₁|...|α_k| < [p^(1/(p−1))]^k = p^(k/(p−1)).\nСледователно k > p−1, т.е. k ≥ p, което е противоречие.",
+      "answer": null,
+      "difficulty": "medium",
+      "techniques": [
+        "root_bound",
+        "irreducibility",
+        "vieta"
+      ],
+      "confidence": "exact",
+      "reasoning": "Shows |α|<p^{1/(p-1)} and uses Vieta + integer factor arguments to prove no non‑trivial factorisation."
+    },
+    {
+      "source": "OLI-3-Национален кръг-1997-9-12 кл · 1997-None · Зад. 2",
+      "statement": "Let $M$ be the centroid of $\\triangle ABC$. Prove the inequality\n\n$$\\sin\\angle CAM+\\sin\\angle CBM\\leq\\frac{2}{\\sqrt{3}}$$\n\n(a) if the circumscribed circle of $\\triangle AMC$ is tangent to the line $AB$;\n(b) for any $\\triangle ABC$.",
+      "solution": "Solution: We use the standard notation for the elements of $\\triangle ABC$. Let $G$ be the midpoint of $AB$.\n\n(a) It follows from the conditions of the problem that\n\n$$\\left(\\frac{c}{2}\\right)^2=GA^2=GM\\cdot GC=\\frac{1}{3}m_c^2=\\frac{1}{12}(2a^2+2b^2-c^2),$$\n\nand therefore $a^2+b^2=2c^2$. Using the median formula we get $m_a=\\frac{\\sqrt{3}}{2}b$ and $m_b=\\frac{\\sqrt{3}}{2}a$. Further\n\n$$A=\\sin\\angle CAM+\\sin\\angle CBM=S\\left(\\frac{1}{bm_a}+\\frac{1}{am_b}\\right)=\\frac{(a^2+b^2)\\sin\\gamma}{\\sqrt{3}ab}.$$\n\nFrom the Cosine Law $a^2+b^2-2ab\\cos\\gamma=c^2=\\frac{a^2+b^2}{2}$, so $a^2+b^2=4ab\\cos\\gamma$. Therefore $A=\\frac{2}{\\sqrt{3}}\\sin 2\\gamma\\leq\\frac{2}{\\sqrt{3}}$.\n\n(b) There are two circles through $C$ and $M$ tangent to the line $AB$. Denote the contact points by $A_1$ and $B_1$ and let $A_1\\in GA^\\to$, $B_1\\in GB^\\to$. Since $G$ is the midpoint of $A_1B_1$ and $CM:MG=2:1$, $M$ must be the centroid of $\\triangle A_1B_1C$. Furthermore it is clear that $\\angle CAM\\leq\\angle CA_1M$ and $\\angle CBM\\leq\\angle CB_1M$. Suppose $\\angle CA_1M\\leq90^\\circ$ and $\\angle CB_1M\\leq90^\\circ$. Now $\\sin\\angle CAM+\\sin\\angle CBM\\leq\\sin\\angle CA_1M+\\sin\\angle CB_1M\\leq\\frac{2}{\\sqrt{3}}$.\n\nIt remains to consider the case $\\angle CA_1M>90^\\circ$, $\\angle CB_1M\\leq90^\\circ$ (the above angles could not both be obtuse). It follows from $\\triangle CA_1M$ that $CM^2>CA_1^2+A_1M^2$, so\n\n$$\\frac{1}{9}(2b_1^2+2a_1^2-c_1^2)>b_1^2+\\frac{1}{9}(2b_1^2+2c_1^2-a_1^2)$$\n\n($a_1,b_1,c_1$ are sides of $\\triangle A_1B_1C$). We know from (a) that $a_1^2+b_1^2=2c_1^2$ and the above inequality becomes $a_1^2>7b_1^2$. Again from (a) we obtain\n\n$$\\sin\\angle CB_1M=\\frac{b_1\\sin\\gamma_1}{a_1\\sqrt{3}}=\\frac{b_1}{a_1\\sqrt{3}}\\sqrt{1-\\left(\\frac{a_1^2+b_1^2}{4a_1b_1}\\right)^2}.$$\n\nSubstituting $\\frac{b_1^2}{a_1^2}=x$ we get that\n\n$$\\sin\\angle CB_1M=\\frac{1}{4\\sqrt{3}}\\sqrt{14x-x^2-1}<\\frac{1}{4\\sqrt{3}}\\sqrt{2-\\frac{1}{49}-1}=\\frac{1}{7}$$\n\nsince $x<\\frac{1}{7}$. Therefore\n\n$$\\sin\\angle CAM+\\sin\\angle CBM<1+\\sin\\angle CB_1M<1+\\frac{1}{7}<\\frac{2}{\\sqrt{3}}.$$\n\nNote: The inequality holds only for $\\triangle ABC$ with angles $\\alpha=22.5^\\circ$, $\\beta=112.5^\\circ$, $\\gamma=45^\\circ$ or $\\alpha=112.5^\\circ$, $\\beta=22.5^\\circ$, $\\gamma=45^\\circ$.",
+      "answer": null,
+      "difficulty": "medium",
+      "techniques": [
+        "median_formula",
+        "trig_identity",
+        "inequality"
+      ],
+      "confidence": "exact",
+      "reasoning": "Uses median lengths to express the sines, then reduces to sin 2γ ≤ 1 via basic trig identities."
+    },
+    {
+      "source": "OLI-2-Областен кръг-2025-11 кл · 2025-11 · Зад. 4",
+      "statement": "Да се докаже, че за всяко естествено число n съществува просто число p < 2^{2^n}, за което 2^n дели p − 1.",
+      "solution": "Решение. Имаме $2^{2^n - 1} = \\left(2^{2^{n-1} - 1}\\right)\\left(2^{2^{n-1} + 1}\\right)$. Нека $p$ е прост делител на $2^{2^{n-1} + 1}$. Ясно е, че $p \\mid 2^{2^n - 1}$, но $p \\nmid 2^{2^{n-1} - 1}$. Ще докажем, че $2^n$ дели $p - 1$. Нека $k$ е показателя на 2 по модул $p$, т.е. $k$ е най-малкото естествено число, за което $p \\mid 2^k - 1$. От казаното следва $k \\mid 2^n$ и $k \\nmid 2^{n-1}$, което дава $k = 2^n$. От друга страна, от малката теорема на Ферма получаваме: $2^{p-1} \\equiv 1 \\pmod p$ и значи $k \\mid p - 1$, т.е. $2^n \\mid p - 1$.",
+      "answer": null,
+      "difficulty": "hard",
+      "techniques": [
+        "order_of_element_mod_prime",
+        "primitive_prime_divisor",
+        "fermat_little_theorem"
+      ],
+      "confidence": "exact",
+      "reasoning": "Considers the order k of 2 modulo a prime divisor of 2^{2^{n-1}+1}, shows k=2^n and thus 2^n | p‑1."
+    },
+    {
+      "source": "OLI-3-Национален кръг-1983-9-12 кл · 1983-None · Зад. 5",
+      "statement": "Могат ли полиномите x⁵ − x − 1 и x² + ax + b, където a и b са рационални числа, да имат общи корени в областта на комплексните числа?",
+      "solution": "Решение. Да допуснем, че съществува α, за което α⁵ = α+1 и α² = −aα−b. Тогава е сигурно, че α не е рационално, защото уравнението x⁵−x−1 = 0 няма рационални корени. От горните две равенства последователно получаваме\nα+1 = α⁵ = α·α²·α² = α(−aα−b)² = a[a²(−aα−b)+2abα+b²] = [неразчетено]\n= (2ab−a³)(−aα−b)+(b²−a²b)α =\n= (a⁴−3a²b+b²)α+(a³b−2ab²).\nТъй като α не е рационално число, следва, че\n(1) a⁴−3a²b+b² = 1,\n(2) a³b−2ab² = 1.\nУмножаваме (1) с 2a, прибавяме го към (2) и получаваме\nb = (2a⁵−2a−1)/(5a³).\nЗаместваме b в (2) и след кратки преобразувания стигаме до уравнението\na¹⁰+3a⁶−11a⁵−4a²−4a−1 = 0.\nПоследното равенство противоречи на условието, че a е рационално число, понеже уравнението x¹⁰+3x⁶−11x⁵−4x²−4x−1 = 0 няма рационални корени.",
+      "answer": "Не, не могат да имат общи комплексни корени.",
+      "difficulty": "hard",
+      "techniques": [
+        "irreducible_polynomials",
+        "rational_root_theorem",
+        "resultant"
+      ],
+      "confidence": "exact",
+      "reasoning": "Shows quintic has no rational root and derives contradictions for rational a,b; relies on irreducibility of the quintic (step 5.5)."
+    },
+    {
+      "source": "OLI-3-Национален кръг-2003-9-12 кл · 2003-None · Зад. 6",
+      "statement": "Find all polynomials $P(x)$ with integer coefficients such that for any positive integer $n$ the equation $P(x) = 2^n$ has an integer solution.",
+      "solution": "Denote by $m$ and $a$ the degree and the leading coefficient of $P(x)$, respectively. Let $x_n$ be an integer solution of the equation $P(x) = 2^n$. Since $\\lim_{n \\to \\infty} |x_n| = +\\infty$, then $\\lim_{n \\to \\infty} \\frac{a|x_n|^m}{2^n} = 1$ and hence $\\lim_{n \\to \\infty} \\left| \\frac{x_{n+1}}{x_n} \\right| = \\sqrt[n]{2}$.\n\nOn the other hand, $x_{n+1} - x_n$ divides $P(x_{n+1}) - P(x_n)$ and thus $|x_{n+1} - x_n| = 2^{k_n}$ for some $k_n \\ge 0$. Then\n\n$$\\left| \\frac{x_{n+1}}{x_n} \\right| = \\frac{2^{k_n}}{|x_n|} + \\varepsilon_n,$$\n\nwhere $\\varepsilon_n = \\pm 1$ and we get that\n\n$$\\sqrt[n]{2} = \\lim_{n \\to \\infty} \\left( \\frac{2^{k_n}}{|x_n|} + \\varepsilon_n \\right) = \\lim_{n \\to \\infty} \\left( 2^{k_n} \\sqrt[m]{\\frac{a}{2^n} + \\varepsilon_n} \\right).$$\n\nNote that $\\varepsilon_n$ equals either 1 or $-1$ for infinitely many $n$. Since the two cases are similar, we shall consider only the second one. Let $1 = \\varepsilon_{i_1} = \\varepsilon_{i_2} = \\cdots$. Then\n\n$$\\sqrt[n]{2} + 1 = \\sqrt[n]{a} \\lim_{j \\to \\infty} 2^{k_{i_j} - i_j}$$\n\nand hence the sequence of integers $k_{i_j} - i_j$ converges to some integer $\\ell$. It follows that $(\\sqrt[n]{2} + 1)^m = a 2^{m\\ell}$ is a rational number. According to the Eisenstein criteria, the polynomial $x^m - 2$ is irreducible. Hence $(x - 1)^m - 2$ is the minimal polynomial of $\\sqrt[n]{2} + 1$. It follows that $(x - 1)^m - 2 = x^m - a 2^{m\\ell}$ which is possible only for $m = 1$.\n\nLet $P(x) = ax + b$. Then $a(x_2 - x_1)$ divides 2 and thus $a = \\pm 1, \\pm 2$. Now it follows easily that all polynomials with the desired property are of the form $P(x) = a(x + b)$, where $a = \\pm 1, \\pm 2$ and $b$ is an arbitrary integer.",
+      "answer": "P(x) = a(x + b), a ∈ {−2, −1, 1, 2}, b ∈ ℤ.",
+      "difficulty": "hard",
+      "techniques": [
+        "polynomial_degree_analysis",
+        "eisenstein_criterion",
+        "linear_polynomial"
+      ],
+      "confidence": "exact",
+      "reasoning": "Analyzes degree and leading coefficient, uses irreducibility (Eisenstein) to show only linear polynomials of specific form work."
+    },
+    {
+      "source": "OLI-3-Национален кръг-2007-9-12 кл · 2007-None · Зад. 3",
+      "statement": "[неразчетено] cos(π/n) [неразчетено] p + √q + ∛r, където q ≥ 0, p, r ∈ ℚ. [неразчетено]",
+      "solution": "Решение. Ще докажем, че n = 7. Имаме, че cos π = −1, cos(π/2) = 0, cos(π/3) = 1/2, cos(π/4) = √2/2, cos(π/6) = √3/2.\nОсвен това, от 0 = cos(3π/5) + cos(2π/5), следва, че x₅ = cos(π/5) е корен на уравнението 0 = 4x³ − 3x + 2x² − 1 = (x + 1)(4x² − 2x − 1), откъдето x₅ = (1 + √5)/4.\nОстава да покажем, че x₇ = cos(π/7) няма дадения вид. Понеже 0 = cos(4π/7) + cos(3π/7), следва, че x₇ е корен на\n0 = 2(2x² − 1)² − 1 + 4x³ − 3x = (x + 1)(8x³ − 4x² − 4x + 1),\nт.е. x₇ е нула на полинома P(x) = 8x³ − 4x² − 4x + 1. Сега да допуснем, че x₇ = p + √q + ∛r, където q ≥ 0, p, r ∈ ℚ. Тогава x₇ е нула на полинома\nQ(x) = (x − p − √q)³ − r\nс коефициенти от ℚ[√q], т.е. от вида a + b√q, a, b ∈ ℚ. Понеже коефициентът пред x е неотрицателен, то P ≠ 8Q. Тогава P = 8Q + R, където R е полином от степен 1 или 2 с коефициенти от ℚ[√q] и R(x₇) = 0. Ако deg R = 1, то x₇ ∈ ℚ[√q]. Ако deg R = 2 и R не дели P, то x₇ е нулата на остатъка на P при деление на R, т.е. отново x₇ ∈ ℚ[q]. Ако deg R = 2 и R дели P, то нулата на P/R, която е от ℚ[q], е нула и на P. И така, P има нула от ℚ[q]. Тази нула е нула на полином от степен 1 или 2 с рационални коефициенти. Подобно на по-горе следва, че P има рационална нула. Тя трябва да е измежду числата ±1, ±1/2, ±1/4, ±1/8 и директна проверка води до противоречие.\nЗабележки. а) Известно е, че степента на минималният полином на cos(π/n) при n ≥ 2 е равна на φ(2n)/2, където φ е функцията на Ойлер.\nб) Следвайки горното решение, може да се докаже, че ако полиномът P(x) = 8x³ + ax² + bx + 1, a, b ∈ ℤ, има нула от вида p + √q + ∛r, q ≥ 0, p, r ∈ ℚ, но няма рационална нула, то a = −12, b = 6, т.е. P(x) = (2x − 1)³ + 2.",
+      "answer": "n = 7",
+      "difficulty": "hard",
+      "techniques": [
+        "minimal_polynomial",
+        "cyclotomic_polynomials"
+      ],
+      "confidence": "exact",
+      "reasoning": "The impossibility of representing cos(π/7) as p+√q+∛r is shown via its minimal polynomial of degree 3, which is irreducible over ℚ[√q]."
+    }
+  ]
+}

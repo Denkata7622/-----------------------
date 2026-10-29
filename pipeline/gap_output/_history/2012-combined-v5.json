@@ -1,0 +1,306 @@
+{
+  "_meta": {
+    "pdf": "C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\Материали_БГ\\OT_2012.pdf",
+    "paired_with": null,
+    "level": 3,
+    "type": "combined",
+    "analyzed_at": "2026-10-16T21:59:10.060466",
+    "model": "deepseek/deepseek-v3.2",
+    "text_length": 118886,
+    "paired_text_length": 0
+  },
+  "problems": [
+    {
+      "num": 1,
+      "topic": "number_theory",
+      "theorems": [
+        "Chinese Remainder Theorem",
+        "Bézout's theorem",
+        "Gauss's lemma"
+      ],
+      "techniques": [
+        "substitution",
+        "contradiction",
+        "induction",
+        "modular arithmetic"
+      ],
+      "concepts": [
+        "polynomials with integer coefficients",
+        "irreducible polynomials",
+        "divisibility of polynomial values",
+        "prime divisors",
+        "arithmetic progressions"
+      ],
+      "difficulty": "olympic",
+      "notes": "Schur's lemma and generalizations about divisors of polynomial values."
+    },
+    {
+      "num": 2,
+      "topic": "combinatorics",
+      "theorems": [],
+      "techniques": [
+        "pigeonhole principle",
+        "extremal principle",
+        "graph theory",
+        "contradiction"
+      ],
+      "concepts": [
+        "acquaintance graphs",
+        "cliques and independent sets",
+        "graph connectivity",
+        "Ramsey-type arguments"
+      ],
+      "difficulty": "olympic",
+      "notes": "Problem about acquaintances in a group; uses graph model and extremal argument."
+    },
+    {
+      "num": 3,
+      "topic": "combinatorics",
+      "theorems": [],
+      "techniques": [
+        "graph theory",
+        "extremal principle",
+        "contradiction"
+      ],
+      "concepts": [
+        "connected graphs",
+        "cycles",
+        "spanning trees",
+        "edge count",
+        "graph connectivity after edge deletion"
+      ],
+      "difficulty": "standard",
+      "notes": "Graph with property that deleting any cycle disconnects it; find max vertices."
+    },
+    {
+      "num": 4,
+      "topic": "combinatorics",
+      "theorems": [],
+      "techniques": [
+        "graph theory",
+        "induction",
+        "cycle existence proof"
+      ],
+      "concepts": [
+        "connected graphs",
+        "cycles",
+        "spanning trees",
+        "edge and vertex count"
+      ],
+      "difficulty": "standard",
+      "notes": "Connected graph with 100 vertices and 199 edges; prove existence of a cycle whose removal preserves connectivity."
+    },
+    {
+      "num": 5,
+      "topic": "combinatorics",
+      "theorems": [],
+      "techniques": [
+        "graph theory",
+        "induction",
+        "spanning trees"
+      ],
+      "concepts": [
+        "connected graphs",
+        "vertex degrees",
+        "parity of degrees",
+        "spanning trees"
+      ],
+      "difficulty": "standard",
+      "notes": "In any connected graph with even number of vertices, can delete edges so all vertices have odd degree."
+    },
+    {
+      "num": 6,
+      "topic": "combinatorics",
+      "theorems": [],
+      "techniques": [
+        "graph theory",
+        "coloring",
+        "contradiction",
+        "cycle construction"
+      ],
+      "concepts": [
+        "vertex coloring",
+        "regular graphs",
+        "long cycles",
+        "graph connectivity"
+      ],
+      "difficulty": "hard",
+      "notes": "Graph with 2007 countries and more cities; prove existence of a long closed route (cycle of length at least 4012)."
+    },
+    {
+      "num": 7,
+      "topic": "combinatorics",
+      "theorems": [],
+      "techniques": [
+        "graph theory",
+        "coloring",
+        "construction",
+        "extremal principle"
+      ],
+      "concepts": [
+        "vertex coloring",
+        "regular graphs",
+        "cycle length",
+        "graph construction"
+      ],
+      "difficulty": "hard",
+      "notes": "Find minimal possible length of the longest cycle in a colored graph with specific adjacency conditions."
+    },
+    {
+      "num": 8,
+      "topic": "geometry",
+      "theorems": [],
+      "techniques": [
+        "optimization",
+        "symmetry",
+        "projection",
+        "triangle inequality"
+      ],
+      "concepts": [
+        "shortest path problem",
+        "reflection principle",
+        "speed ratios",
+        "river crossing"
+      ],
+      "difficulty": "standard",
+      "notes": "Eskimo path optimization across a river; uses symmetry and projection."
+    },
+    {
+      "num": 9,
+      "topic": "geometry",
+      "theorems": [],
+      "techniques": [
+        "similar triangles",
+        "circumcircles",
+        "angle chasing"
+      ],
+      "concepts": [
+        "circumscribed quadrilateral",
+        "incircle",
+        "midpoints",
+        "arcs",
+        "power of a point"
+      ],
+      "difficulty": "standard",
+      "notes": "Inequality for product of sides in a circumscribed quadrilateral."
+    },
+    {
+      "num": 10,
+      "topic": "geometry",
+      "theorems": [],
+      "techniques": [
+        "angle sum",
+        "spatial reasoning",
+        "contradiction"
+      ],
+      "concepts": [
+        "hexagon with unit sides",
+        "circumradius",
+        "angle sum",
+        "spatial model"
+      ],
+      "difficulty": "standard",
+      "notes": "At least one of two triangles in a unit-side hexagon has circumradius at least 1."
+    },
+    {
+      "num": 11,
+      "topic": "geometry",
+      "theorems": [],
+      "techniques": [
+        "angle ordering",
+        "quadrilateral in circle",
+        "circumcircle"
+      ],
+      "concepts": [
+        "triangle centers (centroid, incenter, orthocenter)",
+        "angle between centers",
+        "obtuse angle proof"
+      ],
+      "difficulty": "hard",
+      "notes": "Prove angle MIH is obtuse in a scalene triangle."
+    },
+    {
+      "num": 12,
+      "topic": "geometry",
+      "theorems": [
+        "Stewart's theorem"
+      ],
+      "techniques": [
+        "triangle inequalities",
+        "side length comparison"
+      ],
+      "concepts": [
+        "excircles",
+        "triangle construction from cevians",
+        "acute triangle"
+      ],
+      "difficulty": "hard",
+      "notes": "Segments from vertices to excenters' touchpoints form a triangle (and it's acute)."
+    }
+  ],
+  "unique_concepts": [
+    "polynomials with integer coefficients",
+    "irreducible polynomials",
+    "divisibility of polynomial values",
+    "prime divisors",
+    "arithmetic progressions",
+    "Chinese Remainder Theorem",
+    "Bézout's theorem",
+    "Gauss's lemma",
+    "Schur's lemma",
+    "acquaintance graphs",
+    "cliques and independent sets",
+    "graph connectivity",
+    "Ramsey-type arguments",
+    "connected graphs",
+    "cycles",
+    "spanning trees",
+    "edge count",
+    "graph connectivity after edge deletion",
+    "vertex degrees",
+    "parity of degrees",
+    "vertex coloring",
+    "regular graphs",
+    "long cycles",
+    "shortest path problem",
+    "reflection principle",
+    "speed ratios",
+    "river crossing",
+    "circumscribed quadrilateral",
+    "incircle",
+    "midpoints",
+    "arcs",
+    "power of a point",
+    "hexagon with unit sides",
+    "circumradius",
+    "angle sum",
+    "spatial model",
+    "triangle centers (centroid, incenter, orthocenter)",
+    "angle between centers",
+    "obtuse angle proof",
+    "excircles",
+    "triangle construction from cevians",
+    "acute triangle",
+    "Stewart's theorem",
+    "pigeonhole principle",
+    "extremal principle",
+    "graph theory",
+    "contradiction",
+    "substitution",
+    "induction",
+    "modular arithmetic",
+    "coloring",
+    "construction",
+    "optimization",
+    "symmetry",
+    "projection",
+    "triangle inequality",
+    "similar triangles",
+    "circumcircles",
+    "angle chasing",
+    "angle ordering",
+    "quadrilateral in circle",
+    "side length comparison"
+  ],
+  "confidence": 0.95
+}

@@ -1,0 +1,658 @@
+{
+  "total": 56,
+  "problems": [
+    {
+      "source": "BMC_2003-2006 · 2003-9 · Зад. 1",
+      "statement": null,
+      "solution": "First solution. Since $CP = CQ$, $CA = CB$ and $\\angle APC = \\angle BQC = 90^\\circ$, then $\\triangle APC \\cong BQC$. Hence $\\angle CAP = \\angle CBQ$. Setting $AP \\cap BQ = T$, it follows that the quadrilateral $ABTC$ is cyclic. Then $\\angle BAC = \\angle QTC$ and now $\\angle TQC = \\angle AHC = 90^\\circ$ implies that $\\angle QCT = \\angle ACH$. The equalities $\\angle AHC = \\angle APC = \\angle CPT = \\angle CQT = 90^\\circ$ show that $AHPC$ and $CPTQ$ are cyclic quadrilaterals. Thus $\\angle APH = \\angle ACH$ and $\\angle QPT = \\angle QCT$ which means that $\\angle APH = \\angle QPT$. Hence the points $H$, $P$ and $Q$ are collinear.\n\nSecond solution. Set $S = HQ \\cap k$. Since the quadrilateral $BHCQ$ is cyclic, and the triangles $ABC$ and $CQS$ are isosceles, it follows that $\\angle BAC = \\angle ABC = \\angle HQC = \\angle CSQ$. Then $AHSC$ is a cyclic quadrilateral and therefore $\\angle ASC = \\angle AHC = 90^\\circ$. Hence $S = P$, i.e., the points $H$, $P$ and $Q$ are collinear.",
+      "answer": "The points H, P and Q are collinear.",
+      "difficulty": null,
+      "techniques": [],
+      "confidence": "pending",
+      "reasoning": "standalone"
+    },
+    {
+      "source": "BMC_2003-2006 · 2003-9 · Зад. 2",
+      "statement": null,
+      "solution": "The given equation is equivalent to\n\n$$ax^2 + (1 - 2a)x + (1 - a) = 0,$$\n\nwhere $x \\neq -1, -\\frac{1}{2}, 1$. Hence this equation has two real roots $x_1$ and $x_2$ such that\n\n$$x_2^2 - ax_1 = a^2 - a - 1.$$\n\nSince $x_1 + x_2 = \\frac{2a - 1}{a}$ we get that\n\n$$x_2^2 + ax_2 - a^2 - a + 2 = 0.$$\n\nThis together with the identity\n\n$$ax_2^2 + (1 - 2a)x_2 + 1 - a = 0$$\n\nimplies that\n\n$$(a^2 + 2a - 1)x_2 = a^3 + a^2 - 3a + 1 = (a^2 + 2a - 1)(a - 1).$$\n\nThe coefficient of $x_2$ vanishes if $a = -1 \\pm \\sqrt{2}$.\n\nIf $a = -1 + \\sqrt{2}$, then\n\n$$(-1 + \\sqrt{2})x_2^2 + (3 - 2\\sqrt{2})x_2 + (2 - \\sqrt{2}) = 0$$\n\nwhich is impossible, since the discriminant of this quadratic equation equals $33 - 24\\sqrt{2} < 0$, i.e. it has no real roots.\n\nIf $a = -1 - \\sqrt{2}$ we get the equation\n\n$$(-1 - \\sqrt{2})x_2^2 + (3 + 2\\sqrt{2})x_2 + (2 + \\sqrt{2}) = 0$$\n\nthat has two real roots, which are not equal to $\\pm 1$ and $-\\frac{1}{2}$.\n\nLet now $a \\neq -1 \\pm \\sqrt{2}$. Then $x_2 = a - 1$ and hence $a(a - 1)(a - 3) = 0$. Since $a \\neq 0, 1$ we get $a = 3$. In this case the roots of the given equation are $-\\frac{1}{3}$ and 2, and they satisfy the given condition.\n\nThus the desired values of $a$ are $-1 - \\sqrt{2}$ and 3.",
+      "answer": "$a \\in \\{-1 - \\sqrt{2}, 3\\}$",
+      "difficulty": null,
+      "techniques": [],
+      "confidence": "pending",
+      "reasoning": "standalone"
+    },
+    {
+      "source": "BMC_2003-2006 · 2003-9 · Зад. 3",
+      "statement": null,
+      "solution": "We shall prove that the desired number have one of the forms $9k \\pm 1$, $3^3(9k \\pm 1)$ or $3^6(9k \\pm 1)$.\n\nSuppose that 3 does not divide $a$. Since $n^3 \\equiv 0, \\pm 1 \\pmod{9}$, then $a \\equiv \\pm 1 \\pmod{9}$.\n\nConversely, let $a \\equiv \\pm 1 \\pmod{9}$. Since 9 divides $1^3 - 1$ and $2^3 + 1$, then there is $n_0$ such $n_0^3 + a = 3^s t$, where $s \\geq 2$ and $t$ is not divisible by 3. We shall prove that if $n_1 = n_0 + 2.3^{s-1}t$, then $3^{s+1}$ divides $n_1^3 + a$. We have that\n\n$$(n_0 + 2.3^{s-1}t)^3 + a = 3^s t(2n_0^2 + 1) + 4n_0 3^{2s-1}t^2 + 8.3^{3s-3}t^3.$$\n\nSince 3 does not divide $n_0$, then $2n_0^2 + 1$ is divisible by 3. Moreover, $2s - 1 \\geq s + 1$ and $3s - 3 \\geq s + 1$. Hence $n_1^3 + a$ is divisible by $3^{s+1}$ but 3 does not divide $n_1$. Repeating the same argument, we get a positive integer $n_p$ such that $3^{2003}$ divides $n_p^3 + a$.\n\nLet now 3 divides $a < 2003$. Then $a = 3^s b$, where $s \\leq 6$. Hence $n$ is divisible by 3, i.e., $n = 3^p n_0$, where $p \\geq 1$ and 3 does not divide $n_0$. If $p \\geq 3$, then $3^9$ divides $n^3$ and does not divide $a$ which implies that $3^{2003}$ does not divide $n^3 + a$. Hence $p = 1$ or $p = 2$ and it is easy to see that $s = 3$ or $s = 6$, respectively.\n\nIn the first case we get that $3^{2000}$ divides $n_0^3 + b$, where 3 does not divide $b$ and $27b < 2003$. It follows as above that $b \\equiv \\pm 1 \\pmod{9}$.\n\nIn the second case we get similarly that $3^{1997}$ divides $n_0^3 + b$, where $729b < 2003$ and $b \\equiv \\pm 1 \\pmod{9}$.\n\nThe number of the positive integers $b \\equiv \\pm 1 \\pmod{9}$ such that $b < 2003$, $27b < 2003$ or $729b < 2003$ equals $2.222 + 1 = 445$, $2.8 + 1 = 17$ or 1, respectively. Hence the desired number is equal to $445 + 17 + 1 = 463$.",
+      "answer": "463",
+      "difficulty": null,
+      "techniques": [],
+      "confidence": "pending",
+      "reasoning": "standalone"
+    },
+    {
+      "source": "BMC_2003-2006 · None-10 · Зад. 3",
+      "statement": null,
+      "solution": "Consider a table with rows corresponding to the elements of $A$ and column corresponding to the elements of $M$. We write $\\times$ in a cell if the element of $A$ in the respective row is adjacent to the element of $M$ in the respective column. Let $|M| = k$. It follows from the given condition that there are no two equal rows which means that $M$ has at least 16 different subsets. Since a set with $n$ elements has $2^n$ subset, we get $k \\geq 4$.\n\nAny row has exactly five adjacent and thus any column contains exactly five $\\times$, i.e., the total number of $\\times$ is $5k$. A minimal number of $\\times$ by rows is attained if one row contains no $\\times$, $k$ rows contain one $\\times$, $\\binom{k}{2}$ rows contain two $\\times$, etc.\n\nIf $k = 4$, then all the subsets of $M$ are 16 and hence any subset of $M$ appears exactly once as a adjacent set to some element of $A$. Then we have one row with no $\\times$, 4 rows with one $\\times$, 6 rows with two $\\times$, 4 rows with three $\\times$ and one row with four $\\times$. The total number of $\\times$ becomes $32 > 20$, a contradiction.\n\nFor $k = 5$ one has $25 \\times$. Their minimal number by rows is attained when one row contains no $\\times$, 5 rows contain one $\\times$ and 10 rows – two $\\times$. Since $5.1 + 10.2 = 25$ the distribution of $\\times$ must be exactly the one described above. This means that any two elements of $M$ are simultaneously adjacent to some element of $A$.\n\nIt is easy to see that if two elements of $M$ do not coincide at at most two positions, then there is no an element of $A$ that is adjacent to them. Hence any two elements of $M$ do not coincide at one or two positions. If there are two elements which do not coincide at one position, we may assume that they are $a = 0000$ in $b = 1000$. The adjacent to $a$ and $b$ in $M$ are 0000 and 1000. So the rows of $a$ and $b$ coincide, a contradiction. This shows that any two elements of $M$ are different at exactly two positions. We may assume that $0000 \\in M$. Then the remaining 4 elements are among 0011, 1100, 0101, 1010, 1001 and 0110. But among any of the pairs (0011, 1100), (0101, 1010) and (1001, 0110) at most one element can be chosen, a contradiction.\n\nFor $k = 6$ the set $M = \\{0000, 1111, 0111, 0100, 1001, 0101\\}$ separates any two elements of $A$.\n\nHence the desired minimal number is 6.",
+      "answer": "6",
+      "difficulty": null,
+      "techniques": [],
+      "confidence": "pending",
+      "reasoning": "standalone"
+    },
+    {
+      "source": "BMC_2003-2006 · None-11 · Зад. 1",
+      "statement": null,
+      "solution": "a) We have that\n\n$$a_{n+1}^2 = a_n^2 + 1 + \\frac{1}{4a_n^2}.$$\n\nIn particular, $a_{n+1}^2 > a_n^2 + 1$ and it follows by induction that $a_n^2 \\geq n$.\n\nWe shall prove the other inequality by using induction again. It is obvious for $n = 1$. Suppose that $a_{n}^{2} < n + \\sqrt[3]{n}$. Then $a_{n+1}^{2} < n + \\sqrt[3]{n} + 1 + \\frac{1}{4n}$ and it is enough to check that\n\n$$\\begin{array}{l}\n\\sqrt[3]{n} + \\frac{1}{4n} < \\sqrt[3]{n+1} \\iff \\frac{1}{4n} < \\sqrt[3]{n+1} - \\sqrt[3]{n} \\\\\n\\iff \\sqrt[3]{n^2} + \\sqrt[3]{n(n+1)} + \\sqrt[3]{(n+1)^2} < 4n \\\\\n\\iff 1 + \\sqrt[3]{1 + \\frac{1}{n}} + \\sqrt[3]{\\left(1 + \\frac{1}{n}\\right)^2} < 4\\sqrt[3]{n}.\n\\end{array}$$\n\nThis inequality follows by the inequalities $1 + \\frac{1}{n} \\leq 2$ and $1 + \\sqrt[3]{2} + \\sqrt[3]{4} = \\frac{1}{\\sqrt[3]{2} - 1} < 4$.\n\nb) The statement is a consequence of the inequalities\n\n$$0 \\leq a_n - \\sqrt{n} < \\sqrt{n + \\sqrt[3]{n}} - \\sqrt{n} = \\frac{\\sqrt[3]{n}}{\\sqrt{n + \\sqrt[3]{n}} + \\sqrt{n}} < \\frac{\\sqrt[3]{n}}{\\sqrt{n}} = \\frac{1}{\\sqrt[6]{n}}.$$",
+      "answer": null,
+      "difficulty": null,
+      "techniques": [],
+      "confidence": "pending",
+      "reasoning": "standalone"
+    },
+    {
+      "source": "BMC_2003-2006 · None-11 · Зад. 2",
+      "statement": null,
+      "solution": "Let $A_1$ be the midpoint of the segment $BC$. Then Ceva's theorem implies that\n\n$$\\frac{AC_1}{C_1B} \\cdot \\frac{BA_1}{A_1C} \\cdot \\frac{CB_1}{B_1A} = 1,$$\n\ni.e., $\\frac{AC_1}{C_1B} = \\frac{B_1A}{B_1C}$. Hence we have $B_1C_1 \\parallel BC$, i.e. $S_{BC_1M} = S_{CB_1M} = 2S_{AC_1M}$ and we get that $S_{AB_1M} = S_{AC_1M}$. Then\n\n$$\\frac{1}{3} = \\frac{S_{AC_1M}}{S_{AMC}} = \\frac{C_1M}{MC} = \\frac{S_{BC_1M}}{S_{BMC}} = \\frac{2S_{AC_1M}}{2S_{BA_1M}}$$\n\nand therefore $S_{BA_1M} = 3S_{AC_1M}$.\n\nConversely, let $S_{AC_1M} = 1$, $S_{CB_1M} = 2$, $S_{BA_1M} = 3$, $S_{BC_1M} = x$, $S_{CA_1M} = 3y$ and $S_{AB_1M} = 2z$. We have to show that $y = 1$. Note that\n\n$$\\frac{1}{2(z+1)} = \\frac{S_{AC_1M}}{S_{AMC}} = \\frac{C_1M}{CM} = \\frac{S_{C_1MB}}{S_{CMB}} = \\frac{x}{3(y+1)}.$$\n\nAnalogously,\n\n$$\\frac{3}{x+1} = \\frac{3y}{2(z+1)} \\quad \\text{and} \\quad \\frac{2}{3(y+1)} = \\frac{2z}{x+1}.$$\n\nMultiplying these equalities gives $xyz = 1$. Hence $z = \\frac{1}{xy}$ and the first equality implies that\n\n$$xy = \\frac{3y^2 + 3y - 2}{2}. \\tag{1}$$\n\nAnalogously, the second equality gives\n\n$$2\\left(1 + \\frac{1}{xy}\\right) = xy + y. \\tag{2}$$\n\nPlugging (1) in (2) leads to\n\n$$(3y^2 + 3y - 2)^2 + 2y(3y^2 + 3y - 2) - 12y(y + 1) = 0,$$\n\ni.e.,\n\n$$(y - 1)(3(y + 2)(3y^2 + 3y + 2) + 6y^2 - 16) = 0.$$\n\nIt follows by (1) that $3y^2 + 3y > 2$ and since $y > 0$ we get $3(y + 2)(3y^2 + 3y + 2) + 6y^2 - 16 > 6(3y^2 + 3y + 2) - 16 > 8$. Thus $y = 1$, $x = 2$ and $z = \\frac{1}{2}$ which completes the solution.",
+      "answer": null,
+      "difficulty": null,
+      "techniques": [],
+      "confidence": "pending",
+      "reasoning": "standalone"
+    },
+    {
+      "source": "BMC_2003-2006 · None-None · Зад. 4",
+      "statement": null,
+      "solution": "Let $H = AC \\cap EF$. Then $\\angle CDG = \\angle FHC$ and\n\\[\n\\frac{CD}{DG}=\\frac{BD}{DG}=\\frac{FH}{HE}=\\frac{FH}{HC}.\n\\]\nIt follows that $\\triangle CDG \\sim \\triangle FHC$ which implies that $\\angle GCD = \\angle CFH$. Hence\n\\[\n\\begin{aligned}\n\\angle BCG &= \\angle BCD - \\angle GCD\\\\\n&= \\angle CEH - \\angle CFH = \\angle BCF.\n\\end{aligned}\n\\]",
+      "answer": "∠BCG = ∠BCF",
+      "difficulty": null,
+      "techniques": [],
+      "confidence": "pending",
+      "reasoning": "standalone"
+    },
+    {
+      "source": "BMC_2003-2006 · None-None · Зад. 5",
+      "statement": null,
+      "solution": "Note first that the triple $(0,0,0)$ is a solution of the system.\n\nIf $y = 0$, then it follows from the first equation that $x = -z$ and the second one gives that $x = z = 0$.\n\nIf $y \\neq 0$, set $a = \\frac{x}{y}$ and $b = \\frac{z}{y}$. Then the system becomes\n$$\\left| \\begin{array}{l} 1 + a + b = 3ay \\\\ 1 + a^2 + b^2 = 3ab \\\\ y(1 + a^3 + b^3) = 3b. \\end{array} \\right.$$\nHence $y = \\frac{1 + a + b}{3a}$ and therefore\n$$\\left| \\begin{array}{l} (1 + a + b)(1 + a^3 + b^3) = 9ab \\\\ 1 + a^2 + b^2 = 3ab. \\end{array} \\right.$$\nSet $u = a + b$ and $v = ab$. Then\n$$\\left| \\begin{array}{l} (1 + u)(1 + u^3 - 3uv) = 9v \\\\ 1 + u^2 - 2v = 3v, \\end{array} \\right.$$\nHence $v = \\frac{u^2 + 1}{5}$ and plugging it into the first equation gives\n$$0 = u^4 + u^3 - 6u^2 + u - 2 = (u - 2)(u^3 + 3u^2 + 1).$$\nThe case $u = 2$ leads to $v = 1$, $a = b = 1$ and gives the solution $(x, y, z) = (1, 1, 1)$. The function $f(u) = u^3 + 3u^2 + 1$ has a local maximum at $u = -2$ and a local minimum at $u = 0$. Since $f(0) = 1 > 0$, the equation $f(u) = 0$ has only one real root $u_0$ and $u_0 < -2$. Then $u_0^2 - 4\\frac{u_0^2 + 1}{5} = \\frac{u_0^2 - 4}{5} > 0$ which shows that the system\n$$\\left| \\begin{array}{l} a + b = u_0 \\\\ ab = \\frac{u_0^2 + 1}{5} \\end{array} \\right.$$\nhas two solution.\n\nThus the given system has four real solutions.",
+      "answer": "The given system has four real solutions.",
+      "difficulty": null,
+      "techniques": [],
+      "confidence": "pending",
+      "reasoning": "standalone"
+    },
+    {
+      "source": "BMC_2003-2006 · None-None · Зад. 6",
+      "statement": null,
+      "solution": "Let $p_1, p_2, \\ldots, p_n$ be all prime divisors of all possible differences of two distinct numbers of $C$.\n\nSuppose that for any $p_i$ there exists an integer $\\alpha_i$ such that $c \\equiv \\alpha_i \\pmod{p_i}$ for at most one $c \\in C$. It follows by the Chinese remainder theorem that there is an integer $k$ such that $k \\equiv p_i - \\alpha_i \\pmod{p_i}$ for any $i$. Then the condition of the problem implies that $p_j$ divides $a + k$ and $b + k$ for some $j$ and some $a, b \\in C$. Then $a \\equiv b \\equiv \\alpha_j \\pmod{p_j}$, a contradiction.\n\nWe conclude that for some prime number $p$ each reminder modulo $p$ appears at least twice. Assuming that any remainder appears exactly twice we get that the sum of the elements of $C$ equals\n$$pr + 2(0 + 1 + \\cdots + p - 1) = p(r + p - 1), \\ r \\geq 1.$$\nThis is a contradiction, since 2003 is a prime number. Hence some remainder appears at least three times. Removing an element of $C$ giving this remainder we obtain a new good set $C'$. (Indeed, for any $k$ we can find $a, b \\in C'$, $a \\neq b$, such that $p$ divides $a + k$ and $b + k$.)",
+      "answer": null,
+      "difficulty": null,
+      "techniques": [],
+      "confidence": "pending",
+      "reasoning": "standalone"
+    },
+    {
+      "source": "BMC_2003-2006 · 2003-None · Зад. 4",
+      "statement": null,
+      "solution": "We have $P_1(x)=P_2(x)=1$, $P_3(x)=x+1$, $P_4(x)=x^2+1$ and $P_6(x)=x^4+1$. Hence the integers $n=1,2,3,4,6$ have the desired property. We shall prove that these are the only solutions of the problem.\n\nIt is enough to show that for $n\\geq3$ the polynomial $P_n(x)$ has a divisor of the form $1+x^r$, $r\\geq1$, which is proper divisor for $n=5$ and $n\\geq7$.\n\nIf $n\\geq3$ is a prime, this follows by the decomposition\n\\[\nP_n(x)=(1+x)\\left(1+x^2+x^4+\\dots+x^{n-3}\\right).\n\\]\nNote also that $P_4(x)=x^2+1$.\n\nNow we shall use induction on $n$. Suppose that the statement is true for all $m\\geq3$ that are less than $n$. If $n\\geq6$ is a composite integer, then $n=mp$, where $p$ is prime and $m\\geq3$. Two cases are possible.\n\nCase 1. $p$ divides $m$. Then we have that $A_n=\\bigcup_{i=0}^{p-1}(A_m+im)$ and hence $P_n(x)=P_m(x)\\sum_{i=0}^{p-1}x^{im}$. It remains to use that $P_m(x)$ has a divisor of the form $1+x^r$.\n\nCase 2. $p$ does not divide $m$. Using that\n\\[\nA_n=\\left(\\bigcup_{i=0}^{p-1}(A_m+im)\\right)\\setminus(pA_m)\n\\]\nand $x^{kp-1}=x^{p-1}(x^p)^{k-1}$, it follows that\n\\[\nP_n(x)=P_m(x)\\sum_{i=0}^{p-1}x^{im}-x^{p-1}P_m(x^p).\n\\]\nBy the induction assumption, $P_m(x)$ has a divisor of the form $1+x^r$. Therefore $1+x^{pr}$ divides $P_m(x^p)$. We shall consider two subcases.\n\na) If $p\\geq3$, then $p$ is odd and $1+x^r$ divides $1+x^{pr}$. Hence $1+x^r$ divides $P_n(x)$.\n\nb) If $p=2$, we may assume that $m$ is prime (otherwise, $m$ has an odd prime divisor and we may go either to a) or to the first case). Then\n\\[\nP_n(x)=(1+x^{m+1})(1+x^2+x^4+\\cdots+x^{m-3}).\n\\]\nIt remains to observe that $P_n(x)=1+x^r$ only for $n=3,4,6$ which completes the solution.",
+      "answer": "$n\\in\\{1,2,3,4,6\\}$.",
+      "difficulty": null,
+      "techniques": [],
+      "confidence": "pending",
+      "reasoning": "standalone"
+    },
+    {
+      "source": "BMC_2003-2006 · 2003-None · Зад. 5",
+      "statement": null,
+      "solution": "We shall use the following fact: if $\\alpha, \\beta, \\gamma$ and $\\delta$ are angles such that $\\sin \\alpha \\sin \\delta = \\sin \\beta \\sin \\gamma$ and $\\alpha + \\beta = \\gamma + \\delta < 180^{\\circ}$, then $\\alpha = \\gamma$ and $\\beta = \\delta$.\n\nDenote by $M, N, R$ and $S$ the tangent points of the incircle of $ABCD$ centered at $O$ with the sides $AB, BC, CD$ and $DA$, respectively. Then the points $A, M, O, P$ and $S$ lie on the circle with diameter $AO$ and $\\angle APM = \\frac{\\widehat{AM}}{2} = \\frac{\\widehat{AS}}{2} = \\angle APS$.\n\n![img-12.jpeg](img-12.jpeg)\n\nAnalogously, $\\angle CPR = \\angle CPN$ and hence $\\angle SPR = \\angle MPN$. The Sine theorem for $\\triangle BPM$ and $\\triangle BPN$ gives\n\n$$\\frac{\\sin \\angle MPB}{\\sin \\angle PMB} = \\frac{BM}{BP} = \\frac{BN}{BP} = \\frac{\\sin \\angle BPN}{\\sin \\angle BNP}$$\n\nand therefore $\\frac{\\sin\\angle MPB}{\\sin\\angle NPB} = \\frac{\\sin\\angle PMB}{\\sin\\angle PNB}$. Since\n\n$$\\angle PMB = 180^{\\circ} - \\angle AMP = 180^{\\circ} - \\angle AOP,$$\n\n$$\\angle PNB = 180^{\\circ} - \\angle CNP = 180^{\\circ} - \\angle COP,$$\n\nthen $\\frac{\\sin\\angle MPB}{\\sin\\angle NPB} = \\frac{\\sin\\angle AOP}{\\sin\\angle COP}$. We get in the same way that\n\n$$\\frac{\\sin \\angle SPD}{\\sin \\angle RPD} = \\frac{\\sin \\angle AOP}{\\sin \\angle COP}.$$\n\nApplying the fact mentioned above with $\\alpha = \\angle MPB, \\beta = \\angle NPB, \\gamma = \\angle SPD$ and $\\delta = \\angle RPD$ we conclude that $\\angle MPB = \\angle SPD$ and therefore $\\angle APB = \\angle APM + \\angle MPB = \\angle APS + \\angle SPD = \\angle APD$.",
+      "answer": "$\\angle APB = \\angle APD$",
+      "difficulty": null,
+      "techniques": [],
+      "confidence": "pending",
+      "reasoning": "standalone"
+    },
+    {
+      "source": "BMC_2003-2006 · 2003-None · Зад. 6",
+      "statement": null,
+      "solution": "We shall use that if $\\left(\\sqrt{a^2 - 1} + 1\\right)^k = x_k\\sqrt{a^2 - 1} + y_k$, then all the solutions of Pell's equation $(a^2 - 1)x^2 + 1 = y^2$ are $(x_k, y_k)$. This implies that $(a^2 - 1)x^2 + 1$ is a perfect square if and only if $x$ is a term of the sequence defined by $x_0 = 0$, $x_1 = 1$ and $x_{k+2} = 2ax_{k+1} - x_k$ for $k \\geq 0$.\n\nSince $m(m + 1)(m + 2)(m + 3) + 1 = (m^2 + 3m + 1)^2$, then $n(n + 1)^2(n + 2)^3(n + 3)^4 + 1 = [(n + 1)^2 - 1][(n + 1)(n + 2)(n + 3)^2]^2 + 1$ is a perfect square. Applying the property mentioned above with $a = n + 1$ gives that $(n + 1)(n + 2)(n + 3)^2$ is a term of the sequence defined by $x_0 = 0$, $x_1 = 1$ and $x_{k+2} = (2n + 2)x_{k+1} - x_k$ for $k \\geq 0$. Now it is easy to see by 'induction on $k$ that the remainders of any $x_k$ modulo $2n + 1$ and $2n + 3$ are $0, 1$ or $-1$. Hence $(n + 1)(n + 2)(n + 3)^2 \\equiv 0, \\pm 1 \\pmod{2n + 1}$ and then\n\n$$(2n + 2)(2n + 4)(2n + 6)^2 \\equiv 0, \\pm 16 \\pmod{2n + 1}.$$\n\nUsing that $2n + 2 \\equiv 1 \\pmod{2n + 1}$, $2n + 4 \\equiv 3 \\pmod{2n + 1}$ and $2n + 6 \\equiv 5 \\pmod{2n + 1}$, it follows that $2n + 1$ divides 75, 59 or 91. Repeating the same arguments, we get that $2n + 3$ divides 7, 9 or 25. The only numbers satisfying both conditions are $n = 1, 2, 3$. Now direct verifications complete the solution.",
+      "answer": null,
+      "difficulty": null,
+      "techniques": [],
+      "confidence": "pending",
+      "reasoning": "standalone"
+    },
+    {
+      "source": "BMC_2003-2006 · 2004-9 · Зад. 1",
+      "statement": null,
+      "solution": "The equation has two distinct positive roots if and only if\n\n$$\\left| \\begin{array}{l} D = a^{3} - a^{2} - 9a + 9 > 0 \\\\ x_1 + x_2 = \\frac{6}{a^{2} - a - 9} > 0 \\\\ x_1 x_2 = \\frac{-a}{a^{2} - a - 9} > 0 \\end{array} \\right.$$\n\nThe first inequality is satisfied for $a \\in (-3, 1) \\cup (3, +\\infty)$, the second one - for $a \\in ((1 - \\sqrt{37}) / 2, (1 + \\sqrt{37}) / 2)$, and the third - for every $a \\in (-\\infty, 0)$. Therefore the required values of $a$ are $a \\in (-3, (1 - \\sqrt{37}) / 2)$.",
+      "answer": "$a \\in (-3, (1 - \\sqrt{37}) / 2)$",
+      "difficulty": null,
+      "techniques": [],
+      "confidence": "pending",
+      "reasoning": "standalone"
+    },
+    {
+      "source": "BMC_2003-2006 · 2004-9 · Зад. 2",
+      "statement": null,
+      "solution": "Denote the midpoints of $AD$ and $BC$ by $M$ and $N$, respectively. Without loss of generality we may assume that $I$ lies in the interior of $AMNB$ and $E$ lies in the interior to $MDCN$. Then we have\n\n![img-13.jpeg](img-13.jpeg)\n\n$$\\begin{array}{l} S_{MIN} = S_{AMNB} - S_{ABI} - S_{AMI} - S_{BNI} \\\\ = S_{AMNB} - S_{ABI} - \\frac{1}{2}\\left(S_{ADI} + S_{BCI}\\right) \\\\ = S_{AMNB} - \\frac{1}{2}S_{ABI} - \\frac{1}{2}\\left(S_{ABCD} - S_{CDI}\\right). \\end{array}$$\n\nAnalogously, $S_{MEN} = S_{MDNC} - \\frac{1}{2}S_{DCE} - \\frac{1}{2}(S_{ABCD} - S_{ABE})$. Now using $S_{MIN} = S_{MEN}$ we get\n\n$$\\begin{array}{l} S_{AMNB} - \\frac{1}{2}S_{ABI} - \\frac{1}{2}(S_{ABCD} - S_{CDI}) = S_{MDNC} - \\frac{1}{2}S_{DCE} - \\frac{1}{2}(S_{ABCD} - S_{ABE}), \\\\ \\frac{1}{2}S_{ADN} + \\frac{1}{2}S_{ABC} - \\frac{1}{2}S_{ABI} - \\frac{1}{2}(S_{ABCD} + \\frac{1}{2}S_{CDI}) \\\\ = \\frac{1}{2}S_{ADN} + \\frac{1}{2}S_{CBD} - \\frac{1}{2}S_{DCE} - \\frac{1}{2}(S_{ABCD} + \\frac{1}{2}S_{ABE}), \\\\ S_{ABC} - S_{CBD} + S_{DCE} - S_{ABE} = S_{ABI} - S_{CDI}, \\\\ S_{ABE} - S_{CDE} + S_{DCE} - S_{ABE} = S_{ABI} - S_{CDI}. \\end{array}$$\n\nTherefore $S_{ABI} = S_{CDI}$, whence $AB = CD$.",
+      "answer": "$AB = CD$",
+      "difficulty": null,
+      "techniques": [],
+      "confidence": "pending",
+      "reasoning": "standalone"
+    },
+    {
+      "source": "BMC_2003-2006 · 2004-9 · Зад. 3",
+      "statement": null,
+      "solution": "Denote by $f(n)$ the least number of colors such that the integers $1,2,\\ldots,n$ can be colored in the required way. We shall prove that $f(n) = \\lfloor (k + 1) / 2\\rfloor$, where $2^{k - 1} \\leq n < 2^k$. Observe that in the sequence $1,2,2^2,\\ldots,2^{k - 1}$ we have no three numbers of the same color. This means that $f(n) \\geq \\lfloor (k + 1) / 2\\rfloor$.\n\nConsider the following coloring by $\\lfloor (k + 1) / 2 \\rfloor$ colors (each color is identified with an integer among $1, 2, \\ldots, \\lfloor (k + 1) / 2 \\rfloor$). If $m = p_1^{\\alpha_1} p_2^{\\alpha_2} \\ldots p_t^{\\alpha_t} \\leq n$, where $p_i$ are primes, then we have $h(m) := \\alpha_1 + \\cdots + \\alpha_t < k$ and we can correctly color $m$ by the color $\\lfloor (h(m) + 1) / 2 \\rfloor$. If $a$ divides $b$ and $b$ divides $c$, then we have $h(a) < h(b) < h(c)$, i.e., $h(c) - h(a) \\geq 2$. This means that the numbers $a$ and $c$ have different colors. Hence $f(n) = \\lfloor (k + 1) / 2 \\rfloor$. Now applying the above formula for $n = 2004$ we get $f(2004) = 6$.",
+      "answer": "$f(2004) = 6$",
+      "difficulty": null,
+      "techniques": [],
+      "confidence": "pending",
+      "reasoning": "standalone"
+    },
+    {
+      "source": "BMC_2003-2006 · None-None · Зад. 7",
+      "statement": null,
+      "solution": "We may assume the set $A_1$ has maximal cardinality. Denote $A_i \\cap A_{i+1} = B_i, i = 1, 2, \\ldots, n$. Since $A_n \\supset B_{n-1} \\cup B_n$, then\n\n$$\\begin{array}{l}\n|A_n| \\geq |B_{n-1}\\cup B_n| = |B_{n-1}|+|B_n|-|B_{n-1}\\cap B_n| \\\\\n> \\frac{n-2}{n-1}|A_n|+\\frac{n-2}{n-1}|A_1|-|B_{n-1}\\cap B_n|.\n\\end{array}$$\n\nHence\n\n$$|B_{n-1}\\cap B_n| > \\frac{n-2}{n-1}|A_1|-\\frac{1}{n-1}|A_n| \\geq \\frac{n-3}{n-1}|A_1|,$$\n\ni.e., $|A_{n-1} \\cap A_n \\cap A_1| > \\frac{n-3}{n-1}|A_1|$. Further, if $C = A_{n-1} \\cap A_n \\cap A_1$, then $A_{n-1} \\supset C \\cup B_{n-2}$ and\n\n$$\\begin{array}{l}\n|A_{n-1}| \\geq |B_{n-2}\\cup C| = |B_{n-2}|+|C|-|B_{n-2}\\cap C| \\\\\n> \\frac{n-2}{n-1}|A_{n-1}|+\\frac{n-3}{n-1}|A_1|-|B_{n-2}\\cap C|.\n\\end{array}$$\n\nSo $|B_{n-2}\\cap C| > \\frac{n-3}{n-1}|A_1|-\\frac{1}{n-1}|A_{n-1}| \\geq \\frac{n-4}{n-1}|A_1|$, i.e.\n\n$$|A_{n-2}\\cap A_{n-1}\\cap A_n\\cap A_1| > \\frac{n-4}{n-1}|A_1|.$$\n\nWe get by induction that\n\n$$|A_{n-k}\\cap A_{n-k+1}\\cap \\dots\\cap A_{n-1}\\cap A_n\\cap A_1| > \\frac{n-k-2}{n-1}|A_1|$$\n\nfor $k = 1,2,\\ldots,n-2$. In particular, $|A_2\\cap A_3\\cap \\dots\\cap A_{n-1}\\cap A_n\\cap A_1| > 0$.",
+      "answer": "$|A_2\\cap A_3\\cap \\dots\\cap A_{n-1}\\cap A_n\\cap A_1| > 0$",
+      "difficulty": null,
+      "techniques": [],
+      "confidence": "pending",
+      "reasoning": "standalone"
+    },
+    {
+      "source": "BMC_2003-2006 · None-None · Зад. 8",
+      "statement": null,
+      "solution": "The function $K(n)$ is increasing for $n \\geq 3$, since $\\sum_{i=1}^{n}\\frac{1}{x_i} = 1$ implies that\n\n$$\\sum_{i=1}^{n-1}\\frac{1}{x_i}+\\frac{1}{x_n+1}+\\frac{1}{x_n(x_n+1)} = 1.$$\n\nThus it is enough to find $t \\leq L(b)$ such that $K(t+2)+2L(b) \\geq d(b)$, where $d(b)$ is the number of the distinct positive integers that divide $b$. Let $t$ be the minimal positive integer, for which the equation $\\sum_{i=1}^{t}\\frac{1}{x_i} = 1-\\frac{1}{b}$ has a solution. Then $t \\leq L(b)$. Fix now $t, b, x_1, \\ldots, x_t$.\n\nNote that the numbers of the solution of the equation $\\frac{1}{y_1}+\\frac{1}{y_2} = \\frac{1}{b}$ such that $b$ divides $y_2$ and $y_1 \\leq y_2$, is equal to $d(b)$. Indeed, if $\\frac{1}{b} = \\frac{1}{y_1}+\\frac{1}{kb}$ for some $k \\geq 2$, then $y_1 = b+\\frac{b}{k-1}$. So $k-1$ divides $b$ and there are exactly $d(b)$ possibilities for $k$.\n\nHence $K(t+2)$ is not less than $d(b)$ minus the number of the cases, when $y_i = x_j$. This cases are at most $2L(b)$ which implies the desired inequality.",
+      "answer": null,
+      "difficulty": null,
+      "techniques": [],
+      "confidence": "pending",
+      "reasoning": "standalone"
+    },
+    {
+      "source": "BMC_2003-2006 · 2004-None · Зад. 4",
+      "statement": null,
+      "solution": "Let $x_1 + x_2 + \\dots + x_k = 2004$, $x_1, x_2, \\ldots, x_k \\in \\mathbb{N}$, $x_1 < x_2 < \\dots < x_k$ and the product $x_1x_2\\ldots x_k$ is maximal. Assume that for some $i, j$, $1 \\leq i < j \\leq k$ one has that $x_i \\leq x_{i+1} - 2$ and $x_j \\leq x_{j+1} - 2$. Then replacing $x_i$ and $x_j$ by $x_i + 1$ and $x_j - 1$, respectively (the sum is the same, i.e. 2004), we get a larger product since\n\n$$(x_i + 1)(x_j - 1) = x_ix_j + x_j - x_i - 1 > x_ix_j,$$\n\na contradiction. Hence $x_1, x_2, \\ldots, x_k$ are consecutive integers but at most one.\n\nLet the numbers be $\\{x_1, x_2, \\ldots, x_k\\} = \\{x, x + 1, \\ldots, x + \\ell, x + \\ell + n, x + \\ell + n + 1, \\ldots, x + k + n - 2\\}$ and $k = n + \\ell - 2$. If $n \\geq 3$, we replace $x + \\ell$ and $x + \\ell + n$ by $x + \\ell + 1$ and $x + \\ell + n - 1$, respectively, and, as above, we get a larger product.\n\nLet $n = 1$ and the numbers be $x, x + 1, \\ldots, x + k - 1$. If $x \\geq 5$ we replace $x$ by the numbers $x - 2$ and 2. The sum remains 2004 and the product increases, since $2(x - 2) > x$. If $1 \\leq x \\leq 4$, a direct verification shows that either we have a larger product or the sum is not equal to 2004 (for $x = 2$ and $x = 3$).\n\nIt remains to consider the case $n = 2$. Let the numbers be\n\n$$x, x + 1, \\dots, x + \\ell, x + \\ell + 2, x + \\ell + 3, \\dots, x + k, \\quad \\ell \\geq 0, k \\geq \\ell + 2.$$\n\nAs above, we get a larger product for $x = 1$ and $x \\geq 4$.\n\nIf $x = 2$, then $2 + 3 + \\dots + (\\ell + 2) + (\\ell + 4) + \\dots + (k + 2) = 2004$ and hence $(k + 2)(k + 3) = 2(2008 + \\ell)$. Since $0 \\leq \\ell \\leq k - 2$, it follows that $4016 \\leq (k + 2)(k + 3) \\leq 4012 + 2k$ and then $k = 61$, $\\ell = 8$. So the numbers are $2, 3, \\ldots, 10, 12, 13, \\ldots, 63$ with product $\\frac{63!}{11}$.\n\nFor $x = 3$ we get analogously $k = 60$, $\\ell = 5$ and the numbers are $3, 4, \\ldots, 8, 10, 11, \\ldots, 63$ with product $\\frac{63!}{18}$ which is smaller than $\\frac{63!}{11}$.",
+      "answer": "$\\frac{63!}{11}$, attained for $2,3,\\ldots,10,12,13,\\ldots,63$.",
+      "difficulty": null,
+      "techniques": [],
+      "confidence": "pending",
+      "reasoning": "standalone"
+    },
+    {
+      "source": "BMC_2003-2006 · None-None · Зад. 9",
+      "statement": null,
+      "solution": "Let the given numbers be $a_1, a_2, \\ldots, a_{2n+1}$. Choose first 1 and then choose at any step (if it is possible) a number that is not a linear combination with rational coefficients of the already chosen numbers. We may assume that the chosen numbers are $a_0 = 1, a_1, a_2, \\ldots, a_k, 1 \\leq k \\leq 2n + 1$. It is easy to see that any linear combination with rational coefficients of the given numbers can be uniquely presented linear combination of these numbers.\n\nLet $a_i = \\sum_{j=0}^{k} \\alpha_{ij} a_j$, where $\\alpha_{ij} \\in \\mathbb{Q}, 1 \\leq i \\leq 2n + 1, 0 \\leq j \\leq k$. Then a sum of $a_i'$ is a rational number if and only if the sum of the corresponding numbers $b_i = a_i - \\alpha_{i0}$ vanishes. Since $b_1, b_2, \\ldots, b_{2n+1}$ are irrational numbers, they are non-zero. In particular, at least $n + 1$ of them have the same sign and hence the corresponding $a_i'$s have the desired property.",
+      "answer": null,
+      "difficulty": null,
+      "techniques": [],
+      "confidence": "pending",
+      "reasoning": "standalone"
+    },
+    {
+      "source": "BMC_2003-2006 · None-None · Зад. 10",
+      "statement": null,
+      "solution": "Using (d) for $y = 1$ and (c) we see that $f(zx, z) = z^k x$. Set $zx = y$. Then $f(y, z) = yz^{k-1}$ for $y \\leq z$. Conversely, if $y \\leq z$, then we set $y = zx$, $x \\in [0,1]$, and $f(y, z) = f(zx, z) = z^k x = yz^{k-1}$.\n\nNow let $x \\leq y \\leq z, x, y, z \\in (0,1)$. Then using (a), we get that $f(xy^{k-1}, z) = f(x, yz^{k-1})$. Hence it follows from the above that\n$$\n\\{xy^{k-1}z^{k-1}, x^{k-1}y^{(k-1)^2}z\\} \\cap \\{xy^{k-1}z^{(k-1)^2}, x^{k-1}yz^{k-1}\\} \\neq \\phi.\n$$\nThis easily implies that either $k = 1$ and $f(x, y) = \\min\\{x, y\\}$ or $k = 2$ and $f(x, y) = xy$. A direct verification shows that both functions are solutions for the respective $k$.",
+      "answer": "$k=1$, $f(x,y)=\\min\\{x,y\\}$, or $k=2$, $f(x,y)=xy$.",
+      "difficulty": null,
+      "techniques": [],
+      "confidence": "pending",
+      "reasoning": "standalone"
+    },
+    {
+      "source": "BMC_2003-2006 · None-None · Зад. 11",
+      "statement": null,
+      "solution": "Set $a = \\frac{9x^2}{x^2 + y^2 + z^2}$, $b = \\frac{9y^2}{x^2 + y^2 + z^2}$, $c = \\frac{9z^2}{x^2 + y^2 + z^2}$, where $x, y, z > 0$ and $x + y + z = 1$. We have to prove that\n\n$$x^2 + y^2 + z^2 \\geq 9(x^2y^2 + y^2z^2 + z^2x^2).$$\n\nSince $a \\geq 1$, then\n\n$$9x^2 = a(x^2 + y^2 + z^2) \\geq x^2 + y^2 + z^2 \\geq \\frac{(x + y + z)^2}{3} = \\frac{1}{3},$$\n\ni.e. $x \\geq \\frac{1}{3\\sqrt{3}}$. Analogously $y \\geq \\frac{1}{3\\sqrt{3}}$ и $z \\geq \\frac{1}{3\\sqrt{3}}$.\n\nWe may assume that $x \\geq y \\geq z$. Then\n\n$$\\frac{1}{3\\sqrt{3}} \\leq z \\leq \\frac{1}{3}, \\quad \\frac{1}{3} \\leq \\frac{x + y}{2} = \\frac{1 - z}{2} \\leq \\frac{3\\sqrt{3} - 1}{6\\sqrt{3}}.$$\n\nLet $f(x, y, z) = x^2 + y^2 + z^2 - 9(x^2y^2 + y^2z^2 + z^2x^2)$. Then\n\n$$f(x, y, z) - f\\left(\\frac{x + y}{2}, \\frac{x + y}{2}, z\\right) = \\frac{(x - y)^2}{2} \\left[1 - 9z^2 + \\frac{9}{8}((x + y)^2 + 4xy)\\right] \\geq 0.$$\n\nIt is enough to prove that $f(t, t, 1 - 2t) \\geq 0$, where $t = \\frac{x + y}{2}$. One has that\n\n$$f(t, t, 1 - 2t) = 2t^2 + (1 - 2t)^2 - 9(t^4 + 2t^2(1 - 2t)^2) = \\frac{(p - 1)^2}{3}(3 + 2p - 3p^2) \\geq 0,$$\n\nwhere $p = 3t$ ($1 \\leq p \\leq \\frac{3\\sqrt{3} - 1}{2\\sqrt{3}}$), i.e., $3 + 2p - 3p^2 > 0 \\iff \\frac{1 - \\sqrt{10}}{3} < p < \\frac{1 + \\sqrt{10}}{3}$. It remains to check that $\\frac{3\\sqrt{3} - 1}{2\\sqrt{3}} < \\frac{1 + \\sqrt{10}}{3}$.\n\nIn fact, we have proved the inequality under the weaker conditions $a + b + c = 9$ and $a, b, c \\geq \\frac{89 - 28\\sqrt{10}}{3}$.",
+      "answer": null,
+      "difficulty": null,
+      "techniques": [],
+      "confidence": "pending",
+      "reasoning": "standalone"
+    },
+    {
+      "source": "BMC_2003-2006 · None-None · Зад. 12",
+      "statement": null,
+      "solution": "We put $m + n - 1$ white pieces by $m + n - 1$ movies consecutively in the cells $(1, 1), (2, 1), \\ldots, (m, 1), (1, 2), (1, 3), \\ldots, (1, n)$.\n\nWe shall call a closed chain of cells such that at least two numbers of rows and columns change alternatively a zig-zag cycle.\n\nNote that there is at least one black piece in the cells of a zig-zag cycle. Indeed, assume the contrary and consider the last white piece. Its neighbors (in the zig-zag cycle) are white pieces that have been put before it. Then the last piece must be black, a contradiction.\n\nAssume now that the game is over and there are more than $m + n - 1$ pieces. Remove a row or a column with at most one white piece, repeat the same operation, etc. Since such a removing can be done at most $m + n - 1$ times, any row and column in the new table will contain at least two white pieces. This new table, and hence the given table, has a zig-zag cycle, a contradiction to the proved above.",
+      "answer": "$m+n-1$",
+      "difficulty": null,
+      "techniques": [],
+      "confidence": "pending",
+      "reasoning": "standalone"
+    },
+    {
+      "source": "BMC_2003-2006 · 2005-9 · Зад. 1",
+      "statement": null,
+      "solution": "For $a \\neq 0$, $a \\neq 1$, the given equality is equivalent to\n\n$$a(x_1 x_2 + x_3 x_4) = x_1 x_2 x_3 x_4 (x_1 + x_2 + x_3 + x_4)$$\n$$\\iff 2a - 1 = (a - 1)(a + 5) \\iff a^2 + 2a - 4 = 0$$\n$$\\iff a_{1,2} = -1 \\pm \\sqrt{5}.$$\n\nIt is easy to check that for these values of $a$ both equations have real roots. The case $a = 0$ is excluded by the condition and $a = 1$ implies $x_4 = 0$, whence $x_1 = 0$, which is a contradiction.",
+      "answer": "$a = -1 \\pm \\sqrt{5}$",
+      "difficulty": null,
+      "techniques": [],
+      "confidence": "pending",
+      "reasoning": "standalone"
+    },
+    {
+      "source": "BMC_2003-2006 · 2005-9 · Зад. 2",
+      "statement": null,
+      "solution": "If $AB$ is a diameter of $k$, then $AN$ and $BM$ are altitudes of $\\triangle ABC$. Let $H$ be the orthocenter of $\\triangle ABC$ and let the tangent line to $k$ at $M$ meet the altitude $CH$ at $O_1$. Then $\\angle CMO_1 = \\angle ABM = \\frac{\\widehat{AM}}{2}$ and $\\angle ABM = \\angle ACH$. Thus $\\angle CMO_1 = \\angle MCO_1$, i.e. $CO_1 = MO_1$. On the other hand $\\angle O_1HM = 90^\\circ - \\angle O_1CM = 90^\\circ - \\angle CMO_1 = \\angle O_1MH$, i.e. $O_1M = O_1H$. Therefore $O_1$ is the midpoint of $CH$. It can be seen analogously that the tangent line to $k$ at $N$ passes through $O_1$, i.e. $O \\equiv O_1$ and $OM = ON = OC = CH/2$.\n\nLet $O$ be the circumcenter of $\\triangle CMN$. Then $\\angle CMO = \\angle MCO = \\angle ABM$ and $\\angle CNO = \\angle NCO = \\angle BAN$. Hence\n\n$$\\angle ACB = \\angle MCO + \\angle NCO = \\angle ABM + \\angle BAN.$$\n\nTherefore\n\n$$2\\angle ANB = \\angle ANB + \\angle AMB$$\n$$= 180^\\circ - \\angle ABC - \\angle BAN + 180^\\circ - \\angle BAC - \\angle ABM$$\n$$= 360^\\circ - (\\angle ABC + \\angle ACB + \\angle BAC) = 180^\\circ.$$\n\nHence $\\angle ANB = 90^\\circ$ and $AB$ is a diameter of $k$.",
+      "answer": null,
+      "difficulty": null,
+      "techniques": [],
+      "confidence": "pending",
+      "reasoning": "standalone"
+    },
+    {
+      "source": "BMC_2003-2006 · 2005-9 · Зад. 3",
+      "statement": null,
+      "solution": "The number $m - n$ has at most three different positive divisors if and only if $m - n = p^k$, where $p$ is a prime and $k \\in \\{0, 1, 2\\}$. If $k = 0$ then $m = n + 1$ and $n(n + 1)$ is a perfect square, which is impossible. Let $m - n = p^k$, $mn = t^2$, where $k \\in \\{1, 2\\}$ and $t$ is a positive integer. Then\n\n$$n(n + p^k) = t^2 \\iff (2n + p^k - 2t)(2n + p^k + 2t) = p^{2k}.$$\n\nTherefore $2n + p^k - 2t = p^s$ and $2n + p^k + 2t = p^r$, where $r$ and $s$ are integers, such that $0 \\leq s < r \\leq 2k$ and $r + s = 2k$.\n\nFor $k = 1$ we have the unique possibility $2n + p - 2t = 1$, $2n + p + 2t = p^2$. Hence\n\n$$n = \\frac{(p - 1)^2}{4}, \\quad m = n + p = \\frac{(p + 1)^2}{4}.$$\n\nTaking into account that $1000 \\leq m < 2005$ we obtain the solutions $m = 1764$, $1600$, $1369$, $1296$ and $1156$ (for $p = 83$, $79$, $73$, $71$ and $67$, respectively).\n\nFor $k = 2$ we have $(r, s) = (4, 0)$ or $(r, s) = (3, 1)$. In the first case we get\n\n$$n = \\frac{(p^2 - 1)^2}{4}, \\quad m = n + p^2 = \\frac{(p^2 + 1)^2}{4}.$$\n\nNow the inequalities $1000 \\leq m < 2005$ imply that $p = 8$ which is not a prime. In the second case we have $m = p(p + 1)^2 / 4$, which gives the solutions $m = 1900$ and $1377$ (for $p = 19$ and $17$, respectively).",
+      "answer": "$m \\in \\{1156,1296,1369,1377,1600,1764,1900\\}$",
+      "difficulty": null,
+      "techniques": [],
+      "confidence": "pending",
+      "reasoning": "standalone"
+    },
+    {
+      "source": "BMC_2003-2006 · 2005-9 · Зад. 4",
+      "statement": null,
+      "solution": "Yana has at least one card, say $k \\neq 1$. If Ivo has 1, then the product $1.k = k$ does not belong to Yana, a contradiction. Therefore Yana has 1.\n\nIf 12 is in Ivo, then the sum $13 = 1 + 12$ belongs to Yana, a contradiction. Therefore 12 belongs to Yana. Since the sum $13 = 6 + 7$ is in Ivo, both cards 6 and 7 belong to one and the same person. They are not in Ivo since otherwise the sum $1 + 6 = 7$ is in Yana. Using similar arguments we conclude that all cards $1, 2, \\ldots, 12$ belong to Yana. Further, all cards $13k$, $k = 1, \\ldots, 7$, are in Ivo, and all the others belong to Yana. Therefore Yana has $100 - 7 = 93$ cards.",
+      "answer": "Yana has 93 cards.",
+      "difficulty": null,
+      "techniques": [],
+      "confidence": "pending",
+      "reasoning": "standalone"
+    },
+    {
+      "source": "OLI-2-Областен кръг-1995-10 кл · 1995-10 · Зад. 1",
+      "statement": "Let $p$ and $q$ be positive numbers such that the parabola $y = x^2 - 2px + q$ has no common point with the $x$-axis. Prove that there exist points $A$ and $B$ on the parabola such that the segment $AB$ is parallel to the $x$-axis and $\\angle AOB = 90^\\circ$ ($O$ is the coordinate origin) if and only if $p^2 < q \\leq \\frac{1}{4}$. Find the values of $p$ and $q$ for which the points $A$ and $B$ are defined in an unique way.",
+      "solution": "Solution. Since the parabola has no common point with the $x$-axis, then the roots of the equation $x^2 - 2px + q = 0$ are not real and hence $p^2 < q$. Let the points $A(x_1, y_0)$ and $B(x_2, y_0)$ (Figure 1) be with the required properties. Then $x_1$ and $x_2$ are the roots of the equation $x^2 - 2px + q - y_0 = 0$ and $y_0 > q - p^2$, because the vertex of the parabola has coordinates $(p, q - p^2)$. On the other hand $OA^2 = x_1^2 + y_0^2$, $OB^2 = x_2^2 + y_0^2$, $AB^2 = (x_1 - x_2)^2$ and it follows from the Pythagorean theorem that $y_0^2 + x_1x_2 = 0$. But $x_1x_2 = q - y_0$ and thus $y_0^2 - y_0 + q = 0$. Consequently the existence of the points $A$ and $B$ is equivalent to the assertion that the equation $f(y) = y^2 - y + q = 0$ has a solution $y_0 > q - p^2$. ($A$ and $B$ are defined in an unique way if this is the only solution.) A necessary condition is that the discriminant of the equation is not negative, i.e. $q \\leq \\frac{1}{4}$. The last condition is sufficient because $f(q - p^2) = (q - p^2) + p^2 > 0$ and $\\frac{1}{2} > \\frac{1}{4} \\geq q - p^2$. The corresponding solution $y_0$ is unique iff $q = \\frac{1}{4}$.",
+      "answer": "$q = \\frac{1}{4}$, $0 < p < \\frac{1}{2}$.",
+      "difficulty": "medium",
+      "techniques": [
+        "coordinate_geometry",
+        "quadratic_discriminant",
+        "perpendicular_chord"
+      ],
+      "confidence": "exact",
+      "reasoning": "Solution uses roots of quadratic for horizontal chord and Pythagorean condition; standard algebraic/analytic geometry."
+    },
+    {
+      "source": "OLI-2-Областен кръг-1995-10 кл · 1995-10 · Зад. 4",
+      "statement": "Let $n \\geq 2$ and $0 \\leq x_i \\leq 1$ for $i = 1, 2, \\ldots, n$. Prove the inequality\n\n$$(x_1 + x_2 + \\cdots + x_n) - (x_1x_2 + x_2x_3 + \\cdots + x_{n-1}x_n + x_nx_1) \\leq \\left[ \\frac{n}{2} \\right].$$\n\nWhen is there an equality?",
+      "solution": "Solution. Denote by $S(x_1,x_2,\\ldots,x_n)$ the left hand side of the inequality. This function is linear with respect to each of the variables $x_i$. Particularly,\n\n$$S(x_1,x_2,\\dots,x_n) \\leq \\max\\left(S(0,x_2,\\dots,x_n), S(1,x_2,\\dots,x_n)\\right).$$\n\nFrom here it follows by induction that it is enough to prove the inequality when all $x_i$ are equal to 0 or 1. On the other hand for arbitrary $x_i$ we have\n\n$$\\begin{array}{l} 2S(x_1,x_2,\\dots,x_n) = n - (1-x_1)(1-x_2) - (1-x_2)(1-x_3) - \\dots - \\\\ - (1-x_n)(1-x_1) - x_1x_2 - x_2x_3 - \\dots - x_nx_1 \\end{array} \\tag{*}$$\n\ni.e. $S(x_1,x_2,\\ldots,x_n)\\leq \\frac{n}{2}$, when $x_i\\in [0,1]$. In the case when $x_i$ are equal to 0 or 1, the left hand side of the last inequality is an integer. Consequently $S(x_1,x_2,\\ldots,x_n)\\leq \\left[\\frac{n}{2}\\right]$. It follows from (*) that\n\n- when $n$ is even, the equality is satisfied iff $(x_1,x_2,\\ldots,x_n) = (0,1,0,1,\\ldots,0,1)$;\n- when $n$ is odd, the equality is satisfied iff $(x_1,x_2,\\ldots,x_n) = (x,0,1,0,1,\\ldots,0,1)$, where $x \\in [0,1]$ is arbitrary.",
+      "answer": "When $n$ is even: $(x_1,x_2,\\ldots,x_n) = (0,1,0,1,\\ldots,0,1)$. When $n$ is odd: $(x_1,x_2,\\ldots,x_n) = (x,0,1,0,1,\\ldots,0,1)$, where $x \\in [0,1]$ is arbitrary.",
+      "difficulty": "medium",
+      "techniques": [
+        "linear_programming",
+        "induction",
+        "extremal_configuration"
+      ],
+      "confidence": "exact",
+      "reasoning": "Uses linearity of the expression in each variable and reduces to 0‑1 case; then induction gives bound."
+    },
+    {
+      "source": "OLI-2-Областен кръг-1995-10 кл · 1995-10 · Зад. 5",
+      "statement": "The points $A_1$, $B_1$, $C_1$ lie on the sides $BC$, $CA$, $AB$ of the triangle $ABC$ respectively and the lines $AA_1$, $BB_1$, $CC_1$ have a common point $M$. Prove that if the point $M$ is center of gravity of $\\triangle A_1B_1C_1$, then $M$ is the center of gravity of $\\triangle ABC$.",
+      "solution": "Solution. Let $M$ be the center of gravity of $\\triangle A_1 B_1 C_1$. Let $A_2$ be a point on $MA^-$ such that $B_1 A_1 C_1 A_2$ is a parallelogram. The points $B_2$ and $C_2$ are constructed analogously. Since $A_1 C_1 \\| A_1 B_1 \\| C_1 B_2$, then the points $A_2$, $C_1$, $B_2$ are colinear and $C_1$ is the midpoint of $A_2 B_2$. The same is true for the points $A_2$, $B_1$, $C_2$ and $C_2$, $A_1$, $B_2$. We shall prove that $A_2 = A$, $B_2 = B$ and $C_2 = C$, which will solve the problem.\n\nAssume that $A_2 \\neq A$ and let $A$ be between $A_2$ and $M$. Then $C_2$ is between $C$ and $M$, $B$ is between $B_2$ and $M$ and consequently $A_2$ is between $A$ and $M$, which is a contradiction.",
+      "answer": null,
+      "difficulty": "medium",
+      "techniques": [
+        "centroid_properties",
+        "parallelogram_construction",
+        "mass_points"
+      ],
+      "confidence": "exact",
+      "reasoning": "Constructs auxiliary points forming parallelograms and uses centroid definition to prove coincidence."
+    },
+    {
+      "source": "OLI-2-Областен кръг-1995-11 кл · 1995-11 · Зад. 4",
+      "statement": "Let $n \\geq 2$ and $0 \\leq x_i \\leq 1$ for $i = 1, 2, \\ldots, n$. Prove the inequality\n\n$$(x_1 + x_2 + \\cdots + x_n) - (x_1x_2 + x_2x_3 + \\cdots + x_{n-1}x_n + x_nx_1) \\leq \\left[ \\frac{n}{2} \\right].$$\n\nWhen is there an equality?",
+      "solution": "Solution. Denote by $S(x_1,x_2,\\ldots,x_n)$ the left hand side of the inequality. This function is linear with respect to each of the variables $x_i$. Particularly,\n\n$$S\\left(x_1, x_2, \\dots, x_n\\right) \\leq \\max\\left(S\\left(0, x_2, \\dots, x_n\\right), S\\left(1, x_2, \\dots, x_n\\right)\\right).$$\n\nFrom here it follows by induction that it is enough to prove the inequality when all $x_i$ are equal to 0 or 1. On the other hand for arbitrary $x_i$ we have\n\n$$\\begin{array}{l} 2S\\left(x_1, x_2, \\dots, x_n\\right) = n - \\left(1 - x_1\\right)\\left(1 - x_2\\right) - \\left(1 - x_2\\right)\\left(1 - x_3\\right) - \\dots - \\\\ - (1 - x_n)(1 - x_1) - x_1x_2 - x_2x_3 - \\dots - x_nx_1 \\\\ \\end{array} \\tag{*}$$\n\ni.e. $S(x_1,x_2,\\ldots,x_n) \\leq \\frac{n}{2}$, when $x_i \\in [0,1]$. In the case when $x_i$ are equal to 0 or 1, the left hand side of the last inequality is an integer. Consequently $S(x_1,x_2,\\ldots,x_n) \\leq \\left[\\frac{n}{2}\\right]$. It follows from (*) that\n\n- when $n$ is even, the equality is satisfied iff $(x_1, x_2, \\ldots, x_n) = (0, 1, 0, 1, \\ldots, 0, 1)$;\n- when $n$ is odd, the equality is satisfied iff $(x_1, x_2, \\ldots, x_n) = (x, 0, 1, 0, 1, \\ldots, 0, 1)$, where $x \\in [0, 1]$ is arbitrary.",
+      "answer": "When $n$ is even: $(x_1, x_2, \\ldots, x_n) = (0, 1, 0, 1, \\ldots, 0, 1)$. When $n$ is odd: $(x_1, x_2, \\ldots, x_n) = (x, 0, 1, 0, 1, \\ldots, 0, 1)$, where $x \\in [0,1]$ is arbitrary.",
+      "difficulty": "medium",
+      "techniques": [
+        "linearization",
+        "induction",
+        "extremal_case_analysis"
+      ],
+      "confidence": "exact",
+      "reasoning": "Solution linearises the expression, reduces to 0/1 variables and finishes by induction; no single listed step matches exactly."
+    },
+    {
+      "source": "OLI-2-Областен кръг-1996-10 кл · 1996-10 · Зад. 1",
+      "statement": "Prove that for all positive integers $n \\geq 3$ there exist an odd positive integers $x_n$ and $y_n$, such that\n\n$$7x_n^2 + y_n^2 = 2^n.$$",
+      "solution": "Solution. If $n = 3$ we have $x_3 = y_3 = 1$.\n\nSuppose that for an integer $n \\geq 3$ there are odd positive integers $x_n, y_n$, such that $7x_n^2 + y_n^2 = 2^n$. We shall prove that for each pair\n\n$$\\left(X = \\frac{x_n + y_n}{2}, Y = \\frac{|7x_n - y_n|}{2}\\right) \\quad \\text{and} \\quad \\left(X = \\frac{|x_n - y_n|}{2}, Y = \\frac{7x_n + y_n}{2}\\right)$$\n\nwe have $7X^2 + Y^2 = 2^{n+1}$. Indeed,\n\n$$7 \\left(\\frac{x_n \\pm y_n}{2}\\right)^2 + \\left(\\frac{7x_n \\mp y_n}{2}\\right)^2 = 2 \\left(7x_n^2 + y_n^2\\right) = 2 \\cdot 2^n = 2^{n+1}.$$\n\nSince $x_n$ and $y_n$ are odd, i.e. $x_n = 2k + 1$ and $y_n = 2l + 1$ ($k, l$ are integers), then $\\frac{x_n + y_n}{2} = k + l + 1$ and $\\frac{|x_n - y_n|}{2} = |k - l|$, which shows that one of the numbers $\\frac{x_n + y_n}{2}$ and $\\frac{|x_n - y_n|}{2}$ is odd. Thus, for $n + 1$ there are odd natural numbers $x_{n+1}$ and $y_{n+1}$ with the required property.",
+      "answer": null,
+      "difficulty": "medium",
+      "techniques": [
+        "induction",
+        "parity"
+      ],
+      "confidence": "exact",
+      "reasoning": "Solution matches the statement for S1; uses"
+    },
+    {
+      "source": "OLI-2-Областен кръг-1996-10 кл · 1996-10 · Зад. 2",
+      "statement": "The circles $k_1$ and $k_2$ with centers $O_1$ and $O_2$ respectively are externally tangent at the point $C$, while the circle $k$ with center $O$ is externally tangent to $k_1$ and $k_2$. Let $\\ell$ be the common tangent of $k_1$ and $k_2$ at the point $C$ and let $AB$ be the diameter of $k$, which is perpendicular to $\\ell$, the points $A$ and $O_1$ lie in one and the same semiplane with respect to the line $\\ell$. Prove that the lines $AO_2$, $BO_1$ and $\\ell$ have a common point.",
+      "solution": "Solution. Denote by $r, r_1$ and $r_2$ the radii of $k, k_1$ and $k_2$, by $M$ and $N$ the tangent points of $k$ with $k_1$ and $k_2$, respectively and by $P$ the common point of $\\ell$ and $AB$ (Figure 1).\n\nIt follows from $O_1O_2 \\perp \\ell$ and $AB \\perp \\ell$ that $\\triangle BON \\sim \\triangle CO_2N$. Then $\\angle CNO_2 = \\angle ONB$, and consequently the points $C, N$ and $B$ are colinear. Also, $\\frac{BN}{CN} = \\frac{BO}{CO_2} = \\frac{r}{r_2}$. Analogously, $A, M$ and $C$ are colinear and $\\frac{AM}{MC} = \\frac{r}{r_1}$.\n\nThe lines $AN, BM$ and $\\ell$ have a common point $H$, which is the altitude center of $\\triangle ABC$. By Ceva's theorem we have: $\\frac{AP}{PB} \\cdot \\frac{BN}{NC} \\cdot \\frac{CM}{MA} = \\frac{AP}{PB} \\cdot \\frac{r}{r_2} \\cdot \\frac{r_1}{r} = 1$, from where:\n\n$$\\frac{r_1}{PB} = \\frac{r_2}{AP}. \\tag{1}$$\n\nLet now $D_1$ and $D_2$ be the common points of the line $\\ell$ with the lines $BO_1$ and $AO_2$, respectively. Obviously, $\\triangle O_1CD_1 \\sim \\triangle BPD_1$ (Figure 2), from where $\\frac{CD_1}{D_1P} = \\frac{r_1}{PB}$. Analogously, $\\frac{CD_2}{D_2P} = \\frac{r_2}{AP}$ and according to (1) we have $\\frac{CD_1}{D_1P} = \\frac{CD_2}{D_2P}$, which shows that $D_1 \\equiv D_2$. Thus, the lines $AO_2$, $BO_1$ and $\\ell$ have a common point.",
+      "answer": null,
+      "difficulty": null,
+      "techniques": [],
+      "confidence": "exact",
+      "reasoning": null
+    },
+    {
+      "source": "OLI-2-Областен кръг-1996-11 кл · 1996-11 · Зад. 3",
+      "statement": "a) Find the maximal value of the function $y = |4x^3 - 3x|$ in the interval $[-1, 1]$. b) Let $a$, $b$ and $c$ be real numbers and $M$ be the maximal value of the function $y = |4x^3 + ax^2 + bx + c|$ in the interval $[-1, 1]$. Prove that $M \\geq 1$. For which $a$, $b$, $c$ is the equality reached?",
+      "solution": "Solution. a) Using that $\\left(4x^3 - 3x\\right)' = 12x^2 - 3 = 12\\left(x - \\frac{1}{2}\\right)\\left(x + \\frac{1}{2}\\right)$, we find that the function\n\n$$y = |4x^3 - 3x|$$\n\nhas a local maximums when $x = \\pm \\frac{1}{2}$. Then its maximal value in the interval $[-1, 1]$ is the biggest among the numbers $y(-1)$, $y(1)$, $y\\left(-\\frac{1}{2}\\right)$ and $y\\left(\\frac{1}{2}\\right)$ (Figure 3).\n\nBut $y(-1) = y\\left(-\\frac{1}{2}\\right) = y\\left(\\frac{1}{2}\\right) = y(1) = 1$, thus the maximal value is equal to 1.\n\nb) Let $f(x) = 4x^3 + ax^2 + bx + c$. Assume that there exist numbers $a$, $b$, $c$, for which the maximal value $M$ of the function $y = |f(x)|$ in $[-1, 1]$ is less than 1, i.e. $M < 1$. Then $-1 < f(x) < 1$ for all $x \\in [-1, 1]$.\n\nConsider the function $g(x) = f(x) - (4x^3 - 3x) = ax^2 + (b + 3)x + c$. We have $g(-1) > 0$, $g\\left(-\\frac{1}{2}\\right) < 0$, $g\\left(\\frac{1}{2}\\right) > 0$ and $g(1) < 0$. Consequently $g(x)$ changes its sign at least 3 times, which means that the quadratic equation $ax^2 + (b + 3)x + c = 0$ has at least 3 different roots. This is possible only if $a = b + 3 = c = 0$, i.e. if $f(x) = 4x^3 - 3x$. According to a) the maximal value of $y = |4x^3 - 3x|$ is $\\leq 1$.\n\nThe equality $M = 1$ is reached only when $a = 0$, $b = -3$ and $c = 0$.",
+      "answer": "a) 1. b) $M \\geq 1$, with equality only when $a = 0$, $b = -3$, $c = 0$.",
+      "difficulty": "medium",
+      "techniques": [
+        "calculus_derivative",
+        "extremal_principle"
+      ],
+      "confidence": "exact",
+      "reasoning": "Maximum of |4x³‑3x| is found by derivative; part b uses sign‑change argument, no listed geometry/algebra point matches."
+    },
+    {
+      "source": "OLI-2-Областен кръг-2005-11 кл · 2005-11 · Зад. 1",
+      "statement": "Да се намерят всички стойности на реалните параметри a и b, за които остатъкът при делението на полинома x⁴ − 3ax³ + ax + b на полинома x² − 1 е полиномът (a² + 1)x + 3b².",
+      "solution": "От условието следва, че за всяко x трябва да бъде изпълнено равенството\nx⁴ − 3ax³ + ax + b = q(x)(x² − 1) + (a² + 1)x + 3b²,\nкъдето q(x) е частното от делението. Полагаме в това равенство x = 1 и x = −1 и получаваме системата\na² + 3b² + 2a − b = 0,\na² − 3b² + 2a + b + 2 = 0,\nс решение a = −1, b = (1 ± √13)/6.",
+      "answer": "a = −1, b = (1 ± √13)/6",
+      "difficulty": "medium",
+      "techniques": [
+        "polynomial_remainder"
+      ],
+      "confidence": "exact",
+      "reasoning": "Uses remainder theorem by substituting x=±1 to find a,b."
+    },
+    {
+      "source": "OLI-2-Областен кръг-2005-11 кл · 2005-11 · Зад. 4",
+      "statement": "Да се намерят всички стойности на реалния параметър a, за които уравнението\nlog_{[неразчетено]}(3^x + 4^x) = log_{[неразчетено]}(7²(4^x − 3^x)) + log_{[неразчетено]}(8^(x−1))\nима решение.",
+      "solution": "Решение. Да решим даденото уравнение. Тъй като условията ax > 0 и 4^x − 3^x > 0, т.е. x > 0 трябва да бъдат изпълнени едновременно, при a < 0 уравнението няма решение.\nПри a > 0, x > 0, ax ≠ 1 уравнението е еквивалентно на\n3^x + 4^x = 7·2^{x−1}√(4^x − 3^x) ⇔ 45(4/3)^{2x} − 57(4/3)^x − 4 = 0,\nкоето при y = (4/3)^x > 0 записваме като 45y² − 57y − 4 = 0. Корените на полученото уравнение са y₁ = 4/3 и y₂ = −1/15 и намираме x = 1. За да няма решение даденото уравнение, за x = 1 трябва да е в сила равенството ax = 1, което се получава при a = 1.\nОкончателно, отговорът на задачата е a ∈ (0,+∞) \\ {1}.",
+      "answer": "a ∈ (0,+∞) \\ {1}",
+      "difficulty": "medium",
+      "techniques": [
+        "logarithm_properties",
+        "equation_transformation"
+      ],
+      "confidence": "exact",
+      "reasoning": "Reduces the logarithmic equation to a quadratic in y=(4/3)^x."
+    },
+    {
+      "source": "OLI-2-Областен кръг-2006-10 кл · 2006-10 · Зад. 2",
+      "statement": "Да се определи най-голямата стойност на израза\n\n$$A = \\frac{\\lg x . \\lg x^2 + \\lg x^3 + 3}{\\lg^2 x + \\lg x^2 + 2}$$\n\nи стойностите на $x$, за които тя се достига.",
+      "solution": "Дефиниционната област е $x > 0$. Полагаме $y = \\lg x$ и получаваме\n\n$$A = \\frac{2y^2 + 3y + 3}{y^2 + 2y + 2},$$\n\nкато при това знаменателят е винаги положителен. В частност, изразът $A$ е определен за всяко реално $y$.\n\nНека $M$ е функционална стойност на $A$. Тогава съществува реално число $y$, за което\n\n$$\\frac{2y^2 + 3y + 3}{y^2 + 2y + 2} = M \\iff 2y^2 + 3y + 3 = My^2 + 2My + 2M$$\n$$\\iff (2 - M)y^2 + (3 - 2M)y + (3 - 2M) = 0.$$\n\nПоследното уравнение има реално решение тогава и само тогава, когато $M = 2$ или $D = (3 - 2M)(2M - 5) \\geq 0$, т.е. при $M \\in \\left(-\\infty, \\frac{3}{2}\\right] \\cup \\left[\\frac{5}{2}, +\\infty\\right)$.\n\nСледователно най-голямата стойност на $A$ е равна на $\\frac{5}{2}$ и се достига при $y = -2$, т.е. при $x = \\frac{1}{100}$.",
+      "answer": "$A_{\\max} = \\frac{5}{2}$ при $x = \\frac{1}{100}$.",
+      "difficulty": "medium",
+      "techniques": [
+        "algebraic_manipulation",
+        "discriminant_analysis"
+      ],
+      "confidence": "exact",
+      "reasoning": "Problem reduces to a rational function in y=lg x; maximum found via quadratic discriminant. No exact STEPS entry matches."
+    },
+    {
+      "source": "OLI-2-Областен кръг-2007-11 кл · 2007-11 · Зад. 3",
+      "statement": "За множество A от реални числа означаваме с A⁺ броя на различните числа, които могат да се получат като сбор на две (не непременно различни) числа от A, а с A⁻ броя на различните положителни числа, които могат да се получат като разлика на две числа от A. Нека A е такова множество с 2007 елемента, за което A⁺ приема минимална възможна стойност. Да се намери A⁻.",
+      "solution": "Нека M = {a₁, a₂, ..., aₙ}, като a₁ < a₂ < ··· < aₙ. Тъй като\n2aₙ > aₙ + aₙ₋₁ > ··· > aₙ + a₁ > aₙ₋₁ + a₁ > aₙ₋₂ + a₁ > ··· > a₂ + a₁ > 2a₁,\nто в M има поне 2n − 1 различни сборове. Ще докажем с индукция по n ≥ 3, че елементите на всяко множество с n елемента, имащо 2n − 1 различни сборове, образуват в някакъв ред аритметична прогресия.\nПри n = 3 имаме 5 различни сбора a₃ + a₃ > a₃ + a₂ > a₃ + a₁ > a₁ + a₂ > a₁ + a₁. Тъй като 2a₂ трябва да съвпада с някой от тези сборове и a₃ + a₂ > 2a₂ > a₁ + a₂, то единствената възможност е 2a₂ = a₁ + a₃, т.е. числата образуват аритметична прогресия.\nНека твърдението е вярно за n = k, т.е. елементите на всяко множество M, за което M⁺ = 2k − 1 образуват в някакъв ред аритметична прогресия.\nДа разгледаме множество с n = k + 1 елемента, в което има 2(k + 1) − 1 = 2k + 1 различни сборове. Тъй като aₖ₊₁ + aₖ₊₁ и aₖ₊₁ + aₖ са различни сборове и са по-големи от всеки сбор от вида aᵢ + aⱼ за i, j ≤ k, то в множеството {a₁, a₂, ..., aₖ} има най-много (следователно точно) 2k − 1 различни сборове. Следователно a₁ < a₂ < ··· < aₖ образуват аритметична прогресия. Тогава aₖ₊₁ + aₖ₋₁ може да бъде равно само на 2aₖ, което означава, че всички числа образуват аритметична прогресия.\nСледователно елементите на множеството A от условието на задачата образуват аритметична прогресия с 2007 члена и лесно пресмятаме, че броят на различните положителни числа, които могат да се получат като разлика на две числа е точно 2006, т.е. A⁻ = 2006.",
+      "answer": "A⁻ = 2006",
+      "difficulty": "medium",
+      "techniques": [
+        "extremal_combinatorics",
+        "induction"
+      ],
+      "confidence": "exact",
+      "reasoning": "Uses extremal argument that minimal number of sums forces the set to be an arithmetic progression; proved by induction."
+    },
+    {
+      "source": "OLI-2-Областен кръг-2008-11 кл · 2008-11 · Зад. 1",
+      "statement": "Дадена с аритметична прогресия $a_1, a_2, \\dots, a_n, \\dots$, за която $a_1 a_2 < 0$ и\n\n$$(a_1 + a_2 + a_3) \\left( \\frac{1}{a_1} + \\frac{1}{a_2} + \\frac{1}{a_3} \\right) = -\\frac{3}{8}.$$\n\nДа се намери най-малкото естествено число $n > 2$, за което $\\frac{a_n}{a_2}$ е точен квадрат на естествено число.",
+      "solution": "Ако $d$ е разликата на прогресията, като използваме равенствата $a_1 = a_2 - d$ и $a_3 = a_2 + d$, получаваме, че равенството от условието е еквивалентно на\n\n$$3a_2 \\cdot \\frac{3a_2^2 - d^2}{a_2(a_2^2 - d^2)} = -\\frac{3}{8},$$\n\nоткъдето $25a_2^2 = 9d^2$. Ако $d = -\\frac{5}{3}a_2$, то $a_1 = \\frac{8}{3}a_2$ и тогава $a_1a_2 = \\frac{8}{3}a_2^2 > 0$. Следователно $d = \\frac{5}{3}a_2$ и тогава $a_1 = -\\frac{2}{3}a_2$. Директна проверка показва, че $\\frac{a_{11}}{a_2} = 16$ и при $n < 11$ частното $\\frac{a_n}{a_2}$ не е квадрат на естествено число. Следователно търсеното число е $n = 11$.",
+      "answer": "n = 11",
+      "difficulty": "medium",
+      "techniques": [
+        "arithmetic_progression",
+        "diophantine"
+      ],
+      "confidence": "exact",
+      "reasoning": "Solution uses AP formulas a1 = a2 - d, a3 = a2 + d, derives 25a2^2 = 9d^2 and checks n=11. Two‑step algebraic manipulation → medium."
+    },
+    {
+      "source": "OLI-2-Областен кръг-2008-11 кл · 2008-11 · Зад. 3",
+      "statement": "Нека $a$ и $b$ са естествени числа. Да се докаже, че редицата $\\{a_n\\}_{n=1}^{\\infty}$, зададена с равенствата $a_1 = a$ и $a_{n+1} = \\varphi(a_n + b)$, $n \\ge 1$, е ограничена. ($\\varphi(k)$ е броят на естествените числа по-малки от $k$ и взаимнопрости с $k$.)",
+      "solution": "Да разгледаме числата $N!+2, N!+3, \\dots, N!+N$, където $N$ е естествено число, за което $N! > a$ и $N > 2b+1$. Понеже $\\varphi(a_n + b) \\le a_n + b - 1$, то всеки член на редицата е най-много с $b-1$ по-голям от предния. Следователно или редицата е ограничена, или съществува $k$ за което $a_k < N!+2$ и $a_{k+1}$ е някое от избраните числа. Тогава $a_{k+1} + b$ отново е измежду тези числа и следователно има прост делител $p \\le N$. Но ако простото число $p$ дели $t$, то $\\varphi(t) \\le t \\cdot \\frac{p-1}{p}$, откъдето получаваме\n\n$$a_{k+2} = \\varphi(a_{k+1} + b) \\le (N! + N) \\frac{N-1}{N} < N! + 2,$$\n\nкато последното неравенство е еквивалентно на $N! > N(N-3)$, което е очевидно.\n\nПолучихме, че $a_{k+2} < N!+2$, т.е. редицата е ограничена.",
+      "answer": null,
+      "difficulty": "medium",
+      "techniques": [
+        "totient_function",
+        "sequence_bounding",
+        "factorial_estimate"
+      ],
+      "confidence": "exact",
+      "reasoning": "Uses inequality φ(k) ≤ k‑1 and factorial block N!+2,…,N!+N to bound the recursive sequence. Two‑step number‑theoretic argument → medium."
+    },
+    {
+      "source": "OLI-2-Областен кръг-2008-11 кл · 2008-11 · Зад. 5",
+      "statement": "а) Дадена е редицата $a_n = \\sqrt[n]{n}$, $n = 1, 2, \\dots$. Да се докаже, че $\\lim_{n \\to \\infty} a_n = 1$.\n\nб) Нека $f(x)$ е полином, коефициентите на който са положителни реални числа. Да се докаже, че редицата $b_n = \\sqrt[n]{f(n)}$, $n = 1, 2, \\dots$, е сходяща и да се намери нейната граница.",
+      "solution": "а) Първо ще покажем, че $n < \\left(1 + \\sqrt{\\frac{2}{n}}\\right)^n$. Наистина\n\n$$\\left(1 + \\sqrt{\\frac{2}{n}}\\right)^n = 1 + n\\sqrt{\\frac{2}{n}} + \\frac{n(n-1)}{2}\\frac{2}{n} + \\dots > 1 + \\sqrt{2n} + n - 1 > n.$$\n\nТогава за всяко $n$ имаме $1 \\leq a_n < 1 + \\sqrt{\\frac{2}{n}}$ и твърдението следва от $\\lim_{n \\to \\infty} \\left(1 + \\sqrt{\\frac{2}{n}}\\right) = 1$.\n\nб) Нека $\\deg f(x) = k$. Ясно е че съществува $N$, такова че при $n > N$ имаме $1 < f(n) < n^{k+1}$. Следователно $1 < b_n < (\\sqrt[n]{n})^{k+1}$. Тъй като от а) имаме, че $\\lim_{n \\to \\infty} (\\sqrt[n]{n})^{k+1} = 1$, то $\\lim_{n \\to \\infty} b_n = 1$.",
+      "answer": "а) $\\lim_{n \\to \\infty} a_n = 1$; б) $\\lim_{n \\to \\infty} b_n = 1$.",
+      "difficulty": "easy",
+      "techniques": [
+        "limit_of_root_sequence",
+        "inequality_estimate"
+      ],
+      "confidence": "exact",
+      "reasoning": "Shows 1 ≤ a_n < 1+√(2/n) and uses squeeze; similarly for b_n with polynomial growth. One‑step inequality → easy."
+    },
+    {
+      "source": "OLI-2-Областен кръг-2008-11 кл · 2008-11 · Зад. 6",
+      "statement": "Нека $k$ е естествено число. Означаваме с $f(k)$ най-голямото естествено число, за което съществува множество $M$ с $f(k)$ елемента, за което всеки елемент на $M$ е делител на $k$ и никой елемент на $M$ не дели друг негов елемент.\n\nДа се докаже, че ако $m$ и $n$ са взаимнопрости естествени числа, то\n\n$$f(n 2^n) f(m 2^m) = f(m n 2^{m+n}).$$",
+      "solution": "Ще докажем, че ако $k = p_1^{\\alpha_1} p_2^{\\alpha_2} \\dots p_t^{\\alpha_t}$ е каноничното разлагане на $k$ и $\\alpha_1 \\geq \\alpha_2 + \\alpha_3 + \\dots + \\alpha_t$, то $f(k) = (\\alpha_2 + 1)(\\alpha_3 + 1) \\dots (\\alpha_t + 1)$, т.е. $f(k)$ е точно броят на делителите на числото $\\frac{k}{p_1^{\\alpha_1}} = p_2^{\\alpha_2} \\dots p_t^{\\alpha_t}$.\n\nДа означим $A = (\\alpha_2 + 1)(\\alpha_3 + 1) \\dots (\\alpha_t + 1)$. Ако $|M| > A$, то ще съществуват два елемента от $M$ от вида $p_1^{s_1}d$ и $p_1^{s_2}d$, като е ясно, че единия дели другия, откъдето намираме, че $f(k) \\leq A$. Да забележим, че множеството\n\n$$M = \\{p_1^{\\alpha_1 - (\\beta_2 + \\dots + \\beta_t)}d \\mid d = p_2^{\\beta_2} \\dots p_t^{\\beta_t} \\text{ е делител на } p_2^{\\alpha_2} \\dots p_t^{\\alpha_t}\\}$$\n\nима исканите свойства. Следователно $f(k) \\geq A$, т.е. $f(k) = A$.\n\nПоне едното число от $m$ и $n$ е нечетно. Без ограничение приемаме, че $n$ е нечетно и $m = 2^t m_1$ за $t \\geq 0$, като $(m_1, n) = 1$. Тогава $f(n2^n)$ е броят на делителите на $n$, $f(m2^m)$ е броят на делителите на $m_1$, а $f(mn2^{m+n})$ е броят на делителите на $nm_1$. Следователно $f(n2^n)f(m2^m) = f(mn2^{m+n})$.",
+      "answer": null,
+      "difficulty": "medium",
+      "techniques": [
+        "prime_factorization",
+        "divisor_count",
+        "antichain"
+      ],
+      "confidence": "exact",
+      "reasoning": "Derives explicit formula for f(k) via prime exponents, then uses multiplicativity for coprime m,n. Two‑step number‑theoretic reasoning → medium."
+    },
+    {
+      "source": "OLI-2-Областен кръг-2019-11 кл · 2019-11 · Зад. 1",
+      "statement": "Точките M, N, P и Q са среди съответно на страните AB, BC, CD и DA на четириъгълник ABCD. Точките F и G са медицентрове съответно на триъгълниците BNP и NPD. Отсечката MG пресича FQ в точка K и FK = 6 cm. Да се докаже, че KQ = 9 cm.",
+      "solution": "Решение. Върху отсечката FQ да изберем точка L, за която QL = (3/5)QF. Достатъчно е да докажем, че L лежи на MG, понеже ще следва, че L ≡ K. Наистина,\n→ML = →MQ + (3/5)→QF = →MQ + (3/5)→QM + (3/5)→MF = (2/5)→MQ + (3/5)→MF\n= (1/5)→MA + (1/5)→MD + (1/5)→MB + (1/5)→MN + (1/5)→MP = (3/5)→MG\n(тук ползвахме →MA + →MB = →0 и →MG = (1/3)(→MD + →MN + →MP)). Резултатът следва.",
+      "answer": "KQ = 9 cm.",
+      "difficulty": "medium",
+      "techniques": [
+        "vector_method"
+      ],
+      "confidence": "exact",
+      "reasoning": "Задачата е за средни точки и медицентри; решението използва векторен подход, но няма съвпадаща STEPS точка."
+    },
+    {
+      "source": "OLI-2-Областен кръг-2019-11 кл · 2019-11 · Зад. 2",
+      "statement": "За положителните числа a, b и c са в сила равенствата\n a(a+b)/(b+c) + b = b(b+c)/(c+a) + c = c(c+a)/(a+b) + a.\nДа се докаже, че a = b = c.",
+      "solution": "Решение. Първи начин. Забелязваме, че всеки от изразите в условието се получава от друг след циклично завъртане на променливите. Равенствата оформяме като пропорции и използваме свойството на пропорциите. Имаме\n(a²+ab+b²+bc)/(b+c) = (b²+bc+c²+ca)/(c+a) = (c²+ca+a²+ab)/(a+b)\n= ((a²+ab+b²+bc) − (b²+bc+c²+ca) + (c²+ca+a²+ab))/((b+c) − (c+a) + (a+b)) = (a²+ab)/b.\nАналогично, (a²+ab)/b = (b²+bc)/c = (c²+ca)/a. Следователно\na²c+abc = b³+b²c; b²a+abc = c³+c²a; c²b+abc = a³+a²b.\nПоради цикличната инвариантност е достатъчно да разгледаме два случая: a ≥ b ≥ c и a ≥ c ≥ b. Нека a ≥ b ≥ c. Тогава a³+a²b ≥ c²b+abc и равенство е възможно само при a = b = c. Нека a ≥ c ≥ b. Тогава a²c+abc ≥ b³+b²c и отново a = b = c.",
+      "answer": "a = b = c.",
+      "difficulty": "easy",
+      "techniques": [
+        "symmetry",
+        "cyclic_substitution"
+      ],
+      "confidence": "exact",
+      "reasoning": "Алгебрично доказателство, базирано на симетрията на изразите; не съвпада с дадени STEPS точки."
+    },
+    {
+      "source": "OLI-3-Национален кръг-1984-9-12 кл · 1984-None · Зад. 3",
+      "statement": "В пространството са дадени такива точки P₁, P₂, . . . , Pₙ, Q (n ≥ 4), че никои четири от тях не лежат в една равнина. Да се докаже, че ако за всяка тройка различни точки P_α, P_β, P_γ съществува такава точка P_δ, че тетраедърът P_αP_βP_γP_δ съдържа точката Q, то n е четно число.",
+      "solution": "Решение. Да разгледаме равнината, определена от точките P₁, P₂, Q. Част от точките P₃, P₄, …, Pₙ са от една страна на тази равнина, а останалите — от другата. Въртим полуравнината, определена от точките Q, P₁, P₂, около правата QP₁. При движението си тя преминава през точките (да кажем) P₃, P₄, …, Pₖ, които са наредени по реда на това преминаване. Да разгледаме точките P₁, P₂, P₃.\nПо условие има такава точка P_s, че тетраедърът P₁P₂P₃P_s съдържа Q. Ясно е, че точката P_s лежи в допълнителния тристенен ъгъл на QP₁P₂P₃. Ще докажем, че в този ъгъл има само една такава точка. Наистина, ако P_t е една друга такава, за точките P₁, P_s, P_[неразчетено] ще има точка P_r, за която тетраедърът P₁P_sP_tP_r съдържа Q. Но тази точка P_r ще трябва да лежи между полуравнините, определени от P₁, P₂, Q и P₁, P₃, Q. Такава точка обаче няма. Аналогично, обхождайки точките от едното полупространство, построяваме еднозначно съответствие на тези точки от допълнителното полупространство, т.е. n е четно число.",
+      "answer": null,
+      "difficulty": "medium",
+      "techniques": [
+        "parity_argument",
+        "bijection"
+      ],
+      "confidence": "exact",
+      "reasoning": "Proof relies on pairing points from opposite half‑spaces; main idea is parity, not listed in STEPS."
+    },
+    {
+      "source": "OLI-3-Национален кръг-1985-9-12 кл · 1985-None · Зад. 2",
+      "statement": "Да се намерят всички стойности на реалния параметър a, за които корените на уравнението\nx⁶ + 3x⁵ + (6 − a)x⁴ + (7 − 2a)x³ + (6 − a)x² + 3x + 1 = 0\nса реални.",
+      "solution": "Решение. Ако запишем даденото уравнение във вида (x² + x + 1)³/[x²(x + 1)²] = a и изследваме функцията f(x) = (x² + x + 1)³/[x²(x + 1)²] в D = (−∞, −1) ∪ (−1, 0) ∪ (0, +∞), ще получим, че тя притежава три локални минимума при x = −2, x = −1/2 и x = 1. При това стойностите и на трите минимума са равни на 27/4.\nВече е ясно, че корените на уравнението са реални тогава и само тогава, когато a ≥ 27/4.",
+      "answer": "a ≥ 27/4",
+      "difficulty": "medium",
+      "techniques": [
+        "rational_function_analysis",
+        "calculus_minima"
+      ],
+      "confidence": "exact",
+      "reasoning": "Problem reduced to a rational function; solution studies its minima to obtain the parameter bound."
+    },
+    {
+      "source": "OLI-3-Национален кръг-1985-9-12 кл · 1985-None · Зад. 3",
+      "statement": "Около сфера с център O е описана четириъгълна пирамида MABCD с връх M. Центърът O лежи на височината MH на пирамидата. Всяка от равнините (ACM), (BDM) и (ABO) дели околната повърхнина на пирамидата на две равнолицеви части. Лицата на сеченията на пирамидата с равнините (ACM) и (ABO) се отнасят както (√2 + 2) : 4. Да се намерят ъгълът δ между равнините (ACM) и (ABO) и ъгълът между равнините (ABCD) и (MAB).",
+      "solution": "Решение. Да означим с P, R, Q и T петите на перпендикулярите, спуснати от H към AB, BC, CD, DA и с P₁, R₁, Q₁ и T₁ — петите на перпендикулярите от O към MP, MR, MQ и MT (черт. 1). Тъй като правата AB е перпендикулярна на равнината (MPH), лесно се вижда, че OP₁ ⊥ (ABM), т.е. OP₁ е радиусът на сферата. Същият извод е верен и за OR₁, OQ₁, OT₁, откъдето следва, че триъгълниците MOP₁, MOR₁, MOQ₁, MOT₁ са еднакви. От друга страна, от подобието на триъгълниците MPH и MOP₁ получаваме, че MP = MH·MO/MP₁, а оттук MP = MR = MQ = MT, както и PH = [неразчетено] = RH = QH = TH. Последното равенство показва, че в четириъгълника ABCD може да се впише окръжност с център H, откъдето\n(1) AB + CD = BC + AD.\nОт условието S_ABM + S_BCM = S_ADM + S_CDM получаваме\n(2) AB + BC = AD + CD.\nАналогично от второто условие за равнолицевост намираме\n(3) AB + AD = BC + CD.\nОт (1), (2) и (3) следва, че ABCD е ромб и AC ∩ BD = H, AC ⊥ BD. Равнината (ABO) е ъглополовяща на двустенния ъгъл с ръб AB и пресича равнината (MCD) в отсечката C₁D₁, успоредна на CD. От друга страна, понеже MA = MC и MB = MD, околните стени са еднакви триъгълници, така че S_BCC₁ = S_ADD₁ и S_BMC₁ = S_AMD₁. Да означим S₁ = S_ABM, S₂ = S_BC₁M, S₃ = S_C₁D₁M. От условието получаваме\nS₁ + 2S₂ + S₃ = 2(S₁ − S₂) + S₁ − S₃,\nили S₁ = 2S₂ + S₃.\nАко (A₁B₁C₁D₁) е сечението на пирамидата с равнина през C₁D₁, успоредна на основата, и θ е ъгълът при върха M на всяка от околните стени, то\nS₂ = (1/2)MA·MD₁ sin θ; S₁ = (1/2)MA·MB sin θ; S₃ = (1/2)MC₁·MD₁ sin θ,\nоткъдето поради подобието на триъгълниците MCD и MC₁D₁ получаваме S₂² = S₁S₃.\nТогава S₁ − 2√(S₁S₃) − S₃ = 0 или √(S₁/S₃) = 1 + √2.\nДа означим с ε двустенния ъгъл с ръб AB. Очевидно ε = ∠MPQ = ∠MQP и ∠MPO = ∠QPO = ε/2. Ако PO ∩ MQ = U, от синусовата теорема за триъгълника MPU получаваме MP : MU = sin(ε + ε/2) : sin(ε/2) и понеже MP = MQ и MQ/MU = CD/(C₁D₁) = √(S₁/S₃) = 1 + √2, намираме sin(ε + ε/2) = (1 + √2)sin(ε/2). От това уравнение следва, че ε = π/4.\nНека S = S_ABC₁D₁ и S* = S_ACM. По условие S*/S = (√2 + 2)/4, а ортогоналната проекция на ABC₁D₁ върху (ACM) е AHC₁H₁. Но S_AHC₁H₁ = (1/2)S_ACC₁A₁ и S_ACC₁A₁ = S* − S_A₁C₁M, а освен това\nS_A₁C₁M/S* = (A₁C₁/AC)² = (C₁D₁/CD)² = S₃/S₁ = (1/(1 + √2))²,\nоткъдето S_A₁C₁M = (3 − 2√2)S* или S_ACC₁A₁ = 2(√2 − 1)S*. Тогава\ncos δ = S_AHC₁H₁/S = (√2 − 1)S*/S = (√2 − 1)(√2 + 2)/4 = √2/4.",
+      "answer": "cos δ = √2/4; ъгълът между (ABCD) и (MAB) е π/4.",
+      "difficulty": "hard",
+      "techniques": [
+        "geometry",
+        "similar_triangles",
+        "area_ratios"
+      ],
+      "confidence": "exact",
+      "reasoning": "Heavy spatial reasoning, area equalities and angle calculations; no single listed STEPS point matches exactly."
+    },
+    {
+      "source": "OLI-3-Национален кръг-1985-9-12 кл · 1985-None · Зад. 5",
+      "statement": "Върху медианата CM на триъгълника ABC (AC ≠ BC) с остър ъгъл γ = ∠ACB е взета такава точка P, че ъглополовящите на вътрешните ъгли PAC и PBC се пресичат в точка Q от медианата CM. Да се намерят ъглите APB и AQB.",
+      "solution": "Решение. Означаваме с N пресечната точка на CM с описаната около триъгълника ABC окръжност (черт. 3). От свойствата на ъглополовящите имаме\nQP/QC = AP/AC = BP/BC,\nили AP/BP = b/a. Да означим MP = k·MC.\nПрилагаме косинусовата теорема за триъгълниците BMP и AMP и получаваме\nBP² = c²/4 + m²k² + kcm cos θ, AP² = c²/4 + m²k² + kcm cos θ,\nкъдето m = MC, θ = ∠BMP. Понеже BP²/AP² = a²/b², от горните равенства следва, че\nk²m²(a² − b²) + kcm(a² + b²)cos θ + (c²/4)(a² − b²) = 0.\nЗаместваме mc cos θ = c²/4 + m² − a² и 4m² = 2a² + 2b² − c² и получаваме\nk²(2a² + 2b² − c²)(a² − b²) + 2k(b² − a²)(a² + b²) + c²(a² − b²) = 0.\nТъй като a ≠ b, достигаме до квадратното уравнение k²(2a² + 2b² − c²) + 2k(a² + b²) + c² = 0; то очевидно има корен k = 1, който няма геометричен смисъл. Остава k = c²/(2a² + 2b² − c²) = c²/(4m²), откъдето PM·CM = c²/4 = MN·CM. Оттук получаваме, че PM = MN, т.е. четириъгълникът ANBP е успоредник и значи ∠APB = ∠ANB = π − γ. Освен това\n∠BAQ + ∠ABQ = ∠BAP + ∠PAQ + ∠ABP + ∠PBQ = (1/2)(∠BAP + ∠PBA) + (1/2)(∠PAC + ∠PBC) = γ + (1/2)(2π − γ − (2π − (π − γ))) = π/2.",
+      "answer": "∠APB = π − γ; ∠AQB = π/2.",
+      "difficulty": "medium",
+      "techniques": [
+        "law_of_cosines",
+        "angle_bisectors"
+      ],
+      "confidence": "exact",
+      "reasoning": "Main tool is the cosine law together with properties of angle bisectors."
+    },
+    {
+      "source": "OLI-3-Национален кръг-1987-9-12 кл · 1987-None · Зад. 2",
+      "statement": "Даден е многоъгълникът P, който се изобразява в себе си при две ротации: ρ₁ с център O₁ на ъгъл ω₁ и ρ₂ с център O₂ на ъгъл ω₂, като ωᵢ ≠ 2π за i ∈ {1, 2}. Да се докаже, че числото ω₁/ω₂ е рационално.",
+      "solution": "Решение. Достатъчно е да покажем, че всяко от числата ω₁ и ω₂ е рационално кратно на π. Разглеждаме произволен връх A₁ на P, различен от O₁. Тъй като ρ₁ изобразява всеки връх на P във връх на многоъгълника ρ₁(P), който съвпада с P, редицата от точки\nA₁, A₂ = ρ₁(A₁), A₃ = ρ₁(A₂), ..., Aₙ = ρ₁(Aₙ₋₁), ...\nсе състои от върхове на P. Но множеството от върховете на P е крайно. Ето защо съществуват естествени числа k и l, за които 1 ≤ k < l и Aₖ = Aₗ. Последното равенство означава, че ротацията ρ′₁ с център O₁ на ъгъл (l−k)ω₁ изобразява Aₖ в Aₖ. Следователно съществува цяло положително число s, за което (l−k)ω₁ = s·2π, т. е. ω₁ = (2s/(l−k))π. Така доказахме, че ω₁ е рационално кратно на π. С аналогични разсъждения се убеждаваме, че същото е вярно и за ω₂. Задачата е решена.",
+      "answer": null,
+      "difficulty": "medium",
+      "techniques": [
+        "rotation_symmetry",
+        "rational_multiple_of_pi"
+      ],
+      "confidence": "exact",
+      "reasoning": "Finte set of vertices forces a power of the rotation to be identity, giving ω rational multiple of π."
+    },
+    {
+      "source": "OLI-3-Национален кръг-1990-9-12 кл · 1990-None · Зад. 1",
+      "statement": "На дъската са написани последователно цифрите 1234567891011...19891990. В така полученото многоцифрено число се зачертават всички цифри, разположени на четни места. В новополученото число след това се зачертават всички цифри, разположени на нечетни места, след което в новото число отново се зачертават цифрите, стоящи на четни места, и т. н. Да се намери последната цифра, която трябва да се зачертае.",
+      "solution": "Решение. Първоначално на дъската е записано число с 9·1 + 90·2 + 900·3 + 991·4 = 6853 цифри. Номерираме последователно позициите на тези цифри и по същество извършваме операциите над естествените числа от 1 до 6983. Тези числа могат да се разглеждат като аритметична прогресия с първи член a₁ = 1 и d = 1. След всяка следваща операция „зачертаване на цифри“ се [неразчетено] нови прогресии с разлики 2, 4, 8 и т. н. За да не въвеждаме други означения ще отбелязваме пак с a₁ и d първите членове и разликите на новите прогресии. Лесно се вижда, че винаги a₁ < d. Тъй като d е число от вида 2^k и 4096 = 2¹² < 6853 < 8192 = 2¹³, поне до момента, в който d стане равно на 2¹² = 4096 измежду числата 1, 2, ..., 6853 ще има незачеркнати. Да проследим [неразчетено] членове на получаваните прогресии. Най-напред имаме a₁ = 1 и d = 1. След това — a₁ = 1 и d = 2, и по-нататък: a₁ = 1 + 2 = 3 и d = 4, a₁ = 3 и [неразчетено], a₁ = 3 + 8 = 11 и d = 16, a₁ = 11 и d = 32, a₁ = 11 + 32 = 43 и d = 64, a₁ = [неразчетено], d = 128, a₁ = 43 + 128 = 171 и d = 256, a₁ = 171 и d = 512, a₁ = 171 + 512 = [неразчетено] и d = 1024, a₁ = 683 и d = 2048, a₁ = 683 + 2048 = 2731 и d = 4096. Получихме прогресията\n2731, 2731 + 4096, 2731 + 2·4096, ...,\nв която зачертаваме всеки член с четен номер. Вече е ясно, че на следващият ход се зачертава последната от дадените цифри — цифрата с позиция 2731.\nЛесно се вижда, че на тази позиция е записано трицифрено число, защото 9·1 + 90·2 < 2731 < 9·1 + 90·2 + 900·3. Имаме 2731 − 189 = 2542 и 2542 = 3·847 + 1, т. е. търсената цифра е първата цифра на 848-ото трицифрено число. То е 947, следователно тази цифра е 9.",
+      "answer": "9",
+      "difficulty": "medium",
+      "techniques": [
+        "josephus_elimination",
+        "binary_representation",
+        "powers_of_two"
+      ],
+      "confidence": "exact",
+      "reasoning": "Problem reduces to repeatedly deleting even/odd positions, i.e., Josephus problem with step 2; solution uses binary powers."
+    },
+    {
+      "source": "OLI-3-Национален кръг-1992-9-12 кл · 1992-None · Зад. 1",
+      "statement": "През произволна точка C₁ от ръба DC на правилния тетраедър ABCD е прекарана равнина, успоредна на равнината (ABC). Тази равнина пресича ръбовете DA и DB съответно в точките A₁ и B₁. Нека точката H е средата на височината през върха D на тетраедъра DA₁B₁C₁, а M е медицентърът на триъгълника ABC₁. Да се докаже, че мярката на ъгъла [неразчетено] не зависи от положението на точката C₁.",
+      "solution": "Решение. Нека даденият правилен тетраедър има ръб с дължина 1. Тогава →DA = →a, →DB = →b, →DC = →c (черт. 1). Тъй като равнините (ABC) и (A₁B₁C₁) са успоредни, то съществува число λ, за което →DA₁ = λ→a, →DB₁ = λ→b и →DC₁ = λ→c. Тетраедърът A₁B₁C₁D е правилен, следователно петата на височината му през върха D съвпада с медицентъра на равностранния △A₁B₁C₁. Оттук за вектора →DH непосредствено получаваме\n→DH = (1/2)·(1/3)(→DA₁ + →DB₁ + →DC₁) = (λ/6)(→a + →b + →c)\nи тъй като\n→DM = (1/3)(→DA + →DB + →DC₁) = (λ/6)(→a + →b + λ→c), то\n→CM = →DM − →DC = (1/3)(→a + →b + (λ − 3)→c)\nи\n→MH = →DH − →DM = (1/6)((λ − 2)→a + (λ − 2)→b − λ→c).\nКато вземем предвид, че\n→a² = →b² = →c² = 1,\n→a·→b = →b·→c = →c·→a = 1/2 (защото ABCD е правилен тетраедър),\nза скаларното произведение на ненулевите вектори →CM и →MH получаваме\n→CM·→MH = (1/3)(→a + →b + (λ − 3)→c)·(1/6)((λ − 2)→a + (λ − 2)→b − λ→c) =\n= (1/18)((λ − 2)→a² + (λ − 2)→b²) + (3λ − λ²)→c² + (2λ − 4)→a·→b + (λ² − 6λ + 6)→b·→c + (λ² − 6λ + 6)→c·→a = 0.\nСледователно →CM ⊥ →MH, т. е. ∠HMC = 90° независимо от избора на точката C₁ върху DC.",
+      "answer": "∠HMC = 90°.",
+      "difficulty": "medium",
+      "techniques": [
+        "vector_method",
+        "dot_product",
+        "regular_tetrahedron_properties"
+      ],
+      "confidence": "exact",
+      "reasoning": "Solution uses vector coordinates of a regular tetrahedron and dot‑product to show CM ⟂ MH, a typical vector‑geometry approach."
+    },
+    {
+      "source": "OLI-3-Национален кръг-1995-9-12 кл · 1995-None · Зад. 4",
+      "statement": "The points $C_1, A_1$ and $B_1$ lie on the sides $AB, BC$ and $CA$ of the equilateral triangle $ABC$ respectively in such a way that the inradii of the triangles $C_1AB_1, B_1CA_1, A_1BC_1$ and $A_1B_1C_1$ are equal. Prove that $A_1, B_1$ and $C_1$ are the midpoints of the corresponding sides.",
+      "solution": "Solution. We shall prove that $BA_1 = CB_1 = AC_1$ (Figure 1). Assume the contrary and let $BA_1 \\ge CB_1 > AC_1$. Let $\\rho$ be the rotation at $120^\\circ$ which center coincides with the in center of the incircle of $\\triangle ABC$. This rotation transforms the incircles of the triangles $C_1BA_1$, $A_1CB_1$ and $B_1AC_1$ to the incircles of the triangles $A_1CB_1$, $B_1AC_1$ and $C_1BA_1$, respectively. Let $A_2 = \\rho(A_1)$, $B_2 = \\rho(B_1)$ and $C_2 = \\rho(C_1)$. It follows that $BB_2 < BC_1$ and $BC_2 < BA_1$. But the incircles of the triangles $BC_1A_1$ and $BC_2B_2$ have equal radii (because $\\rho(\\triangle AC_1B_1) = \\triangle BC_2B_2$), which is a contradiction.\n\nLet $r$ be the radius of the incircles of the triangles $C_1AB_1$, $B_1CA_1$, $A_1BC_1$ and $A_1B_1C_1$. From the triangle $B_1AC_1$ we have $r = \\frac{1 - B_1C_1}{2} \\cdot \\frac{\\sqrt{3}}{3}$, and from $\\triangle A_1B_1C_1$ which is equilateral we have $r = B_1C_1 \\cdot \\frac{\\sqrt{3}}{6}$. From here $B_1C_1 = \\frac{1}{2}$ and consequently $A_1$, $B_1$, $C_1$ are midpoints of the corresponding sides.",
+      "answer": null,
+      "difficulty": "medium",
+      "techniques": [
+        "rotation_symmetry",
+        "equal_inradius"
+      ],
+      "confidence": "exact",
+      "reasoning": "Uses a 120° rotation of the equilateral triangle to compare equal incircles and deduce midpoints."
+    },
+    {
+      "source": "OLI-3-Национален кръг-1999-9-12 кл · 1999-None · Зад. 1",
+      "statement": "The faces of an orthogonal parallelepiped whose dimensions are natural numbers are painted green. The parallelepiped is partitioned into unit cubes by planes parallel to its faces. Find the dimensions of the parallelepiped if the number of cubes having no green face is one third of the total number of cubes.",
+      "solution": "Solution: Let $x \\leq y \\leq z$ be the dimensions of the parallelepiped. It follows from the conditions of the problem that $x \\geq 3$ and $(x - 2)(y - 2)(z - 2) = \\frac{xyz}{3}$. Since $\\frac{x - 2}{x} \\leq \\frac{y - 2}{y} \\leq \\frac{z - 2}{z}$, when $x \\geq 7$, we obtain that $\\frac{(x - 2)(y - 2)(z - 2)}{xyz} \\geq (\\frac{5}{7})^3 > \\frac{1}{3}$. Therefore $x \\leq 6$ and thus $x = 3$, $x = 4$, $x = 5$ or $x = 6$.\n\n1. If $x = 3$, then $(y - 2)(z - 2) = yz$, which is impossible.\n2. If $x = 4$, then $2(y - 2)(z - 2) = \\frac{4yz}{3}$, so $(y - 6)(z - 6) = 24$. In this case the only solutions are $(4, 7, 30)$, $(4, 8, 18)$, $(4, 9, 14)$ and $(4, 10, 12)$.\n3. If $x = 5$, then $3(y - 2)(z - 2) = \\frac{5yz}{3}$, so $(2y - 9)(2z - 9) = 45$. Therefore the solutions are $(5, 5, 27)$, $(5, 6, 12)$ and $(5, 7, 9)$.\n4. If $x = 6$, then $4(y - 2)(z - 2) = 2yz$, so $(y - 4)(z - 4) = 8$. Thus there is an unique solution $(6, 6, 8)$.\n\nAnswer: The problem has 8 solutions—$(4, 7, 30)$, $(4, 8, 18)$, $(4, 9, 14)$, $(4, 10, 12)$, $(5, 5, 27)$, $(5, 6, 12)$, $(5, 7, 9)$ and $(6, 6, 8)$.",
+      "answer": "$(4, 7, 30)$, $(4, 8, 18)$, $(4, 9, 14)$, $(4, 10, 12)$, $(5, 5, 27)$, $(5, 6, 12)$, $(5, 7, 9)$ and $(6, 6, 8)$.",
+      "difficulty": "medium",
+      "techniques": [
+        "counting",
+        "diophantine"
+      ],
+      "confidence": "exact",
+      "reasoning": "Solution matches the parallelepiped problem"
+    },
+    {
+      "source": "OLI-3-Национален кръг-1999-9-12 кл · 1999-None · Зад. 2",
+      "statement": "Let $\\{a_n\\}_{n=1}^{\\infty}$ be a sequence of integer numbers such that\n\n$$(n-1)a_{n+1} = (n+1)a_n - 2(n-1)$$\n\nfor any $n \\geq 1$. If 2000 divides $a_{1999}$, find the smallest $n \\geq 2$ such that 2000 divides $a_n$.",
+      "solution": "Solution: It is obvious that $a_1 = 0$ and $a_{n+1} = \\frac{n + 1}{n - 1}a_n - 2$ when $n \\geq 2$. Therefore the sequence is uniquely determined by its second term. Furthermore the sequence $a_n = (n - 1)(cn + 2)$ (where $c = \\frac{a_2}{2} - 1$ is an arbitrary real number) satisfies the equality from the conditions of the problem. We conclude now that all sequences which satisfy this equality are of the kind given above. Since all terms are integer numbers and 2000 divides $a_{1999}$, it is easy to see that $c$ is integer and $c = 1000m + 2$. Therefore 2000 divides $a_n$ if and only if 1000 divides $(n-1)(n+1)$. Thus $n = 2k+1$ and $k(k+1)$ is divisible by $250 = 5^3 \\cdot 2$. Since $k$ and $k+1$ are relatively prime, we get that the smallest $n \\geq 2$ equals $2 \\cdot 124 + 1 = 249$.",
+      "answer": "$n = 249$.",
+      "difficulty": null,
+      "techniques": [],
+      "confidence": "exact",
+      "reasoning": null
+    },
+    {
+      "source": "OLI-3-Национален кръг-2006-9-12 кл · 2006-None · Зад. 1",
+      "statement": "Дадено е множеството $A = \\{1, 2, 3, 4, \\dots, 2^n\\}$, където $n \\ge 2$ е естествено число. Да се намери броят на подмножествата $B$ на $A$, такива, че ако $x$ и $y$ са различни числа от $A$, чийто сбор е степен на 2, то точно едно от числата $x$ и $y$ принадлежи на $B$.",
+      "solution": "Нека $B \\subset A$ има исканото свойство. Тъй като $1 + 3 = 2^2$, то точно едно от числата 1 и 3 е в $B$.\n\nАко $1 \\in B$, то $3 \\notin B$. Ще докажем по индукция, че за всяко цяло число $t, 0 \\le t < 2^{n-2}$, числата от вида $4t + 1$ са в $B$, а числата от вида $4t + 3$ не са в $B$. За $t = 0$ твърдението е вярно и нека то е вярно за $t \\le s$. Тъй като $4(s+1)+1$ е нечетно число, то съществува $l$, за което $2^l < 4(s+1)+1 < 2^{l+1}$. Тогава $2(4s+5) > 2 \\cdot 2^l = 2^{l+1}$, откъдето $0 < 2^{l+1} - (4s+5) < 4s+5$. Тогава при $x = 4s+5$ и $y = 2^{l+1} - (4s+5)$ имаме $x + y = 2^{l+1}$ и понеже $y$ е от вида $4m+3$, то $y \\notin B$ и следователно $4(s+1)+1 = 4s+5 \\in B$. Аналогично се доказва, че $4(s+1)+3 \\notin B$.\n\nАко $1 \\notin B$, то $3 \\in B$ и както по-горе се доказва, че числата от вида $4t+1$ не са в $B$, а числата от вида $4t+3$ са в $B$. Следователно нечетните числа в $B$ са или всички числа от вида $4t+1$ или всички числа от вида $4t+3$.\n\nНека $x = 2^p x_0$ и $y = 2^q y_0$, където $x_0$ и $y_0$ са нечетни числа, а $p$ и $q$ са естествени числа. Ако $2^p x_0 + 2^q y_0 = 2^k$ и $p \\neq q$ (без ограничение нека $p < q$), то $x_0 + 2^{q-p} y_0 = 2^{k-p}$, което е невъзможно, понеже числото отляво е нечетно. Тогава $p = q$. Оттук следва, че ако разделим числата от $A$ в множества $A_i = \\{2^i a \\mid a \\text{ е нечетно число}\\}, i = 1, 2, \\dots, n$, то сборът на числа от различни множества не може да бъде степен на двойката. За всяко $A_i$ след съкращаване на $2^i$ прилагаме горните разсъждения и получаваме, че за избор на числата от $A_i$ имаме точно две възможности: или всички числа от вида $2^i(4t+1)$ са в $B$, или всички числа от вида $2^i(4t+3)$ са в $B$.\n\nСледователно за избора на множеството $B$ имаме $2^{n+1}$ възможности.",
+      "answer": "$2^{n+1}$ възможности.",
+      "difficulty": "medium",
+      "techniques": [
+        "induction",
+        "binary_representation",
+        "parity"
+      ],
+      "confidence": "exact",
+      "reasoning": "Solution uses induction on t and binary decomposition of numbers; fits 'Свободни от суми множества' (4.13).",
+      "_invalid_pid": "4.13"
+    },
+    {
+      "source": "OLI-3-Национален кръг-2019-9-12 кл · 2019-None · Зад. 1",
+      "statement": "Нека f(x) = x² + bx + 1, където b е реален параметър. Да се намери броят на целочислените решения на неравенството f(f(x) + x) < 0.",
+      "solution": "Решение. Ако |b|≤2, то f(x)≥0 за всяко x.\nНека |b|>2 и x₁<x₂ са реалните нули на f. Тогава\n(∗) f(f(x)+x)=(f(x)+x−x₁)(f(x)+x−x₂)=(x−x₁)(x−x₂+1)(x−x₂)(x−x₁+1).\n1) x₂−x₁≤1, т.е. 2<|b|≤√5. Понеже f(±1)=2±b, лесно следва, че целите числа x, за които f(f(x)+x)<0, са −1 и −2 при b>0, и 1 и 0 при b<0.\n2) x₂−x₁>1, т.е. |b|>√5. Тогава всеки от интервалите (x₁−1,x₁) и (x₂−1,x₂) съдържа точно по едно цяло число x, за което f(f(x)+x)<0, освен ако x₁ или x₂ не са цели числа.\nИ така, търсеният брой е равен на 0 при |b|≤2, на 1 при b=m+1/m, m∈ℤ, |m|≥2, и на 2 в останалите случаи.",
+      "answer": "0 при |b|≤2; 1 при b=m+1/m, m∈ℤ, |m|≥2; 2 в останалите случаи.",
+      "difficulty": "medium",
+      "techniques": [
+        "quadratic_inequality",
+        "sign_analysis"
+      ],
+      "confidence": "exact",
+      "reasoning": "Direct factorisation of f(f(x)+x) and case analysis on roots gives integer solutions."
+    },
+    {
+      "source": "OLI-3-Национален кръг-2022-9-12 кл · 2022-None · Зад. 4",
+      "statement": "Нека n ≥ 4 е естествено число и x₁, x₂, ..., xₙ, xₙ₊₁, xₙ₊₂ са реални числа, такива че xₙ₊₁ = x₁ и xₙ₊₂ = x₂. Ако съществува реално положително число a, такова, че xᵢ² = a + xᵢ₊₁xᵢ₊₂ за всяко i = 1, 2, ..., n, то да се докаже, че поне 2 от числата x₁, x₂, ..., xₙ са отрицателни.",
+      "solution": "Решение. Да забележим, че xᵢ²xᵢ₊₁ = axᵢ₊₁ + xᵢ₊₁²xᵢ₊₂ е вярно за всяко i = 1, 2, ..., n. Следователно след сумиране на тези равенства за i = 1, 2, ..., n получаваме, че е в сила равенството ∑ᵢ₌₁ⁿ xᵢ²xᵢ₊₁ = a∑ᵢ₌₁ⁿ xᵢ + ∑ᵢ₌₁ⁿ xᵢ²xᵢ₊₁, което означава, че ∑ᵢ₌₁ⁿ xᵢ = 0. Тъй като a > 0, то поне едно от числата xᵢ е различно от нула и следователно поне едно от тях е отрицателно.\nДа допуснем, че има точно едно отрицателно число и нека без ограничение на общността това бъде x₁. Тогава имаме, че x₂² = a + x₃x₄ ≥ a и |x₁| = x₂ + ··· + xₙ. Последното означава, че (x₂ + ··· + xₙ)² = x₁² = a + x₂x₃, следователно x₂² − a + ∑ᵢ₌₃ⁿ xᵢ² + x₂x₃ ≤ 0. Оттук получаваме, че x₂ = √a и x₃ = ··· = xₙ = 0. Сега, ако заместим в равенството от условието за i = 3, получаваме, че 0 = x₃² = a + x₄x₅ = a, което е противоречие. Следователно поне 2 от числата са отрицателни.",
+      "answer": null,
+      "difficulty": "medium",
+      "techniques": [
+        "algebraic_summation",
+        "sign_argument"
+      ],
+      "confidence": "exact",
+      "reasoning": "Summation of the given recurrence yields Σx_i=0; sign analysis shows at least two negatives."
+    }
+  ]
+}

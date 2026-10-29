@@ -1,0 +1,101 @@
+{
+  "pdf": "OLI-3-Национален кръг-2013-9-12 кл-probs",
+  "problems": [
+    {
+      "num": 1,
+      "year": 2013,
+      "grade": null,
+      "round": "nacionalen",
+      "statement": "Да се намерят всички прости числа $p$ и $q$, за които $p^{q+1} + q^{p+1}$ е точен квадрат на естествено число.",
+      "solution": null,
+      "answer": null,
+      "page": 1,
+      "pdf": "OLI-3-Национален кръг-2013-9-12 кл-probs",
+      "chunk": 1,
+      "grade_range": [
+        9,
+        12
+      ]
+    },
+    {
+      "num": 2,
+      "year": 2013,
+      "grade": null,
+      "round": "nacionalen",
+      "statement": "Да се намерят всички функции $f : \\mathbb{R} \\to \\mathbb{R}$, ограничени в интервала $(0, 1)$ и такива, че\n\n$$x^2 f(x) - y^2 f(y) = (x^2 - y^2)f(x + y) - xyf(x - y)$$\n\nза произволни $x, y \\in \\mathbb{R}$.",
+      "solution": null,
+      "answer": null,
+      "page": 1,
+      "pdf": "OLI-3-Национален кръг-2013-9-12 кл-probs",
+      "chunk": 1,
+      "grade_range": [
+        9,
+        12
+      ]
+    },
+    {
+      "num": 3,
+      "year": 2013,
+      "grade": null,
+      "round": "nacionalen",
+      "statement": "Всички целочислени точки в равнината са оцветени в три цвята. Да се намери най-малкото реално положително число $S$ със следното свойство: за всяко такова оцветяване съществува триъгълник с лице $S$, върховете на който са оцветени в един и същи цвят?",
+      "solution": null,
+      "answer": null,
+      "page": 1,
+      "pdf": "OLI-3-Национален кръг-2013-9-12 кл-probs",
+      "chunk": 1,
+      "grade_range": [
+        9,
+        12
+      ]
+    },
+    {
+      "num": 4,
+      "year": 2013,
+      "grade": null,
+      "round": "nacionalen",
+      "statement": "Да се докаже, че ако $\\alpha, \\beta, \\gamma \\in [0, \\pi/2)$ и $\\tan \\alpha + \\tan \\beta + \\tan \\gamma \\le 3$, то\n\n$$\\cos 2\\alpha + \\cos 2\\beta + \\cos 2\\gamma \\ge 0.$$",
+      "solution": null,
+      "answer": null,
+      "page": 1,
+      "pdf": "OLI-3-Национален кръг-2013-9-12 кл-probs",
+      "chunk": 1,
+      "grade_range": [
+        9,
+        12
+      ]
+    },
+    {
+      "num": 5,
+      "year": 2013,
+      "grade": null,
+      "round": "nacionalen",
+      "statement": "Даден е остроъгълен $\\triangle ABC$ с височини $AA_1$, $BB_1$ и $CC_1$ ($A_1 \\in BC$, $B_1 \\in AC$, $C_1 \\in AB$). Върху продължението на $B_1A_1$ след $A_1$ е избрана точка $C'$, така че $A_1C' = B_1C_1$. Аналогично върху продължението на $A_1C_1$ след $C_1$ е избрана точка $B'$, така че $C_1B' = A_1B_1$ и върху продължението на $C_1B_1$ след $B_1$ е избрана точка $A'$, така че $B_1A' = C_1A_1$. Да означим с $A''$, $B''$ и $C''$ симетричните точки на $A'$, $B'$ и $C'$ относно правите $BC$, $CA$ и $AB$ съответно. Да се докаже, че ако $R$, $R'$ и $R''$ са радиусите на описаните окръжности съответно около $\\triangle ABC$, $\\triangle A'B'C'$ и $\\triangle A''B''C''$, то $R$, $R'$ и $R''$ са дължини на страните на триъгълник, чието лице е половината от лицето на $\\triangle ABC$.",
+      "solution": null,
+      "answer": null,
+      "page": 1,
+      "pdf": "OLI-3-Национален кръг-2013-9-12 кл-probs",
+      "chunk": 1,
+      "grade_range": [
+        9,
+        12
+      ]
+    },
+    {
+      "num": 6,
+      "year": 2013,
+      "grade": null,
+      "round": "nacionalen",
+      "statement": "Нека $m$ е естествено число, а $p$ е просто число, $p > m$. Да се докаже, че броя на естествените числа $n$, за които\n\n$$m^2 + n^2 + p^2 - 2mn - 2mp - 2np$$\n\nе точен квадрат на естествено число не зависи от $p$.",
+      "solution": null,
+      "answer": null,
+      "page": 1,
+      "pdf": "OLI-3-Национален кръг-2013-9-12 кл-probs",
+      "chunk": 1,
+      "grade_range": [
+        9,
+        12
+      ]
+    }
+  ]
+}

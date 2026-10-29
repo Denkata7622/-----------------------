@@ -1,0 +1,25 @@
+{
+  "point_id": "2.8",
+  "total": 1,
+  "by_difficulty": {
+    "easy": 0,
+    "medium": 1,
+    "hard": 0
+  },
+  "problems": [
+    {
+      "source": "OLI-3-Национален кръг-2002-9-12 кл · 2002-None · Зад. 6",
+      "statement": "Да се намери най-малкото число $k$, такова че за всеки триъгълник със страни $a$ и $b$ и ъглополовящи към тях $l_a$ и $l_b$ е в сила неравенството $\\frac{l_a + l_b}{a + b} < k$.",
+      "solution": "Решение: Ще докажем, че $k = \\frac{4}{3}$. Първо ще покажем, че $k \\ge \\frac{4}{3}$. Разглеждаме равнобедрени триъгълници, за които $a = b$ е фиксирано число, а ъгълът $\\alpha$ при основата клони към 0. Понеже $l_a = \\frac{2bc \\cos \\frac{\\alpha}{2}}{b + c}$, $c \\to 2b$ и $\\cos \\frac{\\alpha}{2} \\to 1$ при $\\alpha \\to 0$, то $\\frac{l_a + l_b}{a + b} = \\frac{l_a}{b} \\to \\frac{4}{3}$. Следователно $k \\ge \\frac{4}{3}$. Остава да докажем неравенството $\\frac{l_a + l_b}{a + b} < \\frac{4}{3}$. Тъй като\n\n$$l_a < \\frac{2bc}{b + c} = 2b \\left(1 - \\frac{b}{b + c}\\right) < 2b \\left(1 - \\frac{b}{b + a + b}\\right) = 2b \\frac{a + b}{a + 2b}$$\n\nи аналогично $l_b < 2a \\frac{a + b}{2a + b}$, то\n\n$$\\frac{4}{3} - \\frac{l_a + l_b}{a + b} > 2 \\left(\\frac{2}{3} - \\frac{b}{a + 2b} - \\frac{a}{2a + b}\\right) = \\frac{2(a - b)^2}{3(a + 2b)(2a + b)} \\ge 0.$$",
+      "answer": "$k = \\frac{4}{3}$",
+      "difficulty": "medium",
+      "techniques": [
+        "angle_bisector_inequality",
+        "algebraic_manipulation",
+        "geometric_inequality"
+      ],
+      "confidence": "exact",
+      "reasoning": "Derives a sharp bound for the sum of two angle bisectors using algebraic manipulation of the known formula."
+    }
+  ]
+}

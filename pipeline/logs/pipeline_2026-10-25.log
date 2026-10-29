@@ -1,0 +1,91 @@
+2026-10-25 18:56:46,110 [INFO] ════════════════════════════════════════════════════════════
+2026-10-25 18:56:46,110 [INFO] Pipeline v5 стартиран 24/7
+2026-10-25 18:56:46,111 [INFO] Generator:      openai/gpt-oss-120b
+2026-10-25 18:56:46,111 [INFO] Verifier:       anthropic/claude-opus-5.5
+2026-10-25 18:56:46,112 [INFO] Бюджет/ден:     $3.00
+2026-10-25 18:56:46,112 [INFO] Batch:          4 items
+2026-10-25 18:56:46,113 [INFO] Concurrent:     4
+2026-10-25 18:56:46,119 [INFO] Auto-scan:      ON
+2026-10-25 18:56:46,121 [INFO] HTML:           C:\Users\denis\Downloads\Материали Олимпиада МАТ\index.html
+2026-10-25 18:56:46,121 [INFO] ════════════════════════════════════════════════════════════
+2026-10-25 18:56:46,129 [ERROR] [scan/startup] Грешка: Не намирам 'const STEPS' в C:\Users\denis\Downloads\Материали Олимпиада МАТ\index.html
+Traceback (most recent call last):
+  File "C:\Users\denis\Downloads\Материали Олимпиада МАТ\pipeline\pipeline.py", line 662, in try_scan
+    stats = scan_and_merge(
+            ^^^^^^^^^^^^^^^
+  File "C:\Users\denis\Downloads\Материали Олимпиада МАТ\pipeline\scan_queue.py", line 362, in scan_and_merge
+    raw = extract_steps_raw(html_path)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\denis\Downloads\Материали Олимпиада МАТ\pipeline\scan_queue.py", line 39, in extract_steps_raw
+    raise ValueError(f"Не намирам 'const STEPS' в {html_path}")
+ValueError: Не намирам 'const STEPS' в C:\Users\denis\Downloads\Материали Олимпиада МАТ\index.html
+2026-10-25 18:56:46,135 [INFO] Batch: 4 items | остават 160 | бюджет $3.00
+2026-10-25 18:56:46,136 [INFO] ▶ [1.1] Теорема на Менелай (опит 1)
+2026-10-25 18:56:46,136 [INFO] ▶ [1.2] Теорема на Чева (опит 1)
+2026-10-25 18:56:46,137 [INFO] ▶ [1.3] Теорема на Птолемей (опит 1)
+2026-10-25 18:56:46,141 [INFO] ▶ [1.4] Степен на точка. Радикална ос (опит 1)
+2026-10-25 18:56:51,096 [INFO] [1.1] 12 валидни real problems (от 12)
+2026-10-25 18:56:51,096 [INFO] [1.2] 7 валидни real problems (от 7)
+2026-10-25 18:56:51,096 [INFO] [1.3] 5 валидни real problems (от 5)
+2026-10-25 18:56:51,097 [INFO] [1.4] 10 валидни real problems (от 10)
+2026-10-25 18:56:53,018 [ERROR] [1.2/gen] 402: {"error":"Spending limit reached. Need a higher limit? hey@mahadk.com"}
+2026-10-25 18:56:53,018 [ERROR] [1.3/gen] 402: {"error":"Spending limit reached. Need a higher limit? hey@mahadk.com"}
+2026-10-25 18:56:53,020 [ERROR] [1.4/gen] 402: {"error":"Spending limit reached. Need a higher limit? hey@mahadk.com"}
+2026-10-25 18:56:53,038 [ERROR] [1.3] Exception: [WinError 32] The process cannot access the file because it is being used by another process: 'C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\pipeline\\state.tmp' -> 'C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\pipeline\\state.json'
+Traceback (most recent call last):
+  File "C:\Users\denis\Downloads\Материали Олимпиада МАТ\pipeline\pipeline.py", line 1006, in run_once
+    if fut.result():
+       ^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\concurrent\futures\_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\concurrent\futures\_base.py", line 401, in __get_result
+    raise self._exception
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\concurrent\futures\thread.py", line 59, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\denis\Downloads\Материали Олимпиада МАТ\pipeline\pipeline.py", line 886, in process_item
+    self.state.mark(item.id, "error")
+  File "C:\Users\denis\Downloads\Материали Олимпиада МАТ\pipeline\pipeline.py", line 237, in mark
+    self.save()
+  File "C:\Users\denis\Downloads\Материали Олимпиада МАТ\pipeline\pipeline.py", line 209, in save
+    tmp.replace(self.file)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\pathlib.py", line 1376, in replace
+    os.replace(self, target)
+PermissionError: [WinError 32] The process cannot access the file because it is being used by another process: 'C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\pipeline\\state.tmp' -> 'C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\pipeline\\state.json'
+2026-10-25 18:56:53,040 [ERROR] ✗ [1.4] Generator грешка
+2026-10-25 18:56:53,047 [ERROR] [1.2] Exception: [WinError 32] The process cannot access the file because it is being used by another process: 'C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\pipeline\\state.tmp' -> 'C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\pipeline\\state.json'
+Traceback (most recent call last):
+  File "C:\Users\denis\Downloads\Материали Олимпиада МАТ\pipeline\pipeline.py", line 1006, in run_once
+    if fut.result():
+       ^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\concurrent\futures\_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\concurrent\futures\_base.py", line 401, in __get_result
+    raise self._exception
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\concurrent\futures\thread.py", line 59, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\denis\Downloads\Материали Олимпиада МАТ\pipeline\pipeline.py", line 886, in process_item
+    self.state.mark(item.id, "error")
+  File "C:\Users\denis\Downloads\Материали Олимпиада МАТ\pipeline\pipeline.py", line 237, in mark
+    self.save()
+  File "C:\Users\denis\Downloads\Материали Олимпиада МАТ\pipeline\pipeline.py", line 209, in save
+    tmp.replace(self.file)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\pathlib.py", line 1376, in replace
+    os.replace(self, target)
+PermissionError: [WinError 32] The process cannot access the file because it is being used by another process: 'C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\pipeline\\state.tmp' -> 'C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\pipeline\\state.json'
+2026-10-25 19:13:00,144 [INFO] Batch: 4 items | остават 160 | бюджет $3.00
+2026-10-25 19:13:00,145 [INFO] ▶ [R.1] Формули за съкратено умножение (опит 1)
+2026-10-25 19:13:00,146 [INFO] ▶ [R.2] Модули и неравенства с модул (опит 1)
+2026-10-25 19:13:00,147 [INFO] ▶ [R.3] Степенуване и логаритми (опит 1)
+2026-10-25 19:13:00,148 [INFO] ▶ [R.4] Показателни и логаритмични уравнения (опит 1)
+2026-10-25 19:13:01,881 [ERROR] [R.1/gen] 402: {"error":"Spending limit reached. Need a higher limit? hey@mahadk.com"}
+2026-10-25 19:13:01,894 [ERROR] ✗ [R.1] Generator грешка
+2026-10-25 19:13:05,728 [INFO] [R.3] 2 валидни real problems (от 2)
+2026-10-25 19:13:05,729 [INFO] [R.4] 2 валидни real problems (от 2)
+2026-10-25 19:13:06,799 [ERROR] [R.4/gen] 402: {"error":"Spending limit reached. Need a higher limit? hey@mahadk.com"}
+2026-10-25 19:13:06,805 [ERROR] ✗ [R.4] Generator грешка
+2026-10-25 19:13:06,923 [ERROR] [R.3/gen] 402: {"error":"Spending limit reached. Need a higher limit? hey@mahadk.com"}
+2026-10-25 19:13:06,931 [ERROR] ✗ [R.3] Generator грешка

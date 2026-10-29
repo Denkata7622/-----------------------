@@ -1,0 +1,169 @@
+{
+  "_meta": {
+    "pdf": "C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\Задачи_Минали_Години\\Областен\\OLI-2-Областен кръг-2010-10 кл-sol.pdf",
+    "paired_with": null,
+    "level": 1,
+    "type": "sol",
+    "analyzed_at": "2026-10-18T12:53:13.618744",
+    "model": "deepseek/deepseek-v3.2",
+    "text_length": 9425,
+    "paired_text_length": 0
+  },
+  "problems": [
+    {
+      "num": 1,
+      "topic": "algebra",
+      "theorems": [
+        "Vieta's formulas"
+      ],
+      "techniques": [
+        "substitution",
+        "squaring",
+        "polynomial factorization",
+        "case analysis"
+      ],
+      "concepts": [
+        "quadratic equation",
+        "discriminant",
+        "real roots condition",
+        "parameter analysis"
+      ],
+      "difficulty": "standard",
+      "notes": "Уравнение с параметър, използване на Виет и преобразуване до равенство на квадрати."
+    },
+    {
+      "num": 2,
+      "topic": "geometry",
+      "theorems": [],
+      "techniques": [
+        "power of a point",
+        "cyclic quadrilateral properties"
+      ],
+      "concepts": [
+        "cyclic quadrilateral",
+        "intersecting chords theorem",
+        "inscribed angles",
+        "circle tangents"
+      ],
+      "difficulty": "standard",
+      "notes": "Задача за окръжност, допирателни и пресичащи се хорди; използва се свойството на степента на точка."
+    },
+    {
+      "num": 3,
+      "topic": "geometry",
+      "theorems": [],
+      "techniques": [
+        "similar triangles",
+        "ratio manipulation",
+        "quadratic equation solving"
+      ],
+      "concepts": [
+        "similar triangles",
+        "parallel lines",
+        "proportional segments",
+        "golden ratio"
+      ],
+      "difficulty": "hard",
+      "notes": "Задача с успоредни прави и пресичащи се отсечки; води до квадратно уравнение и златно сечение."
+    },
+    {
+      "num": 4,
+      "topic": "algebra",
+      "theorems": [],
+      "techniques": [
+        "substitution",
+        "system of equations",
+        "case analysis",
+        "elimination"
+      ],
+      "concepts": [
+        "system of linear equations",
+        "parameter analysis",
+        "symmetric expressions"
+      ],
+      "difficulty": "standard",
+      "notes": "Система уравнения с параметри; разглеждат се случаи за нулеви и ненулеви параметри."
+    },
+    {
+      "num": 5,
+      "topic": "number_theory",
+      "theorems": [],
+      "techniques": [
+        "case analysis",
+        "constructive proof",
+        "exponent manipulation"
+      ],
+      "concepts": [
+        "sum of squares",
+        "parity",
+        "powers of two",
+        "representation as sum of squares"
+      ],
+      "difficulty": "olympic",
+      "notes": "Представяне на число като сума от квадрати; разглеждат се случаи за четни и нечетни степени."
+    },
+    {
+      "num": 6,
+      "topic": "algebra",
+      "theorems": [],
+      "techniques": [
+        "exponential equation solving",
+        "factorization",
+        "logarithms"
+      ],
+      "concepts": [
+        "exponential equations",
+        "logarithms",
+        "zero product property"
+      ],
+      "difficulty": "standard",
+      "notes": "Експоненциално уравнение, решавано чрез разлагане на множители и логаритми."
+    },
+    {
+      "num": 7,
+      "topic": "geometry",
+      "theorems": [
+        "Law of Sines",
+        "Law of Cosines"
+      ],
+      "techniques": [
+        "trigonometric identities",
+        "angle chasing",
+        "segment ratio calculation"
+      ],
+      "concepts": [
+        "triangle geometry",
+        "angle bisector?",
+        "trigonometric relations",
+        "segment ratios"
+      ],
+      "difficulty": "hard",
+      "notes": "Тригонометрична задача в триъгълник с дадено ъглово условие; използват се синусова и косинусова теореми."
+    }
+  ],
+  "unique_concepts": [
+    "quadratic equation",
+    "Vieta's formulas",
+    "discriminant",
+    "parameter analysis",
+    "cyclic quadrilateral",
+    "power of a point",
+    "intersecting chords theorem",
+    "similar triangles",
+    "proportional segments",
+    "golden ratio",
+    "system of linear equations",
+    "symmetric expressions",
+    "sum of squares",
+    "parity",
+    "powers of two",
+    "exponential equations",
+    "logarithms",
+    "zero product property",
+    "Law of Sines",
+    "Law of Cosines",
+    "trigonometric identities",
+    "segment ratios"
+  ],
+  "confidence": 0.9
+}

@@ -1,0 +1,162 @@
+{
+  "_meta": {
+    "pdf": "C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\Задачи_Минали_Години\\Областен\\OLI-2-Областен кръг-2007-11 кл-sol.pdf",
+    "paired_with": null,
+    "level": 1,
+    "type": "sol",
+    "analyzed_at": "2026-10-18T12:46:07.554672",
+    "model": "deepseek/deepseek-v3.2",
+    "text_length": 8551,
+    "paired_text_length": 0
+  },
+  "problems": [
+    {
+      "num": 1,
+      "topic": "algebra",
+      "theorems": [],
+      "techniques": [
+        "squaring_and_adding",
+        "bounding_using_range_of_sine"
+      ],
+      "concepts": [
+        "trigonometric_identities",
+        "range_of_sine",
+        "system_of_equations"
+      ],
+      "difficulty": "standard",
+      "notes": "Uses sin(x+y) identity and bounding to force a specific value."
+    },
+    {
+      "num": 2,
+      "topic": "algebra",
+      "theorems": [
+        "AM-GM"
+      ],
+      "techniques": [
+        "expanding_product",
+        "symmetry_consideration",
+        "equality_case_analysis"
+      ],
+      "concepts": [
+        "product_expansion",
+        "arithmetic_mean_geometric_mean",
+        "homogeneous_expressions"
+      ],
+      "difficulty": "hard",
+      "notes": "Clever expansion to get many terms with product 1, then apply AM-GM."
+    },
+    {
+      "num": 3,
+      "topic": "combinatorics",
+      "theorems": [],
+      "techniques": [
+        "induction",
+        "pigeonhole_principle",
+        "extreme_principle"
+      ],
+      "concepts": [
+        "sumset",
+        "difference_set",
+        "arithmetic_progression",
+        "minimal_sumset_size",
+        "Sidon_sets?"
+      ],
+      "difficulty": "olympic",
+      "notes": "Deep combinatorial argument about minimal sumset size forcing an arithmetic progression."
+    },
+    {
+      "num": 4,
+      "topic": "algebra",
+      "theorems": [],
+      "techniques": [
+        "recurrence_manipulation",
+        "limit_computation",
+        "rationalization"
+      ],
+      "concepts": [
+        "linear_recurrence",
+        "convergent_sequence",
+        "limit_of_sequence",
+        "algebraic_manipulation"
+      ],
+      "difficulty": "standard",
+      "notes": "Part (a) solves recurrence explicitly. Part (b) uses rationalization and substitution of limit."
+    },
+    {
+      "num": 5,
+      "topic": "geometry",
+      "theorems": [
+        "Menelaus",
+        "Ceva?",
+        "properties_of_incircle_and_excircles"
+      ],
+      "techniques": [
+        "symmetry",
+        "cyclic_quadrilaterals",
+        "angle_chasing",
+        "Menelaus_application"
+      ],
+      "concepts": [
+        "incenter",
+        "excenter",
+        "angle_bisector",
+        "collinearity",
+        "concyclic_points",
+        "isosceles_triangle_condition"
+      ],
+      "difficulty": "olympic",
+      "notes": "Complex geometry involving incircles, excircles, symmetry, and concyclicity conditions."
+    },
+    {
+      "num": 6,
+      "topic": "number_theory",
+      "theorems": [
+        "Fermat's_theorem_on_sums_of_two_squares?"
+      ],
+      "techniques": [
+        "descent",
+        "identity_manipulation",
+        "infinite_descent",
+        "modular_analysis_primes_4k+3"
+      ],
+      "concepts": [
+        "Diophantine_equation",
+        "primes_of_form_4k+3",
+        "sum_of_two_squares",
+        "divisibility_properties",
+        "lifting_exponent"
+      ],
+      "difficulty": "olympic",
+      "notes": "Uses a clever identity to square the RHS, and properties of primes 4k+3 dividing sums of squares."
+    }
+  ],
+  "unique_concepts": [
+    "trigonometric_identities",
+    "range_of_sine",
+    "AM-GM",
+    "product_expansion",
+    "sumset",
+    "difference_set",
+    "arithmetic_progression",
+    "linear_recurrence",
+    "limit_computation",
+    "rationalization",
+    "incenter",
+    "excenter",
+    "angle_bisector",
+    "Menelaus",
+    "cyclic_quadrilaterals",
+    "Diophantine_equation",
+    "primes_of_form_4k+3",
+    "sum_of_two_squares",
+    "modular_analysis",
+    "induction",
+    "symmetry",
+    "collinearity",
+    "concyclic_points",
+    "isosceles_triangle_condition",
+    "descent",
+    "identity_manipulation"
+  ],
+  "confidence": 0.95
+}

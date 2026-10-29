@@ -1,0 +1,188 @@
+{
+  "_meta": {
+    "pdf": "C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\Задачи_Минали_Години\\Областен\\OLI-2-Областен кръг-2019-10 кл-sol.pdf",
+    "paired_with": null,
+    "level": 1,
+    "type": "sol",
+    "analyzed_at": "2026-10-16T21:23:57.672223",
+    "model": "deepseek/deepseek-v3.2",
+    "text_length": 13997,
+    "paired_text_length": 0
+  },
+  "problems": [
+    {
+      "num": 1,
+      "topic": "combinatorics",
+      "theorems": [],
+      "techniques": [
+        "construction",
+        "parity argument",
+        "contradiction",
+        "tiling",
+        "copying pattern"
+      ],
+      "concepts": [
+        "coloring",
+        "parity",
+        "central symmetry",
+        "tiling with copies",
+        "invariants"
+      ],
+      "difficulty": "olympic",
+      "notes": "Задача за оцветяване на таблица с условия за четност в редове, колони и диагонали. Решението използва четност, за да докаже, че n трябва да е кратно на 6, и конструкция чрез копиране на 12x12 блок."
+    },
+    {
+      "num": 2,
+      "topic": "geometry",
+      "theorems": [
+        "Ceva",
+        "Menelaus",
+        "Van Aubel"
+      ],
+      "techniques": [
+        "vector method",
+        "ratio division",
+        "center of mass",
+        "auxiliary point construction"
+      ],
+      "concepts": [
+        "centroid",
+        "midpoints",
+        "ratio division",
+        "collinearity",
+        "vector representation"
+      ],
+      "difficulty": "hard",
+      "notes": "Задача за произволен четириъгълник и пресичащи се отсечки. Решението използва векторен метод и въвеждане на спомагателна точка L, която дели отсечка в отношение 2:3, след което доказва, че тя лежи на правата MG."
+    },
+    {
+      "num": 3,
+      "topic": "geometry",
+      "theorems": [
+        "Ceva",
+        "Menelaus",
+        "Desargues"
+      ],
+      "techniques": [
+        "trigonometric calculations",
+        "angle chasing",
+        "symmetry",
+        "using incircle and excircle properties"
+      ],
+      "concepts": [
+        "incircle",
+        "excircle",
+        "contact points",
+        "concurrency",
+        "collinearity",
+        "triangle centers"
+      ],
+      "difficulty": "olympic",
+      "notes": "Задача за триъгълник с вписана и външновписани окръжности. Използват се свойства на допирните точки и теореми за съседност и конкурентност (Ceva, Menelaus). Подточка б) изисква разглеждане на подходящи неравенства."
+    },
+    {
+      "num": 4,
+      "topic": "combinatorics",
+      "theorems": [],
+      "techniques": [
+        "pigeonhole principle",
+        "counting",
+        "construction",
+        "parity"
+      ],
+      "concepts": [
+        "diagonals in a grid",
+        "parity condition",
+        "maximization",
+        "non-intersecting sets"
+      ],
+      "difficulty": "olympic",
+      "notes": "Задача за максимален брой единици в таблица n x n при условие за четен брой единици във всеки ред, колона и диагонал. Решението използва факта, че има 2n диагонала с нечетен брой клетки, които не се пресичат, и дава горна оценка n² - 2n, след което се дава конструкция."
+    },
+    {
+      "num": 5,
+      "topic": "algebra",
+      "theorems": [],
+      "techniques": [
+        "coefficient analysis",
+        "modular arithmetic",
+        "bounding",
+        "synthetic division",
+        "base representation"
+      ],
+      "concepts": [
+        "polynomials with nonnegative integer coefficients",
+        "evaluation at points",
+        "divisibility",
+        "mod 2 and mod 3",
+        "ternary expansion"
+      ],
+      "difficulty": "olympic",
+      "notes": "Задача за намиране на полином с неотрицателни цели коефициенти, даващ определени стойности. Решението използва последователно определяне на коефициентите чрез анализ на f(0) mod 2 и mod 3 и граници. Алтернативно решение използва идея за ограничаване на коефициентите до {0,1,2} и троично представяне."
+    },
+    {
+      "num": 6,
+      "topic": "algebra",
+      "theorems": [],
+      "techniques": [
+        "algebraic manipulation",
+        "discriminant analysis",
+        "parameterization"
+      ],
+      "concepts": [
+        "arithmetic progression",
+        "geometric progression",
+        "condition for three terms to be in GP",
+        "perfect square discriminant"
+      ],
+      "difficulty": "standard",
+      "notes": "Задача за аритметична прогресия, в която определени три члена образуват геометрична прогресия. Решението използва условието a_n² = a_1 * a_m и параметризация, която води до квадратно уравнение с дискриминанта, която трябва да е точен квадрат."
+    },
+    {
+      "num": 7,
+      "topic": "geometry",
+      "theorems": [],
+      "techniques": [
+        "trigonometric identities",
+        "squaring equations",
+        "angle sum in triangle",
+        "bounding angles"
+      ],
+      "concepts": [
+        "sine and cosine functions",
+        "angle addition formulas",
+        "solving trigonometric equations",
+        "acute triangle condition"
+      ],
+      "difficulty": "standard",
+      "notes": "Задача за намиране на ъгли в остроъгълен триъгълник по дадени суми на синус и косинус. Решението използва събиране на квадратите на уравненията, за да се получи sin(γ+β), което определя един ъгъл. Останалите се намират чрез проверка и гранични разсъждения."
+    }
+  ],
+  "unique_concepts": [
+    "parity",
+    "coloring",
+    "tiling",
+    "central symmetry",
+    "vector methods",
+    "centroid",
+    "ratio division",
+    "collinearity",
+    "incircle",
+    "excircle",
+    "concurrency",
+    "Ceva theorem",
+    "Menelaus theorem",
+    "pigeonhole principle",
+    "counting diagonals",
+    "maximization in combinatorics",
+    "polynomials with nonnegative coefficients",
+    "modular arithmetic in polynomials",
+    "arithmetic and geometric progressions",
+    "condition for three terms in GP",
+    "perfect square discriminant",
+    "trigonometric equations",
+    "angle addition formulas",
+    "solving triangles"
+  ],
+  "confidence": 0.95
+}

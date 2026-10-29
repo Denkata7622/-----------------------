@@ -1,0 +1,175 @@
+{
+  "_meta": {
+    "pdf": "C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\Задачи_Минали_Години\\Национален\\OLI-3-Национален кръг-2004-9-12 кл-sol.pdf",
+    "paired_with": null,
+    "level": 2,
+    "type": "sol",
+    "analyzed_at": "2026-10-18T12:02:10.532819",
+    "model": "deepseek/deepseek-v3.2",
+    "text_length": 12406,
+    "paired_text_length": 0
+  },
+  "problems": [
+    {
+      "num": 1,
+      "topic": "geometry",
+      "theorems": [
+        "Inscribed Angle Theorem",
+        "Orthocenter properties"
+      ],
+      "techniques": [
+        "angle chasing",
+        "cyclic quadrilaterals",
+        "perpendicularity"
+      ],
+      "concepts": [
+        "circumcenter",
+        "incenter",
+        "orthocenter",
+        "angle bisector",
+        "perpendicular bisector",
+        "cyclic quadrilateral",
+        "angle sum in triangle"
+      ],
+      "difficulty": "olympic",
+      "notes": "Complex geometry problem linking the circumcenter of one triangle to the orthocenter of another via angle properties and perpendicularity."
+    },
+    {
+      "num": 2,
+      "topic": "number_theory",
+      "theorems": [],
+      "techniques": [
+        "sum manipulation",
+        "modular arithmetic (mod 3)",
+        "inductive step analysis"
+      ],
+      "concepts": [
+        "harmonic numbers",
+        "divisibility by 3",
+        "fraction representation in lowest terms",
+        "recursive sequences"
+      ],
+      "difficulty": "olympic",
+      "notes": "Problem about the exponent of 3 in the denominator of partial sums of the harmonic series. Uses careful analysis of terms and modular reasoning."
+    },
+    {
+      "num": 3,
+      "topic": "combinatorics",
+      "theorems": [
+        "Turán's theorem (implicitly)",
+        "Graph theory: bipartite graphs and odd cycles"
+      ],
+      "techniques": [
+        "graph modeling",
+        "contradiction",
+        "degree counting",
+        "extremal principle"
+      ],
+      "concepts": [
+        "graph representation of acquaintances",
+        "triangle-free graph",
+        "odd cycle",
+        "bipartite graph",
+        "vertex degree",
+        "handshaking lemma",
+        "minimum degree bound"
+      ],
+      "difficulty": "olympic",
+      "notes": "Graph theory problem translating social conditions into graph properties (no triangles, existence of odd cycle) and deriving an upper bound on minimum degree."
+    },
+    {
+      "num": 4,
+      "topic": "combinatorics",
+      "theorems": [],
+      "techniques": [
+        "invariant",
+        "parity argument"
+      ],
+      "concepts": [
+        "word transformation rules",
+        "invariant property",
+        "parity of positions",
+        "count of letters on even/odd positions",
+        "reachability"
+      ],
+      "difficulty": "standard",
+      "notes": "Problem about string rewriting rules. The key is finding an invariant (parity of count of 'a's on even positions) to show two specific words are not reachable from each other."
+    },
+    {
+      "num": 5,
+      "topic": "number_theory",
+      "theorems": [
+        "Pick's theorem",
+        "GCD properties"
+      ],
+      "techniques": [
+        "geometric interpretation",
+        "coordinate geometry",
+        "case analysis",
+        "Diophantine equation"
+      ],
+      "concepts": [
+        "linear transformation of unit square",
+        "parallelogram area",
+        "integer lattice points",
+        "greatest common divisor",
+        "counting interior/boundary points",
+        "determinant (ad-bc)"
+      ],
+      "difficulty": "olympic",
+      "notes": "Uses Pick's theorem to relate the number of integer pairs (x,y) giving integer outputs to the area and boundary points of a parallelogram. Leads to a Diophantine equation."
+    },
+    {
+      "num": 6,
+      "topic": "combinatorics",
+      "theorems": [
+        "Pigeonhole Principle",
+        "Cauchy-Davenport theorem (for Z_p)"
+      ],
+      "techniques": [
+        "pigeonhole principle",
+        "induction",
+        "set addition",
+        "modular arithmetic"
+      ],
+      "concepts": [
+        "sumset modulo p",
+        "complete residue system",
+        "combinatorial number theory",
+        "minimal counterexample",
+        "set intersection/union"
+      ],
+      "difficulty": "olympic",
+      "notes": "Problem about sumsets in Z_p. Part (a) is direct pigeonhole. Part (b) is a proof of the Cauchy-Davenport theorem for prime p using induction and clever set shifting."
+    }
+  ],
+  "unique_concepts": [
+    "circumcenter",
+    "incenter",
+    "orthocenter",
+    "angle bisector",
+    "perpendicular bisector",
+    "cyclic quadrilateral",
+    "angle chasing",
+    "harmonic numbers",
+    "divisibility",
+    "modular arithmetic",
+    "graph modeling",
+    "triangle-free graph",
+    "odd cycle",
+    "bipartite graph",
+    "vertex degree",
+    "invariant",
+    "parity argument",
+    "word transformation",
+    "Pick's theorem",
+    "integer lattice points",
+    "GCD",
+    "determinant",
+    "pigeonhole principle",
+    "sumset",
+    "Cauchy-Davenport theorem",
+    "complete residue system"
+  ],
+  "confidence": 0.95
+}

@@ -1,0 +1,101 @@
+{
+  "pdf": "OLI-3-Национален кръг-1994-9-12 кл-probs",
+  "problems": [
+    {
+      "num": 1,
+      "year": 1994,
+      "grade": null,
+      "round": "nacionalen",
+      "statement": "Дадени са окръжностите k₁(O₁, R) и k₂(O₂, r), такива че R ≥ √2r и O₁O₂ = √(R² + r² − r√(4R² + r²)). От произволна точка A ∈ k₁ са прекарани допирателни AB и AC (B, C ∈ k₂) към k₂, които пресичат k₁ съответно в точките D и E. Да се докаже, че BD · CE = r².",
+      "solution": null,
+      "answer": null,
+      "page": 1,
+      "pdf": "OLI-3-Национален кръг-1994-9-12 кл-probs",
+      "chunk": 1,
+      "grade_range": [
+        9,
+        12
+      ]
+    },
+    {
+      "num": 2,
+      "year": 1994,
+      "grade": null,
+      "round": "nacionalen",
+      "statement": "Да се намерят всички функции f : ℝ → ℝ, за които\nxf(x) − yf(y) = (x − y)f(x + y)\nза произволни x, y ∈ ℝ (с ℝ означено множеството на реалните числа).",
+      "solution": null,
+      "answer": null,
+      "page": 1,
+      "pdf": "OLI-3-Национален кръг-1994-9-12 кл-probs",
+      "chunk": 1,
+      "grade_range": [
+        9,
+        12
+      ]
+    },
+    {
+      "num": 3,
+      "year": 1994,
+      "grade": null,
+      "round": "nacionalen",
+      "statement": "Нека p е просто число. Да се реши в естествени числа x, y, z уравнението x^p + y^p = p^z.",
+      "solution": null,
+      "answer": null,
+      "page": 1,
+      "pdf": "OLI-3-Национален кръг-1994-9-12 кл-probs",
+      "chunk": 1,
+      "grade_range": [
+        9,
+        12
+      ]
+    },
+    {
+      "num": 4,
+      "year": 1994,
+      "grade": null,
+      "round": "nacionalen",
+      "statement": "Нека I е центърът на вписаната окръжност в неравнобедрения триъгълник ABC, а A₁, B₁ и C₁ са допирните й точки съответно със страните BC, CA и AB. Да се докаже, че центровете на описаните окръжности около триъгълниците AIA₁, BIB₁ и CIC₁ лежат на една права.",
+      "solution": null,
+      "answer": null,
+      "page": 2,
+      "pdf": "OLI-3-Национален кръг-1994-9-12 кл-probs",
+      "chunk": 1,
+      "grade_range": [
+        9,
+        12
+      ]
+    },
+    {
+      "num": 5,
+      "year": 1994,
+      "grade": null,
+      "round": "nacionalen",
+      "statement": "Нека k е естествено число и rₙ е остатъкът на число binom(2n, n) при деление на k, 0 ≤ rₙ ≤ k − 1. Да се намерят всички стойности k, за които редицата r₁, r₂, r₃, … е периодична от някое място нататък.",
+      "solution": null,
+      "answer": null,
+      "page": 2,
+      "pdf": "OLI-3-Национален кръг-1994-9-12 кл-probs",
+      "chunk": 1,
+      "grade_range": [
+        9,
+        12
+      ]
+    },
+    {
+      "num": 6,
+      "year": 1994,
+      "grade": null,
+      "round": "nacionalen",
+      "statement": "Нека n е естествено число и A е фамилия от подмножества на множеството {1, 2, …, n} така, че никой елемент на A не се съдържа в друг елемент на A. Да се намери възможно най-големият брой елементи на A.",
+      "solution": null,
+      "answer": null,
+      "page": 2,
+      "pdf": "OLI-3-Национален кръг-1994-9-12 кл-probs",
+      "chunk": 1,
+      "grade_range": [
+        9,
+        12
+      ]
+    }
+  ]
+}

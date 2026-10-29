@@ -1,0 +1,26 @@
+[Стр. 1]
+# BULGARIAN NATIONAL OLYMPIAD IN MATHEMATICS
+
+Third round
+
+1995
+
+Problem 1. Let $p$ and $q$ be positive numbers such that the parabola $y = x^2 - 2px + q$ has no common point with the $x$-axis. Prove that there exist points $A$ and $B$ on the parabola such that the segment $AB$ is parallel to the $x$-axis and $\angle AOB = 90^\circ$ ($O$ is the coordinate origin) if and only if $p^2 < q \leq \frac{1}{4}$. Find the values of $p$ and $q$ for which the points $A$ and $B$ are defined in an unique way.
+
+Problem 2. Let $A_1A_2A_3A_4A_5A_6A_7$, $B_1B_2B_3B_4B_5B_6B_7$, $C_1C_2C_3C_4C_5C_6C_7$ be regular heptagons with areas $S_A$, $S_B$ and $S_C$, respectively. Let $A_1A_2 = B_1B_3 = C_1C_4$. Prove that
+
+$$\frac{1}{2} < \frac{S_B + S_C}{S_A} < 2 - \sqrt{2}.$$
+
+Problem 3. Let $n > 1$ be an integer. Find the number of the permutations $(a_1, a_2, \ldots, a_n)$ of the numbers $1, 2, \ldots, n$ with the following property: there exists only one index $i \in \{1, 2, \ldots, n - 1\}$ such that $a_i > a_{i+1}$.
+
+Problem 4. Let $n \geq 2$ and $0 \leq x_i \leq 1$ for $i = 1, 2, \ldots, n$. Prove the inequality
+
+$$(x_1 + x_2 + \cdots + x_n) - (x_1x_2 + x_2x_3 + \cdots + x_{n-1}x_n + x_nx_1) \leq \left[ \frac{n}{2} \right].$$
+
+When is there an equality?
+
+Problem 5. The points $A_1$, $B_1$, $C_1$ lie on the sides $BC$, $CA$, $AB$ of the triangle $ABC$ respectively and the lines $AA_1$, $BB_1$, $CC_1$ have a common point $M$. Prove that if the point $M$ is center of gravity of $\triangle A_1B_1C_1$, then $M$ is the center of gravity of $\triangle ABC$.
+
+Problem 6. Find all pairs of positive integers $(x, y)$ for which $\frac{x^2 + y^2}{x - y}$ is an integer which is a divisor of 1995.
+
+Downloaded from Klasirane.com

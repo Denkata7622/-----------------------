@@ -1,0 +1,114 @@
+{
+  "_meta": {
+    "pdf": "C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\Задачи_Минали_Години\\Областен\\OLI-2-Областен кръг-2021-11 кл-probs.pdf",
+    "paired_with": "C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\Задачи_Минали_Години\\Областен\\OLI-2-Областен кръг-2021-11 кл-sol.pdf",
+    "level": 1,
+    "type": "probs",
+    "analyzed_at": "2026-10-16T21:30:34.960879",
+    "model": "deepseek/deepseek-v3.2",
+    "text_length": 1972,
+    "paired_text_length": 0
+  },
+  "problems": [
+    {
+      "num": 1,
+      "topic": "algebra",
+      "theorems": [],
+      "techniques": [
+        "substitution",
+        "exponential equation solving",
+        "parameter analysis"
+      ],
+      "concepts": [
+        "exponential equations",
+        "quadratic equations",
+        "change of variable",
+        "discriminant",
+        "conditions for real roots"
+      ],
+      "difficulty": "standard",
+      "notes": "Уравнението 4^x + a*2^(x+2) = 2^(x-1) + 2a може да се сведе до квадратно чрез заместване y = 2^x. След това се изследва за кои стойности на параметъра a уравнението има точно едно решение."
+    },
+    {
+      "num": 2,
+      "topic": "geometry",
+      "theorems": [
+        "Law of Cosines",
+        "Pythagorean theorem",
+        "Area formulas"
+      ],
+      "techniques": [
+        "trigonometry",
+        "algebraic manipulation",
+        "length calculation"
+      ],
+      "concepts": [
+        "right triangle",
+        "inscribed quadrilateral",
+        "cyclic quadrilateral",
+        "circumradius",
+        "inradius",
+        "distance from a point to a line",
+        "angle conditions (60 degrees)"
+      ],
+      "difficulty": "hard",
+      "notes": "Задачата изисква работа с вписани четириъгълници и окръжности. Даден е правоъгълен триъгълник ABC с прав ъгъл при C и <)ACB = 60° (което е противоречиво, вероятно има предвид друг ъгъл, например <)BAC = 60°). Точки P и Q лежат на катетите така, че ABPQ е вписан в окръжност с радиус r. Трябва да се намери израз за (BP + AQ - PQ) / AB чрез r."
+    },
+    {
+      "num": 3,
+      "topic": "number_theory",
+      "theorems": [],
+      "techniques": [
+        "summation",
+        "inclusion-exclusion",
+        "counting"
+      ],
+      "concepts": [
+        "composite numbers",
+        "prime numbers",
+        "sum of numbers",
+        "function definition",
+        "natural numbers"
+      ],
+      "difficulty": "standard",
+      "notes": "f(n) е сумата на всички съставни числа, по-малки от n. Трябва да се докаже, че за безброй много естествени числа n е изпълнено f(n) = (n^2 - 1)/4. Задачата се свежда до преброяване и сумиране на съставни числа."
+    },
+    {
+      "num": 4,
+      "topic": "combinatorics",
+      "theorems": [],
+      "techniques": [
+        "pigeonhole principle",
+        "invariant",
+        "parity",
+        "coloring"
+      ],
+      "concepts": [
+        "3x3 grid",
+        "graph coloring",
+        "chessboard coloring",
+        "adjacent cells",
+        "sum of numbers",
+        "invariant method"
+      ],
+      "difficulty": "olympic",
+      "notes": "Задача върху дъска 3x3. Във всяка клетка е записано число. Операция: избира се клетка и се заменя сбора на числата от всички съседни по страна клетки. Въпросът е дали винаги може да се получи конфигурация, в която всяко число е сбор на числата в съседните му клетки. Вероятно се използва инвариант или разглеждане на четност."
+    }
+  ],
+  "unique_concepts": [
+    "exponential equations",
+    "parameter analysis",
+    "cyclic quadrilateral",
+    "circumradius",
+    "inradius",
+    "distance from a point to a line",
+    "sum of composite numbers",
+    "inclusion-exclusion",
+    "3x3 grid",
+    "graph coloring",
+    "invariant method",
+    "pigeonhole principle",
+    "adjacent cells sum"
+  ],
+  "confidence": 0.85
+}

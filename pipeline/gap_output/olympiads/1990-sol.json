@@ -1,0 +1,144 @@
+{
+  "_meta": {
+    "pdf": "C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\Задачи_Минали_Години\\Национален\\OLI-3-Национален кръг-1990-9-12 кл-sol.pdf",
+    "paired_with": null,
+    "level": 2,
+    "type": "sol",
+    "analyzed_at": "2026-10-18T11:45:02.685884",
+    "model": "deepseek/deepseek-v3.2",
+    "text_length": 16398,
+    "paired_text_length": 0
+  },
+  "problems": [
+    {
+      "num": 1,
+      "topic": "number_theory",
+      "theorems": [],
+      "techniques": [
+        "positional analysis",
+        "arithmetic progression manipulation",
+        "digit counting"
+      ],
+      "concepts": [
+        "digit positions",
+        "number of digits in concatenated sequence",
+        "binary-like elimination process"
+      ],
+      "difficulty": "standard",
+      "notes": "Involves constructing a sequence by concatenating numbers from 1 to 1990, then repeatedly removing digits at even/odd positions. Solution tracks positions via arithmetic progressions with doubling differences."
+    },
+    {
+      "num": 2,
+      "topic": "algebra",
+      "theorems": [],
+      "techniques": [
+        "coordinate geometry",
+        "system of equations",
+        "discriminant analysis",
+        "parameter elimination"
+      ],
+      "concepts": [
+        "parabola",
+        "perpendicular vectors",
+        "condition for perpendicular lines",
+        "locus of points"
+      ],
+      "difficulty": "standard",
+      "notes": "Finds unique point P such that any line through P intersecting parabola y=αx² at A,B yields OA ⟂ OB. Uses vector perpendicular condition and line equation parameter λ."
+    },
+    {
+      "num": 3,
+      "topic": "number_theory",
+      "theorems": [
+        "Fermat's Little Theorem",
+        "LTE (Lifting The Exponent)"
+      ],
+      "techniques": [
+        "cyclotomic polynomial analysis",
+        "combinatorial counting of roots",
+        "modular exponent properties"
+      ],
+      "concepts": [
+        "roots of unity",
+        "cyclotomic polynomials",
+        "order of an integer modulo p",
+        "prime divisors of special numbers"
+      ],
+      "difficulty": "olympic",
+      "notes": "Defines F_n(x) as product of (x^d-1) terms. Shows it's integer polynomial with roots being primitive n-th roots of unity. Uses combinatorial argument to count multiplicities. Part (b) uses order of 2 modulo p and LTE lemma."
+    },
+    {
+      "num": 4,
+      "topic": "number_theory",
+      "theorems": [],
+      "techniques": [
+        "proof by contradiction",
+        "representation of large numbers"
+      ],
+      "concepts": [
+        "infinite set with sum property",
+        "linear combinations with natural coefficients",
+        "sufficiently large numbers representation"
+      ],
+      "difficulty": "hard",
+      "notes": "Uses known fact: if a1,...,an are coprime, every sufficiently large natural number can be written as x1a1+...+xnan with xi natural. Shows complement M' must have common divisor >1."
+    },
+    {
+      "num": 5,
+      "topic": "geometry",
+      "theorems": [
+        "Thales' theorem"
+      ],
+      "techniques": [
+        "symmetry argument",
+        "function minimization",
+        "derivative analysis",
+        "geometric construction"
+      ],
+      "concepts": [
+        "covering arc with triangle",
+        "tangent lines to circle",
+        "isosceles triangle minimization",
+        "area optimization"
+      ],
+      "difficulty": "hard",
+      "notes": "Seeks triangle covering given arc with endpoints on one side, minimal area. Shows optimal triangle is isosceles with tangents from endpoints, and legs bisected by points of tangency. Solves via derivative of area function."
+    },
+    {
+      "num": 6,
+      "topic": "geometry",
+      "theorems": [],
+      "techniques": [
+        "inversion",
+        "volume comparison",
+        "geometric inequalities"
+      ],
+      "concepts": [
+        "tetrahedron",
+        "circumscribed sphere radius",
+        "volume formula via inversion",
+        "relationship between side lengths and area"
+      ],
+      "difficulty": "olympic",
+      "notes": "Uses inversion to relate tetrahedron ABCM to triangle with sides aa1, bb1, cc1. Derives formula V=σ/(6R). For equilateral base ABC, proves inequality RS ≥ V using d=R√3."
+    }
+  ],
+  "unique_concepts": [
+    "digit counting in concatenated sequences",
+    "binary elimination process on digit positions",
+    "parabola and perpendicular vectors condition",
+    "locus of points with secant property",
+    "cyclotomic polynomials and roots of unity",
+    "order of an integer modulo prime",
+    "LTE lemma application",
+    "infinite sets with sum closure property",
+    "representation of large numbers as linear combinations",
+    "covering arc with minimal area triangle",
+    "tangent lines to circle in optimization",
+    "isosceles triangle area minimization via calculus",
+    "tetrahedron volume via inversion",
+    "circumsphere radius inequality",
+    "geometric transformation (inversion)"
+  ],
+  "confidence": 0.95
+}

@@ -1,0 +1,580 @@
+### Част 1: ЗАДАЧИ (10 кл)
+
+```js
+// ─── ЗАДАЧИ: 2018-10 ───
+{
+  source_pdf_probs: "Задачи_Минали_Години/OLI-2-Областен кръг-2018-10 кл-probs.pdf",
+  source_pdf_sols:  "Задачи_Минали_Години/OLI-2-Областен кръг-2018-10 кл-sol.pdf",
+  year: 2018,
+  grade: 10,
+  exam_type: "областен",
+  problems: [
+    {
+      num: 1,
+      topic: "Алгебра",
+      subtopic: "Параметрично уравнение с квадратна функция",
+      difficulty: 3,
+      probs_page: 1,
+      sol_page: 1,
+      summary: "Да се реши f(x)=f(√(a²−x²)) за f(x)=x²+ax+1 в зависимост от a.",
+      plan_step: 5,
+      plan_point: "5.1",
+      related_points: ["5.4", "7.5"],
+      prerequisites: ["5.1"],
+      add_as_task_to: ["5.1", "7.5"],
+      required_knowledge: [
+        { point_id: "5.1", technique: "Симетрия на квадратна функция", why_needed: "f(u)=f(v) ⇔ u=v или u+v=−a" },
+        { point_id: null, technique: "Повдигане на квадрат с проверка", why_needed: "Решаване на ирационално уравнение" },
+        { point_id: "5.4", technique: "Разлагане и рационални корени", why_needed: "За намиране на корените след повдигане" }
+      ],
+      techniques_not_in_plan: ["Симетрия на квадратна функция с параметър"],
+      gap_severity: "minor",
+      estimated_time_minutes: 35,
+      common_pitfalls: "Забравя се условието |x|≤|a| и проверката след повдигане на квадрат.",
+      recommended_for_simulation: false,
+      prerequisite_review: "Преговори 5.1 (Виет) и квадратни уравнения."
+    },
+    {
+      num: 2,
+      topic: "Алгебра",
+      subtopic: "Деление на полиноми с остатък",
+      difficulty: 3,
+      probs_page: 1,
+      sol_page: 1,
+      summary: "Да се намерят a,b,c, ако остатъкът от f(x) при деление на g(x) е ax²+bx+c.",
+      plan_step: 5,
+      plan_point: "5.7",
+      related_points: ["5.1", "5.4"],
+      prerequisites: ["5.7", "5.1"],
+      add_as_task_to: ["5.7"],
+      required_knowledge: [
+        { point_id: "5.7", technique: "Теорема за деление с остатък", why_needed: "Записва f=g.q+остатък" },
+        { point_id: "5.4", technique: "Намиране на корени на g(x)", why_needed: "g(1)=g(±√2)=0" },
+        { point_id: "5.1", technique: "Виет/системи", why_needed: "Решаване на системата за a,b,c" }
+      ],
+      techniques_not_in_plan: [],
+      gap_severity: "none",
+      estimated_time_minutes: 30,
+      common_pitfalls: "Грешки при заместване на √2 и при опростяване на системата.",
+      recommended_for_simulation: false,
+      prerequisite_review: "Преговори 5.7 и 5.4."
+    },
+    {
+      num: 3,
+      topic: "ТЧ",
+      subtopic: "CRT и взаимно прости числа",
+      difficulty: 5,
+      probs_page: 1,
+      sol_page: 2,
+      summary: "Да се намери най-голямото n, такова че сред всеки 20 различни естествени числа могат да се изберат n с m+a_i две по две взаимно прости.",
+      plan_step: 3,
+      plan_point: "3.6",
+      related_points: ["8.1", "3.2"],
+      prerequisites: ["3.2", "3.6", "8.1"],
+      add_as_task_to: ["3.6", "8.1"],
+      required_knowledge: [
+        { point_id: "3.6", technique: "Китайска теорема за остатъците", why_needed: "Да се намери m с предписани остатъци" },
+        { point_id: "3.2", technique: "Сравнения по модул", why_needed: "Условие за общи делители" },
+        { point_id: "8.1", technique: "Принцип на Дирихле", why_needed: "Избор на 9 числа с остатъци" }
+      ],
+      techniques_not_in_plan: [],
+      gap_severity: "none",
+      estimated_time_minutes: 50,
+      common_pitfalls: "Не се доказва горната граница с конкретна конструкция от 20 числа.",
+      recommended_for_simulation: false,
+      prerequisite_review: "Преговори 3.6 и 8.1."
+    },
+    {
+      num: 4,
+      topic: "Геометрия",
+      subtopic: "Вписани ъгли и вписана окръжност",
+      difficulty: 5,
+      probs_page: 1,
+      sol_page: 2,
+      summary: "Да се докаже, че центърът на вписаната в MNL окръжност лежи на PQ.",
+      plan_step: 1,
+      plan_point: "1.5",
+      related_points: ["1.10", "1.9", "2.1"],
+      prerequisites: ["1.5", "1.10"],
+      add_as_task_to: ["1.5", "1.10"],
+      required_knowledge: [
+        { point_id: "1.5", technique: "Вписани ъгли и допирателна-хорда", why_needed: "Доказване на MLCN вписан" },
+        { point_id: "1.10", technique: "Вписана окръжност и ъглополовящи", why_needed: "Идентифициране на инцентър" },
+        { point_id: "1.9", technique: "Микел/пресичане на окръжности", why_needed: "Втора пресечна точка на окръжности" }
+      ],
+      techniques_not_in_plan: [],
+      gap_severity: "none",
+      estimated_time_minutes: 60,
+      common_pitfalls: "Трудно се виждат вписаните четириъгълници и връзката с ъглополовящите.",
+      recommended_for_simulation: false,
+      prerequisite_review: "Преговори 1.5 и 1.10."
+    }
+  ],
+  difficulty_distribution: { easy: 0, medium: 2, hard: 2 },
+  recommended_action: "add-to-specific-points",
+  recommended_for_simulation: []
+}
+```
+
+### Част 2: ЗАДАЧИ (11 кл)
+
+```js
+// ─── ЗАДАЧИ: 2018-11 ───
+{
+  source_pdf_probs: "Задачи_Минали_Години/OLI-2-Областен кръг-2018-11 кл-probs.pdf",
+  source_pdf_sols:  "Задачи_Минали_Години/OLI-2-Областен кръг-2018-11 кл-sol.pdf",
+  year: 2018,
+  grade: 11,
+  exam_type: "областен",
+  problems: [
+    {
+      num: 1,
+      topic: "Алгебра",
+      subtopic: "Експоненциално неравенство",
+      difficulty: 3,
+      probs_page: 1,
+      sol_page: 1,
+      summary: "Да се реши x·4^x + 16/x − 5·2^{x+1} > 0.",
+      plan_step: 7,
+      plan_point: "7.3",
+      related_points: ["6.1", "6.10"],
+      prerequisites: ["7.3"],
+      add_as_task_to: ["7.3"],
+      required_knowledge: [
+        { point_id: "7.3", technique: "Монотонност на 2^x и 1/x", why_needed: "Определяне на знака на множителите" },
+        { point_id: null, technique: "Факторизация и метод на интервалите", why_needed: "Разлагане и решаване на неравенството" }
+      ],
+      techniques_not_in_plan: ["Експоненциални неравенства чрез факторизация"],
+      gap_severity: "minor",
+      estimated_time_minutes: 30,
+      common_pitfalls: "Пропуска се случаят x<0 и не се обосновава знакът на множителите.",
+      recommended_for_simulation: false,
+      prerequisite_review: "Преговори 7.3 и решаване на неравенства."
+    },
+    {
+      num: 2,
+      topic: "Алгебра",
+      subtopic: "Рационални числа и геометрична прогресия",
+      difficulty: 4,
+      probs_page: 1,
+      sol_page: 1,
+      summary: "Да се докаже, че r е рационално ⇔ съществуват различни цели a,b,c с r+a, r+b, r+c в геометрична прогресия.",
+      plan_step: 5,
+      plan_point: "5.4",
+      related_points: ["5.1", "3.1"],
+      prerequisites: ["5.4", "5.1"],
+      add_as_task_to: ["5.4"],
+      required_knowledge: [
+        { point_id: "5.4", technique: "Рационални числа и цели параметри", why_needed: "Доказване, че r е рационално" },
+        { point_id: "5.1", technique: "Алгебрични преобразувания", why_needed: "Изразяване на r от GP условието" },
+        { point_id: "3.1", technique: "Делимост в цели числа", why_needed: "Конструиране на a,b,c" }
+      ],
+      techniques_not_in_plan: ["Геометрична прогресия с параметри"],
+      gap_severity: "minor",
+      estimated_time_minutes: 40,
+      common_pitfalls: "Пропускат се случаите, когато две от числата a,b,c са равни или a+c−2b=0.",
+      recommended_for_simulation: true,
+      prerequisite_review: "Преговори 5.4 и 5.1."
+    },
+    {
+      num: 3,
+      topic: "Геометрия",
+      subtopic: "Ортоцентър и ъглополовящи",
+      difficulty: 5,
+      probs_page: 1,
+      sol_page: 2,
+      summary: "Да се докаже, че HK разполовява BC в остроъгълен △ABC с ортоцентър H.",
+      plan_step: 1,
+      plan_point: "1.5",
+      related_points: ["1.6", "1.10", "2.1"],
+      prerequisites: ["1.5", "1.6", "1.10"],
+      add_as_task_to: ["1.5", "1.6"],
+      required_knowledge: [
+        { point_id: "1.5", technique: "Вписани ъгли и окръжности", why_needed: "Доказване на равнобедрен △ADE" },
+        { point_id: "1.6", technique: "Синусова/косинусова теорема", why_needed: "Пресмятане на отношения" },
+        { point_id: "1.10", technique: "Ъглополовящи и инцентър", why_needed: "Свойства на ъглополовящата" },
+        { point_id: "1.1", technique: "Менелай/Талес", why_needed: "Доказване на успоредност и среди" }
+      ],
+      techniques_not_in_plan: [],
+      gap_severity: "none",
+      estimated_time_minutes: 60,
+      common_pitfalls: "Объркване на външна и вътрешна ъглополовяща; трудно angle chasing.",
+      recommended_for_simulation: true,
+      prerequisite_review: "Преговори 1.5, 1.6, 1.10."
+    },
+    {
+      num: 4,
+      topic: "Комбинаторика",
+      subtopic: "Индуктивно оцветяване",
+      difficulty: 5,
+      probs_page: 1,
+      sol_page: 3,
+      summary: "Да се докаже, че белите клетки могат да се оцветят в синьо/червено с дадените условия.",
+      plan_step: 8,
+      plan_point: "8.10",
+      related_points: ["8.1", "9.7"],
+      prerequisites: ["8.10", "8.1"],
+      add_as_task_to: ["8.10", "9.7"],
+      required_knowledge: [
+        { point_id: "8.10", technique: "Индукция по стълбове", why_needed: "Построяване на оцветяването" },
+        { point_id: "8.1", technique: "Принцип на Дирихле", why_needed: "Ако не може да се оцвети, възниква противоречие" },
+        { point_id: "9.7", technique: "Оцветявания и графи", why_needed: "Моделиране на редове и стълбове" }
+      ],
+      techniques_not_in_plan: [],
+      gap_severity: "none",
+      estimated_time_minutes: 60,
+      common_pitfalls: "Не се разбира условието 'точно един стълб, в който и двата реда имат бели клетки'.",
+      recommended_for_simulation: true,
+      prerequisite_review: "Преговори 8.10 и 8.1."
+    }
+  ],
+  difficulty_distribution: { easy: 0, medium: 1, hard: 3 },
+  recommended_action: "add-to-specific-points",
+  recommended_for_simulation: [2, 3, 4]
+}
+```
+
+### Част 3: АРХИВ (готов за copy-paste в Step 10)
+
+```js
+// ─── АРХИВ: 2018-10 ───
+{ 
+  id: "10.11", 
+  title: "Областен кръг 2018 – 10 клас",
+  desc: "4 задачи: 2 Алг, 1 ТЧ, 1 Геом",
+  source: "Областен кръг 2018",
+  pdf: "Задачи_Минали_Години/OLI-2-Областен кръг-2018-10 кл-probs",
+  page: 1,
+  problems_page: 1,
+  solutions_page: 1,
+  tasks: [
+    { label: "Зад 1 — Параметрично уравнение с квадратна функция", 
+      pdf: "Задачи_Минали_Години/OLI-2-Областен кръг-2018-10 кл-probs", 
+      page: 1,
+      knowledge: ["5.1"]
+    },
+    { label: "Зад 2 — Деление на полиноми с остатък", 
+      pdf: "Задачи_Минали_Години/OLI-2-Областен кръг-2018-10 кл-probs", 
+      page: 1,
+      knowledge: ["5.7", "5.4"]
+    },
+    { label: "Зад 3 — CRT и взаимно прости числа", 
+      pdf: "Задачи_Минали_Години/OLI-2-Областен кръг-2018-10 кл-probs", 
+      page: 1,
+      knowledge: ["3.6", "8.1"]
+    },
+    { label: "Зад 4 — Вписани ъгли и вписана окръжност", 
+      pdf: "Задачи_Минали_Години/OLI-2-Областен кръг-2018-10 кл-probs", 
+      page: 1,
+      knowledge: ["1.5", "1.10", "1.9"]
+    }
+  ],
+  bonus: [
+    { label: "Решения", pdf: "Задачи_Минали_Години/OLI-2-Областен кръг-2018-10 кл-sol" }
+  ],
+  explanation: "Фокус върху алгебра (2 задачи) и геометрия с вписани ъгли. Задача 3 изисква CRT и Дирихле."
+}
+
+// ─── АРХИВ: 2018-11 ───
+{ 
+  id: "10.12", 
+  title: "Областен кръг 2018 – 11 клас",
+  desc: "4 задачи: 2 Алг, 1 Геом, 1 Комб",
+  source: "Областен кръг 2018",
+  pdf: "Задачи_Минали_Години/OLI-2-Областен кръг-2018-11 кл-probs",
+  page: 1,
+  problems_page: 1,
+  solutions_page: 1,
+  tasks: [
+    { label: "Зад 1 — Експоненциално неравенство", 
+      pdf: "Задачи_Минали_Години/OLI-2-Областен кръг-2018-11 кл-probs", 
+      page: 1,
+      knowledge: ["7.3"]
+    },
+    { label: "Зад 2 — Рационални числа и геометрична прогресия", 
+      pdf: "Задачи_Минали_Години/OLI-2-Областен кръг-2018-11 кл-probs", 
+      page: 1,
+      knowledge: ["5.4", "5.1"]
+    },
+    { label: "Зад 3 — Ортоцентър и ъглополовящи", 
+      pdf: "Задачи_Минали_Години/OLI-2-Областен кръг-2018-11 кл-probs", 
+      page: 1,
+      knowledge: ["1.5", "1.6", "1.10"]
+    },
+    { label: "Зад 4 — Индуктивно оцветяване", 
+      pdf: "Задачи_Минали_Години/OLI-2-Областен кръг-2018-11 кл-probs", 
+      page: 1,
+      knowledge: ["8.10", "8.1"]
+    }
+  ],
+  bonus: [
+    { label: "Решения", pdf: "Задачи_Минали_Години/OLI-2-Областен кръг-2018-11 кл-sol" }
+  ],
+  explanation: "Балансирана година: алгебра, геометрия и комбинаторика. Зад 3 и 4 са трудни и подходящи за симулация."
+}
+```
+
+### Част 4: TASKS ЗА ТЕМАТИЧНИ ТОЧКИ
+
+```js
+// Точка 1.5 в STEPS[0].points:
+{ id: "1.5",
+  tasks: [
+    { label: "ОИ 2018/10 кл, Зад 4 (Вписани ъгли и вписана окръжност)", 
+      pdf: "Задачи_Минали_Години/OLI-2-Областен кръг-2018-10 кл-probs", 
+      page: 1,
+      difficulty: 5,
+      requires_also: ["1.10", "1.9"],
+      prerequisite_review: "Преговори 1.5 и 1.10"
+    },
+    { label: "ОИ 2018/11 кл, Зад 3 (Ортоцентър и ъглополовящи)", 
+      pdf: "Задачи_Минали_Години/OLI-2-Областен кръг-2018-11 кл-probs", 
+      page: 1,
+      difficulty: 5,
+      requires_also: ["1.6", "1.10"],
+      prerequisite_review: "Преговори 1.5, 1.6, 1.10"
+    }
+  ]
+}
+
+// Точка 1.6 в STEPS[0].points:
+{ id: "1.6",
+  tasks: [
+    { label: "ОИ 2018/11 кл, Зад 3 (Ортоцентър и ъглополовящи)", 
+      pdf: "Задачи_Минали_Години/OLI-2-Областен кръг-2018-11 кл-probs", 
+      page: 1,
+      difficulty: 5,
+      requires_also: ["1.5", "1.10"],
+      prerequisite_review: "Преговори 1.5 и 1.10"
+    }
+  ]
+}
+
+// Точка 1.9 в STEPS[0].points:
+{ id: "1.9",
+  tasks: [
+    { label: "ОИ 2018/10 кл, Зад 4 (Вписани ъгли и вписана окръжност)", 
+      pdf: "Задачи_Минали_Години/OLI-2-Областен кръг-2018-10 кл-probs", 
+      page: 1,
+      difficulty: 5,
+      requires_also: ["1.5", "1.10"],
+      prerequisite_review: "Преговори 1.5 и 1.10"
+    }
+  ]
+}
+
+// Точка 1.10 в STEPS[0].points:
+{ id: "1.10",
+  tasks: [
+    { label: "ОИ 2018/10 кл, Зад 4 (Вписани ъгли и вписана окръжност)", 
+      pdf: "Задачи_Минали_Години/OLI-2-Областен кръг-2018-10 кл-probs", 
+      page: 1,
+      difficulty: 5,
+      requires_also: ["1.5", "1.9"],
+      prerequisite_review: "Преговори 1.5 и 1.9"
+    },
+    { label: "ОИ 2018/11 кл, Зад 3 (Ортоцентър и ъглополовящи)", 
+      pdf: "Задачи_Минали_Години/OLI-2-Областен кръг-2018-11 кл-probs", 
+      page: 1,
+      difficulty: 5,
+      requires_also: ["1.5", "1.6"],
+      prerequisite_review: "Преговори 1.5 и 1.6"
+    }
+  ]
+}
+
+// Точка 3.6 в STEPS[2].points:
+{ id: "3.6",
+  tasks: [
+    { label: "ОИ 2018/10 кл, Зад 3 (CRT и взаимно прости числа)", 
+      pdf: "Задачи_Минали_Години/OLI-2-Областен кръг-2018-10 кл-probs", 
+      page: 1,
+      difficulty: 5,
+      requires_also: ["8.1", "3.2"],
+      prerequisite_review: "Преговори 3.2 и 8.1"
+    }
+  ]
+}
+
+// Точка 5.1 в STEPS[4].points:
+{ id: "5.1",
+  tasks: [
+    { label: "ОИ 2018/10 кл, Зад 1 (Параметрично уравнение с квадратна функция)", 
+      pdf: "Задачи_Минали_Години/OLI-2-Областен кръг-2018-10 кл-probs", 
+      page: 1,
+      difficulty: 3,
+      requires_also: ["5.4"],
+      prerequisite_review: "Преговори 5.1 и квадратни уравнения"
+    }
+  ]
+}
+
+// Точка 5.4 в STEPS[4].points:
+{ id: "5.4",
+  tasks: [
+    { label: "ОИ 2018/11 кл, Зад 2 (Рационални числа и геометрична прогресия)", 
+      pdf: "Задачи_Минали_Години/OLI-2-Областен кръг-2018-11 кл-probs", 
+      page: 1,
+      difficulty: 4,
+      requires_also: ["5.1", "3.1"],
+      prerequisite_review: "Преговори 5.4 и 5.1"
+    }
+  ]
+}
+
+// Точка 5.7 в STEPS[4].points:
+{ id: "5.7",
+  tasks: [
+    { label: "ОИ 2018/10 кл, Зад 2 (Деление на полиноми с остатък)", 
+      pdf: "Задачи_Минали_Години/OLI-2-Областен кръг-2018-10 кл-probs", 
+      page: 1,
+      difficulty: 3,
+      requires_also: ["5.4", "5.1"],
+      prerequisite_review: "Преговори 5.7 и 5.4"
+    }
+  ]
+}
+
+// Точка 7.3 в STEPS[6].points:
+{ id: "7.3",
+  tasks: [
+    { label: "ОИ 2018/11 кл, Зад 1 (Експоненциално неравенство)", 
+      pdf: "Задачи_Минали_Години/OLI-2-Областен кръг-2018-11 кл-probs", 
+      page: 1,
+      difficulty: 3,
+      requires_also: [],
+      prerequisite_review: "Преговори 7.3 и решаване на неравенства"
+    }
+  ]
+}
+
+// Точка 8.1 в STEPS[7].points:
+{ id: "8.1",
+  tasks: [
+    { label: "ОИ 2018/10 кл, Зад 3 (CRT и взаимно прости числа)", 
+      pdf: "Задачи_Минали_Години/OLI-2-Областен кръг-2018-10 кл-probs", 
+      page: 1,
+      difficulty: 5,
+      requires_also: ["3.6", "3.2"],
+      prerequisite_review: "Преговори 3.6 и 3.2"
+    }
+  ]
+}
+
+// Точка 8.10 в STEPS[7].points:
+{ id: "8.10",
+  tasks: [
+    { label: "ОИ 2018/11 кл, Зад 4 (Индуктивно оцветяване)", 
+      pdf: "Задачи_Минали_Години/OLI-2-Областен кръг-2018-11 кл-probs", 
+      page: 1,
+      difficulty: 5,
+      requires_also: ["8.1", "9.7"],
+      prerequisite_review: "Преговори 8.10 и 8.1"
+    }
+  ]
+}
+
+// Точка 9.7 в STEPS[8].points:
+{ id: "9.7",
+  tasks: [
+    { label: "ОИ 2018/11 кл, Зад 4 (Индуктивно оцветяване)", 
+      pdf: "Задачи_Минали_Години/OLI-2-Областен кръг-2018-11 кл-probs", 
+      page: 1,
+      difficulty: 5,
+      requires_also: ["8.10", "8.1"],
+      prerequisite_review: "Преговори 8.10 и 8.1"
+    }
+  ]
+}
+```
+
+### Част 5: KNOWLEDGE PROFILE ЗА ГОДИНАТА
+
+```js
+// ─── KNOWLEDGE PROFILE: 2018 ───
+{
+  year: 2018,
+  total_problems_analyzed: 8,
+  most_used_points: [
+    { point_id: "1.5", count: 2, examples: [10.4, 11.3] },
+    { point_id: "1.10", count: 2, examples: [10.4, 11.3] },
+    { point_id: "3.6", count: 1, examples: [10.3] },
+    { point_id: "8.1", count: 1, examples: [10.3] },
+    { point_id: "8.10", count: 1, examples: [11.4] },
+    { point_id: "5.1", count: 1, examples: [10.1] },
+    { point_id: "5.4", count: 1, examples: [11.2] },
+    { point_id: "5.7", count: 1, examples: [10.2] },
+    { point_id: "7.3", count: 1, examples: [11.1] },
+    { point_id: "1.6", count: 1, examples: [11.3] },
+    { point_id: "1.9", count: 1, examples: [10.4] },
+    { point_id: "9.7", count: 1, examples: [11.4] }
+  ],
+  techniques_used: [
+    "Симетрия на квадратна функция",
+    "Деление на полиноми с остатък",
+    "Китайска теорема за остатъците",
+    "Принцип на Дирихле",
+    "Вписани ъгли",
+    "Допирателна-хорда",
+    "Вписана окръжност",
+    "Монотонност на експоненциална функция",
+    "Геометрична прогресия с параметри",
+    "Ортоцентър и ъглополовящи",
+    "Индуктивно оцветяване"
+  ],
+  gaps_identified: [
+    { 
+      technique: "Симетрия на квадратна функция с параметър", 
+      appeared_in: ["10 кл зад 1"], 
+      recommendation: "Може да се добави като подточка към 5.1" 
+    },
+    { 
+      technique: "Експоненциални неравенства чрез факторизация", 
+      appeared_in: ["11 кл зад 1"], 
+      recommendation: "Малка липса; добави пример към 7.3 или 6.1" 
+    },
+    { 
+      technique: "Геометрична прогресия с параметри", 
+      appeared_in: ["11 кл зад 2"], 
+      recommendation: "Малка липса; подходящо за 5.4 или 3.1" 
+    }
+  ],
+  study_priority: [
+    "1.5 — Вписани ъгли (2 задачи)",
+    "1.10 — Вписана окръжност (2 задачи)",
+    "3.6 — CRT (1 задача, трудна)",
+    "8.10 — Индукция (1 задача, трудна)",
+    "5.7 — Деление на полиноми (1 задача)"
+  ],
+  summary: "Тази година доминираха геометрията (2 задачи) и алгебрата (3 задачи). Липсват критични техники; има само minor gaps в параметрични уравнения и експоненциални неравенства."
+}
+```
+
+### Част 6: RECOMMENDED CHANGES
+
+```markdown
+### RECOMMENDED CHANGES TO index.html
+
+**В STEPS:**
+- [ ] Добави `10.11` в Step 10 (архив на 2018 – 10 клас)
+- [ ] Добави `10.12` в Step 10 (архив на 2018 – 11 клас)
+- [ ] Актуализирай точка 1.5 с нови задачи от 10.4 и 11.3
+- [ ] Актуализирай точка 1.10 с нови задачи от 10.4 и 11.3
+- [ ] Актуализирай точка 3.6 с нова задача от 10.3
+- [ ] Актуализирай точка 5.1 с нова задача от 10.1
+- [ ] Актуализирай точка 5.4 с нова задача от 11.2
+- [ ] Актуализирай точка 5.7 с нова задача от 10.2
+- [ ] Актуализирай точка 7.3 с нова задача от 11.1
+- [ ] Актуализирай точка 8.1 с нова задача от 10.3
+- [ ] Актуализирай точка 8.10 с нова задача от 11.4
+- [ ] Актуализирай точка 9.7 с нова задача от 11.4
+
+**В PLAN_PHASES:**
+- [ ] Добави симулация с 11 кл задачи 2, 3, 4 в Phase 3 (пред-областен)
+- [ ] Включи 10.3 и 10.4 като тренировка за комбинаторика/ТЧ в Phase 2
+
+**Нови точки/стъпки:**
+- [ ] Няма major gaps — не са нужни нови стъпки.
+- [ ] Разгледай добавяне на подточка към 5.1: „Симетрия на квадратна функция с параметър“.
+- [ ] Разгледай добавяне на пример към 7.3: „Експоненциални неравенства чрез факторизация“.
+```

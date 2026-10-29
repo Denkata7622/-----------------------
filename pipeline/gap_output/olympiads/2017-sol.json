@@ -1,0 +1,189 @@
+{
+  "_meta": {
+    "pdf": "C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\Задачи_Минали_Години\\Национален\\OLI-3-Национален кръг-2017-9-12 кл-sol.pdf",
+    "paired_with": null,
+    "level": 2,
+    "type": "sol",
+    "analyzed_at": "2026-10-16T20:56:46.538525",
+    "model": "deepseek/deepseek-v3.2",
+    "text_length": 10391,
+    "paired_text_length": 0
+  },
+  "problems": [
+    {
+      "num": 1,
+      "topic": "geometry",
+      "theorems": [],
+      "techniques": [
+        "similar triangles",
+        "midpoints",
+        "cyclic quadrilaterals"
+      ],
+      "concepts": [
+        "convex quadrilateral",
+        "diagonals",
+        "circumcircles of triangles",
+        "midpoints of segments",
+        "power of a point",
+        "cyclic points",
+        "parallelogram construction",
+        "perpendicular lines"
+      ],
+      "difficulty": "olympic",
+      "notes": "Two distinct solutions provided: one using similarity and midpoints leading to a common circle (OXY), another using a parallelogram construction and perpendiculars."
+    },
+    {
+      "num": 2,
+      "topic": "number_theory",
+      "theorems": [],
+      "techniques": [
+        "modular arithmetic",
+        "construction of sequences",
+        "case analysis"
+      ],
+      "concepts": [
+        "arithmetic progression",
+        "divisibility",
+        "modulo m",
+        "greatest number less than N",
+        "game strategy",
+        "last remaining number"
+      ],
+      "difficulty": "olympic",
+      "notes": "Problem involves a game on numbers written in decreasing order with a common difference m. Key is to identify the number that remains last based on divisibility and modular conditions."
+    },
+    {
+      "num": 3,
+      "topic": "combinatorics",
+      "theorems": [],
+      "techniques": [
+        "injective function proof",
+        "graph theory (directed cycles)",
+        "parity argument"
+      ],
+      "concepts": [
+        "subsets",
+        "function defined on subsets",
+        "injective function",
+        "directed graph on subsets",
+        "cycles in graphs",
+        "even-length cycles",
+        "graph coloring",
+        "two-coloring"
+      ],
+      "difficulty": "olympic",
+      "notes": "The function f is injective. The graph of the problem decomposes into even cycles, allowing a 2-coloring."
+    },
+    {
+      "num": 4,
+      "topic": "number_theory",
+      "theorems": [
+        "Wilson's Theorem"
+      ],
+      "techniques": [
+        "modular arithmetic",
+        "case analysis",
+        "bounding arguments"
+      ],
+      "concepts": [
+        "prime numbers",
+        "factorial",
+        "mod p",
+        "mod (p-1)",
+        "Diophantine equation",
+        "exponential equation",
+        "trial for small primes"
+      ],
+      "difficulty": "olympic",
+      "notes": "Solution uses Wilson's Theorem to get a ≡ 1 (mod p), then expresses a in terms of p, and analyzes possible values of k and m."
+    },
+    {
+      "num": 5,
+      "topic": "algebra",
+      "theorems": [
+        "Rolle's Theorem"
+      ],
+      "techniques": [
+        "polynomial factorization",
+        "root analysis",
+        "comparison of polynomials",
+        "contradiction"
+      ],
+      "concepts": [
+        "polynomial with real coefficients and distinct positive roots",
+        "polynomial as a perfect power",
+        "even and odd exponents",
+        "difference of squares factorization",
+        "distribution of roots among factors",
+        "inequality of polynomial values"
+      ],
+      "difficulty": "olympic",
+      "notes": "Shows impossibility for odd k≥3 and for k=2 (hence for all even k). Uses factorization g^2 - b^2 and analyzes root distribution to reach a contradiction."
+    },
+    {
+      "num": 6,
+      "topic": "geometry",
+      "theorems": [],
+      "techniques": [
+        "auxiliary constructions (rectangles)",
+        "similar triangles",
+        "midpoint theorem",
+        "parallel lines"
+      ],
+      "concepts": [
+        "acute non-isosceles triangle",
+        "altitudes",
+        "symmetry",
+        "rectangle construction",
+        "midpoint of segment",
+        "angle chasing",
+        "similar triangles",
+        "parallel lines",
+        "angle equality"
+      ],
+      "difficulty": "olympic",
+      "notes": "Solution involves constructing rectangles to relate segments and angles, using similarity and midpoints to prove the desired angle equality. Alternative methods mentioned: inversion, complex numbers, cotangent technique."
+    }
+  ],
+  "unique_concepts": [
+    "convex quadrilateral",
+    "circumcircles of triangles",
+    "midpoints of segments",
+    "power of a point",
+    "cyclic points",
+    "parallelogram construction",
+    "perpendicular lines",
+    "similar triangles",
+    "arithmetic progression",
+    "divisibility",
+    "modulo m",
+    "game strategy",
+    "last remaining number",
+    "subsets",
+    "injective function",
+    "directed graph on subsets",
+    "cycles in graphs",
+    "even-length cycles",
+    "graph coloring",
+    "two-coloring",
+    "Wilson's Theorem",
+    "factorial",
+    "mod p",
+    "mod (p-1)",
+    "Diophantine equation",
+    "exponential equation",
+    "polynomial with real coefficients and distinct positive roots",
+    "polynomial as a perfect power",
+    "difference of squares factorization",
+    "distribution of roots among factors",
+    "Rolle's Theorem",
+    "acute non-isosceles triangle",
+    "altitudes",
+    "symmetry",
+    "rectangle construction",
+    "midpoint theorem",
+    "parallel lines",
+    "angle chasing"
+  ],
+  "confidence": 0.95
+}

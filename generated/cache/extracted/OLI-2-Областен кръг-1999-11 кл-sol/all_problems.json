@@ -1,0 +1,77 @@
+{
+  "pdf": "OLI-2-Областен кръг-1999-11 кл-sol",
+  "problems": [
+    {
+      "num": 1,
+      "year": 1999,
+      "grade": 11,
+      "round": "nacionalen",
+      "statement": "Find all triples $(x, y, z)$ of natural numbers such that $y$ is a prime number, $y$ and 3 do not divide $z$, and $x^3 - y^3 = z^2$.",
+      "solution": "Since $(x - y)((x - y)^2 + 3xy)) = x^3 - y^3 = z^2$, it follows from the conditions of the problem that $x - y$ and $(x - y)^2 + 3xy$ are relatively prime. Therefore $x - y = u^2$ and $x^2 + xy + y^2 = v^2$. Thus $3y^2 = (2v - 2x - y)(2v + 2x + y)$ and since $y$ is a prime number, there are three cases to consider:\n\n1. $2v - 2x - y = y, 2v + 2x + y = 3y$. Now $x = 0$, which is impossible.\n2. $2v - 2x - y = 1, 2v + 2x + y = 3y^2$. Now $3y^2 - 1 = 2(2x + y) = 2(2u^2 + 3y)$ and it follows that 3 divides $u^2 + 1$, which is impossible.\n3. $2v - 2x - y = 3, 2v + 2x + y = y^2$. Now $y^2 - 3 = 2(2x + y) = 2(2u^2 + 3y)$ and it follows that $(y - 3)^2 - (2u)^2 = 12$. Therefore $y = 7, u = 1, x = 8, z = 13$. Direct verification shows that $(8, 7, 13)$ is a solution of the problem.",
+      "answer": "$(x, y, z) = (8, 7, 13)$",
+      "page": 1,
+      "pdf": "OLI-2-Областен кръг-1999-11 кл-sol",
+      "chunk": 1
+    },
+    {
+      "num": 2,
+      "year": 1999,
+      "grade": 11,
+      "round": "nacionalen",
+      "statement": "A convex quadrilateral of area $S$ is inscribed in a circle whose centre is a point interior to the quadrilateral. Prove that the area of the quadrilateral whose vertices are the projections of the point of intersection of the diagonals on the sides does not exceed $\\frac{S}{2}$.",
+      "solution": "Let $ABCD$ be a quadrilateral inscribed in a circle with centre $O$ and radius $R$. Denote by $E$ the point of intersection of $AC$ and $BD$. Denote further by $M, N, P, Q$ and $F$ the projections of $E$ on $AB, BC, CD, DA$ and $MN$, respectively. We know that $MN = BE \\sin \\angle ABC = \\frac{BE \\cdot AC}{2R}$. Also,\n\n$$EF = EM \\sin \\angle EMN = \\frac{AE \\cdot BE \\sin \\angle AEB}{AB} \\sin \\angle CBE.$$\n\nSince $BE \\sin \\angle CBE = CE \\sin \\angle BCE = CE \\frac{AB}{2R}$ and $AE \\cdot CE = R^2 - OE^2$, it follows that $EF = \\frac{R^2 - OE^2}{2R} \\sin \\angle AEB$. Therefore [неразчетено]\n\nSimilar equalities hold for $S_{\\triangle NEP}, S_{\\triangle PEQ}$ and $S_{\\triangle QEM}$. By combining the above we obtain\n\n$$S_{MNPQ} = \\frac{AC \\cdot BD \\sin \\angle AEB(R^2 - OE^2)}{4R^2} \\leq \\frac{S_{ABCD}}{2},$$\n\nQ. E. D.",
+      "answer": null,
+      "page": 1,
+      "pdf": "OLI-2-Областен кръг-1999-11 кл-sol",
+      "chunk": 1
+    },
+    {
+      "num": 3,
+      "year": 1999,
+      "grade": 11,
+      "round": "nacionalen",
+      "statement": "In a competition 8 judges marked the contestants by yes or no. It is known that for any two contestants, two judges gave both a yes; two judges gave the first one a yes and the second one a no; two judges gave the first one a no and the second one a yes, and finally, two judges gave both a no. What is the greatest possible number of contestants?",
+      "solution": "Denote the number of contestants by $n$. Consider a table with 8 rows and $n$ columns such that the cell in the $i$th row and $j$th column contains 0 (1) if the $i$th judge gave the $j$th contestant a no (a yes). The conditions of the problem now imply that the table formed by any two columns contains among its rows each of the pairs 00, 01, 10 and 11 twice. We shall prove that 8 columns having this property do not exist. Assume the opposite. It is easily seen that if in any column all 0s are replaced by 1s and vice versa, the above property is retained. Therefore without loss of generality suppose that the first row consists of 0s. Denote the number of 0s in the $i$th row by $a_i$. It is clear that the total number of 0s is $8 \\cdot 4 = 32$. Further, the number of occurrences of 00 is $\\binom{8}{2} \\cdot 2 = 56$.\n\nOn the other hand the same number is $\\sum_{i=1}^{8} \\binom{a_i}{2}$. Since $a_1 = 8$, it follows that $\\sum_{i=2}^{8} a_i = 24$. It is easy to prove now that $\\sum_{i=2}^{8} \\binom{a_i}{2} \\geq 30$. Therefore $56 = \\sum_{i=1}^{8} \\binom{a_i}{2} \\geq 58$, which is false.\n\nThe diagram on the right shows that it is possible to have exactly 7 contestants:\n\n0 0 0 0 0 0 0\n0 1 1 1 1 0 0\n0 1 1 0 0 1 1\n0 0 0 1 1 1 1\n1 0 1 0 1 0 1\n1 0 1 1 0 1 0\n1 1 0 0 1 1 0\n1 1 0 1 0 0 1",
+      "answer": "7",
+      "page": 2,
+      "pdf": "OLI-2-Областен кръг-1999-11 кл-sol",
+      "chunk": 1
+    },
+    {
+      "num": 4,
+      "year": 1999,
+      "grade": 11,
+      "round": "nacionalen",
+      "statement": "Find all pairs $(x, y)$ of integer numbers such that $x^3 = y^3 + 2y^2 + 1$.",
+      "solution": "It is obvious that $x > y$. On the other hand $x < y + 1 \\iff (y + 1)^3 > y^3 + 2y^2 + 1 \\iff y(y + 3) > 0$. Therefore if $y > 0$ or $y < -3$ the problem has no solution. Direct verification yields all pairs $(x, y)$ which satisfy the equality $x^3 = y^3 + 2y^2 + 1$, namely $(-2, -3)$, $(1, -2)$ and $(1, 0)$.",
+      "answer": "$(x, y) \\in \\{(-2, -3), (1, -2), (1, 0)\\}$",
+      "page": 2,
+      "pdf": "OLI-2-Областен кръг-1999-11 кл-sol",
+      "chunk": 1
+    },
+    {
+      "num": 5,
+      "year": 1999,
+      "grade": 11,
+      "round": "nacionalen",
+      "statement": "Let $B_1$ and $C_1$ be points on the sides $AC$ and $AB$ of $\\triangle ABC$. The straight lines $BB_1$ and $CC_1$ intersect at point $D$. Prove that the quadrilateral $AB_1DC_1$ is circumscribed if and only if the incircles of $\\triangle ABD$ and $\\triangle ACD$ are tangent.",
+      "solution": null,
+      "answer": null,
+      "page": 3,
+      "pdf": "OLI-2-Областен кръг-1999-11 кл-sol",
+      "chunk": 1
+    },
+    {
+      "num": 6,
+      "year": 1999,
+      "grade": 11,
+      "round": "nacionalen",
+      "statement": "Each interior point of an equilateral triangle of side 1 lies in one of six circles of the same radius $r$. Prove that $r \\geq \\frac{\\sqrt{3}}{10}$.",
+      "solution": "Divide each side of the triangle into five equal parts and draw lines parallel to the sides through these points. Thus the triangle is divided into 25 equilateral triangles of side $\\frac{1}{5}$. The total number of vertices is $21 > 6 \\cdot 3$. Therefore there exist 4 points which are interior to one and the same circle. It is easy to see now that $r \\geq \\frac{\\sqrt{3}}{10}$, which solves the problem.",
+      "answer": null,
+      "page": 3,
+      "pdf": "OLI-2-Областен кръг-1999-11 кл-sol",
+      "chunk": 1
+    }
+  ]
+}

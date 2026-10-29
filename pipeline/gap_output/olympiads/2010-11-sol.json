@@ -1,0 +1,160 @@
+{
+  "_meta": {
+    "pdf": "C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\Задачи_Минали_Години\\Областен\\OLI-2-Областен кръг-2010-11 кл-sol.pdf",
+    "paired_with": null,
+    "level": 1,
+    "type": "sol",
+    "analyzed_at": "2026-10-18T15:37:02.982520",
+    "model": "deepseek/deepseek-v3.2",
+    "text_length": 8176,
+    "paired_text_length": 0
+  },
+  "problems": [
+    {
+      "num": 1,
+      "topic": "algebra",
+      "theorems": [],
+      "techniques": [
+        "substitution",
+        "quadratic inequality analysis",
+        "case analysis"
+      ],
+      "concepts": [
+        "exponential equations",
+        "inequalities with parameters",
+        "quadratic functions",
+        "properties of exponents"
+      ],
+      "difficulty": "standard",
+      "notes": "Standard exponential inequality solved via substitution and quadratic analysis."
+    },
+    {
+      "num": 2,
+      "topic": "algebra",
+      "theorems": [
+        "Monotone convergence theorem"
+      ],
+      "techniques": [
+        "induction",
+        "inequality manipulation",
+        "limit calculation"
+      ],
+      "concepts": [
+        "recursive sequences",
+        "monotone bounded sequences",
+        "convergence",
+        "inequalities"
+      ],
+      "difficulty": "standard",
+      "notes": "Recursive sequence, proving monotonicity, boundedness, and convergence, then using induction for an inequality."
+    },
+    {
+      "num": 3,
+      "topic": "combinatorics",
+      "theorems": [],
+      "techniques": [
+        "strategy",
+        "invariant",
+        "parity",
+        "contradiction"
+      ],
+      "concepts": [
+        "two-player game",
+        "polynomial coefficients",
+        "integer roots",
+        "sum of coefficients",
+        "alternating sum of coefficients"
+      ],
+      "difficulty": "olympic",
+      "notes": "Combinatorial game strategy based on maintaining parity of unfilled coefficients for odd/even powers to force root 1 or -1."
+    },
+    {
+      "num": 4,
+      "topic": "geometry",
+      "theorems": [
+        "Law of Cosines",
+        "Sine Law"
+      ],
+      "techniques": [
+        "similar triangles",
+        "midsegment theorem",
+        "ratio calculations"
+      ],
+      "concepts": [
+        "triangle geometry",
+        "parallel lines",
+        "medians",
+        "altitudes",
+        "circumradius",
+        "inradius",
+        "area formula",
+        "trigonometric functions"
+      ],
+      "difficulty": "hard",
+      "notes": "Geometry problem combining parallel lines, midsegments, similar triangles, and trigonometric calculations for R and r."
+    },
+    {
+      "num": 5,
+      "topic": "combinatorics",
+      "theorems": [],
+      "techniques": [
+        "induction",
+        "coloring argument",
+        "parity",
+        "case analysis"
+      ],
+      "concepts": [
+        "chessboard coloring",
+        "domino tiling",
+        "bipartite graphs",
+        "matching",
+        "invariant (color count)",
+        "odd dimensions"
+      ],
+      "difficulty": "olympic",
+      "notes": "Domino tiling problem on an odd×odd board after removing cells, using induction and careful case analysis."
+    },
+    {
+      "num": 6,
+      "topic": "number_theory",
+      "theorems": [
+        "Chinese Remainder Theorem"
+      ],
+      "techniques": [
+        "contradiction",
+        "construction",
+        "modular arithmetic"
+      ],
+      "concepts": [
+        "polynomials with integer coefficients",
+        "prime divisors",
+        "coprime numbers",
+        "modular congruence",
+        "existence proofs"
+      ],
+      "difficulty": "olympic",
+      "notes": "Advanced number theory problem using Chinese Remainder Theorem to construct numbers with specific divisibility properties, leading to a contradiction."
+    }
+  ],
+  "unique_concepts": [
+    "exponential equations",
+    "inequalities with parameters",
+    "quadratic functions",
+    "recursive sequences",
+    "monotone bounded sequences",
+    "convergence",
+    "two-player game strategy",
+    "invariant/parity",
+    "polynomial coefficients and roots",
+    "similar triangles",
+    "midsegment theorem",
+    "circumradius and inradius",
+    "chessboard coloring",
+    "domino tiling",
+    "bipartite matching",
+    "Chinese Remainder Theorem",
+    "prime divisors in polynomials",
+    "modular congruence construction"
+  ],
+  "confidence": 0.95
+}

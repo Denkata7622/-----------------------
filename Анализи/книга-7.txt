@@ -1,0 +1,176 @@
+```js
+// ─── КНИГА ───
+{
+  file: "Материали_EN/book-7.pdf",
+  title: "Inequalities: An Approach Through Problems",
+  author: "B. J. Venkatachala",
+  year: 2009,
+  language: "EN",
+  total_pages: 399,
+  topics: ["Algebra", "Inequalities", "Geometry", "Number Theory"],
+  structure: [
+    { 
+      chapter: "Ch 1", 
+      title: "Some Basic Inequalities", 
+      pages: "10-58", 
+      plan_step: 6, 
+      plan_points: ["6.1","6.2","6.3","6.4","6.5","6.6","6.7","6.8","6.9","6.10"],
+      priority_regional: "high",
+      priority_national: "high"
+    },
+    { 
+      chapter: "Ch 2", 
+      title: "Techniques for Proving Inequalities", 
+      pages: "59-101", 
+      plan_step: 6, 
+      plan_points: ["6.1","6.4","6.5","6.8","6.9","6.10","5.1","5.2","8.10"],
+      priority_regional: "high",
+      priority_national: "high"
+    },
+    { 
+      chapter: "Ch 3", 
+      title: "Geometric Inequalities", 
+      pages: "102-161", 
+      plan_step: 2, 
+      plan_points: ["2.8"],
+      priority_regional: "med",
+      priority_national: "high"
+    },
+    { 
+      chapter: "Ch 4", 
+      title: "Applications Involving Inequalities", 
+      pages: "162-192", 
+      plan_step: 10, 
+      plan_points: ["10.1","10.2","10.3","10.4","10.5","10.6","10.7","10.8","10.9","10.10"],
+      priority_regional: "med",
+      priority_national: "high"
+    },
+    { 
+      chapter: "Ch 5", 
+      title: "Problems on Inequalities", 
+      pages: "193-223", 
+      plan_step: 10, 
+      plan_points: ["10.1","10.2","10.3","10.4","10.5","10.6","10.7","10.8","10.9","10.10"],
+      priority_regional: "high",
+      priority_national: "high"
+    },
+    { 
+      chapter: "Ch 6", 
+      title: "Solutions to Problems", 
+      pages: "224-395", 
+      plan_step: 10, 
+      plan_points: ["10.1","10.2","10.3","10.4","10.5","10.6","10.7","10.8","10.9","10.10"],
+      priority_regional: "med",
+      priority_national: "med"
+    }
+  ],
+  duplicates: [], // CHECK: book-7.pdf няма очевиден дубликат сред известните файлове
+  recommended_action: "add-as-specific-points",
+  best_mapping: [
+    { step_id: 6, point_ids: ["6.1","6.2","6.3"], chapters: ["Ch 1 (1.1-1.2)"], pages: "10-19" },
+    { step_id: 6, point_ids: ["6.4"], chapters: ["Ch 1 (1.3)"], pages: "20-25" },
+    { step_id: 6, point_ids: ["6.5"], chapters: ["Ch 1 (1.7)"], pages: "43-55" },
+    { step_id: 6, point_ids: ["6.6"], chapters: ["Ch 1 (1.4)"], pages: "26-29" },
+    { step_id: 6, point_ids: ["6.7"], chapters: ["Ch 1 (1.5)"], pages: "30-35" },
+    { step_id: 6, point_ids: ["6.8"], chapters: ["Ch 2 (2.9-2.10)"], pages: "90-93" },
+    { step_id: 6, point_ids: ["6.9"], chapters: ["Ch 2 (2.8, 2.13)"], pages: "88-89, 99-101" },
+    { step_id: 6, point_ids: ["6.10"], chapters: ["Ch 1 (1.6)"], pages: "36-42" },
+    { step_id: 2, point_ids: ["2.8"], chapters: ["Ch 3"], pages: "102-161" },
+    { step_id: 10, point_ids: ["10.1","10.2","10.3","10.4","10.5","10.6","10.7","10.8","10.9","10.10"], chapters: ["Ch 4-6"], pages: "162-395" }
+  ]
+}
+```
+
+```js
+// ─── АКТУАЛИЗАЦИЯ ───
+// Замести САМО следните полета в съществуващите точки:
+
+// Точка 6.1 в STEPS[5].points:
+{ id: "6.1",
+  bonus: [
+    { label: "Ch 1.2: AM-GM (теория + примери)", pdf: "Материали_EN/book-7", page: 12 },
+    { label: "Ch 2.2-2.3: Индукция и известни неравенства", pdf: "Материали_EN/book-7", page: 59 }
+  ]
+}
+
+// Точка 6.4 в STEPS[5].points:
+{ id: "6.4",
+  bonus: [
+    { label: "Ch 1.3: Cauchy-Schwarz (теория + примери)", pdf: "Материали_EN/book-7", page: 20 }
+  ]
+}
+
+// Точка 6.5 в STEPS[5].points:
+{ id: "6.5",
+  bonus: [
+    { label: "Ch 1.7: Jensen и изпъкнали функции", pdf: "Материали_EN/book-7", page: 43 }
+  ]
+}
+
+// Точка 6.6 в STEPS[5].points:
+{ id: "6.6",
+  bonus: [
+    { label: "Ch 1.4: Chebyshev", pdf: "Материали_EN/book-7", page: 26 }
+  ]
+}
+
+// Точка 6.7 в STEPS[5].points:
+{ id: "6.7",
+  bonus: [
+    { label: "Ch 1.5: Rearrangement", pdf: "Материали_EN/book-7", page: 30 }
+  ]
+}
+
+// Точка 6.8 в STEPS[5].points:
+{ id: "6.8",
+  bonus: [
+    { label: "Ch 2.9-2.10: Майоризация и Muirhead", pdf: "Материали_EN/book-7", page: 90 }
+  ]
+}
+
+// Точка 6.9 в STEPS[5].points:
+{ id: "6.9",
+  bonus: [
+    { label: "Ch 2.8: Schur", pdf: "Материали_EN/book-7", page: 88 },
+    { label: "Ch 2.13: Stolarsky", pdf: "Материали_EN/book-7", page: 99 }
+  ]
+}
+
+// Точка 6.10 в STEPS[5].points:
+{ id: "6.10",
+  bonus: [
+    { label: "Ch 1.6: Hölder и Minkowski", pdf: "Материали_EN/book-7", page: 36 }
+  ]
+}
+
+// Точка 2.8 в STEPS[1].points:
+{ id: "2.8",
+  bonus: [
+    { label: "Ch 3: Геометрични неравенства (пълен курс)", pdf: "Материали_EN/book-7", page: 102 }
+  ]
+}
+```
+
+```markdown
+### RECOMMENDED CHANGES TO index.html
+
+**В STEPS:**
+- [ ] Промяна в `STEPS[5].points[0]` (Точка 6.1): нов `bonus` = Ch 1.2 (page 12) + Ch 2.2-2.3 (page 59)
+- [ ] Промяна в `STEPS[5].points[3]` (Точка 6.4): нов `bonus` = Ch 1.3 (page 20)
+- [ ] Промяна в `STEPS[5].points[4]` (Точка 6.5): нов `bonus` = Ch 1.7 (page 43)
+- [ ] Промяна в `STEPS[5].points[5]` (Точка 6.6): нов `bonus` = Ch 1.4 (page 26)
+- [ ] Промяна в `STEPS[5].points[6]` (Точка 6.7): нов `bonus` = Ch 1.5 (page 30)
+- [ ] Промяна в `STEPS[5].points[7]` (Точка 6.8): нов `bonus` = Ch 2.9-2.10 (page 90)
+- [ ] Промяна в `STEPS[5].points[8]` (Точка 6.9): нов `bonus` = Ch 2.8 (page 88) + Ch 2.13 (page 99)
+- [ ] Промяна в `STEPS[5].points[9]` (Точка 6.10): нов `bonus` = Ch 1.6 (page 36)
+- [ ] Промяна в `STEPS[1].points[7]` (Точка 2.8): нов `bonus` = Ch 3 (page 102)
+
+**В PLAN_PHASES:**
+- [ ] Обновяване на Week 7-8 (ТЧ + Комбинаторика): добавяне на Ch 4-5 (Applications + Problems) като допълнителни задачи за симулация
+- [ ] Обновяване на Week 13-17 (Пред-областен): използване на Ch 5 (Problems) за смесени симулации
+
+**Друго:**
+- [ ] Книгата е уникална (няма дубликати сред известните файлове)
+- [ ] Препоръчително е да се добавят конкретни задачи от Ch 5 (Problems) към Стъпка 10
+- [ ] Няма промени в конфигурацията на exam dates
+```

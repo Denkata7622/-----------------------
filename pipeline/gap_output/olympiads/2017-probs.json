@@ -1,0 +1,160 @@
+{
+  "_meta": {
+    "pdf": "C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\Задачи_Минали_Години\\Национален\\OLI-3-Национален кръг-2017-9-12 кл-probs.pdf",
+    "paired_with": "C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\Задачи_Минали_Години\\Национален\\OLI-3-Национален кръг-2017-9-12 кл-sol.pdf",
+    "level": 2,
+    "type": "probs",
+    "analyzed_at": "2026-10-16T20:56:26.466752",
+    "model": "deepseek/deepseek-v3.2",
+    "text_length": 34118,
+    "paired_text_length": 10391
+  },
+  "problems": [
+    {
+      "num": 1,
+      "topic": "geometry",
+      "theorems": [
+        "Menelaus",
+        "Ptolemy"
+      ],
+      "techniques": [
+        "similar triangles",
+        "midpoint construction",
+        "cyclic quadrilaterals",
+        "perpendicular lines"
+      ],
+      "concepts": [
+        "diagonals of quadrilateral",
+        "circumcircles of triangles",
+        "intersection of circles (Miquel point)",
+        "power of a point",
+        "midpoints",
+        "homothety/translation (due to AA1=CC1, BB1=DD1)"
+      ],
+      "difficulty": "olympic",
+      "notes": "Two distinct solutions: one using similar triangles and midpoints to show concyclicity via angle chasing; another using a parallelogram construction and right angles. The points M, N, P, Q lie on the circle with diameter OT or the circumcircle of triangle OXY."
+    },
+    {
+      "num": 2,
+      "topic": "number_theory",
+      "theorems": [],
+      "techniques": [
+        "modular arithmetic",
+        "induction/recursive sequences",
+        "case analysis",
+        "extremal principle (smallest number a)"
+      ],
+      "concepts": [
+        "arithmetic progression modulo m",
+        "divisibility",
+        "deletion game strategy",
+        "analysis of last remaining number"
+      ],
+      "difficulty": "olympic",
+      "notes": "The key is to identify the special number a = (m^2017 + m^2 + m + 1)/(m+1) and prove it remains last by showing all smaller numbers are deleted earlier and no multiples of a exist on the board."
+    },
+    {
+      "num": 3,
+      "topic": "combinatorics",
+      "theorems": [],
+      "techniques": [
+        "injective function proof",
+        "graph theory (directed cycles)",
+        "parity argument",
+        "extremal principle (smallest element)"
+      ],
+      "concepts": [
+        "set function defined by parity of divisors",
+        "coloring of subsets",
+        "directed cycles of even length",
+        "2-coloring suffices (bipartite)"
+      ],
+      "difficulty": "olympic",
+      "notes": "Proves f is injective, then models the problem as a directed graph where each vertex has in-degree and out-degree 1, leading to cycles of even length, hence k=2 is sufficient."
+    },
+    {
+      "num": 4,
+      "topic": "number_theory",
+      "theorems": [
+        "Wilson's Theorem"
+      ],
+      "techniques": [
+        "modular arithmetic",
+        "case analysis",
+        "bounding arguments",
+        "divisibility analysis"
+      ],
+      "concepts": [
+        "factorials",
+        "prime numbers",
+        "Diophantine equation (p-1)! + a = p^m)",
+        "upper bound a ≤ 5p^2"
+      ],
+      "difficulty": "olympic",
+      "notes": "Uses Wilson's Theorem to get a ≡ 1 (mod p), then writes a = kp(p-1)+1, bounds k ≤ 5, and analyzes cases for k=0..5 to find all solutions for small primes p=2,3,5 and show no solutions for p≥7."
+    },
+    {
+      "num": 5,
+      "topic": "algebra",
+      "theorems": [
+        "Rolle's Theorem"
+      ],
+      "techniques": [
+        "polynomial factorization",
+        "root analysis",
+        "comparison of values",
+        "contradiction"
+      ],
+      "concepts": [
+        "polynomials with distinct real roots",
+        "k-th power of a polynomial",
+        "even/odd degree considerations",
+        "sign and ordering of roots"
+      ],
+      "difficulty": "olympic",
+      "notes": "Shows impossibility for odd k≥3 by degree counting, then focuses on k=2, factors as difference of squares, analyzes root distribution of g(x)+b and g(x)-b, and reaches a contradiction by comparing absolute values at -1 and -2."
+    },
+    {
+      "num": 6,
+      "topic": "geometry",
+      "theorems": [],
+      "techniques": [
+        "similar triangles",
+        "midpoint construction",
+        "rectangle construction",
+        "parallel lines",
+        "angle chasing"
+      ],
+      "concepts": [
+        "altitudes of triangle",
+        "symmetry",
+        "homothety (scaling by 3)",
+        "cyclic quadrilaterals (implied by rectangles)",
+        "angle preservation under similarity"
+      ],
+      "difficulty": "olympic",
+      "notes": "Constructs rectangles to create similar triangles, uses midpoints and parallel lines to transfer angles, eventually proving the desired angle equality. Alternative solutions mentioned: inversion, complex numbers, cotangent technique."
+    }
+  ],
+  "unique_concepts": [
+    "cyclic quadrilaterals",
+    "power of a point",
+    "similar triangles",
+    "midpoint construction",
+    "modular arithmetic",
+    "divisibility game",
+    "injective set functions",
+    "graph cycles and 2-coloring",
+    "Wilson's Theorem",
+    "factorial Diophantine equation",
+    "polynomial roots and factorization",
+    "Rolle's Theorem application",
+    "altitudes and symmetry in triangles",
+    "homothety/scaling",
+    "angle chasing",
+    "directed graphs in combinatorics",
+    "parity arguments",
+    "extremal principle"
+  ],
+  "confidence": 0.95
+}

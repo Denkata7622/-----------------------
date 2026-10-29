@@ -1,0 +1,159 @@
+{
+  "_meta": {
+    "pdf": "C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\Задачи_Минали_Години\\Национален\\OLI-3-Национален кръг-2020-9-12 кл-sol.pdf",
+    "paired_with": null,
+    "level": 2,
+    "type": "sol",
+    "analyzed_at": "2026-10-16T21:02:32.424595",
+    "model": "deepseek/deepseek-v3.2",
+    "text_length": 16638,
+    "paired_text_length": 0
+  },
+  "problems": [
+    {
+      "num": 1,
+      "topic": "geometry",
+      "theorems": [
+        "Menelaus",
+        "Thales",
+        "Law of Sines"
+      ],
+      "techniques": [
+        "substitution",
+        "ratio manipulation",
+        "parallel line construction"
+      ],
+      "concepts": [
+        "cyclic quadrilaterals",
+        "angle chasing",
+        "segment equality",
+        "directed segments"
+      ],
+      "difficulty": "standard",
+      "notes": "Two solutions provided: one using Menelaus and cyclic quadrilateral properties, another using parallel line construction and triangle congruence."
+    },
+    {
+      "num": 2,
+      "topic": "algebra",
+      "theorems": [],
+      "techniques": [
+        "substitution",
+        "summation manipulation",
+        "inequality chaining",
+        "geometric interpretation (area)"
+      ],
+      "concepts": [
+        "absolute value inequalities",
+        "sequence bounds",
+        "sum of squares",
+        "discrete optimization"
+      ],
+      "difficulty": "hard",
+      "notes": "Two solutions: one geometric (interpreting sum as area), one algebraic (splitting sum based on a threshold). Involves careful bounding and case analysis."
+    },
+    {
+      "num": 3,
+      "topic": "number_theory",
+      "theorems": [],
+      "techniques": [
+        "modular arithmetic",
+        "contradiction",
+        "pigeonhole principle",
+        "invariance analysis"
+      ],
+      "concepts": [
+        "quadratic residues",
+        "coprime numbers",
+        "recurrence sequences",
+        "function iteration modulo p"
+      ],
+      "difficulty": "olympic",
+      "notes": "Uses properties of the function f(x)=x^2-x-1 modulo a prime divisor p of a_{n+1}. Shows the sequence cannot have a cycle and uses symmetry to bound n."
+    },
+    {
+      "num": 4,
+      "topic": "number_theory",
+      "theorems": [],
+      "techniques": [
+        "modular arithmetic",
+        "quadratic residues",
+        "exhaustion (small case)"
+      ],
+      "concepts": [
+        "binomial coefficients as squares",
+        "Diophantine equations",
+        "mod 7 analysis"
+      ],
+      "difficulty": "standard",
+      "notes": "Part (a) has a known example. Part (b) uses mod 7 analysis to show impossibility, focusing on the product of four consecutive numbers modulo 7."
+    },
+    {
+      "num": 5,
+      "topic": "combinatorics",
+      "theorems": [],
+      "techniques": [
+        "graph theory modeling",
+        "induction",
+        "parity argument",
+        "edge swapping"
+      ],
+      "concepts": [
+        "Hamiltonian cycles",
+        "4-regular graphs",
+        "edge coloring",
+        "perfect matchings of cycles",
+        "graph contraction"
+      ],
+      "difficulty": "olympic",
+      "notes": "Highly non-standard. Models the problem as a 4-regular graph where white and black edges form two disjoint Hamiltonian cycles. Proves a parity lemma about pairs of Hamiltonian cycle decompositions via induction on vertices and edge distance."
+    },
+    {
+      "num": 6,
+      "topic": "algebra",
+      "theorems": [],
+      "techniques": [
+        "limits",
+        "inequality manipulation",
+        "digit analysis",
+        "construction of specific numbers"
+      ],
+      "concepts": [
+        "polynomial growth",
+        "floor function",
+        "decimal representation",
+        "unbounded sequences",
+        "monotonicity for large arguments"
+      ],
+      "difficulty": "olympic",
+      "notes": "Requires understanding how the floor of f(x) grows relative to f(x+2020). Uses a clever construction of a number M whose decimal expansion contains all rotations of a given n-digit block."
+    }
+  ],
+  "unique_concepts": [
+    "Menelaus theorem",
+    "Thales theorem",
+    "Law of Sines",
+    "cyclic quadrilaterals",
+    "angle chasing",
+    "absolute value inequalities",
+    "sequence bounds",
+    "sum of squares",
+    "modular arithmetic",
+    "quadratic residues",
+    "recurrence sequences",
+    "binomial coefficients as squares",
+    "Diophantine equations",
+    "graph theory (Hamiltonian cycles, 4-regular graphs)",
+    "edge coloring",
+    "parity arguments",
+    "polynomial growth",
+    "floor function",
+    "decimal representation",
+    "digit blocks",
+    "unbounded sequences",
+    "geometric interpretation of sums",
+    "pigeonhole principle",
+    "invariance modulo p",
+    "construction of specific decimal numbers"
+  ],
+  "confidence": 0.95
+}

@@ -1,0 +1,108 @@
+{
+  "_meta": {
+    "pdf": "C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\Задачи_Минали_Години\\Областен\\OLI-2-Областен кръг-2016-11 кл-sol.pdf",
+    "paired_with": null,
+    "level": 1,
+    "type": "sol",
+    "analyzed_at": "2026-10-16T21:16:12.780151",
+    "model": "deepseek/deepseek-v3.2",
+    "text_length": 3750,
+    "paired_text_length": 0
+  },
+  "problems": [
+    {
+      "num": 1,
+      "topic": "algebra",
+      "theorems": [],
+      "techniques": [
+        "substitution",
+        "quadratic equation analysis",
+        "interval analysis"
+      ],
+      "concepts": [
+        "trigonometric equations",
+        "cotangent function",
+        "discriminant",
+        "quadratic function sign on interval",
+        "range of trigonometric functions"
+      ],
+      "difficulty": "standard",
+      "notes": "Standard problem involving trigonometric substitution to a quadratic equation and analysis of root placement in an interval."
+    },
+    {
+      "num": 2,
+      "topic": "geometry",
+      "theorems": [],
+      "techniques": [
+        "angle chasing",
+        "cyclic quadrilaterals",
+        "parallel lines"
+      ],
+      "concepts": [
+        "incircle",
+        "tangent points",
+        "angle bisector",
+        "right angles",
+        "midsegment of a trapezoid",
+        "inscribed angles"
+      ],
+      "difficulty": "hard",
+      "notes": "Non-standard geometry problem requiring construction of auxiliary points and careful angle chasing to prove a point lies on the midsegment."
+    },
+    {
+      "num": 3,
+      "topic": "number_theory",
+      "theorems": [],
+      "techniques": [
+        "recurrence relation manipulation",
+        "induction",
+        "limit calculation",
+        "greatest common divisor analysis"
+      ],
+      "concepts": [
+        "recurrence sequences",
+        "divisibility",
+        "parity",
+        "infinite products",
+        "limits of sequences"
+      ],
+      "difficulty": "olympic",
+      "notes": "Mixed problem combining number theory (gcd) and analysis (limit of an infinite product). The sequence is related to the recurrence for cosine in multiple-angle formulas."
+    },
+    {
+      "num": 4,
+      "topic": "algebra",
+      "theorems": [],
+      "techniques": [
+        "inequality manipulation",
+        "substitution",
+        "induction",
+        "constructing sequences",
+        "functional equations"
+      ],
+      "concepts": [
+        "functional inequality",
+        "monotonicity via substitution",
+        "density arguments using sequences",
+        "proving function is constant on an interval"
+      ],
+      "difficulty": "olympic",
+      "notes": "Non-standard functional equation problem. The key step is a clever substitution to compare f(z) and f(t), followed by constructing sequences to cover the interval (0,2)."
+    }
+  ],
+  "unique_concepts": [
+    "trigonometric substitution",
+    "quadratic root placement",
+    "incircle and tangent properties",
+    "angle bisector",
+    "midsegment of a trapezoid",
+    "cyclic quadrilaterals",
+    "recurrence sequences",
+    "gcd and parity",
+    "limits of infinite products",
+    "functional inequality",
+    "density argument via sequences",
+    "proving a function is constant on an interval"
+  ],
+  "confidence": 0.95
+}

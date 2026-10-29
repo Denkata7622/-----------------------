@@ -1,0 +1,110 @@
+{
+  "_meta": {
+    "pdf": "C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\Задачи_Минали_Години\\Областен\\OLI-2-Областен кръг-2013-11 кл-probs.pdf",
+    "paired_with": "C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\Задачи_Минали_Години\\Областен\\OLI-2-Областен кръг-2013-11 кл-sol.pdf",
+    "level": 1,
+    "type": "probs",
+    "analyzed_at": "2026-10-18T15:44:12.912437",
+    "model": "deepseek/deepseek-v3.2",
+    "text_length": 1387,
+    "paired_text_length": 0
+  },
+  "problems": [
+    {
+      "num": 1,
+      "topic": "algebra",
+      "theorems": [
+        "Vieta's formulas"
+      ],
+      "techniques": [
+        "substitution",
+        "system of equations"
+      ],
+      "concepts": [
+        "arithmetic progression",
+        "cubic equation",
+        "roots as natural numbers"
+      ],
+      "difficulty": "standard",
+      "notes": "The problem involves setting up equations from the conditions on the coefficients and roots, then solving for parameters."
+    },
+    {
+      "num": 2,
+      "topic": "geometry",
+      "theorems": [
+        "Power of a point",
+        "Inscribed angles",
+        "Cyclic quadrilaterals"
+      ],
+      "techniques": [
+        "angle chasing",
+        "proof of equivalence"
+      ],
+      "concepts": [
+        "tangent to a circle",
+        "collinear points",
+        "ray",
+        "circle through four points",
+        "if and only if proof"
+      ],
+      "difficulty": "standard",
+      "notes": "A synthetic geometry problem requiring proving two cyclic quadrilateral conditions are equivalent."
+    },
+    {
+      "num": 3,
+      "topic": "number_theory",
+      "theorems": [
+        "Euler's totient theorem"
+      ],
+      "techniques": [
+        "inequality bounding",
+        "case analysis"
+      ],
+      "concepts": [
+        "Euler's totient function",
+        "coprime numbers",
+        "divisibility"
+      ],
+      "difficulty": "olympic",
+      "notes": "Requires manipulating the equation involving the totient function and analyzing possible values."
+    },
+    {
+      "num": 4,
+      "topic": "combinatorics",
+      "theorems": [],
+      "techniques": [
+        "pigeonhole principle",
+        "extremal principle",
+        "graph theory (implicit)"
+      ],
+      "concepts": [
+        "set of numbers with fixed digit length",
+        "adjacency defined by matching digits",
+        "selection property",
+        "maximum size under condition"
+      ],
+      "difficulty": "hard",
+      "notes": "A combinatorial design problem. The condition is that from any 9 numbers, we can choose 3 pairwise adjacent. This is a non-standard condition requiring careful combinatorial reasoning."
+    }
+  ],
+  "unique_concepts": [
+    "arithmetic progression",
+    "Vieta's formulas",
+    "cubic equation",
+    "natural number roots",
+    "tangent to a circle",
+    "cyclic quadrilaterals",
+    "Power of a point",
+    "inscribed angles",
+    "if and only if proof",
+    "Euler's totient function",
+    "coprime numbers",
+    "divisibility",
+    "pigeonhole principle",
+    "extremal principle",
+    "adjacency in digit strings",
+    "selection property",
+    "maximum set size under constraints"
+  ],
+  "confidence": 0.95
+}

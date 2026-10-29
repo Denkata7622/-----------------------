@@ -1,0 +1,113 @@
+{
+  "_meta": {
+    "pdf": "C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\Задачи_Минали_Години\\Областен\\OLI-2-Областен кръг-2022-10 кл-probs.pdf",
+    "paired_with": "C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\Задачи_Минали_Години\\Областен\\OLI-2-Областен кръг-2022-10 кл-sol.pdf",
+    "level": 1,
+    "type": "probs",
+    "analyzed_at": "2026-10-16T21:31:19.088440",
+    "model": "deepseek/deepseek-v3.2",
+    "text_length": 11967,
+    "paired_text_length": 12311
+  },
+  "problems": [
+    {
+      "num": 1,
+      "topic": "algebra",
+      "theorems": [],
+      "techniques": [
+        "symmetry_analysis",
+        "substitution",
+        "inequality_estimation",
+        "case_analysis"
+      ],
+      "concepts": [
+        "system_of_equations",
+        "absolute_value",
+        "parameter_analysis",
+        "uniqueness_of_solution",
+        "necessary_and_sufficient_conditions",
+        "function_bounding"
+      ],
+      "difficulty": "standard",
+      "notes": "Uses symmetry (if (x,y) is a solution, so is (-x,y)) to deduce x=0 as a necessary condition for uniqueness. Then solves for parameter a and verifies uniqueness by bounding."
+    },
+    {
+      "num": 2,
+      "topic": "geometry",
+      "theorems": [],
+      "techniques": [
+        "symmetry",
+        "angle_chasing",
+        "cyclic_quadrilaterals"
+      ],
+      "concepts": [
+        "triangle_geometry",
+        "altitudes",
+        "angle_equality",
+        "point_symmetry",
+        "inscribed_angles",
+        "collinearity"
+      ],
+      "difficulty": "olympic",
+      "notes": "Construction of symmetric point P1 wrt BC is key. Proves two quadrilaterals are cyclic to show points coincide, leading to the angle measure."
+    },
+    {
+      "num": 3,
+      "topic": "number_theory",
+      "theorems": [],
+      "techniques": [
+        "induction",
+        "symmetrization",
+        "recursive_definition",
+        "generalization"
+      ],
+      "concepts": [
+        "divisibility",
+        "integer_valued_functions",
+        "product_of_differences",
+        "recursive_relations"
+      ],
+      "difficulty": "hard",
+      "notes": "Defines a generalized function f(m,n) and proves properties (symmetry f(m,n)=f(n,m), integer value for base cases, recursive relation) by induction on m+n."
+    },
+    {
+      "num": 4,
+      "topic": "combinatorics",
+      "theorems": [
+        "Pigeonhole_Principle"
+      ],
+      "techniques": [
+        "construction",
+        "exhaustive_counting",
+        "contradiction"
+      ],
+      "concepts": [
+        "strings_digits",
+        "substrings",
+        "existence_construction",
+        "uniqueness_property",
+        "combinatorial_arguments"
+      ],
+      "difficulty": "olympic",
+      "notes": "Part (a) requires constructing an example. Part (b) uses the fact that there are exactly 16 possible 4-digit substrings from {1,2}, so a 'rich' number must contain all of them exactly once. Uses an extended number and the Pigeonhole Principle to force the equality of the first and last triplets."
+    }
+  ],
+  "unique_concepts": [
+    "symmetry_analysis",
+    "parameter_analysis",
+    "uniqueness_of_solution",
+    "function_bounding",
+    "point_symmetry",
+    "cyclic_quadrilaterals",
+    "angle_chasing",
+    "integer_valued_functions",
+    "recursive_relations",
+    "product_of_differences",
+    "strings_digits",
+    "substrings",
+    "Pigeonhole_Principle",
+    "existence_construction",
+    "combinatorial_arguments"
+  ],
+  "confidence": 0.95
+}

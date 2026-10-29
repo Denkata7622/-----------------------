@@ -1,0 +1,118 @@
+{
+  "_meta": {
+    "pdf": "C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\Задачи_Минали_Години\\Областен\\OLI-2-Областен кръг-2018-11 кл-sol.pdf",
+    "paired_with": null,
+    "level": 1,
+    "type": "sol",
+    "analyzed_at": "2026-10-16T21:22:23.159805",
+    "model": "deepseek/deepseek-v3.2",
+    "text_length": 5183,
+    "paired_text_length": 0
+  },
+  "problems": [
+    {
+      "num": 1,
+      "topic": "algebra",
+      "theorems": [],
+      "techniques": [
+        "substitution",
+        "sign_analysis",
+        "case_analysis"
+      ],
+      "concepts": [
+        "exponential_inequality",
+        "monotonic_functions",
+        "domain_restriction",
+        "interval_method"
+      ],
+      "difficulty": "standard",
+      "notes": "Стандартно неравенство с експоненциална функция. Използва се разлагане и анализ на знака на множители, като се използва монотонността на 2^x и 1/x."
+    },
+    {
+      "num": 2,
+      "topic": "number_theory",
+      "theorems": [],
+      "techniques": [
+        "constructive_proof",
+        "contradiction",
+        "algebraic_manipulation"
+      ],
+      "concepts": [
+        "rational_numbers",
+        "geometric_progression",
+        "arithmetic_progression",
+        "parameterization"
+      ],
+      "difficulty": "standard",
+      "notes": "Задача за характеризиране на рационалните числа чрез геометрична прогресия. Изисква конструкция в едната посока и алгебрично изразяване в другата."
+    },
+    {
+      "num": 3,
+      "topic": "geometry",
+      "theorems": [
+        "Thales",
+        "similar_triangles"
+      ],
+      "techniques": [
+        "auxiliary_construction",
+        "parallel_lines",
+        "angle_chasing"
+      ],
+      "concepts": [
+        "orthocenter",
+        "angle_bisector",
+        "circumcircle",
+        "isosceles_triangle",
+        "cyclic_quadrilaterals",
+        "diameter_property",
+        "parallelogram"
+      ],
+      "difficulty": "hard",
+      "notes": "Сложна планиметрична задача с ортоцентър и ъглополовящи. Използва се построяване на успоредни прави и теорема на Талес, за да се докаже, че четириъгълникът е успоредник."
+    },
+    {
+      "num": 4,
+      "topic": "combinatorics",
+      "theorems": [],
+      "techniques": [
+        "induction",
+        "greedy_algorithm",
+        "proof_by_contradiction"
+      ],
+      "concepts": [
+        "coloring",
+        "combinatorial_design",
+        "row_column_constraints",
+        "pigeonhole_principle_idea"
+      ],
+      "difficulty": "olympic",
+      "notes": "Комбинаторна задача за оцветяване на матрица. Решението е алгоритмично, с индукция по стълбовете, и използва противоречие, за да се докаже, че алгоритъмът винаги работи."
+    }
+  ],
+  "unique_concepts": [
+    "exponential_inequality",
+    "monotonic_functions",
+    "domain_restriction",
+    "interval_method",
+    "rational_numbers",
+    "geometric_progression",
+    "arithmetic_progression",
+    "parameterization",
+    "orthocenter",
+    "angle_bisector",
+    "circumcircle",
+    "isosceles_triangle",
+    "cyclic_quadrilaterals",
+    "diameter_property",
+    "parallelogram",
+    "Thales_theorem",
+    "similar_triangles",
+    "coloring",
+    "combinatorial_design",
+    "row_column_constraints",
+    "induction",
+    "greedy_algorithm",
+    "proof_by_contradiction"
+  ],
+  "confidence": 0.95
+}

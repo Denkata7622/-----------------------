@@ -1,0 +1,144 @@
+{
+  "_meta": {
+    "pdf": "C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\Задачи_Минали_Години\\Национален\\OLI-3-Национален кръг-2019-9-12 кл-probs.pdf",
+    "paired_with": "C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\Задачи_Минали_Години\\Национален\\OLI-3-Национален кръг-2019-9-12 кл-sol.pdf",
+    "level": 2,
+    "type": "probs",
+    "analyzed_at": "2026-10-16T21:00:04.227001",
+    "model": "deepseek/deepseek-v3.2",
+    "text_length": 29329,
+    "paired_text_length": 60542
+  },
+  "problems": [
+    {
+      "num": 1,
+      "topic": "algebra",
+      "theorems": [],
+      "techniques": [
+        "case analysis",
+        "quadratic analysis",
+        "factorization",
+        "inequality solving"
+      ],
+      "concepts": [
+        "quadratic functions",
+        "discriminant",
+        "roots of quadratic",
+        "integer solutions",
+        "inequalities",
+        "parameter analysis"
+      ],
+      "difficulty": "standard",
+      "notes": "Analyzes the number of integer solutions to f(f(x)+x)<0 depending on parameter b. Uses factorization f(f(x)+x) = (x-x1)(x-x2+1)(x-x2)(x-x1+1). Cases based on distance between roots."
+    },
+    {
+      "num": 2,
+      "topic": "geometry",
+      "theorems": [
+        "Law of Sines",
+        "similar triangles"
+      ],
+      "techniques": [
+        "symmetry",
+        "parallel lines",
+        "cyclic quadrilateral properties",
+        "angle chasing",
+        "distance to line"
+      ],
+      "concepts": [
+        "orthocenter",
+        "circumcenter",
+        "perpendicular bisector",
+        "right triangle",
+        "inscribed angles",
+        "parallel lines",
+        "isosceles trapezoid",
+        "distance from point to line"
+      ],
+      "difficulty": "hard",
+      "notes": "Complex geometry problem involving orthocenter, circumcenter, and symmetry lines. Key step shows QPYX is an isosceles trapezoid, leading to ∡OHC = 90°."
+    },
+    {
+      "num": 3,
+      "topic": "number_theory",
+      "theorems": [],
+      "techniques": [
+        "pigeonhole principle",
+        "contradiction",
+        "digit sum analysis",
+        "construction of sequence"
+      ],
+      "concepts": [
+        "digit sum in base b",
+        "divisibility",
+        "infinite sequences",
+        "inequalities",
+        "modular arithmetic"
+      ],
+      "difficulty": "olympic",
+      "notes": "Finds all real a such that for any sequence of distinct naturals with a_n ≤ a^n, infinitely many terms have digit sum (base 4038) not divisible by 2019. Solution uses sequence b_n of numbers with digit sum divisible by 2019 and a counting/pigeonhole argument."
+    },
+    {
+      "num": 4,
+      "topic": "combinatorics",
+      "theorems": [],
+      "techniques": [
+        "contradiction",
+        "modular arithmetic",
+        "parity argument",
+        "construction of example"
+      ],
+      "concepts": [
+        "perfect squares",
+        "square-free numbers",
+        "arithmetic progression",
+        "permutations",
+        "modular constraints",
+        "parity"
+      ],
+      "difficulty": "olympic",
+      "notes": "Finds all natural d such that numbers d,2d,...,kd can be permuted so that sums of adjacent numbers are perfect squares. Shows only perfect square d work. For d=1 gives explicit example. For d>1 and square-free, uses modulo d argument to show impossibility."
+    },
+    {
+      "num": 5,
+      "topic": "combinatorics",
+      "theorems": [
+        "Ceva's Theorem",
+        "Law of Sines"
+      ],
+      "techniques": [
+        "graph theory modeling",
+        "induction",
+        "construction",
+        "contradiction",
+        "trigonometric identities"
+      ],
+      "concepts": [
+        "complete graph",
+        "diagonals of polygon",
+        "graph vertices and edges",
+        "cycles in graphs",
+        "maximal number of colored vertices",
+        "intersection of lines"
+      ],
+      "difficulty": "olympic",
+      "notes": "Complex combinatorial geometry. Models diagonals of 2019-gon as graph edges, vertices as intersection points. Asks for maximum number of vertices that can be colored so no cycle has all vertices colored and no two consecutive colored vertices lie on same diagonal. Answer is 2019(2019-3)/2 - 1. Proof uses induction and properties of complete graphs."
+    }
+  ],
+  "unique_concepts": [
+    "quadratic functions and roots",
+    "integer solutions to inequalities",
+    "orthocenter and circumcenter geometry",
+    "isosceles trapezoid properties",
+    "digit sum in arbitrary base",
+    "pigeonhole principle in sequences",
+    "perfect squares and modular constraints",
+    "permutations with adjacent sum condition",
+    "graph theory modeling of geometric intersections",
+    "coloring vertices to avoid monochromatic cycles",
+    "induction on polygon diagonals",
+    "Ceva's Theorem application",
+    "trigonometric laws in geometry"
+  ],
+  "confidence": 0.95
+}

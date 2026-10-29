@@ -1,0 +1,112 @@
+{
+  "_meta": {
+    "pdf": "C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\Задачи_Минали_Години\\Областен\\OLI-2-Областен кръг-2017-10 кл-sol.pdf",
+    "paired_with": null,
+    "level": 1,
+    "type": "sol",
+    "analyzed_at": "2026-10-16T21:18:06.895266",
+    "model": "deepseek/deepseek-v3.2",
+    "text_length": 6876,
+    "paired_text_length": 0
+  },
+  "problems": [
+    {
+      "num": 1,
+      "topic": "algebra",
+      "theorems": [],
+      "techniques": [
+        "substitution",
+        "interval_method",
+        "inequality_analysis"
+      ],
+      "concepts": [
+        "exponential_inequality",
+        "quadratic_inequality",
+        "integer_solutions",
+        "parameter_analysis"
+      ],
+      "difficulty": "standard",
+      "notes": "Стандартна задача с параметър, включваща заместване и анализ на интервали за намиране на целочислено решение."
+    },
+    {
+      "num": 2,
+      "topic": "geometry",
+      "theorems": [
+        "Thales",
+        "angle_bisector",
+        "similarity_criteria"
+      ],
+      "techniques": [
+        "cyclic_quadrilaterals",
+        "parallel_lines",
+        "angle_chasing"
+      ],
+      "concepts": [
+        "orthocenter",
+        "diameter_subtends_right_angle",
+        "inscribed_angles",
+        "similar_triangles"
+      ],
+      "difficulty": "standard",
+      "notes": "Задача за подобни триъгълници, използваща свойства на височини, окръжности с диаметри и успоредни отсечки."
+    },
+    {
+      "num": 3,
+      "topic": "algebra",
+      "theorems": [],
+      "techniques": [
+        "induction",
+        "floor_function",
+        "sum_manipulation"
+      ],
+      "concepts": [
+        "sequence_definition",
+        "integer_part",
+        "pattern_recognition"
+      ],
+      "difficulty": "standard",
+      "notes": "Редица, дефинирана с под и сума. Решението използва индукция за установяване на закономерност."
+    },
+    {
+      "num": 4,
+      "topic": "combinatorics",
+      "theorems": [],
+      "techniques": [
+        "double_counting",
+        "combinatorial_design",
+        "inequality_bounding"
+      ],
+      "concepts": [
+        "triple_systems",
+        "balanced_incomplete_block_design",
+        "incidence_counting",
+        "extremal_construction"
+      ],
+      "difficulty": "hard",
+      "notes": "Нетривиална комбинаторна задача за минимален брой тройки при условия за срещания на двойки. Включва конструкция и сложно ограничаване."
+    }
+  ],
+  "unique_concepts": [
+    "exponential_inequality",
+    "quadratic_inequality",
+    "integer_solutions",
+    "parameter_analysis",
+    "orthocenter",
+    "diameter_subtends_right_angle",
+    "inscribed_angles",
+    "similar_triangles",
+    "cyclic_quadrilaterals",
+    "parallel_lines",
+    "angle_chasing",
+    "sequence_definition",
+    "floor_function",
+    "induction",
+    "pattern_recognition",
+    "triple_systems",
+    "balanced_incomplete_block_design",
+    "double_counting",
+    "incidence_counting",
+    "extremal_construction"
+  ],
+  "confidence": 0.95
+}

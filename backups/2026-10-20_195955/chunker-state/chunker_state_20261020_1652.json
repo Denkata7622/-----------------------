@@ -1,0 +1,3464 @@
+{
+  "extracted": {
+    "OLI-2-Областен кръг-2024-11 кл-probs": {
+      "chunks_done": {
+        "1": 0
+      },
+      "status": "done",
+      "problems": 0
+    },
+    "OLI-2-Областен кръг-2024-11 кл-sol": {
+      "chunks_done": {
+        "1": 5
+      },
+      "status": "done",
+      "problems": 5
+    },
+    "OLI-2-Областен кръг-1995-10 кл-probs": {
+      "chunks_done": {
+        "1": 0
+      },
+      "status": "done",
+      "problems": 0
+    },
+    "OLI-2-Областен кръг-1995-10 кл-sol": {
+      "chunks_done": {
+        "1": 0
+      },
+      "status": "done",
+      "problems": 0
+    },
+    "OLI-2-Областен кръг-1995-11 кл-probs": {
+      "chunks_done": {
+        "1": 0
+      },
+      "status": "done",
+      "problems": 0
+    },
+    "OLI-2-Областен кръг-1995-11 кл-sol": {
+      "chunks_done": {
+        "1": 0
+      },
+      "status": "done",
+      "problems": 0
+    },
+    "OLI-2-Областен кръг-1996-10 кл-probs": {
+      "chunks_done": {
+        "1": 0
+      },
+      "status": "done",
+      "problems": 0
+    },
+    "OLI-2-Областен кръг-1996-10 кл-sol": {
+      "chunks_done": {
+        "1": 0
+      },
+      "status": "done",
+      "problems": 0
+    },
+    "OLI-2-Областен кръг-1996-11 кл-probs": {
+      "chunks_done": {
+        "1": 0
+      },
+      "status": "done",
+      "problems": 0
+    },
+    "OLI-2-Областен кръг-1996-11 кл-sol": {
+      "chunks_done": {
+        "1": 0
+      },
+      "status": "done",
+      "problems": 0
+    },
+    "OLI-2-Областен кръг-1997-10 кл-probs": {
+      "chunks_done": {
+        "1": 0
+      },
+      "status": "done",
+      "problems": 0
+    },
+    "OLI-2-Областен кръг-1997-10 кл-sol": {
+      "chunks_done": {
+        "1": 0
+      },
+      "status": "done",
+      "problems": 0
+    },
+    "OLI-2-Областен кръг-1997-11 кл-probs": {
+      "chunks_done": {
+        "1": 0
+      },
+      "status": "done",
+      "problems": 0
+    },
+    "OLI-2-Областен кръг-1997-11 кл-sol": {
+      "chunks_done": {
+        "1": 0
+      },
+      "status": "done",
+      "problems": 0
+    },
+    "OLI-2-Областен кръг-1998-10 кл-probs": {
+      "chunks_done": {
+        "1": 0
+      },
+      "status": "done",
+      "problems": 0
+    },
+    "OLI-2-Областен кръг-1998-10 кл-sol": {
+      "chunks_done": {
+        "1": 0
+      },
+      "status": "done",
+      "problems": 0
+    },
+    "OLI-2-Областен кръг-1998-11 кл-probs": {
+      "chunks_done": {
+        "1": 0
+      },
+      "status": "done",
+      "problems": 0
+    },
+    "OLI-2-Областен кръг-1998-11 кл-sol": {
+      "chunks_done": {
+        "1": 0
+      },
+      "status": "done",
+      "problems": 0
+    },
+    "OLI-2-Областен кръг-1999-10 кл-probs": {
+      "chunks_done": {
+        "1": 0
+      },
+      "status": "done",
+      "problems": 0
+    },
+    "OLI-2-Областен кръг-1999-10 кл-sol": {
+      "chunks_done": {
+        "1": 0
+      },
+      "status": "done",
+      "problems": 0
+    },
+    "OLI-2-Областен кръг-1999-11 кл-probs": {
+      "chunks_done": {
+        "1": 0
+      },
+      "status": "done",
+      "problems": 0
+    },
+    "OLI-2-Областен кръг-1999-11 кл-sol": {
+      "chunks_done": {
+        "1": 0
+      },
+      "status": "done",
+      "problems": 0
+    },
+    "OLI-2-Областен кръг-2000-10 кл-probs": {
+      "chunks_done": {
+        "1": 0
+      },
+      "status": "done",
+      "problems": 0
+    },
+    "OLI-2-Областен кръг-2000-10 кл-sol": {
+      "chunks_done": {
+        "1": 0
+      },
+      "status": "done",
+      "problems": 0
+    },
+    "OLI-2-Областен кръг-2000-11 кл-probs": {
+      "chunks_done": {
+        "1": 0
+      },
+      "status": "done",
+      "problems": 0
+    },
+    "OLI-2-Областен кръг-2000-11 кл-sol": {
+      "chunks_done": {
+        "1": 0
+      },
+      "status": "done",
+      "problems": 0
+    },
+    "OLI-2-Областен кръг-2001-10 кл-probs": {
+      "chunks_done": {
+        "1": 0
+      },
+      "status": "done",
+      "problems": 0
+    },
+    "OLI-2-Областен кръг-2001-10 кл-sol": {
+      "chunks_done": {
+        "1": 0
+      },
+      "status": "done",
+      "problems": 0
+    },
+    "OLI-2-Областен кръг-2001-11 кл-probs": {
+      "chunks_done": {
+        "1": 0
+      },
+      "status": "done",
+      "problems": 0
+    },
+    "OLI-2-Областен кръг-2001-11 кл-sol": {
+      "chunks_done": {
+        "1": 0
+      },
+      "status": "done",
+      "problems": 0
+    },
+    "OLI-2-Областен кръг-2002-10 кл-probs": {
+      "chunks_done": {
+        "1": 0
+      },
+      "status": "done",
+      "problems": 0
+    },
+    "OLI-2-Областен кръг-2002-10 кл-sol": {
+      "chunks_done": {
+        "1": 0
+      },
+      "status": "done",
+      "problems": 0
+    },
+    "OLI-2-Областен кръг-2002-11 кл-probs": {
+      "chunks_done": {
+        "1": 0
+      },
+      "status": "done",
+      "problems": 0
+    },
+    "OLI-2-Областен кръг-2002-11 кл-sol": {
+      "chunks_done": {
+        "1": 0
+      },
+      "status": "done",
+      "problems": 0
+    },
+    "OLI-2-Областен кръг-2003-10 кл-probs": {
+      "chunks_done": {
+        "1": 6
+      },
+      "status": "done",
+      "problems": 6
+    },
+    "OLI-2-Областен кръг-2003-10 кл-sol": {
+      "chunks_done": {
+        "1": 6
+      },
+      "status": "done",
+      "problems": 6
+    },
+    "OLI-2-Областен кръг-2003-11 кл-probs": {
+      "chunks_done": {
+        "1": 6
+      },
+      "status": "done",
+      "problems": 6
+    },
+    "OLI-2-Областен кръг-2003-11 кл-sol": {
+      "chunks_done": {
+        "1": 6
+      },
+      "status": "done",
+      "problems": 6
+    },
+    "OLI-2-Областен кръг-2004-10 кл-probs": {
+      "chunks_done": {
+        "1": 12
+      },
+      "status": "done",
+      "problems": 10
+    },
+    "OLI-2-Областен кръг-2004-10 кл-sol": {
+      "chunks_done": {
+        "1": 7
+      },
+      "status": "done",
+      "problems": 3
+    },
+    "OLI-2-Областен кръг-2004-11 кл-probs": {
+      "chunks_done": {
+        "1": 14
+      },
+      "status": "done",
+      "problems": 14
+    },
+    "OLI-2-Областен кръг-2004-11 кл-sol": {
+      "chunks_done": {
+        "1": 6
+      },
+      "status": "done",
+      "problems": 6
+    },
+    "OLI-2-Областен кръг-2005-10 кл-probs": {
+      "chunks_done": {
+        "1": 13
+      },
+      "status": "done",
+      "problems": 6
+    },
+    "OLI-2-Областен кръг-2005-10 кл-sol": {
+      "chunks_done": {
+        "1": 10
+      },
+      "status": "done",
+      "problems": 10
+    },
+    "OLI-2-Областен кръг-2005-11 кл-probs": {
+      "chunks_done": {
+        "1": 17
+      },
+      "status": "done",
+      "problems": 6
+    },
+    "OLI-2-Областен кръг-2005-11 кл-sol": {
+      "chunks_done": {
+        "1": 13
+      },
+      "status": "done",
+      "problems": 13
+    },
+    "OLI-2-Областен кръг-2006-10 кл-probs": {
+      "chunks_done": {
+        "1": 0
+      },
+      "status": "done",
+      "problems": 0
+    },
+    "OLI-2-Областен кръг-2006-10 кл-sol": {
+      "chunks_done": {
+        "1": 0
+      },
+      "status": "done",
+      "problems": 0
+    },
+    "OLI-2-Областен кръг-2006-11 кл-probs": {
+      "chunks_done": {
+        "1": 0
+      },
+      "status": "done",
+      "problems": 0
+    },
+    "OLI-2-Областен кръг-2006-11 кл-sol": {
+      "chunks_done": {
+        "1": 0
+      },
+      "status": "done",
+      "problems": 0
+    },
+    "OLI-2-Областен кръг-2007-10 кл-probs": {
+      "chunks_done": {
+        "1": 6
+      },
+      "status": "done",
+      "problems": 6
+    },
+    "OLI-2-Областен кръг-2007-10 кл-sol": {
+      "chunks_done": {
+        "1": 6
+      },
+      "status": "done",
+      "problems": 6
+    },
+    "OLI-2-Областен кръг-2007-11 кл-probs": {
+      "status": "partial",
+      "failed_chunks": 1,
+      "total_chunks": 1
+    },
+    "OLI-2-Областен кръг-2007-11 кл-sol": {
+      "status": "partial",
+      "failed_chunks": 1,
+      "total_chunks": 1
+    },
+    "OLI-2-Областен кръг-2008-10 кл-probs": {
+      "status": "partial",
+      "failed_chunks": 1,
+      "total_chunks": 1
+    },
+    "OLI-2-Областен кръг-2008-10 кл-sol": {
+      "status": "partial",
+      "failed_chunks": 1,
+      "total_chunks": 1
+    },
+    "OLI-2-Областен кръг-2008-11 кл-probs": {
+      "status": "partial",
+      "failed_chunks": 1,
+      "total_chunks": 1
+    },
+    "OLI-2-Областен кръг-2008-11 кл-sol": {
+      "status": "partial",
+      "failed_chunks": 1,
+      "total_chunks": 1
+    },
+    "OLI-2-Областен кръг-2009-10 кл-probs": {
+      "status": "partial",
+      "failed_chunks": 1,
+      "total_chunks": 1
+    },
+    "OLI-2-Областен кръг-2009-10 кл-sol": {
+      "chunks_done": {
+        "1": 10
+      },
+      "status": "done",
+      "problems": 10
+    },
+    "OLI-2-Областен кръг-2009-11 кл-probs": {
+      "chunks_done": {
+        "1": 6
+      },
+      "status": "done",
+      "problems": 6
+    },
+    "OLI-2-Областен кръг-2009-11 кл-sol": {
+      "chunks_done": {
+        "1": 9
+      },
+      "status": "done",
+      "problems": 9
+    },
+    "OLI-2-Областен кръг-2010-10 кл-probs": {
+      "chunks_done": {
+        "1": 3
+      },
+      "status": "done",
+      "problems": 3
+    },
+    "OLI-2-Областен кръг-2010-10 кл-sol": {
+      "chunks_done": {
+        "1": 7
+      },
+      "status": "done",
+      "problems": 7
+    },
+    "OLI-2-Областен кръг-2010-11 кл-probs": {
+      "chunks_done": {
+        "1": 3
+      },
+      "status": "done",
+      "problems": 3
+    },
+    "OLI-2-Областен кръг-2010-11 кл-sol": {
+      "chunks_done": {
+        "1": 6
+      },
+      "status": "done",
+      "problems": 6
+    },
+    "OLI-2-Областен кръг-2011-10 кл-probs": {
+      "chunks_done": {
+        "1": 6
+      },
+      "status": "done",
+      "problems": 6
+    },
+    "OLI-2-Областен кръг-2011-10 кл-sol": {
+      "chunks_done": {
+        "1": 0
+      },
+      "status": "done",
+      "problems": 0
+    },
+    "OLI-2-Областен кръг-2011-11 кл-probs": {
+      "chunks_done": {
+        "1": 6
+      },
+      "status": "done",
+      "problems": 6
+    },
+    "OLI-2-Областен кръг-2011-11 кл-sol": {
+      "chunks_done": {
+        "1": 7
+      },
+      "status": "done",
+      "problems": 7
+    },
+    "OLI-2-Областен кръг-2012-10 кл-probs": {
+      "chunks_done": {
+        "1": 6
+      },
+      "status": "done",
+      "problems": 6
+    },
+    "OLI-2-Областен кръг-2012-10 кл-sol": {
+      "chunks_done": {
+        "1": 0
+      },
+      "status": "done",
+      "problems": 0
+    },
+    "OLI-2-Областен кръг-2012-11 кл-probs": {
+      "chunks_done": {
+        "1": 6
+      },
+      "status": "done",
+      "problems": 6
+    },
+    "OLI-2-Областен кръг-2012-11 кл-sol": {
+      "chunks_done": {
+        "1": 0
+      },
+      "status": "done",
+      "problems": 0
+    },
+    "OLI-2-Областен кръг-2013-10 кл-probs": {
+      "chunks_done": {
+        "1": 4
+      },
+      "status": "done",
+      "problems": 4
+    },
+    "OLI-2-Областен кръг-2013-10 кл-sol": {
+      "chunks_done": {
+        "1": 0
+      },
+      "status": "done",
+      "problems": 0
+    },
+    "OLI-2-Областен кръг-2013-11 кл-probs": {
+      "chunks_done": {
+        "1": 4
+      },
+      "status": "done",
+      "problems": 4
+    },
+    "OLI-2-Областен кръг-2013-11 кл-sol": {
+      "chunks_done": {
+        "1": 0
+      },
+      "status": "done",
+      "problems": 0
+    },
+    "OLI-2-Областен кръг-2014-10 кл-probs": {
+      "chunks_done": {
+        "1": 4
+      },
+      "status": "done",
+      "problems": 4
+    },
+    "OLI-2-Областен кръг-2014-10 кл-sol": {
+      "chunks_done": {
+        "1": 0
+      },
+      "status": "done",
+      "problems": 0
+    },
+    "OLI-2-Областен кръг-2014-11 кл-probs": {
+      "chunks_done": {
+        "1": 4
+      },
+      "status": "done",
+      "problems": 4
+    },
+    "OLI-2-Областен кръг-2014-11 кл-sol": {
+      "chunks_done": {
+        "1": 0
+      },
+      "status": "done",
+      "problems": 0
+    },
+    "OLI-2-Областен кръг-2015-10 кл-probs": {
+      "chunks_done": {
+        "1": 4
+      },
+      "status": "done",
+      "problems": 4
+    },
+    "OLI-2-Областен кръг-2015-10 кл-sol": {
+      "chunks_done": {
+        "1": 2
+      },
+      "status": "done",
+      "problems": 2
+    },
+    "OLI-2-Областен кръг-2015-11 кл-probs": {
+      "chunks_done": {
+        "1": 4
+      },
+      "status": "done",
+      "problems": 4
+    },
+    "OLI-2-Областен кръг-2015-11 кл-sol": {
+      "chunks_done": {
+        "1": 4
+      },
+      "status": "done",
+      "problems": 4
+    },
+    "OLI-2-Областен кръг-2016-10 кл-probs": {
+      "chunks_done": {
+        "1": 4
+      },
+      "status": "done",
+      "problems": 4
+    },
+    "OLI-2-Областен кръг-2016-10 кл-sol": {
+      "chunks_done": {
+        "1": 4
+      },
+      "status": "done",
+      "problems": 4
+    },
+    "OLI-2-Областен кръг-2016-11 кл-probs": {
+      "chunks_done": {
+        "1": 4
+      },
+      "status": "done",
+      "problems": 4
+    },
+    "OLI-2-Областен кръг-2016-11 кл-sol": {
+      "chunks_done": {
+        "1": 4
+      },
+      "status": "done",
+      "problems": 4
+    },
+    "OLI-2-Областен кръг-2017-10 кл-probs": {
+      "chunks_done": {
+        "1": 0
+      },
+      "status": "done",
+      "problems": 0
+    },
+    "OLI-2-Областен кръг-2017-10 кл-sol": {
+      "chunks_done": {
+        "1": 4
+      },
+      "status": "done",
+      "problems": 4
+    },
+    "OLI-2-Областен кръг-2017-11 кл-probs": {
+      "chunks_done": {
+        "1": 0
+      },
+      "status": "done",
+      "problems": 0
+    },
+    "OLI-2-Областен кръг-2017-11 кл-sol": {
+      "chunks_done": {
+        "1": 4
+      },
+      "status": "done",
+      "problems": 4
+    },
+    "OLI-2-Областен кръг-2018-10 кл-probs": {
+      "chunks_done": {
+        "1": 4
+      },
+      "status": "done",
+      "problems": 4
+    },
+    "OLI-2-Областен кръг-2018-10 кл-sol": {
+      "chunks_done": {
+        "1": 4
+      },
+      "status": "done",
+      "problems": 4
+    },
+    "OLI-2-Областен кръг-2018-11 кл-probs": {
+      "chunks_done": {
+        "1": 4
+      },
+      "status": "done",
+      "problems": 4
+    },
+    "OLI-2-Областен кръг-2018-11 кл-sol": {
+      "chunks_done": {
+        "1": 4
+      },
+      "status": "done",
+      "problems": 4
+    },
+    "OLI-2-Областен кръг-2019-10 кл-probs": {
+      "chunks_done": {
+        "1": 0
+      },
+      "status": "done",
+      "problems": 0
+    },
+    "OLI-2-Областен кръг-2019-10 кл-sol": {
+      "chunks_done": {
+        "1": 8
+      },
+      "status": "done",
+      "problems": 8
+    },
+    "OLI-2-Областен кръг-2019-11 кл-probs": {
+      "chunks_done": {
+        "1": 0
+      },
+      "status": "done",
+      "problems": 0
+    },
+    "OLI-2-Областен кръг-2019-11 кл-sol": {
+      "chunks_done": {
+        "1": 7
+      },
+      "status": "done",
+      "problems": 7
+    },
+    "OLI-2-Областен кръг-2020-10 кл-probs": {
+      "chunks_done": {
+        "1": 0
+      },
+      "status": "done",
+      "problems": 0
+    },
+    "OLI-2-Областен кръг-2020-10 кл-sol": {
+      "chunks_done": {
+        "1": 0
+      },
+      "status": "done",
+      "problems": 0
+    },
+    "OLI-2-Областен кръг-2020-11 кл-probs": {
+      "chunks_done": {
+        "1": 0
+      },
+      "status": "done",
+      "problems": 0
+    },
+    "OLI-2-Областен кръг-2020-11 кл-sol": {
+      "chunks_done": {
+        "1": 7
+      },
+      "status": "done",
+      "problems": 7
+    },
+    "OLI-2-Областен кръг-2021-10 кл-probs": {
+      "chunks_done": {
+        "1": 4
+      },
+      "status": "done",
+      "problems": 4
+    },
+    "OLI-2-Областен кръг-2021-10 кл-sol": {
+      "chunks_done": {
+        "1": 7
+      },
+      "status": "done",
+      "problems": 6
+    },
+    "OLI-2-Областен кръг-2021-11 кл-probs": {
+      "chunks_done": {
+        "1": 4
+      },
+      "status": "done",
+      "problems": 4
+    },
+    "OLI-2-Областен кръг-2021-11 кл-sol": {
+      "chunks_done": {
+        "1": 0
+      },
+      "status": "done",
+      "problems": 0
+    },
+    "OLI-2-Областен кръг-2022-10 кл-probs": {
+      "chunks_done": {
+        "1": 4
+      },
+      "status": "done",
+      "problems": 4
+    },
+    "OLI-2-Областен кръг-2022-10 кл-sol": {
+      "chunks_done": {
+        "1": 5
+      },
+      "status": "done",
+      "problems": 5
+    },
+    "OLI-2-Областен кръг-2022-11 кл-probs": {
+      "chunks_done": {
+        "1": 3
+      },
+      "status": "done",
+      "problems": 1
+    },
+    "OLI-2-Областен кръг-2022-11 кл-sol": {
+      "chunks_done": {
+        "1": 4
+      },
+      "status": "done",
+      "problems": 4
+    },
+    "OLI-2-Областен кръг-2023-10 кл-probs (1)": {
+      "chunks_done": {
+        "1": 0
+      },
+      "status": "done",
+      "problems": 0
+    },
+    "OLI-2-Областен кръг-2023-10 кл-sol (1)": {
+      "chunks_done": {
+        "1": 0
+      },
+      "status": "done",
+      "problems": 0
+    },
+    "OLI-2-Областен кръг-2023-11 кл-probs": {
+      "chunks_done": {
+        "1": 0
+      },
+      "status": "done",
+      "problems": 0
+    },
+    "OLI-2-Областен кръг-2023-11 кл-sol": {
+      "chunks_done": {
+        "1": 0
+      },
+      "status": "done",
+      "problems": 0
+    },
+    "OLI-2-Областен кръг-2024-10 кл-probs (1)": {
+      "chunks_done": {
+        "1": 0
+      },
+      "status": "done",
+      "problems": 0
+    },
+    "OLI-2-Областен кръг-2024-10 кл-sol (1)": {
+      "chunks_done": {
+        "1": 7
+      },
+      "status": "done",
+      "problems": 7
+    },
+    "OLI-2-Областен кръг-2025-10 кл-probs (1)": {
+      "chunks_done": {
+        "1": 4
+      },
+      "status": "done",
+      "problems": 4
+    },
+    "OLI-2-Областен кръг-2025-10 кл-sol (1)": {
+      "chunks_done": {
+        "1": 0
+      },
+      "status": "done",
+      "problems": 0
+    },
+    "OLI-2-Областен кръг-2025-11 кл-probs": {
+      "chunks_done": {
+        "1": 4
+      },
+      "status": "done",
+      "problems": 4
+    },
+    "OLI-2-Областен кръг-2025-11 кл-sol": {
+      "chunks_done": {
+        "1": 0
+      },
+      "status": "done",
+      "problems": 0
+    },
+    "OLI-2-Областен кръг-2026-10 кл-probs": {
+      "chunks_done": {
+        "1": 4
+      },
+      "status": "done",
+      "problems": 4
+    },
+    "OLI-2-Областен кръг-2026-10 кл-sol": {
+      "chunks_done": {
+        "1": 0
+      },
+      "status": "done",
+      "problems": 0
+    },
+    "OLI-2-Областен кръг-2026-11 кл-probs": {
+      "chunks_done": {
+        "1": 4
+      },
+      "status": "done",
+      "problems": 4
+    }
+  },
+  "merged": {
+    "OLI-2-Областен кръг-2024-11 кл": 5,
+    "OLI-2-Областен кръг-1995-10 кл": 0,
+    "OLI-2-Областен кръг-1995-11 кл": 0,
+    "OLI-2-Областен кръг-1996-10 кл": 0,
+    "OLI-2-Областен кръг-1996-11 кл": 0,
+    "OLI-2-Областен кръг-1997-10 кл": 0,
+    "OLI-2-Областен кръг-1997-11 кл": 0,
+    "OLI-2-Областен кръг-1998-10 кл": 0,
+    "OLI-2-Областен кръг-1998-11 кл": 0,
+    "OLI-2-Областен кръг-1999-10 кл": 0,
+    "OLI-2-Областен кръг-2000-10 кл": 0,
+    "OLI-2-Областен кръг-2000-11 кл": 0,
+    "OLI-2-Областен кръг-2001-10 кл": 0,
+    "OLI-2-Областен кръг-2001-11 кл": 0,
+    "OLI-2-Областен кръг-2002-10 кл": 0,
+    "OLI-2-Областен кръг-2002-11 кл": 0,
+    "OLI-2-Областен кръг-2003-10 кл": 6,
+    "OLI-2-Областен кръг-2003-11 кл": 6,
+    "OLI-2-Областен кръг-2004-10 кл": 9,
+    "OLI-2-Областен кръг-2004-11 кл": 9,
+    "OLI-2-Областен кръг-2005-10 кл": 9,
+    "OLI-2-Областен кръг-2005-11 кл": 10,
+    "OLI-2-Областен кръг-2006-10 кл": 0,
+    "OLI-2-Областен кръг-2006-11 кл": 0,
+    "OLI-2-Областен кръг-2007-10 кл": 8,
+    "OLI-2-Областен кръг-2009-10 кл": 10,
+    "OLI-2-Областен кръг-2009-11 кл": 15,
+    "OLI-2-Областен кръг-2010-10 кл": 7,
+    "OLI-2-Областен кръг-2010-11 кл": 6,
+    "OLI-2-Областен кръг-2011-10 кл": 6,
+    "OLI-2-Областен кръг-2011-11 кл": 6,
+    "OLI-2-Областен кръг-2012-10 кл": 6,
+    "OLI-2-Областен кръг-2012-11 кл": 6,
+    "OLI-2-Областен кръг-2013-10 кл": 4,
+    "OLI-2-Областен кръг-2013-11 кл": 4,
+    "OLI-2-Областен кръг-2014-10 кл": 4,
+    "OLI-2-Областен кръг-2014-11 кл": 4,
+    "OLI-2-Областен кръг-2015-10 кл": 4,
+    "OLI-2-Областен кръг-2015-11 кл": 4,
+    "OLI-2-Областен кръг-2016-10 кл": 4,
+    "OLI-2-Областен кръг-2016-11 кл": 4,
+    "OLI-2-Областен кръг-2017-10 кл": 4,
+    "OLI-2-Областен кръг-2017-11 кл": 4,
+    "OLI-2-Областен кръг-2018-10 кл": 4,
+    "OLI-2-Областен кръг-2018-11 кл": 4,
+    "OLI-2-Областен кръг-2019-10 кл": 8,
+    "OLI-2-Областен кръг-2019-11 кл": 3,
+    "OLI-2-Областен кръг-2020-10 кл": 0,
+    "OLI-2-Областен кръг-2020-11 кл": 3,
+    "OLI-2-Областен кръг-2021-10 кл": 4,
+    "OLI-2-Областен кръг-2021-11 кл": 4,
+    "OLI-2-Областен кръг-2022-10 кл": 4,
+    "OLI-2-Областен кръг-2022-11 кл": 5,
+    "OLI-2-Областен кръг-2023-10 кл": 0,
+    "OLI-2-Областен кръг-2023-11 кл": 0,
+    "OLI-2-Областен кръг-2024-10 кл": 4,
+    "OLI-2-Областен кръг-2025-10 кл": 4,
+    "OLI-2-Областен кръг-2025-11 кл": 4,
+    "OLI-2-Областен кръг-2026-10 кл": 4,
+    "OLI-2-Областен кръг-2026-11 кл": 4
+  },
+  "classified": {
+    "OLI-2-Областен кръг-2003-10 кл:1:1": {
+      "point_id": "1.10",
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": "medium",
+      "techniques": [
+        "inscribed_circles",
+        "power_of_point",
+        "similar_triangles"
+      ],
+      "reasoning": "Задачата изисква условието за вписана окръжност в трапец (т.н. вписан четириъгълник) и използва свойства на степента на точка/радикална ос за получаване на съотношенията между височините, което я свързва главно с точка 1.10 – Вписана и външновписани окръжности."
+    },
+    "OLI-2-Областен кръг-2003-10 кл:2:1": {
+      "point_id": "9.10",
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": "medium",
+      "techniques": [
+        "pigeonhole_principle",
+        "modular_arithmetic",
+        "winning_strategy"
+      ],
+      "reasoning": "Задачата изисква да се намери печеливша стратегия в игра, като се използва принципът на Дирихле (pigeonhole) за суми на подмножества по модул 2003 и модулна аритметика. Това съвпада с точка 9.10 – Игри – печеливши стратегии."
+    },
+    "OLI-2-Областен кръг-2003-10 кл:3:1": {
+      "point_id": "7.5",
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": "medium",
+      "techniques": [
+        "limit_analysis",
+        "floor_function_properties",
+        "substitution",
+        "bounding"
+      ],
+      "reasoning": "Задачата е функционално уравнение с целочислени части, решава се чрез асимптотичен анализ (n→∞), свойства на функцията floor и заместване на променливи – типични техники от раздел 7.5 (Общи техники за ФУ)."
+    },
+    "OLI-2-Областен кръг-2003-10 кл:4:1": {
+      "point_id": null,
+      "point_confidence": "partial",
+      "alternative_points": [
+        "1.4",
+        "1.5"
+      ],
+      "difficulty": "medium",
+      "techniques": [
+        "power_of_point",
+        "similar_triangles"
+      ],
+      "reasoning": "В решението се използва равенството BD = CD (степен на точка) и полученото подобие на триъгълници CDG и FHC, за да се стигне до ъгловото неравенство. Основната идея е свързана със степен на точка, но също така се прилага подобие, затова предлагам две възможни STEPS точки."
+    },
+    "OLI-2-Областен кръг-2003-10 кл:5:1": {
+      "point_id": null,
+      "point_confidence": "off",
+      "alternative_points": [],
+      "difficulty": null,
+      "techniques": [],
+      "reasoning": "не е олимпиадна задача"
+    },
+    "OLI-2-Областен кръг-2003-10 кл:6:1": {
+      "point_id": "3.6",
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": "medium",
+      "techniques": [
+        "chinese_remainder_theorem",
+        "pigeonhole_principle",
+        "prime_numbers"
+      ],
+      "reasoning": "Основната техника в решението е приложението на Китайската теорема за остатъците за конструиране на k, след което се използва принципът на гнездо (pigeonhole) и свойства на простите числа за броене на остатъци. Това съвпада с точка 3.6 – Китайска теорема."
+    },
+    "OLI-2-Областен кръг-2003-11 кл:1:1": {
+      "point_id": "1.10",
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": "medium",
+      "techniques": [
+        "inscribed_circle",
+        "similar_triangles"
+      ],
+      "reasoning": "Задачата изисква използването на свойството за вписана окръжност в трапец (вписани окръжности) и подобие на триъгълници за намиране на височините и радиусите."
+    },
+    "OLI-2-Областен кръг-2003-11 кл:2:1": {
+      "point_id": "8.13",
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": "medium",
+      "techniques": [
+        "pigeonhole_principle",
+        "additive_combinatorics"
+      ],
+      "reasoning": "Задачата се решава чрез принципа на Дирихле (pigeonhole) за суми на подмножества modulo 2003, което е базова техника от адитивната комбинаторика. Това е основната техника, използвана за изграждане на печеливша стратегия."
+    },
+    "OLI-2-Областен кръг-2003-11 кл:3:1": {
+      "point_id": "4.4",
+      "point_confidence": "partial",
+      "alternative_points": [
+        "5.1"
+      ],
+      "difficulty": "medium",
+      "techniques": [
+        "solve_quadratic",
+        "floor_function"
+      ],
+      "reasoning": "Задачата се решава чрез преобразуване на условието с функции на най-голямото цяло число, което води до квадратично уравнение a = 4 - 1/a (a^2 - 4a + 1 = 0). Основната техника е решаване на квадратично уравнение – точка 4.4 (Точни квадрати и степени). Възможно е също да се разглежда като приложение на Виетови формули (точка 5.1)."
+    },
+    "OLI-2-Областен кръг-2003-11 кл:4:1": {
+      "point_id": "1.4",
+      "point_confidence": "partial",
+      "alternative_points": [
+        "1.5",
+        "1.2"
+      ],
+      "difficulty": "medium",
+      "techniques": [
+        "power_of_point",
+        "similar_triangles",
+        "isosceles_triangle"
+      ],
+      "reasoning": "Задачата изисква използване на свойството BD = CD (исосел триъгълник) и успоредността EF ∥ BD, което води до подобни триъгълници и създава връзка между ъглите BCG и BCF. Това обикновено се решава чрез степен на точка (power of a point) или чрез вписани ъгли/симетрали, затова основната точка е 1.4, но също така са възможни 1.5 и 1.2."
+    },
+    "OLI-2-Областен кръг-2003-11 кл:5:1": {
+      "point_id": "5.3",
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": "medium",
+      "techniques": [
+        "symmetric_polynomials",
+        "viete_formulas",
+        "polynomial_factorization"
+      ],
+      "reasoning": "Задачата се решава чрез въвеждане на симетрични променливи (a,b), използване на формули на Виет за сума и произведение и факторизиране на получен полином, което съответства на точка 5.3 – Симетрични полиноми."
+    },
+    "OLI-2-Областен кръг-2003-11 кл:6:1": {
+      "point_id": null,
+      "point_confidence": "off",
+      "alternative_points": [],
+      "difficulty": null,
+      "techniques": [],
+      "reasoning": "не е олимпиадна задача"
+    },
+    "OLI-2-Областен кръг-2004-10 кл:1:2": {
+      "point_id": "R.6",
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": "medium",
+      "techniques": [
+        "geometric_progression",
+        "trigonometric_equation",
+        "exponential_simplification"
+      ],
+      "reasoning": "Задачата изисква прилагане на условието за геометрична прогресия (R.6) и след това решаване на полученото тригонометрично уравнение (5.10), като се използват свойства на показателните функции за опростяване."
+    },
+    "OLI-2-Областен кръг-2004-10 кл:2:2": {
+      "point_id": "1.4",
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": "medium",
+      "techniques": [
+        "power_of_point",
+        "radical_axis",
+        "similar_triangles"
+      ],
+      "reasoning": "Задачата използва свойството на точка D като външна точка към описаната окръжност (тangent lengths), което е класически пример за степен на точка и радикална ос. Оттук се извеждат съотношения, водещи до подобие на триъгълници и ъглово равенство ∠ACM = ∠BCD."
+    },
+    "OLI-2-Областен кръг-2004-10 кл:3:3": {
+      "point_id": "12.2",
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": "medium",
+      "techniques": [
+        "barycentric_coordinates"
+      ],
+      "reasoning": "Задачата се решава с помощта на барицентрични координати (масови точки) за определяне на съотношенията по ръбовете и условието за половин обем, което директно води до показването, че равнината минава през средите на AC и BD."
+    },
+    "OLI-2-Областен кръг-2004-10 кл:4:3": {
+      "point_id": "1.4",
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": "medium",
+      "techniques": [
+        "power_of_point",
+        "law_of_cosines"
+      ],
+      "reasoning": "Задачата се решава чрез степен на точка (AE·EC = BE·ED) – основната техника, а за намиране на ъгъла ∠BCD се използва законът на косинусите в триъгълника BCD. Това съответства на точка 1.4 от плана."
+    },
+    "OLI-2-Областен кръг-2004-10 кл:5:3": {
+      "point_id": "3.1",
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": "medium",
+      "techniques": [
+        "divisibility",
+        "prime_factorization",
+        "counting"
+      ],
+      "reasoning": "Задачата се решава чрез анализ на делимостта и верига от множители, използвайки простото разлагане на 2000 и изчисляване на най‑дългата верига от числа, всяко от които дели следващото, както и преброяване на възможните вериги с максимална дължина."
+    },
+    "OLI-2-Областен кръг-2004-10 кл:6:3": {
+      "point_id": "5.7",
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": "medium",
+      "techniques": [
+        "polynomial_divisibility",
+        "degree_comparison",
+        "root_shift"
+      ],
+      "reasoning": "Задачата се решава чрез анализ на делимостта на полиноми при замяна x → x+2004, сравняване на степени и изследване на корените – основната техника е делимост на полиноми (точка 5.7)."
+    },
+    "OLI-2-Областен кръг-2004-10 кл:None:1": {
+      "point_id": "8.1",
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": "medium",
+      "techniques": [
+        "pigeonhole_principle",
+        "case_analysis"
+      ],
+      "reasoning": "Решението се базира на принципа на Дирихле (pigeonhole) за разпределение на черни квадратчета в редове/колони и разглежда няколко случая, за да се построи правоъгълник с черни ъгли."
+    },
+    "OLI-2-Областен кръг-2004-10 кл:None:2": {
+      "point_id": "4.2",
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": "hard",
+      "techniques": [
+        "diophantine_quadratic",
+        "vieta_jumping"
+      ],
+      "reasoning": "Задачата се решава чрез факторизация на квадратични диофантови уравнения, използвайки свойството за взаимна простота и представяне като квадрати, след което се прилага метод на безкрайно намаляващ процес (Vieta jumping/инфинитен спад), което я поставя под точка 4.2 – Диофантови – квадратни."
+    },
+    "OLI-2-Областен кръг-2004-10 кл:None:3": {
+      "point_id": "9.5",
+      "point_confidence": "partial",
+      "alternative_points": [
+        "9.1"
+      ],
+      "difficulty": "medium",
+      "techniques": [
+        "degree_sum",
+        "handshaking_lemma",
+        "turan_bound"
+      ],
+      "reasoning": "Задачата използва графови степени и неравенства, типични за теоремата на Туран (екстремална графова теория), за да получи нижна граница за броя на триъгълниците. Това е основната техника, макар че се опира и на базови свойства на графите."
+    },
+    "OLI-2-Областен кръг-2004-11 кл:1:1": {
+      "point_id": null,
+      "point_confidence": "off",
+      "alternative_points": [],
+      "difficulty": null,
+      "techniques": [],
+      "reasoning": "не е олимпиадна задача"
+    },
+    "OLI-2-Областен кръг-2004-11 кл:10:1": {
+      "point_id": "9.5",
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": "medium",
+      "techniques": [
+        "turan_theorem",
+        "double_counting"
+      ],
+      "reasoning": "Задачата изисква използване на Теоремата на Туран (или еквивалентно на теоремата на Мантел) за граници на брой ребра без триъгълници и двойно броене за получаване на минимум 4 триъгълника."
+    },
+    "OLI-2-Областен кръг-2004-11 кл:11:1": {
+      "point_id": "1.7",
+      "point_confidence": "partial",
+      "alternative_points": [],
+      "difficulty": "medium",
+      "techniques": [
+        "area_formulas",
+        "barycentric_coordinates"
+      ],
+      "reasoning": "Задачата изисква използване на формули за лице за изчисляване на суми от площи и броене на триъгълници, като основната идея е да се проследи как всяка избрана точка увеличава броя на триъгълниците с 2 и да се оценят средните суми на площите."
+    },
+    "OLI-2-Областен кръг-2004-11 кл:12:1": {
+      "point_id": "5.11",
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": "medium",
+      "techniques": [
+        "inequality_with_parameter",
+        "am_gm"
+      ],
+      "reasoning": "Задачата изисква да се намери параметър a така, че (ax‑1)/(x^4‑x^2+1) ≤ 1 за всички x, което се решава чрез преобразуване в полиномиална неравенство и прилагане на AM‑GM (или други неравенства) за намиране на минимум/максимум – типична техника от точка 5.11 „Ирационални уравнения и неравенства с параметър“."
+    },
+    "OLI-2-Областен кръг-2004-11 кл:2:1": {
+      "point_id": "1.4",
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": "medium",
+      "techniques": [
+        "power_of_point",
+        "similar_triangles"
+      ],
+      "reasoning": "Задачата започва с използване на равенството AA₁/BB₁ = AM/BM, което произтича от степен на точка (power of point). По-нататък решението се базира на подобия на триъгълници за извеждане на ъглови равенства. Основната техника е степен на точка, а подобието е помощна."
+    },
+    "OLI-2-Областен кръг-2004-11 кл:3:2": {
+      "point_id": "8.15",
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": "medium",
+      "techniques": [
+        "extremal_principle",
+        "pigeonhole_principle"
+      ],
+      "reasoning": "Задачата се решава чрез избор на максимално независимо множество (екстремален принцип) и след това се прилага принципът на Дирихле (pigeonhole) за да се докаже съществуването на човек с поне n познати."
+    },
+    "OLI-2-Областен кръг-2004-11 кл:4:2": {
+      "point_id": "1.7",
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": "medium",
+      "techniques": [
+        "similar_triangles",
+        "area_formulas"
+      ],
+      "reasoning": "Задачата се решава чрез прилагане на подобие на триъгълници, след което се използва формулата за лице (½ab·sinC). Това съответства на точка 1.7 – Формули за лице."
+    },
+    "OLI-2-Областен кръг-2004-11 кл:5:2": {
+      "point_id": "4.1",
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": "medium",
+      "techniques": [
+        "bezout_identity",
+        "linear_diophantine",
+        "modular_congruence"
+      ],
+      "reasoning": "Задачата се решава чрез използване на Бѐзутовата идентичност (гcd‑условията дават линейно диофантово уравнение) и избор на k чрез сравнение по модул – типични техники за линейни диофантови уравнения."
+    },
+    "OLI-2-Областен кръг-2004-11 кл:6:3": {
+      "point_id": "8.10",
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": "medium",
+      "techniques": [
+        "induction",
+        "pairing",
+        "area_estimate"
+      ],
+      "reasoning": "Задачата се решава чрез индукция върху броя на стъпките, като се използва комбинирано групиране (pairing) на триъгълниците с обща страна и оценка на площите. Това съвпада с точка 8.10 – Индукция в комбинаториката."
+    },
+    "OLI-2-Областен кръг-2005-10 кл:1:1": {
+      "point_id": "5.7",
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": "easy",
+      "techniques": [
+        "polynomial_remainder_theorem",
+        "substitution",
+        "linear_system"
+      ],
+      "reasoning": "Задачата изисква намиране на остатъка при деление на полином, което се решава чрез теоремата за остатъка (изчисляване в корените x=1 и x=-1) и решаване на получената система от две линейни уравнения за a и b. Това съвпада със стъпка 5.7 – Делимост на полиноми."
+    },
+    "OLI-2-Областен кръг-2005-10 кл:10:2": {
+      "point_id": "8.1",
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": "easy",
+      "techniques": [
+        "dirichlet_principle"
+      ],
+      "reasoning": "Задачата използва принципа на Дирихле (пigeonhole principle) за да докаже съществуването на блок от 50 последователни числа с сума поне средната стойност. Това е единствената необходима техника и решението се състои от 1‑2 стъпки, следователно се класифицира като easy."
+    },
+    "OLI-2-Областен кръг-2005-10 кл:11:2": {
+      "point_id": "5.10",
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": "medium",
+      "techniques": [
+        "trig_substitution",
+        "quadratic_equation",
+        "parameter_inequality"
+      ],
+      "reasoning": "Задачата се решава чрез замяна sinx+cosx = √2·sin(x+45°), което превръща тригонометричното уравнение в квадратно уравнение за y в интервала [-1,1]. След това се анализира дискриминантата и се решават неравенства за параметъра a – типичен подход за тригонометрични уравнения с параметър (STEPS 5.10)."
+    },
+    "OLI-2-Областен кръг-2005-10 кл:2:1": {
+      "point_id": "1.4",
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": "medium",
+      "techniques": [
+        "power_of_point"
+      ],
+      "reasoning": "Задачата се решава чрез използване на свойството за степен на точка (радикална ос) – центърът на третата окръжност лежи върху O1O2 и условието за допирателност към раменете на ъгъла води до равенство на степените на O1 и O2 спрямо тази окръжност, което доказва, че тя минава и през двете точки."
+    },
+    "OLI-2-Областен кръг-2005-10 кл:3:1": {
+      "point_id": "4.4",
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": "medium",
+      "techniques": [
+        "linear_diophantine",
+        "exact_power"
+      ],
+      "reasoning": "Задачата е диофантова линейна уравнение с условие за последователни цели числа и изисква доказване, че разликата |a‑b| е точна k‑та степен – типична за точни квадрати и степени (точни k‑ти степени)."
+    },
+    "OLI-2-Областен кръг-2005-10 кл:4:1": {
+      "point_id": "3.2",
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": "medium",
+      "techniques": [
+        "modulus_equation",
+        "vieta"
+      ],
+      "reasoning": "Задачата се решава чрез разглеждане на уравнение с модул – се получават две квадратни уравнения, за които се изисква условие за реални корени (дисриминанта). След това се използват формули на Виет за сума на квадратите на корените. Това съответства на точка 3.2 (Сравнения по модул) и включва техниките modulus_equation и vieta."
+    },
+    "OLI-2-Областен кръг-2005-10 кл:5:1": {
+      "point_id": "1.4",
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": "medium",
+      "techniques": [
+        "power_of_point",
+        "centroid",
+        "similar_triangles"
+      ],
+      "reasoning": "Задачата изисква използване на степен на точка (NT^2 = NA·ND = NB·NC) за връзка между NT и отрязъците от N към окръжността, както и свойството, че P е центроид на триъгълника NTD, което води до съотношения чрез подобни триъгълници и векторни съотношения."
+    },
+    "OLI-2-Областен кръг-2005-10 кл:6:1": {
+      "point_id": "8.3",
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": "easy",
+      "techniques": [
+        "double_counting",
+        "pigeonhole_principle"
+      ],
+      "reasoning": "Задачата се решава чрез броене на двойките играчи – всяка игра използва 10 двойки, общо има C(25,2)=300 двойки, следователно максимум ⌊300/10⌋=30 игри. Това е типичен пример за двойно броене (double counting) и принципа на Дирихле (pigeonhole)."
+    },
+    "OLI-2-Областен кръг-2005-10 кл:9:1": {
+      "point_id": "8.11",
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": "medium",
+      "techniques": [
+        "double_counting",
+        "block_design",
+        "modular_arithmetic"
+      ],
+      "reasoning": "Задачата изисква двойно броене за горната граница и конструкция на блоков дизайн (аффинна равнина от ред 5) чрез остатъци по модул 5 – това е основната техника, съответстваща на точка 8.11."
+    },
+    "OLI-2-Областен кръг-2005-11 кл:1:1": {
+      "point_id": "5.10",
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": "medium",
+      "techniques": [
+        "sin_plus_cos_identity",
+        "range_analysis"
+      ],
+      "reasoning": "Задачата е тригонометрично уравнение с параметър; решението се постига чрез замяна s = sin x + cos x, използване на идентичността sin x + cos x = √2·sin(x+π/4) и анализ на диапазона на полученото линейно‑квадратно изразяване. Това съвпада със стъпка 5.10 – Тригонометрични уравнения."
+    },
+    "OLI-2-Областен кръг-2005-11 кл:10:1": {
+      "point_id": "6.7",
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": "easy",
+      "techniques": [
+        "rearrangement"
+      ],
+      "reasoning": "Задачата се решава чрез подреждане на най‑големите и най‑малките числа в редуващ ред, което е типичен пример за техниката „Rearrangement”. Решението е кратко (два основни стъпки) и се счита за лесно."
+    },
+    "OLI-2-Областен кръг-2005-11 кл:11:3": {
+      "point_id": "1.6",
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": "medium",
+      "techniques": [
+        "sine_theorem",
+        "parallel_lines",
+        "inscribed_angles"
+      ],
+      "reasoning": "Основната идея е да се използва равенството на ъглите, получено от успоредните прави, за да се получат равни ъгли в окръжността и чрез формулата за дължина на хордата (AD = 2R·sin∠) – т.е. синусовата теорема – се доказва, че две страни са равни, което дава равнобедрен триъгълник. Това съвпада с точка 1.6 – Синусова и косинусова теорема"
+    },
+    "OLI-2-Областен кръг-2005-11 кл:12:3": {
+      "point_id": "1.4",
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": "medium",
+      "techniques": [
+        "power_of_point",
+        "inscribed_angles",
+        "similar_triangles"
+      ],
+      "reasoning": "Задачата използва теоремата на Симпсън, която се доказва чрез степен на точка (радикална ос) и ъглови съотношения, включващи вписани ъгли и подобие на триъгълници."
+    },
+    "OLI-2-Областен кръг-2005-11 кл:2:1": {
+      "point_id": "2.11",
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": "medium",
+      "techniques": [
+        "orthocenter_configuration",
+        "power_of_point",
+        "similar_triangles",
+        "angle_chasing"
+      ],
+      "reasoning": "Задачата изисква да се покаже, че ортоцентърът на △ABC е центърът на описаната около △MNP окръжност – типична ортоцентрична конфигурация (точка 2.11). За доказателството се използва свойството за степен на точка/радикална ос (1.4) и съответните подобия и ъглови пресмятания."
+    },
+    "OLI-2-Областен кръг-2005-11 кл:3:1": {
+      "point_id": "4.2",
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": "medium",
+      "techniques": [
+        "diophantine_equation",
+        "substitution",
+        "inequality_am_gm"
+      ],
+      "reasoning": "Задачата е чисто диофантова, включва квадрати и симетрични линейни изрази; основната техника е работа с квадратични диофантови уравнения, често чрез замяна и неравенства от тип AM‑GM."
+    },
+    "OLI-2-Областен кръг-2005-11 кл:4:1": {
+      "point_id": "5.11",
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": "medium",
+      "techniques": [
+        "irrational_equations",
+        "parameter_analysis",
+        "discriminant"
+      ],
+      "reasoning": "Задачата изисква работа с уравнение, съдържащо радикал и параметър, и сравняване на броя на решенията – типична техника от раздел „Ирационални уравнения и неравенства с параметър\" (5.11)."
+    },
+    "OLI-2-Областен кръг-2005-11 кл:5:1": {
+      "point_id": "2.5",
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": "medium",
+      "techniques": [
+        "pole_polar",
+        "power_of_point",
+        "angle_bisector_theorem"
+      ],
+      "reasoning": "Задачата се решава чрез полярите на точките A₁, B₁, C₁ спрямо описаната окръжност (полюси‑поляри) – това дава конкарентност на MQ, NR, SP. За част (а) се използва степен на точка (power of point) и връзката ѝ с радиуса на вписаната окръжност. Тези техники са основните, затова точка 2.5 е главната."
+    },
+    "OLI-2-Областен кръг-2005-11 кл:6:1": {
+      "point_id": "8.3",
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": "easy",
+      "techniques": [
+        "double_counting"
+      ],
+      "reasoning": "Задачата се решава чрез просто броене – общият брой участници в игрите е 5·брой_игри, което трябва да е поне 25. Това е типичен пример за двойно броене (double counting)."
+    },
+    "OLI-2-Областен кръг-2005-11 кл:9:1": {
+      "point_id": null,
+      "point_confidence": "off",
+      "alternative_points": [],
+      "difficulty": null,
+      "techniques": [],
+      "reasoning": "не е олимпиадна задача"
+    },
+    "OLI-2-Областен кръг-2007-10 кл:1:1": {
+      "point_id": "5.11",
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": "medium",
+      "techniques": [
+        "domain_of_radical",
+        "isolate_sqrt",
+        "square_both_sides",
+        "solve_quadratic",
+        "check_extraneous"
+      ],
+      "reasoning": "Задачата изисква решаване на ирационално неравенство със квадратен корен, което попада в точка 5.11 – Ирационални уравнения и неравенства с параметър. Основните стъпки са определяне на областта на дефиниция, изолиране на корена, квадриране, решаване на полученото квадратично неравенство и проверка за излишни корени."
+    },
+    "OLI-2-Областен кръг-2007-10 кл:10:2": {
+      "point_id": "3.7",
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": "medium",
+      "techniques": [
+        "modular_exponentiation",
+        "primitive_root",
+        "linear_diophantine"
+      ],
+      "reasoning": "Задачата се решава чрез свойства на степените в остатъчна аритметика (48⁶ ≡ 1 mod 61), т.е. използва показател и примитивни корени, както и линейно диофантово уравнение 3m+2n=1000. Това съответства на точка 3.7 – Показател. Примитивни корени."
+    },
+    "OLI-2-Областен кръг-2007-10 кл:2:1": {
+      "point_id": "1.2",
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": "medium",
+      "techniques": [
+        "ceva_theorem",
+        "excircle_properties"
+      ],
+      "reasoning": "Конкурентността на AD, BE, CF се доказва чрез Теоремата на Чева (Ceva), като се използват свойства на външновписаните окръжности. Това е основната техника, затова точката 1.2 е главната STEPS точка."
+    },
+    "OLI-2-Областен кръг-2007-10 кл:3:1": {
+      "point_id": null,
+      "point_confidence": "off",
+      "alternative_points": [],
+      "difficulty": null,
+      "techniques": [],
+      "reasoning": "не е олимпиадна задача"
+    },
+    "OLI-2-Областен кръг-2007-10 кл:4:1": {
+      "point_id": "R.4",
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": "medium",
+      "techniques": [
+        "logarithmic_equation",
+        "domain_analysis",
+        "parameter_analysis"
+      ],
+      "reasoning": "Задачата изисква решаване на логаритмично уравнение с параметър, като се анализира областта на дефиниция и броят на решенията – типична техника от точка R.4 (Показателни и логаритмични уравнения)."
+    },
+    "OLI-2-Областен кръг-2007-10 кл:5:1": {
+      "point_id": "4.1",
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": "medium",
+      "techniques": [
+        "linear_diophantine",
+        "modular_congruence"
+      ],
+      "reasoning": "Задачата се решава чрез намиране на цели решения на линейно диофантово уравнение 3m+2n=1000 и проверка на получените решения спрямо линейна конгруенция 47m‑48n+1≡0 (mod 61). Това изисква основно умение за линейни диофантови уравнения (точка 4.1) и работа с сравнения по модул (точка 3.2), като решението се постига в 2‑3 стъпки, което съответства на трудност medium."
+    },
+    "OLI-2-Областен кръг-2007-10 кл:6:1": {
+      "point_id": "1.4",
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": "medium",
+      "techniques": [
+        "power_of_point"
+      ],
+      "reasoning": "Задачата изисква използване на степен на точка (power of a point) за преброяване на пресичанията на отсечки (страни и диагонали) при последователни завъртания около центъра O, което е основната техника от точка 1.4."
+    },
+    "OLI-2-Областен кръг-2007-10 кл:9:3": {
+      "point_id": "3.2",
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": "medium",
+      "techniques": [
+        "modular_arithmetic",
+        "combinatorial_counting",
+        "case_analysis"
+      ],
+      "reasoning": "Задачата се решава чрез работа с остатъци по модул 16 (и 4, 8), броене на двойки и анализ на възможните разпределения – типичен пример за сравнения по модул и комбинаторно броене."
+    },
+    "OLI-2-Областен кръг-2009-10 кл:9.6:1": {
+      "point_id": "3.2",
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": "medium",
+      "techniques": [
+        "modular_arithmetic",
+        "residue_analysis",
+        "contradiction"
+      ],
+      "reasoning": "Задачата се решава чрез сравнение по модул (модулно сравнение) – се сумират уравненията, разглеждат се остатъци на кубове и четвърти степени по модул 13 и се получава противоречие. Това съвпада със STEPS точка 3.2 „Сравнения по модул“."
+    },
+    "OLI-2-Областен кръг-2009-10 кл:9.1:1": {
+      "point_id": "5.4",
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": "medium",
+      "techniques": [
+        "rational_root_test",
+        "substitution",
+        "discriminant_analysis"
+      ],
+      "reasoning": "Основната техника е намиране на рационален корен (тест на Рационален корен/Гаус) след замяна x/y = t, последвано от факторизация и проверка на дискриминантата на квадратичния множител."
+    },
+    "OLI-2-Областен кръг-2009-10 кл:10.1:1": {
+      "point_id": null,
+      "point_confidence": "off",
+      "alternative_points": [],
+      "difficulty": null,
+      "techniques": [],
+      "reasoning": "не е олимпиадна задача"
+    },
+    "OLI-2-Областен кръг-2009-10 кл:10.2:1": {
+      "point_id": "1.10",
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": "medium",
+      "techniques": [
+        "incircle_circumcircle",
+        "angle_chasing",
+        "similar_triangles"
+      ],
+      "reasoning": "Задачата изисква използването на свойства на вписаната и описаната окръжност (взаимодействие между тях) и след това ъглово пресмятане, което води до подобие на триъгълници за получаване на отношението KL:AB."
+    },
+    "OLI-2-Областен кръг-2009-10 кл:10.3:2": {
+      "point_id": null,
+      "point_confidence": "off",
+      "alternative_points": [],
+      "difficulty": null,
+      "techniques": [],
+      "reasoning": "не е олимпиадна задача"
+    },
+    "OLI-2-Областен кръг-2009-10 кл:10.4:2": {
+      "point_id": "5.9",
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": "medium",
+      "techniques": [
+        "sign_analysis",
+        "vieta_relations",
+        "graph_intersection"
+      ],
+      "reasoning": "Задачата изисква разположение на корените на два квадратни тричлена – основната техника е анализ на знака на полинома между корените (interlacing) и използване на формули на Виет, както и сравняване на графиките f(x) и g(x)."
+    },
+    "OLI-2-Областен кръг-2009-10 кл:10.5:3": {
+      "point_id": "1.6",
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": "medium",
+      "techniques": [
+        "sine_law",
+        "trigonometric_identity",
+        "quadratic_maximization"
+      ],
+      "reasoning": "Задачата се решава чрез синусовата теорема (law of sines), преобразуване на тригонометрични функции и максимизиране на квадратична функция – това съответства на точка 1.6 „Синусова и косинусова теорема“."
+    },
+    "OLI-2-Областен кръг-2009-10 кл:10.6:3": {
+      "point_id": "3.3",
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": "medium",
+      "techniques": [
+        "small_fermat_theorem",
+        "quadratic_residues",
+        "modular_arithmetic"
+      ],
+      "reasoning": "Задачата се решава чрез прилагане на малката теорема на Ферма (модул 19) и проверка на възможните квадратични остатъци, т.е. основната техника е модулна аритметика с малка теорема на Ферма и квадратични остатъци."
+    },
+    "OLI-2-Областен кръг-2009-10 кл:11.1:3": {
+      "point_id": "5.11",
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": "medium",
+      "techniques": [
+        "irrational_equation",
+        "parameter_analysis",
+        "domain_restriction",
+        "squaring"
+      ],
+      "reasoning": "Задачата изисква решаване на ирационално уравнение с параметър – типична техника от точка 5.11."
+    },
+    "OLI-2-Областен кръг-2009-10 кл:11.2:3": {
+      "point_id": "1.6",
+      "point_confidence": "exact",
+      "alternative_points": [
+        "1.10"
+      ],
+      "difficulty": "medium",
+      "techniques": [
+        "sine_theorem",
+        "area_relations",
+        "half_angle_sine"
+      ],
+      "reasoning": "Доказателството използва синусовата теорема (a=2R sinα и др.) и връзката между лице, радиус на вписаната и описаната окръжност (Δ=abc/(4R)=rs), след което се прилагат полугранични синусови формули. Това съответства на точка 1.6 – Синусова и косинусова теорема, като допълнително се включва темата за вписаната и описаната окръжност (1.10)."
+    },
+    "OLI-2-Областен кръг-2009-11 кл:1:1": {
+      "point_id": "5.11",
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": "medium",
+      "techniques": [
+        "irrational_equation",
+        "parameter_analysis"
+      ],
+      "reasoning": "Задачата е ирационално уравнение с параметър, което се решава чрез квадриране, проверка на областта на дефиниция и анализ на параметъра."
+    },
+    "OLI-2-Областен кръг-2009-11 кл:10:1": {
+      "point_id": "5.4",
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": "medium",
+      "techniques": [
+        "rational_root_theorem",
+        "substitution",
+        "polynomial_factorization"
+      ],
+      "reasoning": "Задачата се решава чрез заместване x = t·y, получаване на едномерен полином в t и намиране на рационален корен (t = 1) – типични техники за рационални корени и факторизация на полиноми, които съответстват на точка 5.4."
+    },
+    "OLI-2-Областен кръг-2009-11 кл:11:1": {
+      "point_id": "1.4",
+      "point_confidence": "multiple",
+      "alternative_points": [
+        "1.5"
+      ],
+      "difficulty": "medium",
+      "techniques": [
+        "power_of_point",
+        "symmedian",
+        "incircle"
+      ],
+      "reasoning": "Задачата изисква използването на степен на точка (радикална ос) за съотношенията между точките от вписаната окръжност и същевременно свойството на симетралата на CI. И двете техники са съществени за получаване на търсеното отношение."
+    },
+    "OLI-2-Областен кръг-2009-11 кл:12:1": {
+      "point_id": "5.11",
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": "medium",
+      "techniques": [
+        "irrational_equation",
+        "squaring",
+        "domain_restriction",
+        "parameter_inequality"
+      ],
+      "reasoning": "Задачата е ирационално уравнение с параметър a, решава се чрез квадриране, проверка на условието за съществуване на корен и анализ на полученото линейно уравнение спрямо параметъра – типична техника от точка 5.11."
+    },
+    "OLI-2-Областен кръг-2009-11 кл:13:2": {
+      "point_id": "1.10",
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": "medium",
+      "techniques": [
+        "half_angle_formula",
+        "inradius_circumradius_relation",
+        "sine_theorem"
+      ],
+      "reasoning": "Задачата използва формулата за половин ъгъл и връзката r = 4R·sin(α/2)·sin(β/2)·sin(γ/2), което е типично за темата „Вписана и външновписани окръжности”. Основната техника е работа с вписани окръжности и полуградусни синуси, затова точката 1.10 е най‑подходяща."
+    },
+    "OLI-2-Областен кръг-2009-11 кл:14:2": {
+      "point_id": "9.7",
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": "medium",
+      "techniques": [
+        "edge_coloring",
+        "modular_arithmetic",
+        "graph_factorization"
+      ],
+      "reasoning": "Задачата се решава чрез оцветяване на ребрата на пълен граф с n върха в n‑1 цвята (правилно ребърно оцветяване), което е типична техника от темата „Оцветявания на графи“ (точка 9.7)."
+    },
+    "OLI-2-Областен кръг-2009-11 кл:15:3": {
+      "point_id": "5.1",
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": "medium",
+      "techniques": [
+        "vieta_formulas",
+        "exponential_substitution",
+        "geometric_progression_condition",
+        "polynomial_factorization"
+      ],
+      "reasoning": "Задачата се решава чрез замяна y=2^x, факторизиране на получен полином и прилагане на формули на Виет за връзка между корените, като се използва условието за геометрична прогресия. Това съвпада с точка 5.1 – Формули на Виет."
+    },
+    "OLI-2-Областен кръг-2009-11 кл:16:4": {
+      "point_id": "7.7",
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": "medium",
+      "techniques": [
+        "nonlinear_recurrence",
+        "telescoping_sum",
+        "induction"
+      ],
+      "reasoning": "Задачата се решава чрез анализ на нелинейна рекурентна редица и телескопично сумиране, което е типично за точка 7.7 – Нелинейни рекурентни редици."
+    },
+    "OLI-2-Областен кръг-2009-11 кл:17:4": {
+      "point_id": "4.4",
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": "medium",
+      "techniques": [
+        "factorization",
+        "gcd",
+        "modular_arithmetic",
+        "parity",
+        "exact_square"
+      ],
+      "reasoning": "Задачата се решава чрез факторизиране на израза (2c‑a+b)(2c+a‑b)=3(a+b)^2, анализ на НОД и делимост, модулни съображения и проверка за точен квадрат – всичко това попада в темата „Точни квадрати и степени\" (точка 4.4)."
+    },
+    "OLI-2-Областен кръг-2009-11 кл:2:1": {
+      "point_id": "1.10",
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": "medium",
+      "techniques": [
+        "inscribed_and_circumscribed_circles",
+        "law_of_sines",
+        "half_angle_formulas"
+      ],
+      "reasoning": "Задачата изисква използване на свойства на вписаната и описаната окръжност (релацията r = 4R sin(α/2) sin(β/2) sin(γ/2)) и законът за синусите/полуъглови формули, което попада в точка 1.10 – Вписана и външновписани окръжности."
+    },
+    "OLI-2-Областен кръг-2009-11 кл:3:1": {
+      "point_id": "9.1",
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": "medium",
+      "techniques": [
+        "graph_factorization",
+        "perfect_matching",
+        "cyclic_permutation"
+      ],
+      "reasoning": "Задачата се решава чрез факторизация на пълен граф K_n на перфектни съвпадения (1‑фактори), което е базова техника от теорията на графите – точка 9.1."
+    },
+    "OLI-2-Областен кръг-2009-11 кл:4:2": {
+      "point_id": null,
+      "point_confidence": "off",
+      "alternative_points": [],
+      "difficulty": null,
+      "techniques": [],
+      "reasoning": "не е олимпиадна задача"
+    },
+    "OLI-2-Областен кръг-2009-11 кл:5:2": {
+      "point_id": "7.7",
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": "medium",
+      "techniques": [
+        "telescoping_sum",
+        "nonlinear_recurrence"
+      ],
+      "reasoning": "Задачата изисква работа с нелинейна рекурентна редица и използва телескопиращо събиране, за да се намери стойността на a₃ от даденото условие за сума."
+    },
+    "OLI-2-Областен кръг-2009-11 кл:6:2": {
+      "point_id": "4.10",
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": "medium",
+      "techniques": [
+        "quadratic_residues",
+        "modular_arithmetic",
+        "diophantine_equation"
+      ],
+      "reasoning": "Задачата се базира върху квадратичната форма a²+ab+b²=c² и изисква анализ на квадратични остатъци (особено мод 3) за да се докаже условието за перфектен квадрат. Това съвпада с точка 4.10 – Квадратични форми и суми на квадрати, като основните техники са работа с квадратични остатъци и диофантови уравнения."
+    },
+    "OLI-2-Областен кръг-2009-11 кл:9:1": {
+      "point_id": "3.3",
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": "medium",
+      "techniques": [
+        "modular_arithmetic",
+        "small_fermat_theorem",
+        "quadratic_residues"
+      ],
+      "reasoning": "Задачата се решава чрез сравнение по модул, използвайки Малката теорема на Ферма за редуциране на степента и проверка на възможните квадратични остатъци мод 19 – основната техника е модулна аритметика (3.3)."
+    },
+    "OLI-2-Областен кръг-2010-10 кл:1:1": {
+      "point_id": "5.11",
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": "medium",
+      "techniques": [
+        "irrational_equations",
+        "parameter_analysis",
+        "factorization"
+      ],
+      "reasoning": "Задачата изисква решаване на уравнение с радикали и параметър, което попада в категорията „Ирационални уравнения и неравенства с параметър\" (5.11). Решението включва замяна, квадриране и факторизиране на получен полином, типични стъпки за този тип задачи."
+    },
+    "OLI-2-Областен кръг-2010-10 кл:2:1": {
+      "point_id": "1.4",
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": "medium",
+      "techniques": [
+        "power_of_point",
+        "similar_triangles"
+      ],
+      "reasoning": "Задачата се решава чрез степен на точка (тъждество за мощта на точка спрямо външновписаната окръжност) и подобие на триъгълници, получени от ъгловото условие."
+    },
+    "OLI-2-Областен кръг-2010-10 кл:3:1": {
+      "point_id": "1.5",
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": "medium",
+      "techniques": [
+        "similar_triangles"
+      ],
+      "reasoning": "Задачата се решава чрез подобие на триъгълници (Талес/симетрали), което е основната техника, описана в точка 1.5."
+    },
+    "OLI-2-Областен кръг-2010-10 кл:4:3": {
+      "point_id": "4.10",
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": "medium",
+      "techniques": [
+        "case_analysis",
+        "parameter_analysis",
+        "substitution",
+        "elimination"
+      ],
+      "reasoning": "Задачата изисква решаване на система от квадратични уравнения с параметри, като се прави разглеждане на случаи (a=0, abc≠0) и се използва заместване/елиминация – типична техника за квадратични форми и суми на квадрати."
+    },
+    "OLI-2-Областен кръг-2010-10 кл:5:5": {
+      "point_id": "4.10",
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": "medium",
+      "techniques": [
+        "quadratic_forms",
+        "sum_of_squares",
+        "scaling_by_power_of_two"
+      ],
+      "reasoning": "Задачата се решава чрез представяне на числото 7·2^n като сума от квадрати – типична техника от темата „Квадратични форми и суми на квадрати“ (точка 4.10). Основната идея е скалиране на известна репрезентация с 2^m, което е съществена техника за суми от квадрати."
+    },
+    "OLI-2-Областен кръг-2010-10 кл:6:5": {
+      "point_id": "R.4",
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": "medium",
+      "techniques": [
+        "properties_of_exponents",
+        "logarithm"
+      ],
+      "reasoning": "Задачата се решава чрез преобразуване на показателно‑логаритмично уравнение, използвайки свойства на степените и логаритмите – това съвпада с точка R.4 „Показателни и логаритмични уравнения“."
+    },
+    "OLI-2-Областен кръг-2010-10 кл:7:5": {
+      "point_id": "1.6",
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": "medium",
+      "techniques": [
+        "sine_law",
+        "cosine_law"
+      ],
+      "reasoning": "Задачата се решава чрез прилагане на синусовата и косинусовата теореми, което съвпада с точка 1.6 от плана."
+    },
+    "OLI-2-Областен кръг-2010-11 кл:1:1": {
+      "point_id": "5.11",
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": "medium",
+      "techniques": [
+        "substitution",
+        "quadratic_inequality",
+        "parameter_analysis"
+      ],
+      "reasoning": "Задачата изисква замяна 2ax = y и решаване на квадратично неравенство с параметър a, което попада в точка 5.11 – Ирационални уравнения и неравенства с параметър."
+    },
+    "OLI-2-Областен кръг-2010-11 кл:2:1": {
+      "point_id": "7.8",
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": "medium",
+      "techniques": [
+        "monotone_sequence",
+        "bounded_sequence",
+        "limit_of_sequence",
+        "induction"
+      ],
+      "reasoning": "Задачата се занимава с линейна рекурентна редица, изисква доказване на монотонност и ограниченост за получаване на сходимост и намиране на граница – основната техника е \"Сходимост и граници\" (точка 7.8)."
+    },
+    "OLI-2-Областен кръг-2010-11 кл:3:1": {
+      "point_id": "9.10",
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": "medium",
+      "techniques": [
+        "invariant",
+        "parity_argument",
+        "winning_strategy"
+      ],
+      "reasoning": "Задачата е типична игра с печеливша стратегия, където се използва инвариант (баланс между суми на коефициентите в четни и нечетни степени) и паритетен аргумент, за да се докаже, че Дени има печеливша стратегия."
+    },
+    "OLI-2-Областен кръг-2010-11 кл:4:2": {
+      "point_id": "1.6",
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": "medium",
+      "techniques": [
+        "cosine_theorem",
+        "similar_triangles",
+        "midline_theorem",
+        "circumradius_formula",
+        "inradius_formula"
+      ],
+      "reasoning": "Основната техника е използването на косинусовата теорема за намиране на страните, след което се прилагат формули за радиусите на описаната и вписаната окръжност. Други използвани идеи са подобието (similar_triangles) и свойството на средната отсечка (midline_theorem)."
+    },
+    "OLI-2-Областен кръг-2010-11 кл:5:3": {
+      "point_id": "9.7",
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": "medium",
+      "techniques": [
+        "graph_coloring",
+        "induction",
+        "parity_argument"
+      ],
+      "reasoning": "Задачата се решава чрез шахматно оцветяване (паритет) и индукция, което е типично за задачи от областта \"Оцветявания на графи\" (9.7)."
+    },
+    "OLI-2-Областен кръг-2010-11 кл:6:3": {
+      "point_id": "3.6",
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": "medium",
+      "techniques": [
+        "chinese_remainder_theorem",
+        "divisibility_of_polynomial_values",
+        "prime_divisors"
+      ],
+      "reasoning": "В решението се използва китайската теорема за остатъци за конструиране на числа b, c, a, а също се разисква делимостта на стойностите на полинома и свойства на прости делители – това е основната техника, съответстваща на точка 3.6."
+    },
+    "OLI-2-Областен кръг-2011-10 кл:1:1": {
+      "point_id": "5.11",
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": "medium",
+      "techniques": [
+        "modulus_inequality",
+        "parameter_inequality"
+      ],
+      "reasoning": "Задачата изисква да се реши неравенство с модул и параметър – да се намерят a и b така, че |x^2+ax+b| ≤ 1/2 за всички x∈[1,3]. Това попада в категория „Ирационални уравнения и неравенства с параметър“ (5.11) и използва техника за сравнения по модул (3.2)."
+    },
+    "OLI-2-Областен кръг-2011-10 кл:2:1": {
+      "point_id": "3.1",
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": "medium",
+      "techniques": [
+        "divisibility",
+        "prime_numbers"
+      ],
+      "reasoning": "Задачата се решава чрез анализ на НОД/НОК на a^2+ab+b^2 и a+b, използвайки свойствата на взаимно прости числа и простите числа, което съответства на точка 3.1 – Делимост, НОД/НОК."
+    },
+    "OLI-2-Областен кръг-2011-10 кл:3:1": {
+      "point_id": "2.11",
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": "medium",
+      "techniques": [
+        "orthocenter_configuration",
+        "parallelism"
+      ],
+      "reasoning": "Задачата се базира върху свойства на ортоцентъра в триъгълници и ортоцентрични конфигурации, което съответства на точка 2.11. Доказателството изисква няколко стъпки (паралелност на прави, използване на съвпадения на ъгли) и е типично за средна трудност."
+    },
+    "OLI-2-Областен кръг-2011-10 кл:4:2": {
+      "point_id": "5.11",
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": "medium",
+      "techniques": [
+        "domain_analysis",
+        "squaring",
+        "radical_inequality"
+      ],
+      "reasoning": "Задачата е ирационално неравенство с радикали, което се решава чрез определяне на областта на дефиниция, последователно квадриране и опростяване – типични техники за точка 5.11."
+    },
+    "OLI-2-Областен кръг-2011-10 кл:5:2": {
+      "point_id": "1.10",
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": "medium",
+      "techniques": [
+        "incircle_excircle",
+        "area_semiperimeter"
+      ],
+      "reasoning": "Задачата се решава чрез формули за вписаната и външновписаната окръжност (r, r_a) и връзката им с лице и полупериметър, което е точно точката 1.10 от плана."
+    },
+    "OLI-2-Областен кръг-2011-10 кл:6:2": {
+      "point_id": "3.2",
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": "medium",
+      "techniques": [
+        "congruences",
+        "recurrence_relations"
+      ],
+      "reasoning": "Задачата изисква работа с остатъци по модул 3 и построяване на рекурентна връзка/индуктивен аргумент, за да се покаже, че a_{n+8}-a_n е делимо на 3."
+    },
+    "OLI-2-Областен кръг-2011-11 кл:1:1": {
+      "point_id": "1.4",
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": "medium",
+      "techniques": [
+        "power_of_point",
+        "similar_triangles"
+      ],
+      "reasoning": "В решението се използва свойството на степента на точка (power of point) за определяне на съотношенията между точките A, B и C, както и подобие на триъгълници за извеждане на необходимите равенства."
+    },
+    "OLI-2-Областен кръг-2011-11 кл:2:1": {
+      "point_id": "1.8",
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": "medium",
+      "techniques": [
+        "euler_theorem",
+        "sine_law"
+      ],
+      "reasoning": "Основната техника е Теоремата на Ойлер (отношението OI, R и r). За да се намери sin∠ACB се използва и синусовата теорема, но главната идея е приложението на Ойлеровата теорема."
+    },
+    "OLI-2-Областен кръг-2011-11 кл:3:1": {
+      "point_id": null,
+      "point_confidence": "off",
+      "alternative_points": [],
+      "difficulty": null,
+      "techniques": [],
+      "reasoning": "не е олимпиадна задача"
+    },
+    "OLI-2-Областен кръг-2011-11 кл:4:2": {
+      "point_id": "8.11",
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": "medium",
+      "techniques": [
+        "pigeonhole_principle",
+        "double_counting",
+        "block_designs"
+      ],
+      "reasoning": "Задачата изисква покриване на всички двойки от 8 елемента с тройки – типичен пример за блоков дизайн (covering design). Основната техника е използването на принципа на Дирихле (пigeonhole) и двойно броене за получаване на нижна граница, след което се конструира конкретен набор от блокове."
+    },
+    "OLI-2-Областен кръг-2011-11 кл:5:2": {
+      "point_id": "7.5",
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": "medium",
+      "techniques": [
+        "functional_inequality",
+        "substitution",
+        "bounding"
+      ],
+      "reasoning": "Задачата се решава чрез типични техники за функционални уравнения/неравенства: поставяне на специални стойности (y=0, z=1) за получаване на граници върху f, последващо използване на замяна y=1/x, z=1 за получаване на противоречие и доказване, че функцията е константна. Това попада в общите техники за ФУ (7.5)."
+    },
+    "OLI-2-Областен кръг-2011-11 кл:6:2": {
+      "point_id": "3.8",
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": "medium",
+      "techniques": [
+        "quadratic_residues",
+        "legendre_symbol",
+        "divisibility",
+        "induction"
+      ],
+      "reasoning": "Задачата се решава чрез свойства на квадратичните остатъци (Лежандър) и делимост, като се използва индукция върху степента. Това съвпада със STEPS точка 3.8 – Квадратични остатъци. Лежандър."
+    },
+    "OLI-2-Областен кръг-2012-10 кл:1:1": {
+      "point_id": "5.11",
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": "medium",
+      "techniques": [
+        "irrational_equation",
+        "domain_analysis",
+        "squaring"
+      ],
+      "reasoning": "Задачата изисква намиране на параметъра a за който уравнението с корени има решение – типична ирационална (радикална) уравнение с параметър, което попада в точка 5.11 от плана."
+    },
+    "OLI-2-Областен кръг-2012-10 кл:2:1": {
+      "point_id": "1.4",
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": "medium",
+      "techniques": [
+        "power_of_point",
+        "similar_triangles"
+      ],
+      "reasoning": "Задачата се решава чрез степен на точка (power of a point) спрямо външновписаната окръжност и използване на подобие на тръгващи от точките P и Q триъгълници, което е основната техника за тази конфигурация."
+    },
+    "OLI-2-Областен кръг-2012-10 кл:3:1": {
+      "point_id": "3.9",
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": "medium",
+      "techniques": [
+        "sum_of_powers_factorization",
+        "lte"
+      ],
+      "reasoning": "Задачата се решава чрез факторизация на a^{pn}+p^{n} като сума от степени (за нечетни n) и използване на p‑адични оценки (LTE) за доказване, че получените множители съдържат поне два различни прости делителя. Това съответства на точка 3.9 – p‑адични оценки (LTE)."
+    },
+    "OLI-2-Областен кръг-2012-10 кл:4:2": {
+      "point_id": "5.1",
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": "medium",
+      "techniques": [
+        "substitution",
+        "system_of_equations",
+        "vieta_formulas"
+      ],
+      "reasoning": "Задачата изисква да се проверят дали дадени числа са корени на двата полинома, което се прави чрез подмяна (substitution) и решаване на система от уравнения за параметрите a и b. Това е типична задача за прилагане на формули на Виет (vieta_formulas) и решаване на система от линейни уравнения."
+    },
+    "OLI-2-Областен кръг-2012-10 кл:5:2": {
+      "point_id": "1.4",
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": "medium",
+      "techniques": [
+        "power_of_point",
+        "radical_axis"
+      ],
+      "reasoning": "Задачата се решава чрез използване на степен на точка – точката M има еднаква степен спрямо вписаната и външновписаната окръжност, което дава радикалната ос PQ. Тази ос е успоредна на AB и минава през центъра I на вписаната окръжност."
+    },
+    "OLI-2-Областен кръг-2012-10 кл:6:2": {
+      "point_id": null,
+      "point_confidence": "off",
+      "alternative_points": [],
+      "difficulty": null,
+      "techniques": [],
+      "reasoning": "не е олимпиадна задача"
+    },
+    "OLI-2-Областен кръг-2012-11 кл:1:1": {
+      "point_id": "5.10",
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": "medium",
+      "techniques": [
+        "trigonometric_identities",
+        "range_analysis",
+        "parameter_elimination"
+      ],
+      "reasoning": "Задачата е типично тригонометрично уравнение с параметър, което се решава чрез прилагане на тригонометрични тъждества, преобразуване на израза и анализ на диапазона на лявата страна, за да се намерят допустимите стойности на a. Това съвпада с точка 5.10 – Тригонометрични уравнения."
+    },
+    "OLI-2-Областен кръг-2012-11 кл:2:1": {
+      "point_id": "1.4",
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": "hard",
+      "techniques": [
+        "power_of_point",
+        "angle_bisector_theorem",
+        "orthocenter_properties"
+      ],
+      "reasoning": "Задачата изисква степен на точка (power of point) и свойства на ортоцентъра, както и ъглополовящата, за да се получи съотношението HT/TM и позицията на H."
+    },
+    "OLI-2-Областен кръг-2012-11 кл:3:1": {
+      "point_id": "8.15",
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": "medium",
+      "techniques": [
+        "extremal_principle",
+        "erdos_ko_rado"
+      ],
+      "reasoning": "Задачата изисква намиране на максимален брой ъгли с условие за взаимно пресичане – типичен пример за екстремален принцип (подобно на теоремата на Ердош‑Ко‑Радо)."
+    },
+    "OLI-2-Областен кръг-2012-11 кл:4:2": {
+      "point_id": "R.4",
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": "medium",
+      "techniques": [
+        "logarithmic_equations",
+        "domain_analysis",
+        "monotonicity"
+      ],
+      "reasoning": "Задачата изисква работа с вложени логаритми, определяне на областта на дефиниция и използване на монотонност за получаване на единствено решение – типични техники от точка R.4 (показателни и логаритмични уравнения)."
+    },
+    "OLI-2-Областен кръг-2012-11 кл:5:2": {
+      "point_id": null,
+      "point_confidence": "off",
+      "alternative_points": [],
+      "difficulty": null,
+      "techniques": [],
+      "reasoning": "не е олимпиадна задача"
+    },
+    "OLI-2-Областен кръг-2012-11 кл:6:2": {
+      "point_id": "5.7",
+      "point_confidence": "partial",
+      "alternative_points": [
+        "5.3"
+      ],
+      "difficulty": "medium",
+      "techniques": [
+        "polynomial_degree",
+        "polynomial_divisibility"
+      ],
+      "reasoning": "Задачата изисква анализ на степента на полинома и използване на делимост/съотношения между полиноми, което съответства най‑близо на точка 5.7 (делимост на полиноми). Възможно е също да се разглеждат симетрични свойства (5.3), затова се дава частична увереност."
+    },
+    "OLI-2-Областен кръг-2013-10 кл:1:1": {
+      "point_id": null,
+      "point_confidence": "off",
+      "alternative_points": [],
+      "difficulty": null,
+      "techniques": [],
+      "reasoning": "не е олимпиадна задача"
+    },
+    "OLI-2-Областен кръг-2013-10 кл:2:1": {
+      "point_id": "1.4",
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": "medium",
+      "techniques": [
+        "power_of_point",
+        "angle_bisector_theorem",
+        "altitude_properties"
+      ],
+      "reasoning": "Задачата включва ъглополовяща, височина и условието ∠ALC = ∠BHL, което подсказва използването на степен на точка (power of a point) и свойства на ъглополовящата и височината."
+    },
+    "OLI-2-Областен кръг-2013-10 кл:3:1": {
+      "point_id": null,
+      "point_confidence": "off",
+      "alternative_points": [],
+      "difficulty": null,
+      "techniques": [],
+      "reasoning": "не е олимпиадна задача"
+    },
+    "OLI-2-Областен кръг-2013-10 кл:4:1": {
+      "point_id": "8.5",
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": "medium",
+      "techniques": [
+        "stars_and_bars",
+        "binomial_coefficients"
+      ],
+      "reasoning": "Задачата изисква преброяване на k‑орки от цели числа, което се решава със \"stars and bars\" (комбинаторика) и използване на биномни коефициенти за броя на съставните решения."
+    },
+    "OLI-2-Областен кръг-2013-11 кл:1:1": {
+      "point_id": null,
+      "point_confidence": "off",
+      "alternative_points": [],
+      "difficulty": null,
+      "techniques": [],
+      "reasoning": "не е олимпиадна задача"
+    },
+    "OLI-2-Областен кръг-2013-11 кл:2:1": {
+      "point_id": "1.4",
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": "medium",
+      "techniques": [
+        "power_of_point",
+        "similar_triangles"
+      ],
+      "reasoning": "Задачата се решава чрез степен на точка (power of point) – сравняване на произведенията от сегменти от правите SC, SP, SB и др., като се използва и подобие на триъгълници, получени от равните отрязъци AP = PQ."
+    },
+    "OLI-2-Областен кръг-2013-11 кл:3:1": {
+      "point_id": "4.7",
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": "medium",
+      "techniques": [
+        "multiplicative_functions",
+        "divisibility"
+      ],
+      "reasoning": "Задачата изисква използване на свойствата на функцията φ(n), която е мултипликативна, както и аритметични разсъждения за делимост и оценка на величините, за да се намерят всички естествени решения."
+    },
+    "OLI-2-Областен кръг-2013-11 кл:4:1": {
+      "point_id": "9.6",
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": "medium",
+      "techniques": [
+        "ramsey_theorem",
+        "pigeonhole_principle"
+      ],
+      "reasoning": "Задачата се формулира като графов проблем, където съседство се дефинира чрез споделена цифра. Условие \"от всяко 9‑елементно подмножество можем да изберем 3 взаимно съседни\" е типично за теоремата на Рамзи (търсим триъгълник във всяко 9‑върхово подмножество). Основната техника е прилагане на Рамзи и използване на принципа на Дирихле/пухирчето за построяване на горната граница."
+    },
+    "OLI-2-Областен кръг-2014-10 кл:1:1": {
+      "point_id": "5.11",
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": "easy",
+      "techniques": [
+        "substitution",
+        "linear_inequality",
+        "parameter_feasibility"
+      ],
+      "reasoning": "Задачата изисква да се реши линейното уравнение, да се подмени в неравенството и да се намери условието върху параметъра a – типична техника за неравенства с параметър (5.11)."
+    },
+    "OLI-2-Областен кръг-2014-10 кл:2:1": {
+      "point_id": "1.4",
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": "medium",
+      "techniques": [
+        "radical_axis",
+        "power_of_point",
+        "perpendicular_bisector"
+      ],
+      "reasoning": "Конструкцията изисква да се намери окръжност, минаваща през две дадени точки (A и B) и допираща се до дадена окръжност (вписаната). Това се решава чрез използване на радикалната ос (или мощта на точка) – центърът на търсената окръжност лежи на перпендикулярната бисектриса на AB и на радикалната ос спрямо инцръга, което е основната техника от точка 1.4."
+    },
+    "OLI-2-Областен кръг-2014-10 кл:3:1": {
+      "point_id": null,
+      "point_confidence": "off",
+      "alternative_points": [],
+      "difficulty": null,
+      "techniques": [],
+      "reasoning": "не е олимпиадна задача"
+    },
+    "OLI-2-Областен кръг-2014-10 кл:4:1": {
+      "point_id": "2.3",
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": "medium",
+      "techniques": [
+        "inversion"
+      ],
+      "reasoning": "Задачата изисква преобразуване на окръжностите в прави чрез инверсия, за да се сравнят минималните броеве на прави и окръжности, покриващи дадено множество от точки."
+    },
+    "OLI-2-Областен кръг-2014-11 кл:1:1": {
+      "point_id": "5.1",
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": "medium",
+      "techniques": [
+        "vieta_formulas",
+        "quadratic_substitution",
+        "discriminant_analysis",
+        "sign_analysis"
+      ],
+      "reasoning": "Задачата се решава чрез замяна 2^x = t, получаване на квадратно уравнение и използване на формули на Виет за сума и произведение на корените, както и проверка на знака им чрез стойността при t=1. Това е типичен пример за прилагане на Виетови формули при уравнения с параметър."
+    },
+    "OLI-2-Областен кръг-2014-11 кл:2:1": {
+      "point_id": "1.4",
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": "medium",
+      "techniques": [
+        "power_of_point",
+        "radical_axis"
+      ],
+      "reasoning": "Задачата изисква използване на степен на точка (power of a point) и радикална ос, за да се докаже колинеарност между допирната точка, средата на AB и средата на ъглополовящата от C."
+    },
+    "OLI-2-Областен кръг-2014-11 кл:3:1": {
+      "point_id": "5.4",
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": "medium",
+      "techniques": [
+        "rational_roots",
+        "prime_numbers"
+      ],
+      "reasoning": "Задачата изисква прилагане на теоремата за рационални корени (Гаус) за полином с параметър p и използване на свойства на прости числа, за да се провери съществуването на рационален корен."
+    },
+    "OLI-2-Областен кръг-2014-11 кл:4:1": {
+      "point_id": "9.7",
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": "medium",
+      "techniques": [
+        "graph_coloring",
+        "lcm_properties",
+        "parity_argument"
+      ],
+      "reasoning": "Задачата изисква да се докаже, че графът е двуцветен (бипартитен). Основната техника е оцветяване на графи, като се използват свойства на най‑малкото общо кратно за получаване на необходимото условие. Това е типично за точка 9.7 – Оцветявания на графи."
+    },
+    "OLI-2-Областен кръг-2015-10 кл:1:1": {
+      "point_id": null,
+      "point_confidence": "off",
+      "alternative_points": [],
+      "difficulty": null,
+      "techniques": [],
+      "reasoning": "не е олимпиадна задача"
+    },
+    "OLI-2-Областен кръг-2015-10 кл:2:1": {
+      "point_id": "12.2",
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": "medium",
+      "techniques": [
+        "barycentric_coordinates",
+        "ceva_theorem",
+        "midpoint_theorem"
+      ],
+      "reasoning": "Конкурентността на AQ, BP, CN се доказва удобно с барицентрични координати (или масови точки) и теоремата на Цева, като се използват свойства на средните точки на страните и на сегментите DM, DE, DF."
+    },
+    "OLI-2-Областен кръг-2015-10 кл:3:1": {
+      "point_id": "3.6",
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": "medium",
+      "techniques": [
+        "modular_arithmetic",
+        "chinese_remainder_theorem"
+      ],
+      "reasoning": "Задачата се решава чрез разглеждане на израза по модул на простите делители на 455 и след това събиране на получените остатъци с помощта на Китайската теорема за остатъци – основната техника е китайската теорема, подкрепена от модулни сравнения."
+    },
+    "OLI-2-Областен кръг-2015-10 кл:4:1": {
+      "point_id": "8.3",
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": "medium",
+      "techniques": [
+        "bijection",
+        "cyclic_shift",
+        "modular_arithmetic"
+      ],
+      "reasoning": "Задачата се решава чрез построяване на биекция между подмножества с различни остатъци от сума (циклична пермутация σ). Това е типичен пример за двойно броене/биекция в комбинаториката, което съответства на точка 8.3 – Двойно броене."
+    },
+    "OLI-2-Областен кръг-2015-11 кл:1:1": {
+      "point_id": "5.9",
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": "medium",
+      "techniques": [
+        "substitution_exponential",
+        "factorization",
+        "solve_quadratic",
+        "parameter_analysis"
+      ],
+      "reasoning": "Задачата се решава чрез замяна 2^x = t, факторизиране и анализ на корените на полученото квадратно тричлен спрямо параметъра a, което съответства на точка 5.9 – разположение на корени на квадратен тричлен."
+    },
+    "OLI-2-Областен кръг-2015-11 кл:2:1": {
+      "point_id": "1.4",
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": "medium",
+      "techniques": [
+        "power_of_point",
+        "similar_triangles",
+        "angle_chasing"
+      ],
+      "reasoning": "Задачата се решава чрез използване на степен на точка (DI^2 = DP·DO, DL·DC = DP·DO) за доказване на съвместност на точки и чрез подобие на триъгълници за получаване на равенства на ъгли. Това съвпада с точка 1.4 – Степен на точка (радикална ос)."
+    },
+    "OLI-2-Областен кръг-2015-11 кл:3:1": {
+      "point_id": "6.1",
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": "medium",
+      "techniques": [
+        "am_gm"
+      ],
+      "reasoning": "Задачата се решава чрез неравенството AM‑GM (САСГ), което е основната техника от точка 6.1. Решението изисква 2‑3 стъпки и не включва други независими техники."
+    },
+    "OLI-2-Областен кръг-2015-11 кл:4:1": {
+      "point_id": "3.2",
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": "medium",
+      "techniques": [
+        "modular_arithmetic",
+        "induction",
+        "parity"
+      ],
+      "reasoning": "Задачата се решава чрез сравнения по модул (остатъци по модул 2^n), използва индуктивно разширяване на числата чрез добавяне на цифра и разсъждения за четност – това съвпада с точка 3.2 „Сравнения по модул\"."
+    },
+    "OLI-2-Областен кръг-2016-10 кл:1:1": {
+      "point_id": "5.9",
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": "medium",
+      "techniques": [
+        "substitution",
+        "discriminant_analysis"
+      ],
+      "reasoning": "Задачата изисква замяна на променлива (t = 3x^2‑2x) и анализ на дискриминантa на полученото квадратно уравнение, за да се определи броят на реалните корени – типична техника за разположение на корени на квадратен тричлен."
+    },
+    "OLI-2-Областен кръг-2016-10 кл:2:1": {
+      "point_id": "1.4",
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": "medium",
+      "techniques": [
+        "power_of_point",
+        "similar_triangles",
+        "angle_bisector"
+      ],
+      "reasoning": "Основната идея е да се използва степен на точка (AD·BD = DI^2), получена чрез подобие на триъгълници, като DI е ъглополовяща. Това съвпада със STEPS точка 1.4 – Степен на точка (радикална ос)."
+    },
+    "OLI-2-Областен кръг-2016-10 кл:3:1": {
+      "point_id": "8.8",
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": "medium",
+      "techniques": [
+        "recurrence_relation",
+        "combinatorial_reasoning"
+      ],
+      "reasoning": "Задачата се решава чрез построяване на рекурентна връзка за броя на пермутациите, което съответства на точка 8.8 – Рекурентни връзки. Основната техника е рекурентна формула (Фибоначи), подкрепена от комбинаторно разсъждение."
+    },
+    "OLI-2-Областен кръг-2016-10 кл:4:1": {
+      "point_id": "8.3",
+      "point_confidence": "partial",
+      "alternative_points": [
+        "3.1"
+      ],
+      "difficulty": "medium",
+      "techniques": [
+        "prime_factorization",
+        "double_counting",
+        "antichain"
+      ],
+      "reasoning": "Задачата използва разлагане на числото на прости множители и превръщане на делителите в тройки (α,β,γ). Основната идея е да се преброи максималният брой тройки, които не са сравними координатно – типичен пример за двойно броене/конструкция на антиверига в продукт от вериги. Това съвпада най‑близо със STEPS точка 8.3 (Двойно броене), като също така е свързано с делимост (3.1)."
+    },
+    "OLI-2-Областен кръг-2016-11 кл:1:1": {
+      "point_id": "5.10",
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": "medium",
+      "techniques": [
+        "trig_substitution",
+        "quadratic_discriminant",
+        "sign_analysis"
+      ],
+      "reasoning": "Задачата изисква замяна sin и cos с отношение cot (тригонометрична подмяна), получаване на квадратно уравнение и анализ на корените спрямо параметъра a, което съответства на точка 5.10 – Тригонометрични уравнения."
+    },
+    "OLI-2-Областен кръг-2016-11 кл:2:1": {
+      "point_id": "1.4",
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": "medium",
+      "techniques": [
+        "radical_axis",
+        "angle_bisector",
+        "cyclic_quadrilateral"
+      ],
+      "reasoning": "Основната идея е да се използва свойството на радикалната ос (степен на точка) за две вписани окръжности – линиите MN и PQ са полярите на върховете B и D спрямо съответните инциркули, а тяхното пресичане е радикалната ос, която в трапеца минава през средната основа. За доказателството се прибягва и до ъглополовящи (теорема за ъглополовящата) и до конструиране на циклични четириъгълници, което дава правите ъгли и показва че точката S лежи на средната основа."
+    },
+    "OLI-2-Областен кръг-2016-11 кл:3:1": {
+      "point_id": "3.1",
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": "medium",
+      "techniques": [
+        "divisibility",
+        "gcd",
+        "recurrence_relation"
+      ],
+      "reasoning": "Задачата изисква анализ на нелинейна рекурентна редица чрез свойството a_{n+1}^2-4 = a_n^2(a_n^2-4) и използване на делимост/НОД за определяне на най-големия общ делител, което е основната техника от точка 3.1."
+    },
+    "OLI-2-Областен кръг-2016-11 кл:4:1": {
+      "point_id": "7.3",
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": "medium",
+      "techniques": [
+        "functional_inequality",
+        "monotonicity",
+        "iteration",
+        "sequence_convergence"
+      ],
+      "reasoning": "Задачата се решава чрез извеждане на монотонност от даденото функционално неравенство и последващо използване на итеративни редици, което съответства на точка 7.3 – ФУ с монотонност."
+    },
+    "OLI-2-Областен кръг-2017-10 кл:1:1": {
+      "point_id": "R.3",
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": "medium",
+      "techniques": [
+        "exponential_substitution",
+        "polynomial_factorization",
+        "interval_method",
+        "quadratic_inequality",
+        "parameter_analysis",
+        "integer_solution_count"
+      ],
+      "reasoning": "Задачата се решава чрез замяна 3^{2x^2+x-a}=u, факторизиране на получен полином, интервален метод за определяне на знака, решаване на квадратично неравенство с параметър и преброяване на целочислени решения – типични техники за степенуване и логаритми, съответстващи на точка R.3."
+    },
+    "OLI-2-Областен кръг-2017-10 кл:2:1": {
+      "point_id": "1.5",
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": "medium",
+      "techniques": [
+        "inscribed_angle",
+        "thales_theorem",
+        "congruence",
+        "parallelism",
+        "similar_triangles"
+      ],
+      "reasoning": "Задачата се решава чрез вписани ъгли (Талесовата теорема) за получаване на прави ъгли, конгруентност на триъгълници за получаване на успоредни страни и след това подобие на триъгълници. Това съответства на STEPS точка 1.5 – \"Вписани ъгли, Талес, симетрали\"."
+    },
+    "OLI-2-Областен кръг-2017-10 кл:3:2": {
+      "point_id": "7.7",
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": "medium",
+      "techniques": [
+        "mathematical_induction",
+        "floor_function",
+        "inequality_bounding"
+      ],
+      "reasoning": "Задачата изисква работа с нелинейна рекурентна редица, доказана чрез индукция и оценка на стойността на ⌊√(... )⌋ чрез неравенства между квадрати."
+    },
+    "OLI-2-Областен кръг-2017-10 кл:4:2": {
+      "point_id": "8.11",
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": "medium",
+      "techniques": [
+        "double_counting",
+        "block_designs",
+        "combinatorial_counting"
+      ],
+      "reasoning": "Задачата се решава чрез двойно броене и свойства на балансираните непълни блокови дизайни (BIBD), което съответства на точка 8.11 – Блок‑дизайни."
+    },
+    "OLI-2-Областен кръг-2017-11 кл:1:1": {
+      "point_id": null,
+      "point_confidence": "off",
+      "alternative_points": [],
+      "difficulty": null,
+      "techniques": [],
+      "reasoning": "не е олимпиадна задача"
+    },
+    "OLI-2-Областен кръг-2017-11 кл:2:1": {
+      "point_id": null,
+      "point_confidence": "off",
+      "alternative_points": [],
+      "difficulty": null,
+      "techniques": [],
+      "reasoning": "не е олим Olympiad задача, а типична геометрична задача от учебник"
+    },
+    "OLI-2-Областен кръг-2017-11 кл:3:2": {
+      "point_id": "9.10",
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": "medium",
+      "techniques": [
+        "divisibility",
+        "interval_analysis",
+        "winning_strategy"
+      ],
+      "reasoning": "Задачата изисква построяване на печеливша стратегия в игра, като се използва делимост и интервали от степени на 2 – типичен пример за техника от „Игри – печеливши стратегии”."
+    },
+    "OLI-2-Областен кръг-2017-11 кл:4:3": {
+      "point_id": "9.1",
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": "medium",
+      "techniques": [
+        "graph_theory",
+        "extremal_combinatorics",
+        "induction",
+        "matching"
+      ],
+      "reasoning": "Задачата се решава чрез моделиране на двойките като ръбове на граф и използване на индуктивно доказателство за съществуване на голямо съвпадение (matching). Това е основна техника от теорията на графите."
+    },
+    "OLI-2-Областен кръг-2018-10 кл:1:1": {
+      "point_id": null,
+      "point_confidence": "off",
+      "alternative_points": [],
+      "difficulty": null,
+      "techniques": [],
+      "reasoning": "не е олимпиадна задача"
+    },
+    "OLI-2-Областен кръг-2018-10 кл:2:1": {
+      "point_id": null,
+      "point_confidence": "off",
+      "alternative_points": [],
+      "difficulty": null,
+      "techniques": [],
+      "reasoning": "не е олимпиадна задача"
+    },
+    "OLI-2-Областен кръг-2018-10 кл:3:1": {
+      "point_id": "3.6",
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": "medium",
+      "techniques": [
+        "chinese_remainder_theorem",
+        "pigeonhole_principle",
+        "modular_arithmetic"
+      ],
+      "reasoning": "Основната техника в решението е приложението на Китайската теорема за остатъци за конструиране на m, подкрепена от разсъждения за остатъци (модулно деление) и принципа на Дирихле/пigeonhole за избор на подходящи числа."
+    },
+    "OLI-2-Областен кръг-2018-10 кл:4:1": {
+      "point_id": "1.4",
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": "hard",
+      "techniques": [
+        "power_of_point",
+        "radical_axis",
+        "angle_bisector"
+      ],
+      "reasoning": "Задаччa е съвсем съвместно с степен на точка и радикална ос, а това е основната техника"
+    },
+    "OLI-2-Областен кръг-2018-11 кл:1:1": {
+      "point_id": "R.4",
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": "medium",
+      "techniques": [
+        "exponential_substitution",
+        "sign_analysis"
+      ],
+      "reasoning": "Задачата изисква преобразуване на показателни изрази (4^x, 2^{x+1}) в променлива t=2^x и след това решаване на полученото рационално неравенство чрез метод на интервалите – типична техника за показателни/логаритмични уравнения и неравенства."
+    },
+    "OLI-2-Областен кръг-2018-11 кл:2:1": {
+      "point_id": "R.6",
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": "medium",
+      "techniques": [
+        "gp_definition",
+        "rational_expression"
+      ],
+      "reasoning": "Задачата се решава чрез условието за геометрична прогресия (r+b)^2 = (r+a)(r+c) и изразяване на r като рационална дроб, което съответства на точка R.6 – Прогресии (АП, ГП)."
+    },
+    "OLI-2-Областен кръг-2018-11 кл:3:1": {
+      "point_id": "2.11",
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": "medium",
+      "techniques": [
+        "orthocenter",
+        "angle_bisector",
+        "similar_triangles",
+        "thales_theorem",
+        "cyclic_quadrilateral",
+        "parallelism",
+        "midpoint"
+      ],
+      "reasoning": "Задачата се базира върху свойства на ортоцентъра (H) и ъглополовящите, използва сходни триъгълници и теоремата на Талес за прави, както и цикличност и успоредност, за да докаже, че HK дели отсечката BC. Това съвпада с точка 2.11 – ортоцентър и ортоцентрични конфигурации."
+    },
+    "OLI-2-Областен кръг-2018-11 кл:4:1": {
+      "point_id": "8.10",
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": "medium",
+      "techniques": [
+        "induction",
+        "contradiction"
+      ],
+      "reasoning": "Задачата се решава чрез индуктивно построяване (индукция в комбинаториката) – оцветяваме колоните една по една и при невъзможност получаваме противоречие с условието за уникален общ столб. Това е типичен пример за техника 8.10 „Индукция в комбинаториката“."
+    },
+    "OLI-2-Областен кръг-2019-10 кл:1:1": {
+      "point_id": null,
+      "point_confidence": "off",
+      "alternative_points": [],
+      "difficulty": null,
+      "techniques": [],
+      "reasoning": "не е олимписка олим? задача"
+    },
+    "OLI-2-Областен кръг-2019-10 кл:2:1": {
+      "point_id": "12.2",
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": "medium",
+      "techniques": [
+        "barycentric_coordinates",
+        "vectors",
+        "centroid"
+      ],
+      "reasoning": "Задачата се решава чрез работа с медианси (центроиди) и векторен подход, което е типично за техника „Барицентрични координати“ (12.2). Използва се съотношението на сегменти, получено от свойства на центроидите, за да се намери делението на отсечката FQ – това е основната техника."
+    },
+    "OLI-2-Областен кръг-2019-10 кл:3:1": {
+      "point_id": "5.11",
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": "medium",
+      "techniques": [
+        "irrational_equations",
+        "parameter_analysis",
+        "squaring"
+      ],
+      "reasoning": "Задачата изисква решаване на ирационално уравнение с параметър a (и използва квадриране и проверка на областта на дефиниция), което съответства на точка 5.11 – Ирационални уравнения и неравенства с параметър."
+    },
+    "OLI-2-Областен кръг-2019-10 кл:4:1": {
+      "point_id": "1.2",
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": "medium",
+      "techniques": [
+        "ceva_theorem",
+        "similar_triangles"
+      ],
+      "reasoning": "Основната техника е Теоремата на Чева (Ceva), използвана за доказване на конкарентност. За получаване на необходимите пропорции се прилагат подобия на триъгълници, затова се включва и техниката similar_triangles."
+    },
+    "OLI-2-Областен кръг-2019-10 кл:5:2": {
+      "point_id": null,
+      "point_confidence": "off",
+      "alternative_points": [],
+      "difficulty": null,
+      "techniques": [],
+      "reasoning": "не е олимпиадна задача"
+    },
+    "OLI-2-Областен кръг-2019-10 кл:6:2": {
+      "point_id": "5.7",
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": "medium",
+      "techniques": [
+        "polynomial_divisibility",
+        "modular_arithmetic",
+        "base_expansion"
+      ],
+      "reasoning": "Задачата се решава чрез последователно изнасяне на константните членове, използвайки делимостта на полинома от вида f(x)-a0 = x·g(x) и проверка на остатъци по модул, което съответства на точка 5.7 – Делимост на полиноми."
+    },
+    "OLI-2-Областен кръг-2019-10 кл:7:2": {
+      "point_id": null,
+      "point_confidence": "off",
+      "alternative_points": [],
+      "difficulty": null,
+      "techniques": [],
+      "reasoning": "не е олимпиадна задача"
+    },
+    "OLI-2-Областен кръг-2019-10 кл:8:2": {
+      "point_id": "5.10",
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": "medium",
+      "techniques": [
+        "trigonometric_identities",
+        "trigonometric_equations"
+      ],
+      "reasoning": "Задачата се решава чрез тригонометрични тъждества (sin(γ+β)=sinα) и преобразуване на система от тригонометрични уравнения – основната техника е решаване на тригонометрични уравнения."
+    },
+    "OLI-2-Областен кръг-2019-11 кл:11:2": {
+      "point_id": "1.4",
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": "medium",
+      "techniques": [
+        "power_of_point",
+        "similar_triangles"
+      ],
+      "reasoning": "Основната идея е да се използва степен на точка (power of a point) за връзка между разстоянията от O до страните и дължините на сегментите, след което се прилагат подобия между триъгълници, образувани от допирателните и диаметралните точки. Това съвпада с точка 1.4 – Степен на точка. Радикална ос."
+    },
+    "OLI-2-Областен кръг-2019-11 кл:12:2": {
+      "point_id": null,
+      "point_confidence": "off",
+      "alternative_points": [],
+      "difficulty": null,
+      "techniques": [],
+      "reasoning": "не е олимпиадна задача"
+    },
+    "OLI-2-Областен кръг-2019-11 кл:8:1": {
+      "point_id": null,
+      "point_confidence": "partial",
+      "alternative_points": [
+        "5.3",
+        "2.1"
+      ],
+      "difficulty": "medium",
+      "techniques": [
+        "symmetric_polynomials",
+        "cyclic_symmetry",
+        "case_analysis"
+      ],
+      "reasoning": "Условието е циклично симетрично и решението се базира на работа със симетрични полиноми, пропорции и разглеждане на случаи (подредба на a, b, c). Това подсказва точка 5.3 (симетрични полиноми) или 2.1 (хармонично отношение) като възможни главни STEPS точки."
+    },
+    "OLI-2-Областен кръг-2020-11 кл:11:2": {
+      "point_id": "8.1",
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": "medium",
+      "techniques": [
+        "pigeonhole_principle",
+        "counting_argument"
+      ],
+      "reasoning": "Задачата се решава чрез директно броене и приложение на принципа на Дирихле (pigeonhole principle) за да се покаже, че съществува позиция i, чиято единица не се покрива от двойни единици, което води до t_{n-1}(A) ≥ |A|-1."
+    },
+    "OLI-2-Областен кръг-2020-11 кл:12:2": {
+      "point_id": null,
+      "point_confidence": "off",
+      "alternative_points": [],
+      "difficulty": null,
+      "techniques": [],
+      "reasoning": "не е олимпиадна задача"
+    },
+    "OLI-2-Областен кръг-2020-11 кл:8:1": {
+      "point_id": "5.1",
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": "medium",
+      "techniques": [
+        "vieta_formulas",
+        "discriminant_analysis"
+      ],
+      "reasoning": "Задачата се решава чрез прилагане на формулите на Виет за корените на квадратичните уравнения и проверка на дискриминантата за реалност/натуралност на корените, което съответства на точка 5.1 – Формули на Виет."
+    },
+    "OLI-2-Областен кръг-2021-10 кл:1:1": {
+      "point_id": null,
+      "point_confidence": "off",
+      "alternative_points": [],
+      "difficulty": null,
+      "techniques": [],
+      "reasoning": "не е олимпиадна задача"
+    },
+    "OLI-2-Областен кръг-2021-10 кл:2:1": {
+      "point_id": "1.4",
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": "medium",
+      "techniques": [
+        "power_of_point",
+        "similar_triangles"
+      ],
+      "reasoning": "Задачата се решава чрез степен на точка (power of a point) и съответните подобия, което я свързва главно с точка 1.4 – Степен на точка. Радикална ос."
+    },
+    "OLI-2-Областен кръг-2021-10 кл:3:1": {
+      "point_id": "4.6",
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": "medium",
+      "techniques": [
+        "sum_of_powers",
+        "diophantine_equation"
+      ],
+      "reasoning": "Задачата изисква изчисляване на сума от вида ∑k·2^k (техника „Суми на степени“) и след това решаване на диофантово уравнение, за да се провери дали полученото число е точен квадрат."
+    },
+    "OLI-2-Областен кръг-2021-10 кл:4:1": {
+      "point_id": null,
+      "point_confidence": "off",
+      "alternative_points": [],
+      "difficulty": null,
+      "techniques": [],
+      "reasoning": "не е олимпиадна задача"
+    },
+    "OLI-2-Областен кръг-2021-11 кл:1:1": {
+      "point_id": "R.4",
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": "medium",
+      "techniques": [
+        "exponential_substitution",
+        "quadratic_equation",
+        "discriminant_analysis",
+        "case_analysis"
+      ],
+      "reasoning": "Уравнението се преобразува чрез замяна 2^x = t, получава се квадратично уравнение в t, което се решава чрез дискриминант и разглеждане на знаците, типично за задачи от категория \"Показателни и логаритмични уравнения\"."
+    },
+    "OLI-2-Областен кръг-2021-11 кл:2:1": {
+      "point_id": "1.4",
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": "medium",
+      "techniques": [
+        "power_of_point",
+        "tangential_quadrilateral",
+        "incircle_properties"
+      ],
+      "reasoning": "Задачата изисква използване на степен на точка (радикална ос) за връзка между разстоянията от C до общата окръжност и страните на квадрилатерала, както и свойства на вписаните окръжности в триъгълник и вписан четириъгълник."
+    },
+    "OLI-2-Областен кръг-2021-11 кл:3:1": {
+      "point_id": "4.5",
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": "medium",
+      "techniques": [
+        "prime_numbers",
+        "sum_of_primes",
+        "diophantine_equation"
+      ],
+      "reasoning": "Задачата се свежда до сравнение на сума на прости числа с квадратична функция, което изисква техники от темата „Прости числа“ (4.5) и решаване на диофантова уравнение."
+    },
+    "OLI-2-Областен кръг-2021-11 кл:4:1": {
+      "point_id": "3.1",
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": "easy",
+      "techniques": [
+        "divisibility"
+      ],
+      "reasoning": "Задачата се решава чрез свойството a|b и b|a ⇒ a=b, което е основна техника от раздела за делимост (3.1)."
+    },
+    "OLI-2-Областен кръг-2022-10 кл:1:1": {
+      "point_id": "5.11",
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": "medium",
+      "techniques": [
+        "irrational_equation",
+        "parameter_analysis",
+        "case_work"
+      ],
+      "reasoning": "Задачата изисква решаване на система, където се появява иррационално уравнение/неравенство с параметър a. Това попада в точка 5.11 – Ирационални уравнения и неравенства с параметър. Решението се базира на разглеждане на случаи, трансформиране на неравенството и анализ на параметъра, което е типично за тази техника."
+    },
+    "OLI-2-Областен кръг-2022-10 кл:2:1": {
+      "point_id": null,
+      "point_confidence": "off",
+      "alternative_points": [],
+      "difficulty": null,
+      "techniques": [],
+      "reasoning": "не е олимпиадна задача"
+    },
+    "OLI-2-Областен кръг-2022-10 кл:3:1": {
+      "point_id": "1.4",
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": "medium",
+      "techniques": [
+        "power_of_point",
+        "radical_axis",
+        "cyclic_quadrilateral",
+        "angle_chasing"
+      ],
+      "reasoning": "Задачата изисква използването на степен на точка (power of a point) и радикална ос за работа с конциклените точки C, M, N, T, както и за пресичане на прави в точките P, Q, K, L. Това е основната техника, съответстваща на STEPS точка 1.4."
+    },
+    "OLI-2-Областен кръг-2022-10 кл:4:1": {
+      "point_id": "8.1",
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": "medium",
+      "techniques": [
+        "pigeonhole_principle",
+        "counting_substrings"
+      ],
+      "reasoning": "Задачата се решава чрез броене на 4‑цифрови подчисла и прилагане на принципа на Дирихле (pigeonhole principle), което е основната техника."
+    },
+    "OLI-2-Областен кръг-2022-11 кл:1:3": {
+      "point_id": "5.10",
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": "easy",
+      "techniques": [
+        "substitution",
+        "quadratic_inequality",
+        "trigonometric_inequality"
+      ],
+      "reasoning": "Задачата се решава чрез въвеждане на нова променлива t = sin x (substitution) и решаване на квадратно неравенство (quadratic_inequality), след което се връща към оригиналната тригонометрична променлива – типична техника за тригонометрични уравнения/неравенства (5.10)."
+    },
+    "OLI-2-Областен кръг-2022-11 кл:2:3": {
+      "point_id": "1.5",
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": "medium",
+      "techniques": [
+        "thales_theorem",
+        "similar_triangles"
+      ],
+      "reasoning": "Задачата се решава чрез построяване на успоредни отсечки и прилагане на теоремата на Талес (пропорционалност), което води до подобни триъгълници и изчисляване на търсените отношения."
+    },
+    "OLI-2-Областен кръг-2022-11 кл:3:3": {
+      "point_id": null,
+      "point_confidence": "off",
+      "alternative_points": [],
+      "difficulty": null,
+      "techniques": [],
+      "reasoning": "не е олимпиадна задача"
+    },
+    "OLI-2-Областен кръг-2022-11 кл:4:3": {
+      "point_id": "8.3",
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": "medium",
+      "techniques": [
+        "double_counting",
+        "pigeonhole_principle"
+      ],
+      "reasoning": "Задачата се решава чрез двойно броене – от една страна броим всички двоични низове от дължина n, от друга – броим колко различни низове се получават от всяка добра редица от дължина n‑1 (n+1). Това дава основната оценка 2^n/(n+1) ≤ a_n. Оценката a_n ≤ 2^{n‑2} се получава от прост конструктивен аргумент. Следователно главната техника е двойно броене (double counting) с елемент на принципа на гнездене (pigeonhole)."
+    },
+    "OLI-2-Областен кръг-2022-11 кл:None:1": {
+      "point_id": "2.10",
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": "medium",
+      "techniques": [
+        "angle_bisector_theorem",
+        "similar_triangles",
+        "sine_rule"
+      ],
+      "reasoning": "Задачата се решава чрез свойствата на ъглополовящата (обобщена теорема), използвайки подобие на триъгълници и синусовата теорема за изразяване на отношенията между страните и ъглите."
+    },
+    "OLI-2-Областен кръг-2024-10 кл:10:4": {
+      "point_id": "8.1",
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": "hard",
+      "techniques": [
+        "pigeonhole_principle",
+        "modular_arithmetic",
+        "induction"
+      ],
+      "reasoning": "Основната техника е принципът на Дирихле (пigeonhole) за остатъци по модул 5, комбинирана с индукция и построения за оцветяване на правоъгълници."
+    },
+    "OLI-2-Областен кръг-2024-10 кл:11:4": {
+      "point_id": "5.12",
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": "medium",
+      "techniques": [
+        "reciprocal_equation",
+        "substitution_t_plus_inverse",
+        "discriminant_analysis",
+        "vieta_relations"
+      ],
+      "reasoning": "Задачата се решава чрез преобразуване на полинома с обратна симетрия в уравнение от тип x+1/x=t (реципрочно уравнение), последващ анализ на дискриминантата и използване на Виетови формули за параметъра a. Това съвпада с точка 5.12 – Реципрочни уравнения."
+    },
+    "OLI-2-Областен кръг-2024-10 кл:8:2": {
+      "point_id": "5.1",
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": "medium",
+      "techniques": [
+        "discriminant",
+        "viete_formulas",
+        "irrational_equations"
+      ],
+      "reasoning": "Задачата се решава чрез намиране на корените на квадратични уравнения с радикали (дискриминанта) и използване на формулите на Виет за сума и произведение на корените, за да се построи ново квадратично уравнение. Това съвпада с точка 5.1 – Формули на Виет."
+    },
+    "OLI-2-Областен кръг-2024-10 кл:9:2": {
+      "point_id": "9.5",
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": "medium",
+      "techniques": [
+        "turans_theorem",
+        "bipartite_graph",
+        "parity_argument"
+      ],
+      "reasoning": "Задачата се решава чрез наблюдение, че графът на полетите с цена 1 трябва да е двуделен (няма нечетни цикли). За да се минимизира общата сума се максимизира броят на ребрата в двуделния граф, което е точно приложението на Теоремата на Туран (максимален брой ребра в двуделен граф се постига при равни части)."
+    },
+    "OLI-2-Областен кръг-2024-11 кл:1:2": {
+      "point_id": "5.11",
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": "medium",
+      "techniques": [
+        "irrational_equations",
+        "parameter_analysis",
+        "discriminant",
+        "vieta_formulas",
+        "substitution_t_plus_inverse"
+      ],
+      "reasoning": "Задачата изисква работа с ирационални уравнения, включва параметър a, използва дискриминант и Виетови формули за изследване на корените, както и замяната t = x+1/x – всичко това попада в точка 5.11 „Ирационални уравнения и неравенства с параметър“."
+    },
+    "OLI-2-Областен кръг-2024-11 кл:2:2": {
+      "point_id": "2.10",
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": "medium",
+      "techniques": [
+        "angle_bisector_theorem",
+        "law_of_sines"
+      ],
+      "reasoning": "Задачата се решава чрез прилагане на обобщената теорема за ъглополовящата (за да се изразят отношенията между точките K, L, M, N) и синусовата теорема (за получаване на връзки между дължините KL, MN и страните AB, CD)."
+    },
+    "OLI-2-Областен кръг-2024-11 кл:3:3": {
+      "point_id": "4.2",
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": "medium",
+      "techniques": [
+        "diophantine_quadratic",
+        "perfect_square_discriminant",
+        "difference_of_squares",
+        "factorization"
+      ],
+      "reasoning": "Задачата изисква решаване на система от квадратични диофантови уравнения чрез изискване дискриминантите да са точни квадрати и използване на разлагане на разлика от квадрати, което попада в точка 4.2 – Диофантови – квадратни."
+    },
+    "OLI-2-Областен кръг-2024-11 кл:4:3": {
+      "point_id": "6.1",
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": "medium",
+      "techniques": [
+        "am_gm",
+        "double_counting"
+      ],
+      "reasoning": "Основната техника е неравенството AM‑GM (САСГ) за получаване на граница x_i + y_i ≥ 2√(x_i y_i). Решението използва и двойно броене (сумиране по числа и по редове/колони), но главната точка е САСГ, която съответства на STEPS 6.1."
+    },
+    "OLI-2-Областен кръг-2024-11 кл:5:3": {
+      "point_id": "1.4",
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": "medium",
+      "techniques": [
+        "power_of_point",
+        "radical_axis"
+      ],
+      "reasoning": "Условието ∠I₁MI₂ = 90° подсказва, че точка M има еднаква мощност спрямо вписаните окръжности на ΔADC и ΔBDC, което води до използване на степен на точка (power of a point) и радикална ос (radical axis) като основна техника за доказване, че AC = BC."
+    },
+    "OLI-2-Областен кръг-2025-10 кл:1:1": {
+      "point_id": "5.11",
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": "medium",
+      "techniques": [
+        "irrational_equations",
+        "squaring",
+        "parameter_substitution",
+        "checking_domain"
+      ],
+      "reasoning": "Задачата е иррационално уравнение с параметър a, решава се чрез заместване на конкретните стойности, проверка на областта на дефиниция, квадриране и последващо факторизиране/решаване на получен полином."
+    },
+    "OLI-2-Областен кръг-2025-10 кл:2:1": {
+      "point_id": "1.4",
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": "medium",
+      "techniques": [
+        "power_of_point",
+        "radical_axis"
+      ],
+      "reasoning": "Задачата изисква използването на степен на точка (power of a point) и радикална ос, за да се покаже, че точка E е равноотдалечена от X, Y и F, т.е. е център на описаната около триъгълника FXY окръжност."
+    },
+    "OLI-2-Областен кръг-2025-10 кл:3:1": {
+      "point_id": "8.1",
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": "medium",
+      "techniques": [
+        "pigeonhole_principle"
+      ],
+      "reasoning": "Задачата изисква гарантирано покритие на множеството от 1 до 2025 чрез избиране на страна от всяко от k картончета, което се решава чрез принципа на Дирихле (pigeonhole principle)."
+    },
+    "OLI-2-Областен кръг-2025-10 кл:4:1": {
+      "point_id": "3.7",
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": "medium",
+      "techniques": [
+        "multiplicative_order",
+        "primitive_root",
+        "modular_congruence"
+      ],
+      "reasoning": "Задачата изисква да се използва понятието за ред (order) на 2 и 3 по модул p, което е част от темата за примитивни корени и показател. Това е основната техника за определяне на възможните прости числа p."
+    },
+    "OLI-2-Областен кръг-2025-11 кл:1:1": {
+      "point_id": null,
+      "point_confidence": "off",
+      "alternative_points": [],
+      "difficulty": null,
+      "techniques": [],
+      "reasoning": "не е олимпиадна задача"
+    },
+    "OLI-2-Областен кръг-2025-11 кл:2:1": {
+      "point_id": "1.4",
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": "hard",
+      "techniques": [
+        "power_of_point",
+        "radical_axis",
+        "similar_triangles"
+      ],
+      "reasoning": "Задачата включва окръжност, която минава през C и допира се до AB в A, както и пресичане с медианата и правата BQ. Основната техника е степен на точка (power of a point) и радикалната ос, които водят до успоредност PR || AB."
+    },
+    "OLI-2-Областен кръг-2025-11 кл:3:1": {
+      "point_id": "6.7",
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": "medium",
+      "techniques": [
+        "rearrangement_inequality"
+      ],
+      "reasoning": "Задачата се решава чрез прилагане на неравенството за пренареждане (rearrangement), което дава максималната сума на абсолютните разлики, като се съчетаят най‑големите елементи с най‑малките позиции. Това е единствената съществена техника, съответстваща на точка 6.7."
+    },
+    "OLI-2-Областен кръг-2025-11 кл:4:1": {
+      "point_id": "4.5",
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": "medium",
+      "techniques": [
+        "prime_divisors",
+        "order_of_two_mod_p",
+        "euler_theorem"
+      ],
+      "reasoning": "Задачата изисква да се покаже съществуването на просто число p, за което 2^n дели p‑1. Това се решава чрез разглеждане на прост делител на подходящо конструирано число и използване на свойствата на реда на 2 в групата (Z/pZ)^*, което попада в темата „Прости числа“ (4.5) и включва техники за работа с прост делител и ред на елемент (order_of_two_mod_p) и евентуално Ейлеровата теорема."
+    },
+    "OLI-2-Областен кръг-2026-10 кл:1:1": {
+      "point_id": "R.6",
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": "medium",
+      "techniques": [
+        "arithmetic_progression_sum",
+        "telescoping_sum"
+      ],
+      "reasoning": "Задачата изисква използване на формулата за сума на аритметична прогресия и телескопиращото събиране на 1/(a_k·a_{k+1}), което я поставя под точка R.6 – Прогресии (АП, ГП)."
+    },
+    "OLI-2-Областен кръг-2026-10 кл:2:1": {
+      "point_id": "2.5",
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": "medium",
+      "techniques": [
+        "poles_and_polars",
+        "power_of_point",
+        "angle_bisector"
+      ],
+      "reasoning": "Задачата се решава чрез полярно‑полярна конфигурация (полюси и поляри) – основната техника е полюс‑поляр, като се използват и свойства на степен на точка и ъглополовяща."
+    },
+    "OLI-2-Областен кръг-2026-10 кл:3:1": {
+      "point_id": "4.7",
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": "medium",
+      "techniques": [
+        "multiplicative_functions",
+        "prime_factorization",
+        "divisor_count"
+      ],
+      "reasoning": "Задачата изисква анализ на свойството d_{mn}=d_m·d_n – типично за мултипликативни функции и използва разлагане на числото на прости множители, за да се определи максималният брой делители."
+    },
+    "OLI-2-Областен кръг-2026-10 кл:4:1": {
+      "point_id": "1.11",
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": "medium",
+      "techniques": [
+        "pick_theorem"
+      ],
+      "reasoning": "Задачата се решава чрез Приковата формула (Pick's theorem) за решетъчни многоъгълници, която свързва площта с броя на вътрешните и граничните решетъчни точки и позволява да се намери минималната сума от площи."
+    },
+    "OLI-2-Областен кръг-2026-11 кл:1:1": {
+      "point_id": "5.4",
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": "medium",
+      "techniques": [
+        "rational_root_theorem",
+        "synthetic_division"
+      ],
+      "reasoning": "Задачата изисква намиране на реални корени на полином чрез рационален корен (теорема за рационални корени) и последващо деление, което съответства на точка 5.4 – Рационални корени. Решението включва няколко стъпки (търсене на кандидат‑корени, проверка, деление), което я прави средно трудна."
+    },
+    "OLI-2-Областен кръг-2026-11 кл:2:1": {
+      "point_id": "1.6",
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": "medium",
+      "techniques": [
+        "sine_cosine_theorem",
+        "similar_triangles"
+      ],
+      "reasoning": "Задачата изисква да се използва синусовата/косинусовата теорема за намиране на страни и ъгли в трапеца, като се комбинира с подобие на триъгълници, за да се изразят дадените дължини и ъгъл α/2. Това е основната техника, отговаряща на точка 1.6."
+    },
+    "OLI-2-Областен кръг-2026-11 кл:3:1": {
+      "point_id": null,
+      "point_confidence": "off",
+      "alternative_points": [],
+      "difficulty": null,
+      "techniques": [],
+      "reasoning": "не е олимпиадна задача"
+    },
+    "OLI-2-Областен кръг-2026-11 кл:4:1": {
+      "point_id": "8.1",
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": "easy",
+      "techniques": [
+        "pigeonhole_principle",
+        "averaging",
+        "graph_path"
+      ],
+      "reasoning": "Задачата се решава чрез прилагане на принципа на Дирихле (пigeonhole) за оценка на сумата по път, като се разглежда графът на квадратната решетка и се използва проста оценка на средната стойност на числата."
+    }
+  },
+  "budget": {
+    "date": "2026-10-19",
+    "spent_usd": 2.074999999999978,
+    "calls": 343
+  }
+}

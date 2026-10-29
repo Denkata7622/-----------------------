@@ -1,0 +1,128 @@
+{
+  "_meta": {
+    "pdf": "C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\Задачи_Минали_Години\\Областен\\OLI-2-Областен кръг-2022-10 кл-probs.pdf",
+    "paired_with": "C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\Задачи_Минали_Години\\Областен\\OLI-2-Областен кръг-2022-10 кл-sol.pdf",
+    "level": 1,
+    "type": "probs",
+    "analyzed_at": "2026-10-16T21:31:59.439870",
+    "model": "deepseek/deepseek-v3.2",
+    "text_length": 11967,
+    "paired_text_length": 12311
+  },
+  "problems": [
+    {
+      "num": 1,
+      "topic": "algebra",
+      "theorems": [],
+      "techniques": [
+        "symmetry_analysis",
+        "substitution",
+        "inequality_estimation",
+        "case_checking"
+      ],
+      "concepts": [
+        "system_of_equations",
+        "absolute_value",
+        "necessary_condition",
+        "uniqueness_of_solution",
+        "parameter_analysis"
+      ],
+      "difficulty": "standard",
+      "notes": "Задачата използва симетрия (x, y) -> (-x, y), за да установи необходимо условие x=0. След това чрез заместване и оценка на изрази се намират допустимите параметри и се проверява единственост."
+    },
+    {
+      "num": 2,
+      "topic": "geometry",
+      "theorems": [],
+      "techniques": [
+        "symmetry_construction",
+        "angle_chasing",
+        "cyclic_quadrilaterals",
+        "collinearity"
+      ],
+      "concepts": [
+        "triangle_geometry",
+        "altitudes",
+        "reflection",
+        "inscribed_angles",
+        "angle_equality",
+        "cyclic_quadrilateral_properties"
+      ],
+      "difficulty": "hard",
+      "notes": "Ключовата идея е да се отрази точка P относно BC, за да се получи цикличност и да се докаже съвпадение на точки, което води до намиране на ъгъл."
+    },
+    {
+      "num": 3,
+      "topic": "number_theory",
+      "theorems": [],
+      "techniques": [
+        "induction",
+        "recursive_definition",
+        "symmetrization",
+        "cancellation"
+      ],
+      "concepts": [
+        "divisibility",
+        "integer_valued_functions",
+        "recursive_sequences",
+        "product_of_differences",
+        "generalization"
+      ],
+      "difficulty": "olympic",
+      "notes": "Задачата се свежда до дефиниране на обобщена функция f(m,n) и доказване на свойства (симетричност, рекурсия, цялост) чрез индукция по m+n."
+    },
+    {
+      "num": 4,
+      "topic": "combinatorics",
+      "theorems": [
+        "Pigeonhole_Principle"
+      ],
+      "techniques": [
+        "explicit_construction",
+        "pigeonhole_principle",
+        "contradiction",
+        "extension_argument"
+      ],
+      "concepts": [
+        "strings_of_digits",
+        "substrings",
+        "exhaustive_occurrence",
+        "Dirichlet_principle"
+      ],
+      "difficulty": "hard",
+      "notes": "Част а) се решава с пример. Част б) използва факта, че има точно 16 различни 4-цифрени подчисла, следователно богатото число трябва да съдържа всички. След това се разглежда удължено число и се прилага принцип на Дирихле за индекси, за да се докаже равенство на тройките."
+    }
+  ],
+  "unique_concepts": [
+    "system_of_equations",
+    "absolute_value",
+    "necessary_condition",
+    "uniqueness_of_solution",
+    "parameter_analysis",
+    "symmetry_analysis",
+    "inequality_estimation",
+    "triangle_geometry",
+    "altitudes",
+    "reflection",
+    "inscribed_angles",
+    "cyclic_quadrilateral_properties",
+    "angle_chasing",
+    "collinearity",
+    "divisibility",
+    "integer_valued_functions",
+    "recursive_sequences",
+    "product_of_differences",
+    "induction",
+    "recursive_definition",
+    "symmetrization",
+    "cancellation",
+    "strings_of_digits",
+    "substrings",
+    "exhaustive_occurrence",
+    "Pigeonhole_Principle",
+    "explicit_construction",
+    "contradiction",
+    "extension_argument"
+  ],
+  "confidence": 0.95
+}

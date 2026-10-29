@@ -1,0 +1,143 @@
+{
+  "_meta": {
+    "pdf": "C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\Задачи_Минали_Години\\Областен\\OLI-2-Областен кръг-2004-11 кл-sol.pdf",
+    "paired_with": null,
+    "level": 1,
+    "type": "sol",
+    "analyzed_at": "2026-10-18T12:36:50.099774",
+    "model": "deepseek/deepseek-v3.2",
+    "text_length": 10270,
+    "paired_text_length": 0
+  },
+  "problems": [
+    {
+      "num": 1,
+      "topic": "algebra",
+      "theorems": [],
+      "techniques": [
+        "substitution",
+        "trigonometric identities",
+        "solving equations"
+      ],
+      "concepts": [
+        "geometric progression",
+        "trigonometric equations",
+        "sine and cosine",
+        "solving for parameters"
+      ],
+      "difficulty": "standard",
+      "notes": "Уравнение, свързано с геометрична прогресия и тригонометрично уравнение. Стандартна задача за параметър."
+    },
+    {
+      "num": 2,
+      "topic": "geometry",
+      "theorems": [
+        "Law of Sines"
+      ],
+      "techniques": [
+        "angle chasing",
+        "trigonometric manipulation"
+      ],
+      "concepts": [
+        "triangle geometry",
+        "angle equality",
+        "trigonometric identities in triangles",
+        "tangent function monotonicity"
+      ],
+      "difficulty": "standard",
+      "notes": "Доказване на равенство на ъгли в триъгълник с помощта на синусова теорема и тангенс."
+    },
+    {
+      "num": 3,
+      "topic": "combinatorics",
+      "theorems": [
+        "Pigeonhole Principle"
+      ],
+      "techniques": [
+        "extremal principle",
+        "averaging argument",
+        "construction of counterexample"
+      ],
+      "concepts": [
+        "graph theory (acquaintances)",
+        "maximal independent set",
+        "bounds and extremal examples"
+      ],
+      "difficulty": "olympic",
+      "notes": "Класическа задача за познати/непознати, използваща екстремален принцип и конструкция."
+    },
+    {
+      "num": 4,
+      "topic": "geometry",
+      "theorems": [],
+      "techniques": [
+        "area calculation",
+        "similar triangles"
+      ],
+      "concepts": [
+        "isosceles triangles",
+        "similar triangles",
+        "area formulas",
+        "angle relations"
+      ],
+      "difficulty": "standard",
+      "notes": "Доказване на равенство на лица чрез подобие на триъгълници и формула за лице."
+    },
+    {
+      "num": 5,
+      "topic": "number_theory",
+      "theorems": [
+        "Bezout's Lemma"
+      ],
+      "techniques": [
+        "modular arithmetic",
+        "construction of solutions"
+      ],
+      "concepts": [
+        "coprime numbers",
+        "divisibility",
+        "existence of integer solutions",
+        "linear Diophantine equations"
+      ],
+      "difficulty": "standard",
+      "notes": "Задача за делимост, използваща твърдението на Безу и конструкция на конкретни решения."
+    },
+    {
+      "num": 6,
+      "topic": "combinatorics",
+      "theorems": [],
+      "techniques": [
+        "induction",
+        "pairing argument",
+        "extremal principle"
+      ],
+      "concepts": [
+        "recursive subdivision of triangles",
+        "counting regions",
+        "pairing of adjacent triangles",
+        "area bounds"
+      ],
+      "difficulty": "hard",
+      "notes": "Индуктивна задача за разбиване на триъгълник и групиране на получените триъгълници в двойки. Включва оценка на максималната сума от лица."
+    }
+  ],
+  "unique_concepts": [
+    "geometric progression",
+    "trigonometric equations",
+    "Law of Sines",
+    "angle chasing",
+    "Pigeonhole Principle",
+    "extremal principle",
+    "graph theory (acquaintances)",
+    "similar triangles",
+    "area calculation",
+    "Bezout's Lemma",
+    "coprime numbers",
+    "divisibility",
+    "induction",
+    "recursive subdivision",
+    "pairing of adjacent regions",
+    "area bounds"
+  ],
+  "confidence": 0.95
+}

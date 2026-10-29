@@ -1,0 +1,110 @@
+{
+  "_meta": {
+    "pdf": "C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\Материали_БГ\\NOM_2015-2016.pdf",
+    "paired_with": null,
+    "level": 2,
+    "type": "combined",
+    "analyzed_at": "2026-10-16T21:57:15.705126",
+    "model": "deepseek/deepseek-v3.2",
+    "text_length": 196798,
+    "paired_text_length": 0
+  },
+  "problems": [
+    {
+      "num": 1,
+      "topic": "geometry",
+      "theorems": [
+        "Power of a Point",
+        "Tangent-Secant Theorem"
+      ],
+      "techniques": [
+        "inequality manipulation",
+        "substitution"
+      ],
+      "concepts": [
+        "tangent circles",
+        "common external tangent",
+        "segment lengths on a line"
+      ],
+      "difficulty": "standard",
+      "notes": "Relates lengths of tangents and radii. Uses algebraic inequality (AM-GM or Cauchy-Schwarz likely)."
+    },
+    {
+      "num": 2,
+      "topic": "combinatorics",
+      "theorems": [],
+      "techniques": [
+        "adversary argument",
+        "worst-case analysis",
+        "strategy"
+      ],
+      "concepts": [
+        "partial order",
+        "comparison queries",
+        "tournament ranking",
+        "information theory"
+      ],
+      "difficulty": "hard",
+      "notes": "Interactive query problem. Finding longest guaranteed decreasing subsequence. Requires combinatorial reasoning about comparisons."
+    },
+    {
+      "num": 3,
+      "topic": "geometry",
+      "theorems": [
+        "Radical Axis",
+        "Miquel Point",
+        "Cyclic Quadrilaterals"
+      ],
+      "techniques": [
+        "angle chasing",
+        "radical axis properties"
+      ],
+      "concepts": [
+        "cyclic quadrilateral",
+        "perpendicular lines",
+        "midpoint",
+        "intersecting chords",
+        "concyclic points"
+      ],
+      "difficulty": "standard",
+      "notes": "Uses radical axis of two circles (likely from P and Q)."
+    },
+    {
+      "num": 4,
+      "topic": "number_theory",
+      "theorems": [
+        "Infinite Descent",
+        "Modular Arithmetic",
+        "Properties of Squares mod 4 or mod 8"
+      ],
+      "techniques": [
+        "substitution",
+        "factoring",
+        "parity analysis"
+      ],
+      "concepts": [
+        "Pell-type equation",
+        "difference of squares",
+        "primes",
+        "representation as square or twice a square"
+      ],
+      "difficulty": "standard",
+      "notes": "Equation p^2 = (u^2+v^2)/2 leads to (2p-u-v) being a square or double square. Uses mod 4 or mod 8 analysis."
+    }
+  ],
+  "unique_concepts": [
+    "tangent circles",
+    "common external tangent",
+    "Power of a Point",
+    "interactive query algorithms",
+    "partial order extraction",
+    "cyclic quadrilaterals",
+    "radical axis",
+    "Miquel point",
+    "Pell-type equations",
+    "representation as square or twice a square",
+    "modular arithmetic (mod 4, mod 8)",
+    "inequality manipulation (AM-GM/Cauchy)"
+  ],
+  "confidence": 0.95
+}

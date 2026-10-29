@@ -1,0 +1,154 @@
+{
+  "_meta": {
+    "pdf": "C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\Задачи_Минали_Години\\Национален\\OLI-3-Национален кръг-2016-9-12 кл-sol.pdf",
+    "paired_with": null,
+    "level": 2,
+    "type": "sol",
+    "analyzed_at": "2026-10-16T20:51:27.617530",
+    "model": "deepseek/deepseek-v3.2",
+    "text_length": 23139,
+    "paired_text_length": 0
+  },
+  "problems": [
+    {
+      "num": 1,
+      "topic": "number_theory",
+      "theorems": [
+        "Order of an element modulo prime",
+        "Lifting the Exponent Lemma (LTE) concept"
+      ],
+      "techniques": [
+        "Proof by contradiction",
+        "Modular arithmetic",
+        "Exponent manipulation"
+      ],
+      "concepts": [
+        "Divisibility",
+        "Prime factorization",
+        "GCD",
+        "Order of 2 modulo p",
+        "Properties of Fermat numbers (2^(2^k)+1)"
+      ],
+      "difficulty": "olympic",
+      "notes": "The solution uses properties of the order of 2 modulo a prime divisor. It reduces to finding n such that n divides 5*(2^(2n)+1), leading to n=1 or 5."
+    },
+    {
+      "num": 2,
+      "topic": "combinatorics",
+      "theorems": [],
+      "techniques": [
+        "Pigeonhole principle",
+        "Counting pairs",
+        "Extremal principle"
+      ],
+      "concepts": [
+        "Pairwise comparisons",
+        "Maximum possible value given constraints"
+      ],
+      "difficulty": "standard",
+      "notes": "Problem about students solving problems and getting same scores. The solution is not fully detailed, but likely involves combinatorial counting and the pigeonhole principle."
+    },
+    {
+      "num": 3,
+      "topic": "algebra",
+      "theorems": [
+        "AM-GM inequality",
+        "Weighted AM-GM"
+      ],
+      "techniques": [
+        "Inequality chaining",
+        "Substitution",
+        "Algebraic manipulation"
+      ],
+      "concepts": [
+        "Arithmetic mean - Geometric mean (AM-GM)",
+        "Weighted averages",
+        "Inequality for n positive numbers (generalization noted)"
+      ],
+      "difficulty": "hard",
+      "notes": "The solution cleverly chains applications of AM-GM to prove the inequality. A generalization for n numbers is mentioned."
+    },
+    {
+      "num": 4,
+      "topic": "number_theory",
+      "theorems": [],
+      "techniques": [
+        "Counting sums",
+        "Pigeonhole principle",
+        "Bounding"
+      ],
+      "concepts": [
+        "Sums of three distinct squares",
+        "Upper bound on number of representable integers",
+        "Existence proof via counting"
+      ],
+      "difficulty": "standard",
+      "notes": "Shows existence of a natural number less than 10^9 not representable as a sum of three distinct squares by counting possible sums and using the pigeonhole principle."
+    },
+    {
+      "num": 5,
+      "topic": "geometry",
+      "theorems": [
+        "Cyclic quadrilaterals",
+        "Inscribed angles"
+      ],
+      "techniques": [
+        "Auxiliary construction (parallel line)",
+        "Angle chasing",
+        "Symmetry"
+      ],
+      "concepts": [
+        "Isosceles triangle",
+        "Angle bisector",
+        "Midpoint",
+        "Circle through points (concyclic points)",
+        "Parallel lines and transversals"
+      ],
+      "difficulty": "hard",
+      "notes": "Complex geometry problem requiring construction of a parallel line and careful angle chasing to show points are concyclic."
+    },
+    {
+      "num": 6,
+      "topic": "combinatorics",
+      "theorems": [],
+      "techniques": [
+        "Pigeonhole principle",
+        "Double counting",
+        "Averaging argument",
+        "Bounding"
+      ],
+      "concepts": [
+        "Coloring of n x n grid (square tiling)",
+        "Monochromatic squares in a larger square",
+        "Existence for sufficiently large n"
+      ],
+      "difficulty": "olympic",
+      "notes": "Problem about coloring unit squares in an n x n grid with n colors. The solution uses a combinatorial argument to show that for large n, there exists a square of side length floor(sqrt(n)) containing squares of at most 4 colors."
+    }
+  ],
+  "unique_concepts": [
+    "Divisibility",
+    "Order of an element modulo prime",
+    "Modular arithmetic",
+    "GCD",
+    "Pigeonhole principle",
+    "Counting pairs",
+    "Extremal principle",
+    "AM-GM inequality",
+    "Weighted AM-GM",
+    "Inequality chaining",
+    "Sums of squares",
+    "Bounding",
+    "Cyclic quadrilaterals",
+    "Inscribed angles",
+    "Angle chasing",
+    "Auxiliary construction",
+    "Isosceles triangle",
+    "Midpoint",
+    "Coloring",
+    "Double counting",
+    "Monochromatic squares",
+    "Grid tiling"
+  ],
+  "confidence": 0.95
+}

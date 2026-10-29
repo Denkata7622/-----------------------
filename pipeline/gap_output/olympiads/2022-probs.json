@@ -1,0 +1,176 @@
+{
+  "_meta": {
+    "pdf": "C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\Задачи_Минали_Години\\Национален\\OLI-3-Национален кръг-2022-9-12 кл-probs.pdf",
+    "paired_with": "C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\Задачи_Минали_Години\\Национален\\OLI-3-Национален кръг-2022-9-12 кл-sol.pdf",
+    "level": 2,
+    "type": "probs",
+    "analyzed_at": "2026-10-16T21:05:40.190371",
+    "model": "deepseek/deepseek-v3.2",
+    "text_length": 20878,
+    "paired_text_length": 65229
+  },
+  "problems": [
+    {
+      "num": 1,
+      "topic": "combinatorics",
+      "theorems": [
+        "Handshaking Lemma (parity argument)"
+      ],
+      "techniques": [
+        "parity",
+        "graph theory modeling",
+        "case analysis",
+        "counting"
+      ],
+      "concepts": [
+        "graph vertices and edges",
+        "coloring",
+        "modular arithmetic (mod 2)",
+        "triangular grid",
+        "adjacent cells",
+        "invariant"
+      ],
+      "difficulty": "olympic",
+      "notes": "Problem about a triangular grid and a strategy game. Core idea is to model the board as a graph and use parity of degrees to create a winning set."
+    },
+    {
+      "num": 2,
+      "topic": "geometry",
+      "theorems": [
+        "Inscribed quadrilateral",
+        "Power of a point",
+        "Brocard's theorem",
+        "Reim's theorem",
+        "Properties of parallelogram",
+        "Diameter perpendicular to tangent"
+      ],
+      "techniques": [
+        "angle chasing",
+        "cyclic quadrilaterals",
+        "inversion",
+        "symmetry",
+        "composition of transformations"
+      ],
+      "concepts": [
+        "parallelogram",
+        "circumscribed circles",
+        "intersection of circles",
+        "symmetry point",
+        "collinearity",
+        "concurrency",
+        "tangent to circle",
+        "diameter",
+        "right angles"
+      ],
+      "difficulty": "hard",
+      "notes": "Complex geometry problem with multiple circles and concurrency. Two solutions provided: one using angle chasing and cyclic quads, another using inversion and symmetry."
+    },
+    {
+      "num": 3,
+      "topic": "number_theory",
+      "theorems": [],
+      "techniques": [
+        "construction of counterexample",
+        "modular arithmetic",
+        "proof by contradiction",
+        "inequality estimation"
+      ],
+      "concepts": [
+        "perfect square",
+        "coprime numbers",
+        "gcd",
+        "Diophantine equation",
+        "interval",
+        "natural numbers"
+      ],
+      "difficulty": "olympic",
+      "notes": "Problem asks if it's possible for two expressions to be coprime for all z in an interval. Solution constructs a specific z that leads to a contradiction, proving it's impossible."
+    },
+    {
+      "num": 4,
+      "topic": "algebra",
+      "theorems": [],
+      "techniques": [
+        "summation",
+        "algebraic manipulation",
+        "sign analysis"
+      ],
+      "concepts": [
+        "recurrence relation",
+        "periodic sequence",
+        "sum of terms",
+        "real numbers",
+        "positive constant"
+      ],
+      "difficulty": "standard",
+      "notes": "Problem about a sequence satisfying a recurrence. The key step is summing the given equation to prove the sum of terms is zero, implying at least one is negative."
+    },
+    {
+      "num": 5,
+      "topic": "geometry",
+      "theorems": [
+        "Ceva's theorem",
+        "Menelaus' theorem",
+        "Geometric progression properties"
+      ],
+      "techniques": [
+        "trigonometric Ceva",
+        "length calculation",
+        "coordinate geometry",
+        "geometric construction"
+      ],
+      "concepts": [
+        "isosceles triangle",
+        "concurrent lines",
+        "points on sides",
+        "infinite geometric progression",
+        "collinearity"
+      ],
+      "difficulty": "hard",
+      "notes": "Problem about an isosceles triangle with points on sides forming infinite geometric progressions, requiring concurrency of lines. Solution involves finding specific lengths or using Ceva in trigonometric form."
+    },
+    {
+      "num": 6,
+      "topic": "combinatorics",
+      "theorems": [
+        "Pigeonhole principle"
+      ],
+      "techniques": [
+        "construction of example",
+        "extremal principle",
+        "proof by contradiction"
+      ],
+      "concepts": [
+        "set intersection",
+        "families of sets",
+        "grid construction",
+        "minimal counterexample"
+      ],
+      "difficulty": "olympic",
+      "notes": "Problem about two families of sets with specific intersection properties. Requires finding the maximum possible size of the symmetric difference. Solution involves constructing an example and proving optimality using the pigeonhole principle and extremal argument."
+    }
+  ],
+  "unique_concepts": [
+    "parity",
+    "graph theory modeling",
+    "cyclic quadrilaterals",
+    "angle chasing",
+    "inversion",
+    "power of a point",
+    "Brocard's theorem",
+    "Reim's theorem",
+    "construction of counterexample",
+    "coprime numbers",
+    "perfect square",
+    "summation of recurrence",
+    "sign analysis",
+    "Ceva's theorem",
+    "geometric progression on sides",
+    "concurrency",
+    "set intersection families",
+    "pigeonhole principle",
+    "extremal principle",
+    "grid construction"
+  ],
+  "confidence": 0.95
+}

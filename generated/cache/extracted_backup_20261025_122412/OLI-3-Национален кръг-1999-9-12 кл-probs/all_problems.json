@@ -1,0 +1,101 @@
+{
+  "pdf": "OLI-3-Национален кръг-1999-9-12 кл-probs",
+  "problems": [
+    {
+      "num": 1,
+      "year": 1999,
+      "grade": null,
+      "round": "nacionalen",
+      "statement": "The faces of an orthogonal parallelepiped whose dimensions are natural numbers are painted green. The parallelepiped is partitioned into unit cubes by planes parallel to its faces. Find the dimensions of the parallelepiped if the number of cubes having no green face is one third of the total number of cubes.",
+      "solution": null,
+      "answer": null,
+      "page": 1,
+      "pdf": "OLI-3-Национален кръг-1999-9-12 кл-probs",
+      "chunk": 1,
+      "grade_range": [
+        9,
+        12
+      ]
+    },
+    {
+      "num": 2,
+      "year": 1999,
+      "grade": null,
+      "round": "nacionalen",
+      "statement": "Let $\\{a_n\\}_{n=1}^{\\infty}$ be a sequence of integer numbers such that\n\n$$(n-1)a_{n+1} = (n+1)a_n - 2(n-1)$$\n\nfor any $n \\geq 1$. If 2000 divides $a_{1999}$, find the smallest $n \\geq 2$ such that 2000 divides $a_n$.",
+      "solution": null,
+      "answer": null,
+      "page": 1,
+      "pdf": "OLI-3-Национален кръг-1999-9-12 кл-probs",
+      "chunk": 1,
+      "grade_range": [
+        9,
+        12
+      ]
+    },
+    {
+      "num": 3,
+      "year": 1999,
+      "grade": null,
+      "round": "nacionalen",
+      "statement": "The vertices of a triangle have integer coordinates and one of its sides is of length $\\sqrt{n}$, where $n$ is a square-free natural number. Prove that the ratio of the circumradius and the inradius is an irrational number.",
+      "solution": null,
+      "answer": null,
+      "page": 1,
+      "pdf": "OLI-3-Национален кръг-1999-9-12 кл-probs",
+      "chunk": 1,
+      "grade_range": [
+        9,
+        12
+      ]
+    },
+    {
+      "num": 4,
+      "year": 1999,
+      "grade": null,
+      "round": "nacionalen",
+      "statement": "Find the number of all natural numbers $n, 4 \\leq n \\leq 1023$, such that their binary representations do not contain three consecutive equal digits.",
+      "solution": null,
+      "answer": null,
+      "page": 1,
+      "pdf": "OLI-3-Национален кръг-1999-9-12 кл-probs",
+      "chunk": 1,
+      "grade_range": [
+        9,
+        12
+      ]
+    },
+    {
+      "num": 5,
+      "year": 1999,
+      "grade": null,
+      "round": "nacionalen",
+      "statement": "The vertices $A$, $B$ and $C$ of an acute triangle $ABC$ lie on the sides $B_1C_1, C_1A_1$ and $A_1B_1$ of $\\triangle A_1B_1C_1$ and $\\angle ABC = \\angle A_1B_1C_1$, $\\angle BCA = \\angle B_1C_1A_1$, $\\angle CAB = \\angle C_1A_1B_1$. Prove that the orthocentres of $\\triangle ABC$ and $\\triangle A_1B_1C_1$ are equally remote from the circumcentre of $\\triangle ABC$.",
+      "solution": null,
+      "answer": null,
+      "page": 1,
+      "pdf": "OLI-3-Национален кръг-1999-9-12 кл-probs",
+      "chunk": 1,
+      "grade_range": [
+        9,
+        12
+      ]
+    },
+    {
+      "num": 6,
+      "year": 1999,
+      "grade": null,
+      "round": "nacionalen",
+      "statement": "Prove that the equation\n\n$$x^3 + y^3 + z^3 + t^3 = 1999$$\n\nhas infinitely many integer solutions.",
+      "solution": null,
+      "answer": null,
+      "page": 1,
+      "pdf": "OLI-3-Национален кръг-1999-9-12 кл-probs",
+      "chunk": 1,
+      "grade_range": [
+        9,
+        12
+      ]
+    }
+  ]
+}

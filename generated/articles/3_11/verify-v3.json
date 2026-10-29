@@ -1,0 +1,44 @@
+{
+  "verdict": "approve",
+  "score": 10,
+  "issues": [
+    {
+      "severity": "minor",
+      "section": "4.3 Hard examples",
+      "description": "Пример 8 не е атрибутиран към конкретна олимпиада или година, въпреки че е релевантен. Препоръчително е да се посочи източник за по-голяма достоверност."
+    }
+  ],
+  "strengths": [
+    "Изчерпателно покриване на edge cases (нулев полином, p не просто, n ≥ p)",
+    "Всички примери са математически коректни и добре обяснени",
+    "Секцията 'Чести грешки' е практична и насочена към реални проблеми на учениците",
+    "CHECK-овете между нивата позволяват самодиагностика"
+  ],
+  "suggestions": [
+    "Добави конкретна година/източник за Пример 8 в секция 4.3 за пълна олимпиадна атрибуция",
+    "В Пример 7 (Зад. 3 от областен кръг 2003) може да се добави линк към официалния сборник за по-лесно потвърждение"
+  ],
+  "math_errors": [],
+  "missing_topics": [],
+  "structure_check": {
+    "section_1_why_important": true,
+    "section_2_objectives": true,
+    "section_3_theory": true,
+    "section_4_examples_3_levels": true,
+    "section_5_recognition": true,
+    "section_6_mistakes": true,
+    "section_7_mastery": true,
+    "section_8_quiz": true,
+    "section_9_recall": true,
+    "check_marks_present": true
+  },
+  "examples_check": {
+    "real_olympiad": true,
+    "easy_count": 3,
+    "medium_count": 3,
+    "hard_count": 2
+  },
+  "verdict_reasoning": "Статията е изключително вярна математически, с отлични реални примери и пълна покритост на структурата. Единственият недостатък е липсата на източник за един от hard примерите, но това не намалява значително качеството.",
+  "_tokens": 14799,
+  "_model": "deepseek/deepseek-r1-0528"
+}

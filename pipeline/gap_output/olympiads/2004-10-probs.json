@@ -1,0 +1,211 @@
+{
+  "_meta": {
+    "pdf": "C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\Задачи_Минали_Години\\Областен\\OLI-2-Областен кръг-2004-10 кл-probs.pdf",
+    "paired_with": "C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\Задачи_Минали_Години\\Областен\\OLI-2-Областен кръг-2004-10 кл-sol.pdf",
+    "level": 1,
+    "type": "probs",
+    "analyzed_at": "2026-10-18T12:33:18.759847",
+    "model": "deepseek/deepseek-v3.2",
+    "text_length": 5627,
+    "paired_text_length": 9089
+  },
+  "problems": [
+    {
+      "num": 1,
+      "topic": "algebra",
+      "theorems": [],
+      "techniques": [
+        "case analysis",
+        "inequality manipulation",
+        "substitution"
+      ],
+      "concepts": [
+        "irrational inequalities",
+        "domain of square roots",
+        "quadratic equations"
+      ],
+      "difficulty": "standard",
+      "notes": "Irrational inequality requiring careful domain consideration and squaring."
+    },
+    {
+      "num": 2,
+      "topic": "geometry",
+      "theorems": [
+        "Law of Cosines",
+        "AM-GM inequality",
+        "Cauchy-Schwarz inequality"
+      ],
+      "techniques": [
+        "trigonometric identities",
+        "area formulas",
+        "inequality proofs"
+      ],
+      "concepts": [
+        "centroid",
+        "cotangent in triangle",
+        "triangle area",
+        "side lengths"
+      ],
+      "difficulty": "hard",
+      "notes": "Part (b) requires proving a non-trivial inequality involving cotangents of angles at the centroid."
+    },
+    {
+      "num": 3,
+      "topic": "combinatorics",
+      "theorems": [],
+      "techniques": [
+        "counting arguments",
+        "Diophantine equations",
+        "infinite descent",
+        "Fibonacci sequence"
+      ],
+      "concepts": [
+        "graph theory interpretation",
+        "handshaking lemma",
+        "coprime numbers",
+        "perfect squares"
+      ],
+      "difficulty": "olympic",
+      "notes": "Leads to a Pell-type equation whose solutions are related to Fibonacci numbers."
+    },
+    {
+      "num": 4,
+      "topic": "algebra",
+      "theorems": [
+        "Factor Theorem",
+        "Vieta's formulas"
+      ],
+      "techniques": [
+        "polynomial factorization",
+        "root analysis",
+        "discriminant",
+        "sign analysis"
+      ],
+      "concepts": [
+        "cubic equations",
+        "parameter conditions",
+        "positive roots"
+      ],
+      "difficulty": "standard",
+      "notes": "Standard problem: find parameter values for which a cubic has three distinct positive real roots."
+    },
+    {
+      "num": 5,
+      "topic": "geometry",
+      "theorems": [],
+      "techniques": [
+        "vector methods",
+        "dot product"
+      ],
+      "concepts": [
+        "circumcenter",
+        "centroid",
+        "midpoint",
+        "perpendicular vectors",
+        "isosceles triangle"
+      ],
+      "difficulty": "standard",
+      "notes": "Elegant vector solution proving triangle is isosceles."
+    },
+    {
+      "num": 6,
+      "topic": "combinatorics",
+      "theorems": [
+        "Handshaking Lemma",
+        "Cauchy-Schwarz inequality"
+      ],
+      "techniques": [
+        "double counting",
+        "inequality manipulation"
+      ],
+      "concepts": [
+        "graph theory",
+        "triangles in graph",
+        "degree sum",
+        "lower bounds"
+      ],
+      "difficulty": "standard",
+      "notes": "Classical extremal graph theory problem: lower bound for number of triangles given vertices and edges."
+    },
+    {
+      "num": 7,
+      "topic": "algebra",
+      "theorems": [],
+      "techniques": [
+        "trigonometric identities",
+        "condition analysis"
+      ],
+      "concepts": [
+        "geometric progression",
+        "trigonometric functions",
+        "system of equations"
+      ],
+      "difficulty": "standard",
+      "notes": "Find angles for which three trigonometric expressions form a geometric progression."
+    },
+    {
+      "num": 8,
+      "topic": "geometry",
+      "theorems": [
+        "Tangent properties",
+        "Inscribed angles"
+      ],
+      "techniques": [
+        "angle chasing"
+      ],
+      "concepts": [
+        "circumcircle",
+        "tangents from a point",
+        "midpoint",
+        "angle equality"
+      ],
+      "difficulty": "standard",
+      "notes": "Standard angle chasing problem using properties of tangents and midpoints."
+    },
+    {
+      "num": 9,
+      "topic": "combinatorics",
+      "theorems": [],
+      "techniques": [
+        "pigeonhole principle",
+        "case analysis"
+      ],
+      "concepts": [
+        "coloring",
+        "rectangles in grid",
+        "extremal construction"
+      ],
+      "difficulty": "olympic",
+      "notes": "Extremal problem on coloring a grid to avoid monochromatic corners in any rectangle."
+    },
+    {
+      "num": 10,
+      "topic": "algebra",
+      "theorems": [],
+      "techniques": [
+        "floor function analysis",
+        "substitution",
+        "cubic equation analysis"
+      ],
+      "concepts": [
+        "floor function equations",
+        "integer and non-integer solutions"
+      ],
+      "difficulty": "hard",
+      "notes": "Equation mixing polynomials and floor functions. Part (b) requires constructing a non-integer solution."
+    }
+  ],
+  "unique_concepts": [
+    "irrational inequalities",
+    "centroid and cotangent",
+    "Diophantine equations (Pell-type)",
+    "polynomial roots with parameters",
+    "vector geometry",
+    "graph triangles lower bound",
+    "trigonometric geometric progression",
+    "tangent and angle chasing",
+    "grid coloring extremal",
+    "floor function equations"
+  ],
+  "confidence": 0.95
+}

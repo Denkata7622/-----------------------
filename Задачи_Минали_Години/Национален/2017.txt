@@ -1,0 +1,514 @@
+### Част 1: ЗАДАЧИ (10 кл)
+
+```js
+// ─── ЗАДАЧИ: 2017-10 ───
+{
+  source_pdf_probs: "Задачи_Минали_Години/OLI-2-Областен кръг-2017-10 кл-probs.pdf",
+  source_pdf_sols:  "Задачи_Минали_Години/OLI-2-Областен кръг-2017-10 кл-sol.pdf",
+  year: 2017,
+  grade: 10,
+  exam_type: "областен",
+  problems: [
+    {
+      num: 1,
+      topic: "Алгебра",
+      subtopic: "Показателни неравенства с параметър",
+      difficulty: 3,
+      probs_page: 1,
+      sol_page: 1,
+      summary: "Намерете a, за които 4·27^{2x²+x−a} < 31·3^{2x²+x−a} + 15 има точно едно целочислено решение.",
+      plan_step: 6,
+      plan_point: "6.1", // CHECK: не пасва точно, по-скоро параметрично неравенство
+      related_points: ["5.1", "5.2"],
+      prerequisites: ["5.1"],
+      add_as_task_to: ["6.1"],
+      required_knowledge: [
+        { point_id: "6.1", technique: "Полиномни неравенства", why_needed: "След полагане се стига до кубично неравенство." },
+        { point_id: "5.1", technique: "Квадратни неравенства", why_needed: "Определяне на интервала за x." },
+        { point_id: null, technique: "Параметрични неравенства с целочислени решения", why_needed: "Ключово за намиране на a." }
+      ],
+      techniques_not_in_plan: ["Параметрични неравенства с целочислени решения"],
+      gap_severity: "minor",
+      estimated_time_minutes: 40,
+      common_pitfalls: "Забравят да проверят граничните случаи и броя на целочислените решения.",
+      recommended_for_simulation: false,
+      prerequisite_review: "Преговори 5.1 и 6.1."
+    },
+    {
+      num: 2,
+      topic: "Геометрия",
+      subtopic: "Окръжности с диаметри в ортоцентричен триъгълник",
+      difficulty: 4,
+      probs_page: 1,
+      sol_page: 1, // продължава на 2
+      summary: "Докажете, че ∆ABC ~ ∆A₁B₁C₁, където A₁, B₁, C₁ са пресечни точки на окръжности с диаметри HH₁, HH₂, HH₃.",
+      plan_step: 1,
+      plan_point: "1.5",
+      related_points: ["1.6", "1.8"],
+      prerequisites: ["1.5", "1.6"],
+      add_as_task_to: ["1.5", "1.8"],
+      required_knowledge: [
+        { point_id: "1.5", technique: "Вписани ъгли", why_needed: "За доказване на ъглови равенства." },
+        { point_id: "1.6", technique: "Синусова теорема", why_needed: "За отношения на отсечки." },
+        { point_id: "1.8", technique: "Ортоцентър", why_needed: "Конфигурацията е ортоцентрична." }
+      ],
+      techniques_not_in_plan: [],
+      gap_severity: "none",
+      estimated_time_minutes: 50,
+      common_pitfalls: "Объркване на кои окръжности кои точки лежат.",
+      recommended_for_simulation: false,
+      prerequisite_review: "Преговори 1.5, 1.6 и 1.8."
+    },
+    {
+      num: 3,
+      topic: "Алгебра",
+      subtopic: "Рекурентна редица с floor и корен",
+      difficulty: 4,
+      probs_page: 1,
+      sol_page: 2,
+      summary: "Редица: a₁=1, aₙ=⌊√(2aₙ₋₁+aₙ₋₂+...+a₁)⌋. Намерете a₂₀₁₇.",
+      plan_step: 7,
+      plan_point: "7.7",
+      related_points: ["7.1", "7.3", "8.10"],
+      prerequisites: ["7.1", "8.10"],
+      add_as_task_to: ["7.7", "8.10"],
+      required_knowledge: [
+        { point_id: "7.7", technique: "Нелинейни рекурсии", why_needed: "Рекурсията съдържа корен и floor." },
+        { point_id: "8.10", technique: "Индукция", why_needed: "Доказва се формула за две стъпки." }
+      ],
+      techniques_not_in_plan: [],
+      gap_severity: "none",
+      estimated_time_minutes: 45,
+      common_pitfalls: "Не откриват формулата a₂ₖ = a₂ₖ₊₁ = k.",
+      recommended_for_simulation: false,
+      prerequisite_review: "Преговори 7.7 и 8.10."
+    },
+    {
+      num: 4,
+      topic: "Комбинаторика",
+      subtopic: "Блок-дизайни и двойно броене",
+      difficulty: 5,
+      probs_page: 1,
+      sol_page: 3, // продължава на 4
+      summary: "11 сорта, саксии с по 3 различни сорта, всяка двойка сортове се среща еднакво често. Минимален брой различни саксии.",
+      plan_step: 8,
+      plan_point: "8.3",
+      related_points: ["8.2", "8.6", "9.5"],
+      prerequisites: ["8.2", "8.3"],
+      add_as_task_to: ["8.3", "9.5"],
+      required_knowledge: [
+        { point_id: "8.3", technique: "Двойно броене", why_needed: "За долна граница на броя саксии." },
+        { point_id: "9.5", technique: "Туран", why_needed: "Екстремални множества." },
+        { point_id: null, technique: "Блок-дизайни (2-(11,3,λ) дизайн)", why_needed: "Структурата е блок-дизайн." }
+      ],
+      techniques_not_in_plan: ["Блок-дизайни (2-(11,3,λ) дизайн)"],
+      gap_severity: "major",
+      estimated_time_minutes: 90,
+      common_pitfalls: "Трудно намиране на долна граница и отхвърляне на случаи.",
+      recommended_for_simulation: false,
+      prerequisite_review: "Преговори 8.2, 8.3 и 9.5."
+    }
+  ],
+  difficulty_distribution: { easy: 0, medium: 2, hard: 2 },
+  recommended_action: "add-to-step10",
+  recommended_for_simulation: []
+}
+```
+
+### Част 2: ЗАДАЧИ (11 кл)
+
+```js
+// ─── ЗАДАЧИ: 2017-11 ───
+{
+  source_pdf_probs: "Задачи_Минали_Години/OLI-2-Областен кръг-2017-11 кл-probs.pdf",
+  source_pdf_sols:  "Задачи_Минали_Години/OLI-2-Областен кръг-2017-11 кл-sol.pdf",
+  year: 2017,
+  grade: 11,
+  exam_type: "областен",
+  problems: [
+    {
+      num: 1,
+      topic: "Алгебра",
+      subtopic: "Хомогенни уравнения и тригонометрия",
+      difficulty: 3,
+      probs_page: 1,
+      sol_page: 1,
+      summary: "Решете системата x²+6y²=5xy; cos²x+sin²y=1 за x,y∈[0,π].",
+      plan_step: 5,
+      plan_point: null, // CHECK: няма точна точка за тригонометрия
+      related_points: ["5.1", "6.1"],
+      prerequisites: ["5.1"],
+      add_as_task_to: ["5.1"],
+      required_knowledge: [
+        { point_id: null, technique: "Тригонометрични тъждества", why_needed: "cos²x = cos²y ⇒ x=y или x+y=π." },
+        { point_id: "5.1", technique: "Хомогенни уравнения", why_needed: "x²+6y²=5xy се решава като хомогенно." }
+      ],
+      techniques_not_in_plan: ["Тригонометрични уравнения cos²x = cos²y", "Хомогенни уравнения"],
+      gap_severity: "minor",
+      estimated_time_minutes: 30,
+      common_pitfalls: "Пропускат случая y=0 и не разглеждат x+y=π.",
+      recommended_for_simulation: true,
+      prerequisite_review: "Преговори тригонометрия и хомогенни уравнения."
+    },
+    {
+      num: 2,
+      topic: "Геометрия",
+      subtopic: "Ортоцентрични конфигурации и конкурентност",
+      difficulty: 5,
+      probs_page: 1,
+      sol_page: 1, // продължава на 2
+      summary: "Докажете, че AA₀, BB₀, CC₀ се пресичат в една точка.",
+      plan_step: 1,
+      plan_point: "1.2",
+      related_points: ["1.5", "1.8"],
+      prerequisites: ["1.2", "1.5", "1.8"],
+      add_as_task_to: ["1.2", "1.8"],
+      required_knowledge: [
+        { point_id: "1.2", technique: "Чева", why_needed: "За доказване на конкурентност." },
+        { point_id: "1.5", technique: "Вписани ъгли", why_needed: "За подобни триъгълници." },
+        { point_id: "1.8", technique: "Ортоцентър", why_needed: "Централна конфигурация." }
+      ],
+      techniques_not_in_plan: [],
+      gap_severity: "none",
+      estimated_time_minutes: 80,
+      common_pitfalls: "Сложна конфигурация, объркване на перпендикуляри и успоредни.",
+      recommended_for_simulation: true,
+      prerequisite_review: "Преговори 1.2, 1.5 и 1.8."
+    },
+    {
+      num: 3,
+      topic: "Комбинаторика",
+      subtopic: "Игри с делимост",
+      difficulty: 5,
+      probs_page: 1,
+      sol_page: 2, // продължава на 3
+      summary: "Намерете всички n, за които Иван има печеливша стратегия в игра с числа 2..2017.",
+      plan_step: 9,
+      plan_point: "9.10",
+      related_points: ["9.8", "3.1"],
+      prerequisites: ["9.10", "3.1"],
+      add_as_task_to: ["9.10", "3.1"],
+      required_knowledge: [
+        { point_id: "9.10", technique: "Игри", why_needed: "Стратегия за Иван/Петър." },
+        { point_id: "3.1", technique: "Делимост", why_needed: "Условието е aᵢ | aᵢ₊₁." },
+        { point_id: null, technique: "Стратегии с интервали от степени на 2", why_needed: "Иван избира 2^k+1." }
+      ],
+      techniques_not_in_plan: ["Стратегии в игри с делимост и интервали от степени на 2"],
+      gap_severity: "minor",
+      estimated_time_minutes: 70,
+      common_pitfalls: "Не откриват, че n≥10 е печелившо за Иван.",
+      recommended_for_simulation: true,
+      prerequisite_review: "Преговори 9.10 и 3.1."
+    },
+    {
+      num: 4,
+      topic: "Комбинаторика",
+      subtopic: "Екстремални множества и графи",
+      difficulty: 5,
+      probs_page: 1,
+      sol_page: 3, // продължава на 4
+      summary: "Реални числа със сбор 2017. Намерете максималния брой двойки (i,j) с aᵢ+aⱼ<2.",
+      plan_step: 9,
+      plan_point: "9.5",
+      related_points: ["8.3", "8.10"],
+      prerequisites: ["9.5", "8.10"],
+      add_as_task_to: ["9.5", "8.3"],
+      required_knowledge: [
+        { point_id: "9.5", technique: "Туран", why_needed: "Екстремален брой ребра в граф." },
+        { point_id: "8.3", technique: "Двойно броене", why_needed: "За горна граница." },
+        { point_id: "8.10", technique: "Индукция", why_needed: "Доказване на несъществуване на повече ребра." }
+      ],
+      techniques_not_in_plan: [],
+      gap_severity: "none",
+      estimated_time_minutes: 90,
+      common_pitfalls: "Трудно доказване на горна граница и конструиране на пример.",
+      recommended_for_simulation: true,
+      prerequisite_review: "Преговори 9.5, 8.3 и 8.10."
+    }
+  ],
+  difficulty_distribution: { easy: 0, medium: 1, hard: 3 },
+  recommended_action: "add-to-step10",
+  recommended_for_simulation: [1, 2, 4]
+}
+```
+
+### Част 3: АРХИВ (готов за copy-paste в Step 10)
+
+```js
+{ 
+  id: "10.12", 
+  title: "Областен кръг 2017 – 10 клас",
+  desc: "4 задачи: 1 Алг, 2 Геом, 1 Комб",
+  source: "Областен кръг 2017",
+  pdf: "Задачи_Минали_Години/OLI-2-Областен кръг-2017-10 кл-probs",
+  page: 1,
+  problems_page: 1,
+  solutions_page: 1,
+  tasks: [
+    { label: "Зад 1 — Показателни неравенства с параметър", 
+      pdf: "Задачи_Минали_Години/OLI-2-Областен кръг-2017-10 кл-probs", 
+      page: 1,
+      knowledge: ["5.1", "6.1"]
+    },
+    { label: "Зад 2 — Окръжности с диаметри в ортоцентричен триъгълник", 
+      pdf: "Задачи_Минали_Години/OLI-2-Областен кръг-2017-10 кл-probs", 
+      page: 1,
+      knowledge: ["1.5", "1.6", "1.8"]
+    },
+    { label: "Зад 3 — Рекурентна редица с floor", 
+      pdf: "Задачи_Минали_Години/OLI-2-Областен кръг-2017-10 кл-probs", 
+      page: 1,
+      knowledge: ["7.7", "8.10"]
+    },
+    { label: "Зад 4 — Блок-дизайни", 
+      pdf: "Задачи_Минали_Години/OLI-2-Областен кръг-2017-10 кл-probs", 
+      page: 1,
+      knowledge: ["8.3", "9.5"]
+    }
+  ],
+  bonus: [
+    { label: "Решения", pdf: "Задачи_Минали_Години/OLI-2-Областен кръг-2017-10 кл-sol" }
+  ],
+  explanation: "ФОРМУЛИРОВКА: Областен кръг 2017 за 10 клас.\n\nКОГА: Подходящ за симулация и тренировка на параметрични неравенства, ортоцентрични конфигурации, рекурсии и блок-дизайни.\n\nСВОЙСТВА: Доминира геометрия и комбинаторика.\n\nТРИК: Зад 4 изисква блок-дизайни — липсваща техника в плана."
+}
+```
+
+```js
+{ 
+  id: "10.13", 
+  title: "Областен кръг 2017 – 11 клас",
+  desc: "4 задачи: 1 Алг/Триг, 1 Геом, 2 Комб",
+  source: "Областен кръг 2017",
+  pdf: "Задачи_Минали_Години/OLI-2-Областен кръг-2017-11 кл-probs",
+  page: 1,
+  problems_page: 1,
+  solutions_page: 1,
+  tasks: [
+    { label: "Зад 1 — Хомогенни уравнения и тригонометрия", 
+      pdf: "Задачи_Минали_Години/OLI-2-Областен кръг-2017-11 кл-probs", 
+      page: 1,
+      knowledge: ["5.1"]
+    },
+    { label: "Зад 2 — Ортоцентрични конфигурации и конкурентност", 
+      pdf: "Задачи_Минали_Години/OLI-2-Областен кръг-2017-11 кл-probs", 
+      page: 1,
+      knowledge: ["1.2", "1.5", "1.8"]
+    },
+    { label: "Зад 3 — Игри с делимост", 
+      pdf: "Задачи_Минали_Години/OLI-2-Областен кръг-2017-11 кл-probs", 
+      page: 1,
+      knowledge: ["9.10", "3.1"]
+    },
+    { label: "Зад 4 — Екстремални множества и графи", 
+      pdf: "Задачи_Минали_Години/OLI-2-Областен кръг-2017-11 кл-probs", 
+      page: 1,
+      knowledge: ["9.5", "8.3", "8.10"]
+    }
+  ],
+  bonus: [
+    { label: "Решения", pdf: "Задачи_Минали_Години/OLI-2-Областен кръг-2017-11 кл-sol" }
+  ],
+  explanation: "ФОРМУЛИРОВКА: Областен кръг 2017 за 11 клас.\n\nКОГА: Подходящ за симулация — 3 от 4 задачи са трудни.\n\nСВОЙСТВА: Доминират комбинаториката и геометрията.\n\nТРИК: Зад 3 и 4 са класически олимпийски стратегии и екстремални графи."
+}
+```
+
+### Част 4: TASKS ЗА ТЕМАТИЧНИ ТОЧКИ
+
+```js
+// Точка 6.1 в STEPS[5].points:
+{ id: "6.1",
+  tasks: [
+    { label: "ОИ 2017/10 кл, Зад 1 (Показателни неравенства с параметър)", 
+      pdf: "Задачи_Минали_Години/OLI-2-Областен кръг-2017-10 кл-probs", 
+      page: 1,
+      difficulty: 3,
+      requires_also: ["5.1"],
+      prerequisite_review: "Преговори 5.1 и 6.1."
+    }
+  ]
+}
+```
+
+```js
+// Точка 1.5 в STEPS[0].points:
+{ id: "1.5",
+  tasks: [
+    { label: "ОИ 2017/10 кл, Зад 2 (Окръжности с диаметри)", 
+      pdf: "Задачи_Минали_Години/OLI-2-Областен кръг-2017-10 кл-probs", 
+      page: 1,
+      difficulty: 4,
+      requires_also: ["1.6", "1.8"],
+      prerequisite_review: "Преговори 1.5, 1.6 и 1.8."
+    }
+  ]
+}
+```
+
+```js
+// Точка 7.7 в STEPS[6].points:
+{ id: "7.7",
+  tasks: [
+    { label: "ОИ 2017/10 кл, Зад 3 (Рекурентна редица с floor)", 
+      pdf: "Задачи_Минали_Години/OLI-2-Областен кръг-2017-10 кл-probs", 
+      page: 1,
+      difficulty: 4,
+      requires_also: ["8.10"],
+      prerequisite_review: "Преговори 7.7 и 8.10."
+    }
+  ]
+}
+```
+
+```js
+// Точка 8.3 в STEPS[7].points:
+{ id: "8.3",
+  tasks: [
+    { label: "ОИ 2017/10 кл, Зад 4 (Блок-дизайни)", 
+      pdf: "Задачи_Минали_Години/OLI-2-Областен кръг-2017-10 кл-probs", 
+      page: 1,
+      difficulty: 5,
+      requires_also: ["8.2", "9.5"],
+      prerequisite_review: "Преговори 8.2, 8.3 и 9.5."
+    }
+  ]
+}
+```
+
+```js
+// Точка 5.1 в STEPS[4].points:
+{ id: "5.1",
+  tasks: [
+    { label: "ОИ 2017/11 кл, Зад 1 (Хомогенни уравнения и тригонометрия)", 
+      pdf: "Задачи_Минали_Години/OLI-2-Областен кръг-2017-11 кл-probs", 
+      page: 1,
+      difficulty: 3,
+      requires_also: [],
+      prerequisite_review: "Преговори тригонометрия и хомогенни уравнения."
+    }
+  ]
+}
+```
+
+```js
+// Точка 1.2 в STEPS[0].points:
+{ id: "1.2",
+  tasks: [
+    { label: "ОИ 2017/11 кл, Зад 2 (Ортоцентрични конфигурации)", 
+      pdf: "Задачи_Минали_Години/OLI-2-Областен кръг-2017-11 кл-probs", 
+      page: 1,
+      difficulty: 5,
+      requires_also: ["1.5", "1.8"],
+      prerequisite_review: "Преговори 1.2, 1.5 и 1.8."
+    }
+  ]
+}
+```
+
+```js
+// Точка 9.10 в STEPS[8].points:
+{ id: "9.10",
+  tasks: [
+    { label: "ОИ 2017/11 кл, Зад 3 (Игри с делимост)", 
+      pdf: "Задачи_Минали_Години/OLI-2-Областен кръг-2017-11 кл-probs", 
+      page: 1,
+      difficulty: 5,
+      requires_also: ["3.1"],
+      prerequisite_review: "Преговори 9.10 и 3.1."
+    }
+  ]
+}
+```
+
+```js
+// Точка 9.5 в STEPS[8].points:
+{ id: "9.5",
+  tasks: [
+    { label: "ОИ 2017/11 кл, Зад 4 (Екстремални множества и графи)", 
+      pdf: "Задачи_Минали_Години/OLI-2-Областен кръг-2017-11 кл-probs", 
+      page: 1,
+      difficulty: 5,
+      requires_also: ["8.3", "8.10"],
+      prerequisite_review: "Преговори 9.5, 8.3 и 8.10."
+    }
+  ]
+}
+```
+
+### Част 5: KNOWLEDGE PROFILE ЗА ГОДИНАТА
+
+```js
+// ─── KNOWLEDGE PROFILE: 2017 ───
+{
+  year: 2017,
+  total_problems_analyzed: 8,
+  most_used_points: [
+    { point_id: "1.5", count: 2, examples: [10.2, 11.2] },
+    { point_id: "8.3", count: 2, examples: [10.4, 11.4] },
+    { point_id: "9.5", count: 1, examples: [11.4] },
+    { point_id: "9.10", count: 1, examples: [11.3] },
+    { point_id: "5.1", count: 1, examples: [11.1] },
+    { point_id: "6.1", count: 1, examples: [10.1] },
+    { point_id: "7.7", count: 1, examples: [10.3] }
+  ],
+  techniques_used: [
+    "Вписани ъгли",
+    "Ортоцентрични конфигурации",
+    "Двойно броене",
+    "Туран",
+    "Игри с делимост",
+    "Хомогенни уравнения",
+    "Параметрични неравенства",
+    "Индукция с floor"
+  ],
+  gaps_identified: [
+    { 
+      technique: "Блок-дизайни (2-(11,3,λ) дизайн)", 
+      appeared_in: ["10 кл зад 4"], 
+      recommendation: "Добави нова точка в Step 8: '8.11 Блок-дизайни и двойно броене'" 
+    },
+    { 
+      technique: "Тригонометрични уравнения cos²x = cos²y", 
+      appeared_in: ["11 кл зад 1"], 
+      recommendation: "Добави нова точка в Step 5: '5.9 Тригонометрични уравнения'" 
+    }
+  ],
+  study_priority: [
+    "1.5 — Вписани ъгли (2 задачи)",
+    "8.3 — Двойно броене (2 задачи)",
+    "9.5 — Туран (1 задача, но трудна)",
+    "9.10 — Игри (1 задача, но трудна)",
+    "5.1 — Хомогенни уравнения (1 задача)"
+  ],
+  summary: "Тази година доминираха геометрията и комбинаториката. Липсващи техники: блок-дизайни и тригонометрични уравнения."
+}
+```
+
+### Част 6: RECOMMENDED CHANGES
+
+```markdown
+### RECOMMENDED CHANGES TO index.html
+
+**В STEPS:**
+- [ ] Добави `10.12` в Step 10 (архив 2017 – 10 клас)
+- [ ] Добави `10.13` в Step 10 (архив 2017 – 11 клас)
+- [ ] Актуализирай точка 6.1 с нова задача от 10 кл (Зад 1)
+- [ ] Актуализирай точка 1.5 с нова задача от 10 кл (Зад 2)
+- [ ] Актуализирай точка 7.7 с нова задача от 10 кл (Зад 3)
+- [ ] Актуализирай точка 8.3 с нова задача от 10 кл (Зад 4)
+- [ ] Актуализирай точка 5.1 с нова задача от 11 кл (Зад 1)
+- [ ] Актуализирай точка 1.2 с нова задача от 11 кл (Зад 2)
+- [ ] Актуализирай точка 9.10 с нова задача от 11 кл (Зад 3)
+- [ ] Актуализирай точка 9.5 с нова задача от 11 кл (Зад 4)
+
+**В PLAN_PHASES:**
+- [ ] Добави симулация с ОИ 2017/11 кл в Week 14 или 15
+- [ ] Включи блок-дизайни в Week 10 (Комбинаторика)
+
+**Нови точки/стъпки:**
+- [ ] Предложи нова точка `8.11` – Блок-дизайни и двойно броене (Step 8)
+- [ ] Предложи нова точка `5.9` – Тригонометрични уравнения (Step 5)
+
+**Друго:**
+- [ ] Идентифицирани gaps: блок-дизайни (major), тригонометрични уравнения (minor)
+- [ ] Обърни внимание на ортоцентричните конфигурации (2 задачи)
+```

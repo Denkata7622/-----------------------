@@ -1,0 +1,179 @@
+{
+  "_meta": {
+    "pdf": "C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\Задачи_Минали_Години\\Национален\\OLI-3-Национален кръг-2018-9-12 кл-probs.pdf",
+    "paired_with": "C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\Задачи_Минали_Години\\Национален\\OLI-3-Национален кръг-2018-9-12 кл-sol.pdf",
+    "level": 2,
+    "type": "probs",
+    "analyzed_at": "2026-10-16T20:58:12.969466",
+    "model": "deepseek/deepseek-v3.2",
+    "text_length": 22518,
+    "paired_text_length": 19057
+  },
+  "problems": [
+    {
+      "num": 1,
+      "topic": "number_theory",
+      "theorems": [],
+      "techniques": [
+        "construction",
+        "contradiction",
+        "modular arithmetic",
+        "gcd"
+      ],
+      "concepts": [
+        "sum of arithmetic progression",
+        "coprime numbers",
+        "partition of a set",
+        "parity",
+        "existence proof"
+      ],
+      "difficulty": "olympic",
+      "notes": "Constructive existence proof using prime numbers and arithmetic progressions. Key is to find a set M where the sum of elements is a perfect power, forcing any good partition to have parts of equal size."
+    },
+    {
+      "num": 2,
+      "topic": "geometry",
+      "theorems": [
+        "Homothety",
+        "Properties of cyclic quadrilaterals",
+        "Parallel lines"
+      ],
+      "techniques": [
+        "homothety",
+        "angle chasing",
+        "similar triangles",
+        "coordinate geometry (implied)"
+      ],
+      "concepts": [
+        "circumcenter",
+        "orthocenter",
+        "incircle",
+        "tangential quadrilateral",
+        "homothetic centers",
+        "concyclic points"
+      ],
+      "difficulty": "hard",
+      "notes": "Complex geometry problem involving multiple circles (incircles of triangles formed from a point on a side of a tangential quadrilateral). Uses homothety to show lines are parallel to sides, leading to a new tangential quadrilateral."
+    },
+    {
+      "num": 3,
+      "topic": "algebra",
+      "theorems": [
+        "Taylor expansion (Binomial theorem for non-integer exponent)",
+        "Jensen's inequality (implied by convexity)"
+      ],
+      "techniques": [
+        "inequality proof",
+        "calculus (derivatives to analyze function)",
+        "approximation"
+      ],
+      "concepts": [
+        "binomial inequality",
+        "function monotonicity",
+        "convexity/concavity",
+        "numerical comparison"
+      ],
+      "difficulty": "hard",
+      "notes": "Proves a specific numerical inequality by first proving a general Binomial-type inequality for exponents in (1,2) using calculus (up to third derivative)."
+    },
+    {
+      "num": 4,
+      "topic": "geometry",
+      "theorems": [
+        "Radical axis theorem",
+        "Lemma about incircle and points on lines"
+      ],
+      "techniques": [
+        "radical axis",
+        "lengths of tangents",
+        "cyclic quadrilaterals",
+        "lemma application"
+      ],
+      "concepts": [
+        "incircle",
+        "tangential quadrilateral",
+        "radical center",
+        "concyclic points",
+        "power of a point"
+      ],
+      "difficulty": "olympic",
+      "notes": "Uses radical axes of three circles to show they share a common tangent line. Then uses a lemma relating incircle and collinearity to conclude concyclicity."
+    },
+    {
+      "num": 5,
+      "topic": "number_theory",
+      "theorems": [
+        "Lifting the Exponent Lemma (LTE)",
+        "Modular arithmetic properties"
+      ],
+      "techniques": [
+        "induction",
+        "contradiction",
+        "p-adic valuation (v_p)",
+        "inequality estimation"
+      ],
+      "concepts": [
+        "iterated polynomials",
+        "prime divisors",
+        "p-adic order",
+        "gcd",
+        "sequence growth"
+      ],
+      "difficulty": "olympic",
+      "notes": "Deep number theory problem. Uses p-adic valuations and LTE ideas to show that if b_n shares no prime factors with previous terms, then its p-adic order equals that of earlier terms, leading to a contradiction via growth estimates."
+    },
+    {
+      "num": 6,
+      "topic": "combinatorics",
+      "theorems": [
+        "Dirac's theorem (or a variant)",
+        "Ore's theorem",
+        "Lemma: If graph has no Hamiltonian cycle but d(u)+d(v)>=|V| for non-adjacent u,v, then it has a Hamiltonian path"
+      ],
+      "techniques": [
+        "graph construction",
+        "contradiction",
+        "Hamiltonian path/cycle",
+        "degree sum condition",
+        "cycle merging"
+      ],
+      "concepts": [
+        "graph partitioning",
+        "Hamiltonian cycle",
+        "degree condition",
+        "cycle decomposition",
+        "graph union"
+      ],
+      "difficulty": "olympic",
+      "notes": "Complex graph theory problem. Models cities as graph vertices, roads as edges. Uses a known sufficient condition for Hamiltonian cycle (Ore's condition) and constructs a large cycle by merging smaller cycles from each district, using the district size conditions."
+    }
+  ],
+  "unique_concepts": [
+    "sum of arithmetic progression",
+    "coprime numbers",
+    "partition of a set",
+    "parity",
+    "construction",
+    "homothety",
+    "circumcenter",
+    "orthocenter",
+    "incircle",
+    "tangential quadrilateral",
+    "radical axis",
+    "power of a point",
+    "concyclic points",
+    "binomial inequality",
+    "function monotonicity",
+    "convexity",
+    "p-adic valuation",
+    "Lifting the Exponent Lemma",
+    "iterated polynomials",
+    "graph theory",
+    "Hamiltonian cycle",
+    "Ore's theorem",
+    "degree condition",
+    "cycle decomposition",
+    "graph partitioning"
+  ],
+  "confidence": 0.95
+}

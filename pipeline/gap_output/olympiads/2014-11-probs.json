@@ -1,0 +1,132 @@
+{
+  "_meta": {
+    "pdf": "C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\Задачи_Минали_Години\\Областен\\OLI-2-Областен кръг-2014-11 кл-probs.pdf",
+    "paired_with": "C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\Задачи_Минали_Години\\Областен\\OLI-2-Областен кръг-2014-11 кл-sol.pdf",
+    "level": 1,
+    "type": "probs",
+    "analyzed_at": "2026-10-18T15:46:42.648983",
+    "model": "deepseek/deepseek-v3.2",
+    "text_length": 1253,
+    "paired_text_length": 0
+  },
+  "problems": [
+    {
+      "num": 1,
+      "topic": "algebra",
+      "theorems": [],
+      "techniques": [
+        "substitution",
+        "quadratic equation analysis",
+        "sign analysis"
+      ],
+      "concepts": [
+        "exponential equations",
+        "quadratic equations in disguise",
+        "Vieta's formulas",
+        "roots sign conditions"
+      ],
+      "difficulty": "standard",
+      "notes": "Standard exponential equation solved via substitution t=2^x. The condition for one positive and one negative root in t translates to conditions on the original quadratic's roots."
+    },
+    {
+      "num": 2,
+      "topic": "geometry",
+      "theorems": [
+        "Menelaus",
+        "Ceva",
+        "Stewart's theorem",
+        "Angle bisector theorem"
+      ],
+      "techniques": [
+        "analytic geometry",
+        "vector methods",
+        "coordinate geometry",
+        "using midpoints and tangency points"
+      ],
+      "concepts": [
+        "incircle",
+        "tangency point",
+        "midpoint",
+        "angle bisector midpoint",
+        "collinearity",
+        "triangle side relations",
+        "trigonometric identities",
+        "power of a point"
+      ],
+      "difficulty": "hard",
+      "notes": "The given condition BC^2+AC^2 = AC*AB is non-standard and likely leads to a specific triangle configuration (possibly right-angled or isosceles) that simplifies the collinearity proof. Requires careful setup and application of Menelaus or coordinate geometry."
+    },
+    {
+      "num": 3,
+      "topic": "algebra",
+      "theorems": [
+        "Rational Root Theorem"
+      ],
+      "techniques": [
+        "modular arithmetic",
+        "contradiction",
+        "analysis of divisibility"
+      ],
+      "concepts": [
+        "cubic equations",
+        "rational roots",
+        "prime numbers",
+        "divisibility",
+        "polynomial evaluation modulo p"
+      ],
+      "difficulty": "standard",
+      "notes": "Direct application of the Rational Root Theorem to narrow candidates, then checking modulo p or specific evaluations to show impossibility for primes p>=5."
+    },
+    {
+      "num": 4,
+      "topic": "combinatorics",
+      "theorems": [],
+      "techniques": [
+        "graph theory",
+        "double counting",
+        "parity argument",
+        "bipartite graphs"
+      ],
+      "concepts": [
+        "regular graphs (cubic graphs)",
+        "least common multiple (LCM)",
+        "sum over edges",
+        "bipartite graph characterization",
+        "handshaking lemma",
+        "vertex coloring"
+      ],
+      "difficulty": "olympic",
+      "notes": "The problem is a graph theory problem about cubic graphs. The condition on the sum of LCMs being twice the sum of inhabitants suggests a parity or bipartite structure. Proving the graph is bipartite (2-colorable) is the goal."
+    }
+  ],
+  "unique_concepts": [
+    "exponential equations",
+    "quadratic equations in disguise",
+    "Vieta's formulas",
+    "roots sign conditions",
+    "incircle",
+    "tangency point",
+    "midpoint",
+    "angle bisector midpoint",
+    "collinearity",
+    "triangle side relations",
+    "Menelaus",
+    "Ceva",
+    "Stewart's theorem",
+    "Angle bisector theorem",
+    "Rational Root Theorem",
+    "cubic equations",
+    "rational roots",
+    "prime numbers",
+    "divisibility",
+    "modular arithmetic",
+    "graph theory",
+    "regular graphs (cubic graphs)",
+    "least common multiple (LCM)",
+    "sum over edges",
+    "bipartite graph characterization",
+    "double counting",
+    "parity argument"
+  ],
+  "confidence": 0.95
+}

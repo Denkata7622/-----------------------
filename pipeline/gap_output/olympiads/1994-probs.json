@@ -1,0 +1,171 @@
+{
+  "_meta": {
+    "pdf": "C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\Задачи_Минали_Години\\Национален\\OLI-3-Национален кръг-1994-9-12 кл-probs.pdf",
+    "paired_with": "C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\Задачи_Минали_Години\\Национален\\OLI-3-Национален кръг-1994-9-12 кл-sol.pdf",
+    "level": 2,
+    "type": "probs",
+    "analyzed_at": "2026-10-18T11:51:02.743827",
+    "model": "deepseek/deepseek-v3.2",
+    "text_length": 1479,
+    "paired_text_length": 3839
+  },
+  "problems": [
+    {
+      "num": 1,
+      "topic": "geometry",
+      "theorems": [],
+      "techniques": [
+        "trigonometric expressions",
+        "algebraic manipulation"
+      ],
+      "concepts": [
+        "tangents to a circle",
+        "power of a point",
+        "cyclic quadrilateral",
+        "inscribed and circumscribed circles",
+        "distance between centers"
+      ],
+      "difficulty": "hard",
+      "notes": "The condition on O1O2 ensures k2 is inside k1 and there exists a quadrilateral inscribed in k1 and circumscribed about k2. The proof involves expressing lengths via trigonometry and the given distance."
+    },
+    {
+      "num": 2,
+      "topic": "algebra",
+      "theorems": [],
+      "techniques": [
+        "functional equation",
+        "linear function characterization",
+        "collinearity of points"
+      ],
+      "concepts": [
+        "linear functions",
+        "graph of a function",
+        "collinearity condition"
+      ],
+      "difficulty": "standard",
+      "notes": "The key step is to show that points (a, f(a)), (b, f(b)), and (a+b, f(a+b)) are collinear, implying f is linear."
+    },
+    {
+      "num": 3,
+      "topic": "number_theory",
+      "theorems": [
+        "Binomial Theorem",
+        "Lifting The Exponent (LTE)"
+      ],
+      "techniques": [
+        "case analysis",
+        "gcd considerations",
+        "binomial expansion",
+        "modular arithmetic"
+      ],
+      "concepts": [
+        "prime numbers",
+        "Diophantine equation",
+        "Fermat's Last Theorem for exponent p",
+        "coprime numbers",
+        "divisibility by p"
+      ],
+      "difficulty": "olympic",
+      "notes": "For p>2, one shows x+y = p and uses binomial expansion to find solutions. Only p=2 and p=3 yield solutions in natural numbers."
+    },
+    {
+      "num": 4,
+      "topic": "geometry",
+      "theorems": [
+        "Menelaus",
+        "Trig Ceva"
+      ],
+      "techniques": [
+        "collinearity proof",
+        "angle chasing"
+      ],
+      "concepts": [
+        "incenter",
+        "incircle",
+        "touchpoints",
+        "circumcenters",
+        "external angle bisectors",
+        "Menelaus' theorem application"
+      ],
+      "difficulty": "hard",
+      "notes": "The circumcenters of triangles AIA1, BIB1, CIC1 lie on the line formed by the intersections of the external angle bisectors with the opposite sides (the Nagel line)."
+    },
+    {
+      "num": 5,
+      "topic": "number_theory",
+      "theorems": [
+        "Lucas' Theorem",
+        "Kummer's Theorem"
+      ],
+      "techniques": [
+        "periodicity analysis",
+        "modular arithmetic",
+        "binomial coefficient properties"
+      ],
+      "concepts": [
+        "binomial coefficients",
+        "central binomial coefficients",
+        "remainders modulo k",
+        "periodic sequences",
+        "prime power modulus"
+      ],
+      "difficulty": "olympic",
+      "notes": "The sequence of remainders is eventually periodic only for k=1 and k=2. For k>=3, the sequence is not eventually periodic. Proof uses properties of central binomial coefficients modulo prime powers."
+    },
+    {
+      "num": 6,
+      "topic": "combinatorics",
+      "theorems": [
+        "Sperner's Theorem"
+      ],
+      "techniques": [
+        "antichain",
+        "maximal family",
+        "combinatorial bounds"
+      ],
+      "concepts": [
+        "Sperner family",
+        "antichain in subset lattice",
+        "binomial coefficient maximum",
+        "Lubell-Yamamoto-Meshalkin inequality"
+      ],
+      "difficulty": "standard",
+      "notes": "This is the classic Sperner's Theorem: the maximum size of an antichain in the Boolean lattice of an n-element set is C(n, floor(n/2))."
+    }
+  ],
+  "unique_concepts": [
+    "tangents to a circle",
+    "power of a point",
+    "cyclic quadrilateral",
+    "inscribed and circumscribed circles",
+    "distance between centers",
+    "linear functions",
+    "collinearity condition",
+    "functional equation",
+    "prime numbers",
+    "Diophantine equation",
+    "Fermat's Last Theorem for exponent p",
+    "coprime numbers",
+    "divisibility by p",
+    "Binomial Theorem",
+    "Lifting The Exponent (LTE)",
+    "incenter",
+    "incircle",
+    "touchpoints",
+    "circumcenters",
+    "external angle bisectors",
+    "Menelaus' theorem application",
+    "binomial coefficients",
+    "central binomial coefficients",
+    "remainders modulo k",
+    "periodic sequences",
+    "prime power modulus",
+    "Lucas' Theorem",
+    "Kummer's Theorem",
+    "Sperner family",
+    "antichain in subset lattice",
+    "binomial coefficient maximum",
+    "Lubell-Yamamoto-Meshalkin inequality"
+  ],
+  "confidence": 0.95
+}

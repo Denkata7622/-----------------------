@@ -1,0 +1,160 @@
+{
+  "_meta": {
+    "pdf": "C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\Задачи_Минали_Години\\Национален\\OLI-3-Национален кръг-1989-9-12 кл-sol.pdf",
+    "paired_with": null,
+    "level": 2,
+    "type": "sol",
+    "analyzed_at": "2026-10-18T11:42:55.192151",
+    "model": "deepseek/deepseek-v3.2",
+    "text_length": 11467,
+    "paired_text_length": 0
+  },
+  "problems": [
+    {
+      "num": 1,
+      "topic": "geometry",
+      "theorems": [
+        "Cosine rule",
+        "Thales"
+      ],
+      "techniques": [
+        "trigonometric identities",
+        "area calculations",
+        "case analysis"
+      ],
+      "concepts": [
+        "excircles",
+        "semiperimeter",
+        "trigonometric functions of half-angles",
+        "parallel lines",
+        "area ratios",
+        "inscribed and circumscribed circles"
+      ],
+      "difficulty": "olympic",
+      "notes": "Heavy use of excircle properties and half-angle trigonometry to relate areas. The condition leads to proving lines are parallel and then sides are equal."
+    },
+    {
+      "num": 2,
+      "topic": "number_theory",
+      "theorems": [],
+      "techniques": [
+        "binary representation",
+        "recurrence relation",
+        "squeeze theorem"
+      ],
+      "concepts": [
+        "floor and fractional part functions",
+        "binary digits",
+        "sequence convergence",
+        "limit evaluation",
+        "inequalities"
+      ],
+      "difficulty": "olympic",
+      "notes": "Clever interpretation of the sequence term using binary expansion of a related integer. The limit is found by bounding the sequence."
+    },
+    {
+      "num": 3,
+      "topic": "algebra",
+      "theorems": [
+        "Vieta's formulas",
+        "Fermat's Little Theorem (implicit in size argument)"
+      ],
+      "techniques": [
+        "proof by contradiction",
+        "inequality manipulation",
+        "modular arithmetic (for part b)"
+      ],
+      "concepts": [
+        "polynomial roots",
+        "complex modulus",
+        "irreducibility over integers",
+        "bounds on roots"
+      ],
+      "difficulty": "olympic",
+      "notes": "Part (a) uses a reverse triangle inequality and a bound on (1+1/n)^n to constrain p. Part (b) uses size of roots and Vieta to show a degree contradiction."
+    },
+    {
+      "num": 4,
+      "topic": "combinatorics",
+      "theorems": [
+        "Binomial theorem (properties of coefficients)"
+      ],
+      "techniques": [
+        "induction",
+        "construction of specific initial configuration",
+        "modular arithmetic (parity)"
+      ],
+      "concepts": [
+        "iterative transformation",
+        "binary operation (+1, -1)",
+        "periodicity",
+        "powers of two",
+        "binomial coefficients modulo 2"
+      ],
+      "difficulty": "olympic",
+      "notes": "The key is deriving the formula for the state after t steps using binomial coefficients as exponents, and using a specific initial setup to force n to be a power of 2."
+    },
+    {
+      "num": 5,
+      "topic": "geometry",
+      "theorems": [],
+      "techniques": [
+        "mass point geometry",
+        "central symmetry",
+        "transformation"
+      ],
+      "concepts": [
+        "centroid (medial center)",
+        "perpendicular lines",
+        "circumscribed sphere",
+        "midpoints",
+        "concurrency",
+        "symmetry"
+      ],
+      "difficulty": "olympic",
+      "notes": "Uses centroids of point masses and central symmetry to map perpendiculars to perpendicular bisectors. The condition is equivalent to the circumcenter lying on a specific line."
+    },
+    {
+      "num": 6,
+      "topic": "number_theory",
+      "theorems": [
+        "Fermat's Little Theorem",
+        "properties of cubic residues"
+      ],
+      "techniques": [
+        "proof by contradiction",
+        "modular arithmetic",
+        "exponent manipulation",
+        "gcd arguments"
+      ],
+      "concepts": [
+        "coprime integers",
+        "prime numbers",
+        "divisibility",
+        "congruences",
+        "order of an element modulo prime",
+        "diophantine equation (Fermat type)"
+      ],
+      "difficulty": "hard",
+      "notes": "A variant of Fermat's Last Theorem with an auxiliary prime condition. Uses the structure of the equation modulo q and properties of the prime p to derive a contradiction."
+    }
+  ],
+  "unique_concepts": [
+    "excircles",
+    "semiperimeter",
+    "trigonometric half-angles",
+    "floor and fractional part",
+    "binary representation",
+    "polynomial irreducibility",
+    "complex modulus bounds",
+    "iterative transformation on a circle",
+    "binomial coefficients modulo 2",
+    "mass point geometry",
+    "central symmetry in geometry",
+    "circumscribed sphere",
+    "cubic residues modulo prime",
+    "order of an element modulo prime",
+    "Fermat-type equation with conditions"
+  ],
+  "confidence": 0.95
+}

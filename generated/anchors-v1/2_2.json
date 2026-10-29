@@ -1,0 +1,25 @@
+{
+  "point_id": "2.2",
+  "total": 1,
+  "by_difficulty": {
+    "easy": 0,
+    "medium": 1,
+    "hard": 0
+  },
+  "problems": [
+    {
+      "source": "OLI-3-Национален кръг-2021-9-12 кл · 2021-None · Зад. 2",
+      "statement": "Върху височината през върха C на остроъгълен триъгълник ABC с център на описаната окръжност O е избрана точка T, за която ∠TBA = ∠ACB. Ако правата CO пресича страната AB в точка K, да се докаже, че симетралата на AB, височината през върха A в △ABC и отсечката KT се пресичат в една точка.",
+      "solution": "Решение. Ако OM ∩ KT = P, то ∠PAM = ∠PBM. Имаме PM/TH = KM/KH = OM/CH, откъдето PM = OM·TH/CH. Тъй като TH = HB·tg γ, то\nPM/BM = (OM/BM)·(TH/CH) = (OM/BM)·(HB/CH)·tg γ.\nНо от △OMB имаме OM/BM = ctg γ и следователно\nPM/BM = ctg γ·(HB/CH)·tg γ = HB/CH.\nОт горното следва, че △PMB ∼ △BHC, откъдето ∠PBM = ∠BCH. Следователно ∠PAB = ∠PBM = ∠BCH и значи AP ⟂ BC.",
+      "answer": null,
+      "difficulty": "medium",
+      "techniques": [
+        "angle_chasing",
+        "similar_triangles",
+        "symmedian"
+      ],
+      "confidence": "exact",
+      "reasoning": "Angle chasing and similarity give concurrency of the AB‑perpendicular, altitude from A and KT."
+    }
+  ]
+}

@@ -1,0 +1,112 @@
+{
+  "_meta": {
+    "pdf": "C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\Задачи_Минали_Години\\Областен\\OLI-2-Областен кръг-2026-10 кл-probs.pdf",
+    "paired_with": "C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\Задачи_Минали_Години\\Областен\\OLI-2-Областен кръг-2026-10 кл-sol.pdf",
+    "level": 1,
+    "type": "probs",
+    "analyzed_at": "2026-10-16T21:43:58.575180",
+    "model": "deepseek/deepseek-v3.2",
+    "text_length": 1452,
+    "paired_text_length": 0
+  },
+  "problems": [
+    {
+      "num": 1,
+      "topic": "algebra",
+      "theorems": [],
+      "techniques": [
+        "telescoping sum",
+        "arithmetic progression properties",
+        "system of equations"
+      ],
+      "concepts": [
+        "arithmetic progression",
+        "sum of terms",
+        "reciprocal sum",
+        "telescoping product"
+      ],
+      "difficulty": "standard",
+      "notes": "Standard problem combining arithmetic progression and telescoping sum for reciprocals."
+    },
+    {
+      "num": 2,
+      "topic": "geometry",
+      "theorems": [
+        "Menelaus",
+        "Ceva",
+        "properties of regular pentagon"
+      ],
+      "techniques": [
+        "angle chasing",
+        "collinearity proof",
+        "coordinate geometry or synthetic approach"
+      ],
+      "concepts": [
+        "regular pentagon",
+        "angle bisector",
+        "concurrency",
+        "collinearity",
+        "cyclic quadrilaterals",
+        "symmetry"
+      ],
+      "difficulty": "hard",
+      "notes": "Complex geometry problem requiring multiple steps of angle calculation and application of Menelaus/Ceva to prove collinearity."
+    },
+    {
+      "num": 3,
+      "topic": "number_theory",
+      "theorems": [],
+      "techniques": [
+        "multiplicative function analysis",
+        "prime factorization",
+        "inequality bounding"
+      ],
+      "concepts": [
+        "divisor function",
+        "multiplicative structure",
+        "prime divisors",
+        "ordered divisors",
+        "composite numbers"
+      ],
+      "difficulty": "olympic",
+      "notes": "Non-standard definition of 'special' number imposing strong multiplicative constraints on its divisors. Requires determining maximal possible number of divisors under these constraints."
+    },
+    {
+      "num": 4,
+      "topic": "combinatorics",
+      "theorems": [],
+      "techniques": [
+        "pigeonhole principle",
+        "area minimization",
+        "tiling",
+        "boundary argument"
+      ],
+      "concepts": [
+        "lattice points",
+        "polygon area",
+        "covering problem",
+        "integer grid",
+        "Pick's theorem potential"
+      ],
+      "difficulty": "olympic",
+      "notes": "Covering problem on a discrete grid. Likely involves finding an optimal arrangement of polygons (e.g., triangles or rectangles) to minimize total area while covering all points."
+    }
+  ],
+  "unique_concepts": [
+    "arithmetic progression",
+    "telescoping sum",
+    "regular pentagon",
+    "angle bisector",
+    "collinearity",
+    "Menelaus theorem",
+    "Ceva theorem",
+    "divisor function",
+    "multiplicative structure",
+    "prime factorization",
+    "lattice points",
+    "covering problem",
+    "area minimization",
+    "Pick's theorem"
+  ],
+  "confidence": 0.95
+}

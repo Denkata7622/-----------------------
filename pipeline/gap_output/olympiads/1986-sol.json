@@ -1,0 +1,148 @@
+{
+  "_meta": {
+    "pdf": "C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\Задачи_Минали_Години\\Национален\\OLI-3-Национален кръг-1986-9-12 кл-sol.pdf",
+    "paired_with": null,
+    "level": 2,
+    "type": "sol",
+    "analyzed_at": "2026-10-18T11:38:00.649505",
+    "model": "deepseek/deepseek-v3.2",
+    "text_length": 10299,
+    "paired_text_length": 0
+  },
+  "problems": [
+    {
+      "num": 1,
+      "topic": "number_theory",
+      "theorems": [],
+      "techniques": [
+        "modular_arithmetic",
+        "function_monotonicity",
+        "bounding"
+      ],
+      "concepts": [
+        "prime_factorization",
+        "quadratic_expression_modulo_small_primes",
+        "search_for_minimal_solution"
+      ],
+      "difficulty": "olympic",
+      "notes": "Non-standard: clever use of 4(n^2-n+11) = (2n-1)^2+43 to analyze divisibility by 3,5,7; then systematic search for minimal n such that n^2-n+11 is product of four primes (>=11)."
+    },
+    {
+      "num": 2,
+      "topic": "algebra",
+      "theorems": [],
+      "techniques": [
+        "case_analysis",
+        "inequality_manipulation"
+      ],
+      "concepts": [
+        "quadratic_polynomial",
+        "maximum_of_absolute_value_on_interval",
+        "derivative_of_quadratic",
+        "relationship_between_f_and_f_prime"
+      ],
+      "difficulty": "olympic",
+      "notes": "Standard: analysis of where |f(x)| attains maximum on [-1,1] (endpoints or midpoint of roots) and deducing lower bound for |f'(x)|."
+    },
+    {
+      "num": 3,
+      "topic": "geometry",
+      "theorems": [],
+      "techniques": [
+        "geometric_optimization",
+        "trigonometric_functions",
+        "function_maximization"
+      ],
+      "concepts": [
+        "regular_tetrahedron",
+        "inscribed_cube",
+        "spatial_geometry",
+        "similar_triangles",
+        "trigonometric_inequalities"
+      ],
+      "difficulty": "hard",
+      "notes": "Hard 3D geometry: cube with body diagonal along tetrahedron's altitude; uses decomposition into parallel sections and optimization via trigonometric functions."
+    },
+    {
+      "num": 4,
+      "topic": "combinatorics",
+      "theorems": [],
+      "techniques": [
+        "induction",
+        "construction_of_counterexample",
+        "graph_coloring"
+      ],
+      "concepts": [
+        "polygon_illumination_problem",
+        "triangulation_of_polygons",
+        "vertex_coloring_(1,2,3)_of_triangulation",
+        "existence_of_diagonals_splitting_polygon"
+      ],
+      "difficulty": "olympic",
+      "notes": "Classic illumination problem: minimal n such that a point exists inside an n-gon not illuminating any side; uses triangulation and coloring argument for second part."
+    },
+    {
+      "num": 5,
+      "topic": "geometry",
+      "theorems": [],
+      "techniques": [
+        "transformation_geometry"
+      ],
+      "concepts": [
+        "rotations",
+        "homothety",
+        "composition_of_transformations",
+        "image_of_circle_under_similarity"
+      ],
+      "difficulty": "standard",
+      "notes": "Standard: use of rotations and homothety to determine locus as union of two circles."
+    },
+    {
+      "num": 6,
+      "topic": "algebra",
+      "theorems": [],
+      "techniques": [
+        "proof_by_contradiction",
+        "inequality_manipulation",
+        "harmonic_series_divergence"
+      ],
+      "concepts": [
+        "sequence_inequalities",
+        "harmonic_series",
+        "divergence_of_harmonic_series",
+        "bounded_monotone_sequences"
+      ],
+      "difficulty": "olympic",
+      "notes": "Uses divergence of harmonic series (specifically S_{2n}-S_n >= 1/2) to derive contradiction assuming all terms nonnegative."
+    }
+  ],
+  "unique_concepts": [
+    "prime_factorization",
+    "modular_arithmetic",
+    "quadratic_polynomial",
+    "maximum_on_interval",
+    "derivative",
+    "regular_tetrahedron",
+    "inscribed_cube",
+    "3D_geometry",
+    "trigonometric_optimization",
+    "polygon_illumination",
+    "triangulation",
+    "vertex_coloring",
+    "rotations",
+    "homothety",
+    "transformation_geometry",
+    "sequence_inequalities",
+    "harmonic_series_divergence",
+    "proof_by_contradiction",
+    "function_monotonicity",
+    "bounding",
+    "case_analysis",
+    "inequality_manipulation",
+    "geometric_optimization",
+    "induction",
+    "construction_of_counterexample",
+    "graph_coloring"
+  ],
+  "confidence": 0.95
+}

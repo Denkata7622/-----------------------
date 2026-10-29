@@ -1,0 +1,213 @@
+{
+  "point_id": "7.5",
+  "total": 15,
+  "by_difficulty": {
+    "easy": 0,
+    "medium": 14,
+    "hard": 1
+  },
+  "problems": [
+    {
+      "source": "OLI-2-Областен кръг-1997-10 кл · 1997-10 · Зад. 4",
+      "statement": "Find all continuous functions f(x) defined in the set of real numbers and such that\n\n$$f(x)=f\\left(x^{2}+\\frac{1}{4}\\right)$$\n\nfor all real x.",
+      "solution": "Solution: Let $f(x)$ be a function satisfying the conditions of the problem. Obviously $f(x)$ is an even function.\n\nLet $x_0 \\ge 0$. There are two cases:\n\n(I) $0 \\le x_0 \\le \\frac{1}{2}$. Consider the sequence\n\n(1) $$x_0, x_1, \\dots, x_n, \\dots$$\n\ndefined by the equalities $x_{n+1} = x_n^2 + \\frac{1}{4}$.\n\nIt is easy to see by induction that $0 \\le x_n \\le \\frac{1}{2}$ for all $n$. Moreover\n\n$$x_{n+1} - x_n = x_n^2 - x_n + \\frac{1}{4} = \\left(x_n - \\frac{1}{2}\\right)^2 \\ge 0,$$\n\nwhich implies that (1) is a monotone increasing function. Since it is bounded, it follows that it is a convergent function. Let $\\lim_{n\\to\\infty} x_n = \\alpha$.\n\nNow $\\alpha^2 - \\alpha + \\frac{1}{4} = 0$, so $\\alpha = \\frac{1}{2}$.\n\nOn the other hand, since $f(x)$ is a continuous function,\n\n$$\\lim_{n\\to\\infty} f(x_n) = f\\left(\\frac{1}{2}\\right).$$\n\nBut\n\n$$f(x_{n+1}) = f\\left(x_n^2 + \\frac{1}{4}\\right) = f(x_n)$$\n\nfor all $n$. Thus $f(x_0) = f(x_1) = \\cdots$ which means that $f(x_0) = f\\left(\\frac{1}{2}\\right)$ for all $x_0 \\in \\left[0, \\frac{1}{2}\\right]$.\n\n(II) $x_0 > \\frac{1}{2}$. Consider the following sequence:\n\n(2) $x_0, x_1, \\ldots, x_n, \\ldots$\n\ndefined by $x_{n+1} = \\sqrt{x_n - \\frac{1}{4}}$.\n\nAs in the previous case, we show that (2) is a convergent function and $\\lim_{n\\to\\infty} x_n = \\frac{1}{2}$. Further $\\lim_{n\\to\\infty} f(x_n) = f\\left(\\frac{1}{2}\\right)$ and since\n\n$$f(x_{n+1}) = f\\left(x_{n+1}^2 + \\frac{1}{4}\\right) = f(x_n)$$\n\nfor all $n$ we get that $f(x_0) = f\\left(\\frac{1}{2}\\right)$.\n\nTherefore $f(x)$ is a constant function in the interval $[0, +\\infty)$, and since it is even, it is a constant for all $x$.\n\nConversely, any constant function satisfies the conditions of the problem.",
+      "answer": "$f(x)=C$ for all $x\\in\\mathbb{R}$, where $C\\in\\mathbb{R}$ is arbitrary.",
+      "difficulty": "medium",
+      "techniques": [
+        "functional_equation"
+      ],
+      "confidence": "exact",
+      "reasoning": "Iterates the functional relation, shows convergence to ½, and uses continuity to prove constancy."
+    },
+    {
+      "source": "OLI-2-Областен кръг-1998-10 кл · 1998-10 · Зад. 3",
+      "statement": "Let $\\mathbb{R}^+$ be the set of all positive real numbers. Prove that there is no function $f : \\mathbb{R}^+ \\to \\mathbb{R}^+$ such that\n\n$$(f(x))^2 \\ge f(x+y)(f(x)+y)$$\n\nfor arbitrary positive real numbers $x$ and $y$.",
+      "solution": "Solution: Suppose there exists a function satisfying the conditions of the problem. Write the initial equality in the form\n\n$$f(x) - f(x + y) \\geq \\frac{f(x)y}{f(x) + y}.$$\n\nFirst we prove that $f(x) - f(x + 1) \\geq \\frac{1}{2}$ for $x > 0$. Obviously $f$ is a (strictly) monotone non-increasing function. Fix $x > 0$ and choose a natural number $n$, such that $n \\cdot F(x + 1) \\geq 1$. When $k = 0, 1, \\ldots, n - 1$, we obtain that\n\n$$f(x + \\frac{k}{n}) - f(x + \\frac{k + 1}{n}) \\geq \\frac{f(x + \\frac{k}{n})\\frac{1}{n}}{f(x + \\frac{k}{n}) + \\frac{1}{n}} \\geq \\frac{1}{2n}.$$\n\nAdding the above inequalities gives $f(x) - f(x + 1) \\geq \\frac{1}{2}$.\n\nLet the natural number $m$ be such that $m \\geq 2f(x)$. Therefore\n\n$$f(x) - f(x + m) = \\sum_{i=0}^{m-1} (f(x + i) - f(x + i + 1)) \\geq \\frac{m}{2} \\geq f(x),$$\n\nand so $f(x + m) \\leq 0$. But this contradicts the fact that $f$ is strictly positive.",
+      "answer": "There is no such function.",
+      "difficulty": "medium",
+      "techniques": [
+        "functional_inequality"
+      ],
+      "confidence": "exact",
+      "reasoning": "Shows monotonicity, telescoping sum and contradiction; typical functional‑inequality technique."
+    },
+    {
+      "source": "OLI-2-Областен кръг-1998-11 кл · 1998-11 · Зад. 3",
+      "statement": "Let $\\mathbb{R}^+$ be the set of all positive real numbers. Prove that there is no function $f : \\mathbb{R}^+ \\to \\mathbb{R}^+$ such that\n\n$$(f(x))^2 \\ge f(x+y)(f(x)+y)$$\n\nfor arbitrary positive real numbers $x$ and $y$.",
+      "solution": "Solution: Suppose there exists a function satisfying the conditions of the problem. Write the initial equality in the form\n\n$$f(x) - f(x + y) \\geq \\frac{f(x)y}{f(x) + y}.$$\n\nFirst we prove that $f(x) - f(x + 1) \\geq \\frac{1}{2}$ for $x > 0$. Obviously $f$ is a (strictly) monotone non-increasing function. Fix $x > 0$ and choose a natural number $n$, such that $n \\cdot F(x + 1) \\geq 1$. When $k = 0, 1, \\ldots, n - 1$, we obtain that\n\n$$f(x + \\frac{k}{n}) - f(x + \\frac{k + 1}{n}) \\geq \\frac{f(x + \\frac{k}{n})\\frac{1}{n}}{f(x + \\frac{k}{n}) + \\frac{1}{n}} \\geq \\frac{1}{2n}.$$\n\nAdding the above inequalities gives $f(x) - f(x + 1) \\geq \\frac{1}{2}$.\n\nLet the natural number $m$ be such that $m \\geq 2f(x)$. Therefore\n\n$$f(x) - f(x + m) = \\sum_{i=0}^{m-1} (f(x + i) - f(x + i + 1)) \\geq \\frac{m}{2} \\geq f(x),$$\n\nand so $f(x + m) \\leq 0$. But this contradicts the fact that $f$ is strictly positive.",
+      "answer": null,
+      "difficulty": "medium",
+      "techniques": [
+        "functional_inequality",
+        "monotonicity",
+        "telescoping_sum"
+      ],
+      "confidence": "exact",
+      "reasoning": "Shows f must be decreasing, builds a telescoping sum to obtain a contradiction; typical functional‑inequality technique."
+    },
+    {
+      "source": "OLI-2-Областен кръг-2002-10 кл · 2002-10 · Зад. 3",
+      "statement": "Да се намерят всички естествени числа $n$, за които съществуват реални числа $x$, $y$ и $z$ такива, че\n\n$$x = y - \\frac{1}{y^n}, \\ y = z - \\frac{1}{z^n} \\text{ и } z = x - \\frac{1}{x^n}.$$",
+      "solution": "Решение. Ако $n$ е четно, като съберем трите уравнения, получаваме $\\frac{1}{x^n} + \\frac{1}{y^n} + \\frac{1}{z^n} = 0$, което е невъзможно. Ще докажем, че всяко нечетно $n$ е решение на задачата. Нека $f(y) = y - \\frac{1}{y^n}$ за $y \\in (0, 1)$ и $h(y) = f(f(f(y))) - y = f(y) - \\frac{1}{f^n(y)} - \\frac{1}{\\left(f(y) - \\frac{1}{f^n(y)}\\right)^n} - y$. Понеже $f(y)$ е растяща функция в интервала $(0, 1)$, то функцията $g(y) = f(y) - \\frac{1}{f^n(y)}$ е също растяща. Тъй като $\\lim_{y \\to 0, y > 0} g(y) = -\\infty$ и $\\lim_{y \\to 1, y < 1} g(y) = +\\infty$, съгласно теоремата на Болцано-Вайершрас съществува единствено $\\beta \\in (0, 1)$, за което $g(\\beta) = 0$. Следователно функцията $h(y)$ е непрекъсната в $(0, \\beta)$. Понеже $\\lim_{y \\to 0, y > 0} h(y) = -\\infty$ и $\\lim_{y \\to \\beta, y < \\beta} h(y) = +\\infty$, то съществува $\\gamma \\in (0, \\beta)$, за което $h(\\gamma) = 0$. Тогава числата $x = f(\\gamma)$, $y = \\gamma$ и $z = f(f(\\gamma))$ изпълняват условието на задачата.",
+      "answer": "Всички нечетни естествени числа $n$.",
+      "difficulty": "medium",
+      "techniques": [
+        "functional_equations",
+        "monotonicity",
+        "intermediate_value_theorem"
+      ],
+      "confidence": "exact",
+      "reasoning": "Treats the cyclic system as a functional iteration, uses parity, monotonicity and Bolzano‑Weierstrass to show existence for odd n."
+    },
+    {
+      "source": "OLI-2-Областен кръг-2002-11 кл · 2002-11 · Зад. 3",
+      "statement": "Да се намерят всички естествени числа $n$, за които съществуват реални числа $x$, $y$ и $z$ такива, че\n\n$$x = y - \\frac{1}{y^n}, \\ y = z - \\frac{1}{z^n} \\text{ и } z = x - \\frac{1}{x^n}.$$",
+      "solution": "Решение. Ако $n$ е четно, като съберем трите уравнения, получаваме $\\frac{1}{x^n} + \\frac{1}{y^n} + \\frac{1}{z^n} = 0$, което е невъзможно. Ще докажем, че всяко нечетно $n$ е решение на задачата. Нека $f(y) = y - \\frac{1}{y^n}$ за $y \\in (0, 1)$ и $h(y) = f(f(f(y))) - y = f(y) - \\frac{1}{f^n(y)} - \\frac{1}{\\left(f(y) - \\frac{1}{f^n(y)}\\right)^n} - y$. Понеже $f(y)$ е растяща функция в интервала $(0, 1)$, то функцията $g(y) = f(y) - \\frac{1}{f^n(y)}$ е също растяща. Тъй като $\\lim_{y \\to 0, y > 0} g(y) = -\\infty$ и $\\lim_{y \\to 1, y < 1} g(y) = +\\infty$, съгласно теоремата на Болцано-Вайершрас съществува единствено $\\beta \\in (0, 1)$, за което $g(\\beta) = 0$. Следователно функцията $h(y)$ е непрекъсната в $(0, \\beta)$. Понеже $\\lim_{y \\to 0, y > 0} h(y) = -\\infty$ и $\\lim_{y \\to \\beta, y < \\beta} h(y) = +\\infty$, то съществува $\\gamma \\in (0, \\beta)$, за което $h(\\gamma) = 0$. Тогава числата $x = f(\\gamma)$, $y = \\gamma$ и $z = f(f(\\gamma))$ изпълняват условието на задачата.",
+      "answer": "Всички нечетни естествени числа $n$.",
+      "difficulty": "medium",
+      "techniques": [
+        "functional_equations",
+        "monotonicity"
+      ],
+      "confidence": "exact",
+      "reasoning": "Cyclic functional equations are handled by monotonicity and intermediate‑value arguments."
+    },
+    {
+      "source": "OLI-2-Областен кръг-2006-10 кл · 2006-10 · Зад. 3",
+      "statement": "Нека $\\mathbb{Q}^+$ е множеството на положителните рационални числа. Да се намерят всички функции $f : \\mathbb{Q}^+ \\to \\mathbb{R}$, такива че $f(1/x) = f(x)$, $xf(x) = (x + 1)f(x - 1)$ за всяко $x \\in \\mathbb{Q}^+$ и $f(1) = 1$.",
+      "solution": "Нека $x = \\frac{p}{q}$ е несъкратима дроб (т.е. $p$ и $q$ са взаимнопрости естествени числа). Ще докажем с индукция по $n = p + q \\geq 2$, че $f(x)$ е еднозначно определена.\n\nТвърдението е вярно за $n = 2$ (имаме $f(1) = 1$). Да предположим, че то е вярно за всички числа, по-малки от дадено $n \\geq 3$, и да разгледаме $x = \\frac{p}{q}$ с $p + q = n$. От първото условие следва, че можем да считаме $p > q$.\n\nТогава от второто условие $f\\left(\\frac{p}{q}\\right)$ се дефинира еднозначно чрез $f\\left(\\frac{p - q}{q}\\right)$, за която $p - q + q < n$, т.е. тя е еднозначно определена от индукционното предположение.\n\nОстава да отбележим, че функцията $f\\left(\\frac{p}{q}\\right) = \\frac{1}{2}(p + q)$, където $p$ и $q$ са взаимнопрости естествени числа, изпълнява условието на задачата.",
+      "answer": "$f\\left(\\frac{p}{q}\\right) = \\frac{p + q}{2}$, където $p$ и $q$ са взаимнопрости естествени числа.",
+      "difficulty": "medium",
+      "techniques": [
+        "functional_equation",
+        "induction"
+      ],
+      "confidence": "exact",
+      "reasoning": "Induction on p+q for rational x, using given functional relations."
+    },
+    {
+      "source": "OLI-2-Областен кръг-2008-10 кл · 2008-10 · Зад. 3",
+      "statement": "Да се докаже, че съществува функция $f : \\mathbb{N} \\to \\mathbb{N}$, удовлетворяваща равенството $f(f(n)) = 3n$ за всяко $n \\in \\mathbb{N}$.",
+      "solution": "Всяко естествено число $n$ еднозначно се представя във вида $n = 3^k t$, където $k$ е цяло неотрицателно число и $t$ е естествено число, за което $(t, 3) = 1$. Да разгледаме функцията\n\n$$f(n) = \\begin{cases} 3^{k+1}(t+1), & \\text{ако } t \\equiv 1 \\pmod{3}, \\\\ 3^k(t-1), & \\text{ако } t \\equiv 2 \\pmod{3}. \\end{cases}$$\n\nАко $n = 3^k t$, където $t \\equiv 1 \\pmod{3}$, то\n\n$$f(f(n)) = f(3^{k+1}(t+1)) = 3^{k+1}(t+1-1) = 3^{k+1}t = 3n.$$\n\nАналогично се проверява, че ако $n = 3^k t$, където $t \\equiv 2 \\pmod{3}$, то $f(f(n)) = 3n$. Следователно функцията $f(n)$ удовлетворява условието.",
+      "answer": "$f(3^k t)=\\begin{cases}3^{k+1}(t+1),&t\\equiv1\\pmod3,\\\\3^k(t-1),&t\\equiv2\\pmod3,\\end{cases}$ където $k\\geq0$ и $(t,3)=1$.",
+      "difficulty": "medium",
+      "techniques": [
+        "functional_equation_construction",
+        "case_analysis"
+      ],
+      "confidence": "exact",
+      "reasoning": "Represented n=3^k·t, defined f piecewise, verified f(f(n))=3n for both residue classes."
+    },
+    {
+      "source": "OLI-2-Областен кръг-2011-11 кл · 2011-11 · Зад. 5",
+      "statement": "Да се намерят всички функции f : R → R такива, че за произволни x, y, z, е изпълнено неравенството (f(x) + f(y) − 2f(xy)) · (f(x) + f(z) − 2f(xz)) ≥ 0.",
+      "solution": "Решение. При y = 0 и z = 1 следва, че (f(x) − f(0)) · (f(x) − f(1)) ≤ 0, т.е. f(0) ≤ f(x) ≤ f(1) или f(1) ≤ f(x) ≤ f(0) за всяко x.\nДа предположим, че f не е константа. Ако f(0) ≤ f(x) < f(1) или f(1) < f(x) ≤ f(0) за някое x ≠ 0, то при y = 1/x и z = 1 следва, че f(1) + f(1) > f(a) + f(1/a) ≥ 2f(1) или f(1) + f(1) < f(a) + f(1/a) ≤ 2f(1), което е противоречие. Значи f(x) = f(1) при x ≠ 0.\nПроверка показва, че всяка такава функция изпълнява даденото неравенство.",
+      "answer": "Всички функции с произволна стойност f(0) и с f(x) = f(1) за всяко x ≠ 0.",
+      "difficulty": "medium",
+      "techniques": [
+        "functional_inequality",
+        "bounding",
+        "constant_function"
+      ],
+      "confidence": "exact",
+      "reasoning": "Fix y=0, z=1 to bound f between f(0) and f(1); any non‑constant leads to contradiction, so f is constant."
+    },
+    {
+      "source": "OLI-3-Национален кръг-1993-9-12 кл · 1993-None · Зад. 1",
+      "statement": "Да се намерят всички функции f, дефинирани и приемащи стойности в множеството на целите числа, за които са изпълнени условията:\n(а) f(1) = 1;\n(б) за всеки две цели числа m и n е в сила равенството:\nf(m + n)(f(m) − f(n)) = f(m − n)(f(m) + f(n)).",
+      "solution": "Решение. Нека f е функция, удовлетворяваща а) и б). Полагаме в б) m = n = 1 и намираме 2f(0) = 0, т.е. f(0) = 0. Отново от б) при m = 0 получаваме, че за всяко цяло n е изпълнено f(n)(f(n)+f(−n)) = 0. Оттук f(−n) = −f(n) или f(n) = 0. Ако обаче f(n) = 0, заместваме m и n съответно с 0 и −n и лесно намираме f(−n) = 0 = f(n). Следователно f(−n) = −f(n) за всяко n ∈ Z, т.е. f е нечетна функция.\nДа положим в б) m = 2, n = 1. Имаме f(3)(f(2)−1) = f(2)+1 или (f(2)−1)(f(3)−1) = 2. Тъй като f(2) и f(3) са цели числа, последното е възможно само в един от следните случаи:\nf(2) = 2, f(3) = 3; f(2) = 3, f(3) = 2;\nf(2) = 0, f(3) = −1; f(2) = −1, f(3) = 0.\nПърви случай. При f(2) = 2, f(3) = 3 ще докажем по индукция, че f(n) = n за всяко n ∈ Z. При n = 0, 1, 2, 3 това вече е проверено. Нека f(k) = k за всяко k = 0, 1, 2, ..., n, където n ≥ 3. Тогава съгласно б) имаме\nf(n+1)(f(n)−1) = f(n−1)(f(n)+1)\nи като вземем предвид индуктивното предположение, намираме f(n+1) = n+1. Твърдението е доказано за всяко n ≥ 0. Но f е нечетна функция, следователно то е вярно за всяко n ∈ Z.\nВтори случай. Ако f(2) = 3, f(3) = 2, от б) намираме последователно f(4) = 9 и f(5) = 5/2, което е невъзможно.\nТрети случай. Нека f(2) = 0, f(3) = −1. Ще докажем, че\nf(n) = 0, ако n = 2k;\nf(n) = 1, ако n = 4k+1;\nf(n) = −1, ако n = 4k+3,\nза всяко k ∈ Z. Поради нечетността на f и тук можем да се ограничим със случая k ≥ 0. За k = 0 твърдението е вярно. Нека то е изпълнено за някое k > 0. Равенството f(m−2)f(m) = f(m−2)f(m) показва при m = 4k+1 и m = 4k+3, че f(4(k+1)+1) = f(4k+1) = 1 и f(4(k+1)+3) = f(4k+3) = −1. Сега можем да се позовем на равенствата\nf(2k+2)(f(2k+1)−1) = f(2k)(f(2k+1)+1),\nf(2k+2)(f(2k−1)−f(3)) = f(2k−4)(f(2k−1)+f(3)),\nот които се вижда, че f(2k+2) = 0 и при четно, и при нечетно k.\nЧетвърти случай. Ако f(2) = −1, f(3) = 0, както в Трети случай се доказва, че\nf(n) = 0, ако n = 3k;\nf(n) = 1, ако n = 3k+1;\nf(n) = −1, ако n = 3k+2.\nНакрая непосредствено се проверява, че трите функции, намерени в Първи, трети и четвърти случай, са решения на задачата.",
+      "answer": "Трите функции са: f(n) = n; f(2k) = 0, f(4k+1) = 1, f(4k+3) = −1; f(3k) = 0, f(3k+1) = 1, f(3k+2) = −1, където k ∈ Z.",
+      "difficulty": "medium",
+      "techniques": [
+        "functional_equation",
+        "parity",
+        "induction",
+        "case_analysis"
+      ],
+      "confidence": "exact",
+      "reasoning": "Solution uses substitution m=n=1, m=0, then parity arguments and induction on n. Main tool is general functional‑equation techniques (7.5)."
+    },
+    {
+      "source": "OLI-3-Национален кръг-2006-9-12 кл · 2006-None · Зад. 2",
+      "statement": "Нека $\\mathbb{R}^+$ е множеството на положителните реални числа и функцията $f : \\mathbb{R}^+ \\to \\mathbb{R}^+$ е такава, че\n\n$$f(x + y) - f(x - y) = 4\\sqrt{f(x)f(y)}$$\n\nза произволни $x > y > 0$.\n\nа) Да се докаже, че $f(2x) = 4f(x)$ за всяко $x \\in \\mathbb{R}^{+}$.\nб) Да се намерят всички такива функции.",
+      "solution": "а) Понеже $f(x+y) - f(x-y) > 0$, то $f$ е (строго) растяща функция. Следователно $f(x)$ има граница $l \\ge 0$ при $x \\to 0$, $x > 0$ (докажете!). Тогава при $x, y \\to 0$, $x > y > 0$, получаваме, че $l - l = 4\\sqrt{l^2}$, т.е. $l = 0$. Сега да фиксираме $x$. При $y \\to 0$, $y > 0$ следва, че $f(x+y) - f(x-y) \\to 0$. Тъй като $f$ е монотонна функция, заключаваме, че тя е непрекъсната в $x$. Накрая при $y \\to x$, $y < x$, получаваме, че $f(2x) = 4f(x)$.\n\nб) При $x = ny > 0$, където $n \\ge 2$ е естествено число, следва, че $f((n+1)y) = f((n-1)y) + 4\\sqrt{f(ny)f(y)}$. Понеже $f(2y) = 4f(y)$ по индукция заключаваме, че $f(ny) = n^2 f(y)$. Полагаме $f(1) = c > 0$. Тогава $f(n) = n^2 c$. Сега при $p, q \\in \\mathbb{N}$ имаме, че $c p^2 = f(q \\cdot p/q) = q^2 f(p/q)$, т.е. $f(p/q) = c(p/q)^2$. Тъй като $f$ е непрекъсната функция, следва, че $f(x) = cx^2$ за всяко $x > 0$. Обратно, функциите от този вид изпълняват условието на задачата.\n\nЗабележка. Може да се докаже, че функция, изпълняваща даденото условие, е диференцируема. Тогава от равенството $$\\frac{f(x+y)-f(x-y)}{2y} = 2\\sqrt{f(x)}\\frac{\\sqrt{f(y)}}{y}$$ при $y \\to 0$, $y > 0$, следва, че $f'(x) = 2c\\sqrt{f(x)}$. Оттук $(\\sqrt{f(x)})' = c$, т.е. $f(x) = c^2x^2$.",
+      "answer": "$f(x)=cx^2$ за всяко $x>0$, където $c>0$.",
+      "difficulty": "medium",
+      "techniques": [
+        "functional_equation",
+        "monotonicity",
+        "continuity",
+        "induction"
+      ],
+      "confidence": "exact",
+      "reasoning": "Main tool is solving a functional equation; step 7.5 lists general techniques for ФУ."
+    },
+    {
+      "source": "OLI-3-Национален кръг-2010-9-12 кл · 2010-None · Зад. 5",
+      "statement": "Нека $f : \\mathbb{N} \\to \\mathbb{N}$ е функция, която удовлетворява условията $f(1) = 1$ и $f(n) = n - f(f(n - 1))$, за всяко $n \\ge 2$. Да се докаже, че $f(n + f(n)) = n$ за всяко $n \\in \\mathbb{N}$.",
+      "solution": "Нека означим със (*) условието $f(n) = n - f(f(n - 1))$, за всяко $n \\ge 2$. Първо ще докажем с индукция, че $f(n) \\le f(n + 1) \\le f(n) + 1$ за всяко $n \\in \\mathbb{N}$.\n\nПри $n = 2$ по условие имаме $f(2) = 2 - f(f(1)) = 1$ и неравенството е изпълнено. Нека неравенствата са изпълнени за всяко $k \\le n$. Тогава $f(n + 1) = f(n)$ или $f(n) + 1$. От (*) следва, че $f(n) < n$ и от индукционното предположение получаваме\n\n$$\\begin{array}{l} f(f(n)) \\le f(f(n + 1)) \\stackrel{(*)}{\\Rightarrow} n + 1 - f(n + 1) \\le n + 2 - f(n + 2) \\\\ \\Rightarrow f(n + 2) \\le f(n + 1) + 1, \\end{array}$$\n\n$$\\begin{array}{l} f(f(n + 1)) \\le f(f(n)) + 1 \\stackrel{(*)}{\\Rightarrow} n + 2 - f(n + 2) \\le n + 1 - f(n + 1) + 1 \\\\ \\Rightarrow f(n + 1) \\le f(n + 2). \\end{array}$$\n\nОкончателно $f(n + 1) \\le f(n + 2) \\le f(n + 1) + 1$, с което индукционната стъпка е направена.\n\nСега ще докажем, че равенството $f(n + f(n)) = n$ е изпълнено за всяко $n \\in \\mathbb{N}$.\n\nПри $n = 1$ имаме $f(1 + f(1)) = f(2) = 1$. Ако $f(n + f(n)) = n$ за някое $n \\in \\mathbb{N}$, то\n\n$$\\begin{array}{l} f(f(n + f(n)) = f(n)) \\stackrel{(*)}{\\Rightarrow} n + f(n) + 1 - f(n + f(n) + 1) = f(n) \\\\ \\Rightarrow f(n + f(n) + 1) = n + 1. \\end{array}$$\n\nСлучай 1. Ако $f(n + 1) = f(n)$, то $f(n + 1 + f(n + 1)) = n + 1$.\n\nСлучай 2. Ако $f(n + 1) = f(n) + 1$, то $f(n + 1 + f(n + 1)) \\stackrel{(*)}{=} n + 1 + f(n + 1) - f(f(n + f(n + 1))) = n + 1 + f(n + 1) - f(f(n + f(n) + 1)) = n + 1 + f(n + 1) - f(n + 1) = n + 1$\n\nС това доказателството е завършено.",
+      "answer": null,
+      "difficulty": "medium",
+      "techniques": [
+        "induction",
+        "functional_equation"
+      ],
+      "confidence": "exact",
+      "reasoning": "The argument proceeds by induction on n, first establishing monotonicity of f, then proving the required identity using the recurrence definition."
+    },
+    {
+      "source": "OLI-3-Национален кръг-2015-9-12 кл · 2015-None · Зад. 4",
+      "statement": "Да се намерят всички функции f : R⁺ → R⁺, за които неравенствата\n(i) f(x + y) ≥ f(x) + y\n(ii) f(f(x)) ≤ x\nса в сила за всички положителни числа x и y.",
+      "solution": "Решение. Първи начин. От (i) следва, че f е строго растяща функция. Тогава имаме\nx + y ≥ f(f(x + y)) ≥ f(f(x) + y) ≥ f(x) + f(y). (1)\nИзползвахме (ii); второто неравенство следва от (i), тъй като f е растяща, а третото — замествайки x с y и y с f(x) в (i). Тъй като функцията f е растяща, имаме lim_{x→0⁺} f(x) = inf_{x>0} f(x) = ℓ ≥ 0. Да отбележим, че от (ii) следва, че lim_{x→0⁺} f(f(x)) = 0.\nДа допуснем, че ℓ > 0. Тъй като f е растяща, получаваме f(f(x)) ≥ f(ℓ) > 0, което противоречи на lim_{x→0⁺} f(f(x)) = 0. Следователно ℓ = 0 и lim_{x→0⁺} f(x) = 0. Избирайки y → 0⁺ в (1), получаваме x ≥ f(x) за всяко положително x. Сега от (i) получаваме\nx + y ≥ f(x + y) ≥ f(x) + y;\nx − f(x) ≥ f(x + y) − f(x) − y ≥ 0.\nФиксирайки x + y и избирайки x → 0⁺ в последните неравенства, получаваме f(x + y) = x + y, което означава, че f(x) = x за всяко положително x. Очевидно тази функция е решение на задачата.\nВтори начин. Прилагайки последователно (i) и (ii), получаваме\nx ≥ f(f(x)) = f(f(x)/n + ((n − 1)/n)f(x)) ≥ f(f(x)/n) + ((n − 1)/n)f(x)\n(n е естествено число). Тогава, ако изберем в горния израз n → +∞, достигаме до x ≥ f(x). Следователно lim_{x→0⁺} f(x) = 0. Комбинираме (i) и x + y ≥ f(x + y), за да получим x + y ≥ f(x + y) ≥ f(x) + y и оттук нататък продължаваме както по-горе.",
+      "answer": "f(x) = x за всяко x > 0.",
+      "difficulty": "medium",
+      "techniques": [
+        "functional_inequality",
+        "monotonicity"
+      ],
+      "confidence": "exact",
+      "reasoning": "Derives monotonicity from (i), uses limit arguments and inequality chaining to force f(x)=x; the essential tool is handling functional inequalities."
+    },
+    {
+      "source": "OLI-3-Национален кръг-2021-9-12 кл · 2021-None · Зад. 3",
+      "statement": "Да се намерят всички функции f : R+ → R+ такива, че\nf(x)f(y + f(x)) = f(xy + 1) ∀x, y > 0.",
+      "solution": "Решение. (1) Очевидно функциите f = 1 и f(x) = 1/x изпълняват даденото равенство. Ще докажем, че други няма.\n(2) Първо да отбележим, че ако y = (f(x) − 1)/(x − 1) > 0 за някое x ≠ 1, то y + f(x) = xy + 1 и тогава f(x) = 1 – противоречие.\n(3) Ако f(z) = 1/z за всяко z > 1, от условието при y > 1 следва, че f(x) = 1/x за всяко x > 0.\n(4) Нека сега f(x) ≠ 1/x за някое x > 1. Тогава x = xy + 1 при y = 1 − 1/x > 0 и значи f(a) = 1 за a = 1 − 1/x + f(x). Тогава f(z + 1) = f(a)f(z + f(a)) = f(az + 1) и по индукция следва, че\n(∗) f(z + 1) = f(aⁿz + 1) за всеки z > 0 и n ∈ Z.\n(5) Нека u, v > 1. Понеже a ≠ 1, можем да изберем n ∈ Z така, че bₙ = aⁿ(u − 1) > v(1 − f(v)), т.е. cₙ = bₙ/v + f(v) > 1. Тогава f(cₙ) ≤ 1 съгласно (2) и значи\nf(v) ≥ f(v)f(cₙ) = f(bₙ + 1) = f(u)\nсъгласно (∗). Аналогично f(u) ≥ f(v), т.е. f(x) е константа при x > 1.\n(6) Сега от условието при y > 1 следва, че f(x) = 1 при x > 0.",
+      "answer": "f(x) = 1 за всяко x > 0 или f(x) = 1/x за всяко x > 0.",
+      "difficulty": "medium",
+      "techniques": [
+        "functional_equation",
+        "substitution",
+        "induction"
+      ],
+      "confidence": "exact",
+      "reasoning": "Substitutes special y, derives constant behaviour and shows only f≡1 or f(x)=1/x work."
+    },
+    {
+      "source": "OLI-3-Национален кръг-2024-9-12 кл · 2024-None · Зад. 3",
+      "statement": "Да се намерят всички функции f : (0, ∞) → (0, ∞), удовлетворяващи равенството\nf(af(b) + a)(f(bf(a)) + a) = 1\nза всички положителни реални числа a, b.",
+      "solution": "Решение. Полагайки b = 1/f(a) получаваме, че за всяко a > 0 е изпълнено f(af(1/f(a)) + a) = 1/(a + f(1)), откъдето функцията f може да приема всяка стойност в интервала (0,1/f(1)). В частност, за всички a > 0 и x ∈ (0,1/f(1)), полагайки b така че f(bf(a)) = x получаваме, че f(af(b) + a) = 1/(a + x), откъдето функцията f е сюрективна.\nНека y удовлетворява f(y) = 1. Да разгледаме произволни реални числа a > y, b > 0. От предишното разсъждение съществува d > 0 за което af(b) + a = yf(d) + y. След прилагане на функцията f и използване на уравнението получаваме, че f(bf(a)) + a = f(d) + y. В частност, за всички a,b избрани по-горе получаваме, че\naf(b) + a = y(f(bf(a)) + a − y) + y.\nЗамествайки горната връзка в началното уравнение получаваме, че за всички a > y, b > 0 е изпълнено, че\nf(y(f(bf(a)) + a) + y − y²) = 1/(f(bf(a)) + a).\nИзползвайки сюрективността на функцията и факта, че a > y, заключаваме, че c = y(f(bf(a)) + a) + y − y² приема всички стойности в интервала (y,∞), откъдето съществуват реални числа z,w, за които f(c) = 1/(zc + w) за всички достатъчно големи c. Проверка в даденото уравнение показва, че това е възможно само ако z = 1, w = 0.\nОстава да положим a,b достатъчно големи, като същевременно b/a е произволно число. Тогава началното уравнение ни дава, че f(b/a) = a/b за всички такива a,b. Проверка показва, че функцията x ↦ 1/x е решение на задачата.",
+      "answer": "f(x) = 1/x за всяко x > 0.",
+      "difficulty": "medium",
+      "techniques": [
+        "substitution",
+        "surjectivity"
+      ],
+      "confidence": "exact",
+      "reasoning": "Repeated substitutions (b=1/f(a), etc.) and surjectivity arguments lead to the unique solution f(x)=1/x."
+    },
+    {
+      "source": "OLI-2-Областен кръг-2012-11 кл · 2012-11 · Зад. 6",
+      "statement": "Нека a е реално число и P(x) е неконстантен полином с реални коефициенти така, че P(x² + a) = (P(x))² за всяко реално число x. Да се докаже, че a = 0.",
+      "solution": "Решение. От $P^2(x) = P^2(-x)$ следва, че $P$ е или четна, или нечетна функция.\n\nАко $P$ е четна функция, то $P(x) = Q(x^2)$. Тогава $Q((x^2 + a)^2) = Q^2(x^2)$ и следователно $Q((x + a)^2) = Q^2(x)$ за всяко $x$. Оттук $Q(x^2) = Q^2(x - a)$, т.е. полиномът $Q(x - a)$ също изпълнява даденото условие, като $\\deg P = 2\\deg Q$.\n\nПродължавайки по същия начин, ще стигнем до полином от нечетна степен, изпълняващ даденото условие. Той не може да е четна функция.\n\nИ така, остана да разгледаме случая, когато $P$ е нечетна функция. Тогава $P(x) = xR(x^2)$ и следователно $(x^2 + a)R((x^2 + a)^2) = x^2R^2(x^2)$. Оттук $(x + a)R((x + a)^2) = xR^2(x)$, т.е. $P(x) = (x - a)R^2(x - a)$ за всяко $x$. Нека $R(x - a) = x^kS(x)$, където $S(0) \\neq 0$. Лесно се вижда, че $(x - a)R^2(x - a) = x^{2k+1}T(x) - aS^2(0)x^{2k}$. Понеже $P$ е нечетна функция, следва, че $a = 0$.\n\nЗабележки. а) Лесно се доказва, че ако $P(x^2) = P^2(x) \\neq \\text{const}$ за всяко $x$, то $P(x) = x^n$.\n\nб) Задачата е много частен случай на теорема на Дж. Ф. Рит, която описва комутиращите (относно композиция) полиноми.",
+      "answer": "a = 0",
+      "difficulty": "hard",
+      "techniques": [
+        "functional_equation",
+        "polynomial_composition",
+        "parity"
+      ],
+      "confidence": "exact",
+      "reasoning": "Studies polynomial functional equation, uses parity and degree arguments to force a=0."
+    }
+  ]
+}

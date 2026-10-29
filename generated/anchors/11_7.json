@@ -1,0 +1,25 @@
+{
+  "point_id": "11.7",
+  "total": 1,
+  "by_difficulty": {
+    "easy": 0,
+    "medium": 1,
+    "hard": 0
+  },
+  "problems": [
+    {
+      "source": "OLI-3-Национален кръг-2008-9-12 кл · 2008-None · Зад. 3",
+      "statement": "Нека $n \\in N$ и $0 \\le \\alpha_1 \\le \\alpha_2 \\le \\dots \\le \\alpha_n \\le \\pi$ и $b_1, b_2, \\dots, b_n$ са реални числа, за които неравенството $\\left| \\sum_{i=1}^n b_i \\cos(k\\alpha_i) \\right| < \\frac{1}{k}$ е в сила за всяко $k \\in N$. Да се докаже, че $b_1 = b_2 = \\dots b_n = 0$.",
+      "solution": "Първо ще докажем следното\n\nТвърдение. Ако $a_j, z_j \\in \\mathbb{C}$, $|z_j| \\ge 1$ ($1 \\le j \\le n$), $z_j \\neq z_l$ ($j \\neq l$) и $b_k = \\sum_{j=1}^n a_j z_j^k \\to 0$, то $a_j = 0$.\n\nДоказателство. Достатъчно е да докажем, че $a_n = 0$ (тогава твърдението следва с индукция по $n$). При $n = 1$ това е очевидно. Нека $n > 1$ и $w_j = \\frac{z_j}{z_n}$. Тъй като $|z_n| \\ge 1$, то $c_k = \\sum_{j=1}^{n-1} a_j w_j^k \\to -a_n$. От друга страна, ако $P(w) = \\prod_{j=1}^{n-1} (w - w_j) = \\sum_{j=0}^{n-1} d_j w^j$, то (както е добре известно и лесно се проверява)\n\n$\\sum_{j=0}^{n-1} d_j c_{k+j} = 0$ за всяко $k \\in \\mathbb{N}$. При $k \\to \\infty$ следва, че $a_n \\sum_{j=0}^{n-1} d_j = 0$. Понеже $w_j \\neq 1$, то $\\sum_{j=0}^{n-1} d_j = P(1) \\neq 0$ и значи $a_n = 0$.\n\nНека сега $z_j = \\cos \\alpha_j + i \\sin \\alpha_j$. Понеже $\\alpha_j \\in [0, \\pi]$ и $\\alpha_j \\neq \\alpha_l$ ($j \\neq l$), то $z_j \\neq z_l \\neq \\overline{z_j}$. Тъй като $2 \\sum_{j=1}^n \\cos k \\alpha_j = \\sum_{j=1}^n a_j (z_j^k + \\overline{z_j}^k)$, от доказаното твърдение (за $2n$ вместо $n$) следва, че ако $z_j \\neq \\overline{z_j}$, то $a_j = 0$, а иначе $2a_j = 0$, т.е. пак $a_j = 0$.",
+      "answer": null,
+      "difficulty": "medium",
+      "techniques": [
+        "complex_numbers",
+        "roots_of_unity",
+        "linear_independence"
+      ],
+      "confidence": "exact",
+      "reasoning": "Transforms cosine sum into sums of powers of unit complex numbers and applies a linear‑independence lemma for distinct roots of unity."
+    }
+  ]
+}

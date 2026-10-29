@@ -1,0 +1,164 @@
+{
+  "_meta": {
+    "pdf": "C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\Задачи_Минали_Години\\Национален\\OLI-3-Национален кръг-2026-9-12 кл-probs.pdf",
+    "paired_with": "C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\Задачи_Минали_Години\\Национален\\OLI-3-Национален кръг-2026-9-12 кл-sol.pdf",
+    "level": 2,
+    "type": "probs",
+    "analyzed_at": "2026-10-16T21:12:41.762937",
+    "model": "deepseek/deepseek-v3.2",
+    "text_length": 2529,
+    "paired_text_length": 17317
+  },
+  "problems": [
+    {
+      "num": 1,
+      "topic": "combinatorics",
+      "theorems": [],
+      "techniques": [
+        "induction",
+        "counting",
+        "pigeonhole_principle"
+      ],
+      "concepts": [
+        "coin_problem",
+        "factorial_numbers",
+        "maximal_sum",
+        "existence_construction"
+      ],
+      "difficulty": "standard",
+      "notes": "Classical coin problem variant with i coins of denomination a_i. Upper bound via counting possible sums, lower bound via construction a_i = i!."
+    },
+    {
+      "num": 2,
+      "topic": "algebra",
+      "theorems": [],
+      "techniques": [
+        "function_monotonicity",
+        "inequality_manipulation",
+        "substitution"
+      ],
+      "concepts": [
+        "real_numbers",
+        "maximization",
+        "symmetric_expression",
+        "homogeneous_equation"
+      ],
+      "difficulty": "standard",
+      "notes": "Maximization of ab under given equation. Key step: define f(x) = (x-1)^n/x and use monotonicity."
+    },
+    {
+      "num": 3,
+      "topic": "number_theory",
+      "theorems": [
+        "cyclotomic_polynomial",
+        "polynomial_remainder"
+      ],
+      "techniques": [
+        "polynomial_division",
+        "roots_of_unity",
+        "modular_arithmetic",
+        "lemma_application"
+      ],
+      "concepts": [
+        "primitive_roots",
+        "polynomial_congruence",
+        "finite_fields",
+        "simple_prime"
+      ],
+      "difficulty": "hard",
+      "notes": "Remainder is constant p. Solved via complex roots of unity or lemma about cyclotomic polynomials."
+    },
+    {
+      "num": 4,
+      "topic": "geometry",
+      "theorems": [
+        "tangent_properties",
+        "angle_chasing",
+        "power_of_point"
+      ],
+      "techniques": [
+        "angle_chasing",
+        "inversion",
+        "directed_angles",
+        "arc_measure"
+      ],
+      "concepts": [
+        "cyclic_quadrilaterals",
+        "tangent_circles",
+        "angle_bisector",
+        "oriented_arcs",
+        "parallel_lines"
+      ],
+      "difficulty": "olympic",
+      "notes": "Equivalence between tangency and angle bisector. Multiple solutions: synthetic (angle chase), inversion, arc manipulation."
+    },
+    {
+      "num": 5,
+      "topic": "combinatorics",
+      "theorems": [
+        "pigeonhole_principle",
+        "divergence_of_harmonic_series"
+      ],
+      "techniques": [
+        "counting_pairs",
+        "bounding_products",
+        "summation_estimates",
+        "density_argument"
+      ],
+      "concepts": [
+        "infinite_sequences",
+        "bounded_differences",
+        "product_equality",
+        "combinatorial_number_theory"
+      ],
+      "difficulty": "hard",
+      "notes": "Uses pigeonhole principle with careful counting of products. Shows existence of distinct indices with equal products."
+    },
+    {
+      "num": 6,
+      "topic": "combinatorics",
+      "theorems": [
+        "graph_coloring",
+        "degree_counting"
+      ],
+      "techniques": [
+        "binary_representation",
+        "xor_operation",
+        "induction",
+        "labeling_construction"
+      ],
+      "concepts": [
+        "hypercube_graph",
+        "edge_labeling",
+        "incoming_outgoing_conditions",
+        "bitwise_xor",
+        "necessary_divisibility"
+      ],
+      "difficulty": "olympic",
+      "notes": "Problem reduces to edge-coloring of n-dimensional hypercube with constraints. Answer: n must be a power of 2."
+    }
+  ],
+  "unique_concepts": [
+    "coin_problem",
+    "factorial_numbers",
+    "maximal_sum",
+    "function_monotonicity",
+    "symmetric_expression",
+    "cyclotomic_polynomial",
+    "polynomial_remainder",
+    "primitive_roots",
+    "tangent_circles",
+    "angle_bisector",
+    "inversion",
+    "bounded_differences",
+    "product_equality",
+    "pigeonhole_principle",
+    "hypercube_graph",
+    "edge_labeling",
+    "bitwise_xor",
+    "necessary_divisibility",
+    "graph_coloring",
+    "xor_operation"
+  ],
+  "confidence": 0.95
+}

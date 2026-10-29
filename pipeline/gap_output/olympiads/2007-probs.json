@@ -1,0 +1,144 @@
+{
+  "_meta": {
+    "pdf": "C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\Задачи_Минали_Години\\Национален\\OLI-3-Национален кръг-2007-9-12 кл-probs.pdf",
+    "paired_with": "C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\Задачи_Минали_Години\\Национален\\OLI-3-Национален кръг-2007-9-12 кл-sol.pdf",
+    "level": 2,
+    "type": "probs",
+    "analyzed_at": "2026-10-18T12:06:09.108620",
+    "model": "deepseek/deepseek-v3.2",
+    "text_length": 22239,
+    "paired_text_length": 13281
+  },
+  "problems": [
+    {
+      "num": 1,
+      "topic": "geometry",
+      "theorems": [],
+      "techniques": [
+        "congruent triangles",
+        "angle chasing"
+      ],
+      "concepts": [
+        "incircle",
+        "tangent points",
+        "angle sum in quadrilateral",
+        "segment lengths"
+      ],
+      "difficulty": "standard",
+      "notes": "Uses properties of incircle and congruent triangles from equal segments from incenter."
+    },
+    {
+      "num": 2,
+      "topic": "combinatorics",
+      "theorems": [],
+      "techniques": [
+        "pigeonhole principle",
+        "construction",
+        "counting"
+      ],
+      "concepts": [
+        "digit manipulation",
+        "table construction",
+        "exponential counting (5^n, 2^n)"
+      ],
+      "difficulty": "hard",
+      "notes": "Creative construction of a table with digits to satisfy a difference condition; uses base-5 and base-2 counting."
+    },
+    {
+      "num": 3,
+      "topic": "algebra",
+      "theorems": [
+        "Gauss's Lemma"
+      ],
+      "techniques": [
+        "polynomial manipulation",
+        "assumption of specific form",
+        "contradiction"
+      ],
+      "concepts": [
+        "cosine values",
+        "minimal polynomial",
+        "field extensions Q(√q)",
+        "rational root test"
+      ],
+      "difficulty": "olympic",
+      "notes": "Shows cos(π/7) cannot be expressed in a specific nested radical form; uses properties of algebraic numbers and field theory."
+    },
+    {
+      "num": 4,
+      "topic": "combinatorics",
+      "theorems": [],
+      "techniques": [
+        "coloring",
+        "construction",
+        "extremal principle"
+      ],
+      "concepts": [
+        "sum-free sets",
+        "coloring of integers",
+        "arithmetic progressions"
+      ],
+      "difficulty": "standard",
+      "notes": "Finds maximal size of an interval that is 'good' for all shifts; uses explicit coloring constructions for odd and even cases."
+    },
+    {
+      "num": 5,
+      "topic": "geometry",
+      "theorems": [],
+      "techniques": [
+        "area covering",
+        "inequality manipulation",
+        "proof by contradiction"
+      ],
+      "concepts": [
+        "equilateral triangles",
+        "area sum",
+        "covering problems",
+        "geometric inequalities"
+      ],
+      "difficulty": "hard",
+      "notes": "Determines minimal total area of five equilateral triangles needed to cover a unit equilateral triangle; involves careful case analysis and area estimates."
+    },
+    {
+      "num": 6,
+      "topic": "algebra",
+      "theorems": [
+        "Gauss's Lemma"
+      ],
+      "techniques": [
+        "polynomial identity",
+        "infinite descent",
+        "coefficient comparison"
+      ],
+      "concepts": [
+        "polynomial as perfect square",
+        "integer solutions to y^2 = f(x)",
+        "rational coefficients becoming integer"
+      ],
+      "difficulty": "olympic",
+      "notes": "If a polynomial takes square values infinitely often, it must be a square of another polynomial; uses degree comparison and growth arguments."
+    }
+  ],
+  "unique_concepts": [
+    "incircle and tangent points",
+    "digit table construction and exponential counting",
+    "cosine algebraic representation and field extensions",
+    "sum-free sets and integer coloring",
+    "covering with equilateral triangles and area inequalities",
+    "polynomial as perfect square from infinite square values",
+    "Gauss's Lemma",
+    "rational root test",
+    "pigeonhole principle",
+    "congruent triangles",
+    "angle chasing",
+    "construction",
+    "contradiction",
+    "minimal polynomial",
+    "coloring",
+    "extremal principle",
+    "area covering",
+    "polynomial manipulation",
+    "infinite descent"
+  ],
+  "confidence": 0.95
+}

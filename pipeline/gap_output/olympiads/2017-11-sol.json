@@ -1,0 +1,120 @@
+{
+  "_meta": {
+    "pdf": "C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\Задачи_Минали_Години\\Областен\\OLI-2-Областен кръг-2017-11 кл-sol.pdf",
+    "paired_with": null,
+    "level": 1,
+    "type": "sol",
+    "analyzed_at": "2026-10-16T21:19:24.249355",
+    "model": "deepseek/deepseek-v3.2",
+    "text_length": 6975,
+    "paired_text_length": 0
+  },
+  "problems": [
+    {
+      "num": 1,
+      "topic": "algebra",
+      "theorems": [],
+      "techniques": [
+        "substitution",
+        "homogeneous_equation",
+        "trigonometric_identity"
+      ],
+      "concepts": [
+        "quadratic_equation",
+        "cosine_identity",
+        "interval_analysis"
+      ],
+      "difficulty": "standard",
+      "notes": "Смесена система от алгебрично и тригонометрично уравнение. Ключови стъпки: решаване на хомогенно уравнение и използване на cos2x = cos2y."
+    },
+    {
+      "num": 2,
+      "topic": "geometry",
+      "theorems": [],
+      "techniques": [
+        "similar_triangles",
+        "parallel_lines",
+        "midpoint",
+        "cyclic_quadrilaterals"
+      ],
+      "concepts": [
+        "orthocenter",
+        "altitudes",
+        "similarity",
+        "parallelogram",
+        "homothety"
+      ],
+      "difficulty": "hard",
+      "notes": "Сложна геометрична конструкция. Ключови стъпки: установяване на подобия, доказване, че определени точки са среди на отсечки, и че образуваният триъгълник е хомотетичен на дадения."
+    },
+    {
+      "num": 3,
+      "topic": "combinatorics",
+      "theorems": [],
+      "techniques": [
+        "strategy_game",
+        "pigeonhole_principle",
+        "contradiction",
+        "interval_analysis"
+      ],
+      "concepts": [
+        "divisibility",
+        "powers_of_two",
+        "interval_covering",
+        "existence_proof"
+      ],
+      "difficulty": "olympic",
+      "notes": "Комбинаторна игра. Ключови идеи: за n>=10 изборът на числа от вида 2^k+1 гарантира победа; за n<=9 се използва принцип на Дирихле, за да се покаже, че противникът винаги може да победи."
+    },
+    {
+      "num": 4,
+      "topic": "combinatorics",
+      "theorems": [],
+      "techniques": [
+        "extremal_principle",
+        "graph_theory_modeling",
+        "induction",
+        "contradiction"
+      ],
+      "concepts": [
+        "sum_constraint",
+        "pairwise_sums",
+        "graph_edges_and_vertices",
+        "matching"
+      ],
+      "difficulty": "olympic",
+      "notes": "Екстремална комбинаторна задача. Ключови идеи: построяване на пример; моделиране с графи (върхове=числа, ребра=двойки със сбор <2); използване на индукция за намиране на съвършено съвпадение в подграф; достигане на противоречие със сборното условие."
+    }
+  ],
+  "unique_concepts": [
+    "quadratic_equation",
+    "homogeneous_equation",
+    "trigonometric_identity",
+    "cosine_identity",
+    "interval_analysis",
+    "orthocenter",
+    "altitudes",
+    "similar_triangles",
+    "parallel_lines",
+    "midpoint",
+    "cyclic_quadrilaterals",
+    "parallelogram",
+    "homothety",
+    "strategy_game",
+    "pigeonhole_principle",
+    "divisibility",
+    "powers_of_two",
+    "interval_covering",
+    "existence_proof",
+    "extremal_principle",
+    "graph_theory_modeling",
+    "sum_constraint",
+    "pairwise_sums",
+    "graph_edges_and_vertices",
+    "matching",
+    "contradiction",
+    "induction",
+    "substitution"
+  ],
+  "confidence": 0.95
+}

@@ -1,0 +1,61 @@
+# АНАЛИЗ НА `book-3 (1).pdf`
+
+⚠️ **КРИТИЧНО НЕСЪОТВЕТСТВИЕ:** Този PDF **НЕ Е олимпиадна математическа книга**. Това е книга по **състезателно програмиране** (Competitive Programming / Информатика). Тя няма нищо общо с подготовката за областен/национален кръг по **математика** и не може да се map-не към нито една от 96-те математически точки в `AI_MASTER_CONTEXT.md`.
+
+Въпреки това, спазвам заявения формат и попълвам блока „КНИГА" с пълната структура (всички глави, не само първите 5).
+
+```js
+// ─── КНИГА ───
+{
+  file: "Материали_EN/book-3 (1).pdf",
+  title: "Competitive Programming 4, Book 1",
+  author: "Steven Halim, Felix Halim, Suhendry Effendy",
+  year: 2020,
+  language: "EN",
+  total_pages: 329,
+  topics: ["Data Structures", "Algorithms", "Graph Theory", "Dynamic Programming", "Competitive Programming (Informatics)"],
+  structure: [
+    { chapter: "Front matter", title: "Forewords, Testimonials, About IOI/ICPC", pages: "1-30", plan_step: null, plan_points: [], priority_regional: "low", priority_national: "low" },
+    { chapter: "Ch 1", title: "Introduction: Competitive Programming, Ad Hoc Problems", pages: "31-82", plan_step: null, plan_points: [], priority_regional: "low", priority_national: "low" },
+    { chapter: "Ch 2", title: "Data Structures and Libraries (Array, BST, Fenwick, Segment Tree, UFDS, Graph DS)", pages: "83-158", plan_step: null, plan_points: [], priority_regional: "low", priority_national: "low" },
+    { chapter: "Ch 3", title: "Problem Solving Paradigms (Complete Search, D&C, Greedy, DP)", pages: "159-222", plan_step: null, plan_points: [], priority_regional: "low", priority_national: "low" },
+    { chapter: "Ch 4", title: "Graph (Traversal, MST, SSSP, APSP, Special Graphs)", pages: "223-301", plan_step: null, plan_points: [], priority_regional: "low", priority_national: "low" },
+    { chapter: "Back matter", title: "Bibliography & Index", pages: "303-329", plan_step: null, plan_points: [], priority_regional: "low", priority_national: "low" }
+  ],
+  duplicates: [],
+  is_duplicate_of: null,
+  recommended_action: "skip",
+  best_mapping: [],
+  does_not_fit: true,
+  reason: "Книгата е по състезателно програмиране (алгоритми и структури от данни за IOI/ICPC), не по олимпиадна математика. Нула припокриване с 96-те математически точки (Геометрия, ТЧ, Алгебра, Комбинаторика в смисъла на математическата олимпиада). Съдържанието (Fenwick Tree, Segment Tree, Kruskal, Dijkstra, Floyd-Warshall, DP-TSP, SCC, Eulerian Graph и т.н.) не присъства в плана за математическа олимпиада.",
+  suggested_new_step: null,
+  note_to_user: "Ако ученикът се състезава и по ИНФОРМАТИКА (IOI/NOI), тази книга е отличен ресурс — но трябва да се третира като ОТДЕЛЕН curriculum (напр. паралелен STEP 'Informatics'), а не като част от математическите 11 стъпки."
+}
+```
+
+---
+
+### Проверка за дубликати
+
+Видях, че файлът е именуван `book-3 (1).pdf` — суфиксът `(1)` подсказва, че има и други копия с име `book-3.pdf`, `book-3 (2).pdf` и т.н. в същата папка. **Не мога да потвърдя дали са идентични**, защото не са ми прикачени. Препоръчвам ръчна проверка на хешове (md5) на всички файлове с име `book-3*.pdf`.
+
+⚠️ **НЕ мога да проверя останалите `book-1..12.pdf`** — прикачен ми е само този един файл.
+
+---
+
+### RECOMMENDED CHANGES TO index.html
+
+**В STEPS:**
+- [ ] **Няма промени.** Тази книга не се map-ва към нито една от 96-те математически точки.
+
+**В PLAN_PHASES:**
+- [ ] **Няма промени.** Книгата е нерелевантна за 25-седмичния план по математика.
+
+**Друго:**
+- [ ] **Препоръка:** Премести `book-3 (1).pdf` (и всички `book-*.pdf`) в отделна папка `Материали_EN/Informatics/`, за да не се смесват с математическите ресурси. Ако ученикът има паралелна подготовка по информатика, създай отделен контекст-файл `AI_MASTER_CONTEXT_Informatics.md` и отделен `index.html` (или секция), защото curriculum-ите са принципно различни.
+- [ ] **Конкретен mapping (само ако добавяш паралелен Informatics track):**
+  - Ch 2 → IOI Syllabus: Data Structures (Fenwick, Segment Tree, UFDS)
+  - Ch 3 → IOI Syllabus: Complete Search, DP, Greedy
+  - Ch 4 → IOI Syllabus: Graph algorithms (BFS, DFS, MST, Dijkstra, SCC)
+  - Book 2 (не е прикачен) покрива остатъка от IOI syllabus (Number Theory, Strings, Geometry, Network Flow).
+- [ ] **Няма промени** в exam dates конфигурацията за математика.

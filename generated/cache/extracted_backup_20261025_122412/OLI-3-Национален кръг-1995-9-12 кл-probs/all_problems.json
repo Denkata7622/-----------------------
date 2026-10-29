@@ -1,0 +1,101 @@
+{
+  "pdf": "OLI-3-Национален кръг-1995-9-12 кл-probs",
+  "problems": [
+    {
+      "num": 1,
+      "year": 1995,
+      "grade": null,
+      "round": "nacionalen",
+      "statement": "Find the number of all integers $n > 1$, for which the number $a^{25} - a$ is divisible by $n$ for every integer $a$.",
+      "solution": null,
+      "answer": null,
+      "page": 1,
+      "pdf": "OLI-3-Национален кръг-1995-9-12 кл-probs",
+      "chunk": 1,
+      "grade_range": [
+        9,
+        12
+      ]
+    },
+    {
+      "num": 2,
+      "year": 1995,
+      "grade": null,
+      "round": "nacionalen",
+      "statement": "A triangle $ABC$ with semiperimeter $p$ is given. Points $E$ and $F$ lie on the line $AB$ and $CE = CF = p$. Prove that the excircle $k_1$ of $\\triangle ABC$ to the side $AB$ touches the circumcircle $k$ of $\\triangle EFC$.",
+      "solution": null,
+      "answer": null,
+      "page": 1,
+      "pdf": "OLI-3-Национален кръг-1995-9-12 кл-probs",
+      "chunk": 1,
+      "grade_range": [
+        9,
+        12
+      ]
+    },
+    {
+      "num": 3,
+      "year": 1995,
+      "grade": null,
+      "round": "nacionalen",
+      "statement": "Two players $\\mathbf{A}$ and $\\mathbf{B}$ take stones one after the other from a heap with $n \\geq 2$ stones. $\\mathbf{A}$ begins the game and takes at least 1 stone but no more than $n - 1$ stones. Each player on his turn must take at least 1 stone but no more than the other player has taken before him. The player who takes the last stone is the winner. Find who of the players has a winning strategy.",
+      "solution": null,
+      "answer": null,
+      "page": 1,
+      "pdf": "OLI-3-Национален кръг-1995-9-12 кл-probs",
+      "chunk": 1,
+      "grade_range": [
+        9,
+        12
+      ]
+    },
+    {
+      "num": 4,
+      "year": 1995,
+      "grade": null,
+      "round": "nacionalen",
+      "statement": "The points $C_1, A_1$ and $B_1$ lie on the sides $AB, BC$ and $CA$ of the equilateral triangle $ABC$ respectively in such a way that the inradii of the triangles $C_1AB_1, B_1CA_1, A_1BC_1$ and $A_1B_1C_1$ are equal. Prove that $A_1, B_1$ and $C_1$ are the midpoints of the corresponding sides.",
+      "solution": null,
+      "answer": null,
+      "page": 1,
+      "pdf": "OLI-3-Национален кръг-1995-9-12 кл-probs",
+      "chunk": 1,
+      "grade_range": [
+        9,
+        12
+      ]
+    },
+    {
+      "num": 5,
+      "year": 1995,
+      "grade": null,
+      "round": "nacionalen",
+      "statement": "Let $A = \\{1, 2, \\dots, m + n\\}$, where $m$ and $n$ are positive integers and let the function $f : A \\to A$ be defined by the equations:\n\n$$f(i) = i + 1 \\quad \\text{for} \\quad i = 1, 2, \\dots, m - 1, m + 1, \\dots, m + n - 1$$\n\n$$f(m) = 1 \\quad \\text{and} \\quad f(m + n) = m + 1.$$\n\na) Prove that if $m$ and $n$ are odd then there exists a function $g : A \\to A$ such that $g(g(a)) = f(a)$ for all $a \\in A$.\n\nb) Prove that if $m$ is even then $m = n$ iff there exists a function $g : A \\to A$ such that $g(g(a)) = f(a)$ for all $a \\in A$.",
+      "solution": null,
+      "answer": null,
+      "page": 1,
+      "pdf": "OLI-3-Национален кръг-1995-9-12 кл-probs",
+      "chunk": 1,
+      "grade_range": [
+        9,
+        12
+      ]
+    },
+    {
+      "num": 6,
+      "year": 1995,
+      "grade": null,
+      "round": "nacionalen",
+      "statement": "Let $x$ and $y$ be different real numbers such that $\\frac{x^n - y^n}{x - y}$ is an integer for some four consecutive positive integers $n$. Prove that $\\frac{x^n - y^n}{x - y}$ is integer for all positive integers $n$.",
+      "solution": null,
+      "answer": null,
+      "page": 1,
+      "pdf": "OLI-3-Национален кръг-1995-9-12 кл-probs",
+      "chunk": 1,
+      "grade_range": [
+        9,
+        12
+      ]
+    }
+  ]
+}

@@ -1,0 +1,77 @@
+{
+  "pdf": "OLI-2-Областен кръг-2002-11 кл-probs",
+  "problems": [
+    {
+      "num": 1,
+      "year": 2002,
+      "grade": 11,
+      "round": "oblasten",
+      "statement": "Да се реши в естествени числа уравнението\n\n$$x! + y! = 15.2^{x!}.$$",
+      "solution": null,
+      "answer": null,
+      "page": 1,
+      "pdf": "OLI-2-Областен кръг-2002-11 кл-probs",
+      "chunk": 1
+    },
+    {
+      "num": 2,
+      "year": 2002,
+      "grade": 11,
+      "round": "oblasten",
+      "statement": "Нека $E$ и $F$ са точки съответно върху страните $AD$ и $CD$ на успоредник $ABCD$ такива, че $\\measuredangle AEB = \\measuredangle AFB = 90^\\circ$, а $G$ е точка върху $BF$, за която $EG||AB$. Да се докаже, че ако $H = AF \\cap BE$ и $I = DH \\cap BC$, то $FI \\perp GH$.",
+      "solution": null,
+      "answer": null,
+      "page": 1,
+      "pdf": "OLI-2-Областен кръг-2002-11 кл-probs",
+      "chunk": 1
+    },
+    {
+      "num": 3,
+      "year": 2002,
+      "grade": 11,
+      "round": "oblasten",
+      "statement": "Да се намерят всички естествени числа $n$, за които съществуват реални числа $x$, $y$ и $z$ такива, че\n\n$$x = y - \\frac{1}{y^n}, \\ y = z - \\frac{1}{z^n} \\text{ и } z = x - \\frac{1}{x^n}.$$",
+      "solution": null,
+      "answer": null,
+      "page": 1,
+      "pdf": "OLI-2-Областен кръг-2002-11 кл-probs",
+      "chunk": 1
+    },
+    {
+      "num": 4,
+      "year": 2002,
+      "grade": 11,
+      "round": "oblasten",
+      "statement": "Точки $A$ и $B$ лежат на окръжност, а точка $C$ се мени върху нея, като $\\triangle ABC$ е остроъгълен. Да се докаже, че ако $E$ и $F$ са ортогоналчите проекции на средата на отсечката $AB$ върху страните $AC$ и $BC$, то симетралата на отсечката $EF$ минава през постоянна точка.",
+      "solution": null,
+      "answer": null,
+      "page": 1,
+      "pdf": "OLI-2-Областен кръг-2002-11 кл-probs",
+      "chunk": 1
+    },
+    {
+      "num": 5,
+      "year": 2002,
+      "grade": 11,
+      "round": "oblasten",
+      "statement": "Да се докаже, че ако $a$, $b$ и $c$ са положителни числа, за които\n\n$$abc \\le \\frac{1}{4} \\text{ и } \\frac{1}{a^2} + \\frac{1}{b^2} + \\frac{1}{c^2} < 9,$$\n\nто те са дължини на страни на триъгълник.",
+      "solution": null,
+      "answer": null,
+      "page": 1,
+      "pdf": "OLI-2-Областен кръг-2002-11 кл-probs",
+      "chunk": 1
+    },
+    {
+      "num": 6,
+      "year": 2002,
+      "grade": 11,
+      "round": "oblasten",
+      "statement": "Нека $n \\ge 3$ е дадено естествено число и $a_1, a_2, \\dots, a_n$ е $n$-орка от различни реални числа с положителна сума. Една пермутация $b_1, b_2, \\dots, b_n$ на тези числа наричаме „добра“, ако за всяко $k = 1, 2, \\dots, n$ е изпълнено $b_1 + b_2 + \\dots + b_k > 0$. Колко най-малко могат да бъдат „добрите“ пермутации?",
+      "solution": null,
+      "answer": null,
+      "page": 1,
+      "pdf": "OLI-2-Областен кръг-2002-11 кл-probs",
+      "chunk": 1
+    }
+  ]
+}

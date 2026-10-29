@@ -1,0 +1,159 @@
+{
+  "_meta": {
+    "pdf": "C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\Задачи_Минали_Години\\Областен\\OLI-2-Областен кръг-2011-10 кл-probs.pdf",
+    "paired_with": "C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\Задачи_Минали_Години\\Областен\\OLI-2-Областен кръг-2011-10 кл-sol.pdf",
+    "level": 1,
+    "type": "probs",
+    "analyzed_at": "2026-10-18T15:37:20.741200",
+    "model": "deepseek/deepseek-v3.2",
+    "text_length": 1678,
+    "paired_text_length": 0
+  },
+  "problems": [
+    {
+      "num": 1,
+      "topic": "algebra",
+      "theorems": [],
+      "techniques": [
+        "inequality_analysis",
+        "quadratic_function_extremum",
+        "parameter_analysis"
+      ],
+      "concepts": [
+        "absolute_value_inequality",
+        "quadratic_function",
+        "interval_analysis",
+        "no_solution_condition"
+      ],
+      "difficulty": "standard",
+      "notes": "Задачата се свежда до намиране на условия, при които квадратната функция в модул е ограничена в интервала [1,3], така че неравенството да няма решение."
+    },
+    {
+      "num": 2,
+      "topic": "number_theory",
+      "theorems": [],
+      "techniques": [
+        "divisibility",
+        "prime_factorization",
+        "substitution",
+        "bounding_arguments"
+      ],
+      "concepts": [
+        "prime_numbers",
+        "coprime_numbers",
+        "diophantine_equation",
+        "symmetric_expression"
+      ],
+      "difficulty": "standard",
+      "notes": "Уравнението е симетрично относно a и b. Ключов момент е да се изрази p и да се използват делимости и ограничения за прости числа."
+    },
+    {
+      "num": 3,
+      "topic": "geometry",
+      "theorems": [
+        "Euler_line",
+        "properties_of_orthocenter"
+      ],
+      "techniques": [
+        "vector_methods",
+        "coordinate_geometry",
+        "parallel_lines_criteria"
+      ],
+      "concepts": [
+        "orthocenter",
+        "convex_quadrilateral",
+        "parallel_lines",
+        "triangle_geometry"
+      ],
+      "difficulty": "hard",
+      "notes": "Задачата изисква разбиране на връзката между ортоцентровете на триъгълници, образувани от върховете на четириъгълник. Може да се използват вектори или координати за доказване на успоредност."
+    },
+    {
+      "num": 4,
+      "topic": "algebra",
+      "theorems": [],
+      "techniques": [
+        "domain_analysis",
+        "squaring_inequalities",
+        "substitution"
+      ],
+      "concepts": [
+        "irrational_inequalities",
+        "square_roots",
+        "domain_of_definition",
+        "system_of_conditions"
+      ],
+      "difficulty": "standard",
+      "notes": "Трябва внимателно да се намери дефиниционната област преди да се повдига на квадрат. Може да се сведе до по-проста система."
+    },
+    {
+      "num": 5,
+      "topic": "geometry",
+      "theorems": [],
+      "techniques": [
+        "trigonometric_formulas",
+        "area_calculation",
+        "inequality_optimization"
+      ],
+      "concepts": [
+        "incircle",
+        "excircle",
+        "triangle_altitude",
+        "triangle_area",
+        "fixed_parameters",
+        "isosceles_triangle_property"
+      ],
+      "difficulty": "hard",
+      "notes": "Използват се стандартни формули за радиуси на вписана и външновписана окръжност, свързани с полупериметър и страни. Част б) изисква сравнение на лица при фиксирани r и r_a."
+    },
+    {
+      "num": 6,
+      "topic": "combinatorics",
+      "theorems": [],
+      "techniques": [
+        "modular_arithmetic",
+        "counting",
+        "recursion",
+        "periodicity_analysis"
+      ],
+      "concepts": [
+        "sequences_of_natural_numbers",
+        "divisibility_by_3",
+        "combinatorial_counting",
+        "modular_cycles"
+      ],
+      "difficulty": "olympic",
+      "notes": "Задачата е комбинаторна с модулна аритметика. Ключът е да се забележи периодичност в поведението на броя редици с период 8 по модул 3."
+    }
+  ],
+  "unique_concepts": [
+    "absolute_value_inequality",
+    "quadratic_function",
+    "interval_analysis",
+    "no_solution_condition",
+    "prime_numbers",
+    "coprime_numbers",
+    "diophantine_equation",
+    "symmetric_expression",
+    "orthocenter",
+    "convex_quadrilateral",
+    "parallel_lines",
+    "triangle_geometry",
+    "Euler_line",
+    "irrational_inequalities",
+    "square_roots",
+    "domain_of_definition",
+    "incircle",
+    "excircle",
+    "triangle_altitude",
+    "triangle_area",
+    "fixed_parameters",
+    "isosceles_triangle_property",
+    "sequences_of_natural_numbers",
+    "divisibility_by_3",
+    "combinatorial_counting",
+    "modular_arithmetic",
+    "periodicity_analysis"
+  ],
+  "confidence": 0.95
+}

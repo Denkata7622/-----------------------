@@ -1,0 +1,113 @@
+{
+  "extracted": {
+    "OLI-2-Областен кръг-2024-11 кл-probs": {
+      "chunks_done": {
+        "1": 4
+      },
+      "status": "done",
+      "problems": 4
+    },
+    "OLI-2-Областен кръг-2024-11 кл-sol": {
+      "chunks_done": {
+        "1": 8
+      },
+      "status": "done",
+      "problems": 8
+    }
+  },
+  "merged": {
+    "OLI-2-Областен кръг-2024-11 кл": 7
+  },
+  "classified": {
+    "OLI-2-Областен кръг-2024-11 кл:1:2": {
+      "point_id": "5.1",
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": "medium",
+      "techniques": [
+        "vieta_formulas",
+        "discriminant_analysis",
+        "quadratic_equation_solving"
+      ],
+      "reasoning": "Задачата изисква използване на формулите на Виет за сума и произведение на корените, както и проверка на реалността на корените чрез дискриминантата – основната техника е \"Формули на Виет\" (точка 5.1)."
+    },
+    "OLI-2-Областен кръг-2024-11 кл:2:2": {
+      "point_id": "1.4",
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": "medium",
+      "techniques": [
+        "power_of_point",
+        "radical_axis",
+        "angle_bisector"
+      ],
+      "reasoning": "Задачата се решава чрез разглеждане на линията, съдържаща ъглополовящите, като радикална ос на две окръжности (с диаметри AD и BC). Това води до използване на степен на точка и свойства на радикалната ос, от които се извеждат отношенията между KL и MN и следователно между AB и CD."
+    },
+    "OLI-2-Областен кръг-2024-11 кл:1:1": {
+      "point_id": "5.12",
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": "medium",
+      "techniques": [
+        "horner_scheme",
+        "factorization",
+        "reciprocal_substitution",
+        "quadratic_discriminant",
+        "parameter_inequality"
+      ],
+      "reasoning": "Задачата се решава чрез намиране на рационален корен (Хорнер), факторизиране, след което се използва замяната t = x + 1/x – типично за реципрочни уравнения, и се анализира полученото квадратично уравнение спрямо параметъра a, за да се определи броя на реалните корени."
+    },
+    "OLI-2-Областен кръг-2024-11 кл:2:1": {
+      "point_id": "1.6",
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": "medium",
+      "techniques": [
+        "sine_theorem",
+        "area_formula",
+        "trigonometric_relations"
+      ],
+      "reasoning": "Задачата се решава чрез синусова теорема за намиране на страните на триъгълника и след това се използва формулата за лице на трапец. Това съвпада с точка 1.6 – Синусова и косинусова теорема."
+    },
+    "OLI-2-Областен кръг-2024-11 кл:3:1": {
+      "point_id": "4.2",
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": "medium",
+      "techniques": [
+        "diophantine_quadratic",
+        "difference_of_squares",
+        "perfect_square_discriminant"
+      ],
+      "reasoning": "Задачата се решава чрез поставяне на квадратни диофантови уравнения за делителите, изисква дисриминантите да са точни квадрати и използва факторизация на разликата от квадрати – типична техника от точка 4.2 (Диофантови – квадратни)."
+    },
+    "OLI-2-Областен кръг-2024-11 кл:4:1": {
+      "point_id": "6.1",
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": "medium",
+      "techniques": [
+        "am_gm",
+        "double_counting"
+      ],
+      "reasoning": "Задачата се решава чрез двойно броене и прилагане на неравенството AM‑GM (САСГ), което е основната техника, съответстваща на точка 6.1."
+    },
+    "OLI-2-Областен кръг-2024-11 кл:1:3": {
+      "point_id": "1.4",
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": "medium",
+      "techniques": [
+        "power_of_point",
+        "radical_axis",
+        "incenter_properties"
+      ],
+      "reasoning": "Условието ∠I₁MI₂ = 90° показва, че точка M лежи върху радикалната ос на окръжностите с центрове I₁ и I₂ (т.е. има еднаква мощност към двете вписани окръжности). Това води до използване на техниката „степен на точка“ (power of a point) и свойства на инцентровете, от които се извежда AC = BC."
+    }
+  },
+  "budget": {
+    "date": "2026-10-20",
+    "spent_usd": 0.10800000000000004,
+    "calls": 24
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "point_id": "8.5",
+  "total": 1,
+  "by_difficulty": {
+    "easy": 0,
+    "medium": 1,
+    "hard": 0
+  },
+  "problems": [
+    {
+      "source": "OLI-2-Областен кръг-2013-10 кл · 2013-10 · Зад. 4",
+      "statement": "Нека A(n,k) е броят на k-орките (a₁,...,aₖ) от цели числа, за които е изпълнено\na₁ + ... + aₖ₋₁ ≤ n,\na₁ + ... + aₖ₋₁ + aₖ > n,\n1 ≤ aᵢ ≤ n, i = 1...,k.\nЗа кое k стойността на A(12,k) е максимална?",
+      "solution": null,
+      "answer": null,
+      "difficulty": "medium",
+      "techniques": [
+        "stars_and_bars",
+        "binomial_coefficients"
+      ],
+      "confidence": "exact",
+      "reasoning": "Задачата изисква преброяване на k‑орки от цели числа, което се решава със \"stars and bars\" (комбинаторика) и използване на биномни коефициенти за броя на съставните решения."
+    }
+  ]
+}

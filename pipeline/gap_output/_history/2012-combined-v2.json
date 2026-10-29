@@ -1,0 +1,186 @@
+{
+  "_meta": {
+    "pdf": "C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\Материали_БГ\\BMS_2012-2015.pdf",
+    "paired_with": null,
+    "level": 2,
+    "type": "combined",
+    "analyzed_at": "2026-10-16T21:51:42.332323",
+    "model": "deepseek/deepseek-v3.2",
+    "text_length": 447782,
+    "paired_text_length": 0
+  },
+  "problems": [
+    {
+      "num": 8.1,
+      "topic": "algebra",
+      "theorems": [],
+      "techniques": [
+        "inequality manipulation",
+        "parameter analysis"
+      ],
+      "concepts": [
+        "polynomial inequalities",
+        "cubic expansion"
+      ],
+      "difficulty": "standard",
+      "notes": "Преобразуване на кубично неравенство, изследване на параметър."
+    },
+    {
+      "num": 8.2,
+      "topic": "geometry",
+      "theorems": [],
+      "techniques": [
+        "area coloring",
+        "invariant sum"
+      ],
+      "concepts": [
+        "area of triangles",
+        "equilateral triangle",
+        "combinatorial geometry"
+      ],
+      "difficulty": "hard",
+      "notes": "Комбинаторно оцветяване и равни лица, изисква намиране на сума от отсечки."
+    },
+    {
+      "num": 8.3,
+      "topic": "number_theory",
+      "theorems": [
+        "Fermat's little theorem",
+        "divisibility rules"
+      ],
+      "techniques": [
+        "constructing multiples",
+        "digit representation"
+      ],
+      "concepts": [
+        "divisibility by 41",
+        "repunit-like numbers"
+      ],
+      "difficulty": "standard",
+      "notes": "Конструиране на число от вида a111...1b, кратно на 41."
+    },
+    {
+      "num": 8.4,
+      "topic": "number_theory",
+      "theorems": [],
+      "techniques": [
+        "counting representations",
+        "parity argument"
+      ],
+      "concepts": [
+        "sum of consecutive numbers",
+        "number of representations",
+        "odd count condition"
+      ],
+      "difficulty": "hard",
+      "notes": "Брой на представянията като сбор на последователни естествени числа."
+    },
+    {
+      "num": 9.1,
+      "topic": "algebra",
+      "theorems": [],
+      "techniques": [
+        "absolute value equations",
+        "quadratic analysis",
+        "distance condition"
+      ],
+      "concepts": [
+        "absolute value",
+        "roots equidistant from a point",
+        "quadratic equations"
+      ],
+      "difficulty": "standard",
+      "notes": "Уравнение с абсолютни стойности, корените са на равно разстояние от 6."
+    },
+    {
+      "num": 9.2,
+      "topic": "geometry",
+      "theorems": [
+        "Menelaus",
+        "Ceva",
+        "angle bisector properties"
+      ],
+      "techniques": [
+        "Menelaus/Ceva application",
+        "collinearity proof"
+      ],
+      "concepts": [
+        "cyclic quadrilaterals",
+        "intersecting chords",
+        "collinearity"
+      ],
+      "difficulty": "hard",
+      "notes": "Окръжност с център върху ъглополовяща, пресичаща страни, доказване на колинеарност."
+    },
+    {
+      "num": 9.3,
+      "topic": "combinatorics",
+      "theorems": [],
+      "techniques": [
+        "optimal strategy",
+        "information theory",
+        "binary search"
+      ],
+      "concepts": [
+        "king moves on chessboard",
+        "distance queries",
+        "guessing game"
+      ],
+      "difficulty": "olympic",
+      "notes": "Игра на отгатване с въпроси за разстояние на цар по шахматна дъска, оптимален брой въпроси."
+    },
+    {
+      "num": 9.4,
+      "topic": "number_theory",
+      "theorems": [
+        "Dirichlet's theorem",
+        "quadratic reciprocity hints"
+      ],
+      "techniques": [
+        "infinite descent",
+        "existence proof"
+      ],
+      "concepts": [
+        "primes of the form 4k-1",
+        "divisibility 2^q-1 by p",
+        "infinite primes"
+      ],
+      "difficulty": "olympic",
+      "notes": "Съществуват безбройно много прости числа от вида 4k-1, които делят 2^q-1 за някое просто q."
+    }
+  ],
+  "unique_concepts": [
+    "polynomial inequalities",
+    "area coloring",
+    "divisibility by 41",
+    "repunit-like numbers",
+    "sum of consecutive numbers",
+    "absolute value equations",
+    "roots equidistant from a point",
+    "cyclic quadrilaterals",
+    "collinearity",
+    "king moves on chessboard",
+    "distance queries",
+    "guessing game",
+    "primes of the form 4k-1",
+    "divisibility 2^q-1 by p",
+    "infinite primes",
+    "Menelaus theorem",
+    "Ceva theorem",
+    "Fermat's little theorem",
+    "Dirichlet's theorem",
+    "parameter analysis",
+    "inequality manipulation",
+    "constructing multiples",
+    "counting representations",
+    "parity argument",
+    "quadratic analysis",
+    "Menelaus/Ceva application",
+    "optimal strategy",
+    "information theory",
+    "binary search",
+    "infinite descent",
+    "existence proof"
+  ],
+  "confidence": 0.9
+}

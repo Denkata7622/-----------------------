@@ -1,0 +1,115 @@
+{
+  "_meta": {
+    "pdf": "C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\Задачи_Минали_Години\\Областен\\OLI-2-Областен кръг-2022-10 кл-sol.pdf",
+    "paired_with": null,
+    "level": 1,
+    "type": "sol",
+    "analyzed_at": "2026-10-16T21:31:37.430320",
+    "model": "deepseek/deepseek-v3.2",
+    "text_length": 12311,
+    "paired_text_length": 0
+  },
+  "problems": [
+    {
+      "num": 1,
+      "topic": "algebra",
+      "theorems": [],
+      "techniques": [
+        "symmetry_analysis",
+        "substitution",
+        "inequality_bounding"
+      ],
+      "concepts": [
+        "system_of_equations",
+        "absolute_value",
+        "uniqueness_of_solution",
+        "necessary_condition"
+      ],
+      "difficulty": "standard",
+      "notes": "Key observation: if (x,y) is a solution, then (-x,y) is also a solution, forcing x=0 for uniqueness. Then bounding arguments show the solution must be (0,-1)."
+    },
+    {
+      "num": 2,
+      "topic": "geometry",
+      "theorems": [],
+      "techniques": [
+        "symmetry",
+        "cyclic_quadrilaterals",
+        "angle_chasing"
+      ],
+      "concepts": [
+        "altitudes",
+        "reflection",
+        "concyclic_points",
+        "inscribed_angles",
+        "angle_equality"
+      ],
+      "difficulty": "hard",
+      "notes": "Construct P1 as reflection of P over BC. Proving A, C, P1, T are concyclic is central. Then showing T coincides with its reflection leads to the answer."
+    },
+    {
+      "num": 3,
+      "topic": "number_theory",
+      "theorems": [],
+      "techniques": [
+        "generalization",
+        "induction",
+        "recursive_definition",
+        "symmetry_argument"
+      ],
+      "concepts": [
+        "divisibility",
+        "integer_valued_function",
+        "symmetric_function",
+        "product_of_differences"
+      ],
+      "difficulty": "olympic",
+      "notes": "Generalizes the problem to a function f(m,n). Proof uses induction on m+n and a recursive relation f(m,n) = a^n * f(m-1,n) + f(m, n-1)."
+    },
+    {
+      "num": 4,
+      "topic": "combinatorics",
+      "theorems": [
+        "Pigeonhole_Principle"
+      ],
+      "techniques": [
+        "explicit_construction",
+        "pigeonhole_principle",
+        "proof_by_contradiction"
+      ],
+      "concepts": [
+        "strings_of_digits",
+        "de_Bruijn_sequence_like",
+        "substrings",
+        "exhaustive_occurrence"
+      ],
+      "difficulty": "olympic",
+      "notes": "A 'rich' number contains all 16 possible 4-digit substrings from {1,2}. Part (b) uses an extended number and the pigeonhole principle to force the prefix and suffix to be equal."
+    }
+  ],
+  "unique_concepts": [
+    "system_of_equations",
+    "absolute_value",
+    "uniqueness_of_solution",
+    "symmetry_analysis",
+    "inequality_bounding",
+    "altitudes",
+    "reflection",
+    "cyclic_quadrilaterals",
+    "inscribed_angles",
+    "angle_chasing",
+    "divisibility",
+    "integer_valued_function",
+    "induction",
+    "recursive_definition",
+    "symmetric_function",
+    "product_of_differences",
+    "strings_of_digits",
+    "substrings",
+    "pigeonhole_principle",
+    "exhaustive_occurrence",
+    "explicit_construction",
+    "proof_by_contradiction"
+  ],
+  "confidence": 0.95
+}

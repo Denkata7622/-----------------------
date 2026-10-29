@@ -1,0 +1,235 @@
+```js
+// ─── КНИГА ───
+{
+  file: "Материали_EN/book-3.pdf",
+  title: "Mathematical Olympiad Treasures",
+  author: "Titu Andreescu, Bogdan Enescu",
+  year: 2011,
+  language: "EN",
+  total_pages: 262,
+  topics: ["Algebra", "Geometry", "Trigonometry", "Number Theory", "Combinatorics"],
+  structure: [
+    // ═══ PART I: PROBLEMS — CHAPTER 1: ALGEBRA (p 11–45) ═══
+    { chapter: "1.1", title: "An Algebraic Identity", pages: "12-15", plan_step: 6, plan_points: ["6.1"], priority_regional: "high", priority_national: "high" },
+    { chapter: "1.2", title: "Cauchy-Schwarz Revisited", pages: "16-19", plan_step: 6, plan_points: ["6.4"], priority_regional: "high", priority_national: "high" },
+    { chapter: "1.3", title: "Easy Ways Through Absolute Values", pages: "20-23", plan_step: 6, plan_points: ["6.4"], priority_regional: "high", priority_national: "med" },
+    { chapter: "1.4", title: "Parameters", pages: "23-26", plan_step: 5, plan_points: ["5.1"], priority_regional: "med", priority_national: "high" },
+    { chapter: "1.5", title: "Take the Conjugate!", pages: "26-29", plan_step: 3, plan_points: ["3.10"], priority_regional: "high", priority_national: "high" },
+    { chapter: "1.6", title: "Inequalities with Convex Functions", pages: "29-33", plan_step: 6, plan_points: ["6.5"], priority_regional: "high", priority_national: "high" },
+    { chapter: "1.7", title: "Induction at Work", pages: "33-36", plan_step: 8, plan_points: ["8.10"], priority_regional: "high", priority_national: "high" },
+    { chapter: "1.8", title: "Roots and Coefficients", pages: "36-40", plan_step: 5, plan_points: ["5.1", "5.3"], priority_regional: "high", priority_national: "high" },
+    { chapter: "1.9", title: "The Rearrangements Inequality", pages: "40-45", plan_step: 6, plan_points: ["6.7"], priority_regional: "high", priority_national: "high" },
+
+    // ═══ CHAPTER 2: GEOMETRY AND TRIGONOMETRY (p 46–78) ═══
+    { chapter: "2.1", title: "Geometric Inequalities", pages: "46-49", plan_step: 2, plan_points: ["2.8"], priority_regional: "high", priority_national: "high" },
+    { chapter: "2.2", title: "An Interesting Locus", pages: "49-54", plan_step: 1, plan_points: ["1.7"], priority_regional: "med", priority_national: "med" },
+    { chapter: "2.3", title: "Cyclic Quads", pages: "54-59", plan_step: 1, plan_points: ["1.3", "1.5", "1.9"], priority_regional: "high", priority_national: "high" },
+    { chapter: "2.4", title: "Equiangular Polygons", pages: "59-63", plan_step: 2, plan_points: ["2.4"], priority_regional: "low", priority_national: "med" },
+    { chapter: "2.5", title: "More on Equilateral Triangles", pages: "63-67", plan_step: 2, plan_points: ["2.4"], priority_regional: "high", priority_national: "high" },
+    { chapter: "2.6", title: "The \"Carpets\" Theorem", pages: "67-71", plan_step: 1, plan_points: ["1.7"], priority_regional: "med", priority_national: "med" },
+    { chapter: "2.7", title: "Quadrilaterals with an Inscribed Circle", pages: "71-74", plan_step: 1, plan_points: ["1.10"], priority_regional: "high", priority_national: "high" },
+    { chapter: "2.8", title: "Dr. Trig Learns Complex Numbers", pages: "75-78", plan_step: 1, plan_points: ["1.6"], priority_regional: "low", priority_national: "med" },
+
+    // ═══ CHAPTER 3: NUMBER THEORY AND COMBINATORICS (p 79–107) ═══
+    { chapter: "3.1", title: "Arrays of Numbers", pages: "80-83", plan_step: 8, plan_points: ["8.3"], priority_regional: "med", priority_national: "med" },
+    { chapter: "3.2", title: "Functions Defined on Sets of Points", pages: "83-86", plan_step: 7, plan_points: ["7.5"], priority_regional: "low", priority_national: "med" },
+    { chapter: "3.3", title: "Count Twice!", pages: "86-89", plan_step: 8, plan_points: ["8.3"], priority_regional: "high", priority_national: "high" },
+    { chapter: "3.4", title: "Sequences of Integers", pages: "90-94", plan_step: 7, plan_points: ["7.6", "7.7"], priority_regional: "high", priority_national: "high" },
+    { chapter: "3.5", title: "Equations with Infinitely Many Solutions", pages: "94-97", plan_step: 4, plan_points: ["4.1", "4.2"], priority_regional: "high", priority_national: "high" },
+    { chapter: "3.6", title: "Equations with No Solutions", pages: "97-99", plan_step: 3, plan_points: ["3.2"], priority_regional: "high", priority_national: "high" },
+    { chapter: "3.7", title: "Powers of 2", pages: "99-102", plan_step: 3, plan_points: ["3.1"], priority_regional: "high", priority_national: "high" },
+    { chapter: "3.8", title: "Progressions", pages: "102-104", plan_step: 7, plan_points: ["7.6"], priority_regional: "high", priority_national: "high" },
+    { chapter: "3.9", title: "The Marriage Lemma", pages: "105-107", plan_step: 9, plan_points: ["9.1"], priority_regional: "med", priority_national: "med" },
+
+    // ═══ PART II: SOLUTIONS (p 109–256) ═══
+    { chapter: "4", title: "Algebra — Solutions (4.1–4.9)", pages: "110-157", plan_step: 6, plan_points: ["6.1","6.4","6.7"], priority_regional: "high", priority_national: "high" },
+    { chapter: "5", title: "Geometry and Trigonometry — Solutions (5.1–5.8)", pages: "158-205", plan_step: 1, plan_points: ["1.3","1.7","1.10"], priority_regional: "high", priority_national: "high" },
+    { chapter: "6", title: "Number Theory and Combinatorics — Solutions (6.1–6.9)", pages: "206-256", plan_step: 8, plan_points: ["8.3","9.1"], priority_regional: "high", priority_national: "high" }
+  ],
+  duplicates: [],  // CHECK: търси "book-3 (1).pdf", "book-3 (2).pdf" в Материали_EN/
+  recommended_action: "add-as-bonus",
+  best_mapping: [
+    { step_id: 6, point_ids: ["6.1","6.4","6.5","6.7"], chapters: ["1.1","1.2","1.3","1.6","1.9"], pages: "12-45" },
+    { step_id: 5, point_ids: ["5.1","5.3"], chapters: ["1.4","1.8"], pages: "23-40" },
+    { step_id: 3, point_ids: ["3.2","3.10"], chapters: ["1.5","3.6","3.7"], pages: "26-29, 97-102" },
+    { step_id: 4, point_ids: ["4.1","4.2"], chapters: ["3.5"], pages: "94-97" },
+    { step_id: 7, point_ids: ["7.5","7.6","7.7"], chapters: ["3.2","3.4","3.8"], pages: "83-94, 102-104" },
+    { step_id: 8, point_ids: ["8.3","8.10"], chapters: ["1.7","3.1","3.3"], pages: "33-36, 80-89" },
+    { step_id: 9, point_ids: ["9.1"], chapters: ["3.9"], pages: "105-107" },
+    { step_id: 1, point_ids: ["1.3","1.5","1.6","1.7","1.9","1.10"], chapters: ["2.1–2.7"], pages: "46-74" },
+    { step_id: 2, point_ids: ["2.4","2.8"], chapters: ["2.1","2.4","2.5"], pages: "46-67" }
+  ]
+}
+```
+
+```js
+// ─── АКТУАЛИЗАЦИЯ ───
+// Добавяне на bonus ресурс "book-3" към следните съществуващи точки:
+
+// Точка 6.1 в STEPS[5].points:
+{ id: "6.1",
+  bonus: [
+    { label: "Andreescu–Enescu, Treasures — Identity", pdf: "Материали_EN/book-3", page: 12 }
+  ]
+}
+
+// Точка 6.4 в STEPS[5].points:
+{ id: "6.4",
+  bonus: [
+    { label: "Andreescu–Enescu, Treasures — Cauchy-Schwarz", pdf: "Материали_EN/book-3", page: 16 },
+    { label: "Andreescu–Enescu, Treasures — Conjugate tricks", pdf: "Материали_EN/book-3", page: 26 }
+  ]
+}
+
+// Точка 6.5 в STEPS[5].points:
+{ id: "6.5",
+  bonus: [
+    { label: "Andreescu–Enescu, Treasures — Convex functions", pdf: "Материали_EN/book-3", page: 29 }
+  ]
+}
+
+// Точка 6.7 в STEPS[5].points:
+{ id: "6.7",
+  bonus: [
+    { label: "Andreescu–Enescu, Treasures — Rearrangements", pdf: "Материали_EN/book-3", page: 40 }
+  ]
+}
+
+// Точка 5.1 в STEPS[4].points:
+{ id: "5.1",
+  bonus: [
+    { label: "Andreescu–Enescu, Treasures — Roots & Coefficients", pdf: "Материали_EN/book-3", page: 36 },
+    { label: "Andreescu–Enescu, Treasures — Parameters", pdf: "Материали_EN/book-3", page: 23 }
+  ]
+}
+
+// Точка 3.10 в STEPS[2].points:
+{ id: "3.10",
+  bonus: [
+    { label: "Andreescu–Enescu, Treasures — Conjugate & Pell", pdf: "Материали_EN/book-3", page: 26 }
+  ]
+}
+
+// Точка 3.2 в STEPS[2].points:
+{ id: "3.2",
+  bonus: [
+    { label: "Andreescu–Enescu, Treasures — No Solutions mod p", pdf: "Материали_EN/book-3", page: 97 }
+  ]
+}
+
+// Точка 3.1 в STEPS[2].points:
+{ id: "3.1",
+  bonus: [
+    { label: "Andreescu–Enescu, Treasures — Powers of 2", pdf: "Материали_EN/book-3", page: 99 }
+  ]
+}
+
+// Точка 4.1 в STEPS[3].points:
+{ id: "4.1",
+  bonus: [
+    { label: "Andreescu–Enescu, Treasures — Infinite Solutions", pdf: "Материали_EN/book-3", page: 94 }
+  ]
+}
+
+// Точка 7.6 в STEPS[6].points:
+{ id: "7.6",
+  bonus: [
+    { label: "Andreescu–Enescu, Treasures — Integer Sequences", pdf: "Материали_EN/book-3", page: 90 },
+    { label: "Andreescu–Enescu, Treasures — Progressions", pdf: "Материали_EN/book-3", page: 102 }
+  ]
+}
+
+// Точка 8.3 в STEPS[7].points:
+{ id: "8.3",
+  bonus: [
+    { label: "Andreescu–Enescu, Treasures — Count Twice!", pdf: "Материали_EN/book-3", page: 86 }
+  ]
+}
+
+// Точка 8.10 в STEPS[7].points:
+{ id: "8.10",
+  bonus: [
+    { label: "Andreescu–Enescu, Treasures — Induction at Work", pdf: "Материали_EN/book-3", page: 33 }
+  ]
+}
+
+// Точка 9.1 в STEPS[8].points:
+{ id: "9.1",
+  bonus: [
+    { label: "Andreescu–Enescu, Treasures — Marriage Lemma", pdf: "Материали_EN/book-3", page: 105 }
+  ]
+}
+
+// Точка 1.3 в STEPS[0].points:
+{ id: "1.3",
+  bonus: [
+    { label: "Andreescu–Enescu, Treasures — Cyclic Quads & Ptolemy", pdf: "Материали_EN/book-3", page: 54 }
+  ]
+}
+
+// Точка 1.10 в STEPS[0].points:
+{ id: "1.10",
+  bonus: [
+    { label: "Andreescu–Enescu, Treasures — Inscribed Circle Quads", pdf: "Материали_EN/book-3", page: 71 }
+  ]
+}
+
+// Точка 1.7 в STEPS[0].points:
+{ id: "1.7",
+  bonus: [
+    { label: "Andreescu–Enescu, Treasures — Carpets & Locus (Areas)", pdf: "Материали_EN/book-3", page: 49 },
+    { label: "Andreescu–Enescu, Treasures — Carpets Theorem", pdf: "Материали_EN/book-3", page: 67 }
+  ]
+}
+
+// Точка 1.5 в STEPS[0].points:
+{ id: "1.5",
+  bonus: [
+    { label: "Andreescu–Enescu, Treasures — Cyclic Quads", pdf: "Материали_EN/book-3", page: 54 }
+  ]
+}
+
+// Точка 2.4 в STEPS[1].points:
+{ id: "2.4",
+  bonus: [
+    { label: "Andreescu–Enescu, Treasures — Equilateral Triangles", pdf: "Материали_EN/book-3", page: 63 }
+  ]
+}
+
+// Точка 2.8 в STEPS[1].points:
+{ id: "2.8",
+  bonus: [
+    { label: "Andreescu–Enescu, Treasures — Geometric Inequalities", pdf: "Материали_EN/book-3", page: 46 }
+  ]
+}
+
+// Точка 1.6 в STEPS[0].points:
+{ id: "1.6",
+  bonus: [
+    { label: "Andreescu–Enescu, Treasures — Dr. Trig (Complex Numbers)", pdf: "Материали_EN/book-3", page: 75 }
+  ]
+}
+```
+
+### RECOMMENDED CHANGES TO index.html
+
+**В STEPS:**
+- [ ] Добавяне на `bonus` поле към **22 точки** (виж блока АКТУАЛИЗАЦИЯ по-горе):
+  - `STEPS[0]` (Геометрия осн.): точки `1.3`, `1.5`, `1.6`, `1.7`, `1.10`
+  - `STEPS[1]` (Геометрия напреднали): точки `2.4`, `2.8`
+  - `STEPS[2]` (ТЧ осн.): точки `3.1`, `3.2`, `3.10`
+  - `STEPS[3]` (ТЧ напреднали): точка `4.1`
+  - `STEPS[4]` (Полиноми): точка `5.1`
+  - `STEPS[5]` (Неравенства): точки `6.1`, `6.4`, `6.5`, `6.7`
+  - `STEPS[6]` (ФУ/редици): точка `7.6`
+  - `STEPS[7]` (Комбинаторика осн.): точки `8.3`, `8.10`
+  - `STEPS[8]` (Графи/игри): точка `9.1`
+- [ ] Всички bonus записи използват `pdf: "Материали_EN/book-3"` и съответния `page` от таблицата по-горе
+
+**В PLAN_PHASES:**
+- [ ] Няма промени — книгата е допълнителен ресурс, не замества основния план
+
+**Друго:**
+- [ ] Провери за дубликати: `book-3 (1).pdf`, `book-3 (2).pdf`, `book-3 (3).pdf`, `book-3 (4).pdf` в `Материали_EN/` → ако съществуват, изтрий ги и остави само `book-3.pdf`
+- [ ] Няма промени в конфигурацията на exam dates
+- [ ] Няма нова Стъпка 12 — книгата се вписва в съществуващите 11 стъпки

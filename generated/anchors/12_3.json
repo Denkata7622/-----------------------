@@ -1,0 +1,26 @@
+{
+  "point_id": "12.3",
+  "total": 1,
+  "by_difficulty": {
+    "easy": 0,
+    "medium": 0,
+    "hard": 1
+  },
+  "problems": [
+    {
+      "source": "OLI-3-Национален кръг-2021-9-12 кл · 2021-None · Зад. 6",
+      "statement": "Точка S е средата на дъгата ACB от описаната окръжност k около △ABC (AC > BC). Нека I е центърът на вписаната в △ABC окръжност. Правата SI пресича окръжността k за втори път в точка T. Нека D е симетричната точка на I спрямо точката T, а M е средата на страната AB. Правата IM пресича правата през D, успоредна на AB, в точка E. Да се докаже, че AE = BD.",
+      "solution": "Решение. Имаме ∠ATI = ∠ATS = ∠BTS = ∠BTI и ∠AIB = 90° + γ/2. Тъй като\n∠TAI + ∠TIA = 90° + γ/2,\nто ∠TAI = ∠TIB и следователно △AIT ∼ △BIT. Получаваме DT² = IT² = AT·BT, откъдето следва, че △ATD ∼ △DTB. Пресмятаме\n∠ADB = ∠ADI = 180° − ∠AIB,\nт.е. ADBI е вписан четириъгълник. Понеже\nAD/BD = AT/TD = AT/TI = AI/BI,\nто ADBI е хармоничен четириъгълник. Следователно ID е симедиана в △ABI, т.е. ∠AIM = ∠DIB. Ако L е пресечната точка на правата IM с описаната около четириъгълника ADBI окръжност, то AL = BD и понеже ALDB е вписан, то DL е успоредна на AB. Следователно L съвпада с E и твърдението е доказано.",
+      "answer": "AE = BD.",
+      "difficulty": "hard",
+      "techniques": [
+        "harmonic_quadrilateral",
+        "symmedian",
+        "similar_triangles",
+        "angle_chasing"
+      ],
+      "confidence": "exact",
+      "reasoning": "Shows ADBI is harmonic, uses symmedian and similarity to obtain AE=BD."
+    }
+  ]
+}

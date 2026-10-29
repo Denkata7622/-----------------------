@@ -1,0 +1,224 @@
+{
+  "point_id": "1.6",
+  "total": 16,
+  "by_difficulty": {
+    "easy": 0,
+    "medium": 16,
+    "hard": 0
+  },
+  "problems": [
+    {
+      "source": "OLI-2-Областен кръг-1996-11 кл · 1996-11 · Зад. 5",
+      "statement": "A convex quadrilateral $ABCD$, for which $\\angle ABC + \\angle BCD < 180^\\circ$, is given. The common point of the lines $AB$ and $CD$ is $E$. Prove that $\\angle ABC = \\angle ADC$ if and only if\n\n$$AC^2 = CD \\cdot CE - AB \\cdot AE.$$",
+      "solution": "Solution. Let $\\angle ABC = \\beta$, $\\angle ADC = \\delta$, $\\angle BAC = \\varphi$ and $\\angle CAD = \\psi$ (Figure 4). The point $A$ is between $E$ and $B$ and the point $D$ is between $E$ and $C$. Also, $\\angle AEC = \\delta + \\varphi + \\psi - 180^\\circ$.\n\nApplying the sine theorem to the triangles $ACD, ACE, ABC$ and again to $\\triangle ACE$, we obtain:\n\n$$\\begin{array}{l} \\frac{CD}{AC} = \\frac{\\sin \\psi}{\\sin \\delta}, \\\\ \\frac{CE}{AC} = -\\frac{\\sin \\varphi}{\\sin (\\delta + \\varphi + \\psi)}, \\\\ \\frac{AB}{AC} = \\frac{\\sin (\\beta + \\varphi)}{\\sin \\beta}, \\\\ \\frac{AE}{AC} = -\\frac{\\sin (\\delta + \\psi)}{\\sin (\\delta + \\varphi + \\psi)}. \\end{array}$$\n\nFrom here the equation $AC^2 = CD \\cdot CE - AB \\cdot AE$ is equivalent to the equations:\n\n$$\\frac{CD}{AC} \\cdot \\frac{CE}{AC} - \\frac{AB}{AC} \\cdot \\frac{AE}{AC} - 1 = 0;$$\n\n$$\\sin (\\beta + \\varphi) \\sin (\\delta + \\psi) \\sin \\delta - \\sin \\psi \\sin \\varphi \\sin \\beta$$\n\n$$- \\sin \\delta \\sin \\beta \\sin (\\varphi + \\psi + \\delta) = 0;$$\n\n$$\\begin{array}{l} (\\cos (\\beta + \\varphi - \\delta - \\psi) - \\cos (\\beta + \\varphi + \\delta + \\psi)) \\sin \\delta \\\\ - (\\cos (\\varphi - \\psi) - \\cos (\\varphi + \\psi)) \\sin \\beta \\\\ - (\\cos (\\beta - \\delta) - \\cos (\\beta + \\delta)) \\sin (\\varphi + \\psi + \\delta) = 0 \\end{array}$$\n\n$$\\begin{array}{l} \\sin (\\beta + \\varphi + \\psi) - \\sin (2\\delta + \\varphi + \\psi - \\beta) \\\\ + \\sin (2\\delta + \\psi - \\beta - \\varphi) - \\sin (\\beta + \\psi - \\varphi) = 0; \\end{array}$$\n\n$$\\sin (\\beta - \\delta) \\cos (\\delta + \\varphi + \\psi) + \\sin (\\delta - \\beta) \\cos (\\delta + \\psi - \\varphi) = 0;$$\n\n$$\\sin (\\beta - \\delta) \\sin (\\delta + \\psi) \\sin \\varphi = 0$$\n\nBut $\\sin \\varphi \\neq 0$ and $\\sin (\\delta + \\psi) \\neq 0$. Consequently, $\\sin (\\beta - \\delta) = 0$ and $\\beta = \\delta$.",
+      "answer": null,
+      "difficulty": "medium",
+      "techniques": [
+        "law_of_sines",
+        "angle_chasing",
+        "trigonometric_identities"
+      ],
+      "confidence": "exact",
+      "reasoning": "Applies sine law to several triangles, reduces to sin(β‑δ)=0, giving the required equivalence."
+    },
+    {
+      "source": "OLI-2-Областен кръг-1998-10 кл · 1998-10 · Зад. 5",
+      "statement": "The convex pentagon $ABCDE$ is inscribed in a circle with radius $R$. The inradii of the triangles $ABC, ABD, AEC$ and $AED$ are denoted by $r_{ABC}, r_{ABD}, r_{AEC}$ and $r_{AED}$. Prove that\n\na.) \\(\\cos \\angle CAB + \\cos \\angle ABC + \\cos \\angle BCA = 1 + \\frac{r_{ABC}}{R}\\)\nb.) If \\( r_{ABC} = r_{AED} \\) and \\( r_{ABD} = r_{AEC} \\), then \\( \\triangle ABC \\cong \\triangle AED \\).",
+      "solution": "Solution: a.) Using the standard notation for the elements of $\\triangle ABC$, we obtain that\n\n$$\\begin{array}{l} \\frac {r}{R} = \\frac {S}{p R} = \\frac {4 S ^ {2}}{p a b c} = \\frac {4 (p - a) (p - b) (p - c)}{a b c} = \\\\ = \\frac {1}{2 a b c} \\left(a \\left(b ^ {2} + c ^ {2} - a ^ {2}\\right) + b \\left(c ^ {2} + a ^ {2} - b ^ {2}\\right) + c \\left(a ^ {2} + b ^ {2} - c ^ {2}\\right) - 2 a b c\\right) = \\\\ = \\cos \\angle C A B + \\cos \\angle A B C + \\cos \\angle B C A - 1. \\\\ \\end{array}$$\n\nb.) Applying continuously the equality from a.) and using the fact that $ABCDE$ is inscribed in a circle convex pentagon, it is easy to see that\n\n$$r _ {A B C} + r _ {A E C} + r _ {E D C} = r _ {A E D} + r _ {A B D} + r _ {B C D}.$$\n\nThe condition of the problem and the above equality imply $r_{BCD} = r_{EDC}$. Since $\\triangle BCD$ and $\\triangle EDC$ have a side in common and equal circumradiuses we get that $\\triangle BCD \\cong \\triangle EDC$ (prove it using a.)). In particular $BC = ED$ and using $r_{ABC} = r_{AED}$ again, we get $\\triangle ABC \\cong \\triangle AED$.",
+      "answer": null,
+      "difficulty": "medium",
+      "techniques": [
+        "law_of_cosines"
+      ],
+      "confidence": "exact",
+      "reasoning": "Transforms inradius/circumradius relation via cosine law; two‑part problem, each part follows from the same identity."
+    },
+    {
+      "source": "OLI-2-Областен кръг-1998-11 кл · 1998-11 · Зад. 5",
+      "statement": "The convex pentagon $ABCDE$ is inscribed in a circle with radius $R$. The inradii of the triangles $ABC, ABD, AEC$ and $AED$ are denoted by $r_{ABC}, r_{ABD}, r_{AEC}$ and $r_{AED}$. Prove that\n\na.) \\(\\cos \\angle CAB + \\cos \\angle ABC + \\cos \\angle BCA = 1 + \\frac{r_{ABC}}{R}\\)\nb.) If \\( r_{ABC} = r_{AED} \\) and \\( r_{ABD} = r_{AEC} \\), then \\( \\triangle ABC \\cong \\triangle AED \\).",
+      "solution": "Solution: a.) Using the standard notation for the elements of $\\triangle ABC$, we obtain that\n\n$$\\begin{array}{l} \\frac {r}{R} = \\frac {S}{p R} = \\frac {4 S ^ {2}}{p a b c} = \\frac {4 (p - a) (p - b) (p - c)}{a b c} = \\\\ = \\frac {1}{2 a b c} \\left(a \\left(b ^ {2} + c ^ {2} - a ^ {2}\\right) + b \\left(c ^ {2} + a ^ {2} - b ^ {2}\\right) + c \\left(a ^ {2} + b ^ {2} - c ^ {2}\\right) - 2 a b c\\right) = \\\\ = \\cos \\angle C A B + \\cos \\angle A B C + \\cos \\angle B C A - 1. \\\\ \\end{array}$$\n\nb.) Applying continuously the equality from a.) and using the fact that $ABCDE$ is inscribed in a circle convex pentagon, it is easy to see that\n\n$$r _ {A B C} + r _ {A E C} + r _ {E D C} = r _ {A E D} + r _ {A B D} + r _ {B C D}.$$\n\nThe condition of the problem and the above equality imply $r_{BCD} = r_{EDC}$. Since $\\triangle BCD$ and $\\triangle EDC$ have a side in common and equal circumradiuses we get that $\\triangle BCD \\cong \\triangle EDC$ (prove it using a.)). In particular $BC = ED$ and using $r_{ABC} = r_{AED}$ again, we get $\\triangle ABC \\cong \\triangle AED$.",
+      "answer": null,
+      "difficulty": "medium",
+      "techniques": [
+        "law_of_cosines",
+        "inradius_circumradius_relation",
+        "angle_cosine_sum"
+      ],
+      "confidence": "exact",
+      "reasoning": "Transforms r/R via Heron and cosine law to obtain the identity; part b uses the same relation and congruence arguments."
+    },
+    {
+      "source": "OLI-2-Областен кръг-2000-10 кл · 2000-10 · Зад. 4",
+      "statement": "Даден е изпъкнал четириъгълник $ABCD$, за който $\\measuredangle BCD = \\measuredangle CDA$. Нека ъглополовящата на ъгъл $ABC$ пресича отсечката $CD$ в точка $E$. Да се докаже, че $\\measuredangle AEB = 90^\\circ$ тогава и само тогава, когато $AB = AD + BC$.",
+      "solution": "Решение: Нека ∠AEB = 90°. Тъй като ∠CEB < 90°, върху страната AB можем да изберем точка F такава, че ∠BEF = ∠BEC. Тогава △BCE ≅ △BFE, откъдето BF = BC и ∠BFE = ∠BCE. От друга страна,\n(*) AE/sin∠AFE = AF/sin∠AEF, AE/sin∠ADE = AD/sin∠AED.\nТъй като ∠AED = ∠AEF и ∠AFE + ∠ADE = 180°, получаваме AF = AD и значи AB = AD + BC.\nОбратно, нека AB = AD + BC. Тогава върху отсечката AB съществува точка F, за която AF = AD и BF = BC. Следователно △BFE ≅ △BCE, откъдето ∠BFE = ∠BCE и ∠BEF = ∠BEC. Понеже AF = AD, от равенствата (*) следва, че sin∠AED = sin∠AEF. Тъй като ∠AED + ∠AEF < 180°, то ∠AED = ∠AEF и значи ∠AEB = 90°.",
+      "answer": null,
+      "difficulty": "medium",
+      "techniques": [
+        "law_of_sines"
+      ],
+      "confidence": "exact",
+      "reasoning": "Използва законите за синусите и ъглополовящи за доказателство на условието за прав ъгъл."
+    },
+    {
+      "source": "OLI-2-Областен кръг-2000-11 кл · 2000-11 · Зад. 4",
+      "statement": "Даден е изпъкнал четириъгълник $ABCD$, за който $\\measuredangle BCD = \\measuredangle CDA$. Нека ъглополовящата на ъгъл $ABC$ пресича отсечката $CD$ в точка $E$. Да се докаже, че $\\measuredangle AEB = 90^\\circ$ тогава и само тогава, когато $AB = AD + BC$.",
+      "solution": "Решение: Нека ∠AEB = 90°. Тъй като ∠CEB < 90°, върху страната AB можем да изберем точка F такава, че ∠BEF = ∠BEC. Тогава △BCE ≅ △BFE, откъдето BF = BC и ∠BFE = ∠BCE. От друга страна,\n\n(*) AE/sin ∠AFE = AF/sin ∠AEF, AE/sin ∠ADE = AD/sin ∠AED.\n\nТъй като ∠AED = ∠AEF и ∠AFE + ∠ADE = 180°, получаваме AF = AD и значи AB = AD + BC.\n\nОбратно, нека AB = AD + BC. Тогава върху отсечката AB съществува точка F, за която AF = AD и BF = BC. Следователно △BFE ≅ △BCE, откъдето ∠BFE = ∠BCE и ∠BEF = ∠BEC. Понеже AF = AD, от равенствата (*) следва, че sin ∠AED = sin ∠AEF. Тъй като ∠AED + ∠AEF < 180°, то ∠AED = ∠AEF и значи ∠AEB = 90°.",
+      "answer": null,
+      "difficulty": "medium",
+      "techniques": [
+        "law_of_sines",
+        "angle_chasing"
+      ],
+      "confidence": "exact",
+      "reasoning": "Чрез законите за синусите и ъглово пресичане се получава условието ∠AEB=90° ⇔ AB=AD+BC."
+    },
+    {
+      "source": "OLI-2-Областен кръг-2001-11 кл · 2001-11 · Зад. 2",
+      "statement": "Диагоналите $AC$ и $BD$ на вписан в окръжност четириъгълник се пресичат в точка $E$. Да се докаже, че ако $\\angle BAD = 60^\\circ$ и $AE = 3CE$, то сумата на две от страните на четириъгълника е равна на сумата на другите му две страни.",
+      "solution": "Решение: Нека $\\angle ABD = x$ и $\\angle CBD = y$. От синусовата теорема получаваме\n$$\\frac{AE}{AB} = \\frac{\\sin x}{\\sin(120^\\circ + y - x)}, \\frac{CE}{BC} = \\frac{\\sin y}{\\sin(60^\\circ + x - y)}$$\nи $\\frac{AB}{BC} = \\frac{\\sin(120^\\circ - x)}{\\sin(60^\\circ - y)}$. Следователно\n$$3 = \\frac{AE}{CE} = \\frac{\\sin x \\cdot \\sin(120^\\circ - x)}{\\sin y \\cdot \\sin(60^\\circ - y)}.$$\nОттук $3(\\cos(2y - 60^\\circ) - \\cos 60^\\circ) = \\cos(2x - 120^\\circ) - \\cos 120^\\circ$, т.е.\n$$1 - \\cos(2x - 120^\\circ) = 3(1 - \\cos(2y - 60^\\circ))$$\nи значи $\\sin^2(x - 60^\\circ) = 3\\sin^2(y - 30^\\circ)$.\nСледователно\n$$\\sin(x - 60^\\circ) \\cos 60^\\circ = \\pm \\cos 30^\\circ \\sin(y - 30^\\circ),$$\nт.е. $\\sin x - \\sin(120^\\circ - x) = \\pm(\\sin y - \\sin(60^\\circ - y))$. Отново от синусовата теорема получаваме, че $AD - AB = \\pm(CD - BC)$, т.е.\n$$AD + BC = AB + CD \\quad \\text{или} \\quad AD + CD = AB + BC.$$",
+      "answer": "$AD + BC = AB + CD$ или $AD + CD = AB + BC$.",
+      "difficulty": "medium",
+      "techniques": [
+        "law_of_sines",
+        "cyclic_quadrilateral",
+        "ratio_analysis"
+      ],
+      "confidence": "exact",
+      "reasoning": "Приложени са синусовата теорема и съотношението AE=3CE, което води до равенство на суми от страни."
+    },
+    {
+      "source": "OLI-2-Областен кръг-2004-11 кл · 2004-11 · Зад. 2",
+      "statement": "Допирателните към описаната около остроъгълния триъгълник ABC окръжност, построени в точките A и B, се пресичат в точка D. Ако M е среда на AB, докажете, че ∠ACM = ∠BCD.",
+      "solution": "От синусовата теорема за триъгълниците AMC и BMC имаме\nAM/CM = sin ∠ACM / sin α, BM/CM = sin(γ − ∠ACM) / sin β.\nОттук, тъй като AM = BM, получаваме sin ∠ACM / sin α = sin(γ − ∠ACM) / sin β, т.е.\n(1) tg ∠ACM = (sin α sin γ)/(sin β + sin α cos γ).\nОт синусовата теорема за триъгълниците ADC и BDC имаме\nAD/CD = sin(γ − ∠BCD) / sin(α + γ), BD/CD = sin ∠BCD / sin(β + γ).\nОттук, тъй като AD = BD, получаваме sin(γ − ∠BCD) / sin β = sin ∠BCD / sin α, т.е.\n(2) tg ∠BCD = (sin α sin γ)/(sin β + sin α cos γ).\nОт (1) и (2) следва, че tg ∠ACM = tg ∠BCD. Тъй като и двата ъгъла са остри и функцията тангенс е растяща в интервала (0; π/2), то ∠ACM = ∠BCD.",
+      "answer": "∠ACM = ∠BCD.",
+      "difficulty": "medium",
+      "techniques": [
+        "law_of_sines",
+        "angle_chasing"
+      ],
+      "confidence": "exact",
+      "reasoning": "Applies sine law in two triangles, derives equality of tangents, concludes angles equal."
+    },
+    {
+      "source": "OLI-2-Областен кръг-2006-10 кл · 2006-10 · Зад. 5",
+      "statement": "Нека $ABCD$ е успоредник с остър ъгъл $\\gamma$ при върха $A$. Нека $DE$ и $DF$ са височини, като $E$ и $F$ лежат съответно на страните $AB$ и $BC$. Да се докаже, че $4(AB.BC.EF + BD.AE.FC) \\le 5.AB.BC.BD$. Ако се достига равенство, да се определи стойността на $\\gamma$.",
+      "solution": "Нека $AB = CD = a$, $AD = BC = b$, $BD = d$. Имаме $DE = b \\sin \\alpha$, $AE = b \\cos \\alpha$, $DF = a \\sin \\alpha$, $CF = a \\cos \\alpha$. Тогава $\\triangle DEF \\sim \\triangle ADB$ по втори признак, като коефициентът на подобие е $\\sin \\alpha$.\n\nСледователно $EF = d \\sin \\alpha$ и неравенството добива вида\n\n$$4(abd \\sin \\alpha + dba \\cos^2 \\alpha) \\le 5abd,$$\n\n$$4 \\sin \\alpha + 4 - 4 \\sin^2 \\alpha \\le 5 \\iff 4 \\sin^2 \\alpha - 4 \\sin \\alpha + 1 \\ge 0,$$\n\nкоето е вярно за всяко $\\alpha$. Равенство се достига за $\\alpha = 30^\\circ$.",
+      "answer": "Равенство се достига при $\\gamma = 30^\\circ$.",
+      "difficulty": "medium",
+      "techniques": [
+        "similarity",
+        "trigonometry",
+        "inequality"
+      ],
+      "confidence": "exact",
+      "reasoning": "Uses similarity of triangles and sin α, cos α to obtain the inequality."
+    },
+    {
+      "source": "OLI-2-Областен кръг-2006-11 кл · 2006-11 · Зад. 5",
+      "statement": "Допирателните към описаната около равнобедрен $\\triangle ABC$, $AC = BC$, окръжност $k$ в точките $B$ и $C$ се пресичат в точка $X$. Ако $AX$ пресича $k$ в точка $Y$, да се намери отношението $\\frac{AY}{BY}$.",
+      "solution": "Ако $\\angle BAY = \\alpha$ и $\\angle ABY = \\beta$, то $\\angle BYX = \\beta + \\alpha$. Нещо повече, имаме $\\angle ACB = \\angle AYB = 180^{\\circ} - \\alpha - \\beta$, откъдето $\\angle BAC = \\angle ABC = \\frac{\\beta + \\alpha}{2}$.\n\n![img-0.jpeg](img-0.jpeg)\n\nТогава $\\angle AYC = \\frac{\\beta + \\alpha}{2}$ и $\\angle YCX = \\angle YAC = \\frac{\\beta + \\alpha}{2} - \\alpha = \\frac{\\beta - \\alpha}{2}$. Синусовата теорема за $\\triangle BYX$ и $\\triangle CYX$ дава\n\n$$\\frac{XY}{XB} = \\frac{\\sin \\alpha}{\\sin(\\alpha + \\beta)}, \\quad \\frac{XY}{XC} = \\frac{\\sin(\\frac{\\beta - \\alpha}{2})}{\\sin(\\frac{\\beta + \\alpha}{2})}$$\n\nи тъй като $XB = XC$, получаваме $\\frac{\\sin \\alpha}{\\sin(\\alpha + \\beta)} = \\frac{\\sin(\\frac{\\beta - \\alpha}{2})}{\\sin(\\frac{\\beta + \\alpha}{2})}$. Следователно\n\n$$\\sin \\alpha = 2 \\cos \\left( \\frac{\\beta + \\alpha}{2} \\right) \\sin \\left( \\frac{\\beta - \\alpha}{2} \\right) = \\sin \\beta - \\sin \\alpha$$\n\nи значи $\\frac{AY}{BY} = \\frac{\\sin \\beta}{\\sin \\alpha} = 2$.",
+      "answer": "$\\frac{AY}{BY} = 2$.",
+      "difficulty": "medium",
+      "techniques": [
+        "sine_law",
+        "angle_chasing",
+        "tangent_properties"
+      ],
+      "confidence": "exact",
+      "reasoning": "Angle chasing with tangents and application of the sine law yields the ratio AY/BY = 2 – core of step 1.6."
+    },
+    {
+      "source": "OLI-2-Областен кръг-2007-11 кл · 2007-11 · Зад. 1",
+      "statement": "Да се намерят всички стойности на параметъра a, за които системата\nsin x + cos y = 4a + 6,\ncos x + sin y = 3a + 2\nима решение.",
+      "solution": "Повдигаме на квадрат двете равенства и събираме почленно. Получаваме\n2 + 2 sin x cos y + 2 cos x sin y = (4a + 6)² + (3a + 2)² = 25a² + 60a + 40 = (5a + 6)² + 4,\nоткъдето sin(x + y) = (5a + 6)²/2 + 1. Тъй като 1 ≥ sin(x + y) = (5a + 6)²/2 + 1 ≥ 1, то sin(x + y) = 1 и (5a + 6)² = 0, т.е. a = −6/5. За тази стойност на a решение са (x₀, y₀), за които sin x₀ = 3/5, cos x₀ = −4/5 и y₀ = 90° − x₀.",
+      "answer": "a = −6/5",
+      "difficulty": "medium",
+      "techniques": [
+        "trig_identity",
+        "inequality"
+      ],
+      "confidence": "exact",
+      "reasoning": "Solution squares the two equations, adds them and uses sin(x+y) bound; main tool is trigonometric identities."
+    },
+    {
+      "source": "OLI-2-Областен кръг-2009-11 кл · 2009-11 · Зад. 2",
+      "statement": "а) Да се докаже, че за триъгълник с ъгли α, β и γ е изпълнено равенството\nr = 4R sin(α/2) sin(β/2) sin(γ/2),\nкъдето r и R са съответно радиусът на вписаната и на описаната окръжност за този триъгълник.\nб) Шестоъгълникът ABCDEF е вписан в окръжност. Да се докаже, че произведението на радиусите на вписаните окръжности в △ABF, △BCD и △DEF е равно на произведението на радиусите на вписаните окръжности в △ABC, △CDE и △EFA тогава и само тогава, когато периметрите на △ACE и △BDF са равни.",
+      "solution": "Решение. а) Равенството следва от тъждеството sin(α/2) = √((1 − cos α)/2), косинусовата теорема и формулите S = pr = abc/(4R).\nб) Ще използваме, че ако α, β и γ са ъгли в триъгълник, то\nsin 2α + sin 2β + sin 2γ = 2sin(α + β)cos(α − β) + 2sin γ cos γ = 2sin γ(cos(α − β) − cos(α + β)) = 4sin α sin β sin γ.\nКато използваме тъждеството от а), получаваме\n(1) sin(∠ABC/2) sin(∠CDE/2) sin(∠EFA/2) = sin(∠BCD/2) sin(∠DEF/2) sin(∠FAB/2).\nОсвен това ∠ABC + ∠CDE + ∠EFA = ∠BCD + ∠DEF + ∠FAB = 360°, откъдето следва, че\nsin ∠ABC + sin ∠CDE + sin ∠EFA = sin ∠BCD + sin ∠DEF + sin ∠FAB.\nОт синусовата теорема сега следва твърдението на задачата.",
+      "answer": null,
+      "difficulty": "medium",
+      "techniques": [
+        "trigonometric_formulas",
+        "inradius_circumradius_relation"
+      ],
+      "confidence": "exact",
+      "reasoning": "Apply sine law and r = 4R·sin(α/2)·sin(β/2)·sin(γ/2); hexagon part uses perimeter equality."
+    },
+    {
+      "source": "OLI-2-Областен кръг-2021-11 кл · 2021-11 · Зад. 2",
+      "statement": "Даден е триъгълник ABC, за който ∠ACB = 60°. Точките P и Q върху страните BC и AC са такива, че четириъгълникът ABPQ е вписан в окръжност с радиус r и разстоянието от върха C до допирната точка на вписаната окръжност в △ABC със страната BC е равно на BP + AQ − PQ. Да се намери отношението AB/r.",
+      "solution": "Решение. Ще използваме стандартни означения за елементите на $\\triangle ABC$.\n\nТъй като $ABPQ$ е вписан в окръжност имаме $\\triangle ABC \\sim \\triangle PQC$. Тогава $CP = kb$, $CQ = ka$ и $PQ = kc$, където $k$ е коефициентът на подобие на двата триъгълника.\n\nОт $BP + AQ - PQ = \\frac{a + b - c}{2}$ получаваме:\n\n$$a - kb + b - ka - kc = \\frac{a + b - c}{2} \\iff (a + b + c)(2k - 1) = 0.$$\n\nТова означава, че $k = \\frac{1}{2}$ и от косинусовата теорема за $\\triangle APC$ получаваме:\n\n$$AP^2 = AC^2 + CP^2 - AP.AC = 3CP^2 \\Rightarrow AP = CP\\sqrt{3}.$$\n\nЗа $\\triangle APC$ е изпълнена Питагоровата теорема, т.е. $\\angle APC = 90^{\\circ}$. Следователно $R = \\frac{c}{2}$ и търсеното отношение е равно на 2.",
+      "answer": "$\\frac{AB}{r} = 2$.",
+      "difficulty": "medium",
+      "techniques": [
+        "similarity",
+        "cosine_law",
+        "inscribed_circle"
+      ],
+      "confidence": "exact",
+      "reasoning": "Uses similarity of triangles ABPQ~PQC and cosine law to obtain k=1/2, then derives AB/r=2."
+    },
+    {
+      "source": "OLI-2-Областен кръг-2024-11 кл · 2024-11 · Зад. 2",
+      "statement": "Трапецът $ABCD$ ($AB \\parallel CD$, $AB > CD$) е вписан в окръжност с радиус 9 cm. Петата на перпендикуляра от върха $C$ към основата $AB$ я разделя в отношение $2 : 1$, считано от върха $A$. Ако дължината на диагонала $AC$ е равна на дължината на основата $AB$, то да се намери лицето на трапеца.",
+      "solution": "Решение. Тъй като трапецът ABCD е вписан, то той е равнобедрен. Нека CP, P ∈ AB е височината от върха C. От условието AP : PB = 2 : 1, получаваме, че AB = 3CD. Нека означим с α острия ъгъл на трапеца, т.е. ∡ABC = α. От AC = AB следва, че △ABC е равнобедрен с ъгли ∡ABC = ∡ACB = α и ∡BAC = 180° − 2α. От правоъгълния △APC имаме\n∡PAC = 180° − 2α < 90°,\nт.е. α ∈ (45°; 90°) или 2α ∈ (90°; 180°). От правоъгълните △APC и △BPC изразяваме\ntg(180° − 2α) = CP/AP и tg α = CP/BP,\nоткъдето tg(180° − 2α)/(tg α) = BP/AP = 1/2. Тъй като tg(180° − 2α) = −tg(2α) = −(2·tg α)/(1 − tg² α), получаваме −2/(1 − tg² α) = 1/2, т.е. tg² α = 5, откъдето tg α = √5, т.к. α е остър ъгъл. Пресмятаме sin α = √30/6 и cos α = √6/6. От синусова теорема за △ABC намираме AB = 3√30 cm, а от AB = 3CD, CD = √30 cm. От △BPC имаме CP = BP·tg α = √30·√5 = 5√6 cm. Тогава лицето на трапеца е равно на\nS = ((AB + CD)/2)·CP = 2·√30·5√6 = 60√5 cm².",
+      "answer": "S = 60√5 cm².",
+      "difficulty": "medium",
+      "techniques": [
+        "trigonometric_theorem",
+        "cyclic_quadrilateral"
+      ],
+      "confidence": "exact",
+      "reasoning": "Решението се базира на тригонометрични съотношения (tg) и свойствата на вписан трапец – типична употреба на синусова/косинусова теорема."
+    },
+    {
+      "source": "OLI-3-Национален кръг-1996-9-12 кл · 1996-None · Зад. 2",
+      "statement": "Find the side length of the smallest equilateral triangle in which three disks with radii 2, 3 and 4 without common inner points can be placed.",
+      "solution": "Solution. Let in a equilateral $\\triangle ABC$ two disks with radii 3 and 4 without common inner points be placed. It is clear that a line $\\ell$ exists, which separates them, i.e. the disks are in different semiplanes with respect to $\\ell$ (Figure 1).\n\nThis line divides the triangle into a triangle and a quadrilateral or into two triangles. In both cases the disks can be replaced in the figure in a way that each of them is tangent to two of the sides of $\\triangle ABC$. It is clear that the new disks have no common inner point. Let the disks be inscribed in $\\angle A$ and $\\angle B$ of $\\triangle ABC$, respectively. We translate the side $BC$ parallelly to itself towards the point $A$, till the disk which is inscribed in $\\angle B$ touches the disk which is inscribed in $\\angle A$ (Figure 2). Thus, we get an equilateral $\\triangle A_1 B_1 C_1$ with a smaller sides, in which two disks with radii 3 and 4 and without common inner points are placed.\n\nLet $A_1 B_1 = x$, $I$ be the incenter of $\\triangle A_1 B_1 C_1$, while $O_1$ and $O_2$ be the centers of the two disks. Then $A_1 I = B_1 I = \\frac{x}{\\sqrt{3}}$, $A_1 O_1 = 6$, $B_1 O_2 = 8$. Since the disk with radius 4 is inside the $\\triangle A_1B_1C_1$, then $O_2 \\in IB_1$. Thus, $B_1O_2 \\leq B_1I$, i.e. $x \\geq 8\\sqrt{3}$. On the other hand $O_1I = \\frac{x}{\\sqrt{3}} - 6$, $O_2I = \\frac{x}{\\sqrt{3}} - 8$, $O_1O_2 = 7$ and by the cosine theorem for $\\triangle O_1O_2I$ we find that $\\left(\\frac{x}{\\sqrt{3}} - 6\\right)^2 + \\left(\\frac{x}{\\sqrt{3}} - 8\\right)^2 + \\left(\\frac{x}{\\sqrt{3}} - 6\\right)\\left(\\frac{x}{\\sqrt{3}} - 8\\right) = 49$. But $x \\geq 8\\sqrt{3}$, and from here $x = 11\\sqrt{3}$. Consequently, $AB \\geq 11\\sqrt{3}$. On the other hand in the equilateral $\\triangle ABC$ with side length $11\\sqrt{3}$ three disks with radii 2, 3 and 4 (without common inner points) can be placed inscribing circles with these radii in the angles of the triangle (Figure 3).\n\nNote that the disks wit radii 3 and 4 are tangent to each other. It follows from the above considerations that the solution of the problem is $11\\sqrt{3}$.",
+      "answer": "$11\\sqrt{3}$",
+      "difficulty": "medium",
+      "techniques": [
+        "law_of_cosines",
+        "incenter_distance"
+      ],
+      "confidence": "exact",
+      "reasoning": "Places disks tangent to sides, writes distances from incenter and applies cosine theorem to obtain side length."
+    },
+    {
+      "source": "OLI-3-Национален кръг-2000-9-12 кл · 2000-None · Зад. 2",
+      "statement": "Даден е остроъгълен триъгълник $ABC$. Да се докаже, че съществуват единствени точки $A_1, B_1$ и $C_1$, лежащи съответно върху страните $BC, AC$ и $AB$, със следното свойство: Всяка от точките е среда на отсечкат[неразчетено]",
+      "solution": "Решение: Лесно се вижда, че перпендикулярът през $C_1$ към $AB$ минава през средата на $A_1 B_1$. Същото е вярно и за точките $A_1$ и $B_1$. Следователно трите перпендикуляра се пресичат в [неразчетено] на $\\Delta A_1 B_1 C_1$ — точка $P$.\n\nНека $T$ е средата на $A_1 B_1, \\angle PB_1 A_1 = x = \\angle PCA_1; \\angle PA_1 B_1 = y = \\angle PCB_1$. Синусова теорема за $\\Delta B_1 TP$ и $\\Delta A_1 TP$ дава, че\n$$\\frac{\\sin \\alpha}{\\sin x} = \\frac{B_1 T}{TP} = \\frac{A_1 T}{TP} = \\frac{\\sin \\beta}{\\sin y},$$\nоткъдето $\\frac{\\sin x}{\\sin y} = \\frac{\\sin \\alpha}{\\sin \\beta}$. Ако $CN$ е медианата в $\\Delta ABC$, аналогични пресмятания показват, че $\\frac{\\sin \\angle ACG}{\\sin \\angle BCG} = \\frac{\\sin \\alpha}{\\sin \\beta}$. Тъй като $x + y = \\angle ACG + \\angle BCG = \\gamma$ и $\\gamma$ е остър ъгъл, получаваме $x = \\angle ACG, y = \\angle BCG$. Значи $CP$ е симетрична на медианата на $\\Delta ABC$ през $C$ спрямо ъглополовящата на ъгъл $\\gamma$. Аналогично е положението на $AP$ и $BP$. Вече е ясно, че точка $P$ е единствена (а следователно и точките $A_1, B_1$ и $C_1$). Накрая $\\angle B_1 C_1 A_1 = \\angle B_1 C_1 P + \\angle A_1 C_1 P = \\angle B_1 AP + \\angle A_1 BP = \\angle BAG + \\angle ABG = \\angle BGK$, където $K$ е симетричната на $G$ спрямо средата на $BC$. Аналогично $\\angle C_1 A_1 B_1 = \\angle GBK$ и $\\angle A_1 B_1 C_1 = \\angle GKB$. Следователно $\\Delta A_1 B_1 C_1$ е подобен на триъгълника, образуван от медианите на $\\Delta ABC$.\n\nЗабележка: Втората част на задачата може да се реши и чрез допълнително построение. Върху лъча $\\overrightarrow{C_1 B_1}$ построяваме точка $Q$, за която $C_1 B_1 = B_1Q$, а върху лъча $\\overrightarrow{A_1B_1}$ точка $S$, за която $A_1B_1 = 2B_1S$. Ако $R = QS \\cap A_1P$, лесно се доказва, че точка $B_1$ е [неразчетено] на $\\triangle QRA_1$ и $\\triangle QRA_1 \\sim \\triangle ABC$. Освен това дължините на страните на $\\triangle A_1B_1C_1$ са точно $\\frac{2}{3}$ от дължините на медианите на $\\triangle QRA_1$.",
+      "answer": null,
+      "difficulty": "medium",
+      "techniques": [
+        "sine_law",
+        "angle_chasing",
+        "similarity"
+      ],
+      "confidence": "exact",
+      "reasoning": "Applies the sine law to several triangles, performs angle chasing and shows ΔA₁B₁C₁ is similar to the median triangle of ΔABC."
+    },
+    {
+      "source": "OLI-3-Национален кръг-2015-9-12 кл · 2015-None · Зад. 1",
+      "statement": "Шестоъгълникът ABLCDK е вписан в окръжност. Правата LK пресича отсечките AD, BC, AC, BD съответно в точки M, N, P, Q. Да се докаже, че NL·KP·MQ = KM·PN·LQ.",
+      "solution": "Първо решение. Да означим s = sin(⌢AB/2), t = sin(⌢BL/2), u = sin((⌢LC + ⌢AK)/2), v = sin(⌢CK/2), w = sin(⌢DK/2), x = sin((⌢LD + ⌢AK)/2). Имаме\n(NL·KP·MQ)/(KM·PN·LQ) = (NL/NC)·(NC/NP)·(KP/AK)·(AK/KM)·(MQ/DQ)·(DQ/LQ) = (t/v)·(u/s)·(v/u)·(x/w)·(s/x)·(w/t) = 1.\nВторо решение. Нека точката T от правата MN е такава, че ∠NTB = ∠ADB = ∠ACB и N е между P и T. Тогава △CNP ∼ △TNB и следователно (TL + NL)PN = CN·BN, откъдето TL = (NL·KP)/PN. Аналогично от △DQM ∼ △TQB получаваме TL = (LQ·KM)/MQ. Резултатът следва.",
+      "answer": null,
+      "difficulty": "medium",
+      "techniques": [
+        "sine_law",
+        "similar_triangles"
+      ],
+      "confidence": "exact",
+      "reasoning": "Solution uses sine of arcs to express segment ratios (sine law) and also a similarity argument; main tool is the sine law for cyclic polygons."
+    }
+  ]
+}

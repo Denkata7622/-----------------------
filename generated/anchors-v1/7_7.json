@@ -1,0 +1,82 @@
+{
+  "point_id": "7.7",
+  "total": 5,
+  "by_difficulty": {
+    "easy": 0,
+    "medium": 4,
+    "hard": 1
+  },
+  "problems": [
+    {
+      "source": "OLI-2-Областен кръг-2006-11 кл · 2006-11 · Зад. 6",
+      "statement": "Нека $\\{a_n\\}_{n=1}^{\\infty}$ е редица от реални числа, по-малки от 1, за която $a_{n+1}(a_n + 2) = 3$, $n \\ge 1$. Да се докаже, че:\n\nа) $-\\frac{7}{2} < a_n < -2$; б) $a_n = -3$ за всяко $n$.",
+      "solution": "а) От $a_n < 1$ и $a_{n+1} = \\frac{3}{a_n + 2} < 1$ следва, че $a_n < -2$. Следователно $a_{n+1} < -2$ и оттук $a_n + 2 = \\frac{3}{a_{n+1}} > -\\frac{3}{2}$, т.е. $a_n > -\\frac{7}{2}$.\n\nб) Първи начин. Да положим $b_n = a_n + 3$. Тогава $b_{n+1} = \\frac{3b_n}{b_n - 1}$. От а) следва, че $-\\frac{3}{2} < b_n - 1 < 0$, т.е. $|b_n - 1| < \\frac{3}{2}$ и следователно $|b_{n+1}| > 2|b_n|$. Тогава $1 > |b_{n+1}| > 2^n |b_1|$ за всяко $n$. При $n \\to \\infty$ получаваме $b_1 = 0$. Тогава $b_n = 0$, т.е. $a_n = -3$ за всяко $n$.\n\nВтори начин. Нека $c_1 = 1$ и $c_{k+1} = 3c_k + (-1)^k$ за $k \\ge 1$. С индукция по $k$ може да се докаже, че\n\n$$-\\frac{c_{2k+1}}{c_{2k}} < a_n < -\\frac{c_{2k}}{c_{2k-1}} \\tag{1}$$\n\nза всички $n$ и $k$. Действително, подобно на а) от $a_n < -\\frac{c_{2k}}{c_{2k-1}}$ следва, че $-\\frac{c_{2k+1}}{c_{2k}} < a_n$, което дава $a_n < -\\frac{c_{2k+2}}{c_{2k+1}}$.\n\nПо-нататък, лесна индукция по $k$ дава $c_k = \\frac{3^k + (-1)^{k-1}}{4}$. Следователно $\\lim_{k \\to \\infty} \\frac{c_{k+1}}{c_k} = 3$ и с помощта на (1) заключаваме, че $a_n = -3$ за всяко $n$.",
+      "answer": "а) $-\\frac{7}{2} < a_n < -2$; б) $a_n = -3$ за всяко $n$.",
+      "difficulty": "medium",
+      "techniques": [
+        "nonlinear_recurrence",
+        "induction",
+        "bounds"
+      ],
+      "confidence": "exact",
+      "reasoning": "Recurrence a_{n+1}(a_n+2)=3 is nonlinear; solution bounds the terms and uses induction to show the only possible limit is -3 – matches step 7.7."
+    },
+    {
+      "source": "OLI-2-Областен кръг-2010-11 кл · 2010-11 · Зад. 2",
+      "statement": "Нека a₁ > 1 и a_{n+1} = a_n + 1/a_n − 1 при n ≥ 1. Да се докаже, че:\nа) редицата (a_n) е сходяща и да се намери нейната граница;\nб) съществува n, за което [неразчетено: индексът и степените в неравенството „a 2n < 1 + 1/(22n)“].",
+      "solution": "Решение. а) Понеже a_{n+1} − 1 = (a_n − 1)²/a_n > 0, то a_{n+1} − a_n = 1/a_n − 1 < 0 и значи a_n > a_{n+1} > 1. Следователно редицата е сходяща и за нейната граница l имаме, че l = l + 1/l − 1, т.е. l = 1.\nб) От а) следва, че a_k ≤ 3/2 за някое k. Тогава от\na_{n+1} − 1 = (a_n − 1)²/a_n < (a_n − 1)²\nпо индукция получаваме, че a_n − 1 < 1/2^{2^{n−k}} при n > k. Остава да изберем n ≥ 2k.",
+      "answer": "а) lim a_n = 1.",
+      "difficulty": "medium",
+      "techniques": [
+        "recurrence_analysis",
+        "monotone_convergence",
+        "induction",
+        "limit_equation"
+      ],
+      "confidence": "exact",
+      "reasoning": "Shows a_n decreasing and bounded, finds limit solving l = l + 1/l - 1, then uses induction for the inequality."
+    },
+    {
+      "source": "OLI-3-Национален кръг-1996-9-12 кл · 1996-None · Зад. 4",
+      "statement": "The sequence $\\{a_n\\}_{n=1}^{\\infty}$ is defined by\n\n$$a_1 = 1, \\quad a_{n+1} = \\frac{a_n}{n} + \\frac{n}{a_n}, \\quad n \\geq 1.$$\n\nProve that $\\lfloor a_n^2 \\rfloor = n$ when $n \\geq 4$ (it is denoted by $\\lfloor x \\rfloor$ the integer part of the number $x$).",
+      "solution": "Solution. Let $f(x) = \\frac{x}{n} + \\frac{n}{x}$. Since $f(a) - f(b) = \\frac{(a-b)(ab-n^2)}{abn}$, it follows that the function $f(x)$ is decreasing in the interval $(0, n)$.\n\nFirstly, by induction we shall prove that $\\sqrt{n} \\le a_n \\le \\frac{n}{\\sqrt{n-1}}$ when $n \\ge 3$. We have $a_1 = 1, a_2 = 2$ and $a_3 = 2$, i.e. $\\sqrt{3} \\le a_3 \\le \\frac{3}{\\sqrt{2}}$. Let $\\sqrt{n} \\le a_n \\le \\frac{n}{\\sqrt{n-1}}$ for an integer $n \\ge 3$. Then, $a_{n+1} = f(a_n) \\le f(\\sqrt{n}) = \\frac{n+1}{\\sqrt{n}}$ and $a_{n+1} = f(a_n) \\ge f\\left(\\frac{n}{\\sqrt{n-1}}\\right) = \\frac{n}{\\sqrt{n-1}} > \\sqrt{n+1}$ and thus the induction finishes.\n\nSince $a_n \\ge \\sqrt{n}$, it remains to prove, that $a_n < \\sqrt{n+1}$. We have $a_{n+1} = f(a_n) \\ge f\\left(\\frac{n}{\\sqrt{n-1}}\\right) = \\frac{n}{\\sqrt{n-1}}$ when $n \\ge 3$. Consequently, $a_n \\ge \\frac{n-1}{\\sqrt{n-2}}$ when $n \\ge 4$. Then,\n\n$$a_{n+1} = f(a_n) < f\\left(\\frac{n-1}{\\sqrt{n-2}}\\right) = \\frac{(n-1)^2 + n^2(n-2)}{(n-1)n\\sqrt{n-2}} < \\sqrt{n+2}$$\n\nwhen $n \\ge 4$. (The last inequality is equivalent to $2n^2(n-3) + 4n - 1 > 0$.) Therefore, $\\sqrt{n} \\le a_n < \\sqrt{n+1}$ when $n \\ge 4$, i.e. $\\lfloor a_n^2 \\rfloor = n$.",
+      "answer": null,
+      "difficulty": "medium",
+      "techniques": [
+        "nonlinear_recurrence",
+        "induction",
+        "inequality"
+      ],
+      "confidence": "exact",
+      "reasoning": "Shows bounds for a_n by induction using monotonicity of x/n + n/x, then squeezes a_n between √n and √(n+1)."
+    },
+    {
+      "source": "OLI-3-Национален кръг-2002-9-12 кл · 2002-None · Зад. 1",
+      "statement": "Нека $\\{a_n\\}_{n=1}^{\\infty}$ е редица от реални числа, за която\n\n$$a_{n+1} = \\sqrt{a_n^2 + a_n - 1} \\text{ при } n \\ge 1.$$\n\nа се докаже, че $a_1 \\notin (-2; 1)$.",
+      "solution": "решение: Да допуснем, че $a_1 \\in (-2; 1)$. Тогава $a_2 \\in [0; 1)$ и понеже $a_{n+1}^2 - a_n^2 = a_n - 1$, то по индукция следва, че $0 < a_{n+1} < a_n < 1$ при $n \\ge 2$. Значи редицата е сходяща и ако $l$ е нейната граница, то $l = \\sqrt{l^2 + l - 1}$, откъдето $l = 1$. От друга страна, $0 \\le l < a_2 < 1$, което е противоречие.",
+      "answer": null,
+      "difficulty": "medium",
+      "techniques": [
+        "nonlinear_recurrence",
+        "induction",
+        "limit_analysis"
+      ],
+      "confidence": "exact",
+      "reasoning": "Uses monotonicity and fixed‑point limit of a nonlinear recurrence."
+    },
+    {
+      "source": "OLI-2-Областен кръг-2016-11 кл · 2016-11 · Зад. 3",
+      "statement": "Дадено е естествено число t > 2. За редицата от естествени числа a₁, a₂, ..., aₙ е изпълнено a₁ = t и aₙ₊₁ = aₙ² − 2 при n ≥ 1.\nа) Да се намери най-големият общ делител на a₂₀₁₆ и a₁₀₀₈.\nб) Да се пресметне границата lim_{n→∞} (a₁ · a₂ · ... · aₙ)/aₙ₊₁.",
+      "solution": "Решение. След повдигане на втора степен на дадената рекурентна връзка, получаваме\n(1) aₙ₊₁² − 4 = aₙ²(aₙ² − 4).\nа) Оттук следва, че a₂₀₁₆² − 4 = a₂₀₁₅²·a₂₀₁₄²·...·a₁₀₀₈²(a₁₀₀₈² − 4). Ако d = (a₂₀₁₆, a₁₀₀₈), то d дели a₁₀₀₈ и следователно d дели a₂₀₁₆² − 4, т.е. d = 1, 2 или 4. Ако a₁ е четно число, то всички членове на редицата след първия се делят на 2, но не и на 4, а ако a₁ е нечетно число, всички членове на редицата са нечетни числа. Следователно d = 2 при t четно и d = 1 при t нечетно.\nб) Тъй като a₁ = t > 2 редицата е строго растяща. От (1) следва\nlim_{n→∞} (a₁·a₂·...·aₙ)/aₙ₊₁ = √((1 − 4/aₙ₊₁²)/(a₁² − 4))\nи тогава търсената граница е равна на √(1/(t² − 4)).",
+      "answer": "а) НОД(a₂₀₁₆, a₁₀₀₈) = 2 при четно t и 1 при нечетно t; б) 1/√(t² − 4).",
+      "difficulty": "hard",
+      "techniques": [
+        "nonlinear_recurrence",
+        "gcd_analysis",
+        "limit_computation"
+      ],
+      "confidence": "exact",
+      "reasoning": "Transforms a_{n+1}=a_n^2-2 into a_{n+1}^2-4 = a_n^2(a_n^2-4), derives gcd and evaluates limit via asymptotics."
+    }
+  ]
+}

@@ -1,0 +1,167 @@
+{
+  "pdf": "OLI-3-Национален кръг-2008-9-12 кл",
+  "problems": [
+    {
+      "num": 1,
+      "grade": null,
+      "year": 2008,
+      "round": "nacionalen",
+      "statement": "Нека $\\triangle ABC$ е остроъгълен с вътрешна ъглополовяща $CL, L \\in AB$. Точка P принадлежи на отсечката CL така, че $\\angle APB = \\pi - \\frac{1}{2} \\angle ACB$. Нека $k_1$ и $k_2$ са описаните окръжности съответно около $\\triangle APC$ и $\\triangle BPC$. $BP \\cap k_1 = Q, AP \\cap k_2 = R$. Допирателните към $k_1$ в Q и към $k_2$ в B се пресичат в точка S, допирателните към $k_1$ в A и към $k_2$ в R се пресичат в точка T. Да се докаже, че $|AS|=|BT|$.",
+      "solution": "Като използваме, че $SQ$ и $SB$ са допирателни съответно към $k_1$ и $k_2$ получаваме $\\angle QCB = \\angle QCP + \\angle PCB = \\angle SQB + \\angle SBQ$, откъдето\n\n$\\angle QSB + \\angle QCB = \\angle QSB + \\angle SQB + \\angle SBQ = 180^{\\circ}.$\n\nСледователно четириъгълникът $SBCQ$ е вписан. Освен това\n\n$\\angle QCA = \\angle QPA = \\frac{1}{2}\\gamma = \\angle QBC = \\angle QCS,$\n\nкоето означава, че $A \\in CS$. Оттук\n\n$\\angle QAS = 180^{\\circ} - \\angle QAC = 180^{\\circ} - \\angle QPC = \\angle CPB$\n\nи понеже $\\angle SQA = \\frac{1}{2}\\gamma = \\angle BCP$, то $\\triangle QAS \\sim \\triangle CPB$. Тогава $\\frac{AS}{AQ} = \\frac{PB}{PC}$ и като използваме, че $AQ = PA$ (тъй като $\\angle QCA = \\angle PCA = \\frac{1}{2}\\gamma$), получаваме $AS = \\frac{PB.AQ}{PC} = \\frac{PB.PA}{PC}$. Аналогично намираме $BT = \\frac{PB.PA}{PC}$, т.е. $AS = BT$.",
+      "answer": null,
+      "page": 1,
+      "source": "OLI-3-Национален кръг-2008-9-12 кл · 2008-? · Зад. 1",
+      "point_id": "1.10",
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": "medium",
+      "techniques": [
+        "tangents",
+        "cyclic_quadrilateral",
+        "similar_triangles"
+      ],
+      "reasoning": "Solution uses tangents to the two circles, shows S,B,C,Q cyclic and derives similarity of triangles QAS and CPB to get AS=BT.",
+      "_paired": true,
+      "_grade_source": "grade_range",
+      "grade_range": [
+        9,
+        12
+      ]
+    },
+    {
+      "num": 2,
+      "grade": null,
+      "year": 2008,
+      "round": "nacionalen",
+      "statement": "Съществуват ли 2008 непресичащи се аритметични прогресии от естествени числа, такива че всяка от тях съдържа просто число, по-голямо от 2008 и числата, които не принадлежат на нито една от тях са краен брой?",
+      "solution": "Да допуснем, че съществуват 2008 аритметични прогресии, удовлетворяващи условието. Можем да считаме, че всяка от тях има за първи член просто число $a_i > 2008$, $i = 1, 2, \\dots, 2008$. Ясно е, че за тези прогресии множеството на естествените числа, които не принадлежат на нито една от тях също е крайно. Нека $d_i$, $i = 1, 2, \\dots, 2008$ са съответните разлики. За достатъчно голямо $t$ числото $td_1d_2 \\dots d_{2008}$ трябва да принадлежи на точно една прогресия. Без ограничение считаме, че това е първата. От условието, че никои две прогресии, не се пресичат лесно следва, че $(d_i, d_j) \\neq 1$ при $i \\neq j$, в частност $d_1 \\neq 1$ за всяко $i$. Сега от $a_1 + kd_1 = td_1d_2 \\dots d_{2008}$ следва, че $d_1$ дели $a_1$ и понеже $a_1$ е просто и $d_1 \\neq 1$, то $d_1 = a_1$. Но тогава $a_1$ дели $d_i$ за $i = 1, 2, \\dots, 2008$. Понеже $a_1 > 2008$, то ясно е, че поне един остатък по модул $a_1$ няма да се среща излежду числата $a_1, a_2, \\dots, a_{2008}$, т.е. естествените числа, даващи този остатък не принадлежат на нито една прогресия. Полученото противоречие показва, че 2008 прогресии с исканото свойство не съществуват.",
+      "answer": "Не съществуват.",
+      "page": 1,
+      "source": "OLI-3-Национален кръг-2008-9-12 кл · 2008-? · Зад. 2",
+      "point_id": "3.1",
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": "medium",
+      "techniques": [
+        "divisibility",
+        "gcd",
+        "prime_numbers"
+      ],
+      "reasoning": "Argument relies on divisibility relations between first terms and differences of the progressions and uses gcd properties of primes.",
+      "_paired": true,
+      "_grade_source": "grade_range",
+      "grade_range": [
+        9,
+        12
+      ]
+    },
+    {
+      "num": 3,
+      "grade": null,
+      "year": 2008,
+      "round": "nacionalen",
+      "statement": "Нека $n \\in N$ и $0 \\le \\alpha_1 \\le \\alpha_2 \\le \\dots \\le \\alpha_n \\le \\pi$ и $b_1, b_2, \\dots, b_n$ са реални числа, за които неравенството $\\left| \\sum_{i=1}^n b_i \\cos(k\\alpha_i) \\right| < \\frac{1}{k}$ е в сила за всяко $k \\in N$. Да се докаже, че $b_1 = b_2 = \\dots b_n = 0$.",
+      "solution": "Първо ще докажем следното\n\nТвърдение. Ако $a_j, z_j \\in \\mathbb{C}$, $|z_j| \\ge 1$ ($1 \\le j \\le n$), $z_j \\neq z_l$ ($j \\neq l$) и $b_k = \\sum_{j=1}^n a_j z_j^k \\to 0$, то $a_j = 0$.\n\nДоказателство. Достатъчно е да докажем, че $a_n = 0$ (тогава твърдението следва с индукция по $n$). При $n = 1$ това е очевидно. Нека $n > 1$ и $w_j = \\frac{z_j}{z_n}$. Тъй като $|z_n| \\ge 1$, то $c_k = \\sum_{j=1}^{n-1} a_j w_j^k \\to -a_n$. От друга страна, ако $P(w) = \\prod_{j=1}^{n-1} (w - w_j) = \\sum_{j=0}^{n-1} d_j w^j$, то (както е добре известно и лесно се проверява)\n\n$\\sum_{j=0}^{n-1} d_j c_{k+j} = 0$ за всяко $k \\in \\mathbb{N}$. При $k \\to \\infty$ следва, че $a_n \\sum_{j=0}^{n-1} d_j = 0$. Понеже $w_j \\neq 1$, то $\\sum_{j=0}^{n-1} d_j = P(1) \\neq 0$ и значи $a_n = 0$.\n\nНека сега $z_j = \\cos \\alpha_j + i \\sin \\alpha_j$. Понеже $\\alpha_j \\in [0, \\pi]$ и $\\alpha_j \\neq \\alpha_l$ ($j \\neq l$), то $z_j \\neq z_l \\neq \\overline{z_j}$. Тъй като $2 \\sum_{j=1}^n \\cos k \\alpha_j = \\sum_{j=1}^n a_j (z_j^k + \\overline{z_j}^k)$, от доказаното твърдение (за $2n$ вместо $n$) следва, че ако $z_j \\neq \\overline{z_j}$, то $a_j = 0$, а иначе $2a_j = 0$, т.е. пак $a_j = 0$.",
+      "answer": null,
+      "page": 1,
+      "source": "OLI-3-Национален кръг-2008-9-12 кл · 2008-? · Зад. 3",
+      "point_id": "11.7",
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": "medium",
+      "techniques": [
+        "complex_numbers",
+        "roots_of_unity",
+        "linear_independence"
+      ],
+      "reasoning": "Transforms cosine sum into sums of powers of unit complex numbers and applies a linear‑independence lemma for distinct roots of unity.",
+      "_paired": true,
+      "_grade_source": "grade_range",
+      "grade_range": [
+        9,
+        12
+      ]
+    },
+    {
+      "num": 4,
+      "grade": null,
+      "year": 2008,
+      "round": "nacionalen",
+      "statement": "Да се намери най-малкото естествено k такова че съществуват такива естествени числа m и n, че $1324 + 279m + 5^n$ е точна k-та степен на естествено число.",
+      "solution": "При $m = 1$ и $n = 3$ имаме $1324 + 279 \\cdot 1 + 5^3 = 1728 = 12^3$, което означава, че търсеното число е 2 или 3. Ще докажем, че уравнението $1324 + 279m + 5^n = x^2$ няма решение в естествени числа, откъдето ще следва, че $k = 3$.\n\nДа допуснем, че $m$, $n$ и $x$ са естествени числа, за които $1324 + 279m + 5^n = x^2$. Ако $x$ не се дели на 3, то $1 + 5^n \\equiv 1 \\pmod{3}$, което е невъзможно. Следователно $x$ се дели на 3 и тогава $1 + 5^n \\equiv 0 \\pmod{9}$. Оттук заключаваме, че $n \\equiv 3 \\pmod{6}$, в частност $n$ се дели на 3. Ако $n = 3t$, $t \\in \\mathbb{N}$, то $5^n = (5^3)^t \\equiv 1 \\pmod{31}$ и следователно $x^2 \\equiv 22 + 0 + 1 \\equiv 23 \\pmod{31}$. Очевидно $(x, 31) = 1$ и с помощта на малката теорема на Ферма получаваме $1 \\equiv x^{30} \\equiv 23^{15} \\pmod{31}$. Не е трудно да се провери обаче, че сравнението $23^{15} \\equiv 1 \\pmod{31}$ не е вярно (всъщност имаме $23^{15} \\equiv -1 \\pmod{31}$).",
+      "answer": "$k = 3$.",
+      "page": 1,
+      "source": "OLI-3-Национален кръг-2008-9-12 кл · 2008-? · Зад. 4",
+      "point_id": "3.3",
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": "medium",
+      "techniques": [
+        "modular_arithmetic",
+        "quadratic_residue",
+        "fermat_little"
+      ],
+      "reasoning": "Uses congruences modulo 3,9 and 31 together with Fermat’s little theorem to exclude a square and conclude k=3.",
+      "_paired": true,
+      "_grade_source": "grade_range",
+      "grade_range": [
+        9,
+        12
+      ]
+    },
+    {
+      "num": 5,
+      "grade": null,
+      "year": 2008,
+      "round": "nacionalen",
+      "statement": "Нека n е фиксирано естествено число. Да се намерят всички естествени числа m, такива че $\\frac{1}{a^n} + \\frac{1}{b^n} \\ge a^m + b^m$ е в сила за всеки положителни a и b със сума 2.",
+      "solution": "Нека $A_n$ е множеството от естествените числа $m$ с даденото свойство. Първо ще докажем, че ако $m \\ge 2$ и $m \\in A_n$, то $m - 1 \\in A_n$. Наистина, за $a > 0$, $b > 0$ и $a + b = 2$ имаме\n\n$\\begin{aligned} 2(a^m + b^m - a^{m-1} - b^{m-1}) &= 2(a^m + b^m) - (a + b)(a^{m-1} + b^{m-1}) = \\\\ &= (a - b)(a^{m-1} - b^{m-1}) \\ge 0. \\end{aligned}$\n\nСледователно $a^m + b^m \\geq a^{m-1} + b^{m-1}$, което доказва, че ако $m \\geq 2$ и $m \\in A_n$, то $m - 1 \\in A_n$.\n\nСега ще докажем, че $n + 1 \\in A_n$, но $n + 2 \\notin A_n$. Оттук и от доказаното по-горе следва, че $A_n = \\{1, 2, \\dots, n + 1\\}$.\n\nЛема 1. Ако $a > 0$, $b > 0$ и $a + b = 2$, то $\\frac{1}{a^n} + \\frac{1}{b^n} \\geq a^{n+1} + b^{n+1}$.\n\nДоказателство. От равенството $1 - b = a - 1$ следва, че\n\n$\\frac{1}{a^n} + \\frac{1}{b^n} - a^{n+1} - b^{n+1} = \\frac{1 - a}{(ab)^n} \\sum_{k=0}^{2n} (b^n a^k - a^n b^k) = \\frac{2(1 - a)^2 S}{(ab)^n},$\n\nкъдето\n\n$S = \\sum_{j=0}^{n-1} (ab)^{n-j-1} (1 - (ab)^{j+1}) (a^j + a^{j-1}b + \\dots + ab^{j-1} + b^j).$\n\nТъй като $ab \\leq \\frac{(a + b)^2}{4} = 1$, заключаваме, че $S \\geq 0$ и с това лемата е доказана.\n\nЛема 2. За всяко естествено число $n$ съществуват $a > 0$ и $b > 0$, за които $a + b = 2$ и $\\frac{1}{a^n} + \\frac{1}{b^n} < a^{n+2} + b^{n+2}$.\n\nДоказателство. Както в доказателството на Лема 1 получаваме равенството\n\n$\\frac{1}{a^n} + \\frac{1}{b^n} - a^{n+2} - b^{n+2} = \\frac{2(1 - a)^2 S}{(ab)^n},$\n\nкато този път\n\n$S = -(ab)^n (a^n + a^{n-1}b + \\dots + b^n) + \\sum_{j=0}^{n-1} (ab)^{n-j-1} (1 - (ab)^{j+1}) (a^j + a^{j-1}b + \\dots + b^j).$\n\nСега твърдението на лемата следва от факта, че изразът $S$ си мени знака при $ab \\in (0, 1)$, защото при $ab = 0$ той е положителен, а при $ab = 1$ е отрицателен. Това може да се докаже строго по следния начин. Нека $1 - (ab)^n = \\varepsilon \\in (0, 1)$. Тогава от неравенствата $0 < ab \\leq 1$, $0 < a < 2$ [неразчетено]\n\nОт горните неравенства следва, че\n\n$S < -(1 - \\varepsilon) + \\varepsilon \\sum_{j=0}^{n-1} 4^j = \\frac{\\varepsilon(4^n - 1)}{3} - (1 - \\varepsilon) < \\varepsilon 4^n - (1 - \\varepsilon) = \\varepsilon(1 + 4^n) - 1.$\n\nНека $a$ и $b$ са положителни числа, за които $a + b = 2$ и $ab = \\sqrt[n]{1 - \\frac{1}{1 + 4^n}}$. В този случай $\\varepsilon(1 + 4^n) - 1 = 0$, т.е. $S < 0$.\n\nОкончателно, търсените числа са $m = 1, 2, \\dots, n + 1$.",
+      "answer": "$m = 1, 2, \\dots, n + 1$.",
+      "page": 1,
+      "source": "OLI-3-Национален кръг-2008-9-12 кл · 2008-? · Зад. 5",
+      "point_id": "6.1",
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": "hard",
+      "techniques": [
+        "am_gm",
+        "inequality_transform",
+        "induction"
+      ],
+      "reasoning": "Establishes a chain of implications via AM‑GM and a telescoping inequality, then proves the extremal case with induction.",
+      "_paired": true,
+      "_grade_source": "grade_range",
+      "grade_range": [
+        9,
+        12
+      ]
+    },
+    {
+      "num": 6,
+      "grade": null,
+      "year": 2008,
+      "round": "nacionalen",
+      "statement": "Нека M е множеството на целите числа от интервала [-n,n]. Подмножеството P на M се нарича базисно, ако всяко число от M може да се представи като сума на някои n различни числа от P. Да се намери най-малкото естествено k, такова че всеки k числа от M образуват базисно множество.",
+      "solution": "Нека $n = 2l + 1$, където $l$ е естествено число. Тъй като сборът на кои да е $n$ числа от множеството $\\{-l, -l + 1, \\dots, -1, 0, 1, \\dots, n\\}$ е неотрицателно число, то $k \\ge n + 1 + l + 1 = 3l + 3$. Ще докажем, че $k = 3l + 3$. Нека $P$ е произволно подмножество на $M$ с $3l + 3$ елемента и нека $a$ е произволен елемент от $M$. Без ограничение $a \\le 0$.\n\nСлучай 1. Нека $0 \\notin P$. Съществуват поне $l + 2$ двойки от вида $(-x, x)$, $x > 0$ в $P$. Ако $a \\in P$, то $a = a + \\sum(x + (-x))$, където в сумата има точно $l$ двойки $(-x, x)$, $x > 0$, $-x \\neq a$. Нека $a \\notin P$. Ще представим $a$ като сбор на три различни елемента от $P$ и след това да добавим $l - 1$ двойки $(-x, x)$ всяка от които не съдържа трите елемента със сбор $a$. Последното е възможно тъй като има поне $l + 2$ двойки $(-x, x)$ в $P$. Ще разгледаме два случая.\n\n1.1. Нека в $P$ има точно $l + 2$ отрицателни числа. Тогава $P = P_1 \\cup P_2$, където $P_1$ е множество от $l + 2$ отрицателни числа и $P_2 = \\{1, 2, \\dots, n\\}$. Ако съществуват $x, y \\in P_1$, за които $x < a < y$, то $a = x + y + (a - x - y)$, където $-y < a - x - y < -x$, т.е. $a - x - y \\in P_2$. Ако всички елементи на $P_1$ са по-малки от $a$, то съществува $x \\in P_1$, за което $x \\le a - 3$. Тогава $a = x + 1 + (a - x - 1)$, т.е. $2 \\le a - x - 1 \\le a + n - 1 < n$.\n\nАко всички числа от $P_1$ са по-големи от $a$, то нека $x$ и $y$ са двете най-големи числа от $P_1$. Получаваме $a = x + y + (a - x - y)$, където $x + y \\le -(l + 2) - (l + 1) = -2l - 3 < a$ (има $l + 2$ отрицателни числа в $P_1$). Следователно\n\n$0 < a - x - y \\le a - (a + 1) - (a + 2) = -a - 3 < n,$\n\nт.е. $a - x - y \\in P_2$.\n\n1.2. Нека в $P$ има поне $l + 3$ отрицателни числа. Поне $l + 1$ елемента на $P$ са измежду числата $a + 1, a + 2, \\ldots, a + n$ (дори $l + 2$, тъй като $a \\notin P$). Нека $b$ е едно от тези числа и $a - b$ е нечетно. Такова число съществува, тъй като измежду числата $a + 1, a + 2, \\ldots, a + n$ има точно $l$ с четността на $a$. Нека $c = a - b$, $c < 0$. Измежду числата $c + 1, c + 2, \\ldots, c + n$ има поне $l + 1$ от $P$ и поне $l$ от тях, нека това са $p_1, p_2, \\ldots, p_l$, са различни от $b$. Тъй като в $P$ има поне $l + 3$ отрицателни числа, получаваме, че поне $l + 2$ от тях, нека това са $q_1, q_2, \\ldots, q_{l+2}$, са различни от $b$.\n\nТъй като $c - p_1, c - p_2, \\ldots, c - p_l$ са $l$ различни отрицателни числа, то съществуват $i$ и $j$ за които $c - p_i = q_j$. Тъй като $c$ е нечетно, то $p_i \\neq q_j$. Тогава $a = b + p_i + q_j$ е исканото представяне.\n\nСлучай 2. Нека $0 \\in P$. Съществуват поне $l + 1$ двойки от вида $(-x, x)$, $x > 0$ в $P$. Да допуснем, че $a \\notin P$ (случаят $a \\in P$ се разглежда както в I.). Достатъчно е да представим $a$ като сбор на два различни елемента от $P$ и след това да прибавим $l - 1$ двойки $(-x, x)$ и $0$.\n\nСъществуват поне $l + 2$ елемента на $P$ измежду числата $a + 1, a + 2, \\ldots, a + n$ и поне $l + 1$ от тях, нека това са $p_1, p_2, \\ldots, p_{l+1}$ са различни от $\\frac{a}{2}$. Тъй като съществуват поне $l + 1$ отрицателни числа в $P$, нека това са $q_1, q_2, \\ldots, q_{l+1}$, то съществуват $i$ и $j$ за които $a - p_i = q_j$. Остава да забележим, че $p_i = 0$ или $q_j = 0$ води до противоречие (тъй като $a \\notin P$) и $p_i = q_j$ води до $p_i = \\frac{a}{2}$, противоречие.\n\nСледователно търсеното $k$ е равно на $3l + 3 = \\frac{3(n + 1)}{2}$.",
+      "answer": "$k = \\frac{3(n + 1)}{2}$.",
+      "page": 1,
+      "source": "OLI-3-Национален кръг-2008-9-12 кл · 2008-? · Зад. 6",
+      "point_id": "8.1",
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": "hard",
+      "techniques": [
+        "pigeonhole_principle",
+        "counting",
+        "combinatorial_design"
+      ],
+      "reasoning": "Counts required positive/negative pairs and applies the pigeon‑hole principle to show the minimal k = 3l+3.",
+      "_paired": true,
+      "_grade_source": "grade_range",
+      "grade_range": [
+        9,
+        12
+      ]
+    }
+  ]
+}

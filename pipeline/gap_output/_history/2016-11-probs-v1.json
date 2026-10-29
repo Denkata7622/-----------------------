@@ -1,0 +1,107 @@
+{
+  "_meta": {
+    "pdf": "C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\Задачи_Минали_Години\\Областен\\OLI-2-Областен кръг-2016-11 кл-probs.pdf",
+    "paired_with": "C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\Задачи_Минали_Години\\Областен\\OLI-2-Областен кръг-2016-11 кл-sol.pdf",
+    "level": 1,
+    "type": "probs",
+    "analyzed_at": "2026-10-16T21:15:59.707483",
+    "model": "deepseek/deepseek-v3.2",
+    "text_length": 1064,
+    "paired_text_length": 3750
+  },
+  "problems": [
+    {
+      "num": 1,
+      "topic": "algebra",
+      "theorems": [],
+      "techniques": [
+        "substitution",
+        "quadratic equation analysis",
+        "interval analysis"
+      ],
+      "concepts": [
+        "trigonometric equations",
+        "cotangent function",
+        "quadratic discriminant",
+        "Vieta's formulas",
+        "function monotonicity on interval"
+      ],
+      "difficulty": "standard",
+      "notes": "Standard problem involving trigonometric substitution to a quadratic and analyzing roots in an interval."
+    },
+    {
+      "num": 2,
+      "topic": "geometry",
+      "theorems": [],
+      "techniques": [
+        "angle chasing",
+        "cyclic quadrilaterals",
+        "parallel lines"
+      ],
+      "concepts": [
+        "incircle",
+        "tangency points",
+        "angle bisectors",
+        "midsegment of a trapezoid",
+        "concyclic points",
+        "right angles"
+      ],
+      "difficulty": "hard",
+      "notes": "Requires constructing auxiliary points and proving concyclicity to show a point lies on the midsegment."
+    },
+    {
+      "num": 3,
+      "topic": "number_theory",
+      "theorems": [],
+      "techniques": [
+        "recurrence manipulation",
+        "induction",
+        "limit evaluation",
+        "greatest common divisor analysis"
+      ],
+      "concepts": [
+        "recurrence relations",
+        "divisibility",
+        "parity",
+        "infinite products",
+        "limits of sequences"
+      ],
+      "difficulty": "olympic",
+      "notes": "Part (a) requires careful analysis of parity and divisibility from the recurrence. Part (b) involves transforming the product into a telescoping form."
+    },
+    {
+      "num": 4,
+      "topic": "algebra",
+      "theorems": [],
+      "techniques": [
+        "inequality manipulation",
+        "constructive substitution",
+        "induction",
+        "limit of sequences"
+      ],
+      "concepts": [
+        "functional inequalities",
+        "density arguments",
+        "monotonic sequences",
+        "fixed points"
+      ],
+      "difficulty": "olympic",
+      "notes": "Non-standard functional problem. Key step is constructing sequences to cover the interval (0,2) and using the inequality to show function constancy."
+    }
+  ],
+  "unique_concepts": [
+    "trigonometric substitution",
+    "quadratic root analysis in interval",
+    "incircle and tangency points",
+    "angle bisectors and concyclic points",
+    "midsegment of a trapezoid",
+    "recurrence relation manipulation",
+    "divisibility and parity analysis",
+    "infinite product limit",
+    "functional inequalities",
+    "constructive substitution for functions",
+    "density arguments via sequences",
+    "fixed point of a sequence"
+  ],
+  "confidence": 0.95
+}

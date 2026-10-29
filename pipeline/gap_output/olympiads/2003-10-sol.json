@@ -1,0 +1,154 @@
+{
+  "_meta": {
+    "pdf": "C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\Задачи_Минали_Години\\Областен\\OLI-2-Областен кръг-2003-10 кл-sol.pdf",
+    "paired_with": null,
+    "level": 1,
+    "type": "sol",
+    "analyzed_at": "2026-10-18T12:31:24.791520",
+    "model": "deepseek/deepseek-v3.2",
+    "text_length": 4102,
+    "paired_text_length": 0
+  },
+  "problems": [
+    {
+      "num": 1,
+      "topic": "geometry",
+      "theorems": [],
+      "techniques": [
+        "algebraic manipulation",
+        "solving quadratic equations"
+      ],
+      "concepts": [
+        "trapezoid",
+        "area",
+        "inscribed circle",
+        "tangential quadrilateral",
+        "properties of tangents"
+      ],
+      "difficulty": "standard",
+      "notes": "Problem involves a trapezoid divided into two tangential trapezoids. Solution uses algebraic relations from geometric properties (heights, bases) and area condition."
+    },
+    {
+      "num": 2,
+      "topic": "combinatorics",
+      "theorems": [
+        "Pigeonhole Principle"
+      ],
+      "techniques": [
+        "strategy",
+        "modular arithmetic",
+        "subset sums"
+      ],
+      "concepts": [
+        "winning strategy",
+        "subset sums modulo prime",
+        "existence proof"
+      ],
+      "difficulty": "olympic",
+      "notes": "Game theory/combinatorial game. For n>=11, uses pigeonhole principle on subsets to force a sum divisible by 2003."
+    },
+    {
+      "num": 3,
+      "topic": "number_theory",
+      "theorems": [],
+      "techniques": [
+        "limit analysis",
+        "floor function manipulation",
+        "substitution"
+      ],
+      "concepts": [
+        "floor and ceiling functions",
+        "integer part",
+        "limits",
+        "irrational numbers",
+        "functional equation in integers"
+      ],
+      "difficulty": "hard",
+      "notes": "Functional equation involving floor functions. Solution finds parameter 'a' by taking limit as n→∞ and then verifies."
+    },
+    {
+      "num": 4,
+      "topic": "geometry",
+      "theorems": [],
+      "techniques": [
+        "angle chasing",
+        "similar triangles"
+      ],
+      "concepts": [
+        "cyclic quadrilateral",
+        "inscribed angles",
+        "similar triangles",
+        "intersecting chords",
+        "angle equality"
+      ],
+      "difficulty": "standard",
+      "notes": "Pure geometry problem using angle equalities and triangle similarity to prove an angle relation."
+    },
+    {
+      "num": 5,
+      "topic": "algebra",
+      "theorems": [],
+      "techniques": [
+        "substitution",
+        "symmetry",
+        "system manipulation",
+        "polynomial factorization"
+      ],
+      "concepts": [
+        "symmetric systems",
+        "homogeneous equations",
+        "real solutions",
+        "cubic polynomial",
+        "Vieta's formulas"
+      ],
+      "difficulty": "hard",
+      "notes": "Symmetric system in three variables. Solution uses substitution to reduce to two variables, then polynomial factorization."
+    },
+    {
+      "num": 6,
+      "topic": "number_theory",
+      "theorems": [
+        "Chinese Remainder Theorem",
+        "Pigeonhole Principle"
+      ],
+      "techniques": [
+        "contradiction",
+        "modular analysis",
+        "prime divisors"
+      ],
+      "concepts": [
+        "prime numbers",
+        "modular residues",
+        "sum of residues",
+        "combinatorial set",
+        "existence proof"
+      ],
+      "difficulty": "olympic",
+      "notes": "Combinatorial number theory. Uses primes dividing differences, Chinese Remainder Theorem, and pigeonhole principle on residues to prove existence of a 'good' subset after removal."
+    }
+  ],
+  "unique_concepts": [
+    "trapezoid",
+    "inscribed circle",
+    "tangential quadrilateral",
+    "area",
+    "pigeonhole principle",
+    "winning strategy",
+    "subset sums modulo prime",
+    "floor and ceiling functions",
+    "integer part",
+    "limits",
+    "irrational numbers",
+    "functional equation",
+    "cyclic quadrilateral",
+    "similar triangles",
+    "angle chasing",
+    "symmetric systems",
+    "polynomial factorization",
+    "Chinese Remainder Theorem",
+    "modular residues",
+    "prime divisors",
+    "combinatorial set"
+  ],
+  "confidence": 0.95
+}

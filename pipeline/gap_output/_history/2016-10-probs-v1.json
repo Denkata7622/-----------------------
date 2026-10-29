@@ -1,0 +1,128 @@
+{
+  "_meta": {
+    "pdf": "C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\Задачи_Минали_Години\\Областен\\OLI-2-Областен кръг-2016-10 кл-probs.pdf",
+    "paired_with": "C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\Задачи_Минали_Години\\Областен\\OLI-2-Областен кръг-2016-10 кл-sol.pdf",
+    "level": 1,
+    "type": "probs",
+    "analyzed_at": "2026-10-16T21:14:33.809754",
+    "model": "deepseek/deepseek-v3.2",
+    "text_length": 946,
+    "paired_text_length": 4017
+  },
+  "problems": [
+    {
+      "num": 1,
+      "topic": "algebra",
+      "theorems": [],
+      "techniques": [
+        "substitution",
+        "quadratic equation analysis",
+        "function monotonicity/range analysis"
+      ],
+      "concepts": [
+        "exponential equations",
+        "quadratic equations",
+        "parameter analysis",
+        "real roots count",
+        "transformation to new variable"
+      ],
+      "difficulty": "standard",
+      "notes": "Standard exponential equation solved by substitution and analysis of quadratic equation with parameter and domain restriction."
+    },
+    {
+      "num": 2,
+      "topic": "geometry",
+      "theorems": [
+        "Incircle center properties",
+        "Cyclic quadrilateral properties",
+        "Angle bisector theorem (implicitly)",
+        "Power of a point (implicitly)"
+      ],
+      "techniques": [
+        "similar triangles",
+        "auxiliary construction",
+        "algebraic manipulation from geometric relations"
+      ],
+      "concepts": [
+        "incircle",
+        "circumcircle",
+        "angle bisector",
+        "similar triangles",
+        "cyclic quadrilateral",
+        "inscribed angles",
+        "chord properties"
+      ],
+      "difficulty": "hard",
+      "notes": "Olympiad-level geometry problem requiring construction of intersection points of angle bisectors with circumcircle and multiple similarity arguments."
+    },
+    {
+      "num": 3,
+      "topic": "combinatorics",
+      "theorems": [],
+      "techniques": [
+        "recursion",
+        "Fibonacci sequence identification",
+        "case analysis",
+        "direct verification"
+      ],
+      "concepts": [
+        "permutations",
+        "recurrence relations",
+        "Fibonacci numbers",
+        "combinatorial counting",
+        "inequality constraints on permutations"
+      ],
+      "difficulty": "olympic",
+      "notes": "Non-standard permutation problem leading to Fibonacci recurrence. Requires insight to deduce a1 ≤ 2 and establish recurrence."
+    },
+    {
+      "num": 4,
+      "topic": "number_theory",
+      "theorems": [],
+      "techniques": [
+        "prime factorization",
+        "divisor representation as tuples",
+        "chain arguments (Dilworth/antichain)",
+        "construction of maximal set"
+      ],
+      "concepts": [
+        "prime factorization",
+        "divisors",
+        "antichain in partially ordered set (divisibility)",
+        "exponent tuples",
+        "maximal set of incomparable elements",
+        "upper bound proof via covering chains"
+      ],
+      "difficulty": "olympic",
+      "notes": "Problem reduces to finding largest antichain in a 3D grid (divisibility poset). Uses chain decomposition (for fixed β,γ) to get upper bound and explicit construction to match it."
+    }
+  ],
+  "unique_concepts": [
+    "exponential equations",
+    "quadratic equations",
+    "parameter analysis",
+    "real roots count",
+    "substitution",
+    "incircle",
+    "circumcircle",
+    "angle bisector",
+    "similar triangles",
+    "cyclic quadrilateral",
+    "inscribed angles",
+    "chord properties",
+    "permutations",
+    "recurrence relations",
+    "Fibonacci numbers",
+    "combinatorial counting",
+    "inequality constraints",
+    "prime factorization",
+    "divisors",
+    "antichain in partially ordered set",
+    "exponent tuples",
+    "maximal set of incomparable elements",
+    "chain decomposition",
+    "upper bound proof",
+    "explicit construction"
+  ],
+  "confidence": 0.98
+}

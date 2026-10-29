@@ -1,0 +1,131 @@
+{
+  "point_id": "8.2",
+  "total": 9,
+  "by_difficulty": {
+    "easy": 2,
+    "medium": 6,
+    "hard": 1
+  },
+  "problems": [
+    {
+      "source": "OLI-2-Областен кръг-2023-11 кл · 2023-11 · Зад. 4",
+      "statement": "Да се намерят всички естествени числа $n$, за които от група от $2n$ ученици могат да се изберат 14 групи, всяка от по $n$ ученици, така, че всеки двама ученици да участват заедно в точно 3 от избраните групи.",
+      "solution": "Решение. Всички двойки ученици са $\\binom{2n}{2}$, а във всяка група се срещат точно $\\binom{n}{2}$ двойки. От условието сега следва, че\n\n$$3\\binom{2n}{2} = 14\\binom{n}{2} \\iff 6n(2n-1) = 14n(n-1) \\Rightarrow n = 4.$$\n\nСледователно от 8 ученици трябва да образуваме 14 групи от по 4 ученика всяка, така че всеки двама ученици да се срещат в точно три групи. Пример за такова разпределение е следния:\n\n$$\\begin{array}{l} (1, 2, 3, 4), (5, 6, 7, 8), (1, 2, 5, 6), (3, 4, 7, 8), (1, 2, 7, 8), (3, 4, 5, 6), (1, 3, 5, 7), \\\\ (2, 4, 6, 8), (1, 3, 6, 8), (2, 4, 5, 7), (1, 4, 5, 8), (2, 3, 6, 7), (1, 4, 6, 7), (2, 3, 5, 8) \\end{array}$$",
+      "answer": "$n = 4$",
+      "difficulty": "easy",
+      "techniques": [
+        "double_counting",
+        "combinatorial_design",
+        "block_design"
+      ],
+      "confidence": "exact",
+      "reasoning": "Чрез двойно броене се получава линейно уравнение 3·C(2n,2)=14·C(n,2) → n=4; след това се конструира пример."
+    },
+    {
+      "source": "OLI-3-Национален кръг-2004-9-12 кл · 2004-None · Зад. 4",
+      "statement": "Във всяка дума, съставена от буквите a и b, можем да извършваме следните замени: aba → b, b → aba, bba → a, a → bba. Възможно ли е от думата b aa…a (2003 букви a) да се получи думата aa…a b (2003 букви a)?",
+      "solution": "Ще докажем, че при прилагане на коя да е от разрешените замени броят на буквите a на четни (съответно нечетни) позиции запазва четността си.\nДействително, да разгледаме замяната aba → b, приложена към думата w₁abaw₂. В новополучената дума w₁bw₂ всички букви a от w₁ са останали на местата си, а всички букви a от w₂ са се преместили с две позиции на ляво и следователно са запазили четността на позицията си. Изтриването на двете букви a от aba е намалило броя на буквите a на четни или нечетни позиции с две.\nАналогично, при прилагане на bba → a към w₁bbaw₂ получаваме w₁aw₂ и лесно се вижда, че свойството е изпълнено.\nТъй като a → aba и a → bba са обратни на разгледаните, то за тях е в сила същото свойство.\nДа забележим, че в думата b aa . . . a (2003 букви a) броят на буквите a на четни позиции е 1002, докато броят на буквите a на четни позиции в думата aa . . . a b (2003 букви a) е 1001. Следователно от първата дума не може да се получи втората.",
+      "answer": "От първата дума не може да се получи втората.",
+      "difficulty": "easy",
+      "techniques": [
+        "parity_invariant",
+        "word_replacements"
+      ],
+      "confidence": "exact",
+      "reasoning": "Shows parity of a‑positions is invariant under given replacements, proving impossibility for S4."
+    },
+    {
+      "source": "OLI-2-Областен кръг-1999-11 кл · 1999-11 · Зад. 3",
+      "statement": "In a competition 8 judges marked the contestants by *yes* or *no*. It is known that for any two contestants, two judges gave both a *yes*; two judges gave the first one a *yes* and the second one a *no*; two judges gave the first one a *no* and the second one a *yes*, and finally, two judges gave both a *no*. What is the greatest possible number of contestants?",
+      "solution": "Denote the number of contestants by $n$. Consider a table with 8 rows and $n$ columns such that the cell in the $i$th row and $j$th column contains 0 (1) if the $i$th judge gave the $j$th contestant a no (a yes). The conditions of the problem now imply that the table formed by any two columns contains among its rows each of the pairs 00, 01, 10 and 11 twice. We shall prove that 8 columns having this property do not exist. Assume the opposite. It is easily seen that if in any column all 0s are replaced by 1s and vice versa, the above property is retained. Therefore without loss of generality suppose that the first row consists of 0s. Denote the number of 0s in the $i$th row by $a_i$. It is clear that the total number of 0s is $8 \\cdot 4 = 32$. Further, the number of occurrences of 00 is $\\binom{8}{2} \\cdot 2 = 56$.\n\nOn the other hand the same number is $\\sum_{i=1}^{8} \\binom{a_i}{2}$. Since $a_1 = 8$, it follows that $\\sum_{i=2}^{8} a_i = 24$. It is easy to prove now that $\\sum_{i=2}^{8} \\binom{a_i}{2} \\geq 30$. Therefore $56 = \\sum_{i=1}^{8} \\binom{a_i}{2} \\geq 58$, which is false.\n\nThe diagram on the right shows that it is possible to have exactly 7 contestants:\n\n0 0 0 0 0 0 0\n0 1 1 1 1 0 0\n0 1 1 0 0 1 1\n0 0 0 1 1 1 1\n1 0 1 0 1 0 1\n1 0 1 1 0 1 0\n1 1 0 0 1 1 0\n1 1 0 1 0 0 1",
+      "answer": "7",
+      "difficulty": "medium",
+      "techniques": [
+        "double_counting",
+        "inclusion_exclusion"
+      ],
+      "confidence": "exact",
+      "reasoning": "Таблица‑мрежа, брои двойки (00,01,10,11) и използва двойно броене/включване‑изключване, класическа техника за подобни задачи."
+    },
+    {
+      "source": "OLI-2-Областен кръг-2011-11 кл · 2011-11 · Зад. 4",
+      "statement": "Колко най-малко подмножества с три елемента на множеството A = {1, 2, ..., 8} трябва да се изберат така, че всеки два елемента на A да са едновременно елементи на поне едно от избраните множества?",
+      "solution": "Решение. Всяка от седемте двойки (1, 2), (1, 3), …, (1, 8) трябва да се среща в някое от избраните множества. Тъй като в едно триелементно множество се срещат най-много две от тези двойки, следва, че числото 1 се среща в поне 4 множества. Това е вярно за всяко от останалите числа. Тогава общо във всички множества трябва да има поне 8 · 4 = 32 елемента. Това означава, че са ни необходими поне ⌈32/3⌉ = 11 множества.\nТъй като дадените 11 множества имат исканото свойство, то отговорът е 11.\n{1, 2, 3}, {1, 4, 5}, {1, 6, 7}, {1, 2, 8}, {2, 4, 6}, {2, 5, 7}, {2, 3, 8}, {3, 4, 7}, {3, 5, 6}, {4, 5, 8}, {6, 7, 8}.",
+      "answer": "11 множества",
+      "difficulty": "medium",
+      "techniques": [
+        "double_counting",
+        "covering_design"
+      ],
+      "confidence": "exact",
+      "reasoning": "Double‑count ordered pairs covered by 3‑element subsets, obtain lower bound ⌈32/3⌉=11 and give an explicit construction."
+    },
+    {
+      "source": "OLI-2-Областен кръг-2021-11 кл · 2021-11 · Зад. 3",
+      "statement": "За всяко естествено число n с f(n) означаваме сборът от всички естествени числа, които са по-малки от n и не са прости.\nНапример f(5) = 1 + 4 = 5 и f(10) = 1 + 4 + 6 + 8 + 9 = 28.\nДа се намерят всички естествени числа, за които f(n) − 1 = n²/4.",
+      "solution": "Решение. От равенството $f(n) - 1 = \\frac{n^2}{4}$ следва, че $\\frac{n^2}{4}$ е естествено число, т.е. $n$ е четно число. С директна проверка се установява, че при $n \\le 14$ единственото решение е $n = 14$, като тогава $f(14) = 1 + 4 + 6 + 8 + 9 + 10 + 12 = 50$ и $\\frac{14^2}{4} = 49$.\n\nНека $g(n) = \\frac{n^2}{4}$. При $n = 16$ имаме $f(16) = 79$ и $g(16) = 64$, като $f(16) - g(16) = 15$.\n\nНека $n \\ge 16$ и да разгледаме функцията $f(n)$, когато $n$ е четно число. Ако $n + 1$ е просто число, имаме $f(n + 2) = f(n) + n$. Ако $n + 1$ не е просто число, имаме $f(n + 2) = f(n) + 2n + 1$. За функцията $g(n) = \\frac{n^2}{4}$ имаме $g(n + 2) = g(n) + n + 1$.\n\nТъй като едно от числата $n + 1$, $n + 3$ и $n + 5$ се дели на 3, от горното следва, че ако $f(n) - g(n) > 10$, то $f(n + 2) - g(n + 2) > 9$, $f(n + 4) - g(n + 4) > 8$ и $f(n + 6) - g(n + 6) > 10$. Следователно $f(n) - g(n) > 10$ за всяко $n \\ge 16$.\n\nЕдинственото число с исканото свойство е $n = 14$.",
+      "answer": "$n = 14$.",
+      "difficulty": "medium",
+      "techniques": [
+        "counting_composites",
+        "parity_analysis",
+        "inequality"
+      ],
+      "confidence": "exact",
+      "reasoning": "Shows n must be even, checks small n, then uses recurrence and divisibility arguments to prove only n=14 works."
+    },
+    {
+      "source": "OLI-3-Национален кръг-1991-9-12 кл · 1991-None · Зад. 2",
+      "statement": "Нека n е четно естествено число, различно от 2, и [неразчетено] е куб, имащ ръб с дължина n. Кубът K е разделен на n³ единични кубчета, ръбовете на които са успоредни на ръбовете на големия куб. Всяка група от n² единични кубчета, основите на които лежат в една хоризонтална или една вертикална равнина, ще наричаме слой в K. Разполагаме с n³/4 цвята и оцветяваме всяко единично кубче от K в точно един от тези цветове така, че от всеки цвят да има точно по 4 кубчета.\nДа се докаже, че могат да се изберат n единични кубчета от различни цветове по такъв начин, че никои две от тях да не лежат в един и същ слой.",
+      "solution": "Решение. Да пресметнем първо броя S на всевъзможните начини, по които могат да се изберат n единични кубчета, никои две от които не лежат в един и същ слой. Първото кубче в една такава n-орка може да се избере измежду n² на брой кубчета, намиращи се в „най-горния“ слой. Като отстраним вертикалните слоеве, в които участва това кубче, виждаме, че второто кубче може да се избере измежду (n − 1)² на брой кубчета, намиращи се във втория „отгоре надолу“ слой. Продължавайки по този начин, в крайна сметка получаваме, че S = (n!)².\nНека сега кубчетата са оцветени така, както е казано в условието на задачата. Един набор от n единични кубчета, никои две от които не лежат в един слой, ще наричаме „лош“, ако в него има поне две едноцветни кубчета. Да означим с T броя на лошите набори.\nНека A и B са две едноцветни единични кубчета, които не са в един и същ слой. Тези две кубчета участват в ((n − 2)!)² на брой набори и всички тези набори са „лоши“. Тогава, като вземем предвид, че двойка едноцветни кубчета може да бъде избрана общо по 6·n³/4 = 3n³/2 начина, получаваме, че\nT ≤ (3n³/2)((n − 2)!)² = T₁.\nЯсно е, че задачата ще бъде решена, ако успеем да докажем, че S > T, а това ще бъде постигнато, ако докажем, че S > T₁, т. е., че\n(n!)² > (3n³/2)((n − 2)!)².\nТова неравенство е еквивалентно с неравенството 2n² − 7n + 2 > 0, за което лесно се вижда, че е изпълнено за всяко n ≥ 4.",
+      "answer": null,
+      "difficulty": "medium",
+      "techniques": [
+        "counting",
+        "inequality"
+      ],
+      "confidence": "exact",
+      "reasoning": "Counts the total number of admissible selections (S=(n!)²) and shows it exceeds the number of ‘bad’ selections using a simple inequality."
+    },
+    {
+      "source": "OLI-3-Национален кръг-1996-9-12 кл · 1996-None · Зад. 6",
+      "statement": "A square table of size $7 \\times 7$ with the four corner squares deleted is given.\n\nFigure 4.\n\na) What is the smallest number of squares which need to be colored black so that a 5-square entirely uncolored Greek cross (Figure 4) cannot be found on the table?\n\nb) Prove that it is possible to write integers in each square in a way that the sum of the integers in each Greek cross is negative while the sum of all integers in the square table is positive.\n\n![img-0.jpeg](img-0.jpeg)",
+      "solution": "Solution. Denote the square in row $i$ and column $j$ by $(i, j)$. Note that a cross is uniquely determined by its central cell. The cross with central cell $(i, j)$ is denoted by $C_{ij}$, $2 \\leq i, j \\leq 6$. The number of all crosses is 25.\n\na) The squares $(1, i)$, $(i, 1)$, $(7, i)$, $(i, 7)$, $i = 2, \\ldots, 6$, are included in exactly one cross; the squares $(2, 2)$, $(2, 6)$, $(6, 2)$, $(6, 6)$ are included in exactly 3 crosses; the squares $(2, i)$, $(i, 2)$, $(6, i)$, $(i, 6)$, $i = 3, 4, 5$ — in exactly 4 crosses and finally, the squares $(i, j)$, $3 \\leq i, j \\leq 5$, are included in exactly 5 crosses. Since $C_{22}$ contains a colored square, then at least one of $(1, 2)$, $(2, 1)$, $(2, 2)$, $(2, 3)$, $(3, 2)$ should be colored. Similarly, at least one of $(2, 7)$, $(1, 6)$, $(2, 6)$, $(2, 5)$, $(3, 6)$, at least one of $(7, 2)$, $(6, 1)$, $(6, 2)$, $(5, 2)$, $(6, 3)$ and at least one of $(6, 7)$, $(7, 6)$, $(6, 6)$, $(6, 5)$, $(5, 6)$ are colored. Any of them is contained in at most four crosses (the first two in each quintuple in 1 cross, the third one in 3 crosses and the remaining two — in 4 crosses). Denote by $x$ the number of the colored squares among $(i, j)$, $3 \\leq i, j \\leq 5$. The number of crosses containing a colored square is not greater than $4.4 + 5x$, whence\n\n$$16 + 5x \\geq 25. \\tag{1}$$\n\nThus, $x \\geq 2$ and the number of the colored cells is at least 6.\n\nSuppose that the number of the colored squares is 6. Then $x = 2$. Moreover, according (1) there exists at most one Greek cross containing more than one colored square. If two squares with a common side or a common vertex are colored, then it is easy to check that there are two crosses with at least two colored squares each. Therefore, the squares $(4, 4)$, $(3, 3)$, $(3, 5)$, $(5, 3)$, $(5, 5)$ should be uncolored. With no loss of generality, let the two colored squares be $(4, 3)$ and $(4, 5)$. But now the crosses $C_{34}$ and $C_{54}$ do not contain colored squares.\n\nTo prove that the minimal number of colored squares is 7, color for example the squares $(2, 5)$, $(3, 2)$, $(3, 3)$, $(4, 6)$, $(5, 4)$, $(6, 2)$, $(6, 5)$.\n\nb) Let us write $-5$ in each of the colored squares from a) and 1 in the remaining squares. Since every Greek cross contains a colored square, the sum of the numbers in its squares does not exceed $1 + 1 + 1 + 1 - 5 = -1 < 0$. The sum of all numbers in the table is $7.(-5) + (45 - 7).1 = 3 > 0$ and we are done.",
+      "answer": "a) 7. b) Write $-5$ in the squares $(2,5),(3,2),(3,3),(4,6),(5,4),(6,2),(6,5)$ and $1$ in all remaining squares; the total sum is $3$ and the sum in every Greek cross is at most $-1$.",
+      "difficulty": "medium",
+      "techniques": [
+        "inclusion_exclusion",
+        "combinatorial_counting"
+      ],
+      "confidence": "exact",
+      "reasoning": "Counts how many Greek crosses each cell belongs to and uses inclusion‑exclusion to obtain the minimal number of coloured squares."
+    },
+    {
+      "source": "OLI-3-Национален кръг-2003-9-12 кл · 2003-None · Зад. 4",
+      "statement": "A set of at least three positive integers is called uniform if removing any of its elements the remaining set can be disjoint into two subsets with equal sums of elements. Find the minimal cardinality of a uniform set.",
+      "solution": "Let $A = \\{a_1, a_2, \\dots, a_n\\}$ be a uniform set. Set $S = a_1 + a_2 + \\dots + a_n$. It follows from the given condition that $S - a_i$ is an even number for any $i = 1, 2, \\dots, n$. Suppose that the number $S$ is even. Then all the numbers $a_i$ are even. Set $a_i = 2b_i$, $i = 1, 2, \\dots, n$. Then it is easy to see that the set $B = \\{b_1, b_2, \\dots, b_n\\}$ is uniform, too. So, we may assume that $S$ is an odd number and whence $a_1, a_2, \\dots, a_n$ and $n$ are also odd numbers.\n\nWe shall prove that $n = 7$. It is not difficult to check that $\\{1, 3, 5, 7, 9, 11, 13\\}$ is a uniform set. It remains to show that there are no uniform sets with 5 elements, since it is obvious that the sets with 3 elements are not uniform.\n\nSuppose that $A = \\{a_1, a_2, a_3, a_4, a_5\\}$ is a uniform set and let $a_1 < a_2 < a_3 < a_4 < a_5$. Considering the set $A \\setminus \\{a_1\\}$ we see that either $a_2 + a_5 = a_3 + a_4$ or $a_2 + a_3 + a_4 = a_5$. Considering the set $A \\setminus \\{a_2\\}$ we get that either $a_1 + a_5 = a_3 + a_4$ or $a_1 + a_3 + a_4 = a_5$.\n\n- If $a_2 + a_5 = a_3 + a_4$ and $a_1 + a_5 = a_3 + a_4$, then $a_1 = a_2$.\n- If $a_2 + a_5 = a_3 + a_4$ and $a_1 + a_3 + a_4 = a_5$, then $a_1 = -a_2$.\n- If $a_2 + a_3 + a_4 = a_5$ and $a_1 + a_5 = a_3 + a_4$, then $a_1 = -a_2$.\n- If $a_2 + a_3 + a_4 = a_5$ and $a_1 + a_3 + a_4 = a_5$, then $a_1 = a_2$.\n\nSince all the above possibilities lead to a contradiction, we conclude that there are no uniform sets with 5 elements.",
+      "answer": "n = 7",
+      "difficulty": "medium",
+      "techniques": [
+        "parity_argument",
+        "set_partition"
+      ],
+      "confidence": "exact",
+      "reasoning": "Uses parity of total sum and case analysis on removal of elements; essentially an inclusion‑exclusion/parity argument."
+    },
+    {
+      "source": "OLI-3-Национален кръг-2023-9-12 кл · 2023-None · Зад. 6",
+      "statement": "В клас от 26 ученици всеки ученик се оценява по пет различни предмета, като за всеки предмет са възможни три различни оценки. Да се докаже, че ако 25 от тези ученици са получили своите оценки, то оценките на 26-ия ученик могат да се поставят така, че да се различават поне по два от предметите с оценките на всеки от останалите 25 ученици.",
+      "solution": "Решение. Ще казваме, че един троичен вектор с дължина 5 покрива друг, ако двата вектора се различават в най-много една позиция. Трябва да докажем, че не съществуват 25 троични вектора с дължина 5, които да покриват всички 3⁵ = 243 вектора. Да допуснем, че такова множество с 25 вектора съществува и да го означим с A.\nДа разделим всички 243 вектора на 4 групи: B₀ — вектори с първи две координати 00; B₁ — вектори с първи две координати 01, 02, 10 или 20; B₂ — вектори с първи две координати 11 или 22 и B₃ — вектори с първи две координати 12 или 21. Ясно е, че |B₀| = 27, |B₂| = |B₃| = 54.\nЗа първите две координати на всеки вектор има 9 възможности, а в A има 24 вектора. Можем да считаме, че от всички вектори в A като първи две координати най-малко пъти се появяват 00, като тогава 00 се появява най-много два пъти.\nДа разделим векторите от A на 4 групи: A₀ — вектори с първи две координати 00; A₁ — вектори с първи две координати 01, 02, 10 или 20; A₂ — вектори с първи две координати 11 или 22 и A₃ — вектори с първи две координати 12 или 21. Нека aᵢ = |Aᵢ|, като a₀ + a₁ + a₂ + a₃ = 25, a₀ ≤ 2 и без ограничение a₂ < a₃.\nСледните наблюдения са очевидни: всеки вектор от A₀ покрива 7 вектора в B₀; всеки вектор от A₁ покрива по 1 вектор в B₀, B₂ и B₃; всеки вектор от A₂ покрива 7 вектора в B₂ и 2 вектора в B₃; всеки вектор от A₂ или A₃ покрива 2 вектора в B₁; всеки вектор от A₃ покрива 7 вектора в B₃ и 2 вектора в B₂.\nОт горните наблюдения получаваме: 7a₀ + a₁ ≥ 27, 7a₂ + a₁ + 2a₃ ≥ 54 и 7a₃ + a₁ + 2a₂ ≥ 54.\nПри a₀ = 0 следва a₁ ≥ 27, противоречие. При a₀ = 1 следва a₁ ≥ 20, като тогава a₂ + a₃ ≤ 4 и 7a₃ + a₁ + 2a₂ ≥ 54 не може да е вярно.\nПолучаваме a₀ = 2 и следователно a₁ ≥ 13. Ако a₂ = 4, то най-голямата стойност на 7a₂ + a₁ + 2a₃ е 7·4 + 13 + 12 = 53 < 54, противоречие. Следователно единствената възможност е a₁ = 13, a₂ = a₃ = 5.\nБез ограничение векторите от A с първи две координати 00 са 00000 и 00111 (в противен случай те няма да покриват 14 вектора). Тогава векторите\n222, 220, 221, 202, 212, 022, 122, 012, 120, 201, 021, 210, 102\nне са покрити в B₀ и следователно трябва да се появяват като опашки в A₁.\nВсеки от векторите 001, 010, 100, 110, 101, 011 е покрит по два пъти в B₁ (например 001 е покрит от 201 и 021), а трябва да бъде покрит 4 пъти. Следователно тези вектори трябва да се появяват като опашки в A₂ или A₃. Следователно знаем 6 опашки в A₂ или A₃ и има още 4 неизвестни опашки.\nВсеки от векторите 002, 020, 200, 112, 121, 211 трябва да е покрит общо 4 пъти в B₂ и B₃, като до този момент те са покрити по един път (например 002 е покрит само от 001). Следователно четирите неизвестни опашки трябва да осигуряват още 4·6 − 6 = 18 покрития. Директно се проверява, че всеки вектор с дължина три покрива най-много 3 вектора от 002, 020, 200, 112, 121, 211 в B₂ и B₃, т.е. неизвестните 4 опашки могат да осигурят най-много 4·3 = 12 < 18 покрития, противоречие.",
+      "answer": null,
+      "difficulty": "hard",
+      "techniques": [
+        "covering_codes",
+        "pigeonhole",
+        "combinatorial"
+      ],
+      "confidence": "exact",
+      "reasoning": "Разделяне на 3‑арични вектори в групи и покриване чрез броене показва, че 25 вектора не могат да покрият всички 243 възможни."
+    }
+  ]
+}

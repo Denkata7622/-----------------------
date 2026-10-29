@@ -1,0 +1,100 @@
+{
+  "_meta": {
+    "pdf": "C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\Материали_БГ\\NOM_2013.pdf",
+    "paired_with": null,
+    "level": 2,
+    "type": "combined",
+    "analyzed_at": "2026-10-16T21:53:25.552752",
+    "model": "deepseek/deepseek-v3.2",
+    "text_length": 155414,
+    "paired_text_length": 0
+  },
+  "problems": [
+    {
+      "num": 1,
+      "topic": "number_theory",
+      "theorems": [
+        "Fibonacci numbers properties"
+      ],
+      "techniques": [
+        "induction",
+        "constructive proof"
+      ],
+      "concepts": [
+        "divisibility",
+        "infinite families of solutions"
+      ],
+      "difficulty": "standard",
+      "notes": "Constructs infinite family using Fibonacci numbers; standard number theory problem."
+    },
+    {
+      "num": 2,
+      "topic": "geometry",
+      "theorems": [],
+      "techniques": [
+        "auxiliary construction",
+        "parallelogram properties",
+        "angle chasing"
+      ],
+      "concepts": [
+        "cyclic quadrilaterals",
+        "parallel lines",
+        "congruent triangles"
+      ],
+      "difficulty": "standard",
+      "notes": "Uses parallelogram construction and cyclic quadrilateral to prove angle equality."
+    },
+    {
+      "num": 3,
+      "topic": "combinatorics",
+      "theorems": [],
+      "techniques": [
+        "counting",
+        "binary representation analysis",
+        "summation"
+      ],
+      "concepts": [
+        "binary numbers",
+        "digit count",
+        "parity",
+        "combinatorial sums"
+      ],
+      "difficulty": "hard",
+      "notes": "Requires careful combinatorial analysis of binary numbers with more zeros than ones; involves sum and count properties."
+    },
+    {
+      "num": 4,
+      "topic": "geometry",
+      "theorems": [
+        "Pythagorean theorem"
+      ],
+      "techniques": [
+        "coordinate geometry",
+        "diophantine equations"
+      ],
+      "concepts": [
+        "incircle of a square",
+        "integer lengths",
+        "distance formula"
+      ],
+      "difficulty": "olympic",
+      "notes": "Asks for existence of integer distances from a point on incircle to vertices and side; leads to system of Diophantine equations."
+    }
+  ],
+  "unique_concepts": [
+    "Fibonacci numbers properties",
+    "divisibility",
+    "infinite families of solutions",
+    "cyclic quadrilaterals",
+    "parallelogram properties",
+    "angle chasing",
+    "binary numbers",
+    "digit count",
+    "parity",
+    "combinatorial sums",
+    "incircle of a square",
+    "integer lengths",
+    "Diophantine equations"
+  ],
+  "confidence": 0.95
+}

@@ -1,0 +1,258 @@
+{
+  "_meta": {
+    "pdf": "C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\Задачи_Минали_Години\\Областен\\OLI-2-Областен кръг-2005-10 кл-probs.pdf",
+    "paired_with": "C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\Задачи_Минали_Години\\Областен\\OLI-2-Областен кръг-2005-10 кл-sol.pdf",
+    "level": 1,
+    "type": "probs",
+    "analyzed_at": "2026-10-18T12:37:33.250538",
+    "model": "deepseek/deepseek-v3.2",
+    "text_length": 4691,
+    "paired_text_length": 9880
+  },
+  "problems": [
+    {
+      "num": 9.1,
+      "topic": "algebra",
+      "theorems": [],
+      "techniques": [
+        "polynomial division",
+        "remainder theorem",
+        "substitution"
+      ],
+      "concepts": [
+        "polynomial remainder",
+        "system of equations"
+      ],
+      "difficulty": "standard",
+      "notes": "Standard polynomial remainder problem."
+    },
+    {
+      "num": 9.2,
+      "topic": "geometry",
+      "theorems": [],
+      "techniques": [
+        "similar triangles",
+        "distance calculations"
+      ],
+      "concepts": [
+        "tangent circles",
+        "incircles",
+        "distance from center to side"
+      ],
+      "difficulty": "standard",
+      "notes": "Geometry of two tangent circles inside an angle."
+    },
+    {
+      "num": 9.3,
+      "topic": "number_theory",
+      "theorems": [],
+      "techniques": [
+        "substitution",
+        "modular arithmetic",
+        "analysis of divisibility"
+      ],
+      "concepts": [
+        "Diophantine equation",
+        "consecutive integers",
+        "absolute difference as perfect power"
+      ],
+      "difficulty": "olympic",
+      "notes": "Requires manipulation of a linear Diophantine equation with consecutive integer solutions."
+    },
+    {
+      "num": 9.4,
+      "topic": "algebra",
+      "theorems": [
+        "Vieta's formulas"
+      ],
+      "techniques": [
+        "case analysis",
+        "absolute value equations",
+        "sum of squares"
+      ],
+      "concepts": [
+        "quadratic equations",
+        "real roots",
+        "sum of squares of roots"
+      ],
+      "difficulty": "standard",
+      "notes": "Involves solving an absolute value quadratic equation and using Vieta's formulas."
+    },
+    {
+      "num": 9.5,
+      "topic": "geometry",
+      "theorems": [
+        "tangent-secant theorem"
+      ],
+      "techniques": [
+        "similar triangles",
+        "midpoint properties"
+      ],
+      "concepts": [
+        "cyclic quadrilateral",
+        "tangent to a circle",
+        "centroid",
+        "parallel lines"
+      ],
+      "difficulty": "hard",
+      "notes": "Complex geometry problem involving a cyclic quadrilateral, tangent, and centroid."
+    },
+    {
+      "num": 9.6,
+      "topic": "combinatorics",
+      "theorems": [],
+      "techniques": [
+        "counting pairs",
+        "construction",
+        "modular arithmetic"
+      ],
+      "concepts": [
+        "graph theory (implicit)",
+        "maximum number of games",
+        "social golfer problem variant"
+      ],
+      "difficulty": "olympic",
+      "notes": "Combinatorial design problem; finding maximum number of 5-player games with no repeated pairs."
+    },
+    {
+      "num": 10.1,
+      "topic": "algebra",
+      "theorems": [],
+      "techniques": [
+        "substitution",
+        "system of equations"
+      ],
+      "concepts": [
+        "exponential equations",
+        "logarithms"
+      ],
+      "difficulty": "standard",
+      "notes": "System of equations with exponentials and logarithms."
+    },
+    {
+      "num": 10.2,
+      "topic": "geometry",
+      "theorems": [
+        "Ptolemy's theorem",
+        "median length formula"
+      ],
+      "techniques": [
+        "algebraic manipulation of lengths",
+        "triangle inequality"
+      ],
+      "concepts": [
+        "quadrilateral sides and diagonals",
+        "cyclic quadrilateral",
+        "inequalities in geometry"
+      ],
+      "difficulty": "hard",
+      "notes": "Part (a) uses median formula and triangle inequality. Part (b) uses Ptolemy's theorem."
+    },
+    {
+      "num": 10.3,
+      "topic": "number_theory",
+      "theorems": [],
+      "techniques": [
+        "GCD/LCM properties",
+        "prime factorization"
+      ],
+      "concepts": [
+        "greatest common divisor",
+        "least common multiple",
+        "equation with GCD and LCM"
+      ],
+      "difficulty": "olympic",
+      "notes": "Requires solving GCD(m^2+mn, mn-n^2) + GCD(m-n, mn) = 2^2005."
+    },
+    {
+      "num": 10.4,
+      "topic": "algebra",
+      "theorems": [],
+      "techniques": [
+        "discriminant analysis",
+        "comparison of equation solution counts"
+      ],
+      "concepts": [
+        "quadratic equations",
+        "cubic equations",
+        "number of real solutions"
+      ],
+      "difficulty": "hard",
+      "notes": "Comparing the number of solutions of two equations (one quadratic, one cubic) depending on parameter."
+    },
+    {
+      "num": 10.5,
+      "topic": "geometry",
+      "theorems": [],
+      "techniques": [
+        "cyclic quadrilaterals",
+        "angle bisectors",
+        "perpendicular bisector"
+      ],
+      "concepts": [
+        "orthocenter",
+        "angle bisector",
+        "circumcircle",
+        "midpoint of arc"
+      ],
+      "difficulty": "olympic",
+      "notes": "Geometry problem involving orthocenter, angle bisectors, and cyclic quadrilaterals."
+    },
+    {
+      "num": 10.6,
+      "topic": "combinatorics",
+      "theorems": [],
+      "techniques": [
+        "pigeonhole principle",
+        "summation",
+        "construction of extremal example"
+      ],
+      "concepts": [
+        "sum of consecutive numbers",
+        "extremal problem",
+        "permutations"
+      ],
+      "difficulty": "olympic",
+      "notes": "Finding minimal A such that in any permutation of 1..1000, there exist 50 consecutive numbers with sum >= A."
+    },
+    {
+      "num": 11.1,
+      "topic": "algebra",
+      "theorems": [],
+      "techniques": [
+        "trigonometric substitution",
+        "quadratic in sinx+cosx",
+        "root location in interval"
+      ],
+      "concepts": [
+        "trigonometric equations",
+        "quadratic discriminant",
+        "roots in an interval"
+      ],
+      "difficulty": "hard",
+      "notes": "Trigonometric equation reduced to quadratic in y=sinx+cosx, requiring analysis of roots in [-1,1]."
+    }
+  ],
+  "unique_concepts": [
+    "polynomial remainder",
+    "tangent circles",
+    "Diophantine equation",
+    "Vieta's formulas",
+    "cyclic quadrilateral",
+    "tangent-secant theorem",
+    "centroid",
+    "maximum games (combinatorial design)",
+    "exponential equations",
+    "GCD and LCM",
+    "Ptolemy's theorem",
+    "median length formula",
+    "number of real solutions",
+    "orthocenter",
+    "angle bisector",
+    "pigeonhole principle",
+    "sum of consecutive numbers",
+    "trigonometric substitution",
+    "roots in an interval"
+  ],
+  "confidence": 0.95
+}

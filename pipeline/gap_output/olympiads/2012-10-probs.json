@@ -1,0 +1,169 @@
+{
+  "_meta": {
+    "pdf": "C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\Задачи_Минали_Години\\Областен\\OLI-2-Областен кръг-2012-10 кл-probs.pdf",
+    "paired_with": "C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\Задачи_Минали_Години\\Областен\\OLI-2-Областен кръг-2012-10 кл-sol.pdf",
+    "level": 1,
+    "type": "probs",
+    "analyzed_at": "2026-10-18T15:40:25.515748",
+    "model": "deepseek/deepseek-v3.2",
+    "text_length": 1702,
+    "paired_text_length": 0
+  },
+  "problems": [
+    {
+      "num": 1,
+      "topic": "algebra",
+      "theorems": [],
+      "techniques": [
+        "function analysis",
+        "range of a function",
+        "derivatives"
+      ],
+      "concepts": [
+        "cube root function",
+        "monotonicity",
+        "even function",
+        "domain of a function"
+      ],
+      "difficulty": "standard",
+      "notes": "Задача за намиране на стойностите на параметър, за които уравнението има решение. Функцията е четна. Може да се изследва чрез производна или чрез неравенства."
+    },
+    {
+      "num": 2,
+      "topic": "geometry",
+      "theorems": [
+        "Menelaus",
+        "Ceva",
+        "Incircle-Excircle properties"
+      ],
+      "techniques": [
+        "trigonometry",
+        "homothety",
+        "similar triangles"
+      ],
+      "concepts": [
+        "excircle",
+        "tangent points",
+        "midpoint",
+        "parallel lines",
+        "angle bisector"
+      ],
+      "difficulty": "hard",
+      "notes": "Задача с външновписана окръжност и отношение на отсечки. Използва се фактът, че E и F са допирни точки, а P и Q са пресечни точки на ъглополовящи с EF. Условието BC = 2PQ води до намиране на ъгъл BAC."
+    },
+    {
+      "num": 3,
+      "topic": "number_theory",
+      "theorems": [
+        "Zsigmondy's theorem",
+        "Lifting The Exponent (LTE)"
+      ],
+      "techniques": [
+        "infinite descent",
+        "modular arithmetic",
+        "contradiction"
+      ],
+      "concepts": [
+        "prime divisors",
+        "exponential diophantine",
+        "gcd properties",
+        "Fermat's little theorem"
+      ],
+      "difficulty": "olympic",
+      "notes": "Задача за доказване на съществуването на безбройно много n, за които изразът има поне два различни прости делителя. Може да се използва теорема на Цигмонди или подобни разсъждения."
+    },
+    {
+      "num": 4,
+      "topic": "algebra",
+      "theorems": [
+        "Polynomial Remainder Theorem"
+      ],
+      "techniques": [
+        "substitution",
+        "system of equations",
+        "case analysis"
+      ],
+      "concepts": [
+        "common roots of polynomials",
+        "cubic equations",
+        "real parameters"
+      ],
+      "difficulty": "standard",
+      "notes": "Задача за намиране на параметри, така че точно едно от дадените числа да е общ корен. Решава се чрез заместване и разглеждане на случаи."
+    },
+    {
+      "num": 5,
+      "topic": "geometry",
+      "theorems": [
+        "Menelaus",
+        "Ceva",
+        "Incenter-Excenter Lemma"
+      ],
+      "techniques": [
+        "homothety",
+        "mass points",
+        "coordinate geometry"
+      ],
+      "concepts": [
+        "excenters",
+        "incenter",
+        "midpoint",
+        "parallel lines",
+        "collinearity"
+      ],
+      "difficulty": "hard",
+      "notes": "Задача с вписани и външновписани окръжности. Трябва да се докаже, че PQ е успоредна на AB и минава през инцентъра I. Често се използва хомотетия или теорема на Менелай."
+    },
+    {
+      "num": 6,
+      "topic": "combinatorics",
+      "theorems": [
+        "Turán's theorem",
+        "Handshaking lemma"
+      ],
+      "techniques": [
+        "graph theory",
+        "complement graph",
+        "extremal principle"
+      ],
+      "concepts": [
+        "acquaintance graph",
+        "regular graph",
+        "clique",
+        "complement graph",
+        "odd number of vertices"
+      ],
+      "difficulty": "olympic",
+      "notes": "Задача за компания от хора, моделирана с графи. Условието за еднакъв брой познати води до регулярен граф. Търси се минималният брой хора, които трябва да си тръгнат, за да се получи клика."
+    }
+  ],
+  "unique_concepts": [
+    "cube root function",
+    "range of a function",
+    "excircle",
+    "tangent points",
+    "Menelaus theorem",
+    "Ceva theorem",
+    "Zsigmondy's theorem",
+    "Lifting The Exponent (LTE)",
+    "prime divisors",
+    "common roots of polynomials",
+    "incenter",
+    "excenters",
+    "regular graph",
+    "clique",
+    "complement graph",
+    "Handshaking lemma",
+    "homothety",
+    "modular arithmetic",
+    "system of equations",
+    "even function",
+    "angle bisector",
+    "parallel lines",
+    "midpoint",
+    "cubic equations",
+    "graph theory",
+    "extremal principle"
+  ],
+  "confidence": 0.95
+}

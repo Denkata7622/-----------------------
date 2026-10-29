@@ -1,0 +1,265 @@
+{
+  "_meta": {
+    "pdf": "C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\Материали_БГ\\NOM_2011.pdf",
+    "paired_with": null,
+    "level": 2,
+    "type": "combined",
+    "analyzed_at": "2026-10-16T21:51:15.723053",
+    "model": "deepseek/deepseek-v3.2",
+    "text_length": 154916,
+    "paired_text_length": 0
+  },
+  "problems": [
+    {
+      "num": 1,
+      "topic": "geometry",
+      "theorems": [
+        "Power of a point",
+        "Tangent properties"
+      ],
+      "techniques": [
+        "Radical axis",
+        "Angle chasing"
+      ],
+      "concepts": [
+        "Orthocenter",
+        "Circle with diameter",
+        "Midpoints",
+        "Tangency",
+        "Parallel lines"
+      ],
+      "difficulty": "olympic",
+      "notes": "Construction of auxiliary circle with diameter AH; MD and ME are tangents; LK is the radical axis of point M and circle ω."
+    },
+    {
+      "num": 2,
+      "topic": "number_theory",
+      "theorems": [],
+      "techniques": [
+        "Construction",
+        "Parity argument"
+      ],
+      "concepts": [
+        "Arithmetic progression",
+        "Product sequences",
+        "Double factorial",
+        "Existence proof"
+      ],
+      "difficulty": "hard",
+      "notes": "No solutions for even n; for odd n, a specific construction using double factorials and a scaling factor yields natural numbers."
+    },
+    {
+      "num": 3,
+      "topic": "combinatorics",
+      "theorems": [],
+      "techniques": [
+        "Pigeonhole principle",
+        "Counting arguments"
+      ],
+      "concepts": [
+        "Intervals on a line",
+        "Set inclusion",
+        "Maximal elements",
+        "Multisets"
+      ],
+      "difficulty": "standard",
+      "notes": "Key observation: For a non-maximal interval, at least one of its endpoints appears only once among all intervals in F."
+    },
+    {
+      "num": 4,
+      "topic": "number_theory",
+      "theorems": [],
+      "techniques": [
+        "Case analysis",
+        "Exhaustion"
+      ],
+      "concepts": [
+        "Greatest common divisor",
+        "Divisibility",
+        "Three-element sets",
+        "Good sets definition"
+      ],
+      "difficulty": "olympic",
+      "notes": "Requires finding all three-element subsets of natural numbers satisfying two conditions: pairwise gcd=1 and for any two, a third divides their product."
+    },
+    {
+      "num": 5,
+      "topic": "algebra",
+      "theorems": [],
+      "techniques": [
+        "Substitution",
+        "Surjectivity",
+        "Functional equations"
+      ],
+      "concepts": [
+        "Surjective functions",
+        "Cauchy-type equations",
+        "Invariance"
+      ],
+      "difficulty": "olympic",
+      "notes": "Functional equation over reals; surjectivity is a strong condition."
+    },
+    {
+      "num": 6,
+      "topic": "geometry",
+      "theorems": [
+        "Incenter properties",
+        "Angle bisector"
+      ],
+      "techniques": [
+        "Inversion",
+        "Homothety",
+        "Radical axis"
+      ],
+      "concepts": [
+        "Tangent circles",
+        "Incircle",
+        "Angle bisector",
+        "Chain of circles",
+        "Isosceles triangle"
+      ],
+      "difficulty": "hard",
+      "notes": "Complex configuration with nested circles tangent to each other and sides; likely uses inversion or homothety to relate centers."
+    },
+    {
+      "num": 7,
+      "topic": "geometry",
+      "theorems": [],
+      "techniques": [
+        "Area method",
+        "Coordinate geometry"
+      ],
+      "concepts": [
+        "Distances to sides",
+        "Equilateral triangle",
+        "Locus",
+        "Square roots of distances"
+      ],
+      "difficulty": "standard",
+      "notes": "Uses area equality: sum of areas of triangles from P equals total area. The condition leads to a linear relation in distances."
+    },
+    {
+      "num": 8,
+      "topic": "algebra",
+      "theorems": [
+        "Polynomial divisibility",
+        "Fermat's Little Theorem"
+      ],
+      "techniques": [
+        "Polynomial expansion",
+        "Modular arithmetic"
+      ],
+      "concepts": [
+        "Polynomials with integer coefficients",
+        "Divisibility by prime powers",
+        "Representation theorem"
+      ],
+      "difficulty": "hard",
+      "notes": "Deep result about representing polynomials divisible by p^k in terms of (x^p - x). Uses properties modulo p."
+    },
+    {
+      "num": 9,
+      "topic": "combinatorics",
+      "theorems": [],
+      "techniques": [
+        "Pigeonhole principle",
+        "Continuity argument"
+      ],
+      "concepts": [
+        "Points in plane",
+        "Distances to a line",
+        "Splitting sets",
+        "Good lines",
+        "Infinitely many lines"
+      ],
+      "difficulty": "olympic",
+      "notes": "Shows existence of infinitely many points through which n+1 good lines pass. Likely uses averaging and continuity."
+    },
+    {
+      "num": 10,
+      "topic": "algebra",
+      "theorems": [
+        "Cauchy-Schwarz",
+        "AM-GM"
+      ],
+      "techniques": [
+        "Inequality optimization",
+        "Substitution"
+      ],
+      "concepts": [
+        "Symmetric inequalities",
+        "Square roots of products",
+        "Minimal constant",
+        "Real numbers"
+      ],
+      "difficulty": "hard",
+      "notes": "Finding minimal k such that inequality holds for all real a,b,c,d. Likely uses symmetry and clever substitutions."
+    },
+    {
+      "num": 11,
+      "topic": "geometry",
+      "theorems": [
+        "Apollonius circle",
+        "Fixed point"
+      ],
+      "techniques": [
+        "Locus",
+        "Invariance"
+      ],
+      "concepts": [
+        "Midpoints",
+        "Equal distances",
+        "Fixed point theorem",
+        "Triangle geometry"
+      ],
+      "difficulty": "olympic",
+      "notes": "Points P and P' move such that distances to vertices of triangle ABC and its medial triangle are equal. Proves PP' passes through a fixed point (likely centroid or circumcenter)."
+    },
+    {
+      "num": 12,
+      "topic": "number_theory",
+      "theorems": [],
+      "techniques": [
+        "Infinite descent",
+        "Contradiction"
+      ],
+      "concepts": [
+        "Perfect squares",
+        "Functional equation on naturals",
+        "Identity function"
+      ],
+      "difficulty": "olympic",
+      "notes": "Functional condition: af(a)+bf(b)+2ab is a perfect square for all a,b. Proves f(a)=a."
+    }
+  ],
+  "unique_concepts": [
+    "Orthocenter",
+    "Power of a point",
+    "Radical axis",
+    "Arithmetic progression",
+    "Double factorial",
+    "Intervals on a line",
+    "Maximal elements",
+    "Greatest common divisor",
+    "Divisibility",
+    "Surjective functions",
+    "Functional equations",
+    "Incenter",
+    "Tangent circles",
+    "Homothety",
+    "Inversion",
+    "Locus",
+    "Equilateral triangle area",
+    "Polynomial divisibility by prime powers",
+    "Fermat's Little Theorem in polynomials",
+    "Distances to a line",
+    "Splitting sets",
+    "Symmetric inequalities",
+    "Cauchy-Schwarz",
+    "Apollonius circle",
+    "Fixed point",
+    "Perfect squares",
+    "Identity function"
+  ],
+  "confidence": 0.95
+}

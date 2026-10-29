@@ -1,0 +1,151 @@
+{
+  "_meta": {
+    "pdf": "C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\Задачи_Минали_Години\\Областен\\OLI-2-Областен кръг-2024-11 кл-sol.pdf",
+    "paired_with": null,
+    "level": 1,
+    "type": "sol",
+    "analyzed_at": "2026-10-16T21:38:59.395770",
+    "model": "deepseek/deepseek-v3.2",
+    "text_length": 10650,
+    "paired_text_length": 0
+  },
+  "problems": [
+    {
+      "num": 1,
+      "topic": "algebra",
+      "theorems": [],
+      "techniques": [
+        "substitution",
+        "case_analysis",
+        "discriminant_analysis"
+      ],
+      "concepts": [
+        "real_roots",
+        "quadratic_equation",
+        "sum_and_product_of_roots",
+        "rationalization"
+      ],
+      "difficulty": "standard",
+      "notes": "Уравнението се разлага на два множителя, всеки дава квадратно уравнение. Част а) изисква намиране на реални корени; част б) изисква намиране на параметър, така че да има точно три реални корена, единият от които е 1."
+    },
+    {
+      "num": 2,
+      "topic": "geometry",
+      "theorems": [
+        "Pythagorean_theorem",
+        "sine_law"
+      ],
+      "techniques": [
+        "angle_chasing",
+        "trigonometric_identities",
+        "trapezoid_properties"
+      ],
+      "concepts": [
+        "cyclic_quadrilateral",
+        "isosceles_trapezoid",
+        "right_triangle",
+        "tangent_function",
+        "double_angle_formula"
+      ],
+      "difficulty": "standard",
+      "notes": "Трапецът е вписан в окръжност, следователно е равнобедрен. Използва се ъгъл и тригонометрични съотношения за намиране на страните и лицето."
+    },
+    {
+      "num": 3,
+      "topic": "number_theory",
+      "theorems": [],
+      "techniques": [
+        "divisor_ordering",
+        "system_of_equations",
+        "difference_of_squares"
+      ],
+      "concepts": [
+        "divisors",
+        "perfect_square",
+        "integer_equations",
+        "factoring"
+      ],
+      "difficulty": "standard",
+      "notes": "Използва се свойството на делителите d_i * d_{2k+1-i} = n. Получават се две квадратни уравнения, чиито дискриминанти трябва да са точни квадрати. Води до разлагане на разлика на квадрати."
+    },
+    {
+      "num": 4,
+      "topic": "combinatorics",
+      "theorems": [
+        "AM_GM_inequality"
+      ],
+      "techniques": [
+        "double_counting",
+        "inequality_manipulation",
+        "pigeonhole_principle"
+      ],
+      "concepts": [
+        "counting_distinct_elements",
+        "row_and_column_contributions",
+        "averaging_argument"
+      ],
+      "difficulty": "olympic",
+      "notes": "Задачата използва двойно броене и неравенство между средно аритметично и средно геометрично (AM-GM), за да докаже, че в някой ред или колона има поне 45 различни числа."
+    },
+    {
+      "num": 5,
+      "topic": "geometry",
+      "theorems": [],
+      "techniques": [
+        "angle_chasing",
+        "symmetry",
+        "proof_by_contradiction"
+      ],
+      "concepts": [
+        "incenter",
+        "angle_bisector",
+        "right_angle",
+        "midpoint",
+        "triangle_equality"
+      ],
+      "difficulty": "hard",
+      "notes": "Задачата изисква доказателство, че ако ъгълът между центровете на вписаните окръжности на два триъгълника, споделящи основа, е прав, то триъгълникът ABC е равнобедрен. Решението не е дадено, но се предполага използване на свойства на ъглополовящи и симетрия."
+    },
+    {
+      "num": 6,
+      "topic": "combinatorics",
+      "theorems": [],
+      "techniques": [
+        "induction",
+        "pigeonhole_principle",
+        "constructive_method"
+      ],
+      "concepts": [
+        "rectangle_tiling",
+        "modular_arithmetic",
+        "sums_of_numbers",
+        "remainders"
+      ],
+      "difficulty": "olympic",
+      "notes": "Задачата включва лема, доказана с индукция и принципа на Дирихле (остатъци modulo 5). Целта е да се намери максималният брой клетки, които могат да се оцветят в квадрат 10x10, като се използва конструкция и пример за горна и долна граница."
+    }
+  ],
+  "unique_concepts": [
+    "real_roots",
+    "quadratic_equation",
+    "cyclic_quadrilateral",
+    "isosceles_trapezoid",
+    "divisors",
+    "perfect_square",
+    "double_counting",
+    "AM_GM_inequality",
+    "incenter",
+    "angle_bisector",
+    "induction",
+    "pigeonhole_principle",
+    "modular_arithmetic",
+    "rectangle_tiling",
+    "trigonometric_identities",
+    "difference_of_squares",
+    "sum_and_product_of_roots",
+    "angle_chasing",
+    "system_of_equations",
+    "constructive_method"
+  ],
+  "confidence": 0.95
+}

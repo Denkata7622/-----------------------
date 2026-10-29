@@ -1,0 +1,378 @@
+{
+  "pages": [
+    {
+      "index": 0,
+      "markdown": "Министерство на образованието и науката\n\n## 73. Национална олимпиада по математика\nОбластен кръг\n\n11 февруари 2024 г.\n\nСвалено от Klasirane.com",
+      "images": [],
+      "tables": [],
+      "hyperlinks": [],
+      "header": null,
+      "footer": null,
+      "dimensions": {
+        "dpi": 87,
+        "height": 1018,
+        "width": 720
+      },
+      "confidence_scores": null,
+      "blocks": [
+        {
+          "top_left_x": 200,
+          "top_left_y": 151,
+          "bottom_right_x": 522,
+          "bottom_right_y": 171,
+          "content": "Министерство на образованието и науката",
+          "confidence_scores": null,
+          "type": "header"
+        },
+        {
+          "top_left_x": 52,
+          "top_left_y": 265,
+          "bottom_right_x": 671,
+          "bottom_right_y": 334,
+          "content": "## 73. Национална олимпиада по математика\nОбластен кръг",
+          "confidence_scores": null,
+          "type": "title"
+        },
+        {
+          "top_left_x": 290,
+          "top_left_y": 372,
+          "bottom_right_x": 431,
+          "bottom_right_y": 392,
+          "content": "11 февруари 2024 г.",
+          "confidence_scores": null,
+          "type": "text"
+        },
+        {
+          "top_left_x": 417,
+          "top_left_y": 982,
+          "bottom_right_x": 654,
+          "bottom_right_y": 1006,
+          "content": "Свалено от Klasirane.com",
+          "confidence_scores": null,
+          "type": "footer"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "markdown": "# Условия, кратки решения и критерии за оценяване\n\nЗадача 11.1. Да се намерят стойностите на реалния параметр \\(a\\), за които уравнението\n\n\\[\n3 x ^ {5} + x ^ {4} + (a - 2) x ^ {3} + (a - 2) x ^ {2} + x + 3 = 0\n\\]\n\nима три различни реални корена.\n\nРешение. Тъй като от схемата на Хорнер директно се вижда, че  \\( x_{1} = -1 \\)  е решение на уравнението, то представяме уравнението във вида  \\( (x + 1)(3x^{4} - 2x^{3} + ax^{2} - 2x + 3) = 0 \\) . Уравнението  \\( 3x^{4} - 2x^{3} + ax^{2} - 2x + 3 = 0 \\)  след разделяне на  \\( x^{2} \\neq 0 \\)  (очевидно x = 0 не е решение) добива вида\n\n\\[\n3 (x ^ {2} + 1 / x ^ {2}) - 2 (x + 1 / x) + a = 0,\n\\]\n\nоткъдето получаваме  \\( 3t^{2}-2t+a-6=0 \\) , където  \\( t=x+1/x \\) . За да има даденото в условието уравнение три различни реални корена, то  \\( 3x^{4}-2x^{3}+ax^{2}-2x+3=0 \\)  трябва да има три различни реални корена, единият от които да е -1, а другите два да са различни от -1 или два различни реални корени, които не са равни на -1. Уравнението  \\( t=x+\\frac{1}{x} \\)  има реални корени когато  \\( t\\in(-\\infty;-2]\\cup[2;\\infty) \\) . Това означава, че за  \\( 3t^{2}-2t+a-6=0 \\)  има следните възможности:\n\n1.  \\( t_{1}=t_{2}\\in(-\\infty;-2)\\cup(2;\\infty) \\) ; Този случай е невъзможен, тъй като  \\( t_{1}=t_{2}=\\frac{1}{3} \\) .\n2.  \\( t_{1} = -2 \\)  и  \\( t_{2} \\in (-\\infty; -2) \\cup (2; \\infty) \\) . Тогава  \\( t_{1} = -2 \\)  при a = -10 и получаваме  \\( t_{2} = \\frac{8}{3} \\in (2; \\infty) \\) .\n3.  \\( t_{1} \\in (-2;2) \\)  и  \\( t_{2} \\in (-\\infty; -2) \\cup (2; \\infty) \\) . Този случай е еквивалентен на  \\( f(-2).f(2) < 0 \\) , където  \\( f(t) = 3t^{2} - 2t + a - 6 \\) . Така получаваме  \\( (2 + a).(10 + a) < 0 \\) , т. е  \\( a \\in (-10; -2) \\) . Така окончателно получаваме, че  \\( a \\in [-10; -2) \\) .\n\nОценяване. (7 точки) 1 т. за  \\( (x+1)(3x^{4}-2x^{3}+ax^{2}-2x+3)=0 \\) ; 2 т. за  \\( 3t^{2}-2t+a-6=0 \\)  с  \\( t=x+1/x \\) ; по 1 т. за разглеждане и решаване на всеки от трите случая за  \\( t_{1} \\)  и  \\( t_{2} \\) ; 1 т. за окончателния отговор.\n\nЗадача 11.2. Трапецът \\(ABCD\\) (\\(AB \\parallel CD\\), \\(AB > CD\\)) е вписан в окръжност с радиус 9 cm. Петата на перпендикуляра от върха \\(C\\) към основата \\(AB\\) я разделя в отношение 2 : 1, считано от върха \\(A\\). Ако дължината на диагонала \\(AC\\) е равна на дължината на основата \\(AB\\), то да се намери лицето на трапеца.\n\nРешение. Тъй като трапецът \\(ABCD\\) е вписан, то той е равнобедрен. Нека \\(CP, P \\in AB\\) е височината от върха \\(C\\). От условието \\(AP: PB = 2:1\\), получаваме, че \\(AB = 3CD\\). Нека означим с \\(\\alpha\\) острия ъгъл на трапеца, т.е. \\(\\angle ABC = \\alpha\\). От \\(AC = AB\\) следва, че \\(\\triangle ABC\\) е равнобедрен с ъгли \\(\\angle ABC = \\angle ACB = \\alpha\\) и \\(\\angle BAC = 180^{\\circ} - 2\\alpha\\). От правоъгълния \\(\\triangle APC\\) имаме\n\n\\[\n\\angle P A C = 1 8 0 ^ {\\circ} - 2 \\alpha <   9 0 ^ {\\circ}.\n\\]\n\nт. е.  \\( \\alpha\\in(45^{\\circ};90^{\\circ}) \\)  или  \\( 2\\alpha\\in(90^{\\circ};180^{\\circ}) \\) . От правоъгълните  \\( \\triangle APC \\)  и  \\( \\triangle BPC \\)  изразяваме\n\n\\[\n\\operatorname{tg} \\left(1 8 0 ^ {\\circ} - 2 \\alpha\\right) = C P / A P \\text {и} \\operatorname{tg} \\alpha = C P / B P,\n\\]\n\nоткъдето  \\( \\operatorname{tg}(180^{\\circ}-2\\alpha)/( \\operatorname{tg}\\alpha)=BP/AP=1/2 \\) . Тъй като  \\( \\operatorname{tg}(180^{\\circ}-2\\alpha)=-\\operatorname{tg}(2\\alpha)=-(2\\cdot\\operatorname{tg}\\alpha)/(1-\\operatorname{tg}^{2}\\alpha) \\) , получаваме  \\( -2/(1-\\operatorname{tg}^{2}\\alpha)=1/2 \\) , т.е.  \\( \\operatorname{tg}^{2}\\alpha=5 \\) , откъдето  \\( \\operatorname{tg}\\alpha=\\sqrt{5} \\) , т. к.  \\( \\alpha \\)  е остър ъгъл. Пресмятаме  \\( \\sin(\\alpha)=\\frac{\\sqrt{30}}{6} \\)  и  \\( \\cos\\alpha=\\frac{\\sqrt{6}}{6} \\) . От синусова теорема за  \\( \\triangle ABC \\)  намираме  \\( AB=3\\sqrt{30} \\)  cm, а от  \\( AB=3CD \\) ,  \\( CD=\\sqrt{30} \\)  cm. От  \\( \\triangle BPC \\)  имаме  \\( CP=BP\\cdot\\operatorname{tg}\\alpha=\\sqrt{30}\\cdot\\sqrt{5}=5\\sqrt{6} \\)  cm. Тогава лицето на трапеца е равно на\n\n\\[\nS = \\frac {A B + C D}{2} \\cdot C P = 2 \\cdot \\sqrt {3 0} \\cdot 5 \\sqrt {6} = 6 0 \\sqrt {5} \\mathrm{cm} ^ {2}\n\\]\n\nОценяване. (7 точки) 0,5 т. за AB = 3CD; 1 т. за въвеждане на ъгъл α и изразяване на ъглите ∠ABC, ∠ACB и ∠BAC чрез α; 1 т. за изводите за α и 2α; 2 т. за намиране на tg α, sin α и cos α; 1 т. за намиране дължината на AB; 1 т. за CD и CP; 0,5 т. за пресмятане на лицето.\n\nСвалено от Klasirane.com",
+      "images": [],
+      "tables": [],
+      "hyperlinks": [],
+      "header": null,
+      "footer": null,
+      "dimensions": {
+        "dpi": 87,
+        "height": 1018,
+        "width": 720
+      },
+      "confidence_scores": null,
+      "blocks": [
+        {
+          "top_left_x": 181,
+          "top_left_y": 89,
+          "bottom_right_x": 540,
+          "bottom_right_y": 104,
+          "content": "# Условия, кратки решения и критерии за оценяване",
+          "confidence_scores": null,
+          "type": "title"
+        },
+        {
+          "top_left_x": 83,
+          "top_left_y": 115,
+          "bottom_right_x": 627,
+          "bottom_right_y": 131,
+          "content": "Задача 11.1. Да се намерят стойностите на реалния параметр \\(a\\), за които уравнението",
+          "confidence_scores": null,
+          "type": "text"
+        },
+        {
+          "top_left_x": 227,
+          "top_left_y": 140,
+          "bottom_right_x": 493,
+          "bottom_right_y": 160,
+          "content": "\\[\n3 x ^ {5} + x ^ {4} + (a - 2) x ^ {3} + (a - 2) x ^ {2} + x + 3 = 0\n\\]",
+          "confidence_scores": null,
+          "type": "equation"
+        },
+        {
+          "top_left_x": 83,
+          "top_left_y": 172,
+          "bottom_right_x": 291,
+          "bottom_right_y": 187,
+          "content": "има три различни реални корена.",
+          "confidence_scores": null,
+          "type": "text"
+        },
+        {
+          "top_left_x": 82,
+          "top_left_y": 191,
+          "bottom_right_x": 636,
+          "bottom_right_y": 254,
+          "content": "Решение. Тъй като от схемата на Хорнер директно се вижда, че  \\( x_{1} = -1 \\)  е решение на уравнението, то представяме уравнението във вида  \\( (x + 1)(3x^{4} - 2x^{3} + ax^{2} - 2x + 3) = 0 \\) . Уравнението  \\( 3x^{4} - 2x^{3} + ax^{2} - 2x + 3 = 0 \\)  след разделяне на  \\( x^{2} \\neq 0 \\)  (очевидно x = 0 не е решение) добива вида",
+          "confidence_scores": null,
+          "type": "text"
+        },
+        {
+          "top_left_x": 256,
+          "top_left_y": 254,
+          "bottom_right_x": 462,
+          "bottom_right_y": 272,
+          "content": "\\[\n3 (x ^ {2} + 1 / x ^ {2}) - 2 (x + 1 / x) + a = 0,\n\\]",
+          "confidence_scores": null,
+          "type": "equation"
+        },
+        {
+          "top_left_x": 82,
+          "top_left_y": 277,
+          "bottom_right_x": 637,
+          "bottom_right_y": 387,
+          "content": "откъдето получаваме  \\( 3t^{2}-2t+a-6=0 \\) , където  \\( t=x+1/x \\) . За да има даденото в условието уравнение три различни реални корена, то  \\( 3x^{4}-2x^{3}+ax^{2}-2x+3=0 \\)  трябва да има три различни реални корена, единият от които да е -1, а другите два да са различни от -1 или два различни реални корени, които не са равни на -1. Уравнението  \\( t=x+\\frac{1}{x} \\)  има реални корени когато  \\( t\\in(-\\infty;-2]\\cup[2;\\infty) \\) . Това означава, че за  \\( 3t^{2}-2t+a-6=0 \\)  има следните възможности:",
+          "confidence_scores": null,
+          "type": "text"
+        },
+        {
+          "top_left_x": 83,
+          "top_left_y": 387,
+          "bottom_right_x": 636,
+          "bottom_right_y": 488,
+          "content": "1.  \\( t_{1}=t_{2}\\in(-\\infty;-2)\\cup(2;\\infty) \\) ; Този случай е невъзможен, тъй като  \\( t_{1}=t_{2}=\\frac{1}{3} \\) .\n2.  \\( t_{1} = -2 \\)  и  \\( t_{2} \\in (-\\infty; -2) \\cup (2; \\infty) \\) . Тогава  \\( t_{1} = -2 \\)  при a = -10 и получаваме  \\( t_{2} = \\frac{8}{3} \\in (2; \\infty) \\) .\n3.  \\( t_{1} \\in (-2;2) \\)  и  \\( t_{2} \\in (-\\infty; -2) \\cup (2; \\infty) \\) . Този случай е еквивалентен на  \\( f(-2).f(2) < 0 \\) , където  \\( f(t) = 3t^{2} - 2t + a - 6 \\) . Така получаваме  \\( (2 + a).(10 + a) < 0 \\) , т. е  \\( a \\in (-10; -2) \\) . Така окончателно получаваме, че  \\( a \\in [-10; -2) \\) .",
+          "confidence_scores": null,
+          "type": "list"
+        },
+        {
+          "top_left_x": 82,
+          "top_left_y": 491,
+          "bottom_right_x": 636,
+          "bottom_right_y": 541,
+          "content": "Оценяване. (7 точки) 1 т. за  \\( (x+1)(3x^{4}-2x^{3}+ax^{2}-2x+3)=0 \\) ; 2 т. за  \\( 3t^{2}-2t+a-6=0 \\)  с  \\( t=x+1/x \\) ; по 1 т. за разглеждане и решаване на всеки от трите случая за  \\( t_{1} \\)  и  \\( t_{2} \\) ; 1 т. за окончателния отговор.",
+          "confidence_scores": null,
+          "type": "text"
+        },
+        {
+          "top_left_x": 82,
+          "top_left_y": 547,
+          "bottom_right_x": 636,
+          "bottom_right_y": 613,
+          "content": "Задача 11.2. Трапецът \\(ABCD\\) (\\(AB \\parallel CD\\), \\(AB > CD\\)) е вписан в окръжност с радиус 9 cm. Петата на перпендикуляра от върха \\(C\\) към основата \\(AB\\) я разделя в отношение 2 : 1, считано от върха \\(A\\). Ако дължината на диагонала \\(AC\\) е равна на дължината на основата \\(AB\\), то да се намери лицето на трапеца.",
+          "confidence_scores": null,
+          "type": "text"
+        },
+        {
+          "top_left_x": 82,
+          "top_left_y": 617,
+          "bottom_right_x": 636,
+          "bottom_right_y": 697,
+          "content": "Решение. Тъй като трапецът \\(ABCD\\) е вписан, то той е равнобедрен. Нека \\(CP, P \\in AB\\) е височината от върха \\(C\\). От условието \\(AP: PB = 2:1\\), получаваме, че \\(AB = 3CD\\). Нека означим с \\(\\alpha\\) острия ъгъл на трапеца, т.е. \\(\\angle ABC = \\alpha\\). От \\(AC = AB\\) следва, че \\(\\triangle ABC\\) е равнобедрен с ъгли \\(\\angle ABC = \\angle ACB = \\alpha\\) и \\(\\angle BAC = 180^{\\circ} - 2\\alpha\\). От правоъгълния \\(\\triangle APC\\) имаме",
+          "confidence_scores": null,
+          "type": "text"
+        },
+        {
+          "top_left_x": 280,
+          "top_left_y": 698,
+          "bottom_right_x": 438,
+          "bottom_right_y": 713,
+          "content": "\\[\n\\angle P A C = 1 8 0 ^ {\\circ} - 2 \\alpha <   9 0 ^ {\\circ}.\n\\]",
+          "confidence_scores": null,
+          "type": "equation"
+        },
+        {
+          "top_left_x": 82,
+          "top_left_y": 721,
+          "bottom_right_x": 613,
+          "bottom_right_y": 738,
+          "content": "т. е.  \\( \\alpha\\in(45^{\\circ};90^{\\circ}) \\)  или  \\( 2\\alpha\\in(90^{\\circ};180^{\\circ}) \\) . От правоъгълните  \\( \\triangle APC \\)  и  \\( \\triangle BPC \\)  изразяваме",
+          "confidence_scores": null,
+          "type": "text"
+        },
+        {
+          "top_left_x": 231,
+          "top_left_y": 749,
+          "bottom_right_x": 487,
+          "bottom_right_y": 766,
+          "content": "\\[\n\\operatorname{tg} \\left(1 8 0 ^ {\\circ} - 2 \\alpha\\right) = C P / A P \\text {и} \\operatorname{tg} \\alpha = C P / B P,\n\\]",
+          "confidence_scores": null,
+          "type": "equation"
+        },
+        {
+          "top_left_x": 82,
+          "top_left_y": 776,
+          "bottom_right_x": 636,
+          "bottom_right_y": 874,
+          "content": "откъдето  \\( \\operatorname{tg}(180^{\\circ}-2\\alpha)/( \\operatorname{tg}\\alpha)=BP/AP=1/2 \\) . Тъй като  \\( \\operatorname{tg}(180^{\\circ}-2\\alpha)=-\\operatorname{tg}(2\\alpha)=-(2\\cdot\\operatorname{tg}\\alpha)/(1-\\operatorname{tg}^{2}\\alpha) \\) , получаваме  \\( -2/(1-\\operatorname{tg}^{2}\\alpha)=1/2 \\) , т.е.  \\( \\operatorname{tg}^{2}\\alpha=5 \\) , откъдето  \\( \\operatorname{tg}\\alpha=\\sqrt{5} \\) , т. к.  \\( \\alpha \\)  е остър ъгъл. Пресмятаме  \\( \\sin(\\alpha)=\\frac{\\sqrt{30}}{6} \\)  и  \\( \\cos\\alpha=\\frac{\\sqrt{6}}{6} \\) . От синусова теорема за  \\( \\triangle ABC \\)  намираме  \\( AB=3\\sqrt{30} \\)  cm, а от  \\( AB=3CD \\) ,  \\( CD=\\sqrt{30} \\)  cm. От  \\( \\triangle BPC \\)  имаме  \\( CP=BP\\cdot\\operatorname{tg}\\alpha=\\sqrt{30}\\cdot\\sqrt{5}=5\\sqrt{6} \\)  cm. Тогава лицето на трапеца е равно на",
+          "confidence_scores": null,
+          "type": "text"
+        },
+        {
+          "top_left_x": 213,
+          "top_left_y": 881,
+          "bottom_right_x": 505,
+          "bottom_right_y": 913,
+          "content": "\\[\nS = \\frac {A B + C D}{2} \\cdot C P = 2 \\cdot \\sqrt {3 0} \\cdot 5 \\sqrt {6} = 6 0 \\sqrt {5} \\mathrm{cm} ^ {2}\n\\]",
+          "confidence_scores": null,
+          "type": "equation"
+        },
+        {
+          "top_left_x": 82,
+          "top_left_y": 937,
+          "bottom_right_x": 636,
+          "bottom_right_y": 1003,
+          "content": "Оценяване. (7 точки) 0,5 т. за AB = 3CD; 1 т. за въвеждане на ъгъл α и изразяване на ъглите ∠ABC, ∠ACB и ∠BAC чрез α; 1 т. за изводите за α и 2α; 2 т. за намиране на tg α, sin α и cos α; 1 т. за намиране дължината на AB; 1 т. за CD и CP; 0,5 т. за пресмятане на лицето.",
+          "confidence_scores": null,
+          "type": "text"
+        },
+        {
+          "top_left_x": 417,
+          "top_left_y": 986,
+          "bottom_right_x": 652,
+          "bottom_right_y": 1005,
+          "content": "Свалено от Klasirane.com",
+          "confidence_scores": null,
+          "type": "footer"
+        }
+      ]
+    },
+    {
+      "index": 2,
+      "markdown": "**Задача 11.3.** Естествено число $n$ се нарича *добро*, ако $n$ има четен брой делители:\n\n$$1 = d_1 < d_2 < \\dots < d_{2k-1} < d_{2k} = n,$$\n\nза които $d_{k+1} - d_k = 2$ и $d_{k+2} - d_{k-1} = 65$. Да се намери най-малкото добро число.\n\n*Решение.* Тъй като $d_k \\cdot d_{k+1} = d_{k-1} \\cdot d_{k+2} = n$, то от условието получаваме $d_k^2 + 2d_k - n = 0$ и $d_{k-1}^2 + 65d_{k-1} - n = 0$. Дискриминантите на двата квадратни тричлена трябва да бъдат точни квадрати, откъдето $4 + 4n = t^2$ и $65^2 + 4n = s^2$. След почленно изваждане намираме $s^2 - t^2 = 63.67 = 3^2 \\cdot 7.67$. Следователно $s - t = 1, 3, 7, 9, 21, 63$ и съответно $s + t = 3^2 \\cdot 7.67, 3 \\cdot 7.67, 3^2 \\cdot 67, 7.67, 3.67, 67$. За всеки от случайите получаваме решения съответно $s = 65, 111, 239, 305, 705, 2111$. При $s = 65$ получаваме $n = 0$, което е невъзможно, а при $s = 111$ получаваме $n = 2024$. За останалите стойности на $s$ получаваме по-големи $n$.\n\n**Оценяване.** (7 точки) 1 точка за едното или двете равенства $d_k^2 + 2d_k - n = 0$ и $d_{k-1}^2 + 65d_{k-1} - n = 0$; по 1 точка за всяко от равенствата $4 + 4n = t^2$ и $65^2 + 4n = s^2$; 2 точки за $s^2 - t^2 = 3^2 \\cdot 7.67$; 1 точка за $s - t = 1, 3, 7, 9, 21, 63$ и $s + t = 3^2 \\cdot 7.67, 3 \\cdot 7.67, 3^2 \\cdot 67, 7.67, 3.67, 67$; 1 точка за намиране на $n = 2024$.\n\n**Задача 11.4.** В клетките на квадратна таблица $2025 \\times 2025$ са записани числата $1, 2, 3, \\dots, 2024, 2025$, всяко по 2025 пъти. Да се докаже, че в някой ред или в някоя колона на таблицата се срещат поне 45 различни числа.\n\n*Решение.* Да означим с $x_i$, $i = 1, 2, \\dots, 2025$ броят на редовете на таблицата, в които се среща числото $i$, а с $y_i$, $i = 1, 2, \\dots, 2025$ броят на колоните на таблицата, в които се среща числото $i$. Тъй като всяко число $i$ може да се среща само в пресечна клетка на ред с $i$ и колона с $i$, то $x_i y_i \\geq 2025$. Следователно\n\n$$x_i + y_i \\geq 2\\sqrt{x_i y_i} = 90.$$\n\nДа означим с $a_i$, $i = 1, 2, \\dots, 2025$ броят на различните числа в ред $i$, а с $b_i$, $i = 1, 2, \\dots, 2025$ броят на различните числа в колона $i$. Всяко $i$ дава принос $x_i$ към сумата $\\sum_{i=1}^{2025} a_i$ и принос $y_i$ към сумата $\\sum_{i=1}^{2025} b_i$. Тогава:\n\n$$\\sum_{i=1}^{2025} a_i + \\sum_{i=1}^{2025} b_i = \\sum_{i=1}^{2025} x_i + \\sum_{i=1}^{2025} y_i \\geq 90 \\cdot 2025.$$\n\nОт горното равенство следва, че някое от числата $a_i$ и/или $b_i$ е поне 45.\n\n**Оценяване.** (7 точки) 2 точки за $x_i y_i \\geq 2025$; 2 точки за $x_i + y_i \\geq 2\\sqrt{x_i y_i} = 90$ в контекста на задачата; 2 точки за $\\sum_{i=1}^{2025} a_i + \\sum_{i=1}^{2045} b_i = \\sum_{i=1}^{2025} x_i + \\sum_{i=1}^{2025} y_i$; 1 точка за довършване.\n\nСвалено от Klasirane.com",
+      "images": [],
+      "tables": [],
+      "hyperlinks": [
+        "http://www.tcpdf.org"
+      ],
+      "header": null,
+      "footer": null,
+      "dimensions": {
+        "dpi": 87,
+        "height": 1018,
+        "width": 720
+      },
+      "confidence_scores": null,
+      "blocks": [
+        {
+          "top_left_x": 84,
+          "top_left_y": 87,
+          "bottom_right_x": 590,
+          "bottom_right_y": 104,
+          "content": "**Задача 11.3.** Естествено число $n$ се нарича *добро*, ако $n$ има четен брой делители:",
+          "confidence_scores": null,
+          "type": "text"
+        },
+        {
+          "top_left_x": 252,
+          "top_left_y": 117,
+          "bottom_right_x": 469,
+          "bottom_right_y": 133,
+          "content": "$$1 = d_1 < d_2 < \\dots < d_{2k-1} < d_{2k} = n,$$",
+          "confidence_scores": null,
+          "type": "equation"
+        },
+        {
+          "top_left_x": 84,
+          "top_left_y": 147,
+          "bottom_right_x": 586,
+          "bottom_right_y": 163,
+          "content": "за които $d_{k+1} - d_k = 2$ и $d_{k+2} - d_{k-1} = 65$. Да се намери най-малкото добро число.",
+          "confidence_scores": null,
+          "type": "text"
+        },
+        {
+          "top_left_x": 84,
+          "top_left_y": 165,
+          "bottom_right_x": 638,
+          "bottom_right_y": 281,
+          "content": "*Решение.* Тъй като $d_k \\cdot d_{k+1} = d_{k-1} \\cdot d_{k+2} = n$, то от условието получаваме $d_k^2 + 2d_k - n = 0$ и $d_{k-1}^2 + 65d_{k-1} - n = 0$. Дискриминантите на двата квадратни тричлена трябва да бъдат точни квадрати, откъдето $4 + 4n = t^2$ и $65^2 + 4n = s^2$. След почленно изваждане намираме $s^2 - t^2 = 63.67 = 3^2 \\cdot 7.67$. Следователно $s - t = 1, 3, 7, 9, 21, 63$ и съответно $s + t = 3^2 \\cdot 7.67, 3 \\cdot 7.67, 3^2 \\cdot 67, 7.67, 3.67, 67$. За всеки от случайите получаваме решения съответно $s = 65, 111, 239, 305, 705, 2111$. При $s = 65$ получаваме $n = 0$, което е невъзможно, а при $s = 111$ получаваме $n = 2024$. За останалите стойности на $s$ получаваме по-големи $n$.",
+          "confidence_scores": null,
+          "type": "text"
+        },
+        {
+          "top_left_x": 84,
+          "top_left_y": 283,
+          "bottom_right_x": 638,
+          "bottom_right_y": 351,
+          "content": "**Оценяване.** (7 точки) 1 точка за едното или двете равенства $d_k^2 + 2d_k - n = 0$ и $d_{k-1}^2 + 65d_{k-1} - n = 0$; по 1 точка за всяко от равенствата $4 + 4n = t^2$ и $65^2 + 4n = s^2$; 2 точки за $s^2 - t^2 = 3^2 \\cdot 7.67$; 1 точка за $s - t = 1, 3, 7, 9, 21, 63$ и $s + t = 3^2 \\cdot 7.67, 3 \\cdot 7.67, 3^2 \\cdot 67, 7.67, 3.67, 67$; 1 точка за намиране на $n = 2024$.",
+          "confidence_scores": null,
+          "type": "text"
+        },
+        {
+          "top_left_x": 84,
+          "top_left_y": 357,
+          "bottom_right_x": 638,
+          "bottom_right_y": 406,
+          "content": "**Задача 11.4.** В клетките на квадратна таблица $2025 \\times 2025$ са записани числата $1, 2, 3, \\dots, 2024, 2025$, всяко по 2025 пъти. Да се докаже, че в някой ред или в някоя колона на таблицата се срещат поне 45 различни числа.",
+          "confidence_scores": null,
+          "type": "text"
+        },
+        {
+          "top_left_x": 84,
+          "top_left_y": 410,
+          "bottom_right_x": 638,
+          "bottom_right_y": 475,
+          "content": "*Решение.* Да означим с $x_i$, $i = 1, 2, \\dots, 2025$ броят на редовете на таблицата, в които се среща числото $i$, а с $y_i$, $i = 1, 2, \\dots, 2025$ броят на колоните на таблицата, в които се среща числото $i$. Тъй като всяко число $i$ може да се среща само в пресечна клетка на ред с $i$ и колона с $i$, то $x_i y_i \\geq 2025$. Следователно",
+          "confidence_scores": null,
+          "type": "text"
+        },
+        {
+          "top_left_x": 293,
+          "top_left_y": 488,
+          "bottom_right_x": 427,
+          "bottom_right_y": 505,
+          "content": "$$x_i + y_i \\geq 2\\sqrt{x_i y_i} = 90.$$",
+          "confidence_scores": null,
+          "type": "equation"
+        },
+        {
+          "top_left_x": 84,
+          "top_left_y": 518,
+          "bottom_right_x": 638,
+          "bottom_right_y": 569,
+          "content": "Да означим с $a_i$, $i = 1, 2, \\dots, 2025$ броят на различните числа в ред $i$, а с $b_i$, $i = 1, 2, \\dots, 2025$ броят на различните числа в колона $i$. Всяко $i$ дава принос $x_i$ към сумата $\\sum_{i=1}^{2025} a_i$ и принос $y_i$ към сумата $\\sum_{i=1}^{2025} b_i$. Тогава:",
+          "confidence_scores": null,
+          "type": "text"
+        },
+        {
+          "top_left_x": 233,
+          "top_left_y": 579,
+          "bottom_right_x": 486,
+          "bottom_right_y": 623,
+          "content": "$$\\sum_{i=1}^{2025} a_i + \\sum_{i=1}^{2025} b_i = \\sum_{i=1}^{2025} x_i + \\sum_{i=1}^{2025} y_i \\geq 90 \\cdot 2025.$$",
+          "confidence_scores": null,
+          "type": "equation"
+        },
+        {
+          "top_left_x": 84,
+          "top_left_y": 635,
+          "bottom_right_x": 524,
+          "bottom_right_y": 651,
+          "content": "От горното равенство следва, че някое от числата $a_i$ и/или $b_i$ е поне 45.",
+          "confidence_scores": null,
+          "type": "text"
+        },
+        {
+          "top_left_x": 84,
+          "top_left_y": 655,
+          "bottom_right_x": 638,
+          "bottom_right_y": 691,
+          "content": "**Оценяване.** (7 точки) 2 точки за $x_i y_i \\geq 2025$; 2 точки за $x_i + y_i \\geq 2\\sqrt{x_i y_i} = 90$ в контекста на задачата; 2 точки за $\\sum_{i=1}^{2025} a_i + \\sum_{i=1}^{2045} b_i = \\sum_{i=1}^{2025} x_i + \\sum_{i=1}^{2025} y_i$; 1 точка за довършване.",
+          "confidence_scores": null,
+          "type": "text"
+        },
+        {
+          "top_left_x": 417,
+          "top_left_y": 983,
+          "bottom_right_x": 653,
+          "bottom_right_y": 1005,
+          "content": "Свалено от Klasirane.com",
+          "confidence_scores": null,
+          "type": "footer"
+        }
+      ]
+    }
+  ],
+  "model": "mistral-ocr-latest",
+  "document_annotation": null,
+  "usage_info": {
+    "pages_processed": 3,
+    "doc_size_bytes": 797524
+  }
+}

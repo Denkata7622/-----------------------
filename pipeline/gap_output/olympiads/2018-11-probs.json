@@ -1,0 +1,123 @@
+{
+  "_meta": {
+    "pdf": "C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\Задачи_Минали_Години\\Областен\\OLI-2-Областен кръг-2018-11 кл-probs.pdf",
+    "paired_with": "C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\Задачи_Минали_Години\\Областен\\OLI-2-Областен кръг-2018-11 кл-sol.pdf",
+    "level": 1,
+    "type": "probs",
+    "analyzed_at": "2026-10-16T21:22:05.784111",
+    "model": "deepseek/deepseek-v3.2",
+    "text_length": 1189,
+    "paired_text_length": 5183
+  },
+  "problems": [
+    {
+      "num": 1,
+      "topic": "algebra",
+      "theorems": [],
+      "techniques": [
+        "substitution",
+        "sign analysis",
+        "inequality manipulation"
+      ],
+      "concepts": [
+        "exponential functions",
+        "monotonicity",
+        "domain restrictions",
+        "rational inequalities",
+        "interval method"
+      ],
+      "difficulty": "standard",
+      "notes": "Standard exponential inequality. Key step is factoring and analyzing sign based on monotonicity of 2^x and 1/x."
+    },
+    {
+      "num": 2,
+      "topic": "number_theory",
+      "theorems": [],
+      "techniques": [
+        "construction",
+        "contradiction",
+        "algebraic manipulation"
+      ],
+      "concepts": [
+        "rational numbers",
+        "geometric progression",
+        "arithmetic progression",
+        "integer properties"
+      ],
+      "difficulty": "standard",
+      "notes": "Necessity and sufficiency proof. Construction for rational r, algebraic manipulation to show r is rational."
+    },
+    {
+      "num": 3,
+      "topic": "geometry",
+      "theorems": [
+        "Thales",
+        "similar triangles",
+        "properties of cyclic quadrilaterals"
+      ],
+      "techniques": [
+        "auxiliary construction",
+        "parallel lines",
+        "proportional segments"
+      ],
+      "concepts": [
+        "orthocenter",
+        "angle bisector",
+        "external angle bisector",
+        "isosceles triangle",
+        "circumcircle",
+        "diameter",
+        "midpoint"
+      ],
+      "difficulty": "hard",
+      "notes": "Complex geometry problem. Key steps: showing triangle ADE is isosceles, AK is diameter, using parallels and Thales to prove HK bisects BC via parallelogram."
+    },
+    {
+      "num": 4,
+      "topic": "combinatorics",
+      "theorems": [],
+      "techniques": [
+        "induction",
+        "greedy algorithm",
+        "contradiction"
+      ],
+      "concepts": [
+        "coloring",
+        "row and column constraints",
+        "combinatorial existence"
+      ],
+      "difficulty": "olympic",
+      "notes": "Non-standard combinatorial coloring. Proof uses an inductive/algorithmic coloring process and contradiction based on the given condition about pairs of rows."
+    }
+  ],
+  "unique_concepts": [
+    "exponential functions",
+    "monotonicity",
+    "domain restrictions",
+    "rational inequalities",
+    "interval method",
+    "rational numbers",
+    "geometric progression",
+    "arithmetic progression",
+    "integer properties",
+    "orthocenter",
+    "angle bisector",
+    "external angle bisector",
+    "isosceles triangle",
+    "circumcircle",
+    "diameter",
+    "midpoint",
+    "Thales theorem",
+    "similar triangles",
+    "cyclic quadrilaterals",
+    "parallel lines",
+    "proportional segments",
+    "coloring",
+    "row and column constraints",
+    "combinatorial existence",
+    "induction",
+    "greedy algorithm",
+    "contradiction"
+  ],
+  "confidence": 0.95
+}

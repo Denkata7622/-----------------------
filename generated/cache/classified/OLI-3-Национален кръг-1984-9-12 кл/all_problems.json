@@ -1,0 +1,160 @@
+{
+  "pdf": "OLI-3-Национален кръг-1984-9-12 кл",
+  "problems": [
+    {
+      "num": 1,
+      "grade": null,
+      "year": 1984,
+      "round": "nacionalen",
+      "statement": "Да се реши в цели неотрицателни числа уравнението 5^x · 7^y + 4 = 3^z.",
+      "solution": null,
+      "answer": null,
+      "page": 1,
+      "source": "OLI-3-Национален кръг-1984-9-12 кл · 1984-? · Зад. 1",
+      "point_id": "4.9",
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": "medium",
+      "techniques": [
+        "lifting_the_exponent",
+        "modular_arithmetic"
+      ],
+      "reasoning": "Exponential Diophantine solved by LTE and congruences; 2‑3 steps.",
+      "_paired": true,
+      "_grade_source": "grade_range",
+      "grade_range": [
+        9,
+        12
+      ]
+    },
+    {
+      "num": 2,
+      "grade": null,
+      "year": 1984,
+      "round": "nacionalen",
+      "statement": "Диагоналите на трапеца ABCD с основи AB и CD се пресичат в точка O с AB/CD = k > 1. Ъглополовящите на ъглите ∠AOB, ∠BOC, ∠COD и ∠DOA пресичат страните AB, BC, CD и DA съответно в точките K, L, M и N. Ако P е пресечната точка на правите KL и MN, а Q - пресечната точка на правите KN и LM, да се пресметне стойността на k при условие, че лицето на трапеца ABCD е равно на лицето на триъгълника OPQ.",
+      "solution": "Решение. Върху правата AC (черт. 1) разглеждаме точка P′, външна за отсечката AC и такава, че AP′/CP′ = AO/CO = k. Понеже (ACP′)(CDM)(DAN) = (AP′/CP′) · (CM/DM) · (DN/AN) = (AO/CO) · (CO/DO) · (DO/AO) = 1, от теоремата на Менелай за триъгълника ACD и правата MN получаваме, че P′ лежи върху MN. Аналогично, P′ лежи и върху KL, т.е. P′ ≡ P и AP/CP = k[неразчетено].\nПо аналогичен начин получаваме, че Q лежи върху правата BD, външна за отсечката BD и BQ/DQ = k.\nИмаме OA = k/(k + 1) · AC и PA = k/(k − 1) · AC. Тогава OP = PA − OA = 2k/(k² − 1) · AC.\nАналогично OQ = 2k/(k² − 1) · BD. Ако S е лицето на трапеца, то S_OPQ/S = (OP · OQ)/(AC · BD) = 4k²/(k² − 1)² = 1, откъдето намираме k² = 3 + 2√2 = (1 + √2)², т.е. k = 1 + √2.",
+      "answer": "k = 1 + √2",
+      "page": 1,
+      "source": "OLI-3-Национален кръг-1984-9-12 кл · 1984-? · Зад. 2",
+      "point_id": "1.1",
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": "medium",
+      "techniques": [
+        "menelaus_theorem"
+      ],
+      "reasoning": "Solution explicitly uses Menelaus in triangle ACD; geometry with a few algebraic steps.",
+      "_paired": true,
+      "_grade_source": "grade_range",
+      "grade_range": [
+        9,
+        12
+      ]
+    },
+    {
+      "num": 3,
+      "grade": null,
+      "year": 1984,
+      "round": "nacionalen",
+      "statement": "В пространството са дадени такива точки P₁, P₂, . . . , Pₙ, Q (n ≥ 4), че никои четири от тях не лежат в една равнина. Да се докаже, че ако за всяка тройка различни точки P_α, P_β, P_γ съществува такава точка P_δ, че тетраедърът P_αP_βP_γP_δ съдържа точката Q, то n е четно число.",
+      "solution": "Решение. Да разгледаме равнината, определена от точките P₁, P₂, Q. Част от точките P₃, P₄, …, Pₙ са от една страна на тази равнина, а останалите — от другата. Въртим полуравнината, определена от точките Q, P₁, P₂, около правата QP₁. При движението си тя преминава през точките (да кажем) P₃, P₄, …, Pₖ, които са наредени по реда на това преминаване. Да разгледаме точките P₁, P₂, P₃.\nПо условие има такава точка P_s, че тетраедърът P₁P₂P₃P_s съдържа Q. Ясно е, че точката P_s лежи в допълнителния тристенен ъгъл на QP₁P₂P₃. Ще докажем, че в този ъгъл има само една такава точка. Наистина, ако P_t е една друга такава, за точките P₁, P_s, P_[неразчетено] ще има точка P_r, за която тетраедърът P₁P_sP_tP_r съдържа Q. Но тази точка P_r ще трябва да лежи между полуравнините, определени от P₁, P₂, Q и P₁, P₃, Q. Такава точка обаче няма. Аналогично, обхождайки точките от едното полупространство, построяваме еднозначно съответствие на тези точки от допълнителното полупространство, т.е. n е четно число.",
+      "answer": null,
+      "page": 1,
+      "source": "OLI-3-Национален кръг-1984-9-12 кл · 1984-? · Зад. 3",
+      "point_id": null,
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": "medium",
+      "techniques": [
+        "parity_argument",
+        "bijection"
+      ],
+      "reasoning": "Proof relies on pairing points from opposite half‑spaces; main idea is parity, not listed in STEPS.",
+      "_paired": true,
+      "_grade_source": "grade_range",
+      "grade_range": [
+        9,
+        12
+      ]
+    },
+    {
+      "num": 4,
+      "grade": null,
+      "year": 1984,
+      "round": "nacionalen",
+      "statement": "Числата a, b, a₂, a₃, . . . , a_{n−2} са реални, ab ≠ 0 и такива, че всичките корени на уравнението\nax^n − ax^{n−1} + a₂x^{n−2} + · · · + a_{n−2}x² − n²bx + b = 0\nса реални и положителни. Да се докаже, че тези корени са равни помежду си.",
+      "solution": "Решение. От формулите на Виет имаме\nx₁ + x₂ + … + xₙ = 1,\n1/x₁ + 1/x₂ + … + 1/xₙ = n².\nСледователно\n(x₁ + x₂ + … + xₙ)(1/x₁ + 1/x₂ + … + 1/xₙ) = n².\nНо в известното неравенство\n(x₁ + x₂ + … + xₙ)(1/x₁ + 1/x₂ + … + 1/xₙ) ≥ n²\nимаме равенство тогава и само тогава когато x₁ = x₂ = … = xₙ.",
+      "answer": null,
+      "page": 2,
+      "source": "OLI-3-Национален кръг-1984-9-12 кл · 1984-? · Зад. 4",
+      "point_id": "6.4",
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": "medium",
+      "techniques": [
+        "cauchy_schwarz",
+        "vieta"
+      ],
+      "reasoning": "Uses Vieta to get sum and sum of reciprocals, then C‑S inequality to force equality of roots.",
+      "_paired": true,
+      "_grade_source": "grade_range",
+      "grade_range": [
+        9,
+        12
+      ]
+    },
+    {
+      "num": 5,
+      "grade": null,
+      "year": 1984,
+      "round": "nacionalen",
+      "statement": "Дадени са реалните числа x₁, x₂, . . . , xₙ, y₁, y₂, . . . , yₙ, за които 0 ≤ xᵢ ≤ 1, xᵢ + yᵢ = 1 за i = 1, 2, . . . , n. Да се докаже, че\n(1 − x₁x₂ . . . xₙ)^m + (1 − y₁^m)(1 − y₂^m) . . . (1 − yₙ^m) ≥ 1\nза произволни естествени числа m и n.",
+      "solution": "Решение. Ще доказваме по индукция относно n. Неравенството е очевидно вярно при n = 1 и всяко m. Допускаме, че е вярно за n − 1 и всяко m. Ще го докажем за n и всяко m. Нека t = xₙ₋₁xₙ. Тогава съгласно индукционното предположение\n(1 − x₁x₂…xₙ₋₂t)^m + (1 − y₁^m)(1 − y₂^m)…(1 − yₙ₋₂^m)^[неразчетено] (1 − (1 − t)^m) ≥ 1.\nСледователно неравенството ще бъде доказано, ако покажем, че\n(1 − yₙ₋₁^m)(1 − yₙ^m) ≥ 1 − (1 − t)^m,\nт.е. ако (1 − a^m)(1 − b^m) ≥ 1 − (a + b − ab)^m за 0 ≤ a ≤ 1 и 0 ≤ b ≤ 1, което е еквивалентно с\na^m + b^m − a^m b^m ≤ (a + b − ab)^m.\nПоследното лесно следва по индукция. Наистина, при m = 1 то е вярно. Умножаваме даденото неравенство с a + b − ab и след преобразуване получаваме\n[a^(m+1) + b^(m+1) − a^(m+1)b^(m+1)] + [a^m(b − ab) + b^m(a − ab) − a^(m+1)b^m − a^m b^(m+1) + 2a^(m+1)b^(m+1)] ≤ (a + b − ab)^(m+1).\nТрябва да покажем, че второто събираемо в лявата страна е неотрицателно. Имаме\na^m(b − ab) + b^m(a − ab) − a^(m+1)b^m − a^m b^(m+1) + 2a^(m+1)b^(m+1)\n= (a^m b − a^(m+1)b − a^m b^(m+1) + a^(m+1)b^(m+1)) + (b^m a − b^(m+1)a − a^(m+1)b^m + a^(m+1)b^(m+1))\n= a^m b(1 − a − b^m + ab^m) + ab^m(1 − b − a^m + a^m b)\n= a^m b(1 − a)(1 − b^m) + ab^m(1 − b)(1 − a^m) ≥ 0,\nс което задачата е решена.",
+      "answer": null,
+      "page": 2,
+      "source": "OLI-3-Национален кръг-1984-9-12 кл · 1984-? · Зад. 5",
+      "point_id": "8.10",
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": "medium",
+      "techniques": [
+        "induction",
+        "am_gm"
+      ],
+      "reasoning": "Induction on n with AM‑GM type estimate; 2‑3 logical steps.",
+      "_paired": true,
+      "_grade_source": "grade_range",
+      "grade_range": [
+        9,
+        12
+      ]
+    },
+    {
+      "num": 6,
+      "grade": null,
+      "year": 1984,
+      "round": "nacionalen",
+      "statement": "Дадена е пирамидата SABCD, основата на която е успоредника ABCD. Нека N е средата на отсечката BC. Равнина λ се движи по такъв начин, че пресича правите SC, SA и AB съответно в точките P, Q и R, така че\nCP/CS = SQ/SA = AR/AB.\nТочката M от правата SD е такава, че правата MN е успоредна на равнината λ. Да се докаже, че геометричното място на точката M, когато λ описва всички възможни положения, е отсечка с дължина (√5/2)SD.",
+      "solution": "Решение. Нека CP/CS = SQ/SA = AR/AB = t. Тогава (черт. 2), ако векторите SA = a⃗, SB = b⃗, SC = c⃗, то\nSP = (1 − t)c⃗,\nSQ = ta⃗,\nSR = (1 − t)a⃗ + tb⃗,\nSD = a⃗ − b⃗ + c⃗,\nSN = (1/2)(b⃗ + c⃗),\nSM = m(a⃗ − b⃗ + c⃗)\nи MN = ma⃗ − (m + 1/2)b⃗ + (m − 1/2)c⃗.\nОт друга страна, понеже векторът MN е колинеарен с λ, то\nMN = αPQ + βPR = [αt + β(1 − t)]a⃗ + βtb⃗ − [(α + β)(1 − t)]c⃗.\nТъй като a⃗, b⃗, c⃗ са линейно независими, то\nm = αt + β(1 − t),\n−m − 1/2 = βt,\nm − 1/2 = −(α + β)(1 − t),\nоткъдето получаваме\n(1) m = (−t² + 3t − 1)/(2(2t² − 2t + 1)).\nТъй като 2t² − 2t + 1 > 0 за всяко t и\nlim_(t→±∞) (−t² + 3t − 1)/(2(2t² − 2t + 1)) = −1/4,\nтърсеното геометрично място е отсечка. От (1) получаваме\n(2) (4m + 1)t² − (4m + 3)t + 2m + [неразчетено] = 0.\nПонеже t е реално число, дискриминантата D на (2) трябва да е неотрицателна. Имаме\nD = (4m + 3)² − 4(4m + 1)(2m + 1) = 5 − 16m²,\nт.е. −√5/4 ≤ m ≤ √5/4. Следователно за краищата на отсечката M₁ и M₂ имаме векторите SM₁ = −(√5/4)SD и SM₂ = (√5/4)SD, откъдето векторът M₁M₂ = (√5/2)SD или M₁M₂ = (√5/2)SD, с което задачата е решена.",
+      "answer": "Геометричното място е отсечката M₁M₂ с вектори SM₁ = −(√5/4)SD и SM₂ = (√5/4)SD и дължина M₁M₂ = (√5/2)SD.",
+      "page": 2,
+      "source": "OLI-3-Национален кръг-1984-9-12 кл · 1984-? · Зад. 6",
+      "point_id": "R.11",
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": "hard",
+      "techniques": [
+        "vector_method",
+        "analytic_geometry"
+      ],
+      "reasoning": "Vector parametrisation, solving a quadratic discriminant; requires several algebraic manipulations.",
+      "_paired": true,
+      "_grade_source": "grade_range",
+      "grade_range": [
+        9,
+        12
+      ]
+    }
+  ]
+}

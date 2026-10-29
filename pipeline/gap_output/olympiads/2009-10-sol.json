@@ -1,0 +1,262 @@
+{
+  "_meta": {
+    "pdf": "C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\Задачи_Минали_Години\\Областен\\OLI-2-Областен кръг-2009-10 кл-sol.pdf",
+    "paired_with": null,
+    "level": 1,
+    "type": "sol",
+    "analyzed_at": "2026-10-18T12:50:01.940066",
+    "model": "deepseek/deepseek-v3.2",
+    "text_length": 12530,
+    "paired_text_length": 0
+  },
+  "problems": [
+    {
+      "num": 1,
+      "topic": "geometry",
+      "theorems": [],
+      "techniques": [
+        "inequality manipulation",
+        "case analysis"
+      ],
+      "concepts": [
+        "sides of a quadrilateral",
+        "longest and shortest sides",
+        "intersection of segments"
+      ],
+      "difficulty": "standard",
+      "notes": "Problem about a quadrilateral and intersection of OI with sides. Uses properties of side lengths."
+    },
+    {
+      "num": 2,
+      "topic": "algebra",
+      "theorems": [
+        "Fermat's Little Theorem"
+      ],
+      "techniques": [
+        "modular arithmetic",
+        "substitution",
+        "proof by contradiction"
+      ],
+      "concepts": [
+        "Diophantine equations",
+        "system of equations",
+        "mod 13 residues",
+        "cubes and fourth powers modulo 13"
+      ],
+      "difficulty": "olympic",
+      "notes": "System of equations in integers. Solved by summing equations and using mod 13 analysis."
+    },
+    {
+      "num": 3,
+      "topic": "algebra",
+      "theorems": [],
+      "techniques": [
+        "case analysis",
+        "squaring inequalities",
+        "interval method"
+      ],
+      "concepts": [
+        "irrational inequalities",
+        "domain of square roots",
+        "sign analysis"
+      ],
+      "difficulty": "standard",
+      "notes": "Irrational inequality solved by considering cases based on x relative to parameters a and b."
+    },
+    {
+      "num": 4,
+      "topic": "geometry",
+      "theorems": [],
+      "techniques": [
+        "angle chasing",
+        "similar triangles",
+        "cyclic quadrilaterals"
+      ],
+      "concepts": [
+        "incircle",
+        "tangent points",
+        "cyclic quadrilateral",
+        "intersecting chords",
+        "midpoint"
+      ],
+      "difficulty": "hard",
+      "notes": "Geometry problem with incircle, midpoint, and ratio of segments. Uses properties of cyclic quadrilaterals and similar triangles."
+    },
+    {
+      "num": 5,
+      "topic": "geometry",
+      "theorems": [],
+      "techniques": [
+        "angle chasing",
+        "congruent triangles",
+        "circumscribed quadrilateral"
+      ],
+      "concepts": [
+        "tangential quadrilateral",
+        "circumscribed circle",
+        "inscribed circle",
+        "rhombus"
+      ],
+      "difficulty": "hard",
+      "notes": "Proves a quadrilateral is a rhombus if a certain point lies on the circumcircle of a triangle. Uses congruent triangles and angle properties."
+    },
+    {
+      "num": 6,
+      "topic": "algebra",
+      "theorems": [
+        "Binomial Theorem"
+      ],
+      "techniques": [
+        "substitution",
+        "induction",
+        "inequality proof"
+      ],
+      "concepts": [
+        "polynomial identities",
+        "parameter n",
+        "exponential equations",
+        "inequality comparison"
+      ],
+      "difficulty": "olympic",
+      "notes": "Identity involving (x+y)^(2n+1) - x^(2n+1) - y^(2n+1). Solved by setting x=y=1, leading to an equation in n, then checking small n and disproving for n>=4."
+    },
+    {
+      "num": 7,
+      "topic": "algebra",
+      "theorems": [
+        "Vieta's formulas"
+      ],
+      "techniques": [
+        "root analysis",
+        "sign of product",
+        "graphical interpretation"
+      ],
+      "concepts": [
+        "quadratic equations",
+        "root separation",
+        "relative position of roots",
+        "parameter a"
+      ],
+      "difficulty": "standard",
+      "notes": "Two quadratics; condition that exactly one root of one lies between roots of the other. Solved via f(x3)f(x4)<0 or via intersection point condition."
+    },
+    {
+      "num": 8,
+      "topic": "geometry",
+      "theorems": [
+        "Law of Sines"
+      ],
+      "techniques": [
+        "angle relation",
+        "trigonometric manipulation",
+        "maximization of quadratic function"
+      ],
+      "concepts": [
+        "triangle angles and sides",
+        "sine rule",
+        "cosine of angle",
+        "inequality between sides"
+      ],
+      "difficulty": "hard",
+      "notes": "Given 2α+3β=180°, prove 4(BC+CA) ≤ 5AB. Uses sine rule to express ratio, then maximizes a quadratic in cos γ."
+    },
+    {
+      "num": 9,
+      "topic": "number_theory",
+      "theorems": [
+        "Fermat's Little Theorem"
+      ],
+      "techniques": [
+        "modular arithmetic",
+        "proof by contradiction",
+        "factoring"
+      ],
+      "concepts": [
+        "product of consecutive integers",
+        "perfect squares",
+        "ninth powers",
+        "mod 19 residues"
+      ],
+      "difficulty": "olympic",
+      "notes": "N = n(n+1)(n+2)(n+3). Show N + m^9 = 2008 impossible. Rewrite N = k^2 - 1, then use mod 19 to analyze squares and ninth powers."
+    },
+    {
+      "num": 10,
+      "topic": "algebra",
+      "theorems": [],
+      "techniques": [
+        "domain consideration",
+        "squaring",
+        "parameter analysis"
+      ],
+      "concepts": [
+        "irrational equations",
+        "parameter a",
+        "linear equation",
+        "inequality condition"
+      ],
+      "difficulty": "standard",
+      "notes": "Equation sqrt(x^2 + x + 3) = x - a. Solve by considering x ≥ a, leading to linear equation, then checking condition."
+    },
+    {
+      "num": 11,
+      "topic": "geometry",
+      "theorems": [],
+      "techniques": [
+        "trigonometric identities"
+      ],
+      "concepts": [
+        "triangle geometry",
+        "inradius r",
+        "circumradius R",
+        "semiperimeter",
+        "sine of half-angles"
+      ],
+      "difficulty": "standard",
+      "notes": "Proof of formula r = 4R sin(α/2) sin(β/2) sin(γ/2). Standard trigonometric identity in triangle geometry."
+    }
+  ],
+  "unique_concepts": [
+    "sides of a quadrilateral",
+    "intersection of segments",
+    "Diophantine equations",
+    "modular arithmetic",
+    "cubes and fourth powers modulo 13",
+    "irrational inequalities",
+    "domain of square roots",
+    "sign analysis",
+    "incircle",
+    "tangent points",
+    "cyclic quadrilateral",
+    "intersecting chords",
+    "midpoint",
+    "tangential quadrilateral",
+    "circumscribed circle",
+    "inscribed circle",
+    "rhombus",
+    "polynomial identities",
+    "parameter n",
+    "exponential equations",
+    "inequality comparison",
+    "quadratic equations",
+    "root separation",
+    "relative position of roots",
+    "Vieta's formulas",
+    "triangle angles and sides",
+    "sine rule",
+    "cosine of angle",
+    "inequality between sides",
+    "product of consecutive integers",
+    "perfect squares",
+    "ninth powers",
+    "mod 19 residues",
+    "irrational equations",
+    "parameter a",
+    "linear equation",
+    "inradius r",
+    "circumradius R",
+    "semiperimeter",
+    "sine of half-angles"
+  ],
+  "confidence": 0.95
+}

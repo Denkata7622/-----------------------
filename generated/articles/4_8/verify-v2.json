@@ -1,0 +1,24 @@
+{
+  "verdict": "revise",
+  "score": 6,
+  "issues": [
+    {
+      "severity": "major",
+      "section": "Доказателство",
+      "description": "Доказателството за втората формула е непълен/грешен при опростяването, липсва ясно обяснение как се преминава от сума на геометрична прогресия към $(n-s_p(n))/(p-1)$."
+    },
+    {
+      "severity": "major",
+      "section": "Пример 3",
+      "description": "Твърдото търтърт търт  \"\"\"\"\""
+    },
+    {
+      "severity": "minor"
+    }
+  ],
+  "strengths": [
+    "Характерна  "
+  ],
+  "suggesties...": "} The answer... This is not JSON... Need proper JSON. Let's craft proper JSON. Need to include fields: verdict, score, issues (list of objects with severity, section, description), strengths (list), suggestions (list), math_errors (list), missing_topics (list), verdict_reasoning (string). Provide proper content. Let's evaluate article more thoroughly to assign score. Issues: some math errors? The proof of alternative formula seems okay but there is a mistake: they wrote sum from i=1 to t of floor(n/p^i) = ... then they derived expression with a0 incorrectly? Might be minor. Also example 3 proof is incomplete and messy. Also some statements: ",
+  "_tokens": 22198
+}

@@ -1,0 +1,498 @@
+### Част 1: ЗАДАЧИ (10 кл)
+
+```js
+// ─── ЗАДАЧИ: 2024-10 ───
+{
+  source_pdf_probs: "Задачи_Минали_Години/OLI-2-Областен кръг-2024-10 кл-probs.pdf",
+  source_pdf_sols:  "Задачи_Минали_Години/OLI-2-Областен кръг-2024-10 кл-sol.pdf",
+  year: 2024,
+  grade: 10,
+  exam_type: "областен",
+  problems: [
+    {
+      num: 1,
+      topic: "Алгебра",
+      subtopic: "Аритметична и геометрична прогресия",
+      difficulty: 2,
+      probs_page: 1,
+      sol_page: 2,
+      summary: "Третият, деветият и тридесет и деветият член на растяща аритметична прогресия са последователни членове на геометрична прогресия. Да се намери частното и при d=2, Sn=2024 да се намери n.",
+      plan_step: 7,
+      plan_point: "7.6",
+      related_points: ["7.5", "5.4"],
+      prerequisites: ["7.6", "5.4"],
+      add_as_task_to: ["7.6", "7.5"],
+      required_knowledge: [
+        { point_id: "7.6", technique: "Формули за аритметична прогресия", why_needed: "Изразяване на a3, a9, a39 чрез a1 и d" },
+        { point_id: "7.6", technique: "Свойство на геометрична прогресия", why_needed: "a9^2 = a3 * a39" },
+        { point_id: "5.4", technique: "Квадратно уравнение", why_needed: "Решаване на n^2 - 2n - 2024 = 0" }
+      ],
+      techniques_not_in_plan: [],
+      gap_severity: "minor",
+      estimated_time_minutes: 20,
+      common_pitfalls: "Бъркане на формулите за an и Sn; забравяне, че n е естествено.",
+      recommended_for_simulation: false,
+      prerequisite_review: "Преговори 7.6 (прогресии) и 5.4 (квадратни уравнения)."
+    },
+    {
+      num: 2,
+      topic: "Геометрия",
+      subtopic: "Фиксирана окръжност и вписани ъгли",
+      difficulty: 3,
+      probs_page: 1,
+      sol_page: 2,
+      summary: "Даден е остър ъгъл с връх O и фиксирана точка P. M, N се движат по раменете, така че ∠MPN = 180° - α. Да се докаже, че петата на перпендикуляра от P към MN лежи на фиксирана окръжност.",
+      plan_step: 1,
+      plan_point: "1.5",
+      related_points: ["1.6", "1.9"],
+      prerequisites: ["1.5", "1.6"],
+      add_as_task_to: ["1.5"],
+      required_knowledge: [
+        { point_id: "1.5", technique: "Вписани четириъгълници", why_needed: "QPLN и QPKM са вписани" },
+        { point_id: "1.5", technique: "Ъгли в окръжност", why_needed: "Пресмятане на ∠KQL и ∠LRK" },
+        { point_id: "1.6", technique: "Средна отсечка в правоъгълен триъгълник", why_needed: "R е среда на PO" }
+      ],
+      techniques_not_in_plan: [],
+      gap_severity: "none",
+      estimated_time_minutes: 40,
+      common_pitfalls: "Не се въвеждат помощните точки K, L, R; объркване в ъгловите равенства.",
+      recommended_for_simulation: false,
+      prerequisite_review: "Преговори 1.5 (вписани ъгли) и 1.6 (синус/косинус)."
+    },
+    {
+      num: 3,
+      topic: "ТЧ",
+      subtopic: "Квадратични форми и прости числа",
+      difficulty: 5,
+      probs_page: 1,
+      sol_page: 3,
+      summary: "Да се намери вероятността при хвърляне на зар числото k да има свойството: ако p^2 = a^2 + k b^2 за просто p, то p = x^2 + k y^2.",
+      plan_step: 4,
+      plan_point: "4.2",
+      related_points: ["4.4", "4.5"],
+      prerequisites: ["4.2", "3.2"],
+      add_as_task_to: ["4.2", "4.4", "4.5"],
+      required_knowledge: [
+        { point_id: "4.2", technique: "Питагорови тройки", why_needed: "Характеризация при k=1,4" },
+        { point_id: "4.4", technique: "Точни квадрати", why_needed: "Разлагане на p^2 - a^2" },
+        { point_id: "4.5", technique: "Прости числа и mod 4", why_needed: "Проверка на k=3,5,6" },
+        { point_id: null, technique: "Суми на два квадрата", why_needed: "Ключово за k=1,2,4" }
+      ],
+      techniques_not_in_plan: ["Представяне на прости като суми на квадрати", "Квадратични форми"],
+      gap_severity: "major",
+      estimated_time_minutes: 60,
+      common_pitfalls: "Проверка само на някои k; липса на строго доказателство за k=2; объркване на необходимо и достатъчно условие.",
+      recommended_for_simulation: false,
+      prerequisite_review: "Преговори 4.2 (Питагорови тройки) и 3.2 (сравнения)."
+    },
+    {
+      num: 4,
+      topic: "Комбинаторика",
+      subtopic: "Оцветяване на правоъгълници mod 5",
+      difficulty: 4,
+      probs_page: 1,
+      sol_page: 4,
+      summary: "В 10×10 таблица с цели числа да се намери максималното d, за което винаги могат да се оцветят поне d клетки в добри правоъгълници (сума дели се на 5).",
+      plan_step: 8,
+      plan_point: "8.1",
+      related_points: ["8.10", "9.7"],
+      prerequisites: ["8.1", "8.10"],
+      add_as_task_to: ["8.1", "8.10"],
+      required_knowledge: [
+        { point_id: "8.1", technique: "Принцип на Дирихле mod 5", why_needed: "Намиране на добър правоъгълник в 1×k" },
+        { point_id: "8.10", technique: "Индукция", why_needed: "Доказване на лемата за k-4 клетки" },
+        { point_id: "9.7", technique: "Оцветявания", why_needed: "Конструкция на горна граница" }
+      ],
+      techniques_not_in_plan: [],
+      gap_severity: "none",
+      estimated_time_minutes: 50,
+      common_pitfalls: "Трудна горна граница; не се разбира лемата за 1×k.",
+      recommended_for_simulation: false,
+      prerequisite_review: "Преговори 8.1 (Дирихле) и 8.10 (индукция)."
+    }
+  ],
+  difficulty_distribution: { easy: 1, medium: 1, hard: 2 },
+  recommended_action: "add-to-step10",
+  recommended_for_simulation: []
+}
+```
+
+### Част 2: ЗАДАЧИ (11 кл)
+
+```js
+// ─── ЗАДАЧИ: 2024-11 ───
+{
+  source_pdf_probs: "Задачи_Минали_Години/OLI-2-Областен кръг-2024-11 кл-probs.pdf",
+  source_pdf_sols:  "Задачи_Минали_Години/OLI-2-Областен кръг-2024-11 кл-sol.pdf",
+  year: 2024,
+  grade: 11,
+  exam_type: "областен",
+  problems: [
+    {
+      num: 1,
+      topic: "Алгебра",
+      subtopic: "Реципрочни уравнения и параметър",
+      difficulty: 3,
+      probs_page: 1,
+      sol_page: 2,
+      summary: "Да се намерят стойностите на a, за които 3x^5 + x^4 + (a-2)x^3 + (a-2)x^2 + x + 3 = 0 има три различни реални корена.",
+      plan_step: 5,
+      plan_point: "5.3",
+      related_points: ["5.1", "5.4"],
+      prerequisites: ["5.3", "5.1"],
+      add_as_task_to: ["5.3", "5.1"],
+      required_knowledge: [
+        { point_id: "5.3", technique: "Симетрични/реципрочни полиноми", why_needed: "Факторизиране и заместване t = x + 1/x" },
+        { point_id: "5.1", technique: "Виет", why_needed: "Анализ на корените" },
+        { point_id: "5.4", technique: "Рационални корени", why_needed: "Откриване на x = -1" }
+      ],
+      techniques_not_in_plan: ["Реципрочни уравнения"],
+      gap_severity: "minor",
+      estimated_time_minutes: 40,
+      common_pitfalls: "Пропускане на случаи за t1, t2; не се проверява, че корените са различни.",
+      recommended_for_simulation: true,
+      prerequisite_review: "Преговори 5.3 (симетрични) и 5.1 (Виет)."
+    },
+    {
+      num: 2,
+      topic: "Геометрия",
+      subtopic: "Вписан трапец и тригонометрия",
+      difficulty: 3,
+      probs_page: 1,
+      sol_page: 2,
+      summary: "Вписан трапец ABCD с радиус 9 cm, AP:PB = 2:1, AC = AB. Да се намери лицето.",
+      plan_step: 1,
+      plan_point: "1.6",
+      related_points: ["1.5", "1.7"],
+      prerequisites: ["1.5", "1.6"],
+      add_as_task_to: ["1.6", "1.7"],
+      required_knowledge: [
+        { point_id: "1.5", technique: "Вписан трапец е равнобедрен", why_needed: "Опростяване на конфигурацията" },
+        { point_id: "1.6", technique: "Синусова теорема", why_needed: "Намиране на AB" },
+        { point_id: "1.7", technique: "Лице на трапец", why_needed: "Крайна формула" }
+      ],
+      techniques_not_in_plan: [],
+      gap_severity: "none",
+      estimated_time_minutes: 35,
+      common_pitfalls: "Грешно определяне на ъглите; объркване на AP:PB.",
+      recommended_for_simulation: true,
+      prerequisite_review: "Преговори 1.6 (синусова теорема) и 1.7 (лице)."
+    },
+    {
+      num: 3,
+      topic: "ТЧ",
+      subtopic: "Делители и точни квадрати",
+      difficulty: 4,
+      probs_page: 1,
+      sol_page: 3,
+      summary: "Естествено число n е добро, ако делителите му 1=d1<...<d2k=n изпълняват d_{k+1}-d_k=2 и d_{k+2}-d_{k-1}=65. Да се намери най-малкото добро число.",
+      plan_step: 3,
+      plan_point: "3.1",
+      related_points: ["4.4", "4.1"],
+      prerequisites: ["3.1", "4.4"],
+      add_as_task_to: ["3.1", "4.4"],
+      required_knowledge: [
+        { point_id: "3.1", technique: "Делители и спрегнати делители", why_needed: "d_k d_{k+1} = n" },
+        { point_id: "4.4", technique: "Точни квадрати", why_needed: "Дискриминантите трябва да са квадрати" },
+        { point_id: "4.1", technique: "Разлика на квадрати", why_needed: "s^2 - t^2 = 63*67" }
+      ],
+      techniques_not_in_plan: [],
+      gap_severity: "none",
+      estimated_time_minutes: 50,
+      common_pitfalls: "Не се стига до дискриминанти; пропускане на случаи за s-t.",
+      recommended_for_simulation: false,
+      prerequisite_review: "Преговори 3.1 (делимост) и 4.4 (точни квадрати)."
+    },
+    {
+      num: 4,
+      topic: "Комбинаторика",
+      subtopic: "Двойно броене и AM-GM",
+      difficulty: 3,
+      probs_page: 1,
+      sol_page: 3,
+      summary: "В 2025×2025 таблица числата 1..2025 са записани по 2025 пъти. Да се докаже, че в някой ред или колона има поне 45 различни числа.",
+      plan_step: 8,
+      plan_point: "8.3",
+      related_points: ["8.1", "6.1"],
+      prerequisites: ["8.3", "6.1"],
+      add_as_task_to: ["8.3", "6.1"],
+      required_knowledge: [
+        { point_id: "8.3", technique: "Двойно броене", why_needed: "Сумиране на ai и bi" },
+        { point_id: "6.1", technique: "AM-GM", why_needed: "xi + yi >= 2√(xi yi) = 90" }
+      ],
+      techniques_not_in_plan: [],
+      gap_severity: "none",
+      estimated_time_minutes: 30,
+      common_pitfalls: "Не се въвеждат xi, yi; объркване на редове и колони.",
+      recommended_for_simulation: true,
+      prerequisite_review: "Преговори 8.3 (двойно броене) и 6.1 (AM-GM)."
+    }
+  ],
+  difficulty_distribution: { easy: 0, medium: 3, hard: 1 },
+  recommended_action: "add-to-step10",
+  recommended_for_simulation: [1, 2, 4]
+}
+```
+
+### Част 3: АРХИВ (готов за copy-paste в Step 10)
+
+```js
+// ─── АРХИВ 2024-10 ───
+{ 
+  id: "10.27", 
+  title: "Областен кръг 2024 – 10 клас",
+  desc: "4 задачи: 1 Геом, 1 ТЧ, 1 Алг, 1 Комб",
+  source: "Областен кръг 2024",
+  pdf: "Задачи_Минали_Години/OLI-2-Областен кръг-2024-10 кл-probs",
+  page: 1,
+  problems_page: 1,
+  solutions_page: 2,
+  tasks: [
+    { label: "Зад 1 — Аритметична и геометрична прогресия", 
+      pdf: "Задачи_Минали_Години/OLI-2-Областен кръг-2024-10 кл-probs", 
+      page: 1,
+      knowledge: ["7.6", "7.5", "5.4"] 
+    },
+    { label: "Зад 2 — Фиксирана окръжност и вписани ъгли", 
+      pdf: "Задачи_Минали_Години/OLI-2-Областен кръг-2024-10 кл-probs", 
+      page: 1,
+      knowledge: ["1.5", "1.6", "1.9"] 
+    },
+    { label: "Зад 3 — Квадратични форми и прости", 
+      pdf: "Задачи_Минали_Години/OLI-2-Областен кръг-2024-10 кл-probs", 
+      page: 1,
+      knowledge: ["4.2", "4.4", "4.5"] 
+    },
+    { label: "Зад 4 — Оцветяване на правоъгълници mod 5", 
+      pdf: "Задачи_Минали_Години/OLI-2-Областен кръг-2024-10 кл-probs", 
+      page: 1,
+      knowledge: ["8.1", "8.10", "9.7"] 
+    }
+  ],
+  bonus: [
+    { label: "Решения", pdf: "Задачи_Минали_Години/OLI-2-Областен кръг-2024-10 кл-sol" }
+  ],
+  explanation: "2024 10 кл: доминират Геометрия, ТЧ и Комбинаторика. Има major gap при квадратичните форми (суми на квадрати)."
+}
+
+// ─── АРХИВ 2024-11 ───
+{ 
+  id: "10.28", 
+  title: "Областен кръг 2024 – 11 клас",
+  desc: "4 задачи: 1 Геом, 1 ТЧ, 1 Алг, 1 Комб",
+  source: "Областен кръг 2024",
+  pdf: "Задачи_Минали_Години/OLI-2-Областен кръг-2024-11 кл-probs",
+  page: 1,
+  problems_page: 1,
+  solutions_page: 2,
+  tasks: [
+    { label: "Зад 1 — Реципрочни уравнения и параметър", 
+      pdf: "Задачи_Минали_Години/OLI-2-Областен кръг-2024-11 кл-probs", 
+      page: 1,
+      knowledge: ["5.3", "5.1", "5.4"] 
+    },
+    { label: "Зад 2 — Вписан трапец и тригонометрия", 
+      pdf: "Задачи_Минали_Години/OLI-2-Областен кръг-2024-11 кл-probs", 
+      page: 1,
+      knowledge: ["1.6", "1.5", "1.7"] 
+    },
+    { label: "Зад 3 — Делители и точни квадрати", 
+      pdf: "Задачи_Минали_Години/OLI-2-Областен кръг-2024-11 кл-probs", 
+      page: 1,
+      knowledge: ["3.1", "4.4", "4.1"] 
+    },
+    { label: "Зад 4 — Двойно броене и AM-GM", 
+      pdf: "Задачи_Минали_Години/OLI-2-Областен кръг-2024-11 кл-probs", 
+      page: 1,
+      knowledge: ["8.3", "6.1"] 
+    }
+  ],
+  bonus: [
+    { label: "Решения", pdf: "Задачи_Минали_Години/OLI-2-Областен кръг-2024-11 кл-sol" }
+  ],
+  explanation: "2024 11 кл: балансирани теми. Липсваща техника: реципрочни уравнения (minor)."
+}
+```
+
+### Част 4: TASKS ЗА ТЕМАТИЧНИ ТОЧКИ
+
+```js
+// Точка 7.6 в STEPS[6].points:
+{ id: "7.6",
+  tasks: [
+    { label: "ОИ 2024/10 кл, Зад 1 (Аритметична и геометрична прогресия)", 
+      pdf: "Задачи_Минали_Години/OLI-2-Областен кръг-2024-10 кл-probs", 
+      page: 1,
+      difficulty: 2,
+      requires_also: ["7.5", "5.4"],
+      prerequisite_review: "Преговори 7.6 (прогресии) и 5.4 (квадратни уравнения)."
+    }
+  ]
+}
+
+// Точка 1.5 в STEPS[0].points:
+{ id: "1.5",
+  tasks: [
+    { label: "ОИ 2024/10 кл, Зад 2 (Фиксирана окръжност)", 
+      pdf: "Задачи_Минали_Години/OLI-2-Областен кръг-2024-10 кл-probs", 
+      page: 1,
+      difficulty: 3,
+      requires_also: ["1.6", "1.9"],
+      prerequisite_review: "Преговори 1.5 (вписани ъгли) и 1.6 (синус/косинус)."
+    }
+  ]
+}
+
+// Точка 4.2 в STEPS[3].points:
+{ id: "4.2",
+  tasks: [
+    { label: "ОИ 2024/10 кл, Зад 3 (Квадратични форми)", 
+      pdf: "Задачи_Минали_Години/OLI-2-Областен кръг-2024-10 кл-probs", 
+      page: 1,
+      difficulty: 5,
+      requires_also: ["4.4", "4.5", "3.2"],
+      prerequisite_review: "Преговори 4.2 (Питагорови тройки) и 3.2 (сравнения)."
+    }
+  ]
+}
+
+// Точка 8.1 в STEPS[7].points:
+{ id: "8.1",
+  tasks: [
+    { label: "ОИ 2024/10 кл, Зад 4 (Оцветяване mod 5)", 
+      pdf: "Задачи_Минали_Години/OLI-2-Областен кръг-2024-10 кл-probs", 
+      page: 1,
+      difficulty: 4,
+      requires_also: ["8.10", "9.7"],
+      prerequisite_review: "Преговори 8.1 (Дирихле) и 8.10 (индукция)."
+    }
+  ]
+}
+
+// Точка 5.3 в STEPS[4].points:
+{ id: "5.3",
+  tasks: [
+    { label: "ОИ 2024/11 кл, Зад 1 (Реципрочни уравнения)", 
+      pdf: "Задачи_Минали_Години/OLI-2-Областен кръг-2024-11 кл-probs", 
+      page: 1,
+      difficulty: 3,
+      requires_also: ["5.1", "5.4"],
+      prerequisite_review: "Преговори 5.3 (симетрични) и 5.1 (Виет)."
+    }
+  ]
+}
+
+// Точка 1.6 в STEPS[0].points:
+{ id: "1.6",
+  tasks: [
+    { label: "ОИ 2024/11 кл, Зад 2 (Вписан трапец)", 
+      pdf: "Задачи_Минали_Години/OLI-2-Областен кръг-2024-11 кл-probs", 
+      page: 1,
+      difficulty: 3,
+      requires_also: ["1.5", "1.7"],
+      prerequisite_review: "Преговори 1.6 (синусова теорема) и 1.7 (лице)."
+    }
+  ]
+}
+
+// Точка 3.1 в STEPS[2].points:
+{ id: "3.1",
+  tasks: [
+    { label: "ОИ 2024/11 кл, Зад 3 (Делители и квадрати)", 
+      pdf: "Задачи_Минали_Години/OLI-2-Областен кръг-2024-11 кл-probs", 
+      page: 1,
+      difficulty: 4,
+      requires_also: ["4.4", "4.1"],
+      prerequisite_review: "Преговори 3.1 (делимост) и 4.4 (точни квадрати)."
+    }
+  ]
+}
+
+// Точка 8.3 в STEPS[7].points:
+{ id: "8.3",
+  tasks: [
+    { label: "ОИ 2024/11 кл, Зад 4 (Двойно броене)", 
+      pdf: "Задачи_Минали_Години/OLI-2-Областен кръг-2024-11 кл-probs", 
+      page: 1,
+      difficulty: 3,
+      requires_also: ["8.1", "6.1"],
+      prerequisite_review: "Преговори 8.3 (двойно броене) и 6.1 (AM-GM)."
+    }
+  ]
+}
+```
+
+### Част 5: KNOWLEDGE PROFILE ЗА ГОДИНАТА
+
+```js
+// ─── KNOWLEDGE PROFILE: 2024 ───
+{
+  year: 2024,
+  total_problems_analyzed: 8,
+  most_used_points: [
+    { point_id: "1.5", count: 2, examples: [10.2, 11.2] },
+    { point_id: "1.6", count: 2, examples: [10.2, 11.2] },
+    { point_id: "4.2", count: 1, examples: [10.3] },
+    { point_id: "4.4", count: 2, examples: [10.3, 11.3] },
+    { point_id: "8.1", count: 2, examples: [10.4, 11.4] },
+    { point_id: "8.3", count: 1, examples: [11.4] },
+    { point_id: "5.3", count: 1, examples: [11.1] },
+    { point_id: "3.1", count: 1, examples: [11.3] }
+  ],
+  techniques_used: [
+    "Прогресии", "Вписани ъгли", "Питагорови тройки", "Суми на квадрати",
+    "Принцип на Дирихле", "Индукция", "Двойно броене", "AM-GM",
+    "Реципрочни уравнения", "Синусова теорема", "Делители"
+  ],
+  gaps_identified: [
+    { 
+      technique: "Квадратични форми и суми на квадрати", 
+      appeared_in: ["10 кл зад 3"], 
+      recommendation: "Добави нова точка 4.9 'Суми на квадрати и квадратични форми'" 
+    },
+    { 
+      technique: "Реципрочни уравнения", 
+      appeared_in: ["11 кл зад 1"], 
+      recommendation: "Добави като подточка в 5.3 или нова точка 5.9 'Реципрочни уравнения'" 
+    }
+  ],
+  study_priority: [
+    "1.5/1.6 — Вписани ъгли и тригонометрия (2 задачи)",
+    "4.2/4.4 — Питагорови тройки и точни квадрати (2 задачи)",
+    "8.1/8.3 — Дирихле и двойно броене (2 задачи)",
+    "5.3 — Симетрични/реципрочни полиноми (1 задача)",
+    "3.1 — Делители (1 задача)"
+  ],
+  summary: "2024 доминира геометрия с вписани ъгли и тригонометрия. Има major gap при квадратични форми (суми на квадрати), както и minor gap при реципрочни уравнения."
+}
+```
+
+### Част 6: RECOMMENDED CHANGES
+
+```markdown
+### RECOMMENDED CHANGES TO index.html
+
+**В STEPS:**
+- [ ] Добави `10.27` в Step 10 (архив 2024 – 10 клас)
+- [ ] Добави `10.28` в Step 10 (архив 2024 – 11 клас)
+- [ ] Актуализирай точка `7.6` с нова задача от 2024/10
+- [ ] Актуализирай точка `1.5` с нова задача от 2024/10
+- [ ] Актуализирай точка `4.2` с нова задача от 2024/10
+- [ ] Актуализирай точка `8.1` с нова задача от 2024/10
+- [ ] Актуализирай точка `5.3` с нова задача от 2024/11
+- [ ] Актуализирай точка `1.6` с нова задача от 2024/11
+- [ ] Актуализирай точка `3.1` с нова задача от 2024/11
+- [ ] Актуализирай точка `8.3` с нова задача от 2024/11
+
+**В PLAN_PHASES:**
+- [ ] Добави симулация с 2024/11 кл задачи в подходяща седмица (Фаза 3 или 4)
+- [ ] Включи 10.3 (квадратични форми) в седмицата за ТЧ напреднали
+
+**Нови точки/стъпки:**
+- [ ] **Major gap:** Добави нова точка `4.9` – „Суми на квадрати и квадратични форми“ (Step 4)
+- [ ] **Minor gap:** Добави подточка в `5.3` или нова точка `5.9` – „Реципрочни уравнения“ (Step 5)
+
+**Друго:**
+- [ ] Идентифицирани gaps: квадратични форми (major), реципрочни уравнения (minor)
+- [ ] Обнови Knowledge Profile за 2024 в `all_analyses.md`
+```

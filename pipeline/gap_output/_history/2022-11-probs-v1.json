@@ -1,0 +1,164 @@
+{
+  "_meta": {
+    "pdf": "C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\Задачи_Минали_Години\\Областен\\OLI-2-Областен кръг-2022-11 кл-probs.pdf",
+    "paired_with": "C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\Задачи_Минали_Години\\Областен\\OLI-2-Областен кръг-2022-11 кл-sol.pdf",
+    "level": 1,
+    "type": "probs",
+    "analyzed_at": "2026-10-16T21:33:02.928616",
+    "model": "deepseek/deepseek-v3.2",
+    "text_length": 8744,
+    "paired_text_length": 6545
+  },
+  "problems": [
+    {
+      "num": 1,
+      "topic": "number_theory",
+      "theorems": [],
+      "techniques": [
+        "pigeonhole_principle",
+        "contradiction",
+        "case_analysis"
+      ],
+      "concepts": [
+        "subnumbers_of_a_digit_string",
+        "rich_numbers",
+        "combinatorial_properties_of_sequences"
+      ],
+      "difficulty": "olympic",
+      "notes": "Задача за т.нар. 'богати' числа, които съдържат всички 4-цифрени числа с цифри 1 и 2 като подчисла. Доказателството използва принципа на Дирихле и разсъждение с индекси."
+    },
+    {
+      "num": 2,
+      "topic": "algebra",
+      "theorems": [],
+      "techniques": [
+        "inequality_manipulation",
+        "case_analysis",
+        "substitution"
+      ],
+      "concepts": [
+        "rational_inequalities",
+        "domain_of_definition"
+      ],
+      "difficulty": "standard",
+      "notes": "Стандартно рационално неравенство. Решава се чрез разглеждане на знака на числителя и знаменателя в интервали."
+    },
+    {
+      "num": 3,
+      "topic": "geometry",
+      "theorems": [],
+      "techniques": [
+        "trigonometric_identities",
+        "angle_chasing",
+        "law_of_sines"
+      ],
+      "concepts": [
+        "angle_bisector",
+        "trigonometry_in_triangles",
+        "right_triangles"
+      ],
+      "difficulty": "hard",
+      "notes": "Задача за намиране на ъгъл в триъгълник с дадени ъглополовящи. Решава се с тригонометрични преобразувания и свойства на синусите."
+    },
+    {
+      "num": 4,
+      "topic": "number_theory",
+      "theorems": [],
+      "techniques": [
+        "divisibility",
+        "algebraic_manipulation",
+        "factorization"
+      ],
+      "concepts": [
+        "divisibility_of_products",
+        "geometric_series_factorization",
+        "properties_of_a^n_-_1"
+      ],
+      "difficulty": "standard",
+      "notes": "Задача за делимост на произведения от вида (a^k - 1). Използва се факторизацията a^n - 1 = (a-1)(a^{n-1}+...+1) и свойства на делимост."
+    },
+    {
+      "num": 5,
+      "topic": "combinatorics",
+      "theorems": [],
+      "techniques": [
+        "double_counting",
+        "pigeonhole_principle",
+        "induction",
+        "construction"
+      ],
+      "concepts": [
+        "binary_sequences",
+        "good_sets_of_sequences",
+        "lower_and_upper_bounds",
+        "generating_all_sequences"
+      ],
+      "difficulty": "olympic",
+      "notes": "Комбинаторна задача за 'добри' множества от двоични редици. Използва се горна и долна оценка за броя елементи, двойно броене и индукция."
+    },
+    {
+      "num": 6,
+      "topic": "algebra",
+      "theorems": [],
+      "techniques": [
+        "substitution",
+        "quadratic_inequalities",
+        "back_substitution"
+      ],
+      "concepts": [
+        "exponential_inequalities",
+        "trigonometric_substitution",
+        "range_of_sine"
+      ],
+      "difficulty": "hard",
+      "notes": "Неравенство, свързано с 2^{sin x}. Решава се чрез заместване t=2^{sin x} и решаване на квадратно неравенство, след което се връща към x."
+    },
+    {
+      "num": 7,
+      "topic": "geometry",
+      "theorems": [
+        "Thales",
+        "Ceva",
+        "Menelaus"
+      ],
+      "techniques": [
+        "auxiliary_lines",
+        "parallel_lines",
+        "segment_ratios"
+      ],
+      "concepts": [
+        "triangle_cevians",
+        "ratio_segments",
+        "mass_point_geometry",
+        "similar_triangles"
+      ],
+      "difficulty": "olympic",
+      "notes": "Задача за намиране на отношения в триъгълник с медиани и пресечна точка. Решава се чрез построяване на успоредни отсечки и многократно прилагане на теоремата на Талес (или метода на масовите точки)."
+    }
+  ],
+  "unique_concepts": [
+    "subnumbers_of_a_digit_string",
+    "rich_numbers",
+    "rational_inequalities",
+    "domain_of_definition",
+    "angle_bisector",
+    "trigonometry_in_triangles",
+    "divisibility_of_products",
+    "geometric_series_factorization",
+    "properties_of_a^n_-_1",
+    "binary_sequences",
+    "good_sets_of_sequences",
+    "lower_and_upper_bounds",
+    "exponential_inequalities",
+    "trigonometric_substitution",
+    "triangle_cevians",
+    "ratio_segments",
+    "mass_point_geometry",
+    "pigeonhole_principle",
+    "double_counting",
+    "Thales_theorem",
+    "Ceva_theorem",
+    "Menelaus_theorem"
+  ],
+  "confidence": 0.95
+}

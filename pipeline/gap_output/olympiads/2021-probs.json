@@ -1,0 +1,184 @@
+{
+  "_meta": {
+    "pdf": "C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\Задачи_Минали_Години\\Национален\\OLI-3-Национален кръг-2021-9-12 кл-probs.pdf",
+    "paired_with": "C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\Задачи_Минали_Години\\Национален\\OLI-3-Национален кръг-2021-9-12 кл-sol.pdf",
+    "level": 2,
+    "type": "probs",
+    "analyzed_at": "2026-10-16T21:03:55.144640",
+    "model": "deepseek/deepseek-v3.2",
+    "text_length": 16837,
+    "paired_text_length": 13620
+  },
+  "problems": [
+    {
+      "num": 1,
+      "topic": "combinatorics",
+      "theorems": [],
+      "techniques": [
+        "counting",
+        "double_counting",
+        "induction",
+        "case_analysis"
+      ],
+      "concepts": [
+        "graph_theory_grid",
+        "vertices_and_edges_count",
+        "degree_of_vertex",
+        "handshaking_lemma",
+        "coloring",
+        "graph_construction"
+      ],
+      "difficulty": "olympic",
+      "notes": "Задача за мрежа от квадратчета и кръгчета. Използва се броене на ръбове и върхове, индукция и специално покритие."
+    },
+    {
+      "num": 2,
+      "topic": "geometry",
+      "theorems": [
+        "similar_triangles",
+        "power_of_a_point",
+        "trigonometry"
+      ],
+      "techniques": [
+        "angle_chasing",
+        "proportional_segments",
+        "trigonometric_identities"
+      ],
+      "concepts": [
+        "circumcircle",
+        "right_triangle",
+        "perpendicular_lines",
+        "angle_bisector",
+        "symmetry",
+        "tangent",
+        "chord"
+      ],
+      "difficulty": "olympic",
+      "notes": "Сложна геометрична задача с окръжности, перпендикуляри и подобни триъгълници. Използва се ъглово преследване и пропорции."
+    },
+    {
+      "num": 3,
+      "topic": "algebra",
+      "theorems": [],
+      "techniques": [
+        "substitution",
+        "contradiction",
+        "induction",
+        "functional_equation",
+        "case_analysis"
+      ],
+      "concepts": [
+        "functional_equations",
+        "injective_property",
+        "constant_function",
+        "reciprocal_function",
+        "inequalities"
+      ],
+      "difficulty": "olympic",
+      "notes": "Функционално уравнение. Решенията са f(x)=1 и f(x)=1/x. Използва се специално заместване и индукция."
+    },
+    {
+      "num": 4,
+      "topic": "number_theory",
+      "theorems": [],
+      "techniques": [
+        "arithmetic_progressions",
+        "divisibility",
+        "infinite_descent",
+        "parameterization"
+      ],
+      "concepts": [
+        "infinite_sequences",
+        "common_difference",
+        "linear_relations",
+        "gcd",
+        "diophantine_equation"
+      ],
+      "difficulty": "olympic",
+      "notes": "Задача за две безкрайни аритметични прогресии и делимост. Използва се параметризация и свойства на прогресиите."
+    },
+    {
+      "num": 5,
+      "topic": "combinatorics",
+      "theorems": [
+        "pigeonhole_principle"
+      ],
+      "techniques": [
+        "averaging",
+        "coordinate_method",
+        "construction"
+      ],
+      "concepts": [
+        "centers_of_mass",
+        "vector_sum",
+        "ordering",
+        "existence_proof"
+      ],
+      "difficulty": "olympic",
+      "notes": "Задача за центрове на тежестта на подмножества. Използва се принцип на Дирихле и координатен метод."
+    },
+    {
+      "num": 6,
+      "topic": "geometry",
+      "theorems": [
+        "similar_triangles",
+        "power_of_a_point",
+        "cyclic_quadrilateral",
+        "harmonic_quadrilateral"
+      ],
+      "techniques": [
+        "angle_chasing",
+        "symmetry",
+        "proportional_segments",
+        "circle_properties"
+      ],
+      "concepts": [
+        "incircle",
+        "circumcircle",
+        "angle_bisector",
+        "midpoint",
+        "tangent_chord_angle",
+        "symmedian",
+        "harmonic_division"
+      ],
+      "difficulty": "olympic",
+      "notes": "Сложна геометрична задача с вписани и описани окръжности, хармонични четириъгълници и симедиани."
+    }
+  ],
+  "unique_concepts": [
+    "graph_theory_grid",
+    "double_counting",
+    "functional_equations",
+    "arithmetic_progressions_divisibility",
+    "centers_of_mass_vector_sum",
+    "cyclic_quadrilateral",
+    "harmonic_quadrilateral",
+    "power_of_a_point",
+    "similar_triangles",
+    "angle_chasing",
+    "induction",
+    "pigeonhole_principle",
+    "substitution",
+    "contradiction",
+    "trigonometry",
+    "infinite_sequences",
+    "coloring",
+    "proportional_segments",
+    "injective_property",
+    "constant_function",
+    "reciprocal_function",
+    "common_difference",
+    "gcd",
+    "diophantine_equation",
+    "averaging",
+    "coordinate_method",
+    "incircle",
+    "circumcircle",
+    "angle_bisector",
+    "midpoint",
+    "tangent_chord_angle",
+    "symmedian",
+    "harmonic_division"
+  ],
+  "confidence": 0.9
+}

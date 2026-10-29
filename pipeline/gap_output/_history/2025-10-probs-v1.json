@@ -1,0 +1,139 @@
+{
+  "_meta": {
+    "pdf": "C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\Задачи_Минали_Години\\Областен\\OLI-2-Областен кръг-2025-10 кл-probs (1).pdf",
+    "paired_with": "C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\Задачи_Минали_Години\\Областен\\OLI-2-Областен кръг-2025-10 кл-sol (1).pdf",
+    "level": 1,
+    "type": "probs",
+    "analyzed_at": "2026-10-16T21:40:51.527964",
+    "model": "deepseek/deepseek-v3.2",
+    "text_length": 6746,
+    "paired_text_length": 0
+  },
+  "problems": [
+    {
+      "num": 1,
+      "topic": "algebra",
+      "theorems": [],
+      "techniques": [
+        "substitution",
+        "squaring",
+        "root analysis",
+        "polynomial factorization"
+      ],
+      "concepts": [
+        "irrational equations",
+        "domain of equation",
+        "quadratic equations",
+        "Vieta's formulas",
+        "system of equations"
+      ],
+      "difficulty": "standard",
+      "notes": "Standard irrational equation. Need to consider domain (square root non-negative) and square both sides. After squaring, get polynomial equation, then factor or solve. For each parameter a, find real solutions."
+    },
+    {
+      "num": 2,
+      "topic": "geometry",
+      "theorems": [
+        "Menelaus",
+        "Ceva",
+        "Power of a point",
+        "Radical axis"
+      ],
+      "techniques": [
+        "vector geometry",
+        "coordinate geometry",
+        "angle chasing",
+        "radical center"
+      ],
+      "concepts": [
+        "cyclic quadrilateral",
+        "circumcircle",
+        "midpoint",
+        "perpendicular lines",
+        "intersection of lines",
+        "collinearity",
+        "concurrency",
+        "radical axis theorem",
+        "orthocenter",
+        "circumcenter"
+      ],
+      "difficulty": "hard",
+      "notes": "Complex geometry problem. Need to show E is circumcenter of triangle FXY. Likely uses radical axis properties (circles with diameters EX, EY, EF). Condition EF perpendicular to MN suggests MN is radical axis of some circles. Then E has equal power to points X, Y, F, so equidistant. Alternatively, use coordinate geometry with vectors."
+    },
+    {
+      "num": 3,
+      "topic": "combinatorics",
+      "theorems": [],
+      "techniques": [
+        "pigeonhole principle",
+        "extremal principle",
+        "pairing",
+        "parity"
+      ],
+      "concepts": [
+        "tournament scheduling",
+        "graph theory (matches as edges)",
+        "pigeonhole principle application",
+        "minimum number of cards",
+        "covering numbers"
+      ],
+      "difficulty": "olympic",
+      "notes": "Combinatorial problem about minimal number k of cards to record all match outcomes. Each card has two sides, can write two numbers (players). Need to assign numbers 1..2025 to cards so that for every pair (i,j) there is a card where i and j are on opposite sides. Equivalent to edge coloring or covering complete graph K_2025 with books of size 2? Actually each card is like a page with two sides, so can record two matches if numbers are on opposite sides. Need to cover all edges of complete graph with such 'books'. Minimum k is ceil(log2(2025))? Or related to pairing. Possibly uses pigeonhole: each card can cover at most 2 matches? Wait, each card has two sides, each side can hold one number, so a card can represent at most one match (two numbers). So need at least total matches = C(2025,2) cards, but that's too big. Actually problem says: on one side write numbers from match (ordered by Adelin's list), on other side write numbers from Boris's list. So each card corresponds to one match, but the two sides have same two numbers but ordered differently? Not clear. Need careful interpretation. Likely uses pigeonhole to find minimal k such that any arrangement of k cards can be placed to show all numbers. Might be about representing all numbers on at least one side of some card. This is a covering problem."
+    },
+    {
+      "num": 4,
+      "topic": "number_theory",
+      "theorems": [
+        "Fermat's little theorem",
+        "Euler's theorem",
+        "Chinese remainder theorem"
+      ],
+      "techniques": [
+        "modular arithmetic",
+        "contradiction",
+        "infinite descent",
+        "prime factorization"
+      ],
+      "concepts": [
+        "prime numbers",
+        "divisibility",
+        "modular congruences",
+        "exponential diophantine equations",
+        "gcd properties",
+        "order of an element modulo prime"
+      ],
+      "difficulty": "olympic",
+      "notes": "Number theory problem: set T of primes such that for any p in T, there exist natural numbers m,n with p dividing 3^m - 2 and 2^n - 3. Ask if T is finite or infinite. Likely uses Zsigmondy's theorem or Catalan conjecture? Actually need to show there are infinitely many primes dividing some 3^m - 2 and also some 2^n - 3. Possibly use Dirichlet's theorem? Or construct infinite sequence. Might be hard: show T is infinite by constructing primes of form? Possibly use order of 3 modulo p and order of 2 modulo p."
+    }
+  ],
+  "unique_concepts": [
+    "irrational equations",
+    "domain of equation",
+    "polynomial factorization",
+    "Vieta's formulas",
+    "cyclic quadrilateral",
+    "circumcircle",
+    "midpoint",
+    "perpendicular lines",
+    "radical axis theorem",
+    "power of a point",
+    "Menelaus theorem",
+    "Ceva theorem",
+    "vector geometry",
+    "coordinate geometry",
+    "pigeonhole principle",
+    "extremal principle",
+    "tournament scheduling",
+    "graph theory",
+    "covering problem",
+    "prime numbers",
+    "divisibility",
+    "modular arithmetic",
+    "exponential diophantine equations",
+    "order of an element modulo prime",
+    "Fermat's little theorem",
+    "Euler's theorem",
+    "Chinese remainder theorem"
+  ],
+  "confidence": 0.85
+}

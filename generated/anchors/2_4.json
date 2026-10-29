@@ -1,0 +1,49 @@
+{
+  "point_id": "2.4",
+  "total": 3,
+  "by_difficulty": {
+    "easy": 0,
+    "medium": 3,
+    "hard": 0
+  },
+  "problems": [
+    {
+      "source": "OLI-2-Областен кръг-1997-10 кл · 1997-10 · Зад. 5",
+      "statement": "Two squares K₁ and K₂ with centres M and N and sides of length 1 are placed in the plane in a way that MN = 4, two of the sides of K₁ are parallel to MN and one of the diagonals of K₂ lies on the line MN. Find the locus of midpoints of segments XY where X is an interior point for K₁ and Y is an interior point for K₂.",
+      "solution": "Solution: The locus is the interior of a regular hexagon centred at the midpoint of the segment $MN$ and with a side length of $\\frac{1}{2}$.\n\nTo prove this, proceed as follows.\n\nFix the point $Y$ in the interior of $K_2$. When $X$ varies in the interior of $K_1$ the locus of the midpoints of $XY$ is a square $K_1'$ which is homothetic to $K_1$ by homothecy with centre $Y$ and coefficient $\\frac{1}{2}$.\n\nObviously the side of this square is $\\frac{1}{2}$ and its centre is the midpoint of $MY$. When $Y$ varies in the interior of $K_2$ then the locus of the midpoints of $MY$ is a square $K_2'$ which is homothetic to $K_2$ by homothecy with centre $M$ and coefficient $\\frac{1}{2}$. The side of this square equals $\\frac{1}{2}$ and its centre $Q$ is the midpoint of $MN$. Finally, when the centres of $K_1'$ vary in the interior of $K_2'$, the squares vary in the interior of a regular hexagon centred at $Q$ and with a side length of $\\frac{1}{2}$.",
+      "answer": "The interior of a regular hexagon centred at the midpoint of $MN$ and with a side length of $\\frac{1}{2}$.",
+      "difficulty": "medium",
+      "techniques": [
+        "homothety"
+      ],
+      "confidence": "exact",
+      "reasoning": "Applies homothety (scale ½) from interior points of each square; the moving centres trace a regular hexagon."
+    },
+    {
+      "source": "OLI-2-Областен кръг-1997-11 кл · 1997-11 · Зад. 5",
+      "statement": "Two squares K₁ and K₂ with centres M and N and sides of length 1 are placed in the plane in a way that MN = 4, two of the sides of K₁ are parallel to MN and one of the diagonals of K₂ lies on the line MN. Find the locus of midpoints of segments XY where X is an interior point for K₁ and Y is an interior point for K₂.",
+      "solution": "Solution: The locus is the interior of a regular hexagon centred at the midpoint of the segment $MN$ and with a side length of $\\frac{1}{2}$.\n\nTo prove this, proceed as follows.\n\nFix the point $Y$ in the interior of $K_2$. When $X$ varies in the interior of $K_1$ the locus of the midpoints of $XY$ is a square $K_1'$ which is homothetic to $K_1$ by homothecy with centre $Y$ and coefficient $\\frac{1}{2}$.\n\nObviously the side of this square is $\\frac{1}{2}$ and its centre is the midpoint of $MY$. When $Y$ varies in the interior of $K_2$ then the locus of the midpoints of $MY$ is a square $K_2'$ which is homothetic to $K_2$ by homothecy with centre $M$ and coefficient $\\frac{1}{2}$. The side of this square equals $\\frac{1}{2}$ and its centre $Q$ is the midpoint of $MN$. Finally, when the centres of $K_1'$ vary in the interior of $K_2'$, the squares vary in the interior of a regular hexagon centred at $Q$ and with a side length of $\\frac{1}{2}$.",
+      "answer": "The interior of a regular hexagon centred at the midpoint of $MN$ and with a side length of $\\frac{1}{2}$.",
+      "difficulty": "medium",
+      "techniques": [
+        "spiral_similarity"
+      ],
+      "confidence": "exact",
+      "reasoning": "Uses homotheties (spiral similarity) of the two squares to obtain a regular hexagon as the locus."
+    },
+    {
+      "source": "OLI-3-Национален кръг-1986-9-12 кл · 1986-None · Зад. 5",
+      "statement": "Дадени са окръжност k и точка A, която не лежи на k. Нека B е произволна точка от k, а M е такава точка, че AM : AB = m и ∠BAM = α, където m и α са дадени. Да се намери множеството, което описва точката M, когато B описва окръжността k.",
+      "solution": "Решение. Преди всичко ще отбележим, че за всяка точка B ∈ k в равнината съществуват точно две точки M₁, M₂, за които AMᵢ : AB = m и ∠BAMᵢ = α (i = 1, 2). Нека r₁(A, α) и r₂(A, −α) са съответно ротациите с център A на ъгли α и −α, а h(A, m) е хомотетията с център A и коефициент m. От условието следва, че изображението h ◦ r₁ преобразува точката B в едната от точките M₁ и M₂. Нека например B ⟶ M₁ при h ◦ r₁. Тогава B ⟶ M₂ при h ◦ r₂, следователно търсеното множество съвпада с обединението на образите на k при h ◦ r₁ и h ◦ r₂. Но r₁ и r₂ са еднаквости, а h — подобност, така че h ◦ r₁ и h ◦ r₂ са подобности. Тъй като всяка подобност преобразува окръжност в окръжност, търсеното множество се състои от точките на окръжностите k₁ = (h ◦ r₁)(k) и k₂ = (h ◦ r₂)(k). Очевидно k₁ и k₂ имат радиус с дължина mR и центрове съответно (h ◦ r₁)(O) и (h ◦ r₂)(O), където O и R са съответно центърът и радиусът на k.",
+      "answer": "Обединението на окръжностите k₁ = (h ◦ r₁)(k) и k₂ = (h ◦ r₂)(k), с радиус mR и центрове съответно (h ◦ r₁)(O) и (h ◦ r₂)(O), където r₁ и r₂ са ротации около A на ъгли α и −α, а h е хомотетия с център A и коефициент m.",
+      "difficulty": "medium",
+      "techniques": [
+        "spiral_similarity",
+        "rotation",
+        "homothety"
+      ],
+      "confidence": "exact",
+      "reasoning": "Локусът се получава като образ на окръжността k при композиция от ротация около A и хомотетия с коефициент m – спирално подобие."
+    }
+  ]
+}

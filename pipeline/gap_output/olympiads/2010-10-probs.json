@@ -1,0 +1,100 @@
+{
+  "_meta": {
+    "pdf": "C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\Задачи_Минали_Години\\Областен\\OLI-2-Областен кръг-2010-10 кл-probs.pdf",
+    "paired_with": "C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\Задачи_Минали_Години\\Областен\\OLI-2-Областен кръг-2010-10 кл-sol.pdf",
+    "level": 1,
+    "type": "probs",
+    "analyzed_at": "2026-10-18T12:51:56.831933",
+    "model": "deepseek/deepseek-v3.2",
+    "text_length": 776,
+    "paired_text_length": 9425
+  },
+  "problems": [
+    {
+      "num": 1,
+      "topic": "algebra",
+      "theorems": [],
+      "techniques": [
+        "substitution",
+        "exponential_equation_manipulation",
+        "case_analysis"
+      ],
+      "concepts": [
+        "exponential_equations",
+        "logarithms",
+        "factoring",
+        "zero_exponent_rule"
+      ],
+      "difficulty": "standard",
+      "notes": "Уравнението се свежда до 2^(x²−1) * 10^(x²+x) = 1, след това до (2^(x−1) * 10^x)^(x+1) = 1. Разглеждат се случаите: основата е 1 или показателят е 0."
+    },
+    {
+      "num": 2,
+      "topic": "geometry",
+      "theorems": [
+        "Law_of_Sines",
+        "Law_of_Cosines"
+      ],
+      "techniques": [
+        "trigonometric_manipulation",
+        "notation_introduction"
+      ],
+      "concepts": [
+        "excircle",
+        "tangent_segments",
+        "angle_chasing",
+        "triangle_side_notation",
+        "angle_bisector_property"
+      ],
+      "difficulty": "hard",
+      "notes": "Използва се стандартна нотация за триъгълник ABC. Въвежда се ъгъл φ = ∠CDA. Чрез синусова и косинусова теореми се изразяват страни и се намира отношението AD:BD."
+    },
+    {
+      "num": 3,
+      "topic": "combinatorics",
+      "theorems": [],
+      "techniques": [
+        "construction",
+        "optimization",
+        "symmetry",
+        "similar_triangles"
+      ],
+      "concepts": [
+        "intersection_of_line_segments",
+        "collinearity",
+        "parallel_lines",
+        "projective_geometry",
+        "minimization"
+      ],
+      "difficulty": "olympic",
+      "notes": "Задача за минимален брой пресечни точки при специално подреждане на точките на две успоредни прави. Решението използва построение със златно сечение (отношение x:y = (1+√5)/2) за да постигне минималния брой 31 пресечни точки."
+    }
+  ],
+  "unique_concepts": [
+    "exponential_equations",
+    "logarithms",
+    "factoring",
+    "zero_exponent_rule",
+    "Law_of_Sines",
+    "Law_of_Cosines",
+    "excircle",
+    "tangent_segments",
+    "angle_chasing",
+    "triangle_side_notation",
+    "angle_bisector_property",
+    "intersection_of_line_segments",
+    "collinearity",
+    "parallel_lines",
+    "projective_geometry",
+    "minimization",
+    "construction",
+    "optimization",
+    "symmetry",
+    "similar_triangles",
+    "substitution",
+    "case_analysis",
+    "trigonometric_manipulation",
+    "notation_introduction"
+  ],
+  "confidence": 0.95
+}

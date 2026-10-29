@@ -1,0 +1,169 @@
+{
+  "_meta": {
+    "pdf": "C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\Задачи_Минали_Години\\Национален\\OLI-3-Национален кръг-2026-9-12 кл-sol.pdf",
+    "paired_with": null,
+    "level": 2,
+    "type": "sol",
+    "analyzed_at": "2026-10-16T21:13:57.848549",
+    "model": "deepseek/deepseek-v3.2",
+    "text_length": 17317,
+    "paired_text_length": 0
+  },
+  "problems": [
+    {
+      "num": 1,
+      "topic": "combinatorics",
+      "theorems": [],
+      "techniques": [
+        "induction",
+        "pigeonhole_principle",
+        "counting"
+      ],
+      "concepts": [
+        "coin_system",
+        "greedy_representation",
+        "factorial_base",
+        "optimal_choice"
+      ],
+      "difficulty": "olympic",
+      "notes": "Classical coin problem (postage stamp problem) with a twist: the number of coins of each denomination is fixed (i for denomination a_i). The optimal choice is a_i = i!."
+    },
+    {
+      "num": 2,
+      "topic": "algebra",
+      "theorems": [],
+      "techniques": [
+        "monotonicity",
+        "inequality_manipulation",
+        "substitution"
+      ],
+      "concepts": [
+        "function_monotonicity",
+        "symmetry",
+        "product_maximization",
+        "real_numbers"
+      ],
+      "difficulty": "standard",
+      "notes": "The problem reduces to analyzing the function f(x)=(x-1)^n/x and using its monotonicity to bound ab."
+    },
+    {
+      "num": 3,
+      "topic": "number_theory",
+      "theorems": [
+        "cyclotomic_polynomials",
+        "roots_of_unity"
+      ],
+      "techniques": [
+        "polynomial_division",
+        "modular_arithmetic",
+        "evaluation_at_roots_of_unity"
+      ],
+      "concepts": [
+        "primitive_roots",
+        "polynomial_remainder",
+        "symmetric_polynomials",
+        "divisibility"
+      ],
+      "difficulty": "olympic",
+      "notes": "Two solutions: one using roots of unity and polynomial remainder, the other using a lemma on cyclotomic polynomials."
+    },
+    {
+      "num": 4,
+      "topic": "geometry",
+      "theorems": [
+        "tangent_chord_angle",
+        "inscribed_angles",
+        "power_of_a_point"
+      ],
+      "techniques": [
+        "angle_chasing",
+        "inversion",
+        "directed_angles",
+        "cyclic_quadrilaterals"
+      ],
+      "concepts": [
+        "tangent_circles",
+        "angle_bisector",
+        "parallel_lines",
+        "arc_measures",
+        "homothety"
+      ],
+      "difficulty": "hard",
+      "notes": "Multiple solutions: angle chasing with auxiliary points, arc manipulation, and inversion. The condition is equivalent to AF being the angle bisector of ∠DFE."
+    },
+    {
+      "num": 5,
+      "topic": "combinatorics",
+      "theorems": [
+        "pigeonhole_principle",
+        "divergence_of_harmonic_series"
+      ],
+      "techniques": [
+        "counting_products",
+        "summation_estimates",
+        "double_counting"
+      ],
+      "concepts": [
+        "bounded_differences",
+        "infinite_sequences",
+        "product_representation",
+        "density_arguments"
+      ],
+      "difficulty": "hard",
+      "notes": "Two solutions: one using product counting and pigeonhole principle with large M, the other using set intersections and divergence of harmonic series to force a coincidence."
+    },
+    {
+      "num": 6,
+      "topic": "combinatorics",
+      "theorems": [],
+      "techniques": [
+        "graph_coloring",
+        "binary_representation",
+        "xor_operation",
+        "induction"
+      ],
+      "concepts": [
+        "hypercube_graph",
+        "edge_labeling",
+        "incoming_outgoing_conditions",
+        "bitwise_operations",
+        "degree_arguments"
+      ],
+      "difficulty": "olympic",
+      "notes": "Problem reduces to edge-coloring the n-dimensional hypercube graph with conditions on incoming/outgoing edges. The answer is n must be a power of 2. Uses XOR-based construction."
+    }
+  ],
+  "unique_concepts": [
+    "coin_system",
+    "factorial_base",
+    "function_monotonicity",
+    "cyclotomic_polynomials",
+    "roots_of_unity",
+    "polynomial_remainder",
+    "tangent_circles",
+    "angle_bisector",
+    "inversion",
+    "bounded_differences",
+    "product_representation",
+    "pigeonhole_principle",
+    "harmonic_series_divergence",
+    "hypercube_graph",
+    "graph_coloring",
+    "xor_operation",
+    "bitwise_operations",
+    "induction",
+    "counting",
+    "angle_chasing",
+    "modular_arithmetic",
+    "symmetric_polynomials",
+    "parallel_lines",
+    "cyclic_quadrilaterals",
+    "power_of_a_point",
+    "directed_angles",
+    "double_counting",
+    "density_arguments",
+    "edge_labeling",
+    "degree_arguments"
+  ],
+  "confidence": 0.95
+}

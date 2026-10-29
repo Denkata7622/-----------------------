@@ -1,0 +1,54 @@
+{
+  "pdf": "OLI-3-Национален кръг-1999-9-12 кл",
+  "problems": [
+    {
+      "num": 1,
+      "grade": null,
+      "year": 1999,
+      "round": "nacionalen",
+      "statement": "The faces of an orthogonal parallelepiped whose dimensions are natural numbers are painted green. The parallelepiped is partitioned into unit cubes by planes parallel to its faces. Find the dimensions of the parallelepiped if the number of cubes having no green face is one third of the total number of cubes.",
+      "solution": "Solution: Let $x \\leq y \\leq z$ be the dimensions of the parallelepiped. It follows from the conditions of the problem that $x \\geq 3$ and $(x - 2)(y - 2)(z - 2) = \\frac{xyz}{3}$. Since $\\frac{x - 2}{x} \\leq \\frac{y - 2}{y} \\leq \\frac{z - 2}{z}$, when $x \\geq 7$, we obtain that $\\frac{(x - 2)(y - 2)(z - 2)}{xyz} \\geq (\\frac{5}{7})^3 > \\frac{1}{3}$. Therefore $x \\leq 6$ and thus $x = 3$, $x = 4$, $x = 5$ or $x = 6$.\n\n1. If $x = 3$, then $(y - 2)(z - 2) = yz$, which is impossible.\n2. If $x = 4$, then $2(y - 2)(z - 2) = \\frac{4yz}{3}$, so $(y - 6)(z - 6) = 24$. In this case the only solutions are $(4, 7, 30)$, $(4, 8, 18)$, $(4, 9, 14)$ and $(4, 10, 12)$.\n3. If $x = 5$, then $3(y - 2)(z - 2) = \\frac{5yz}{3}$, so $(2y - 9)(2z - 9) = 45$. Therefore the solutions are $(5, 5, 27)$, $(5, 6, 12)$ and $(5, 7, 9)$.\n4. If $x = 6$, then $4(y - 2)(z - 2) = 2yz$, so $(y - 4)(z - 4) = 8$. Thus there is an unique solution $(6, 6, 8)$.\n\nAnswer: The problem has 8 solutions—$(4, 7, 30)$, $(4, 8, 18)$, $(4, 9, 14)$, $(4, 10, 12)$, $(5, 5, 27)$, $(5, 6, 12)$, $(5, 7, 9)$ and $(6, 6, 8)$.",
+      "answer": "$(4, 7, 30)$, $(4, 8, 18)$, $(4, 9, 14)$, $(4, 10, 12)$, $(5, 5, 27)$, $(5, 6, 12)$, $(5, 7, 9)$ and $(6, 6, 8)$.",
+      "page": 1,
+      "source": "OLI-3-Национален кръг-1999-9-12 кл · 1999-? · Зад. 1",
+      "point_id": null,
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": "medium",
+      "techniques": [
+        "counting",
+        "diophantine"
+      ],
+      "reasoning": "Solution matches the parallelepiped problem",
+      "_paired": true,
+      "_grade_source": "grade_range",
+      "grade_range": [
+        9,
+        12
+      ]
+    },
+    {
+      "num": 2,
+      "grade": null,
+      "year": 1999,
+      "round": "nacionalen",
+      "statement": "Let $\\{a_n\\}_{n=1}^{\\infty}$ be a sequence of integer numbers such that\n\n$$(n-1)a_{n+1} = (n+1)a_n - 2(n-1)$$\n\nfor any $n \\geq 1$. If 2000 divides $a_{1999}$, find the smallest $n \\geq 2$ such that 2000 divides $a_n$.",
+      "solution": "Solution: It is obvious that $a_1 = 0$ and $a_{n+1} = \\frac{n + 1}{n - 1}a_n - 2$ when $n \\geq 2$. Therefore the sequence is uniquely determined by its second term. Furthermore the sequence $a_n = (n - 1)(cn + 2)$ (where $c = \\frac{a_2}{2} - 1$ is an arbitrary real number) satisfies the equality from the conditions of the problem. We conclude now that all sequences which satisfy this equality are of the kind given above. Since all terms are integer numbers and 2000 divides $a_{1999}$, it is easy to see that $c$ is integer and $c = 1000m + 2$. Therefore 2000 divides $a_n$ if and only if 1000 divides $(n-1)(n+1)$. Thus $n = 2k+1$ and $k(k+1)$ is divisible by $250 = 5^3 \\cdot 2$. Since $k$ and $k+1$ are relatively prime, we get that the smallest $n \\geq 2$ equals $2 \\cdot 124 + 1 = 249$.",
+      "answer": "$n = 249$.",
+      "page": 1,
+      "source": "OLI-3-Национален кръг-1999-9-12 кл · 1999-? · Зад. 2",
+      "point_id": null,
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": null,
+      "techniques": [],
+      "reasoning": null,
+      "_paired": true,
+      "_grade_source": "grade_range",
+      "grade_range": [
+        9,
+        12
+      ]
+    }
+  ]
+}

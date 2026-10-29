@@ -1,0 +1,126 @@
+{
+  "_meta": {
+    "pdf": "C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\Материали_БГ\\NOM_2010.pdf",
+    "paired_with": null,
+    "level": 2,
+    "type": "combined",
+    "analyzed_at": "2026-10-16T21:49:39.392371",
+    "model": "deepseek/deepseek-v3.2",
+    "text_length": 154038,
+    "paired_text_length": 0
+  },
+  "problems": [
+    {
+      "num": 1,
+      "topic": "algebra",
+      "theorems": [],
+      "techniques": [
+        "polynomial interpolation",
+        "extreme value analysis",
+        "inequality manipulation"
+      ],
+      "concepts": [
+        "quadratic polynomials",
+        "inequalities on intervals",
+        "evaluation at specific points"
+      ],
+      "difficulty": "standard",
+      "notes": "Classical problem bounding a quadratic on [-1,1] given its values at -1,0,1."
+    },
+    {
+      "num": 2,
+      "topic": "combinatorics",
+      "theorems": [],
+      "techniques": [
+        "double counting",
+        "graph theory modeling",
+        "pigeonhole principle"
+      ],
+      "concepts": [
+        "grid adjacency",
+        "counting neighbors",
+        "upper bounds"
+      ],
+      "difficulty": "standard",
+      "notes": "Combinatorial problem on a 50x50 grid with adjacency conditions."
+    },
+    {
+      "num": 3,
+      "topic": "geometry",
+      "theorems": [
+        "Angle Bisector Theorem",
+        "cyclic quadrilaterals"
+      ],
+      "techniques": [
+        "angle chasing",
+        "directed angles"
+      ],
+      "concepts": [
+        "angle bisector",
+        "circumcircle",
+        "oriented angles"
+      ],
+      "difficulty": "standard",
+      "notes": "Geometry problem involving angle bisector and circumcircle."
+    },
+    {
+      "num": 4,
+      "topic": "combinatorics",
+      "theorems": [],
+      "techniques": [
+        "invariants",
+        "parity argument"
+      ],
+      "concepts": [
+        "grid rearrangement",
+        "parity of permutations",
+        "invariant modulo 2"
+      ],
+      "difficulty": "standard",
+      "notes": "Problem about soldiers moving in a grid; parity invariant shows n is even."
+    },
+    {
+      "num": 5,
+      "topic": "number_theory",
+      "theorems": [],
+      "techniques": [
+        "divisibility arguments",
+        "ordering",
+        "inequality manipulation"
+      ],
+      "concepts": [
+        "divisibility",
+        "sequences with divisibility property",
+        "inequalities from divisibility"
+      ],
+      "difficulty": "standard",
+      "notes": "Number theory problem with divisibility condition leading to an inequality."
+    },
+    {
+      "num": 6,
+      "topic": "combinatorics",
+      "theorems": [],
+      "techniques": [
+        "invariants",
+        "graph theory",
+        "parity"
+      ],
+      "concepts": [
+        "circular arrangement",
+        "invariant modulo something",
+        "preventing concentration"
+      ],
+      "difficulty": "hard",
+      "notes": "Card swapping problem around a circle with a geometric condition (acute triangle)."
+    }
+  ],
+  "unique_concepts": [
+    "quadratic polynomial bounds",
+    "grid adjacency and double counting",
+    "angle bisector and circumcircle",
+    "parity invariants in rearrangements",
+    "divisibility and ordering",
+    "invariants in circular processes"
+  ],
+  "confidence": 0.95
+}

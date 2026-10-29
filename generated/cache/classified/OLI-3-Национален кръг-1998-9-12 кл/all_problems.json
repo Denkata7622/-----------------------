@@ -1,0 +1,158 @@
+{
+  "pdf": "OLI-3-Национален кръг-1998-9-12 кл",
+  "problems": [
+    {
+      "num": 1,
+      "grade": null,
+      "year": 1998,
+      "round": "nacionalen",
+      "statement": "Let $n$ be a natural number. Find the least natural number $k$ for which there exist $k$ sequences of 0's and 1's of length $2n + 2$ with the following property: any sequence of 0's and 1's of length $2n + 2$ coincides in at least $n + 2$ positions with some of these $k$ sequences.",
+      "solution": "Solution: We shall prove that k = 4. Assume that k ≤ 3 and let the respective sequences be a₁ⁱ, a₂ⁱ, ..., a₂ₙ₊₂ⁱ for i = 1, ..., k. Since k ≤ 3 there is a sequence b₁, b₂, ..., b₂ₙ₊₂ such that (b₂ₗ₊₁, b₂ₗ₊₂) ≠ (a₂ₗ₊₁ⁱ, a₂ₗ₊₂ⁱ) for l = 0, 1, ..., n and i = 1, ..., k. This is a contradiction. For k = 4 it is easily seen that the sequences 000 ... 0, 011 ... 1, 100 ... 0, 111 ... 1 have the required property.",
+      "answer": "k = 4",
+      "page": 1,
+      "source": "OLI-3-Национален кръг-1998-9-12 кл · 1998-? · Зад. 1",
+      "point_id": "8.1",
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": "medium",
+      "techniques": [
+        "dirichlet_principle"
+      ],
+      "reasoning": "Uses pigeon‑hole (Dirichlet) to show k≤3 impossible and constructs 4 explicit sequences.",
+      "_paired": true,
+      "_grade_source": "grade_range",
+      "grade_range": [
+        9,
+        12
+      ]
+    },
+    {
+      "num": 2,
+      "grade": null,
+      "year": 1998,
+      "round": "nacionalen",
+      "statement": "The polynomials $P_n(x, y)$, $n = 1, 2, \\ldots$ are defined by $P_1(x, y) = 1, P_{n+1}(x, y) = (x+y-1)(y+1)P_n(x, y+2) + (y-y^2)P_n(x, y)$.\n\nProve that $P_n(x, y) = P_n(y, x)$ for all $x, y$ and $n$.",
+      "solution": "Solution: We know that P₁(x, y) = 1 and P₂(x, y) = xy + x + y - 1. Assume that Pₙ₋₁(x, y) and Pₙ(x, y), (n ≥ 2) are symmetric polynomials. Then\n\n$$\\begin{array}{l} P_{n+1}(x, y) = (x+y-1)(y+1)P_n(x, y+2) + (y-y^2)P_n(x, y) \\\\ = (x+y-1)(y+1)P_n(y+2, x) + (y-y^2)P_n(y, x) \\\\ = (x+y-1)(y+1) \\left( \\begin{array}{c} (x+y+1)(x+1)P_{n-1}(y+2, x+2) \\\\ + (x-x^2)P_{n-1}(y+2, x) \\end{array} \\right) \\\\ + (y-y^2) \\left( \\begin{array}{c} (y+x-1)(x+1)P_{n-1}(y, x+2) \\\\ + (x-x^2)P_{n-1}(y, x) \\end{array} \\right) \\\\ = (x+y-1)(y+1)(x+y+1)(x+1)P_{n-1}(y+2, x+2) \\\\ + (y-y^2)(x-x^2)P_{n-1}(y, x) \\\\ + (x+y-1)(y+1)(x-x^2)P_{n-1}(y+2, x) \\\\ + (y-y^2)(x+y-1)(x+1)P_{n-1}(x+2, y). \\end{array}$$\n\nand by induction it follows that all the polynomials are symmetric.",
+      "answer": null,
+      "page": 1,
+      "source": "OLI-3-Национален кръг-1998-9-12 кл · 1998-? · Зад. 2",
+      "point_id": "5.3",
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": "medium",
+      "techniques": [
+        "symmetric_polynomials",
+        "induction"
+      ],
+      "reasoning": "Induction on n together with symmetry of the recursive definition proves P_n(x,y)=P_n(y,x).",
+      "_paired": true,
+      "_grade_source": "grade_range",
+      "grade_range": [
+        9,
+        12
+      ]
+    },
+    {
+      "num": 3,
+      "grade": null,
+      "year": 1998,
+      "round": "nacionalen",
+      "statement": "On the sides of a non-obtuse triangle $ABC$ a square, a regular $n$-gon and a regular $m$-gon ($n, m > 5$) are constructed externally, so that their centres are vertices of a regular triangle. Prove that $m = n = 6$ and find the angles of $ABC$.",
+      "solution": "Solution: Let the square, the n-gon and the m-gon be constructed on the sides AB, BC and CA, respectively. Denote their centres by O₁, O₂ and O₃; denote by A₁, B₁ and C₁ the centres of the equilateral triangles constructed externally on BC, CA and AB.\n\nThe lines $O_1C_1, O_2A_1$ and $O_3B_1$ intersect at the circumcentre $O$ of $\\triangle ABC$. Since $\\triangle A_1A_2A_3$ is equilateral, it follows straightforwardly that $\\triangle O_1O_2O_3$ is equilateral if and only if $C_1A_1||O_1O_2, A_1B_1||O_2O_3$ and $B_1C_1||O_1O_3$. This is equivalent to\n\n$$\\frac{OC_1}{C_1O_1} = \\frac{OA_1}{A_1O_2} = \\frac{OB_1}{B_1O_3} = k.$$\n\nOn the other hand,\n\n$$\\begin{array}{l} \\frac{OC_1}{C_1O_1} = \\frac{\\cot C + \\tan 30^\\circ}{\\cot 45^\\circ - \\tan 30^\\circ}, \\\\ \\frac{OA_1}{A_1O_2} = \\frac{\\cot A + \\tan 30^\\circ}{\\cot \\frac{180^\\circ}{n} - \\tan 30^\\circ}, \\\\ \\frac{OB_1}{B_1O_3} = \\frac{\\cot B + \\tan 30^\\circ}{\\cot \\frac{180^\\circ}{m} - \\tan 30^\\circ}. \\end{array}$$\n\nSet $\\cot \\frac{180^\\circ}{n} = x$ and $\\cot \\frac{180^\\circ}{m} = y$. The above identities imply that\n\n$$\\cot A = kx - \\frac{k+1}{\\sqrt{3}}, \\cot B = ky - \\frac{k+1}{\\sqrt{3}}, \\cot C = k - \\frac{k+1}{\\sqrt{3}}.$$\n\nFrom the identity $\\cot A \\cot B + \\cot B \\cot C + \\cot C \\cot A = 1$ we get\n\n$$k = \\frac{2(x+y+1-\\sqrt{3})}{\\sqrt{3}xy + (\\sqrt{3}-2)(x+y) + \\sqrt{3}-2},$$\n\n$$\\cot C = \\frac{x+y-xy+3-2\\sqrt{3}}{\\sqrt{3}xy + (\\sqrt{3}-2)(x+y) + \\sqrt{3}-2}.$$\n\nSince $m, n \\ge 6$ it follows that $x, y \\ge \\sqrt{3}$, i. e. $xy \\ge \\sqrt{3}(x+y)-3$. The inequality $\\cot C \\ge 0$ implies $x+y-xy+3-2\\sqrt{3} \\ge 0$. and therefore $x+y+3-2\\sqrt{3} \\ge xy \\ge \\sqrt{3}(x+y)-3$, i. e. $x+y \\le 2\\sqrt{3}$. This shows that $x=y=\\sqrt{3}$, i. e., $m=n=6$. Hence $\\cot C = 0$, $\\cot A = \\cot B = 1$, so $\\angle C = 90^\\circ, \\angle A = \\angle B = 45^\\circ$.",
+      "answer": "m = n = 6; ∠C = 90°, ∠A = ∠B = 45° (with the square on AB).",
+      "page": 1,
+      "source": "OLI-3-Национален кръг-1998-9-12 кл · 1998-? · Зад. 3",
+      "point_id": "2.1",
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": "hard",
+      "techniques": [
+        "harmonic_ratio",
+        "trigonometric"
+      ],
+      "reasoning": "Transforms geometric condition into ratios of distances (harmonic division) and solves via cotangent identities, leading to n=m=6.",
+      "_paired": true,
+      "_grade_source": "grade_range",
+      "grade_range": [
+        9,
+        12
+      ]
+    },
+    {
+      "num": 4,
+      "grade": null,
+      "year": 1998,
+      "round": "nacionalen",
+      "statement": "Let $a_1, a_2, \\ldots, a_n$ be real numbers, not all of them zero. Prove that the equation\n\n$$\\sqrt{1 + a_1 x} + \\sqrt{1 + a_2 x} + \\ldots + \\sqrt{1 + a_n x} = n$$\n\nhas at most one nonzero real root.",
+      "solution": "Solution: The given equation is equivalent to $x \\sum_{i=1}^n \\frac{a_i}{\\sqrt{1+a_ix}} = n$.\n\nSince the function $\\frac{a_i}{\\sqrt{1+a_ix}}$ ($a_i \\ne 0$) is strictly decreasing, it follows that this equation has at most one nonzero root.",
+      "answer": null,
+      "page": 1,
+      "source": "OLI-3-Национален кръг-1998-9-12 кл · 1998-? · Зад. 4",
+      "point_id": "7.3",
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": "easy",
+      "techniques": [
+        "monotonicity"
+      ],
+      "reasoning": "Shows each term a_i/√(1+a_i x) is strictly decreasing, so the whole sum can cross n at most once.",
+      "_paired": true,
+      "_grade_source": "grade_range",
+      "grade_range": [
+        9,
+        12
+      ]
+    },
+    {
+      "num": 5,
+      "grade": null,
+      "year": 1998,
+      "round": "nacionalen",
+      "statement": "Let $m$ and $n$ be natural numbers such that $A = ((m + 3)^n + 1)/3m$ is integer. Prove that $A$ is an odd integer number.",
+      "solution": "Solution: Assume that $A$ is an even integer number, i. e., $(m+3)^n+1 = 6km$. Then $m$ is an even integer number. Moreover $m|3^n+1$, which shows that $m=3t+2$ and $n$ is odd. Let $m=2^\\circ m_1$, where $\\alpha \\ge 1$ and $m_1$ is odd. Then $2^\\circ|3^n+1$ and therefore $\\alpha \\le 2$. Since $m_1|3^n+1$, it follows that $m_1|a^2+3$, where $a=3^{\\frac{n+1}{2}}$. It is well-known that in this case $m_1=6t_1+1$. Since $m=2^\\circ(6t_1+1)$ has the form $3t+2$ and $1 \\le \\alpha \\le 2$ we see that $\\alpha=1$. Then $m=12t_1+2$ and from $(m+3)^n+1 = 6km$ it follows that $4|5^n+1$, which is impossible.",
+      "answer": null,
+      "page": 1,
+      "source": "OLI-3-Национален кръг-1998-9-12 кл · 1998-? · Зад. 5",
+      "point_id": "4.1",
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": "medium",
+      "techniques": [
+        "parity",
+        "divisibility"
+      ],
+      "reasoning": "Parity argument combined with divisibility constraints forces A to be odd.",
+      "_paired": true,
+      "_grade_source": "grade_range",
+      "grade_range": [
+        9,
+        12
+      ]
+    },
+    {
+      "num": 6,
+      "grade": null,
+      "year": 1998,
+      "round": "nacionalen",
+      "statement": "The sides and the diagonals of a regular $n$-gon $X$ are coloured in $k$ colours so that:\n\nsegment $AB$ is coloured in colour $a$ or there is a vertex $C$ such that $AC$ and $BC$ are coloured in colour $a$;\n\n(ii) the sides of any triangle with vertices among the vertices of $X$ are coloured in at most two colours.\n\nProve that $k \\le 2$.",
+      "solution": "Solution: Assume that the colouring involves at least three different colours $a, b, c$. We shall construct an infinite subset of vertices of $X$, which will imply a contradiction.\n\nLet $Z \\in X$ and $A_1$ is a vertex such that the colour of $A_1Z$ is $a$. From (i) it follows that there is a vertex $B_1$, such that the colour of $B_1Z$ and $B_1A_1$ is $b$. Analogously there is a vertex $C_1$ such that the colour of $C_1Z$ and $C_1B_1$ is $c$. Considering the triangles $C_1A_1Z$ and $C_1A_1B_1$ we see (using condition (ii)) that the colour of $C_1A_1$ is $c$. Let $A_2 \\in X$ be such that the colour of $A_2C_1$ and $A_2Z$ is $a$. It is easily seen that $A_2 \\neq A_1$ and the colour $A_2A_1$ and $A_2B_1$ is $a$. Now we shall proceed by induction. Let the vertices $A_2, B_2, C_2, \\ldots, A_{k-1}, B_{k-1}, C_{k-1}$ be such that the colour of $A_iA_j, A_iB_j, A_iC_j$ is $a$, the colour of $B_iA_j, B_iB_j, B_iC_j$ is $b$ and the colour $C_iA_j, C_iB_j, C_iC_j$ is $c$, ($2 \\le j < i < k$).\n\nTake a vertex $A_k$ such that the colour of $A_kC_{k-1}$ and $A_kZ$ is $a$. Then considering the triangles $ZA_kB_j$ and $C_{k-1}A_kB_j$ ($j < k$), $ZA_kC_j$ and $B_{j+1}A_kC_j$ ($j + 1 < k$), $A_kA_jB_j$ and $A_kA_jB_j$ we see that the colour of $A_kB_j, A_kC_j$ and $A_kC_j$ is $a$. The vertices $B_k$ and $C_k$ are constructed in a similar way.",
+      "answer": null,
+      "page": 1,
+      "source": "OLI-3-Национален кръг-1998-9-12 кл · 1998-? · Зад. 6",
+      "point_id": "9.7",
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": "hard",
+      "techniques": [
+        "graph_coloring"
+      ],
+      "reasoning": "Constructs an infinite monochromatic configuration, contradicting the 2‑colour bound; uses graph‑colouring ideas.",
+      "_paired": true,
+      "_grade_source": "grade_range",
+      "grade_range": [
+        9,
+        12
+      ]
+    }
+  ]
+}

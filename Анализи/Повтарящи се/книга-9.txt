@@ -1,0 +1,186 @@
+```js
+// ─── КНИГА ───
+{
+  file: "Материали_EN/book-9.pdf",
+  title: "The Art of Problem Solving, Prealgebra",
+  author: "Richard Rusczyk, David Patrick, Ravi Boppana",
+  year: 2011,
+  language: "EN",
+  total_pages: 119,
+  topics: ["Arithmetic", "Number Theory", "Fractions", "Decimals", "Percents", "Ratios", "Square Roots", "Geometry", "Statistics", "Counting", "Problem-Solving Strategies"],
+  structure: [
+    {
+      chapter: "Ch 1",
+      title: "Properties of Arithmetic",
+      pages: "6-15",
+      topic_bg: "Основни свойства на аритметичните операции",
+      plan_step: null,
+      plan_points: [],
+      priority_regional: "low",
+      priority_national: "low"
+    },
+    {
+      chapter: "Ch 2",
+      title: "Exponents",
+      pages: "16-23",
+      topic_bg: "Степени — основни правила",
+      plan_step: null,
+      plan_points: [],
+      priority_regional: "low",
+      priority_national: "low"
+    },
+    {
+      chapter: "Ch 3",
+      title: "Number Theory",
+      pages: "24-32",
+      topic_bg: "Делимост, прости числа, НОК, НОД",
+      plan_step: 3,
+      plan_points: ["3.1"],
+      priority_regional: "low",
+      priority_national: "low"
+    },
+    {
+      chapter: "Ch 4",
+      title: "Fractions",
+      pages: "33-44",
+      topic_bg: "Дроби — действия и сравняване",
+      plan_step: null,
+      plan_points: [],
+      priority_regional: "low",
+      priority_national: "low"
+    },
+    {
+      chapter: "Ch 5",
+      title: "Equations and Inequalities",
+      pages: "45-52",
+      topic_bg: "Линейни уравнения и неравенства",
+      plan_step: null,
+      plan_points: [],
+      priority_regional: "low",
+      priority_national: "low"
+    },
+    {
+      chapter: "Ch 6",
+      title: "Decimals",
+      pages: "53-59",
+      topic_bg: "Десетични дроби и закръгляне",
+      plan_step: null,
+      plan_points: [],
+      priority_regional: "low",
+      priority_national: "low"
+    },
+    {
+      chapter: "Ch 7",
+      title: "Ratios, Conversions, and Rates",
+      pages: "60-68",
+      topic_bg: "Пропорции, преобразувания, скорости",
+      plan_step: null,
+      plan_points: [],
+      priority_regional: "low",
+      priority_national: "low"
+    },
+    {
+      chapter: "Ch 8",
+      title: "Percents",
+      pages: "69-74",
+      topic_bg: "Проценти — основни задачи",
+      plan_step: null,
+      plan_points: [],
+      priority_regional: "low",
+      priority_national: "low"
+    },
+    {
+      chapter: "Ch 9",
+      title: "Square Roots",
+      pages: "75-80",
+      topic_bg: "Квадратни корени — основни свойства",
+      plan_step: null,
+      plan_points: [],
+      priority_regional: "low",
+      priority_national: "low"
+    },
+    {
+      chapter: "Ch 10",
+      title: "Angles",
+      pages: "81-86",
+      topic_bg: "Ъгли, успоредни прави, многоъгълници",
+      plan_step: 1,
+      plan_points: ["1.5"],
+      priority_regional: "low",
+      priority_national: "low"
+    },
+    {
+      chapter: "Ch 11",
+      title: "Perimeter and Area",
+      pages: "87-92",
+      topic_bg: "Обиколка, лице, окръжност",
+      plan_step: 1,
+      plan_points: ["1.7"],
+      priority_regional: "low",
+      priority_national: "low"
+    },
+    {
+      chapter: "Ch 12",
+      title: "Right Triangles and Quadrilaterals",
+      pages: "93-98",
+      topic_bg: "Питагорова теорема, специални триъгълници, четириъгълници",
+      plan_step: 1,
+      plan_points: ["1.6", "1.7"],
+      priority_regional: "low",
+      priority_national: "low"
+    },
+    {
+      chapter: "Ch 13",
+      title: "Data and Statistics",
+      pages: "99-104",
+      topic_bg: "Средно, медиана, мода, графики",
+      plan_step: null,
+      plan_points: [],
+      priority_regional: "low",
+      priority_national: "low"
+    },
+    {
+      chapter: "Ch 14",
+      title: "Counting",
+      pages: "105-112",
+      topic_bg: "Броене, комбинаторика, вероятности",
+      plan_step: 8,
+      plan_points: ["8.1", "8.3", "8.6"],
+      priority_regional: "low",
+      priority_national: "low"
+    },
+    {
+      chapter: "Ch 15",
+      title: "Problem-Solving Strategies",
+      pages: "113-119",
+      topic_bg: "Стратегии за решаване на задачи",
+      plan_step: 9,
+      plan_points: ["9.8", "9.9"],
+      priority_regional: "low",
+      priority_national: "low"
+    }
+  ],
+  duplicates: [],
+  recommended_action: "skip",
+  skip_reason: "Книгата е Prealgebra — ниво 6–8 клас (САЩ). Покрива аритметика, дроби, десетични дроби, проценти, основни геометрични формули и базово броене. За 11. клас, подготовка за областен и национален кръг по математика, материалът е под нивото на изискванията. Няма покритие на олимпиадни теми като инверсия, хармонично отношение, LTE, примитивни корени, неравенства (AM-GM, Коши), графи, инварианти и т.н. Единствените потенциали за ползване са: (1) Гл. 3 — бърз преговор на делимост/НОД/НОК, ако има пропуски; (2) Гл. 14 — базово броене, ако се наложи затопляне; (3) Гл. 15 — общи стратегии (Find a Pattern, Make a List, Draw a Picture, Work Backwards), които са универсални, но твърде елементарни за 11. клас. Препоръка: SKIP — не добавяй към плана. Ако се ползва, то е само за много бърз преговор на базата преди Стъпка 3 или като допълнително четиво при пропуски.",
+  best_mapping: [
+    { step_id: 3, point_ids: ["3.1"], chapters: ["Ch 3"], pages: "24-32" },
+    { step_id: 1, point_ids: ["1.5", "1.7"], chapters: ["Ch 10-12"], pages: "81-98" },
+    { step_id: 8, point_ids: ["8.1", "8.3"], chapters: ["Ch 14"], pages: "105-112" }
+  ]
+}
+```
+
+### RECOMMENDED CHANGES TO index.html
+
+**В STEPS:**
+- [ ] Няма промени — книгата е `skip`. Не се добавя към нито една стъпка.
+- [ ] Ако все пак се реши да се ползва за бърз преговор: добави `bonus` към Точка 3.1 (`{ label: "AoPS Prealgebra, Ch 3 (делимост/НОД/НОК)", pdf: "Материали_EN/book-9", page: 24 }`) и към Точка 8.1 (`{ label: "AoPS Prealgebra, Ch 14 (базово броене)", pdf: "Материали_EN/book-9", page: 105 }`).
+
+**В PLAN_PHASES:**
+- [ ] Няма промени.
+
+**Друго:**
+- [ ] Няма дубликати за триене.
+- [ ] Няма промени в конфигурацията на exam dates.
+- [ ] Препоръка: архивирай `book-9.pdf` в папка `Материали_EN/Архив/` или го остави, но не го включвай в активния план.

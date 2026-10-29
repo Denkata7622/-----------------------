@@ -1,0 +1,28 @@
+{
+  "generated_at": "2026-10-22T15:00:42.244058",
+  "model": "openai/gpt-6.1-sol",
+  "reasoning_effort": "max",
+  "max_tokens": 100000,
+  "exams_analyzed": 25,
+  "years": [
+    2026,
+    2025,
+    2024,
+    2023,
+    2022,
+    2021,
+    2020,
+    2019,
+    2018,
+    2017,
+    2016,
+    2015,
+    2014
+  ],
+  "input_tokens": 265536,
+  "cost_usd": 1.258716,
+  "critical_issues": [],
+  "warnings": [
+    "датите не са монотонни"
+  ]
+}

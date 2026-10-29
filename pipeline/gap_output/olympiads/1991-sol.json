@@ -1,0 +1,148 @@
+{
+  "_meta": {
+    "pdf": "C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\Задачи_Минали_Години\\Национален\\OLI-3-Национален кръг-1991-9-12 кл-sol.pdf",
+    "paired_with": null,
+    "level": 2,
+    "type": "sol",
+    "analyzed_at": "2026-10-18T11:46:41.365462",
+    "model": "deepseek/deepseek-v3.2",
+    "text_length": 14267,
+    "paired_text_length": 0
+  },
+  "problems": [
+    {
+      "num": 1,
+      "topic": "geometry",
+      "theorems": [],
+      "techniques": [
+        "angle chasing",
+        "similar triangles",
+        "trigonometric manipulation"
+      ],
+      "concepts": [
+        "orthic projections",
+        "circumcircle",
+        "incircle",
+        "cyclic quadrilateral",
+        "diameter subtends right angle",
+        "distance from incenter to side",
+        "Euler's inequality (r ≤ R/2)"
+      ],
+      "difficulty": "olympic",
+      "notes": "Classical geometry problem combining orthic projection, circumcircle, and incircle. Uses construction of diameter and similarity to relate heights to R and r."
+    },
+    {
+      "num": 2,
+      "topic": "combinatorics",
+      "theorems": [],
+      "techniques": [
+        "double counting",
+        "pigeonhole principle",
+        "inequality estimation"
+      ],
+      "concepts": [
+        "combinatorial selection",
+        "counting selections with restrictions (no two in same layer)",
+        "counting 'bad' selections",
+        "combinatorial identity verification"
+      ],
+      "difficulty": "olympic",
+      "notes": "Combinatorial existence proof via counting total selections and bounding bad ones. Uses factorial counts and algebraic inequality."
+    },
+    {
+      "num": 3,
+      "topic": "number_theory",
+      "theorems": [
+        "Lucas' theorem (implicit)",
+        "binomial coefficient identities"
+      ],
+      "techniques": [
+        "induction",
+        "modular arithmetic",
+        "binomial coefficient manipulation",
+        "congruence arguments"
+      ],
+      "concepts": [
+        "divisibility by prime powers",
+        "properties of binomial coefficients modulo p",
+        "symmetry of binomial coefficients",
+        "sum of squares modulo p"
+      ],
+      "difficulty": "olympic",
+      "notes": "Deep number theory problem on divisibility of binomial coefficients by p^3. Uses combinatorial identity and induction, with careful modulo p^3 analysis."
+    },
+    {
+      "num": 4,
+      "topic": "algebra",
+      "theorems": [],
+      "techniques": [
+        "logarithmic derivative",
+        "inequality from derivative sign"
+      ],
+      "concepts": [
+        "polynomial with real roots",
+        "derivative of polynomial",
+        "logarithmic derivative f'/f",
+        "sum of reciprocals of (x - root)",
+        "second derivative"
+      ],
+      "difficulty": "standard",
+      "notes": "Standard inequality for polynomials with all real roots, proven via logarithmic derivative and monotonicity of f'/f."
+    },
+    {
+      "num": 5,
+      "topic": "geometry",
+      "theorems": [],
+      "techniques": [
+        "coordinate geometry / analytic geometry",
+        "optimization via derivative",
+        "limit computation",
+        "trigonometric substitution"
+      ],
+      "concepts": [
+        "unit circle",
+        "central angle",
+        "tangent line",
+        "right triangle area minimization",
+        "midpoint of hypotenuse",
+        "limit of ratio as angle tends to zero"
+      ],
+      "difficulty": "hard",
+      "notes": "Geometry optimization problem with analytic setup. Minimization via derivative, then limit computation using trigonometric expansions."
+    },
+    {
+      "num": 6,
+      "topic": "combinatorics",
+      "theorems": [],
+      "techniques": [
+        "parity argument",
+        "invariant / monovariant",
+        "graph representation (grid graph edges)"
+      ],
+      "concepts": [
+        "board coloring / flipping",
+        "neighbor adjacency (4-neighborhood)",
+        "parity of degree",
+        "edge counting invariant"
+      ],
+      "difficulty": "olympic",
+      "notes": "Parity/combinatorial game on grid. Uses edge‑counting invariant to show some black piece remains."
+    }
+  ],
+  "unique_concepts": [
+    "orthic projections",
+    "cyclic quadrilateral",
+    "circumcircle and incircle radii relation (R+r)",
+    "Euler's inequality",
+    "combinatorial selection with layer restriction",
+    "double counting and bad selection bound",
+    "binomial coefficient divisibility by p^3",
+    "logarithmic derivative for polynomials with real roots",
+    "area minimization of right triangle in circle",
+    "midpoint of hypotenuse as minimizer",
+    "limit of area/angle^3 ratio",
+    "parity argument on grid edges",
+    "invariant via edge deletion"
+  ],
+  "confidence": 0.95
+}

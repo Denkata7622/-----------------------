@@ -1,0 +1,2625 @@
+Time	Model	Tokens	Cost	Result
+just now ●	R1 0528	13,544 in / 1,926 out	$0.01097	OK 1m 30s
+just now ●	R1 0528	12,146 in / 2,820 out	$0.01222	OK 2m 19s
+1m ago ●	R1 0528	11,244 in / 9,781 out	$0.026944	OK 7m 16s
+2m ago ●	R1 0528	12,359 in / 1,481 out	$0.009408	OK 1m 16s
+2m ago ●	R1 0528	8,986 in / 8,395 out	$0.022794	OK 6m 07s
+3m ago ●	R1 0528	15,074 in / 7,323 out	$0.023501	OK 5m 16s
+3m ago ●	R1 0528	10,638 in / 7,020 out	$0.020622	OK 5m 02s
+7m ago ●	R1 0528	No usage	–	Error 0ms
+8m ago ●	R1 0528	20,549 in / 1,551 out	$0.013655	OK 1m 11s
+10m ago ●	R1 0528	12,964 in / 15,280 out	$0.039792	OK 11m 57s
+3m ago ●	R1 0528	15,358 in / 1,952 out	$0.011934	OK 1m 30s
+4m ago ●	R1 0528	13,308 in / 1,853 out	$0.010693	OK 1m 36s
+4m ago ●	R1 0528	12,372 in / 10,628 out	$0.029355	OK 8m 33s
+5m ago ●	R1 0528	13,310 in / 1,489 out	$0.009901	OK 1m 19s
+6m ago ●	R1 0528	13,805 in / 8,997 out	$0.026515	OK 7m 14s
+6m ago ●	R1 0528	9,785 in / 8,330 out	$0.023051	OK 6m 38s
+13m ago ●	R1 0528	15,367 in / 2,588 out	$0.013325	OK 2m 11s
+15m ago ●	R1 0528	17,633 in / 11,433 out	$0.03374	OK 9m 13s
+18m ago ●	R1 0528	No usage	–	Error 0ms
+26m ago ●	R1 0528	10,150 in / 2,683 out	$0.010923	OK 2m 07s
+29m ago ●	R1 0528	19,987 in / 9,264 out	$0.030189	OK 6m 45s
+29m ago ●	R1 0528	12,692 in / 2,086 out	$0.010893	OK 1m 29s
+31m ago ●	R1 0528	20,449 in / 7,473 out	$0.026515	OK 5m 28s
+32m ago ●	R1 0528	20,441 in / 1,891 out	$0.014342	OK 1m 25s
+33m ago ●	R1 0528	10,162 in / 16,852 out	$0.041818	OK 12m 15s
+35m ago ●	R1 0528	16,297 in / 2,583 out	$0.013779	OK 1m 55s
+36m ago ●	R1 0528	16,110 in / 2,002 out	$0.012419	OK 1m 30s
+36m ago ●	R1 0528	15,626 in / 2,177 out	$0.012558	OK 1m 43s
+37m ago ●	R1 0528	8,946 in / 11,382 out	$0.029285	OK 8m 23s
+37m ago ●	R1 0528	15,224 in / 11,265 out	$0.032169	OK 8m 09s
+38m ago ●	R1 0528	10,043 in / 10,172 out	$0.027196	OK 7m 26s
+14h ago ●	R1 0528	10,061 in / 1,451 out	$0.008193	OK 56s
+14h ago ●	R1 0528	22,835 in / 4,831 out	$0.021949	OK 3m 04s
+14h ago ●	R1 0528	10,371 in / 3,223 out	$0.012211	OK 1m 58s
+14h ago ●	R1 0528	22,835 in / 4,852 out	$0.021994	OK 3m 09s
+14h ago ●	R1 0528	15,224 in / 16,829 out	$0.044299	OK 10m 54s
+14h ago ●	R1 0528	17,631 in / 2,116 out	$0.013428	OK 1m 21s
+14h ago ●	R1 0528	10,687 in / 12,578 out	$0.032763	OK 8m 25s
+14h ago ●	R1 0528	15,170 in / 1,263 out	$0.010338	OK 53s
+14h ago ●	R1 0528	8,975 in / 10,107 out	$0.02652	OK 6m 42s
+14h ago ●	R1 0528	9,785 in / 7,568 out	$0.02139	OK 5m 12s
+14h ago ●	R1 0528	22,642 in / 2,598 out	$0.016984	OK 1m 39s
+14h ago ●	R1 0528	19,096 in / 2,703 out	$0.01544	OK 1m 46s
+14h ago ●	R1 0528	10,515 in / 16,883 out	$0.042062	OK 12m 02s
+14h ago ●	R1 0528	10,618 in / 14,601 out	$0.037139	OK 10m 39s
+14h ago ●	R1 0528	13,325 in / 2,712 out	$0.012574	OK 1m 57s
+14h ago ●	R1 0528	13,745 in / 9,843 out	$0.02833	OK 7m 25s
+15h ago ●	R1 0528	18,992 in / 1,466 out	$0.012691	OK 1m 12s
+15h ago ●	R1 0528	15,312 in / 13,717 out	$0.037559	OK 10m 31s
+15h ago ●	R1 0528	15,892 in / 1,546 out	$0.011316	OK 1m 15s
+15h ago ●	R1 0528	10,407 in / 10,734 out	$0.028603	OK 8m 16s
+15h ago ●	R1 0528	13,184 in / 2,196 out	$0.011379	OK 1m 35s
+15h ago ●	R1 0528	11,486 in / 1,887 out	$0.009856	OK 1m 19s
+15h ago ●	R1 0528	14,310 in / 8,335 out	$0.025325	OK 6m 29s
+15h ago ●	R1 0528	12,711 in / 6,876 out	$0.021345	OK 5m 32s
+15h ago ●	R1 0528	16,305 in / 1,909 out	$0.012314	OK 1m 23s
+15h ago ●	R1 0528	21,846 in / 18,280 out	$0.050773	OK 13m 48s
+15h ago ●	R1 0528	10,629 in / 2,521 out	$0.01081	OK 2m 04s
+15h ago ●	R1 0528	21,846 in / 5,408 out	$0.022712	OK 4m 15s
+15h ago ●	R1 0528	20,670 in / 1,700 out	$0.014041	OK 1m 26s
+15h ago ●	R1 0528	11,627 in / 16,644 out	$0.042097	OK 12m 19s
+15h ago ●	R1 0528	19,147 in / 1,568 out	$0.012991	OK 1m 22s
+15h ago ●	R1 0528	18,520 in / 2,276 out	$0.014221	OK 1m 50s
+15h ago ●	R1 0528	9,058 in / 14,721 out	$0.03662	OK 10m 52s
+15h ago ●	R1 0528	9,027 in / 13,457 out	$0.033849	OK 9m 56s
+15h ago ●	R1 0528	13,705 in / 3,245 out	$0.013926	OK 2m 24s
+15h ago ●	R1 0528	14,298 in / 8,406 out	$0.025474	OK 6m 16s
+15h ago ●	R1 0528	16,985 in / 2,050 out	$0.012961	OK 1m 29s
+15h ago ●	R1 0528	16,569 in / 1,665 out	$0.011914	OK 1m 16s
+15h ago ●	R1 0528	8,974 in / 11,738 out	$0.030075	OK 9m 18s
+15h ago ●	R1 0528	9,014 in / 11,582 out	$0.029755	OK 9m 15s
+15h ago ●	R1 0528	13,014 in / 5,140 out	$0.017712	OK 4m 00s
+16h ago ●	R1 0528	20,003 in / 7,858 out	$0.027131	OK 5m 44s
+16h ago ●	R1 0528	13,650 in / 2,092 out	$0.011385	OK 1m 41s
+16h ago ●	R1 0528	20,003 in / 8,339 out	$0.02818	OK 6m 37s
+16h ago ●	R1 0528	19,826 in / 1,460 out	$0.013095	OK 1m 16s
+16h ago ●	R1 0528	10,536 in / 14,776 out	$0.037479	OK 12m 37s
+16h ago ●	R1 0528	15,371 in / 3,021 out	$0.014271	OK 2m 29s
+16h ago ●	R1 0528	14,726 in / 3,145 out	$0.014219	OK 2m 36s
+16h ago ●	R1 0528	11,963 in / 4,043 out	$0.014795	OK 3m 23s
+16h ago ●	R1 0528	9,621 in / 10,635 out	$0.027994	OK 9m 11s
+16h ago ●	R1 0528	11,816 in / 10,052 out	$0.027821	OK 8m 43s
+16h ago ●	R1 0528	13,488 in / 6,765 out	$0.021491	OK 6m 01s
+16h ago ●	Claude Sonnet 5.5	18,242 in / 6,113 out	$0.068329	OK 45s
+16h ago ●	GPT-6.1 Sol	9,686 in / 9,733 out	$0.121543	OK 2m 28s
+16h ago ●	GPT-6.1 Sol	17,092 in / 4,200 out	$0.043714	OK 1m 23s
+16h ago ●	anthropic/claude-sonnet-5.5-20260928	No usage	–	Error 0ms
+16h ago ●	GPT-6.1 Sol	17,715 in / 3,925 out	$0.078863	OK 1m 20s
+16h ago ●	Claude Sonnet 5.5	34,284 in / 23,885 out	$0.215192	OK 2m 38s
+17h ago ●	GPT-6.1 Sol	17,092 in / 4,218 out	$0.084908	OK 1m 30s
+17h ago ●	Claude Sonnet 5.5	18,085 in / 27,925 out	$0.220794	OK 3m 26s
+17h ago ●	GPT-6.1 Sol	16,553 in / 3,741 out	$0.074118	OK 1m 12s
+17h ago ●	Claude Sonnet 5.5	34,433 in / 23,395 out	$0.211971	OK 2m 25s
+17h ago ●	GPT-6.1 Sol	16,778 in / 3,482 out	$0.07209	OK 1m 11s
+17h ago ●	Claude Sonnet 5.5	34,433 in / 23,583 out	$0.213287	OK 2m 32s
+17h ago ●	GPT-6.1 Sol	16,506 in / 4,011 out	$0.081373	OK 1m 17s
+17h ago ●	Claude Sonnet 5.5	18,056 in / 28,863 out	$0.227319	OK 3m 35s
+1d ago ●	GPT-6.1 Sol	15,033 in / 3,849 out	$0.071398	OK 1m 23s
+1d ago ●	Claude Sonnet 5.5	31,472 in / 24,051 out	$0.212417	OK 2m 38s
+1d ago ●	GPT-6.1 Sol	13,954 in / 4,474 out	$0.079623	OK 1m 53s
+1d ago ●	Claude Sonnet 5.5	18,004 in / 21,129 out	$0.173108	OK 2m 39s
+1d ago ●	Claude Sonnet 5.5 (batch)	No usage	–	Error 50ms
+1d ago ●	Claude Sonnet 5.5 (batch)	No usage	–	Error 41ms
+1d ago ●	R1 0528	No usage	–	Error 0ms
+1d ago ●	R1 0528	No usage	–	Error 0ms
+1d ago ●	R1 0528	21,895 in / 4,413 out	$0.020567	OK 3m 13s
+1d ago ●	R1 0528	22,382 in / 3,541 out	$0.01891	OK 2m 40s
+1d ago ●	R1 0528	10,468 in / 16,935 out	$0.042152	OK 13m 53s
+1d ago ●	R1 0528	10,446 in / 16,697 out	$0.041622	OK 13m 38s
+1d ago ●	R1 0528	15,551 in / 1,630 out	$0.011328	OK 1m 19s
+1d ago ●	R1 0528	8,927 in / 11,215 out	$0.028912	OK 9m 25s
+1d ago ●	R1 0528	10,577 in / 2,336 out	$0.01038	OK 2m 00s
+1d ago ●	R1 0528	14,812 in / 6,157 out	$0.020828	OK 5m 26s
+1d ago ●	R1 0528	16,657 in / 2,304 out	$0.013351	OK 1m 59s
+1d ago ●	R1 0528	18,025 in / 12,072 out	$0.035329	OK 8m 38s
+1d ago ●	R1 0528	12,458 in / 2,509 out	$0.011698	OK 2m 02s
+1d ago ●	R1 0528	20,188 in / 7,884 out	$0.027281	OK 5m 19s
+1d ago ●	R1 0528	14,050 in / 3,112 out	$0.013809	OK 2m 09s
+1d ago ●	R1 0528	13,660 in / 2,924 out	$0.013204	OK 2m 00s
+1d ago ●	R1 0528	12,923 in / 2,754 out	$0.012465	OK 1m 55s
+1d ago ●	R1 0528	11,256 in / 2,941 out	$0.012039	OK 2m 07s
+1d ago ●	R1 0528	12,642 in / 9,511 out	$0.027054	OK 7m 10s
+1d ago ●	R1 0528	14,188 in / 9,351 out	$0.027479	OK 7m 01s
+1d ago ●	R1 0528	9,691 in / 8,101 out	$0.022505	OK 6m 11s
+1d ago ●	R1 0528	13,292 in / 6,588 out	$0.021007	OK 5m 09s
+1d ago ●	R1 0528	14,651 in / 5,726 out	$0.019808	OK 4m 15s
+1d ago ●	R1 0528	23,636 in / 10,081 out	$0.033794	OK 7m 41s
+1d ago ●	R1 0528	10,189 in / 2,470 out	$0.010479	OK 2m 03s
+1d ago ●	R1 0528	16,030 in / 2,220 out	$0.012854	OK 1m 55s
+1d ago ●	R1 0528	25,068 in / 5,771 out	$0.025114	OK 4m 29s
+1d ago ●	R1 0528	23,636 in / 11,879 out	$0.037714	OK 9m 17s
+1d ago ●	R1 0528	11,389 in / 1,468 out	$0.008894	OK 1m 18s
+1d ago ●	R1 0528	25,068 in / 6,774 out	$0.027301	OK 5m 13s
+1d ago ●	R1 0528	16,652 in / 2,930 out	$0.014713	OK 2m 27s
+1d ago ●	R1 0528	16,074 in / 2,051 out	$0.012508	OK 1m 43s
+1d ago ●	R1 0528	14,441 in / 3,453 out	$0.014748	OK 2m 49s
+1d ago ●	R1 0528	13,918 in / 12,674 out	$0.034588	OK 9m 59s
+1d ago ●	R1 0528	13,176 in / 3,240 out	$0.013651	OK 2m 36s
+1d ago ●	R1 0528	14,029 in / 11,451 out	$0.031977	OK 9m 01s
+1d ago ●	R1 0528	13,981 in / 9,804 out	$0.028363	OK 7m 51s
+1d ago ●	R1 0528	13,424 in / 9,164 out	$0.026689	OK 7m 17s
+1d ago ●	R1 0528	13,881 in / 2,582 out	$0.012569	OK 2m 02s
+1d ago ●	R1 0528	12,136 in / 2,066 out	$0.010571	OK 1m 37s
+1d ago ●	R1 0528	11,789 in / 2,020 out	$0.010298	OK 1m 33s
+1d ago ●	R1 0528	8,955 in / 9,057 out	$0.024221	OK 6m 33s
+1d ago ●	R1 0528	11,836 in / 1,558 out	$0.009314	OK 1m 13s
+1d ago ●	R1 0528	8,965 in / 7,342 out	$0.020488	OK 5m 16s
+1d ago ●	R1 0528	8,961 in / 7,286 out	$0.020363	OK 5m 11s
+1d ago ●	R1 0528	8,952 in / 7,109 out	$0.019973	OK 5m 05s
+1d ago ●	R1 0528	14,449 in / 1,823 out	$0.011198	OK 1m 22s
+1d ago ●	R1 0528	12,806 in / 2,002 out	$0.010767	OK 1m 28s
+1d ago ●	R1 0528	16,177 in / 10,696 out	$0.031405	OK 7m 32s
+1d ago ●	R1 0528	16,746 in / 8,668 out	$0.027269	OK 6m 03s
+1d ago ●	R1 0528	17,188 in / 2,857 out	$0.014822	OK 1m 59s
+1d ago ●	R1 0528	15,121 in / 2,930 out	$0.013947	OK 2m 04s
+1d ago ●	R1 0528	8,970 in / 12,614 out	$0.031983	OK 9m 11s
+1d ago ●	R1 0528	12,957 in / 2,448 out	$0.011815	OK 1m 46s
+1d ago ●	R1 0528	8,969 in / 10,755 out	$0.02793	OK 7m 55s
+1d ago ●	R1 0528	11,689 in / 2,822 out	$0.011996	OK 2m 05s
+1d ago ●	R1 0528	8,974 in / 9,282 out	$0.024721	OK 6m 51s
+1d ago ●	R1 0528	9,717 in / 7,518 out	$0.021247	OK 5m 39s
+1d ago ●	R1 0528	12,214 in / 2,455 out	$0.011458	OK 1m 42s
+1d ago ●	R1 0528	16,020 in / 7,340 out	$0.024011	OK 5m 02s
+1d ago ●	R1 0528	12,877 in / 2,136 out	$0.011094	OK 1m 30s
+1d ago ●	R1 0528	12,872 in / 2,488 out	$0.011859	OK 1m 46s
+1d ago ●	R1 0528	9,438 in / 8,742 out	$0.023776	OK 6m 19s
+1d ago ●	R1 0528	11,397 in / 1,787 out	$0.009594	OK 1m 26s
+1d ago ●	R1 0528	10,978 in / 1,981 out	$0.009807	OK 1m 33s
+1d ago ●	R1 0528	10,382 in / 8,151 out	$0.02296	OK 5m 53s
+1d ago ●	R1 0528	9,008 in / 6,453 out	$0.018571	OK 4m 37s
+1d ago ●	R1 0528	10,122 in / 6,122 out	$0.018406	OK 4m 23s
+1d ago ●	R1 0528	11,671 in / 2,324 out	$0.010901	OK 1m 28s
+1d ago ●	R1 0528	9,069 in / 7,006 out	$0.019807	OK 4m 32s
+1d ago ●	GLM 5.3 Flash	11,699 in / 2,037 out	$0.000554	OK 13s
+1d ago ●	R1 0528	9,069 in / 7,797 out	$0.021531	OK 5m 34s
+1d ago ●	R1 0528	No usage	–	Error 0ms
+1d ago ●	R1 0528	No usage	–	Error 0ms
+1d ago ●	R1 0528	No usage	–	Error 0ms
+1d ago ●	R1 0528	No usage	–	Error 0ms
+2d ago ●	GLM 5.3 Flash	4,284 in / 600 out	$0.000229	OK 6.2s
+2d ago ●	GLM 5.3 Flash	4,208 in / 53 out	$0.000171	OK 1.1s
+2d ago ●	GLM 5.3 Flash	4,123 in / 84 out	$0.000536	OK 894ms
+2d ago ●	GLM 5.3 Flash	4,196 in / 600 out	$0.000929	OK 5.8s
+2d ago ●	GLM 5.3 Flash	4,800 in / 2,000 out	$0.000349	OK 20s
+2d ago ●	GLM 5.3 Flash	8,122 in / 4,000 out	$0.000638	OK 43s
+2d ago ●	GLM 5.3 Flash	4,167 in / 600 out	$0.000925	OK 4.2s
+2d ago ●	GLM 5.3 Flash	16,332 in / 600 out	$0.002749	OK 3.8s
+2d ago ●	GLM 5.3 Flash	10,342 in / 2,858 out	$0.002349	OK 29s
+2d ago ●	GLM 5.3 Flash	16,861 in / 8,000 out	$0.005713	OK 44s
+2d ago ●	GLM 5.3 Flash	10,373 in / 2,845 out	$0.002978	OK 20s
+2d ago ●	GLM 5.3 Flash	10,284 in / 600 out	$0.001842	OK 3.2s
+2d ago ●	GLM 5.3 Flash	10,379 in / 1,056 out	$0.001152	OK 10.0s
+2d ago ●	GLM 5.3 Flash	10,776 in / 8,000 out	$0.005616	OK 23s
+2d ago ●	GLM 5.3 Flash	10,275 in / 38 out	$0.001131	OK 1.3s
+2d ago ●	GLM 5.3 Flash	10,859 in / 2,000 out	$0.002628	OK 7.9s
+2d ago ●	GLM 5.3 Flash	11,335 in / 2,000 out	$0.0027	OK 6.2s
+2d ago ●	GLM 5.3 Flash	4,093 in / 44 out	$0.00045	OK 947ms
+2d ago ●	GLM 5.3 Flash	4,652 in / 674 out	$0.000518	OK 9.3s
+2d ago ●	GLM 5.3 Flash	3,986 in / 1,453 out	$0.001042	OK 10s
+2d ago ●	GLM 5.3 Flash	3,064 in / 6 out	$0.000337	OK 1.1s
+2d ago ●	GLM 5.3 Flash	3,047 in / 6 out	$0.000335	OK 711ms
+2d ago ●	GLM 5.3 Flash	2,985 in / 302 out	$0.000299	OK 6.8s
+2d ago ●	GLM 5.3 Flash	2,786 in / 577 out	$0.000706	OK 4.7s
+2d ago ●	GLM 5.3 Flash	2,064 in / 29 out	$0.000227	OK 580ms
+2d ago ●	GLM 5.3 Flash	2,287 in / 1,022 out	$0.000608	OK 4.5s
+2d ago ●	GLM 5.3 Flash	2,164 in / 153 out	$0.000401	OK 1.1s
+2d ago ●	GLM 5.3 Flash	1,945 in / 491 out	$0.000218	OK 3.1s
+2d ago ●	GLM 5.3 Flash	1,554 in / 1,211 out	$0.000838	OK 5.4s
+2d ago ●	GLM 5.3 Flash	1,353 in / 6 out	$0.000148	OK 732ms
+2d ago ●	gpt-oss-120b	683 in / 1,003 out	$0.00017	OK 38s
+2d ago ●	GLM 5.3 Flash	17,889 in / 36,000 out	$0.002328	OK 8m 15s
+2d ago ●	GLM 5.3 Flash	28,795 in / 16,821 out	$0.003336	OK 2m 54s
+2d ago ●	GLM 5.3 Flash	16,786 in / 24,492 out	$0.002092	OK 5m 17s
+2d ago ●	GLM 5.3 Flash	14,805 in / 13,570 out	$0.001764	OK 3m 02s
+2d ago ●	GLM 5.3 Flash	15,071 in / 17,218 out	$0.00183	OK 3m 49s
+2d ago ●	GLM 5.3 Flash	13,708 in / 12,292 out	$0.001631	OK 2m 32s
+2d ago ●	GLM 5.3 Flash	9,325 in / 2,159 out	$0.001047	OK 14s
+2d ago ●	GLM 5.3 Flash	10,681 in / 8,931 out	$0.001264	OK 58s
+2d ago ●	GLM 5.3 Flash	6,365 in / 1,783 out	$0.000718	OK 10s
+2d ago ●	GLM 5.3 Flash	9,003 in / 2,652 out	$0.001017	OK 14s
+2d ago ●	GLM 5.3 Flash	6,789 in / 1,759 out	$0.000764	OK 10s
+2d ago ●	GLM 5.3 Flash	9,622 in / 65,536 out	$0.001714	OK 5m 55s
+2d ago ●	GLM 5.3 Flash	8,848 in / 2,207 out	$0.000995	OK 17s
+2d ago ●	GLM 5.3 Flash	9,601 in / 65,536 out	$0.001711	OK 5m 57s
+2d ago ●	GLM 5.3 Flash	6,331 in / 1,755 out	$0.000714	OK 9.6s
+2d ago ●	GLM 5.3 Flash	9,003 in / 2,580 out	$0.001016	OK 19s
+2d ago ●	GLM 5.3 Flash	62 in / 14 out	$0.000006	OK 699ms
+2d ago ●	GLM 5.3 Flash	62 in / 14 out	$0.000006	OK 1.8s
+2d ago ●	GLM 5.3 Flash	62 in / 14 out	$0.000006	OK 496ms
+2d ago ●	GLM 5.3 Flash	15,466 in / 9,122 out	$0.001793	OK 1m 55s
+2d ago ●	GLM 5.3 Flash	19,438 in / 33,316 out	$0.002472	OK 6m 43s
+2d ago ●	GLM 5.3 Flash	13,548 in / 7,903 out	$0.001569	OK 1m 32s
+2d ago ●	GLM 5.3 Flash	8,435 in / 9,645 out	$0.001024	OK 60s
+2d ago ●	GLM 5.3 Flash	6,492 in / 1,536 out	$0.000729	OK 9.7s
+2d ago ●	GLM 5.3 Flash	9,103 in / 3,043 out	$0.001032	OK 21s
+2d ago ●	GLM 5.3 Flash	6,680 in / 1,685 out	$0.000751	OK 10s
+2d ago ●	GLM 5.3 Flash	9,169 in / 64,000 out	$0.001648	OK 5m 51s
+2d ago ●	GLM 5.3 Flash	8,403 in / 2,157 out	$0.000946	OK 14s
+2d ago ●	GLM 5.3 Flash	8,435 in / 10,269 out	$0.00103	OK 1m 05s
+2d ago ●	z-ai/glm-5.3-flashx-20260918	No usage	–	Error 0ms
+2d ago ●	z-ai/glm-5.3-flashx-20260918	No usage	–	Error 0ms
+2d ago ●	z-ai/glm-5.3-flashx-20260918	No usage	–	Error 0ms
+2d ago ●	z-ai/glm-5.3-flashx-20260918	No usage	–	Error 0ms
+2d ago ●	GLM 5.3 FlashX	15,174 in / 24,000 out	$0.03384	OK 3m 03s
+2d ago ●	GLM 5.3 FlashX	13,832 in / 24,000 out	$0.033343	OK 3m 00s
+2d ago ●	GLM 5.3 FlashX	10,929 in / 24,000 out	$0.032269	OK 2m 50s
+2d ago ●	GLM 5.3 FlashX	16,870 in / 24,000 out	$0.034467	OK 2m 40s
+2d ago ●	GLM 5.3 Flash	15,029 in / 12,000 out	$0.001773	OK 2m 51s
+2d ago ●	GLM 5.3 FlashX	8,411 in / 24,000 out	$0.033112	OK 2m 48s
+2d ago ●	GLM 5.3 FlashX	16,523 in / 24,000 out	$0.03149	OK 3m 13s
+2d ago ●	GLM 5.3 FlashX	17,613 in / 24,000 out	$0.031588	OK 2m 56s
+2d ago ●	GLM 5.3 FlashX	18,027 in / 24,000 out	$0.031634	OK 2m 52s
+2d ago ●	GLM 5.3 FlashX	15,056 in / 24,000 out	$0.031359	OK 2m 52s
+2d ago ●	gpt-oss-120b	27,533 in / 11,064 out	$0.002484	OK 6m 16s
+2d ago ●	GLM 5.3 FlashX	16,523 in / 24,000 out	$0.03149	OK 3m 12s
+2d ago ●	GLM 5.3 FlashX	18,027 in / 24,000 out	$0.036669	OK 3m 06s
+2d ago ●	GLM 5.3 FlashX	17,613 in / 24,000 out	$0.036516	OK 3m 05s
+2d ago ●	GLM 5.3 FlashX	15,056 in / 24,000 out	$0.03557	OK 2m 56s
+2d ago ●	GLM 5.3 FlashX	8,411 in / 24,000 out	$0.033112	OK 3m 03s
+2d ago ●	GLM 5.3 FlashX	16,523 in / 24,000 out	$0.036113	OK 3m 13s
+2d ago ●	GLM 5.3 FlashX	17,613 in / 24,000 out	$0.036516	OK 3m 05s
+2d ago ●	GLM 5.3 FlashX	18,027 in / 24,000 out	$0.036669	OK 3m 03s
+2d ago ●	GLM 5.3 FlashX	15,056 in / 24,000 out	$0.03557	OK 2m 46s
+2d ago ●	GLM 5.3 Flash	12,247 in / 9,108 out	$0.001438	OK 1m 57s
+2d ago ●	gpt-oss-120b	19,535 in / 7,900 out	$0.00177	OK 2m 28s
+2d ago ●	GLM 5.3 Flash	18,646 in / 5,603 out	$0.001748	OK 1m 01s
+2d ago ●	gpt-oss-120b	17,326 in / 24,000 out	$0.004027	OK 5m 06s
+2d ago ●	GLM 5.3 Flash	11,728 in / 2,107 out	$0.001311	OK 14s
+2d ago ●	GLM 5.3 Flash	11,675 in / 1,694 out	$0.001301	OK 12s
+2d ago ●	gpt-oss-120b	8,162 in / 7,653 out	$0.001392	OK 2m 57s
+2d ago ●	gpt-oss-120b	8,153 in / 7,439 out	$0.001359	OK 2m 55s
+2d ago ●	GLM 5.3 Flash	11,169 in / 2,111 out	$0.00125	OK 13s
+2d ago ●	gpt-oss-120b	8,134 in / 6,569 out	$0.001137	OK 2m 39s
+2d ago ●	GLM 5.3 Flash	15,128 in / 10,020 out	$0.001764	OK 1m 54s
+2d ago ●	GLM 5.3 Flash	15,019 in / 8,175 out	$0.001734	OK 1m 45s
+2d ago ●	gpt-oss-120b	19,743 in / 11,310 out	$0.002288	OK 2m 28s
+2d ago ●	GLM 5.3 Flash	16,351 in / 8,613 out	$0.001885	OK 1m 48s
+2d ago ●	gpt-oss-120b	20,486 in / 11,472 out	$0.002243	OK 2m 29s
+2d ago ●	gpt-oss-120b	25,174 in / 12,167 out	$0.002488	OK 2m 41s
+2d ago ●	GLM 5.3 Flash	14,729 in / 12,000 out	$0.00174	OK 3m 08s
+2d ago ●	GLM 5.3 Flash	14,713 in / 6,989 out	$0.001329	OK 1m 30s
+2d ago ●	GLM 5.3 Flash	14,036 in / 7,949 out	$0.001264	OK 1m 42s
+2d ago ●	gpt-oss-120b	19,246 in / 11,183 out	$0.002124	OK 2m 28s
+2d ago ●	gpt-oss-120b	18,160 in / 11,155 out	$0.002217	OK 2m 27s
+2d ago ●	gpt-oss-120b	23,704 in / 9,789 out	$0.002178	OK 2m 06s
+2d ago ●	GLM 5.3 Flash	13,124 in / 8,531 out	$0.001529	OK 1m 52s
+2d ago ●	GLM 5.3 Flash	13,257 in / 8,504 out	$0.001543	OK 1m 34s
+2d ago ●	GLM 5.3 Flash	12,853 in / 6,365 out	$0.001477	OK 1m 15s
+2d ago ●	gpt-oss-120b	8,736 in / 9,139 out	$0.00154	OK 2m 34s
+2d ago ●	gpt-oss-120b	8,157 in / 9,184 out	$0.001621	OK 2m 28s
+2d ago ●	gpt-oss-120b	14,653 in / 8,552 out	$0.00163	OK 2m 23s
+2d ago ●	GLM 5.3 Flash	11,129 in / 2,242 out	$0.001247	OK 15s
+2d ago ●	gpt-oss-120b	8,164 in / 7,193 out	$0.001323	OK 1m 58s
+2d ago ●	gpt-oss-120b	No usage	–	Error 0ms
+2d ago ●	z-ai/glm-5.3-flash-20260826	No usage	–	Error 0ms
+2d ago ●	z-ai/glm-5.3-flash-20260826	No usage	–	Error 0ms
+2d ago ●	z-ai/glm-5.3-flash-20260826	No usage	–	Error 0ms
+2d ago ●	gpt-oss-120b	20,082 in / 11,034 out	$0.002118	OK 3m 00s
+2d ago ●	gpt-oss-120b	18,913 in / 10,877 out	$0.002106	OK 2m 32s
+2d ago ●	gpt-oss-120b	17,401 in / 9,532 out	$0.001859	OK 2m 13s
+2d ago ●	GLM 5.3 Flash	15,503 in / 11,841 out	$0.001824	OK 2m 31s
+2d ago ●	GLM 5.3 Flash	16,777 in / 9,905 out	$0.001945	OK 1m 59s
+2d ago ●	GLM 5.3 Flash	14,204 in / 10,030 out	$0.001663	OK 2m 10s
+2d ago ●	GLM 5.3 Flash	12,686 in / 8,314 out	$0.001479	OK 1m 47s
+2d ago ●	GLM 5.3 Flash	12,619 in / 9,540 out	$0.001483	OK 2m 10s
+2d ago ●	GLM 5.3 Flash	14,053 in / 8,478 out	$0.001631	OK 1m 48s
+2d ago ●	gpt-oss-120b	9,687 in / 13,268 out	$0.002188	OK 3m 27s
+2d ago ●	gpt-oss-120b	19,856 in / 11,818 out	$0.002276	OK 2m 56s
+2d ago ●	GLM 5.3 Flash	13,946 in / 11,333 out	$0.001647	OK 2m 25s
+2d ago ●	gpt-oss-120b	18,583 in / 9,727 out	$0.001894	OK 2m 32s
+2d ago ●	gpt-oss-120b	18,354 in / 10,022 out	$0.00192	OK 2m 31s
+2d ago ●	gpt-oss-120b	19,060 in / 10,267 out	$0.002111	OK 2m 29s
+2d ago ●	gpt-oss-120b	12,114 in / 8,561 out	$0.001555	OK 2m 27s
+2d ago ●	gpt-oss-120b	10,644 in / 10,149 out	$0.001749	OK 3m 00s
+2d ago ●	GLM 5.3 Flash	14,539 in / 9,161 out	$0.001331	OK 1m 57s
+2d ago ●	GLM 5.3 Flash	12,638 in / 7,860 out	$0.001469	OK 1m 48s
+2d ago ●	GLM 5.3 Flash	13,611 in / 7,327 out	$0.00157	OK 1m 36s
+2d ago ●	GLM 5.3 Flash	15,042 in / 12,000 out	$0.001775	OK 3m 06s
+2d ago ●	GLM 5.3 Flash	12,869 in / 8,299 out	$0.001499	OK 1m 45s
+2d ago ●	GLM 5.3 Flash	12,606 in / 7,819 out	$0.001465	OK 1m 46s
+2d ago ●	GLM 5.3 Flash	13,989 in / 12,000 out	$0.001659	OK 2m 54s
+2d ago ●	gpt-oss-120b	8,163 in / 10,280 out	$0.001664	OK 2m 32s
+2d ago ●	gpt-oss-120b	11,191 in / 8,416 out	$0.001505	OK 1m 59s
+2d ago ●	gpt-oss-120b	8,168 in / 9,318 out	$0.00152	OK 2m 27s
+2d ago ●	gpt-oss-120b	8,911 in / 8,625 out	$0.001427	OK 2m 06s
+3d ago ●	gpt-oss-120b	9,329 in / 8,484 out	$0.001412	OK 2m 03s
+3d ago ●	GLM 5.3 Flash	12,858 in / 7,470 out	$0.001489	OK 1m 35s
+3d ago ●	gpt-oss-120b	10,618 in / 11,509 out	$0.002044	OK 3m 06s
+3d ago ●	gpt-oss-120b	11,424 in / 10,411 out	$0.001812	OK 2m 54s
+3d ago ●	GLM 5.3 Flash	12,866 in / 6,697 out	$0.001482	OK 1m 28s
+3d ago ●	gpt-oss-120b	10,803 in / 8,522 out	$0.001601	OK 2m 21s
+3d ago ●	gpt-oss-120b	9,726 in / 9,089 out	$0.001654	OK 2m 49s
+3d ago ●	GLM 5.3 Flash	12,594 in / 8,643 out	$0.001472	OK 1m 49s
+3d ago ●	GLM 5.3 Flash	13,323 in / 7,135 out	$0.001537	OK 1m 32s
+3d ago ●	GLM 5.3 Flash	12,346 in / 7,996 out	$0.001438	OK 1m 42s
+3d ago ●	gpt-oss-120b	8,163 in / 8,905 out	$0.001579	OK 2m 19s
+3d ago ●	GLM 5.3 Flash	11,818 in / 3,138 out	$0.001331	OK 22s
+3d ago ●	gpt-oss-120b	8,168 in / 8,378 out	$0.001501	OK 2m 07s
+3d ago ●	gpt-oss-120b	9,329 in / 8,538 out	$0.001468	OK 2m 03s
+3d ago ●	gpt-oss-120b	8,911 in / 7,554 out	$0.001399	OK 1m 53s
+3d ago ●	GLM 5.3 Flash	12,741 in / 6,832 out	$0.00147	OK 1m 28s
+3d ago ●	gpt-oss-120b	11,604 in / 8,768 out	$0.001662	OK 1m 50s
+3d ago ●	GLM 5.3 Flash	13,378 in / 11,790 out	$0.001589	OK 2m 28s
+3d ago ●	GLM 5.3 Flash	13,419 in / 12,000 out	$0.001596	OK 2m 39s
+3d ago ●	gpt-oss-120b	10,922 in / 9,672 out	$0.001777	OK 2m 22s
+3d ago ●	gpt-oss-120b	8,709 in / 24,000 out	$0.006435	OK 9m 04s
+3d ago ●	gpt-oss-120b	12,896 in / 9,095 out	$0.00175	OK 2m 11s
+3d ago ●	GLM 5.3 Flash	7,078 in / 10,173 out	$0.001782	OK 5m 14s
+3d ago ●	GLM 5.3 Flash	13,250 in / 9,534 out	$0.001553	OK 2m 06s
+3d ago ●	gpt-oss-120b	11,219 in / 9,833 out	$0.00181	OK 3m 12s
+3d ago ●	GLM 5.3 Flash	11,978 in / 12,000 out	$0.007796	OK 1m 05s
+3d ago ●	gpt-oss-120b	10,139 in / 3,667 out	Free	OK 3m 33s
+3d ago ●	gpt-oss-120b	8,260 in / 7,876 out	$0.001644	OK 2m 39s
+3d ago ●	GLM 5.3 Flash	9,665 in / 1,927 out	$0.001082	OK 13s
+3d ago ●	gpt-oss-120b	8,209 in / 4,437 out	$0.001	OK 1m 43s
+3d ago ●	GLM 5.3 Flash	8,621 in / 2,463 out	$0.000973	OK 16s
+3d ago ●	gpt-oss-120b	10,391 in / 3,149 out	$0.000847	OK 1m 12s
+3d ago ●	openai/gpt-6.1-sol-20260929	No usage	–	Error 0ms
+3d ago ●	openai/gpt-6.1-sol-20260929	No usage	–	Error 0ms
+3d ago ●	openai/gpt-6.1-sol-20260929	No usage	–	Error 0ms
+3d ago ●	Claude Opus 5.5	16,815 in / 7,234 out	$0.148358	OK 1m 10s
+3d ago ●	Claude Opus 5.5	15,926 in / 6,056 out	$0.129376	OK 58s
+3d ago ●	Claude Opus 5.5	16,172 in / 6,044 out	$0.129897	OK 58s
+3d ago ●	Claude Opus 5.5	16,824 in / 5,879 out	$0.129413	OK 58s
+3d ago ●	GPT-6.1 Sol	9,828 in / 10,307 out	$0.120337	OK 3m 11s
+3d ago ●	GPT-6.1 Sol	11,148 in / 8,716 out	$0.107727	OK 2m 38s
+3d ago ●	GPT-6.1 Sol	12,018 in / 9,313 out	$0.115872	OK 2m 45s
+3d ago ●	GPT-6.1 Sol	9,773 in / 9,705 out	$0.11418	OK 3m 03s
+3d ago ●	Claude Opus 5.5	16,388 in / 5,416 out	$0.12171	OK 54s
+3d ago ●	Claude Opus 5.5	16,043 in / 6,210 out	$0.13186	OK 59s
+3d ago ●	Claude Opus 5.5	16,208 in / 4,903 out	$0.114024	OK 48s
+3d ago ●	Claude Opus 5.5	16,105 in / 5,299 out	$0.11928	OK 51s
+3d ago ●	GPT-6.1 Sol	9,463 in / 9,281 out	$0.109165	OK 2m 49s
+3d ago ●	GPT-6.1 Sol	10,328 in / 8,921 out	$0.107727	OK 2m 37s
+3d ago ●	GPT-6.1 Sol	8,210 in / 9,395 out	$0.114473	OK 2m 44s
+3d ago ●	GPT-6.1 Sol	8,146 in / 8,780 out	$0.100862	OK 2m 34s
+3d ago ●	gpt-oss-120b	No usage	–	Error 0ms
+3d ago ●	gpt-oss-120b	No usage	–	Error 0ms
+3d ago ●	gpt-oss-120b	13,287 in / 1,777 out	$0.000664	OK 27s
+3d ago ●	gpt-oss-120b	12,590 in / 1,494 out	$0.000601	OK 22s
+3d ago ●	gpt-oss-120b	14,593 in / 1,826 out	$0.00071	OK 27s
+3d ago ●	gpt-oss-120b	13,952 in / 2,526 out	$0.000722	OK 47s
+3d ago ●	gpt-oss-120b	15,241 in / 1,791 out	$0.000725	OK 40s
+3d ago ●	gpt-oss-120b	13,546 in / 1,769 out	$0.000596	OK 38s
+3d ago ●	gpt-oss-120b	14,747 in / 1,746 out	$0.000629	OK 35s
+3d ago ●	gpt-oss-120b	15,653 in / 2,033 out	$0.000773	OK 46s
+3d ago ●	gpt-oss-120b	15,563 in / 2,041 out	$0.000698	OK 41s
+3d ago ●	gpt-oss-120b	15,989 in / 1,668 out	$0.000729	OK 26s
+3d ago ●	gpt-oss-120b	14,525 in / 1,861 out	$0.000714	OK 32s
+3d ago ●	gpt-oss-120b	9,950 in / 1,832 out	$0.000498	OK 30s
+3d ago ●	gpt-oss-120b	12,755 in / 2,309 out	$0.000654	OK 36s
+3d ago ●	gpt-oss-120b	12,672 in / 1,858 out	$0.000583	OK 28s
+3d ago ●	gpt-oss-120b	14,116 in / 1,418 out	$0.000561	OK 19s
+3d ago ●	gpt-oss-120b	13,956 in / 111 out	$0.000437	OK 4.3s
+3d ago ●	gpt-oss-120b	13,514 in / 1,897 out	$0.001149	OK 9.0s
+3d ago ●	gpt-oss-120b	12,774 in / 1,621 out	$0.001043	OK 7.1s
+3d ago ●	gpt-oss-120b	12,222 in / 1,665 out	$0.000735	OK 25s
+3d ago ●	gpt-oss-120b	12,235 in / 107 out	$0.000385	OK 2.7s
+3d ago ●	gpt-oss-120b	11,789 in / 1,856 out	$0.001053	OK 7.5s
+3d ago ●	gpt-oss-120b	12,722 in / 149 out	$0.000406	OK 2.9s
+3d ago ●	gpt-oss-120b	11,109 in / 1,836 out	$0.000676	OK 37s
+3d ago ●	gpt-oss-120b	14,991 in / 2,164 out	$0.000773	OK 52s
+3d ago ●	gpt-oss-120b	12,508 in / 1,933 out	$0.000664	OK 45s
+3d ago ●	gpt-oss-120b	15,970 in / 1,773 out	$0.00067	OK 38s
+3d ago ●	gpt-oss-120b	14,142 in / 1,867 out	$0.000629	OK 49s
+3d ago ●	gpt-oss-120b	13,732 in / 1,965 out	$0.000631	OK 39s
+3d ago ●	gpt-oss-120b	12,486 in / 1,967 out	$0.000668	OK 49s
+3d ago ●	gpt-oss-120b	13,335 in / 2,007 out	$0.000625	OK 38s
+3d ago ●	gpt-oss-120b	11,356 in / 1,687 out	$0.000593	OK 37s
+3d ago ●	gpt-oss-120b	13,487 in / 1,796 out	$0.000599	OK 32s
+3d ago ●	gpt-oss-120b	13,845 in / 5,036 out	$0.00117	OK 1m 24s
+3d ago ●	gpt-oss-120b	13,287 in / 2,087 out	$0.00071	OK 38s
+3d ago ●	gpt-oss-120b	12,697 in / 5,648 out	$0.001227	OK 1m 41s
+3d ago ●	gpt-oss-120b	13,756 in / 1,692 out	$0.000665	OK 23s
+3d ago ●	gpt-oss-120b	11,796 in / 2,084 out	$0.000665	OK 35s
+3d ago ●	gpt-oss-120b	16,423 in / 2,151 out	$0.00074	OK 36s
+3d ago ●	gpt-oss-120b	13,242 in / 1,921 out	$0.00061	OK 44s
+3d ago ●	gpt-oss-120b	14,495 in / 1,765 out	$0.000698	OK 35s
+3d ago ●	gpt-oss-120b	12,306 in / 2,046 out	$0.0006	OK 38s
+3d ago ●	gpt-oss-120b	14,546 in / 1,753 out	$0.000624	OK 49s
+3d ago ●	gpt-oss-120b	13,107 in / 2,865 out	$0.000822	OK 1m 07s
+3d ago ●	gpt-oss-120b	14,682 in / 1,998 out	$0.000665	OK 50s
+3d ago ●	gpt-oss-120b	10,300 in / 2,330 out	$0.000657	OK 57s
+3d ago ●	gpt-oss-120b	14,045 in / 1,786 out	$0.000688	OK 45s
+3d ago ●	gpt-oss-120b	12,800 in / 1,753 out	$0.000646	OK 41s
+3d ago ●	gpt-oss-120b	13,550 in / 1,787 out	$0.000673	OK 35s
+3d ago ●	gpt-oss-120b	12,457 in / 2,643 out	$0.000769	OK 51s
+3d ago ●	gpt-oss-120b	13,966 in / 2,323 out	$0.000692	OK 40s
+3d ago ●	gpt-oss-120b	11,581 in / 1,206 out	$0.000527	OK 30s
+3d ago ●	gpt-oss-120b	9,927 in / 1,734 out	$0.000482	OK 33s
+3d ago ●	gpt-oss-120b	18,325 in / 1,679 out	$0.0008	OK 36s
+3d ago ●	gpt-oss-120b	12,081 in / 1,498 out	$0.000512	OK 33s
+3d ago ●	gpt-oss-120b	15,909 in / 1,418 out	$0.000689	OK 28s
+3d ago ●	gpt-oss-120b	17,734 in / 1,769 out	$0.000722	OK 33s
+3d ago ●	gpt-oss-120b	16,557 in / 1,582 out	$0.000658	OK 31s
+3d ago ●	gpt-oss-120b	15,766 in / 2,277 out	$0.000739	OK 37s
+3d ago ●	gpt-oss-120b	15,662 in / 1,607 out	$0.000635	OK 31s
+3d ago ●	gpt-oss-120b	17,102 in / 1,828 out	$0.000712	OK 42s
+3d ago ●	gpt-oss-120b	16,412 in / 1,714 out	$0.000674	OK 40s
+3d ago ●	gpt-oss-120b	17,390 in / 1,654 out	$0.000694	OK 36s
+3d ago ●	gpt-oss-120b	16,385 in / 1,743 out	$0.000752	OK 48s
+3d ago ●	gpt-oss-120b	14,483 in / 1,657 out	$0.000682	OK 39s
+3d ago ●	gpt-oss-120b	12,751 in / 1,772 out	$0.000647	OK 40s
+3d ago ●	gpt-oss-120b	13,956 in / 1,873 out	$0.000698	OK 36s
+3d ago ●	gpt-oss-120b	12,774 in / 1,598 out	$0.000622	OK 25s
+3d ago ●	gpt-oss-120b	11,799 in / 1,460 out	$0.000572	OK 22s
+3d ago ●	gpt-oss-120b	11,108 in / 1,780 out	$0.000599	OK 33s
+3d ago ●	gpt-oss-120b	12,519 in / 1,969 out	$0.00067	OK 34s
+3d ago ●	gpt-oss-120b	14,131 in / 2,319 out	$0.000771	OK 47s
+3d ago ●	gpt-oss-120b	13,664 in / 1,610 out	$0.00065	OK 29s
+3d ago ●	gpt-oss-120b	12,484 in / 1,903 out	$0.000584	OK 23s
+3d ago ●	gpt-oss-120b	11,351 in / 2,159 out	$0.000663	OK 34s
+3d ago ●	gpt-oss-120b	13,563 in / 5,013 out	$0.001083	OK 1m 04s
+3d ago ●	gpt-oss-120b	15,870 in / 4,327 out	$0.001124	OK 50s
+3d ago ●	gpt-oss-120b	12,541 in / 1,765 out	$0.000565	OK 36s
+3d ago ●	gpt-oss-120b	13,664 in / 8,000 out	$0.001769	OK 2m 25s
+3d ago ●	gpt-oss-120b	12,510 in / 1,745 out	$0.000636	OK 35s
+3d ago ●	gpt-oss-120b	13,375 in / 3,362 out	$0.000904	OK 60s
+3d ago ●	gpt-oss-120b	11,912 in / 1,774 out	$0.000622	OK 45s
+3d ago ●	gpt-oss-120b	12,458 in / 2,674 out	$0.000774	OK 59s
+3d ago ●	gpt-oss-120b	12,379 in / 1,742 out	$0.000557	OK 48s
+3d ago ●	gpt-oss-120b	11,507 in / 1,295 out	$0.000538	OK 37s
+3d ago ●	gpt-oss-120b	11,311 in / 1,373 out	$0.000515	OK 41s
+3d ago ●	gpt-oss-120b	11,106 in / 1,395 out	$0.000467	OK 39s
+3d ago ●	gpt-oss-120b	10,763 in / 1,299 out	$0.000442	OK 34s
+3d ago ●	gpt-oss-120b	11,911 in / 1,120 out	$0.00045	OK 27s
+3d ago ●	gpt-oss-120b	10,909 in / 1,325 out	$0.00045	OK 35s
+3d ago ●	gpt-oss-120b	12,451 in / 2,449 out	$0.00074	OK 52s
+3d ago ●	gpt-oss-120b	11,841 in / 2,508 out	$0.00073	OK 52s
+3d ago ●	gpt-oss-120b	11,559 in / 1,431 out	$0.000486	OK 23s
+3d ago ●	gpt-oss-120b	11,351 in / 1,720 out	$0.000569	OK 27s
+3d ago ●	gpt-oss-120b	11,134 in / 1,389 out	$0.000541	OK 30s
+3d ago ●	gpt-oss-120b	12,339 in / 2,562 out	$0.000753	OK 54s
+3d ago ●	gpt-oss-120b	11,411 in / 1,156 out	$0.000486	OK 24s
+3d ago ●	gpt-oss-120b	9,297 in / 1,003 out	$0.000428	OK 20s
+3d ago ●	gpt-oss-120b	9,233 in / 1,062 out	$0.000435	OK 14s
+3d ago ●	gpt-oss-120b	9,201 in / 842 out	$0.000401	OK 15s
+3d ago ●	gpt-oss-120b	9,176 in / 436 out	$0.000339	OK 6.9s
+3d ago ●	gpt-oss-120b	12,484 in / 2,165 out	$0.000624	OK 46s
+3d ago ●	gpt-oss-120b	11,351 in / 1,924 out	$0.000554	OK 39s
+3d ago ●	gpt-oss-120b	13,563 in / 4,778 out	$0.001122	OK 1m 18s
+3d ago ●	gpt-oss-120b	15,870 in / 4,995 out	$0.001224	OK 1m 13s
+3d ago ●	gpt-oss-120b	12,541 in / 1,722 out	$0.000698	OK 17s
+3d ago ●	gpt-oss-120b	13,664 in / 1,612 out	$0.000576	OK 30s
+3d ago ●	gpt-oss-120b	12,510 in / 1,832 out	$0.000574	OK 38s
+3d ago ●	gpt-oss-120b	13,375 in / 2,393 out	$0.000685	OK 41s
+3d ago ●	gpt-oss-120b	11,912 in / 1,762 out	$0.00062	OK 33s
+3d ago ●	gpt-oss-120b	12,458 in / 2,342 out	$0.000649	OK 49s
+3d ago ●	gpt-oss-120b	12,379 in / 1,747 out	$0.000558	OK 35s
+3d ago ●	gpt-oss-120b	11,507 in / 1,290 out	$0.000537	OK 24s
+3d ago ●	gpt-oss-120b	11,311 in / 1,248 out	$0.000451	OK 19s
+3d ago ●	gpt-oss-120b	11,106 in / 1,217 out	$0.00044	OK 20s
+3d ago ●	gpt-oss-120b	10,763 in / 1,517 out	$0.00052	OK 28s
+3d ago ●	gpt-oss-120b	11,911 in / 1,825 out	$0.000601	OK 42s
+3d ago ●	gpt-oss-120b	10,909 in / 1,342 out	$0.000453	OK 27s
+3d ago ●	gpt-oss-120b	12,451 in / 2,636 out	$0.000693	OK 49s
+3d ago ●	gpt-oss-120b	11,841 in / 2,594 out	$0.000669	OK 58s
+3d ago ●	gpt-oss-120b	11,559 in / 1,444 out	$0.000562	OK 23s
+3d ago ●	gpt-oss-120b	11,351 in / 1,895 out	$0.000595	OK 37s
+3d ago ●	gpt-oss-120b	11,134 in / 1,696 out	$0.000587	OK 35s
+3d ago ●	gpt-oss-120b	12,339 in / 2,545 out	$0.000751	OK 53s
+3d ago ●	gpt-oss-120b	11,411 in / 1,262 out	$0.00053	OK 27s
+3d ago ●	gpt-oss-120b	9,297 in / 869 out	$0.000346	OK 21s
+3d ago ●	gpt-oss-120b	9,233 in / 991 out	$0.000424	OK 27s
+3d ago ●	gpt-oss-120b	9,201 in / 695 out	$0.000379	OK 16s
+3d ago ●	gpt-oss-120b	9,176 in / 462 out	$0.000343	OK 13s
+3d ago ●	gpt-oss-120b	8,982 in / 812 out	$0.000256	OK 16s
+3d ago ●	gpt-oss-120b	8,982 in / 1,112 out	$0.000435	OK 21s
+3d ago ●	gpt-oss-120b	11,351 in / 2,451 out	$0.000678	OK 51s
+3d ago ●	gpt-oss-120b	11,134 in / 1,477 out	$0.000554	OK 27s
+3d ago ●	gpt-oss-120b	12,339 in / 2,737 out	$0.00078	OK 44s
+3d ago ●	gpt-oss-120b	11,411 in / 1,612 out	$0.000583	OK 20s
+3d ago ●	gpt-oss-120b	9,297 in / 1,036 out	$0.000433	OK 17s
+3d ago ●	GPT-6.1 Sol	4,093 in / 63 out	$0.010861	OK 5.6s
+3d ago ●	gpt-oss-120b	9,233 in / 80 out	$0.00029	OK 2.5s
+3d ago ●	gpt-oss-120b	9,201 in / 742 out	$0.000645	OK 12s
+3d ago ●	gpt-oss-120b	9,176 in / 642 out	$0.00037	OK 19s
+3d ago ●	gpt-oss-120b	12,431 in / 2,664 out	$0.000771	OK 54s
+3d ago ●	gpt-oss-120b	11,503 in / 1,263 out	$0.000581	OK 8.3s
+3d ago ●	GPT-6.1 Sol	4,093 in / 46 out	$0.000875	OK 4.1s
+3d ago ●	gpt-oss-120b	9,297 in / 87 out	$0.000293	OK 2.2s
+3d ago ●	gpt-oss-120b	9,233 in / 1,666 out	$0.000588	OK 10s
+3d ago ●	gpt-oss-120b	9,201 in / 68 out	$0.000287	OK 2.1s
+3d ago ●	gpt-oss-120b	9,176 in / 111 out	$0.000294	OK 2.7s
+3d ago ●	GPT-6.1 Sol	4,093 in / 46 out	$0.000875	OK 3.4s
+3d ago ●	GPT-6.1 Sol	4,093 in / 76 out	$0.001175	OK 4.4s
+3d ago ●	GPT-6.1 Sol	4,093 in / 73 out	$0.010961	OK 5.3s
+3d ago ●	gpt-oss-120b	8,725 in / 2,000 out	$0.000662	OK 56s
+3d ago ●	gpt-oss-120b	7,809 in / 1,251 out	$0.000703	OK 5.9s
+3d ago ●	gpt-oss-120b	6,110 in / 702 out	$0.000287	OK 15s
+3d ago ●	gpt-oss-120b	6,046 in / 1,331 out	$0.00038	OK 24s
+3d ago ●	gpt-oss-120b	6,013 in / 2,000 out	$0.002101	OK 8.5s
+3d ago ●	gpt-oss-120b	5,988 in / 825 out	$0.000505	OK 3.8s
+3d ago ●	GPT-6.1 Sol	4,093 in / 45 out	$0.000865	OK 3.4s
+3d ago ●	GPT-6.1 Sol	4,093 in / 47 out	$0.000885	OK 4.0s
+3d ago ●	GPT-6.1 Sol	4,093 in / 53 out	$0.010761	OK 4.0s
+3d ago ●	GPT-6.1 Sol	11,078 in / 7,602 out	$0.100159	OK 56s
+3d ago ●	GPT-6.1 Sol	4,020 in / 1,209 out	$0.018584	OK 11s
+3d ago ●	GPT-6.1 Sol	29,216 in / 7,654 out	$0.146024	OK 54s
+3d ago ●	GPT-6.1 Sol	13,372 in / 2,933 out	$0.059204	OK 41s
+3d ago ●	GPT-6.1 Sol	26,516 in / 4,932 out	$0.112054	OK 36s
+3d ago ●	GPT-6.1 Sol	20,106 in / 4,652 out	$0.093229	OK 35s
+3d ago ●	GPT-6.1 Sol	24,929 in / 7,054 out	$0.129306	OK 51s
+3d ago ●	GPT-6.1 Sol	13,205 in / 2,330 out	$0.052756	OK 26s
+3d ago ●	GPT-6.1 Sol	34,632 in / 5,718 out	$0.140204	OK 42s
+3d ago ●	GPT-6.1 Sol	19,316 in / 4,914 out	$0.093874	OK 1m 01s
+3d ago ●	GPT-6.1 Sol	16,288 in / 4,481 out	$0.081974	OK 47s
+3d ago ●	GPT-6.1 Sol	18,940 in / 4,340 out	$0.087194	OK 42s
+3d ago ●	GPT-6.1 Sol	10,908 in / 7,500 out	$0.098714	OK 55s
+3d ago ●	GPT-6.1 Sol	18,905 in / 2,207 out	$0.065776	OK 38s
+3d ago ●	GPT-6.1 Sol	32,680 in / 6,461 out	$0.142754	OK 48s
+3d ago ●	GPT-6.1 Sol	25,904 in / 3,722 out	$0.098424	OK 39s
+3d ago ●	GPT-6.1 Sol	21,132 in / 6,151 out	$0.110784	OK 48s
+3d ago ●	GPT-6.1 Sol	24,415 in / 4,480 out	$0.102281	OK 38s
+3d ago ●	GPT-6.1 Sol	7,834 in / 4,958 out	$0.065609	OK 41s
+3d ago ●	GPT-6.1 Sol	22,862 in / 4,016 out	$0.093759	OK 44s
+3d ago ●	GPT-6.1 Sol	14,184 in / 3,090 out	$0.062804	OK 37s
+3d ago ●	GPT-6.1 Sol	35,224 in / 2,463 out	$0.109134	OK 39s
+3d ago ●	GPT-6.1 Sol	36,846 in / 5,790 out	$0.146459	OK 44s
+3d ago ●	GPT-6.1 Sol	46,637 in / 5,632 out	$0.169356	OK 40s
+3d ago ●	GPT-6.1 Sol	4,295 in / 765 out	$0.014831	OK 7.4s
+3d ago ●	GPT-6.1 Sol	3,686 in / 904 out	$0.014699	OK 8.0s
+3d ago ●	GPT-6.1 Sol	8,164 in / 4,906 out	$0.065914	OK 32s
+3d ago ●	GPT-6.1 Sol	3,872 in / 1,115 out	$0.017274	OK 8.6s
+3d ago ●	GPT-6.1 Sol	7,681 in / 4,285 out	$0.058496	OK 30s
+3d ago ●	GPT-6.1 Sol	3,958 in / 1,484 out	$0.021179	OK 14s
+3d ago ●	GPT-6.1 Sol	7,531 in / 4,895 out	$0.064221	OK 33s
+3d ago ●	mistral-ocr-latest	0 in / 0 out	$0.004	OK 2.7s
+3d ago ●	GPT-6.1 Sol	4,017 in / 1,265 out	$0.019136	OK 9.4s
+3d ago ●	GPT-6.1 Sol	8,132 in / 5,531 out	$0.072084	OK 37s
+3d ago ●	mistral-ocr-latest	0 in / 0 out	$0.004	OK 2.5s
+3d ago ●	GPT-6.1 Sol	3,901 in / 1,150 out	$0.017696	OK 8.8s
+3d ago ●	GPT-6.1 Sol	7,941 in / 5,287 out	$0.069166	OK 39s
+3d ago ●	GPT-6.1 Sol	4,065 in / 1,279 out	$0.022951	OK 9.3s
+4d ago ●	GPT-6.1 Sol	8,625 in / 5,885 out	$0.076856	OK 39s
+4d ago ●	mistral-ocr-latest	0 in / 0 out	$0.006	OK 2.2s
+4d ago ●	GPT-6.1 Sol	3,789 in / 1,027 out	$0.016186	OK 9.3s
+4d ago ●	GPT-6.1 Sol	8,987 in / 5,264 out	$0.071551	OK 39s
+4d ago ●	GPT-6.1 Sol	15,030 in / 3,774 out	$0.071759	OK 41s
+4d ago ●	GPT-6.1 Sol	7,359 in / 4,867 out	$0.063511	OK 34s
+4d ago ●	mistral-ocr-latest	0 in / 0 out	$0.004	OK 2.8s
+4d ago ●	GPT-6.1 Sol	3,713 in / 1,038 out	$0.016106	OK 8.7s
+4d ago ●	GPT-6.1 Sol	13,285 in / 4,409 out	$0.073746	OK 34s
+4d ago ●	GPT-6.1 Sol	3,762 in / 1,039 out	$0.016239	OK 9.3s
+4d ago ●	GPT-6.1 Sol	9,216 in / 4,817 out	$0.067654	OK 41s
+4d ago ●	GPT-6.1 Sol	3,797 in / 1,061 out	$0.016546	OK 9.2s
+4d ago ●	GPT-6.1 Sol	7,004 in / 4,553 out	$0.059484	OK 32s
+4d ago ●	mistral-ocr-latest	0 in / 0 out	$0.004	OK 2.2s
+4d ago ●	GPT-6.1 Sol	3,470 in / 797 out	$0.013089	OK 6.6s
+4d ago ●	mistral-ocr-latest	0 in / 0 out	$0.001	OK 1.6s
+4d ago ●	GPT-6.1 Sol	7,269 in / 4,683 out	$0.061446	OK 32s
+4d ago ●	mistral-ocr-latest	0 in / 0 out	$0.004	OK 2.7s
+4d ago ●	GPT-6.1 Sol	3,752 in / 1,077 out	$0.016594	OK 9.5s
+4d ago ●	GPT-6.1 Sol	9,102 in / 6,649 out	$0.085689	OK 45s
+4d ago ●	mistral-ocr-latest	0 in / 0 out	$0.004	OK 3.1s
+4d ago ●	GPT-6.1 Sol	4,225 in / 1,503 out	$0.022036	OK 11s
+4d ago ●	GPT-6.1 Sol	8,394 in / 5,698 out	$0.074409	OK 39s
+4d ago ●	mistral-ocr-latest	0 in / 0 out	$0.006	OK 2.6s
+4d ago ●	GPT-6.1 Sol	3,921 in / 1,403 out	$0.020276	OK 13s
+4d ago ●	GPT-6.1 Sol	6,530 in / 3,883 out	$0.051599	OK 27s
+4d ago ●	mistral-ocr-latest	0 in / 0 out	$0.004	OK 1.9s
+4d ago ●	GPT-6.1 Sol	3,483 in / 807 out	$0.013221	OK 6.7s
+4d ago ●	GPT-6.1 Sol	5,856 in / 3,317 out	$0.044254	OK 24s
+4d ago ●	mistral-ocr-latest	0 in / 0 out	$0.003	OK 2.7s
+4d ago ●	GPT-6.1 Sol	3,542 in / 874 out	$0.014039	OK 7.8s
+4d ago ●	GPT-6.1 Sol	3,856 in / 1,041 out	$0.016494	OK 9.2s
+4d ago ●	GPT-6.1 Sol	8,332 in / 4,565 out	$0.062924	OK 54s
+4d ago ●	mistral-ocr-latest	0 in / 0 out	$0.005	OK 2.4s
+4d ago ●	GPT-6.1 Sol	8,004 in / 5,380 out	$0.070254	OK 1m 04s
+4d ago ●	GPT-6.1 Sol	3,535 in / 862 out	$0.013901	OK 11s
+4d ago ●	GPT-6.1 Sol	6,277 in / 3,647 out	$0.048606	OK 44s
+4d ago ●	GPT-6.1 Sol	3,679 in / 1,003 out	$0.015671	OK 14s
+4d ago ●	GPT-6.1 Sol	4,675 in / 1,120 out	$0.019331	OK 19s
+4d ago ●	GPT-6.1 Sol	3,622 in / 948 out	$0.014979	OK 14s
+4d ago ●	GPT-6.1 Sol	8,005 in / 5,425 out	$0.070706	OK 1m 09s
+4d ago ●	GPT-6.1 Sol	4,035 in / 1,392 out	$0.020451	OK 18s
+4d ago ●	GPT-6.1 Sol	9,312 in / 6,818 out	$0.087904	OK 1m 20s
+4d ago ●	GPT-6.1 Sol	4,042 in / 1,330 out	$0.019849	OK 18s
+4d ago ●	GPT-6.1 Sol	9,781 in / 6,697 out	$0.087866	OK 1m 21s
+4d ago ●	GPT-6.1 Sol	4,158 in / 1,472 out	$0.021559	OK 20s
+4d ago ●	GPT-6.1 Sol	10,309 in / 7,715 out	$0.099366	OK 1m 33s
+4d ago ●	GPT-6.1 Sol	3,868 in / 980 out	$0.015914	OK 13s
+4d ago ●	GPT-6.1 Sol	8,453 in / 5,606 out	$0.073636	OK 1m 05s
+4d ago ●	GPT-6.1 Sol	3,904 in / 1,215 out	$0.018354	OK 17s
+4d ago ●	GPT-6.1 Sol	7,741 in / 5,106 out	$0.066856	OK 1m 00s
+4d ago ●	GPT-6.1 Sol	3,627 in / 1,055 out	$0.016061	OK 15s
+4d ago ●	GPT-6.1 Sol	8,703 in / 6,149 out	$0.079691	OK 1m 11s
+4d ago ●	GPT-6.1 Sol	3,871 in / 1,086 out	$0.016981	OK 14s
+4d ago ●	GPT-6.1 Sol	7,703 in / 5,140 out	$0.067101	OK 1m 02s
+4d ago ●	GPT-6.1 Sol	3,708 in / 973 out	$0.015444	OK 13s
+4d ago ●	GPT-6.1 Sol	8,279 in / 5,525 out	$0.072391	OK 1m 06s
+4d ago ●	GPT-6.1 Sol	3,929 in / 1,274 out	$0.013138	OK 17s
+4d ago ●	gpt-oss-120b	6,265 in / 6,550 out	$0.001412	OK 45s
+4d ago ●	gpt-oss-120b	6,629 in / 5,351 out	$0.001669	OK 51s
+4d ago ●	gpt-oss-120b	7,044 in / 8,000 out	$0.002352	OK 1m 00s
+4d ago ●	gpt-oss-120b	9,901 in / 9 out	$0.000298	OK 920ms
+4d ago ●	gpt-oss-120b	5,423 in / 4,579 out	$0.001415	OK 1m 07s
+4d ago ●	gpt-oss-120b	3,720 in / 8,000 out	$0.001471	OK 54s
+4d ago ●	gpt-oss-120b	5,036 in / 3,326 out	$0.000751	OK 53s
+4d ago ●	openai/gpt-6.1-sol-20260929	No usage	–	Error 0ms
+4d ago ●	gpt-oss-120b	3,691 in / 1,732 out	$0.000617	OK 2.8s
+4d ago ●	gpt-oss-120b	5,424 in / 899 out	$0.000315	OK 8.3s
+4d ago ●	gpt-oss-120b	3,691 in / 1,720 out	$0.00042	OK 33s
+4d ago ●	GPT-6.1 Sol	6,420 in / 3,502 out	$0.047514	OK 42s
+4d ago ●	GPT-6.1 Sol	3,838 in / 1,093 out	$0.016969	OK 14s
+4d ago ●	GPT-6.1 Sol	7,149 in / 4,408 out	$0.058396	OK 52s
+4d ago ●	GPT-6.1 Sol	3,726 in / 1,065 out	$0.016409	OK 14s
+4d ago ●	GPT-6.1 Sol	3,560 in / 889 out	$0.014234	OK 13s
+4d ago ●	GPT-6.1 Sol	6,258 in / 2,741 out	$0.039499	OK 31s
+4d ago ●	GPT-6.1 Sol	5,122 in / 680 out	$0.016049	OK 10s
+4d ago ●	GPT-6.1 Sol	7,988 in / 3,687 out	$0.053284	OK 43s
+4d ago ●	GPT-6.1 Sol	3,450 in / 626 out	$0.011329	OK 8.3s
+4d ago ●	GPT-6.1 Sol	5,382 in / 2,338 out	$0.033279	OK 26s
+4d ago ●	GPT-6.1 Sol	3,355 in / 539 out	$0.010221	OK 7.5s
+4d ago ●	GPT-6.1 Sol	6,766 in / 2,135 out	$0.034709	OK 27s
+4d ago ●	GPT-6.1 Sol	8,145 in / 2,313 out	$0.039936	OK 37s
+4d ago ●	GPT-6.1 Sol	5,759 in / 2,713 out	$0.037971	OK 30s
+4d ago ●	GPT-6.1 Sol	4,995 in / 1,080 out	$0.019731	OK 16s
+4d ago ●	GPT-6.1 Sol	8,873 in / 2,916 out	$0.047786	OK 34s
+4d ago ●	GPT-6.1 Sol	3,606 in / 831 out	$0.013769	OK 10s
+4d ago ●	GPT-6.1 Sol	10,470 in / 3,757 out	$0.060189	OK 47s
+4d ago ●	GPT-6.1 Sol	3,765 in / 1,121 out	$0.017066	OK 14s
+4d ago ●	GPT-6.1 Sol	5,202 in / 2,058 out	$0.030029	OK 25s
+4d ago ●	GPT-6.1 Sol	3,452 in / 771 out	$0.012784	OK 11s
+4d ago ●	GPT-6.1 Sol	6,098 in / 2,912 out	$0.040809	OK 34s
+4d ago ●	GPT-6.1 Sol	3,616 in / 796 out	$0.013444	OK 11s
+4d ago ●	GPT-6.1 Sol	4,778 in / 1,926 out	$0.027649	OK 23s
+4d ago ●	GPT-6.1 Sol	3,444 in / 672 out	$0.011774	OK 9.4s
+4d ago ●	GPT-6.1 Sol	5,218 in / 2,192 out	$0.031409	OK 26s
+4d ago ●	GPT-6.1 Sol	3,433 in / 667 out	$0.011696	OK 9.1s
+4d ago ●	GPT-6.1 Sol	5,587 in / 2,366 out	$0.034071	OK 27s
+4d ago ●	GPT-6.1 Sol	3,487 in / 631 out	$0.015026	OK 8.8s
+5d ago ●	GPT-6.1 Sol	5,593 in / 2,691 out	$0.037336	OK 35s
+5d ago ●	GPT-6.1 Sol	3,523 in / 862 out	$0.013871	OK 16s
+5d ago ●	GPT-6.1 Sol	6,201 in / 2,794 out	$0.039886	OK 37s
+5d ago ●	GPT-6.1 Sol	3,447 in / 646 out	$0.011521	OK 9.7s
+5d ago ●	GPT-6.1 Sol	6,566 in / 3,620 out	$0.049059	OK 46s
+5d ago ●	GPT-6.1 Sol	3,595 in / 863 out	$0.014061	OK 14s
+5d ago ●	GPT-6.1 Sol	6,505 in / 3,835 out	$0.051056	OK 50s
+5d ago ●	GPT-6.1 Sol	3,658 in / 1,128 out	$0.016869	OK 18s
+5d ago ●	GPT-6.1 Sol	6,520 in / 3,584 out	$0.048584	OK 46s
+5d ago ●	GPT-6.1 Sol	3,673 in / 1,043 out	$0.016056	OK 16s
+5d ago ●	GPT-6.1 Sol	6,981 in / 3,821 out	$0.052106	OK 50s
+5d ago ●	GPT-6.1 Sol	3,691 in / 898 out	$0.014651	OK 13s
+5d ago ●	GPT-6.1 Sol	6,486 in / 3,626 out	$0.048919	OK 49s
+5d ago ●	GPT-6.1 Sol	3,363 in / 989 out	$0.014741	OK 19s
+5d ago ●	GPT-6.1 Sol	11,858 in / 1,991 out	$0.045999	OK 32s
+5d ago ●	GPT-6.1 Sol	3,343 in / 692 out	$0.011721	OK 12s
+5d ago ●	GPT-6.1 Sol	13,454 in / 4,791 out	$0.077989	OK 1m 04s
+5d ago ●	GPT-6.1 Sol	3,831 in / 992 out	$0.015941	OK 14s
+5d ago ●	GPT-6.1 Sol	9,836 in / 5,421 out	$0.075244	OK 1m 17s
+5d ago ●	GPT-6.1 Sol	3,643 in / 791 out	$0.013461	OK 11s
+5d ago ●	GPT-6.1 Sol	5,980 in / 3,383 out	$0.045224	OK 43s
+5d ago ●	GPT-6.1 Sol	3,770 in / 1,069 out	$0.016559	OK 14s
+5d ago ●	GPT-6.1 Sol	6,004 in / 3,384 out	$0.045294	OK 43s
+5d ago ●	GPT-6.1 Sol	3,702 in / 1,005 out	$0.015749	OK 15s
+5d ago ●	GPT-6.1 Sol	7,014 in / 4,543 out	$0.059409	OK 59s
+5d ago ●	GPT-6.1 Sol	3,839 in / 1,321 out	$0.019251	OK 19s
+5d ago ●	GPT-6.1 Sol	6,741 in / 4,374 out	$0.057036	OK 56s
+5d ago ●	GPT-6.1 Sol	3,669 in / 1,110 out	$0.016716	OK 17s
+5d ago ●	GPT-6.1 Sol	6,203 in / 3,668 out	$0.048631	OK 45s
+5d ago ●	GPT-6.1 Sol	3,600 in / 899 out	$0.014434	OK 12s
+5d ago ●	GPT-6.1 Sol	5,359 in / 2,858 out	$0.038421	OK 36s
+5d ago ●	GPT-6.1 Sol	3,655 in / 1,086 out	$0.016441	OK 16s
+5d ago ●	GPT-6.1 Sol	15,120 in / 6,502 out	$0.099264	OK 1m 29s
+5d ago ●	GPT-6.1 Sol	5,076 in / 3,300 out	$0.042134	OK 46s
+5d ago ●	GPT-6.1 Sol	8,719 in / 4,151 out	$0.059751	OK 1m 01s
+5d ago ●	GPT-6.1 Sol	5,100 in / 2,000 out	$0.029194	OK 31s
+5d ago ●	GPT-6.1 Sol	7,711 in / 3,505 out	$0.050771	OK 44s
+5d ago ●	GPT-6.1 Sol	5,031 in / 3,082 out	$0.039841	OK 41s
+5d ago ●	GPT-6.1 Sol	7,541 in / 4,275 out	$0.058046	OK 56s
+5d ago ●	GPT-6.1 Sol	5,799 in / 3,151 out	$0.042451	OK 48s
+5d ago ●	GPT-6.1 Sol	4,985 in / 2,501 out	$0.033916	OK 35s
+5d ago ●	GPT-6.1 Sol	3,627 in / 835 out	$0.013861	OK 12s
+5d ago ●	GPT-6.1 Sol	4,985 in / 2,494 out	$0.033846	OK 34s
+5d ago ●	GPT-6.1 Sol	3,627 in / 835 out	$0.013861	OK 12s
+5d ago ●	GPT-6.1 Sol	6,638 in / 3,461 out	$0.047649	OK 45s
+5d ago ●	GPT-6.1 Sol	3,640 in / 942 out	$0.014964	OK 15s
+5d ago ●	GPT-6.1 Sol	6,638 in / 3,437 out	$0.047409	OK 48s
+5d ago ●	GPT-6.1 Sol	3,642 in / 943 out	$0.014979	OK 14s
+5d ago ●	GPT-6.1 Sol	8,037 in / 5,349 out	$0.070026	OK 1m 08s
+5d ago ●	GPT-6.1 Sol	3,692 in / 1,210 out	$0.017774	OK 19s
+5d ago ●	GPT-6.1 Sol	8,037 in / 5,279 out	$0.069326	OK 1m 05s
+5d ago ●	GPT-6.1 Sol	6,690 in / 3,450 out	$0.047669	OK 43s
+5d ago ●	GPT-6.1 Sol	6,690 in / 3,491 out	$0.048079	OK 45s
+5d ago ●	GPT-6.1 Sol	5,216 in / 2,338 out	$0.032864	OK 31s
+5d ago ●	GPT-6.1 Sol	5,216 in / 2,333 out	$0.032814	OK 31s
+5d ago ●	GPT-6.1 Sol	5,892 in / 2,808 out	$0.039254	OK 35s
+5d ago ●	GPT-6.1 Sol	5,876 in / 2,821 out	$0.039344	OK 37s
+5d ago ●	GPT-6.1 Sol	6,540 in / 4,151 out	$0.054304	OK 51s
+5d ago ●	GPT-6.1 Sol	6,540 in / 4,137 out	$0.054164	OK 51s
+5d ago ●	GPT-6.1 Sol	7,569 in / 5,099 out	$0.066356	OK 1m 01s
+5d ago ●	GPT-6.1 Sol	7,569 in / 5,087 out	$0.066236	OK 1m 03s
+5d ago ●	GPT-6.1 Sol	6,356 in / 3,798 out	$0.050314	OK 47s
+5d ago ●	GPT-6.1 Sol	6,356 in / 3,719 out	$0.049524	OK 48s
+5d ago ●	GPT-6.1 Sol	3,031 in / 13 out	$0.007706	OK 2.4s
+5d ago ●	GPT-6.1 Sol	4,093 in / 49 out	$0.000905	OK 5.0s
+5d ago ●	GPT-6.1 Sol	4,093 in / 51 out	$0.000925	OK 5.4s
+5d ago ●	GPT-6.1 Sol	2,915 in / 13 out	$0.004032	OK 2.1s
+5d ago ●	GPT-6.1 Sol	3,551 in / 1,110 out	$0.016592	OK 18s
+5d ago ●	GPT-6.1 Sol	2,915 in / 13 out	$0.004032	OK 7.8s
+5d ago ●	GPT-6.1 Sol	3,559 in / 1,062 out	$0.016132	OK 28s
+5d ago ●	GPT-6.1 Sol	2,915 in / 13 out	$0.004032	OK 7.9s
+5d ago ●	GPT-6.1 Sol	3,559 in / 1,032 out	$0.015832	OK 17s
+5d ago ●	GPT-6.1 Sol	2,889 in / 13 out	$0.003967	OK 1.8s
+5d ago ●	GPT-6.1 Sol	3,282 in / 783 out	$0.012649	OK 12s
+5d ago ●	GPT-6.1 Sol	2,889 in / 13 out	$0.003967	OK 2.3s
+5d ago ●	GPT-6.1 Sol	3,282 in / 777 out	$0.012589	OK 12s
+5d ago ●	GPT-6.1 Sol	2,907 in / 13 out	$0.004012	OK 2.4s
+5d ago ●	GPT-6.1 Sol	3,394 in / 905 out	$0.014149	OK 14s
+5d ago ●	GPT-6.1 Sol	2,907 in / 13 out	$0.004012	OK 2.1s
+5d ago ●	GPT-6.1 Sol	3,394 in / 924 out	$0.014339	OK 15s
+5d ago ●	GPT-6.1 Sol	2,925 in / 13 out	$0.004057	OK 23s
+5d ago ●	GPT-6.1 Sol	3,275 in / 801 out	$0.012812	OK 12s
+5d ago ●	GPT-6.1 Sol	2,925 in / 13 out	$0.004057	OK 2.2s
+5d ago ●	GPT-6.1 Sol	3,275 in / 797 out	$0.012772	OK 12s
+5d ago ●	GPT-6.1 Sol	2,907 in / 13 out	$0.004012	OK 1.8s
+5d ago ●	GPT-6.1 Sol	3,483 in / 1,014 out	$0.015462	OK 15s
+5d ago ●	GPT-6.1 Sol	2,907 in / 13 out	$0.004012	OK 3.3s
+5d ago ●	GPT-6.1 Sol	3,483 in / 992 out	$0.015242	OK 17s
+5d ago ●	GPT-6.1 Sol	2,889 in / 13 out	$0.003967	OK 3.7s
+5d ago ●	GPT-6.1 Sol	3,549 in / 1,067 out	$0.016157	OK 18s
+5d ago ●	GPT-6.1 Sol	2,889 in / 13 out	$0.003967	OK 3.5s
+5d ago ●	GPT-6.1 Sol	3,549 in / 1,053 out	$0.016017	OK 17s
+5d ago ●	GPT-6.1 Sol	6,215 in / 3,624 out	$0.048392	OK 49s
+5d ago ●	GPT-6.1 Sol	6,305 in / 3,853 out	$0.050907	OK 51s
+5d ago ●	GPT-6.1 Sol	5,844 in / 3,537 out	$0.046594	OK 49s
+5d ago ●	GPT-6.1 Sol	4,093 in / 65 out	$0.001065	OK 6.3s
+5d ago ●	GPT-6.1 Sol	6,476 in / 3,882 out	$0.055008	OK 54s
+5d ago ●	GPT-6.1 Sol	4,093 in / 57 out	$0.010801	OK 5.4s
+5d ago ●	GPT-6.1 Sol	4,093 in / 43 out	$0.000845	OK 5.1s
+5d ago ●	GPT-6.1 Sol	4,093 in / 54 out	$0.000955	OK 5.2s
+5d ago ●	GPT-6.1 Sol	4,093 in / 53 out	$0.010761	OK 6.7s
+6d ago ●	GPT-6.1 Sol	4,093 in / 44 out	$0.000855	OK 3.9s
+6d ago ●	GPT-6.1 Sol	4,093 in / 77 out	$0.001185	OK 5.4s
+6d ago ●	GPT-6.1 Sol	4,093 in / 69 out	$0.010921	OK 4.9s
+6d ago ●	mistral-ocr-latest	0 in / 0 out	$0.001	OK 2.1s
+6d ago ●	mistral-ocr-latest	0 in / 0 out	$0.001	OK 2.9s
+6d ago ●	mistral-ocr-latest	0 in / 0 out	$0.001	OK 2.8s
+6d ago ●	mistral-ocr-latest	0 in / 0 out	$0.001	OK 2.5s
+6d ago ●	mistral-ocr-latest	0 in / 0 out	$0.001	OK 2.3s
+6d ago ●	mistral-ocr-latest	0 in / 0 out	$0.001	OK 2.1s
+6d ago ●	mistral-ocr-latest	0 in / 0 out	$0.001	OK 1.9s
+6d ago ●	mistral-ocr-latest	0 in / 0 out	$0.001	OK 1.6s
+6d ago ●	mistral-ocr-latest	0 in / 0 out	$0.001	OK 2.4s
+6d ago ●	mistral-ocr-latest	0 in / 0 out	$0.001	OK 3.3s
+6d ago ●	mistral-ocr-latest	0 in / 0 out	$0.001	OK 1.7s
+6d ago ●	mistral-ocr-latest	0 in / 0 out	$0.001	OK 1.4s
+6d ago ●	mistral-ocr-latest	0 in / 0 out	$0.001	OK 1.7s
+6d ago ●	mistral-ocr-latest	0 in / 0 out	$0.001	OK 2.0s
+6d ago ●	GPT-6.1 Sol	4,093 in / 50 out	$0.000915	OK 4.6s
+6d ago ●	GPT-6.1 Sol	4,093 in / 41 out	$0.000825	OK 4.4s
+6d ago ●	GPT-6.1 Sol	4,093 in / 51 out	$0.000925	OK 5.5s
+6d ago ●	GPT-6.1 Sol	4,093 in / 55 out	$0.000965	OK 4.7s
+6d ago ●	GPT-6.1 Sol	4,093 in / 63 out	$0.001045	OK 9.1s
+6d ago ●	GPT-6.1 Sol	4,093 in / 55 out	$0.000965	OK 5.0s
+6d ago ●	GPT-6.1 Sol	4,093 in / 76 out	$0.001175	OK 5.7s
+6d ago ●	GPT-6.1 Sol	4,093 in / 78 out	$0.001195	OK 4.6s
+6d ago ●	GPT-6.1 Sol	4,093 in / 40 out	$0.000815	OK 2.4s
+6d ago ●	GPT-6.1 Sol	4,093 in / 66 out	$0.001075	OK 5.1s
+6d ago ●	GPT-6.1 Sol	4,093 in / 54 out	$0.000955	OK 4.5s
+6d ago ●	GPT-6.1 Sol	4,093 in / 50 out	$0.000915	OK 4.1s
+6d ago ●	GPT-6.1 Sol	4,093 in / 50 out	$0.000915	OK 3.3s
+6d ago ●	GPT-6.1 Sol	4,093 in / 50 out	$0.000915	OK 3.6s
+6d ago ●	GPT-6.1 Sol	4,093 in / 75 out	$0.001165	OK 5.7s
+6d ago ●	GPT-6.1 Sol	4,093 in / 72 out	$0.001135	OK 4.0s
+6d ago ●	GPT-6.1 Sol	4,093 in / 41 out	$0.000825	OK 3.7s
+6d ago ●	GPT-6.1 Sol	4,093 in / 62 out	$0.001035	OK 3.3s
+6d ago ●	GPT-6.1 Sol	4,093 in / 44 out	$0.000855	OK 4.8s
+6d ago ●	GPT-6.1 Sol	4,093 in / 62 out	$0.001035	OK 4.2s
+6d ago ●	GPT-6.1 Sol	4,093 in / 61 out	$0.001025	OK 5.3s
+6d ago ●	GPT-6.1 Sol	4,093 in / 71 out	$0.001125	OK 4.7s
+6d ago ●	GPT-6.1 Sol	4,093 in / 69 out	$0.001105	OK 11s
+6d ago ●	GPT-6.1 Sol	4,093 in / 45 out	$0.000865	OK 6.8s
+6d ago ●	GPT-6.1 Sol	4,093 in / 53 out	$0.000945	OK 5.0s
+6d ago ●	GPT-6.1 Sol	4,093 in / 53 out	$0.010761	OK 3.9s
+6d ago ●	GPT-6.1 Sol	4,093 in / 48 out	$0.010711	OK 8.6s
+6d ago ●	GPT-6.1 Sol	271,143 in / 71,643 out	$1.394286	OK 24m 50s
+6d ago ●	GPT-6.1 Sol	4,093 in / 66 out	$0.010891	OK 5.1s
+6d ago ●	GPT-6.1 Sol	8 in / 5 out	$0.000066	OK 1.9s
+6d ago ●	GPT-6.1 Sol	4,093 in / 75 out	$0.001165	OK 5.6s
+6d ago ●	GPT-6.1 Sol	4,093 in / 49 out	$0.000905	OK 4.8s
+6d ago ●	GPT-6.1 Sol	4,093 in / 44 out	$0.000855	OK 3.4s
+6d ago ●	GPT-6.1 Sol	4,093 in / 66 out	$0.010891	OK 10s
+21 Oct 2026 ●	GPT-6.1 Sol	6,673 in / 4,164 out	$0.054937	OK 53s
+21 Oct 2026 ●	GPT-6.1 Sol	6,347 in / 3,209 out	$0.044572	OK 41s
+21 Oct 2026 ●	GPT-6.1 Sol	6,376 in / 3,674 out	$0.049294	OK 46s
+21 Oct 2026 ●	GPT-6.1 Sol	6,758 in / 3,683 out	$0.050339	OK 47s
+21 Oct 2026 ●	GPT-6.1 Sol	6,509 in / 3,269 out	$0.045577	OK 42s
+21 Oct 2026 ●	GPT-6.1 Sol	6,288 in / 2,069 out	$0.033024	OK 28s
+21 Oct 2026 ●	GPT-6.1 Sol	6,166 in / 2,682 out	$0.038849	OK 35s
+21 Oct 2026 ●	GPT-6.1 Sol	6,338 in / 3,709 out	$0.049549	OK 46s
+21 Oct 2026 ●	GPT-6.1 Sol	6,420 in / 4,064 out	$0.053304	OK 51s
+21 Oct 2026 ●	GPT-6.1 Sol	7,506 in / 4,603 out	$0.061409	OK 58s
+21 Oct 2026 ●	GPT-6.1 Sol	7,518 in / 4,342 out	$0.058829	OK 55s
+21 Oct 2026 ●	GPT-6.1 Sol	7,165 in / 4,463 out	$0.059157	OK 56s
+21 Oct 2026 ●	GPT-6.1 Sol	6,945 in / 4,553 out	$0.059507	OK 57s
+21 Oct 2026 ●	GPT-6.1 Sol	6,467 in / 3,465 out	$0.047432	OK 45s
+21 Oct 2026 ●	GPT-6.1 Sol	6,764 in / 3,712 out	$0.050644	OK 48s
+21 Oct 2026 ●	GPT-6.1 Sol	6,343 in / 3,535 out	$0.047822	OK 45s
+21 Oct 2026 ●	GPT-6.1 Sol	6,526 in / 3,810 out	$0.051029	OK 47s
+21 Oct 2026 ●	GPT-6.1 Sol	5,371 in / 2,954 out	$0.039582	OK 39s
+21 Oct 2026 ●	GPT-6.1 Sol	6,719 in / 4,336 out	$0.056772	OK 55s
+21 Oct 2026 ●	GPT-6.1 Sol	6,532 in / 4,169 out	$0.054634	OK 53s
+21 Oct 2026 ●	GPT-6.1 Sol	6,227 in / 4,145 out	$0.053632	OK 52s
+21 Oct 2026 ●	GPT-6.1 Sol	6,754 in / 4,076 out	$0.054259	OK 52s
+21 Oct 2026 ●	GPT-6.1 Sol	6,568 in / 4,260 out	$0.055634	OK 54s
+21 Oct 2026 ●	GPT-6.1 Sol	4,231 in / 800 out	$0.018576	OK 17s
+21 Oct 2026 ●	GPT-6.1 Sol	4,267 in / 799 out	$0.013935	OK 21s
+21 Oct 2026 ●	GPT-6.1 Sol	5,645 in / 2,934 out	$0.040067	OK 38s
+21 Oct 2026 ●	GPT-6.1 Sol	4,277 in / 644 out	$0.017131	OK 15s
+21 Oct 2026 ●	GPT-6.1 Sol	9,147 in / 800 out	$0.026193	OK 19s
+21 Oct 2026 ●	GPT-6.1 Sol	6,871 in / 3,877 out	$0.052562	OK 49s
+21 Oct 2026 ●	GPT-6.1 Sol	10,649 in / 800 out	$0.034621	OK 17s
+21 Oct 2026 ●	GPT-6.1 Sol	6,290 in / 3,614 out	$0.048479	OK 47s
+21 Oct 2026 ●	GPT-6.1 Sol	6,536 in / 3,669 out	$0.049644	OK 48s
+21 Oct 2026 ●	GPT-6.1 Sol	6,880 in / 3,703 out	$0.050844	OK 51s
+21 Oct 2026 ●	GPT-6.1 Sol	6,597 in / 4,083 out	$0.053937	OK 54s
+21 Oct 2026 ●	GPT-6.1 Sol	6,175 in / 3,739 out	$0.049442	OK 47s
+21 Oct 2026 ●	GPT-6.1 Sol	6,649 in / 4,014 out	$0.053377	OK 50s
+21 Oct 2026 ●	GPT-6.1 Sol	6,666 in / 4,373 out	$0.057009	OK 54s
+21 Oct 2026 ●	GPT-6.1 Sol	4,819 in / 2,348 out	$0.032142	OK 29s
+21 Oct 2026 ●	GPT-6.1 Sol	5,386 in / 4,260 out	$0.052679	OK 55s
+21 Oct 2026 ●	GPT-6.1 Sol	4,093 in / 51 out	$0.010741	OK 3.0s
+21 Oct 2026 ●	GPT-6.1 Sol	5,274 in / 3,911 out	$0.048909	OK 50s
+21 Oct 2026 ●	GPT-6.1 Sol	5,218 in / 3,526 out	$0.044919	OK 45s
+21 Oct 2026 ●	GPT-6.1 Sol	5,268 in / 3,418 out	$0.043964	OK 43s
+21 Oct 2026 ●	GPT-6.1 Sol	5,298 in / 3,728 out	$0.047139	OK 48s
+21 Oct 2026 ●	GPT-6.1 Sol	5,315 in / 3,509 out	$0.044992	OK 43s
+21 Oct 2026 ●	GPT-6.1 Sol	5,592 in / 4,022 out	$0.050814	OK 50s
+21 Oct 2026 ●	GPT-6.1 Sol	5,313 in / 3,626 out	$0.046157	OK 47s
+21 Oct 2026 ●	GPT-6.1 Sol	5,422 in / 3,883 out	$0.048999	OK 48s
+21 Oct 2026 ●	GPT-6.1 Sol	5,808 in / 4,464 out	$0.055774	OK 57s
+21 Oct 2026 ●	GPT-6.1 Sol	5,614 in / 4,133 out	$0.051979	OK 53s
+21 Oct 2026 ●	GPT-6.1 Sol	5,193 in / 3,566 out	$0.045257	OK 46s
+21 Oct 2026 ●	GPT-6.1 Sol	4,697 in / 2,840 out	$0.036757	OK 35s
+21 Oct 2026 ●	GPT-6.1 Sol	5,214 in / 3,312 out	$0.042769	OK 41s
+21 Oct 2026 ●	GPT-6.1 Sol	5,160 in / 2,916 out	$0.038674	OK 37s
+21 Oct 2026 ●	GPT-6.1 Sol	4,339 in / 13 out	$0.007592	OK 2.0s
+21 Oct 2026 ●	GPT-6.1 Sol	3,511 in / 13 out	$0.008906	OK 2.1s
+21 Oct 2026 ●	mistral-ocr-latest	0 in / 0 out	$0.22	OK 11s
+21 Oct 2026 ●	GPT-6.1 Sol	6,363 in / 3,806 out	$0.050582	OK 49s
+21 Oct 2026 ●	GPT-6.1 Sol	11,716 in / 2,110 out	$0.047004	OK 33s
+21 Oct 2026 ●	GPT-6.1 Sol	14,978 in / 6,219 out	$0.096249	OK 1m 26s
+21 Oct 2026 ●	GPT-6.1 Sol	4,843 in / 2,474 out	$0.036846	OK 36s
+21 Oct 2026 ●	gpt-oss-120b	5,859 in / 99 out	$0.000192	OK 2.0s
+21 Oct 2026 ●	GPT-6.1 Sol	4,093 in / 61 out	$0.001025	OK 4.0s
+21 Oct 2026 ●	GPT-6.1 Sol	4,093 in / 52 out	$0.010751	OK 4.4s
+20 Oct 2026 ●	GPT-6.1 Sol	4,093 in / 43 out	$0.010661	OK 2.4s
+20 Oct 2026 ●	mistral-ocr-latest	0 in / 0 out	$0.004	OK 3.1s
+20 Oct 2026 ●	mistral-ocr-latest	0 in / 0 out	$0.001	OK 2.7s
+20 Oct 2026 ●	GPT-6.1 Sol	9,170 in / 6,888 out	$0.088419	OK 1m 34s
+20 Oct 2026 ●	Claude Opus 5.5	16,704 in / 8,810 out	$0.170111	OK 1m 23s
+20 Oct 2026 ●	GPT-6.1 Sol	8,577 in / 3,497 out	$0.053027	OK 1m 00s
+20 Oct 2026 ●	GPT-6.1 Sol	9,816 in / 11,337 out	$0.130607	OK 4m 09s
+20 Oct 2026 ●	GPT-6.1 Sol	7,569 in / 3,427 out	$0.049807	OK 48s
+20 Oct 2026 ●	GPT-6.1 Sol	7,399 in / 4,305 out	$0.058162	OK 1m 01s
+20 Oct 2026 ●	GPT-6.1 Sol	4,843 in / 2,539 out	$0.034112	OK 36s
+20 Oct 2026 ●	GPT-6.1 Sol	4,843 in / 2,510 out	$0.033822	OK 35s
+20 Oct 2026 ●	GPT-6.1 Sol	2,915 in / 13 out	$0.004032	OK 2.2s
+20 Oct 2026 ●	GPT-6.1 Sol	2,915 in / 13 out	$0.004032	OK 1.9s
+20 Oct 2026 ●	GPT-6.1 Sol	2,915 in / 13 out	$0.004032	OK 1.8s
+20 Oct 2026 ●	GPT-6.1 Sol	2,915 in / 13 out	$0.004032	OK 1.9s
+20 Oct 2026 ●	GPT-6.1 Sol	2,915 in / 13 out	$0.004032	OK 2.0s
+20 Oct 2026 ●	GPT-6.1 Sol	2,915 in / 13 out	$0.004032	OK 2.0s
+20 Oct 2026 ●	GPT-6.1 Sol	2,889 in / 13 out	$0.003967	OK 2.1s
+20 Oct 2026 ●	GPT-6.1 Sol	2,889 in / 13 out	$0.003967	OK 1.6s
+20 Oct 2026 ●	GPT-6.1 Sol	2,907 in / 13 out	$0.004012	OK 2.1s
+20 Oct 2026 ●	GPT-6.1 Sol	2,907 in / 13 out	$0.004012	OK 2.0s
+20 Oct 2026 ●	GPT-6.1 Sol	2,925 in / 13 out	$0.004057	OK 2.3s
+20 Oct 2026 ●	Claude Opus 5.5	15,891 in / 7,321 out	$0.146988	OK 1m 12s
+20 Oct 2026 ●	GPT-6.1 Sol	2,925 in / 13 out	$0.004057	OK 2.4s
+20 Oct 2026 ●	GPT-6.1 Sol	2,907 in / 13 out	$0.004012	OK 2.6s
+20 Oct 2026 ●	GPT-6.1 Sol	2,907 in / 13 out	$0.004012	OK 1.9s
+20 Oct 2026 ●	GPT-6.1 Sol	2,889 in / 13 out	$0.003967	OK 2.7s
+20 Oct 2026 ●	GPT-6.1 Sol	2,889 in / 13 out	$0.003967	OK 2.2s
+20 Oct 2026 ●	GPT-6.1 Sol	9,633 in / 13,874 out	$0.15552	OK 5m 57s
+20 Oct 2026 ●	Claude Opus 5.5	16,102 in / 5,770 out	$0.125865	OK 1m 03s
+20 Oct 2026 ●	GPT-6.1 Sol	8,132 in / 10,124 out	$0.121568	OK 3m 44s
+20 Oct 2026 ●	gpt-oss-120b	3,944 in / 545 out	$0.000238	OK 11s
+20 Oct 2026 ●	gpt-oss-120b	4,355 in / 552 out	$0.000711	OK 4.0s
+20 Oct 2026 ●	gpt-oss-120b	4,267 in / 469 out	$0.000197	OK 19s
+20 Oct 2026 ●	gpt-oss-120b	4,414 in / 576 out	$0.000261	OK 9.0s
+20 Oct 2026 ●	gpt-oss-120b	4,505 in / 602 out	$0.000243	OK 8.7s
+20 Oct 2026 ●	gpt-oss-120b	4,016 in / 967 out	$0.000264	OK 24s
+20 Oct 2026 ●	gpt-oss-120b	4,454 in / 444 out	$0.000333	OK 1.3s
+20 Oct 2026 ●	gpt-oss-120b	1,404 in / 1,252 out	$0.000276	OK 17s
+20 Oct 2026 ●	gpt-oss-120b	1,785 in / 519 out	$0.000146	OK 14s
+20 Oct 2026 ●	gpt-oss-120b	1,714 in / 384 out	$0.000108	OK 17s
+20 Oct 2026 ●	gpt-oss-120b	1,874 in / 282 out	$0.000106	OK 6.3s
+20 Oct 2026 ●	gpt-oss-120b	1,952 in / 51 out	$0.000067	OK 1.5s
+20 Oct 2026 ●	gpt-oss-120b	1,463 in / 66 out	$0.000055	OK 1.6s
+20 Oct 2026 ●	gpt-oss-120b	1,888 in / 542 out	$0.000161	OK 6.9s
+20 Oct 2026 ●	GPT-6.1 Sol	4,093 in / 41 out	$0.000825	OK 2.7s
+20 Oct 2026 ●	GPT-6.1 Sol	4,093 in / 95 out	$0.001365	OK 5.8s
+20 Oct 2026 ●	GPT-6.1 Sol	7,846 in / 3,669 out	$0.052919	OK 51s
+20 Oct 2026 ●	GPT-6.1 Sol	3,308 in / 626 out	$0.014528	OK 12s
+20 Oct 2026 ●	mistral-ocr-latest	0 in / 0 out	$0.005	OK 3.1s
+20 Oct 2026 ●	mistral-ocr-latest	0 in / 0 out	$0.004	OK 3.6s
+20 Oct 2026 ●	mistral-ocr-latest	0 in / 0 out	$0.001	OK 1.7s
+20 Oct 2026 ●	mistral-ocr-latest	0 in / 0 out	$0.003	OK 2.7s
+20 Oct 2026 ●	mistral-ocr-latest	0 in / 0 out	$0.001	OK 2.2s
+20 Oct 2026 ●	mistral-ocr-latest	0 in / 0 out	$0.005	OK 4.4s
+20 Oct 2026 ●	mistral-ocr-latest	0 in / 0 out	$0.002	OK 4.9s
+20 Oct 2026 ●	mistral-ocr-latest	0 in / 0 out	$0.003	OK 3.9s
+20 Oct 2026 ●	mistral-ocr-latest	0 in / 0 out	$0.001	OK 1.6s
+20 Oct 2026 ●	mistral-ocr-latest	0 in / 0 out	$0.001	OK 2.8s
+20 Oct 2026 ●	mistral-ocr-latest	0 in / 0 out	$0.002	OK 3.3s
+20 Oct 2026 ●	mistral-ocr-latest	0 in / 0 out	$0.001	OK 1.8s
+20 Oct 2026 ●	mistral-ocr-latest	0 in / 0 out	$0.004	OK 3.9s
+20 Oct 2026 ●	mistral-ocr-latest	0 in / 0 out	$0.001	OK 1.8s
+20 Oct 2026 ●	mistral-ocr-latest	0 in / 0 out	$0.003	OK 3.5s
+20 Oct 2026 ●	mistral-ocr-latest	0 in / 0 out	$0.001	OK 1.6s
+20 Oct 2026 ●	mistral-ocr-latest	0 in / 0 out	$0.003	OK 5.6s
+20 Oct 2026 ●	mistral-ocr-latest	0 in / 0 out	$0.001	OK 2.1s
+20 Oct 2026 ●	mistral-ocr-latest	0 in / 0 out	$0.001	OK 2.6s
+20 Oct 2026 ●	mistral-ocr-latest	0 in / 0 out	$0.001	OK 2.0s
+20 Oct 2026 ●	mistral-ocr-latest	0 in / 0 out	$0.001	OK 1.7s
+20 Oct 2026 ●	mistral-ocr-latest	0 in / 0 out	$0.001	OK 1.7s
+20 Oct 2026 ●	mistral-ocr-latest	0 in / 0 out	$0.003	OK 3.4s
+20 Oct 2026 ●	mistral-ocr-latest	0 in / 0 out	$0.003	OK 3.4s
+20 Oct 2026 ●	mistral-ocr-latest	0 in / 0 out	$0.002	OK 4.1s
+20 Oct 2026 ●	mistral-ocr-latest	0 in / 0 out	$0.003	OK 3.9s
+20 Oct 2026 ●	mistral-ocr-latest	0 in / 0 out	$0.003	OK 4.6s
+20 Oct 2026 ●	mistral-ocr-latest	0 in / 0 out	$0.003	OK 3.9s
+20 Oct 2026 ●	mistral-ocr-latest	0 in / 0 out	$0.003	OK 4.2s
+20 Oct 2026 ●	mistral-ocr-latest	0 in / 0 out	$0.003	OK 2.9s
+20 Oct 2026 ●	mistral-ocr-latest	0 in / 0 out	$0.001	OK 1.9s
+20 Oct 2026 ●	mistral-ocr-latest	0 in / 0 out	$0.003	OK 3.9s
+20 Oct 2026 ●	mistral-ocr-latest	0 in / 0 out	$0.001	OK 2.2s
+20 Oct 2026 ●	mistral-ocr-latest	0 in / 0 out	$0.004	OK 2.9s
+20 Oct 2026 ●	mistral-ocr-latest	0 in / 0 out	$0.001	OK 1.6s
+20 Oct 2026 ●	mistral-ocr-latest	0 in / 0 out	$0.003	OK 3.0s
+20 Oct 2026 ●	mistral-ocr-latest	0 in / 0 out	$0.001	OK 2.4s
+20 Oct 2026 ●	mistral-ocr-latest	0 in / 0 out	$0.004	OK 3.7s
+20 Oct 2026 ●	mistral-ocr-latest	0 in / 0 out	$0.001	OK 2.0s
+20 Oct 2026 ●	mistral-ocr-latest	0 in / 0 out	$0.004	OK 3.3s
+20 Oct 2026 ●	mistral-ocr-latest	0 in / 0 out	$0.001	OK 2.7s
+20 Oct 2026 ●	mistral-ocr-latest	0 in / 0 out	$0.004	OK 3.7s
+20 Oct 2026 ●	mistral-ocr-latest	0 in / 0 out	$0.001	OK 2.7s
+20 Oct 2026 ●	mistral-ocr-latest	0 in / 0 out	$0.004	OK 3.9s
+20 Oct 2026 ●	mistral-ocr-latest	0 in / 0 out	$0.001	OK 3.9s
+20 Oct 2026 ●	mistral-ocr-latest	0 in / 0 out	$0.004	OK 4.4s
+20 Oct 2026 ●	mistral-ocr-latest	0 in / 0 out	$0.001	OK 2.6s
+20 Oct 2026 ●	mistral-ocr-latest	0 in / 0 out	$0.004	OK 2.6s
+20 Oct 2026 ●	mistral-ocr-latest	0 in / 0 out	$0.003	OK 2.5s
+20 Oct 2026 ●	mistral-ocr-latest	0 in / 0 out	$0.001	OK 1.4s
+20 Oct 2026 ●	mistral-ocr-latest	0 in / 0 out	$0.003	OK 2.4s
+20 Oct 2026 ●	mistral-ocr-latest	0 in / 0 out	$0.001	OK 1.4s
+20 Oct 2026 ●	mistral-ocr-latest	0 in / 0 out	$0.004	OK 3.1s
+20 Oct 2026 ●	mistral-ocr-latest	0 in / 0 out	$0.001	OK 2.8s
+20 Oct 2026 ●	mistral-ocr-latest	0 in / 0 out	$0.004	OK 2.7s
+20 Oct 2026 ●	mistral-ocr-latest	0 in / 0 out	$0.001	OK 2.4s
+20 Oct 2026 ●	mistral-ocr-latest	0 in / 0 out	$0.005	OK 2.4s
+20 Oct 2026 ●	mistral-ocr-latest	0 in / 0 out	$0.001	OK 1.8s
+20 Oct 2026 ●	mistral-ocr-latest	0 in / 0 out	$0.005	OK 3.2s
+20 Oct 2026 ●	mistral-ocr-latest	0 in / 0 out	$0.001	OK 1.8s
+20 Oct 2026 ●	mistral-ocr-latest	0 in / 0 out	$0.004	OK 4.8s
+20 Oct 2026 ●	mistral-ocr-latest	0 in / 0 out	$0.001	OK 2.3s
+20 Oct 2026 ●	mistral-ocr-latest	0 in / 0 out	$0.004	OK 4.2s
+20 Oct 2026 ●	mistral-ocr-latest	0 in / 0 out	$0.001	OK 1.8s
+20 Oct 2026 ●	mistral-ocr-latest	0 in / 0 out	$0.003	OK 5.1s
+20 Oct 2026 ●	mistral-ocr-latest	0 in / 0 out	$0.001	OK 5.6s
+20 Oct 2026 ●	mistral-ocr-latest	0 in / 0 out	$0.003	OK 7.8s
+20 Oct 2026 ●	mistral-ocr-latest	0 in / 0 out	$0.001	OK 4.4s
+20 Oct 2026 ●	GPT-6.1 Sol	4,093 in / 54 out	$0.010771	OK 3.6s
+20 Oct 2026 ●	mistral-ocr-latest	0 in / 0 out	$0.001	OK 3.2s
+20 Oct 2026 ●	mistral-ocr-latest	0 in / 0 out	$0.001	OK 2.9s
+20 Oct 2026 ●	mistral-ocr-latest	0 in / 0 out	$0.001	OK 2.7s
+20 Oct 2026 ●	mistral-ocr-latest	0 in / 0 out	$0.001	OK 1.7s
+20 Oct 2026 ●	mistral-ocr-latest	0 in / 0 out	$0.001	OK 1.6s
+20 Oct 2026 ●	mistral-ocr-latest	0 in / 0 out	$0.001	OK 1.6s
+20 Oct 2026 ●	mistral-ocr-latest	0 in / 0 out	$0.001	OK 2.3s
+20 Oct 2026 ●	mistral-ocr-latest	0 in / 0 out	$0.001	OK 2.3s
+20 Oct 2026 ●	mistral-ocr-latest	0 in / 0 out	$0.001	OK 1.6s
+20 Oct 2026 ●	GPT-6.1 Sol	7,212 in / 4,732 out	$0.048046	OK 1m 05s
+20 Oct 2026 ●	GPT-6.1 Sol	2,674 in / 626 out	$0.006533	OK 9.6s
+20 Oct 2026 ●	GPT-6.1 Sol	7,212 in / 4,679 out	$0.062195	OK 1m 05s
+20 Oct 2026 ●	GPT-6.1 Sol	2,674 in / 626 out	$0.012943	OK 9.9s
+20 Oct 2026 ●	mistral-ocr-latest	0 in / 0 out	$0.001	OK 3.2s
+20 Oct 2026 ●	Claude Opus 5.5	15,964 in / 7,308 out	$0.147011	OK 1m 11s
+20 Oct 2026 ●	GPT-6.1 Sol	10,232 in / 11,934 out	$0.137617	OK 4m 53s
+20 Oct 2026 ●	mistral-ocr-latest	0 in / 0 out	$0.003	OK 3.5s
+20 Oct 2026 ●	mistral-ocr-latest	0 in / 0 out	$0.001	OK 1.9s
+20 Oct 2026 ●	Claude Opus 5.5	16,050 in / 7,699 out	$0.152726	OK 1m 15s
+20 Oct 2026 ●	GPT-6.1 Sol	9,814 in / 12,115 out	$0.138382	OK 4m 51s
+20 Oct 2026 ●	Claude Opus 5.5	16,177 in / 6,548 out	$0.136967	OK 1m 06s
+20 Oct 2026 ●	GPT-6.1 Sol	8,132 in / 11,142 out	$0.131748	OK 4m 19s
+20 Oct 2026 ●	Claude Opus 5.5	17 in / 10 out	$0.000187	OK 2.7s
+20 Oct 2026 ●	GPT-6.1 Sol	4,093 in / 60 out	$0.001015	OK 3.8s
+20 Oct 2026 ●	GPT-6.1 Sol	6,932 in / 4,827 out	$0.065598	OK 1m 15s
+20 Oct 2026 ●	GPT-6.1 Sol	4,093 in / 60 out	$0.001015	OK 4.6s
+20 Oct 2026 ●	GPT-6.1 Sol	1,933 in / 13 out	$0.004961	OK 2.4s
+20 Oct 2026 ●	GPT-6.1 Sol	7,573 in / 5,034 out	$0.069271	OK 1m 23s
+20 Oct 2026 ●	GPT-6.1 Sol	1,944 in / 13 out	$0.004988	OK 2.0s
+20 Oct 2026 ●	GPT-6.1 Sol	4,093 in / 45 out	$0.000865	OK 3.5s
+20 Oct 2026 ●	GPT-6.1 Sol	2,163 in / 40 out	$0.005806	OK 2.7s
+20 Oct 2026 ●	GPT-6.1 Sol	2,149 in / 84 out	$0.001495	OK 3.1s
+20 Oct 2026 ●	GPT-6.1 Sol	1,986 in / 50 out	$0.005463	OK 3.7s
+20 Oct 2026 ●	GPT-6.1 Sol	1,968 in / 160 out	$0.001843	OK 5.1s
+20 Oct 2026 ●	GPT-6.1 Sol	4,093 in / 54 out	$0.010771	OK 4.4s
+20 Oct 2026 ●	GPT-6.1 Sol	2,928 in / 163 out	$0.005538	OK 6.5s
+20 Oct 2026 ●	GPT-6.1 Sol	1,951 in / 262 out	$0.004037	OK 9.5s
+20 Oct 2026 ●	GPT-6.1 Sol	1,444 in / 482 out	$0.008428	OK 12s
+20 Oct 2026 ●	GPT-6.1 Sol	3,879 in / 55 out	$0.000943	OK 3.9s
+20 Oct 2026 ●	GPT-6.1 Sol	3,879 in / 43 out	$0.000823	OK 3.3s
+20 Oct 2026 ●	GPT-6.1 Sol	3,879 in / 49 out	$0.000883	OK 2.8s
+20 Oct 2026 ●	GPT-6.1 Sol	3,879 in / 52 out	$0.000913	OK 3.3s
+20 Oct 2026 ●	GPT-6.1 Sol	3,879 in / 48 out	$0.000873	OK 3.4s
+20 Oct 2026 ●	GPT-6.1 Sol	3,879 in / 64 out	$0.001033	OK 3.7s
+20 Oct 2026 ●	GPT-6.1 Sol	3,879 in / 41 out	$0.000803	OK 3.2s
+20 Oct 2026 ●	GPT-6.1 Sol	3,879 in / 68 out	$0.001073	OK 3.9s
+20 Oct 2026 ●	GPT-6.1 Sol	3,879 in / 69 out	$0.001083	OK 5.1s
+20 Oct 2026 ●	GPT-6.1 Sol	3,879 in / 40 out	$0.000793	OK 3.2s
+20 Oct 2026 ●	GPT-6.1 Sol	3,879 in / 72 out	$0.001113	OK 3.9s
+20 Oct 2026 ●	GPT-6.1 Sol	3,879 in / 54 out	$0.000933	OK 4.0s
+20 Oct 2026 ●	GPT-6.1 Sol	3,879 in / 40 out	$0.000793	OK 3.9s
+20 Oct 2026 ●	GPT-6.1 Sol	3,879 in / 58 out	$0.000973	OK 4.2s
+20 Oct 2026 ●	GPT-6.1 Sol	3,879 in / 67 out	$0.001063	OK 4.5s
+20 Oct 2026 ●	GPT-6.1 Sol	3,879 in / 75 out	$0.001143	OK 3.8s
+20 Oct 2026 ●	GPT-6.1 Sol	3,879 in / 51 out	$0.000903	OK 3.8s
+20 Oct 2026 ●	GPT-6.1 Sol	3,879 in / 51 out	$0.000903	OK 4.3s
+20 Oct 2026 ●	GPT-6.1 Sol	3,879 in / 54 out	$0.000933	OK 2.9s
+20 Oct 2026 ●	GPT-6.1 Sol	3,879 in / 41 out	$0.010106	OK 3.4s
+20 Oct 2026 ●	GPT-6.1 Sol	3,682 in / 214 out	$0.011343	OK 9.6s
+20 Oct 2026 ●	GPT-6.1 Sol	3,960 in / 158 out	$0.011478	OK 4.5s
+20 Oct 2026 ●	GPT-6.1 Sol	2,840 in / 130 out	$0.00546	OK 4.1s
+20 Oct 2026 ●	GPT-6.1 Sol	2,886 in / 153 out	$0.008743	OK 4.4s
+20 Oct 2026 ●	GPT-6.1 Sol	4,124 in / 362 out	$0.013928	OK 8.6s
+20 Oct 2026 ●	GPT-6.1 Sol	2,731 in / 305 out	$0.007312	OK 6.7s
+20 Oct 2026 ●	GPT-6.1 Sol	2,547 in / 235 out	$0.006152	OK 5.3s
+20 Oct 2026 ●	GPT-6.1 Sol	2,769 in / 147 out	$0.008391	OK 3.6s
+20 Oct 2026 ●	GPT-6.1 Sol	3,536 in / 125 out	$0.001609	OK 3.4s
+20 Oct 2026 ●	GPT-6.1 Sol	3,536 in / 111 out	$0.009948	OK 3.5s
+20 Oct 2026 ●	GPT-6.1 Sol	3,412 in / 276 out	$0.011288	OK 6.3s
+20 Oct 2026 ●	GPT-6.1 Sol	2,845 in / 195 out	$0.009061	OK 5.4s
+20 Oct 2026 ●	GPT-6.1 Sol	3,346 in / 393 out	$0.012293	OK 9.3s
+20 Oct 2026 ●	GPT-6.1 Sol	2,594 in / 216 out	$0.008643	OK 7.3s
+20 Oct 2026 ●	GPT-6.1 Sol	3,102 in / 358 out	$0.003895	OK 8.2s
+20 Oct 2026 ●	GPT-6.1 Sol	3,102 in / 269 out	$0.010443	OK 8.0s
+20 Oct 2026 ●	GPT-6.1 Sol	2,223 in / 182 out	$0.007376	OK 6.6s
+20 Oct 2026 ●	GPT-6.1 Sol	2,098 in / 233 out	$0.007573	OK 6.6s
+20 Oct 2026 ●	GPT-6.1 Sol	2,445 in / 143 out	$0.007541	OK 4.7s
+20 Oct 2026 ●	GPT-6.1 Sol	1,954 in / 342 out	$0.008303	OK 7.8s
+20 Oct 2026 ●	GPT-6.1 Sol	1,946 in / 409 out	$0.005358	OK 11s
+20 Oct 2026 ●	GPT-6.1 Sol	1,501 in / 420 out	$0.007951	OK 13s
+20 Oct 2026 ●	GPT-6.1 Sol	1,426 in / 138 out	$0.004943	OK 4.5s
+20 Oct 2026 ●	GPT-6.1 Sol	1,329 in / 103 out	$0.001168	OK 4.4s
+20 Oct 2026 ●	GPT-6.1 Sol	1,329 in / 125 out	$0.004571	OK 4.1s
+20 Oct 2026 ●	GPT-6.1 Sol	1,252 in / 82 out	$0.001085	OK 2.9s
+20 Oct 2026 ●	GPT-6.1 Sol	1,196 in / 46 out	$0.000928	OK 2.9s
+20 Oct 2026 ●	GPT-6.1 Sol	1,053 in / 246 out	$0.005091	OK 6.8s
+20 Oct 2026 ●	GPT-6.1 Sol	510 in / 534 out	$0.00636	OK 14s
+20 Oct 2026 ●	GPT-6.1 Sol	626 in / 274 out	$0.003992	OK 11s
+20 Oct 2026 ●	GPT-6.1 Sol	6,077 in / 465 out	$0.019841	OK 10s
+20 Oct 2026 ●	GPT-6.1 Sol	467 in / 217 out	$0.003104	OK 5.7s
+20 Oct 2026 ●	GPT-6.1 Sol	343 in / 13 out	$0.000816	OK 2.1s
+20 Oct 2026 ●	GPT-6.1 Sol	261 in / 74 out	$0.001262	OK 2.5s
+20 Oct 2026 ●	GPT-6.1 Sol	232 in / 19 out	$0.000654	OK 1.6s
+19 Oct 2026 ●	DeepSeek V3.2	13,188 in / 1,433 out	$0.003973	OK 43s
+19 Oct 2026 ●	GPT-6.1 Sol	9,308 in / 12,795 out	$0.143917	OK 4m 50s
+19 Oct 2026 ●	DeepSeek V3.2	12,191 in / 931 out	$0.002941	OK 28s
+19 Oct 2026 ●	GPT-6.1 Sol	9,665 in / 11,231 out	$0.12917	OK 4m 03s
+19 Oct 2026 ●	DeepSeek V3.2	12,530 in / 1,353 out	$0.003771	OK 55s
+19 Oct 2026 ●	GPT-6.1 Sol	8,544 in / 9,892 out	$0.120278	OK 3m 17s
+19 Oct 2026 ●	Nano Banana Pro (Gemini 3 Pro Image)	1,492 in / 1,385 out	$0.140564	OK 33s
+19 Oct 2026 ●	Nano Banana Pro (Gemini 3 Pro Image)	1,419 in / 1,433 out	$0.140994	OK 31s
+19 Oct 2026 ●	Nano Banana Pro (Gemini 3 Pro Image)	1,332 in / 1,453 out	$0.14106	OK 28s
+19 Oct 2026 ●	Nano Banana Pro (Gemini 3 Pro Image)	1,320 in / 1,387 out	$0.140244	OK 33s
+19 Oct 2026 ●	Nano Banana Pro (Gemini 3 Pro Image)	765 in / 1,365 out	$0.13887	OK 38s
+19 Oct 2026 ●	Nano Banana Pro (Gemini 3 Pro Image)	No usage	–	Error 214ms
+19 Oct 2026 ●	Nano Banana Pro (Gemini 3 Pro Image)	No usage	–	Error 149ms
+19 Oct 2026 ●	R1 0528	16,588 in / 4,260 out	$0.01758	OK 3m 36s
+19 Oct 2026 ●	DeepSeek V3.2	16,587 in / 738 out	$0.004593	OK 39s
+19 Oct 2026 ●	GPT-6.1 Sol	827 in / 3,386 out	$0.035514	OK 1m 12s
+19 Oct 2026 ●	GPT-6.1 Sol	864 in / 2,665 out	$0.028378	OK 55s
+19 Oct 2026 ●	GPT-6.1 Sol	831 in / 2,627 out	$0.027932	OK 52s
+19 Oct 2026 ●	GPT-6.1 Sol	831 in / 1,655 out	$0.018212	OK 32s
+19 Oct 2026 ●	GPT-6.1 Sol	811 in / 1,506 out	$0.016682	OK 30s
+19 Oct 2026 ●	GPT-6.1 Sol	826 in / 1,254 out	$0.014192	OK 23s
+19 Oct 2026 ●	GPT-6.1 Sol	821 in / 941 out	$0.011052	OK 17s
+19 Oct 2026 ●	GPT-6.1 Sol	800 in / 599 out	$0.00759	OK 11s
+19 Oct 2026 ●	GPT-6.1 Sol	796 in / 398 out	$0.005572	OK 7.8s
+19 Oct 2026 ●	GPT-6.1 Sol	9,457 in / 7,048 out	$0.094121	OK 3m 05s
+19 Oct 2026 ●	R1 0528	5,595 in / 8,526 out	$0.021384	OK 7m 32s
+19 Oct 2026 ●	gpt-oss-120b	78,190 in / 9,117 out	$0.004442	OK 4m 37s
+19 Oct 2026 ●	gpt-oss-120b	78,203 in / 4,525 out	$0.003024	OK 2m 26s
+19 Oct 2026 ●	DeepSeek V3.2	951 in / 14,000 out	$0.005525	OK 8m 27s
+19 Oct 2026 ●	DeepSeek V3.2	917 in / 14,000 out	$0.005491	OK 8m 06s
+19 Oct 2026 ●	DeepSeek V3.2	900 in / 14,000 out	$0.005554	OK 8m 02s
+19 Oct 2026 ●	DeepSeek V3.2	918 in / 7,790 out	$0.003132	OK 4m 22s
+19 Oct 2026 ●	DeepSeek V3.2	903 in / 14,000 out	$0.006132	OK 4m 30s
+19 Oct 2026 ●	DeepSeek V3.2	970 in / 8,648 out	$0.003635	OK 3m 59s
+19 Oct 2026 ●	DeepSeek V3.2	899 in / 1,385 out	$0.000688	OK 26s
+19 Oct 2026 ●	DeepSeek V3.2	899 in / 784 out	$0.00049	OK 22s
+19 Oct 2026 ●	DeepSeek V3.2	885 in / 542 out	$0.000475	OK 11s
+19 Oct 2026 ●	DeepSeek V3.2	10,205 in / 3,117 out	$0.002523	OK 2m 05s
+19 Oct 2026 ●	gpt-oss-120b	22,135 in / 3,854 out	$0.00091	OK 2m 05s
+19 Oct 2026 ●	gpt-oss-120b	22,135 in / 3,306 out	$0.001159	OK 1m 42s
+19 Oct 2026 ●	DeepSeek V3.2	9,519 in / 7,737 out	$0.00509	OK 3m 02s
+19 Oct 2026 ●	DeepSeek V3.2	9,424 in / 6,170 out	$0.00447	OK 2m 38s
+19 Oct 2026 ●	DeepSeek V3.2	9,461 in / 2,822 out	$0.002483	OK 1m 16s
+19 Oct 2026 ●	DeepSeek V3.2	9,521 in / 1,505 out	$0.003297	OK 26s
+19 Oct 2026 ●	gpt-oss-120b	63,192 in / 3,020 out	$0.002348	OK 1m 38s
+19 Oct 2026 ●	gpt-oss-120b	63,192 in / 3,128 out	$0.002458	OK 1m 29s
+19 Oct 2026 ●	DeepSeek V3.2	918 in / 14,000 out	$0.005508	OK 8m 52s
+19 Oct 2026 ●	DeepSeek V3.2	920 in / 14,000 out	$0.005517	OK 6m 59s
+19 Oct 2026 ●	DeepSeek V3.2	941 in / 14,000 out	$0.005564	OK 7m 01s
+19 Oct 2026 ●	DeepSeek V3.2	880 in / 9,266 out	$0.003772	OK 5m 37s
+19 Oct 2026 ●	DeepSeek V3.2	865 in / 3,664 out	$0.003155	OK 4m 35s
+19 Oct 2026 ●	DeepSeek V3.2	872 in / 2,219 out	$0.001069	OK 1m 30s
+19 Oct 2026 ●	DeepSeek V3.2	867 in / 513 out	$0.000634	OK 36s
+19 Oct 2026 ●	DeepSeek V3.2	870 in / 973 out	$0.000554	OK 35s
+19 Oct 2026 ●	DeepSeek V3.2	890 in / 525 out	$0.00065	OK 23s
+19 Oct 2026 ●	DeepSeek V3.2	10,205 in / 2,734 out	$0.003692	OK 1m 58s
+19 Oct 2026 ●	gpt-oss-120b	4,019 in / 714 out	$0.00027	OK 24s
+19 Oct 2026 ●	gpt-oss-120b	3,967 in / 51 out	$0.000127	OK 2.2s
+19 Oct 2026 ●	gpt-oss-120b	3,937 in / 822 out	$0.00024	OK 23s
+19 Oct 2026 ●	gpt-oss-120b	3,905 in / 520 out	$0.000777	OK 5.6s
+19 Oct 2026 ●	gpt-oss-120b	3,980 in / 431 out	$0.00022	OK 11s
+19 Oct 2026 ●	gpt-oss-120b	3,967 in / 716 out	$0.000211	OK 27s
+19 Oct 2026 ●	gpt-oss-120b	3,969 in / 867 out	$0.000281	OK 6.1s
+19 Oct 2026 ●	gpt-oss-120b	3,965 in / 1,175 out	$0.00049	OK 16s
+19 Oct 2026 ●	gpt-oss-120b	3,890 in / 1,682 out	$0.000615	OK 8.7s
+19 Oct 2026 ●	gpt-oss-120b	3,934 in / 324 out	$0.000277	OK 1.7s
+19 Oct 2026 ●	gpt-oss-120b	3,934 in / 135 out	$0.00014	OK 1.6s
+19 Oct 2026 ●	gpt-oss-120b	3,917 in / 51 out	$0.000126	OK 927ms
+19 Oct 2026 ●	gpt-oss-120b	3,905 in / 964 out	$0.00029	OK 7.5s
+19 Oct 2026 ●	gpt-oss-120b	4,038 in / 1,317 out	$0.000303	OK 31s
+19 Oct 2026 ●	gpt-oss-120b	3,991 in / 564 out	$0.00034	OK 2.4s
+19 Oct 2026 ●	gpt-oss-120b	3,912 in / 715 out	$0.000246	OK 7.3s
+19 Oct 2026 ●	gpt-oss-120b	3,955 in / 735 out	$0.000256	OK 5.2s
+19 Oct 2026 ●	gpt-oss-120b	4,356 in / 483 out	$0.000202	OK 20s
+19 Oct 2026 ●	gpt-oss-120b	4,438 in / 627 out	$0.000226	OK 15s
+19 Oct 2026 ●	gpt-oss-120b	4,621 in / 1,139 out	$0.000351	OK 9.6s
+19 Oct 2026 ●	gpt-oss-120b	5,086 in / 635 out	$0.000247	OK 19s
+19 Oct 2026 ●	gpt-oss-120b	4,307 in / 783 out	$0.000292	OK 34s
+19 Oct 2026 ●	gpt-oss-120b	4,691 in / 518 out	$0.000233	OK 9.4s
+19 Oct 2026 ●	gpt-oss-120b	4,809 in / 692 out	$0.000413	OK 2.8s
+19 Oct 2026 ●	gpt-oss-120b	4,787 in / 997 out	$0.00033	OK 9.3s
+19 Oct 2026 ●	gpt-oss-120b	4,115 in / 754 out	$0.000235	OK 19s
+19 Oct 2026 ●	gpt-oss-120b	4,445 in / 843 out	$0.00029	OK 10s
+19 Oct 2026 ●	gpt-oss-120b	3,971 in / 51 out	$0.000127	OK 993ms
+19 Oct 2026 ●	gpt-oss-120b	4,438 in / 374 out	$0.000203	OK 2.8s
+19 Oct 2026 ●	gpt-oss-120b	4,100 in / 758 out	$0.000259	OK 13s
+19 Oct 2026 ●	gpt-oss-120b	4,827 in / 406 out	$0.00022	OK 2.9s
+19 Oct 2026 ●	gpt-oss-120b	4,360 in / 1,034 out	$0.000476	OK 5.5s
+19 Oct 2026 ●	gpt-oss-120b	4,141 in / 51 out	$0.000132	OK 891ms
+19 Oct 2026 ●	gpt-oss-120b	4,195 in / 531 out	$0.00019	OK 18s
+19 Oct 2026 ●	gpt-oss-120b	3,909 in / 459 out	$0.000222	OK 12s
+19 Oct 2026 ●	gpt-oss-120b	3,947 in / 842 out	$0.000229	OK 21s
+19 Oct 2026 ●	gpt-oss-120b	3,957 in / 749 out	$0.000273	OK 29s
+19 Oct 2026 ●	gpt-oss-120b	3,880 in / 1,222 out	$0.000351	OK 32s
+19 Oct 2026 ●	gpt-oss-120b	4,222 in / 51 out	$0.000135	OK 936ms
+19 Oct 2026 ●	gpt-oss-120b	4,114 in / 990 out	$0.000301	OK 12s
+19 Oct 2026 ●	gpt-oss-120b	4,119 in / 579 out	$0.000227	OK 6.0s
+19 Oct 2026 ●	gpt-oss-120b	4,097 in / 51 out	$0.000131	OK 1.0s
+19 Oct 2026 ●	gpt-oss-120b	4,685 in / 459 out	$0.000223	OK 5.2s
+19 Oct 2026 ●	gpt-oss-120b	3,903 in / 199 out	$0.000154	OK 3.6s
+19 Oct 2026 ●	gpt-oss-120b	4,404 in / 652 out	$0.000229	OK 17s
+19 Oct 2026 ●	gpt-oss-120b	4,350 in / 971 out	$0.000312	OK 13s
+19 Oct 2026 ●	gpt-oss-120b	4,304 in / 51 out	$0.000137	OK 784ms
+19 Oct 2026 ●	gpt-oss-120b	4,309 in / 424 out	$0.000321	OK 2.0s
+19 Oct 2026 ●	gpt-oss-120b	4,143 in / 687 out	$0.000252	OK 5.8s
+19 Oct 2026 ●	gpt-oss-120b	4,198 in / 51 out	$0.000134	OK 738ms
+19 Oct 2026 ●	gpt-oss-120b	4,859 in / 856 out	$0.000299	OK 14s
+19 Oct 2026 ●	gpt-oss-120b	4,089 in / 51 out	$0.000131	OK 1.3s
+19 Oct 2026 ●	gpt-oss-120b	4,303 in / 485 out	$0.000216	OK 7.7s
+19 Oct 2026 ●	gpt-oss-120b	4,197 in / 400 out	$0.0002	OK 3.1s
+19 Oct 2026 ●	gpt-oss-120b	4,247 in / 595 out	$0.000238	OK 5.1s
+19 Oct 2026 ●	gpt-oss-120b	4,646 in / 52 out	$0.000148	OK 1.5s
+19 Oct 2026 ●	gpt-oss-120b	4,412 in / 806 out	$0.000277	OK 14s
+19 Oct 2026 ●	gpt-oss-120b	4,189 in / 883 out	$0.00043	OK 4.5s
+19 Oct 2026 ●	gpt-oss-120b	4,252 in / 687 out	$0.000229	OK 18s
+19 Oct 2026 ●	gpt-oss-120b	4,143 in / 617 out	$0.000239	OK 4.4s
+19 Oct 2026 ●	gpt-oss-120b	4,364 in / 107 out	$0.000718	OK 3.3s
+19 Oct 2026 ●	gpt-oss-120b	4,511 in / 641 out	$0.000255	OK 5.5s
+19 Oct 2026 ●	gpt-oss-120b	4,156 in / 51 out	$0.000133	OK 1.3s
+19 Oct 2026 ●	gpt-oss-120b	4,457 in / 51 out	$0.000142	OK 769ms
+19 Oct 2026 ●	gpt-oss-120b	4,671 in / 717 out	$0.000274	OK 7.2s
+19 Oct 2026 ●	gpt-oss-120b	4,611 in / 530 out	$0.000217	OK 12s
+19 Oct 2026 ●	gpt-oss-120b	4,423 in / 64 out	$0.000143	OK 1.8s
+19 Oct 2026 ●	gpt-oss-120b	4,108 in / 51 out	$0.000131	OK 935ms
+19 Oct 2026 ●	gpt-oss-120b	5,075 in / 564 out	$0.001184	OK 17s
+19 Oct 2026 ●	gpt-oss-120b	4,324 in / 401 out	$0.000316	OK 2.9s
+19 Oct 2026 ●	gpt-oss-120b	4,343 in / 1,193 out	$0.000353	OK 7.4s
+19 Oct 2026 ●	gpt-oss-120b	4,174 in / 910 out	$0.000246	OK 22s
+19 Oct 2026 ●	gpt-oss-120b	4,240 in / 731 out	$0.000258	OK 13s
+19 Oct 2026 ●	gpt-oss-120b	4,335 in / 921 out	$0.000295	OK 21s
+19 Oct 2026 ●	gpt-oss-120b	4,205 in / 1,311 out	$0.000371	OK 17s
+19 Oct 2026 ●	gpt-oss-120b	4,061 in / 523 out	$0.000199	OK 13s
+19 Oct 2026 ●	gpt-oss-120b	4,338 in / 1,122 out	$0.000339	OK 8.1s
+19 Oct 2026 ●	gpt-oss-120b	4,233 in / 668 out	$0.000251	OK 6.9s
+19 Oct 2026 ●	gpt-oss-120b	4,186 in / 1,123 out	$0.000335	OK 12s
+19 Oct 2026 ●	gpt-oss-120b	4,168 in / 653 out	$0.00037	OK 13s
+19 Oct 2026 ●	gpt-oss-120b	4,562 in / 582 out	$0.000241	OK 8.2s
+19 Oct 2026 ●	gpt-oss-120b	4,223 in / 302 out	$0.000181	OK 5.1s
+19 Oct 2026 ●	gpt-oss-120b	4,323 in / 462 out	$0.000198	OK 9.6s
+19 Oct 2026 ●	gpt-oss-120b	4,058 in / 714 out	$0.000228	OK 16s
+19 Oct 2026 ●	gpt-oss-120b	4,425 in / 636 out	$0.000227	OK 13s
+19 Oct 2026 ●	gpt-oss-120b	4,269 in / 573 out	$0.000984	OK 2.0s
+19 Oct 2026 ●	gpt-oss-120b	3,928 in / 587 out	$0.000245	OK 14s
+19 Oct 2026 ●	gpt-oss-120b	3,925 in / 51 out	$0.000126	OK 1.1s
+19 Oct 2026 ●	gpt-oss-120b	4,036 in / 571 out	$0.000227	OK 4.9s
+19 Oct 2026 ●	gpt-oss-120b	3,903 in / 627 out	$0.000234	OK 5.8s
+19 Oct 2026 ●	gpt-oss-120b	3,934 in / 512 out	$0.000213	OK 12s
+19 Oct 2026 ●	gpt-oss-120b	3,891 in / 1,511 out	$0.0004	OK 40s
+19 Oct 2026 ●	gpt-oss-120b	3,990 in / 918 out	$0.000291	OK 6.9s
+19 Oct 2026 ●	gpt-oss-120b	3,978 in / 51 out	$0.000128	OK 1.1s
+19 Oct 2026 ●	gpt-oss-120b	3,905 in / 549 out	$0.000332	OK 2.8s
+19 Oct 2026 ●	gpt-oss-120b	3,908 in / 740 out	$0.000255	OK 7.7s
+19 Oct 2026 ●	gpt-oss-120b	3,979 in / 1,027 out	$0.000911	OK 5.6s
+19 Oct 2026 ●	gpt-oss-120b	3,918 in / 712 out	$0.000372	OK 11s
+19 Oct 2026 ●	gpt-oss-120b	3,969 in / 463 out	$0.000314	OK 2.6s
+19 Oct 2026 ●	gpt-oss-120b	3,940 in / 51 out	$0.000126	OK 1.5s
+19 Oct 2026 ●	gpt-oss-120b	3,941 in / 995 out	$0.000314	OK 35s
+19 Oct 2026 ●	gpt-oss-120b	3,902 in / 51 out	$0.000125	OK 1.8s
+19 Oct 2026 ●	gpt-oss-120b	3,927 in / 128 out	$0.000139	OK 2.3s
+19 Oct 2026 ●	gpt-oss-120b	3,955 in / 51 out	$0.000127	OK 1.6s
+19 Oct 2026 ●	gpt-oss-120b	3,897 in / 900 out	$0.000297	OK 33s
+19 Oct 2026 ●	gpt-oss-120b	3,882 in / 51 out	$0.000125	OK 1.1s
+19 Oct 2026 ●	gpt-oss-120b	3,896 in / 518 out	$0.000324	OK 2.8s
+19 Oct 2026 ●	gpt-oss-120b	3,966 in / 789 out	$0.000791	OK 4.3s
+19 Oct 2026 ●	gpt-oss-120b	3,957 in / 118 out	$0.000138	OK 1.9s
+19 Oct 2026 ●	gpt-oss-120b	3,888 in / 414 out	$0.000178	OK 11s
+19 Oct 2026 ●	gpt-oss-120b	3,928 in / 51 out	$0.000126	OK 1.1s
+19 Oct 2026 ●	gpt-oss-120b	3,957 in / 1,126 out	$0.000479	OK 5.6s
+19 Oct 2026 ●	gpt-oss-120b	3,936 in / 556 out	$0.000222	OK 5.4s
+19 Oct 2026 ●	gpt-oss-120b	3,908 in / 910 out	$0.000287	OK 7.4s
+19 Oct 2026 ●	gpt-oss-120b	3,927 in / 884 out	$0.001119	OK 4.1s
+19 Oct 2026 ●	gpt-oss-120b	3,895 in / 607 out	$0.000226	OK 14s
+19 Oct 2026 ●	gpt-oss-120b	4,336 in / 549 out	$0.000232	OK 5.8s
+19 Oct 2026 ●	gpt-oss-120b	4,145 in / 839 out	$0.000249	OK 20s
+19 Oct 2026 ●	gpt-oss-120b	4,164 in / 604 out	$0.000233	OK 15s
+19 Oct 2026 ●	gpt-oss-120b	4,478 in / 51 out	$0.000143	OK 1.2s
+19 Oct 2026 ●	gpt-oss-120b	4,149 in / 570 out	$0.000231	OK 5.5s
+19 Oct 2026 ●	gpt-oss-120b	4,210 in / 769 out	$0.00024	OK 17s
+19 Oct 2026 ●	gpt-oss-120b	3,965 in / 989 out	$0.000296	OK 26s
+19 Oct 2026 ●	gpt-oss-120b	4,001 in / 847 out	$0.000823	OK 3.8s
+19 Oct 2026 ●	gpt-oss-120b	3,872 in / 376 out	$0.000207	OK 11s
+19 Oct 2026 ●	gpt-oss-120b	3,958 in / 1,079 out	$0.000312	OK 26s
+19 Oct 2026 ●	gpt-oss-120b	3,885 in / 1,007 out	$0.000314	OK 41s
+19 Oct 2026 ●	gpt-oss-120b	3,895 in / 719 out	$0.000223	OK 17s
+19 Oct 2026 ●	gpt-oss-120b	4,396 in / 857 out	$0.000434	OK 3.4s
+19 Oct 2026 ●	gpt-oss-120b	4,487 in / 685 out	$0.000282	OK 30s
+19 Oct 2026 ●	gpt-oss-120b	4,316 in / 914 out	$0.000315	OK 39s
+19 Oct 2026 ●	gpt-oss-120b	4,274 in / 836 out	$0.000252	OK 23s
+19 Oct 2026 ●	gpt-oss-120b	4,091 in / 771 out	$0.000266	OK 5.5s
+19 Oct 2026 ●	gpt-oss-120b	4,129 in / 361 out	$0.000214	OK 11s
+19 Oct 2026 ●	gpt-oss-120b	4,155 in / 363 out	$0.000189	OK 5.9s
+19 Oct 2026 ●	gpt-oss-120b	4,036 in / 583 out	$0.000207	OK 15s
+19 Oct 2026 ●	gpt-oss-120b	4,225 in / 645 out	$0.000903	OK 4.0s
+19 Oct 2026 ●	gpt-oss-120b	4,214 in / 668 out	$0.000251	OK 11s
+19 Oct 2026 ●	gpt-oss-120b	4,184 in / 804 out	$0.000275	OK 8.2s
+19 Oct 2026 ●	gpt-oss-120b	3,903 in / 758 out	$0.000384	OK 4.2s
+19 Oct 2026 ●	gpt-oss-120b	4,093 in / 737 out	$0.000232	OK 21s
+19 Oct 2026 ●	gpt-oss-120b	4,094 in / 710 out	$0.000228	OK 19s
+19 Oct 2026 ●	gpt-oss-120b	3,931 in / 855 out	$0.000277	OK 11s
+19 Oct 2026 ●	gpt-oss-120b	3,967 in / 495 out	$0.00023	OK 13s
+19 Oct 2026 ●	gpt-oss-120b	3,924 in / 51 out	$0.000126	OK 2.2s
+19 Oct 2026 ●	gpt-oss-120b	3,947 in / 803 out	$0.000398	OK 5.3s
+19 Oct 2026 ●	gpt-oss-120b	4,047 in / 838 out	$0.00041	OK 20s
+19 Oct 2026 ●	gpt-oss-120b	4,628 in / 723 out	$0.000294	OK 25s
+19 Oct 2026 ●	gpt-oss-120b	4,221 in / 528 out	$0.000342	OK 9.1s
+19 Oct 2026 ●	gpt-oss-120b	4,249 in / 585 out	$0.000256	OK 17s
+19 Oct 2026 ●	gpt-oss-120b	4,360 in / 483 out	$0.000337	OK 9.1s
+19 Oct 2026 ●	gpt-oss-120b	4,209 in / 983 out	$0.000456	OK 4.7s
+19 Oct 2026 ●	gpt-oss-120b	4,191 in / 473 out	$0.000214	OK 6.0s
+19 Oct 2026 ●	gpt-oss-120b	4,113 in / 918 out	$0.000295	OK 9.9s
+19 Oct 2026 ●	gpt-oss-120b	4,072 in / 588 out	$0.000232	OK 6.3s
+19 Oct 2026 ●	gpt-oss-120b	3,884 in / 517 out	$0.000322	OK 5.9s
+19 Oct 2026 ●	gpt-oss-120b	3,907 in / 827 out	$0.000271	OK 11s
+19 Oct 2026 ●	gpt-oss-120b	4,055 in / 458 out	$0.000317	OK 3.1s
+19 Oct 2026 ●	gpt-oss-120b	4,099 in / 945 out	$0.000312	OK 26s
+19 Oct 2026 ●	gpt-oss-120b	4,095 in / 587 out	$0.000232	OK 5.8s
+19 Oct 2026 ●	gpt-oss-120b	4,354 in / 482 out	$0.000337	OK 8.7s
+19 Oct 2026 ●	gpt-oss-120b	4,246 in / 51 out	$0.000136	OK 1.3s
+19 Oct 2026 ●	gpt-oss-120b	4,065 in / 1,347 out	$0.000323	OK 32s
+19 Oct 2026 ●	gpt-oss-120b	4,224 in / 51 out	$0.000135	OK 983ms
+19 Oct 2026 ●	gpt-oss-120b	4,090 in / 628 out	$0.000361	OK 3.1s
+19 Oct 2026 ●	gpt-oss-120b	4,139 in / 565 out	$0.000225	OK 14s
+19 Oct 2026 ●	gpt-oss-120b	4,743 in / 502 out	$0.000232	OK 4.9s
+19 Oct 2026 ●	gpt-oss-120b	4,003 in / 658 out	$0.000362	OK 10s
+19 Oct 2026 ●	gpt-oss-120b	3,894 in / 899 out	$0.000296	OK 22s
+19 Oct 2026 ●	gpt-oss-120b	3,891 in / 529 out	$0.000325	OK 8.2s
+19 Oct 2026 ●	gpt-oss-120b	3,961 in / 51 out	$0.000127	OK 1.1s
+19 Oct 2026 ●	gpt-oss-120b	3,973 in / 750 out	$0.00023	OK 16s
+19 Oct 2026 ●	gpt-oss-120b	4,311 in / 627 out	$0.000242	OK 8.3s
+19 Oct 2026 ●	gpt-oss-120b	3,890 in / 529 out	$0.000326	OK 3.1s
+19 Oct 2026 ●	gpt-oss-120b	4,190 in / 51 out	$0.000134	OK 1.7s
+19 Oct 2026 ●	gpt-oss-120b	3,942 in / 620 out	$0.00021	OK 11s
+19 Oct 2026 ●	gpt-oss-120b	4,042 in / 1,323 out	$0.000318	OK 25s
+19 Oct 2026 ●	gpt-oss-120b	3,940 in / 436 out	$0.000199	OK 3.4s
+19 Oct 2026 ●	gpt-oss-120b	3,973 in / 1,131 out	$0.000481	OK 5.4s
+19 Oct 2026 ●	gpt-oss-120b	4,024 in / 870 out	$0.000277	OK 24s
+19 Oct 2026 ●	gpt-oss-120b	3,931 in / 815 out	$0.0004	OK 3.3s
+19 Oct 2026 ●	gpt-oss-120b	5,242 in / 624 out	$0.000418	OK 3.5s
+19 Oct 2026 ●	gpt-oss-120b	4,148 in / 530 out	$0.000203	OK 14s
+19 Oct 2026 ●	gpt-oss-120b	3,896 in / 1,172 out	$0.000487	OK 4.6s
+19 Oct 2026 ●	gpt-oss-120b	4,278 in / 941 out	$0.000449	OK 3.8s
+19 Oct 2026 ●	gpt-oss-120b	3,944 in / 1,067 out	$0.000317	OK 13s
+19 Oct 2026 ●	gpt-oss-120b	3,958 in / 623 out	$0.000707	OK 2.9s
+19 Oct 2026 ●	gpt-oss-120b	3,934 in / 590 out	$0.000228	OK 3.4s
+19 Oct 2026 ●	gpt-oss-120b	3,910 in / 577 out	$0.000242	OK 13s
+19 Oct 2026 ●	gpt-oss-120b	3,973 in / 395 out	$0.000295	OK 5.0s
+19 Oct 2026 ●	gpt-oss-120b	4,218 in / 571 out	$0.000197	OK 11s
+19 Oct 2026 ●	gpt-oss-120b	4,101 in / 468 out	$0.00021	OK 7.7s
+19 Oct 2026 ●	gpt-oss-120b	3,920 in / 530 out	$0.000216	OK 7.3s
+19 Oct 2026 ●	gpt-oss-120b	4,479 in / 632 out	$0.000248	OK 9.7s
+19 Oct 2026 ●	gpt-oss-120b	4,615 in / 493 out	$0.000354	OK 2.6s
+19 Oct 2026 ●	gpt-oss-120b	4,423 in / 701 out	$0.000396	OK 2.9s
+19 Oct 2026 ●	gpt-oss-120b	4,214 in / 754 out	$0.000262	OK 14s
+19 Oct 2026 ●	gpt-oss-120b	4,289 in / 1,134 out	$0.000298	OK 23s
+19 Oct 2026 ●	gpt-oss-120b	3,892 in / 1,167 out	$0.000342	OK 32s
+19 Oct 2026 ●	gpt-oss-120b	4,085 in / 1,445 out	$0.001479	OK 3.4s
+19 Oct 2026 ●	gpt-oss-120b	3,889 in / 670 out	$0.000237	OK 11s
+19 Oct 2026 ●	gpt-oss-120b	4,146 in / 51 out	$0.000133	OK 1.4s
+19 Oct 2026 ●	gpt-oss-120b	4,085 in / 860 out	$0.000236	OK 18s
+19 Oct 2026 ●	gpt-oss-120b	4,516 in / 717 out	$0.000242	OK 16s
+19 Oct 2026 ●	gpt-oss-120b	4,315 in / 485 out	$0.000216	OK 13s
+19 Oct 2026 ●	gpt-oss-120b	3,909 in / 562 out	$0.000335	OK 2.4s
+19 Oct 2026 ●	gpt-oss-120b	3,951 in / 1,436 out	$0.000333	OK 29s
+19 Oct 2026 ●	gpt-oss-120b	3,914 in / 465 out	$0.000186	OK 12s
+19 Oct 2026 ●	gpt-oss-120b	3,931 in / 868 out	$0.000274	OK 12s
+19 Oct 2026 ●	gpt-oss-120b	3,918 in / 521 out	$0.000194	OK 12s
+19 Oct 2026 ●	gpt-oss-120b	3,905 in / 854 out	$0.000276	OK 9.6s
+19 Oct 2026 ●	gpt-oss-120b	3,958 in / 51 out	$0.000127	OK 1.8s
+19 Oct 2026 ●	gpt-oss-120b	4,254 in / 826 out	$0.000276	OK 28s
+19 Oct 2026 ●	gpt-oss-120b	3,928 in / 1,709 out	$0.000373	OK 37s
+19 Oct 2026 ●	gpt-oss-120b	4,065 in / 859 out	$0.000296	OK 24s
+19 Oct 2026 ●	gpt-oss-120b	4,082 in / 697 out	$0.000226	OK 17s
+19 Oct 2026 ●	gpt-oss-120b	4,181 in / 604 out	$0.000238	OK 6.2s
+19 Oct 2026 ●	gpt-oss-120b	4,191 in / 570 out	$0.000251	OK 12s
+19 Oct 2026 ●	gpt-oss-120b	4,254 in / 51 out	$0.000136	OK 1.5s
+19 Oct 2026 ●	gpt-oss-120b	3,980 in / 1,621 out	$0.000361	OK 45s
+19 Oct 2026 ●	gpt-oss-120b	4,146 in / 675 out	$0.00025	OK 6.2s
+19 Oct 2026 ●	gpt-oss-120b	4,082 in / 595 out	$0.00021	OK 14s
+19 Oct 2026 ●	gpt-oss-120b	4,168 in / 880 out	$0.000303	OK 25s
+19 Oct 2026 ●	DeepSeek V3.2	2,703 in / 715 out	$0.0008	OK 32s
+19 Oct 2026 ●	DeepSeek V3.2	2,191 in / 8 out	$0.000389	OK 1.6s
+19 Oct 2026 ●	DeepSeek V3.2	2,717 in / 762 out	$0.000812	OK 25s
+19 Oct 2026 ●	DeepSeek V3.2	2,125 in / 8 out	$0.000364	OK 2.6s
+19 Oct 2026 ●	DeepSeek V3.2	4,336 in / 521 out	$0.001142	OK 20s
+19 Oct 2026 ●	DeepSeek V3.2	2,149 in / 8 out	$0.00037	OK 1.8s
+19 Oct 2026 ●	DeepSeek V3.2	5,541 in / 711 out	$0.001527	OK 24s
+19 Oct 2026 ●	DeepSeek V3.2	8,851 in / 6,321 out	$0.00452	OK 4m 13s
+19 Oct 2026 ●	DeepSeek V3.2	2,105 in / 8 out	$0.000367	OK 6.2s
+19 Oct 2026 ●	DeepSeek V3.2	2,125 in / 8 out	$0.000372	OK 1.1s
+19 Oct 2026 ●	DeepSeek V3.2	2,103 in / 8 out	$0.000366	OK 5.6s
+19 Oct 2026 ●	DeepSeek V3.2	2,171 in / 8 out	$0.000585	OK 3.0s
+19 Oct 2026 ●	DeepSeek V3.2	2,105 in / 8 out	$0.000567	OK 5.5s
+19 Oct 2026 ●	DeepSeek V3.2	5,953 in / 1,913 out	$0.00214	OK 1m 51s
+19 Oct 2026 ●	DeepSeek V3.2	7,334 in / 1,048 out	$0.002173	OK 1m 06s
+19 Oct 2026 ●	DeepSeek V3.2	8,637 in / 2,847 out	$0.003224	OK 2m 10s
+19 Oct 2026 ●	DeepSeek V3.2	8,960 in / 3,025 out	$0.00338	OK 2m 53s
+19 Oct 2026 ●	DeepSeek V3.2	2,147 in / 8 out	$0.000375	OK 3.4s
+19 Oct 2026 ●	DeepSeek V3.2	3,575 in / 596 out	$0.000988	OK 26s
+19 Oct 2026 ●	DeepSeek V3.2	14,294 in / 2,675 out	$0.004549	OK 1m 38s
+19 Oct 2026 ●	DeepSeek V3.2	3,614 in / 624 out	$0.000993	OK 24s
+19 Oct 2026 ●	DeepSeek V3.2	9,039 in / 3,557 out	$0.003518	OK 1m 47s
+19 Oct 2026 ●	DeepSeek V3.2	2,103 in / 8 out	$0.000549	OK 1.5s
+19 Oct 2026 ●	DeepSeek V3.2	2,147 in / 8 out	$0.000378	OK 1.1s
+19 Oct 2026 ●	DeepSeek V3.2	2,103 in / 8 out	$0.000366	OK 974ms
+19 Oct 2026 ●	DeepSeek V3.2	9,645 in / 3,309 out	$0.003582	OK 1m 57s
+19 Oct 2026 ●	DeepSeek V3.2	2,103 in / 8 out	$0.000358	OK 2.9s
+19 Oct 2026 ●	DeepSeek V3.2	13,805 in / 4,582 out	$0.005147	OK 2m 42s
+19 Oct 2026 ●	DeepSeek V3.2	2,103 in / 8 out	$0.000366	OK 1.6s
+19 Oct 2026 ●	DeepSeek V3.2	4,428 in / 1,944 out	$0.001706	OK 1m 10s
+19 Oct 2026 ●	DeepSeek V3.2	2,589 in / 621 out	$0.000726	OK 19s
+19 Oct 2026 ●	DeepSeek V3.2	5,025 in / 2,531 out	$0.002085	OK 1m 26s
+19 Oct 2026 ●	DeepSeek V3.2	2,651 in / 680 out	$0.000764	OK 25s
+19 Oct 2026 ●	DeepSeek V3.2	5,402 in / 2,837 out	$0.002299	OK 1m 44s
+19 Oct 2026 ●	DeepSeek V3.2	2,103 in / 8 out	$0.000358	OK 3.7s
+19 Oct 2026 ●	DeepSeek V3.2	5,538 in / 3,019 out	$0.002404	OK 1m 42s
+19 Oct 2026 ●	DeepSeek V3.2	2,103 in / 8 out	$0.000366	OK 2.0s
+19 Oct 2026 ●	DeepSeek V3.2	3,940 in / 1,770 out	$0.001513	OK 58s
+19 Oct 2026 ●	DeepSeek V3.2	2,563 in / 607 out	$0.000714	OK 20s
+19 Oct 2026 ●	DeepSeek V3.2	4,066 in / 1,885 out	$0.00159	OK 1m 01s
+19 Oct 2026 ●	DeepSeek V3.2	2,516 in / 548 out	$0.000679	OK 18s
+19 Oct 2026 ●	DeepSeek V3.2	4,449 in / 2,081 out	$0.001764	OK 1m 03s
+19 Oct 2026 ●	DeepSeek V3.2	2,558 in / 609 out	$0.000713	OK 19s
+19 Oct 2026 ●	DeepSeek V3.2	3,562 in / 1,036 out	$0.001128	OK 47s
+19 Oct 2026 ●	DeepSeek V3.2	2,494 in / 533 out	$0.000659	OK 23s
+19 Oct 2026 ●	DeepSeek V3.2	2,147 in / 8 out	$0.000378	OK 1.5s
+19 Oct 2026 ●	DeepSeek V3.2	2,645 in / 668 out	$0.000758	OK 27s
+19 Oct 2026 ●	DeepSeek V3.2	2,147 in / 8 out	$0.000378	OK 1.1s
+19 Oct 2026 ●	DeepSeek V3.2	2,662 in / 659 out	$0.000759	OK 20s
+19 Oct 2026 ●	DeepSeek V3.2	2,125 in / 8 out	$0.000372	OK 911ms
+19 Oct 2026 ●	DeepSeek V3.2	2,667 in / 661 out	$0.000761	OK 20s
+19 Oct 2026 ●	DeepSeek V3.2	2,147 in / 8 out	$0.000378	OK 3.9s
+19 Oct 2026 ●	DeepSeek V3.2	2,581 in / 590 out	$0.000712	OK 20s
+19 Oct 2026 ●	DeepSeek V3.2	2,147 in / 8 out	$0.000378	OK 1.6s
+19 Oct 2026 ●	DeepSeek V3.2	2,745 in / 769 out	$0.000822	OK 26s
+19 Oct 2026 ●	DeepSeek V3.2	2,147 in / 8 out	$0.000378	OK 2.2s
+19 Oct 2026 ●	DeepSeek V3.2	2,831 in / 847 out	$0.000874	OK 34s
+19 Oct 2026 ●	DeepSeek V3.2	5,755 in / 3,396 out	$0.002603	OK 2m 19s
+19 Oct 2026 ●	DeepSeek V3.2	2,831 in / 845 out	$0.000874	OK 29s
+19 Oct 2026 ●	DeepSeek V3.2	2,147 in / 8 out	$0.000369	OK 4.4s
+19 Oct 2026 ●	DeepSeek V3.2	2,859 in / 879 out	$0.000894	OK 28s
+19 Oct 2026 ●	DeepSeek V3.2	5,785 in / 3,206 out	$0.002531	OK 2m 37s
+19 Oct 2026 ●	DeepSeek V3.2	2,488 in / 448 out	$0.000817	OK 23s
+19 Oct 2026 ●	DeepSeek V3.2	8,615 in / 2,559 out	$0.003029	OK 1m 18s
+19 Oct 2026 ●	DeepSeek V3.2	2,470 in / 425 out	$0.00062	OK 16s
+19 Oct 2026 ●	DeepSeek V3.2	12,909 in / 4,291 out	$0.004803	OK 3m 23s
+19 Oct 2026 ●	DeepSeek V3.2	2,998 in / 1,003 out	$0.000977	OK 1m 04s
+19 Oct 2026 ●	DeepSeek V3.2	9,123 in / 3,580 out	$0.003732	OK 2m 10s
+19 Oct 2026 ●	deepseek/deepseek-v3.2-20251201	No usage	–	Error 0ms
+19 Oct 2026 ●	DeepSeek V3.2	5,983 in / 3,982 out	$0.003068	OK 3m 15s
+19 Oct 2026 ●	DeepSeek V3.2	2,815 in / 904 out	$0.000892	OK 32s
+19 Oct 2026 ●	DeepSeek V3.2	2,169 in / 8 out	$0.000383	OK 3.3s
+19 Oct 2026 ●	DeepSeek V3.2	2,103 in / 8 out	$0.000366	OK 1.8s
+19 Oct 2026 ●	DeepSeek V3.2	2,147 in / 8 out	$0.000378	OK 857ms
+19 Oct 2026 ●	DeepSeek V3.2	2,103 in / 8 out	$0.000366	OK 1.3s
+19 Oct 2026 ●	DeepSeek V3.2	14,354 in / 7,351 out	$0.006342	OK 4m 08s
+19 Oct 2026 ●	DeepSeek V3.2	4,475 in / 2,673 out	$0.001996	OK 1m 20s
+19 Oct 2026 ●	DeepSeek V3.2	7,951 in / 3,757 out	$0.003311	OK 2m 03s
+19 Oct 2026 ●	DeepSeek V3.2	4,503 in / 1,900 out	$0.001709	OK 53s
+19 Oct 2026 ●	DeepSeek V3.2	7,544 in / 3,608 out	$0.003149	OK 2m 10s
+19 Oct 2026 ●	DeepSeek V3.2	4,609 in / 2,024 out	$0.001784	OK 1m 06s
+19 Oct 2026 ●	DeepSeek V3.2	7,209 in / 3,221 out	$0.002915	OK 1m 49s
+19 Oct 2026 ●	DeepSeek V3.2	4,970 in / 1,557 out	$0.0017	OK 1m 00s
+19 Oct 2026 ●	DeepSeek V3.2	4,220 in / 2,257 out	$0.001771	OK 1m 05s
+19 Oct 2026 ●	DeepSeek V3.2	2,764 in / 883 out	$0.000862	OK 50s
+19 Oct 2026 ●	DeepSeek V3.2	4,220 in / 2,248 out	$0.001768	OK 1m 27s
+19 Oct 2026 ●	DeepSeek V3.2	2,764 in / 885 out	$0.000871	OK 30s
+19 Oct 2026 ●	DeepSeek V3.2	2,169 in / 8 out	$0.000383	OK 1.8s
+19 Oct 2026 ●	DeepSeek V3.2	2,103 in / 8 out	$0.000366	OK 2.2s
+19 Oct 2026 ●	DeepSeek V3.2	2,169 in / 8 out	$0.000383	OK 1.4s
+19 Oct 2026 ●	DeepSeek V3.2	2,103 in / 8 out	$0.000366	OK 1.1s
+19 Oct 2026 ●	DeepSeek V3.2	2,169 in / 8 out	$0.000383	OK 798ms
+19 Oct 2026 ●	DeepSeek V3.2	2,103 in / 8 out	$0.000366	OK 999ms
+19 Oct 2026 ●	DeepSeek V3.2	2,169 in / 8 out	$0.000383	OK 1.4s
+19 Oct 2026 ●	DeepSeek V3.2	2,103 in / 8 out	$0.000358	OK 2.1s
+19 Oct 2026 ●	DeepSeek V3.2	2,169 in / 8 out	$0.000383	OK 869ms
+19 Oct 2026 ●	DeepSeek V3.2	2,103 in / 8 out	$0.000366	OK 862ms
+19 Oct 2026 ●	DeepSeek V3.2	2,169 in / 8 out	$0.000383	OK 1.0s
+19 Oct 2026 ●	DeepSeek V3.2	2,103 in / 8 out	$0.000366	OK 1.7s
+19 Oct 2026 ●	DeepSeek V3.2	2,103 in / 8 out	$0.000358	OK 5.7s
+19 Oct 2026 ●	DeepSeek V3.2	2,147 in / 8 out	$0.000378	OK 1.3s
+19 Oct 2026 ●	DeepSeek V3.2	2,103 in / 8 out	$0.000366	OK 886ms
+19 Oct 2026 ●	DeepSeek V3.2	2,147 in / 8 out	$0.000378	OK 1.0s
+19 Oct 2026 ●	DeepSeek V3.2	2,103 in / 8 out	$0.000366	OK 1.1s
+19 Oct 2026 ●	DeepSeek V3.2	2,169 in / 8 out	$0.000383	OK 1.9s
+19 Oct 2026 ●	DeepSeek V3.2	2,103 in / 8 out	$0.000358	OK 1.2s
+19 Oct 2026 ●	DeepSeek V3.2	2,169 in / 8 out	$0.000383	OK 934ms
+19 Oct 2026 ●	DeepSeek V3.2	2,103 in / 8 out	$0.000366	OK 972ms
+19 Oct 2026 ●	DeepSeek V3.2	2,191 in / 8 out	$0.000389	OK 1.5s
+19 Oct 2026 ●	DeepSeek V3.2	2,103 in / 8 out	$0.000366	OK 1.3s
+19 Oct 2026 ●	DeepSeek V3.2	2,191 in / 8 out	$0.000389	OK 1.7s
+19 Oct 2026 ●	DeepSeek V3.2	2,103 in / 8 out	$0.000366	OK 686ms
+19 Oct 2026 ●	DeepSeek V3.2	2,169 in / 8 out	$0.000383	OK 878ms
+19 Oct 2026 ●	DeepSeek V3.2	2,103 in / 8 out	$0.000366	OK 1.0s
+19 Oct 2026 ●	DeepSeek V3.2	2,169 in / 8 out	$0.000566	OK 822ms
+19 Oct 2026 ●	DeepSeek V3.2	2,103 in / 8 out	$0.000366	OK 1.1s
+19 Oct 2026 ●	DeepSeek V3.2	2,147 in / 8 out	$0.000378	OK 2.1s
+19 Oct 2026 ●	DeepSeek V3.2	2,103 in / 8 out	$0.000366	OK 800ms
+19 Oct 2026 ●	DeepSeek V3.2	2,147 in / 8 out	$0.000378	OK 1.2s
+19 Oct 2026 ●	DeepSeek V3.2	2,103 in / 8 out	$0.000366	OK 1.0s
+19 Oct 2026 ●	DeepSeek V3.2	7,897 in / 3,734 out	$0.003472	OK 1m 57s
+19 Oct 2026 ●	DeepSeek V3.2	2,103 in / 7 out	$0.00055	OK 5.8s
+19 Oct 2026 ●	deepseek/deepseek-r1	5,349 in / 2,446 out	$0.009859	OK 2m 00s
+19 Oct 2026 ●	gpt-oss-120b	27,728 in / 2,348 out	$0.001254	OK 1m 01s
+19 Oct 2026 ●	gpt-oss-120b	27,728 in / 2,387 out	$0.001189	OK 50s
+19 Oct 2026 ●	DeepSeek V3.2	9,444 in / 8,830 out	$0.00581	OK 6m 28s
+19 Oct 2026 ●	DeepSeek V3.2	9,413 in / 5,851 out	$0.00467	OK 4m 12s
+19 Oct 2026 ●	DeepSeek V3.2	9,381 in / 4,652 out	$0.00315	OK 3m 28s
+19 Oct 2026 ●	DeepSeek V3.2	9,462 in / 4,640 out	$0.004223	OK 3m 21s
+19 Oct 2026 ●	DeepSeek V3.2	9,433 in / 699 out	$0.002718	OK 40s
+19 Oct 2026 ●	deepseek/deepseek-r1	5,333 in / 3,448 out	$0.012353	OK 2m 19s
+19 Oct 2026 ●	gpt-oss-120b	65,923 in / 2,658 out	$0.002891	OK 50s
+19 Oct 2026 ●	gpt-oss-120b	65,936 in / 2,225 out	$0.003853	OK 10s
+19 Oct 2026 ●	DeepSeek V3.2	951 in / 14,000 out	$0.005638	OK 10m 14s
+19 Oct 2026 ●	DeepSeek V3.2	888 in / 13,852 out	$0.00559	OK 9m 45s
+19 Oct 2026 ●	DeepSeek V3.2	921 in / 14,000 out	$0.005517	OK 9m 08s
+19 Oct 2026 ●	DeepSeek V3.2	892 in / 11,471 out	$0.004644	OK 7m 59s
+19 Oct 2026 ●	DeepSeek V3.2	894 in / 4,830 out	$0.004095	OK 3m 25s
+19 Oct 2026 ●	DeepSeek V3.2	948 in / 1,476 out	$0.000807	OK 1m 05s
+19 Oct 2026 ●	DeepSeek V3.2	945 in / 1,383 out	$0.000704	OK 1m 04s
+19 Oct 2026 ●	DeepSeek V3.2	897 in / 942 out	$0.000549	OK 47s
+19 Oct 2026 ●	DeepSeek V3.2	879 in / 1,013 out	$0.000613	OK 39s
+19 Oct 2026 ●	DeepSeek V3.2	9,091 in / 5,301 out	$0.004378	OK 3m 49s
+18 Oct 2026 ●	deepseek/deepseek-r1	6,170 in / 10,000 out	$0.029319	OK 7m 26s
+18 Oct 2026 ●	gpt-oss-120b	18,279 in / 10,175 out	$0.002073	OK 5m 02s
+18 Oct 2026 ●	gpt-oss-120b	18,279 in / 5,076 out	$0.001035	OK 2m 49s
+18 Oct 2026 ●	DeepSeek V3.2	9,669 in / 6,050 out	$0.004812	OK 3m 00s
+18 Oct 2026 ●	DeepSeek V3.2	9,454 in / 2,224 out	$0.002246	OK 1m 14s
+18 Oct 2026 ●	DeepSeek V3.2	9,547 in / 3,426 out	$0.002735	OK 1m 46s
+18 Oct 2026 ●	DeepSeek V3.2	9,414 in / 1,921 out	$0.003177	OK 1m 06s
+18 Oct 2026 ●	DeepSeek V3.2	9,447 in / 1,376 out	$0.002979	OK 47s
+18 Oct 2026 ●	deepseek/deepseek-r1	6,399 in / 7,635 out	$0.023566	OK 7m 09s
+18 Oct 2026 ●	gpt-oss-120b	65,373 in / 3,524 out	$0.002489	OK 1m 17s
+18 Oct 2026 ●	gpt-oss-120b	65,373 in / 3,167 out	$0.001456	OK 1m 12s
+18 Oct 2026 ●	DeepSeek V3.2	901 in / 11,807 out	$0.004671	OK 7m 50s
+18 Oct 2026 ●	DeepSeek V3.2	940 in / 14,000 out	$0.006143	OK 3m 56s
+18 Oct 2026 ●	DeepSeek V3.2	913 in / 14,000 out	$0.006135	OK 3m 55s
+18 Oct 2026 ●	DeepSeek V3.2	915 in / 11,648 out	$0.005148	OK 3m 10s
+18 Oct 2026 ●	DeepSeek V3.2	996 in / 7,135 out	$0.003178	OK 2m 05s
+18 Oct 2026 ●	DeepSeek V3.2	871 in / 1,482 out	$0.000739	OK 1m 06s
+18 Oct 2026 ●	DeepSeek V3.2	887 in / 888 out	$0.000568	OK 37s
+18 Oct 2026 ●	DeepSeek V3.2	874 in / 603 out	$0.000381	OK 29s
+18 Oct 2026 ●	DeepSeek V3.2	866 in / 436 out	$0.000315	OK 22s
+18 Oct 2026 ●	DeepSeek V3.2	9,091 in / 3,061 out	$0.003526	OK 2m 34s
+18 Oct 2026 ●	gpt-oss-120b	30,110 in / 10,915 out	$0.002089	OK 5m 24s
+18 Oct 2026 ●	gpt-oss-120b	30,110 in / 9,595 out	$0.002341	OK 4m 38s
+18 Oct 2026 ●	DeepSeek V3.2	9,458 in / 11,450 out	$0.00681	OK 7m 02s
+18 Oct 2026 ●	DeepSeek V3.2	9,366 in / 8,863 out	$0.005803	OK 6m 37s
+18 Oct 2026 ●	DeepSeek V3.2	9,409 in / 3,984 out	$0.002903	OK 3m 12s
+18 Oct 2026 ●	DeepSeek V3.2	9,392 in / 2,904 out	$0.003545	OK 2m 27s
+18 Oct 2026 ●	deepseek/deepseek-r1	5,305 in / 1,380 out	$0.007163	OK 1m 12s
+18 Oct 2026 ●	gpt-oss-120b	47,346 in / 3,499 out	$0.001944	OK 2m 06s
+18 Oct 2026 ●	gpt-oss-120b	47,346 in / 3,771 out	$0.00331	OK 18s
+18 Oct 2026 ●	DeepSeek V3.2	1,063 in / 14,000 out	$0.006177	OK 3m 59s
+18 Oct 2026 ●	DeepSeek V3.2	1,174 in / 14,000 out	$0.006208	OK 4m 06s
+18 Oct 2026 ●	DeepSeek V3.2	1,196 in / 13,653 out	$0.006069	OK 3m 52s
+18 Oct 2026 ●	DeepSeek V3.2	1,046 in / 1,550 out	$0.00086	OK 1m 04s
+18 Oct 2026 ●	DeepSeek V3.2	9,091 in / 2,937 out	$0.003479	OK 2m 19s
+18 Oct 2026 ●	gpt-oss-120b	50,025 in / 2,877 out	$0.00322	OK 6m 01s
+18 Oct 2026 ●	gpt-oss-120b	50,042 in / 4,795 out	$0.007401	OK 23s
+18 Oct 2026 ●	DeepSeek V3.2	930 in / 14,000 out	$0.005561	OK 9m 55s
+18 Oct 2026 ●	DeepSeek V3.2	1,278 in / 14,000 out	$0.006237	OK 4m 05s
+18 Oct 2026 ●	DeepSeek V3.2	1,258 in / 14,000 out	$0.006232	OK 3m 53s
+18 Oct 2026 ●	DeepSeek V3.2	1,135 in / 3,618 out	$0.001837	OK 1m 06s
+18 Oct 2026 ●	DeepSeek V3.2	9,091 in / 3,813 out	$0.003812	OK 2m 11s
+18 Oct 2026 ●	gpt-oss-120b	18,007 in / 6,538 out	$0.002532	OK 5m 47s
+18 Oct 2026 ●	DeepSeek V3.2	9,551 in / 7,473 out	$0.004266	OK 5m 11s
+18 Oct 2026 ●	DeepSeek V3.2	9,485 in / 4,121 out	$0.002975	OK 2m 52s
+18 Oct 2026 ●	DeepSeek V3.2	9,404 in / 2,398 out	$0.002299	OK 1m 50s
+18 Oct 2026 ●	gpt-oss-120b	25,067 in / 4,832 out	$0.001476	OK 2m 25s
+18 Oct 2026 ●	DeepSeek V3.2	8,631 in / 8,000 out	$0.004227	OK 4m 51s
+18 Oct 2026 ●	DeepSeek V3.2	9,501 in / 6,883 out	$0.004037	OK 4m 19s
+18 Oct 2026 ●	DeepSeek V3.2	9,438 in / 3,644 out	$0.003505	OK 2m 18s
+18 Oct 2026 ●	DeepSeek V3.2	8,609 in / 1,530 out	$0.001763	OK 59s
+18 Oct 2026 ●	DeepSeek V3.2	9,757 in / 1,427 out	$0.002746	OK 53s
+18 Oct 2026 ●	gpt-oss-120b	32,786 in / 3,982 out	$0.00158	OK 2m 17s
+18 Oct 2026 ●	DeepSeek V3.2	1,231 in / 8,000 out	$0.003607	OK 2m 24s
+18 Oct 2026 ●	DeepSeek V3.2	1,217 in / 8,000 out	$0.0037	OK 2m 19s
+18 Oct 2026 ●	DeepSeek V3.2	1,195 in / 8,000 out	$0.003694	OK 2m 17s
+18 Oct 2026 ●	DeepSeek V3.2	1,119 in / 3,907 out	$0.001954	OK 1m 07s
+18 Oct 2026 ●	DeepSeek V3.2	9,091 in / 3,592 out	$0.003728	OK 2m 08s
+18 Oct 2026 ●	gpt-oss-120b	14,545 in / 2,261 out	$0.000774	OK 1m 33s
+18 Oct 2026 ●	DeepSeek V3.2	8,437 in / 8,000 out	$0.004143	OK 5m 42s
+18 Oct 2026 ●	DeepSeek V3.2	8,437 in / 1,575 out	$0.001718	OK 55s
+18 Oct 2026 ●	DeepSeek V3.2	8,437 in / 1,224 out	$0.001585	OK 50s
+18 Oct 2026 ●	gpt-oss-120b	30,261 in / 4,064 out	$0.001516	OK 2m 33s
+18 Oct 2026 ●	DeepSeek V3.2	8,437 in / 8,000 out	$0.00416	OK 4m 51s
+18 Oct 2026 ●	DeepSeek V3.2	8,437 in / 1,348 out	$0.001632	OK 1m 01s
+18 Oct 2026 ●	DeepSeek V3.2	8,437 in / 7,557 out	$0.003992	OK 5m 08s
+18 Oct 2026 ●	DeepSeek V3.2	8,437 in / 8,000 out	$0.00416	OK 5m 15s
+18 Oct 2026 ●	DeepSeek V3.2	8,437 in / 1,464 out	$0.001676	OK 56s
+18 Oct 2026 ●	DeepSeek V3.2	8,437 in / 717 out	$0.002133	OK 26s
+18 Oct 2026 ●	gpt-oss-120b	36,622 in / 2,694 out	$0.001602	OK 49s
+18 Oct 2026 ●	DeepSeek V3.2	1,288 in / 8,000 out	$0.003623	OK 2m 06s
+18 Oct 2026 ●	DeepSeek V3.2	1,245 in / 8,000 out	$0.003708	OK 2m 15s
+18 Oct 2026 ●	DeepSeek V3.2	1,259 in / 8,000 out	$0.003712	OK 2m 13s
+18 Oct 2026 ●	DeepSeek V3.2	1,100 in / 8,000 out	$0.003668	OK 2m 09s
+18 Oct 2026 ●	DeepSeek V3.2	9,091 in / 3,636 out	$0.002563	OK 2m 27s
+18 Oct 2026 ●	DeepSeek V3.2	1,288 in / 8,000 out	$0.00372	OK 2m 14s
+18 Oct 2026 ●	DeepSeek V3.2	1,312 in / 8,000 out	$0.003727	OK 2m 09s
+18 Oct 2026 ●	DeepSeek V3.2	1,128 in / 2,256 out	$0.001263	OK 36s
+18 Oct 2026 ●	DeepSeek V3.2	9,091 in / 3,724 out	$0.003778	OK 2m 16s
+18 Oct 2026 ●	DeepSeek V3.2	7,866 in / 2,709 out	$0.00334	OK 41s
+18 Oct 2026 ●	DeepSeek V3.2	2,893 in / 701 out	$0.001007	OK 11s
+18 Oct 2026 ●	DeepSeek V3.2	3,372 in / 679 out	$0.001229	OK 12s
+18 Oct 2026 ●	DeepSeek V3.2	2,017 in / 318 out	$0.000585	OK 5.3s
+18 Oct 2026 ●	DeepSeek V3.2	2,432 in / 723 out	$0.000984	OK 13s
+18 Oct 2026 ●	DeepSeek V3.2	8,644 in / 6,000 out	$0.003545	OK 3m 53s
+18 Oct 2026 ●	DeepSeek V3.2	1,123 in / 747 out	$0.000531	OK 12s
+18 Oct 2026 ●	DeepSeek V3.2	1,140 in / 955 out	$0.000623	OK 16s
+18 Oct 2026 ●	gpt-oss-120b	8,706 in / 2,581 out	$0.00108	OK 11s
+18 Oct 2026 ●	DeepSeek V3.2	9,121 in / 6,000 out	$0.004651	OK 3m 26s
+18 Oct 2026 ●	DeepSeek V3.2	1,145 in / 567 out	$0.000461	OK 10.0s
+18 Oct 2026 ●	DeepSeek V3.2	1,059 in / 803 out	$0.000633	OK 15s
+18 Oct 2026 ●	DeepSeek V3.2	1,212 in / 1,323 out	$0.000798	OK 21s
+18 Oct 2026 ●	DeepSeek V3.2	1,298 in / 1,121 out	$0.000737	OK 19s
+18 Oct 2026 ●	DeepSeek V3.2	4,199 in / 1,107 out	$0.001527	OK 18s
+18 Oct 2026 ●	DeepSeek V3.2	4,940 in / 1,209 out	$0.00189	OK 20s
+18 Oct 2026 ●	DeepSeek V3.2	1,326 in / 1,084 out	$0.000729	OK 17s
+18 Oct 2026 ●	DeepSeek V3.2	4,229 in / 829 out	$0.001532	OK 13s
+18 Oct 2026 ●	DeepSeek V3.2	9,144 in / 6,000 out	$0.00508	OK 1m 35s
+18 Oct 2026 ●	DeepSeek V3.2	4,627 in / 957 out	$0.0016	OK 16s
+18 Oct 2026 ●	DeepSeek V3.2	7,026 in / 947 out	$0.002268	OK 14s
+18 Oct 2026 ●	DeepSeek V3.2	7,406 in / 674 out	$0.002259	OK 11s
+18 Oct 2026 ●	DeepSeek V3.2	11,353 in / 1,300 out	$0.003611	OK 20s
+18 Oct 2026 ●	DeepSeek V3.2	12,262 in / 927 out	$0.003822	OK 15s
+18 Oct 2026 ●	DeepSeek V3.2	7,578 in / 1,527 out	$0.002666	OK 23s
+18 Oct 2026 ●	DeepSeek V3.2	8,219 in / 1,056 out	$0.002555	OK 27s
+18 Oct 2026 ●	DeepSeek V3.2	4,722 in / 913 out	$0.001592	OK 14s
+18 Oct 2026 ●	DeepSeek V3.2	5,626 in / 903 out	$0.001857	OK 14s
+18 Oct 2026 ●	DeepSeek V3.2	4,438 in / 1,002 out	$0.00155	OK 16s
+18 Oct 2026 ●	DeepSeek V3.2	5,175 in / 767 out	$0.001674	OK 12s
+18 Oct 2026 ●	DeepSeek V3.2	12,809 in / 1,977 out	$0.004416	OK 31s
+18 Oct 2026 ●	DeepSeek V3.2	15,205 in / 2,150 out	$0.005063	OK 31s
+18 Oct 2026 ●	DeepSeek V3.2	6,417 in / 1,220 out	$0.002212	OK 19s
+18 Oct 2026 ●	DeepSeek V3.2	8,818 in / 1,441 out	$0.002928	OK 40s
+18 Oct 2026 ●	DeepSeek V3.2	5,999 in / 834 out	$0.001917	OK 14s
+18 Oct 2026 ●	gpt-oss-120b	5,966 in / 1,854 out	$0.000456	OK 36s
+18 Oct 2026 ●	DeepSeek V3.2	8,620 in / 1,229 out	$0.001042	OK 20s
+18 Oct 2026 ●	DeepSeek V3.2	8,529 in / 3,011 out	$0.003555	OK 48s
+18 Oct 2026 ●	gpt-oss-120b	10,483 in / 1,418 out	$0.001757	OK 6.2s
+18 Oct 2026 ●	DeepSeek V3.2	9,144 in / 6,000 out	$0.00508	OK 1m 32s
+18 Oct 2026 ●	DeepSeek V3.2	5,665 in / 1,395 out	$0.002075	OK 21s
+18 Oct 2026 ●	DeepSeek V3.2	8,535 in / 1,081 out	$0.002747	OK 16s
+18 Oct 2026 ●	DeepSeek V3.2	2,676 in / 747 out	$0.000966	OK 13s
+18 Oct 2026 ●	DeepSeek V3.2	3,361 in / 1,102 out	$0.001307	OK 17s
+18 Oct 2026 ●	DeepSeek V3.2	2,676 in / 807 out	$0.001088	OK 13s
+18 Oct 2026 ●	DeepSeek V3.2	3,361 in / 982 out	$0.001353	OK 16s
+18 Oct 2026 ●	gpt-oss-120b	7,258 in / 1,333 out	$0.000467	OK 9.9s
+18 Oct 2026 ●	DeepSeek V3.2	8,757 in / 2,494 out	$0.001354	OK 40s
+18 Oct 2026 ●	gpt-oss-120b	11,120 in / 2,944 out	$0.001292	OK 13s
+18 Oct 2026 ●	DeepSeek V3.2	8,719 in / 6,650 out	$0.005234	OK 1m 45s
+18 Oct 2026 ●	gpt-oss-120b	22,143 in / 1,892 out	$0.001004	OK 1m 39s
+18 Oct 2026 ●	DeepSeek V3.2	9,144 in / 24,000 out	$0.01264	OK 6m 13s
+18 Oct 2026 ●	DeepSeek V3.2	1,743 in / 409 out	$0.000659	OK 7.1s
+18 Oct 2026 ●	DeepSeek V3.2	5,466 in / 979 out	$0.001844	OK 17s
+18 Oct 2026 ●	DeepSeek V3.2	5,694 in / 869 out	$0.001862	OK 16s
+18 Oct 2026 ●	DeepSeek V3.2	6,707 in / 897 out	$0.002157	OK 15s
+18 Oct 2026 ●	DeepSeek V3.2	19,026 in / 797 out	$0.005565	OK 13s
+18 Oct 2026 ●	DeepSeek V3.2	12,570 in / 863 out	$0.003785	OK 15s
+18 Oct 2026 ●	DeepSeek V3.2	13,373 in / 902 out	$0.004026	OK 15s
+18 Oct 2026 ●	DeepSeek V3.2	7,350 in / 1,011 out	$0.002482	OK 18s
+18 Oct 2026 ●	DeepSeek V3.2	8,169 in / 1,092 out	$0.002745	OK 18s
+18 Oct 2026 ●	DeepSeek V3.2	2,287 in / 799 out	$0.000863	OK 22s
+18 Oct 2026 ●	DeepSeek V3.2	2,972 in / 1,043 out	$0.001173	OK 16s
+18 Oct 2026 ●	DeepSeek V3.2	5,689 in / 950 out	$0.001879	OK 15s
+18 Oct 2026 ●	DeepSeek V3.2	6,804 in / 790 out	$0.00214	OK 13s
+18 Oct 2026 ●	DeepSeek V3.2	7,020 in / 774 out	$0.002193	OK 12s
+18 Oct 2026 ●	DeepSeek V3.2	8,078 in / 839 out	$0.002517	OK 14s
+18 Oct 2026 ●	DeepSeek V3.2	7,577 in / 912 out	$0.002391	OK 16s
+18 Oct 2026 ●	DeepSeek V3.2	8,842 in / 1,006 out	$0.002801	OK 17s
+18 Oct 2026 ●	DeepSeek V3.2	8,099 in / 997 out	$0.0025	OK 44s
+18 Oct 2026 ●	DeepSeek V3.2	9,034 in / 1,013 out	$0.002858	OK 17s
+18 Oct 2026 ●	DeepSeek V3.2	6,099 in / 953 out	$0.002011	OK 17s
+18 Oct 2026 ●	DeepSeek V3.2	7,041 in / 959 out	$0.002277	OK 17s
+18 Oct 2026 ●	DeepSeek V3.2	5,353 in / 882 out	$0.003999	OK 15s
+18 Oct 2026 ●	DeepSeek V3.2	6,036 in / 1,080 out	$0.002046	OK 19s
+18 Oct 2026 ●	DeepSeek V3.2	6,379 in / 834 out	$0.002039	OK 15s
+18 Oct 2026 ●	DeepSeek V3.2	7,293 in / 775 out	$0.00227	OK 13s
+18 Oct 2026 ●	DeepSeek V3.2	5,421 in / 987 out	$0.001839	OK 40s
+18 Oct 2026 ●	DeepSeek V3.2	6,192 in / 991 out	$0.002053	OK 16s
+18 Oct 2026 ●	DeepSeek V3.2	5,951 in / 1,047 out	$0.001993	OK 18s
+18 Oct 2026 ●	DeepSeek V3.2	6,905 in / 970 out	$0.002244	OK 16s
+18 Oct 2026 ●	DeepSeek V3.2	4,078 in / 1,055 out	$0.001488	OK 18s
+18 Oct 2026 ●	DeepSeek V3.2	4,936 in / 888 out	$0.001658	OK 15s
+18 Oct 2026 ●	DeepSeek V3.2	4,846 in / 846 out	$0.001712	OK 14s
+18 Oct 2026 ●	DeepSeek V3.2	5,598 in / 971 out	$0.001975	OK 16s
+17 Oct 2026 ●	gpt-oss-120b	7,804 in / 1,959 out	$0.000527	OK 45s
+17 Oct 2026 ●	DeepSeek V3.2	1,046 in / 7,190 out	$0.006022	OK 8m 50s
+17 Oct 2026 ●	gpt-oss-120b	7,340 in / 780 out	$0.00036	OK 37s
+17 Oct 2026 ●	DeepSeek V3.2	1,483 in / 6,966 out	$0.003082	OK 2m 06s
+17 Oct 2026 ●	gpt-oss-120b	6,474 in / 1,293 out	$0.000436	OK 24s
+17 Oct 2026 ●	DeepSeek V3.2	1,606 in / 6,031 out	$0.00274	OK 1m 49s
+17 Oct 2026 ●	gpt-oss-120b	7,324 in / 1,750 out	$0.000534	OK 57s
+17 Oct 2026 ●	DeepSeek V3.2	1,059 in / 7,038 out	$0.00301	OK 2m 10s
+17 Oct 2026 ●	gpt-oss-120b	5,832 in / 1,143 out	$0.00041	OK 31s
+17 Oct 2026 ●	gpt-oss-120b	6,516 in / 964 out	$0.000566	OK 3.1s
+17 Oct 2026 ●	DeepSeek V3.2	1,076 in / 5,646 out	$0.002672	OK 1m 35s
+17 Oct 2026 ●	DeepSeek V3.2	1,066 in / 5,046 out	$0.002175	OK 1m 24s
+17 Oct 2026 ●	gpt-oss-120b	5,851 in / 2,227 out	$0.002213	OK 11s
+17 Oct 2026 ●	DeepSeek V3.2	1,850 in / 5,288 out	$0.002497	OK 1m 31s
+17 Oct 2026 ●	gpt-oss-120b	8,058 in / 3,704 out	$0.003986	OK 13s
+17 Oct 2026 ●	DeepSeek V3.2	2,062 in / 7,578 out	$0.006596	OK 5m 35s
+17 Oct 2026 ●	gpt-oss-120b	9,581 in / 2,241 out	$0.00069	OK 1m 26s
+17 Oct 2026 ●	gpt-oss-120b	7,421 in / 1,769 out	$0.000487	OK 44s
+17 Oct 2026 ●	DeepSeek V3.2	1,847 in / 6,825 out	$0.003141	OK 1m 58s
+17 Oct 2026 ●	DeepSeek V3.2	1,632 in / 9,140 out	$0.004053	OK 2m 41s
+17 Oct 2026 ●	gpt-oss-120b	6,583 in / 2,094 out	$0.000599	OK 1m 10s
+17 Oct 2026 ●	gpt-oss-120b	8,125 in / 1,488 out	$0.000778	OK 7.5s
+17 Oct 2026 ●	DeepSeek V3.2	1,721 in / 7,284 out	$0.003541	OK 2m 00s
+17 Oct 2026 ●	DeepSeek V3.2	1,976 in / 5,979 out	$0.002822	OK 1m 44s
+17 Oct 2026 ●	gpt-oss-120b	7,180 in / 2,031 out	$0.00061	OK 1m 08s
+17 Oct 2026 ●	DeepSeek V3.2	1,984 in / 6,584 out	$0.003078	OK 1m 52s
+17 Oct 2026 ●	gpt-oss-120b	6,950 in / 2,086 out	$0.002294	OK 9.9s
+17 Oct 2026 ●	gpt-oss-120b	7,423 in / 2,693 out	$0.000707	OK 2m 24s
+17 Oct 2026 ●	DeepSeek V3.2	1,516 in / 6,062 out	$0.002728	OK 1m 42s
+17 Oct 2026 ●	gpt-oss-120b	6,998 in / 2,956 out	$0.000742	OK 2m 19s
+17 Oct 2026 ●	gpt-oss-120b	6,026 in / 2,205 out	$0.000852	OK 1m 14s
+17 Oct 2026 ●	gpt-oss-120b	9,719 in / 1,125 out	$0.002132	OK 2.9s
+17 Oct 2026 ●	DeepSeek V3.2	1,074 in / 8,926 out	$0.003807	OK 2m 29s
+17 Oct 2026 ●	DeepSeek V3.2	1,076 in / 6,835 out	$0.00293	OK 1m 56s
+17 Oct 2026 ●	DeepSeek V3.2	1,077 in / 6,454 out	$0.00277	OK 1m 52s
+17 Oct 2026 ●	DeepSeek V3.2	1,080 in / 5,348 out	$0.002306	OK 1m 31s
+17 Oct 2026 ●	gpt-oss-120b	5,630 in / 303 out	$0.00022	OK 8.1s
+17 Oct 2026 ●	DeepSeek V3.2	1,374 in / 4,917 out	$0.002449	OK 1m 23s
+17 Oct 2026 ●	gpt-oss-120b	6,473 in / 338 out	$0.000251	OK 4.6s
+17 Oct 2026 ●	DeepSeek V3.2	9,346 in / 5,838 out	$0.005068	OK 1m 38s
+17 Oct 2026 ●	gpt-oss-120b	8,082 in / 16,000 out	$0.002962	OK 3m 03s
+17 Oct 2026 ●	gpt-oss-120b	6,570 in / 2,020 out	$0.000586	OK 54s
+17 Oct 2026 ●	DeepSeek V3.2	1,075 in / 7,554 out	$0.003231	OK 2m 06s
+17 Oct 2026 ●	gpt-oss-120b	7,711 in / 2,486 out	$0.001007	OK 7.5s
+17 Oct 2026 ●	DeepSeek V3.2	1,084 in / 6,963 out	$0.002969	OK 1m 52s
+17 Oct 2026 ●	gpt-oss-120b	6,435 in / 1,249 out	$0.000634	OK 8.7s
+17 Oct 2026 ●	DeepSeek V3.2	1,085 in / 6,040 out	$0.002598	OK 1m 37s
+17 Oct 2026 ●	DeepSeek V3.2	1,098 in / 5,678 out	$0.00245	OK 1m 34s
+17 Oct 2026 ●	gpt-oss-120b	13,081 in / 1,338 out	$0.000988	OK 5.6s
+17 Oct 2026 ●	DeepSeek V3.2	2,011 in / 12,858 out	$0.005963	OK 3m 39s
+17 Oct 2026 ●	gpt-oss-120b	7,637 in / 2,371 out	$0.000972	OK 1m 34s
+17 Oct 2026 ●	DeepSeek V3.2	1,974 in / 7,129 out	$0.003304	OK 2m 02s
+17 Oct 2026 ●	gpt-oss-120b	7,094 in / 1,218 out	$0.000659	OK 5.4s
+17 Oct 2026 ●	DeepSeek V3.2	1,614 in / 6,378 out	$0.002888	OK 1m 42s
+17 Oct 2026 ●	gpt-oss-120b	9,289 in / 1,911 out	$0.000564	OK 48s
+17 Oct 2026 ●	gpt-oss-120b	8,038 in / 2,341 out	$0.000591	OK 49s
+17 Oct 2026 ●	DeepSeek V3.2	1,072 in / 8,918 out	$0.003803	OK 2m 30s
+17 Oct 2026 ●	gpt-oss-120b	7,911 in / 1,690 out	$0.001636	OK 7.2s
+17 Oct 2026 ●	DeepSeek V3.2	1,089 in / 7,340 out	$0.003145	OK 1m 57s
+17 Oct 2026 ●	DeepSeek V3.2	1,094 in / 7,232 out	$0.003101	OK 1m 56s
+17 Oct 2026 ●	gpt-oss-120b	6,734 in / 524 out	$0.000291	OK 8.8s
+17 Oct 2026 ●	DeepSeek V3.2	1,091 in / 6,156 out	$0.002649	OK 1m 41s
+17 Oct 2026 ●	gpt-oss-120b	7,491 in / 1,547 out	$0.00054	OK 45s
+17 Oct 2026 ●	DeepSeek V3.2	1,805 in / 7,065 out	$0.00323	OK 2m 03s
+17 Oct 2026 ●	gpt-oss-120b	7,252 in / 1,850 out	$0.00055	OK 41s
+17 Oct 2026 ●	gpt-oss-120b	9,032 in / 1,458 out	$0.001632	OK 5.8s
+17 Oct 2026 ●	DeepSeek V3.2	1,933 in / 6,794 out	$0.003152	OK 1m 59s
+17 Oct 2026 ●	DeepSeek V3.2	2,282 in / 8,539 out	$0.003983	OK 2m 25s
+17 Oct 2026 ●	gpt-oss-120b	8,592 in / 1,571 out	$0.002034	OK 10s
+17 Oct 2026 ●	DeepSeek V3.2	1,571 in / 8,134 out	$0.003614	OK 2m 20s
+17 Oct 2026 ●	gpt-oss-120b	7,324 in / 2,697 out	$0.00104	OK 7.1s
+17 Oct 2026 ●	DeepSeek V3.2	2,212 in / 6,754 out	$0.003197	OK 1m 54s
+17 Oct 2026 ●	gpt-oss-120b	12,786 in / 1,790 out	$0.000718	OK 27s
+17 Oct 2026 ●	DeepSeek V3.2	1,073 in / 12,612 out	$0.005597	OK 3m 33s
+17 Oct 2026 ●	gpt-oss-120b	7,773 in / 1,134 out	$0.00067	OK 46s
+17 Oct 2026 ●	gpt-oss-120b	7,814 in / 2,762 out	$0.002829	OK 20s
+17 Oct 2026 ●	gpt-oss-120b	6,644 in / 1,855 out	$0.000546	OK 35s
+17 Oct 2026 ●	DeepSeek V3.2	1,111 in / 7,364 out	$0.003403	OK 2m 05s
+17 Oct 2026 ●	DeepSeek V3.2	1,085 in / 7,323 out	$0.003379	OK 2m 06s
+17 Oct 2026 ●	DeepSeek V3.2	1,079 in / 5,854 out	$0.00276	OK 1m 39s
+17 Oct 2026 ●	gpt-oss-120b	7,626 in / 4,108 out	$0.000844	OK 1m 54s
+17 Oct 2026 ●	DeepSeek V3.2	1,869 in / 5,699 out	$0.005043	OK 9m 59s
+17 Oct 2026 ●	DeepSeek V3.2	1,799 in / 6,851 out	$0.005946	OK 4m 37s
+17 Oct 2026 ●	gpt-oss-120b	8,650 in / 2,700 out	$0.001107	OK 6.1s
+17 Oct 2026 ●	DeepSeek V3.2	1,547 in / 8,086 out	$0.003829	OK 2m 14s
+17 Oct 2026 ●	gpt-oss-120b	8,238 in / 16,000 out	$0.002967	OK 4m 39s
+17 Oct 2026 ●	gpt-oss-120b	14,763 in / 1,632 out	$0.000823	OK 58s
+17 Oct 2026 ●	DeepSeek V3.2	1,837 in / 14,357 out	$0.006302	OK 3m 54s
+17 Oct 2026 ●	gpt-oss-120b	6,624 in / 1,907 out	$0.000569	OK 48s
+17 Oct 2026 ●	DeepSeek V3.2	1,663 in / 5,855 out	$0.002666	OK 1m 34s
+17 Oct 2026 ●	gpt-oss-120b	7,550 in / 2,167 out	$0.000919	OK 8.0s
+17 Oct 2026 ●	DeepSeek V3.2	1,969 in / 7,616 out	$0.003508	OK 2m 00s
+17 Oct 2026 ●	DeepSeek V3.2	2,120 in / 6,984 out	$0.003268	OK 1m 51s
+17 Oct 2026 ●	gpt-oss-120b	6,920 in / 619 out	$0.000312	OK 5.4s
+17 Oct 2026 ●	DeepSeek V3.2	1,712 in / 6,122 out	$0.002808	OK 1m 38s
+17 Oct 2026 ●	gpt-oss-120b	12,004 in / 1,680 out	$0.000611	OK 49s
+17 Oct 2026 ●	gpt-oss-120b	7,504 in / 2,307 out	$0.00095	OK 1m 14s
+17 Oct 2026 ●	gpt-oss-120b	9,853 in / 1,550 out	$0.000628	OK 40s
+17 Oct 2026 ●	DeepSeek V3.2	1,079 in / 11,227 out	$0.004775	OK 3m 04s
+17 Oct 2026 ●	gpt-oss-120b	7,719 in / 1,665 out	$0.000568	OK 42s
+17 Oct 2026 ●	DeepSeek V3.2	1,088 in / 9,295 out	$0.003966	OK 2m 31s
+17 Oct 2026 ●	DeepSeek V3.2	1,111 in / 7,080 out	$0.003042	OK 1m 57s
+17 Oct 2026 ●	DeepSeek V3.2	1,086 in / 6,980 out	$0.002993	OK 1m 56s
+17 Oct 2026 ●	gpt-oss-120b	6,965 in / 2,104 out	$0.000523	OK 54s
+17 Oct 2026 ●	DeepSeek V3.2	1,763 in / 6,282 out	$0.002874	OK 1m 41s
+17 Oct 2026 ●	gpt-oss-120b	8,057 in / 1,747 out	$0.000568	OK 42s
+17 Oct 2026 ●	DeepSeek V3.2	1,367 in / 7,532 out	$0.003304	OK 2m 07s
+17 Oct 2026 ●	gpt-oss-120b	7,110 in / 1,228 out	$0.000471	OK 33s
+17 Oct 2026 ●	DeepSeek V3.2	1,742 in / 6,591 out	$0.003014	OK 1m 52s
+17 Oct 2026 ●	gpt-oss-120b	6,799 in / 775 out	$0.000335	OK 14s
+17 Oct 2026 ●	DeepSeek V3.2	1,561 in / 6,100 out	$0.002757	OK 1m 41s
+17 Oct 2026 ●	gpt-oss-120b	No usage	–	Error 0ms
+17 Oct 2026 ●	gpt-oss-120b	9,294 in / 366 out	$0.000341	OK 11s
+17 Oct 2026 ●	DeepSeek V3.2	1,071 in / 9,019 out	$0.004087	OK 2m 28s
+17 Oct 2026 ●	gpt-oss-120b	5,510 in / 1,884 out	$0.000745	OK 49s
+17 Oct 2026 ●	gpt-oss-120b	7,370 in / 747 out	$0.000348	OK 19s
+17 Oct 2026 ●	gpt-oss-120b	6,577 in / 1,147 out	$0.001231	OK 4.0s
+17 Oct 2026 ●	DeepSeek V3.2	1,069 in / 6,025 out	$0.002829	OK 1m 53s
+17 Oct 2026 ●	DeepSeek V3.2	1,079 in / 6,747 out	$0.003135	OK 1m 52s
+17 Oct 2026 ●	DeepSeek V3.2	1,076 in / 4,933 out	$0.002115	OK 1m 31s
+16 Oct 2026 ●	gpt-oss-120b	9,693 in / 1,480 out	$0.00061	OK 49s
+16 Oct 2026 ●	DeepSeek V3.2	2,279 in / 9,300 out	$0.004544	OK 2m 34s
+16 Oct 2026 ●	gpt-oss-120b	6,863 in / 2,718 out	$0.000695	OK 1m 45s
+16 Oct 2026 ●	gpt-oss-120b	16,441 in / 1,658 out	$0.000741	OK 52s
+16 Oct 2026 ●	DeepSeek V3.2	2,035 in / 16,494 out	$0.007255	OK 4m 21s
+16 Oct 2026 ●	DeepSeek V3.2	1,279 in / 6,498 out	$0.002845	OK 1m 58s
+16 Oct 2026 ●	gpt-oss-120b	7,770 in / 1,491 out	$0.00076	OK 1m 28s
+16 Oct 2026 ●	gpt-oss-120b	11,186 in / 166 out	$0.000363	OK 3.9s
+16 Oct 2026 ●	DeepSeek V3.2	1,944 in / 10,808 out	$0.005083	OK 3m 01s
+16 Oct 2026 ●	DeepSeek V3.2	1,674 in / 7,232 out	$0.003264	OK 2m 04s
+16 Oct 2026 ●	gpt-oss-120b	14,198 in / 1,508 out	$0.000707	OK 28s
+16 Oct 2026 ●	gpt-oss-120b	6,862 in / 1,374 out	$0.000462	OK 23s
+16 Oct 2026 ●	DeepSeek V3.2	1,048 in / 14,060 out	$0.021614	OK 4m 15s
+16 Oct 2026 ●	DeepSeek V3.2	1,807 in / 6,261 out	$0.002893	OK 1m 43s
+16 Oct 2026 ●	gpt-oss-120b	11,451 in / 1,279 out	$0.00056	OK 29s
+16 Oct 2026 ●	gpt-oss-120b	6,950 in / 1,477 out	$0.000715	OK 1m 34s
+16 Oct 2026 ●	DeepSeek V3.2	1,090 in / 11,276 out	$0.004799	OK 3m 13s
+16 Oct 2026 ●	gpt-oss-120b	6,456 in / 1,236 out	$0.000424	OK 30s
+16 Oct 2026 ●	DeepSeek V3.2	1,076 in / 6,455 out	$0.00277	OK 1m 51s
+16 Oct 2026 ●	DeepSeek V3.2	1,090 in / 5,980 out	$0.002574	OK 1m 46s
+16 Oct 2026 ●	gpt-oss-120b	6,887 in / 1,621 out	$0.000509	OK 43s
+16 Oct 2026 ●	DeepSeek V3.2	1,313 in / 6,187 out	$0.002966	OK 1m 41s
+16 Oct 2026 ●	gpt-oss-120b	16,737 in / 16,000 out	$0.003222	OK 2m 02s
+16 Oct 2026 ●	gpt-oss-120b	5,876 in / 2,130 out	$0.000559	OK 1m 08s
+16 Oct 2026 ●	DeepSeek V3.2	1,982 in / 5,273 out	$0.002527	OK 1m 29s
+16 Oct 2026 ●	DeepSeek V3.2	1,804 in / 16,734 out	$0.007291	OK 4m 42s
+16 Oct 2026 ●	gpt-oss-120b	6,910 in / 1,950 out	$0.000587	OK 1m 28s
+16 Oct 2026 ●	gpt-oss-120b	9,604 in / 650 out	$0.000398	OK 5.8s
+16 Oct 2026 ●	DeepSeek V3.2	2,094 in / 9,202 out	$0.004209	OK 2m 40s
+16 Oct 2026 ●	gpt-oss-120b	11,368 in / 2,183 out	$0.002771	OK 11s
+16 Oct 2026 ●	DeepSeek V3.2	2,088 in / 10,898 out	$0.004919	OK 3m 01s
+16 Oct 2026 ●	DeepSeek V3.2	1,447 in / 6,253 out	$0.002789	OK 1m 45s
+16 Oct 2026 ●	gpt-oss-120b	8,674 in / 1,985 out	$0.000631	OK 20s
+16 Oct 2026 ●	DeepSeek V3.2	1,783 in / 8,143 out	$0.003677	OK 2m 18s
+16 Oct 2026 ●	gpt-oss-120b	6,164 in / 1,403 out	$0.000394	OK 40s
+16 Oct 2026 ●	gpt-oss-120b	9,575 in / 1,719 out	$0.000608	OK 24s
+16 Oct 2026 ●	gpt-oss-120b	8,700 in / 1,039 out	$0.000448	OK 34s
+16 Oct 2026 ●	DeepSeek V3.2	1,930 in / 5,529 out	$0.00262	OK 1m 40s
+16 Oct 2026 ●	DeepSeek V3.2	1,075 in / 9,330 out	$0.003977	OK 2m 49s
+16 Oct 2026 ●	DeepSeek V3.2	1,075 in / 8,380 out	$0.003578	OK 2m 31s
+16 Oct 2026 ●	gpt-oss-120b	5,222 in / 1,942 out	$0.000746	OK 8.2s
+16 Oct 2026 ●	DeepSeek V3.2	1,075 in / 4,707 out	$0.002277	OK 1m 27s
+16 Oct 2026 ●	gpt-oss-120b	4,883 in / 1,460 out	$0.000609	OK 6.3s
+16 Oct 2026 ●	DeepSeek V3.2	1,075 in / 4,246 out	$0.001842	OK 1m 18s
+16 Oct 2026 ●	gpt-oss-120b	9,082 in / 1,940 out	$0.000621	OK 1m 04s
+16 Oct 2026 ●	DeepSeek V3.2	1,744 in / 8,688 out	$0.004137	OK 2m 31s
+16 Oct 2026 ●	gpt-oss-120b	22,949 in / 3,242 out	$0.0014	OK 1m 59s
+16 Oct 2026 ●	DeepSeek V3.2	1,793 in / 24,000 out	$0.01034	OK 6m 43s
+16 Oct 2026 ●	gpt-oss-120b	18,451 in / 1,640 out	$0.001332	OK 27s
+16 Oct 2026 ●	DeepSeek V3.2	1,649 in / 18,760 out	$0.008099	OK 5m 15s
+16 Oct 2026 ●	gpt-oss-120b	10,362 in / 2,156 out	$0.000633	OK 1m 02s
+16 Oct 2026 ●	DeepSeek V3.2	1,989 in / 9,916 out	$0.004479	OK 2m 45s
+16 Oct 2026 ●	gpt-oss-120b	7,776 in / 2,226 out	$0.002444	OK 9.4s
+16 Oct 2026 ●	DeepSeek V3.2	2,228 in / 7,040 out	$0.003338	OK 1m 54s
+16 Oct 2026 ●	gpt-oss-120b	18,738 in / 1,345 out	$0.000813	OK 16s
+16 Oct 2026 ●	DeepSeek V3.2	1,726 in / 19,022 out	$0.00823	OK 5m 17s
+16 Oct 2026 ●	gpt-oss-120b	7,460 in / 3,367 out	$0.000829	OK 1m 59s
+16 Oct 2026 ●	gpt-oss-120b	18,598 in / 2,575 out	$0.000943	OK 1m 05s
+16 Oct 2026 ●	gpt-oss-120b	5,881 in / 1,765 out	$0.00044	OK 50s
+16 Oct 2026 ●	DeepSeek V3.2	1,075 in / 18,918 out	$0.008246	OK 5m 18s
+16 Oct 2026 ●	DeepSeek V3.2	1,605 in / 6,950 out	$0.003126	OK 1m 57s
+16 Oct 2026 ●	DeepSeek V3.2	1,824 in / 5,184 out	$0.002512	OK 2m 11s
+16 Oct 2026 ●	gpt-oss-120b	7,358 in / 1,176 out	$0.00044	OK 33s
+16 Oct 2026 ●	gpt-oss-120b	6,105 in / 1,127 out	$0.000585	OK 32s
+16 Oct 2026 ●	DeepSeek V3.2	1,075 in / 6,942 out	$0.003216	OK 2m 05s
+16 Oct 2026 ●	DeepSeek V3.2	1,075 in / 5,588 out	$0.002647	OK 1m 44s
+16 Oct 2026 ●	gpt-oss-120b	5,814 in / 1,444 out	$0.001738	OK 3.6s
+16 Oct 2026 ●	DeepSeek V3.2	1,075 in / 5,285 out	$0.00252	OK 1m 38s
+16 Oct 2026 ●	gpt-oss-120b	14,770 in / 1,345 out	$0.000685	OK 46s
+16 Oct 2026 ●	DeepSeek V3.2	1,757 in / 14,923 out	$0.006517	OK 4m 07s
+16 Oct 2026 ●	gpt-oss-120b	11,796 in / 1,426 out	$0.00062	OK 19s
+16 Oct 2026 ●	DeepSeek V3.2	1,805 in / 11,417 out	$0.005042	OK 3m 14s
+16 Oct 2026 ●	gpt-oss-120b	13,466 in / 1,544 out	$0.002946	OK 17s
+16 Oct 2026 ●	DeepSeek V3.2	1,908 in / 13,362 out	$0.006146	OK 3m 42s
+16 Oct 2026 ●	gpt-oss-120b	9,270 in / 2,012 out	$0.00064	OK 1m 07s
+16 Oct 2026 ●	gpt-oss-120b	11,251 in / 1,183 out	$0.000558	OK 15s
+16 Oct 2026 ●	DeepSeek V3.2	1,634 in / 10,703 out	$0.00471	OK 2m 52s
+16 Oct 2026 ●	DeepSeek V3.2	1,404 in / 8,983 out	$0.003924	OK 2m 34s
+16 Oct 2026 ●	gpt-oss-120b	8,123 in / 1,249 out	$0.000717	OK 25s
+16 Oct 2026 ●	DeepSeek V3.2	1,534 in / 7,603 out	$0.00338	OK 2m 08s
+16 Oct 2026 ●	gpt-oss-120b	7,165 in / 1,153 out	$0.000461	OK 49s
+16 Oct 2026 ●	gpt-oss-120b	6,132 in / 1,269 out	$0.000412	OK 39s
+16 Oct 2026 ●	gpt-oss-120b	7,002 in / 363 out	$0.000271	OK 8.9s
+16 Oct 2026 ●	gpt-oss-120b	5,559 in / 1,517 out	$0.000655	OK 31s
+16 Oct 2026 ●	DeepSeek V3.2	1,075 in / 6,664 out	$0.003099	OK 1m 57s
+16 Oct 2026 ●	DeepSeek V3.2	1,075 in / 6,514 out	$0.003036	OK 1m 55s
+16 Oct 2026 ●	DeepSeek V3.2	1,075 in / 5,500 out	$0.002611	OK 1m 38s
+16 Oct 2026 ●	DeepSeek V3.2	1,075 in / 4,957 out	$0.002382	OK 1m 28s
+16 Oct 2026 ●	gpt-oss-120b	16,723 in / 1,127 out	$0.002235	OK 4.9s
+16 Oct 2026 ●	DeepSeek V3.2	2,120 in / 16,912 out	$0.007438	OK 4m 30s
+16 Oct 2026 ●	gpt-oss-120b	5,920 in / 1,634 out	$0.000496	OK 1m 28s
+16 Oct 2026 ●	gpt-oss-120b	13,374 in / 1,266 out	$0.000985	OK 41s
+16 Oct 2026 ●	gpt-oss-120b	6,732 in / 1,413 out	$0.000456	OK 55s
+16 Oct 2026 ●	gpt-oss-120b	9,164 in / 2,092 out	$0.000651	OK 1m 07s
+16 Oct 2026 ●	DeepSeek V3.2	2,005 in / 13,397 out	$0.005946	OK 3m 28s
+16 Oct 2026 ●	DeepSeek V3.2	1,465 in / 5,441 out	$0.004732	OK 4m 09s
+16 Oct 2026 ●	DeepSeek V3.2	1,049 in / 6,084 out	$0.005138	OK 5m 36s
+16 Oct 2026 ●	DeepSeek V3.2	1,577 in / 8,685 out	$0.004089	OK 2m 19s
+16 Oct 2026 ●	gpt-oss-120b	7,611 in / 1,076 out	$0.000389	OK 32s
+16 Oct 2026 ●	gpt-oss-120b	6,966 in / 1,291 out	$0.000441	OK 41s
+16 Oct 2026 ●	DeepSeek V3.2	1,084 in / 7,184 out	$0.003062	OK 2m 12s
+16 Oct 2026 ●	DeepSeek V3.2	1,085 in / 6,406 out	$0.002994	OK 1m 48s
+16 Oct 2026 ●	gpt-oss-120b	6,089 in / 438 out	$0.000257	OK 4.7s
+16 Oct 2026 ●	DeepSeek V3.2	1,075 in / 5,754 out	$0.002717	OK 1m 39s
+16 Oct 2026 ●	gpt-oss-120b	7,747 in / 1,411 out	$0.00074	OK 33s
+16 Oct 2026 ●	DeepSeek V3.2	2,007 in / 7,162 out	$0.011746	OK 2m 03s
+16 Oct 2026 ●	gpt-oss-120b	20,117 in / 1,847 out	$0.000948	OK 30s
+16 Oct 2026 ●	DeepSeek V3.2	2,025 in / 20,078 out	$0.008757	OK 5m 14s
+16 Oct 2026 ●	gpt-oss-120b	9,817 in / 1,978 out	$0.000985	OK 15s
+16 Oct 2026 ●	gpt-oss-120b	6,850 in / 550 out	$0.000299	OK 8.6s
+16 Oct 2026 ●	DeepSeek V3.2	1,784 in / 9,147 out	$0.004083	OK 2m 21s
+16 Oct 2026 ●	DeepSeek V3.2	1,838 in / 6,230 out	$0.002873	OK 1m 34s
+16 Oct 2026 ●	gpt-oss-120b	6,637 in / 2,093 out	$0.00059	OK 38s
+16 Oct 2026 ●	gpt-oss-120b	16,585 in / 1,435 out	$0.001188	OK 23s
+16 Oct 2026 ●	DeepSeek V3.2	1,084 in / 16,309 out	$0.006895	OK 4m 24s
+16 Oct 2026 ●	DeepSeek V3.2	1,734 in / 5,953 out	$0.002743	OK 1m 37s
+16 Oct 2026 ●	gpt-oss-120b	7,448 in / 2,125 out	$0.002392	OK 4.9s
+16 Oct 2026 ●	DeepSeek V3.2	1,646 in / 6,689 out	$0.003028	OK 1m 49s
+16 Oct 2026 ●	gpt-oss-120b	7,022 in / 2,436 out	$0.000666	OK 59s
+16 Oct 2026 ●	gpt-oss-120b	7,819 in / 946 out	$0.00045	OK 31s
+16 Oct 2026 ●	gpt-oss-120b	7,132 in / 2,205 out	$0.000907	OK 41s
+16 Oct 2026 ●	DeepSeek V3.2	1,068 in / 7,308 out	$0.003126	OK 1m 57s
+16 Oct 2026 ●	DeepSeek V3.2	1,075 in / 6,406 out	$0.002991	OK 1m 46s
+16 Oct 2026 ●	DeepSeek V3.2	1,069 in / 6,395 out	$0.002743	OK 1m 45s
+16 Oct 2026 ●	gpt-oss-120b	6,184 in / 1,622 out	$0.000714	OK 9.5s
+16 Oct 2026 ●	DeepSeek V3.2	1,995 in / 5,566 out	$0.002638	OK 1m 32s
+16 Oct 2026 ●	gpt-oss-120b	9,845 in / 2,264 out	$0.000718	OK 1m 25s
+16 Oct 2026 ●	DeepSeek V3.2	1,505 in / 9,351 out	$0.004106	OK 2m 35s
+16 Oct 2026 ●	gpt-oss-120b	10,700 in / 1,415 out	$0.000887	OK 42s
+16 Oct 2026 ●	DeepSeek V3.2	1,069 in / 10,233 out	$0.004597	OK 2m 52s
+16 Oct 2026 ●	gpt-oss-120b	7,179 in / 1,075 out	$0.000448	OK 54s
+16 Oct 2026 ●	gpt-oss-120b	8,157 in / 963 out	$0.000424	OK 18s
+16 Oct 2026 ●	gpt-oss-120b	5,906 in / 907 out	$0.000372	OK 51s
+16 Oct 2026 ●	DeepSeek V3.2	1,068 in / 7,588 out	$0.003244	OK 2m 06s
+16 Oct 2026 ●	DeepSeek V3.2	1,067 in / 6,624 out	$0.00308	OK 1m 50s
+16 Oct 2026 ●	DeepSeek V3.2	1,064 in / 5,154 out	$0.00222	OK 1m 28s
+16 Oct 2026 ●	gpt-oss-120b	8,899 in / 1,199 out	$0.000533	OK 58s
+16 Oct 2026 ●	DeepSeek V3.2	1,562 in / 8,553 out	$0.003787	OK 2m 20s
+16 Oct 2026 ●	gpt-oss-120b	7,747 in / 2,457 out	$0.001001	OK 19s
+16 Oct 2026 ●	DeepSeek V3.2	1,530 in / 7,151 out	$0.003173	OK 1m 56s
+16 Oct 2026 ●	gpt-oss-120b	6,972 in / 542 out	$0.000301	OK 9.1s
+16 Oct 2026 ●	gpt-oss-120b	6,176 in / 1,818 out	$0.000537	OK 1m 31s
+16 Oct 2026 ●	DeepSeek V3.2	1,875 in / 6,413 out	$0.002976	OK 1m 53s
+16 Oct 2026 ●	DeepSeek V3.2	1,935 in / 5,530 out	$0.002622	OK 1m 32s
+16 Oct 2026 ●	gpt-oss-120b	8,341 in / 3,197 out	$0.000848	OK 1m 46s
+16 Oct 2026 ●	gpt-oss-120b	8,839 in / 1,545 out	$0.000554	OK 60s
+16 Oct 2026 ●	gpt-oss-120b	9,337 in / 1,764 out	$0.000907	OK 21s
+16 Oct 2026 ●	gpt-oss-120b	6,644 in / 1,101 out	$0.000605	OK 47s
+16 Oct 2026 ●	DeepSeek V3.2	1,075 in / 8,744 out	$0.003973	OK 2m 28s
+16 Oct 2026 ●	DeepSeek V3.2	1,074 in / 8,288 out	$0.003539	OK 2m 16s
+16 Oct 2026 ●	DeepSeek V3.2	1,070 in / 7,850 out	$0.003596	OK 2m 13s
+16 Oct 2026 ●	DeepSeek V3.2	1,074 in / 5,980 out	$0.002812	OK 1m 42s
+16 Oct 2026 ●	gpt-oss-120b	11,263 in / 1,595 out	$0.000576	OK 47s
+16 Oct 2026 ●	DeepSeek V3.2	1,321 in / 10,613 out	$0.004827	OK 2m 49s
+16 Oct 2026 ●	gpt-oss-120b	11,871 in / 16,000 out	$0.003076	OK 6m 58s
+16 Oct 2026 ●	gpt-oss-120b	8,811 in / 8,892 out	$0.001775	OK 3m 33s
+16 Oct 2026 ●	gpt-oss-120b	8,746 in / 2,389 out	$0.002745	OK 7.8s
+16 Oct 2026 ●	DeepSeek V3.2	1,971 in / 8,133 out	$0.003725	OK 2m 13s
+16 Oct 2026 ●	DeepSeek V3.2	1,981 in / 8,296 out	$0.00378	OK 2m 16s
+16 Oct 2026 ●	gpt-oss-120b	11,492 in / 1,947 out	$0.002892	OK 8.4s
+16 Oct 2026 ●	DeepSeek V3.2	1,560 in / 11,080 out	$0.004848	OK 2m 59s
+16 Oct 2026 ●	DeepSeek V3.2	1,283 in / 11,498 out	$0.004946	OK 3m 13s
+16 Oct 2026 ●	gpt-oss-120b	6,921 in / 1,731 out	$0.002336	OK 13s
+16 Oct 2026 ●	DeepSeek V3.2	1,841 in / 6,372 out	$0.002949	OK 1m 49s
+16 Oct 2026 ●	gpt-oss-120b	9,104 in / 1,361 out	$0.000476	OK 41s
+16 Oct 2026 ●	gpt-oss-120b	8,001 in / 1,657 out	$0.000814	OK 33s
+16 Oct 2026 ●	gpt-oss-120b	7,246 in / 3,323 out	$0.003213	OK 34s
+16 Oct 2026 ●	DeepSeek V3.2	1,069 in / 8,603 out	$0.00367	OK 2m 23s
+16 Oct 2026 ●	gpt-oss-120b	8,074 in / 243 out	$0.000283	OK 7.6s
+16 Oct 2026 ●	DeepSeek V3.2	1,066 in / 7,399 out	$0.003406	OK 2m 03s
+16 Oct 2026 ●	DeepSeek V3.2	1,070 in / 7,383 out	$0.0034	OK 2m 01s
+16 Oct 2026 ●	DeepSeek V3.2	1,062 in / 6,479 out	$0.003018	OK 1m 48s
+16 Oct 2026 ●	gpt-oss-120b	6,475 in / 1,503 out	$0.000699	OK 12s
+16 Oct 2026 ●	DeepSeek V3.2	1,727 in / 5,795 out	$0.002917	OK 1m 40s
+16 Oct 2026 ●	gpt-oss-120b	8,335 in / 1,917 out	$0.0024	OK 28s
+16 Oct 2026 ●	DeepSeek V3.2	1,210 in / 7,822 out	$0.003382	OK 2m 11s
+16 Oct 2026 ●	gpt-oss-120b	7,048 in / 16,000 out	$0.002931	OK 6m 12s
+16 Oct 2026 ●	gpt-oss-120b	6,468 in / 1,756 out	$0.001524	OK 8.3s
+16 Oct 2026 ●	DeepSeek V3.2	1,715 in / 5,652 out	$0.002595	OK 1m 33s
+16 Oct 2026 ●	gpt-oss-120b	8,280 in / 1,473 out	$0.002125	OK 4.1s
+16 Oct 2026 ●	DeepSeek V3.2	1,444 in / 7,599 out	$0.003353	OK 2m 06s
+16 Oct 2026 ●	gpt-oss-120b	6,520 in / 2,376 out	$0.00092	OK 9.8s
+16 Oct 2026 ●	DeepSeek V3.2	1,741 in / 5,764 out	$0.002666	OK 1m 34s
+16 Oct 2026 ●	gpt-oss-120b	6,710 in / 2,158 out	$0.000875	OK 28s
+16 Oct 2026 ●	gpt-oss-120b	6,477 in / 2,292 out	$0.000896	OK 13s
+16 Oct 2026 ●	DeepSeek V3.2	1,069 in / 6,357 out	$0.002727	OK 1m 52s
+16 Oct 2026 ●	gpt-oss-120b	6,391 in / 1,319 out	$0.001298	OK 7.7s
+16 Oct 2026 ●	DeepSeek V3.2	1,072 in / 5,976 out	$0.002568	OK 1m 41s
+16 Oct 2026 ●	DeepSeek V3.2	1,090 in / 5,613 out	$0.002662	OK 1m 39s
+16 Oct 2026 ●	DeepSeek V3.2	1,075 in / 5,609 out	$0.002414	OK 1m 35s
+16 Oct 2026 ●	gpt-oss-120b	9,642 in / 1,643 out	$0.002432	OK 16s
+16 Oct 2026 ●	DeepSeek V3.2	1,560 in / 9,099 out	$0.004258	OK 2m 30s
+16 Oct 2026 ●	gpt-oss-120b	9,052 in / 2,589 out	$0.003299	OK 13s
+16 Oct 2026 ●	DeepSeek V3.2	1,556 in / 8,571 out	$0.003793	OK 2m 28s
+16 Oct 2026 ●	gpt-oss-120b	7,562 in / 2,013 out	$0.000622	OK 1m 11s
+16 Oct 2026 ●	DeepSeek V3.2	1,317 in / 6,951 out	$0.003046	OK 2m 00s
+16 Oct 2026 ●	gpt-oss-120b	12,362 in / 2,004 out	$0.003056	OK 26s
+16 Oct 2026 ●	DeepSeek V3.2	1,087 in / 12,128 out	$0.005398	OK 3m 18s
+16 Oct 2026 ●	gpt-oss-120b	9,572 in / 1,332 out	$0.000536	OK 44s
+16 Oct 2026 ●	DeepSeek V3.2	1,087 in / 8,690 out	$0.003954	OK 2m 26s
+16 Oct 2026 ●	gpt-oss-120b	8,699 in / 275 out	$0.000307	OK 6.4s
+16 Oct 2026 ●	DeepSeek V3.2	1,069 in / 8,079 out	$0.00345	OK 2m 16s
+16 Oct 2026 ●	gpt-oss-120b	6,386 in / 1,705 out	$0.000745	OK 21s
+16 Oct 2026 ●	DeepSeek V3.2	1,084 in / 5,753 out	$0.002719	OK 1m 36s
+16 Oct 2026 ●	gpt-oss-120b	7,547 in / 1,986 out	$0.001747	OK 7.7s
+16 Oct 2026 ●	DeepSeek V3.2	1,861 in / 6,734 out	$0.003091	OK 1m 54s
+16 Oct 2026 ●	gpt-oss-120b	10,381 in / 2,462 out	$0.001134	OK 14s
+16 Oct 2026 ●	DeepSeek V3.2	2,119 in / 9,597 out	$0.004382	OK 2m 38s
+16 Oct 2026 ●	gpt-oss-120b	5,848 in / 960 out	$0.000348	OK 42s
+16 Oct 2026 ●	DeepSeek V3.2	1,562 in / 5,166 out	$0.002365	OK 1m 28s
+16 Oct 2026 ●	gpt-oss-120b	6,909 in / 2,028 out	$0.002253	OK 36s
+16 Oct 2026 ●	DeepSeek V3.2	1,701 in / 6,320 out	$0.002888	OK 1m 48s
+16 Oct 2026 ●	gpt-oss-120b	9,517 in / 2,608 out	$0.000754	OK 1m 24s
+16 Oct 2026 ●	gpt-oss-120b	8,720 in / 1,661 out	$0.00056	OK 1m 27s
+16 Oct 2026 ●	gpt-oss-120b	6,084 in / 2,246 out	$0.000518	OK 1m 13s
+16 Oct 2026 ●	DeepSeek V3.2	1,073 in / 8,899 out	$0.003796	OK 2m 32s
+16 Oct 2026 ●	DeepSeek V3.2	1,077 in / 8,115 out	$0.003709	OK 2m 20s
+16 Oct 2026 ●	gpt-oss-120b	6,625 in / 1,275 out	$0.000437	OK 27s
+16 Oct 2026 ●	DeepSeek V3.2	1,082 in / 6,062 out	$0.002607	OK 1m 42s
+16 Oct 2026 ●	DeepSeek V3.2	1,074 in / 5,351 out	$0.002306	OK 1m 27s
+16 Oct 2026 ●	gpt-oss-120b	9,212 in / 1,228 out	$0.000767	OK 41s
+16 Oct 2026 ●	DeepSeek V3.2	1,447 in / 8,621 out	$0.003784	OK 2m 27s
+16 Oct 2026 ●	gpt-oss-120b	9,833 in / 2,639 out	$0.00069	OK 1m 15s
+16 Oct 2026 ●	DeepSeek V3.2	1,660 in / 9,055 out	$0.004267	OK 2m 22s
+16 Oct 2026 ●	gpt-oss-120b	8,244 in / 1,530 out	$0.000476	OK 1m 05s
+16 Oct 2026 ●	DeepSeek V3.2	1,801 in / 7,605 out	$0.003456	OK 2m 10s
+16 Oct 2026 ●	gpt-oss-120b	10,657 in / 3,070 out	$0.0013	OK 1m 46s
+16 Oct 2026 ●	gpt-oss-120b	8,153 in / 2,075 out	$0.000654	OK 1m 30s
+16 Oct 2026 ●	DeepSeek V3.2	1,067 in / 10,050 out	$0.004519	OK 2m 45s
+16 Oct 2026 ●	gpt-oss-120b	9,934 in / 1,876 out	$0.002615	OK 6.2s
+16 Oct 2026 ●	gpt-oss-120b	7,411 in / 1,735 out	$0.000546	OK 45s
+16 Oct 2026 ●	DeepSeek V3.2	1,072 in / 9,440 out	$0.004264	OK 2m 36s
+16 Oct 2026 ●	DeepSeek V3.2	1,079 in / 7,410 out	$0.003414	OK 2m 05s
+16 Oct 2026 ●	DeepSeek V3.2	1,071 in / 6,785 out	$0.003149	OK 1m 55s
+16 Oct 2026 ●	gpt-oss-120b	10,211 in / 11,987 out	$0.002344	OK 4m 01s
+16 Oct 2026 ●	DeepSeek V3.2	1,989 in / 9,591 out	$0.004585	OK 2m 36s
+16 Oct 2026 ●	gpt-oss-120b	8,157 in / 2,081 out	$0.000633	OK 43s
+16 Oct 2026 ●	gpt-oss-120b	2,563 in / 836 out	$0.000227	OK 45s
+16 Oct 2026 ●	DeepSeek V3.2	1,065 in / 7,678 out	$0.006418	OK 8m 39s
+16 Oct 2026 ●	gpt-oss-120b	2,573 in / 623 out	$0.000284	OK 4.4s
+16 Oct 2026 ●	gpt-oss-120b	2,561 in / 577 out	$0.000272	OK 9.2s
+16 Oct 2026 ●	gpt-oss-120b	2,527 in / 883 out	$0.000345	OK 18s
+16 Oct 2026 ●	gpt-oss-120b	2,556 in / 16,000 out	$0.002796	OK 4m 21s
+16 Oct 2026 ●	gpt-oss-120b	2,522 in / 817 out	$0.000197	OK 25s
+16 Oct 2026 ●	gpt-oss-120b	14,645 in / 2,010 out	$0.001234	OK 49s
+16 Oct 2026 ●	gpt-oss-120b	2,549 in / 777 out	$0.000216	OK 42s
+16 Oct 2026 ●	DeepSeek V3.2	1,527 in / 14,256 out	$0.006173	OK 4m 02s
+16 Oct 2026 ●	gpt-oss-120b	2,555 in / 726 out	$0.000184	OK 19s
+16 Oct 2026 ●	gpt-oss-120b	2,551 in / 577 out	$0.00018	OK 33s
+16 Oct 2026 ●	gpt-oss-120b	2,542 in / 949 out	$0.000364	OK 9.7s
+16 Oct 2026 ●	gpt-oss-120b	2,539 in / 786 out	$0.000322	OK 14s
+16 Oct 2026 ●	gpt-oss-120b	8,175 in / 2,276 out	$0.000977	OK 33s
+16 Oct 2026 ●	gpt-oss-120b	2,523 in / 772 out	$0.000224	OK 47s
+16 Oct 2026 ●	DeepSeek V3.2	1,622 in / 7,650 out	$0.003425	OK 2m 07s
+16 Oct 2026 ●	gpt-oss-120b	2,528 in / 695 out	$0.000211	OK 37s
+16 Oct 2026 ●	gpt-oss-120b	2,552 in / 252 out	$0.000119	OK 3.2s
+16 Oct 2026 ●	DeepSeek V3.2	7,819 in / 3,481 out	$0.00349	OK 56s
+16 Oct 2026 ●	gpt-oss-120b	2,585 in / 967 out	$0.000221	OK 21s
+16 Oct 2026 ●	gpt-oss-120b	2,610 in / 964 out	$0.000258	OK 21s
+16 Oct 2026 ●	gpt-oss-120b	2,611 in / 811 out	$0.000878	OK 6.3s
+16 Oct 2026 ●	DeepSeek V3.2	13,823 in / 1,503 out	$0.00105	OK 26s
+16 Oct 2026 ●	gpt-oss-120b	2,582 in / 711 out	$0.00021	OK 27s
+16 Oct 2026 ●	gpt-oss-120b	7,116 in / 2,114 out	$0.000608	OK 1m 09s
+16 Oct 2026 ●	gpt-oss-120b	9,382 in / 2,072 out	$0.000987	OK 20s
+16 Oct 2026 ●	gpt-oss-120b	2,558 in / 1,169 out	$0.000293	OK 54s
+16 Oct 2026 ●	DeepSeek V3.2	1,079 in / 8,821 out	$0.004006	OK 2m 28s
+16 Oct 2026 ●	gpt-oss-120b	7,285 in / 1,633 out	$0.000772	OK 9.7s
+16 Oct 2026 ●	DeepSeek V3.2	1,082 in / 6,483 out	$0.002783	OK 1m 50s
+16 Oct 2026 ●	DeepSeek V3.2	1,074 in / 6,517 out	$0.002779	OK 1m 47s
+16 Oct 2026 ●	gpt-oss-120b	2,606 in / 750 out	$0.000635	OK 4.3s
+16 Oct 2026 ●	DeepSeek V3.2	14,180 in / 918 out	$0.000807	OK 17s
+16 Oct 2026 ●	DeepSeek V3.2	7,839 in / 3,643 out	$0.003724	OK 1m 01s
+16 Oct 2026 ●	DeepSeek V3.2	13,642 in / 1,401 out	$0.004311	OK 27s
+16 Oct 2026 ●	DeepSeek V3.2	13,823 in / 1,619 out	$0.004453	OK 26s
+16 Oct 2026 ●	gpt-oss-120b	7,322 in / 1,740 out	$0.000801	OK 9.5s
+16 Oct 2026 ●	DeepSeek V3.2	1,736 in / 6,613 out	$0.003263	OK 1m 52s
+16 Oct 2026 ●	DeepSeek V3.2	13,727 in / 9,358 out	$0.007677	OK 2m 25s
+16 Oct 2026 ●	DeepSeek V3.2	14,180 in / 597 out	$0.004124	OK 12s
+16 Oct 2026 ●	DeepSeek V3.2	13,642 in / 587 out	$0.003969	OK 11s
+16 Oct 2026 ●	gpt-oss-120b	7,031 in / 2,223 out	$0.000638	OK 1m 33s
+16 Oct 2026 ●	DeepSeek V3.2	13,727 in / 9,045 out	$0.007545	OK 2m 17s
+16 Oct 2026 ●	DeepSeek V3.2	13,929 in / 470 out	$0.004	OK 8.8s
+16 Oct 2026 ●	gpt-oss-120b	6,576 in / 962 out	$0.00034	OK 23s
+16 Oct 2026 ●	DeepSeek V3.2	5,136 in / 6,348 out	$0.003862	OK 1m 50s
+16 Oct 2026 ●	DeepSeek V3.2	1,048 in / 5,970 out	$0.005047	OK 4m 50s
+16 Oct 2026 ●	gpt-oss-120b	6,836 in / 2,598 out	$0.000991	OK 25s
+16 Oct 2026 ●	DeepSeek V3.2	13,996 in / 645 out	$0.004093	OK 13s
+16 Oct 2026 ●	DeepSeek V3.2	2,229 in / 6,286 out	$0.003022	OK 1m 48s
+16 Oct 2026 ●	DeepSeek V3.2	13,932 in / 1,684 out	$0.004608	OK 31s
+16 Oct 2026 ●	DeepSeek V3.2	13,929 in / 479 out	$0.004101	OK 9.8s
+16 Oct 2026 ●	gpt-oss-120b	6,733 in / 7,700 out	$0.00151	OK 1m 39s
+16 Oct 2026 ●	gpt-oss-120b	10,133 in / 240 out	$0.000344	OK 4.1s
+16 Oct 2026 ●	DeepSeek V3.2	1,079 in / 9,713 out	$0.004139	OK 2m 49s
+16 Oct 2026 ●	gpt-oss-120b	6,894 in / 2,470 out	$0.00096	OK 47s
+16 Oct 2026 ●	DeepSeek V3.2	13,780 in / 654 out	$0.004036	OK 12s
+16 Oct 2026 ●	DeepSeek V3.2	13,996 in / 1,973 out	$0.00465	OK 33s
+16 Oct 2026 ●	DeepSeek V3.2	13,678 in / 1,104 out	$0.000874	OK 19s
+16 Oct 2026 ●	DeepSeek V3.2	1,079 in / 6,413 out	$0.002995	OK 1m 47s
+16 Oct 2026 ●	DeepSeek V3.2	1,077 in / 6,018 out	$0.002587	OK 1m 40s
+16 Oct 2026 ●	DeepSeek V3.2	13,932 in / 1,487 out	$0.004428	OK 27s
+16 Oct 2026 ●	DeepSeek V3.2	14,323 in / 1,801 out	$0.001186	OK 30s
+16 Oct 2026 ●	DeepSeek V3.2	13,780 in / 651 out	$0.004035	OK 12s
+16 Oct 2026 ●	gpt-oss-120b	6,425 in / 556 out	$0.000287	OK 8.5s
+16 Oct 2026 ●	DeepSeek V3.2	4,597 in / 5,663 out	$0.003407	OK 1m 35s
+16 Oct 2026 ●	DeepSeek V3.2	13,678 in / 767 out	$0.004055	OK 14s
+16 Oct 2026 ●	DeepSeek V3.2	14,572 in / 10,202 out	$0.008268	OK 2m 37s
+16 Oct 2026 ●	gpt-oss-120b	6,426 in / 6,898 out	$0.001365	OK 1m 11s
+16 Oct 2026 ●	DeepSeek V3.2	14,323 in / 1,510 out	$0.004547	OK 26s
+16 Oct 2026 ●	DeepSeek V3.2	14,572 in / 472 out	$0.004181	OK 9.0s
+16 Oct 2026 ●	DeepSeek V3.2	1,661 in / 5,719 out	$0.002625	OK 1m 38s
+16 Oct 2026 ●	gpt-oss-120b	6,435 in / 718 out	$0.000315	OK 7.5s
+16 Oct 2026 ●	DeepSeek V3.2	1,421 in / 5,753 out	$0.002814	OK 1m 41s
+16 Oct 2026 ●	DeepSeek V3.2	1,181 in / 953 out	$0.000456	OK 17s
+16 Oct 2026 ●	DeepSeek V3.2	1,181 in / 845 out	$0.000588	OK 14s
+16 Oct 2026 ●	gpt-oss-120b	6,709 in / 591 out	$0.000301	OK 6.5s
+16 Oct 2026 ●	DeepSeek V3.2	1,051 in / 6,052 out	$0.005113	OK 5m 46s
+16 Oct 2026 ●	gpt-oss-120b	11,139 in / 411 out	$0.000404	OK 4.0s
+16 Oct 2026 ●	DeepSeek V3.2	1,614 in / 10,702 out	$0.004704	OK 3m 01s
+16 Oct 2026 ●	DeepSeek V3.2	1,195 in / 557 out	$0.000568	OK 10s
+16 Oct 2026 ●	DeepSeek V3.2	1,195 in / 577 out	$0.00048	OK 10s
+16 Oct 2026 ●	DeepSeek V3.2	2,792 in / 936 out	$0.001471	OK 1m 13s
+16 Oct 2026 ●	DeepSeek V3.2	2,815 in / 954 out	$0.001188	OK 18s
+16 Oct 2026 ●	DeepSeek V3.2	3,998 in / 734 out	$0.00115	OK 31s
+16 Oct 2026 ●	gpt-oss-120b	7,436 in / 897 out	$0.000356	OK 17s
+16 Oct 2026 ●	gpt-oss-120b	7,750 in / 1,167 out	$0.001862	OK 8.3s
+16 Oct 2026 ●	gpt-oss-120b	6,300 in / 2,095 out	$0.000837	OK 30s
+16 Oct 2026 ●	DeepSeek V3.2	1,081 in / 7,066 out	$0.003028	OK 2m 01s
+16 Oct 2026 ●	DeepSeek V3.2	1,074 in / 6,778 out	$0.002905	OK 1m 55s
+16 Oct 2026 ●	DeepSeek V3.2	3,998 in / 1,165 out	$0.001967	OK 51s
+16 Oct 2026 ●	DeepSeek V3.2	1,066 in / 5,612 out	$0.002413	OK 1m 38s
+16 Oct 2026 ●	DeepSeek V3.2	6,329 in / 1,015 out	$0.001704	OK 1m 04s
+16 Oct 2026 ●	gpt-oss-120b	8,332 in / 1,586 out	$0.000535	OK 41s
+16 Oct 2026 ●	DeepSeek V3.2	6,329 in / 1,169 out	$0.002574	OK 1m 17s
+16 Oct 2026 ●	gpt-oss-120b	8,022 in / 1,851 out	$0.000573	OK 45s
+16 Oct 2026 ●	DeepSeek V3.2	1,818 in / 7,610 out	$0.003463	OK 2m 03s
+16 Oct 2026 ●	DeepSeek V3.2	7,297 in / 985 out	$0.00236	OK 18s
+16 Oct 2026 ●	DeepSeek V3.2	1,701 in / 7,248 out	$0.003262	OK 2m 02s
+16 Oct 2026 ●	DeepSeek V3.2	7,297 in / 966 out	$0.002352	OK 17s
+16 Oct 2026 ●	gpt-oss-120b	8,979 in / 1,671 out	$0.000616	OK 1m 10s
+16 Oct 2026 ●	gpt-oss-120b	7,500 in / 1,964 out	$0.000578	OK 1m 13s
+16 Oct 2026 ●	gpt-oss-120b	6,227 in / 2,110 out	$0.000837	OK 36s
+16 Oct 2026 ●	DeepSeek V3.2	1,345 in / 8,368 out	$0.003649	OK 2m 23s
+16 Oct 2026 ●	DeepSeek V3.2	1,611 in / 5,396 out	$0.002475	OK 1m 32s
+16 Oct 2026 ●	DeepSeek V3.2	1,629 in / 6,813 out	$0.003075	OK 1m 52s
+16 Oct 2026 ●	DeepSeek V3.2	4,408 in / 649 out	$0.000426	OK 11s
+16 Oct 2026 ●	DeepSeek V3.2	9,663 in / 1,049 out	$0.003049	OK 19s
+16 Oct 2026 ●	gpt-oss-120b	8,400 in / 1,328 out	$0.0005	OK 24s
+16 Oct 2026 ●	DeepSeek V3.2	4,408 in / 567 out	$0.001359	OK 10s
+16 Oct 2026 ●	gpt-oss-120b	6,883 in / 1,742 out	$0.000532	OK 32s
+16 Oct 2026 ●	DeepSeek V3.2	9,663 in / 1,204 out	$0.003114	OK 22s
+16 Oct 2026 ●	DeepSeek V3.2	1,080 in / 7,541 out	$0.003227	OK 2m 07s
+16 Oct 2026 ●	gpt-oss-120b	7,587 in / 279 out	$0.000275	OK 3.7s
+16 Oct 2026 ●	gpt-oss-120b	6,139 in / 1,819 out	$0.000456	OK 34s
+16 Oct 2026 ●	DeepSeek V3.2	1,069 in / 6,934 out	$0.003211	OK 2m 00s
+16 Oct 2026 ●	DeepSeek V3.2	7,069 in / 985 out	$0.005613	OK 43s
+16 Oct 2026 ●	DeepSeek V3.2	1,080 in / 6,092 out	$0.002861	OK 1m 38s
+16 Oct 2026 ●	DeepSeek V3.2	1,076 in / 5,278 out	$0.002518	OK 1m 29s
+16 Oct 2026 ●	DeepSeek V3.2	13,973 in / 882 out	$0.000783	OK 17s
+16 Oct 2026 ●	DeepSeek V3.2	7,092 in / 710 out	$0.002171	OK 13s
+16 Oct 2026 ●	DeepSeek V3.2	13,973 in / 711 out	$0.004114	OK 14s
+16 Oct 2026 ●	gpt-oss-120b	8,208 in / 2,732 out	$0.000757	OK 59s
+16 Oct 2026 ●	DeepSeek V3.2	2,053 in / 915 out	$0.000862	OK 17s
+16 Oct 2026 ●	DeepSeek V3.2	2,053 in / 657 out	$0.000754	OK 14s
+16 Oct 2026 ●	DeepSeek V3.2	1,746 in / 7,356 out	$0.00332	OK 2m 03s
+16 Oct 2026 ●	DeepSeek V3.2	12,760 in / 809 out	$0.003799	OK 16s
+16 Oct 2026 ●	DeepSeek V3.2	14,295 in / 623 out	$0.004167	OK 15s
+16 Oct 2026 ●	DeepSeek V3.2	12,760 in / 1,212 out	$0.003968	OK 22s
+16 Oct 2026 ●	DeepSeek V3.2	14,295 in / 821 out	$0.00425	OK 17s
+16 Oct 2026 ●	gpt-oss-120b	5,777 in / 711 out	$0.000294	OK 14s
+16 Oct 2026 ●	DeepSeek V3.2	7,505 in / 1,005 out	$0.002426	OK 18s
+16 Oct 2026 ●	DeepSeek V3.2	1,449 in / 4,925 out	$0.002474	OK 1m 28s
+16 Oct 2026 ●	DeepSeek V3.2	7,505 in / 892 out	$0.002379	OK 15s
+16 Oct 2026 ●	gpt-oss-120b	5,775 in / 16,000 out	$0.002893	OK 4m 51s
+16 Oct 2026 ●	gpt-oss-120b	7,965 in / 1,422 out	$0.000494	OK 1m 11s
+16 Oct 2026 ●	DeepSeek V3.2	8,111 in / 1,010 out	$0.002598	OK 19s
+16 Oct 2026 ●	DeepSeek V3.2	1,627 in / 7,151 out	$0.003217	OK 2m 02s
+16 Oct 2026 ●	DeepSeek V3.2	8,111 in / 939 out	$0.002568	OK 21s
+16 Oct 2026 ●	DeepSeek V3.2	12,271 in / 1,470 out	$0.000988	OK 31s
+16 Oct 2026 ●	DeepSeek V3.2	12,271 in / 1,480 out	$0.00396	OK 31s
+16 Oct 2026 ●	gpt-oss-120b	9,675 in / 1,636 out	$0.000892	OK 25s
+16 Oct 2026 ●	DeepSeek V3.2	2,883 in / 780 out	$0.001038	OK 15s
+16 Oct 2026 ●	DeepSeek V3.2	1,076 in / 8,779 out	$0.003746	OK 2m 28s
+16 Oct 2026 ●	DeepSeek V3.2	3,393 in / 620 out	$0.000371	OK 11s
+16 Oct 2026 ●	gpt-oss-120b	7,053 in / 2,119 out	$0.000882	OK 18s
+16 Oct 2026 ●	DeepSeek V3.2	2,883 in / 691 out	$0.000984	OK 12s
+16 Oct 2026 ●	gpt-oss-120b	6,116 in / 1,589 out	$0.000703	OK 19s
+16 Oct 2026 ●	DeepSeek V3.2	1,076 in / 6,170 out	$0.00265	OK 1m 44s
+16 Oct 2026 ●	DeepSeek V3.2	3,393 in / 703 out	$0.001148	OK 11s
+16 Oct 2026 ●	DeepSeek V3.2	1,070 in / 5,290 out	$0.002279	OK 1m 31s
+16 Oct 2026 ●	DeepSeek V3.2	1,080 in / 4,949 out	$0.002139	OK 1m 23s
+16 Oct 2026 ●	DeepSeek V3.2	3,480 in / 658 out	$0.000395	OK 12s
+16 Oct 2026 ●	DeepSeek V3.2	4,052 in / 651 out	$0.000408	OK 13s
+16 Oct 2026 ●	DeepSeek V3.2	3,480 in / 679 out	$0.001162	OK 14s
+16 Oct 2026 ●	DeepSeek V3.2	4,052 in / 670 out	$0.001319	OK 13s
+16 Oct 2026 ●	gpt-oss-120b	6,909 in / 575 out	$0.000305	OK 15s
+16 Oct 2026 ●	DeepSeek V3.2	3,846 in / 834 out	$0.00133	OK 16s
+16 Oct 2026 ●	DeepSeek V3.2	2,120 in / 6,362 out	$0.003007	OK 1m 49s
+16 Oct 2026 ●	gpt-oss-120b	6,489 in / 2,902 out	$0.000737	OK 59s
+16 Oct 2026 ●	DeepSeek V3.2	3,846 in / 784 out	$0.001309	OK 15s
+16 Oct 2026 ●	gpt-oss-120b	6,277 in / 1,467 out	$0.001821	OK 5.4s
+16 Oct 2026 ●	DeepSeek V3.2	1,675 in / 5,639 out	$0.002563	OK 1m 40s
+16 Oct 2026 ●	DeepSeek V3.2	1,583 in / 5,846 out	$0.002656	OK 1m 41s
+16 Oct 2026 ●	DeepSeek V3.2	3,982 in / 661 out	$0.001295	OK 13s
+16 Oct 2026 ●	gpt-oss-120b	10,641 in / 1,910 out	$0.000676	OK 41s
+16 Oct 2026 ●	DeepSeek V3.2	3,982 in / 699 out	$0.001311	OK 13s
+16 Oct 2026 ●	DeepSeek V3.2	2,406 in / 547 out	$0.00079	OK 11s
+16 Oct 2026 ●	DeepSeek V3.2	1,849 in / 10,374 out	$0.004632	OK 3m 00s
+16 Oct 2026 ●	gpt-oss-120b	6,822 in / 662 out	$0.000317	OK 16s
+16 Oct 2026 ●	DeepSeek V3.2	2,890 in / 798 out	$0.001031	OK 15s
+16 Oct 2026 ●	gpt-oss-120b	7,572 in / 2,423 out	$0.000984	OK 45s
+16 Oct 2026 ●	DeepSeek V3.2	1,657 in / 6,196 out	$0.002808	OK 1m 44s
+16 Oct 2026 ●	DeepSeek V3.2	2,406 in / 596 out	$0.000827	OK 11s
+16 Oct 2026 ●	DeepSeek V3.2	2,890 in / 576 out	$0.000954	OK 11s
+16 Oct 2026 ●	DeepSeek V3.2	1,352 in / 6,873 out	$0.003023	OK 1m 55s
+16 Oct 2026 ●	DeepSeek V3.2	2,532 in / 636 out	$0.000863	OK 11s
+16 Oct 2026 ●	DeepSeek V3.2	2,969 in / 589 out	$0.000981	OK 11s
+16 Oct 2026 ●	DeepSeek V3.2	2,532 in / 626 out	$0.000858	OK 12s
+16 Oct 2026 ●	gpt-oss-120b	7,390 in / 1,522 out	$0.00075	OK 37s
+16 Oct 2026 ●	DeepSeek V3.2	2,969 in / 696 out	$0.001026	OK 14s
+16 Oct 2026 ●	gpt-oss-120b	7,329 in / 1,581 out	$0.001523	OK 9.5s
+16 Oct 2026 ●	DeepSeek V3.2	1,098 in / 6,815 out	$0.003169	OK 1m 59s
+16 Oct 2026 ●	DeepSeek V3.2	1,091 in / 6,805 out	$0.003163	OK 1m 59s
+16 Oct 2026 ●	DeepSeek V3.2	8,939 in / 1,012 out	$0.002073	OK 1m 12s
+16 Oct 2026 ●	gpt-oss-120b	6,625 in / 297 out	$0.000249	OK 5.2s
+16 Oct 2026 ●	gpt-oss-120b	4,493 in / 2,071 out	$0.000444	OK 41s
+16 Oct 2026 ●	DeepSeek V3.2	1,075 in / 5,923 out	$0.002788	OK 1m 43s
+16 Oct 2026 ●	DeepSeek V3.2	8,939 in / 1,172 out	$0.003252	OK 54s
+16 Oct 2026 ●	DeepSeek V3.2	1,106 in / 3,614 out	$0.001827	OK 1m 02s
+16 Oct 2026 ●	DeepSeek V3.2	10,049 in / 928 out	$0.000687	OK 17s
+16 Oct 2026 ●	DeepSeek V3.2	10,049 in / 916 out	$0.003101	OK 17s
+16 Oct 2026 ●	DeepSeek V3.2	15,976 in / 724 out	$0.00468	OK 14s
+16 Oct 2026 ●	DeepSeek V3.2	26,618 in / 1,100 out	$0.007818	OK 21s
+16 Oct 2026 ●	DeepSeek V3.2	16,051 in / 965 out	$0.004802	OK 19s
+16 Oct 2026 ●	DeepSeek V3.2	28,976 in / 980 out	$0.008428	OK 20s
+16 Oct 2026 ●	DeepSeek V3.2	15,815 in / 1,109 out	$0.004797	OK 20s
+16 Oct 2026 ●	DeepSeek V3.2	26,255 in / 1,128 out	$0.007728	OK 25s
+16 Oct 2026 ●	DeepSeek V3.2	15,735 in / 900 out	$0.00467	OK 19s
+16 Oct 2026 ●	DeepSeek V3.2	32,286 in / 986 out	$0.009454	OK 20s
+16 Oct 2026 ●	DeepSeek V3.2	10,366 in / 1,067 out	$0.003237	OK 19s
+16 Oct 2026 ●	DeepSeek V3.2	22,201 in / 1,095 out	$0.006579	OK 19s
+16 Oct 2026 ●	DeepSeek V3.2	8,807 in / 944 out	$0.002862	OK 17s
+16 Oct 2026 ●	gpt-oss-120b	9,649 in / 1,382 out	$0.001998	OK 20s
+16 Oct 2026 ●	DeepSeek V3.2	24,890 in / 864 out	$0.007137	OK 41s
+16 Oct 2026 ●	DeepSeek V3.2	1,929 in / 9,616 out	$0.008192	OK 6m 44s
+16 Oct 2026 ●	gpt-oss-120b	8,412 in / 763 out	$0.000382	OK 19s
+16 Oct 2026 ●	DeepSeek V3.2	15,846 in / 1,062 out	$0.00477	OK 18s
+16 Oct 2026 ●	DeepSeek V3.2	1,798 in / 8,018 out	$0.012926	OK 2m 17s
+16 Oct 2026 ●	DeepSeek V3.2	39,263 in / 959 out	$0.011299	OK 19s
+16 Oct 2026 ●	DeepSeek V3.2	13,643 in / 1,280 out	$0.00426	OK 22s
+16 Oct 2026 ●	gpt-oss-120b	8,183 in / 4,000 out	$0.000925	OK 50s
+16 Oct 2026 ●	DeepSeek V3.2	28,541 in / 1,097 out	$0.008355	OK 22s
+16 Oct 2026 ●	gpt-oss-120b	9,419 in / 1,872 out	$0.000619	OK 1m 49s
+16 Oct 2026 ●	DeepSeek V3.2	1,564 in / 8,195 out	$0.003637	OK 2m 19s
+16 Oct 2026 ●	DeepSeek V3.2	5,580 in / 1,079 out	$0.002015	OK 18s
+16 Oct 2026 ●	DeepSeek V3.2	23,320 in / 1,129 out	$0.007003	OK 21s
+16 Oct 2026 ●	DeepSeek V3.2	1,948 in / 9,407 out	$0.004254	OK 2m 45s
+16 Oct 2026 ●	gpt-oss-120b	6,840 in / 901 out	$0.000373	OK 33s
+16 Oct 2026 ●	gpt-oss-120b	7,260 in / 502 out	$0.000303	OK 6.2s
+16 Oct 2026 ●	DeepSeek V3.2	1,673 in / 7,167 out	$0.003236	OK 2m 05s
+16 Oct 2026 ●	gpt-oss-120b	6,730 in / 1,584 out	$0.000732	OK 38s
+16 Oct 2026 ●	DeepSeek V3.2	1,684 in / 6,827 out	$0.003096	OK 2m 00s
+16 Oct 2026 ●	DeepSeek V3.2	1,876 in / 6,603 out	$0.003056	OK 1m 55s
+16 Oct 2026 ●	gpt-oss-120b	10,361 in / 1,391 out	$0.00057	OK 31s
+16 Oct 2026 ●	gpt-oss-120b	10,139 in / 611 out	$0.000408	OK 7.5s
+16 Oct 2026 ●	DeepSeek V3.2	1,073 in / 10,361 out	$0.004652	OK 3m 03s
+16 Oct 2026 ●	DeepSeek V3.2	1,081 in / 10,281 out	$0.004378	OK 2m 59s
+16 Oct 2026 ●	gpt-oss-120b	6,134 in / 1,871 out	$0.000545	OK 1m 03s
+16 Oct 2026 ●	gpt-oss-120b	8,031 in / 865 out	$0.000387	OK 12s
+16 Oct 2026 ●	DeepSeek V3.2	1,083 in / 8,036 out	$0.003678	OK 2m 26s
+16 Oct 2026 ●	gpt-oss-120b	2,527 in / 451 out	$0.00016	OK 10s
+16 Oct 2026 ●	gpt-oss-120b	2,550 in / 270 out	$0.000122	OK 3.6s
+16 Oct 2026 ●	gpt-oss-120b	2,531 in / 621 out	$0.000192	OK 14s
+16 Oct 2026 ●	DeepSeek V3.2	1,065 in / 6,045 out	$0.002837	OK 1m 52s
+16 Oct 2026 ●	gpt-oss-120b	2,566 in / 190 out	$0.000109	OK 2.4s
+16 Oct 2026 ●	gpt-oss-120b	2,559 in / 839 out	$0.000887	OK 6.0s
+16 Oct 2026 ●	DeepSeek V3.2	12,304 in / 945 out	$0.003729	OK 17s
+16 Oct 2026 ●	DeepSeek V3.2	27,848 in / 1,104 out	$0.008261	OK 22s
+16 Oct 2026 ●	DeepSeek V3.2	3,592 in / 1,080 out	$0.001459	OK 19s
+16 Oct 2026 ●	gpt-oss-120b	6,962 in / 1,620 out	$0.001506	OK 8.5s
+16 Oct 2026 ●	DeepSeek V3.2	2,101 in / 6,916 out	$0.003493	OK 2m 02s
+16 Oct 2026 ●	gpt-oss-120b	6,885 in / 2,761 out	$0.000703	OK 2m 49s
+16 Oct 2026 ●	gpt-oss-120b	7,920 in / 2,598 out	$0.000705	OK 2m 06s
+16 Oct 2026 ●	gpt-oss-120b	14,089 in / 695 out	$0.00054	OK 12s
+16 Oct 2026 ●	DeepSeek V3.2	2,003 in / 14,710 out	$0.00648	OK 4m 21s
+16 Oct 2026 ●	DeepSeek V3.2	15,700 in / 558 out	$0.00463	OK 11s
+16 Oct 2026 ●	DeepSeek V3.2	1,997 in / 6,889 out	$0.006028	OK 5m 01s
+16 Oct 2026 ●	DeepSeek V3.2	36,905 in / 768 out	$0.010655	OK 15s
+16 Oct 2026 ●	gpt-oss-120b	6,249 in / 1,609 out	$0.000477	OK 1m 36s
+16 Oct 2026 ●	DeepSeek V3.2	1,753 in / 7,927 out	$0.006795	OK 5m 42s
+16 Oct 2026 ●	DeepSeek V3.2	1,865 in / 6,150 out	$0.002767	OK 3m 00s
+16 Oct 2026 ●	gpt-oss-120b	9,270 in / 1,838 out	$0.000621	OK 34s
+16 Oct 2026 ●	DeepSeek V3.2	1,384 in / 9,464 out	$0.00412	OK 2m 44s
+16 Oct 2026 ●	gpt-oss-120b	6,665 in / 2,343 out	$0.000919	OK 32s
+16 Oct 2026 ●	gpt-oss-120b	6,870 in / 1,665 out	$0.000455	OK 46s
+16 Oct 2026 ●	DeepSeek V3.2	1,990 in / 6,566 out	$0.003073	OK 2m 02s
+16 Oct 2026 ●	DeepSeek V3.2	1,349 in / 6,922 out	$0.003043	OK 2m 01s
+16 Oct 2026 ●	gpt-oss-120b	9,781 in / 1,488 out	$0.000571	OK 26s
+16 Oct 2026 ●	gpt-oss-120b	9,506 in / 328 out	$0.00034	OK 2.7s
+16 Oct 2026 ●	DeepSeek V3.2	1,068 in / 10,015 out	$0.004263	OK 2m 50s
+16 Oct 2026 ●	DeepSeek V3.2	1,066 in / 9,788 out	$0.004167	OK 2m 49s
+16 Oct 2026 ●	gpt-oss-120b	6,209 in / 1,805 out	$0.000511	OK 42s
+16 Oct 2026 ●	gpt-oss-120b	6,513 in / 335 out	$0.000252	OK 8.7s
+16 Oct 2026 ●	DeepSeek V3.2	1,067 in / 6,492 out	$0.002783	OK 1m 51s
+16 Oct 2026 ●	DeepSeek V3.2	1,077 in / 6,087 out	$0.002616	OK 1m 48s
+16 Oct 2026 ●	gpt-oss-120b	7,228 in / 1,790 out	$0.002158	OK 12s
+16 Oct 2026 ●	gpt-oss-120b	11,534 in / 1,616 out	$0.000587	OK 46s
+16 Oct 2026 ●	DeepSeek V3.2	1,993 in / 7,187 out	$0.003318	OK 2m 02s
+16 Oct 2026 ●	gpt-oss-120b	6,063 in / 655 out	$0.001302	OK 35s
+16 Oct 2026 ●	DeepSeek V3.2	1,993 in / 11,847 out	$0.005275	OK 3m 20s
+16 Oct 2026 ●	DeepSeek V3.2	2,126 in / 5,898 out	$0.003072	OK 1m 40s
+16 Oct 2026 ●	gpt-oss-120b	7,087 in / 1,368 out	$0.000417	OK 40s
+16 Oct 2026 ●	DeepSeek V3.2	1,924 in / 7,127 out	$0.003274	OK 2m 07s
+16 Oct 2026 ●	gpt-oss-120b	15,578 in / 1,301 out	$0.002208	OK 8.6s
+16 Oct 2026 ●	DeepSeek V3.2	1,314 in / 16,000 out	$0.006846	OK 4m 33s
+16 Oct 2026 ●	gpt-oss-120b	6,591 in / 680 out	$0.000313	OK 4.9s
+16 Oct 2026 ●	DeepSeek V3.2	1,790 in / 6,531 out	$0.002986	OK 1m 53s
+16 Oct 2026 ●	gpt-oss-120b	7,018 in / 1,258 out	$0.000398	OK 37s
+16 Oct 2026 ●	DeepSeek V3.2	2,014 in / 6,952 out	$0.003241	OK 2m 03s
+16 Oct 2026 ●	gpt-oss-120b	15,552 in / 869 out	$0.000614	OK 6.7s
+16 Oct 2026 ●	DeepSeek V3.2	1,101 in / 16,000 out	$0.007028	OK 4m 43s
+16 Oct 2026 ●	gpt-oss-120b	6,078 in / 761 out	$0.000311	OK 7.9s
+16 Oct 2026 ●	DeepSeek V3.2	1,855 in / 5,985 out	$0.002791	OK 1m 45s
+16 Oct 2026 ●	gpt-oss-120b	6,221 in / 1,545 out	$0.000697	OK 10s
+16 Oct 2026 ●	DeepSeek V3.2	1,043 in / 6,129 out	$0.002671	OK 2m 52s
+16 Oct 2026 ●	gpt-oss-120b	8,351 in / 836 out	$0.000392	OK 10s
+16 Oct 2026 ●	DeepSeek V3.2	1,074 in / 8,443 out	$0.003846	OK 2m 32s
+16 Oct 2026 ●	gpt-oss-120b	7,414 in / 276 out	$0.000269	OK 3.9s
+16 Oct 2026 ●	DeepSeek V3.2	1,088 in / 7,322 out	$0.003379	OK 2m 10s
+16 Oct 2026 ●	gpt-oss-120b	7,645 in / 4,000 out	$0.000909	OK 1m 02s
+16 Oct 2026 ●	DeepSeek V3.2	2,096 in / 7,773 out	$0.003851	OK 2m 13s
+16 Oct 2026 ●	gpt-oss-120b	7,200 in / 3,196 out	$0.001159	OK 45s
+16 Oct 2026 ●	DeepSeek V3.2	1,704 in / 7,212 out	$0.003506	OK 2m 04s
+16 Oct 2026 ●	gpt-oss-120b	8,385 in / 3,189 out	$0.001215	OK 2m 42s
+16 Oct 2026 ●	DeepSeek V3.2	1,055 in / 8,532 out	$0.007098	OK 12m 36s
+16 Oct 2026 ●	gpt-oss-120b	7,847 in / 1,891 out	$0.000865	OK 23s
+16 Oct 2026 ●	gpt-oss-120b	8,160 in / 1,463 out	$0.000463	OK 34s
+16 Oct 2026 ●	DeepSeek V3.2	1,835 in / 7,793 out	$0.003528	OK 2m 16s
+16 Oct 2026 ●	DeepSeek V3.2	1,406 in / 8,264 out	$0.003864	OK 2m 20s
+16 Oct 2026 ●	gpt-oss-120b	6,641 in / 1,752 out	$0.002047	OK 7.0s
+16 Oct 2026 ●	DeepSeek V3.2	1,809 in / 6,498 out	$0.002993	OK 1m 51s
+16 Oct 2026 ●	gpt-oss-120b	7,946 in / 4,000 out	$0.000918	OK 1m 26s
+16 Oct 2026 ●	DeepSeek V3.2	1,716 in / 8,017 out	$0.003847	OK 2m 20s
+16 Oct 2026 ●	gpt-oss-120b	5,908 in / 1,768 out	$0.001913	OK 23s
+16 Oct 2026 ●	DeepSeek V3.2	1,062 in / 5,735 out	$0.004863	OK 5m 43s
+16 Oct 2026 ●	gpt-oss-120b	5,677 in / 2,452 out	$0.000611	OK 2m 16s
+16 Oct 2026 ●	gpt-oss-120b	6,506 in / 1,278 out	$0.000642	OK 1m 02s
+16 Oct 2026 ●	DeepSeek V3.2	1,083 in / 6,287 out	$0.002943	OK 1m 47s
+16 Oct 2026 ●	DeepSeek V3.2	1,071 in / 5,568 out	$0.002638	OK 1m 35s
+16 Oct 2026 ●	DeepSeek V3.2	43 in / 10 out	$0.000016	OK 1.7s
+16 Oct 2026 ●	DeepSeek V3.2	1,048 in / 8,000 out	$0.003653	OK 2m 11s
+16 Oct 2026 ●	gpt-oss-120b	5,556 in / 2,000 out	$0.000506	OK 34s
+16 Oct 2026 ●	DeepSeek V3.2	38 in / 50 out	$0.000031	OK 2.4s
+16 Oct 2026 ●	DeepSeek V3.2	1,052 in / 5,261 out	$0.002504	OK 1m 25s
+15 Oct 2026 ●	DeepSeek V3.2	1,048 in / 8,000 out	$0.012524	OK 2m 46s
+15 Oct 2026 ●	DeepSeek V3.2	1,549 in / 8,000 out	$0.003793	OK 2m 13s
+15 Oct 2026 ●	DeepSeek V3.2	1,922 in / 8,000 out	$0.003672	OK 2m 02s
+15 Oct 2026 ●	DeepSeek V3.2	1,062 in / 9,217 out	$0.007648	OK 9m 15s
+15 Oct 2026 ●	gpt-oss-120b	6,589 in / 1,044 out	$0.001614	OK 15s
+15 Oct 2026 ●	gpt-oss-120b	6,451 in / 2,000 out	$0.000493	OK 1m 05s
+15 Oct 2026 ●	gpt-oss-120b	6,918 in / 1,644 out	$0.001102	OK 30s
+15 Oct 2026 ●	DeepSeek V3.2	1,916 in / 6,482 out	$0.003033	OK 1m 35s
+15 Oct 2026 ●	DeepSeek V3.2	1,059 in / 6,739 out	$0.005665	OK 6m 48s
+15 Oct 2026 ●	DeepSeek V3.2	1,691 in / 6,335 out	$0.003134	OK 1m 35s
+15 Oct 2026 ●	gpt-oss-120b	5,792 in / 1,594 out	$0.000412	OK 1m 04s
+15 Oct 2026 ●	gpt-oss-120b	7,156 in / 1,335 out	$0.000691	OK 6.8s
+15 Oct 2026 ●	DeepSeek V3.2	1,040 in / 7,087 out	$0.008127	OK 4m 35s
+15 Oct 2026 ●	DeepSeek V3.2	1,051 in / 5,602 out	$0.004753	OK 4m 30s
+15 Oct 2026 ●	gpt-oss-120b	4,752 in / 2,000 out	$0.000442	OK 5m 08s
+15 Oct 2026 ●	gpt-oss-120b	6,743 in / 1,551 out	$0.000492	OK 45s
+15 Oct 2026 ●	DeepSeek V3.2	1,052 in / 8,000 out	$0.003412	OK 2m 52s
+15 Oct 2026 ●	gpt-oss-120b	6,695 in / 1,154 out	$0.001017	OK 20s
+15 Oct 2026 ●	DeepSeek V3.2	1,052 in / 6,842 out	$0.002942	OK 2m 24s
+15 Oct 2026 ●	DeepSeek V3.2	1,052 in / 6,678 out	$0.002873	OK 2m 22s
+15 Oct 2026 ●	DeepSeek V3.2	1,052 in / 4,779 out	$0.002075	OK 1m 50s
+15 Oct 2026 ●	DeepSeek V3.2	1,052 in / 8,000 out	$0.003412	OK 2m 50s
+15 Oct 2026 ●	DeepSeek V3.2	1,052 in / 5,650 out	$0.002425	OK 2m 05s
+15 Oct 2026 ●	DeepSeek V3.2	1,052 in / 5,041 out	$0.002169	OK 1m 46s
+15 Oct 2026 ●	DeepSeek V3.2	1,052 in / 3,552 out	$0.00156	OK 1m 17s
+15 Oct 2026 ●	gpt-oss-120b	7,290 in / 1,219 out	$0.000425	OK 40s
+15 Oct 2026 ●	DeepSeek V3.2	1,711 in / 7,283 out	$0.003296	OK 2m 26s
+15 Oct 2026 ●	DeepSeek V3.2	1,052 in / 8,000 out	$0.003428	OK 2m 55s
+15 Oct 2026 ●	DeepSeek V3.2	1,052 in / 8,000 out	$0.003654	OK 2m 54s
+15 Oct 2026 ●	DeepSeek V3.2	1,052 in / 5,134 out	$0.002225	OK 1m 59s
+15 Oct 2026 ●	gpt-oss-120b	4,157 in / 1,227 out	$0.000514	OK 6.4s
+15 Oct 2026 ●	DeepSeek V3.2	1,052 in / 3,986 out	$0.001968	OK 1m 32s
+15 Oct 2026 ●	DeepSeek V3.2	2,018 in / 7,399 out	$0.00343	OK 2m 37s
+15 Oct 2026 ●	gpt-oss-120b	7,690 in / 1,360 out	$0.000515	OK 1m 05s
+15 Oct 2026 ●	DeepSeek V3.2	1,052 in / 7,886 out	$0.00338	OK 2m 52s
+15 Oct 2026 ●	DeepSeek V3.2	1,052 in / 8,000 out	$0.003428	OK 2m 52s
+15 Oct 2026 ●	DeepSeek V3.2	1,052 in / 8,000 out	$0.003428	OK 2m 47s
+15 Oct 2026 ●	DeepSeek V3.2	1,052 in / 7,672 out	$0.003291	OK 2m 43s
+15 Oct 2026 ●	gpt-oss-120b	7,780 in / 1,374 out	$0.00048	OK 1m 03s
+15 Oct 2026 ●	DeepSeek V3.2	1,052 in / 8,000 out	$0.003428	OK 3m 00s
+15 Oct 2026 ●	DeepSeek V3.2	1,062 in / 8,000 out	$0.003431	OK 2m 55s
+15 Oct 2026 ●	DeepSeek V3.2	1,052 in / 7,786 out	$0.003322	OK 2m 50s
+15 Oct 2026 ●	gpt-oss-120b	5,767 in / 2,000 out	$0.000513	OK 37s
+15 Oct 2026 ●	DeepSeek V3.2	1,052 in / 5,667 out	$0.002448	OK 2m 08s
+15 Oct 2026 ●	DeepSeek V3.2	1,052 in / 8,000 out	$0.003654	OK 2m 52s
+15 Oct 2026 ●	DeepSeek V3.2	1,062 in / 8,000 out	$0.003657	OK 2m 52s
+15 Oct 2026 ●	DeepSeek V3.2	1,049 in / 8,000 out	$0.003427	OK 2m 50s
+15 Oct 2026 ●	DeepSeek V3.2	1,052 in / 8,000 out	$0.003654	OK 2m 45s
+15 Oct 2026 ●	DeepSeek V3.2	1,567 in / 8,000 out	$0.003798	OK 2m 45s
+15 Oct 2026 ●	gpt-oss-120b	5,457 in / 1,856 out	$0.001473	OK 12s
+15 Oct 2026 ●	DeepSeek V3.2	1,760 in / 32,020 out	$0.01028	OK 9m 29s
+15 Oct 2026 ●	gpt-oss-120b	6,832 in / 1,239 out	$0.000415	OK 31s
+15 Oct 2026 ●	DeepSeek V3.2	1,052 in / 6,946 out	$0.007998	OK 3m 56s
+15 Oct 2026 ●	DeepSeek V3.2	1,065 in / 8,000 out	$0.003316	OK 3m 53s
+15 Oct 2026 ●	gpt-oss-120b	5,689 in / 1,462 out	$0.001038	OK 1m 08s
+15 Oct 2026 ●	DeepSeek V3.2	1,050 in / 5,741 out	$0.002705	OK 1m 56s
+15 Oct 2026 ●	DeepSeek V3.2	1,042 in / 895 out	Free	OK 30s
+15 Oct 2026 ●	DeepSeek V3.2	1,506 in / 8,000 out	$0.003306	OK 4m 02s
+15 Oct 2026 ●	DeepSeek V3.2	1,627 in / 8,000 out	$0.012813	OK 2m 01s
+15 Oct 2026 ●	gpt-oss-120b	6,125 in / 1,010 out	$0.000557	OK 36s
+15 Oct 2026 ●	DeepSeek V3.2	1,072 in / 6,011 out	$0.002562	OK 4m 05s
+15 Oct 2026 ●	DeepSeek V3.2	1,052 in / 8,000 out	$0.003313	OK 3m 55s
+15 Oct 2026 ●	gpt-oss-120b	5,953 in / 1,613 out	$0.000468	OK 1m 10s
+15 Oct 2026 ●	DeepSeek V3.2	1,055 in / 5,978 out	$0.002806	OK 2m 08s
+15 Oct 2026 ●	DeepSeek V3.2	1,050 in / 6,007 out	$0.002816	OK 2m 02s
+15 Oct 2026 ●	gpt-oss-120b	6,973 in / 2,000 out	$0.000509	OK 6m 32s
+15 Oct 2026 ●	DeepSeek V3.2	1,937 in / 6,949 out	$0.003144	OK 5m 46s
+15 Oct 2026 ●	DeepSeek V3.2	1,782 in / 9,637 out	$0.008171	OK 6m 57s
+15 Oct 2026 ●	DeepSeek V3.2	1,745 in / 7,083 out	$0.006118	OK 6m 25s
+15 Oct 2026 ●	gpt-oss-120b	7,391 in / 1,119 out	$0.000389	OK 2m 19s
+15 Oct 2026 ●	gpt-oss-120b	6,777 in / 1,370 out	$0.00225	OK 2.8s
+15 Oct 2026 ●	DeepSeek V3.2	1,052 in / 6,780 out	$0.005696	OK 6m 19s
+15 Oct 2026 ●	gpt-oss-120b	5,409 in / 1,702 out	$0.000417	OK 4m 05s
+15 Oct 2026 ●	DeepSeek V3.2	1,860 in / 7,391 out	$0.003399	OK 2m 32s
+15 Oct 2026 ●	gpt-oss-120b	5,772 in / 1,660 out	$0.000422	OK 3m 41s
+15 Oct 2026 ●	gpt-oss-120b	7,931 in / 1,398 out	$0.000475	OK 31s
+15 Oct 2026 ●	DeepSeek V3.2	1,049 in / 7,940 out	$0.003628	OK 2m 50s
+15 Oct 2026 ●	DeepSeek V3.2	1,051 in / 5,735 out	$0.002702	OK 2m 10s
+15 Oct 2026 ●	DeepSeek V3.2	1,043 in / 5,447 out	$0.002579	OK 1m 53s
+15 Oct 2026 ●	DeepSeek V3.2	1,797 in / 3,656 out	$0.006382	OK 1m 02s
+15 Oct 2026 ●	gpt-oss-120b	7,030 in / 1,722 out	$0.000469	OK 6m 16s
+15 Oct 2026 ●	DeepSeek V3.2	1,958 in / 6,913 out	$0.006037	OK 6m 25s
+15 Oct 2026 ●	DeepSeek V3.2	1,923 in / 8,000 out	$0.003898	OK 3m 10s
+15 Oct 2026 ●	gpt-oss-120b	7,886 in / 1,725 out	$0.000495	OK 7m 04s
+15 Oct 2026 ●	gpt-oss-120b	5,782 in / 1,210 out	$0.000354	OK 4m 45s
+15 Oct 2026 ●	DeepSeek V3.2	2,070 in / 8,000 out	$0.003713	OK 3m 18s
+15 Oct 2026 ●	DeepSeek V3.2	1,052 in / 8,000 out	$0.003654	OK 3m 08s
+15 Oct 2026 ●	gpt-oss-120b	6,036 in / 1,591 out	$0.000478	OK 47s
+15 Oct 2026 ●	DeepSeek V3.2	1,052 in / 7,864 out	$0.003597	OK 3m 01s
+15 Oct 2026 ●	DeepSeek V3.2	1,051 in / 5,743 out	$0.002706	OK 2m 28s
+15 Oct 2026 ●	DeepSeek V3.2	1,052 in / 5,776 out	$0.00272	OK 2m 15s
+15 Oct 2026 ●	gpt-oss-120b	6,998 in / 2,000 out	$0.000569	OK 1m 41s
+15 Oct 2026 ●	DeepSeek V3.2	1,617 in / 7,259 out	$0.003259	OK 3m 09s
+15 Oct 2026 ●	DeepSeek V3.2	1,814 in / 8,000 out	$0.003867	OK 3m 20s
+15 Oct 2026 ●	gpt-oss-120b	6,897 in / 1,262 out	$0.00066	OK 16s
+15 Oct 2026 ●	DeepSeek V3.2	1,770 in / 7,247 out	$0.003539	OK 2m 58s
+15 Oct 2026 ●	DeepSeek V3.2	1,910 in / 6,344 out	$0.002957	OK 2m 33s
+15 Oct 2026 ●	gpt-oss-120b	6,496 in / 1,910 out	$0.00212	OK 1m 51s
+15 Oct 2026 ●	gpt-oss-120b	7,732 in / 1,430 out	$0.001061	OK 48s
+15 Oct 2026 ●	gpt-oss-120b	6,497 in / 1,240 out	$0.000418	OK 57s
+15 Oct 2026 ●	DeepSeek V3.2	1,078 in / 7,618 out	$0.003275	OK 3m 09s
+15 Oct 2026 ●	DeepSeek V3.2	1,045 in / 6,836 out	$0.002937	OK 2m 54s
+15 Oct 2026 ●	DeepSeek V3.2	1,052 in / 6,463 out	$0.002783	OK 2m 40s
+15 Oct 2026 ●	DeepSeek V3.2	1,043 in / 5,271 out	$0.002263	OK 2m 13s
+15 Oct 2026 ●	gpt-oss-120b	6,671 in / 1,371 out	$0.000433	OK 25s
+15 Oct 2026 ●	gpt-oss-120b	6,046 in / 1,181 out	$0.000382	OK 18s
+15 Oct 2026 ●	DeepSeek V3.2	1,046 in / 6,737 out	$0.002896	OK 2m 46s
+15 Oct 2026 ●	DeepSeek V3.2	1,043 in / 6,705 out	$0.002882	OK 2m 45s
+15 Oct 2026 ●	DeepSeek V3.2	1,048 in / 6,205 out	$0.002673	OK 2m 40s
+15 Oct 2026 ●	gpt-oss-120b	5,157 in / 787 out	$0.000747	OK 4.4s
+15 Oct 2026 ●	DeepSeek V3.2	1,044 in / 5,303 out	$0.002293	OK 2m 11s
+15 Oct 2026 ●	DeepSeek V3.2	1,046 in / 8,000 out	$0.003652	OK 3m 22s
+15 Oct 2026 ●	gpt-oss-120b	7,790 in / 1,239 out	$0.000699	OK 9.2s
+15 Oct 2026 ●	DeepSeek V3.2	1,054 in / 7,901 out	$0.003387	OK 3m 09s
+15 Oct 2026 ●	gpt-oss-120b	6,764 in / 921 out	$0.000568	OK 4.6s
+15 Oct 2026 ●	DeepSeek V3.2	1,046 in / 6,831 out	$0.003161	OK 2m 54s
+15 Oct 2026 ●	DeepSeek V3.2	1,043 in / 4,143 out	$0.001806	OK 1m 44s
+15 Oct 2026 ●	gpt-oss-120b	6,099 in / 1,886 out	$0.00113	OK 34s
+15 Oct 2026 ●	DeepSeek V3.2	1,756 in / 6,233 out	$0.002883	OK 2m 39s
+15 Oct 2026 ●	DeepSeek V3.2	1,046 in / 8,000 out	$0.003652	OK 3m 35s
+15 Oct 2026 ●	gpt-oss-120b	6,353 in / 1,807 out	$0.001137	OK 31s
+15 Oct 2026 ●	gpt-oss-120b	5,576 in / 1,888 out	$0.00075	OK 30s
+15 Oct 2026 ●	gpt-oss-120b	6,400 in / 783 out	$0.001031	OK 3.5s
+15 Oct 2026 ●	DeepSeek V3.2	1,044 in / 6,456 out	$0.002761	OK 2m 43s
+15 Oct 2026 ●	DeepSeek V3.2	1,058 in / 6,540 out	$0.002817	OK 2m 42s
+15 Oct 2026 ●	DeepSeek V3.2	1,050 in / 5,648 out	$0.00244	OK 2m 20s
+15 Oct 2026 ●	DeepSeek V3.2	1,634 in / 8,000 out	$0.003575	OK 3m 26s
+15 Oct 2026 ●	gpt-oss-120b	7,207 in / 1,302 out	$0.000437	OK 17s
+15 Oct 2026 ●	DeepSeek V3.2	2,196 in / 7,051 out	$0.00335	OK 2m 48s
+15 Oct 2026 ●	DeepSeek V3.2	1,058 in / 8,000 out	$0.003656	OK 3m 17s
+15 Oct 2026 ●	gpt-oss-120b	6,683 in / 1,176 out	$0.0004	OK 23s
+15 Oct 2026 ●	gpt-oss-120b	5,636 in / 1,317 out	$0.000415	OK 39s
+15 Oct 2026 ●	gpt-oss-120b	6,677 in / 1,785 out	$0.001147	OK 29s
+15 Oct 2026 ●	DeepSeek V3.2	1,054 in / 6,729 out	$0.003121	OK 2m 40s
+15 Oct 2026 ●	DeepSeek V3.2	1,056 in / 6,507 out	$0.010288	OK 2m 11s
+15 Oct 2026 ●	DeepSeek V3.2	1,045 in / 5,409 out	$0.002564	OK 2m 09s
+15 Oct 2026 ●	gpt-oss-120b	6,169 in / 667 out	$0.000298	OK 16s
+15 Oct 2026 ●	DeepSeek V3.2	1,870 in / 6,390 out	$0.003207	OK 2m 19s
+15 Oct 2026 ●	gpt-oss-120b	6,813 in / 1,987 out	$0.000837	OK 13s
+15 Oct 2026 ●	DeepSeek V3.2	1,901 in / 6,977 out	$0.006073	OK 7m 45s
+15 Oct 2026 ●	gpt-oss-120b	6,435 in / 1,614 out	$0.000435	OK 1m 30s
+15 Oct 2026 ●	DeepSeek V3.2	1,038 in / 40,671 out	$0.012808	OK 8m 00s
+15 Oct 2026 ●	DeepSeek V3.2	1,056 in / 8,000 out	$0.012528	OK 2m 21s
+15 Oct 2026 ●	gpt-oss-120b	5,950 in / 1,116 out	$0.000387	OK 32s
+15 Oct 2026 ●	DeepSeek V3.2	1,034 in / 47,680 out	$0.014977	OK 16m 24s
+15 Oct 2026 ●	DeepSeek V3.2	1,058 in / 8,000 out	$0.009058	OK 4m 47s
+15 Oct 2026 ●	DeepSeek V3.2	1,058 in / 8,000 out	$0.008546	OK 9m 30s
+15 Oct 2026 ●	DeepSeek V3.2	1,034 in / 68,017 out	$0.021273	OK 6m 48s
+15 Oct 2026 ●	gpt-oss-120b	4,515 in / 1,078 out	$0.00035	OK 42s
+15 Oct 2026 ●	DeepSeek V3.2	1,668 in / 4,402 out	$0.00607	OK 4m 15s
+15 Oct 2026 ●	DeepSeek V3.2	1,058 in / 8,000 out	$0.009058	OK 8m 50s
+15 Oct 2026 ●	gpt-oss-120b	5,221 in / 1,368 out	$0.000412	OK 32s
+15 Oct 2026 ●	DeepSeek V3.2	1,061 in / 5,047 out	$0.004312	OK 4m 07s
+15 Oct 2026 ●	gpt-oss-120b	6,105 in / 1,565 out	$0.000464	OK 1m 30s
+15 Oct 2026 ●	gpt-oss-120b	6,590 in / 2,000 out	$0.000571	OK 1m 00s
+15 Oct 2026 ●	DeepSeek V3.2	1,045 in / 6,296 out	$0.002695	OK 2m 05s
+15 Oct 2026 ●	DeepSeek V3.2	1,050 in / 6,104 out	$0.002631	OK 2m 00s
+15 Oct 2026 ●	DeepSeek V3.2	1,048 in / 5,616 out	$0.002406	OK 3m 03s
+15 Oct 2026 ●	gpt-oss-120b	5,589 in / 1,892 out	$0.000521	OK 1m 08s
+15 Oct 2026 ●	DeepSeek V3.2	1,054 in / 5,346 out	$0.00254	OK 1m 47s
+15 Oct 2026 ●	gpt-oss-120b	5,997 in / 671 out	$0.001477	OK 9.4s
+15 Oct 2026 ●	DeepSeek V3.2	1,046 in / 5,795 out	$0.002726	OK 2m 00s
+15 Oct 2026 ●	gpt-oss-120b	5,247 in / 1,350 out	$0.000599	OK 7.3s
+15 Oct 2026 ●	DeepSeek V3.2	1,046 in / 5,093 out	$0.005203	OK 1m 01s
+15 Oct 2026 ●	gpt-oss-120b	6,190 in / 689 out	$0.001341	OK 33s
+15 Oct 2026 ●	gpt-oss-120b	6,042 in / 1,761 out	$0.00051	OK 38s
+15 Oct 2026 ●	DeepSeek V3.2	1,045 in / 6,141 out	$0.002871	OK 2m 04s
+15 Oct 2026 ●	DeepSeek V3.2	1,044 in / 5,708 out	$0.002689	OK 1m 49s
+15 Oct 2026 ●	DeepSeek V3.2	1,045 in / 6,907 out	$0.005796	OK 4m 49s
+15 Oct 2026 ●	DeepSeek V3.2	1,044 in / 4,767 out	$0.005811	OK 3m 26s
+15 Oct 2026 ●	DeepSeek V3.2	1,045 in / 14,493 out	$0.011865	OK 10m 09s
+15 Oct 2026 ●	gpt-oss-120b	5,880 in / 1,673 out	$0.000477	OK 54s
+15 Oct 2026 ●	DeepSeek V3.2	1,049 in / 5,503 out	$0.004674	OK 4m 46s
+15 Oct 2026 ●	R1 0528	394 in / 1,438 out	$0.003331	OK 1m 05s
+15 Oct 2026 ●	R1 0528	359 in / 1,592 out	$0.003563	OK 42s
+15 Oct 2026 ●	R1 0528	347 in / 1,615 out	$0.003694	OK 1m 20s
+15 Oct 2026 ●	R1 0528	421 in / 2,291 out	$0.005097	OK 57s
+15 Oct 2026 ●	R1 0528	369 in / 1,830 out	$0.00408	OK 44s
+15 Oct 2026 ●	R1 0528	389 in / 1,657 out	$0.00401	OK 32s
+15 Oct 2026 ●	R1 0528	382 in / 1,571 out	$0.003615	OK 1m 15s
+15 Oct 2026 ●	R1 0528	352 in / 1,550 out	$0.003744	OK 31s
+15 Oct 2026 ●	Claude Opus 4.5	9 in / 4 out	$0.000101	OK 1.2s
+15 Oct 2026 ●	Claude Haiku 4.5	9 in / 4 out	$0.00002	OK 778ms
+15 Oct 2026 ●	Claude Sonnet 4.5	9 in / 4 out	$0.000087	OK 2.8s
+15 Oct 2026 ●	Claude Sonnet 4.6	9 in / 4 out	$0.00006	OK 1.6s
+15 Oct 2026 ●	Claude Sonnet 4.6 (batch)	No usage	–	Error 25ms
+15 Oct 2026 ●	Claude Sonnet 4.6 (batch)	No usage	–	Error 28ms
+15 Oct 2026 ●	R1 0528	348 in / 1,541 out	$0.003533	OK 1m 11s
+15 Oct 2026 ●	R1 0528	351 in / 2,605 out	$0.006155	OK 53s
+15 Oct 2026 ●	R1 0528	390 in / 2,315 out	$0.005133	OK 56s
+15 Oct 2026 ●	R1 0528	390 in / 1,808 out	$0.004043	OK 43s
+15 Oct 2026 ●	R1 0528	370 in / 1,643 out	$0.003766	OK 1m 14s
+15 Oct 2026 ●	Claude Sonnet 4.6 (batch)	No usage	–	Error 23ms
+15 Oct 2026 ●	R1 0528	407 in / 2,105 out	$0.00469	OK 45s
+15 Oct 2026 ●	R1 0528	366 in / 1,760 out	$0.004232	OK 36s
+15 Oct 2026 ●	R1 0528	371 in / 1,746 out	$0.004203	OK 36s
+15 Oct 2026 ●	R1 0528	376 in / 1,839 out	$0.004103	OK 39s
+15 Oct 2026 ●	R1 0528	385 in / 1,583 out	$0.003838	OK 34s
+15 Oct 2026 ●	R1 0528	381 in / 1,542 out	$0.003742	OK 32s
+15 Oct 2026 ●	R1 0528	370 in / 2,035 out	$0.004521	OK 30s
+15 Oct 2026 ●	R1 0528	398 in / 2,848 out	$0.006283	OK 38s
+15 Oct 2026 ●	R1 0528	403 in / 1,727 out	$0.004178	OK 33s
+15 Oct 2026 ●	R1 0528	399 in / 1,881 out	$0.004527	OK 39s
+15 Oct 2026 ●	R1 0528	399 in / 1,866 out	$0.004854	OK 27s
+15 Oct 2026 ●	R1 0528	429 in / 1,698 out	$0.003916	OK 1m 10s
+15 Oct 2026 ●	R1 0528	387 in / 1,761 out	$0.004583	OK 31s
+15 Oct 2026 ●	R1 0528	418 in / 2,045 out	$0.004913	OK 40s
+15 Oct 2026 ●	R1 0528	407 in / 1,753 out	$0.004239	OK 36s
+15 Oct 2026 ●	R1 0528	411 in / 2,159 out	$0.004912	OK 1m 28s
+15 Oct 2026 ●	R1 0528	392 in / 1,730 out	$0.003877	OK 20s
+15 Oct 2026 ●	R1 0528	401 in / 1,744 out	$0.004002	OK 1m 16s
+15 Oct 2026 ●	R1 0528	390 in / 1,418 out	$0.003286	OK 1m 03s
+15 Oct 2026 ●	R1 0528	423 in / 2,344 out	$0.005321	OK 1m 31s
+15 Oct 2026 ●	R1 0528	395 in / 1,534 out	$0.003541	OK 1m 01s
+15 Oct 2026 ●	R1 0528	392 in / 2,035 out	$0.004632	OK 1m 37s
+15 Oct 2026 ●	R1 0528	423 in / 2,323 out	$0.005551	OK 48s
+15 Oct 2026 ●	R1 0528	412 in / 1,856 out	$0.004252	OK 1m 18s
+15 Oct 2026 ●	R1 0528	407 in / 2,036 out	$0.004542	OK 58s
+15 Oct 2026 ●	R1 0528	391 in / 1,553 out	$0.003581	OK 1m 22s
+15 Oct 2026 ●	R1 0528	420 in / 2,914 out	$0.006901	OK 55s
+15 Oct 2026 ●	R1 0528	395 in / 1,814 out	$0.004059	OK 50s
+15 Oct 2026 ●	R1 0528	388 in / 1,633 out	$0.003666	OK 40s
+15 Oct 2026 ●	R1 0528	396 in / 1,986 out	$0.004429	OK 1m 11s
+15 Oct 2026 ●	R1 0528	408 in / 1,743 out	$0.004217	OK 37s
+15 Oct 2026 ●	R1 0528	397 in / 1,764 out	$0.003952	OK 1m 02s
+15 Oct 2026 ●	R1 0528	398 in / 1,694 out	$0.003802	OK 50s
+15 Oct 2026 ●	R1 0528	438 in / 2,136 out	$0.004875	OK 1m 27s
+15 Oct 2026 ●	R1 0528	425 in / 1,901 out	$0.004356	OK 1m 20s
+15 Oct 2026 ●	R1 0528	432 in / 1,764 out	$0.004061	OK 1m 14s
+15 Oct 2026 ●	R1 0528	402 in / 1,950 out	$0.005156	OK 50s
+15 Oct 2026 ●	R1 0528	432 in / 1,825 out	$0.004194	OK 1m 12s
+15 Oct 2026 ●	R1 0528	445 in / 1,840 out	$0.00414	OK 36s
+15 Oct 2026 ●	R1 0528	432 in / 1,568 out	$0.003634	OK 1m 18s
+15 Oct 2026 ●	R1 0528	392 in / 1,555 out	$0.004072	OK 39s
+15 Oct 2026 ●	R1 0528	411 in / 1,685 out	$0.003878	OK 1m 29s
+15 Oct 2026 ●	R1 0528	429 in / 1,708 out	$0.003886	OK 35s
+15 Oct 2026 ●	R1 0528	471 in / 1,801 out	$0.004161	OK 1m 14s
+15 Oct 2026 ●	R1 0528	428 in / 1,759 out	$0.004048	OK 1m 12s
+15 Oct 2026 ●	R1 0528	496 in / 1,548 out	$0.003622	OK 1m 12s
+15 Oct 2026 ●	R1 0528	488 in / 1,881 out	$0.004249	OK 46s
+15 Oct 2026 ●	R1 0528	445 in / 4,000 out	$0.008784	OK 1m 40s
+15 Oct 2026 ●	R1 0528	459 in / 3,058 out	$0.006765	OK 1m 20s
+15 Oct 2026 ●	R1 0528	357 in / 1,530 out	$0.003468	OK 38s
+15 Oct 2026 ●	R1 0528	394 in / 1,460 out	$0.003297	OK 36s
+14 Oct 2026 ●	R1 0528	No usage	–	Error 0ms
+14 Oct 2026 ●	R1 0528	No usage	–	Error 0ms
+14 Oct 2026 ●	R1 0528	428 in / 1,593 out	$0.003686	OK 1m 17s
+14 Oct 2026 ●	R1 0528	435 in / 1,846 out	$0.004148	OK 55s
+14 Oct 2026 ●	R1 0528	425 in / 1,563 out	$0.003619	OK 1m 18s
+14 Oct 2026 ●	R1 0528	413 in / 1,565 out	$0.003532	OK 40s
+14 Oct 2026 ●	R1 0528	495 in / 2,014 out	$0.004539	OK 48s
+14 Oct 2026 ●	R1 0528	490 in / 1,620 out	$0.004303	OK 39s
+14 Oct 2026 ●	R1 0528	435 in / 2,281 out	$0.005917	OK 1m 01s
+14 Oct 2026 ●	R1 0528	405 in / 1,664 out	$0.004353	OK 47s
+14 Oct 2026 ●	R1 0528	461 in / 1,741 out	$0.004243	OK 38s
+14 Oct 2026 ●	R1 0528	431 in / 1,580 out	$0.003857	OK 34s
+14 Oct 2026 ●	R1 0528	475 in / 2,084 out	$0.00478	OK 1m 26s
+14 Oct 2026 ●	R1 0528	462 in / 1,618 out	$0.003671	OK 1m 00s
+14 Oct 2026 ●	R1 0528	503 in / 1,763 out	$0.004094	OK 1m 09s
+14 Oct 2026 ●	R1 0528	477 in / 2,023 out	$0.005301	OK 1m 06s
+14 Oct 2026 ●	R1 0528	No usage	–	Error 0ms
+14 Oct 2026 ●	R1 0528	No usage	–	Error 0ms
+14 Oct 2026 ●	R1 0528	320 in / 2,304 out	$0.005894	OK 1m 17s
+14 Oct 2026 ●	R1 0528	322 in / 1,734 out	$0.00385	OK 58s
+14 Oct 2026 ●	R1 0528	319 in / 1,410 out	$0.003748	OK 1m 05s
+14 Oct 2026 ●	R1 0528	310 in / 1,587 out	$0.003614	OK 1m 05s

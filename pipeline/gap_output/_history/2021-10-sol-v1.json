@@ -1,0 +1,170 @@
+{
+  "_meta": {
+    "pdf": "C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\Задачи_Минали_Години\\Областен\\OLI-2-Областен кръг-2021-10 кл-sol.pdf",
+    "paired_with": null,
+    "level": 1,
+    "type": "sol",
+    "analyzed_at": "2026-10-16T21:28:43.001398",
+    "model": "deepseek/deepseek-v3.2",
+    "text_length": 17201,
+    "paired_text_length": 0
+  },
+  "problems": [
+    {
+      "num": 1,
+      "topic": "algebra",
+      "theorems": [],
+      "techniques": [
+        "substitution",
+        "case analysis",
+        "discriminant analysis"
+      ],
+      "concepts": [
+        "system of equations",
+        "parameter analysis",
+        "symmetry (if (x,y,z) is a solution, then (x,y,-z) is also a solution)"
+      ],
+      "difficulty": "standard",
+      "notes": "The system is symmetric in z. The solution involves setting z=0, substituting, and analyzing a quadratic equation in x with parameter a. Cases: a=-1 (single root), discriminant zero, and discriminant positive with one root being -1."
+    },
+    {
+      "num": 2,
+      "topic": "geometry",
+      "theorems": [
+        "Power of a point",
+        "Right triangle altitude theorem"
+      ],
+      "techniques": [
+        "auxiliary construction",
+        "similar triangles",
+        "segment length manipulation"
+      ],
+      "concepts": [
+        "incircle",
+        "tangent points",
+        "right triangles",
+        "collinearity",
+        "perpendicular lines"
+      ],
+      "difficulty": "standard",
+      "notes": "The problem uses properties of the incircle and tangents. Key steps: constructing a perpendicular, applying the right triangle altitude theorem (geometric mean) in triangles QOC and DLO, and using the given CD = r (equal to the inradius) to relate segments."
+    },
+    {
+      "num": 3,
+      "topic": "number_theory",
+      "theorems": [
+        "Sum of arithmetic-geometric series",
+        "Infinite descent (Fermat)"
+      ],
+      "techniques": [
+        "summation formula",
+        "parity analysis",
+        "inequality estimation",
+        "direct verification for small cases"
+      ],
+      "concepts": [
+        "perfect squares",
+        "Diophantine equations",
+        "consecutive integers",
+        "modular analysis (mod 4)"
+      ],
+      "difficulty": "hard",
+      "notes": "The problem reduces to finding n such that N = 4 + (n-1)*2^(n+1) is a perfect square. For n>5, an inequality (2^(n-3) > n) derived from the product of two consecutive integers leads to a contradiction, leaving only small n to check."
+    },
+    {
+      "num": 4,
+      "topic": "combinatorics",
+      "theorems": [
+        "Pigeonhole principle"
+      ],
+      "techniques": [
+        "construction of example",
+        "upper bound estimation",
+        "tiling"
+      ],
+      "concepts": [
+        "grid coloring",
+        "covering with squares",
+        "existence proof"
+      ],
+      "difficulty": "olympic",
+      "notes": "A tiling problem on a 2021x2021 grid. The solution shows that k (the size of the square) must be at least 1920 (by constructing a coloring pattern with 19 colors that forces a large square) and at most 1920 (by exhibiting a tiling with 1920x1920 squares)."
+    },
+    {
+      "num": 5,
+      "topic": "algebra",
+      "theorems": [],
+      "techniques": [
+        "substitution",
+        "quadratic analysis",
+        "discriminant analysis",
+        "sign analysis"
+      ],
+      "concepts": [
+        "exponential equations",
+        "parameter range",
+        "quadratic in disguise"
+      ],
+      "difficulty": "standard",
+      "notes": "The equation is transformed via substitution y=2^(x-1) into a quadratic in y. The condition for a unique solution is analyzed via the discriminant and the sign of f(0)."
+    },
+    {
+      "num": 6,
+      "topic": "number_theory",
+      "theorems": [
+        "Fermat's Last Theorem for n=4 (infinite descent)"
+      ],
+      "techniques": [
+        "infinite descent",
+        "parameterization of Pythagorean triples"
+      ],
+      "concepts": [
+        "Pythagorean triples",
+        "coprime numbers",
+        "parity",
+        "Diophantine equations"
+      ],
+      "difficulty": "hard",
+      "notes": "The problem for n=2 is equivalent to x^4 + y^4 = z^2, which has no nontrivial integer solutions (classical lemma). For n=3, a specific example (4,9,48) is constructed."
+    },
+    {
+      "num": 7,
+      "topic": "combinatorics",
+      "theorems": [
+        "Pigeonhole principle"
+      ],
+      "techniques": [
+        "coloring argument",
+        "lower bound construction",
+        "upper bound argument"
+      ],
+      "concepts": [
+        "grid coloring",
+        "monochromatic squares",
+        "existence and non-existence proofs"
+      ],
+      "difficulty": "olympic",
+      "notes": "Similar to problem 4 (likely a variant from a different grade). The solution establishes that the smallest k for which any coloring of a 2021x2021 grid with two colors contains a monochromatic kxk square is 1920, using a coloring with 19 colors (pigeonhole) and a tiling argument."
+    }
+  ],
+  "unique_concepts": [
+    "system of equations with parameter",
+    "symmetry in solutions",
+    "discriminant analysis",
+    "incircle and tangents",
+    "power of a point",
+    "right triangle altitude theorem",
+    "sum of arithmetic-geometric series",
+    "perfect squares and Diophantine equations",
+    "infinite descent",
+    "pigeonhole principle",
+    "grid coloring and monochromatic squares",
+    "tiling and covering",
+    "exponential equations and substitution",
+    "parameterization of Pythagorean triples",
+    "parity and coprime analysis",
+    "construction of counterexamples",
+    "upper and lower bounds"
+  ],
+  "confidence": 0.95
+}

@@ -1,0 +1,173 @@
+{
+  "_meta": {
+    "pdf": "C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\Задачи_Минали_Години\\Областен\\OLI-2-Областен кръг-2019-11 кл-sol.pdf",
+    "paired_with": null,
+    "level": 1,
+    "type": "sol",
+    "analyzed_at": "2026-10-16T21:24:39.853498",
+    "model": "deepseek/deepseek-v3.2",
+    "text_length": 9378,
+    "paired_text_length": 0
+  },
+  "problems": [
+    {
+      "num": 8.1,
+      "topic": "geometry",
+      "theorems": [],
+      "techniques": [
+        "vector algebra",
+        "centroid properties",
+        "section formula"
+      ],
+      "concepts": [
+        "centroid",
+        "vector equality",
+        "collinearity",
+        "ratio division"
+      ],
+      "difficulty": "standard",
+      "notes": "Problem involves midpoints and centroids, solved using vector manipulation to prove collinearity and a specific ratio."
+    },
+    {
+      "num": 11.1,
+      "topic": "algebra",
+      "theorems": [],
+      "techniques": [
+        "substitution",
+        "quadratic equation analysis",
+        "discriminant"
+      ],
+      "concepts": [
+        "arithmetic progression",
+        "geometric progression",
+        "perfect square discriminant"
+      ],
+      "difficulty": "standard",
+      "notes": "Relates terms of an arithmetic progression forming a geometric progression; involves solving a quadratic with natural number roots."
+    },
+    {
+      "num": 8.2,
+      "topic": "algebra",
+      "theorems": [],
+      "techniques": [
+        "cyclic sum manipulation",
+        "proportions",
+        "case analysis",
+        "inequality"
+      ],
+      "concepts": [
+        "cyclic symmetry",
+        "homogeneous expressions",
+        "ordering variables"
+      ],
+      "difficulty": "hard",
+      "notes": "Proving equality from a cyclic symmetric equation; uses properties of proportions and case analysis based on variable ordering."
+    },
+    {
+      "num": 11.2,
+      "topic": "algebra",
+      "theorems": [],
+      "techniques": [
+        "trigonometric identities",
+        "squaring equations",
+        "angle sum"
+      ],
+      "concepts": [
+        "trigonometric equations",
+        "sine and cosine addition formulas",
+        "acute triangle angles"
+      ],
+      "difficulty": "standard",
+      "notes": "Finding angles of an acute triangle from two trigonometric equations; uses squaring and angle sum identity."
+    },
+    {
+      "num": 11.3,
+      "topic": "number_theory",
+      "theorems": [
+        "Euclidean algorithm"
+      ],
+      "techniques": [
+        "invariant analysis",
+        "rationality condition",
+        "construction"
+      ],
+      "concepts": [
+        "invariants",
+        "rational numbers",
+        "square-free numbers",
+        "Euclidean algorithm",
+        "combinatorial selection"
+      ],
+      "difficulty": "olympic",
+      "notes": "Defines a 'good pair' based on an operation; key invariant is the rationality of the ratio a/b. Solution involves selecting numbers with irrational ratios to avoid forming a good pair."
+    },
+    {
+      "num": 11.4,
+      "topic": "geometry",
+      "theorems": [
+        "power of a point",
+        "similar triangles"
+      ],
+      "techniques": [
+        "auxiliary points (diametrically opposite)",
+        "similarity",
+        "ratio manipulation"
+      ],
+      "concepts": [
+        "cyclic quadrilateral",
+        "tangents",
+        "distance from point to line",
+        "diameter",
+        "right triangle"
+      ],
+      "difficulty": "hard",
+      "notes": "Involves a cyclic quadrilateral with a condition on products of distances from an interior point. Solved by introducing diametrically opposite points and using tangents and similarity."
+    },
+    {
+      "num": 12.1,
+      "topic": "algebra",
+      "theorems": [],
+      "techniques": [
+        "induction",
+        "telescoping product",
+        "limit evaluation"
+      ],
+      "concepts": [
+        "recurrence relation",
+        "explicit formula",
+        "infinite product",
+        "convergence"
+      ],
+      "difficulty": "standard",
+      "notes": "Recurrence leads to an explicit formula via induction; the product sequence is shown to converge by manipulating into a telescoping form."
+    }
+  ],
+  "unique_concepts": [
+    "vector algebra",
+    "centroid",
+    "ratio division",
+    "arithmetic progression",
+    "geometric progression",
+    "perfect square discriminant",
+    "cyclic symmetry",
+    "homogeneous expressions",
+    "trigonometric equations",
+    "angle sum identities",
+    "invariants",
+    "rational numbers",
+    "Euclidean algorithm",
+    "square-free numbers",
+    "combinatorial selection",
+    "cyclic quadrilateral",
+    "power of a point",
+    "tangents",
+    "distance from point to line",
+    "diameter",
+    "recurrence relation",
+    "explicit formula",
+    "infinite product",
+    "convergence",
+    "telescoping product"
+  ],
+  "confidence": 0.95
+}

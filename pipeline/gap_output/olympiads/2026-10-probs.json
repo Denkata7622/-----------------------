@@ -1,0 +1,118 @@
+{
+  "_meta": {
+    "pdf": "C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\Задачи_Минали_Години\\Областен\\OLI-2-Областен кръг-2026-10 кл-probs.pdf",
+    "paired_with": "C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\Задачи_Минали_Години\\Областен\\OLI-2-Областен кръг-2026-10 кл-sol.pdf",
+    "level": 1,
+    "type": "probs",
+    "analyzed_at": "2026-10-16T21:44:17.566528",
+    "model": "deepseek/deepseek-v3.2",
+    "text_length": 1452,
+    "paired_text_length": 0
+  },
+  "problems": [
+    {
+      "num": 1,
+      "topic": "algebra",
+      "theorems": [],
+      "techniques": [
+        "summation",
+        "telescoping sum",
+        "substitution"
+      ],
+      "concepts": [
+        "arithmetic progression",
+        "reciprocal product",
+        "system of equations"
+      ],
+      "difficulty": "standard",
+      "notes": "Standard problem combining arithmetic progression properties and telescoping sums."
+    },
+    {
+      "num": 2,
+      "topic": "geometry",
+      "theorems": [
+        "Ceva",
+        "Menelaus",
+        "Ptolemy",
+        "properties of regular pentagon"
+      ],
+      "techniques": [
+        "angle chasing",
+        "collinearity proof",
+        "coordinate geometry or synthetic approach"
+      ],
+      "concepts": [
+        "regular pentagon",
+        "angle bisector theorem",
+        "concurrency",
+        "collinearity",
+        "cyclic quadrilaterals",
+        "power of a point"
+      ],
+      "difficulty": "hard",
+      "notes": "Complex geometry problem requiring multiple steps and theorem applications."
+    },
+    {
+      "num": 3,
+      "topic": "number_theory",
+      "theorems": [],
+      "techniques": [
+        "construction",
+        "analysis of multiplicative functions",
+        "prime factorization"
+      ],
+      "concepts": [
+        "divisor function",
+        "multiplicative sequences",
+        "prime numbers",
+        "composite numbers",
+        "order of divisors"
+      ],
+      "difficulty": "olympic",
+      "notes": "Non-standard definition requiring construction of a number with specific divisor properties."
+    },
+    {
+      "num": 4,
+      "topic": "combinatorics",
+      "theorems": [
+        "Pick's theorem"
+      ],
+      "techniques": [
+        "area minimization",
+        "covering problem",
+        "grid analysis"
+      ],
+      "concepts": [
+        "lattice points",
+        "polygon area",
+        "covering problem",
+        "integer coordinates",
+        "minimization"
+      ],
+      "difficulty": "olympic",
+      "notes": "Optimization problem on a grid; likely uses clever tiling or polygon shapes to minimize total area."
+    }
+  ],
+  "unique_concepts": [
+    "arithmetic progression",
+    "telescoping sum",
+    "reciprocal product",
+    "regular pentagon",
+    "angle bisector theorem",
+    "Ceva's theorem",
+    "Menelaus' theorem",
+    "Ptolemy's theorem",
+    "collinearity",
+    "concurrency",
+    "cyclic quadrilaterals",
+    "power of a point",
+    "divisor function",
+    "multiplicative sequences",
+    "prime factorization",
+    "lattice points",
+    "Pick's theorem",
+    "covering problem",
+    "area minimization"
+  ],
+  "confidence": 0.9
+}

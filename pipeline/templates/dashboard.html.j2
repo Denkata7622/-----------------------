@@ -1,0 +1,2407 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pipeline · Control Center</title>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2322c55e' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M22 12h-4l-3 9L9 3l-3 9H2'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/lucide@0.454.0/dist/umd/lucide.min.js" defer></script>
+<style>
+:root {
+  --bg: #0a0b0e;
+  --surface: #0f1115;
+  --surface-2: #14171d;
+  --surface-3: #1a1e26;
+  --border: #1c2029;
+  --border-2: #262b36;
+  --border-3: #343a48;
+  --text: #e8eaed;
+  --text-2: #a8adb8;
+  --text-3: #6e7480;
+  --text-4: #4a505c;
+  --accent: #22c55e;
+  --accent-soft: rgba(34,197,94,0.10);
+  --accent-line: rgba(34,197,94,0.28);
+  --danger: #ef4444;
+  --danger-soft: rgba(239,68,68,0.10);
+  --danger-line: rgba(239,68,68,0.28);
+  --warn: #f59e0b;
+  --warn-soft: rgba(245,158,11,0.10);
+  --warn-line: rgba(245,158,11,0.28);
+  --info: #3b82f6;
+  --info-soft: rgba(59,130,246,0.10);
+  --info-line: rgba(59,130,246,0.28);
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { color-scheme: dark; }
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Inter', -apple-system, sans-serif;
+  font-size: 13px;
+  line-height: 1.45;
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+}
+button, input, select, textarea { font-family: inherit; }
+button { cursor: pointer; }
+a { color: inherit; text-decoration: none; }
+.mono { font-family: 'JetBrains Mono', monospace; }
+.grow { flex: 1; min-width: 0; }
+.hide { display: none !important; }
+.sr-only {
+  position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0;
+}
+
+/* ─── HEADER ─── */
+.hdr {
+  height: 52px;
+  padding: 0 20px;
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  position: sticky;
+  top: 0;
+  z-index: 40;
+}
+.hdr-brand {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+  font-size: 13px;
+  letter-spacing: 0.2px;
+  flex-shrink: 0;
+}
+.hdr-brand svg { width: 16px; height: 16px; color: var(--accent); stroke-width: 2.5; }
+
+.tabs {
+  display: flex;
+  gap: 2px;
+  flex: 1;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+.tabs::-webkit-scrollbar { display: none; }
+.tab {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 14px;
+  background: transparent;
+  border: none;
+  border-radius: 5px;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--text-3);
+  white-space: nowrap;
+  transition: all 0.12s;
+  position: relative;
+}
+.tab:hover { color: var(--text-2); background: var(--surface-2); }
+.tab.active { color: var(--text); background: var(--surface-2); }
+.tab.active::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 12px;
+  right: 12px;
+  height: 2px;
+  background: var(--accent);
+  border-radius: 2px;
+}
+.tab svg { width: 13px; height: 13px; opacity: 0.7; }
+.tab.active svg { opacity: 1; color: var(--accent); }
+.tab-badge {
+  font-size: 10px;
+  font-weight: 600;
+  padding: 1px 5px;
+  background: var(--surface-3);
+  color: var(--text-3);
+  border-radius: 3px;
+  font-family: 'JetBrains Mono', monospace;
+  margin-left: 2px;
+}
+
+.hdr-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+}
+.status {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 9px;
+  background: var(--surface-2);
+  border: 1px solid var(--border-2);
+  border-radius: 5px;
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--text-2);
+}
+.status .dot {
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: var(--text-4);
+}
+.status.running { color: var(--accent); border-color: var(--accent-line); background: var(--accent-soft); }
+.status.running .dot { background: var(--accent); box-shadow: 0 0 6px rgba(34,197,94,0.5); animation: pulse 2s ease-in-out infinite; }
+.status.error { color: var(--danger); border-color: var(--danger-line); background: var(--danger-soft); }
+.status.error .dot { background: var(--danger); }
+@keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.4} }
+
+.hdr-link {
+  color: var(--text-3);
+  font-size: 11.5px;
+  padding: 5px 10px;
+  border-radius: 4px;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  transition: all 0.12s;
+}
+.hdr-link:hover { color: var(--text); background: var(--surface-2); }
+.hdr-link svg { width: 12px; height: 12px; }
+
+/* ─── MAIN ─── */
+.main {
+  max-width: 1700px;
+  margin: 0 auto;
+  padding: 16px 20px 60px;
+}
+.tab-panel { display: none; }
+.tab-panel.active { display: block; }
+
+/* ─── KPI ROW ─── */
+.kpis {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+  margin-bottom: 12px;
+}
+.kpi {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 12px 14px;
+}
+.kpi-h {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.7px;
+  color: var(--text-3);
+  margin-bottom: 6px;
+}
+.kpi-h svg { width: 11px; height: 11px; stroke-width: 2.5; }
+.kpi-v {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 1.1;
+  color: var(--text);
+}
+.kpi-v.accent { color: var(--accent); }
+.kpi-v.warn { color: var(--warn); }
+.kpi-v.danger { color: var(--danger); }
+.kpi-s {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10.5px;
+  color: var(--text-3);
+  margin-top: 3px;
+}
+
+/* ─── CARD ─── */
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+}
+.card-h {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 14px;
+  border-bottom: 1px solid var(--border);
+  min-height: 42px;
+  flex-shrink: 0;
+}
+.card-h > svg { width: 13px; height: 13px; color: var(--text-3); }
+.card-title {
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.7px;
+  color: var(--text-2);
+}
+.card-badge {
+  margin-left: auto;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10.5px;
+  color: var(--text-3);
+  padding: 2px 7px;
+  background: var(--surface-2);
+  border-radius: 4px;
+  font-weight: 500;
+}
+.card-body { padding: 12px 14px; flex: 1; min-height: 0; overflow: auto; }
+.card-body.flush { padding: 0; }
+
+/* ─── BUTTON ─── */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  height: 30px;
+  padding: 0 11px;
+  font-size: 11.5px;
+  font-weight: 500;
+  color: var(--text-2);
+  background: var(--surface-2);
+  border: 1px solid var(--border-2);
+  border-radius: 5px;
+  transition: all 0.12s;
+  white-space: nowrap;
+}
+.btn > svg { width: 12px; height: 12px; flex-shrink: 0; }
+.btn:hover:not(:disabled) { background: var(--surface-3); color: var(--text); border-color: var(--border-3); }
+.btn:active:not(:disabled) { transform: translateY(1px); }
+.btn:disabled { opacity: 0.4; cursor: not-allowed; }
+.btn.primary { color: var(--accent); border-color: var(--accent-line); background: var(--accent-soft); }
+.btn.primary:hover:not(:disabled) { background: var(--accent); color: #052e16; }
+.btn.danger { color: var(--danger); border-color: var(--danger-line); background: var(--danger-soft); }
+.btn.danger:hover:not(:disabled) { background: var(--danger); color: #fff; }
+.btn.icon { padding: 0; width: 30px; }
+.btn.loading { pointer-events: none; opacity: 0.6; }
+.btn.loading > svg { animation: spin 0.8s linear infinite; }
+@keyframes spin { to { transform: rotate(360deg); } }
+
+/* ─── INPUT ─── */
+.input {
+  height: 30px;
+  padding: 0 10px;
+  font-size: 11.5px;
+  color: var(--text);
+  background: var(--surface-2);
+  border: 1px solid var(--border-2);
+  border-radius: 5px;
+  outline: none;
+  transition: border-color 0.12s;
+  width: 100%;
+}
+.input.mono { font-family: 'JetBrains Mono', monospace; }
+.input:focus { border-color: var(--accent-line); }
+.input::placeholder { color: var(--text-4); }
+
+/* ─── LAYOUT GRIDS ─── */
+.grid {
+  display: grid;
+  gap: 12px;
+}
+.g2 { grid-template-columns: 1fr 1fr; }
+.g3 { grid-template-columns: repeat(3, 1fr); }
+.g1-2 { grid-template-columns: 1fr 2fr; }
+.g2-1 { grid-template-columns: 2fr 1fr; }
+
+/* ─── SCORE DIST ─── */
+.dist-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 5px;
+}
+.dist-item:last-child { margin-bottom: 0; }
+.dist-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10.5px;
+  color: var(--text-3);
+  width: 34px;
+}
+.dist-track {
+  flex: 1;
+  height: 16px;
+  background: var(--surface-2);
+  border-radius: 3px;
+  overflow: hidden;
+}
+.dist-fill {
+  height: 100%;
+  background: var(--accent);
+  border-radius: 3px;
+  transition: width 0.3s ease;
+}
+.dist-fill.hi { background: #16a34a; }
+.dist-fill.mid { background: var(--accent); }
+.dist-fill.lo { background: var(--warn); }
+.dist-fill.bad { background: var(--danger); }
+.dist-count {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10.5px;
+  color: var(--text-3);
+  width: 26px;
+  text-align: right;
+}
+
+/* ─── ACTIVITY LOG (mini) ─── */
+.activity {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10.5px;
+  line-height: 1.6;
+  max-height: 260px;
+  overflow-y: auto;
+}
+.act-row {
+  display: flex;
+  gap: 8px;
+  padding: 1px 0;
+  white-space: pre-wrap;
+  word-break: break-all;
+}
+.act-time { color: var(--text-4); flex-shrink: 0; }
+.act-lv { flex-shrink: 0; width: 50px; font-weight: 500; }
+.act-lv.INFO { color: var(--accent); }
+.act-lv.WARNING { color: var(--warn); }
+.act-lv.ERROR { color: var(--danger); }
+.act-lv.DEBUG { color: var(--text-4); }
+.act-msg { color: var(--text-2); }
+
+/* ─── TABLE ─── */
+.tbl {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 11.5px;
+}
+.tbl thead th {
+  text-align: left;
+  padding: 8px 10px;
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.7px;
+  color: var(--text-3);
+  border-bottom: 1px solid var(--border);
+  background: var(--surface-2);
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  white-space: nowrap;
+}
+.tbl thead th.sortable { cursor: pointer; user-select: none; }
+.tbl thead th.sortable:hover { color: var(--text-2); }
+.tbl thead th .sort-ind { color: var(--accent); margin-left: 3px; font-size: 9px; }
+.tbl tbody td {
+  padding: 7px 10px;
+  border-bottom: 1px solid var(--border);
+  color: var(--text-2);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  white-space: nowrap;
+}
+.tbl tbody td.text { font-family: 'Inter', sans-serif; font-size: 11.5px; }
+.tbl tbody tr { transition: background 0.08s; }
+.tbl tbody tr:hover { background: var(--surface-2); }
+.tbl tbody tr:last-child td { border-bottom: none; }
+
+.score-pill {
+  display: inline-block;
+  padding: 1px 7px;
+  border-radius: 3px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10.5px;
+  font-weight: 600;
+  min-width: 34px;
+  text-align: center;
+}
+.score-pill.s10 { background: var(--accent-soft); color: var(--accent); border: 1px solid var(--accent-line); }
+.score-pill.s8 { background: var(--accent-soft); color: var(--accent); border: 1px solid var(--accent-line); }
+.score-pill.s6 { background: var(--warn-soft); color: var(--warn); border: 1px solid var(--warn-line); }
+.score-pill.s4 { background: var(--danger-soft); color: var(--danger); border: 1px solid var(--danger-line); }
+.score-pill.s0 { background: var(--surface-2); color: var(--text-3); border: 1px solid var(--border-2); }
+
+.verdict-pill {
+  display: inline-block;
+  padding: 1px 7px;
+  border-radius: 3px;
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+}
+.verdict-pill.approve { background: var(--accent-soft); color: var(--accent); }
+.verdict-pill.revise { background: var(--warn-soft); color: var(--warn); }
+.verdict-pill.reject { background: var(--danger-soft); color: var(--danger); }
+.verdict-pill.error { background: var(--danger-soft); color: var(--danger); }
+
+.row-actions { display: flex; gap: 3px; justify-content: flex-end; }
+.row-action {
+  width: 22px;
+  height: 22px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: 3px;
+  color: var(--text-4);
+  transition: all 0.1s;
+}
+.row-action:hover { color: var(--text); background: var(--surface-2); border-color: var(--border-2); }
+.row-action.primary:hover { color: var(--accent); border-color: var(--accent-line); }
+.row-action.danger:hover { color: var(--danger); border-color: var(--danger-line); }
+.row-action svg { width: 12px; height: 12px; }
+
+/* ─── FILTER BAR ─── */
+.filter-bar {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 12px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.filter-bar .input { width: 260px; }
+.chips { display: flex; gap: 3px; }
+.chip {
+  height: 28px;
+  padding: 0 10px;
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--text-3);
+  background: var(--surface-2);
+  border: 1px solid var(--border-2);
+  border-radius: 14px;
+  transition: all 0.12s;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+.chip:hover { color: var(--text-2); border-color: var(--border-3); }
+.chip.active { background: var(--accent-soft); color: var(--accent); border-color: var(--accent-line); }
+.chip-count { font-family: 'JetBrains Mono', monospace; font-size: 10px; opacity: 0.8; }
+
+/* ─── TIMELINE CHART ─── */
+.timeline {
+  display: flex;
+  align-items: flex-end;
+  gap: 3px;
+  height: 120px;
+  padding: 8px 4px;
+  border-bottom: 1px solid var(--border);
+}
+.tl-bar {
+  flex: 1;
+  min-width: 4px;
+  background: var(--accent);
+  border-radius: 2px 2px 0 0;
+  position: relative;
+  transition: all 0.15s;
+  opacity: 0.85;
+  cursor: default;
+}
+.tl-bar:hover { opacity: 1; background: #16a34a; }
+.tl-bar.today { background: var(--accent); box-shadow: 0 0 6px var(--accent-soft); opacity: 1; }
+.tl-bar.zero { background: var(--surface-3); opacity: 0.5; }
+.tl-labels {
+  display: flex;
+  gap: 3px;
+  padding: 4px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 9px;
+  color: var(--text-4);
+}
+.tl-labels > span { flex: 1; min-width: 4px; text-align: center; }
+
+/* ─── LOG FULL ─── */
+.log-full {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  line-height: 1.55;
+  background: #060708;
+  border-radius: 4px;
+  padding: 10px 12px;
+  max-height: calc(100vh - 260px);
+  overflow: auto;
+}
+.log-row { display: flex; gap: 8px; white-space: pre-wrap; word-break: break-all; padding: 0; }
+.log-row:hover { background: rgba(255,255,255,0.02); }
+.log-t { color: var(--text-4); flex-shrink: 0; }
+.log-lv { flex-shrink: 0; width: 54px; font-weight: 500; }
+.log-lv.INFO { color: var(--accent); }
+.log-lv.WARNING { color: var(--warn); }
+.log-lv.ERROR { color: var(--danger); }
+.log-lv.DEBUG { color: var(--text-4); }
+.log-m { color: var(--text-2); flex: 1; min-width: 0; }
+
+/* ─── TOOLS ─── */
+.tools-groups {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 12px;
+}
+.tools-group {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  overflow: hidden;
+}
+.tools-group-h {
+  padding: 10px 14px;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.7px;
+  color: var(--text-2);
+}
+.tools-group-h svg { width: 13px; height: 13px; color: var(--text-3); }
+.tools-list { padding: 6px; }
+.tool-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 8px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.1s;
+}
+.tool-item:hover { background: var(--surface-2); }
+.tool-icon {
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--surface-2);
+  border: 1px solid var(--border-2);
+  border-radius: 5px;
+  color: var(--text-2);
+  flex-shrink: 0;
+}
+.tool-icon svg { width: 14px; height: 14px; }
+.tool-item:hover .tool-icon { color: var(--accent); border-color: var(--accent-line); }
+.tool-info { flex: 1; min-width: 0; }
+.tool-name {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--text);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 2px;
+}
+.tool-desc { font-size: 11px; color: var(--text-3); line-height: 1.4; }
+.tool-cost {
+  font-size: 9.5px;
+  font-weight: 600;
+  padding: 1px 5px;
+  border-radius: 3px;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+.tool-cost.free { background: var(--accent-soft); color: var(--accent); }
+.tool-cost.paid { background: var(--warn-soft); color: var(--warn); }
+
+/* ─── TOOL RESULT PANEL ─── */
+.tool-result {
+  margin-top: 8px;
+  background: var(--surface);
+  border: 1px solid var(--border-2);
+  border-radius: 6px;
+  overflow: hidden;
+}
+.tool-result-h {
+  padding: 8px 12px;
+  background: var(--surface-2);
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 11px;
+}
+.tool-result-h .status-ok { color: var(--accent); }
+.tool-result-h .status-err { color: var(--danger); }
+.tool-result-h .close-r {
+  margin-left: auto;
+  background: transparent;
+  border: none;
+  color: var(--text-3);
+  padding: 3px;
+  border-radius: 3px;
+}
+.tool-result-h .close-r:hover { color: var(--text); background: var(--surface-3); }
+.tool-result-b {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10.5px;
+  line-height: 1.5;
+  padding: 10px 12px;
+  max-height: 400px;
+  overflow: auto;
+  white-space: pre-wrap;
+  word-break: break-all;
+  color: var(--text-2);
+  background: #06070a;
+}
+
+/* ─── ORCHESTRATOR STRIP ─── */
+.orch {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 10px 14px;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.orch-meta {
+  margin-left: auto;
+  display: flex;
+  gap: 16px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10.5px;
+  color: var(--text-3);
+}
+.orch-meta strong { color: var(--text-2); font-weight: 500; }
+
+/* ─── TOAST ─── */
+.toast {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  min-width: 260px;
+  max-width: 500px;
+  padding: 11px 14px;
+  background: var(--surface);
+  border: 1px solid var(--border-2);
+  border-left: 3px solid var(--accent);
+  border-radius: 6px;
+  box-shadow: 0 12px 32px rgba(0,0,0,0.6);
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  opacity: 0;
+  transform: translateY(10px);
+  pointer-events: none;
+  transition: all 0.22s ease;
+  z-index: 100;
+}
+.toast.show { opacity: 1; transform: translateY(0); pointer-events: auto; }
+.toast.error { border-left-color: var(--danger); }
+.toast svg { width: 15px; height: 15px; flex-shrink: 0; margin-top: 1px; }
+.toast.error > svg { color: var(--danger); }
+.toast:not(.error) > svg { color: var(--accent); }
+.toast-content { flex: 1; min-width: 0; }
+.toast-title { font-weight: 600; font-size: 12px; margin-bottom: 2px; }
+.toast-text {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10.5px;
+  color: var(--text-3);
+  white-space: pre-wrap;
+  max-height: 100px;
+  overflow-y: auto;
+  word-break: break-all;
+}
+
+/* ─── SCROLLBARS ─── */
+* { scrollbar-width: thin; scrollbar-color: var(--border-2) transparent; }
+*::-webkit-scrollbar { width: 8px; height: 8px; }
+*::-webkit-scrollbar-track { background: transparent; }
+*::-webkit-scrollbar-thumb { background: var(--border-2); border-radius: 4px; }
+*::-webkit-scrollbar-thumb:hover { background: var(--text-4); }
+
+/* ─── EMPTY ─── */
+.empty {
+  padding: 32px 16px;
+  text-align: center;
+  color: var(--text-4);
+  font-size: 12px;
+}
+.empty svg { width: 24px; height: 24px; margin-bottom: 8px; opacity: 0.4; display: block; margin-left: auto; margin-right: auto; }
+
+/* ─── RESPONSIVE ─── */
+@media (max-width: 1200px) {
+  .g3 { grid-template-columns: 1fr 1fr; }
+  .g1-2, .g2-1 { grid-template-columns: 1fr; }
+}
+@media (max-width: 900px) {
+  .kpis { grid-template-columns: repeat(2, 1fr); }
+  .g2 { grid-template-columns: 1fr; }
+  .g3 { grid-template-columns: 1fr; }
+  .tabs { font-size: 11px; }
+  .tab { padding: 6px 10px; }
+  .tab span.tab-label { display: none; }
+  .tab svg { width: 15px; height: 15px; }
+  .hdr { padding: 0 12px; gap: 10px; }
+  .main { padding: 12px; }
+  .orch-meta { width: 100%; margin-left: 0; margin-top: 6px; }
+  .filter-bar .input { width: 100%; }
+}
+</style>
+</head>
+<body>
+
+<!-- ═══ HEADER ═══ -->
+<header class="hdr">
+  <div class="hdr-brand">
+    <i data-lucide="activity"></i>
+    <span>PIPELINE</span>
+  </div>
+
+  <nav class="tabs" role="tablist">
+    <button class="tab active" data-tab="overview" role="tab">
+      <i data-lucide="layout-dashboard"></i>
+      <span class="tab-label">Overview</span>
+    </button>
+    <button class="tab" data-tab="articles" role="tab">
+      <i data-lucide="file-text"></i>
+      <span class="tab-label">Articles</span>
+      <span class="tab-badge" id="tabArticlesBadge">—</span>
+    </button>
+    <button class="tab" data-tab="costs" role="tab">
+      <i data-lucide="dollar-sign"></i>
+      <span class="tab-label">Costs</span>
+    </button>
+    <button class="tab" data-tab="provider" role="tab">
+      <i data-lucide="cloud"></i>
+      <span class="tab-label">Provider</span>
+    </button>
+    <button class="tab" data-tab="logs" role="tab">
+      <i data-lucide="terminal"></i>
+      <span class="tab-label">Logs</span>
+    </button>
+    <button class="tab" data-tab="tools" role="tab">
+      <i data-lucide="wrench"></i>
+      <span class="tab-label">Tools</span>
+    </button>
+  </nav>
+
+  <div class="hdr-right">
+    <div class="status" id="status">
+      <span class="dot"></span>
+      <span id="statusText">Connecting</span>
+    </div>
+    <a class="hdr-link" href="/" target="_blank">
+      <i data-lucide="arrow-up-right"></i> Site
+    </a>
+  </div>
+</header>
+
+<!-- ═══ MAIN ═══ -->
+<main class="main">
+
+  <!-- ═══ TAB: OVERVIEW ═══ -->
+  <section class="tab-panel active" id="tab-overview">
+
+    <!-- Orchestrator strip -->
+    <div class="orch">
+      <button class="btn primary" id="btnStart" onclick="onStart(this)">
+        <i data-lucide="play"></i> Start
+      </button>
+      <button class="btn danger" id="btnStop" onclick="onStop(this)" disabled>
+        <i data-lucide="square"></i> Stop
+      </button>
+      <button class="btn" id="btnOnce" onclick="onOnce(this)">
+        <i data-lucide="zap"></i> Run Once
+      </button>
+      <span style="width:1px;height:20px;background:var(--border-2);margin:0 4px;"></span>
+      <input type="text" class="input mono" id="pointInput" placeholder="2.1" style="width:70px;">
+      <button class="btn" id="btnVerify" onclick="onPointTool(this,'verify')">
+        <i data-lucide="shield-check"></i> Verify
+      </button>
+      <button class="btn" id="btnRecover" onclick="onPointTool(this,'recover')">
+        <i data-lucide="rotate-ccw"></i> Recover
+      </button>
+      <div class="orch-meta">
+        <span>PID <strong id="mPid">—</strong></span>
+        <span>UPTIME <strong id="mUptime">—</strong></span>
+      </div>
+    </div>
+
+    <!-- KPIs -->
+    <div class="kpis">
+      <div class="kpi">
+        <div class="kpi-h"><i data-lucide="check-circle-2"></i>Done</div>
+        <div class="kpi-v" id="kDone">—</div>
+        <div class="kpi-s" id="kDoneSub">of —</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi-h"><i data-lucide="clock"></i>Pending</div>
+        <div class="kpi-v warn" id="kPending">—</div>
+        <div class="kpi-s" id="kPendingSub">in queue</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi-h"><i data-lucide="alert-triangle"></i>Errors</div>
+        <div class="kpi-v danger" id="kErrors">—</div>
+        <div class="kpi-s" id="kErrorsSub">needs attention</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi-h"><i data-lucide="trending-up"></i>Avg Score</div>
+        <div class="kpi-v accent" id="kScore">—</div>
+        <div class="kpi-s" id="kScoreSub">—</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi-h"><i data-lucide="circle-dollar-sign"></i>Spent Today</div>
+        <div class="kpi-v" id="kSpent">—</div>
+        <div class="kpi-s" id="kSpentSub">of $3.00</div>
+      </div>
+    </div>
+
+    <!-- Row: score dist + activity -->
+    <div class="grid g2" style="margin-bottom:12px">
+      <div class="card">
+        <div class="card-h">
+          <i data-lucide="bar-chart-2"></i>
+          <span class="card-title">Score Distribution</span>
+          <span class="card-badge" id="distBadge">—</span>
+        </div>
+        <div class="card-body" id="distBody">
+          <div class="empty"><i data-lucide="bar-chart-2"></i>No scores yet</div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-h">
+          <i data-lucide="radio"></i>
+          <span class="card-title">Live Activity</span>
+          <span class="card-badge" id="activityBadge">—</span>
+        </div>
+        <div class="card-body" style="padding:8px 12px">
+          <div class="activity" id="activityLog">
+            <div class="empty" style="padding:20px 0;font-size:11px">Waiting for log…</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Row: recent articles + queue preview -->
+    <div class="grid g2">
+      <div class="card">
+        <div class="card-h">
+          <i data-lucide="clock"></i>
+          <span class="card-title">Recent Articles</span>
+          <span class="card-badge" id="recentBadge">—</span>
+        </div>
+        <div class="card-body flush" style="max-height:280px;overflow:auto">
+          <table class="tbl" id="recentTable">
+            <thead>
+              <tr><th>ID</th><th>Title</th><th>Score</th><th>Words</th><th></th></tr>
+            </thead>
+            <tbody><tr><td colspan="5" class="empty"><i data-lucide="file-text"></i>No articles yet</td></tr></tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-h">
+          <i data-lucide="list"></i>
+          <span class="card-title">Next in Queue</span>
+          <span class="card-badge" id="queueBadge">—</span>
+        </div>
+        <div class="card-body flush" style="max-height:280px;overflow:auto">
+          <table class="tbl" id="queueTable">
+            <thead>
+              <tr><th>ID</th><th>Title</th><th></th></tr>
+            </thead>
+            <tbody><tr><td colspan="3" class="empty"><i data-lucide="list"></i>Queue empty</td></tr></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ TAB: ARTICLES ═══ -->
+  <section class="tab-panel" id="tab-articles">
+    <div class="filter-bar">
+      <div class="input-wrap" style="position:relative;flex:1;max-width:340px">
+        <input type="text" class="input" id="artSearch" placeholder="Search by ID or title…">
+      </div>
+      <div class="chips" id="artChips">
+        <button class="chip active" data-verdict="all">All <span class="chip-count" data-count="all">0</span></button>
+        <button class="chip" data-verdict="approve">Approve <span class="chip-count" data-count="approve">0</span></button>
+        <button class="chip" data-verdict="revise">Revise <span class="chip-count" data-count="revise">0</span></button>
+        <button class="chip" data-verdict="reject">Reject <span class="chip-count" data-count="reject">0</span></button>
+        <button class="chip" data-verdict="error">Error <span class="chip-count" data-count="error">0</span></button>
+      </div>
+      <span style="margin-left:auto;font-size:11px;color:var(--text-3);font-family:'JetBrains Mono',monospace;" id="artCount">—</span>
+    </div>
+
+    <div class="card">
+      <div class="card-body flush" style="max-height:calc(100vh - 200px);overflow:auto">
+        <table class="tbl" id="artTable">
+          <thead>
+            <tr>
+              <th class="sortable" data-sort="id">ID <span class="sort-ind" data-ind="id"></span></th>
+              <th>Title</th>
+              <th class="sortable" data-sort="score" style="text-align:right">Score <span class="sort-ind" data-ind="score"></span></th>
+              <th>Verdict</th>
+              <th class="sortable" data-sort="word_count" style="text-align:right">Words <span class="sort-ind" data-ind="word_count"></span></th>
+              <th class="sortable" data-sort="attempts" style="text-align:right">Att <span class="sort-ind" data-ind="attempts"></span></th>
+              <th class="sortable" data-sort="cost" style="text-align:right">Cost <span class="sort-ind" data-ind="cost"></span></th>
+              <th class="sortable" data-sort="ts" style="text-align:right">When <span class="sort-ind" data-ind="ts"></span></th>
+              <th style="text-align:right">Actions</th>
+            </tr>
+          </thead>
+          <tbody id="artBody">
+            <tr><td colspan="9" class="empty"><i data-lucide="file-text"></i>Loading…</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ TAB: COSTS ═══ -->
+  <section class="tab-panel" id="tab-costs">
+
+    <div class="kpis" style="grid-template-columns:repeat(3,1fr)">
+      <div class="kpi">
+        <div class="kpi-h"><i data-lucide="sun"></i>Today</div>
+        <div class="kpi-v" id="cToday">—</div>
+        <div class="kpi-s" id="cTodaySub">— calls</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi-h"><i data-lucide="calendar-days"></i>Last 7 Days</div>
+        <div class="kpi-v" id="cWeek">—</div>
+        <div class="kpi-s" id="cWeekSub">— calls</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi-h"><i data-lucide="infinity"></i>All Time</div>
+        <div class="kpi-v" id="cAll">—</div>
+        <div class="kpi-s" id="cAllSub">— calls</div>
+      </div>
+    </div>
+
+    <div class="card" style="margin-bottom:12px">
+      <div class="card-h">
+        <i data-lucide="chart-column"></i>
+        <span class="card-title">Daily Spend</span>
+        <span class="card-badge" id="timelineBadge">Last 14 days</span>
+      </div>
+      <div class="card-body">
+        <div class="timeline" id="timeline"></div>
+        <div class="tl-labels" id="tlLabels"></div>
+      </div>
+    </div>
+
+    <div class="grid g2">
+      <div class="card">
+        <div class="card-h">
+          <i data-lucide="cpu"></i>
+          <span class="card-title">By Model</span>
+          <span class="card-badge" id="byModelBadge">—</span>
+        </div>
+        <div class="card-body flush" style="max-height:320px;overflow:auto">
+          <table class="tbl" id="byModelTable">
+            <thead>
+              <tr><th>Model</th><th style="text-align:right">Calls</th><th style="text-align:right">Tokens</th><th style="text-align:right">Cost</th></tr>
+            </thead>
+            <tbody><tr><td colspan="4" class="empty">No data</td></tr></tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-h">
+          <i data-lucide="tag"></i>
+          <span class="card-title">By Role</span>
+          <span class="card-badge" id="byRoleBadge">—</span>
+        </div>
+        <div class="card-body flush" style="max-height:320px;overflow:auto">
+          <table class="tbl" id="byRoleTable">
+            <thead>
+              <tr><th>Role</th><th style="text-align:right">Calls</th><th style="text-align:right">Tokens</th><th style="text-align:right">Cost</th></tr>
+            </thead>
+            <tbody><tr><td colspan="4" class="empty">No data</td></tr></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <div class="card" style="margin-top:12px">
+      <div class="card-h">
+        <i data-lucide="history"></i>
+        <span class="card-title">Recent Calls</span>
+        <span class="card-badge" id="recentCallsBadge">—</span>
+      </div>
+      <div class="card-body flush" style="max-height:400px;overflow:auto">
+        <table class="tbl" id="recentCallsTable">
+          <thead>
+            <tr><th>Time</th><th>Item</th><th>Role</th><th>Model</th><th style="text-align:right">Tokens</th><th style="text-align:right">Cost</th></tr>
+          </thead>
+          <tbody id="recentCallsBody">
+            <tr><td colspan="6" class="empty">No calls yet</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ TAB: PROVIDER ═══ -->
+  <section class="tab-panel" id="tab-provider">
+
+    <div class="kpis" style="grid-template-columns:repeat(5,1fr)">
+      <div class="kpi">
+        <div class="kpi-h"><i data-lucide="dollar-sign"></i>Total</div>
+        <div class="kpi-v" id="pTotal">—</div>
+        <div class="kpi-s" id="pTotalSub">—</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi-h"><i data-lucide="activity"></i>Calls</div>
+        <div class="kpi-v" id="pCalls">—</div>
+        <div class="kpi-s" id="pCallsSub">—</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi-h"><i data-lucide="calendar"></i>Range</div>
+        <div class="kpi-v" id="pRange" style="font-size:13px">—</div>
+        <div class="kpi-s" id="pRangeSub">—</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi-h"><i data-lucide="cpu"></i>Models</div>
+        <div class="kpi-v" id="pModels">—</div>
+        <div class="kpi-s" id="pModelsSub">—</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi-h"><i data-lucide="brain"></i>Reasoning</div>
+        <div class="kpi-v accent" id="pReasoningKpi">—</div>
+        <div class="kpi-s" id="pReasoningSub">—</div>
+      </div>
+    </div>
+
+    <div class="orch" style="margin-bottom:12px;gap:10px">
+      <i data-lucide="pie-chart" style="width:14px;height:14px;color:var(--text-3)"></i>
+      <span style="font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:0.7px;color:var(--text-3)">Cost split</span>
+      <span class="mono" style="font-size:10.5px;color:var(--text-4)">prompt</span>
+      <span class="mono" style="font-size:12px;color:var(--text)"><strong id="pCostPrompt">—</strong></span>
+      <span style="color:var(--text-4)">+</span>
+      <span class="mono" style="font-size:10.5px;color:var(--text-4)">completion</span>
+      <span class="mono" style="font-size:12px;color:var(--text)"><strong id="pCostCompletion">—</strong></span>
+      <span style="width:1px;height:14px;background:var(--border-2);margin:0 4px"></span>
+      <span class="mono" style="font-size:10.5px;color:var(--text-4)">reasoning</span>
+      <span class="mono" style="font-size:12px;color:var(--accent)"><strong id="pReasoning">—</strong></span>
+      <span class="mono" style="font-size:10.5px;color:var(--text-4)">tok</span>
+      <span style="color:var(--text-4)">·</span>
+      <span class="mono" style="font-size:10.5px;color:var(--text-4)">cached</span>
+      <span class="mono" style="font-size:12px;color:var(--text-2)"><strong id="pCached">—</strong></span>
+      <span class="mono" style="font-size:10.5px;color:var(--text-4)">tok</span>
+    </div>
+
+    <div class="card" style="margin-bottom:12px">
+      <div class="card-h">
+        <i data-lucide="chart-column"></i>
+        <span class="card-title">Provider Daily Spend</span>
+        <span class="card-badge" id="pTimelineBadge">—</span>
+      </div>
+      <div class="card-body">
+        <div class="timeline" id="pTimeline"></div>
+        <div class="tl-labels" id="pTimelineLabels"></div>
+      </div>
+    </div>
+
+    <div class="grid g2">
+      <div class="card">
+        <div class="card-h">
+          <i data-lucide="cpu"></i>
+          <span class="card-title">By Model</span>
+          <span class="card-badge" id="pByModelBadge">—</span>
+        </div>
+        <div class="card-body flush" style="max-height:420px;overflow:auto">
+          <table class="tbl" id="pByModelTable">
+            <thead><tr>
+              <th>Model</th>
+              <th style="text-align:right">Calls</th>
+              <th style="text-align:right">Tokens</th>
+              <th style="text-align:right">Reasoning</th>
+              <th style="text-align:right">Cost</th>
+            </tr></thead>
+            <tbody><tr><td colspan="5" class="empty">Loading…</td></tr></tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-h">
+          <i data-lucide="calendar-days"></i>
+          <span class="card-title">By Day</span>
+          <span class="card-badge" id="pByDayBadge">—</span>
+        </div>
+        <div class="card-body flush" style="max-height:420px;overflow:auto">
+          <table class="tbl" id="pByDayTable">
+            <thead><tr>
+              <th>Day</th>
+              <th style="text-align:right">Calls</th>
+              <th style="text-align:right">Tokens</th>
+              <th style="text-align:right">Reasoning</th>
+              <th style="text-align:right">Cost</th>
+            </tr></thead>
+            <tbody><tr><td colspan="5" class="empty">Loading…</td></tr></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <div class="card" style="margin-top:12px">
+      <div class="card-h">
+        <i data-lucide="tag"></i>
+        <span class="card-title">By Role (live pipeline)</span>
+        <span class="card-badge" id="pByRoleBadge">—</span>
+      </div>
+      <div class="card-body flush" style="max-height:280px;overflow:auto">
+        <table class="tbl" id="pByRoleTable">
+          <thead><tr>
+            <th>Role</th>
+            <th style="text-align:right">Calls</th>
+            <th style="text-align:right">Tokens</th>
+            <th style="text-align:right">Reasoning</th>
+            <th style="text-align:right">Cost</th>
+          </tr></thead>
+          <tbody><tr><td colspan="5" class="empty">Loading…</td></tr></tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ TAB: LOGS ═══ -->
+  <section class="tab-panel" id="tab-logs">
+    <div class="filter-bar">
+      <div class="input-wrap" style="position:relative;flex:1;max-width:340px">
+        <input type="text" class="input mono" id="logSearch" placeholder="Filter log…">
+      </div>
+      <div class="chips" id="logChips">
+        <button class="chip active" data-lv="all">All</button>
+        <button class="chip" data-lv="INFO">Info</button>
+        <button class="chip" data-lv="WARNING">Warning</button>
+        <button class="chip" data-lv="ERROR">Error</button>
+        <button class="chip" data-lv="DEBUG">Debug</button>
+      </div>
+      <label style="display:flex;align-items:center;gap:6px;font-size:11px;color:var(--text-3);cursor:pointer;">
+        <input type="checkbox" id="logFollow" checked>
+        Follow tail
+      </label>
+      <span style="margin-left:auto;font-size:11px;color:var(--text-3);font-family:'JetBrains Mono',monospace;" id="logCount">—</span>
+    </div>
+
+    <div class="card">
+      <div class="card-body flush">
+        <div class="log-full" id="logFull">
+          <div class="empty" style="padding:20px">Loading…</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ TAB: TOOLS ═══ -->
+  <section class="tab-panel" id="tab-tools">
+    <div id="toolResults"></div>
+
+    <div class="tools-groups">
+
+      <div class="tools-group">
+        <div class="tools-group-h">
+          <i data-lucide="git-branch"></i>
+          <span>Pipeline</span>
+        </div>
+        <div class="tools-list">
+          <div class="tool-item" onclick="onTool(this, 'scan-queue')">
+            <div class="tool-icon"><i data-lucide="search"></i></div>
+            <div class="tool-info">
+              <div class="tool-name">Scan Queue <span class="tool-cost free">Free</span></div>
+              <div class="tool-desc">Re-scan index.html → queue.jsonl. Finds new topics.</div>
+            </div>
+          </div>
+          <div class="tool-item" onclick="onTool(this, 'pipeline-stats')">
+            <div class="tool-icon"><i data-lucide="bar-chart-3"></i></div>
+            <div class="tool-info">
+              <div class="tool-name">Stats <span class="tool-cost free">Free</span></div>
+              <div class="tool-desc">Full stats: queue, done, error, budget, cost.</div>
+            </div>
+          </div>
+          <div class="tool-item" onclick="onTool(this, 'pipeline-report')">
+            <div class="tool-icon"><i data-lucide="file-text"></i></div>
+            <div class="tool-info">
+              <div class="tool-name">Report <span class="tool-cost free">Free</span></div>
+              <div class="tool-desc">Article-by-article report with scores.</div>
+            </div>
+          </div>
+          <div class="tool-item" onclick="onTool(this, 'rebuild-index')">
+            <div class="tool-icon"><i data-lucide="refresh-cw"></i></div>
+            <div class="tool-info">
+              <div class="tool-name">Rebuild Index <span class="tool-cost free">Free</span></div>
+              <div class="tool-desc">integrate.py — rewrite index.html with articles.</div>
+            </div>
+          </div>
+          <div class="tool-item" onclick="onRefreshCosts(this)">
+            <div class="tool-icon"><i data-lucide="dollar-sign"></i></div>
+            <div class="tool-info">
+              <div class="tool-name">Refresh Costs <span class="tool-cost free">Free</span></div>
+              <div class="tool-desc">cost_aggregate.py — rebuild combined.json from ledger + historical.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tools-group">
+        <div class="tools-group-h">
+          <i data-lucide="database"></i>
+          <span>Chunker</span>
+        </div>
+        <div class="tools-list">
+          <div class="tool-item" onclick="onTool(this, 'chunker-audit')">
+            <div class="tool-icon"><i data-lucide="scan-line"></i></div>
+            <div class="tool-info">
+              <div class="tool-name">Audit <span class="tool-cost free">Free</span></div>
+              <div class="tool-desc">Quality audit per PDF: pages, chars, problems.</div>
+            </div>
+          </div>
+          <div class="tool-item" onclick="onTool(this, 'chunker-stats')">
+            <div class="tool-icon"><i data-lucide="bar-chart-3"></i></div>
+            <div class="tool-info">
+              <div class="tool-name">Stats <span class="tool-cost free">Free</span></div>
+              <div class="tool-desc">Per-phase stats: extracted / merged / classified.</div>
+            </div>
+          </div>
+          <div class="tool-item" onclick="onTool(this, 'chunker-merge')">
+            <div class="tool-icon"><i data-lucide="git-merge"></i></div>
+            <div class="tool-info">
+              <div class="tool-name">Merge <span class="tool-cost free">Free</span></div>
+              <div class="tool-desc">Combine probs + sol pairs into merged files.</div>
+            </div>
+          </div>
+          <div class="tool-item" onclick="onTool(this, 'chunker-aggregate')">
+            <div class="tool-icon"><i data-lucide="layers"></i></div>
+            <div class="tool-info">
+              <div class="tool-name">Aggregate <span class="tool-cost free">Free</span></div>
+              <div class="tool-desc">Group classified problems → anchors per point.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tools-group">
+        <div class="tools-group-h">
+          <i data-lucide="sparkles"></i>
+          <span>Chunker · Paid</span>
+        </div>
+        <div class="tools-list">
+          <div class="tool-item" onclick="onChunkerExtract(this)">
+            <div class="tool-icon"><i data-lucide="download"></i></div>
+            <div class="tool-info">
+              <div class="tool-name">Extract <span class="tool-cost paid">API</span></div>
+              <div class="tool-desc">Extract problems from PDFs (~$0.02–0.05/PDF).</div>
+            </div>
+          </div>
+          <div class="tool-item" onclick="onChunkerClassify(this)">
+            <div class="tool-icon"><i data-lucide="brain-circuit"></i></div>
+            <div class="tool-info">
+              <div class="tool-name">Classify <span class="tool-cost paid">API</span></div>
+              <div class="tool-desc">Classify problems → STEPS points.</div>
+            </div>
+          </div>
+          <div class="tool-item" onclick="onFullRefresh(this)">
+            <div class="tool-icon"><i data-lucide="refresh-ccw"></i></div>
+            <div class="tool-info">
+              <div class="tool-name">Full Refresh <span class="tool-cost paid">API</span></div>
+              <div class="tool-desc">Chain: merge → classify → aggregate. No extract.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tools-group">
+        <div class="tools-group-h">
+          <i data-lucide="shield-check"></i>
+          <span>Maintenance</span>
+        </div>
+        <div class="tools-list">
+          <div class="tool-item" onclick="onPointToolFromTools(this, 'verify')">
+            <div class="tool-icon"><i data-lucide="shield-check"></i></div>
+            <div class="tool-info">
+              <div class="tool-name">Verify <span class="tool-cost paid">~$0.08</span></div>
+              <div class="tool-desc">Re-run verifier on existing article (no regen).</div>
+            </div>
+          </div>
+          <div class="tool-item" onclick="onPointToolFromTools(this, 'recover')">
+            <div class="tool-icon"><i data-lucide="rotate-ccw"></i></div>
+            <div class="tool-info">
+              <div class="tool-name">Recover <span class="tool-cost free">Free</span></div>
+              <div class="tool-desc">Restore article from temp backup after crash.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+<!-- TOAST -->
+<div class="toast" id="toast">
+  <i data-lucide="check-circle-2"></i>
+  <div class="toast-content">
+    <div class="toast-title" id="toastTitle"></div>
+    <div class="toast-text" id="toastText"></div>
+  </div>
+</div>
+
+<script>
+// ═══════════════════════════════════════════════════════════════
+// HELPERS
+// ═══════════════════════════════════════════════════════════════
+const $ = id => document.getElementById(id);
+
+function icons() {
+  if (window.lucide?.createIcons) {
+    try { window.lucide.createIcons(); } catch (e) {}
+  }
+}
+function esc(s) {
+  return String(s ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+}
+function money(n) { return '$' + (Number(n) || 0).toFixed(4); }
+function moneyShort(n) {
+  n = Number(n) || 0;
+  if (n === 0) return '$0';
+  if (n < 0.01) return '<$0.01';
+  if (n < 1) return '$' + n.toFixed(3);
+  return '$' + n.toFixed(2);
+}
+function bigNum(n) {
+  n = Number(n) || 0;
+  if (n >= 1e6) return (n/1e6).toFixed(2) + 'M';
+  if (n >= 1e3) return (n/1e3).toFixed(1) + 'K';
+  return String(n);
+}
+function uptime(s) {
+  const h = Math.floor(s/3600), m = Math.floor((s%3600)/60), sec = s%60;
+  if (h) return `${h}h ${m}m`;
+  if (m) return `${m}m ${sec}s`;
+  return `${sec}s`;
+}
+function timeAgo(ts) {
+  if (!ts) return '—';
+  const d = Date.now() - ts * 1000;
+  if (d < 60000) return Math.floor(d/1000) + 's';
+  if (d < 3600000) return Math.floor(d/60000) + 'm';
+  if (d < 86400000) return Math.floor(d/3600000) + 'h';
+  return Math.floor(d/86400000) + 'd';
+}
+
+// Универсален helper: приема ISO низ, Unix секунди или Unix милисекунди → 'YYYY-MM-DD'
+function tsDay(ts) {
+  if (!ts) return '';
+  if (typeof ts === 'string') {
+    if (/^\d{4}-\d{2}-\d{2}/.test(ts)) return ts.slice(0, 10);
+    const n = Number(ts);
+    if (!isNaN(n)) ts = n;
+    else return '';
+  }
+  if (typeof ts === 'number') {
+    // Unix epoch: ако е < 10^11, вероятно секунди; иначе милисекунди
+    const ms = ts < 1e11 ? ts * 1000 : ts;
+    try { return new Date(ms).toISOString().slice(0, 10); } catch (e) { return ''; }
+  }
+  return '';
+}
+
+// ─── TOAST ───
+let _toastTimer = null;
+function toast(title, text = '', isError = false, duration = 5000) {
+  const el = $('toast');
+  $('toastTitle').textContent = title;
+  $('toastText').textContent = text || '';
+  el.classList.toggle('error', isError);
+  el.querySelector('svg')?.remove();
+  const icon = document.createElement('i');
+  icon.setAttribute('data-lucide', isError ? 'alert-circle' : 'check-circle-2');
+  el.insertBefore(icon, el.firstChild);
+  icons();
+  el.classList.add('show');
+  clearTimeout(_toastTimer);
+  _toastTimer = setTimeout(() => el.classList.remove('show'), duration);
+}
+
+// ─── BUTTON LOADING ───
+async function withLoading(el, label, fn) {
+  const btn = el?.closest?.('.btn') || (el?.tagName === 'BUTTON' ? el : null);
+  if (!btn) { await fn(); return; }
+  const orig = btn.innerHTML;
+  btn.classList.add('loading');
+  btn.disabled = true;
+  btn.innerHTML = `<i data-lucide="loader-2"></i> ${label}`;
+  icons();
+  try { await fn(); }
+  finally {
+    btn.classList.remove('loading');
+    btn.disabled = false;
+    btn.innerHTML = orig;
+    icons();
+  }
+}
+
+// ═══════════════════════════════════════════════════════════════
+// STATE
+// ═══════════════════════════════════════════════════════════════
+const S = {
+  running: false,
+  uptimeBase: null,
+  articles: [],
+  costs: [],
+  providerCosts: [],
+  queue: { pending: [], total: 0 },
+  state: null,
+  log: [],
+  // articles tab
+  artSearch: '',
+  artVerdict: 'all',
+  artSort: { key: 'ts', desc: true },
+  // log tab
+  logSearch: '',
+  logLevel: 'all',
+  logFollow: true,
+};
+
+// ═══════════════════════════════════════════════════════════════
+// TAB SWITCHING
+// ═══════════════════════════════════════════════════════════════
+document.querySelectorAll('.tab').forEach(tab => {
+  tab.addEventListener('click', () => {
+    document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+    document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+    tab.classList.add('active');
+    $('tab-' + tab.dataset.tab).classList.add('active');
+    // Refresh data for the tab
+    if (tab.dataset.tab === 'articles') renderArticlesTab();
+    if (tab.dataset.tab === 'costs') renderCostsTab();
+    if (tab.dataset.tab === 'logs') renderLogsTab();
+    icons();
+  });
+});
+
+// ═══════════════════════════════════════════════════════════════
+// FETCHERS
+// ═══════════════════════════════════════════════════════════════
+async function fetchAll() {
+  await Promise.all([fetchState(), fetchQueue(), fetchCostsAll(), fetchOrch()]);
+  renderOverview();
+  if (document.querySelector('.tab[data-tab="articles"]').classList.contains('active')) renderArticlesTab();
+  if (document.querySelector('.tab[data-tab="costs"]').classList.contains('active')) renderCostsTab();
+}
+
+async function fetchState() {
+  try {
+    S.state = await fetch('/api/state').then(r => r.json());
+  } catch (e) { console.error('state', e); }
+}
+
+async function fetchQueue() {
+  try {
+    S.queue = await fetch('/api/queue').then(r => r.json());
+  } catch (e) { console.error('queue', e); }
+}
+
+async function fetchCostsAll() {
+  try {
+    S.costs = await fetch('/api/costs/all').then(r => r.json());
+  } catch (e) {
+    // Fallback to recent
+    try {
+      S.costs = await fetch('/api/costs/recent?n=500').then(r => r.json());
+    } catch (e2) { S.costs = []; }
+  }
+}
+
+async function fetchOrch() {
+  try {
+    const d = await fetch('/api/orchestrator/status').then(r => r.json());
+    S.running = d.running;
+    const st = $('status');
+    st.classList.remove('running', 'error');
+    if (d.running) {
+      st.classList.add('running');
+      $('statusText').textContent = 'Running';
+      $('btnStart').disabled = true;
+      $('btnStop').disabled = false;
+      $('mPid').textContent = d.pid;
+      $('mUptime').textContent = uptime(d.uptime_sec || 0);
+      S.uptimeBase = Date.now() - (d.uptime_sec || 0) * 1000;
+    } else {
+      $('statusText').textContent = 'Idle';
+      $('btnStart').disabled = false;
+      $('btnStop').disabled = true;
+      $('mPid').textContent = '—';
+      $('mUptime').textContent = '—';
+      S.uptimeBase = null;
+    }
+  } catch (e) {
+    $('status').classList.add('error');
+    $('statusText').textContent = 'Offline';
+  }
+}
+
+async function fetchArticles() {
+  try {
+    S.articles = await fetch('/api/articles').then(r => r.json());
+  } catch (e) { console.error('articles', e); }
+}
+
+async function fetchLog() {
+  try {
+    const d = await fetch('/api/logs/tail?lines=200').then(r => r.json());
+    S.log = d.lines || [];
+  } catch (e) { S.log = []; }
+}
+
+// ═══════════════════════════════════════════════════════════════
+// OVERVIEW RENDER
+// ═══════════════════════════════════════════════════════════════
+function renderOverview() {
+  if (!S.state) return;
+  const st = S.state.stats || {};
+  const todayKey = new Date().toISOString().slice(0, 10);
+
+  // ── Primary source: combined.json (историческо + live ledger) ──
+  const providerCombined = (S.providerCosts && !Array.isArray(S.providerCosts)) ? S.providerCosts : null;
+  const liveToday = providerCombined ? (providerCombined.by_day || {})[todayKey] : null;
+
+  // ── Fallback: /api/costs/all (pipeline state.json) — стар източник ──
+  const legacyToday = S.costs.filter(c => tsDay(c.ts) === todayKey);
+  const legacySpent = legacyToday.reduce((a, c) => a + (c.cost || 0), 0);
+
+  // ── Решение: ако live има данни → ползвай тях; иначе fallback ──
+  const todaySpent = (liveToday && liveToday.cost > 0) ? liveToday.cost : legacySpent;
+  const todayCalls = (liveToday && liveToday.calls > 0) ? liveToday.calls : legacyToday.length;
+
+  $('kDone').textContent = st.done || 0;
+  $('kDoneSub').textContent = `of ${S.queue.total || 0} · ${Math.round((st.done || 0) / Math.max(1, S.queue.total || 1) * 100)}%`;
+  $('kPending').textContent = S.queue.pending?.length || 0;
+  $('kPendingSub').textContent = 'in queue';
+  $('kErrors').textContent = st.error || 0;
+  $('kErrorsSub').textContent = st.error ? 'needs attention' : 'all clear';
+  $('kScore').textContent = st.scores?.avg || '—';
+  $('kScoreSub').textContent = st.scores?.max ? `${st.scores.min}–${st.scores.max} range` : 'no scores';
+  $('kSpent').textContent = money(todaySpent);
+  const pct = todaySpent / 3;
+  $('kSpent').className = 'kpi-v' + (pct >= 0.9 ? ' danger' : pct >= 0.75 ? ' warn' : '');
+
+  // Sub-line: разбивка (live → reasoning/cached, legacy → calls)
+  const parts = [`of $3.00`, `${todayCalls} calls`];
+  if (liveToday) {
+    if (liveToday.reasoning_tokens) parts.push(`${bigNum(liveToday.reasoning_tokens)} reasoning`);
+    if (liveToday.cached_tokens)    parts.push(`${bigNum(liveToday.cached_tokens)} cached`);
+    const src = (legacySpent > 0 && Math.abs(legacySpent - todaySpent) > 0.005)
+      ? ' (live)' : '';
+    $('kSpentSub').textContent = parts.join(' · ') + src;
+  } else {
+    $('kSpentSub').textContent = parts.join(' · ') + (legacySpent > 0 ? '' : ' · ledger stale');
+  }
+
+  // Score distribution
+  const dist = st.scores?.distribution || {};
+  const keys = Object.keys(dist).map(Number).sort((a, b) => b - a);
+  if (!keys.length) {
+    $('distBody').innerHTML = '<div class="empty"><i data-lucide="bar-chart-2"></i>No scores yet</div>';
+    $('distBadge').textContent = '—';
+  } else {
+    const max = Math.max(...Object.values(dist));
+    const tot = Object.values(dist).reduce((a, b) => a + b, 0);
+    $('distBody').innerHTML = keys.map(sc => {
+      const c = dist[sc];
+      const w = Math.round(c / max * 100);
+      const cls = sc >= 8 ? 'hi' : sc >= 6 ? 'mid' : sc >= 4 ? 'lo' : 'bad';
+      return `<div class="dist-item">
+        <span class="dist-label">${sc}/10</span>
+        <div class="dist-track"><div class="dist-fill ${cls}" style="width:${w}%"></div></div>
+        <span class="dist-count">${c}</span>
+      </div>`;
+    }).join('');
+    $('distBadge').textContent = `${tot} total`;
+  }
+
+  // Recent articles (from articles list, but fetchArticles is called separately)
+  if (!S.articles || !S.articles.length) {
+    fetchArticles().then(() => renderRecentArticles());
+  } else {
+    renderRecentArticles();
+  }
+
+  // Queue preview
+  $('queueBadge').textContent = `${S.queue.pending?.length || 0}/${S.queue.total || 0}`;
+  if (!S.queue.pending?.length) {
+    $('queueTable').querySelector('tbody').innerHTML = '<tr><td colspan="3" class="empty"><i data-lucide="list"></i>Queue empty</td></tr>';
+  } else {
+    $('queueTable').querySelector('tbody').innerHTML = S.queue.pending.slice(0, 10).map(p =>
+      `<tr>
+        <td class="mono">${esc(p.id)}</td>
+        <td class="text">${esc((p.title || '').slice(0, 50))}</td>
+        <td style="text-align:right"><a class="row-action" href="/article/${esc(p.id)}" target="_blank"><i data-lucide="arrow-up-right"></i></a></td>
+      </tr>`
+    ).join('');
+  }
+
+  // Tab badge
+  $('tabArticlesBadge').textContent = st.done || 0;
+  icons();
+}
+
+function renderRecentArticles() {
+  const recent = [...S.articles]
+    .filter(a => a.status === 'done')
+    .sort((a, b) => (b.ts || 0) - (a.ts || 0))
+    .slice(0, 10);
+  $('recentBadge').textContent = `${S.articles.filter(a => a.status === 'done').length} total`;
+  if (!recent.length) {
+    $('recentTable').querySelector('tbody').innerHTML = '<tr><td colspan="5" class="empty"><i data-lucide="file-text"></i>No articles yet</td></tr>';
+  } else {
+    $('recentTable').querySelector('tbody').innerHTML = recent.map(a => {
+      const sc = a.score;
+      const cls = sc == null ? 's0' : sc >= 8 ? 's8' : sc >= 6 ? 's6' : sc >= 4 ? 's4' : 's0';
+      return `<tr>
+        <td class="mono">${esc(a.id)}</td>
+        <td class="text">${esc((a.title || '').slice(0, 50))}</td>
+        <td><span class="score-pill ${cls}">${sc ?? '—'}</span></td>
+        <td class="mono">${a.word_count || '—'}</td>
+        <td style="text-align:right"><a class="row-action" href="/article/${esc(a.id)}" target="_blank"><i data-lucide="arrow-up-right"></i></a></td>
+      </tr>`;
+    }).join('');
+  }
+}
+
+// ═══════════════════════════════════════════════════════════════
+// ARTICLES TAB RENDER
+// ═══════════════════════════════════════════════════════════════
+function renderArticlesTab() {
+  if (!S.articles.length) {
+    fetchArticles().then(renderArticlesTab);
+    return;
+  }
+  const q = S.artSearch.toLowerCase().trim();
+  const filter = S.artVerdict;
+
+  const counts = {
+    all: S.articles.length,
+    approve: S.articles.filter(a => a.verdict === 'approve').length,
+    revise: S.articles.filter(a => a.verdict === 'revise').length,
+    reject: S.articles.filter(a => a.verdict === 'reject').length,
+    error: S.articles.filter(a => a.status === 'error').length,
+  };
+  Object.entries(counts).forEach(([k, v]) => {
+    const el = document.querySelector(`[data-count="${k}"]`);
+    if (el) el.textContent = v;
+  });
+
+  let filtered = S.articles.filter(a => {
+    if (filter === 'approve' && a.verdict !== 'approve') return false;
+    if (filter === 'revise' && a.verdict !== 'revise') return false;
+    if (filter === 'reject' && a.verdict !== 'reject') return false;
+    if (filter === 'error' && a.status !== 'error') return false;
+    if (q) {
+      const hay = ((a.id || '') + ' ' + (a.title || '')).toLowerCase();
+      if (!hay.includes(q)) return false;
+    }
+    return true;
+  });
+
+  const { key, desc } = S.artSort;
+  filtered.sort((a, b) => {
+    let av = a[key], bv = b[key];
+    if (key === 'ts') { av = av || 0; bv = bv || 0; }
+    if (av == null) av = -Infinity;
+    if (bv == null) bv = -Infinity;
+    if (av < bv) return desc ? 1 : -1;
+    if (av > bv) return desc ? -1 : 1;
+    return 0;
+  });
+
+  // Sort indicators
+  document.querySelectorAll('.sort-ind').forEach(el => el.textContent = '');
+  const ind = document.querySelector(`[data-ind="${key}"]`);
+  if (ind) ind.textContent = desc ? '↓' : '↑';
+
+  $('artCount').textContent = `${filtered.length} of ${S.articles.length}`;
+
+  const tb = $('artBody');
+  if (!filtered.length) {
+    tb.innerHTML = '<tr><td colspan="9" class="empty"><i data-lucide="file-text"></i>No matching articles</td></tr>';
+    icons();
+    return;
+  }
+  tb.innerHTML = filtered.map(a => {
+    const sc = a.score;
+    const scCls = sc == null ? 's0' : sc >= 8 ? 's8' : sc >= 6 ? 's6' : sc >= 4 ? 's4' : 's0';
+    const v = a.verdict || a.status || '—';
+    return `<tr data-id="${esc(a.id)}">
+      <td class="mono">${esc(a.id)}</td>
+      <td class="text" title="${esc(a.title || '')}">${esc((a.title || '').slice(0, 55))}</td>
+      <td style="text-align:right"><span class="score-pill ${scCls}">${sc ?? '—'}</span></td>
+      <td><span class="verdict-pill ${v === 'error' ? 'error' : v}">${v}</span></td>
+      <td class="mono" style="text-align:right">${a.word_count || '—'}</td>
+      <td class="mono" style="text-align:right">${a.attempts || '—'}</td>
+      <td class="mono" style="text-align:right">${a.cost ? moneyShort(a.cost) : '—'}</td>
+      <td class="mono" style="text-align:right">${timeAgo(a.ts)}</td>
+      <td>
+        <div class="row-actions">
+          <a class="row-action primary" href="/article/${esc(a.id)}" target="_blank" title="Open"><i data-lucide="arrow-up-right"></i></a>
+          <button class="row-action" title="Verify" onclick="quickVerify('${esc(a.id)}', this)"><i data-lucide="shield-check"></i></button>
+          <button class="row-action danger" title="Reset" onclick="quickReset('${esc(a.id)}', this)"><i data-lucide="rotate-ccw"></i></button>
+        </div>
+      </td>
+    </tr>`;
+  }).join('');
+  icons();
+}
+
+// ═══════════════════════════════════════════════════════════════
+// PROVIDER TAB — fetch + render (combined.json от cost_aggregate.py)
+// ═══════════════════════════════════════════════════════════════
+async function fetchProviderCosts(force = false) {
+  if (!force && S.providerCosts && !Array.isArray(S.providerCosts) && Object.keys(S.providerCosts).length) {
+    return;
+  }
+  const tryUrls = ['/api/costs/combined', '/generated/costs/combined.json', '/combined.json'];
+  for (const url of tryUrls) {
+    try {
+      const r = await fetch(url);
+      if (!r.ok) continue;
+      const d = await r.json();
+      if (d && typeof d === 'object' && !Array.isArray(d)) {
+        S.providerCosts = d;
+        return;
+      }
+    } catch (e) { /* next url */ }
+  }
+  if (!S.providerCosts || Array.isArray(S.providerCosts)) {
+    S.providerCosts = {};
+  }
+}
+
+function renderProviderTab() {
+  const data = (S.providerCosts && !Array.isArray(S.providerCosts)) ? S.providerCosts : {};
+  const byModel = data.by_model || {};
+  const byDay   = data.by_day   || {};
+  const byRole  = data.by_role  || {};
+  const totals  = data.totals   || {};
+  const sources = data.sources  || {historical: 0, live: 0, combined: 0};
+
+  const modelEntries = Object.entries(byModel);
+  const dayEntries   = Object.entries(byDay).sort();
+  const roleEntries  = Object.entries(byRole);
+  const dayKeys      = dayEntries.map(e => e[0]);
+
+  // ── KPIs ──
+  $('pTotal').textContent = money(totals.cost || 0);
+  $('pTotalSub').textContent = `${sources.historical || 0} hist · ${sources.live || 0} live`;
+  $('pCalls').textContent = bigNum(totals.calls || 0);
+  $('pCallsSub').textContent = `${modelEntries.length} models`;
+  $('pRange').textContent = dayKeys.length ? `${dayKeys[0]} → ${dayKeys[dayKeys.length-1]}` : '—';
+  $('pRangeSub').textContent = `${dayKeys.length} days`;
+  $('pModels').textContent = modelEntries.length;
+  $('pModelsSub').textContent = moneyShort(totals.cost || 0);
+  $('pReasoningKpi').textContent = bigNum(totals.reasoning_tokens || 0);
+  $('pReasoningSub').textContent = (totals.tokens || 0) > 0
+    ? `${((totals.reasoning_tokens || 0) / totals.tokens * 100).toFixed(1)}% of tokens`
+    : '—';
+
+  // ── Cost split strip ──
+  $('pCostPrompt').textContent = moneyShort(totals.cost_prompt || 0);
+  $('pCostCompletion').textContent = moneyShort(totals.cost_completion || 0);
+  $('pReasoning').textContent = bigNum(totals.reasoning_tokens || 0);
+  $('pCached').textContent = bigNum(totals.cached_tokens || 0);
+
+  // ── By model ──
+  $('pByModelBadge').textContent = moneyShort(totals.cost || 0);
+  document.querySelector('#pByModelTable tbody').innerHTML = modelEntries.map(([m, s]) =>
+    `<tr><td class="mono">${esc(m)}</td>
+      <td class="mono" style="text-align:right">${s.calls}</td>
+      <td class="mono" style="text-align:right">${bigNum(s.tokens)}</td>
+      <td class="mono" style="text-align:right;color:var(--accent)">${s.reasoning_tokens ? bigNum(s.reasoning_tokens) : '—'}</td>
+      <td class="mono" style="text-align:right">${moneyShort(s.cost)}</td>
+    </tr>`).join('') || '<tr><td colspan="5" class="empty">No data</td></tr>';
+
+  // ── By day ──
+  $('pByDayBadge').textContent = `${dayKeys.length} days`;
+  document.querySelector('#pByDayTable tbody').innerHTML = [...dayEntries].reverse().map(([d, s]) =>
+    `<tr><td class="mono">${esc(d)}</td>
+      <td class="mono" style="text-align:right">${s.calls}</td>
+      <td class="mono" style="text-align:right">${bigNum(s.tokens)}</td>
+      <td class="mono" style="text-align:right;color:var(--accent)">${s.reasoning_tokens ? bigNum(s.reasoning_tokens) : '—'}</td>
+      <td class="mono" style="text-align:right">${moneyShort(s.cost)}</td>
+    </tr>`).join('') || '<tr><td colspan="5" class="empty">No data</td></tr>';
+
+  // ── By role ──
+  if ($('pByRoleTable')) {
+    $('pByRoleBadge').textContent = roleEntries.length;
+    document.querySelector('#pByRoleTable tbody').innerHTML = roleEntries.map(([r, s]) =>
+      `<tr><td class="text">${esc(r)}</td>
+        <td class="mono" style="text-align:right">${s.calls}</td>
+        <td class="mono" style="text-align:right">${bigNum(s.tokens)}</td>
+        <td class="mono" style="text-align:right;color:var(--accent)">${s.reasoning_tokens ? bigNum(s.reasoning_tokens) : '—'}</td>
+        <td class="mono" style="text-align:right">${moneyShort(s.cost)}</td>
+      </tr>`).join('') || '<tr><td colspan="5" class="empty">No data</td></tr>';
+  }
+
+  // ── Timeline ──
+  const maxCost = Math.max(...dayEntries.map(e => e[1].cost), 0.001);
+  $('pTimeline').innerHTML = dayEntries.map(([d, s]) => {
+    const h = Math.max(2, Math.round((s.cost / maxCost) * 100));
+    const rs = s.reasoning_tokens ? ` · ${bigNum(s.reasoning_tokens)} reasoning` : '';
+    return `<div class="tl-bar" style="height:${h}%" title="${d}: ${money(s.cost)}${rs}"></div>`;
+  }).join('');
+  $('pTimelineLabels').innerHTML = dayEntries.map(e => `<span>${e[0].slice(5)}</span>`).join('');
+  $('pTimelineBadge').textContent = `${dayKeys.length} days · ${moneyShort(totals.cost || 0)}`;
+  icons();
+}
+
+// ═══════════════════════════════════════════════════════════════
+// COSTS TAB RENDER
+// ═══════════════════════════════════════════════════════════════
+function renderCostsTab() {
+  const now = new Date();
+  const today = now.toISOString().slice(0, 10);
+  const weekAgo = new Date(now.getTime() - 7 * 86400000).toISOString().slice(0, 10);
+
+  // ── Източник 1: combined.json (preferred — granular, с reasoning) ──
+  const combined = (S.providerCosts && !Array.isArray(S.providerCosts)) ? S.providerCosts : null;
+  const cByDay   = combined ? (combined.by_day   || {}) : {};
+  const cByModel = combined ? (combined.by_model || {}) : {};
+  const cByRole  = combined ? (combined.by_role  || {}) : {};
+  const cTotals  = combined ? (combined.totals   || {}) : {};
+
+  // ── Източник 2: legacy state.json (per-article) — fallback ──
+  const legacyByDay = {};
+  S.costs.forEach(c => {
+    const d = tsDay(c.ts);
+    if (!d) return;
+    if (!legacyByDay[d]) legacyByDay[d] = { calls: 0, tokens: 0, cost: 0 };
+    legacyByDay[d].calls++;
+    legacyByDay[d].tokens += c.tokens || 0;
+    legacyByDay[d].cost   += c.cost   || 0;
+  });
+
+  const hasCombined = Object.keys(cByDay).length > 0;
+  const hasLegacy   = Object.keys(legacyByDay).length > 0;
+
+  if (!hasCombined && !hasLegacy) {
+    $('cToday').textContent = '$0';
+    $('cTodaySub').textContent = '0 calls · ledger stale';
+    $('cWeek').textContent = '$0';
+    $('cWeekSub').textContent = '0 calls';
+    $('cAll').textContent = '$0';
+    $('cAllSub').textContent = '0 calls';
+    $('byModelTable').querySelector('tbody').innerHTML = '<tr><td colspan="4" class="empty">No data — run cost_aggregate.py</td></tr>';
+    $('byRoleTable').querySelector('tbody').innerHTML = '<tr><td colspan="4" class="empty">No data</td></tr>';
+    $('recentCallsBody').innerHTML = '<tr><td colspan="6" class="empty">No calls yet</td></tr>';
+    return;
+  }
+
+  // Обединяваме by_day: ако денят го има в combined → ползваме него; иначе legacy
+  const daySet = new Set([...Object.keys(cByDay), ...Object.keys(legacyByDay)]);
+  const merged = {};
+  daySet.forEach(d => {
+    const c = cByDay[d] || null;
+    const l = legacyByDay[d] || null;
+    // Ако combined има по-голяма стойност (по-пълна) → ползваме нея; иначе legacy
+    if (c && c.cost >= (l?.cost || 0)) {
+      merged[d] = c;
+    } else if (l) {
+      merged[d] = l;
+    }
+  });
+
+  // KPIs
+  const todayEntry  = merged[today] || { calls: 0, tokens: 0, cost: 0 };
+  const weekTotal   = Object.entries(merged)
+    .filter(([d]) => d >= weekAgo)
+    .reduce((a, [_, v]) => ({ calls: a.calls + v.calls, tokens: a.tokens + v.tokens, cost: a.cost + v.cost }),
+            { calls: 0, tokens: 0, cost: 0 });
+  const allTotal    = Object.values(merged).reduce(
+    (a, v) => ({ calls: a.calls + v.calls, tokens: a.tokens + v.tokens, cost: a.cost + v.cost }),
+    { calls: 0, tokens: 0, cost: 0 }
+  );
+
+  $('cToday').textContent = moneyShort(todayEntry.cost);
+  $('cTodaySub').textContent = `${todayEntry.calls} calls${todayEntry.reasoning_tokens ? ` · ${bigNum(todayEntry.reasoning_tokens)} reasoning` : ''}`;
+  $('cWeek').textContent = moneyShort(weekTotal.cost);
+  $('cWeekSub').textContent = `${weekTotal.calls} calls`;
+  $('cAll').textContent = moneyShort(allTotal.cost);
+  $('cAllSub').textContent = `${allTotal.calls} calls${cTotals.reasoning_tokens ? ` · ${bigNum(cTotals.reasoning_tokens)} reasoning` : ''}`;
+
+  // Timeline (14 дни)
+  const days = {};
+  for (let i = 13; i >= 0; i--) {
+    const d = new Date(now.getTime() - i * 86400000);
+    days[d.toISOString().slice(0, 10)] = 0;
+  }
+  Object.entries(merged).forEach(([d, v]) => {
+    if (days[d] !== undefined) days[d] = v.cost;
+  });
+  const maxCost = Math.max(...Object.values(days), 0.001);
+  $('timeline').innerHTML = Object.entries(days).map(([d, v]) => {
+    const h = Math.max(2, Math.round((v / maxCost) * 100));
+    const cls = v === 0 ? 'zero' : d === today ? 'today' : '';
+    return `<div class="tl-bar ${cls}" style="height:${h}%" title="${d}: ${money(v)}"></div>`;
+  }).join('');
+  $('tlLabels').innerHTML = Object.keys(days).map(d => `<span>${d.split('-')[2]}</span>`).join('');
+  $('timelineBadge').textContent = `${Object.keys(days).length} days`;
+
+  // By model — обединяваме combined с legacy (групирано по модел)
+  const modelAgg = {};
+  Object.entries(cByModel).forEach(([m, s]) => {
+    modelAgg[m] = { ...s };
+  });
+  S.costs.forEach(c => {
+    const m = c.model || 'unknown';
+    if (!modelAgg[m]) modelAgg[m] = { calls: 0, tokens: 0, cost: 0, reasoning_tokens: 0 };
+    modelAgg[m].calls++;
+    modelAgg[m].tokens += c.tokens || 0;
+    modelAgg[m].cost   += c.cost   || 0;
+  });
+  const models = Object.entries(modelAgg).sort((a, b) => b[1].cost - a[1].cost);
+  $('byModelBadge').textContent = moneyShort(allTotal.cost);
+  $('byModelTable').querySelector('tbody').innerHTML = models.length
+    ? models.map(([m, s]) =>
+        `<tr>
+          <td class="mono">${esc(m.split('/').pop())}</td>
+          <td class="mono" style="text-align:right">${s.calls}</td>
+          <td class="mono" style="text-align:right">${bigNum(s.tokens)}</td>
+          <td class="mono" style="text-align:right">${moneyShort(s.cost)}</td>
+        </tr>`
+      ).join('')
+    : '<tr><td colspan="4" class="empty">No data</td></tr>';
+
+  // By role — само combined има role (legacy няма)
+  const roles = Object.entries(cByRole).sort((a, b) => b[1].cost - a[1].cost);
+  $('byRoleBadge').textContent = roles.length;
+  $('byRoleTable').querySelector('tbody').innerHTML = roles.length
+    ? roles.map(([r, s]) =>
+        `<tr>
+          <td class="text">${esc(r)}</td>
+          <td class="mono" style="text-align:right">${s.calls}</td>
+          <td class="mono" style="text-align:right">${bigNum(s.tokens)}</td>
+          <td class="mono" style="text-align:right">${moneyShort(s.cost)}</td>
+        </tr>`
+      ).join('')
+    : '<tr><td colspan="4" class="empty">No data — run cost_aggregate.py</td></tr>';
+
+  // Recent calls — само legacy (per-article). Combined няма per-call records в current format.
+  const recent = [...S.costs]
+    .sort((a, b) => (b.ts || 0) - (a.ts || 0))
+    .slice(0, 100);
+  $('recentCallsBadge').textContent = `${recent.length}`;
+  $('recentCallsBody').innerHTML = recent.length
+    ? recent.map(c => {
+        const d = tsDay(c.ts);
+        const t = typeof c.ts === 'number'
+          ? new Date(c.ts * 1000).toTimeString().slice(0, 8)
+          : (c.ts || '').slice(11, 19);
+        return `<tr>
+          <td class="mono">${esc(t)}</td>
+          <td class="mono">${esc(c.item || c.item_id || '—')}</td>
+          <td class="text">${esc(c.role || '—')}</td>
+          <td class="mono">${esc((c.model || '').split('/').pop())}</td>
+          <td class="mono" style="text-align:right">${bigNum(c.tokens || 0)}</td>
+          <td class="mono" style="text-align:right">${moneyShort(c.cost || 0)}</td>
+        </tr>`;
+      }).join('')
+    : '<tr><td colspan="6" class="empty">No per-call records (state.json has aggregates only)</td></tr>';
+}
+
+// ═══════════════════════════════════════════════════════════════
+// LOGS TAB RENDER
+// ═══════════════════════════════════════════════════════════════
+function renderLogsTab() {
+  const q = S.logSearch.toLowerCase();
+  const lv = S.logLevel;
+
+  const filtered = S.log.filter(line => {
+    if (lv !== 'all' && !line.includes(`[${lv}]`)) return false;
+    if (q && !line.toLowerCase().includes(q)) return false;
+    return true;
+  });
+
+  $('logCount').textContent = `${filtered.length} of ${S.log.length}`;
+
+  const el = $('logFull');
+  if (!filtered.length) {
+    el.innerHTML = '<div class="empty" style="padding:20px">No matching log lines</div>';
+    return;
+  }
+
+  const html = filtered.map(line => {
+    const m = line.match(/^(\d{4}-\d{2}-\d{2})\s+(\d{2}:\d{2}:\d{2}),\d+\s+\[(\w+)\]\s*(.*)$/s);
+    if (!m) return `<div class="log-row"><span class="log-m">${esc(line)}</span></div>`;
+    const [, , time, level, msg] = m;
+    return `<div class="log-row">
+      <span class="log-t">${time}</span>
+      <span class="log-lv ${level}">${level}</span>
+      <span class="log-m">${esc(msg)}</span>
+    </div>`;
+  }).join('');
+
+  const wasAtBottom = el.scrollHeight - el.scrollTop - el.clientHeight < 80;
+  el.innerHTML = html;
+  if (S.logFollow && wasAtBottom) el.scrollTop = el.scrollHeight;
+}
+
+// ═══════════════════════════════════════════════════════════════
+// OVERVIEW: ACTIVITY LOG
+// ═══════════════════════════════════════════════════════════════
+function renderActivity() {
+  const recent = S.log.slice(-30).reverse();
+  if (!recent.length) {
+    $('activityLog').innerHTML = '<div class="empty" style="padding:20px 0;font-size:11px">Waiting for log…</div>';
+    return;
+  }
+  $('activityBadge').textContent = `${recent.length} entries`;
+  $('activityLog').innerHTML = recent.map(line => {
+    const m = line.match(/^(\d{4}-\d{2}-\d{2})\s+(\d{2}:\d{2}:\d{2}),\d+\s+\[(\w+)\]\s*(.*)$/s);
+    if (!m) return `<div class="act-row"><span class="act-msg">${esc(line)}</span></div>`;
+    const [, , time, level, msg] = m;
+    return `<div class="act-row">
+      <span class="act-time">${time}</span>
+      <span class="act-lv ${level}">${level}</span>
+      <span class="act-msg">${esc(msg)}</span>
+    </div>`;
+  }).join('');
+}
+
+// ═══════════════════════════════════════════════════════════════
+// ACTIONS
+// ═══════════════════════════════════════════════════════════════
+async function onStart(btn) {
+  if (S.running) return;
+  if (!confirm('Start pipeline in 24/7 mode?\n\nUses daily budget ($3).')) return;
+  await withLoading(btn, 'Starting', async () => {
+    try {
+      const r = await fetch('/api/orchestrator/start', { method: 'POST' });
+      const d = await r.json();
+      if (r.ok) { toast('Started', `PID ${d.pid}`); await fetchOrch(); }
+      else toast('Start failed', d.error || 'Unknown', true);
+    } catch (e) { toast('Network error', e.message, true); }
+  });
+}
+
+async function onStop(btn) {
+  if (!S.running) return;
+  if (!confirm('Stop pipeline?\n\nCurrent article will finish first.')) return;
+  await withLoading(btn, 'Stopping', async () => {
+    try {
+      const r = await fetch('/api/orchestrator/stop', { method: 'POST' });
+      if (r.ok) { toast('Stopped'); await fetchOrch(); }
+      else { const d = await r.json(); toast('Stop failed', d.error || 'Unknown', true); }
+    } catch (e) { toast('Network error', e.message, true); }
+  });
+}
+
+async function onOnce(btn) {
+  const id = prompt('Process one point?\n\nEmpty = next in queue. Or type ID (e.g. 2.1):', '');
+  if (id === null) return;
+  await withLoading(btn, 'Running', async () => {
+    try {
+      const r = await fetch('/api/orchestrator/once', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ point_id: id.trim() || null }),
+      });
+      const d = await r.json();
+      if (d.status === 'completed') toast('Run Once · OK', (d.stdout || '').slice(-400));
+      else toast('Run Once · Failed', (d.stderr || d.stdout || '').slice(-400), true);
+      await fetchAll(); await fetchLog(); renderActivity();
+    } catch (e) { toast('Network error', e.message, true); }
+  });
+}
+
+async function onPointTool(btn, action) {
+  const id = $('pointInput').value.trim();
+  if (!id) { toast('Missing ID', 'Type e.g. 2.1', true); $('pointInput').focus(); return; }
+  await runPointAction(btn, action, id);
+}
+
+async function onPointToolFromTools(el, action) {
+  const id = prompt(`Point ID for ${action.toUpperCase()}:`, '');
+  if (!id) return;
+  await runPointAction(el, action, id.trim());
+}
+
+async function runPointAction(el, action, id) {
+  const isV = action === 'verify';
+  if (!confirm(`${action.toUpperCase()} ${id}${isV ? ' (~$0.08)' : ''}?`)) return;
+  await withLoading(el, isV ? 'Verifying' : 'Recovering', async () => {
+    try {
+      const r = await fetch(`/api/tools/${action}/${encodeURIComponent(id)}`, { method: 'POST' });
+      const d = await r.json();
+      if (d.status === 'completed') toast(`${action} ${id} · OK`, (d.stdout || '').slice(-400));
+      else toast(`${action} ${id} · Failed`, (d.stderr || d.stdout || d.error || '').slice(-400), true);
+      await fetchAll(); await fetchLog();
+    } catch (e) { toast('Network error', e.message, true); }
+  });
+}
+
+async function quickVerify(id, btn) {
+  await runPointAction(btn, 'verify', id);
+}
+
+async function quickReset(id, btn) {
+  if (!confirm(`Reset ${id}? It will be removed from state.json and re-generated next run.`)) return;
+  try {
+    const r = await fetch(`/api/orchestrator/reset/${encodeURIComponent(id)}`, { method: 'POST' });
+    if (r.ok) {
+      toast(`${id} reset`);
+      await fetchAll();
+    } else {
+      toast('Reset failed', 'Not found in state', true);
+    }
+  } catch (e) { toast('Network error', e.message, true); }
+}
+
+async function onTool(el, name) {
+  const resultContainer = $('toolResults');
+  await withLoading(el, 'Running', async () => {
+    try {
+      const r = await fetch(`/api/tools/${name}`, { method: 'POST' });
+      const d = await r.json();
+      showToolResult(resultContainer, name, d);
+      await fetchLog();
+    } catch (e) {
+      showToolResult(resultContainer, name, { status: 'error', error: e.message });
+    }
+  });
+}
+
+async function onChunkerExtract(el) {
+  const pdf = prompt('PDF pattern\n\nEmpty = all\n"NOM_2015" = one\n"BMO,NOM" = several\n\n:', '');
+  if (pdf === null) return;
+  const lim = prompt('Limit (max PDFs, empty = none):', '');
+  if (lim === null) return;
+  const force = confirm('Force extract? OK = force even if done.');
+  if (!confirm(`EXTRACT uses API credits.\n\nPattern: ${pdf || 'all'}\nLimit: ${lim || 'none'}\nForce: ${force ? 'yes' : 'no'}\n\nContinue?`)) return;
+  await withLoading(el, 'Extracting', async () => {
+    try {
+      const r = await fetch('/api/tools/chunker-extract', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ pdf: pdf.trim() || null, limit: lim ? parseInt(lim) : null, force }),
+      });
+      const d = await r.json();
+      showToolResult($('toolResults'), 'chunker-extract', d);
+      await fetchLog();
+    } catch (e) {
+      showToolResult($('toolResults'), 'chunker-extract', { status: 'error', error: e.message });
+    }
+  });
+}
+
+async function onChunkerClassify(el) {
+  const pdf = prompt('PDF pattern (empty = all):', '');
+  if (pdf === null) return;
+  const force = confirm('Force reclassify? OK = force.');
+  if (!confirm(`CLASSIFY uses API credits.\n\nPattern: ${pdf || 'all'}\nForce: ${force ? 'yes' : 'no'}\n\nContinue?`)) return;
+  await withLoading(el, 'Classifying', async () => {
+    try {
+      const r = await fetch('/api/tools/chunker-classify', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ pdf: pdf.trim() || null, force }),
+      });
+      const d = await r.json();
+      showToolResult($('toolResults'), 'chunker-classify', d);
+      await fetchLog();
+    } catch (e) {
+      showToolResult($('toolResults'), 'chunker-classify', { status: 'error', error: e.message });
+    }
+  });
+}
+
+async function onFullRefresh(el) {
+  if (!confirm('FULL REFRESH:\n\n1. merge\n2. classify (API cost)\n3. aggregate\n\nNo extract.\n\nContinue?')) return;
+  await withLoading(el, 'Refreshing', async () => {
+    try {
+      const r = await fetch('/api/tools/full-refresh', { method: 'POST' });
+      const d = await r.json();
+      const ok = d.status === 'completed';
+      const sum = (d.steps || []).map(s => `${s.name}: ${s.status}`).join('\n');
+      showToolResult($('toolResults'), 'full-refresh', {
+        status: ok ? 'completed' : 'failed',
+        stdout: sum,
+        returncode: ok ? 0 : 1,
+      });
+      await fetchAll(); await fetchLog();
+    } catch (e) {
+      showToolResult($('toolResults'), 'full-refresh', { status: 'error', error: e.message });
+    }
+  });
+}
+
+async function onRefreshCosts(el) {
+  await withLoading(el, 'Refreshing', async () => {
+    try {
+      // 1. Опитай server endpoint
+      const r = await fetch('/api/costs/refresh', { method: 'POST' });
+      let d = null;
+      if (r.ok) {
+        d = await r.json().catch(() => null);
+      }
+      // 2. Ако няма endpoint → просто re-fetch combined.json
+      if (!d || !r.ok) {
+        await fetchProviderCosts(true);
+        toast('Costs reloaded', 'combined.json re-fetched (no server refresh endpoint)');
+      } else {
+        toast('Costs refreshed', `${d.entries ?? '?'} entries · $${(d.total ?? 0).toFixed(4)}`);
+      }
+      // 3. Пре-рендерирай всички изгледи
+      renderOverview();
+      renderCostsTab();
+      renderProviderTab();
+    } catch (e) {
+      toast('Refresh failed', e.message, true);
+    }
+  });
+}
+
+function showToolResult(container, name, data) {
+  const ok = data.status === 'completed';
+  const cls = ok ? 'status-ok' : 'status-err';
+  const output = data.stdout || data.stderr || data.error || data.reason || '(no output)';
+  const html = `
+    <div class="tool-result" data-tool="${esc(name)}">
+      <div class="tool-result-h">
+        <i data-lucide="${ok ? 'check-circle-2' : 'alert-circle'}"></i>
+        <span class="${cls}"><strong>${esc(name)}</strong> — ${esc(data.status)}</span>
+        <button class="close-r" onclick="this.closest('.tool-result').remove()">
+          <i data-lucide="x"></i>
+        </button>
+      </div>
+      <div class="tool-result-b">${esc(output)}</div>
+    </div>
+  `;
+  container.insertAdjacentHTML('afterbegin', html);
+  icons();
+  toast(`${name} · ${data.status}`, ok ? '' : output.slice(0, 200), !ok);
+}
+
+// ═══════════════════════════════════════════════════════════════
+// EVENT WIRES
+// ═══════════════════════════════════════════════════════════════
+// Overview buttons
+$('btnStart').addEventListener('click', e => onStart(e.currentTarget));
+$('btnStop').addEventListener('click', e => onStop(e.currentTarget));
+$('btnOnce').addEventListener('click', e => onOnce(e.currentTarget));
+$('btnVerify').addEventListener('click', e => onPointTool(e.currentTarget, 'verify'));
+$('btnRecover').addEventListener('click', e => onPointTool(e.currentTarget, 'recover'));
+
+// Articles: search
+$('artSearch').addEventListener('input', e => {
+  S.artSearch = e.target.value;
+  renderArticlesTab();
+});
+
+// Articles: chips
+$('artChips').addEventListener('click', e => {
+  const chip = e.target.closest('.chip');
+  if (!chip) return;
+  document.querySelectorAll('#artChips .chip').forEach(c => c.classList.remove('active'));
+  chip.classList.add('active');
+  S.artVerdict = chip.dataset.verdict;
+  renderArticlesTab();
+});
+
+// Articles: sort headers
+document.querySelectorAll('#artTable th.sortable').forEach(th => {
+  th.addEventListener('click', () => {
+    const k = th.dataset.sort;
+    if (S.artSort.key === k) S.artSort.desc = !S.artSort.desc;
+    else { S.artSort.key = k; S.artSort.desc = true; }
+    renderArticlesTab();
+  });
+});
+
+// Logs: search
+$('logSearch').addEventListener('input', e => {
+  S.logSearch = e.target.value;
+  renderLogsTab();
+});
+
+// Logs: chips
+$('logChips').addEventListener('click', e => {
+  const chip = e.target.closest('.chip');
+  if (!chip) return;
+  document.querySelectorAll('#logChips .chip').forEach(c => c.classList.remove('active'));
+  chip.classList.add('active');
+  S.logLevel = chip.dataset.lv;
+  renderLogsTab();
+});
+
+// Logs: follow
+$('logFollow').addEventListener('change', e => {
+  S.logFollow = e.target.checked;
+  if (S.logFollow) {
+    const el = $('logFull');
+    el.scrollTop = el.scrollHeight;
+  }
+});
+
+// ═══════════════════════════════════════════════════════════════
+// POLLING
+// ═══════════════════════════════════════════════════════════════
+async function refreshLoop() {
+  await Promise.all([
+    fetchState(),
+    fetchQueue(),
+    fetchCostsAll(),
+    fetchOrch(),
+    fetchArticles(),
+    fetchProviderCosts(true),   // ← force refresh за live reasoning stats
+  ]);
+  renderOverview();
+  if (document.querySelector('.tab[data-tab="articles"]').classList.contains('active')) renderArticlesTab();
+  if (document.querySelector('.tab[data-tab="costs"]').classList.contains('active')) renderCostsTab();
+  if (document.querySelector('.tab[data-tab="provider"]').classList.contains('active')) renderProviderTab();
+}
+
+async function logLoop() {
+  await fetchLog();
+  renderActivity();
+  if (document.querySelector('.tab[data-tab="logs"]').classList.contains('active')) renderLogsTab();
+}
+
+// Live uptime
+setInterval(() => {
+  if (S.running && S.uptimeBase) {
+    $('mUptime').textContent = uptime(Math.floor((Date.now() - S.uptimeBase) / 1000));
+  }
+}, 1000);
+
+// ═══════════════════════════════════════════════════════════════
+// BOOT
+// ═══════════════════════════════════════════════════════════════
+function boot() {
+  if (!window.lucide) { setTimeout(boot, 100); return; }
+  icons();
+  refreshLoop();
+  logLoop();
+  setInterval(refreshLoop, 5000);
+  setInterval(logLoop, 3000);
+  setInterval(icons, 2000);
+}
+document.addEventListener('DOMContentLoaded', boot);
+</script>
+
+</body>
+</html>

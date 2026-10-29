@@ -1,0 +1,296 @@
+{
+  "_meta": {
+    "pdf": "C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\Материали_БГ\\BMS_2003-2005.pdf",
+    "paired_with": null,
+    "level": 2,
+    "type": "combined",
+    "analyzed_at": "2026-10-16T21:49:46.120283",
+    "model": "deepseek/deepseek-v3.2",
+    "text_length": 267355,
+    "paired_text_length": 0
+  },
+  "problems": [
+    {
+      "num": 9.1,
+      "topic": "geometry",
+      "theorems": [],
+      "techniques": [
+        "coordinate_geometry",
+        "analytic_geometry"
+      ],
+      "concepts": [
+        "isosceles_triangle",
+        "tangent_to_circle",
+        "collinearity"
+      ],
+      "difficulty": "standard",
+      "notes": "Задача за колинеарност. Може да се реши с координати или с подобни триъгълници."
+    },
+    {
+      "num": 9.2,
+      "topic": "algebra",
+      "theorems": [],
+      "techniques": [
+        "substitution",
+        "rational_equations",
+        "system_of_equations",
+        "Vieta's_formulas"
+      ],
+      "concepts": [
+        "rational_equations",
+        "real_roots",
+        "parameter_analysis"
+      ],
+      "difficulty": "standard",
+      "notes": "Уравнение с параметър. Трябва да се сведе до рационално и да се изследват корените."
+    },
+    {
+      "num": 9.3,
+      "topic": "number_theory",
+      "theorems": [
+        "Fermat's_little_theorem",
+        "Euler's_theorem"
+      ],
+      "techniques": [
+        "modular_arithmetic",
+        "congruences"
+      ],
+      "concepts": [
+        "divisibility",
+        "modular_arithmetic",
+        "exponentiation"
+      ],
+      "difficulty": "olympic",
+      "notes": "Задача от теория на числата. Използва се модулна аритметика и свойства на степени."
+    },
+    {
+      "num": 10.1,
+      "topic": "algebra",
+      "theorems": [],
+      "techniques": [
+        "substitution",
+        "irrational_equations",
+        "parameter_analysis"
+      ],
+      "concepts": [
+        "irrational_equations",
+        "unique_solution",
+        "domain_restrictions"
+      ],
+      "difficulty": "standard",
+      "notes": "Ирационално уравнение с параметър. Трябва да се изследва за единствен корен."
+    },
+    {
+      "num": 10.2,
+      "topic": "geometry",
+      "theorems": [
+        "Power_of_a_point",
+        "Apollonius_circle"
+      ],
+      "techniques": [
+        "analytic_geometry",
+        "homothety"
+      ],
+      "concepts": [
+        "tangent_circles",
+        "homothety_center",
+        "fixed_point",
+        "concyclic_points"
+      ],
+      "difficulty": "hard",
+      "notes": "Сложна геометрична задача с три окръжности. Използва хомотетия и степен на точка."
+    },
+    {
+      "num": 10.3,
+      "topic": "combinatorics",
+      "theorems": [],
+      "techniques": [
+        "pigeonhole_principle",
+        "graph_theory",
+        "hypercube"
+      ],
+      "concepts": [
+        "binary_sequences",
+        "Hamming_distance",
+        "covering_problem"
+      ],
+      "difficulty": "olympic",
+      "notes": "Комбинаторна задача върху двоични редици (4-мерен куб). Свързана с теория на графи."
+    },
+    {
+      "num": 11.1,
+      "topic": "algebra",
+      "theorems": [],
+      "techniques": [
+        "induction",
+        "inequalities",
+        "limits"
+      ],
+      "concepts": [
+        "sequences",
+        "recurrence_relations",
+        "asymptotic_behavior"
+      ],
+      "difficulty": "hard",
+      "notes": "Задача за редица. Част а) се доказва с индукция и неравенства. Част б) изследва граница."
+    },
+    {
+      "num": 11.2,
+      "topic": "geometry",
+      "theorems": [
+        "Ceva's_theorem",
+        "Menelaus",
+        "area_ratios"
+      ],
+      "techniques": [
+        "mass_points",
+        "area_method"
+      ],
+      "concepts": [
+        "cevians",
+        "area_ratios",
+        "midpoint"
+      ],
+      "difficulty": "hard",
+      "notes": "Геометрична задача с теорема на Чева и отношения на лица. Може да се реши и с барицентрични координати."
+    },
+    {
+      "num": 11.3,
+      "topic": "combinatorics",
+      "theorems": [],
+      "techniques": [
+        "strategy_games",
+        "pigeonhole_principle"
+      ],
+      "concepts": [
+        "polynomial_roots",
+        "integer_roots",
+        "game_theory"
+      ],
+      "difficulty": "olympic",
+      "notes": "Игра на двама играчи. Свързана с гарантирано съществуване на целочислен корен."
+    },
+    {
+      "num": 12.1,
+      "topic": "algebra",
+      "theorems": [
+        "Descartes'_rule_of_signs",
+        "Intermediate_value_theorem"
+      ],
+      "techniques": [
+        "derivatives",
+        "polynomial_analysis",
+        "Vieta's_formulas"
+      ],
+      "concepts": [
+        "polynomials",
+        "extrema",
+        "real_roots"
+      ],
+      "difficulty": "hard",
+      "notes": "Анализ на полином и неговата производна. Използва се теорема на Виет за намиране на корени."
+    },
+    {
+      "num": 12.2,
+      "topic": "geometry",
+      "theorems": [
+        "Ceva's_theorem",
+        "Menelaus",
+        "area_inequalities"
+      ],
+      "techniques": [
+        "mass_points",
+        "area_method",
+        "inequalities"
+      ],
+      "concepts": [
+        "parallel_lines",
+        "centroid",
+        "area_inequality"
+      ],
+      "difficulty": "hard",
+      "notes": "Геометрична задача с успоредни прави и медицентър. Част б) използва неравенство между лица."
+    },
+    {
+      "num": 12.3,
+      "topic": "combinatorics",
+      "theorems": [
+        "Turán's_theorem",
+        "Handshaking_lemma"
+      ],
+      "techniques": [
+        "graph_theory",
+        "extremal_combinatorics"
+      ],
+      "concepts": [
+        "graph",
+        "acquaintances",
+        "triangles_in_graph"
+      ],
+      "difficulty": "olympic",
+      "notes": "Екстремална комбинаторика/теория на графите. Минимален брой триъгълници в граф с дадени условия."
+    }
+  ],
+  "unique_concepts": [
+    "isosceles_triangle",
+    "tangent_to_circle",
+    "collinearity",
+    "rational_equations",
+    "real_roots",
+    "parameter_analysis",
+    "divisibility",
+    "modular_arithmetic",
+    "irrational_equations",
+    "unique_solution",
+    "tangent_circles",
+    "homothety",
+    "fixed_point",
+    "concyclic_points",
+    "binary_sequences",
+    "Hamming_distance",
+    "covering_problem",
+    "sequences",
+    "recurrence_relations",
+    "asymptotic_behavior",
+    "cevians",
+    "area_ratios",
+    "midpoint",
+    "strategy_games",
+    "polynomial_roots",
+    "integer_roots",
+    "polynomials",
+    "extrema",
+    "parallel_lines",
+    "centroid",
+    "area_inequality",
+    "graph",
+    "acquaintances",
+    "triangles_in_graph",
+    "Fermat's_little_theorem",
+    "Euler's_theorem",
+    "Power_of_a_point",
+    "Apollonius_circle",
+    "Ceva's_theorem",
+    "Menelaus",
+    "Descartes'_rule_of_signs",
+    "Intermediate_value_theorem",
+    "Turán's_theorem",
+    "Handshaking_lemma",
+    "coordinate_geometry",
+    "analytic_geometry",
+    "substitution",
+    "Vieta's_formulas",
+    "congruences",
+    "homothety",
+    "pigeonhole_principle",
+    "graph_theory",
+    "induction",
+    "inequalities",
+    "limits",
+    "mass_points",
+    "area_method",
+    "derivatives",
+    "polynomial_analysis"
+  ],
+  "confidence": 0.95
+}

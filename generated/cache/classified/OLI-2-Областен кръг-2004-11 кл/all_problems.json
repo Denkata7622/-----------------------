@@ -1,0 +1,392 @@
+{
+  "pdf": "OLI-2-Областен кръг-2004-11 кл",
+  "problems": [
+    {
+      "num": 1,
+      "grade": 11,
+      "year": 2004,
+      "round": "oblasten",
+      "statement": "За кои стойности на x ∈ (−π, π) числата 2^(sin x), 2 − 2^(sin x + cos x) и 2^(cos x) са последователни членове на геометрична прогресия?",
+      "solution": "Необходимо и достатъчно условие дадените числа да образуват геометрична прогресия е\n2^{sin x} · 2^{cos x} = (2 − 2^{sin x+cos x})²,\nоткъдето след преобразуване получаваме\n4^{sin x+cos x} − 5 · 2^{sin x+cos x} + 4 = 0.\nПолагането y = 2^{sin x+cos x} свежда уравнението до квадратно y² − 5y + 4 = 0 с корени y₁ = 4 и y₂ = 1.\nПри 2^{sin x+cos x} = 4 получаваме sin x + cos x = 2, т.е. sin(x + π/4) = √2, което очевидно няма решение.\nПри 2^{sin x+cos x} = 1 получаваме sin x + cos x = 0, т.е. sin(x + π/4) = 0.\nОттук x = −π/4 + kπ, където k е цяло число. От тези корени в интервала (−π, π) се намират −π/4 и 3π/4.",
+      "answer": "x = −π/4 или x = 3π/4.",
+      "page": 1,
+      "source": "OLI-2-Областен кръг-2004-11 кл · 2004-11 · Зад. 1",
+      "point_id": "R.6",
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": "medium",
+      "techniques": [
+        "substitution",
+        "quadratic_equation",
+        "parameter_analysis"
+      ],
+      "reasoning": "Uses substitution y=2^{sin x+cos x}, reduces to quadratic, checks cases.",
+      "_paired": true,
+      "_grade_source": "filename"
+    },
+    {
+      "num": 2,
+      "grade": 11,
+      "year": 2004,
+      "round": "oblasten",
+      "statement": "Допирателните към описаната около остроъгълния триъгълник ABC окръжност, построени в точките A и B, се пресичат в точка D. Ако M е среда на AB, докажете, че ∠ACM = ∠BCD.",
+      "solution": "От синусовата теорема за триъгълниците AMC и BMC имаме\nAM/CM = sin ∠ACM / sin α, BM/CM = sin(γ − ∠ACM) / sin β.\nОттук, тъй като AM = BM, получаваме sin ∠ACM / sin α = sin(γ − ∠ACM) / sin β, т.е.\n(1) tg ∠ACM = (sin α sin γ)/(sin β + sin α cos γ).\nОт синусовата теорема за триъгълниците ADC и BDC имаме\nAD/CD = sin(γ − ∠BCD) / sin(α + γ), BD/CD = sin ∠BCD / sin(β + γ).\nОттук, тъй като AD = BD, получаваме sin(γ − ∠BCD) / sin β = sin ∠BCD / sin α, т.е.\n(2) tg ∠BCD = (sin α sin γ)/(sin β + sin α cos γ).\nОт (1) и (2) следва, че tg ∠ACM = tg ∠BCD. Тъй като и двата ъгъла са остри и функцията тангенс е растяща в интервала (0; π/2), то ∠ACM = ∠BCD.",
+      "answer": "∠ACM = ∠BCD.",
+      "page": 1,
+      "source": "OLI-2-Областен кръг-2004-11 кл · 2004-11 · Зад. 2",
+      "point_id": "1.6",
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": "medium",
+      "techniques": [
+        "law_of_sines",
+        "angle_chasing"
+      ],
+      "reasoning": "Applies sine law in two triangles, derives equality of tangents, concludes angles equal.",
+      "_paired": true,
+      "_grade_source": "filename"
+    },
+    {
+      "num": 1,
+      "grade": 11,
+      "year": 2004,
+      "round": "oblasten",
+      "statement": "Да се намерят стойностите на реалния параметър a, за които уравнението √((4a² − 4a − 1)x² − 2ax + 1) = 1 − ax − x² има точно две решения.",
+      "solution": "Повдигаме двете страни на даденото уравнение\n(1) √((4a² − 4a − 1)x² − 2ax + 1) = 1 − ax − x²\nи достигаме до уравнението\nx²(x² + 2ax − 3a² + 4a − 1) = 0\nс корени x₁ = 0, x₂ = 1 − 3a и x₃ = a − 1. Ясно е, че x₁ = 0 е решение на (1) за всяко a. Числото x₂ = 1 − 3a е решение на (1), когато дясната страна на (1) е неотрицателна, т.е.\n1 − a(1 − 3a) − (1 − 3a)² ≥ 0 ⇔ 5a − 6a² ≥ 0 ⇔ a ∈ [0, 5/6].\nАналогично x₃ е решение на (1) при a ∈ [0, 3/2]. Възможни са два случая.\n1. Някои от числата x₁, x₂ и x₃ са равни. Това е изпълнено при a = 1/3, 1/2, 1 и от намереното следва, че a = 1/3 и a = 1/2 са решения на задачата.\n2. Числата x₁, x₂ и x₃ са две по две различни. Тогава лесно следва, че a ∈ (5/6, 3/2] ∖ {1}.\nИ така, a = 1/3, a = 1/2 и a ∈ (5/6, 3/2] ∖ {1}.",
+      "answer": "a ∈ {1/3, 1/2} ∪ ((5/6, 3/2] ∖ {1}).",
+      "page": 1,
+      "source": "OLI-2-Областен кръг-2004-11 кл · 2004-11 · Зад. 1",
+      "point_id": "5.11",
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": "medium",
+      "techniques": [
+        "squaring",
+        "case_analysis",
+        "parameter_analysis"
+      ],
+      "reasoning": "Squares the radical, obtains polynomial, analyses sign conditions for parameter a.",
+      "_paired": true,
+      "_grade_source": "filename"
+    },
+    {
+      "num": 3,
+      "grade": 11,
+      "year": 2004,
+      "round": "oblasten",
+      "statement": "Нека N = mn − n + 1, където m ≥ 3 и n ≥ 2 са естествени числа. Да се докаже, че ако в група от N човека измежду всеки m има двама, които се познават, то съществува човек, който познава поне n от останалите членове на групата. Вярно ли е твърдението при N < mn − n + 1?",
+      "solution": "От дадените N човека да изберем подгрупа с максимален брой хора, никои двама от които не се познават. Ясно е, че ако в групата има l човека, то l ≤ m − 1. Освен това от максималността на l следва, че с прибавянето на кой да е от останалите членове на групата, ще имаме поне едно познанство. Следователно всеки от останалите N − l познава поне един от избраните l.\nТогава някой от избраните l ще има поне (N − l)/l познати. Тъй като\n(N − l)/l = N/l − 1 ≥ N/(m − 1) − 1 = n + 1/(m − 1) − 1 > n − 1,\nима човек с поне n познати.\nНека N = mn − n = (m − 1)n и да разгледаме m − 1 групи от по n човека всяка, като всеки двама от една група се познават и няма познати от различни групи. Тогава измежду всеки m човека има двама от една и съща група, т.е. двама, които се познават. От друга страна всеки познава точно n − 1 от останалите. Следователно твърдението не е вярно при N < mn − n + 1.",
+      "answer": "N = mn − n + 1.",
+      "page": 1,
+      "source": "OLI-2-Областен кръг-2004-11 кл · 2004-11 · Зад. 3",
+      "point_id": "8.1",
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": "medium",
+      "techniques": [
+        "pigeonhole_principle",
+        "extremal_principle"
+      ],
+      "reasoning": "Extremal argument on groups of size m‑1, uses pigeonhole to guarantee two acquainted people.",
+      "_paired": true,
+      "_grade_source": "filename"
+    },
+    {
+      "num": 5,
+      "grade": 11,
+      "year": 2004,
+      "round": "oblasten",
+      "statement": "Нека a, b и c са естествени числа, поне едно от които е взаимнопросто с останалите две. Да се докаже, че съществуват естествени числа x, y и z, за които x^a = y^b + z^c.",
+      "solution": "1. Нека (a, b) = (a, c) = 1. Тогава (a, bc) = 1 и следователно съществуват цели числа u и v, за които ua + vbc = 1, което означава, че a дели −vbc + 1. Ако k ≥ 1 е такова естествено число, че −v − k се дели на a (това означава, че −v е сравнимо с k по модул a), то a дели kbc + 1, т.е. kbc + 1 = at. Тогава при x = 2^t, y = 2^{kc} и z = 2^{kb} имаме\ny^b + z^c = 2^{kbc} + 2^{kbc} = 2^{kbc+1} = (2^t)^a = x^a.\n2. Нека (c, a) = (c, b) = 1. Тогава (c, ab) = 1 и както в 1. следва, че съществува естествено число k, за което c дели kab + 1, т.е. kab + 1 = ct.\nТогава при x = 2(2^a − 1)^{kb}, y = (2^a − 1)^{ka} и z = (2^a − 1)^t имаме\nx^a − y^b = 2^a(2^a − 1)^{kab} − (2^a − 1)^{kab} = (2^a − 1)^{kab+1} = z^c.",
+      "answer": null,
+      "page": 1,
+      "source": "OLI-2-Областен кръг-2004-11 кл · 2004-11 · Зад. 5",
+      "point_id": "4.1",
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": "medium",
+      "techniques": [
+        "bezout_identity",
+        "exponential_diophantine",
+        "construction"
+      ],
+      "reasoning": "Uses gcd=1 to write 1 as linear combination, builds powers of 2 to satisfy x^a = y^b + z^c.",
+      "_paired": true,
+      "_grade_source": "filename"
+    },
+    {
+      "num": 6,
+      "grade": 11,
+      "year": 2004,
+      "round": "oblasten",
+      "statement": "Във вътрешността на триъгълник ABC с лице равно на 1 е избрана произволна точка, която е съединена с върховете му. След това в един от получените три триъгълника отново е избрана произволна точка и е съединена с върховете му. На всяка стъпка се избира произволна точка от вътрешността на някои от получените до момента триъгълници и тя се свързва с върховете на този триъгълник. Да означим с n броя на избраните точки.\nа) Да се докаже, че триъгълникът ABC е разделен на 2n + 1 триъгълника.\nб) За всеки два триъгълника от разделянето с обща страна е пресметната сумата от лицата им. Да се докаже, че максималната от тези суми е не по-малка от 2/(2n + 1).",
+      "solution": "а) На всяка стъпка триъгълникът, от който се избира точка, се разделя на три нови триъгълника, т.е. общият брой триъгълници се увеличава с 2. Тъй като в началото имаме само един триъгълник, то след n-та стъпка ще имаме 2n + 1 триъгълника.\nб) С индукция по n ще докажем, че ако „извадим“ произволен триъгълник, то останалите триъгълници могат да бъдат групирани по двойки, като триъгълниците в една двойка имат обща страна.\n1. При n = 1 твърдението е очевидно.\n2. Нека твърдението е вярно за n = k.\n3. Ще докажем, че то е вярно и за n = k + 1. Нека на k + 1-та стъпка да сме добавили точка O в триъгълник MNP. От полученото разделяне да „извадим“ произволен триъгълник XYZ. Ако XYZ е някой от △OMN, △OMP или △ONP (без ограничение нека това е △OMN), то да разгледаме конфигурацията на k-та стъпка с изваден △MNP.\nСъгласно индукционната хипотеза останалите триъгълници могат да бъдат групирани по двойки с обща страна. Остава да добавим двойката (△OMP, △ONP). Ако XYZ е различен от △OMN, △OMP и △ONP, то разглеждаме конфигурацията на k-та стъпка с изваден триъгълник XYZ. Съгласно индукционната хипотеза останалите триъгълници могат да бъдат групирани по двойки с обща страна и нека MNP е в двойка с QMN. Тогава заместваме двойката (△MNP, △QMN) с двойките (△OMN, △QMN) и (△OMP, △OPN). С това индукцията е завършена.\nТъй като лицето на △ABC е 1, то минималното лице на триъгълник е не по-голямо от 1/(2n + 1). Да разгледаме всички триъгълници от разбиването, без този с минимално лице. Съгласно доказаното по-горе останалите триъгълници могат да бъдат групирани по двойки с обща страна. Тъй като имаме n такива двойки с общо лице поне 1 − 1/(2n + 1), то максималната сума от лицата на два триъгълника в една двойка е поне\n(1 − 1/(2n + 1))/n = 2/(2n + 1).",
+      "answer": "а) 2n + 1 триъгълника; б) има два триъгълника с обща страна и сума от лицата поне 2/(2n + 1).",
+      "page": 1,
+      "source": "OLI-2-Областен кръг-2004-11 кл · 2004-11 · Зад. 6",
+      "point_id": "8.10",
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": "medium",
+      "techniques": [
+        "induction",
+        "area_counting",
+        "recursive_partition"
+      ],
+      "reasoning": "Induction on number of steps shows number of triangles = 2n+1 and derives area bound.",
+      "_paired": true,
+      "_grade_source": "filename"
+    },
+    {
+      "num": 2,
+      "grade": 11,
+      "year": 2004,
+      "round": "oblasten",
+      "statement": "Върху бедрата AC и BC на равнобедрения △ABC са взети съответно точки A₁ и B₁ така, че 4AA₁ · BB₁ = AB². Да се докаже, че ъглополовящите на ∠AA₁B₁ и ∠BB₁A₁ се пресичат върху правата AB.",
+      "solution": null,
+      "answer": null,
+      "page": 1,
+      "source": "OLI-2-Областен кръг-2004-11 кл · 2004-11 · Зад. 2",
+      "point_id": "1.5",
+      "point_confidence": "exact",
+      "difficulty": "medium",
+      "techniques": [
+        "angle_bisector",
+        "similar_triangles",
+        "isosceles_properties"
+      ],
+      "reasoning": "Geometry with bisectors in isosceles triangle, uses angle bisector theorem.",
+      "_no_solution": true
+    },
+    {
+      "num": 3,
+      "grade": 11,
+      "year": 2004,
+      "round": "oblasten",
+      "statement": "Да се докаже, че 9/10 ≤ a/(1 + bc) + b/(1 + ca) + c/(1 + ab) < 1, където a, b и c са положителни числа така, че a + b + c = 1.",
+      "solution": null,
+      "answer": null,
+      "page": 1,
+      "source": "OLI-2-Областен кръг-2004-11 кл · 2004-11 · Зад. 3",
+      "point_id": "6.4",
+      "point_confidence": "exact",
+      "difficulty": "medium",
+      "techniques": [
+        "inequality",
+        "cauchy_schwarz",
+        "symmetrization"
+      ],
+      "reasoning": "Inequality on a,b,c with sum 1, typical Cauchy‑Schwarz application.",
+      "_no_solution": true
+    },
+    {
+      "num": 4,
+      "grade": 11,
+      "year": 2004,
+      "round": "oblasten",
+      "statement": "Да се реши в цели числа уравнението x³ + 10x − 1 = y³ + 6y².",
+      "solution": null,
+      "answer": null,
+      "page": 1,
+      "source": "OLI-2-Областен кръг-2004-11 кл · 2004-11 · Зад. 4",
+      "point_id": "4.3",
+      "point_confidence": "exact",
+      "difficulty": "hard",
+      "techniques": [
+        "cubic_diophantine",
+        "bounding",
+        "modular_arithmetic"
+      ],
+      "reasoning": "Integer equation with cubic terms, requires deep Diophantine analysis.",
+      "_no_solution": true
+    },
+    {
+      "num": 5,
+      "grade": 11,
+      "year": 2004,
+      "round": "oblasten",
+      "statement": "Даден е квадрат n × n (n ≥ 2), съставен от n² единични квадратчета, всяко от които е оцветено в бяло или черно така, че за всеки правоъгълник (от най-малко четири квадратчета) в квадрата поне две от единичните квадратчета в четирите му ъгъла са разноцветни. Да се намери възможно най-голямата стойност на n.",
+      "solution": null,
+      "answer": null,
+      "page": 1,
+      "source": "OLI-2-Областен кръг-2004-11 кл · 2004-11 · Зад. 5",
+      "point_id": "8.15",
+      "point_confidence": "exact",
+      "difficulty": "hard",
+      "techniques": [
+        "extremal_principle",
+        "coloring",
+        "combinatorial_geometry"
+      ],
+      "reasoning": "Maximal n for chessboard coloring, extremal combinatorial argument.",
+      "_no_solution": true
+    },
+    {
+      "num": 1,
+      "grade": 11,
+      "year": 2004,
+      "round": "oblasten",
+      "statement": "Дадени са уравненията [x]³ + x² = x³ + [x]² и [x³] + x² = x³ + [x²], където [t] е най-голямото цяло число, ненадминаващо t. Да се докаже, че:\nа) целите числа са единствените решения на първото уравнение;\nб) съществува решение на второто уравнение, което не е цяло число.",
+      "solution": null,
+      "answer": null,
+      "page": 1,
+      "source": "OLI-2-Областен кръг-2004-11 кл · 2004-11 · Зад. 1",
+      "point_id": "3.2",
+      "point_confidence": "exact",
+      "difficulty": "medium",
+      "techniques": [
+        "floor_function",
+        "integer_equation",
+        "case_analysis"
+      ],
+      "reasoning": "Equations with floor function, need casework on integer intervals.",
+      "_no_solution": true
+    },
+    {
+      "num": 3,
+      "grade": 11,
+      "year": 2004,
+      "round": "oblasten",
+      "statement": "В едно предприятие има m ≥ 1 мъже и j ≥ 1 жени, j < 2004. Всеки пратил на всеки (освен на себе си) по една картичка. Оказало се, че всички картички, пратени от мъже, са колкото картичките, пратени от жени на жени. Намерете всички възможни стойности на j.",
+      "solution": null,
+      "answer": null,
+      "page": 1,
+      "source": "OLI-2-Областен кръг-2004-11 кл · 2004-11 · Зад. 3",
+      "point_id": "8.3",
+      "point_confidence": "exact",
+      "difficulty": "medium",
+      "techniques": [
+        "double_counting",
+        "combinatorial_equations"
+      ],
+      "reasoning": "Cards exchange problem, solved by double counting men‑women cards.",
+      "_no_solution": true
+    },
+    {
+      "num": 4,
+      "grade": 11,
+      "year": 2004,
+      "round": "oblasten",
+      "statement": "Нека f(x) = (a² + 4a + 2)x³ + (a³ + 4a² + a + 1)x² + (2a − a²)x + a², където a е реален параметър.\nа) Да се докаже, че f(−a) = 0.\nб) Да се намерят всички стойности на a, за които уравнението f(x) = 0 има три различни реални положителни корена.",
+      "solution": null,
+      "answer": null,
+      "page": 1,
+      "source": "OLI-2-Областен кръг-2004-11 кл · 2004-11 · Зад. 4",
+      "point_id": "5.1",
+      "point_confidence": "exact",
+      "difficulty": "medium",
+      "techniques": [
+        "vieta",
+        "polynomial_roots",
+        "parameter_analysis"
+      ],
+      "reasoning": "Polynomial f(x) with parameter a, uses Vieta to locate positive roots.",
+      "_no_solution": true
+    },
+    {
+      "num": 5,
+      "grade": 11,
+      "year": 2004,
+      "round": "oblasten",
+      "statement": "Нека O е център на описаната окръжност за △ABC, M е средата на страната AB, а G е медицентърът на △ACM. Ако OG ⟂ CM, да се докаже, че △ABC е равнобедрен.",
+      "solution": null,
+      "answer": null,
+      "page": 1,
+      "source": "OLI-2-Областен кръг-2004-11 кл · 2004-11 · Зад. 5",
+      "point_id": "1.10",
+      "point_confidence": "exact",
+      "difficulty": "medium",
+      "techniques": [
+        "circle_properties",
+        "perpendicular",
+        "isosceles_detection"
+      ],
+      "reasoning": "Perpendicular OG to CM forces symmetry, leading to isosceles triangle.",
+      "_no_solution": true
+    },
+    {
+      "num": 6,
+      "grade": 11,
+      "year": 2004,
+      "round": "oblasten",
+      "statement": "Даден е граф G с 10 върха и 26 ребра. Да се докаже, че G съдържа поне 4 триъгълника.",
+      "solution": null,
+      "answer": null,
+      "page": 1,
+      "source": "OLI-2-Областен кръг-2004-11 кл · 2004-11 · Зад. 6",
+      "point_id": "9.5",
+      "point_confidence": "exact",
+      "difficulty": "medium",
+      "techniques": [
+        "graph_theory",
+        "turan_theorem",
+        "triangle_count"
+      ],
+      "reasoning": "Graph with 10 vertices, 26 edges, Turán’s theorem gives ≥4 triangles.",
+      "_no_solution": true
+    },
+    {
+      "num": 4,
+      "grade": 11,
+      "year": 2004,
+      "round": "oblasten",
+      "statement": "Даден е триъгълник ABC. Точките D и E са от симетралите съответно на страните AB и BC, като D е вътрешна за триъгълника ABC, а E – външна и ∠ADB = ∠CEB. Ако AE пресича отсечката CD в точка O, докажете, че триъгълникът ACO и четириъгълникът DBEO имат равни лица.",
+      "solution": null,
+      "answer": null,
+      "page": 1,
+      "source": "OLI-2-Областен кръг-2004-11 кл · 2004-11 · Зад. 4",
+      "point_id": "1.5",
+      "point_confidence": "exact",
+      "difficulty": "hard",
+      "techniques": [
+        "symmedian",
+        "area_ratio",
+        "angle_chasing"
+      ],
+      "reasoning": "Uses symmedian properties and area ratios to prove equality of areas.",
+      "_no_solution": true
+    },
+    {
+      "num": 1,
+      "grade": 11,
+      "year": 2004,
+      "round": "oblasten",
+      "statement": "Да се намерят всички цели числа a, b и c, за които 2^a + 8b² − 3^c = 283.",
+      "solution": null,
+      "answer": null,
+      "page": 1,
+      "source": "OLI-2-Областен кръг-2004-11 кл · 2004-11 · Зад. 1",
+      "point_id": "3.7",
+      "point_confidence": "exact",
+      "difficulty": "hard",
+      "techniques": [
+        "exponential_diophantine",
+        "modular_arithmetic",
+        "search"
+      ],
+      "reasoning": "Exponential Diophantine equation, solved via modular constraints and enumeration.",
+      "_no_solution": true
+    },
+    {
+      "num": 2,
+      "grade": 11,
+      "year": 2004,
+      "round": "oblasten",
+      "statement": "Да се намерят стойностите на реалния параметър a, за които най-голямата стойност на функцията f(x) = (ax − 1)/(x⁴ − x² + 1) е равна на 1.",
+      "solution": null,
+      "answer": null,
+      "page": 1,
+      "source": "OLI-2-Областен кръг-2004-11 кл · 2004-11 · Зад. 2",
+      "point_id": "6.1",
+      "point_confidence": "exact",
+      "difficulty": "medium",
+      "techniques": [
+        "calculus",
+        "maximization",
+        "derivative"
+      ],
+      "reasoning": "Finds maximum of rational function by derivative or AM‑GM inequality.",
+      "_no_solution": true
+    }
+  ]
+}

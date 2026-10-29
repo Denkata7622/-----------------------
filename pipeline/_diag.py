@@ -1,0 +1,12 @@
+﻿import json
+s = json.load(open('..\\generated\\state\\chunker_state.json', encoding='utf-8'))
+print('=== chunker_state.json ===')
+print('budget.date:      ', s['budget']['date'])
+print('budget.spent_usd: ', f"${s['budget']['spent_usd']:.4f}")
+print('budget.calls:     ', s['budget']['calls'])
+print()
+c = json.load(open('config.json', encoding='utf-8'))
+ck = c.get('chunker', {})
+print('=== config.json [chunker] ===')
+print('daily_budget_usd:', ck.get('daily_budget_usd', 'default 3.0'))
+print('budget_stop_pct: ', ck.get('budget_stop_pct', 'default 0.9'))

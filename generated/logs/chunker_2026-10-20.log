@@ -1,0 +1,1521 @@
+2026-10-20 16:50:00,311 [PDF_CHUNKER] INFO Заредени 0 STEPS точки
+2026-10-20 16:51:34,059 [PDF_CHUNKER] INFO Заредени 0 STEPS точки
+2026-10-20 16:53:11,176 [PDF_CHUNKER] INFO Заредени 0 STEPS точки
+2026-10-20 16:53:11,211 [PDF_CHUNKER] INFO Намерени 227 PDF-а
+2026-10-20 16:53:11,212 [PDF_CHUNKER] INFO Филтър '2024-11': 2 PDF-а
+2026-10-20 16:53:11,212 [PDF_CHUNKER] INFO 
+[1/2] OLI-2-Областен кръг-2024-11 кл-probs.pdf
+2026-10-20 16:53:11,213 [PDF_CHUNKER] INFO 
+═══ OLI-2-Областен кръг-2024-11 кл-probs ═══
+2026-10-20 16:53:11,235 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2024-11 кл-probs] 1 chunks, 2 pages
+2026-10-20 16:53:14,130 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2024-11 кл-probs] chunk 1-2: 0 problems (2s)
+2026-10-20 16:53:14,143 [PDF_CHUNKER] INFO ✓ [OLI-2-Областен кръг-2024-11 кл-probs] 0 problems (deduped) → C:\Users\denis\Downloads\Материали Олимпиада МАТ\pipeline\extracted\OLI-2-Областен кръг-2024-11 кл-probs\all_problems.json
+2026-10-20 16:53:14,146 [PDF_CHUNKER] INFO 
+[2/2] OLI-2-Областен кръг-2024-11 кл-sol.pdf
+2026-10-20 16:53:14,147 [PDF_CHUNKER] INFO 
+═══ OLI-2-Областен кръг-2024-11 кл-sol ═══
+2026-10-20 16:53:15,643 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2024-11 кл-sol] 1 chunks, 3 pages
+2026-10-20 16:53:45,650 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2024-11 кл-sol-1] extract... 30s
+2026-10-20 16:54:15,651 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2024-11 кл-sol-1] extract... 60s
+2026-10-20 16:54:40,171 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2024-11 кл-sol] chunk 1-3: 8 problems (84s)
+2026-10-20 16:54:40,192 [PDF_CHUNKER] INFO ✓ [OLI-2-Областен кръг-2024-11 кл-sol] 6 problems (deduped) → C:\Users\denis\Downloads\Материали Олимпиада МАТ\pipeline\extracted\OLI-2-Областен кръг-2024-11 кл-sol\all_problems.json
+2026-10-20 17:02:36,607 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2024-11 кл-probs.pdf] pdfplumber: 1p, 0 chars
+2026-10-20 17:02:36,607 [PDF_CHUNKER] WARNING [OLI-2-Областен кръг-2024-11 кл-probs.pdf] ⚠ Само 0 chars — вероятно сканиран PDF
+2026-10-20 17:02:38,623 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2024-11 кл-sol.pdf] pypdf: 3p, 10928 chars
+2026-10-20 17:03:26,429 [PDF_CHUNKER] INFO Заредени 0 STEPS точки
+2026-10-20 17:03:26,457 [PDF_CHUNKER] INFO Намерени 227 PDF-а
+2026-10-20 17:03:26,458 [PDF_CHUNKER] INFO Филтър '2024-11': 2 PDF-а
+2026-10-20 17:03:26,459 [PDF_CHUNKER] INFO 
+[1/2] OLI-2-Областен кръг-2024-11 кл-probs.pdf
+2026-10-20 17:03:26,459 [PDF_CHUNKER] INFO 
+═══ OLI-2-Областен кръг-2024-11 кл-probs ═══
+2026-10-20 17:03:26,475 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2024-11 кл-probs.pdf] pdfplumber: 1p, 0 chars
+2026-10-20 17:03:26,475 [PDF_CHUNKER] WARNING [OLI-2-Областен кръг-2024-11 кл-probs.pdf] ⚠ Само 0 chars — вероятно сканиран PDF
+2026-10-20 17:03:26,476 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2024-11 кл-probs] 1 chunks, 1 pages
+2026-10-20 17:03:29,890 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2024-11 кл-probs] chunk 1-1: 0 problems (3s)
+2026-10-20 17:03:29,902 [PDF_CHUNKER] INFO ✓ [OLI-2-Областен кръг-2024-11 кл-probs] 0 problems (deduped) → C:\Users\denis\Downloads\Материали Олимпиада МАТ\pipeline\extracted\OLI-2-Областен кръг-2024-11 кл-probs\all_problems.json
+2026-10-20 17:03:29,902 [PDF_CHUNKER] INFO 
+[2/2] OLI-2-Областен кръг-2024-11 кл-sol.pdf
+2026-10-20 17:03:29,903 [PDF_CHUNKER] INFO 
+═══ OLI-2-Областен кръг-2024-11 кл-sol ═══
+2026-10-20 17:03:32,212 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2024-11 кл-sol.pdf] pypdf: 3p, 10928 chars
+2026-10-20 17:03:32,213 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2024-11 кл-sol] 1 chunks, 3 pages
+2026-10-20 17:04:02,223 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2024-11 кл-sol-1] extract... 30s
+2026-10-20 17:04:32,236 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2024-11 кл-sol-1] extract... 60s
+2026-10-20 17:04:48,415 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2024-11 кл-sol] chunk 1-3: 8 problems (76s)
+2026-10-20 17:04:48,428 [PDF_CHUNKER] INFO ✓ [OLI-2-Областен кръг-2024-11 кл-sol] 8 problems (deduped) → C:\Users\denis\Downloads\Материали Олимпиада МАТ\pipeline\extracted\OLI-2-Областен кръг-2024-11 кл-sol\all_problems.json
+2026-10-20 18:00:58,087 [PDF_CHUNKER] INFO Заредени 0 STEPS точки
+2026-10-20 18:00:58,105 [PDF_CHUNKER] INFO Намерени 227 PDF-а
+2026-10-20 18:00:58,105 [PDF_CHUNKER] INFO Филтър '2024-11': 2 PDF-а
+2026-10-20 18:00:58,105 [PDF_CHUNKER] INFO 
+[1/2] OLI-2-Областен кръг-2024-11 кл-probs.pdf
+2026-10-20 18:00:58,105 [PDF_CHUNKER] INFO 
+═══ OLI-2-Областен кръг-2024-11 кл-probs ═══
+2026-10-20 18:00:58,126 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2024-11 кл-probs.pdf] pdfplumber: 1p, 0 chars
+2026-10-20 18:00:58,126 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2024-11 кл-probs.pdf] 0 chars < 50 → OCR fallback
+2026-10-20 18:00:58,129 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2024-11 кл-probs.pdf] Mistral OCR (86KB)
+2026-10-20 18:01:01,783 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2024-11 кл-probs.pdf] OCR: 1p, 1110chars, 3s, $0.0010
+2026-10-20 18:01:01,785 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2024-11 кл-probs.pdf] OCR: 1110 chars (vs Python: 0)
+2026-10-20 18:01:01,786 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2024-11 кл-probs] 1 chunks, 1 pages
+2026-10-20 18:01:12,082 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2024-11 кл-probs] chunk 1-1: 4 problems (10s)
+2026-10-20 18:01:12,089 [PDF_CHUNKER] INFO ✓ [OLI-2-Областен кръг-2024-11 кл-probs] 4 problems (deduped) → C:\Users\denis\Downloads\Материали Олимпиада МАТ\pipeline\extracted\OLI-2-Областен кръг-2024-11 кл-probs\all_problems.json
+2026-10-20 18:01:12,089 [PDF_CHUNKER] INFO 
+[2/2] OLI-2-Областен кръг-2024-11 кл-sol.pdf
+2026-10-20 18:01:12,089 [PDF_CHUNKER] INFO 
+═══ OLI-2-Областен кръг-2024-11 кл-sol ═══
+2026-10-20 18:01:13,431 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2024-11 кл-sol.pdf] pypdf: 3p, 10928 chars
+2026-10-20 18:01:13,431 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2024-11 кл-sol] 1 chunks, 3 pages
+2026-10-20 18:01:43,441 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2024-11 кл-sol-1] extract... 30s
+2026-10-20 18:02:13,454 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2024-11 кл-sol-1] extract... 60s
+2026-10-20 18:02:19,030 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2024-11 кл-sol] chunk 1-3: 8 problems (65s)
+2026-10-20 18:02:19,044 [PDF_CHUNKER] INFO ✓ [OLI-2-Областен кръг-2024-11 кл-sol] 8 problems (deduped) → C:\Users\denis\Downloads\Материали Олимпиада МАТ\pipeline\extracted\OLI-2-Областен кръг-2024-11 кл-sol\all_problems.json
+2026-10-20 18:02:21,701 [PDF_CHUNKER] INFO Заредени 0 STEPS точки
+2026-10-20 18:02:21,703 [PDF_CHUNKER] INFO Заредени 2 извлечени PDF-а
+2026-10-20 18:02:21,704 [PDF_CHUNKER] INFO   [OLI-2-Областен кръг-2024-11 кл] merge 4 probs + 8 sols → 5 problems
+2026-10-20 18:02:21,709 [PDF_CHUNKER] INFO ✓ 1 merged olympiads → C:\Users\denis\Downloads\Материали Олимпиада МАТ\pipeline\merged
+2026-10-20 18:05:17,125 [PDF_CHUNKER] INFO Заредени 0 STEPS точки
+2026-10-20 18:05:17,139 [PDF_CHUNKER] INFO Намерени 227 PDF-а
+2026-10-20 18:05:17,140 [PDF_CHUNKER] INFO Филтър '2024-11': 2 PDF-а
+2026-10-20 18:05:17,140 [PDF_CHUNKER] INFO 
+[1/2] OLI-2-Областен кръг-2024-11 кл-probs.pdf
+2026-10-20 18:05:17,140 [PDF_CHUNKER] INFO 
+═══ OLI-2-Областен кръг-2024-11 кл-probs ═══
+2026-10-20 18:05:17,153 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2024-11 кл-probs.pdf] pdfplumber: 1p, 0 chars
+2026-10-20 18:05:17,153 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2024-11 кл-probs.pdf] 0 chars < 50 → OCR fallback
+2026-10-20 18:05:17,162 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2024-11 кл-probs.pdf] OCR cache: 1p
+2026-10-20 18:05:17,162 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2024-11 кл-probs.pdf] OCR: 1110 chars (vs Python: 0)
+2026-10-20 18:05:17,163 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2024-11 кл-probs] 1 chunks, 1 pages
+2026-10-20 18:05:27,198 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2024-11 кл-probs] chunk 1-1: 4 problems (10s)
+2026-10-20 18:05:27,204 [PDF_CHUNKER] INFO ✓ [OLI-2-Областен кръг-2024-11 кл-probs] 4 problems (deduped) → C:\Users\denis\Downloads\Материали Олимпиада МАТ\pipeline\extracted\OLI-2-Областен кръг-2024-11 кл-probs\all_problems.json
+2026-10-20 18:05:27,204 [PDF_CHUNKER] INFO 
+[2/2] OLI-2-Областен кръг-2024-11 кл-sol.pdf
+2026-10-20 18:05:27,204 [PDF_CHUNKER] INFO 
+═══ OLI-2-Областен кръг-2024-11 кл-sol ═══
+2026-10-20 18:05:28,375 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2024-11 кл-sol.pdf] pypdf: 3p, 10928 chars
+2026-10-20 18:05:28,376 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2024-11 кл-sol] 1 chunks, 3 pages
+2026-10-20 18:05:58,392 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2024-11 кл-sol-1] extract... 30s
+2026-10-20 18:05:59,044 [PDF_CHUNKER] INFO Заредени 0 STEPS точки
+2026-10-20 18:05:59,057 [PDF_CHUNKER] INFO Намерени 227 PDF-а
+2026-10-20 18:05:59,058 [PDF_CHUNKER] INFO Филтър '2024-11': 2 PDF-а
+2026-10-20 18:05:59,058 [PDF_CHUNKER] INFO 
+[1/2] OLI-2-Областен кръг-2024-11 кл-probs.pdf
+2026-10-20 18:05:59,059 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2024-11 кл-probs] skip (done)
+2026-10-20 18:05:59,059 [PDF_CHUNKER] INFO 
+[2/2] OLI-2-Областен кръг-2024-11 кл-sol.pdf
+2026-10-20 18:05:59,059 [PDF_CHUNKER] INFO 
+═══ OLI-2-Областен кръг-2024-11 кл-sol ═══
+2026-10-20 18:06:00,252 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2024-11 кл-sol.pdf] pypdf: 3p, 10928 chars
+2026-10-20 18:06:00,253 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2024-11 кл-sol] 1 chunks, 3 pages
+2026-10-20 18:06:22,976 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2024-11 кл-sol-1] extract... 54s
+2026-10-20 18:06:29,042 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2024-11 кл-sol] chunk 1-3: 8 problems (60s)
+2026-10-20 18:06:29,048 [PDF_CHUNKER] INFO ✓ [OLI-2-Областен кръг-2024-11 кл-sol] 8 problems (deduped) → C:\Users\denis\Downloads\Материали Олимпиада МАТ\pipeline\extracted\OLI-2-Областен кръг-2024-11 кл-sol\all_problems.json
+2026-10-20 18:09:13,989 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2023-11 кл-probs.pdf] Mistral OCR (76KB)
+2026-10-20 18:09:16,281 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2023-11 кл-probs.pdf] OCR: 1p, 929chars, 2s, $0.0010
+2026-10-20 18:09:16,434 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2019-10 кл-probs.pdf] Mistral OCR (78KB)
+2026-10-20 18:09:19,352 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2019-10 кл-probs.pdf] OCR: 1p, 1081chars, 2s, $0.0010
+2026-10-20 18:09:19,496 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2015-11 кл-probs.pdf] Mistral OCR (198KB)
+2026-10-20 18:09:22,495 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2015-11 кл-probs.pdf] OCR: 1p, 1237chars, 2s, $0.0010
+2026-10-20 18:22:56,416 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1995-10 кл-probs.pdf] Mistral OCR (94KB)
+2026-10-20 18:23:01,290 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1995-10 кл-probs.pdf] OCR: 1p, 1724chars, 4s, $0.0010
+2026-10-20 18:23:01,295 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1995-10 кл-sol.pdf] Mistral OCR (380KB)
+2026-10-20 18:23:09,664 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1995-10 кл-sol.pdf] OCR: 3p, 7894chars, 8s, $0.0030
+2026-10-20 18:23:09,668 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1995-11 кл-probs.pdf] Mistral OCR (94KB)
+2026-10-20 18:23:15,722 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1995-11 кл-probs.pdf] OCR: 1p, 1724chars, 6s, $0.0010
+2026-10-20 18:23:15,728 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1995-11 кл-sol.pdf] Mistral OCR (380KB)
+2026-10-20 18:23:21,384 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1995-11 кл-sol.pdf] OCR: 3p, 7894chars, 5s, $0.0030
+2026-10-20 18:23:21,389 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1996-10 кл-probs.pdf] Mistral OCR (106KB)
+2026-10-20 18:23:23,637 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1996-10 кл-probs.pdf] OCR: 1p, 1887chars, 2s, $0.0010
+2026-10-20 18:23:23,643 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1996-10 кл-sol.pdf] Mistral OCR (592KB)
+2026-10-20 18:23:28,447 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1996-10 кл-sol.pdf] OCR: 4p, 11885chars, 4s, $0.0040
+2026-10-20 18:23:28,452 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1996-11 кл-probs.pdf] Mistral OCR (106KB)
+2026-10-20 18:23:31,239 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1996-11 кл-probs.pdf] OCR: 1p, 1887chars, 2s, $0.0010
+2026-10-20 18:23:31,246 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1996-11 кл-sol.pdf] Mistral OCR (592KB)
+2026-10-20 18:23:36,601 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1996-11 кл-sol.pdf] OCR: 4p, 11885chars, 5s, $0.0040
+2026-10-20 18:23:36,605 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1997-10 кл-probs.pdf] Mistral OCR (95KB)
+2026-10-20 18:23:38,863 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1997-10 кл-probs.pdf] OCR: 1p, 1352chars, 2s, $0.0010
+2026-10-20 18:23:38,870 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1997-10 кл-sol.pdf] Mistral OCR (470KB)
+2026-10-20 18:23:42,602 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1997-10 кл-sol.pdf] OCR: 5p, 9238chars, 3s, $0.0050
+2026-10-20 18:23:42,607 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1997-11 кл-probs.pdf] Mistral OCR (95KB)
+2026-10-20 18:23:44,810 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1997-11 кл-probs.pdf] OCR: 1p, 1352chars, 2s, $0.0010
+2026-10-20 18:23:44,817 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1997-11 кл-sol.pdf] Mistral OCR (470KB)
+2026-10-20 18:23:47,682 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1997-11 кл-sol.pdf] OCR: 5p, 9238chars, 2s, $0.0050
+2026-10-20 18:23:47,687 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1998-10 кл-probs.pdf] Mistral OCR (103KB)
+2026-10-20 18:23:50,572 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1998-10 кл-probs.pdf] OCR: 1p, 1547chars, 2s, $0.0010
+2026-10-20 18:23:50,579 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1998-10 кл-sol.pdf] Mistral OCR (425KB)
+2026-10-20 18:23:53,824 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1998-10 кл-sol.pdf] OCR: 4p, 7611chars, 3s, $0.0040
+2026-10-20 18:23:53,828 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1998-11 кл-probs.pdf] Mistral OCR (103KB)
+2026-10-20 18:23:57,031 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1998-11 кл-probs.pdf] OCR: 1p, 1547chars, 3s, $0.0010
+2026-10-20 18:23:57,043 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1998-11 кл-sol.pdf] Mistral OCR (425KB)
+2026-10-20 18:24:00,673 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1998-11 кл-sol.pdf] OCR: 4p, 7638chars, 3s, $0.0040
+2026-10-20 18:24:00,678 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1999-10 кл-probs.pdf] Mistral OCR (104KB)
+2026-10-20 18:24:02,516 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1999-10 кл-probs.pdf] OCR: 1p, 1474chars, 1s, $0.0010
+2026-10-20 18:24:02,521 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1999-10 кл-sol.pdf] Mistral OCR (370KB)
+2026-10-20 18:24:05,463 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1999-10 кл-sol.pdf] OCR: 3p, 6173chars, 2s, $0.0030
+2026-10-20 18:24:05,468 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1999-11 кл-probs.pdf] Mistral OCR (104KB)
+2026-10-20 18:24:07,317 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1999-11 кл-probs.pdf] OCR: 1p, 1474chars, 1s, $0.0010
+2026-10-20 18:24:07,323 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1999-11 кл-sol.pdf] Mistral OCR (370KB)
+2026-10-20 18:24:10,333 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1999-11 кл-sol.pdf] OCR: 3p, 6173chars, 3s, $0.0030
+2026-10-20 18:24:10,337 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2000-10 кл-probs.pdf] Mistral OCR (147KB)
+2026-10-20 18:24:25,122 [PDF_CHUNKER] ERROR [OLI-2-Областен кръг-2000-10 кл-probs.pdf] OCR 502 (14s): <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Error - Hack Club</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="description" conte
+2026-10-20 18:24:25,127 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2000-10 кл-sol.pdf] Mistral OCR (690KB)
+2026-10-20 18:24:28,262 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2000-10 кл-sol.pdf] OCR: 4p, 8107chars, 3s, $0.0040
+2026-10-20 18:24:28,267 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2000-11 кл-probs.pdf] Mistral OCR (147KB)
+2026-10-20 18:24:31,377 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2000-11 кл-probs.pdf] OCR: 1p, 1561chars, 3s, $0.0010
+2026-10-20 18:24:31,385 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2000-11 кл-sol.pdf] Mistral OCR (690KB)
+2026-10-20 18:24:36,246 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2000-11 кл-sol.pdf] OCR: 4p, 8107chars, 4s, $0.0040
+2026-10-20 18:24:36,251 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2001-10 кл-probs.pdf] Mistral OCR (146KB)
+2026-10-20 18:24:40,576 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2001-10 кл-probs.pdf] OCR: 1p, 1619chars, 4s, $0.0010
+2026-10-20 18:24:40,583 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2001-10 кл-sol.pdf] Mistral OCR (784KB)
+2026-10-20 18:24:45,031 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2001-10 кл-sol.pdf] OCR: 4p, 11335chars, 4s, $0.0040
+2026-10-20 18:24:45,037 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2001-11 кл-probs.pdf] Mistral OCR (146KB)
+2026-10-20 18:24:48,133 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2001-11 кл-probs.pdf] OCR: 1p, 1619chars, 3s, $0.0010
+2026-10-20 18:24:48,141 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2001-11 кл-sol.pdf] Mistral OCR (784KB)
+2026-10-20 18:24:52,426 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2001-11 кл-sol.pdf] OCR: 4p, 11335chars, 4s, $0.0040
+2026-10-20 18:24:52,430 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2002-10 кл-probs.pdf] Mistral OCR (153KB)
+2026-10-20 18:24:55,598 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2002-10 кл-probs.pdf] OCR: 1p, 1477chars, 3s, $0.0010
+2026-10-20 18:24:55,606 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2002-10 кл-sol.pdf] Mistral OCR (729KB)
+2026-10-20 18:24:59,424 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2002-10 кл-sol.pdf] OCR: 4p, 8327chars, 3s, $0.0040
+2026-10-20 18:24:59,429 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2002-11 кл-probs.pdf] Mistral OCR (153KB)
+2026-10-20 18:25:01,815 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2002-11 кл-probs.pdf] OCR: 1p, 1475chars, 2s, $0.0010
+2026-10-20 18:25:01,828 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2002-11 кл-sol.pdf] Mistral OCR (729KB)
+2026-10-20 18:25:06,072 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2002-11 кл-sol.pdf] OCR: 4p, 8330chars, 4s, $0.0040
+2026-10-20 18:25:06,077 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2006-10 кл-probs.pdf] Mistral OCR (128KB)
+2026-10-20 18:25:08,922 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2006-10 кл-probs.pdf] OCR: 1p, 1581chars, 2s, $0.0010
+2026-10-20 18:25:08,928 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2006-10 кл-sol.pdf] Mistral OCR (431KB)
+2026-10-20 18:25:12,397 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2006-10 кл-sol.pdf] OCR: 3p, 5582chars, 3s, $0.0030
+2026-10-20 18:25:12,401 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2006-11 кл-probs.pdf] Mistral OCR (116KB)
+2026-10-20 18:25:14,468 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2006-11 кл-probs.pdf] OCR: 1p, 1446chars, 2s, $0.0010
+2026-10-20 18:25:14,474 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2006-11 кл-sol.pdf] Mistral OCR (467KB)
+2026-10-20 18:25:17,810 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2006-11 кл-sol.pdf] OCR: 4p, 6857chars, 3s, $0.0040
+2026-10-20 18:25:17,815 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2008-10 кл-probs.pdf] Mistral OCR (125KB)
+2026-10-20 18:25:20,395 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2008-10 кл-probs.pdf] OCR: 1p, 1548chars, 2s, $0.0010
+2026-10-20 18:25:20,401 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2008-10 кл-sol.pdf] Mistral OCR (477KB)
+2026-10-20 18:25:24,804 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2008-10 кл-sol.pdf] OCR: 3p, 6326chars, 4s, $0.0030
+2026-10-20 18:25:24,809 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2008-11 кл-probs.pdf] Mistral OCR (129KB)
+2026-10-20 18:25:27,222 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2008-11 кл-probs.pdf] OCR: 1p, 1775chars, 2s, $0.0010
+2026-10-20 18:25:27,228 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2008-11 кл-sol.pdf] Mistral OCR (443KB)
+2026-10-20 18:25:30,642 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2008-11 кл-sol.pdf] OCR: 3p, 6520chars, 3s, $0.0030
+2026-10-20 18:25:30,654 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2011-10 кл-sol.pdf] Mistral OCR (535KB)
+2026-10-20 18:25:35,395 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2011-10 кл-sol.pdf] OCR: 3p, 8877chars, 4s, $0.0030
+2026-10-20 18:25:35,401 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2012-10 кл-sol.pdf] Mistral OCR (469KB)
+2026-10-20 18:25:39,827 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2012-10 кл-sol.pdf] OCR: 3p, 7858chars, 4s, $0.0030
+2026-10-20 18:25:39,834 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2012-11 кл-sol.pdf] Mistral OCR (521KB)
+2026-10-20 18:25:44,906 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2012-11 кл-sol.pdf] OCR: 3p, 8160chars, 5s, $0.0030
+2026-10-20 18:25:44,911 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2013-10 кл-sol.pdf] Mistral OCR (331KB)
+2026-10-20 18:25:49,313 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2013-10 кл-sol.pdf] OCR: 3p, 6906chars, 4s, $0.0030
+2026-10-20 18:25:49,319 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2013-11 кл-sol.pdf] Mistral OCR (372KB)
+2026-10-20 18:25:53,946 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2013-11 кл-sol.pdf] OCR: 2p, 5948chars, 4s, $0.0020
+2026-10-20 18:25:53,952 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2014-10 кл-sol.pdf] Mistral OCR (391KB)
+2026-10-20 18:25:57,929 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2014-10 кл-sol.pdf] OCR: 3p, 6128chars, 3s, $0.0030
+2026-10-20 18:25:57,935 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2014-11 кл-sol.pdf] Mistral OCR (369KB)
+2026-10-20 18:26:01,855 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2014-11 кл-sol.pdf] OCR: 3p, 5996chars, 3s, $0.0030
+2026-10-20 18:26:01,860 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2017-10 кл-probs.pdf] Mistral OCR (87KB)
+2026-10-20 18:26:04,091 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2017-10 кл-probs.pdf] OCR: 1p, 1273chars, 2s, $0.0010
+2026-10-20 18:26:04,096 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2017-11 кл-probs.pdf] Mistral OCR (97KB)
+2026-10-20 18:26:06,167 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2017-11 кл-probs.pdf] OCR: 1p, 1436chars, 2s, $0.0010
+2026-10-20 18:26:06,172 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2019-10 кл-probs.pdf] Mistral OCR (78KB)
+2026-10-20 18:26:08,619 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2019-10 кл-probs.pdf] OCR: 1p, 1094chars, 2s, $0.0010
+2026-10-20 18:26:08,624 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2019-11 кл-probs.pdf] Mistral OCR (121KB)
+2026-10-20 18:26:11,652 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2019-11 кл-probs.pdf] OCR: 1p, 1832chars, 3s, $0.0010
+2026-10-20 18:26:11,657 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2020-10 кл-probs.pdf] Mistral OCR (93KB)
+2026-10-20 18:26:14,220 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2020-10 кл-probs.pdf] OCR: 1p, 1527chars, 2s, $0.0010
+2026-10-20 18:26:14,234 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2020-10 кл-sol.pdf] Mistral OCR (519KB)
+2026-10-20 18:26:20,290 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2020-10 кл-sol.pdf] OCR: 3p, 8815chars, 6s, $0.0030
+2026-10-20 18:26:20,295 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2020-11 кл-probs.pdf] Mistral OCR (93KB)
+2026-10-20 18:26:22,367 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2020-11 кл-probs.pdf] OCR: 1p, 1464chars, 2s, $0.0010
+2026-10-20 18:26:22,374 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2021-11 кл-sol.pdf] Mistral OCR (438KB)
+2026-10-20 18:26:26,354 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2021-11 кл-sol.pdf] OCR: 3p, 6655chars, 3s, $0.0030
+2026-10-20 18:26:26,360 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2023-10 кл-probs (1).pdf] Mistral OCR (93KB)
+2026-10-20 18:26:28,602 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2023-10 кл-probs (1).pdf] OCR: 1p, 1192chars, 2s, $0.0010
+2026-10-20 18:26:28,613 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2023-10 кл-sol (1).pdf] Mistral OCR (1372KB)
+2026-10-20 18:26:33,170 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2023-10 кл-sol (1).pdf] OCR: 4p, 9526chars, 4s, $0.0040
+2026-10-20 18:26:33,175 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2023-11 кл-probs.pdf] Mistral OCR (76KB)
+2026-10-20 18:26:35,365 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2023-11 кл-probs.pdf] OCR: 1p, 929chars, 2s, $0.0010
+2026-10-20 18:26:35,371 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2023-11 кл-sol.pdf] Mistral OCR (752KB)
+2026-10-20 18:26:39,218 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2023-11 кл-sol.pdf] OCR: 2p, 4993chars, 3s, $0.0020
+2026-10-20 18:26:39,222 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2024-10 кл-probs (1).pdf] Mistral OCR (127KB)
+2026-10-20 18:26:42,452 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2024-10 кл-probs (1).pdf] OCR: 1p, 1658chars, 3s, $0.0010
+2026-10-20 18:26:42,456 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2024-11 кл-probs.pdf] Mistral OCR (86KB)
+2026-10-20 18:26:44,531 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2024-11 кл-probs.pdf] OCR: 1p, 1110chars, 2s, $0.0010
+2026-10-20 18:26:44,537 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2025-10 кл-sol (1).pdf] Mistral OCR (637KB)
+2026-10-20 18:26:48,987 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2025-10 кл-sol (1).pdf] OCR: 3p, 10682chars, 4s, $0.0030
+2026-10-20 18:26:48,995 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2025-11 кл-sol.pdf] Mistral OCR (377KB)
+2026-10-20 18:26:54,407 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2025-11 кл-sol.pdf] OCR: 2p, 7411chars, 5s, $0.0020
+2026-10-20 18:26:54,413 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2026-10 кл-sol.pdf] Mistral OCR (740KB)
+2026-10-20 18:26:59,423 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2026-10 кл-sol.pdf] OCR: 5p, 11604chars, 5s, $0.0050
+2026-10-20 18:26:59,428 [PDF_CHUNKER] INFO [OLI-3-Национален кръг-1995-9-12 кл-probs.pdf] Mistral OCR (108KB)
+2026-10-20 18:27:02,090 [PDF_CHUNKER] INFO [OLI-3-Национален кръг-1995-9-12 кл-probs.pdf] OCR: 1p, 1993chars, 2s, $0.0010
+2026-10-20 18:27:02,099 [PDF_CHUNKER] INFO [OLI-3-Национален кръг-1995-9-12 кл-sol.pdf] Mistral OCR (435KB)
+2026-10-20 18:27:05,273 [PDF_CHUNKER] INFO [OLI-3-Национален кръг-1995-9-12 кл-sol.pdf] OCR: 3p, 8619chars, 3s, $0.0030
+2026-10-20 18:27:05,279 [PDF_CHUNKER] INFO [OLI-3-Национален кръг-1996-9-12 кл-probs.pdf] Mistral OCR (102KB)
+2026-10-20 18:27:07,468 [PDF_CHUNKER] INFO [OLI-3-Национален кръг-1996-9-12 кл-probs.pdf] OCR: 1p, 1762chars, 2s, $0.0010
+2026-10-20 18:27:07,477 [PDF_CHUNKER] INFO [OLI-3-Национален кръг-1996-9-12 кл-sol.pdf] Mistral OCR (672KB)
+2026-10-20 18:27:11,750 [PDF_CHUNKER] INFO [OLI-3-Национален кръг-1996-9-12 кл-sol.pdf] OCR: 4p, 13412chars, 4s, $0.0040
+2026-10-20 18:27:11,756 [PDF_CHUNKER] INFO [OLI-3-Национален кръг-1997-9-12 кл-probs.pdf] Mistral OCR (535KB)
+2026-10-20 18:27:53,295 [PDF_CHUNKER] INFO Заредени 0 STEPS точки
+2026-10-20 18:27:53,296 [PDF_CHUNKER] INFO Classify model: openai/gpt-oss-120b ($0.002/call)
+2026-10-20 18:27:53,307 [PDF_CHUNKER] INFO Намерени 227 PDF-а
+2026-10-20 18:27:53,308 [PDF_CHUNKER] INFO Филтър '2024-11': 2 PDF-а
+2026-10-20 18:27:53,308 [PDF_CHUNKER] INFO 
+[1/2] OLI-2-Областен кръг-2024-11 кл-probs.pdf
+2026-10-20 18:27:53,308 [PDF_CHUNKER] INFO 
+═══ OLI-2-Областен кръг-2024-11 кл-probs ═══
+2026-10-20 18:27:53,316 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2024-11 кл-probs.pdf] pdfplumber: 1p, 0 chars
+2026-10-20 18:27:53,317 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2024-11 кл-probs.pdf] 0 chars < 50 → OCR fallback
+2026-10-20 18:27:53,320 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2024-11 кл-probs.pdf] OCR cache: 1p
+2026-10-20 18:27:53,320 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2024-11 кл-probs.pdf] OCR: 1110 chars (vs Python: 0)
+2026-10-20 18:27:53,321 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2024-11 кл-probs] 1 chunks, 1 pages
+2026-10-20 18:28:05,963 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2024-11 кл-probs] chunk 1-1: 4 problems (12s)
+2026-10-20 18:28:05,970 [PDF_CHUNKER] INFO ✓ [OLI-2-Областен кръг-2024-11 кл-probs] 4 problems (deduped) → C:\Users\denis\Downloads\Материали Олимпиада МАТ\pipeline\extracted\OLI-2-Областен кръг-2024-11 кл-probs\all_problems.json
+2026-10-20 18:28:05,971 [PDF_CHUNKER] INFO 
+[2/2] OLI-2-Областен кръг-2024-11 кл-sol.pdf
+2026-10-20 18:28:05,971 [PDF_CHUNKER] INFO 
+═══ OLI-2-Областен кръг-2024-11 кл-sol ═══
+2026-10-20 18:28:07,157 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2024-11 кл-sol.pdf] pypdf: 3p, 10928 chars
+2026-10-20 18:28:07,157 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2024-11 кл-sol] 1 chunks, 3 pages
+2026-10-20 18:28:37,172 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2024-11 кл-sol-1] extract... 30s
+2026-10-20 18:28:58,733 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2024-11 кл-sol] chunk 1-3: 8 problems (51s)
+2026-10-20 18:28:58,739 [PDF_CHUNKER] INFO ✓ [OLI-2-Областен кръг-2024-11 кл-sol] 8 problems (deduped) → C:\Users\denis\Downloads\Материали Олимпиада МАТ\pipeline\extracted\OLI-2-Областен кръг-2024-11 кл-sol\all_problems.json
+2026-10-20 18:29:01,267 [PDF_CHUNKER] INFO Заредени 0 STEPS точки
+2026-10-20 18:29:01,268 [PDF_CHUNKER] INFO Classify model: openai/gpt-oss-120b ($0.002/call)
+2026-10-20 18:29:01,270 [PDF_CHUNKER] INFO Заредени 2 извлечени PDF-а
+2026-10-20 18:29:01,271 [PDF_CHUNKER] INFO   [OLI-2-Областен кръг-2024-11 кл] merge 4 probs + 8 sols → 5 problems
+2026-10-20 18:29:01,276 [PDF_CHUNKER] INFO ✓ 1 merged olympiads → C:\Users\denis\Downloads\Материали Олимпиада МАТ\pipeline\merged
+2026-10-20 18:34:03,540 [PDF_CHUNKER] INFO Заредени 0 STEPS точки
+2026-10-20 18:34:03,540 [PDF_CHUNKER] INFO Classify model: openai/gpt-oss-120b ($0.002/call)
+2026-10-20 18:34:03,542 [PDF_CHUNKER] INFO Заредени 2 извлечени PDF-а
+2026-10-20 18:34:03,543 [PDF_CHUNKER] INFO   [OLI-2-Областен кръг-2024-11 кл] merge 4 probs + 8 sols → 7 problems
+2026-10-20 18:34:03,548 [PDF_CHUNKER] INFO ✓ 1 merged olympiads → C:\Users\denis\Downloads\Материали Олимпиада МАТ\pipeline\merged
+2026-10-20 18:35:10,498 [PDF_CHUNKER] INFO Заредени 0 STEPS точки
+2026-10-20 18:35:10,499 [PDF_CHUNKER] INFO Classify model: openai/gpt-oss-120b ($0.002/call)
+2026-10-20 18:35:10,499 [PDF_CHUNKER] INFO Намерени 1 merged папки
+2026-10-20 18:35:10,500 [PDF_CHUNKER] INFO 
+[OLI-2-Областен кръг-2024-11 кл] класифицирам 7 задачи...
+2026-10-20 18:35:17,822 [PDF_CHUNKER] INFO   [OLI-2-Областен кръг-2024-11 кл:1:2] → ? (?)
+2026-10-20 18:35:19,795 [PDF_CHUNKER] INFO   [OLI-2-Областен кръг-2024-11 кл:2:2] → ? (null)
+2026-10-20 18:35:21,642 [PDF_CHUNKER] INFO   [OLI-2-Областен кръг-2024-11 кл:1:1] → ? (?)
+2026-10-20 18:35:28,296 [PDF_CHUNKER] INFO   [OLI-2-Областен кръг-2024-11 кл:2:1] → ? (?)
+2026-10-20 18:35:46,118 [PDF_CHUNKER] INFO   [OLI-2-Областен кръг-2024-11 кл:3:1] → ? (?)
+2026-10-20 18:36:00,967 [PDF_CHUNKER] INFO   [OLI-2-Областен кръг-2024-11 кл:4:1] → 1.1 (medium)
+2026-10-20 18:36:18,589 [PDF_CHUNKER] INFO   [OLI-2-Областен кръг-2024-11 кл:1:3] → 3.2 (medium)
+2026-10-20 18:36:18,591 [PDF_CHUNKER] INFO ✓ [OLI-2-Областен кръг-2024-11 кл] 7 classified
+2026-10-20 18:36:20,980 [PDF_CHUNKER] INFO Заредени 0 STEPS точки
+2026-10-20 18:36:20,980 [PDF_CHUNKER] INFO Classify model: openai/gpt-oss-120b ($0.002/call)
+2026-10-20 18:36:20,983 [PDF_CHUNKER] INFO ✓ [1.1] 1 real problems
+2026-10-20 18:36:20,984 [PDF_CHUNKER] INFO ⚠ 4 unclassified problems → _unclassified.json
+2026-10-20 18:36:23,293 [PDF_CHUNKER] INFO Заредени 0 STEPS точки
+2026-10-20 18:36:23,293 [PDF_CHUNKER] INFO Classify model: openai/gpt-oss-120b ($0.002/call)
+2026-10-20 18:38:34,341 [PDF_CHUNKER] INFO Заредени 160 STEPS точки
+2026-10-20 18:38:34,341 [PDF_CHUNKER] INFO Classify model: openai/gpt-oss-120b ($0.002/call)
+2026-10-20 18:38:34,342 [PDF_CHUNKER] INFO Намерени 1 merged папки
+2026-10-20 18:38:34,342 [PDF_CHUNKER] INFO 
+[OLI-2-Областен кръг-2024-11 кл] класифицирам 7 задачи...
+2026-10-20 18:38:36,036 [PDF_CHUNKER] INFO   [OLI-2-Областен кръг-2024-11 кл:1:2] → 5.1 (medium)
+2026-10-20 18:39:00,336 [PDF_CHUNKER] INFO   [OLI-2-Областен кръг-2024-11 кл:2:2] → 1.4 (medium)
+2026-10-20 18:39:09,486 [PDF_CHUNKER] INFO   [OLI-2-Областен кръг-2024-11 кл:1:1] → 5.12 (medium)
+2026-10-20 18:39:18,931 [PDF_CHUNKER] INFO   [OLI-2-Областен кръг-2024-11 кл:2:1] → 1.6 (medium)
+2026-10-20 18:39:38,235 [PDF_CHUNKER] INFO   [OLI-2-Областен кръг-2024-11 кл:3:1] → 4.2 (medium)
+2026-10-20 18:39:42,687 [PDF_CHUNKER] INFO   [OLI-2-Областен кръг-2024-11 кл:4:1] → 6.1 (medium)
+2026-10-20 18:39:53,885 [PDF_CHUNKER] INFO   [OLI-2-Областен кръг-2024-11 кл:1:3] → 1.4 (medium)
+2026-10-20 18:39:53,888 [PDF_CHUNKER] INFO ✓ [OLI-2-Областен кръг-2024-11 кл] 7 classified
+2026-10-20 18:39:56,776 [PDF_CHUNKER] INFO Заредени 160 STEPS точки
+2026-10-20 18:39:56,776 [PDF_CHUNKER] INFO Classify model: openai/gpt-oss-120b ($0.002/call)
+2026-10-20 18:39:56,779 [PDF_CHUNKER] INFO ✓ [5.1] 1 real problems
+2026-10-20 18:39:56,781 [PDF_CHUNKER] INFO ✓ [5.12] 1 real problems
+2026-10-20 18:39:56,783 [PDF_CHUNKER] INFO ✓ [1.6] 1 real problems
+2026-10-20 18:39:56,784 [PDF_CHUNKER] INFO ✓ [4.2] 1 real problems
+2026-10-20 18:39:56,787 [PDF_CHUNKER] INFO ✓ [6.1] 1 real problems
+2026-10-20 18:39:59,629 [PDF_CHUNKER] INFO Заредени 160 STEPS точки
+2026-10-20 18:39:59,630 [PDF_CHUNKER] INFO Classify model: openai/gpt-oss-120b ($0.002/call)
+2026-10-20 18:43:51,049 [PDF_CHUNKER] INFO Заредени 160 STEPS точки
+2026-10-20 18:43:51,050 [PDF_CHUNKER] INFO Classify model: openai/gpt-6.1-sol ($0.002/call)
+2026-10-20 18:43:51,053 [PDF_CHUNKER] INFO ✓ [5.1] 1 real problems
+2026-10-20 18:43:51,054 [PDF_CHUNKER] INFO ✓ [5.12] 1 real problems
+2026-10-20 18:43:51,060 [PDF_CHUNKER] INFO ✓ [1.6] 1 real problems
+2026-10-20 18:43:51,063 [PDF_CHUNKER] INFO ✓ [4.2] 1 real problems
+2026-10-20 18:43:51,065 [PDF_CHUNKER] INFO ✓ [6.1] 1 real problems
+2026-10-20 18:55:26,294 [PDF_CHUNKER] INFO Заредени 160 STEPS точки
+2026-10-20 18:55:26,294 [PDF_CHUNKER] INFO Classify model: openai/gpt-6.1-sol ($0.002/call)
+2026-10-20 18:55:26,306 [PDF_CHUNKER] INFO Намерени 227 PDF-а
+2026-10-20 18:55:26,306 [PDF_CHUNKER] INFO Филтър 'sol': 107 PDF-а
+2026-10-20 18:55:26,306 [PDF_CHUNKER] INFO 
+[1/107] OLI-2-Областен кръг-1995-10 кл-sol.pdf
+2026-10-20 18:55:26,306 [PDF_CHUNKER] INFO 
+═══ OLI-2-Областен кръг-1995-10 кл-sol ═══
+2026-10-20 18:55:26,339 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1995-10 кл-sol.pdf] pymupdf: 3p, 87 chars
+2026-10-20 18:55:26,340 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1995-10 кл-sol] 1 chunks, 3 pages
+2026-10-20 18:55:29,009 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1995-10 кл-sol] chunk 1-3: 0 problems (2s)
+2026-10-20 18:55:29,016 [PDF_CHUNKER] INFO ✓ [OLI-2-Областен кръг-1995-10 кл-sol] 0 problems (deduped) → C:\Users\denis\Downloads\Материали Олимпиада МАТ\pipeline\extracted\OLI-2-Областен кръг-1995-10 кл-sol\all_problems.json
+2026-10-20 18:55:29,016 [PDF_CHUNKER] INFO 
+[2/107] OLI-2-Областен кръг-1995-11 кл-sol.pdf
+2026-10-20 18:55:29,016 [PDF_CHUNKER] INFO 
+═══ OLI-2-Областен кръг-1995-11 кл-sol ═══
+2026-10-20 18:55:29,037 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1995-11 кл-sol.pdf] pymupdf: 3p, 87 chars
+2026-10-20 18:55:29,037 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1995-11 кл-sol] 1 chunks, 3 pages
+2026-10-20 18:55:32,142 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1995-11 кл-sol] chunk 1-3: 0 problems (3s)
+2026-10-20 18:55:32,149 [PDF_CHUNKER] INFO ✓ [OLI-2-Областен кръг-1995-11 кл-sol] 0 problems (deduped) → C:\Users\denis\Downloads\Материали Олимпиада МАТ\pipeline\extracted\OLI-2-Областен кръг-1995-11 кл-sol\all_problems.json
+2026-10-20 18:55:32,149 [PDF_CHUNKER] INFO 
+[3/107] OLI-2-Областен кръг-1996-10 кл-sol.pdf
+2026-10-20 18:55:32,149 [PDF_CHUNKER] INFO 
+═══ OLI-2-Областен кръг-1996-10 кл-sol ═══
+2026-10-20 18:55:32,177 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1996-10 кл-sol.pdf] pymupdf: 4p, 116 chars
+2026-10-20 18:55:32,177 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1996-10 кл-sol] 1 chunks, 4 pages
+2026-10-20 18:55:34,533 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1996-10 кл-sol] chunk 1-4: 0 problems (2s)
+2026-10-20 18:55:34,548 [PDF_CHUNKER] INFO ✓ [OLI-2-Областен кръг-1996-10 кл-sol] 0 problems (deduped) → C:\Users\denis\Downloads\Материали Олимпиада МАТ\pipeline\extracted\OLI-2-Областен кръг-1996-10 кл-sol\all_problems.json
+2026-10-20 18:55:34,548 [PDF_CHUNKER] INFO 
+[4/107] OLI-2-Областен кръг-1996-11 кл-sol.pdf
+2026-10-20 18:55:34,548 [PDF_CHUNKER] INFO 
+═══ OLI-2-Областен кръг-1996-11 кл-sol ═══
+2026-10-20 18:55:34,575 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1996-11 кл-sol.pdf] pymupdf: 4p, 116 chars
+2026-10-20 18:55:34,575 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1996-11 кл-sol] 1 chunks, 4 pages
+2026-10-20 18:55:37,607 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1996-11 кл-sol] chunk 1-4: 0 problems (3s)
+2026-10-20 18:55:37,613 [PDF_CHUNKER] INFO ✓ [OLI-2-Областен кръг-1996-11 кл-sol] 0 problems (deduped) → C:\Users\denis\Downloads\Материали Олимпиада МАТ\pipeline\extracted\OLI-2-Областен кръг-1996-11 кл-sol\all_problems.json
+2026-10-20 18:55:37,613 [PDF_CHUNKER] INFO 
+[5/107] OLI-2-Областен кръг-1997-10 кл-sol.pdf
+2026-10-20 18:55:37,613 [PDF_CHUNKER] INFO 
+═══ OLI-2-Областен кръг-1997-10 кл-sol ═══
+2026-10-20 18:55:37,651 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1997-10 кл-sol.pdf] pymupdf: 5p, 145 chars
+2026-10-20 18:55:37,651 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1997-10 кл-sol] 1 chunks, 5 pages
+2026-10-20 18:55:49,892 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1997-10 кл-sol] chunk 1-5: 0 problems (12s)
+2026-10-20 18:55:49,906 [PDF_CHUNKER] INFO ✓ [OLI-2-Областен кръг-1997-10 кл-sol] 0 problems (deduped) → C:\Users\denis\Downloads\Материали Олимпиада МАТ\pipeline\extracted\OLI-2-Областен кръг-1997-10 кл-sol\all_problems.json
+2026-10-20 18:55:49,906 [PDF_CHUNKER] INFO 
+[6/107] OLI-2-Областен кръг-1997-11 кл-sol.pdf
+2026-10-20 18:55:49,906 [PDF_CHUNKER] INFO 
+═══ OLI-2-Областен кръг-1997-11 кл-sol ═══
+2026-10-20 18:55:49,934 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1997-11 кл-sol.pdf] pymupdf: 5p, 145 chars
+2026-10-20 18:55:49,934 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1997-11 кл-sol] 1 chunks, 5 pages
+2026-10-20 18:55:52,608 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1997-11 кл-sol] chunk 1-5: 0 problems (2s)
+2026-10-20 18:55:52,614 [PDF_CHUNKER] INFO ✓ [OLI-2-Областен кръг-1997-11 кл-sol] 0 problems (deduped) → C:\Users\denis\Downloads\Материали Олимпиада МАТ\pipeline\extracted\OLI-2-Областен кръг-1997-11 кл-sol\all_problems.json
+2026-10-20 18:55:52,614 [PDF_CHUNKER] INFO 
+[7/107] OLI-2-Областен кръг-1998-10 кл-sol.pdf
+2026-10-20 18:55:52,615 [PDF_CHUNKER] INFO 
+═══ OLI-2-Областен кръг-1998-10 кл-sol ═══
+2026-10-20 18:55:52,639 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1998-10 кл-sol.pdf] pymupdf: 4p, 116 chars
+2026-10-20 18:55:52,639 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1998-10 кл-sol] 1 chunks, 4 pages
+2026-10-20 18:55:55,069 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1998-10 кл-sol] chunk 1-4: 0 problems (2s)
+2026-10-20 18:55:55,082 [PDF_CHUNKER] INFO ✓ [OLI-2-Областен кръг-1998-10 кл-sol] 0 problems (deduped) → C:\Users\denis\Downloads\Материали Олимпиада МАТ\pipeline\extracted\OLI-2-Областен кръг-1998-10 кл-sol\all_problems.json
+2026-10-20 18:55:55,082 [PDF_CHUNKER] INFO 
+[8/107] OLI-2-Областен кръг-1998-11 кл-sol.pdf
+2026-10-20 18:55:55,082 [PDF_CHUNKER] INFO 
+═══ OLI-2-Областен кръг-1998-11 кл-sol ═══
+2026-10-20 18:55:55,103 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1998-11 кл-sol.pdf] pymupdf: 4p, 116 chars
+2026-10-20 18:55:55,104 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1998-11 кл-sol] 1 chunks, 4 pages
+2026-10-20 18:55:57,634 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1998-11 кл-sol] chunk 1-4: 0 problems (2s)
+2026-10-20 18:55:57,641 [PDF_CHUNKER] INFO ✓ [OLI-2-Областен кръг-1998-11 кл-sol] 0 problems (deduped) → C:\Users\denis\Downloads\Материали Олимпиада МАТ\pipeline\extracted\OLI-2-Областен кръг-1998-11 кл-sol\all_problems.json
+2026-10-20 18:55:57,641 [PDF_CHUNKER] INFO 
+[9/107] OLI-2-Областен кръг-1999-10 кл-sol.pdf
+2026-10-20 18:55:57,641 [PDF_CHUNKER] INFO 
+═══ OLI-2-Областен кръг-1999-10 кл-sol ═══
+2026-10-20 18:55:57,662 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1999-10 кл-sol.pdf] pymupdf: 3p, 87 chars
+2026-10-20 18:55:57,663 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1999-10 кл-sol] 1 chunks, 3 pages
+2026-10-20 18:55:59,849 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1999-10 кл-sol] chunk 1-3: 0 problems (2s)
+2026-10-20 18:55:59,862 [PDF_CHUNKER] INFO ✓ [OLI-2-Областен кръг-1999-10 кл-sol] 0 problems (deduped) → C:\Users\denis\Downloads\Материали Олимпиада МАТ\pipeline\extracted\OLI-2-Областен кръг-1999-10 кл-sol\all_problems.json
+2026-10-20 18:55:59,862 [PDF_CHUNKER] INFO 
+[10/107] OLI-2-Областен кръг-1999-11 кл-sol.pdf
+2026-10-20 18:55:59,862 [PDF_CHUNKER] INFO 
+═══ OLI-2-Областен кръг-1999-11 кл-sol ═══
+2026-10-20 18:55:59,880 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1999-11 кл-sol.pdf] pymupdf: 3p, 87 chars
+2026-10-20 18:55:59,881 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1999-11 кл-sol] 1 chunks, 3 pages
+2026-10-20 18:56:02,403 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1999-11 кл-sol] chunk 1-3: 0 problems (2s)
+2026-10-20 18:56:02,409 [PDF_CHUNKER] INFO ✓ [OLI-2-Областен кръг-1999-11 кл-sol] 0 problems (deduped) → C:\Users\denis\Downloads\Материали Олимпиада МАТ\pipeline\extracted\OLI-2-Областен кръг-1999-11 кл-sol\all_problems.json
+2026-10-20 18:56:02,409 [PDF_CHUNKER] INFO 
+[11/107] OLI-2-Областен кръг-2000-10 кл-sol.pdf
+2026-10-20 18:56:02,409 [PDF_CHUNKER] INFO 
+═══ OLI-2-Областен кръг-2000-10 кл-sol ═══
+2026-10-20 18:56:02,441 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2000-10 кл-sol.pdf] pymupdf: 4p, 96 chars
+2026-10-20 18:56:02,442 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2000-10 кл-sol] 1 chunks, 4 pages
+2026-10-20 18:56:04,830 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2000-10 кл-sol] chunk 1-4: 0 problems (2s)
+2026-10-20 18:56:04,843 [PDF_CHUNKER] INFO ✓ [OLI-2-Областен кръг-2000-10 кл-sol] 0 problems (deduped) → C:\Users\denis\Downloads\Материали Олимпиада МАТ\pipeline\extracted\OLI-2-Областен кръг-2000-10 кл-sol\all_problems.json
+2026-10-20 18:56:04,843 [PDF_CHUNKER] INFO 
+[12/107] OLI-2-Областен кръг-2000-11 кл-sol.pdf
+2026-10-20 18:56:04,843 [PDF_CHUNKER] INFO 
+═══ OLI-2-Областен кръг-2000-11 кл-sol ═══
+2026-10-20 18:56:04,874 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2000-11 кл-sol.pdf] pymupdf: 4p, 96 chars
+2026-10-20 18:56:04,874 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2000-11 кл-sol] 1 chunks, 4 pages
+2026-10-20 18:56:07,258 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2000-11 кл-sol] chunk 1-4: 0 problems (2s)
+2026-10-20 18:56:07,266 [PDF_CHUNKER] INFO ✓ [OLI-2-Областен кръг-2000-11 кл-sol] 0 problems (deduped) → C:\Users\denis\Downloads\Материали Олимпиада МАТ\pipeline\extracted\OLI-2-Областен кръг-2000-11 кл-sol\all_problems.json
+2026-10-20 18:56:07,267 [PDF_CHUNKER] INFO 
+[13/107] OLI-2-Областен кръг-2001-10 кл-sol.pdf
+2026-10-20 18:56:07,267 [PDF_CHUNKER] INFO 
+═══ OLI-2-Областен кръг-2001-10 кл-sol ═══
+2026-10-20 18:56:07,299 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2001-10 кл-sol.pdf] pymupdf: 4p, 96 chars
+2026-10-20 18:56:07,299 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2001-10 кл-sol] 1 chunks, 4 pages
+2026-10-20 18:56:09,573 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2001-10 кл-sol] chunk 1-4: 0 problems (2s)
+2026-10-20 18:56:09,586 [PDF_CHUNKER] INFO ✓ [OLI-2-Областен кръг-2001-10 кл-sol] 0 problems (deduped) → C:\Users\denis\Downloads\Материали Олимпиада МАТ\pipeline\extracted\OLI-2-Областен кръг-2001-10 кл-sol\all_problems.json
+2026-10-20 18:56:09,587 [PDF_CHUNKER] INFO 
+[14/107] OLI-2-Областен кръг-2001-11 кл-sol.pdf
+2026-10-20 18:56:09,587 [PDF_CHUNKER] INFO 
+═══ OLI-2-Областен кръг-2001-11 кл-sol ═══
+2026-10-20 18:56:09,614 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2001-11 кл-sol.pdf] pymupdf: 4p, 96 chars
+2026-10-20 18:56:09,615 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2001-11 кл-sol] 1 chunks, 4 pages
+2026-10-20 18:56:11,776 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2001-11 кл-sol] chunk 1-4: 0 problems (2s)
+2026-10-20 18:56:11,782 [PDF_CHUNKER] INFO ✓ [OLI-2-Областен кръг-2001-11 кл-sol] 0 problems (deduped) → C:\Users\denis\Downloads\Материали Олимпиада МАТ\pipeline\extracted\OLI-2-Областен кръг-2001-11 кл-sol\all_problems.json
+2026-10-20 18:56:11,784 [PDF_CHUNKER] INFO 
+[15/107] OLI-2-Областен кръг-2002-10 кл-sol.pdf
+2026-10-20 18:56:11,784 [PDF_CHUNKER] INFO 
+═══ OLI-2-Областен кръг-2002-10 кл-sol ═══
+2026-10-20 18:56:11,808 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2002-10 кл-sol.pdf] pymupdf: 4p, 96 chars
+2026-10-20 18:56:11,808 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2002-10 кл-sol] 1 chunks, 4 pages
+2026-10-20 18:56:14,139 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2002-10 кл-sol] chunk 1-4: 0 problems (2s)
+2026-10-20 18:56:14,146 [PDF_CHUNKER] INFO ✓ [OLI-2-Областен кръг-2002-10 кл-sol] 0 problems (deduped) → C:\Users\denis\Downloads\Материали Олимпиада МАТ\pipeline\extracted\OLI-2-Областен кръг-2002-10 кл-sol\all_problems.json
+2026-10-20 18:56:14,147 [PDF_CHUNKER] INFO 
+[16/107] OLI-2-Областен кръг-2002-11 кл-sol.pdf
+2026-10-20 18:56:14,147 [PDF_CHUNKER] INFO 
+═══ OLI-2-Областен кръг-2002-11 кл-sol ═══
+2026-10-20 18:56:14,176 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2002-11 кл-sol.pdf] pymupdf: 4p, 96 chars
+2026-10-20 18:56:14,177 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2002-11 кл-sol] 1 chunks, 4 pages
+2026-10-20 18:56:16,842 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2002-11 кл-sol] chunk 1-4: 0 problems (2s)
+2026-10-20 18:56:16,855 [PDF_CHUNKER] INFO ✓ [OLI-2-Областен кръг-2002-11 кл-sol] 0 problems (deduped) → C:\Users\denis\Downloads\Материали Олимпиада МАТ\pipeline\extracted\OLI-2-Областен кръг-2002-11 кл-sol\all_problems.json
+2026-10-20 18:56:16,856 [PDF_CHUNKER] INFO 
+[17/107] OLI-2-Областен кръг-2003-10 кл-sol.pdf
+2026-10-20 18:56:16,856 [PDF_CHUNKER] INFO 
+═══ OLI-2-Областен кръг-2003-10 кл-sol ═══
+2026-10-20 18:56:17,239 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2003-10 кл-sol.pdf] pymupdf: 3p, 4236 chars
+2026-10-20 18:56:17,239 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2003-10 кл-sol] 1 chunks, 3 pages
+2026-10-20 18:56:47,250 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2003-10 кл-sol-1] extract... 30s
+2026-10-20 18:56:52,405 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2003-10 кл-sol] chunk 1-3: 6 problems (35s)
+2026-10-20 18:56:52,414 [PDF_CHUNKER] INFO ✓ [OLI-2-Областен кръг-2003-10 кл-sol] 6 problems (deduped) → C:\Users\denis\Downloads\Материали Олимпиада МАТ\pipeline\extracted\OLI-2-Областен кръг-2003-10 кл-sol\all_problems.json
+2026-10-20 18:56:52,414 [PDF_CHUNKER] INFO 
+[18/107] OLI-2-Областен кръг-2003-11 кл-sol.pdf
+2026-10-20 18:56:52,415 [PDF_CHUNKER] INFO 
+═══ OLI-2-Областен кръг-2003-11 кл-sol ═══
+2026-10-20 18:56:52,760 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2003-11 кл-sol.pdf] pymupdf: 3p, 4236 chars
+2026-10-20 18:56:52,761 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2003-11 кл-sol] 1 chunks, 3 pages
+2026-10-20 18:57:22,768 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2003-11 кл-sol-1] extract... 30s
+2026-10-20 18:57:29,299 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2003-11 кл-sol] chunk 1-3: 6 problems (36s)
+2026-10-20 18:57:29,307 [PDF_CHUNKER] INFO ✓ [OLI-2-Областен кръг-2003-11 кл-sol] 6 problems (deduped) → C:\Users\denis\Downloads\Материали Олимпиада МАТ\pipeline\extracted\OLI-2-Областен кръг-2003-11 кл-sol\all_problems.json
+2026-10-20 18:57:29,307 [PDF_CHUNKER] INFO 
+[19/107] OLI-2-Областен кръг-2004-10 кл-sol.pdf
+2026-10-20 18:57:29,307 [PDF_CHUNKER] INFO 
+═══ OLI-2-Областен кръг-2004-10 кл-sol ═══
+2026-10-20 18:57:30,381 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2004-10 кл-sol.pdf] pypdf: 3p, 9295 chars
+2026-10-20 18:57:30,382 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2004-10 кл-sol] 1 chunks, 3 pages
+2026-10-20 18:58:00,399 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2004-10 кл-sol-1] extract... 30s
+2026-10-20 18:58:30,403 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2004-10 кл-sol-1] extract... 60s
+2026-10-20 18:58:32,576 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2004-10 кл-sol] chunk 1-3: 10 problems (62s)
+2026-10-20 18:58:32,584 [PDF_CHUNKER] INFO ✓ [OLI-2-Областен кръг-2004-10 кл-sol] 10 problems (deduped) → C:\Users\denis\Downloads\Материали Олимпиада МАТ\pipeline\extracted\OLI-2-Областен кръг-2004-10 кл-sol\all_problems.json
+2026-10-20 18:58:32,585 [PDF_CHUNKER] INFO 
+[20/107] OLI-2-Областен кръг-2004-11 кл-sol.pdf
+2026-10-20 18:58:32,585 [PDF_CHUNKER] INFO 
+═══ OLI-2-Областен кръг-2004-11 кл-sol ═══
+2026-10-20 18:58:34,522 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2004-11 кл-sol.pdf] pypdf: 3p, 10784 chars
+2026-10-20 18:58:34,522 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2004-11 кл-sol] 1 chunks, 3 pages
+2026-10-20 18:59:04,526 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2004-11 кл-sol-1] extract... 30s
+2026-10-20 18:59:23,022 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2004-11 кл-sol] chunk 1-3: 9 problems (48s)
+2026-10-20 18:59:23,031 [PDF_CHUNKER] INFO ✓ [OLI-2-Областен кръг-2004-11 кл-sol] 9 problems (deduped) → C:\Users\denis\Downloads\Материали Олимпиада МАТ\pipeline\extracted\OLI-2-Областен кръг-2004-11 кл-sol\all_problems.json
+2026-10-20 18:59:23,031 [PDF_CHUNKER] INFO 
+[21/107] OLI-2-Областен кръг-2005-10 кл-sol.pdf
+2026-10-20 18:59:23,031 [PDF_CHUNKER] INFO 
+═══ OLI-2-Областен кръг-2005-10 кл-sol ═══
+2026-10-20 18:59:24,840 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2005-10 кл-sol.pdf] pdfplumber: 2p, 9878 chars
+2026-10-20 18:59:24,840 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2005-10 кл-sol] 1 chunks, 2 pages
+2026-10-20 18:59:54,854 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2005-10 кл-sol-1] extract... 30s
+2026-10-20 19:00:24,856 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2005-10 кл-sol-1] extract... 60s
+2026-10-20 19:00:26,152 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2005-10 кл-sol] chunk 1-2: 13 problems (61s)
+2026-10-20 19:00:26,164 [PDF_CHUNKER] INFO ✓ [OLI-2-Областен кръг-2005-10 кл-sol] 13 problems (deduped) → C:\Users\denis\Downloads\Материали Олимпиада МАТ\pipeline\extracted\OLI-2-Областен кръг-2005-10 кл-sol\all_problems.json
+2026-10-20 19:00:26,166 [PDF_CHUNKER] INFO 
+[22/107] OLI-2-Областен кръг-2005-11 кл-sol.pdf
+2026-10-20 19:00:26,166 [PDF_CHUNKER] INFO 
+═══ OLI-2-Областен кръг-2005-11 кл-sol ═══
+2026-10-20 19:00:29,214 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2005-11 кл-sol.pdf] pdfplumber: 3p, 21343 chars
+2026-10-20 19:00:29,214 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2005-11 кл-sol] 1 chunks, 3 pages
+2026-10-20 19:00:29,666 [PDF_CHUNKER] ERROR [OLI-2-Областен кръг-2005-11 кл-sol-1] 402: {"error":"Spending limit reached. Need a higher limit? hey@mahadk.com"}
+2026-10-20 19:00:29,669 [PDF_CHUNKER] ERROR [OLI-2-Областен кръг-2005-11 кл-sol] chunk 1-3 — no response (0s)
+2026-10-20 19:00:29,669 [PDF_CHUNKER] ERROR [OLI-2-Областен кръг-2005-11 кл-sol] chunk 1 FAILED — ще retry следващия път
+2026-10-20 19:00:29,673 [PDF_CHUNKER] WARNING [OLI-2-Областен кръг-2005-11 кл-sol] 1/1 chunks failed — status=partial
+2026-10-20 19:00:29,673 [PDF_CHUNKER] INFO 
+[23/107] OLI-2-Областен кръг-2006-10 кл-sol.pdf
+2026-10-20 19:00:29,674 [PDF_CHUNKER] INFO 
+═══ OLI-2-Областен кръг-2006-10 кл-sol ═══
+2026-10-20 19:00:29,698 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2006-10 кл-sol.pdf] pymupdf: 3p, 72 chars
+2026-10-20 19:00:29,698 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2006-10 кл-sol] 1 chunks, 3 pages
+2026-10-20 19:00:30,116 [PDF_CHUNKER] ERROR [OLI-2-Областен кръг-2006-10 кл-sol-1] 402: {"error":"Spending limit reached. Need a higher limit? hey@mahadk.com"}
+2026-10-20 19:00:30,118 [PDF_CHUNKER] ERROR [OLI-2-Областен кръг-2006-10 кл-sol] chunk 1-3 — no response (0s)
+2026-10-20 19:00:30,119 [PDF_CHUNKER] ERROR [OLI-2-Областен кръг-2006-10 кл-sol] chunk 1 FAILED — ще retry следващия път
+2026-10-20 19:00:30,122 [PDF_CHUNKER] WARNING [OLI-2-Областен кръг-2006-10 кл-sol] 1/1 chunks failed — status=partial
+2026-10-20 19:00:30,122 [PDF_CHUNKER] INFO 
+[24/107] OLI-2-Областен кръг-2006-11 кл-sol.pdf
+2026-10-20 19:00:30,122 [PDF_CHUNKER] INFO 
+═══ OLI-2-Областен кръг-2006-11 кл-sol ═══
+2026-10-20 19:00:30,146 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2006-11 кл-sol.pdf] pymupdf: 4p, 96 chars
+2026-10-20 19:00:30,146 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2006-11 кл-sol] 1 chunks, 4 pages
+2026-10-20 19:00:30,561 [PDF_CHUNKER] ERROR [OLI-2-Областен кръг-2006-11 кл-sol-1] 402: {"error":"Spending limit reached. Need a higher limit? hey@mahadk.com"}
+2026-10-20 19:00:30,564 [PDF_CHUNKER] ERROR [OLI-2-Областен кръг-2006-11 кл-sol] chunk 1-4 — no response (0s)
+2026-10-20 19:00:30,564 [PDF_CHUNKER] ERROR [OLI-2-Областен кръг-2006-11 кл-sol] chunk 1 FAILED — ще retry следващия път
+2026-10-20 19:00:30,573 [PDF_CHUNKER] ERROR [OLI-2-Областен кръг-2006-11 кл-sol.pdf] [WinError 5] Access is denied: 'C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\pipeline\\chunker_state.tmp' -> 'C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\pipeline\\chunker_state.json'
+Traceback (most recent call last):
+  File "C:\Users\denis\Downloads\Материали Олимпиада МАТ\pipeline\pdf_chunker.py", line 962, in run_extract
+    self.process_pdf(pdf)
+  File "C:\Users\denis\Downloads\Материали Олимпиада МАТ\pipeline\pdf_chunker.py", line 933, in process_pdf
+    self.state.mark_extraction_failed(name, failed, len(chunks))
+  File "C:\Users\denis\Downloads\Материали Олимпиада МАТ\pipeline\pdf_chunker.py", line 516, in mark_extraction_failed
+    self.save()
+  File "C:\Users\denis\Downloads\Материали Олимпиада МАТ\pipeline\pdf_chunker.py", line 477, in save
+    tmp.replace(STATE_FILE)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\pathlib.py", line 1376, in replace
+    os.replace(self, target)
+PermissionError: [WinError 5] Access is denied: 'C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\pipeline\\chunker_state.tmp' -> 'C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\pipeline\\chunker_state.json'
+2026-10-20 19:00:30,576 [PDF_CHUNKER] INFO 
+[25/107] OLI-2-Областен кръг-2007-10 кл-sol.pdf
+2026-10-20 19:00:30,577 [PDF_CHUNKER] INFO 
+═══ OLI-2-Областен кръг-2007-10 кл-sol ═══
+2026-10-20 19:00:31,337 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2007-10 кл-sol.pdf] pdfplumber: 3p, 7502 chars
+2026-10-20 19:00:31,338 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2007-10 кл-sol] 1 chunks, 3 pages
+2026-10-20 19:00:31,747 [PDF_CHUNKER] ERROR [OLI-2-Областен кръг-2007-10 кл-sol-1] 402: {"error":"Spending limit reached. Need a higher limit? hey@mahadk.com"}
+2026-10-20 19:00:31,750 [PDF_CHUNKER] ERROR [OLI-2-Областен кръг-2007-10 кл-sol] chunk 1-3 — no response (0s)
+2026-10-20 19:00:31,750 [PDF_CHUNKER] ERROR [OLI-2-Областен кръг-2007-10 кл-sol] chunk 1 FAILED — ще retry следващия път
+2026-10-20 19:00:31,753 [PDF_CHUNKER] WARNING [OLI-2-Областен кръг-2007-10 кл-sol] 1/1 chunks failed — status=partial
+2026-10-20 19:00:31,753 [PDF_CHUNKER] INFO 
+[26/107] OLI-2-Областен кръг-2007-11 кл-sol.pdf
+2026-10-20 19:00:31,753 [PDF_CHUNKER] INFO 
+═══ OLI-2-Областен кръг-2007-11 кл-sol ═══
+2026-10-20 19:00:32,490 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2007-11 кл-sol.pdf] pdfplumber: 4p, 8545 chars
+2026-10-20 19:00:32,491 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2007-11 кл-sol] 1 chunks, 4 pages
+2026-10-20 19:00:32,899 [PDF_CHUNKER] ERROR [OLI-2-Областен кръг-2007-11 кл-sol-1] 402: {"error":"Spending limit reached. Need a higher limit? hey@mahadk.com"}
+2026-10-20 19:00:32,899 [PDF_CHUNKER] ERROR [OLI-2-Областен кръг-2007-11 кл-sol] chunk 1-4 — no response (0s)
+2026-10-20 19:00:32,901 [PDF_CHUNKER] ERROR [OLI-2-Областен кръг-2007-11 кл-sol] chunk 1 FAILED — ще retry следващия път
+2026-10-20 19:00:32,904 [PDF_CHUNKER] WARNING [OLI-2-Областен кръг-2007-11 кл-sol] 1/1 chunks failed — status=partial
+2026-10-20 19:00:32,905 [PDF_CHUNKER] INFO 
+[27/107] OLI-2-Областен кръг-2008-10 кл-sol.pdf
+2026-10-20 19:00:32,905 [PDF_CHUNKER] INFO 
+═══ OLI-2-Областен кръг-2008-10 кл-sol ═══
+2026-10-20 19:00:32,929 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2008-10 кл-sol.pdf] pymupdf: 3p, 72 chars
+2026-10-20 19:00:32,929 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2008-10 кл-sol] 1 chunks, 3 pages
+2026-10-20 19:00:33,340 [PDF_CHUNKER] ERROR [OLI-2-Областен кръг-2008-10 кл-sol-1] 402: {"error":"Spending limit reached. Need a higher limit? hey@mahadk.com"}
+2026-10-20 19:00:33,341 [PDF_CHUNKER] ERROR [OLI-2-Областен кръг-2008-10 кл-sol] chunk 1-3 — no response (0s)
+2026-10-20 19:00:33,343 [PDF_CHUNKER] ERROR [OLI-2-Областен кръг-2008-10 кл-sol] chunk 1 FAILED — ще retry следващия път
+2026-10-20 19:00:33,345 [PDF_CHUNKER] WARNING [OLI-2-Областен кръг-2008-10 кл-sol] 1/1 chunks failed — status=partial
+2026-10-20 19:00:33,345 [PDF_CHUNKER] INFO 
+[28/107] OLI-2-Областен кръг-2008-11 кл-sol.pdf
+2026-10-20 19:00:33,345 [PDF_CHUNKER] INFO 
+═══ OLI-2-Областен кръг-2008-11 кл-sol ═══
+2026-10-20 19:00:33,366 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2008-11 кл-sol.pdf] pymupdf: 3p, 72 chars
+2026-10-20 19:00:33,366 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2008-11 кл-sol] 1 chunks, 3 pages
+2026-10-20 19:00:33,869 [PDF_CHUNKER] ERROR [OLI-2-Областен кръг-2008-11 кл-sol-1] 402: {"error":"Spending limit reached. Need a higher limit? hey@mahadk.com"}
+2026-10-20 19:00:33,871 [PDF_CHUNKER] ERROR [OLI-2-Областен кръг-2008-11 кл-sol] chunk 1-3 — no response (0s)
+2026-10-20 19:00:33,872 [PDF_CHUNKER] ERROR [OLI-2-Областен кръг-2008-11 кл-sol] chunk 1 FAILED — ще retry следващия път
+2026-10-20 19:00:33,875 [PDF_CHUNKER] WARNING [OLI-2-Областен кръг-2008-11 кл-sol] 1/1 chunks failed — status=partial
+2026-10-20 19:00:33,876 [PDF_CHUNKER] INFO 
+[29/107] OLI-2-Областен кръг-2009-10 кл-sol.pdf
+2026-10-20 19:00:33,876 [PDF_CHUNKER] INFO 
+═══ OLI-2-Областен кръг-2009-10 кл-sol ═══
+2026-10-20 19:00:35,105 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2009-10 кл-sol.pdf] pdfplumber: 3p, 12526 chars
+2026-10-20 19:00:35,106 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2009-10 кл-sol] 1 chunks, 3 pages
+2026-10-20 19:00:35,547 [PDF_CHUNKER] ERROR [OLI-2-Областен кръг-2009-10 кл-sol-1] 402: {"error":"Spending limit reached. Need a higher limit? hey@mahadk.com"}
+2026-10-20 19:00:35,548 [PDF_CHUNKER] ERROR [OLI-2-Областен кръг-2009-10 кл-sol] chunk 1-3 — no response (0s)
+2026-10-20 19:00:35,548 [PDF_CHUNKER] ERROR [OLI-2-Областен кръг-2009-10 кл-sol] chunk 1 FAILED — ще retry следващия път
+2026-10-20 19:00:35,552 [PDF_CHUNKER] WARNING [OLI-2-Областен кръг-2009-10 кл-sol] 1/1 chunks failed — status=partial
+2026-10-20 19:00:35,553 [PDF_CHUNKER] INFO 
+[30/107] OLI-2-Областен кръг-2009-11 кл-sol.pdf
+2026-10-20 19:00:35,553 [PDF_CHUNKER] INFO 
+═══ OLI-2-Областен кръг-2009-11 кл-sol ═══
+2026-10-20 19:00:37,556 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2009-11 кл-sol.pdf] pdfplumber: 4p, 18878 chars
+2026-10-20 19:00:37,556 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2009-11 кл-sol] 1 chunks, 4 pages
+2026-10-20 19:00:38,000 [PDF_CHUNKER] ERROR [OLI-2-Областен кръг-2009-11 кл-sol-1] 402: {"error":"Spending limit reached. Need a higher limit? hey@mahadk.com"}
+2026-10-20 19:00:38,002 [PDF_CHUNKER] ERROR [OLI-2-Областен кръг-2009-11 кл-sol] chunk 1-4 — no response (0s)
+2026-10-20 19:00:38,002 [PDF_CHUNKER] ERROR [OLI-2-Областен кръг-2009-11 кл-sol] chunk 1 FAILED — ще retry следващия път
+2026-10-20 19:00:38,005 [PDF_CHUNKER] WARNING [OLI-2-Областен кръг-2009-11 кл-sol] 1/1 chunks failed — status=partial
+2026-10-20 19:00:38,006 [PDF_CHUNKER] INFO 
+[31/107] OLI-2-Областен кръг-2010-10 кл-sol.pdf
+2026-10-20 19:00:38,006 [PDF_CHUNKER] INFO 
+═══ OLI-2-Областен кръг-2010-10 кл-sol ═══
+2026-10-20 19:00:38,644 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2010-10 кл-sol.pdf] pypdf: 7p, 13761 chars
+2026-10-20 19:00:38,644 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2010-10 кл-sol] 1 chunks, 7 pages
+2026-10-20 19:00:39,048 [PDF_CHUNKER] ERROR [OLI-2-Областен кръг-2010-10 кл-sol-1] 402: {"error":"Spending limit reached. Need a higher limit? hey@mahadk.com"}
+2026-10-20 19:00:39,050 [PDF_CHUNKER] ERROR [OLI-2-Областен кръг-2010-10 кл-sol] chunk 1-7 — no response (0s)
+2026-10-20 19:00:39,052 [PDF_CHUNKER] ERROR [OLI-2-Областен кръг-2010-10 кл-sol] chunk 1 FAILED — ще retry следващия път
+2026-10-20 19:00:39,054 [PDF_CHUNKER] WARNING [OLI-2-Областен кръг-2010-10 кл-sol] 1/1 chunks failed — status=partial
+2026-10-20 19:00:39,054 [PDF_CHUNKER] INFO 
+[32/107] OLI-2-Областен кръг-2010-11 кл-sol.pdf
+2026-10-20 19:00:39,055 [PDF_CHUNKER] INFO 
+═══ OLI-2-Областен кръг-2010-11 кл-sol ═══
+2026-10-20 19:00:39,658 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2010-11 кл-sol.pdf] pdfplumber: 4p, 8170 chars
+2026-10-20 19:00:39,658 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2010-11 кл-sol] 1 chunks, 4 pages
+2026-10-20 19:00:40,060 [PDF_CHUNKER] ERROR [OLI-2-Областен кръг-2010-11 кл-sol-1] 402: {"error":"Spending limit reached. Need a higher limit? hey@mahadk.com"}
+2026-10-20 19:00:40,062 [PDF_CHUNKER] ERROR [OLI-2-Областен кръг-2010-11 кл-sol] chunk 1-4 — no response (0s)
+2026-10-20 19:00:40,063 [PDF_CHUNKER] ERROR [OLI-2-Областен кръг-2010-11 кл-sol] chunk 1 FAILED — ще retry следващия път
+2026-10-20 19:00:40,065 [PDF_CHUNKER] WARNING [OLI-2-Областен кръг-2010-11 кл-sol] 1/1 chunks failed — status=partial
+2026-10-20 19:00:40,066 [PDF_CHUNKER] INFO 
+[33/107] OLI-2-Областен кръг-2011-10 кл-sol.pdf
+2026-10-20 19:00:40,066 [PDF_CHUNKER] INFO 
+═══ OLI-2-Областен кръг-2011-10 кл-sol ═══
+2026-10-20 19:00:40,081 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2011-10 кл-sol.pdf] pdfplumber: 3p, 0 chars
+2026-10-20 19:00:40,082 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2011-10 кл-sol.pdf] 0 chars < 50 → OCR fallback
+2026-10-20 19:00:40,092 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2011-10 кл-sol.pdf] OCR cache: 3p
+2026-10-20 19:00:40,092 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2011-10 кл-sol.pdf] OCR: 8877 chars (vs Python: 0)
+2026-10-20 19:00:40,093 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2011-10 кл-sol] 1 chunks, 3 pages
+2026-10-20 19:00:40,545 [PDF_CHUNKER] ERROR [OLI-2-Областен кръг-2011-10 кл-sol-1] 402: {"error":"Spending limit reached. Need a higher limit? hey@mahadk.com"}
+2026-10-20 19:00:40,547 [PDF_CHUNKER] ERROR [OLI-2-Областен кръг-2011-10 кл-sol] chunk 1-3 — no response (0s)
+2026-10-20 19:00:40,548 [PDF_CHUNKER] ERROR [OLI-2-Областен кръг-2011-10 кл-sol] chunk 1 FAILED — ще retry следващия път
+2026-10-20 19:00:40,550 [PDF_CHUNKER] WARNING [OLI-2-Областен кръг-2011-10 кл-sol] 1/1 chunks failed — status=partial
+2026-10-20 19:00:40,550 [PDF_CHUNKER] INFO 
+[34/107] OLI-2-Областен кръг-2011-11 кл-sol.pdf
+2026-10-20 19:00:40,551 [PDF_CHUNKER] INFO 
+═══ OLI-2-Областен кръг-2011-11 кл-sol ═══
+2026-10-20 19:00:41,222 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2011-11 кл-sol.pdf] pypdf: 4p, 7801 chars
+2026-10-20 19:00:41,222 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2011-11 кл-sol] 1 chunks, 4 pages
+2026-10-20 19:00:41,654 [PDF_CHUNKER] ERROR [OLI-2-Областен кръг-2011-11 кл-sol-1] 402: {"error":"Spending limit reached. Need a higher limit? hey@mahadk.com"}
+2026-10-20 19:00:41,656 [PDF_CHUNKER] ERROR [OLI-2-Областен кръг-2011-11 кл-sol] chunk 1-4 — no response (0s)
+2026-10-20 19:00:41,657 [PDF_CHUNKER] ERROR [OLI-2-Областен кръг-2011-11 кл-sol] chunk 1 FAILED — ще retry следващия път
+2026-10-20 19:00:41,660 [PDF_CHUNKER] WARNING [OLI-2-Областен кръг-2011-11 кл-sol] 1/1 chunks failed — status=partial
+2026-10-20 19:00:41,660 [PDF_CHUNKER] INFO 
+[35/107] OLI-2-Областен кръг-2012-10 кл-sol.pdf
+2026-10-20 19:00:41,660 [PDF_CHUNKER] INFO 
+═══ OLI-2-Областен кръг-2012-10 кл-sol ═══
+2026-10-20 19:00:41,677 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2012-10 кл-sol.pdf] pdfplumber: 3p, 0 chars
+2026-10-20 19:00:41,678 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2012-10 кл-sol.pdf] 0 chars < 50 → OCR fallback
+2026-10-20 19:00:41,692 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2012-10 кл-sol.pdf] OCR cache: 3p
+2026-10-20 19:00:41,692 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2012-10 кл-sol.pdf] OCR: 7858 chars (vs Python: 0)
+2026-10-20 19:00:41,692 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2012-10 кл-sol] 1 chunks, 3 pages
+2026-10-20 19:00:42,142 [PDF_CHUNKER] ERROR [OLI-2-Областен кръг-2012-10 кл-sol-1] 402: {"error":"Spending limit reached. Need a higher limit? hey@mahadk.com"}
+2026-10-20 19:00:42,144 [PDF_CHUNKER] ERROR [OLI-2-Областен кръг-2012-10 кл-sol] chunk 1-3 — no response (0s)
+2026-10-20 19:00:42,145 [PDF_CHUNKER] ERROR [OLI-2-Областен кръг-2012-10 кл-sol] chunk 1 FAILED — ще retry следващия път
+2026-10-20 19:00:42,147 [PDF_CHUNKER] WARNING [OLI-2-Областен кръг-2012-10 кл-sol] 1/1 chunks failed — status=partial
+2026-10-20 19:00:42,147 [PDF_CHUNKER] INFO 
+[36/107] OLI-2-Областен кръг-2012-11 кл-sol.pdf
+2026-10-20 19:00:42,147 [PDF_CHUNKER] INFO 
+═══ OLI-2-Областен кръг-2012-11 кл-sol ═══
+2026-10-20 19:00:42,166 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2012-11 кл-sol.pdf] pdfplumber: 3p, 0 chars
+2026-10-20 19:00:42,167 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2012-11 кл-sol.pdf] 0 chars < 50 → OCR fallback
+2026-10-20 19:00:42,189 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2012-11 кл-sol.pdf] OCR cache: 3p
+2026-10-20 19:00:42,189 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2012-11 кл-sol.pdf] OCR: 8160 chars (vs Python: 0)
+2026-10-20 19:00:42,189 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2012-11 кл-sol] 1 chunks, 3 pages
+2026-10-20 19:00:42,623 [PDF_CHUNKER] ERROR [OLI-2-Областен кръг-2012-11 кл-sol-1] 402: {"error":"Spending limit reached. Need a higher limit? hey@mahadk.com"}
+2026-10-20 19:00:42,626 [PDF_CHUNKER] ERROR [OLI-2-Областен кръг-2012-11 кл-sol] chunk 1-3 — no response (0s)
+2026-10-20 19:00:42,626 [PDF_CHUNKER] ERROR [OLI-2-Областен кръг-2012-11 кл-sol] chunk 1 FAILED — ще retry следващия път
+2026-10-20 19:00:42,628 [PDF_CHUNKER] WARNING [OLI-2-Областен кръг-2012-11 кл-sol] 1/1 chunks failed — status=partial
+2026-10-20 19:00:42,628 [PDF_CHUNKER] INFO 
+[37/107] OLI-2-Областен кръг-2013-10 кл-sol.pdf
+2026-10-20 19:00:42,630 [PDF_CHUNKER] INFO 
+═══ OLI-2-Областен кръг-2013-10 кл-sol ═══
+2026-10-20 19:00:42,649 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2013-10 кл-sol.pdf] pdfplumber: 3p, 0 chars
+2026-10-20 19:00:42,649 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2013-10 кл-sol.pdf] 0 chars < 50 → OCR fallback
+2026-10-20 19:00:42,660 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2013-10 кл-sol.pdf] OCR cache: 3p
+2026-10-20 19:00:42,661 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2013-10 кл-sol.pdf] OCR: 6906 chars (vs Python: 0)
+2026-10-20 19:00:42,661 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2013-10 кл-sol] 1 chunks, 3 pages
+2026-10-20 19:00:43,082 [PDF_CHUNKER] ERROR [OLI-2-Областен кръг-2013-10 кл-sol-1] 402: {"error":"Spending limit reached. Need a higher limit? hey@mahadk.com"}
+2026-10-20 19:00:43,085 [PDF_CHUNKER] ERROR [OLI-2-Областен кръг-2013-10 кл-sol] chunk 1-3 — no response (0s)
+2026-10-20 19:00:43,085 [PDF_CHUNKER] ERROR [OLI-2-Областен кръг-2013-10 кл-sol] chunk 1 FAILED — ще retry следващия път
+2026-10-20 19:00:43,088 [PDF_CHUNKER] WARNING [OLI-2-Областен кръг-2013-10 кл-sol] 1/1 chunks failed — status=partial
+2026-10-20 19:00:43,088 [PDF_CHUNKER] INFO 
+[38/107] OLI-2-Областен кръг-2013-11 кл-sol.pdf
+2026-10-20 19:00:43,088 [PDF_CHUNKER] INFO 
+═══ OLI-2-Областен кръг-2013-11 кл-sol ═══
+2026-10-20 19:00:43,100 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2013-11 кл-sol.pdf] pdfplumber: 2p, 0 chars
+2026-10-20 19:00:43,100 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2013-11 кл-sol.pdf] 0 chars < 50 → OCR fallback
+2026-10-20 19:00:43,110 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2013-11 кл-sol.pdf] OCR cache: 2p
+2026-10-20 19:00:43,110 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2013-11 кл-sol.pdf] OCR: 5948 chars (vs Python: 0)
+2026-10-20 19:00:43,110 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2013-11 кл-sol] 1 chunks, 2 pages
+2026-10-20 19:00:43,538 [PDF_CHUNKER] ERROR [OLI-2-Областен кръг-2013-11 кл-sol-1] 402: {"error":"Spending limit reached. Need a higher limit? hey@mahadk.com"}
+2026-10-20 19:00:43,539 [PDF_CHUNKER] ERROR [OLI-2-Областен кръг-2013-11 кл-sol] chunk 1-2 — no response (0s)
+2026-10-20 19:00:43,539 [PDF_CHUNKER] ERROR [OLI-2-Областен кръг-2013-11 кл-sol] chunk 1 FAILED — ще retry следващия път
+2026-10-20 19:00:43,543 [PDF_CHUNKER] WARNING [OLI-2-Областен кръг-2013-11 кл-sol] 1/1 chunks failed — status=partial
+2026-10-20 19:00:43,544 [PDF_CHUNKER] INFO 
+[39/107] OLI-2-Областен кръг-2014-10 кл-sol.pdf
+2026-10-20 19:00:43,544 [PDF_CHUNKER] INFO 
+═══ OLI-2-Областен кръг-2014-10 кл-sol ═══
+2026-10-20 19:00:43,562 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2014-10 кл-sol.pdf] pdfplumber: 3p, 0 chars
+2026-10-20 19:00:43,562 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2014-10 кл-sol.pdf] 0 chars < 50 → OCR fallback
+2026-10-20 19:00:43,573 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2014-10 кл-sol.pdf] OCR cache: 3p
+2026-10-20 19:00:43,573 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2014-10 кл-sol.pdf] OCR: 6128 chars (vs Python: 0)
+2026-10-20 19:00:43,573 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2014-10 кл-sol] 1 chunks, 3 pages
+2026-10-20 19:00:43,975 [PDF_CHUNKER] ERROR [OLI-2-Областен кръг-2014-10 кл-sol-1] 402: {"error":"Spending limit reached. Need a higher limit? hey@mahadk.com"}
+2026-10-20 19:00:43,978 [PDF_CHUNKER] ERROR [OLI-2-Областен кръг-2014-10 кл-sol] chunk 1-3 — no response (0s)
+2026-10-20 19:00:43,978 [PDF_CHUNKER] ERROR [OLI-2-Областен кръг-2014-10 кл-sol] chunk 1 FAILED — ще retry следващия път
+2026-10-20 19:00:43,980 [PDF_CHUNKER] ERROR [OLI-2-Областен кръг-2014-10 кл-sol.pdf] [WinError 5] Access is denied: 'C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\pipeline\\chunker_state.tmp' -> 'C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\pipeline\\chunker_state.json'
+Traceback (most recent call last):
+  File "C:\Users\denis\Downloads\Материали Олимпиада МАТ\pipeline\pdf_chunker.py", line 962, in run_extract
+    self.process_pdf(pdf)
+  File "C:\Users\denis\Downloads\Материали Олимпиада МАТ\pipeline\pdf_chunker.py", line 933, in process_pdf
+    self.state.mark_extraction_failed(name, failed, len(chunks))
+  File "C:\Users\denis\Downloads\Материали Олимпиада МАТ\pipeline\pdf_chunker.py", line 516, in mark_extraction_failed
+    self.save()
+  File "C:\Users\denis\Downloads\Материали Олимпиада МАТ\pipeline\pdf_chunker.py", line 477, in save
+    tmp.replace(STATE_FILE)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\pathlib.py", line 1376, in replace
+    os.replace(self, target)
+PermissionError: [WinError 5] Access is denied: 'C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\pipeline\\chunker_state.tmp' -> 'C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\pipeline\\chunker_state.json'
+2026-10-20 19:00:43,982 [PDF_CHUNKER] INFO 
+[40/107] OLI-2-Областен кръг-2014-11 кл-sol.pdf
+2026-10-20 19:00:43,983 [PDF_CHUNKER] INFO 
+═══ OLI-2-Областен кръг-2014-11 кл-sol ═══
+2026-10-20 19:00:43,996 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2014-11 кл-sol.pdf] pdfplumber: 3p, 0 chars
+2026-10-20 19:00:43,996 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2014-11 кл-sol.pdf] 0 chars < 50 → OCR fallback
+2026-10-20 19:00:44,007 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2014-11 кл-sol.pdf] OCR cache: 3p
+2026-10-20 19:00:44,007 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2014-11 кл-sol.pdf] OCR: 5996 chars (vs Python: 0)
+2026-10-20 19:00:44,007 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2014-11 кл-sol] 1 chunks, 3 pages
+2026-10-20 19:00:44,412 [PDF_CHUNKER] ERROR [OLI-2-Областен кръг-2014-11 кл-sol-1] 402: {"error":"Spending limit reached. Need a higher limit? hey@mahadk.com"}
+2026-10-20 19:00:44,414 [PDF_CHUNKER] ERROR [OLI-2-Областен кръг-2014-11 кл-sol] chunk 1-3 — no response (0s)
+2026-10-20 19:00:44,415 [PDF_CHUNKER] ERROR [OLI-2-Областен кръг-2014-11 кл-sol] chunk 1 FAILED — ще retry следващия път
+2026-10-20 19:00:44,416 [PDF_CHUNKER] WARNING [OLI-2-Областен кръг-2014-11 кл-sol] 1/1 chunks failed — status=partial
+2026-10-20 19:00:44,417 [PDF_CHUNKER] INFO 
+[41/107] OLI-2-Областен кръг-2015-10 кл-sol.pdf
+2026-10-20 19:00:44,417 [PDF_CHUNKER] INFO 
+═══ OLI-2-Областен кръг-2015-10 кл-sol ═══
+2026-10-20 19:00:44,694 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2015-10 кл-sol.pdf] pdfplumber: 3p, 3049 chars
+2026-10-20 19:00:44,695 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2015-10 кл-sol] 1 chunks, 3 pages
+2026-10-20 19:00:45,112 [PDF_CHUNKER] ERROR [OLI-2-Областен кръг-2015-10 кл-sol-1] 402: {"error":"Spending limit reached. Need a higher limit? hey@mahadk.com"}
+2026-10-20 19:00:45,114 [PDF_CHUNKER] ERROR [OLI-2-Областен кръг-2015-10 кл-sol] chunk 1-3 — no response (0s)
+2026-10-20 19:00:45,115 [PDF_CHUNKER] ERROR [OLI-2-Областен кръг-2015-10 кл-sol] chunk 1 FAILED — ще retry следващия път
+2026-10-20 19:00:45,118 [PDF_CHUNKER] WARNING [OLI-2-Областен кръг-2015-10 кл-sol] 1/1 chunks failed — status=partial
+2026-10-20 19:00:45,118 [PDF_CHUNKER] INFO 
+[42/107] OLI-2-Областен кръг-2015-11 кл-sol.pdf
+2026-10-20 19:00:45,120 [PDF_CHUNKER] INFO 
+═══ OLI-2-Областен кръг-2015-11 кл-sol ═══
+2026-10-20 19:00:45,605 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2015-11 кл-sol.pdf] pymupdf: 4p, 5188 chars
+2026-10-20 19:00:45,605 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2015-11 кл-sol] 1 chunks, 4 pages
+2026-10-20 19:00:46,060 [PDF_CHUNKER] ERROR [OLI-2-Областен кръг-2015-11 кл-sol-1] 402: {"error":"Spending limit reached. Need a higher limit? hey@mahadk.com"}
+2026-10-20 19:00:46,062 [PDF_CHUNKER] ERROR [OLI-2-Областен кръг-2015-11 кл-sol] chunk 1-4 — no response (0s)
+2026-10-20 19:00:46,062 [PDF_CHUNKER] ERROR [OLI-2-Областен кръг-2015-11 кл-sol] chunk 1 FAILED — ще retry следващия път
+2026-10-20 19:00:46,065 [PDF_CHUNKER] WARNING [OLI-2-Областен кръг-2015-11 кл-sol] 1/1 chunks failed — status=partial
+2026-10-20 19:00:46,065 [PDF_CHUNKER] INFO 
+[43/107] OLI-2-Областен кръг-2016-10 кл-sol.pdf
+2026-10-20 19:00:46,065 [PDF_CHUNKER] INFO 
+═══ OLI-2-Областен кръг-2016-10 кл-sol ═══
+2026-10-20 19:00:46,454 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2016-10 кл-sol.pdf] pypdf: 2p, 4171 chars
+2026-10-20 19:00:46,454 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2016-10 кл-sol] 1 chunks, 2 pages
+2026-10-20 19:00:46,853 [PDF_CHUNKER] ERROR [OLI-2-Областен кръг-2016-10 кл-sol-1] 402: {"error":"Spending limit reached. Need a higher limit? hey@mahadk.com"}
+2026-10-20 19:00:46,856 [PDF_CHUNKER] ERROR [OLI-2-Областен кръг-2016-10 кл-sol] chunk 1-2 — no response (0s)
+2026-10-20 19:00:46,857 [PDF_CHUNKER] ERROR [OLI-2-Областен кръг-2016-10 кл-sol] chunk 1 FAILED — ще retry следващия път
+2026-10-20 19:00:46,860 [PDF_CHUNKER] WARNING [OLI-2-Областен кръг-2016-10 кл-sol] 1/1 chunks failed — status=partial
+2026-10-20 19:00:46,860 [PDF_CHUNKER] INFO 
+[44/107] OLI-2-Областен кръг-2016-11 кл-sol.pdf
+2026-10-20 19:00:46,860 [PDF_CHUNKER] INFO 
+═══ OLI-2-Областен кръг-2016-11 кл-sol ═══
+2026-10-20 19:00:47,260 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2016-11 кл-sol.pdf] pdfplumber: 2p, 3748 chars
+2026-10-20 19:00:47,260 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2016-11 кл-sol] 1 chunks, 2 pages
+2026-10-20 19:00:47,721 [PDF_CHUNKER] ERROR [OLI-2-Областен кръг-2016-11 кл-sol-1] 402: {"error":"Spending limit reached. Need a higher limit? hey@mahadk.com"}
+2026-10-20 19:00:47,723 [PDF_CHUNKER] ERROR [OLI-2-Областен кръг-2016-11 кл-sol] chunk 1-2 — no response (0s)
+2026-10-20 19:00:47,723 [PDF_CHUNKER] ERROR [OLI-2-Областен кръг-2016-11 кл-sol] chunk 1 FAILED — ще retry следващия път
+2026-10-20 19:00:47,726 [PDF_CHUNKER] WARNING [OLI-2-Областен кръг-2016-11 кл-sol] 1/1 chunks failed — status=partial
+2026-10-20 19:00:47,726 [PDF_CHUNKER] INFO 
+[45/107] OLI-2-Областен кръг-2017-10 кл-sol.pdf
+2026-10-20 19:00:47,726 [PDF_CHUNKER] INFO 
+═══ OLI-2-Областен кръг-2017-10 кл-sol ═══
+2026-10-20 19:00:48,282 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2017-10 кл-sol.pdf] pdfplumber: 4p, 6870 chars
+2026-10-20 19:00:48,282 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2017-10 кл-sol] 1 chunks, 4 pages
+2026-10-20 19:00:48,698 [PDF_CHUNKER] ERROR [OLI-2-Областен кръг-2017-10 кл-sol-1] 402: {"error":"Spending limit reached. Need a higher limit? hey@mahadk.com"}
+2026-10-20 19:00:48,701 [PDF_CHUNKER] ERROR [OLI-2-Областен кръг-2017-10 кл-sol] chunk 1-4 — no response (0s)
+2026-10-20 19:00:48,702 [PDF_CHUNKER] ERROR [OLI-2-Областен кръг-2017-10 кл-sol] chunk 1 FAILED — ще retry следващия път
+2026-10-20 19:00:48,705 [PDF_CHUNKER] WARNING [OLI-2-Областен кръг-2017-10 кл-sol] 1/1 chunks failed — status=partial
+2026-10-20 19:00:48,705 [PDF_CHUNKER] INFO 
+[46/107] OLI-2-Областен кръг-2017-11 кл-sol.pdf
+2026-10-20 19:00:48,705 [PDF_CHUNKER] INFO 
+═══ OLI-2-Областен кръг-2017-11 кл-sol ═══
+2026-10-20 19:00:49,291 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2017-11 кл-sol.pdf] pdfplumber: 4p, 6969 chars
+2026-10-20 19:00:49,291 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2017-11 кл-sol] 1 chunks, 4 pages
+2026-10-20 19:00:49,705 [PDF_CHUNKER] ERROR [OLI-2-Областен кръг-2017-11 кл-sol-1] 402: {"error":"Spending limit reached. Need a higher limit? hey@mahadk.com"}
+2026-10-20 19:00:49,707 [PDF_CHUNKER] ERROR [OLI-2-Областен кръг-2017-11 кл-sol] chunk 1-4 — no response (0s)
+2026-10-20 19:00:49,707 [PDF_CHUNKER] ERROR [OLI-2-Областен кръг-2017-11 кл-sol] chunk 1 FAILED — ще retry следващия път
+2026-10-20 19:00:49,711 [PDF_CHUNKER] WARNING [OLI-2-Областен кръг-2017-11 кл-sol] 1/1 chunks failed — status=partial
+2026-10-20 19:00:49,711 [PDF_CHUNKER] INFO 
+[47/107] OLI-2-Областен кръг-2018-10 кл-sol.pdf
+2026-10-20 19:00:49,711 [PDF_CHUNKER] INFO 
+═══ OLI-2-Областен кръг-2018-10 кл-sol ═══
+2026-10-20 19:00:50,227 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2018-10 кл-sol.pdf] pymupdf: 3p, 6470 chars
+2026-10-20 19:00:50,227 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2018-10 кл-sol] 1 chunks, 3 pages
+2026-10-20 19:00:50,640 [PDF_CHUNKER] ERROR [OLI-2-Областен кръг-2018-10 кл-sol-1] 402: {"error":"Spending limit reached. Need a higher limit? hey@mahadk.com"}
+2026-10-20 19:00:50,642 [PDF_CHUNKER] ERROR [OLI-2-Областен кръг-2018-10 кл-sol] chunk 1-3 — no response (0s)
+2026-10-20 19:00:50,642 [PDF_CHUNKER] ERROR [OLI-2-Областен кръг-2018-10 кл-sol] chunk 1 FAILED — ще retry следващия път
+2026-10-20 19:00:50,645 [PDF_CHUNKER] WARNING [OLI-2-Областен кръг-2018-10 кл-sol] 1/1 chunks failed — status=partial
+2026-10-20 19:00:50,645 [PDF_CHUNKER] INFO 
+[48/107] OLI-2-Областен кръг-2018-11 кл-sol.pdf
+2026-10-20 19:00:50,645 [PDF_CHUNKER] INFO 
+═══ OLI-2-Областен кръг-2018-11 кл-sol ═══
+2026-10-20 19:00:51,044 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2018-11 кл-sol.pdf] pdfplumber: 3p, 5179 chars
+2026-10-20 19:00:51,044 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2018-11 кл-sol] 1 chunks, 3 pages
+2026-10-20 19:00:51,481 [PDF_CHUNKER] ERROR [OLI-2-Областен кръг-2018-11 кл-sol-1] 402: {"error":"Spending limit reached. Need a higher limit? hey@mahadk.com"}
+2026-10-20 19:00:51,482 [PDF_CHUNKER] ERROR [OLI-2-Областен кръг-2018-11 кл-sol] chunk 1-3 — no response (0s)
+2026-10-20 19:00:51,483 [PDF_CHUNKER] ERROR [OLI-2-Областен кръг-2018-11 кл-sol] chunk 1 FAILED — ще retry следващия път
+2026-10-20 19:00:51,487 [PDF_CHUNKER] WARNING [OLI-2-Областен кръг-2018-11 кл-sol] 1/1 chunks failed — status=partial
+2026-10-20 19:00:51,487 [PDF_CHUNKER] INFO 
+[49/107] OLI-2-Областен кръг-2019-10 кл-sol.pdf
+2026-10-20 19:00:51,488 [PDF_CHUNKER] INFO 
+═══ OLI-2-Областен кръг-2019-10 кл-sol ═══
+2026-10-20 19:00:52,800 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2019-10 кл-sol.pdf] pdfplumber: 2p, 13995 chars
+2026-10-20 19:00:52,800 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2019-10 кл-sol] 1 chunks, 2 pages
+2026-10-20 19:00:53,235 [PDF_CHUNKER] ERROR [OLI-2-Областен кръг-2019-10 кл-sol-1] 402: {"error":"Spending limit reached. Need a higher limit? hey@mahadk.com"}
+2026-10-20 19:00:53,237 [PDF_CHUNKER] ERROR [OLI-2-Областен кръг-2019-10 кл-sol] chunk 1-2 — no response (0s)
+2026-10-20 19:00:53,237 [PDF_CHUNKER] ERROR [OLI-2-Областен кръг-2019-10 кл-sol] chunk 1 FAILED — ще retry следващия път
+2026-10-20 19:00:53,240 [PDF_CHUNKER] WARNING [OLI-2-Областен кръг-2019-10 кл-sol] 1/1 chunks failed — status=partial
+2026-10-20 19:00:53,240 [PDF_CHUNKER] INFO 
+[50/107] OLI-2-Областен кръг-2019-11 кл-sol.pdf
+2026-10-20 19:00:53,240 [PDF_CHUNKER] INFO 
+═══ OLI-2-Областен кръг-2019-11 кл-sol ═══
+2026-10-20 19:00:54,143 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2019-11 кл-sol.pdf] pdfplumber: 2p, 9376 chars
+2026-10-20 19:00:54,144 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2019-11 кл-sol] 1 chunks, 2 pages
+2026-10-20 19:00:54,563 [PDF_CHUNKER] ERROR [OLI-2-Областен кръг-2019-11 кл-sol-1] 402: {"error":"Spending limit reached. Need a higher limit? hey@mahadk.com"}
+2026-10-20 19:00:54,567 [PDF_CHUNKER] ERROR [OLI-2-Областен кръг-2019-11 кл-sol] chunk 1-2 — no response (0s)
+2026-10-20 19:00:54,567 [PDF_CHUNKER] ERROR [OLI-2-Областен кръг-2019-11 кл-sol] chunk 1 FAILED — ще retry следващия път
+2026-10-20 19:00:54,569 [PDF_CHUNKER] WARNING [OLI-2-Областен кръг-2019-11 кл-sol] 1/1 chunks failed — status=partial
+2026-10-20 19:00:54,569 [PDF_CHUNKER] INFO 
+[51/107] OLI-2-Областен кръг-2020-10 кл-sol.pdf
+2026-10-20 19:00:54,571 [PDF_CHUNKER] INFO 
+═══ OLI-2-Областен кръг-2020-10 кл-sol ═══
+2026-10-20 19:00:54,596 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2020-10 кл-sol.pdf] pymupdf: 3p, 24 chars
+2026-10-20 19:00:54,597 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2020-10 кл-sol.pdf] 24 chars < 50 → OCR fallback
+2026-10-20 19:00:54,611 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2020-10 кл-sol.pdf] OCR cache: 3p
+2026-10-20 19:00:54,612 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2020-10 кл-sol.pdf] OCR: 8815 chars (vs Python: 24)
+2026-10-20 19:00:54,612 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2020-10 кл-sol] 1 chunks, 3 pages
+2026-10-20 19:00:55,054 [PDF_CHUNKER] ERROR [OLI-2-Областен кръг-2020-10 кл-sol-1] 402: {"error":"Spending limit reached. Need a higher limit? hey@mahadk.com"}
+2026-10-20 19:00:55,056 [PDF_CHUNKER] ERROR [OLI-2-Областен кръг-2020-10 кл-sol] chunk 1-3 — no response (0s)
+2026-10-20 19:00:55,056 [PDF_CHUNKER] ERROR [OLI-2-Областен кръг-2020-10 кл-sol] chunk 1 FAILED — ще retry следващия път
+2026-10-20 19:00:55,059 [PDF_CHUNKER] ERROR [OLI-2-Областен кръг-2020-10 кл-sol.pdf] [WinError 5] Access is denied: 'C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\pipeline\\chunker_state.tmp' -> 'C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\pipeline\\chunker_state.json'
+Traceback (most recent call last):
+  File "C:\Users\denis\Downloads\Материали Олимпиада МАТ\pipeline\pdf_chunker.py", line 962, in run_extract
+    self.process_pdf(pdf)
+  File "C:\Users\denis\Downloads\Материали Олимпиада МАТ\pipeline\pdf_chunker.py", line 933, in process_pdf
+    self.state.mark_extraction_failed(name, failed, len(chunks))
+  File "C:\Users\denis\Downloads\Материали Олимпиада МАТ\pipeline\pdf_chunker.py", line 516, in mark_extraction_failed
+    self.save()
+  File "C:\Users\denis\Downloads\Материали Олимпиада МАТ\pipeline\pdf_chunker.py", line 477, in save
+    tmp.replace(STATE_FILE)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\pathlib.py", line 1376, in replace
+    os.replace(self, target)
+PermissionError: [WinError 5] Access is denied: 'C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\pipeline\\chunker_state.tmp' -> 'C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\pipeline\\chunker_state.json'
+2026-10-20 19:00:55,060 [PDF_CHUNKER] INFO 
+[52/107] OLI-2-Областен кръг-2020-11 кл-sol.pdf
+2026-10-20 19:00:55,060 [PDF_CHUNKER] INFO 
+═══ OLI-2-Областен кръг-2020-11 кл-sol ═══
+2026-10-20 19:00:56,643 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2020-11 кл-sol.pdf] pypdf: 2p, 12955 chars
+2026-10-20 19:00:56,643 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2020-11 кл-sol] 1 chunks, 2 pages
+2026-10-20 19:00:57,112 [PDF_CHUNKER] ERROR [OLI-2-Областен кръг-2020-11 кл-sol-1] 402: {"error":"Spending limit reached. Need a higher limit? hey@mahadk.com"}
+2026-10-20 19:00:57,114 [PDF_CHUNKER] ERROR [OLI-2-Областен кръг-2020-11 кл-sol] chunk 1-2 — no response (0s)
+2026-10-20 19:00:57,114 [PDF_CHUNKER] ERROR [OLI-2-Областен кръг-2020-11 кл-sol] chunk 1 FAILED — ще retry следващия път
+2026-10-20 19:00:57,116 [PDF_CHUNKER] WARNING [OLI-2-Областен кръг-2020-11 кл-sol] 1/1 chunks failed — status=partial
+2026-10-20 19:00:57,116 [PDF_CHUNKER] INFO 
+[53/107] OLI-2-Областен кръг-2021-10 кл-sol.pdf
+2026-10-20 19:00:57,117 [PDF_CHUNKER] INFO 
+═══ OLI-2-Областен кръг-2021-10 кл-sol ═══
+2026-10-20 19:00:58,483 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2021-10 кл-sol.pdf] pypdf: 2p, 25838 chars
+2026-10-20 19:00:58,483 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2021-10 кл-sol] 1 chunks, 2 pages
+2026-10-20 19:00:58,912 [PDF_CHUNKER] ERROR [OLI-2-Областен кръг-2021-10 кл-sol-1] 402: {"error":"Spending limit reached. Need a higher limit? hey@mahadk.com"}
+2026-10-20 19:00:58,913 [PDF_CHUNKER] ERROR [OLI-2-Областен кръг-2021-10 кл-sol] chunk 1-2 — no response (0s)
+2026-10-20 19:00:58,914 [PDF_CHUNKER] ERROR [OLI-2-Областен кръг-2021-10 кл-sol] chunk 1 FAILED — ще retry следващия път
+2026-10-20 19:00:58,917 [PDF_CHUNKER] WARNING [OLI-2-Областен кръг-2021-10 кл-sol] 1/1 chunks failed — status=partial
+2026-10-20 19:00:58,918 [PDF_CHUNKER] INFO 
+[54/107] OLI-2-Областен кръг-2021-11 кл-sol.pdf
+2026-10-20 19:00:58,918 [PDF_CHUNKER] INFO 
+═══ OLI-2-Областен кръг-2021-11 кл-sol ═══
+2026-10-20 19:00:58,937 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2021-11 кл-sol.pdf] pdfplumber: 3p, 0 chars
+2026-10-20 19:00:58,939 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2021-11 кл-sol.pdf] 0 chars < 50 → OCR fallback
+2026-10-20 19:00:58,948 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2021-11 кл-sol.pdf] OCR cache: 3p
+2026-10-20 19:00:58,949 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2021-11 кл-sol.pdf] OCR: 6655 chars (vs Python: 0)
+2026-10-20 19:00:58,949 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2021-11 кл-sol] 1 chunks, 3 pages
+2026-10-20 19:00:59,359 [PDF_CHUNKER] ERROR [OLI-2-Областен кръг-2021-11 кл-sol-1] 402: {"error":"Spending limit reached. Need a higher limit? hey@mahadk.com"}
+2026-10-20 19:00:59,362 [PDF_CHUNKER] ERROR [OLI-2-Областен кръг-2021-11 кл-sol] chunk 1-3 — no response (0s)
+2026-10-20 19:00:59,362 [PDF_CHUNKER] ERROR [OLI-2-Областен кръг-2021-11 кл-sol] chunk 1 FAILED — ще retry следващия път
+2026-10-20 19:00:59,366 [PDF_CHUNKER] WARNING [OLI-2-Областен кръг-2021-11 кл-sol] 1/1 chunks failed — status=partial
+2026-10-20 19:00:59,366 [PDF_CHUNKER] INFO 
+[55/107] OLI-2-Областен кръг-2022-10 кл-sol.pdf
+2026-10-20 19:00:59,367 [PDF_CHUNKER] INFO 
+═══ OLI-2-Областен кръг-2022-10 кл-sol ═══
+2026-10-20 19:01:01,164 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2022-10 кл-sol.pdf] pdfplumber: 3p, 12307 chars
+2026-10-20 19:01:01,164 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2022-10 кл-sol] 1 chunks, 3 pages
+2026-10-20 19:01:01,618 [PDF_CHUNKER] ERROR [OLI-2-Областен кръг-2022-10 кл-sol-1] 402: {"error":"Spending limit reached. Need a higher limit? hey@mahadk.com"}
+2026-10-20 19:01:01,620 [PDF_CHUNKER] ERROR [OLI-2-Областен кръг-2022-10 кл-sol] chunk 1-3 — no response (0s)
+2026-10-20 19:01:01,620 [PDF_CHUNKER] ERROR [OLI-2-Областен кръг-2022-10 кл-sol] chunk 1 FAILED — ще retry следващия път
+2026-10-20 19:01:01,623 [PDF_CHUNKER] WARNING [OLI-2-Областен кръг-2022-10 кл-sol] 1/1 chunks failed — status=partial
+2026-10-20 19:01:01,623 [PDF_CHUNKER] INFO 
+[56/107] OLI-2-Областен кръг-2022-11 кл-sol.pdf
+2026-10-20 19:01:01,623 [PDF_CHUNKER] INFO 
+═══ OLI-2-Областен кръг-2022-11 кл-sol ═══
+2026-10-20 19:01:02,462 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2022-11 кл-sol.pdf] pdfplumber: 3p, 6545 chars
+2026-10-20 19:01:02,462 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2022-11 кл-sol] 1 chunks, 3 pages
+2026-10-20 19:01:02,905 [PDF_CHUNKER] ERROR [OLI-2-Областен кръг-2022-11 кл-sol-1] 402: {"error":"Spending limit reached. Need a higher limit? hey@mahadk.com"}
+2026-10-20 19:01:02,907 [PDF_CHUNKER] ERROR [OLI-2-Областен кръг-2022-11 кл-sol] chunk 1-3 — no response (0s)
+2026-10-20 19:01:02,907 [PDF_CHUNKER] ERROR [OLI-2-Областен кръг-2022-11 кл-sol] chunk 1 FAILED — ще retry следващия път
+2026-10-20 19:01:02,911 [PDF_CHUNKER] WARNING [OLI-2-Областен кръг-2022-11 кл-sol] 1/1 chunks failed — status=partial
+2026-10-20 19:01:02,911 [PDF_CHUNKER] INFO 
+[57/107] OLI-2-Областен кръг-2023-10 кл-sol (1).pdf
+2026-10-20 19:01:02,912 [PDF_CHUNKER] INFO 
+═══ OLI-2-Областен кръг-2023-10 кл-sol (1) ═══
+2026-10-20 19:01:02,945 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2023-10 кл-sol (1).pdf] pymupdf: 4p, 96 chars
+2026-10-20 19:01:02,945 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2023-10 кл-sol (1)] 1 chunks, 4 pages
+2026-10-20 19:01:03,374 [PDF_CHUNKER] ERROR [OLI-2-Областен кръг-2023-10 кл-sol (1)-1] 402: {"error":"Spending limit reached. Need a higher limit? hey@mahadk.com"}
+2026-10-20 19:01:03,376 [PDF_CHUNKER] ERROR [OLI-2-Областен кръг-2023-10 кл-sol (1)] chunk 1-4 — no response (0s)
+2026-10-20 19:01:03,376 [PDF_CHUNKER] ERROR [OLI-2-Областен кръг-2023-10 кл-sol (1)] chunk 1 FAILED — ще retry следващия път
+2026-10-20 19:01:03,378 [PDF_CHUNKER] ERROR [OLI-2-Областен кръг-2023-10 кл-sol (1).pdf] [WinError 5] Access is denied: 'C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\pipeline\\chunker_state.tmp' -> 'C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\pipeline\\chunker_state.json'
+Traceback (most recent call last):
+  File "C:\Users\denis\Downloads\Материали Олимпиада МАТ\pipeline\pdf_chunker.py", line 962, in run_extract
+    self.process_pdf(pdf)
+  File "C:\Users\denis\Downloads\Материали Олимпиада МАТ\pipeline\pdf_chunker.py", line 933, in process_pdf
+    self.state.mark_extraction_failed(name, failed, len(chunks))
+  File "C:\Users\denis\Downloads\Материали Олимпиада МАТ\pipeline\pdf_chunker.py", line 516, in mark_extraction_failed
+    self.save()
+  File "C:\Users\denis\Downloads\Материали Олимпиада МАТ\pipeline\pdf_chunker.py", line 477, in save
+    tmp.replace(STATE_FILE)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\pathlib.py", line 1376, in replace
+    os.replace(self, target)
+PermissionError: [WinError 5] Access is denied: 'C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\pipeline\\chunker_state.tmp' -> 'C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\pipeline\\chunker_state.json'
+2026-10-20 19:01:03,380 [PDF_CHUNKER] INFO 
+[58/107] OLI-2-Областен кръг-2023-11 кл-sol.pdf
+2026-10-20 19:01:03,380 [PDF_CHUNKER] INFO 
+═══ OLI-2-Областен кръг-2023-11 кл-sol ═══
+2026-10-20 19:01:03,400 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2023-11 кл-sol.pdf] pymupdf: 2p, 48 chars
+2026-10-20 19:01:03,400 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2023-11 кл-sol.pdf] 48 chars < 50 → OCR fallback
+2026-10-20 19:01:03,411 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2023-11 кл-sol.pdf] OCR cache: 2p
+2026-10-20 19:01:03,411 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2023-11 кл-sol.pdf] OCR: 4993 chars (vs Python: 48)
+2026-10-20 19:01:03,411 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2023-11 кл-sol] 1 chunks, 2 pages
+2026-10-20 19:01:03,850 [PDF_CHUNKER] ERROR [OLI-2-Областен кръг-2023-11 кл-sol-1] 402: {"error":"Spending limit reached. Need a higher limit? hey@mahadk.com"}
+2026-10-20 19:01:03,853 [PDF_CHUNKER] ERROR [OLI-2-Областен кръг-2023-11 кл-sol] chunk 1-2 — no response (0s)
+2026-10-20 19:01:03,853 [PDF_CHUNKER] ERROR [OLI-2-Областен кръг-2023-11 кл-sol] chunk 1 FAILED — ще retry следващия път
+2026-10-20 19:01:03,857 [PDF_CHUNKER] WARNING [OLI-2-Областен кръг-2023-11 кл-sol] 1/1 chunks failed — status=partial
+2026-10-20 19:01:03,857 [PDF_CHUNKER] INFO 
+[59/107] OLI-2-Областен кръг-2024-10 кл-sol (1).pdf
+2026-10-20 19:01:03,857 [PDF_CHUNKER] INFO 
+═══ OLI-2-Областен кръг-2024-10 кл-sol (1) ═══
+2026-10-20 19:01:05,657 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2024-10 кл-sol (1).pdf] pypdf: 4p, 14165 chars
+2026-10-20 19:01:05,658 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2024-10 кл-sol (1)] 1 chunks, 4 pages
+2026-10-20 19:01:06,098 [PDF_CHUNKER] ERROR [OLI-2-Областен кръг-2024-10 кл-sol (1)-1] 402: {"error":"Spending limit reached. Need a higher limit? hey@mahadk.com"}
+2026-10-20 19:01:06,100 [PDF_CHUNKER] ERROR [OLI-2-Областен кръг-2024-10 кл-sol (1)] chunk 1-4 — no response (0s)
+2026-10-20 19:01:06,100 [PDF_CHUNKER] ERROR [OLI-2-Областен кръг-2024-10 кл-sol (1)] chunk 1 FAILED — ще retry следващия път
+2026-10-20 19:01:06,104 [PDF_CHUNKER] WARNING [OLI-2-Областен кръг-2024-10 кл-sol (1)] 1/1 chunks failed — status=partial
+2026-10-20 19:01:06,105 [PDF_CHUNKER] INFO 
+[60/107] OLI-2-Областен кръг-2024-11 кл-sol.pdf
+2026-10-20 19:01:06,105 [PDF_CHUNKER] INFO 
+═══ OLI-2-Областен кръг-2024-11 кл-sol ═══
+2026-10-20 19:01:07,483 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2024-11 кл-sol.pdf] pypdf: 3p, 10928 chars
+2026-10-20 19:01:07,483 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2024-11 кл-sol] 1 chunks, 3 pages
+2026-10-20 19:01:07,919 [PDF_CHUNKER] ERROR [OLI-2-Областен кръг-2024-11 кл-sol-1] 402: {"error":"Spending limit reached. Need a higher limit? hey@mahadk.com"}
+2026-10-20 19:01:07,922 [PDF_CHUNKER] ERROR [OLI-2-Областен кръг-2024-11 кл-sol] chunk 1-3 — no response (0s)
+2026-10-20 19:01:07,923 [PDF_CHUNKER] ERROR [OLI-2-Областен кръг-2024-11 кл-sol] chunk 1 FAILED — ще retry следващия път
+2026-10-20 19:01:07,926 [PDF_CHUNKER] WARNING [OLI-2-Областен кръг-2024-11 кл-sol] 1/1 chunks failed — status=partial
+2026-10-20 19:01:07,927 [PDF_CHUNKER] INFO 
+[61/107] OLI-2-Областен кръг-2025-10 кл-sol (1).pdf
+2026-10-20 19:01:07,927 [PDF_CHUNKER] INFO 
+═══ OLI-2-Областен кръг-2025-10 кл-sol (1) ═══
+2026-10-20 19:01:07,948 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2025-10 кл-sol (1).pdf] pymupdf: 3p, 72 chars
+2026-10-20 19:01:07,949 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2025-10 кл-sol (1)] 1 chunks, 3 pages
+2026-10-20 19:01:08,387 [PDF_CHUNKER] ERROR [OLI-2-Областен кръг-2025-10 кл-sol (1)-1] 402: {"error":"Spending limit reached. Need a higher limit? hey@mahadk.com"}
+2026-10-20 19:01:08,388 [PDF_CHUNKER] ERROR [OLI-2-Областен кръг-2025-10 кл-sol (1)] chunk 1-3 — no response (0s)
+2026-10-20 19:01:08,390 [PDF_CHUNKER] ERROR [OLI-2-Областен кръг-2025-10 кл-sol (1)] chunk 1 FAILED — ще retry следващия път
+2026-10-20 19:01:08,392 [PDF_CHUNKER] ERROR [OLI-2-Областен кръг-2025-10 кл-sol (1).pdf] [WinError 5] Access is denied: 'C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\pipeline\\chunker_state.tmp' -> 'C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\pipeline\\chunker_state.json'
+Traceback (most recent call last):
+  File "C:\Users\denis\Downloads\Материали Олимпиада МАТ\pipeline\pdf_chunker.py", line 962, in run_extract
+    self.process_pdf(pdf)
+  File "C:\Users\denis\Downloads\Материали Олимпиада МАТ\pipeline\pdf_chunker.py", line 933, in process_pdf
+    self.state.mark_extraction_failed(name, failed, len(chunks))
+  File "C:\Users\denis\Downloads\Материали Олимпиада МАТ\pipeline\pdf_chunker.py", line 516, in mark_extraction_failed
+    self.save()
+  File "C:\Users\denis\Downloads\Материали Олимпиада МАТ\pipeline\pdf_chunker.py", line 477, in save
+    tmp.replace(STATE_FILE)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\pathlib.py", line 1376, in replace
+    os.replace(self, target)
+PermissionError: [WinError 5] Access is denied: 'C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\pipeline\\chunker_state.tmp' -> 'C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\pipeline\\chunker_state.json'
+2026-10-20 19:01:08,393 [PDF_CHUNKER] INFO 
+[62/107] OLI-2-Областен кръг-2025-11 кл-sol.pdf
+2026-10-20 19:01:08,393 [PDF_CHUNKER] INFO 
+═══ OLI-2-Областен кръг-2025-11 кл-sol ═══
+2026-10-20 19:01:08,413 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2025-11 кл-sol.pdf] pymupdf: 2p, 48 chars
+2026-10-20 19:01:08,413 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2025-11 кл-sol.pdf] 48 chars < 50 → OCR fallback
+2026-10-20 19:01:08,451 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2025-11 кл-sol.pdf] OCR cache: 2p
+2026-10-20 19:01:08,452 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2025-11 кл-sol.pdf] OCR: 7411 chars (vs Python: 48)
+2026-10-20 19:01:08,452 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2025-11 кл-sol] 1 chunks, 2 pages
+2026-10-20 19:01:08,897 [PDF_CHUNKER] ERROR [OLI-2-Областен кръг-2025-11 кл-sol-1] 402: {"error":"Spending limit reached. Need a higher limit? hey@mahadk.com"}
+2026-10-20 19:01:08,900 [PDF_CHUNKER] ERROR [OLI-2-Областен кръг-2025-11 кл-sol] chunk 1-2 — no response (0s)
+2026-10-20 19:01:08,900 [PDF_CHUNKER] ERROR [OLI-2-Областен кръг-2025-11 кл-sol] chunk 1 FAILED — ще retry следващия път
+2026-10-20 19:01:08,903 [PDF_CHUNKER] WARNING [OLI-2-Областен кръг-2025-11 кл-sol] 1/1 chunks failed — status=partial
+2026-10-20 19:01:08,903 [PDF_CHUNKER] INFO 
+[63/107] OLI-2-Областен кръг-2026-10 кл-sol.pdf
+2026-10-20 19:01:08,904 [PDF_CHUNKER] INFO 
+═══ OLI-2-Областен кръг-2026-10 кл-sol ═══
+2026-10-20 19:01:08,937 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2026-10 кл-sol.pdf] pymupdf: 5p, 120 chars
+2026-10-20 19:01:08,937 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2026-10 кл-sol] 1 chunks, 5 pages
+2026-10-20 19:01:09,470 [PDF_CHUNKER] ERROR [OLI-2-Областен кръг-2026-10 кл-sol-1] 402: {"error":"Spending limit reached. Need a higher limit? hey@mahadk.com"}
+2026-10-20 19:01:09,472 [PDF_CHUNKER] ERROR [OLI-2-Областен кръг-2026-10 кл-sol] chunk 1-5 — no response (0s)
+2026-10-20 19:01:09,472 [PDF_CHUNKER] ERROR [OLI-2-Областен кръг-2026-10 кл-sol] chunk 1 FAILED — ще retry следващия път
+2026-10-20 19:01:09,476 [PDF_CHUNKER] WARNING [OLI-2-Областен кръг-2026-10 кл-sol] 1/1 chunks failed — status=partial
+2026-10-20 19:01:09,476 [PDF_CHUNKER] INFO 
+[64/107] OLI-3-Национален кръг-1983-9-12 кл-sol.pdf
+2026-10-20 19:01:09,477 [PDF_CHUNKER] INFO 
+═══ OLI-3-Национален кръг-1983-9-12 кл-sol ═══
+2026-10-20 19:01:10,589 [PDF_CHUNKER] INFO [OLI-3-Национален кръг-1983-9-12 кл-sol.pdf] pdfplumber: 4p, 8861 chars
+2026-10-20 19:01:10,589 [PDF_CHUNKER] INFO [OLI-3-Национален кръг-1983-9-12 кл-sol] 1 chunks, 4 pages
+2026-10-20 19:01:11,255 [PDF_CHUNKER] ERROR [OLI-3-Национален кръг-1983-9-12 кл-sol-1] 402: {"error":"Spending limit reached. Need a higher limit? hey@mahadk.com"}
+2026-10-20 19:01:11,258 [PDF_CHUNKER] ERROR [OLI-3-Национален кръг-1983-9-12 кл-sol] chunk 1-4 — no response (0s)
+2026-10-20 19:01:11,258 [PDF_CHUNKER] ERROR [OLI-3-Национален кръг-1983-9-12 кл-sol] chunk 1 FAILED — ще retry следващия път
+2026-10-20 19:01:11,262 [PDF_CHUNKER] WARNING [OLI-3-Национален кръг-1983-9-12 кл-sol] 1/1 chunks failed — status=partial
+2026-10-20 19:01:11,262 [PDF_CHUNKER] INFO 
+[65/107] OLI-3-Национален кръг-1984-9-12 кл-sol.pdf
+2026-10-20 19:01:11,264 [PDF_CHUNKER] INFO 
+═══ OLI-3-Национален кръг-1984-9-12 кл-sol ═══
+2026-10-20 19:01:12,128 [PDF_CHUNKER] INFO [OLI-3-Национален кръг-1984-9-12 кл-sol.pdf] pymupdf: 4p, 6955 chars
+2026-10-20 19:01:12,129 [PDF_CHUNKER] INFO [OLI-3-Национален кръг-1984-9-12 кл-sol] 1 chunks, 4 pages
+2026-10-20 19:01:12,632 [PDF_CHUNKER] ERROR [OLI-3-Национален кръг-1984-9-12 кл-sol-1] 402: {"error":"Spending limit reached. Need a higher limit? hey@mahadk.com"}
+2026-10-20 19:01:12,634 [PDF_CHUNKER] ERROR [OLI-3-Национален кръг-1984-9-12 кл-sol] chunk 1-4 — no response (0s)
+2026-10-20 19:01:12,634 [PDF_CHUNKER] ERROR [OLI-3-Национален кръг-1984-9-12 кл-sol] chunk 1 FAILED — ще retry следващия път
+2026-10-20 19:01:12,637 [PDF_CHUNKER] WARNING [OLI-3-Национален кръг-1984-9-12 кл-sol] 1/1 chunks failed — status=partial
+2026-10-20 19:01:12,638 [PDF_CHUNKER] INFO 
+[66/107] OLI-3-Национален кръг-1985-9-12 кл-sol.pdf
+2026-10-20 19:01:12,638 [PDF_CHUNKER] INFO 
+═══ OLI-3-Национален кръг-1985-9-12 кл-sol ═══
+2026-10-20 19:01:13,932 [PDF_CHUNKER] INFO [OLI-3-Национален кръг-1985-9-12 кл-sol.pdf] pdfplumber: 5p, 11034 chars
+2026-10-20 19:01:13,932 [PDF_CHUNKER] INFO [OLI-3-Национален кръг-1985-9-12 кл-sol] 1 chunks, 5 pages
+2026-10-20 19:01:14,423 [PDF_CHUNKER] ERROR [OLI-3-Национален кръг-1985-9-12 кл-sol-1] 402: {"error":"Spending limit reached. Need a higher limit? hey@mahadk.com"}
+2026-10-20 19:01:14,425 [PDF_CHUNKER] ERROR [OLI-3-Национален кръг-1985-9-12 кл-sol] chunk 1-5 — no response (0s)
+2026-10-20 19:01:14,425 [PDF_CHUNKER] ERROR [OLI-3-Национален кръг-1985-9-12 кл-sol] chunk 1 FAILED — ще retry следващия път
+2026-10-20 19:01:14,428 [PDF_CHUNKER] WARNING [OLI-3-Национален кръг-1985-9-12 кл-sol] 1/1 chunks failed — status=partial
+2026-10-20 19:01:14,429 [PDF_CHUNKER] INFO 
+[67/107] OLI-3-Национален кръг-1986-9-12 кл-sol.pdf
+2026-10-20 19:01:14,429 [PDF_CHUNKER] INFO 
+═══ OLI-3-Национален кръг-1986-9-12 кл-sol ═══
+2026-10-20 19:01:15,362 [PDF_CHUNKER] INFO [OLI-3-Национален кръг-1986-9-12 кл-sol.pdf] pdfplumber: 4p, 10293 chars
+2026-10-20 19:01:15,363 [PDF_CHUNKER] INFO [OLI-3-Национален кръг-1986-9-12 кл-sol] 1 chunks, 4 pages
+2026-10-20 19:01:15,824 [PDF_CHUNKER] ERROR [OLI-3-Национален кръг-1986-9-12 кл-sol-1] 402: {"error":"Spending limit reached. Need a higher limit? hey@mahadk.com"}
+2026-10-20 19:01:15,826 [PDF_CHUNKER] ERROR [OLI-3-Национален кръг-1986-9-12 кл-sol] chunk 1-4 — no response (0s)
+2026-10-20 19:01:15,826 [PDF_CHUNKER] ERROR [OLI-3-Национален кръг-1986-9-12 кл-sol] chunk 1 FAILED — ще retry следващия път
+2026-10-20 19:01:15,830 [PDF_CHUNKER] WARNING [OLI-3-Национален кръг-1986-9-12 кл-sol] 1/1 chunks failed — status=partial
+2026-10-20 19:01:15,830 [PDF_CHUNKER] INFO 
+[68/107] OLI-3-Национален кръг-1987-9-12 кл-sol.pdf
+2026-10-20 19:01:15,830 [PDF_CHUNKER] INFO 
+═══ OLI-3-Национален кръг-1987-9-12 кл-sol ═══
+2026-10-20 19:01:16,810 [PDF_CHUNKER] INFO [OLI-3-Национален кръг-1987-9-12 кл-sol.pdf] pdfplumber: 5p, 12148 chars
+2026-10-20 19:01:16,811 [PDF_CHUNKER] INFO [OLI-3-Национален кръг-1987-9-12 кл-sol] 1 chunks, 5 pages
+2026-10-20 19:01:17,283 [PDF_CHUNKER] ERROR [OLI-3-Национален кръг-1987-9-12 кл-sol-1] 402: {"error":"Spending limit reached. Need a higher limit? hey@mahadk.com"}
+2026-10-20 19:01:17,284 [PDF_CHUNKER] ERROR [OLI-3-Национален кръг-1987-9-12 кл-sol] chunk 1-5 — no response (0s)
+2026-10-20 19:01:17,284 [PDF_CHUNKER] ERROR [OLI-3-Национален кръг-1987-9-12 кл-sol] chunk 1 FAILED — ще retry следващия път
+2026-10-20 19:01:17,287 [PDF_CHUNKER] WARNING [OLI-3-Национален кръг-1987-9-12 кл-sol] 1/1 chunks failed — status=partial
+2026-10-20 19:01:17,287 [PDF_CHUNKER] INFO 
+[69/107] OLI-3-Национален кръг-1988-9-12 кл-sol.pdf
+2026-10-20 19:01:17,287 [PDF_CHUNKER] INFO 
+═══ OLI-3-Национален кръг-1988-9-12 кл-sol ═══
+2026-10-20 19:01:18,160 [PDF_CHUNKER] INFO [OLI-3-Национален кръг-1988-9-12 кл-sol.pdf] pdfplumber: 5p, 9727 chars
+2026-10-20 19:01:18,160 [PDF_CHUNKER] INFO [OLI-3-Национален кръг-1988-9-12 кл-sol] 1 chunks, 5 pages
+2026-10-20 19:01:18,637 [PDF_CHUNKER] ERROR [OLI-3-Национален кръг-1988-9-12 кл-sol-1] 402: {"error":"Spending limit reached. Need a higher limit? hey@mahadk.com"}
+2026-10-20 19:01:18,639 [PDF_CHUNKER] ERROR [OLI-3-Национален кръг-1988-9-12 кл-sol] chunk 1-5 — no response (0s)
+2026-10-20 19:01:18,639 [PDF_CHUNKER] ERROR [OLI-3-Национален кръг-1988-9-12 кл-sol] chunk 1 FAILED — ще retry следващия път
+2026-10-20 19:01:18,641 [PDF_CHUNKER] WARNING [OLI-3-Национален кръг-1988-9-12 кл-sol] 1/1 chunks failed — status=partial
+2026-10-20 19:01:18,642 [PDF_CHUNKER] INFO 
+[70/107] OLI-3-Национален кръг-1989-9-12 кл-sol.pdf
+2026-10-20 19:01:18,642 [PDF_CHUNKER] INFO 
+═══ OLI-3-Национален кръг-1989-9-12 кл-sol ═══
+2026-10-20 19:01:19,738 [PDF_CHUNKER] INFO [OLI-3-Национален кръг-1989-9-12 кл-sol.pdf] pdfplumber: 5p, 11459 chars
+2026-10-20 19:01:19,739 [PDF_CHUNKER] INFO [OLI-3-Национален кръг-1989-9-12 кл-sol] 1 chunks, 5 pages
+2026-10-20 19:01:20,189 [PDF_CHUNKER] ERROR [OLI-3-Национален кръг-1989-9-12 кл-sol-1] 402: {"error":"Spending limit reached. Need a higher limit? hey@mahadk.com"}
+2026-10-20 19:01:20,191 [PDF_CHUNKER] ERROR [OLI-3-Национален кръг-1989-9-12 кл-sol] chunk 1-5 — no response (0s)
+2026-10-20 19:01:20,191 [PDF_CHUNKER] ERROR [OLI-3-Национален кръг-1989-9-12 кл-sol] chunk 1 FAILED — ще retry следващия път
+2026-10-20 19:01:20,195 [PDF_CHUNKER] WARNING [OLI-3-Национален кръг-1989-9-12 кл-sol] 1/1 chunks failed — status=partial
+2026-10-20 19:01:20,195 [PDF_CHUNKER] INFO 
+[71/107] OLI-3-Национален кръг-1990-9-12 кл-sol.pdf
+2026-10-20 19:01:20,196 [PDF_CHUNKER] INFO 
+═══ OLI-3-Национален кръг-1990-9-12 кл-sol ═══
+2026-10-20 19:01:21,437 [PDF_CHUNKER] INFO [OLI-3-Национален кръг-1990-9-12 кл-sol.pdf] pdfplumber: 6p, 16388 chars
+2026-10-20 19:01:21,437 [PDF_CHUNKER] INFO [OLI-3-Национален кръг-1990-9-12 кл-sol] 1 chunks, 6 pages
+2026-10-20 19:01:22,013 [PDF_CHUNKER] ERROR [OLI-3-Национален кръг-1990-9-12 кл-sol-1] 402: {"error":"Spending limit reached. Need a higher limit? hey@mahadk.com"}
+2026-10-20 19:01:22,016 [PDF_CHUNKER] ERROR [OLI-3-Национален кръг-1990-9-12 кл-sol] chunk 1-6 — no response (0s)
+2026-10-20 19:01:22,016 [PDF_CHUNKER] ERROR [OLI-3-Национален кръг-1990-9-12 кл-sol] chunk 1 FAILED — ще retry следващия път
+2026-10-20 19:01:22,022 [PDF_CHUNKER] WARNING [OLI-3-Национален кръг-1990-9-12 кл-sol] 1/1 chunks failed — status=partial
+2026-10-20 19:01:22,022 [PDF_CHUNKER] INFO 
+[72/107] OLI-3-Национален кръг-1991-9-12 кл-sol.pdf
+2026-10-20 19:01:22,023 [PDF_CHUNKER] INFO 
+═══ OLI-3-Национален кръг-1991-9-12 кл-sol ═══
+2026-10-20 19:01:23,749 [PDF_CHUNKER] INFO [OLI-3-Национален кръг-1991-9-12 кл-sol.pdf] pdfplumber: 6p, 14257 chars
+2026-10-20 19:01:23,749 [PDF_CHUNKER] INFO [OLI-3-Национален кръг-1991-9-12 кл-sol] 1 chunks, 6 pages
+2026-10-20 19:01:24,362 [PDF_CHUNKER] ERROR [OLI-3-Национален кръг-1991-9-12 кл-sol-1] 402: {"error":"Spending limit reached. Need a higher limit? hey@mahadk.com"}
+2026-10-20 19:01:24,364 [PDF_CHUNKER] ERROR [OLI-3-Национален кръг-1991-9-12 кл-sol] chunk 1-6 — no response (0s)
+2026-10-20 19:01:24,365 [PDF_CHUNKER] ERROR [OLI-3-Национален кръг-1991-9-12 кл-sol] chunk 1 FAILED — ще retry следващия път
+2026-10-20 19:01:24,369 [PDF_CHUNKER] WARNING [OLI-3-Национален кръг-1991-9-12 кл-sol] 1/1 chunks failed — status=partial
+2026-10-20 19:01:24,369 [PDF_CHUNKER] INFO 
+[73/107] OLI-3-Национален кръг-1992-9-12 кл-sol.pdf
+2026-10-20 19:01:24,371 [PDF_CHUNKER] INFO 
+═══ OLI-3-Национален кръг-1992-9-12 кл-sol ═══
+2026-10-20 19:01:26,184 [PDF_CHUNKER] INFO [OLI-3-Национален кръг-1992-9-12 кл-sol.pdf] pymupdf: 5p, 14230 chars
+2026-10-20 19:01:26,185 [PDF_CHUNKER] INFO [OLI-3-Национален кръг-1992-9-12 кл-sol] 1 chunks, 5 pages
+2026-10-20 19:01:56,201 [PDF_CHUNKER] INFO [OLI-3-Национален кръг-1992-9-12 кл-sol-1] extract... 30s
+2026-10-20 19:02:26,209 [PDF_CHUNKER] INFO [OLI-3-Национален кръг-1992-9-12 кл-sol-1] extract... 60s
+2026-10-20 19:02:56,223 [PDF_CHUNKER] INFO [OLI-3-Национален кръг-1992-9-12 кл-sol-1] extract... 90s
+2026-10-20 19:03:01,960 [PDF_CHUNKER] INFO [OLI-3-Национален кръг-1992-9-12 кл-sol] chunk 1-5: 6 problems (95s)
+2026-10-20 19:03:01,969 [PDF_CHUNKER] INFO ✓ [OLI-3-Национален кръг-1992-9-12 кл-sol] 6 problems (deduped) → C:\Users\denis\Downloads\Материали Олимпиада МАТ\pipeline\extracted\OLI-3-Национален кръг-1992-9-12 кл-sol\all_problems.json
+2026-10-20 19:03:01,969 [PDF_CHUNKER] INFO 
+[74/107] OLI-3-Национален кръг-1993-9-12 кл-sol.pdf
+2026-10-20 19:03:01,971 [PDF_CHUNKER] INFO 
+═══ OLI-3-Национален кръг-1993-9-12 кл-sol ═══
+2026-10-20 19:03:02,988 [PDF_CHUNKER] INFO [OLI-3-Национален кръг-1993-9-12 кл-sol.pdf] pdfplumber: 4p, 10709 chars
+2026-10-20 19:03:02,989 [PDF_CHUNKER] INFO [OLI-3-Национален кръг-1993-9-12 кл-sol] 1 chunks, 4 pages
+2026-10-20 19:03:03,467 [PDF_CHUNKER] ERROR [OLI-3-Национален кръг-1993-9-12 кл-sol-1] 402: {"error":"Spending limit reached. Need a higher limit? hey@mahadk.com"}
+2026-10-20 19:03:03,469 [PDF_CHUNKER] ERROR [OLI-3-Национален кръг-1993-9-12 кл-sol] chunk 1-4 — no response (0s)
+2026-10-20 19:03:03,470 [PDF_CHUNKER] ERROR [OLI-3-Национален кръг-1993-9-12 кл-sol] chunk 1 FAILED — ще retry следващия път
+2026-10-20 19:03:03,473 [PDF_CHUNKER] WARNING [OLI-3-Национален кръг-1993-9-12 кл-sol] 1/1 chunks failed — status=partial
+2026-10-20 19:03:03,473 [PDF_CHUNKER] INFO 
+[75/107] OLI-3-Национален кръг-1994-9-12 кл-sol.pdf
+2026-10-20 19:03:03,475 [PDF_CHUNKER] INFO 
+═══ OLI-3-Национален кръг-1994-9-12 кл-sol ═══
+2026-10-20 19:03:03,835 [PDF_CHUNKER] INFO [OLI-3-Национален кръг-1994-9-12 кл-sol.pdf] pdfplumber: 2p, 3837 chars
+2026-10-20 19:03:03,835 [PDF_CHUNKER] INFO [OLI-3-Национален кръг-1994-9-12 кл-sol] 1 chunks, 2 pages
+2026-10-20 19:03:04,274 [PDF_CHUNKER] ERROR [OLI-3-Национален кръг-1994-9-12 кл-sol-1] 402: {"error":"Spending limit reached. Need a higher limit? hey@mahadk.com"}
+2026-10-20 19:03:04,276 [PDF_CHUNKER] ERROR [OLI-3-Национален кръг-1994-9-12 кл-sol] chunk 1-2 — no response (0s)
+2026-10-20 19:03:04,276 [PDF_CHUNKER] ERROR [OLI-3-Национален кръг-1994-9-12 кл-sol] chunk 1 FAILED — ще retry следващия път
+2026-10-20 19:03:04,279 [PDF_CHUNKER] WARNING [OLI-3-Национален кръг-1994-9-12 кл-sol] 1/1 chunks failed — status=partial
+2026-10-20 19:03:04,281 [PDF_CHUNKER] INFO 
+[76/107] OLI-3-Национален кръг-1995-9-12 кл-sol.pdf
+2026-10-20 19:03:04,282 [PDF_CHUNKER] INFO 
+═══ OLI-3-Национален кръг-1995-9-12 кл-sol ═══
+2026-10-20 19:03:04,310 [PDF_CHUNKER] INFO [OLI-3-Национален кръг-1995-9-12 кл-sol.pdf] pymupdf: 3p, 87 chars
+2026-10-20 19:03:04,310 [PDF_CHUNKER] INFO [OLI-3-Национален кръг-1995-9-12 кл-sol] 1 chunks, 3 pages
+2026-10-20 19:03:04,754 [PDF_CHUNKER] ERROR [OLI-3-Национален кръг-1995-9-12 кл-sol-1] 402: {"error":"Spending limit reached. Need a higher limit? hey@mahadk.com"}
+2026-10-20 19:03:04,756 [PDF_CHUNKER] ERROR [OLI-3-Национален кръг-1995-9-12 кл-sol] chunk 1-3 — no response (0s)
+2026-10-20 19:03:04,756 [PDF_CHUNKER] ERROR [OLI-3-Национален кръг-1995-9-12 кл-sol] chunk 1 FAILED — ще retry следващия път
+2026-10-20 19:03:04,760 [PDF_CHUNKER] ERROR [OLI-3-Национален кръг-1995-9-12 кл-sol.pdf] [WinError 5] Access is denied: 'C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\pipeline\\chunker_state.tmp' -> 'C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\pipeline\\chunker_state.json'
+Traceback (most recent call last):
+  File "C:\Users\denis\Downloads\Материали Олимпиада МАТ\pipeline\pdf_chunker.py", line 962, in run_extract
+    self.process_pdf(pdf)
+  File "C:\Users\denis\Downloads\Материали Олимпиада МАТ\pipeline\pdf_chunker.py", line 933, in process_pdf
+    self.state.mark_extraction_failed(name, failed, len(chunks))
+  File "C:\Users\denis\Downloads\Материали Олимпиада МАТ\pipeline\pdf_chunker.py", line 516, in mark_extraction_failed
+    self.save()
+  File "C:\Users\denis\Downloads\Материали Олимпиада МАТ\pipeline\pdf_chunker.py", line 477, in save
+    tmp.replace(STATE_FILE)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\pathlib.py", line 1376, in replace
+    os.replace(self, target)
+PermissionError: [WinError 5] Access is denied: 'C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\pipeline\\chunker_state.tmp' -> 'C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\pipeline\\chunker_state.json'
+2026-10-20 19:03:04,760 [PDF_CHUNKER] INFO 
+[77/107] OLI-3-Национален кръг-1996-9-12 кл-sol.pdf
+2026-10-20 19:03:04,762 [PDF_CHUNKER] INFO 
+═══ OLI-3-Национален кръг-1996-9-12 кл-sol ═══
+2026-10-20 19:03:04,798 [PDF_CHUNKER] INFO [OLI-3-Национален кръг-1996-9-12 кл-sol.pdf] pymupdf: 4p, 116 chars
+2026-10-20 19:03:04,798 [PDF_CHUNKER] INFO [OLI-3-Национален кръг-1996-9-12 кл-sol] 1 chunks, 4 pages
+2026-10-20 19:03:05,264 [PDF_CHUNKER] ERROR [OLI-3-Национален кръг-1996-9-12 кл-sol-1] 402: {"error":"Spending limit reached. Need a higher limit? hey@mahadk.com"}
+2026-10-20 19:03:05,266 [PDF_CHUNKER] ERROR [OLI-3-Национален кръг-1996-9-12 кл-sol] chunk 1-4 — no response (0s)
+2026-10-20 19:03:05,266 [PDF_CHUNKER] ERROR [OLI-3-Национален кръг-1996-9-12 кл-sol] chunk 1 FAILED — ще retry следващия път
+2026-10-20 19:03:05,269 [PDF_CHUNKER] WARNING [OLI-3-Национален кръг-1996-9-12 кл-sol] 1/1 chunks failed — status=partial
+2026-10-20 19:03:05,269 [PDF_CHUNKER] INFO 
+[78/107] OLI-3-Национален кръг-1997-9-12 кл-sol.pdf
+2026-10-20 19:03:05,269 [PDF_CHUNKER] INFO 
+═══ OLI-3-Национален кръг-1997-9-12 кл-sol ═══
+2026-10-20 19:03:05,281 [PDF_CHUNKER] INFO [OLI-3-Национален кръг-1997-9-12 кл-sol.pdf] pymupdf: 1p, 27 chars
+2026-10-20 19:03:05,281 [PDF_CHUNKER] INFO [OLI-3-Национален кръг-1997-9-12 кл-sol.pdf] 27 chars < 50 → OCR fallback
+2026-10-20 19:03:05,282 [PDF_CHUNKER] INFO [OLI-3-Национален кръг-1997-9-12 кл-sol.pdf] Mistral OCR (107KB)
+2026-10-20 19:03:08,522 [PDF_CHUNKER] INFO [OLI-3-Национален кръг-1997-9-12 кл-sol.pdf] OCR: 1p, 2131chars, 3s, $0.0010
+2026-10-20 19:03:08,525 [PDF_CHUNKER] INFO [OLI-3-Национален кръг-1997-9-12 кл-sol.pdf] OCR: 2131 chars (vs Python: 27)
+2026-10-20 19:03:08,525 [PDF_CHUNKER] INFO [OLI-3-Национален кръг-1997-9-12 кл-sol] 1 chunks, 1 pages
+2026-10-20 19:03:08,954 [PDF_CHUNKER] ERROR [OLI-3-Национален кръг-1997-9-12 кл-sol-1] 402: {"error":"Spending limit reached. Need a higher limit? hey@mahadk.com"}
+2026-10-20 19:03:08,956 [PDF_CHUNKER] ERROR [OLI-3-Национален кръг-1997-9-12 кл-sol] chunk 1-1 — no response (0s)
+2026-10-20 19:03:08,956 [PDF_CHUNKER] ERROR [OLI-3-Национален кръг-1997-9-12 кл-sol] chunk 1 FAILED — ще retry следващия път
+2026-10-20 19:03:08,959 [PDF_CHUNKER] WARNING [OLI-3-Национален кръг-1997-9-12 кл-sol] 1/1 chunks failed — status=partial
+2026-10-20 19:03:08,960 [PDF_CHUNKER] INFO 
+[79/107] OLI-3-Национален кръг-1998-9-12 кл-sol.pdf
+2026-10-20 19:03:08,960 [PDF_CHUNKER] INFO 
+═══ OLI-3-Национален кръг-1998-9-12 кл-sol ═══
+2026-10-20 19:03:08,981 [PDF_CHUNKER] INFO [OLI-3-Национален кръг-1998-9-12 кл-sol.pdf] pymupdf: 3p, 87 chars
+2026-10-20 19:03:08,981 [PDF_CHUNKER] INFO [OLI-3-Национален кръг-1998-9-12 кл-sol] 1 chunks, 3 pages
+2026-10-20 19:03:09,434 [PDF_CHUNKER] ERROR [OLI-3-Национален кръг-1998-9-12 кл-sol-1] 402: {"error":"Spending limit reached. Need a higher limit? hey@mahadk.com"}
+2026-10-20 19:03:09,436 [PDF_CHUNKER] ERROR [OLI-3-Национален кръг-1998-9-12 кл-sol] chunk 1-3 — no response (0s)
+2026-10-20 19:03:09,437 [PDF_CHUNKER] ERROR [OLI-3-Национален кръг-1998-9-12 кл-sol] chunk 1 FAILED — ще retry следващия път
+2026-10-20 19:03:09,440 [PDF_CHUNKER] ERROR [OLI-3-Национален кръг-1998-9-12 кл-sol.pdf] [WinError 5] Access is denied: 'C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\pipeline\\chunker_state.tmp' -> 'C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\pipeline\\chunker_state.json'
+Traceback (most recent call last):
+  File "C:\Users\denis\Downloads\Материали Олимпиада МАТ\pipeline\pdf_chunker.py", line 962, in run_extract
+    self.process_pdf(pdf)
+  File "C:\Users\denis\Downloads\Материали Олимпиада МАТ\pipeline\pdf_chunker.py", line 933, in process_pdf
+    self.state.mark_extraction_failed(name, failed, len(chunks))
+  File "C:\Users\denis\Downloads\Материали Олимпиада МАТ\pipeline\pdf_chunker.py", line 516, in mark_extraction_failed
+    self.save()
+  File "C:\Users\denis\Downloads\Материали Олимпиада МАТ\pipeline\pdf_chunker.py", line 477, in save
+    tmp.replace(STATE_FILE)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\pathlib.py", line 1376, in replace
+    os.replace(self, target)
+PermissionError: [WinError 5] Access is denied: 'C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\pipeline\\chunker_state.tmp' -> 'C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\pipeline\\chunker_state.json'
+2026-10-20 19:03:09,442 [PDF_CHUNKER] INFO 
+[80/107] OLI-3-Национален кръг-1999-9-12 кл-sol.pdf
+2026-10-20 19:03:09,442 [PDF_CHUNKER] INFO 
+═══ OLI-3-Национален кръг-1999-9-12 кл-sol ═══
+2026-10-20 19:03:09,467 [PDF_CHUNKER] INFO [OLI-3-Национален кръг-1999-9-12 кл-sol.pdf] pymupdf: 4p, 116 chars
+2026-10-20 19:03:09,467 [PDF_CHUNKER] INFO [OLI-3-Национален кръг-1999-9-12 кл-sol] 1 chunks, 4 pages
+2026-10-20 19:03:09,935 [PDF_CHUNKER] ERROR [OLI-3-Национален кръг-1999-9-12 кл-sol-1] 402: {"error":"Spending limit reached. Need a higher limit? hey@mahadk.com"}
+2026-10-20 19:03:09,936 [PDF_CHUNKER] ERROR [OLI-3-Национален кръг-1999-9-12 кл-sol] chunk 1-4 — no response (0s)
+2026-10-20 19:03:09,937 [PDF_CHUNKER] ERROR [OLI-3-Национален кръг-1999-9-12 кл-sol] chunk 1 FAILED — ще retry следващия път
+2026-10-20 19:03:09,940 [PDF_CHUNKER] WARNING [OLI-3-Национален кръг-1999-9-12 кл-sol] 1/1 chunks failed — status=partial
+2026-10-20 19:03:09,940 [PDF_CHUNKER] INFO 
+[81/107] OLI-3-Национален кръг-2000-9-12 кл-sol.pdf
+2026-10-20 19:03:09,941 [PDF_CHUNKER] INFO 
+═══ OLI-3-Национален кръг-2000-9-12 кл-sol ═══
+2026-10-20 19:03:09,983 [PDF_CHUNKER] INFO [OLI-3-Национален кръг-2000-9-12 кл-sol.pdf] pymupdf: 6p, 144 chars
+2026-10-20 19:03:09,983 [PDF_CHUNKER] INFO [OLI-3-Национален кръг-2000-9-12 кл-sol] 1 chunks, 6 pages
+2026-10-20 19:03:10,459 [PDF_CHUNKER] ERROR [OLI-3-Национален кръг-2000-9-12 кл-sol-1] 402: {"error":"Spending limit reached. Need a higher limit? hey@mahadk.com"}
+2026-10-20 19:03:10,461 [PDF_CHUNKER] ERROR [OLI-3-Национален кръг-2000-9-12 кл-sol] chunk 1-6 — no response (0s)
+2026-10-20 19:03:10,461 [PDF_CHUNKER] ERROR [OLI-3-Национален кръг-2000-9-12 кл-sol] chunk 1 FAILED — ще retry следващия път
+2026-10-20 19:03:10,464 [PDF_CHUNKER] WARNING [OLI-3-Национален кръг-2000-9-12 кл-sol] 1/1 chunks failed — status=partial
+2026-10-20 19:03:10,464 [PDF_CHUNKER] INFO 
+[82/107] OLI-3-Национален кръг-2001-9-12 кл-sol.pdf
+2026-10-20 19:03:10,464 [PDF_CHUNKER] INFO 
+═══ OLI-3-Национален кръг-2001-9-12 кл-sol ═══
+2026-10-20 19:03:10,495 [PDF_CHUNKER] INFO [OLI-3-Национален кръг-2001-9-12 кл-sol.pdf] pymupdf: 4p, 96 chars
+2026-10-20 19:03:10,495 [PDF_CHUNKER] INFO [OLI-3-Национален кръг-2001-9-12 кл-sol] 1 chunks, 4 pages
+2026-10-20 19:03:10,961 [PDF_CHUNKER] ERROR [OLI-3-Национален кръг-2001-9-12 кл-sol-1] 402: {"error":"Spending limit reached. Need a higher limit? hey@mahadk.com"}
+2026-10-20 19:03:10,964 [PDF_CHUNKER] ERROR [OLI-3-Национален кръг-2001-9-12 кл-sol] chunk 1-4 — no response (0s)
+2026-10-20 19:03:10,964 [PDF_CHUNKER] ERROR [OLI-3-Национален кръг-2001-9-12 кл-sol] chunk 1 FAILED — ще retry следващия път
+2026-10-20 19:03:10,966 [PDF_CHUNKER] WARNING [OLI-3-Национален кръг-2001-9-12 кл-sol] 1/1 chunks failed — status=partial
+2026-10-20 19:03:10,966 [PDF_CHUNKER] INFO 
+[83/107] OLI-3-Национален кръг-2002-9-12 кл-sol.pdf
+2026-10-20 19:03:10,966 [PDF_CHUNKER] INFO 
+═══ OLI-3-Национален кръг-2002-9-12 кл-sol ═══
+2026-10-20 19:03:10,999 [PDF_CHUNKER] INFO [OLI-3-Национален кръг-2002-9-12 кл-sol.pdf] pymupdf: 4p, 96 chars
+2026-10-20 19:03:10,999 [PDF_CHUNKER] INFO [OLI-3-Национален кръг-2002-9-12 кл-sol] 1 chunks, 4 pages
+2026-10-20 19:03:11,454 [PDF_CHUNKER] ERROR [OLI-3-Национален кръг-2002-9-12 кл-sol-1] 402: {"error":"Spending limit reached. Need a higher limit? hey@mahadk.com"}
+2026-10-20 19:03:11,456 [PDF_CHUNKER] ERROR [OLI-3-Национален кръг-2002-9-12 кл-sol] chunk 1-4 — no response (0s)
+2026-10-20 19:03:11,456 [PDF_CHUNKER] ERROR [OLI-3-Национален кръг-2002-9-12 кл-sol] chunk 1 FAILED — ще retry следващия път
+2026-10-20 19:03:11,459 [PDF_CHUNKER] ERROR [OLI-3-Национален кръг-2002-9-12 кл-sol.pdf] [WinError 5] Access is denied: 'C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\pipeline\\chunker_state.tmp' -> 'C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\pipeline\\chunker_state.json'
+Traceback (most recent call last):
+  File "C:\Users\denis\Downloads\Материали Олимпиада МАТ\pipeline\pdf_chunker.py", line 962, in run_extract
+    self.process_pdf(pdf)
+  File "C:\Users\denis\Downloads\Материали Олимпиада МАТ\pipeline\pdf_chunker.py", line 933, in process_pdf
+    self.state.mark_extraction_failed(name, failed, len(chunks))
+  File "C:\Users\denis\Downloads\Материали Олимпиада МАТ\pipeline\pdf_chunker.py", line 516, in mark_extraction_failed
+    self.save()
+  File "C:\Users\denis\Downloads\Материали Олимпиада МАТ\pipeline\pdf_chunker.py", line 477, in save
+    tmp.replace(STATE_FILE)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\pathlib.py", line 1376, in replace
+    os.replace(self, target)
+PermissionError: [WinError 5] Access is denied: 'C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\pipeline\\chunker_state.tmp' -> 'C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\pipeline\\chunker_state.json'
+2026-10-20 19:03:11,462 [PDF_CHUNKER] INFO 
+[84/107] OLI-3-Национален кръг-2003-9-12 кл-sol.pdf
+2026-10-20 19:03:11,462 [PDF_CHUNKER] INFO 
+═══ OLI-3-Национален кръг-2003-9-12 кл-sol ═══
+2026-10-20 19:03:11,564 [PDF_CHUNKER] INFO [OLI-3-Национален кръг-2003-9-12 кл-sol.pdf] pymupdf: 4p, 228 chars
+2026-10-20 19:03:11,565 [PDF_CHUNKER] INFO [OLI-3-Национален кръг-2003-9-12 кл-sol] 1 chunks, 4 pages
+2026-10-20 19:03:12,035 [PDF_CHUNKER] ERROR [OLI-3-Национален кръг-2003-9-12 кл-sol-1] 402: {"error":"Spending limit reached. Need a higher limit? hey@mahadk.com"}
+2026-10-20 19:03:12,037 [PDF_CHUNKER] ERROR [OLI-3-Национален кръг-2003-9-12 кл-sol] chunk 1-4 — no response (0s)
+2026-10-20 19:03:12,037 [PDF_CHUNKER] ERROR [OLI-3-Национален кръг-2003-9-12 кл-sol] chunk 1 FAILED — ще retry следващия път
+2026-10-20 19:03:12,040 [PDF_CHUNKER] WARNING [OLI-3-Национален кръг-2003-9-12 кл-sol] 1/1 chunks failed — status=partial
+2026-10-20 19:03:12,040 [PDF_CHUNKER] INFO 
+[85/107] OLI-3-Национален кръг-2004-9-12 кл-sol.pdf
+2026-10-20 19:03:12,041 [PDF_CHUNKER] INFO 
+═══ OLI-3-Национален кръг-2004-9-12 кл-sol ═══
+2026-10-20 19:03:13,747 [PDF_CHUNKER] INFO [OLI-3-Национален кръг-2004-9-12 кл-sol.pdf] pypdf: 4p, 13648 chars
+2026-10-20 19:03:13,748 [PDF_CHUNKER] INFO [OLI-3-Национален кръг-2004-9-12 кл-sol] 1 chunks, 4 pages
+2026-10-20 19:03:14,297 [PDF_CHUNKER] ERROR [OLI-3-Национален кръг-2004-9-12 кл-sol-1] 402: {"error":"Spending limit reached. Need a higher limit? hey@mahadk.com"}
+2026-10-20 19:03:14,299 [PDF_CHUNKER] ERROR [OLI-3-Национален кръг-2004-9-12 кл-sol] chunk 1-4 — no response (0s)
+2026-10-20 19:03:14,299 [PDF_CHUNKER] ERROR [OLI-3-Национален кръг-2004-9-12 кл-sol] chunk 1 FAILED — ще retry следващия път
+2026-10-20 19:03:14,302 [PDF_CHUNKER] WARNING [OLI-3-Национален кръг-2004-9-12 кл-sol] 1/1 chunks failed — status=partial
+2026-10-20 19:03:14,303 [PDF_CHUNKER] INFO 
+[86/107] OLI-3-Национален кръг-2005-9-12 кл-sol.pdf
+2026-10-20 19:03:14,304 [PDF_CHUNKER] INFO 
+═══ OLI-3-Национален кръг-2005-9-12 кл-sol ═══
+2026-10-20 19:03:18,328 [PDF_CHUNKER] INFO [OLI-3-Национален кръг-2005-9-12 кл-sol.pdf] pypdf: 4p, 23551 chars
+2026-10-20 19:03:18,329 [PDF_CHUNKER] INFO [OLI-3-Национален кръг-2005-9-12 кл-sol] 1 chunks, 4 pages
+2026-10-20 19:03:19,035 [PDF_CHUNKER] ERROR [OLI-3-Национален кръг-2005-9-12 кл-sol-1] 402: {"error":"Spending limit reached. Need a higher limit? hey@mahadk.com"}
+2026-10-20 19:03:19,044 [PDF_CHUNKER] ERROR [OLI-3-Национален кръг-2005-9-12 кл-sol] chunk 1-4 — no response (0s)
+2026-10-20 19:03:19,046 [PDF_CHUNKER] ERROR [OLI-3-Национален кръг-2005-9-12 кл-sol] chunk 1 FAILED — ще retry следващия път
+2026-10-20 19:03:19,050 [PDF_CHUNKER] WARNING [OLI-3-Национален кръг-2005-9-12 кл-sol] 1/1 chunks failed — status=partial
+2026-10-20 19:03:19,066 [PDF_CHUNKER] INFO 
+[87/107] OLI-3-Национален кръг-2006-9-12 кл-sol.pdf
+2026-10-20 19:03:19,096 [PDF_CHUNKER] INFO 
+═══ OLI-3-Национален кръг-2006-9-12 кл-sol ═══
+2026-10-20 19:03:19,166 [PDF_CHUNKER] INFO [OLI-3-Национален кръг-2006-9-12 кл-sol.pdf] pymupdf: 4p, 96 chars
+2026-10-20 19:03:19,174 [PDF_CHUNKER] INFO [OLI-3-Национален кръг-2006-9-12 кл-sol] 1 chunks, 4 pages
+2026-10-20 19:03:19,810 [PDF_CHUNKER] ERROR [OLI-3-Национален кръг-2006-9-12 кл-sol-1] 402: {"error":"Spending limit reached. Need a higher limit? hey@mahadk.com"}
+2026-10-20 19:03:19,812 [PDF_CHUNKER] ERROR [OLI-3-Национален кръг-2006-9-12 кл-sol] chunk 1-4 — no response (0s)
+2026-10-20 19:03:19,812 [PDF_CHUNKER] ERROR [OLI-3-Национален кръг-2006-9-12 кл-sol] chunk 1 FAILED — ще retry следващия път
+2026-10-20 19:03:19,816 [PDF_CHUNKER] WARNING [OLI-3-Национален кръг-2006-9-12 кл-sol] 1/1 chunks failed — status=partial
+2026-10-20 19:03:19,817 [PDF_CHUNKER] INFO 
+[88/107] OLI-3-Национален кръг-2007-9-12 кл-sol.pdf
+2026-10-20 19:03:19,818 [PDF_CHUNKER] INFO 
+═══ OLI-3-Национален кръг-2007-9-12 кл-sol ═══
+2026-10-20 19:03:21,334 [PDF_CHUNKER] INFO [OLI-3-Национален кръг-2007-9-12 кл-sol.pdf] pdfplumber: 4p, 13275 chars
+2026-10-20 19:03:21,335 [PDF_CHUNKER] INFO [OLI-3-Национален кръг-2007-9-12 кл-sol] 1 chunks, 4 pages
+2026-10-20 19:03:21,965 [PDF_CHUNKER] ERROR [OLI-3-Национален кръг-2007-9-12 кл-sol-1] 402: {"error":"Spending limit reached. Need a higher limit? hey@mahadk.com"}
+2026-10-20 19:03:21,967 [PDF_CHUNKER] ERROR [OLI-3-Национален кръг-2007-9-12 кл-sol] chunk 1-4 — no response (0s)
+2026-10-20 19:03:21,967 [PDF_CHUNKER] ERROR [OLI-3-Национален кръг-2007-9-12 кл-sol] chunk 1 FAILED — ще retry следващия път
+2026-10-20 19:03:21,973 [PDF_CHUNKER] WARNING [OLI-3-Национален кръг-2007-9-12 кл-sol] 1/1 chunks failed — status=partial
+2026-10-20 19:03:21,974 [PDF_CHUNKER] INFO 
+[89/107] OLI-3-Национален кръг-2008-9-12 кл-sol.pdf
+2026-10-20 19:03:21,974 [PDF_CHUNKER] INFO 
+═══ OLI-3-Национален кръг-2008-9-12 кл-sol ═══
+2026-10-20 19:03:22,032 [PDF_CHUNKER] INFO [OLI-3-Национален кръг-2008-9-12 кл-sol.pdf] pymupdf: 6p, 144 chars
+2026-10-20 19:03:22,033 [PDF_CHUNKER] INFO [OLI-3-Национален кръг-2008-9-12 кл-sol] 1 chunks, 6 pages
+2026-10-20 19:03:22,660 [PDF_CHUNKER] ERROR [OLI-3-Национален кръг-2008-9-12 кл-sol-1] 402: {"error":"Spending limit reached. Need a higher limit? hey@mahadk.com"}
+2026-10-20 19:03:22,662 [PDF_CHUNKER] ERROR [OLI-3-Национален кръг-2008-9-12 кл-sol] chunk 1-6 — no response (0s)
+2026-10-20 19:03:22,662 [PDF_CHUNKER] ERROR [OLI-3-Национален кръг-2008-9-12 кл-sol] chunk 1 FAILED — ще retry следващия път
+2026-10-20 19:03:22,667 [PDF_CHUNKER] WARNING [OLI-3-Национален кръг-2008-9-12 кл-sol] 1/1 chunks failed — status=partial
+2026-10-20 19:03:22,667 [PDF_CHUNKER] INFO 
+[90/107] OLI-3-Национален кръг-2009-9-12 кл-sol.pdf
+2026-10-20 19:03:22,668 [PDF_CHUNKER] INFO 
+═══ OLI-3-Национален кръг-2009-9-12 кл-sol ═══
+2026-10-20 19:03:24,022 [PDF_CHUNKER] INFO [OLI-3-Национален кръг-2009-9-12 кл-sol.pdf] pdfplumber: 4p, 10671 chars
+2026-10-20 19:03:24,022 [PDF_CHUNKER] INFO [OLI-3-Национален кръг-2009-9-12 кл-sol] 1 chunks, 4 pages
+2026-10-20 19:03:24,729 [PDF_CHUNKER] ERROR [OLI-3-Национален кръг-2009-9-12 кл-sol-1] 402: {"error":"Spending limit reached. Need a higher limit? hey@mahadk.com"}
+2026-10-20 19:03:24,731 [PDF_CHUNKER] ERROR [OLI-3-Национален кръг-2009-9-12 кл-sol] chunk 1-4 — no response (0s)
+2026-10-20 19:03:24,731 [PDF_CHUNKER] ERROR [OLI-3-Национален кръг-2009-9-12 кл-sol] chunk 1 FAILED — ще retry следващия път
+2026-10-20 19:03:24,736 [PDF_CHUNKER] WARNING [OLI-3-Национален кръг-2009-9-12 кл-sol] 1/1 chunks failed — status=partial
+2026-10-20 19:03:24,736 [PDF_CHUNKER] INFO 
+[91/107] OLI-3-Национален кръг-2010-9-12 кл-sol.pdf
+2026-10-20 19:03:24,737 [PDF_CHUNKER] INFO 
+═══ OLI-3-Национален кръг-2010-9-12 кл-sol ═══
+2026-10-20 19:03:24,779 [PDF_CHUNKER] INFO [OLI-3-Национален кръг-2010-9-12 кл-sol.pdf] pymupdf: 4p, 96 chars
+2026-10-20 19:03:24,779 [PDF_CHUNKER] INFO [OLI-3-Национален кръг-2010-9-12 кл-sol] 1 chunks, 4 pages
+2026-10-20 19:03:25,431 [PDF_CHUNKER] ERROR [OLI-3-Национален кръг-2010-9-12 кл-sol-1] 402: {"error":"Spending limit reached. Need a higher limit? hey@mahadk.com"}
+2026-10-20 19:03:25,434 [PDF_CHUNKER] ERROR [OLI-3-Национален кръг-2010-9-12 кл-sol] chunk 1-4 — no response (0s)
+2026-10-20 19:03:25,434 [PDF_CHUNKER] ERROR [OLI-3-Национален кръг-2010-9-12 кл-sol] chunk 1 FAILED — ще retry следващия път
+2026-10-20 19:03:25,440 [PDF_CHUNKER] WARNING [OLI-3-Национален кръг-2010-9-12 кл-sol] 1/1 chunks failed — status=partial
+2026-10-20 19:03:25,441 [PDF_CHUNKER] INFO 
+[92/107] OLI-3-Национален кръг-2011-9-12 кл-sol.pdf
+2026-10-20 19:03:25,442 [PDF_CHUNKER] INFO 
+═══ OLI-3-Национален кръг-2011-9-12 кл-sol ═══
+2026-10-20 19:03:25,498 [PDF_CHUNKER] INFO [OLI-3-Национален кръг-2011-9-12 кл-sol.pdf] pymupdf: 4p, 96 chars
+2026-10-20 19:03:25,499 [PDF_CHUNKER] INFO [OLI-3-Национален кръг-2011-9-12 кл-sol] 1 chunks, 4 pages
+2026-10-20 19:03:26,147 [PDF_CHUNKER] ERROR [OLI-3-Национален кръг-2011-9-12 кл-sol-1] 402: {"error":"Spending limit reached. Need a higher limit? hey@mahadk.com"}
+2026-10-20 19:03:26,151 [PDF_CHUNKER] ERROR [OLI-3-Национален кръг-2011-9-12 кл-sol] chunk 1-4 — no response (0s)
+2026-10-20 19:03:26,151 [PDF_CHUNKER] ERROR [OLI-3-Национален кръг-2011-9-12 кл-sol] chunk 1 FAILED — ще retry следващия път
+2026-10-20 19:03:26,156 [PDF_CHUNKER] WARNING [OLI-3-Национален кръг-2011-9-12 кл-sol] 1/1 chunks failed — status=partial
+2026-10-20 19:03:26,156 [PDF_CHUNKER] INFO 
+[93/107] OLI-3-Национален кръг-2012-9-12 кл-sol.pdf
+2026-10-20 19:03:26,157 [PDF_CHUNKER] INFO 
+═══ OLI-3-Национален кръг-2012-9-12 кл-sol ═══
+2026-10-20 19:03:27,396 [PDF_CHUNKER] INFO [OLI-3-Национален кръг-2012-9-12 кл-sol.pdf] pypdf: 4p, 10797 chars
+2026-10-20 19:03:27,396 [PDF_CHUNKER] INFO [OLI-3-Национален кръг-2012-9-12 кл-sol] 1 chunks, 4 pages
+2026-10-20 19:03:28,090 [PDF_CHUNKER] ERROR [OLI-3-Национален кръг-2012-9-12 кл-sol-1] 402: {"error":"Spending limit reached. Need a higher limit? hey@mahadk.com"}
+2026-10-20 19:03:28,092 [PDF_CHUNKER] ERROR [OLI-3-Национален кръг-2012-9-12 кл-sol] chunk 1-4 — no response (0s)
+2026-10-20 19:03:28,092 [PDF_CHUNKER] ERROR [OLI-3-Национален кръг-2012-9-12 кл-sol] chunk 1 FAILED — ще retry следващия път
+2026-10-20 19:03:28,097 [PDF_CHUNKER] WARNING [OLI-3-Национален кръг-2012-9-12 кл-sol] 1/1 chunks failed — status=partial
+2026-10-20 19:03:28,097 [PDF_CHUNKER] INFO 
+[94/107] OLI-3-Национален кръг-2013-9-12 кл-sol.pdf
+2026-10-20 19:03:28,097 [PDF_CHUNKER] INFO 
+═══ OLI-3-Национален кръг-2013-9-12 кл-sol ═══
+2026-10-20 19:03:28,130 [PDF_CHUNKER] INFO [OLI-3-Национален кръг-2013-9-12 кл-sol.pdf] pdfplumber: 4p, 0 chars
+2026-10-20 19:03:28,130 [PDF_CHUNKER] INFO [OLI-3-Национален кръг-2013-9-12 кл-sol.pdf] 0 chars < 50 → OCR fallback
+2026-10-20 19:03:28,139 [PDF_CHUNKER] INFO [OLI-3-Национален кръг-2013-9-12 кл-sol.pdf] Mistral OCR (984KB)
+2026-10-20 19:03:32,109 [PDF_CHUNKER] INFO [OLI-3-Национален кръг-2013-9-12 кл-sol.pdf] OCR: 4p, 11390chars, 3s, $0.0040
+2026-10-20 19:03:32,113 [PDF_CHUNKER] INFO [OLI-3-Национален кръг-2013-9-12 кл-sol.pdf] OCR: 11390 chars (vs Python: 0)
+2026-10-20 19:03:32,113 [PDF_CHUNKER] INFO [OLI-3-Национален кръг-2013-9-12 кл-sol] 1 chunks, 4 pages
+2026-10-20 19:03:32,737 [PDF_CHUNKER] ERROR [OLI-3-Национален кръг-2013-9-12 кл-sol-1] 402: {"error":"Spending limit reached. Need a higher limit? hey@mahadk.com"}
+2026-10-20 19:03:32,739 [PDF_CHUNKER] ERROR [OLI-3-Национален кръг-2013-9-12 кл-sol] chunk 1-4 — no response (0s)
+2026-10-20 19:03:32,740 [PDF_CHUNKER] ERROR [OLI-3-Национален кръг-2013-9-12 кл-sol] chunk 1 FAILED — ще retry следващия път
+2026-10-20 19:03:32,745 [PDF_CHUNKER] WARNING [OLI-3-Национален кръг-2013-9-12 кл-sol] 1/1 chunks failed — status=partial
+2026-10-20 19:03:32,747 [PDF_CHUNKER] INFO 
+[95/107] OLI-3-Национален кръг-2014-9-12 кл-sol.pdf
+2026-10-20 19:03:32,747 [PDF_CHUNKER] INFO 
+═══ OLI-3-Национален кръг-2014-9-12 кл-sol ═══
+2026-10-20 19:03:33,312 [PDF_CHUNKER] INFO [OLI-3-Национален кръг-2014-9-12 кл-sol.pdf] pypdf: 4p, 2447 chars
+2026-10-20 19:03:33,312 [PDF_CHUNKER] INFO [OLI-3-Национален кръг-2014-9-12 кл-sol] 1 chunks, 4 pages
+2026-10-20 19:03:33,905 [PDF_CHUNKER] ERROR [OLI-3-Национален кръг-2014-9-12 кл-sol-1] 402: {"error":"Spending limit reached. Need a higher limit? hey@mahadk.com"}
+2026-10-20 19:03:33,908 [PDF_CHUNKER] ERROR [OLI-3-Национален кръг-2014-9-12 кл-sol] chunk 1-4 — no response (0s)
+2026-10-20 19:03:33,908 [PDF_CHUNKER] ERROR [OLI-3-Национален кръг-2014-9-12 кл-sol] chunk 1 FAILED — ще retry следващия път
+2026-10-20 19:03:33,912 [PDF_CHUNKER] WARNING [OLI-3-Национален кръг-2014-9-12 кл-sol] 1/1 chunks failed — status=partial
+2026-10-20 19:03:33,913 [PDF_CHUNKER] INFO 
+[96/107] OLI-3-Национален кръг-2015-9-12 кл-sol.pdf
+2026-10-20 19:03:33,913 [PDF_CHUNKER] INFO 
+═══ OLI-3-Национален кръг-2015-9-12 кл-sol ═══
+2026-10-20 19:03:35,520 [PDF_CHUNKER] INFO [OLI-3-Национален кръг-2015-9-12 кл-sol.pdf] pdfplumber: 4p, 70641 chars
+2026-10-20 19:03:35,520 [PDF_CHUNKER] INFO [OLI-3-Национален кръг-2015-9-12 кл-sol] 1 chunks, 4 pages
+2026-10-20 19:03:36,199 [PDF_CHUNKER] ERROR [OLI-3-Национален кръг-2015-9-12 кл-sol-1] 402: {"error":"Spending limit reached. Need a higher limit? hey@mahadk.com"}
+2026-10-20 19:03:36,201 [PDF_CHUNKER] ERROR [OLI-3-Национален кръг-2015-9-12 кл-sol] chunk 1-4 — no response (0s)
+2026-10-20 19:03:36,201 [PDF_CHUNKER] ERROR [OLI-3-Национален кръг-2015-9-12 кл-sol] chunk 1 FAILED — ще retry следващия път
+2026-10-20 19:03:36,206 [PDF_CHUNKER] WARNING [OLI-3-Национален кръг-2015-9-12 кл-sol] 1/1 chunks failed — status=partial
+2026-10-20 19:03:36,206 [PDF_CHUNKER] INFO 
+[97/107] OLI-3-Национален кръг-2016-9-12 кл-sol.pdf
+2026-10-20 19:03:36,206 [PDF_CHUNKER] INFO 
+═══ OLI-3-Национален кръг-2016-9-12 кл-sol ═══
+2026-10-20 19:03:36,977 [PDF_CHUNKER] INFO [OLI-3-Национален кръг-2016-9-12 кл-sol.pdf] pdfplumber: 3p, 23135 chars
+2026-10-20 19:03:36,978 [PDF_CHUNKER] INFO [OLI-3-Национален кръг-2016-9-12 кл-sol] 1 chunks, 3 pages
+2026-10-20 19:03:37,607 [PDF_CHUNKER] ERROR [OLI-3-Национален кръг-2016-9-12 кл-sol-1] 402: {"error":"Spending limit reached. Need a higher limit? hey@mahadk.com"}
+2026-10-20 19:03:37,610 [PDF_CHUNKER] ERROR [OLI-3-Национален кръг-2016-9-12 кл-sol] chunk 1-3 — no response (0s)
+2026-10-20 19:03:37,611 [PDF_CHUNKER] ERROR [OLI-3-Национален кръг-2016-9-12 кл-sol] chunk 1 FAILED — ще retry следващия път
+2026-10-20 19:03:37,614 [PDF_CHUNKER] WARNING [OLI-3-Национален кръг-2016-9-12 кл-sol] 1/1 chunks failed — status=partial
+2026-10-20 19:03:37,616 [PDF_CHUNKER] INFO 
+[98/107] OLI-3-Национален кръг-2017-9-12 кл-sol.pdf
+2026-10-20 19:03:37,616 [PDF_CHUNKER] INFO 
+═══ OLI-3-Национален кръг-2017-9-12 кл-sol ═══
+2026-10-20 19:03:38,877 [PDF_CHUNKER] INFO [OLI-3-Национален кръг-2017-9-12 кл-sol.pdf] pdfplumber: 3p, 10387 chars
+2026-10-20 19:03:38,877 [PDF_CHUNKER] INFO [OLI-3-Национален кръг-2017-9-12 кл-sol] 1 chunks, 3 pages
+2026-10-20 19:03:39,626 [PDF_CHUNKER] ERROR [OLI-3-Национален кръг-2017-9-12 кл-sol-1] 402: {"error":"Spending limit reached. Need a higher limit? hey@mahadk.com"}
+2026-10-20 19:03:39,629 [PDF_CHUNKER] ERROR [OLI-3-Национален кръг-2017-9-12 кл-sol] chunk 1-3 — no response (0s)
+2026-10-20 19:03:39,629 [PDF_CHUNKER] ERROR [OLI-3-Национален кръг-2017-9-12 кл-sol] chunk 1 FAILED — ще retry следващия път
+2026-10-20 19:03:39,633 [PDF_CHUNKER] WARNING [OLI-3-Национален кръг-2017-9-12 кл-sol] 1/1 chunks failed — status=partial
+2026-10-20 19:03:39,635 [PDF_CHUNKER] INFO 
+[99/107] OLI-3-Национален кръг-2018-9-12 кл-sol.pdf
+2026-10-20 19:03:39,635 [PDF_CHUNKER] INFO 
+═══ OLI-3-Национален кръг-2018-9-12 кл-sol ═══
+2026-10-20 19:03:41,759 [PDF_CHUNKER] INFO [OLI-3-Национален кръг-2018-9-12 кл-sol.pdf] pypdf: 5p, 28739 chars
+2026-10-20 19:03:41,759 [PDF_CHUNKER] INFO [OLI-3-Национален кръг-2018-9-12 кл-sol] 1 chunks, 5 pages
+2026-10-20 19:03:42,380 [PDF_CHUNKER] ERROR [OLI-3-Национален кръг-2018-9-12 кл-sol-1] 402: {"error":"Spending limit reached. Need a higher limit? hey@mahadk.com"}
+2026-10-20 19:03:42,383 [PDF_CHUNKER] ERROR [OLI-3-Национален кръг-2018-9-12 кл-sol] chunk 1-5 — no response (0s)
+2026-10-20 19:03:42,383 [PDF_CHUNKER] ERROR [OLI-3-Национален кръг-2018-9-12 кл-sol] chunk 1 FAILED — ще retry следващия път
+2026-10-20 19:03:42,387 [PDF_CHUNKER] WARNING [OLI-3-Национален кръг-2018-9-12 кл-sol] 1/1 chunks failed — status=partial
+2026-10-20 19:03:42,389 [PDF_CHUNKER] INFO 
+[100/107] OLI-3-Национален кръг-2019-9-12 кл-sol.pdf
+2026-10-20 19:03:42,390 [PDF_CHUNKER] INFO 
+═══ OLI-3-Национален кръг-2019-9-12 кл-sol ═══
+2026-10-20 19:03:44,271 [PDF_CHUNKER] INFO [OLI-3-Национален кръг-2019-9-12 кл-sol.pdf] pdfplumber: 6p, 60532 chars
+2026-10-20 19:03:44,271 [PDF_CHUNKER] INFO [OLI-3-Национален кръг-2019-9-12 кл-sol] 1 chunks, 6 pages
+2026-10-20 19:04:07,847 [PDF_CHUNKER] ERROR [OLI-3-Национален кръг-2019-9-12 кл-sol-1] 402: {"error":"Spending limit reached. Need a higher limit? hey@mahadk.com"}
+2026-10-20 19:04:07,850 [PDF_CHUNKER] ERROR [OLI-3-Национален кръг-2019-9-12 кл-sol] chunk 1-6 — no response (23s)
+2026-10-20 19:04:07,850 [PDF_CHUNKER] ERROR [OLI-3-Национален кръг-2019-9-12 кл-sol] chunk 1 FAILED — ще retry следващия път
+2026-10-20 19:04:07,854 [PDF_CHUNKER] WARNING [OLI-3-Национален кръг-2019-9-12 кл-sol] 1/1 chunks failed — status=partial
+2026-10-20 19:04:07,854 [PDF_CHUNKER] INFO 
+[101/107] OLI-3-Национален кръг-2020-9-12 кл-sol.pdf
+2026-10-20 19:04:07,854 [PDF_CHUNKER] INFO 
+═══ OLI-3-Национален кръг-2020-9-12 кл-sol ═══
+2026-10-20 19:04:10,092 [PDF_CHUNKER] INFO [OLI-3-Национален кръг-2020-9-12 кл-sol.pdf] pdfplumber: 8p, 16624 chars
+2026-10-20 19:04:10,092 [PDF_CHUNKER] INFO [OLI-3-Национален кръг-2020-9-12 кл-sol] 1 chunks, 8 pages
+2026-10-20 19:04:10,718 [PDF_CHUNKER] ERROR [OLI-3-Национален кръг-2020-9-12 кл-sol-1] 402: {"error":"Spending limit reached. Need a higher limit? hey@mahadk.com"}
+2026-10-20 19:04:10,721 [PDF_CHUNKER] ERROR [OLI-3-Национален кръг-2020-9-12 кл-sol] chunk 1-8 — no response (0s)
+2026-10-20 19:04:10,721 [PDF_CHUNKER] ERROR [OLI-3-Национален кръг-2020-9-12 кл-sol] chunk 1 FAILED — ще retry следващия път
+2026-10-20 19:04:10,727 [PDF_CHUNKER] WARNING [OLI-3-Национален кръг-2020-9-12 кл-sol] 1/1 chunks failed — status=partial
+2026-10-20 19:04:10,728 [PDF_CHUNKER] INFO 
+[102/107] OLI-3-Национален кръг-2021-9-12 кл-sol.pdf
+2026-10-20 19:04:10,728 [PDF_CHUNKER] INFO 
+═══ OLI-3-Национален кръг-2021-9-12 кл-sol ═══
+2026-10-20 19:04:11,633 [PDF_CHUNKER] INFO [OLI-3-Национален кръг-2021-9-12 кл-sol.pdf] pypdf: 5p, 21002 chars
+2026-10-20 19:04:11,633 [PDF_CHUNKER] INFO [OLI-3-Национален кръг-2021-9-12 кл-sol] 1 chunks, 5 pages
+2026-10-20 19:04:12,047 [PDF_CHUNKER] ERROR [OLI-3-Национален кръг-2021-9-12 кл-sol-1] 402: {"error":"Spending limit reached. Need a higher limit? hey@mahadk.com"}
+2026-10-20 19:04:12,048 [PDF_CHUNKER] ERROR [OLI-3-Национален кръг-2021-9-12 кл-sol] chunk 1-5 — no response (0s)
+2026-10-20 19:04:12,050 [PDF_CHUNKER] ERROR [OLI-3-Национален кръг-2021-9-12 кл-sol] chunk 1 FAILED — ще retry следващия път
+2026-10-20 19:04:12,053 [PDF_CHUNKER] WARNING [OLI-3-Национален кръг-2021-9-12 кл-sol] 1/1 chunks failed — status=partial
+2026-10-20 19:04:12,053 [PDF_CHUNKER] INFO 
+[103/107] OLI-3-Национален кръг-2022-9-12 кл-sol.pdf
+2026-10-20 19:04:12,054 [PDF_CHUNKER] INFO 
+═══ OLI-3-Национален кръг-2022-9-12 кл-sol ═══
+2026-10-20 19:04:13,391 [PDF_CHUNKER] INFO [OLI-3-Национален кръг-2022-9-12 кл-sol.pdf] pdfplumber: 7p, 65217 chars
+2026-10-20 19:04:13,391 [PDF_CHUNKER] INFO [OLI-3-Национален кръг-2022-9-12 кл-sol] 1 chunks, 7 pages
+2026-10-20 19:04:13,890 [PDF_CHUNKER] ERROR [OLI-3-Национален кръг-2022-9-12 кл-sol-1] 402: {"error":"Spending limit reached. Need a higher limit? hey@mahadk.com"}
+2026-10-20 19:04:13,892 [PDF_CHUNKER] ERROR [OLI-3-Национален кръг-2022-9-12 кл-sol] chunk 1-7 — no response (0s)
+2026-10-20 19:04:13,892 [PDF_CHUNKER] ERROR [OLI-3-Национален кръг-2022-9-12 кл-sol] chunk 1 FAILED — ще retry следващия път
+2026-10-20 19:04:13,895 [PDF_CHUNKER] WARNING [OLI-3-Национален кръг-2022-9-12 кл-sol] 1/1 chunks failed — status=partial
+2026-10-20 19:04:13,897 [PDF_CHUNKER] INFO 
+[104/107] OLI-3-Национален кръг-2023-9-12 кл-sol.pdf
+2026-10-20 19:04:13,897 [PDF_CHUNKER] INFO 
+═══ OLI-3-Национален кръг-2023-9-12 кл-sol ═══
+2026-10-20 19:04:15,304 [PDF_CHUNKER] INFO [OLI-3-Национален кръг-2023-9-12 кл-sol.pdf] pdfplumber: 8p, 44799 chars
+2026-10-20 19:04:15,304 [PDF_CHUNKER] INFO [OLI-3-Национален кръг-2023-9-12 кл-sol] 1 chunks, 8 pages
+2026-10-20 19:04:15,759 [PDF_CHUNKER] ERROR [OLI-3-Национален кръг-2023-9-12 кл-sol-1] 402: {"error":"Spending limit reached. Need a higher limit? hey@mahadk.com"}
+2026-10-20 19:04:15,760 [PDF_CHUNKER] ERROR [OLI-3-Национален кръг-2023-9-12 кл-sol] chunk 1-8 — no response (0s)
+2026-10-20 19:04:15,761 [PDF_CHUNKER] ERROR [OLI-3-Национален кръг-2023-9-12 кл-sol] chunk 1 FAILED — ще retry следващия път
+2026-10-20 19:04:15,764 [PDF_CHUNKER] WARNING [OLI-3-Национален кръг-2023-9-12 кл-sol] 1/1 chunks failed — status=partial
+2026-10-20 19:04:15,765 [PDF_CHUNKER] INFO 
+[105/107] OLI-3-Национален кръг-2024-9-12 кл-sol.pdf
+2026-10-20 19:04:15,765 [PDF_CHUNKER] INFO 
+═══ OLI-3-Национален кръг-2024-9-12 кл-sol ═══
+2026-10-20 19:04:16,825 [PDF_CHUNKER] INFO [OLI-3-Национален кръг-2024-9-12 кл-sol.pdf] pdfplumber: 6p, 48183 chars
+2026-10-20 19:04:16,825 [PDF_CHUNKER] INFO [OLI-3-Национален кръг-2024-9-12 кл-sol] 1 chunks, 6 pages
+2026-10-20 19:04:17,298 [PDF_CHUNKER] ERROR [OLI-3-Национален кръг-2024-9-12 кл-sol-1] 402: {"error":"Spending limit reached. Need a higher limit? hey@mahadk.com"}
+2026-10-20 19:04:17,301 [PDF_CHUNKER] ERROR [OLI-3-Национален кръг-2024-9-12 кл-sol] chunk 1-6 — no response (0s)
+2026-10-20 19:04:17,301 [PDF_CHUNKER] ERROR [OLI-3-Национален кръг-2024-9-12 кл-sol] chunk 1 FAILED — ще retry следващия път
+2026-10-20 19:04:17,305 [PDF_CHUNKER] WARNING [OLI-3-Национален кръг-2024-9-12 кл-sol] 1/1 chunks failed — status=partial
+2026-10-20 19:04:17,306 [PDF_CHUNKER] INFO 
+[106/107] OLI-3-Национален кръг-2025-9-12 кл-sol.pdf
+2026-10-20 19:04:17,306 [PDF_CHUNKER] INFO 
+═══ OLI-3-Национален кръг-2025-9-12 кл-sol ═══
+2026-10-20 19:04:19,012 [PDF_CHUNKER] INFO [OLI-3-Национален кръг-2025-9-12 кл-sol.pdf] pdfplumber: 10p, 54470 chars
+2026-10-20 19:04:19,013 [PDF_CHUNKER] INFO [OLI-3-Национален кръг-2025-9-12 кл-sol] 1 chunks, 10 pages
+2026-10-20 19:04:19,461 [PDF_CHUNKER] ERROR [OLI-3-Национален кръг-2025-9-12 кл-sol-1] 402: {"error":"Spending limit reached. Need a higher limit? hey@mahadk.com"}
+2026-10-20 19:04:19,463 [PDF_CHUNKER] ERROR [OLI-3-Национален кръг-2025-9-12 кл-sol] chunk 1-10 — no response (0s)
+2026-10-20 19:04:19,463 [PDF_CHUNKER] ERROR [OLI-3-Национален кръг-2025-9-12 кл-sol] chunk 1 FAILED — ще retry следващия път
+2026-10-20 19:04:19,468 [PDF_CHUNKER] WARNING [OLI-3-Национален кръг-2025-9-12 кл-sol] 1/1 chunks failed — status=partial
+2026-10-20 19:04:19,468 [PDF_CHUNKER] INFO 
+[107/107] OLI-3-Национален кръг-2026-9-12 кл-sol.pdf
+2026-10-20 19:04:19,469 [PDF_CHUNKER] INFO 
+═══ OLI-3-Национален кръг-2026-9-12 кл-sol ═══
+2026-10-20 19:04:21,071 [PDF_CHUNKER] INFO [OLI-3-Национален кръг-2026-9-12 кл-sol.pdf] pdfplumber: 8p, 17303 chars
+2026-10-20 19:04:21,072 [PDF_CHUNKER] INFO [OLI-3-Национален кръг-2026-9-12 кл-sol] 1 chunks, 8 pages
+2026-10-20 19:04:21,501 [PDF_CHUNKER] ERROR [OLI-3-Национален кръг-2026-9-12 кл-sol-1] 402: {"error":"Spending limit reached. Need a higher limit? hey@mahadk.com"}
+2026-10-20 19:04:21,502 [PDF_CHUNKER] ERROR [OLI-3-Национален кръг-2026-9-12 кл-sol] chunk 1-8 — no response (0s)
+2026-10-20 19:04:21,504 [PDF_CHUNKER] ERROR [OLI-3-Национален кръг-2026-9-12 кл-sol] chunk 1 FAILED — ще retry следващия път
+2026-10-20 19:04:21,507 [PDF_CHUNKER] WARNING [OLI-3-Национален кръг-2026-9-12 кл-sol] 1/1 chunks failed — status=partial
+2026-10-20 20:04:02,512 [PDF_CHUNKER] INFO Заредени 160 STEPS точки
+2026-10-20 20:04:02,512 [PDF_CHUNKER] INFO Classify model: openai/gpt-6.1-sol ($0.002/call)

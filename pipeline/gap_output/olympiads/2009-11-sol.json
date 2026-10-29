@@ -1,0 +1,226 @@
+{
+  "_meta": {
+    "pdf": "C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\Задачи_Минали_Години\\Областен\\OLI-2-Областен кръг-2009-11 кл-sol.pdf",
+    "paired_with": null,
+    "level": 1,
+    "type": "sol",
+    "analyzed_at": "2026-10-18T12:51:43.384538",
+    "model": "deepseek/deepseek-v3.2",
+    "text_length": 18884,
+    "paired_text_length": 0
+  },
+  "problems": [
+    {
+      "num": 1,
+      "topic": "algebra",
+      "theorems": [],
+      "techniques": [
+        "substitution",
+        "function analysis",
+        "quadratic function extremum"
+      ],
+      "concepts": [
+        "trigonometric identities",
+        "sine rule",
+        "cosine rule",
+        "triangle angles"
+      ],
+      "difficulty": "standard",
+      "notes": "Problem involves trigonometric expression simplification and maximizing a quadratic function of cos γ."
+    },
+    {
+      "num": 2,
+      "topic": "algebra",
+      "theorems": [],
+      "techniques": [
+        "substitution",
+        "factoring",
+        "real roots analysis"
+      ],
+      "concepts": [
+        "system of equations",
+        "symmetric equations"
+      ],
+      "difficulty": "standard",
+      "notes": "System reduces to a homogeneous equation; solve via substitution t = x/y."
+    },
+    {
+      "num": 3,
+      "topic": "number_theory",
+      "theorems": [
+        "Fermat's Little Theorem"
+      ],
+      "techniques": [
+        "modular arithmetic",
+        "perfect square residues"
+      ],
+      "concepts": [
+        "product of consecutive integers",
+        "difference of squares",
+        "mod 19 arithmetic"
+      ],
+      "difficulty": "olympic",
+      "notes": "Uses identity n(n+1)(n+2)(n+3) = (n²+3n+1)² - 1 and FLT mod 19."
+    },
+    {
+      "num": 4,
+      "topic": "geometry",
+      "theorems": [],
+      "techniques": [
+        "angle chasing",
+        "arc measure",
+        "inequality manipulation"
+      ],
+      "concepts": [
+        "cyclic quadrilateral",
+        "inscribed angles",
+        "arcs and chords",
+        "triangle similarity"
+      ],
+      "difficulty": "hard",
+      "notes": "Complex geometry problem involving a cyclic quadrilateral and an inscribed triangle with angle conditions."
+    },
+    {
+      "num": 5,
+      "topic": "algebra",
+      "theorems": [],
+      "techniques": [
+        "substitution",
+        "analysis of permissible values",
+        "rationalization"
+      ],
+      "concepts": [
+        "irrational equations",
+        "domain restrictions"
+      ],
+      "difficulty": "standard",
+      "notes": "Equation with square roots; consider cases based on x relative to parameter a."
+    },
+    {
+      "num": 6,
+      "topic": "geometry",
+      "theorems": [],
+      "techniques": [
+        "trigonometric identities",
+        "sine rule",
+        "sum-to-product formulas"
+      ],
+      "concepts": [
+        "inscribed hexagon",
+        "circumscribed circle",
+        "perimeters",
+        "inradii products",
+        "angle sums in hexagon"
+      ],
+      "difficulty": "hard",
+      "notes": "Two-part problem: a) trigonometric identity for triangle, b) condition for inradii products in cyclic hexagon related to perimeters of triangles."
+    },
+    {
+      "num": 7,
+      "topic": "combinatorics",
+      "theorems": [],
+      "techniques": [
+        "graph coloring",
+        "modular arithmetic",
+        "combinatorial construction"
+      ],
+      "concepts": [
+        "complete graph edge coloring",
+        "round-table seating",
+        "modular sums",
+        "combinatorial design"
+      ],
+      "difficulty": "olympic",
+      "notes": "Problem equivalent to edge coloring of complete graph K_n with n-1 colors such that no two edges incident to the same vertex have the same color. Uses coloring based on sum of indices modulo n."
+    },
+    {
+      "num": 8,
+      "topic": "algebra",
+      "theorems": [],
+      "techniques": [
+        "substitution",
+        "factoring",
+        "analysis of roots",
+        "geometric progression condition"
+      ],
+      "concepts": [
+        "exponential equation",
+        "cubic equation",
+        "real roots",
+        "arithmetic and geometric progressions"
+      ],
+      "difficulty": "hard",
+      "notes": "Exponential equation reduced to cubic via y=2^x. Roots must be positive and in geometric progression. Leads to specific parameter value."
+    },
+    {
+      "num": 9,
+      "topic": "algebra",
+      "theorems": [],
+      "techniques": [
+        "telescoping sum",
+        "induction",
+        "monotonicity argument"
+      ],
+      "concepts": [
+        "recurrence sequence",
+        "telescoping series",
+        "sequence guessing and verification"
+      ],
+      "difficulty": "standard",
+      "notes": "Sequence defined by recurrence; uses telescoping sum to find specific term value."
+    },
+    {
+      "num": 10,
+      "topic": "number_theory",
+      "theorems": [],
+      "techniques": [
+        "factoring",
+        "modular arithmetic (mod 8)",
+        "gcd analysis",
+        "parity arguments"
+      ],
+      "concepts": [
+        "Diophantine equation a²+ab+b²=c²",
+        "coprime numbers",
+        "perfect square conditions",
+        "mod 3 divisibility"
+      ],
+      "difficulty": "olympic",
+      "notes": "Complex number theory problem involving factorization (2c±(a-b)) and analysis of gcd cases (d=1,2,4). Relates being a perfect square to not being divisible by 3."
+    }
+  ],
+  "unique_concepts": [
+    "trigonometric identities",
+    "sine rule",
+    "cosine rule",
+    "system of equations",
+    "substitution",
+    "function analysis",
+    "Fermat's Little Theorem",
+    "modular arithmetic",
+    "perfect square residues",
+    "cyclic quadrilateral",
+    "inscribed angles",
+    "arcs and chords",
+    "triangle similarity",
+    "irrational equations",
+    "domain restrictions",
+    "inscribed hexagon",
+    "circumscribed circle",
+    "inradii products",
+    "angle sums in hexagon",
+    "complete graph edge coloring",
+    "combinatorial design",
+    "exponential equation",
+    "cubic equation",
+    "geometric progression of roots",
+    "telescoping sum",
+    "recurrence sequence",
+    "Diophantine equation a²+ab+b²=c²",
+    "coprime numbers",
+    "gcd analysis",
+    "parity arguments",
+    "mod 8 arithmetic"
+  ],
+  "confidence": 0.95
+}

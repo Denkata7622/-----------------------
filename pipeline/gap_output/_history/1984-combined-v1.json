@@ -1,0 +1,107 @@
+{
+  "_meta": {
+    "pdf": "C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\Материали_БГ\\BMO_1984-2006.pdf",
+    "paired_with": null,
+    "level": 2,
+    "type": "combined",
+    "analyzed_at": "2026-10-16T21:46:55.664159",
+    "model": "deepseek/deepseek-v3.2",
+    "text_length": 214093,
+    "paired_text_length": 0
+  },
+  "problems": [
+    {
+      "num": 1,
+      "topic": "algebra",
+      "theorems": [
+        "AM-HM inequality"
+      ],
+      "techniques": [
+        "substitution",
+        "algebraic manipulation"
+      ],
+      "concepts": [
+        "harmonic mean",
+        "arithmetic mean",
+        "inequalities"
+      ],
+      "difficulty": "standard",
+      "notes": "Standard inequality problem using substitution and AM-HM."
+    },
+    {
+      "num": 2,
+      "topic": "geometry",
+      "theorems": [],
+      "techniques": [
+        "lemma construction",
+        "parallelogram properties"
+      ],
+      "concepts": [
+        "cyclic quadrilateral",
+        "orthocenter",
+        "parallelogram",
+        "similar figures"
+      ],
+      "difficulty": "standard",
+      "notes": "Key step is proving a lemma about orthocenters forming a parallelogram."
+    },
+    {
+      "num": 3,
+      "topic": "number_theory",
+      "theorems": [
+        "Euler's theorem"
+      ],
+      "techniques": [
+        "divisibility",
+        "modular arithmetic",
+        "exponent properties"
+      ],
+      "concepts": [
+        "decimal representation",
+        "Euler's totient function",
+        "powers of 5"
+      ],
+      "difficulty": "standard",
+      "notes": "Uses Euler's theorem to construct n from m."
+    },
+    {
+      "num": 4,
+      "topic": "algebra",
+      "theorems": [],
+      "techniques": [
+        "system of equations",
+        "summation",
+        "substitution",
+        "case analysis"
+      ],
+      "concepts": [
+        "symmetric sums",
+        "ordering variables",
+        "sign analysis"
+      ],
+      "difficulty": "standard",
+      "notes": "Solution involves summing equations and analyzing signs based on ordering."
+    }
+  ],
+  "unique_concepts": [
+    "AM-HM inequality",
+    "harmonic mean",
+    "arithmetic mean",
+    "inequalities",
+    "substitution",
+    "cyclic quadrilateral",
+    "orthocenter",
+    "parallelogram",
+    "similar figures",
+    "Euler's theorem",
+    "Euler's totient function",
+    "decimal representation",
+    "divisibility",
+    "modular arithmetic",
+    "system of equations",
+    "symmetric sums",
+    "ordering variables",
+    "sign analysis"
+  ],
+  "confidence": 0.95
+}

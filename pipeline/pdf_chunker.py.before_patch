@@ -1,0 +1,1518 @@
+#!/usr/bin/env python3
+"""
+pdf_chunker.py v3.2 — извлича задачи от PDF-и, слива probs+sol двойки,
+класифицира към STEPS точки и агрегира по точка.
+
+v3.2:
+- Mistral OCR fallback с include_image_base64 (fix за truncation)
+- Cache v2 (__v2.json)
+- AI separation на stmt/solution (без regex евристики)
+- Classify с евтин модел (chunker.classify_model)
+- По-мек _topics_match (само очевидно сгрешени)
+- Merge приема sols verbatim при празен probs
+"""
+import os, re, sys, json, time, logging, argparse, threading, shutil, hashlib
+from pathlib import Path
+from datetime import datetime, date
+from typing import Optional
+
+import requests
+
+try:
+    import pdfplumber
+    HAS_PDFPLUMBER = True
+except ImportError:
+    HAS_PDFPLUMBER = False
+    print("ЛИПСВА pdfplumber. Инсталирай: pip install pdfplumber pypdf")
+    sys.exit(1)
+
+try:
+    from pypdf import PdfReader
+    HAS_PYPDF = True
+except ImportError:
+    HAS_PYPDF = False
+
+try:
+    import fitz  # pymupdf
+    HAS_PYMUPDF = True
+except ImportError:
+    HAS_PYMUPDF = False
+
+try:
+    from personas import EXTRACTION_PERSONA, CLASSIFIER_PERSONA
+except ImportError as e:
+    print(f"ЛИПСВА personas.py или липсват роли в него: {e}")
+    sys.exit(1)
+
+BASE_DIR = Path(__file__).parent.resolve()
+LOG_DIR = BASE_DIR / "logs"
+LOG_DIR.mkdir(exist_ok=True)
+
+logging.getLogger("pdfminer").setLevel(logging.ERROR)
+logging.getLogger("pdfplumber").setLevel(logging.ERROR)
+logging.getLogger("pypdf").setLevel(logging.ERROR)
+
+logging.basicConfig(
+    level=logging.INFO,
+    format="%(asctime)s [PDF_CHUNKER] %(levelname)s %(message)s",
+    handlers=[
+        logging.FileHandler(LOG_DIR / f"chunker_{date.today()}.log", encoding="utf-8"),
+        logging.StreamHandler(sys.stdout),
+    ],
+)
+log = logging.getLogger("chunker")
+
+EXTRACTED_DIR = BASE_DIR / "extracted"
+EXTRACTED_DIR.mkdir(exist_ok=True)
+MERGED_DIR = BASE_DIR / "merged"
+MERGED_DIR.mkdir(exist_ok=True)
+CLASSIFIED_DIR = BASE_DIR / "classified"
+CLASSIFIED_DIR.mkdir(exist_ok=True)
+REAL_PROBLEMS_DIR = BASE_DIR / "real_problems"
+REAL_PROBLEMS_DIR.mkdir(exist_ok=True)
+
+HTML_FILE = BASE_DIR.parent / "index.html"
+STEPS_FILE = BASE_DIR.parent / "data" / "steps.js"
+STATE_FILE = BASE_DIR / "chunker_state.json"
+
+
+def load_config():
+    with open(BASE_DIR / "config.json", "r", encoding="utf-8") as f:
+        return json.load(f)
+
+CONFIG = load_config()
+
+
+# ═══════════════════════════════════════════════════════════════
+# HELPERS
+# ═══════════════════════════════════════════════════════════════
+def safe_name(name: str) -> str:
+    return re.sub(r'[<>:"/\\|?*]', "_", name).strip()
+
+
+def format_prompt(template: str, **kwargs) -> str:
+    if not kwargs:
+        return template
+    pattern = re.compile(r'\{(' + '|'.join(re.escape(k) for k in kwargs) + r')\}')
+    return pattern.sub(lambda m: str(kwargs[m.group(1)]), template)
+
+
+def heartbeat(item_id: str, label: str, interval: int = 30):
+    stop = threading.Event()
+    def run():
+        t0 = time.time()
+        while not stop.wait(interval):
+            log.info(f"[{item_id}] {label}... {int(time.time()-t0)}s")
+    threading.Thread(target=run, daemon=True).start()
+    return stop
+
+
+def parse_json(text: str) -> Optional[dict]:
+    if not text:
+        return None
+    text = text.strip()
+    if text.startswith("```"):
+        text = re.sub(r'^```(?:json)?\s*', '', text)
+        text = re.sub(r'\s*```\s*$', '', text)
+    m = re.search(r'\{.*\}', text, re.DOTALL)
+    if not m:
+        return None
+    try:
+        return json.loads(m.group(0))
+    except Exception:
+        try:
+            return json.loads(re.sub(r',\s*([}\]])', r'\1', m.group(0)))
+        except Exception:
+            return None
+
+
+# ═══════════════════════════════════════════════════════════════
+# NAME PARSING — structural, не semantic
+# ═══════════════════════════════════════════════════════════════
+def split_pdf_name(stem: str) -> dict:
+    variant = ""
+    m_var = re.search(r'\s*(\(\d+\)|- копие|- copy)\s*$', stem, re.IGNORECASE)
+    if m_var:
+        variant = m_var.group(1).strip()
+        stem = stem[:m_var.start()].strip()
+
+    m = re.search(r'^(.*?)[\s\-]*(probs|sol)$', stem, re.IGNORECASE)
+    if m:
+        return {
+            'base': m.group(1).strip(),
+            'kind': m.group(2).lower(),
+            'variant': variant,
+        }
+    return {'base': stem, 'kind': None, 'variant': variant}
+
+
+def infer_metadata_from_filename(pdf_name: str) -> dict:
+    name = pdf_name.lower()
+    meta = {"year": None, "grade": None, "grade_range": None, "round": "unknown"}
+
+    m = re.search(r"(\d{4})-(\d{1,2})-(\d{1,2})\s*кл", name)
+    if m:
+        meta["year"] = int(m.group(1))
+        meta["grade_range"] = (int(m.group(2)), int(m.group(3)))
+        meta["grade"] = None
+        meta["round"] = "nacionalen"
+        return meta
+
+    m = re.search(r"(\d{4})-(\d{1,2})\s*кл", name)
+    if m:
+        meta["year"] = int(m.group(1))
+        meta["grade"] = int(m.group(2))
+        meta["round"] = "oblasten"
+        return meta
+
+    m = re.search(r"nom[_\-\s]*(\d{4})", name)
+    if m:
+        meta["year"] = int(m.group(1))
+        meta["round"] = "nacionalen"
+    m = re.search(r"ot[_\-\s]*(\d{4})", name)
+    if m:
+        meta["year"] = int(m.group(1))
+        meta["round"] = "ot"
+
+    if "bmo" in name:
+        meta["round"] = "bmo"
+    elif "bms" in name:
+        meta["round"] = "bms"
+    elif "bmc" in name:
+        meta["round"] = "bmc"
+
+    return meta
+
+
+# ═══════════════════════════════════════════════════════════════
+# VALIDATION — минимална, доверяваме се на AI
+# ═══════════════════════════════════════════════════════════════
+def _validate_problem(p: dict) -> tuple:
+    """Само structural checks. AI-ят разделя stmt/solution в extraction."""
+    stmt = (p.get("statement") or "").strip()
+    sol = (p.get("solution") or "").strip()
+    if len(stmt) < 20:
+        return False, "statement_too_short"
+    if not sol or len(sol) < 30:
+        return False, "no_solution"
+    return True, "ok"
+
+
+def _topics_match(stmt: str, sol: str) -> bool:
+    """Само ОЧЕВИДНО сгрешени: 3+ сигнала в stmt, 0 в sol, И различна тема."""
+    if not stmt or not sol:
+        return True
+    s, so = stmt.lower(), sol.lower()
+
+    geo_kw = ['окръжност', 'триъгълник', 'допирателна', 'ъглополовяща', 'хорда',
+              'вписан', 'подобни', 'ортоцентър', 'медиана', 'височина']
+    nt_kw = ['делител', 'просто число', 'остатък', 'mod', 'дели се', 'четно',
+             'нечетно', 'нод', 'нок', 'естествени', 'цяло число']
+    trig_kw = ['cos', 'sin', 'tan', 'cot']
+    para_kw = ['парабола', 'a^2', 'a²', 'b^2', 'b²', '(a,', '(b,']
+    func_kw = ['f(x)', 'f(m,n)', 'функция']
+
+    def count(text, kws):
+        return sum(1 for k in kws if k in text)
+
+    s_geo, s_nt, s_trig = count(s, geo_kw), count(s, nt_kw), count(s, trig_kw)
+    so_geo, so_nt, so_trig = count(so, geo_kw), count(so, nt_kw), count(so, trig_kw)
+    so_para, so_func = count(so, para_kw), count(so, func_kw)
+
+    # Само силни mismatch-и
+    if s_geo >= 3 and so_geo == 0 and (so_nt >= 2 or so_func >= 1):
+        return False
+    if s_trig >= 2 and so_trig == 0 and so_para >= 2:
+        return False
+    if s_nt >= 2 and so_nt == 0 and so_geo >= 3:
+        return False
+    return True
+
+
+# ═══════════════════════════════════════════════════════════════
+# AI CLIENT
+# ═══════════════════════════════════════════════════════════════
+class AIClient:
+    def __init__(self, cfg, name="chunker"):
+        self.name = name
+        self.url = cfg["api_url"]
+        self.model = cfg["model"]
+        self.max_tokens = cfg["max_tokens"]
+        self.temperature = cfg["temperature"]
+        self.headers = {"Content-Type": "application/json"}
+        if cfg.get("api_key"):
+            self.headers["Authorization"] = f"Bearer {cfg['api_key']}"
+
+    def call(self, system, user, item_id="?", force_json=True):
+        payload = {
+            "model": self.model,
+            "max_tokens": self.max_tokens,
+            "temperature": self.temperature,
+            "messages": [
+                {"role": "system", "content": system},
+                {"role": "user", "content": user},
+            ],
+        }
+        if force_json:
+            payload["response_format"] = {"type": "json_object"}
+
+        for attempt in range(1, 4):
+            try:
+                r = requests.post(self.url, headers=self.headers, json=payload, timeout=600)
+                if r.status_code == 429:
+                    log.warning(f"[{item_id}] 429 — чакам 30с")
+                    time.sleep(30); continue
+                if r.status_code == 400 and force_json:
+                    log.warning(f"[{item_id}] 400 — махам response_format")
+                    payload.pop("response_format", None)
+                    force_json = False
+                    continue
+                if r.status_code >= 500:
+                    time.sleep(8 * attempt); continue
+                if r.status_code >= 400:
+                    log.error(f"[{item_id}] {r.status_code}: {r.text[:300]}")
+                    return None
+                data = r.json()
+                content = data.get("choices", [{}])[0].get("message", {}).get("content", "")
+                return (content or "").strip() or None
+            except Exception as e:
+                log.warning(f"[{item_id}] {e}")
+                time.sleep(8 * attempt)
+        return None
+
+# ═══════════════════════════════════════════════════════════════
+# OCR (Mistral) — fallback за сканирани PDF-и
+# ═══════════════════════════════════════════════════════════════
+_OCR_CACHE_DIR = BASE_DIR / ".ocr_cache"
+
+
+def _ocr_pdf(pdf_path: Path) -> list:
+    """OCR-ва PDF чрез Mistral. Кешира резултата (v2 с include_image_base64)."""
+    cfg = CONFIG.get("ocr", {})
+    if not cfg.get("enabled"):
+        return []
+
+    _OCR_CACHE_DIR.mkdir(exist_ok=True)
+    cache_file = _OCR_CACHE_DIR / f"{safe_name(pdf_path.stem)}__v2.json"
+    if cache_file.exists():
+        try:
+            cached = json.loads(cache_file.read_text(encoding="utf-8"))
+            if cached:
+                log.info(f"[{pdf_path.name}] OCR cache: {len(cached)}p")
+                return cached
+        except Exception:
+            pass
+
+    import base64
+    if pdf_path.stat().st_size > 30 * 1024 * 1024:
+        log.warning(f"[{pdf_path.name}] >30MB, OCR skip")
+        return []
+
+    b64 = base64.b64encode(pdf_path.read_bytes()).decode()
+    log.info(f"[{pdf_path.name}] Mistral OCR ({pdf_path.stat().st_size/1024:.0f}KB)")
+
+    hb = heartbeat(pdf_path.stem, "OCR", interval=15)
+    t0 = time.time()
+    try:
+        r = requests.post(
+            cfg["api_url"],
+            headers={
+                "Authorization": f"Bearer {cfg['api_key']}",
+                "Content-Type": "application/json",
+            },
+            json={
+                "model": cfg["model"],
+                "document": {
+                    "type": "document_url",
+                    "document_url": f"data:application/pdf;base64,{b64}",
+                },
+                "include_image_base64": True,
+            },
+            timeout=600,
+        )
+    except Exception as e:
+        hb.set()
+        log.error(f"[{pdf_path.name}] OCR fail: {e}")
+        return []
+    finally:
+        hb.set()
+
+    dur = int(time.time() - t0)
+    if not r.ok:
+        log.error(f"[{pdf_path.name}] OCR {r.status_code} ({dur}s): {r.text[:200]}")
+        return []
+
+    data = r.json()
+    pages_raw = data.get("pages", [])
+    if not pages_raw:
+        return []
+
+    pages = []
+    for p in pages_raw:
+        md = (p.get("markdown") or "").strip()
+        # Изчисти garbage от вида "гггггггггг"
+        md = re.sub(r'(.)\1{9,}', r'\1', md)
+        md = re.sub(r'\n{3,}', '\n\n', md)
+        pages.append({"page": int(p.get("index", 0)) + 1, "text": md.strip()})
+
+    total = sum(len(p["text"]) for p in pages)
+    cost = len(pages) * cfg.get("cost_per_page_usd", 0.001)
+    log.info(f"[{pdf_path.name}] OCR: {len(pages)}p, {total}chars, {dur}s, ${cost:.4f}")
+
+    try:
+        cache_file.write_text(json.dumps(pages, ensure_ascii=False, indent=2), encoding="utf-8")
+    except Exception:
+        pass
+
+    return pages
+
+
+# ═══════════════════════════════════════════════════════════════
+# PDF PAGE EXTRACTION
+# ═══════════════════════════════════════════════════════════════
+def extract_pdf_pages(pdf_path: Path) -> list:
+    """Опитва pdfplumber → pypdf → pymupdf → Mistral OCR."""
+    candidates = []
+
+    if HAS_PDFPLUMBER:
+        try:
+            pages = []
+            with pdfplumber.open(pdf_path) as pdf:
+                for i, page in enumerate(pdf.pages, 1):
+                    try:
+                        text = (page.extract_text() or "").strip()
+                    except Exception:
+                        text = ""
+                    pages.append({"page": i, "text": text})
+            total = sum(len(p["text"]) for p in pages)
+            candidates.append((total, "pdfplumber", pages))
+        except Exception as e:
+            log.warning(f"[{pdf_path.name}] pdfplumber fail: {e}")
+
+    if HAS_PYPDF:
+        try:
+            reader = PdfReader(str(pdf_path))
+            pages = []
+            for i, page in enumerate(reader.pages, 1):
+                try:
+                    text = (page.extract_text() or "").strip()
+                except Exception:
+                    text = ""
+                pages.append({"page": i, "text": text})
+            total = sum(len(p["text"]) for p in pages)
+            candidates.append((total, "pypdf", pages))
+        except Exception as e:
+            log.warning(f"[{pdf_path.name}] pypdf fail: {e}")
+
+    if HAS_PYMUPDF:
+        try:
+            import fitz
+            pages = []
+            doc = fitz.open(str(pdf_path))
+            for i, page in enumerate(doc, 1):
+                try:
+                    text = page.get_text().strip()
+                except Exception:
+                    text = ""
+                pages.append({"page": i, "text": text})
+            doc.close()
+            total = sum(len(p["text"]) for p in pages)
+            candidates.append((total, "pymupdf", pages))
+        except Exception as e:
+            log.warning(f"[{pdf_path.name}] pymupdf fail: {e}")
+
+    min_chars = CONFIG.get("ocr", {}).get("min_text_chars_for_skip", 50)
+    ocr_enabled = CONFIG.get("ocr", {}).get("enabled", False)
+
+    best_chars = 0
+    best_pages = []
+    if candidates:
+        candidates.sort(key=lambda x: x[0], reverse=True)
+        best_chars, method, best_pages = candidates[0]
+        log.info(f"[{pdf_path.name}] {method}: {len(best_pages)}p, {best_chars} chars")
+
+    if best_chars >= min_chars:
+        return best_pages
+
+    log.info(f"[{pdf_path.name}] {best_chars} chars < {min_chars} → OCR fallback")
+
+    if not ocr_enabled:
+        return best_pages
+
+    ocr_pages = _ocr_pdf(pdf_path)
+    if not ocr_pages:
+        return best_pages
+
+    ocr_chars = sum(len(p["text"]) for p in ocr_pages)
+    log.info(f"[{pdf_path.name}] OCR: {ocr_chars} chars (vs Python: {best_chars})")
+
+    return ocr_pages if ocr_chars > best_chars else best_pages
+
+
+# ═══════════════════════════════════════════════════════════════
+# STATE
+# ═══════════════════════════════════════════════════════════════
+class ChunkerState:
+    def __init__(self):
+        if STATE_FILE.exists():
+            try:
+                self.data = json.loads(STATE_FILE.read_text(encoding="utf-8"))
+            except Exception:
+                self.data = self._default()
+        else:
+            self.data = self._default()
+
+    def _default(self):
+        return {
+            "extracted": {},
+            "merged": {},
+            "classified": {},
+            "budget": {"date": str(date.today()), "spent_usd": 0.0, "calls": 0},
+        }
+
+    def save(self):
+        tmp = STATE_FILE.with_suffix(".tmp")
+        tmp.write_text(json.dumps(self.data, ensure_ascii=False, indent=2), encoding="utf-8")
+        tmp.replace(STATE_FILE)
+
+    def check_budget_reset(self):
+        today = str(date.today())
+        if self.data["budget"]["date"] != today:
+            log.info("Нов ден — рестарт на бюджета")
+            self.data["budget"] = {"date": today, "spent_usd": 0.0, "calls": 0}
+            self.save()
+
+    def add_cost(self, usd: float):
+        self.check_budget_reset()
+        self.data["budget"]["spent_usd"] += usd
+        self.data["budget"]["calls"] += 1
+        self.save()
+
+    def budget_remaining(self) -> float:
+        self.check_budget_reset()
+        budget = CONFIG.get("chunker", {}).get("daily_budget_usd", 3.0)
+        return budget - self.data["budget"]["spent_usd"]
+
+    def budget_exceeded(self) -> bool:
+        self.check_budget_reset()
+        budget = CONFIG.get("chunker", {}).get("daily_budget_usd", 3.0)
+        stop = CONFIG.get("chunker", {}).get("budget_stop_pct", 0.9)
+        return self.data["budget"]["spent_usd"] >= budget * stop
+
+    def is_extracted(self, name: str) -> bool:
+        return self.data["extracted"].get(name, {}).get("status") == "done"
+
+    def mark_extracted(self, name: str, problems: int):
+        self.data["extracted"].setdefault(name, {})["status"] = "done"
+        self.data["extracted"][name]["problems"] = problems
+        self.save()
+
+    def mark_extraction_failed(self, name: str, failed: int, total: int):
+        pdf = self.data["extracted"].setdefault(name, {})
+        pdf["status"] = "partial"
+        pdf["failed_chunks"] = failed
+        pdf["total_chunks"] = total
+        self.save()
+
+    def is_chunk_done(self, name: str, chunk_num: int) -> bool:
+        chunks = self.data["extracted"].get(name, {}).get("chunks_done", {})
+        return str(chunk_num) in chunks
+
+    def mark_chunk_done(self, name: str, chunk_num: int, problems: int):
+        pdf = self.data["extracted"].setdefault(name, {})
+        pdf.setdefault("chunks_done", {})[str(chunk_num)] = problems
+        self.save()
+
+    def is_classified(self, key: str) -> bool:
+        return key in self.data["classified"]
+
+    def mark_classified(self, key: str, data: dict):
+        self.data["classified"][key] = data
+        self.save()
+
+    def get_classification(self, key: str) -> dict:
+        return self.data["classified"].get(key, {})
+
+
+# ═══════════════════════════════════════════════════════════════
+# PROMPTS
+# ═══════════════════════════════════════════════════════════════
+EXTRACT_PROMPT = EXTRACTION_PERSONA + """
+
+═══ КОНТЕКСТ ═══
+PDF: {pdf_name}
+Страници: {page_start}-{page_end}
+
+═══ ТЕКСТ ОТ PDF-А ═══
+{text}
+
+═══ ТВОЯТА ЗАДАЧА ═══
+Извлечи ВСИЧКИ задачи от този текст.
+
+За всяка задача попълни:
+1. num — номерът ("Зад. 2" → 2). Ако няма → null
+2. year — годината (2018, 1997). Ако не е ясна → null
+3. grade — класът (10, 11, 12). Ако не е ясен → null
+4. round — "oblasten"/"nacionalen"/"bmo"/"bms"/"bmc"/"nom"/"ot"
+5. statement — пълното условие (копирано от текста, БЕЗ решение)
+6. solution — пълното решение АКО е в текста, иначе null
+7. answer — крайният отговор (ако има)
+8. page — приблизителна страница в PDF
+
+═══ ВАЖНИ ПРАВИЛА ═══
+
+1. STMT vs SOLUTION — как да различиш:
+   - STATEMENT = условието на задачата („Да се намери", „Да се докаже", „Намерете", „Докажете")
+   - SOLUTION = пълното решение (започва с „Решение.", „Proof.", „Доказателство:", или директно с логически стъпки)
+   - Ако не можеш да различиш със сигурност → сложи в statement, solution: null
+   - Ако solution е само частично (hints, скица) → solution: null (не отдавай частични)
+
+2. Ако PDF-ът съдържа САМО условия:
+   - Извлечи всички задачи с statement, solution: null
+   - НЕ ВРЪЩАЙ празен масив
+
+3. Ако PDF-ът съдържа САМО решения (без условия):
+   - statement: null, но сложи num и solution
+   - Ако номерът е „Зад. 11.3" → num=3, grade=11
+
+4. Примери:
+   ✅ STMT: „Да се намерят стойностите на реалния параметър $a$, за които уравнението... има три различни реални корена."
+   ✅ SOLUTION: „Решение. Тъй като от схемата на Хорнер се вижда, че $x=-1$ е решение..."
+   ✅ STMT: „Даден е триъгълник $ABC$ с ъгъл $\\angle C = 90°$. Да се докаже, че..."
+   ❌ STMT: „Решение. Тъй като..." (това е solution, не statement)
+   ❌ STMT: „Нека $M$ е средата на $AB$." (това е част от решение, не начало на задача)
+
+5. Други правила:
+   - Ако не разчиташ част от текста → "[неразчетено]" в statement, НЕ измисляй
+   - Ако задача продължава на следваща страница → свържи я
+   - За книги с много години (BMO, NOM) → сложи year към всяка задача отделно
+   - АКО PDF-ът съдържа задачи от РАЗЛИЧНИ КЛАСОВЕ:
+     * Гледай номерацията: „Задача 11.3" означава grade=11, num=3
+     * „Задача 12.1" означава grade=12, num=1
+     * НЕ оставяй grade=null — винаги го попълни от номера
+   - НЕ включвай съдържание, заглавия, автори, индекси — само задачи
+
+═══ ФОРМАТ (САМО JSON) ═══
+{{
+  "problems": [
+    {{
+      "num": 2,
+      "year": 2018,
+      "grade": 11,
+      "round": "oblasten",
+      "statement": "Пълен текст...",
+      "solution": "Пълно решение..." или null,
+      "answer": "x=2" или null,
+      "page": 7
+    }}
+  ]
+}}
+
+Ако в текста няма задачи → {{"problems": []}}
+"""
+
+
+CLASSIFY_PROMPT = CLASSIFIER_PERSONA + """
+
+═══ ЗАДАЧА ═══
+Условие: {statement}
+
+Решение: {solution}
+
+═══ STEPS ТОЧКИ (от плана) ═══
+{steps_list}
+
+═══ ТВОЯТА ЗАДАЧА ═══
+1. Към коя STEPS точка принадлежи? (1 главна)
+2. Каква е трудността? (easy/medium/hard)
+3. Кои техники се използват? (списък, snake_case)
+4. Увереност: exact / partial / multiple / off
+
+═══ ФОРМАТ (САМО JSON) ═══
+{{
+  "point_id": "1.4",
+  "point_confidence": "exact",
+  "alternative_points": [],
+  "difficulty": "medium",
+  "techniques": ["power_of_point", "similar_triangles"],
+  "reasoning": "Задачата изисква степен на точка като основна техника."
+}}
+
+Ако не можеш да класифицираш (задача от тематична книга, не олимпиада):
+{{"point_id": null, "point_confidence": "off", "difficulty": null, "techniques": [], "reasoning": "не е олимпиадна задача"}}
+"""
+
+
+# ═══════════════════════════════════════════════════════════════
+# STEPS PARSER
+# ═══════════════════════════════════════════════════════════════
+def load_steps_info() -> dict:
+    """Връща {point_id: {"title": ..., "desc": ...}} от data/steps.js."""
+    candidates = [STEPS_FILE, HTML_FILE]
+    html = None
+    for f in candidates:
+        try:
+            if f.exists():
+                html = f.read_text(encoding="utf-8")
+                if "const STEPS" in html:
+                    break
+        except Exception:
+            continue
+
+    if not html:
+        return {}
+
+    marker = "const STEPS = ["
+    start = html.find(marker)
+    if start == -1:
+        return {}
+    start += len("const STEPS = ")
+
+    depth = 0; in_str = False; quote = None; escape = False; end = len(html)
+    for i in range(start, len(html)):
+        c = html[i]
+        if escape: escape = False; continue
+        if in_str:
+            if c == '\\': escape = True
+            elif c == quote: in_str = False
+            continue
+        if c in ('"', "'", '`'):
+            in_str = True; quote = c; continue
+        if c == '[': depth += 1
+        elif c == ']':
+            depth -= 1
+            if depth == 0:
+                end = i
+                break
+
+    steps_str = html[start:end+1]
+
+    # Match: {id: "X.Y", ... title: "...", desc: "..."}
+    points = {}
+    for m in re.finditer(
+        r'\{\s*id\s*:\s*"([^"]+)"[^{}]*?title\s*:\s*"((?:\\.|[^"\\])*)"[^{}]*?desc\s*:\s*"((?:\\.|[^"\\])*)"',
+        steps_str, re.DOTALL,
+    ):
+        pid = m.group(1)
+        title = m.group(2).replace('\\"', '"').replace("\\'", "'")
+        desc = m.group(3).replace('\\"', '"').replace("\\'", "'")
+        points[pid] = {"title": title, "desc": desc}
+
+    # Fallback за точки без desc
+    for m in re.finditer(r'\{\s*id\s*:\s*"([^"]+)"[^{}]*?title\s*:\s*"([^"]+)"', steps_str, re.DOTALL):
+        pid, title = m.group(1), m.group(2)
+        if pid not in points:
+            points[pid] = {"title": title, "desc": ""}
+
+    return points
+
+# ═══════════════════════════════════════════════════════════════
+# PDF CHUNKER
+# ═══════════════════════════════════════════════════════════════
+class PDFChunker:
+    def __init__(self):
+        self.state = ChunkerState()
+        self.steps_info = load_steps_info()
+        self.steps_titles = {pid: info["title"] for pid, info in self.steps_info.items()}
+        log.info(f"Заредени {len(self.steps_info)} STEPS точки")
+
+        # Extract — Sol (НЕ R1). Configurable за безопасност.
+        ext_cfg = dict(CONFIG["generator"])
+        chunker_cfg = CONFIG.get("chunker", {})
+        if chunker_cfg.get("extract_model"):
+            ext_cfg["model"] = chunker_cfg["extract_model"]
+        ext_cfg["max_tokens"] = 18000
+        ext_cfg["temperature"] = 0.05
+        self.ai_extract = AIClient(ext_cfg, "extract")
+        log.info(f"Extract model: {ext_cfg['model']}")
+
+        # Classify — евтин модел (gpt-oss-120b по подразбиране)
+        chunker_cfg = CONFIG.get("chunker", {})
+        cls_cfg = dict(CONFIG["verifier"])
+        if chunker_cfg.get("classify_model"):
+            cls_cfg["model"] = chunker_cfg["classify_model"]
+        cls_cfg["max_tokens"] = 2000
+        cls_cfg["temperature"] = 0.05
+        self.ai_classify = AIClient(cls_cfg, "classify")
+        self.classify_cost = chunker_cfg.get("classify_cost_per_call_usd", 0.005)
+        log.info(f"Classify model: {cls_cfg['model']} (${self.classify_cost}/call)")
+
+    # ═══════════════════════════════════════════════════════════
+    # SCAN + DEDUPE
+    # ═══════════════════════════════════════════════════════════
+    def _dedupe(self, pdfs: list) -> list:
+        groups = {}
+        others = []
+
+        for pdf in pdfs:
+            info = split_pdf_name(pdf.stem)
+            if info['kind']:
+                key = (info['base'], info['kind'])
+                groups.setdefault(key, []).append((info['variant'], pdf))
+            else:
+                others.append(pdf)
+
+        result = []
+        for key, variants in groups.items():
+            no_variant = [p for v, p in variants if not v]
+            if no_variant:
+                result.append(no_variant[0])
+            else:
+                result.append(variants[0][1])
+
+        return sorted(result + others, key=lambda p: p.name)
+
+    def scan_pdfs(self) -> list:
+        pdfs = []
+        for folder in CONFIG.get("watch_folders", []):
+            path = (BASE_DIR / folder).resolve()
+            if not path.exists():
+                log.warning(f"Липсва: {path}")
+                continue
+            for pdf in path.rglob("*.pdf"):
+                pdfs.append(pdf)
+        return self._dedupe(pdfs)
+
+    # ═══════════════════════════════════════════════════════════
+    # CHUNKING
+    # ═══════════════════════════════════════════════════════════
+    def _chunk_size_for(self, pdf_name: str, total_pages: int) -> tuple:
+        if total_pages <= 10:
+            return total_pages, 0
+
+        lower = pdf_name.lower()
+        if any(x in lower for x in ['bmo', 'bmc', 'bms', 'nom', 'ot']):
+            return 4, 1
+
+        return 8, 1
+
+    def chunk_pdf(self, pdf_path: Path) -> list:
+        pages = extract_pdf_pages(pdf_path)
+        if not pages:
+            log.error(f"[{pdf_path.name}] не прочетох PDF (сканиран?)")
+            return []
+
+        chunk_size, overlap = self._chunk_size_for(pdf_path.stem, len(pages))
+
+        chunks = []
+        i = 0
+        while i < len(pages):
+            end = min(i + chunk_size, len(pages))
+            chunks.append({
+                "pages": pages[i:end],
+                "start": i + 1,
+                "end": end,
+            })
+            if end >= len(pages):
+                break
+            i += chunk_size - overlap
+        return chunks
+
+    # ═══════════════════════════════════════════════════════════
+    # EXTRACT
+    # ═══════════════════════════════════════════════════════════
+    def extract_from_chunk(self, pdf_name: str, chunk: dict) -> Optional[list]:
+        text = "\n\n".join(
+            f"─── Стр. {p['page']} ───\n{p['text']}"
+            for p in chunk["pages"]
+        )
+
+        user = format_prompt(
+            EXTRACT_PROMPT,
+            pdf_name=pdf_name,
+            page_start=chunk["start"],
+            page_end=chunk["end"],
+            text=text,
+        )
+
+        hb = heartbeat(f"{pdf_name}-{chunk['start']}", "extract")
+        t0 = time.time()
+        try:
+            raw = self.ai_extract.call(EXTRACT_PROMPT, user, f"{pdf_name}-{chunk['start']}")
+        finally:
+            hb.set()
+        dur = int(time.time() - t0)
+
+        if not raw:
+            log.error(f"[{pdf_name}] chunk {chunk['start']}-{chunk['end']} — no response ({dur}s)")
+            return None
+
+        parsed = parse_json(raw)
+        if not parsed or "problems" not in parsed:
+            log.error(f"[{pdf_name}] chunk {chunk['start']}-{chunk['end']} — JSON fail ({dur}s)")
+            return None
+
+        problems = parsed["problems"]
+        self.state.add_cost(0.008)
+        log.info(f"[{pdf_name}] chunk {chunk['start']}-{chunk['end']}: {len(problems)} problems ({dur}s)")
+        return problems
+
+    def _dedupe_problems(self, problems: list) -> list:
+        """Dedupe по (year, grade, num, page). Запазва по-валидната версия."""
+        by_key = {}
+        for p in problems:
+            key = (
+                p.get('year'),
+                p.get('grade') or p.get('grade_range'),
+                p.get('num'),
+                p.get('page'),
+            )
+            ok, _ = _validate_problem(p)
+            stmt = (p.get('statement') or '').strip()
+            sol = (p.get('solution') or '').strip()
+            score = (1 if ok else 0, len(stmt) + len(sol))
+            existing = by_key.get(key)
+            if existing is None or score > existing[0]:
+                by_key[key] = (score, p)
+        return [p for _, p in by_key.values()]
+
+    def process_pdf(self, pdf_path: Path):
+        name = pdf_path.stem
+        if self.state.is_extracted(name):
+            log.info(f"[{name}] skip (done)")
+            return
+
+        log.info(f"\n═══ {name} ═══")
+        chunks = self.chunk_pdf(pdf_path)
+        if not chunks:
+            return
+
+        log.info(f"[{name}] {len(chunks)} chunks, {sum(len(c['pages']) for c in chunks)} pages")
+
+        out_dir = EXTRACTED_DIR / safe_name(name)
+        out_dir.mkdir(parents=True, exist_ok=True)
+        all_file = out_dir / "all_problems.json"
+
+        all_problems = []
+        if all_file.exists():
+            try:
+                existing = json.loads(all_file.read_text(encoding="utf-8"))
+                all_problems = existing.get("problems", [])
+                log.info(f"[{name}] {len(all_problems)} existing problems")
+            except Exception:
+                pass
+
+        meta = infer_metadata_from_filename(name)
+        success = 0
+        failed = 0
+
+        for i, chunk in enumerate(chunks, 1):
+            if self.state.is_chunk_done(name, i):
+                log.info(f"[{name}] chunk {i} skip")
+                success += 1
+                continue
+
+            if self.state.budget_exceeded():
+                log.warning(f"⚠ Бюджет достигнат. Спирам.")
+                return
+
+            problems = self.extract_from_chunk(name, chunk)
+            if problems is None:
+                failed += 1
+                log.error(f"[{name}] chunk {i} FAILED — ще retry следващия път")
+                continue
+
+            for p in problems:
+                p["pdf"] = name
+                p["chunk"] = i
+                if not p.get("year"):
+                    p["year"] = meta["year"]
+                if not p.get("grade") and not p.get("grade_range"):
+                    p["grade"] = meta["grade"]
+                    p["grade_range"] = meta["grade_range"]
+                if not p.get("round") or p["round"] == "unknown":
+                    p["round"] = meta["round"]
+                all_problems.append(p)
+
+            self.state.mark_chunk_done(name, i, len(problems))
+            success += 1
+
+            all_file.write_text(
+                json.dumps({"pdf": name, "problems": all_problems}, ensure_ascii=False, indent=2),
+                encoding="utf-8",
+            )
+
+        if failed > 0:
+            self.state.mark_extraction_failed(name, failed, len(chunks))
+            log.warning(f"[{name}] {failed}/{len(chunks)} chunks failed — status=partial")
+            return
+
+        all_problems = self._dedupe_problems(all_problems)
+        all_file.write_text(
+            json.dumps({"pdf": name, "problems": all_problems}, ensure_ascii=False, indent=2),
+            encoding="utf-8",
+        )
+
+        self.state.mark_extracted(name, len(all_problems))
+        log.info(f"✓ [{name}] {len(all_problems)} problems (deduped) → {all_file}")
+
+    def run_extract(self, limit: Optional[int] = None, pdf_pattern: Optional[str] = None):
+        pdfs = self.scan_pdfs()
+        log.info(f"Намерени {len(pdfs)} PDF-а")
+        if pdf_pattern:
+            pdfs = [p for p in pdfs if pdf_pattern.lower() in p.name.lower()]
+            log.info(f"Филтър '{pdf_pattern}': {len(pdfs)} PDF-а")
+        if limit:
+            pdfs = pdfs[:limit]
+            log.info(f"Ограничавам до {limit}")
+
+        for i, pdf in enumerate(pdfs, 1):
+            if self.state.budget_exceeded():
+                log.warning(f"⚠ Бюджет достигнат на {i}/{len(pdfs)}")
+                break
+            log.info(f"\n[{i}/{len(pdfs)}] {pdf.name}")
+            try:
+                self.process_pdf(pdf)
+            except Exception as e:
+                log.exception(f"[{pdf.name}] {e}")
+
+    # ═══════════════════════════════════════════════════════════
+    # MERGE (probs + sol)
+    # ═══════════════════════════════════════════════════════════
+    def _find_pair(self, pdf_name: str, extracted: dict) -> Optional[str]:
+        info = split_pdf_name(pdf_name)
+        if not info['kind']:
+            return None
+
+        target_kind = 'sol' if info['kind'] == 'probs' else 'probs'
+
+        for candidate in extracted.keys():
+            if candidate == pdf_name:
+                continue
+            c_info = split_pdf_name(candidate)
+            if (c_info['base'] == info['base']
+                and c_info['kind'] == target_kind
+                and c_info['variant'] == info['variant']):
+                return candidate
+
+        for candidate in extracted.keys():
+            if candidate == pdf_name:
+                continue
+            c_info = split_pdf_name(candidate)
+            if c_info['base'] == info['base'] and c_info['kind'] == target_kind:
+                return candidate
+
+        return None
+
+    def _merge_pair(self, probs: list, sols: list) -> list:
+        """Слива probs+sol по (grade, num). Filter-ва празните."""
+        if not probs and sols:
+            log.info(f"[merge] probs празен — използвам sols verbatim ({len(sols)})")
+            return [s for s in sols
+                    if (s.get("statement") or "").strip() or (s.get("solution") or "").strip()]
+        if not sols and probs:
+            log.info(f"[merge] sols празен — използвам probs verbatim ({len(probs)})")
+            return [p for p in probs
+                    if (p.get("statement") or "").strip() or (p.get("solution") or "").strip()]
+
+        def norm_num(n):
+            if n is None:
+                return None
+            try:
+                return int(n)
+            except (ValueError, TypeError):
+                return str(n)
+
+        def grade_of(p):
+            g = p.get("grade")
+            if g is None and p.get("grade_range"):
+                gr = p.get("grade_range")
+                if isinstance(gr, (list, tuple)) and len(gr) > 0:
+                    g = gr[0]
+            return g
+
+        def key(p):
+            return (grade_of(p), norm_num(p.get("num")))
+
+        # probs: last-wins (не трябва да има дубликати)
+        probs_by_key = {}
+        for p in probs:
+            if p.get("num") is not None:
+                probs_by_key[key(p)] = p
+
+        # sols: при дубликат с еднакъв (grade,num) → предпочети този с solution
+        sols_by_key = {}
+        for s in sols:
+            if s.get("num") is None:
+                continue
+            k = key(s)
+            if k not in sols_by_key:
+                sols_by_key[k] = s
+            else:
+                existing = sols_by_key[k]
+                existing_sol = (existing.get("solution") or "").strip()
+                new_sol = (s.get("solution") or "").strip()
+                if not existing_sol and new_sol:
+                    sols_by_key[k] = s
+                elif existing_sol and new_sol and len(new_sol) > len(existing_sol):
+                    sols_by_key[k] = s
+
+        all_keys = sorted(
+            set(probs_by_key.keys()) | set(sols_by_key.keys()),
+            key=lambda x: (
+                x[0] is None, x[0] if x[0] is not None else 0,
+                x[1] is None, str(x[1]) if x[1] is not None else ""
+            )
+        )
+
+        merged = []
+        for k in all_keys:
+            p = probs_by_key.get(k, {})
+            s = sols_by_key.get(k, {})
+
+            stmt = (p.get("statement") or s.get("statement") or "").strip()
+            sol = (s.get("solution") or p.get("solution") or "").strip()
+
+            if len(stmt) < 20:
+                continue
+
+            if sol and not _topics_match(stmt, sol):
+                log.warning(f"[merge] grade={k[0]} num={k[1]}: solution не пасва на statement — drop")
+                sol = ""
+
+            merged.append({
+                "num": k[1],
+                "year": p.get("year") or s.get("year"),
+                "grade": p.get("grade") or s.get("grade"),
+                "grade_range": p.get("grade_range") or s.get("grade_range"),
+                "round": p.get("round") or s.get("round"),
+                "statement": stmt or None,
+                "solution": sol or None,
+                "answer": s.get("answer") or p.get("answer"),
+                "page": p.get("page") or s.get("page"),
+            })
+
+        # num=None entries — append само ако не са празни
+        for p in probs:
+            if p.get("num") is None and ((p.get("statement") or "").strip() or (p.get("solution") or "").strip()):
+                merged.append(p)
+        for s in sols:
+            if s.get("num") is None and ((s.get("statement") or "").strip() or (s.get("solution") or "").strip()):
+                merged.append(s)
+
+        return merged
+
+    def run_merge(self):
+        extracted = {}
+        for pdf_dir in EXTRACTED_DIR.iterdir():
+            if not pdf_dir.is_dir():
+                continue
+            file = pdf_dir / "all_problems.json"
+            if not file.exists():
+                continue
+            try:
+                data = json.loads(file.read_text(encoding="utf-8"))
+                extracted[data["pdf"]] = data["problems"]
+            except Exception:
+                continue
+
+        log.info(f"Заредени {len(extracted)} извлечени PDF-а")
+
+        processed = set()
+        merged_count = 0
+
+        for pdf_name, problems in extracted.items():
+            if pdf_name in processed:
+                continue
+
+            pair = self._find_pair(pdf_name, extracted)
+            if pair:
+                if "-probs" in pdf_name:
+                    probs_name, sols_name = pdf_name, pair
+                else:
+                    probs_name, sols_name = pair, pdf_name
+                probs = extracted[probs_name]
+                sols = extracted[sols_name]
+                merged = self._merge_pair(probs, sols)
+                base = split_pdf_name(probs_name)['base']
+                processed.add(probs_name)
+                processed.add(sols_name)
+                log.info(f"  [{base}] merge {len(probs)} probs + {len(sols)} sols → {len(merged)} problems")
+            else:
+                merged = problems
+                base = split_pdf_name(pdf_name)['base']
+                processed.add(pdf_name)
+                log.info(f"  [{base}] standalone ({len(merged)} problems)")
+
+            merged = self._dedupe_problems(merged)
+
+            out_dir = MERGED_DIR / safe_name(base)
+            out_dir.mkdir(parents=True, exist_ok=True)
+            (out_dir / "all_problems.json").write_text(
+                json.dumps({"pdf": base, "problems": merged}, ensure_ascii=False, indent=2),
+                encoding="utf-8",
+            )
+            self.state.data["merged"][base] = len(merged)
+            merged_count += 1
+
+        self.state.save()
+        log.info(f"✓ {merged_count} merged olympiads → {MERGED_DIR}")
+
+    # ═══════════════════════════════════════════════════════════
+    # CLASSIFY
+    # ═══════════════════════════════════════════════════════════
+    def classify_problem(self, problem: dict) -> Optional[dict]:
+        stmt = (problem.get("statement") or "").strip()
+        sol = (problem.get("solution") or "").strip()
+
+        if not stmt and not sol:
+            return None
+
+        steps_list = "\n".join(
+            f"  {pid}: {info['title']}"
+            + (f" — {info['desc'][:120]}" if info.get('desc') else "")
+            for pid, info in sorted(self.steps_info.items())
+        )
+
+        user = format_prompt(
+            CLASSIFY_PROMPT,
+            statement=stmt[:2500] if stmt else "(без условие)",
+            solution=sol[:2500] if sol else "(без решение)",
+            steps_list=steps_list,
+        )
+
+        raw = self.ai_classify.call(CLASSIFY_PROMPT, user, str(problem.get("num")))
+        self.state.add_cost(self.classify_cost)
+        return parse_json(raw)
+
+    def run_classify(self, limit: Optional[int] = None):
+        merged_dirs = [d for d in MERGED_DIR.iterdir() if d.is_dir()]
+        log.info(f"Намерени {len(merged_dirs)} merged папки")
+        if limit:
+            merged_dirs = merged_dirs[:limit]
+
+        for mdir in merged_dirs:
+            file = mdir / "all_problems.json"
+            if not file.exists():
+                continue
+
+            data = json.loads(file.read_text(encoding="utf-8"))
+            base = data["pdf"]
+            problems = data["problems"]
+            log.info(f"\n[{base}] класифицирам {len(problems)} задачи...")
+
+            classified = []
+            for p in problems:
+                key = f"{base}:{p.get('num', '?')}:{p.get('page', '?')}"
+                if self.state.is_classified(key):
+                    classified.append({**p, **self.state.get_classification(key)})
+                    continue
+
+                if self.state.budget_exceeded():
+                    log.warning("⚠ Бюджет достигнат")
+                    break
+
+                # Skip no-solution tasks — те ще паднат в aggregate
+                sol = (p.get("solution") or "").strip()
+                if not sol or len(sol) < 30:
+                    skip_data = {"point_id": None, "point_confidence": "off",
+                                 "difficulty": None, "techniques": [],
+                                 "reasoning": "no_solution_skip"}
+                    classified.append({**p, **skip_data})
+                    self.state.mark_classified(key, skip_data)
+                    log.info(f"  [{key}] skip (no solution)")
+                    continue
+
+                try:
+                    cls = self.classify_problem(p)
+                    if cls is not None:
+                        merged = {**p, **cls}
+                        classified.append(merged)
+                        self.state.mark_classified(key, cls)
+                        pid = cls.get("point_id") or "?"
+                        diff = cls.get("difficulty") or "?"
+                        log.info(f"  [{key}] → {pid} ({diff})")
+                    else:
+                        log.warning(f"  [{key}] empty (no statement, no solution) — skip")
+                except Exception as e:
+                    log.error(f"[{key}] {e}")
+
+            out_dir = CLASSIFIED_DIR / safe_name(base)
+            out_dir.mkdir(parents=True, exist_ok=True)
+            (out_dir / "all_problems.json").write_text(
+                json.dumps({"pdf": base, "problems": classified}, ensure_ascii=False, indent=2),
+                encoding="utf-8",
+            )
+            log.info(f"✓ [{base}] {len(classified)} classified")
+
+    # ═══════════════════════════════════════════════════════════
+    # AGGREGATE
+    # ═══════════════════════════════════════════════════════════
+    def run_aggregate(self):
+        by_point = {}
+        unclassified = []
+        seen_keys = set()
+
+        for cdir in CLASSIFIED_DIR.iterdir():
+            if not cdir.is_dir():
+                continue
+            file = cdir / "all_problems.json"
+            if not file.exists():
+                continue
+            try:
+                data = json.loads(file.read_text(encoding="utf-8"))
+            except Exception:
+                continue
+
+            for p in data["problems"]:
+                pid = p.get("point_id")
+                stmt = (p.get("statement") or "").strip()
+                sol = (p.get("solution") or "").strip()
+
+                # Skip задачи без solution — не са полезни като anchors
+                if not sol or len(sol) < 30:
+                    continue
+
+                dedupe_key = (p.get("year"), p.get("num"), stmt[:100])
+                if dedupe_key in seen_keys:
+                    continue
+                seen_keys.add(dedupe_key)
+
+                entry = {
+                    "source": f"{data['pdf']} · {p.get('year')}-{p.get('grade', '?')} · Зад. {p.get('num')}",
+                    "statement": p.get("statement"),
+                    "solution": p.get("solution"),
+                    "answer": p.get("answer"),
+                    "difficulty": p.get("difficulty"),
+                    "techniques": p.get("techniques", []),
+                    "confidence": p.get("point_confidence"),
+                    "reasoning": p.get("reasoning"),
+                }
+                if not pid:
+                    unclassified.append(entry)
+                    continue
+                by_point.setdefault(pid, []).append(entry)
+
+        for pid, problems in by_point.items():
+            problems.sort(key=lambda x: (
+                {"easy": 0, "medium": 1, "hard": 2}.get(x.get("difficulty"), 1),
+                x.get("source", ""),
+            ))
+            safe = pid.replace(".", "_")
+            (REAL_PROBLEMS_DIR / f"{safe}.json").write_text(
+                json.dumps({
+                    "point_id": pid,
+                    "total": len(problems),
+                    "by_difficulty": {
+                        "easy": sum(1 for p in problems if p["difficulty"] == "easy"),
+                        "medium": sum(1 for p in problems if p["difficulty"] == "medium"),
+                        "hard": sum(1 for p in problems if p["difficulty"] == "hard"),
+                    },
+                    "problems": problems,
+                }, ensure_ascii=False, indent=2),
+                encoding="utf-8",
+            )
+            log.info(f"✓ [{pid}] {len(problems)} real problems")
+
+        if unclassified:
+            (REAL_PROBLEMS_DIR / "_unclassified.json").write_text(
+                json.dumps({
+                    "total": len(unclassified),
+                    "problems": unclassified,
+                }, ensure_ascii=False, indent=2),
+                encoding="utf-8",
+            )
+            log.info(f"⚠ {len(unclassified)} unclassified problems → _unclassified.json")
+
+    # ═══════════════════════════════════════════════════════════
+    # STATS
+    # ═══════════════════════════════════════════════════════════
+    def print_stats(self):
+        print()
+        print("═" * 75)
+        print("  PHASE 1: EXTRACTED")
+        n_pdfs = 0
+        n_extracted = 0
+        n_partial = 0
+        for pdf_dir in sorted(EXTRACTED_DIR.iterdir()):
+            if not pdf_dir.is_dir():
+                continue
+            all_file = pdf_dir / "all_problems.json"
+            if all_file.exists():
+                try:
+                    data = json.loads(all_file.read_text(encoding="utf-8"))
+                    n = len(data.get("problems", []))
+                    n_extracted += n
+                    n_pdfs += 1
+                    status = self.state.data["extracted"].get(data["pdf"], {}).get("status", "?")
+                    if status == "partial":
+                        n_partial += 1
+                except Exception:
+                    pass
+        print(f"  PDFs: {n_pdfs}  |  problems: {n_extracted}  |  partial: {n_partial}")
+
+        print()
+        print("  PHASE 2: MERGED")
+        n_merged_pdfs = 0
+        n_merged = 0
+        if MERGED_DIR.exists():
+            for mdir in sorted(MERGED_DIR.iterdir()):
+                if not mdir.is_dir():
+                    continue
+                file = mdir / "all_problems.json"
+                if file.exists():
+                    try:
+                        data = json.loads(file.read_text(encoding="utf-8"))
+                        n = len(data.get("problems", []))
+                        n_merged += n
+                        n_merged_pdfs += 1
+                    except Exception:
+                        pass
+        print(f"  Olympiads: {n_merged_pdfs}  |  problems: {n_merged}")
+
+        print()
+        print("  PHASE 3: CLASSIFIED")
+        n_cls_pdfs = 0
+        n_cls = 0
+        n_off = 0
+        if CLASSIFIED_DIR.exists():
+            for cdir in sorted(CLASSIFIED_DIR.iterdir()):
+                if not cdir.is_dir():
+                    continue
+                file = cdir / "all_problems.json"
+                if file.exists():
+                    try:
+                        data = json.loads(file.read_text(encoding="utf-8"))
+                        n = len(data.get("problems", []))
+                        n_cls += n
+                        n_cls_pdfs += 1
+                        n_off += sum(1 for p in data["problems"] if not p.get("point_id"))
+                    except Exception:
+                        pass
+        print(f"  Olympiads: {n_cls_pdfs}  |  problems: {n_cls}  |  off: {n_off}")
+
+        print()
+        print("  PHASE 4: REAL_PROBLEMS (per point)")
+        total_real = 0
+        points_with_problems = 0
+        if REAL_PROBLEMS_DIR.exists():
+            for f in sorted(REAL_PROBLEMS_DIR.glob("*.json")):
+                try:
+                    data = json.loads(f.read_text(encoding="utf-8"))
+                    if f.name == "_unclassified.json":
+                        print(f"  {'unclassified':10s}  {data['total']:3d} problems  ⚠")
+                        continue
+                    total_real += data["total"]
+                    points_with_problems += 1
+                    d = data["by_difficulty"]
+                    print(f"  {data['point_id']:10s}  {data['total']:3d} problems  "
+                          f"(easy={d['easy']:2d}, medium={d['medium']:2d}, hard={d['hard']:2d})")
+                except Exception:
+                    pass
+
+        print("─" * 75)
+        print(f"  TOTAL: {total_real} real problems across {points_with_problems} points")
+        print(f"  Cost: ${self.state.data['budget']['spent_usd']:.3f}")
+        print("═" * 75)
+
+
+# ═══════════════════════════════════════════════════════════════
+# CLI
+# ═══════════════════════════════════════════════════════════════
+def cmd_scan(limit=None, pdf_pattern=None):
+    chunker = PDFChunker()
+    pdfs = chunker.scan_pdfs()
+    if pdf_pattern:
+        pdfs = [p for p in pdfs if pdf_pattern.lower() in p.name.lower()]
+    if limit:
+        pdfs = pdfs[:limit]
+    print(f"\nНамерени {len(pdfs)} PDF-а (след dedupe):\n")
+    for p in pdfs:
+        meta = infer_metadata_from_filename(p.stem)
+        try:
+            pages = len(extract_pdf_pages(p))
+        except Exception:
+            pages = 0
+        grade_str = f"{meta['grade']}" if meta['grade'] else (
+            f"{meta['grade_range'][0]}-{meta['grade_range'][1]}" if meta['grade_range'] else "?"
+        )
+        info = split_pdf_name(p.stem)
+        kind_str = info['kind'] or "book"
+        variant_str = f" {info['variant']}" if info['variant'] else ""
+        print(f"  {p.name:55s} {pages:3d}p  {meta['round']:12s} "
+              f"year={meta['year'] or '?':6} grade={grade_str:5s} [{kind_str}{variant_str}]")
+
+
+def cmd_reset(stage: str = "all"):
+    if stage in ("all", "extract"):
+        if EXTRACTED_DIR.exists():
+            shutil.rmtree(EXTRACTED_DIR)
+            EXTRACTED_DIR.mkdir()
+        if stage == "all":
+            if STATE_FILE.exists():
+                STATE_FILE.unlink()
+        else:
+            if STATE_FILE.exists():
+                try:
+                    data = json.loads(STATE_FILE.read_text(encoding="utf-8"))
+                    data["extracted"] = {}
+                    STATE_FILE.write_text(json.dumps(data, ensure_ascii=False, indent=2), encoding="utf-8")
+                except Exception:
+                    pass
+        print(f"✓ Reset: extract")
+
+    if stage in ("all", "merge"):
+        if MERGED_DIR.exists():
+            shutil.rmtree(MERGED_DIR)
+            MERGED_DIR.mkdir()
+        print(f"✓ Reset: merge")
+
+    if stage in ("all", "classify"):
+        if CLASSIFIED_DIR.exists():
+            shutil.rmtree(CLASSIFIED_DIR)
+            CLASSIFIED_DIR.mkdir()
+        if STATE_FILE.exists():
+            try:
+                data = json.loads(STATE_FILE.read_text(encoding="utf-8"))
+                data["classified"] = {}
+                STATE_FILE.write_text(json.dumps(data, ensure_ascii=False, indent=2), encoding="utf-8")
+            except Exception:
+                pass
+        print(f"✓ Reset: classify")
+
+    if stage in ("all", "aggregate"):
+        if REAL_PROBLEMS_DIR.exists():
+            shutil.rmtree(REAL_PROBLEMS_DIR)
+            REAL_PROBLEMS_DIR.mkdir()
+        print(f"✓ Reset: aggregate")
+
+
+def main():
+    ap = argparse.ArgumentParser(description="PDF Chunker v3.2 (with Mistral OCR + AI separation)")
+    ap.add_argument("--scan", action="store_true", help="Покажи какво има")
+    ap.add_argument("--extract", action="store_true", help="Извлечи от PDF-и")
+    ap.add_argument("--merge", action="store_true", help="Слей probs+sol двойки")
+    ap.add_argument("--classify", action="store_true", help="Класифицирай")
+    ap.add_argument("--aggregate", action="store_true", help="Групирай по точки")
+    ap.add_argument("--all", action="store_true", help="Всички фази")
+    ap.add_argument("--limit", type=int, default=None, help="Максимум N PDF-а")
+    ap.add_argument("--pdf", default=None, help="Само PDF-и, съдържащи текста в името")
+    ap.add_argument("--stats", action="store_true")
+    ap.add_argument("--reset-stage", choices=["extract", "merge", "classify", "aggregate", "all"],
+                    default=None, help="Изчисти само една фаза")
+    args = ap.parse_args()
+
+    if args.reset_stage:
+        cmd_reset(args.reset_stage); return
+    if args.scan:
+        cmd_scan(limit=args.limit, pdf_pattern=args.pdf); return
+    if args.stats:
+        PDFChunker().print_stats(); return
+
+    chunker = PDFChunker()
+
+    if args.extract or args.all:
+        chunker.run_extract(limit=args.limit, pdf_pattern=args.pdf)
+    if args.merge or args.all:
+        chunker.run_merge()
+    if args.classify or args.all:
+        chunker.run_classify(limit=args.limit)
+    if args.aggregate or args.all:
+        chunker.run_aggregate()
+
+    if args.stats or args.all:
+        chunker.print_stats()
+
+
+if __name__ == "__main__":
+    main()

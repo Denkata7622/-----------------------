@@ -1,0 +1,210 @@
+{
+  "_meta": {
+    "pdf": "C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\Задачи_Минали_Години\\Областен\\OLI-2-Областен кръг-2005-10 кл-sol.pdf",
+    "paired_with": null,
+    "level": 1,
+    "type": "sol",
+    "analyzed_at": "2026-10-18T12:38:54.661957",
+    "model": "deepseek/deepseek-v3.2",
+    "text_length": 9880,
+    "paired_text_length": 0
+  },
+  "problems": [
+    {
+      "num": 9.4,
+      "topic": "algebra",
+      "theorems": [
+        "Vieta's formulas"
+      ],
+      "techniques": [
+        "case analysis",
+        "substitution",
+        "direct verification"
+      ],
+      "concepts": [
+        "quadratic equations",
+        "sum of squares of roots",
+        "real roots condition"
+      ],
+      "difficulty": "standard",
+      "notes": "The problem involves solving for a parameter such that an equation in absolute values has four real roots, leading to two separate quadratic equations via case analysis."
+    },
+    {
+      "num": 9.5,
+      "topic": "geometry",
+      "theorems": [
+        "Power of a Point",
+        "Similar triangles (AA)"
+      ],
+      "techniques": [
+        "proportional segments",
+        "parallel lines proof"
+      ],
+      "concepts": [
+        "tangent-secant theorem",
+        "cyclic quadrilateral",
+        "inscribed angles",
+        "midpoint",
+        "parallel lines"
+      ],
+      "difficulty": "standard",
+      "notes": "The solution uses the power of a point to establish similarity and then proves lines are parallel via equal angles."
+    },
+    {
+      "num": 9.6,
+      "topic": "combinatorics",
+      "theorems": [],
+      "techniques": [
+        "pigeonhole principle",
+        "construction/design",
+        "modular arithmetic",
+        "counting pairs"
+      ],
+      "concepts": [
+        "graph theory / games scheduling",
+        "upper bound proof",
+        "existence construction",
+        "combinatorial design"
+      ],
+      "difficulty": "olympic",
+      "notes": "The problem finds the maximum number of games under a constraint, using an upper bound from pair counting and an explicit construction using a 5x5 grid and modular conditions."
+    },
+    {
+      "num": 10.2,
+      "topic": "algebra",
+      "theorems": [],
+      "techniques": [
+        "polynomial division",
+        "system of equations",
+        "substitution"
+      ],
+      "concepts": [
+        "polynomial identity",
+        "remainder theorem",
+        "solving for coefficients"
+      ],
+      "difficulty": "standard",
+      "notes": "The problem involves finding coefficients such that a polynomial is divisible by another, leading to a system from evaluating at specific points."
+    },
+    {
+      "num": 10.3,
+      "topic": "number_theory",
+      "theorems": [],
+      "techniques": [
+        "infinite descent",
+        "contradiction",
+        "modular arithmetic"
+      ],
+      "concepts": [
+        "Diophantine equation",
+        "infinite descent",
+        "no integer solutions"
+      ],
+      "difficulty": "olympic",
+      "notes": "The problem proves an equation has no integer solutions using an infinite descent argument, showing a cycle leads to contradiction."
+    },
+    {
+      "num": 10.4,
+      "topic": "algebra",
+      "theorems": [],
+      "techniques": [
+        "discriminant analysis",
+        "case analysis",
+        "root conditions"
+      ],
+      "concepts": [
+        "quadratic equations",
+        "discriminant",
+        "real roots",
+        "parameter conditions"
+      ],
+      "difficulty": "standard",
+      "notes": "Determines parameter values for which a quadratic equation has a unique positive solution, using discriminant and sign analysis."
+    },
+    {
+      "num": 10.5,
+      "topic": "geometry",
+      "theorems": [
+        "Thales' theorem",
+        "Inscribed angles"
+      ],
+      "techniques": [
+        "cyclic quadrilaterals",
+        "symmetry",
+        "midpoint of arc"
+      ],
+      "concepts": [
+        "orthocenter",
+        "cyclic quadrilateral",
+        "diameter",
+        "angle bisectors",
+        "perpendicular bisector"
+      ],
+      "difficulty": "hard",
+      "notes": "The problem involves the orthocenter and proves a line is the perpendicular bisector of a chord by showing it passes through the center of a circle."
+    },
+    {
+      "num": 10.6,
+      "topic": "combinatorics",
+      "theorems": [],
+      "techniques": [
+        "averaging / pigeonhole",
+        "construction of extremal example"
+      ],
+      "concepts": [
+        "sum of consecutive elements",
+        "upper/lower bound",
+        "arrangement to achieve bound"
+      ],
+      "difficulty": "olympic",
+      "notes": "Finds the maximum possible minimum sum of 50 consecutive numbers in a permutation of 1..1000, using averaging for upper bound and a specific arrangement for lower bound."
+    },
+    {
+      "num": 11.1,
+      "topic": "algebra",
+      "theorems": [],
+      "techniques": [
+        "trigonometric substitution",
+        "quadratic in parameter",
+        "root location analysis"
+      ],
+      "concepts": [
+        "quadratic equations with parameter",
+        "roots in an interval",
+        "trigonometric substitution (sin+cos)",
+        "discriminant",
+        "sign analysis of polynomial at endpoints"
+      ],
+      "difficulty": "hard",
+      "notes": "The problem reduces a trigonometric equation to a quadratic in a transformed variable, then analyzes conditions for roots to lie in [-1,1]."
+    }
+  ],
+  "unique_concepts": [
+    "Vieta's formulas",
+    "Power of a Point",
+    "Similar triangles",
+    "tangent-secant theorem",
+    "cyclic quadrilateral",
+    "inscribed angles",
+    "parallel lines",
+    "pigeonhole principle",
+    "combinatorial design",
+    "modular arithmetic",
+    "graph theory / games scheduling",
+    "polynomial division",
+    "remainder theorem",
+    "Diophantine equation",
+    "infinite descent",
+    "discriminant",
+    "real roots condition",
+    "Thales' theorem",
+    "orthocenter",
+    "perpendicular bisector",
+    "angle bisectors",
+    "averaging",
+    "extremal construction",
+    "trigonometric substitution",
+    "root location analysis"
+  ],
+  "confidence": 0.95
+}

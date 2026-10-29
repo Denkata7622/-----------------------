@@ -1,0 +1,473 @@
+### Част 1: ЗАДАЧИ (10 кл)
+
+```js
+// ─── ЗАДАЧИ: 2026-10 ───
+{
+  source_pdf_probs: 'Задачи_Минали_Години/OLI-2-Областен кръг-2026-10 кл-probs.pdf',
+  source_pdf_sols:  'Задачи_Минали_Години/OLI-2-Областен кръг-2026-10 кл-sol.pdf',
+  year: 2026,
+  grade: 10,
+  exam_type: 'областен',
+  problems: [
+    {
+      num: 1,
+      topic: 'Алгебра',
+      subtopic: 'Аритметична прогресия и телескопиране',
+      difficulty: 3,
+      probs_page: 1,
+      sol_page: 1,
+      summary: 'Да се намери a1 на аритметична прогресия от 2026 члена с дадена сума 2026 и сума на реципрочни произведения -2025.',
+      plan_step: 7,
+      plan_point: '7.6',
+      related_points: ['5.1'],
+      prerequisites: ['7.6', '5.1'],
+      add_as_task_to: ['7.6', '5.1'],
+      required_knowledge: [
+        { point_id: '7.6', technique: 'Аритметична прогресия', why_needed: 'Формула за сбор и общ член' },
+        { point_id: '5.1', technique: 'Формули на Виет', why_needed: 'Намиране на a1 и a2026 от сбор и произведение' },
+        { point_id: null, technique: 'Телескопиране', why_needed: 'Пресмятане на сумата от реципрочни произведения' }
+      ],
+      techniques_not_in_plan: ['Телескопиране на рационални изрази'],
+      gap_severity: 'minor',
+      estimated_time_minutes: 25,
+      common_pitfalls: 'Допускане, че d=0; забравяне да се провери, че всички членове са ненулеви.',
+      recommended_for_simulation: true,
+      prerequisite_review: 'Преговори 7.6 и 5.1 преди да опиташ.'
+    },
+    {
+      num: 2,
+      topic: 'Геометрия',
+      subtopic: 'Правилен петоъгълник, Менелай',
+      difficulty: 5,
+      probs_page: 1,
+      sol_page: 2,
+      summary: 'В правилен петоъгълник ABCDE да се докаже, че B, F и K са колинеарни при описаното построение.',
+      plan_step: 1,
+      plan_point: '1.1',
+      related_points: ['1.5', '1.6', '2.1'],
+      prerequisites: ['1.1', '1.5', '1.6'],
+      add_as_task_to: ['1.1', '1.5'],
+      required_knowledge: [
+        { point_id: '1.1', technique: 'Менелай', why_needed: 'Доказване на колинеарност/отношения' },
+        { point_id: '1.5', technique: 'Вписани ъгли', why_needed: 'Ъгли в правилен петоъгълник' },
+        { point_id: '1.6', technique: 'Синусова/косинусова теорема', why_needed: 'Пресмятане на отношения' },
+        { point_id: null, technique: 'Теорема за ъглополовящата', why_needed: 'Отношение AH:HE' },
+        { point_id: null, technique: 'Златно сечение в правилен петоъгълник', why_needed: 'Свойства на диагоналите' }
+      ],
+      techniques_not_in_plan: ['Теорема за ъглополовящата', 'Златно сечение в правилен петоъгълник'],
+      gap_severity: 'minor',
+      estimated_time_minutes: 60,
+      common_pitfalls: 'Не се използва симетрията; трудно се открива точка P или T.',
+      recommended_for_simulation: true,
+      prerequisite_review: 'Преговори 1.1, 1.5 и 1.6 преди да опиташ.'
+    },
+    {
+      num: 3,
+      topic: 'ТЧ',
+      subtopic: 'Делители и специални числа',
+      difficulty: 4,
+      probs_page: 1,
+      sol_page: 3,
+      summary: 'Да се намери максималният брой делители на съставно число N със специални свойства на редицата делители.',
+      plan_step: 4,
+      plan_point: '4.5',
+      related_points: ['3.1', '4.7'],
+      prerequisites: ['3.1', '4.5'],
+      add_as_task_to: ['4.5', '3.1'],
+      required_knowledge: [
+        { point_id: '3.1', technique: 'Делители и НОД', why_needed: 'Редица от делители' },
+        { point_id: '4.5', technique: 'Прости числа', why_needed: 'd_p е просто' },
+        { point_id: '4.7', technique: 'Мултипликативност', why_needed: 'Свойство d_mn = d_m d_n' },
+        { point_id: null, technique: 'Постулат на Бертран', why_needed: 'Оценка за брой прости в интервал' }
+      ],
+      techniques_not_in_plan: ['Постулат на Бертран'],
+      gap_severity: 'minor',
+      estimated_time_minutes: 45,
+      common_pitfalls: 'Опити с много делители; неправилно използване на условието d_mn = d_m d_n.',
+      recommended_for_simulation: true,
+      prerequisite_review: 'Преговори 3.1, 4.5 и 4.7 преди да опиташ.'
+    },
+    {
+      num: 4,
+      topic: 'Геометрия',
+      subtopic: 'Решетъчни многоъгълници, формула на Пик',
+      difficulty: 5,
+      probs_page: 1,
+      sol_page: 4,
+      summary: 'Да се намери минималната сума от лица на многоъгълници, покриващи всички 2026×2026 целочислени точки.',
+      plan_step: 1,
+      plan_point: '1.7',
+      related_points: ['8.1', '9.7'],
+      prerequisites: ['1.7'],
+      add_as_task_to: ['1.7', '8.1'],
+      required_knowledge: [
+        { point_id: '1.7', technique: 'Лице на многоъгълник', why_needed: 'Сума от лица' },
+        { point_id: null, technique: 'Формула на Пик', why_needed: 'Връзка лице–точки в решетка' },
+        { point_id: null, technique: 'Триангулация', why_needed: 'Свеждане до триъгълници' }
+      ],
+      techniques_not_in_plan: ['Формула на Пик', 'Покритие с решетъчни многоъгълници'],
+      gap_severity: 'major',
+      estimated_time_minutes: 70,
+      common_pitfalls: 'Мисъл, че лицето може да е по-малко; пренебрегване на формулата на Пик.',
+      recommended_for_simulation: true,
+      prerequisite_review: 'Преговори 1.7 и разгледай формулата на Пик.'
+    }
+  ],
+  difficulty_distribution: { easy: 0, medium: 2, hard: 2 },
+  recommended_action: 'add-to-step10',
+  recommended_for_simulation: [1, 2, 3]
+}
+```
+
+### Част 2: ЗАДАЧИ (11 кл)
+
+```js
+// ─── ЗАДАЧИ: 2026-11 ───
+{
+  source_pdf_probs: 'Задачи_Минали_Години/OLI-2-Областен кръг-2026-11 кл-probs.pdf',
+  source_pdf_sols:  null, // CHECK: няма прикачен 11 кл-sol.pdf
+  year: 2026,
+  grade: 11,
+  exam_type: 'областен',
+  problems: [
+    {
+      num: 1,
+      topic: 'Алгебра',
+      subtopic: 'Ирационално уравнение, факторизация',
+      difficulty: 4,
+      probs_page: 1,
+      sol_page: null, // CHECK
+      summary: 'Да се намерят реалните корени на уравнение с радикал и полином от 4-та степен.',
+      plan_step: 5,
+      plan_point: '5.4',
+      related_points: ['5.1', '5.7'],
+      prerequisites: ['5.1', '5.4'],
+      add_as_task_to: ['5.4', '5.7'],
+      required_knowledge: [
+        { point_id: '5.4', technique: 'Рационални корени/факторизация', why_needed: 'Факторизиране на полинома' },
+        { point_id: '5.7', technique: 'Деление на полиноми', why_needed: 'Групиране и корени' },
+        { point_id: null, technique: 'Заместване с радикал', why_needed: 'Решаване на x^3/√(4-x^2) = 4-x^2' }
+      ],
+      techniques_not_in_plan: ['Уравнения с радикали чрез заместване'],
+      gap_severity: 'minor',
+      estimated_time_minutes: 40,
+      common_pitfalls: 'Повдигане на квадрат без отчитане на домейна; пропускане на корен -1.',
+      recommended_for_simulation: true,
+      prerequisite_review: 'Преговори 5.4 и 5.7 преди да опиташ.'
+    },
+    {
+      num: 2,
+      topic: 'Геометрия',
+      subtopic: 'Равнобедрен трапец, косинусова теорема',
+      difficulty: 4,
+      probs_page: 1,
+      sol_page: null, // CHECK
+      summary: 'Да се намери лицето на равнобедрен трапец ABCD при дадени BE=10, CE=2, ∠AED=α и cos α = 1/4.',
+      plan_step: 1,
+      plan_point: '1.6',
+      related_points: ['1.7', '1.10'],
+      prerequisites: ['1.6', '1.7'],
+      add_as_task_to: ['1.6', '1.7'],
+      required_knowledge: [
+        { point_id: '1.6', technique: 'Косинусова теорема', why_needed: 'Връзка между страни и ъгъл α' },
+        { point_id: '1.7', technique: 'Лице на трапец', why_needed: 'Намиране на лицето' },
+        { point_id: null, technique: 'Свойства на равнобедрен трапец', why_needed: 'Равенство на бедра и ъгли' }
+      ],
+      techniques_not_in_plan: ['Свойства на равнобедрен трапец'],
+      gap_severity: 'minor',
+      estimated_time_minutes: 45,
+      common_pitfalls: 'Неправилно използване на BE=10 и CE=2; объркване на ъгли.',
+      recommended_for_simulation: true,
+      prerequisite_review: 'Преговори 1.6 и 1.7 преди да опиташ.'
+    },
+    {
+      num: 3,
+      topic: 'Алгебра',
+      subtopic: 'Квадратни полиноми, дискриминант',
+      difficulty: 5,
+      probs_page: 1,
+      sol_page: null, // CHECK
+      summary: 'Да се докаже, че множеството от квадратни полиноми с дискриминант D, a<0 и P(p/q) ≥ 0 е крайно.',
+      plan_step: 5,
+      plan_point: '5.5',
+      related_points: ['5.1', '5.4'],
+      prerequisites: ['5.1', '5.5'],
+      add_as_task_to: ['5.5', '5.1'],
+      required_knowledge: [
+        { point_id: '5.5', technique: 'Квадратни полиноми', why_needed: 'Дискриминант и знак' },
+        { point_id: '5.1', technique: 'Виет', why_needed: 'Оценки на корените' },
+        { point_id: null, technique: 'Оценка на P(p/q)', why_needed: 'Доказване на крайност' }
+      ],
+      techniques_not_in_plan: ['Оценка на квадратен полином в рационална точка'],
+      gap_severity: 'minor',
+      estimated_time_minutes: 50,
+      common_pitfalls: 'Не се използва a<0; забравя се, че q ≠ 0.',
+      recommended_for_simulation: false,
+      prerequisite_review: 'Преговори 5.5 и 5.1 преди да опиташ.'
+    },
+    {
+      num: 4,
+      topic: 'Комбинаторика',
+      subtopic: 'Пътища в таблица, сума на числа',
+      difficulty: 5,
+      probs_page: 1,
+      sol_page: null, // CHECK
+      summary: 'Да се докаже, че Борис винаги може да стигне до Ани с сума на посетените числа < 3/2(n^3 - n^2).',
+      plan_step: 9,
+      plan_point: '9.1',
+      related_points: ['9.2', '8.3', '8.1'],
+      prerequisites: ['9.1', '8.1'],
+      add_as_task_to: ['9.1', '8.3'],
+      required_knowledge: [
+        { point_id: '9.1', technique: 'Пътища в графи', why_needed: 'Движение по съседни клетки' },
+        { point_id: '8.3', technique: 'Двойно броене', why_needed: 'Сума по всички пътища' },
+        { point_id: '8.1', technique: 'Принцип на Дирихле', why_needed: 'Гарантиране на път с малка сума' }
+      ],
+      techniques_not_in_plan: ['Средно аритметично по пътища'],
+      gap_severity: 'minor',
+      estimated_time_minutes: 60,
+      common_pitfalls: 'Не се сещат да осреднят по всички пътища; объркване с начална и крайна точка.',
+      recommended_for_simulation: true,
+      prerequisite_review: 'Преговори 9.1, 8.3 и 8.1 преди да опиташ.'
+    }
+  ],
+  difficulty_distribution: { easy: 0, medium: 2, hard: 2 },
+  recommended_action: 'add-to-step10',
+  recommended_for_simulation: [1, 2, 4]
+}
+```
+
+### Част 3: АРХИВ (готов за copy-paste в Step 10)
+
+```js
+{ 
+  id: '10.31', 
+  title: 'Областен кръг 2026 – 10 клас',
+  desc: '4 задачи: 2 Геом, 1 ТЧ, 1 Алг',
+  source: 'Областен кръг 2026',
+  pdf: 'Задачи_Минали_Години/OLI-2-Областен кръг-2026-10 кл-probs',
+  page: 1,
+  problems_page: 1,
+  solutions_page: 1,
+  tasks: [
+    { label: 'Зад 1 — Аритметична прогресия', pdf: 'Задачи_Минали_Години/OLI-2-Областен кръг-2026-10 кл-probs', page: 1, knowledge: ['7.6', '5.1'] },
+    { label: 'Зад 2 — Правилен петоъгълник', pdf: 'Задачи_Минали_Години/OLI-2-Областен кръг-2026-10 кл-probs', page: 1, knowledge: ['1.1', '1.5', '1.6'] },
+    { label: 'Зад 3 — Специални делители', pdf: 'Задачи_Минали_Години/OLI-2-Областен кръг-2026-10 кл-probs', page: 1, knowledge: ['3.1', '4.5', '4.7'] },
+    { label: 'Зад 4 — Покритие с многоъгълници', pdf: 'Задачи_Минали_Години/OLI-2-Областен кръг-2026-10 кл-probs', page: 1, knowledge: ['1.7', 'Pick'] }
+  ],
+  bonus: [
+    { label: 'Решения', pdf: 'Задачи_Минали_Години/OLI-2-Областен кръг-2026-10 кл-sol' }
+  ],
+  explanation: 'КРАТЪК АНАЛИЗ: 10.1 – телескопиране и Виет; 10.2 – Менелай и симетрия в петоъгълник; 10.3 – делители и прости; 10.4 – формула на Пик.\n\nKNOWLEDGE PROFILE: доминира геометрията (2 задачи), има нужда от Пик (major gap).'
+}
+```
+
+```js
+{ 
+  id: '10.32', 
+  title: 'Областен кръг 2026 – 11 клас',
+  desc: '4 задачи: 1 Геом, 1 ТЧ/Алг, 1 Алг, 1 Комб',
+  source: 'Областен кръг 2026',
+  pdf: 'Задачи_Минали_Години/OLI-2-Областен кръг-2026-11 кл-probs',
+  page: 1,
+  problems_page: 1,
+  solutions_page: null, // CHECK: няма прикачен 11 кл-sol
+  tasks: [
+    { label: 'Зад 1 — Ирационално уравнение', pdf: 'Задачи_Минали_Години/OLI-2-Областен кръг-2026-11 кл-probs', page: 1, knowledge: ['5.4', '5.7'] },
+    { label: 'Зад 2 — Равнобедрен трапец', pdf: 'Задачи_Минали_Години/OLI-2-Областен кръг-2026-11 кл-probs', page: 1, knowledge: ['1.6', '1.7'] },
+    { label: 'Зад 3 — Квадратни полиноми', pdf: 'Задачи_Минали_Години/OLI-2-Областен кръг-2026-11 кл-probs', page: 1, knowledge: ['5.5', '5.1'] },
+    { label: 'Зад 4 — Пътища в таблица', pdf: 'Задачи_Минали_Години/OLI-2-Областен кръг-2026-11 кл-probs', page: 1, knowledge: ['9.1', '8.3', '8.1'] }
+  ],
+  bonus: [
+    { label: 'Решения (липсват в подадените файлове)', pdf: null } // CHECK
+  ],
+  explanation: 'КРАТЪК АНАЛИЗ: 11.1 – факторизация и радикал; 11.2 – косинусова теорема; 11.3 – дискриминант и крайност; 11.4 – осредняване по пътища.\n\nKNOWLEDGE PROFILE: балансирано, но липсва 11 кл-sol за пълен анализ.'
+}
+```
+
+### Част 4: TASKS ЗА ТЕМАТИЧНИ ТОЧКИ
+
+```js
+// Точка 1.1 в STEPS[0].points:
+{ id: '1.1',
+  tasks: [
+    { label: 'ОК 2026/10 кл, Зад 2 (Правилен петоъгълник)', pdf: 'Задачи_Минали_Години/OLI-2-Областен кръг-2026-10 кл-probs', page: 1, difficulty: 5, requires_also: ['1.5', '1.6'], prerequisite_review: 'Преговори 1.1, 1.5, 1.6' }
+  ]
+}
+```
+
+```js
+// Точка 1.6 в STEPS[0].points:
+{ id: '1.6',
+  tasks: [
+    { label: 'ОК 2026/11 кл, Зад 2 (Равнобедрен трапец)', pdf: 'Задачи_Минали_Години/OLI-2-Областен кръг-2026-11 кл-probs', page: 1, difficulty: 4, requires_also: ['1.7'], prerequisite_review: 'Преговори 1.6 и 1.7' }
+  ]
+}
+```
+
+```js
+// Точка 1.7 в STEPS[0].points:
+{ id: '1.7',
+  tasks: [
+    { label: 'ОК 2026/10 кл, Зад 4 (Покритие с многоъгълници)', pdf: 'Задачи_Минали_Години/OLI-2-Областен кръг-2026-10 кл-probs', page: 1, difficulty: 5, requires_also: ['Pick'], prerequisite_review: 'Преговори 1.7 и формула на Пик' },
+    { label: 'ОК 2026/11 кл, Зад 2 (Равнобедрен трапец)', pdf: 'Задачи_Минали_Години/OLI-2-Областен кръг-2026-11 кл-probs', page: 1, difficulty: 4, requires_also: ['1.6'], prerequisite_review: 'Преговори 1.6 и 1.7' }
+  ]
+}
+```
+
+```js
+// Точка 3.1 в STEPS[2].points:
+{ id: '3.1',
+  tasks: [
+    { label: 'ОК 2026/10 кл, Зад 3 (Специални делители)', pdf: 'Задачи_Минали_Години/OLI-2-Областен кръг-2026-10 кл-probs', page: 1, difficulty: 4, requires_also: ['4.5', '4.7'], prerequisite_review: 'Преговори 3.1, 4.5, 4.7' }
+  ]
+}
+```
+
+```js
+// Точка 4.5 в STEPS[3].points:
+{ id: '4.5',
+  tasks: [
+    { label: 'ОК 2026/10 кл, Зад 3 (Специални делители)', pdf: 'Задачи_Минали_Години/OLI-2-Областен кръг-2026-10 кл-probs', page: 1, difficulty: 4, requires_also: ['3.1', '4.7'], prerequisite_review: 'Преговори 4.5 и 3.1' }
+  ]
+}
+```
+
+```js
+// Точка 4.7 в STEPS[3].points:
+{ id: '4.7',
+  tasks: [
+    { label: 'ОК 2026/10 кл, Зад 3 (Специални делители)', pdf: 'Задачи_Минали_Години/OLI-2-Областен кръг-2026-10 кл-probs', page: 1, difficulty: 4, requires_also: ['3.1', '4.5'], prerequisite_review: 'Преговори 4.7 и 4.5' }
+  ]
+}
+```
+
+```js
+// Точка 5.1 в STEPS[4].points:
+{ id: '5.1',
+  tasks: [
+    { label: 'ОК 2026/10 кл, Зад 1 (Аритметична прогресия)', pdf: 'Задачи_Минали_Години/OLI-2-Областен кръг-2026-10 кл-probs', page: 1, difficulty: 3, requires_also: ['7.6'], prerequisite_review: 'Преговори 5.1 и 7.6' },
+    { label: 'ОК 2026/11 кл, Зад 3 (Квадратни полиноми)', pdf: 'Задачи_Минали_Години/OLI-2-Областен кръг-2026-11 кл-probs', page: 1, difficulty: 5, requires_also: ['5.5'], prerequisite_review: 'Преговори 5.1 и 5.5' }
+  ]
+}
+```
+
+```js
+// Точка 5.4 в STEPS[4].points:
+{ id: '5.4',
+  tasks: [
+    { label: 'ОК 2026/11 кл, Зад 1 (Ирационално уравнение)', pdf: 'Задачи_Минали_Години/OLI-2-Областен кръг-2026-11 кл-probs', page: 1, difficulty: 4, requires_also: ['5.7'], prerequisite_review: 'Преговори 5.4 и 5.7' }
+  ]
+}
+```
+
+```js
+// Точка 5.5 в STEPS[4].points:
+{ id: '5.5',
+  tasks: [
+    { label: 'ОК 2026/11 кл, Зад 3 (Квадратни полиноми)', pdf: 'Задачи_Минали_Години/OLI-2-Областен кръг-2026-11 кл-probs', page: 1, difficulty: 5, requires_also: ['5.1'], prerequisite_review: 'Преговори 5.5 и 5.1' }
+  ]
+}
+```
+
+```js
+// Точка 7.6 в STEPS[6].points:
+{ id: '7.6',
+  tasks: [
+    { label: 'ОК 2026/10 кл, Зад 1 (Аритметична прогресия)', pdf: 'Задачи_Минали_Години/OLI-2-Областен кръг-2026-10 кл-probs', page: 1, difficulty: 3, requires_also: ['5.1'], prerequisite_review: 'Преговори 7.6 и 5.1' }
+  ]
+}
+```
+
+```js
+// Точка 8.1 в STEPS[7].points:
+{ id: '8.1',
+  tasks: [
+    { label: 'ОК 2026/11 кл, Зад 4 (Пътища в таблица)', pdf: 'Задачи_Минали_Години/OLI-2-Областен кръг-2026-11 кл-probs', page: 1, difficulty: 5, requires_also: ['9.1', '8.3'], prerequisite_review: 'Преговори 8.1, 9.1, 8.3' }
+  ]
+}
+```
+
+```js
+// Точка 8.3 в STEPS[7].points:
+{ id: '8.3',
+  tasks: [
+    { label: 'ОК 2026/11 кл, Зад 4 (Пътища в таблица)', pdf: 'Задачи_Минали_Години/OLI-2-Областен кръг-2026-11 кл-probs', page: 1, difficulty: 5, requires_also: ['9.1', '8.1'], prerequisite_review: 'Преговори 8.3, 9.1, 8.1' }
+  ]
+}
+```
+
+```js
+// Точка 9.1 в STEPS[8].points:
+{ id: '9.1',
+  tasks: [
+    { label: 'ОК 2026/11 кл, Зад 4 (Пътища в таблица)', pdf: 'Задачи_Минали_Години/OLI-2-Областен кръг-2026-11 кл-probs', page: 1, difficulty: 5, requires_also: ['8.3', '8.1'], prerequisite_review: 'Преговори 9.1, 8.3, 8.1' }
+  ]
+}
+```
+
+### Част 5: KNOWLEDGE PROFILE ЗА 2026
+
+```js
+// ─── KNOWLEDGE PROFILE: 2026 ───
+{
+  year: 2026,
+  total_problems_analyzed: 8,
+  most_used_points: [
+    { point_id: '1.7', count: 2, examples: [10.4, 11.2] },
+    { point_id: '1.6', count: 2, examples: [10.2, 11.2] },
+    { point_id: '5.1', count: 2, examples: [10.1, 11.3] },
+    { point_id: '1.1', count: 1, examples: [10.2] },
+    { point_id: '3.1', count: 1, examples: [10.3] },
+    { point_id: '4.5', count: 1, examples: [10.3] },
+    { point_id: '4.7', count: 1, examples: [10.3] },
+    { point_id: '5.4', count: 1, examples: [11.1] },
+    { point_id: '5.5', count: 1, examples: [11.3] },
+    { point_id: '7.6', count: 1, examples: [10.1] },
+    { point_id: '9.1', count: 1, examples: [11.4] }
+  ],
+  techniques_used: [
+    'Менелай', 'Вписани ъгли', 'Косинусова теорема', 'Лице на трапец',
+    'Аритметична прогресия', 'Телескопиране', 'Формули на Виет',
+    'Делители и НОД', 'Прости числа', 'Мултипликативност',
+    'Рационални корени', 'Факторизация', 'Квадратни полиноми',
+    'Пътища в графи', 'Двойно броене', 'Принцип на Дирихле'
+  ],
+  gaps_identified: [
+    { technique: 'Формула на Пик', appeared_in: ['10 кл зад 4'], recommendation: 'Добави нова точка 1.11 „Формула на Пик и решетъчни многоъгълници“' },
+    { technique: 'Теорема за ъглополовящата', appeared_in: ['10 кл зад 2'], recommendation: 'Добави като бонус към 1.6 или нова точка 1.12' },
+    { technique: 'Постулат на Бертран', appeared_in: ['10 кл зад 3'], recommendation: 'Добави като бонус към 4.5' },
+    { technique: 'Уравнения с радикали чрез заместване', appeared_in: ['11 кл зад 1'], recommendation: 'Добави като бонус към 5.4' }
+  ],
+  study_priority: [
+    '1.7 — Лице/Пик (2 задачи)',
+    '1.6 — Косинусова теорема (2 задачи)',
+    '5.1 — Виет (2 задачи)',
+    '1.1 — Менелай (1 задача, трудна)',
+    '9.1 — Пътища в графи (1 задача, трудна)'
+  ],
+  summary: 'Тази година доминираха геометрията и алгебрата. Има major gap: формула на Пик. Липсват 11 кл решения, което ограничава пълния анализ.'
+}
+```
+
+### Част 6: RECOMMENDED CHANGES
+
+### RECOMMENDED CHANGES TO index.html
+
+**В STEPS:**
+- [ ] Добави `10.31` в Step 10 (архив 2026 – 10 клас)
+- [ ] Добави `10.32` в Step 10 (архив 2026 – 11 клас)
+- [ ] Актуализирай точки `1.1`, `1.6`, `1.7`, `3.1`, `4.5`, `4.7`, `5.1`, `5.4`, `5.5`, `7.6`, `8.1`, `8.3`, `9.1` с нови задачи
+- [ ] Добави нова точка `1.11` — „Формула на Пик и решетъчни многоъгълници“ (major gap)
+- [ ] Добави бонус към `1.6` — „Теорема за ъглополовящата“
+- [ ] Добави бонус към `4.5` — „Постулат на Бертран“
+- [ ] Добави бонус към `5.4` — „Уравнения с радикали чрез заместване“
+
+**В PLAN_PHASES:**
+- [ ] Добави симулация с ОК 2026 в подходяща седмица (Фаза 3)
+- [ ] Включи формула на Пик в седмицата за геометрия
+
+**Друго:**
+- [ ] Липсва `OLI-2-Областен кръг-2026-11 кл-sol.pdf` — нужен е за пълен анализ на 11 кл
+- [ ] Идентифициран major gap: формула на Пик
+- [ ] Идентифицирани minor gaps: теорема за ъглополовящата, постулат на Бертран, радикални уравнения, свойства на равнобедрен трапец, осредняване по пътища

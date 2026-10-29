@@ -1,0 +1,486 @@
+(cid:204)Ł(cid:237)Łæ(cid:242)(cid:229)(cid:240)æ(cid:242)(cid:226)(cid:238) (cid:237)(cid:224) (cid:238)Æ(cid:240)(cid:224)(cid:231)(cid:238)(cid:226)(cid:224)(cid:237)Ł(cid:229)(cid:242)(cid:238) Ł (cid:237)(cid:224)(cid:243)Œ(cid:224)(cid:242)(cid:224)
+(cid:209)œ(cid:254)(cid:231) (cid:237)(cid:224) (cid:236)(cid:224)(cid:242)(cid:229)(cid:236)(cid:224)(cid:242)Ł(cid:246)Ł(cid:242)(cid:229) (cid:226) `œºª(cid:224)(cid:240)Ł(cid:255)
+74. ˝(cid:224)(cid:246)Ł(cid:238)(cid:237)(cid:224)º(cid:237)(cid:224) ˛ºŁ(cid:236)(cid:239)Ł(cid:224)(cid:228)(cid:224) (cid:239)(cid:238) (cid:236)(cid:224)(cid:242)(cid:229)(cid:236)(cid:224)(cid:242)ŁŒ(cid:224)
+ˇœ(cid:240)(cid:226)Ł (cid:228)(cid:229)(cid:237) (5.4.2025), 9-12 Œº(cid:224)æ
+(cid:211)æº(cid:238)(cid:226)Ł(cid:255), Œ(cid:240)(cid:224)(cid:242)ŒŁ (cid:240)(cid:229)ł(cid:229)(cid:237)Ł(cid:255) Ł Œ(cid:240)Ł(cid:242)(cid:229)(cid:240)ŁŁ (cid:231)(cid:224) (cid:238)(cid:246)(cid:229)(cid:237)(cid:255)(cid:226)(cid:224)(cid:237)(cid:229)
+˙(cid:224)(cid:228)(cid:224)(cid:247)(cid:224) 1. ˜(cid:224) æ(cid:229) (cid:237)(cid:224)(cid:236)(cid:229)(cid:240)(cid:255)(cid:242) (cid:226)æŁ(cid:247)ŒŁ Æ(cid:229)(cid:231)Œ(cid:240)(cid:224)Ø(cid:237)Ł (cid:240)(cid:229)(cid:228)Ł(cid:246)Ł a ,a ,... (cid:238)(cid:242) (cid:240)(cid:229)(cid:224)º(cid:237)Ł (cid:247)Łæº(cid:224), (cid:231)(cid:224) Œ(cid:238)Ł(cid:242)(cid:238) (cid:229)
+1 2
+Ł(cid:231)(cid:239)œº(cid:237)(cid:229)(cid:237)(cid:238)
+a = a2 +a +a
+m2+m+n m m n
+(cid:231)(cid:224) (cid:239)(cid:240)(cid:238)Ł(cid:231)(cid:226)(cid:238)º(cid:237)Ł ((cid:237)(cid:229) (cid:237)(cid:229)(cid:239)(cid:240)(cid:229)(cid:236)(cid:229)(cid:237)(cid:237)(cid:238) (cid:240)(cid:224)(cid:231)ºŁ(cid:247)(cid:237)Ł) (cid:229)æ(cid:242)(cid:229)æ(cid:242)(cid:226)(cid:229)(cid:237)Ł (cid:247)Łæº(cid:224) m Ł n.
+˛(cid:242)ª(cid:238)(cid:226)(cid:238)(cid:240). a = n (cid:231)(cid:224) (cid:226)æ(cid:255)Œ(cid:238) n; a = 0 (cid:231)(cid:224) (cid:226)æ(cid:255)Œ(cid:238) n; a = −1 (cid:231)(cid:224) (cid:226)æ(cid:255)Œ(cid:238) n; a = 0 (cid:231)(cid:224) (cid:247)(cid:229)(cid:242)(cid:237)Ł n Ł
+n n n n
+a = −1 (cid:231)(cid:224) (cid:237)(cid:229)(cid:247)(cid:229)(cid:242)(cid:237)Ł n; a = −1 (cid:231)(cid:224) (cid:247)(cid:229)(cid:242)(cid:237)Ł n Ł a = 0 (cid:231)(cid:224) (cid:237)(cid:229)(cid:247)(cid:229)(cid:242)(cid:237)Ł n.
+n n n
+—(cid:229)ł(cid:229)(cid:237)Ł(cid:229).ˇœ(cid:240)(cid:226)Ł(cid:239)(cid:238)(cid:228)ı(cid:238)(cid:228).˜(cid:224)(cid:238)(cid:231)(cid:237)(cid:224)(cid:247)Ł(cid:236)a = x.¨(cid:236)(cid:224)(cid:236)(cid:229)a = a +x2+x,(cid:226)(cid:247)(cid:224)æ(cid:242)(cid:237)(cid:238)æ(cid:242)a = x2+2x
+1 n+2 n 3
+Ła = a +6(x2+x) = 6x2+7x.˛(cid:242)(cid:228)(cid:240)(cid:243)ª(cid:224)æ(cid:242)(cid:240)(cid:224)(cid:237)(cid:224),a = a2+a +a = (x2+2x)2+(x2+2x)+x =
+13 1 13 3 3 1
+x4+4x3+5x2+3x. (cid:209)º(cid:229)(cid:228) (cid:239)(cid:240)Ł(cid:240)(cid:224)(cid:226)(cid:237)(cid:255)(cid:226)(cid:224)(cid:237)(cid:229) (cid:239)(cid:238)º(cid:243)(cid:247)(cid:224)(cid:226)(cid:224)(cid:236)(cid:229) x4+4x3−x2−4x = 0, Œ(cid:238)(cid:229)(cid:242)(cid:238) æ(cid:229) (cid:240)(cid:224)(cid:231)º(cid:224)ª(cid:224)
+(cid:228)(cid:238) x(x−1)(x+1)(x+4) = 0, æœ(cid:238)(cid:242)(cid:226)(cid:229)(cid:242)(cid:237)(cid:238) a = 0,1,−1 ŁºŁ −4. (cid:192)Œ(cid:238) a = −4, (cid:242)(cid:238) a = a +12
+1 1 n+2 n
+(cid:231)(cid:224) (cid:226)æ(cid:255)Œ(cid:238) n Ł a = 20, a = a +17·12 = 200, a = a2+2a = 440, (cid:239)(cid:240)(cid:238)(cid:242)Ł(cid:226)(cid:238)(cid:240)(cid:229)(cid:247)Ł(cid:229).
+5 35 1 35 5 5
+(cid:209)(cid:229)ª(cid:224) (cid:237)(cid:229)Œ(cid:224) a = y. ˛(cid:242) (cid:239)(cid:238)-ª(cid:238)(cid:240)(cid:229) Ł(cid:236)(cid:224)(cid:236)(cid:229) a = a +3(x2 +x) = 3x2 +4x, (cid:224) (cid:238)(cid:242) (cid:228)(cid:240)(cid:243)ª(cid:224) æ(cid:242)(cid:240)(cid:224)(cid:237)(cid:224)
+2 7 1
+a = a2+a +a = y2+y+x, (cid:231)(cid:237)(cid:224)(cid:247)Ł y2+y = 3x2+3x. ¨(cid:236)(cid:224)(cid:236)(cid:229) æº(cid:229)(cid:228)(cid:237)Ł(cid:242)(cid:229) æº(cid:243)(cid:247)(cid:224)Ł:
+7 2 2 1
+(cid:136) (cid:192)Œ(cid:238) x = 0 ŁºŁ x = −1, (cid:242)(cid:238) y = 0 ŁºŁ y = −1 Ł a = a (cid:231)(cid:224) (cid:226)æ(cid:255)Œ(cid:238) n. ¨ (cid:247)(cid:229)(cid:242)Ł(cid:240)Ł(cid:242)(cid:229)
+n+2 n
+(cid:226)œ(cid:231)(cid:236)(cid:238)(cid:230)(cid:237)(cid:238)æ(cid:242)Ł (cid:240)(cid:224)Æ(cid:238)(cid:242)(cid:255)(cid:242), (cid:239)(cid:238)(cid:237)(cid:229)(cid:230)(cid:229) t2+t = 0 (cid:231)(cid:224) t = 0,−1, (cid:224) (cid:239)œŒ m2+m+n Ł n æ(cid:224) æ (cid:229)(cid:228)(cid:237)(cid:224)Œ(cid:226)(cid:224)
+(cid:247)(cid:229)(cid:242)(cid:237)(cid:238)æ(cid:242).
+(cid:136) (cid:192)Œ(cid:238) x = 1, (cid:242)(cid:238) y2 + y = 6, æœ(cid:238)(cid:242)(cid:226)(cid:229)(cid:242)(cid:237)(cid:238) y = 2 ŁºŁ y = −3; (cid:238)æ(cid:226)(cid:229)(cid:237) (cid:242)(cid:238)(cid:226)(cid:224) a = a + 2.
+n+2 n
+´ (cid:239)œ(cid:240)(cid:226)Ł(cid:255) æº(cid:243)(cid:247)(cid:224)Ø (cid:239)(cid:238) Ł(cid:237)(cid:228)(cid:243)Œ(cid:246)Ł(cid:255) (cid:239)(cid:238)º(cid:243)(cid:247)(cid:224)(cid:226)(cid:224)(cid:236)(cid:229) a = n (cid:231)(cid:224) (cid:226)æ(cid:255)Œ(cid:238) n (Œ(cid:238)(cid:229)(cid:242)(cid:238) (cid:255)(cid:226)(cid:237)(cid:238) Ł(cid:231)(cid:239)œº(cid:237)(cid:255)(cid:226)(cid:224)
+n
+(cid:228)(cid:224)(cid:228)(cid:229)(cid:237)(cid:238)(cid:242)(cid:238)),a(cid:226)œ(cid:226)(cid:226)(cid:242)(cid:238)(cid:240)Ł(cid:255)æº(cid:243)(cid:247)(cid:224)Øa = −1,a = a2+a +a = 1,(cid:237)(cid:238)Ła = a +2·10 = 21,
+4 21 4 4 1 21 1
+(cid:239)(cid:240)(cid:238)(cid:242)Ł(cid:226)(cid:238)(cid:240)(cid:229)(cid:247)Ł(cid:229).
+´(cid:242)(cid:238)(cid:240)Ł (cid:239)(cid:238)(cid:228)ı(cid:238)(cid:228). (cid:215)(cid:240)(cid:229)(cid:231) (cid:239)(cid:238)º(cid:224)ª(cid:224)(cid:237)(cid:229)(cid:242)(cid:238) m = 1 (cid:239)(cid:238)º(cid:243)(cid:247)(cid:224)(cid:226)(cid:224)(cid:236)(cid:229) a = a +a2+a .
+n+2 n 1 1
+(cid:136) (cid:192)Œ(cid:238) a2+a = 0 ((cid:242)(cid:238)ª(cid:224)(cid:226)(cid:224) a = 0 ŁºŁ a = −1) (cid:238)(cid:242) ª(cid:238)(cid:240)(cid:237)(cid:238)(cid:242)(cid:238) (cid:240)(cid:224)(cid:226)(cid:229)(cid:237)æ(cid:242)(cid:226)(cid:238) (cid:239)(cid:238)º(cid:243)(cid:247)(cid:224)(cid:226)(cid:224)(cid:236)(cid:229)
+1 1 1 1
+(1) a = a = a = ··· Ł a = a = a = ···
+1 3 5 2 4 6
+ˇ(cid:240)Ł m = 2 Ł n = 1 Ł(cid:236)(cid:224)(cid:236)(cid:229) a = a2 +a +a Ł (cid:239)(cid:238)(cid:237)(cid:229)(cid:230)(cid:229) a = a , (cid:242)(cid:238) a2 +a = 0, (cid:231)(cid:237)(cid:224)(cid:247)Ł
+7 2 2 1 1 7 2 2
+a = 0 ŁºŁ a = −1. ˙(cid:224) (cid:226)æ(cid:255)Œ(cid:224) (cid:240)(cid:229)(cid:228)Ł(cid:246)(cid:224), Ł(cid:231)(cid:239)œº(cid:237)(cid:255)(cid:226)(cid:224)ø(cid:224) (1), (cid:231)(cid:224) Œ(cid:238)(cid:255)(cid:242)(cid:238) a ,a ∈ {0,−1},
+2 2 1 2
+(cid:240)(cid:224)(cid:226)(cid:229)(cid:237)æ(cid:242)(cid:226)(cid:238)(cid:242)(cid:238) (cid:238)(cid:242) (cid:243)æº(cid:238)(cid:226)Ł(cid:229)(cid:242)(cid:238) (cid:229) (cid:226)(cid:255)(cid:240)(cid:237)(cid:238), (cid:239)(cid:238)(cid:237)(cid:229)(cid:230)(cid:229) m2+m+n Ł n æ(cid:224) æ (cid:229)(cid:228)(cid:237)(cid:224)Œ(cid:226)(cid:224) (cid:247)(cid:229)(cid:242)(cid:237)(cid:238)æ(cid:242).
+(cid:136) ˝(cid:229)Œ(cid:224) æ(cid:229)ª(cid:224) a2 +a ̸= 0. (cid:210)(cid:238)ª(cid:224)(cid:226)(cid:224) (cid:240)(cid:229)(cid:228)Ł(cid:246)(cid:224)(cid:242)(cid:224) a ,a ,... (æœ(cid:238)(cid:242)(cid:226)(cid:229)(cid:242)(cid:237)(cid:238) a ,a ,... (cid:229) (cid:224)(cid:240)Ł(cid:242)(cid:236)(cid:229)(cid:242)Ł(cid:247)(cid:237)(cid:224)
+1 1 1 3 2 4
+(cid:239)(cid:240)(cid:238)ª(cid:240)(cid:229)æŁ(cid:255) æ (cid:239)œ(cid:240)(cid:226)Ł (cid:247)º(cid:229)(cid:237) a (æœ(cid:238)(cid:242)(cid:226)(cid:229)(cid:242)(cid:237)(cid:238) a ) Ł (cid:240)(cid:224)(cid:231)ºŁŒ(cid:224) a2+a ̸= 0. (cid:209)º(cid:229)(cid:228)(cid:238)(cid:226)(cid:224)(cid:242)(cid:229)º(cid:237)(cid:238) a =
+1 2 1 1 2k+1
+a + k(a2 + a ) Ł a = a + (k − 1)(a2 + a ). (cid:210)(cid:238)(cid:226)(cid:224) (cid:238)(cid:231)(cid:237)(cid:224)(cid:247)(cid:224)(cid:226)(cid:224), (cid:247)(cid:229) a = a · 2k + b Ł
+1 1 1 2k 2 1 1 2k
+a = c(2k+1)+d (cid:231)(cid:224) (cid:226)æ(cid:255)Œ(cid:238) k Ł (cid:237)(cid:255)Œ(cid:224)Œ(cid:226)Ł (cid:240)(cid:229)(cid:224)º(cid:237)Ł Œ(cid:238)(cid:237)æ(cid:242)(cid:224)(cid:237)(cid:242)Ł a ̸= 0,b,c ̸= 0,d.
+2k+1
+
+˝(cid:229)Œ(cid:224) m Ł n æ(cid:224) (cid:247)(cid:229)(cid:242)(cid:237)Ł (cid:247)Łæº(cid:224). (cid:210)(cid:238)ª(cid:224)(cid:226)(cid:224) (cid:238)(cid:242) (cid:243)æº(cid:238)(cid:226)Ł(cid:229)(cid:242)(cid:238) æº(cid:229)(cid:228)(cid:226)(cid:224), (cid:247)(cid:229) (cid:231)(cid:224) (cid:226)æ(cid:229)ŒŁ (cid:228)(cid:226)(cid:229) m Ł n (cid:229)
+Ł(cid:231)(cid:239)œº(cid:237)(cid:229)(cid:237)(cid:238):
+a(m2+m+n)+b = (am+b)2+am+b+an+b.
+(cid:209)º(cid:229)(cid:228) æ(cid:240)(cid:224)(cid:226)(cid:237)(cid:255)(cid:226)(cid:224)(cid:237)(cid:229) (cid:237)(cid:224) Œ(cid:238)(cid:229)(cid:244)Ł(cid:246)Ł(cid:229)(cid:237)(cid:242)Ł(cid:242)(cid:229) (cid:239)(cid:238)º(cid:243)(cid:247)(cid:224)(cid:226)(cid:224)(cid:236)(cid:229) b2 +b = 0,a = a2,2ab = 0. ˇ(cid:240)(cid:229)(cid:228)(cid:226)Ł(cid:228)
+a ̸= 0, (cid:229)(cid:228)Ł(cid:237)æ(cid:242)(cid:226)(cid:229)(cid:237)(cid:224)(cid:242)(cid:224) (cid:226)œ(cid:231)(cid:236)(cid:238)(cid:230)(cid:237)(cid:238)æ(cid:242) (cid:229) a = 1 æ b = 0, æœ(cid:238)(cid:242)(cid:226)(cid:229)(cid:242)(cid:237)(cid:238) a = 2k. (cid:192)(cid:237)(cid:224)º(cid:238)ªŁ(cid:247)(cid:237)(cid:238)
+2k
+(cid:247)(cid:240)(cid:229)(cid:231) (cid:237)(cid:229)(cid:247)(cid:229)(cid:242)(cid:237)Ł m Ł n (cid:239)(cid:238)º(cid:243)(cid:247)(cid:224)(cid:226)(cid:224)(cid:236)(cid:229) c = 1 æ d = 0, æœ(cid:238)(cid:242)(cid:226)(cid:229)(cid:242)(cid:237)(cid:238) a = 2k +1 (cid:231)(cid:224) (cid:226)æ(cid:255)Œ(cid:238) k.
+2k+1
+(cid:209)º(cid:229)(cid:228)(cid:238)(cid:226)(cid:224)(cid:242)(cid:229)º(cid:237)(cid:238) a = n (cid:231)(cid:224) (cid:226)æ(cid:255)Œ(cid:238) n, Œ(cid:238)(cid:229)(cid:242)(cid:238) (cid:237)(cid:224)Łæ(cid:242)Ł(cid:237)(cid:224) Ł(cid:231)(cid:239)œº(cid:237)(cid:255)(cid:226)(cid:224) (cid:228)(cid:224)(cid:228)(cid:229)(cid:237)(cid:238)(cid:242)(cid:238) (cid:243)(cid:240)(cid:224)(cid:226)(cid:237)(cid:229)(cid:237)Ł(cid:229).
+n
+˛(cid:246)(cid:229)(cid:237)(cid:255)(cid:226)(cid:224)(cid:237)(cid:229). (7 (cid:242)(cid:238)(cid:247)ŒŁ) ˇœ(cid:240)(cid:226)Ł (cid:239)(cid:238)(cid:228)ı(cid:238)(cid:228). 1 (cid:242). (cid:231)(cid:224) (cid:239)œº(cid:237)(cid:238) (cid:238)(cid:239)Łæ(cid:224)(cid:237)Ł(cid:229) (cid:237)(cid:224) (cid:240)(cid:224)Æ(cid:238)(cid:242)(cid:229)øŁ(cid:242)(cid:229) (cid:240)(cid:229)(cid:228)Ł(cid:246)Ł; 1 (cid:242).
+(cid:231)(cid:224) (cid:239)(cid:240)(cid:238)(cid:226)(cid:229)(cid:240)Œ(cid:224), (cid:247)(cid:229) (cid:237)(cid:224)Łæ(cid:242)Ł(cid:237)(cid:224) (cid:240)(cid:224)Æ(cid:238)(cid:242)(cid:255)(cid:242); 3 (cid:242). (cid:231)(cid:224) (cid:239)(cid:238)º(cid:243)(cid:247)(cid:224)(cid:226)(cid:224)(cid:237)(cid:229) (cid:237)(cid:224) a = 0,1,−1 (1 (cid:242). (cid:231)(cid:224) (cid:239)(cid:238)º(cid:243)(cid:247)(cid:224)(cid:226)(cid:224)(cid:237)(cid:229)
+1
+(cid:237)(cid:224) (cid:243)(cid:240)(cid:224)(cid:226)(cid:237)(cid:229)(cid:237)Ł(cid:229) (cid:231)(cid:224) a , 1 (cid:242). (cid:231)(cid:224) (cid:240)(cid:229)ł(cid:224)(cid:226)(cid:224)(cid:237)(cid:229)(cid:242)(cid:238) (cid:236)(cid:243) Ł 1 (cid:242). (cid:231)(cid:224) (cid:238)(cid:242)ı(cid:226)œ(cid:240)º(cid:255)(cid:237)(cid:229) (cid:237)(cid:224) æ(cid:242)(cid:238)Ø(cid:237)(cid:238)æ(cid:242)Ł, (cid:240)(cid:224)(cid:231)ºŁ(cid:247)(cid:237)Ł (cid:238)(cid:242)
+1
+(cid:230)(cid:229)º(cid:224)(cid:237)Ł(cid:242)(cid:229)); 1 (cid:242). (cid:231)(cid:224) (cid:239)(cid:238)º(cid:243)(cid:247)(cid:224)(cid:226)(cid:224)(cid:237)(cid:229) (cid:237)(cid:224) (cid:243)(cid:240)(cid:224)(cid:226)(cid:237)(cid:229)(cid:237)Ł(cid:229) (cid:238)(cid:242) (cid:237)(cid:224)Ø-(cid:236)(cid:237)(cid:238)ª(cid:238) (cid:226)(cid:242)(cid:238)(cid:240)(cid:224) æ(cid:242)(cid:229)(cid:239)(cid:229)(cid:237) (cid:236)(cid:229)(cid:230)(cid:228)(cid:243) a Ł a ; 1 (cid:242).
+1 2
+(cid:231)(cid:224) (cid:228)(cid:238)(cid:226)œ(cid:240)ł(cid:226)(cid:224)(cid:237)(cid:229).
+´(cid:242)(cid:238)(cid:240)Ł (cid:239)(cid:238)(cid:228)ı(cid:238)(cid:228). 1 (cid:242). (cid:231)(cid:224) (cid:239)œº(cid:237)(cid:238) (cid:238)(cid:239)Łæ(cid:224)(cid:237)Ł(cid:229) (cid:237)(cid:224) (cid:240)(cid:224)Æ(cid:238)(cid:242)(cid:229)øŁ(cid:242)(cid:229) (cid:240)(cid:229)(cid:228)Ł(cid:246)Ł; 1 (cid:242). (cid:231)(cid:224) (cid:239)(cid:240)(cid:238)(cid:226)(cid:229)(cid:240)Œ(cid:224), (cid:247)(cid:229) (cid:237)(cid:224)Łæ(cid:242)Ł(cid:237)(cid:224)
+(cid:240)(cid:224)Æ(cid:238)(cid:242)(cid:255)(cid:242); 1 (cid:242). (cid:231)(cid:224) (cid:239)(cid:238)º(cid:243)(cid:247)(cid:224)(cid:226)(cid:224)(cid:237)(cid:229), (cid:247)(cid:229) (cid:239)(cid:238)(cid:228)(cid:240)(cid:229)(cid:228)Ł(cid:246)Ł(cid:242)(cid:229) (cid:238)(cid:242) (cid:247)º(cid:229)(cid:237)(cid:238)(cid:226)(cid:229) æ (cid:247)(cid:229)(cid:242)(cid:237)Ł Ł (cid:237)(cid:229)(cid:247)(cid:229)(cid:242)(cid:237)Ł (cid:237)(cid:238)(cid:236)(cid:229)(cid:240)(cid:224) æ(cid:224) (cid:224)(cid:240)Ł(cid:242)-
+(cid:236)(cid:229)(cid:242)Ł(cid:247)(cid:237)Ł (cid:239)(cid:240)(cid:238)ª(cid:240)(cid:229)æŁŁ; 1 (cid:242). (cid:231)(cid:224) (cid:239)œº(cid:229)(cid:237) (cid:224)(cid:237)(cid:224)ºŁ(cid:231) (cid:237)(cid:224) æº(cid:243)(cid:247)(cid:224)(cid:255) æ (cid:240)(cid:224)(cid:231)ºŁŒ(cid:224) 0; 2 (cid:242). (cid:231)(cid:224) (cid:228)(cid:238)Œ(cid:224)(cid:231)(cid:226)(cid:224)(cid:237)(cid:229), (cid:247)(cid:229) a = n
+n
+(cid:231)(cid:224) (cid:247)(cid:229)(cid:242)(cid:237)Ł (ŁºŁ (cid:237)(cid:229)(cid:247)(cid:229)(cid:242)(cid:237)Ł) n (cid:239)(cid:240)Ł (cid:237)(cid:229)(cid:237)(cid:243)º(cid:229)(cid:226)(cid:224) (cid:240)(cid:224)(cid:231)ºŁŒ(cid:224) (cid:237)(cid:224) (cid:239)(cid:240)(cid:238)ª(cid:240)(cid:229)æŁ(cid:255)(cid:242)(cid:224); 1 (cid:242). (cid:231)(cid:224) (cid:228)(cid:238)(cid:226)œ(cid:240)ł(cid:226)(cid:224)(cid:237)(cid:229).
+˙(cid:224)(cid:228)(cid:224)(cid:247)(cid:224) 2. ˇ(cid:240)Ł (cid:228)(cid:224)(cid:228)(cid:229)(cid:237)(cid:238) (cid:229)æ(cid:242)(cid:229)æ(cid:242)(cid:226)(cid:229)(cid:237)(cid:238) (cid:247)Łæº(cid:238) n (cid:237)(cid:229)Œ(cid:224) (cid:242)(cid:238)(cid:247)(cid:237)(cid:238) n (cid:238)(cid:242) Œº(cid:229)(cid:242)ŒŁ(cid:242)(cid:229) (cid:237)(cid:224) Œ(cid:226)(cid:224)(cid:228)(cid:240)(cid:224)(cid:242)(cid:237)(cid:224) (cid:242)(cid:224)ÆºŁ(cid:246)(cid:224)
+n×næ(cid:224)(cid:238)(cid:246)(cid:226)(cid:229)(cid:242)(cid:229)(cid:237)Ł(cid:226)(cid:247)(cid:229)(cid:240)(cid:237)(cid:238),(cid:224)(cid:238)æ(cid:242)(cid:224)(cid:237)(cid:224)ºŁ(cid:242)(cid:229)(cid:21)(cid:226)Æ(cid:255)º(cid:238);(cid:246)(cid:229)(cid:237)(cid:224)(cid:242)(cid:224) (cid:237)(cid:224)(cid:242)(cid:224)Œ(cid:238)(cid:226)(cid:224)(cid:238)(cid:246)(cid:226)(cid:229)(cid:242)(cid:255)(cid:226)(cid:224)(cid:237)(cid:229)(cid:229)(cid:236)Ł(cid:237)Ł(cid:236)(cid:224)º(cid:237)Ł(cid:255)(cid:242)
+Æ(cid:240)(cid:238)Ø Æ(cid:229)ºŁ Œº(cid:229)(cid:242)ŒŁ, Œ(cid:238)Ł(cid:242)(cid:238) (cid:242)(cid:240)(cid:255)Æ(cid:226)(cid:224) (cid:228)(cid:224) æ(cid:229) (cid:239)(cid:240)(cid:229)(cid:238)(cid:246)(cid:226)(cid:229)(cid:242)(cid:255)(cid:242) (cid:226) (cid:247)(cid:229)(cid:240)(cid:237)(cid:238), (cid:242)(cid:224)Œ(cid:224) (cid:247)(cid:229) (cid:238)(cid:242) (cid:226)æ(cid:255)Œ(cid:224) (cid:247)(cid:229)(cid:240)(cid:237)(cid:224) Œº(cid:229)(cid:242)Œ(cid:224)
+(cid:228)(cid:224) (cid:236)(cid:238)(cid:230)(cid:229) (cid:228)(cid:224) æ(cid:229) æ(cid:242)Łª(cid:237)(cid:229) (cid:228)(cid:238) (cid:226)æ(cid:255)Œ(cid:224) (cid:228)(cid:240)(cid:243)ª(cid:224) (cid:247)(cid:229)(cid:240)(cid:237)(cid:224) Œº(cid:229)(cid:242)Œ(cid:224) (cid:247)(cid:240)(cid:229)(cid:231) (cid:239)(cid:238)æº(cid:229)(cid:228)(cid:238)(cid:226)(cid:224)(cid:242)(cid:229)º(cid:237)(cid:238)æ(cid:242) (cid:238)(cid:242) (cid:247)(cid:229)(cid:240)(cid:237)Ł Œº(cid:229)(cid:242)ŒŁ,
+(cid:226) Œ(cid:238)(cid:255)(cid:242)(cid:238) (cid:226)æ(cid:229)ŒŁ (cid:228)(cid:226)(cid:229) (cid:239)(cid:238)(cid:240)(cid:229)(cid:228)(cid:237)Ł Œº(cid:229)(cid:242)ŒŁ Ł(cid:236)(cid:224)(cid:242) (cid:238)Æø(cid:224) æ(cid:242)(cid:240)(cid:224)(cid:237)(cid:224). ˝(cid:229)Œ(cid:224) f(n) (cid:229) (cid:236)(cid:224)ŒæŁ(cid:236)(cid:224)º(cid:237)(cid:224)(cid:242)(cid:224) (cid:226)œ(cid:231)(cid:236)(cid:238)(cid:230)(cid:237)(cid:224)
+(cid:246)(cid:229)(cid:237)(cid:224) æ(cid:239)(cid:240)(cid:255)(cid:236)(cid:238) (cid:226)æŁ(cid:247)ŒŁ (cid:239)œ(cid:240)(cid:226)(cid:238)(cid:237)(cid:224)(cid:247)(cid:224)º(cid:237)Ł (cid:238)(cid:246)(cid:226)(cid:229)(cid:242)(cid:255)(cid:226)(cid:224)(cid:237)Ł(cid:255) (cid:231)(cid:224) (cid:228)(cid:224)(cid:228)(cid:229)(cid:237)(cid:238) n. ˜(cid:224) æ(cid:229) (cid:237)(cid:224)(cid:236)(cid:229)(cid:240)Ł (cid:240)(cid:229)(cid:224)º(cid:237)(cid:238) (cid:247)Łæº(cid:238) α,
+(cid:242)(cid:224)Œ(cid:238)(cid:226)(cid:224) (cid:247)(cid:229) (cid:231)(cid:224) (cid:226)æ(cid:255)Œ(cid:238) (cid:229)æ(cid:242)(cid:229)æ(cid:242)(cid:226)(cid:229)(cid:237)(cid:238) (cid:247)Łæº(cid:238) n ≥ 100 (cid:229) (cid:226) æŁº(cid:224)
+1
+nα ≤ f(n) ≤ 3nα.
+3
+˛(cid:242)ª(cid:238)(cid:226)(cid:238)(cid:240). α = 3/2.
+√
+—(cid:229)ł(cid:229)(cid:237)Ł(cid:229). ˙(cid:224) ª(cid:238)(cid:240)(cid:237)(cid:224)(cid:242)(cid:224) ª(cid:240)(cid:224)(cid:237)Ł(cid:246)(cid:224), (cid:239)(cid:240)Ł m = ⌊ n⌋ (cid:228)(cid:224) (cid:240)(cid:224)(cid:231)ªº(cid:229)(cid:228)(cid:224)(cid:236)(cid:229) Œ(cid:238)º(cid:238)(cid:237)Ł(cid:242)(cid:229) æ (cid:237)(cid:238)(cid:236)(cid:229)(cid:240)(cid:224) cm (cid:231)(cid:224)
+c = 1,2,...,m. ˙(cid:224) (cid:226)æ(cid:255)Œ(cid:224) (cid:239)œ(cid:240)(cid:226)(cid:238)(cid:237)(cid:224)(cid:247)(cid:224)º(cid:237)(cid:238) (cid:238)(cid:246)(cid:226)(cid:229)(cid:242)(cid:229)(cid:237)(cid:224) Œº(cid:229)(cid:242)Œ(cid:224) (cid:237)(cid:229)Œ(cid:224) Ł(cid:231)ª(cid:240)(cid:224)(cid:228)Ł(cid:236) (cid:239)œ(cid:242) (cid:238)(cid:242) (cid:237)(cid:229)(cid:255) (cid:228)(cid:238) (cid:237)(cid:224)Ø-
+ÆºŁ(cid:231)Œ(cid:224)(cid:242)(cid:224) (cid:228)(cid:238) (cid:237)(cid:229)(cid:255) Œ(cid:238)º(cid:238)(cid:237)(cid:224). ˝(cid:229)Œ(cid:224) æœø(cid:238) (cid:238)(cid:246)(cid:226)(cid:229)(cid:242)Ł(cid:236) (cid:226)æ(cid:255)Œ(cid:224) (cid:238)(cid:242) (cid:242)(cid:229)(cid:231)Ł Œ(cid:238)º(cid:238)(cid:237)Ł (cid:226) (cid:247)(cid:229)(cid:240)(cid:237)(cid:238), Œ(cid:224)Œ(cid:242)(cid:238) Ł (cid:239)œ(cid:240)(cid:226)Ł(cid:255)
+(cid:240)(cid:229)(cid:228) (cid:21) æ (cid:242)(cid:238)(cid:226)(cid:224) (cid:230)(cid:229)º(cid:224)(cid:237)(cid:238)(cid:242)(cid:238) æ(cid:226)œ(cid:240)(cid:231)(cid:226)(cid:224)(cid:237)(cid:229) (cid:229) (cid:239)(cid:238)º(cid:243)(cid:247)(cid:229)(cid:237)(cid:238). ˙(cid:224) (cid:226)æ(cid:255)Œ(cid:224) (cid:238)(cid:242) n-(cid:242)(cid:229) (cid:239)œ(cid:240)(cid:226)(cid:238)(cid:237)(cid:224)(cid:247)(cid:224)º(cid:237)(cid:238) (cid:247)(cid:229)(cid:240)(cid:237)Ł Œº(cid:229)(cid:242)ŒŁ
+(cid:242)(cid:238)(cid:226)(cid:224) Ł(cid:231)ŁæŒ(cid:226)(cid:224) (cid:237)(cid:229) (cid:239)(cid:238)(cid:226)(cid:229)(cid:247)(cid:229) (cid:238)(cid:242) m − 1 (cid:228)(cid:238)(cid:239)œº(cid:237)Ł(cid:242)(cid:229)º(cid:237)Ł Œº(cid:229)(cid:242)ŒŁ, Ł(cid:236)(cid:224)(cid:236)(cid:229) æœø(cid:238) mn Œº(cid:229)(cid:242)ŒŁ (cid:238)(cid:242) m-(cid:242)(cid:229)
+Œ(cid:238)º(cid:238)(cid:237)Ł Ł n Œº(cid:229)(cid:242)ŒŁ (cid:238)(cid:242) (cid:239)œ(cid:240)(cid:226)Ł(cid:255) (cid:240)(cid:229)(cid:228). (cid:210)(cid:224)Œ(cid:224) (cid:246)(cid:229)(cid:237)(cid:224)(cid:242)(cid:224) (cid:237)(cid:229) (cid:237)(cid:224)(cid:228)(cid:236)Ł(cid:237)(cid:224)(cid:226)(cid:224)
+n(m−1)+mn+n = 2mn < 3n3/2.
+√ √
+˙(cid:224) (cid:228)(cid:238)º(cid:237)(cid:224)(cid:242)(cid:224) ª(cid:240)(cid:224)(cid:237)Ł(cid:246)(cid:224), (cid:237)(cid:229)Œ(cid:224) m (cid:229) (cid:246)(cid:255)º(cid:238) Ł n−1−1 < m ≤ n−1. ˝(cid:229)Œ(cid:224) (cid:247)(cid:229)(cid:240)(cid:237)Ł æ(cid:224) n Œº(cid:229)(cid:242)ŒŁ
+(cid:238)(cid:242) (cid:226)Ł(cid:228)(cid:224) (1+im;1+jm): i,j = 0,1,...,m ((cid:242)(cid:229) æ(cid:224) (cid:226) (cid:242)(cid:224)ÆºŁ(cid:246)(cid:224)(cid:242)(cid:224), (cid:239)(cid:238)(cid:237)(cid:229)(cid:230)(cid:229) 1+m2 ≤ n, Ł æœø(cid:238)
+(cid:242)(cid:224)Œ(cid:224) Æ(cid:240)(cid:238)(cid:255)(cid:242) Ł(cid:236) (cid:229) (m+1)2 < m2+1 ≤ n). ˙(cid:224) (cid:226)æ(cid:255)Œ(cid:224) (cid:226)(cid:229)(cid:240)Łª(cid:224) (cid:238)(cid:242) (cid:247)(cid:229)(cid:240)(cid:237)Ł Œº(cid:229)(cid:242)ŒŁ ø(cid:229) (cid:240)(cid:224)(cid:231)ªº(cid:229)(cid:230)(cid:228)(cid:224)(cid:236)(cid:229)
+(cid:237)(cid:224)(cid:247)(cid:243)(cid:239)(cid:229)(cid:237)(cid:224)(cid:242)(cid:224) ºŁ(cid:237)Ł(cid:255), æ(cid:226)œ(cid:240)(cid:231)(cid:226)(cid:224)ø(cid:224) (cid:246)(cid:229)(cid:237)(cid:242)(cid:240)(cid:238)(cid:226)(cid:229)(cid:242)(cid:229) (cid:237)(cid:224) (cid:239)(cid:238)(cid:240)(cid:229)(cid:228)(cid:237)Ł(cid:242)(cid:229) Œº(cid:229)(cid:242)ŒŁ. ˛Œ(cid:238)º(cid:238) (cid:226)æ(cid:255)Œ(cid:224) (cid:237)(cid:224)(cid:247)(cid:224)º(cid:237)(cid:224) (cid:247)(cid:229)(cid:240)(cid:237)(cid:224)
+Œº(cid:229)(cid:242)Œ(cid:224) (cid:238)Æ(cid:238)æ(cid:238)Æ(cid:255)(cid:226)(cid:224)(cid:236)(cid:229) (cid:236)(cid:237)(cid:238)(cid:230)(cid:229)æ(cid:242)(cid:226)(cid:238)(cid:242)(cid:238) (cid:238)(cid:242) (cid:242)(cid:229)(cid:231)Ł (cid:242)(cid:238)(cid:247)ŒŁ, (cid:228)(cid:238) Œ(cid:238)Ł(cid:242)(cid:238) (cid:236)(cid:238)(cid:230)(cid:229)(cid:236) (cid:228)(cid:224) æ(cid:242)Łª(cid:237)(cid:229)(cid:236) æ (cid:237)(cid:224)(cid:247)(cid:243)(cid:239)(cid:229)(cid:237)(cid:224)
+
+ºŁ(cid:237)Ł(cid:255)æ(cid:228)œº(cid:230)Ł(cid:237)(cid:224)(cid:237)(cid:229)(cid:239)(cid:238)(cid:226)(cid:229)(cid:247)(cid:229)(cid:238)(cid:242) m,æœ(cid:228)œ(cid:240)(cid:230)(cid:224)øaæ(cid:224)(cid:236)(cid:238)ı(cid:238)(cid:240)Ł(cid:231)(cid:238)(cid:237)(cid:242)(cid:224)º(cid:237)ŁŁ/ŁºŁ(cid:226)(cid:229)(cid:240)(cid:242)ŁŒ(cid:224)º(cid:237)Ł(cid:238)(cid:242)æ(cid:229)(cid:247)ŒŁ
+2
+((cid:242)(cid:224)(cid:231)Ł (cid:237)(cid:224)(cid:247)(cid:243)(cid:239)(cid:229)(cid:237)(cid:224) ºŁ(cid:237)Ł(cid:255) (cid:226)Œº(cid:254)(cid:247)(cid:226)(cid:224) Ł (cid:238)(cid:242)æ(cid:229)(cid:247)Œ(cid:224) æ (cid:228)œº(cid:230)Ł(cid:237)(cid:224) 1 (cid:226) (cid:237)(cid:224)(cid:247)(cid:224)º(cid:237)(cid:224)(cid:242)(cid:224) (cid:247)(cid:229)(cid:240)(cid:237)(cid:224) Œº(cid:229)(cid:242)Œ(cid:224)). (cid:210)(cid:229)(cid:231)Ł
+2
+(cid:236)(cid:237)(cid:238)(cid:230)(cid:229)æ(cid:242)(cid:226)(cid:224) (cid:231)(cid:224) (cid:240)(cid:224)(cid:231)ºŁ(cid:247)(cid:237)Ł(cid:242)(cid:229) (cid:242)(cid:238)(cid:247)ŒŁ (cid:237)(cid:229) æ(cid:229) (cid:239)(cid:240)(cid:229)æŁ(cid:247)(cid:224)(cid:242) ((cid:229)(cid:228)Ł(cid:237)æ(cid:242)(cid:226)(cid:229)(cid:237)(cid:238) (cid:236)(cid:238)ª(cid:224)(cid:242) (cid:228)(cid:224) Ł(cid:236)(cid:224)(cid:242) (cid:238)ÆøŁ ª(cid:240)(cid:224)(cid:237)Ł(cid:247)(cid:237)Ł
+(cid:242)(cid:238)(cid:247)ŒŁ).˙(cid:224)(cid:228)(cid:224)æ(cid:229)(cid:238)æœø(cid:229)æ(cid:242)(cid:226)Ł(cid:226)(cid:240)œ(cid:231)Œ(cid:224)(cid:236)(cid:229)(cid:230)(cid:228)(cid:243)(cid:237)(cid:224)(cid:247)(cid:224)º(cid:237)Ł(cid:242)(cid:229)(cid:247)(cid:229)(cid:240)(cid:237)ŁŒº(cid:229)(cid:242)ŒŁ,(cid:242)(cid:240)(cid:255)Æ(cid:226)(cid:224)(cid:228)(cid:224)Ł(cid:236)(cid:224)(cid:226)(cid:229)(cid:240)Łª(cid:224)(cid:238)(cid:242)
+1(m−1)(cid:247)(cid:229)(cid:240)(cid:237)ŁŒº(cid:229)(cid:242)ŒŁ(cid:238)(cid:242)ª(cid:240)(cid:224)(cid:237)Ł(cid:246)(cid:224)(cid:242)(cid:224)(cid:237)(cid:224)(cid:237)(cid:224)(cid:247)(cid:224)º(cid:237)(cid:224)(cid:242)(cid:224)(cid:247)(cid:229)(cid:240)(cid:237)(cid:224)Œº(cid:229)(cid:242)Œ(cid:224)(cid:228)(cid:238)ª(cid:240)(cid:224)(cid:237)Ł(cid:246)(cid:224)(cid:242)(cid:224)(cid:237)(cid:224)æœ(cid:238)(cid:242)(cid:226)(cid:229)(cid:242)(cid:237)(cid:224)(cid:242)(cid:224)
+2
+Ł(cid:0) (cid:238)Æº(cid:224)æ(cid:242) ((cid:224)Œ(cid:238) (cid:242)(cid:238)(cid:226)(cid:224) (cid:247)Łæº(cid:238) (cid:229) (cid:228)(cid:240)(cid:238)Æ(cid:237)(cid:238), (cid:242)(cid:238) (cid:229)(cid:228)(cid:237)(cid:224) (cid:238)(cid:242) (cid:237)(cid:238)(cid:226)(cid:238)(cid:238)(cid:246)(cid:226)(cid:229)(cid:242)(cid:229)(cid:237)Ł(cid:242)(cid:229) Œº(cid:229)(cid:242)ŒŁ (cid:229) (cid:237)(cid:224) ª(cid:240)(cid:224)(cid:237)Ł(cid:246)(cid:224)(cid:242)(cid:224) (cid:237)(cid:224) (cid:228)(cid:226)(cid:229)
+(cid:238)Æº(cid:224)æ(cid:242)Ł Ł (cid:239)(cid:238) (cid:239)(cid:238)º(cid:238)(cid:226)Ł(cid:237)Œ(cid:224) (cid:238)(cid:242) (cid:237)(cid:229)(cid:255) æ(cid:229) Æ(cid:240)(cid:238)Ł Œœ(cid:236) (cid:226)æ(cid:255)Œ(cid:224) (cid:238)(cid:242) (cid:228)(cid:226)(cid:229)(cid:242)(cid:229) Œ(cid:238)(cid:237)(cid:242)(cid:224)Œ(cid:242)(cid:243)(cid:226)(cid:224)øŁ (cid:238)Æº(cid:224)æ(cid:242)Ł). (cid:210)(cid:238)(cid:226)(cid:224)
+√
+(cid:238)(cid:231)(cid:237)(cid:224)(cid:247)(cid:224)(cid:226)(cid:224), (cid:247)(cid:229) f(n) ≥ n(m−1) > n( n−1−2) Ł (cid:238)æ(cid:242)(cid:224)(cid:226)(cid:224) (cid:228)(cid:224) æ(cid:229) (cid:243)(cid:226)(cid:229)(cid:240)Ł(cid:236), (cid:247)(cid:229)
+2 2
+1 √ 1√
+( n−1−2) ≥ n
+2 3
+√ √
+3 n−1 ≥ 2 n+6
+√
+9n−9 ≥ 4n+24 n+36.
+√ √
+ˇ(cid:240)Ł n ≥ 100 (cid:242)(cid:238)(cid:226)(cid:224) (cid:229) (cid:226)(cid:255)(cid:240)(cid:237)(cid:238), (cid:239)(cid:238)(cid:237)(cid:229)(cid:230)(cid:229) n(5 n−24) ≥ 10(5·10−24) > 45.
+˚(cid:238)(cid:236)(cid:229)(cid:237)(cid:242)(cid:224)(cid:240). ˛(cid:242) ª(cid:238)(cid:240)(cid:229)Ł(cid:231)º(cid:238)(cid:230)(cid:229)(cid:237)(cid:238)(cid:242)(cid:238) (cid:236)(cid:238)(cid:230)(cid:229) (cid:228)(cid:224) æ(cid:229) (cid:237)(cid:224)(cid:239)(cid:240)(cid:224)(cid:226)Ł Ł(cid:231)(cid:226)(cid:238)(cid:228)œ(cid:242), (cid:247)(cid:229) α = 3/2 (cid:229) (cid:229)(cid:228)Ł(cid:237)æ(cid:242)(cid:226)(cid:229)(cid:237)(cid:238)(cid:242)(cid:238)
+(cid:239)(cid:238)(cid:228)ı(cid:238)(cid:228)(cid:255)ø(cid:238). ˝(cid:224)Łæ(cid:242)Ł(cid:237)(cid:224), (cid:239)(cid:240)Ł α ̸= 3/2, (cid:231)(cid:224) (cid:228)(cid:238)æ(cid:242)(cid:224)(cid:242)œ(cid:247)(cid:237)(cid:238) ª(cid:238)º(cid:229)(cid:236)Ł n (n > 91/|α−3 2 |) (cid:229) (cid:226) æŁº(cid:224):
+• 3nα < 1n3/2, (cid:224)Œ(cid:238) α < 3/2;
+3
+• 1nα > 3n3/2, (cid:224)Œ(cid:238) α > 3/2.
+3
+˛(cid:246)(cid:229)(cid:237)(cid:255)(cid:226)(cid:224)(cid:237)(cid:229). (7 (cid:242)(cid:238)(cid:247)ŒŁ) 1 (cid:242). (cid:231)(cid:224) (cid:238)(cid:242)ª(cid:238)(cid:226)(cid:238)(cid:240)(cid:224) α = 3/2; 2 (cid:242). (cid:231)(cid:224) (cid:228)(cid:238)Œ(cid:224)(cid:231)(cid:226)(cid:224)(cid:237)(cid:229) (cid:237)(cid:224) ª(cid:238)(cid:240)(cid:237)(cid:224)(cid:242)(cid:224) ª(cid:240)(cid:224)(cid:237)Ł(cid:246)(cid:224) (1 (cid:242).
+(cid:231)(cid:224) (cid:240)(cid:224)Æ(cid:238)(cid:242)(cid:229)ø(cid:238) (cid:238)(cid:246)(cid:226)(cid:229)(cid:242)(cid:255)(cid:226)(cid:224)(cid:237)(cid:229), 1 (cid:242). (cid:231)(cid:224) (cid:239)(cid:240)(cid:224)(cid:226)Łº(cid:237)(cid:238) (cid:239)(cid:240)(cid:229)æ(cid:236)(cid:255)(cid:242)(cid:224)(cid:237)(cid:229) ((cid:236)(cid:238)(cid:230)(cid:229) (cid:247)(cid:240)(cid:229)(cid:231) m ŁºŁ (cid:239)(cid:238)(cid:228)(cid:238)Æ(cid:229)(cid:237) Ł(cid:231)(cid:240)(cid:224)(cid:231))
+(cid:237)(cid:224) (cid:228)(cid:238)(cid:239)œº(cid:237)Ł(cid:242)(cid:229)º(cid:237)Ł(cid:255) Æ(cid:240)(cid:238)Ø Œº(cid:229)(cid:242)ŒŁ); 4 (cid:242). (cid:231)(cid:224) (cid:228)(cid:238)Œ(cid:224)(cid:231)(cid:226)(cid:224)(cid:237)(cid:229) (cid:237)(cid:224) (cid:228)(cid:238)º(cid:237)(cid:224)(cid:242)(cid:224) ª(cid:240)(cid:224)(cid:237)Ł(cid:246)(cid:224) (1 (cid:242). (cid:231)(cid:224) (cid:240)(cid:224)Æ(cid:238)(cid:242)(cid:229)ø(cid:238)
+(cid:238)(cid:246)(cid:226)(cid:229)(cid:242)(cid:255)(cid:226)(cid:224)(cid:237)(cid:229), 3 (cid:242). (cid:231)(cid:224) (cid:238)Æ(cid:238)æ(cid:237)(cid:238)(cid:226)Œ(cid:224), (cid:247)(cid:229) (cid:242)(cid:238) (cid:240)(cid:224)Æ(cid:238)(cid:242)Ł).
+˙(cid:224)(cid:228)(cid:224)(cid:247)(cid:224) 3. ˝(cid:229)Œ(cid:224) P (cid:229) (cid:237)(cid:229)Œ(cid:238)(cid:237)æ(cid:242)(cid:224)(cid:237)(cid:242)(cid:229)(cid:237) (cid:239)(cid:238)ºŁ(cid:237)(cid:238)(cid:236) æ (cid:246)(cid:229)ºŁ Œ(cid:238)(cid:229)(cid:244)Ł(cid:246)Ł(cid:229)(cid:237)(cid:242)Ł, Œ(cid:224)(cid:242)(cid:238) æ(cid:242)(cid:224)(cid:240)łŁ(cid:255)(cid:242) (cid:229) (cid:240)(cid:224)(cid:226)(cid:229)(cid:237) (cid:237)(cid:224)
+1, Ł (cid:237)(cid:229)Œ(cid:224) a ,a ,... (cid:229) Æ(cid:229)(cid:231)Œ(cid:240)(cid:224)Ø(cid:237)(cid:224) (cid:240)(cid:229)(cid:228)Ł(cid:246)(cid:224) (cid:238)(cid:242) (cid:229)æ(cid:242)(cid:229)æ(cid:242)(cid:226)(cid:229)(cid:237)Ł (cid:247)Łæº(cid:224). ˜(cid:224) æ(cid:229) (cid:228)(cid:238)Œ(cid:224)(cid:230)(cid:229), (cid:247)(cid:229) æœø(cid:229)æ(cid:242)(cid:226)(cid:243)(cid:226)(cid:224)(cid:242)
+1 2
+Æ(cid:229)(cid:231)Æ(cid:240)(cid:238)Ø(cid:237)(cid:238) (cid:236)(cid:237)(cid:238)ª(cid:238) (cid:239)(cid:240)(cid:238)æ(cid:242)Ł (cid:247)Łæº(cid:224), (cid:226)æ(cid:255)Œ(cid:238) (cid:238)(cid:242) Œ(cid:238)Ł(cid:242)(cid:238) (cid:228)(cid:229)ºŁ (cid:239)(cid:238)(cid:237)(cid:229) (cid:229)(cid:228)Ł(cid:237) (cid:247)º(cid:229)(cid:237) (cid:237)(cid:224) (cid:240)(cid:229)(cid:228)Ł(cid:246)(cid:224)(cid:242)(cid:224)
+b = P(n)an +1.
+n
+—(cid:229)ł(cid:229)(cid:237)Ł(cid:229). (cid:217)(cid:229)(cid:240)(cid:224)(cid:231)ªº(cid:229)(cid:228)(cid:224)(cid:236)(cid:229)(cid:238)(cid:242)(cid:228)(cid:229)º(cid:237)(cid:238)æŁ(cid:242)(cid:243)(cid:224)(cid:246)ŁŁ(cid:242)(cid:229),Œ(cid:238)ª(cid:224)(cid:242)(cid:238)(cid:240)(cid:229)(cid:228)Ł(cid:246)(cid:224)(cid:242)(cid:224)(a )(cid:229)(cid:237)(cid:229)(cid:238)ª(cid:240)(cid:224)(cid:237)Ł(cid:247)(cid:229)(cid:237)(cid:224)ŁŒ(cid:238)ª(cid:224)(cid:242)(cid:238)
+n
+(cid:229) (cid:238)ª(cid:240)(cid:224)(cid:237)Ł(cid:247)(cid:229)(cid:237)(cid:224).
+ˇœ(cid:240)(cid:226)Ł (cid:239)(cid:238)(cid:228)ı(cid:238)(cid:228), (cid:237)(cid:229)(cid:238)ª(cid:240)(cid:224)(cid:237)Ł(cid:247)(cid:229)(cid:237)(cid:224). ˙(cid:224)(cid:239)(cid:238)(cid:247)(cid:226)(cid:224)(cid:236)(cid:229) æœæ æº(cid:229)(cid:228)(cid:237)(cid:224)(cid:242)(cid:224):
+¸(cid:229)(cid:236)(cid:224). (cid:192)Œ(cid:238) a,k ∈ N, (cid:224) p (cid:229) (cid:239)(cid:240)(cid:238)æ(cid:242)(cid:238), (cid:231)(cid:224) Œ(cid:238)(cid:229)(cid:242)(cid:238) ν (ak +1) = α, (cid:242)(cid:238)
+p
+pα ≤ (ap−1−1)pνp(k).
+˜(cid:238)Œ(cid:224)(cid:231)(cid:224)(cid:242)(cid:229)ºæ(cid:242)(cid:226)(cid:238). ˜(cid:224) (cid:231)(cid:224)(cid:239)Łł(cid:229)(cid:236) k = ptb, Œœ(cid:228)(cid:229)(cid:242)(cid:238) (b,p) = 1. ˛(cid:242) ¸(cid:229)(cid:236)(cid:224)(cid:242)(cid:224) (cid:231)(cid:224) (cid:239)(cid:238)(cid:226)Łł(cid:224)(cid:226)(cid:224)(cid:237)(cid:229) (cid:237)(cid:224)
+(cid:229)Œæ(cid:239)(cid:238)(cid:237)(cid:229)(cid:237)(cid:242)(cid:224)(cid:242)(cid:224) æº(cid:229)(cid:228)(cid:226)(cid:224), (cid:247)(cid:229) α = t + v (ab + 1). ˜(cid:224) (cid:238)(cid:242)Æ(cid:229)º(cid:229)(cid:230)Ł(cid:236), (cid:247)(cid:229) (cid:224)Œ(cid:238) d (cid:229) (cid:239)(cid:238)Œ(cid:224)(cid:231)(cid:224)(cid:242)(cid:229)º(cid:255)(cid:242) (cid:237)(cid:224) a
+p
+(cid:239)(cid:238) (cid:236)(cid:238)(cid:228)(cid:243)º p, (cid:242)(cid:238) d|2b Ł (cid:242)œØ Œ(cid:224)(cid:242)(cid:238) (p,2b) = 1 Ł(cid:236)(cid:224)(cid:236)(cid:229) ν (a2b−1) = ν (ad−1) = ν (ap−1−1). (cid:210)(cid:224)Œ(cid:224)
+p p p
+ν
+p
+(ab+1) ≤ ν
+p
+(ap−1−1) Ł (cid:231)(cid:237)(cid:224)(cid:247)Ł pνp(ab+1) ≤ ap−1−1, æ Œ(cid:238)(cid:229)(cid:242)(cid:238) º(cid:229)(cid:236)(cid:224)(cid:242)(cid:224) (cid:229) (cid:228)(cid:238)Œ(cid:224)(cid:231)(cid:224)(cid:237)(cid:224).
+
+˜(cid:224)(cid:228)(cid:238)(cid:239)(cid:243)æ(cid:237)(cid:229)(cid:236),(cid:247)(cid:229)(cid:236)(cid:237)(cid:238)(cid:230)(cid:229)æ(cid:242)(cid:226)(cid:238)(cid:242)(cid:238)(cid:238)(cid:242)(cid:239)(cid:240)(cid:238)æ(cid:242)Ł(cid:247)Łæº(cid:224),(cid:228)(cid:229)º(cid:255)øŁ(cid:237)(cid:255)Œ(cid:238)(cid:229)b ,(cid:229)Œ(cid:240)(cid:224)Ø(cid:237)(cid:238)Ł(cid:237)(cid:229)Œ(cid:224)p ,p ,...,p
+k 1 2 s
+æ(cid:224) (cid:226)æŁ(cid:247)ŒŁ (cid:242)(cid:224)ŒŁ(cid:226)(cid:224) (cid:239)(cid:240)(cid:238)æ(cid:242)Ł (cid:247)Łæº(cid:224). ˛(cid:242) º(cid:229)(cid:236)(cid:224)(cid:242)(cid:224) æº(cid:229)(cid:228)(cid:226)(cid:224), (cid:247)(cid:229)
+P(k)a k +1 = (cid:89) s p i vpi (P(k)ak+1) ≤ (cid:89) s (cid:0) P(k)pi−1−1 (cid:1) p v i pi (ai) ≤ a k P(k)i (cid:80) = s 1 pi
+i=1 i=1
+s
+a
+k
+−(cid:80)pi
+æœ(cid:238)(cid:242)(cid:226)(cid:229)(cid:242)(cid:237)(cid:238) P(k) i=1 ≤ a k . ˇ(cid:238)(cid:237)(cid:229)(cid:230)(cid:229) P(k) ≥ 2 (cid:231)(cid:224) (cid:226)æŁ(cid:247)ŒŁ (cid:228)(cid:238)æ(cid:242)(cid:224)(cid:242)œ(cid:247)(cid:237)(cid:238) ª(cid:238)º(cid:229)(cid:236)Ł k, (cid:239)(cid:238)æº(cid:229)(cid:228)(cid:237)(cid:238)(cid:242)(cid:238)
+(cid:229) (cid:237)(cid:229)(cid:226)œ(cid:231)(cid:236)(cid:238)(cid:230)(cid:237)(cid:238) (cid:231)(cid:224) (cid:228)(cid:238)æ(cid:242)(cid:224)(cid:242)œ(cid:247)(cid:237)(cid:238) ª(cid:238)º(cid:229)(cid:236)Ł æ(cid:242)(cid:238)Ø(cid:237)(cid:238)æ(cid:242)Ł (cid:237)(cid:224) a .
+k
+´(cid:242)(cid:238)(cid:240)Ł (cid:239)(cid:238)(cid:228)ı(cid:238)(cid:228), (cid:237)(cid:229)(cid:238)ª(cid:240)(cid:224)(cid:237)Ł(cid:247)(cid:229)(cid:237)(cid:224). ˜(cid:224) (cid:228)(cid:238)(cid:239)(cid:243)æ(cid:237)(cid:229)(cid:236), (cid:247)(cid:229) (cid:236)(cid:237)(cid:238)(cid:230)(cid:229)æ(cid:242)(cid:226)(cid:238)(cid:242)(cid:238) (cid:238)(cid:242) (cid:239)(cid:240)(cid:238)æ(cid:242)Ł (cid:247)Łæº(cid:224), (cid:228)(cid:229)º(cid:255)øŁ (cid:237)(cid:255)-
+Œ(cid:238)(cid:229) b , (cid:229) Œ(cid:240)(cid:224)Ø(cid:237)(cid:238) Ł (cid:237)(cid:229)Œ(cid:224) p ,p ,...,p æ(cid:224) (cid:226)æŁ(cid:247)ŒŁ (cid:242)(cid:224)ŒŁ(cid:226)(cid:224) (cid:239)(cid:240)(cid:238)æ(cid:242)Ł (cid:247)Łæº(cid:224). ˜(cid:224) (cid:238)(cid:231)(cid:237)(cid:224)(cid:247)Ł(cid:236) M =
+k 1 2 s
+max(p ,...,p ).
+1 s
+(cid:210)(cid:226)œ(cid:240)(cid:228)(cid:229)(cid:237)Ł(cid:229) 1. (cid:192)Œ(cid:238) p (cid:229) (cid:237)(cid:229)(cid:247)(cid:229)(cid:242)(cid:237)(cid:238) (cid:239)(cid:240)(cid:238)æ(cid:242)(cid:238) (cid:247)Łæº(cid:238) Ł p|x2n +1 (cid:231)(cid:224) (cid:237)(cid:255)Œ(cid:238)(cid:229) x ∈ N, (cid:242)(cid:238) 2n+1|p−1 Ł (cid:226)
+(cid:247)(cid:224)æ(cid:242)(cid:237)(cid:238)æ(cid:242) p > 2n.
+˜(cid:238)Œ(cid:224)(cid:231)(cid:224)(cid:242)(cid:229)ºæ(cid:242)(cid:226)(cid:238). (cid:192)Œ(cid:238) d (cid:229) (cid:239)(cid:238)Œ(cid:224)(cid:231)(cid:224)(cid:242)(cid:229)º(cid:255)(cid:242) (cid:237)(cid:224) x (cid:239)(cid:238) (cid:236)(cid:238)(cid:228)(cid:243)º p, (cid:242)(cid:238) d|2n+1, (cid:237)(cid:238) d (cid:237)(cid:229) (cid:228)(cid:229)ºŁ 2n, (cid:231)(cid:237)(cid:224)(cid:247)Ł
+d = 2n+1. ˛(cid:242) (cid:236)(cid:224)ºŒ(cid:224)(cid:242)(cid:224) (cid:242)(cid:229)(cid:238)(cid:240)(cid:229)(cid:236)(cid:224) (cid:237)(cid:224) (cid:212)(cid:229)(cid:240)(cid:236)(cid:224) Ł(cid:236)(cid:224)(cid:236)(cid:229), (cid:247)(cid:229) d (cid:228)(cid:229)ºŁ p−1, (cid:242).(cid:229). p ≡ 1 (mod 2n+1) Ł
+(cid:242)(cid:226)œ(cid:240)(cid:228)(cid:229)(cid:237)Ł(cid:229)(cid:242)(cid:238) (cid:229) (cid:228)(cid:238)Œ(cid:224)(cid:231)(cid:224)(cid:237)(cid:238).
+(cid:210)(cid:226)œ(cid:240)(cid:228)(cid:229)(cid:237)Ł(cid:229) 2. (cid:204)(cid:237)(cid:238)(cid:230)(cid:229)æ(cid:242)(cid:226)(cid:238)(cid:242)(cid:238) {ν (a ) : n ∈ N} (cid:229) (cid:238)ª(cid:240)(cid:224)(cid:237)Ł(cid:247)(cid:229)(cid:237)(cid:238).
+2 n
+˜(cid:238)Œ(cid:224)(cid:231)(cid:224)(cid:242)(cid:229)ºæ(cid:242)(cid:226)(cid:238). ˜(cid:224) (cid:238)(cid:242)Æ(cid:229)º(cid:229)(cid:230)Ł(cid:236), (cid:247)(cid:229) x2+1 (cid:237)(cid:229) (cid:229) æ(cid:242)(cid:229)(cid:239)(cid:229)(cid:237) (cid:237)(cid:224) 2 (cid:231)(cid:224) x > 1 (cid:239)(cid:238)(cid:240)(cid:224)(cid:228)Ł (cid:236)(cid:238)(cid:228)(cid:243)º 4. (cid:209)º(cid:229)(cid:228)(cid:238)-
+(cid:226)(cid:224)(cid:242)(cid:229)º(cid:237)(cid:238) (cid:224)Œ(cid:238) ν
+2
+(a
+n
+) > 0 (cid:231)(cid:224) (cid:237)(cid:255)Œ(cid:238)(cid:229) n ∈ N, (cid:242)(cid:238) æœø(cid:229)æ(cid:242)(cid:226)(cid:243)(cid:226)(cid:224) p ∈ {p
+1
+,...,p
+s
+}, Œ(cid:238)(cid:229)(cid:242)(cid:238) (cid:228)(cid:229)ºŁ P(n)an+1
+Ł (cid:238)(cid:242) (cid:210)(cid:226)œ(cid:240)(cid:228)(cid:229)(cid:237)Ł(cid:229) 1 æº(cid:229)(cid:228)(cid:226)(cid:224), (cid:247)(cid:229) M ≥ p > 2ν2(an), æ Œ(cid:238)(cid:229)(cid:242)(cid:238) (cid:242)(cid:226)œ(cid:240)(cid:228)(cid:229)(cid:237)Ł(cid:229)(cid:242)(cid:238) (cid:229) (cid:228)(cid:238)Œ(cid:224)(cid:231)(cid:224)(cid:237)(cid:238).
+˛æ(cid:242)(cid:224)(cid:226)(cid:224) (cid:228)(cid:224) (cid:238)(cid:242)Æ(cid:229)º(cid:229)(cid:230)Ł(cid:236), (cid:247)(cid:229) P(k)2ν2(ak)+1|P(k)a k+1 (cid:231)(cid:224) (cid:226)æ(cid:255)Œ(cid:238) k ∈ N, (cid:238)(cid:242)Œœ(cid:228)(cid:229)(cid:242)(cid:238) (cid:247)(cid:240)(cid:229)(cid:231) (cid:210)(cid:226)œ(cid:240)(cid:228)(cid:229)(cid:237)Ł(cid:229)
+2 æ(cid:226)(cid:229)(cid:230)(cid:228)(cid:224)(cid:236)(cid:229) (cid:231)(cid:224)(cid:228)(cid:224)(cid:247)(cid:224)(cid:242)(cid:224) (cid:228)(cid:238) æŁ(cid:242)(cid:243)(cid:224)(cid:246)Ł(cid:255)(cid:242)(cid:224) æ (cid:238)ª(cid:240)(cid:224)(cid:237)Ł(cid:247)(cid:229)(cid:237)(cid:224) (cid:240)(cid:229)(cid:228)Ł(cid:246)(cid:224).
+ˇœ(cid:240)(cid:226)Ł (cid:239)(cid:238)(cid:228)ı(cid:238)(cid:228), (cid:238)ª(cid:240)(cid:224)(cid:237)Ł(cid:247)(cid:229)(cid:237)(cid:224). ˝(cid:229)Œ(cid:224) M ∈ N (cid:229) (cid:242)(cid:224)Œ(cid:238)(cid:226)(cid:224), (cid:247)(cid:229) a ≤ M (cid:231)(cid:224) (cid:226)æ(cid:255)Œ(cid:238) k ∈ N. ˝(cid:229)Œ(cid:224) t (cid:229) (cid:242)(cid:224)Œ(cid:238)(cid:226)(cid:224),
+k
+(cid:247)(cid:229) P(t) > 0 Ł (cid:237)(cid:229)Œ(cid:224) N > max(P(t)+1,P(t)2+1,...,P(t)M +1) (cid:229) (cid:228)(cid:238)æ(cid:242)(cid:224)(cid:242)œ(cid:247)(cid:237)(cid:238) ª(cid:238)º(cid:255)(cid:236)(cid:238). (cid:210)(cid:238)ª(cid:224)(cid:226)(cid:224)
+s
+(cid:89)
+(cid:231)(cid:224) k = p2N +t Ł(cid:236)(cid:224)(cid:236)(cid:229), (cid:247)(cid:229)
+i
+i=1
+P(k)a k +1 ≡ P(t)a k +1 (mod pNpN ···pN).
+1 2 s
+(cid:209)º(cid:229)(cid:228)(cid:238)(cid:226)(cid:224)(cid:242)(cid:229)º(cid:237)(cid:238) ν pi (P(k)a k +1) ≤ N, (cid:239)(cid:238)(cid:237)(cid:229)(cid:230)(cid:229) a k ≤ M. ˇ(cid:238)æº(cid:229)(cid:228)(cid:237)(cid:238)(cid:242)(cid:238) (cid:238)(cid:231)(cid:237)(cid:224)(cid:247)(cid:224)(cid:226)(cid:224), (cid:247)(cid:229) P(k)a k +1 ≤
+s √
+(cid:89)
+pN < k, Œ(cid:238)(cid:229)(cid:242)(cid:238) (cid:226)(cid:238)(cid:228)Ł (cid:228)(cid:238) (cid:239)(cid:240)(cid:238)(cid:242)Ł(cid:226)(cid:238)(cid:240)(cid:229)(cid:247)Ł(cid:229) (cid:231)(cid:224) (cid:228)(cid:238)æ(cid:242)(cid:224)(cid:242)œ(cid:247)(cid:237)(cid:238) ª(cid:238)º(cid:255)(cid:236)(cid:238) N.
+i
+i=1
+´(cid:242)(cid:238)(cid:240)Ł (cid:239)(cid:238)(cid:228)ı(cid:238)(cid:228), (cid:238)ª(cid:240)(cid:224)(cid:237)Ł(cid:247)(cid:229)(cid:237)(cid:224). (cid:217)(cid:229) Ł(cid:231)(cid:239)(cid:238)º(cid:231)(cid:226)(cid:224)(cid:236)(cid:229) æ(cid:224)(cid:236)(cid:238), (cid:247)(cid:229) b ≤ ckε (cid:231)(cid:224) (cid:237)(cid:255)Œ(cid:238)(cid:229) c > 1, (cid:226)æ(cid:255)Œ(cid:238) ε > 0
+k
+Ł (cid:228)(cid:238)æ(cid:242)(cid:224)(cid:242)œ(cid:247)(cid:237)(cid:238) ª(cid:238)º(cid:229)(cid:236)Ł k Ł (cid:247)(cid:229) æœø(cid:229)æ(cid:242)(cid:226)(cid:243)(cid:226)(cid:224) Œ(cid:238)(cid:237)æ(cid:242)(cid:224)(cid:237)(cid:242)(cid:224) T, (cid:242)(cid:224)Œ(cid:224)(cid:226)(cid:224) (cid:247)(cid:229) (cid:226)æ(cid:255)Œ(cid:238) (cid:229)æ(cid:242)(cid:229)æ(cid:242)(cid:226)(cid:229)(cid:237)(cid:238) (cid:247)Łæº(cid:238) æ(cid:229)
+æ(cid:240)(cid:229)ø(cid:224) Œ(cid:224)(cid:242)(cid:238) (cid:247)º(cid:229)(cid:237) (cid:237)(cid:224) (cid:240)(cid:229)(cid:228)Ł(cid:246)(cid:224)(cid:242)(cid:224) (cid:237)(cid:229) (cid:239)(cid:238)(cid:226)(cid:229)(cid:247)(cid:229) (cid:238)(cid:242) T (cid:239)œ(cid:242)Ł. (cid:210)(cid:229)(cid:231)Ł æ(cid:224) Ł(cid:231)(cid:239)œº(cid:237)(cid:229)(cid:237)Ł, (cid:239)(cid:238)(cid:237)(cid:229)(cid:230)(cid:229) P(n)a +1
+æ(cid:224) Œ(cid:240)(cid:224)(cid:229)(cid:237) Æ(cid:240)(cid:238)Ø (cid:237)(cid:229)Œ(cid:238)(cid:237)æ(cid:242)(cid:224)(cid:237)(cid:242)(cid:237)Ł (cid:239)(cid:238)ºŁ(cid:237)(cid:238)(cid:236)Ł Ł (cid:226)æ(cid:229)ŒŁ (cid:238)(cid:242) (cid:242)(cid:255)ı (cid:239)(cid:240)Ł(cid:229)(cid:236)(cid:224) (cid:228)(cid:224)(cid:228)(cid:229)(cid:237)(cid:224) æ(cid:242)(cid:238)Ø(cid:237)(cid:238)æ(cid:242) Œ(cid:240)(cid:224)(cid:229)(cid:237) Æ(cid:240)(cid:238)Ø
+(cid:239)œ(cid:242)Ł; (cid:242)(cid:243)Œ a (cid:239)(cid:240)(cid:238)Æ(cid:255)ª(cid:226)(cid:224) (cid:238)ª(cid:240)(cid:224)(cid:237)Ł(cid:247)(cid:229)(cid:237)(cid:224)(cid:242)(cid:224) æœ(cid:226)Œ(cid:243)(cid:239)(cid:237)(cid:238)æ(cid:242) (cid:238)(cid:242) æ(cid:242)(cid:238)Ø(cid:237)(cid:238)æ(cid:242)Ł (cid:237)(cid:224) (cid:240)(cid:229)(cid:228)Ł(cid:246)(cid:224)(cid:242)(cid:224).
+˝(cid:229)Œ(cid:224) (cid:238)(cid:242)(cid:237)(cid:238)(cid:226)(cid:238) p ,...,p æ(cid:224) (cid:226)æŁ(cid:247)ŒŁ (cid:239)(cid:240)(cid:238)æ(cid:242)Ł (cid:247)Łæº(cid:224) æ ŁæŒ(cid:224)(cid:237)(cid:238)(cid:242)(cid:238) æ(cid:226)(cid:238)Øæ(cid:242)(cid:226)(cid:238). ˜(cid:224) (cid:231)(cid:224)(cid:239)Łł(cid:229)(cid:236) b =
+1 s k
+s
+(cid:89)
+pα i i (cid:231)(cid:224) α i ≥ 0. ˇ(cid:238)(cid:237)(cid:229)(cid:230)(cid:229) p i ≥ 2 (cid:231)(cid:224) (cid:226)æ(cid:255)Œ(cid:238) i Ł b k < ckε = 2kεlog 2 c (cid:231)(cid:224) ª(cid:238)º(cid:229)(cid:236)Ł k, (cid:226)æ(cid:255)Œ(cid:238) α i
+i=1
+(cid:237)(cid:229) (cid:237)(cid:224)(cid:228)(cid:226)Łł(cid:224)(cid:226)(cid:224) kεlog c. (cid:210)(cid:224)Œ(cid:224) Æ(cid:240)(cid:238)(cid:255)(cid:242) (cid:240)(cid:224)(cid:231)ºŁ(cid:247)(cid:237)Ł æ(cid:242)(cid:238)Ø(cid:237)(cid:238)æ(cid:242)Ł Ł(cid:231)(cid:236)(cid:229)(cid:230)(cid:228)(cid:243) b ,...,b (cid:237)(cid:229) (cid:237)(cid:224)(cid:228)(cid:236)Ł(cid:237)(cid:224)(cid:226)(cid:224)
+2 1 m
+
+m
+(mεlog c)s. ˛(cid:242) (cid:228)(cid:240)(cid:243)ª(cid:224) æ(cid:242)(cid:240)(cid:224)(cid:237)(cid:224), (cid:242)(cid:238)(cid:231)Ł Æ(cid:240)(cid:238)Ø (cid:229) (cid:239)(cid:238)(cid:237)(cid:229) . ˛(cid:242)(cid:242)(cid:243)Œ m1−sε ≤ T(log c)s. (cid:192)Œ(cid:238) Ł(cid:231)Æ(cid:229)(cid:240)(cid:229)(cid:236)
+2 T 2
+1
+ε < , (cid:242)(cid:238) (cid:239)(cid:238)æº(cid:229)(cid:228)(cid:237)(cid:238)(cid:242)(cid:238) (cid:229) (cid:237)(cid:229)(cid:226)(cid:255)(cid:240)(cid:237)(cid:238) (cid:231)(cid:224) ª(cid:238)º(cid:229)(cid:236)Ł m, (cid:239)(cid:240)(cid:238)(cid:242)Ł(cid:226)(cid:238)(cid:240)(cid:229)(cid:247)Ł(cid:229).
+s
+˛(cid:246)(cid:229)(cid:237)(cid:255)(cid:226)(cid:224)(cid:237)(cid:229). (7 (cid:242)(cid:238)(cid:247)ŒŁ) 3 (cid:242). (cid:231)(cid:224) æº(cid:243)(cid:247)(cid:224)(cid:255) (cid:237)(cid:224) (cid:237)(cid:229)(cid:238)ª(cid:240)(cid:224)(cid:237)Ł(cid:247)(cid:229)(cid:237)(cid:224) (cid:240)(cid:229)(cid:228)Ł(cid:246)(cid:224): 2 (cid:242). (cid:231)(cid:224) º(cid:229)(cid:236)(cid:224)(cid:242)(cid:224) Ł 1 (cid:242). (cid:231)(cid:224)
+(cid:228)(cid:238)(cid:226)œ(cid:240)ł(cid:226)(cid:224)(cid:237)(cid:229) (cid:247)(cid:240)(cid:229)(cid:231) (cid:237)(cid:229)(cid:255) ŁºŁ 2 (cid:242). (cid:231)(cid:224) (cid:228)(cid:238)Œ(cid:224)(cid:231)(cid:226)(cid:224)(cid:237)(cid:229), (cid:247)(cid:229) {ν (a ) : n ∈ N} (cid:229) (cid:238)ª(cid:240)(cid:224)(cid:237)Ł(cid:247)(cid:229)(cid:237)(cid:238) Ł 1 (cid:242). (cid:231)(cid:224)
+2 n
+(cid:228)(cid:238)(cid:226)œ(cid:240)ł(cid:226)(cid:224)(cid:237)(cid:229) (cid:247)(cid:240)(cid:229)(cid:231) (cid:242)(cid:238)(cid:226)(cid:224); 3 (cid:242). (cid:231)(cid:224) æº(cid:243)(cid:247)(cid:224)(cid:255) (cid:237)(cid:224) (cid:238)ª(cid:240)(cid:224)(cid:237)Ł(cid:247)(cid:229)(cid:237)(cid:224) (cid:240)(cid:229)(cid:228)Ł(cid:246)(cid:224); 1 (cid:242). (cid:239)(cid:240)Ł Ł(cid:231)(cid:246)(cid:255)º(cid:238) (cid:231)(cid:224)(cid:226)œ(cid:240)ł(cid:229)(cid:237)(cid:238)
+(cid:240)(cid:229)ł(cid:229)(cid:237)Ł(cid:229).
+˙(cid:224)(cid:228)(cid:224)(cid:247)Ł(cid:242)(cid:229) æ(cid:224) (cid:239)(cid:240)(cid:229)(cid:228)º(cid:238)(cid:230)(cid:229)(cid:237)Ł (cid:238)(cid:242): 1 (cid:21) (cid:204)Ł(cid:240)(cid:238)æº(cid:224)(cid:226) (cid:204)(cid:224)(cid:240)Ł(cid:237)(cid:238)(cid:226); 2 (cid:21) ¨ºŁ(cid:255)æ ˝(cid:238)(cid:236)(cid:224)(cid:237); 3 (cid:21) ˚(cid:240)Łæ(cid:242)Ł(cid:255)(cid:237)
+´(cid:224)æŁº(cid:229)(cid:226).
+
+Министерство на образованието и науката
+Съюз на математиците в България
+74. Национална Олимпиада по математика
+Втори ден (6.4.2025), 9-12 клас
+Условия, кратки решения и критерии за оценяване
+Задача 4. Даден е остроъгълен триъгълник ABC, AB < AC, с височина AD (D ∈ BC) и
+ортоцентърH.ОкръжностпрезточкиB иD седопирадоправатаAB ипресичаописаната
+около △ABC окръжност за втори път в точка Q. Описаната около △QDH окръжност
+пресича правата BC за втори път в точка P. Да се докаже, че ако M е среда на BC, то
+правите MH и AP са перпендикулярни.
+Решение.Първиподход.НекаQDпресичаописанатаоколо△ABC окръжност,даяозначим
+с k, в т. F, а T е среда на DF. От ∡BQD = β, не е трудно да се види, че F е симетрична
+на A относно симетралата на BC, която в случая е правата MT. Нека L е симетрична
+на H относно BC, L ∈ k. От △MTD ∼ △QDL =⇒ DT = DL =⇒ FT = HD =⇒
+TM DQ TM DQ
+△TMF ∼ △DQH (∡FTM = ∡HDQ от успоредност). От тук следва ∡TMF = ∡HQD.
+Сега лесно се вижда, че PH ⊥ AM, т.е. H е ортоцентър на △PMA и твърдението следва.
+Втори подход. Нека лъчът MH→ пресича описаната около △ABC окръжност в точка X
+и нека AX ∩BC = P′. Добре известно е, че ∡MXA = 90◦, откъдето следва, че точките
+
+P′,X,D и H лежат на една окръжност. Нека тази окръжност пресича описаната около
+△ABC окръжностзавторипътвточкатаQ′.ПонежеAP′ ⊥ MH едостатъчнодадокажем,
+че Q′ ≡ Q. От друга страна от (P′Q′DX) имаме, че ∡P′XQ′ = ∡P′DQ′, а от (AXBQ′)
+следва, че ∡ABQ′ = 180◦−∡P′XQ′ = 180◦−∡BDQ′, т.е правата AB допира окръжността,
+описана около △BDQ′ и в частност Q′ ≡ Q.
+Оценяване. (7 точки) Първи подход. 1 т. за въвеждане на точки F,T и L; 2 т. за доказване
+△MTD ∼ △QDL; 3 т. за △TMF ∼ DQH; 1 т. за довършване.
+Втори подход. 1 т. за ∡MXA = 90◦; 3 т. за предефиниране на задачата и свеждането и` до
+Q′ ≡ Q; 3 т. за довършване.
+Задача 5. Казваме, че естественото число m е свободно от квадрати, ако не съществува
+естествено число d > 1, за което d2 дели m. Нека n е естествено число. Да се докаже, че
+съществуваестествено числоa,закоетомножеството{a+1,a+2,...,a+n}съдържаточно
+(cid:106)n(cid:107)
+числа, свободни от квадрати.
+4
+Решение. Заx ∈ N некаf(x)еброятчисла,свободниотквадрати,винтервала[x+1,x+n].
+0
+(cid:106)n(cid:107)
+Първо ще докажем, че за всяко естествено число n е в сила неравенството f(0) > .
+4
+Наистина, ако едно число m ≤ n не е свободно от квадрати, то съществува естествено
+число d ≥ 2, за което d2 дели m. Следователно броят на числата, по-малки от n, които не
+
+са свободни от квадрати, е най-много
+∞ ∞ (cid:32) ∞ (cid:33) (cid:32) ∞ (cid:33)
+(cid:88)(cid:106) n (cid:107) (cid:88) n 1 (cid:88) 1 1 (cid:88) 1 3n
+≤ ≤ n + < n + = .
+d2 d2 4 d2 4 d(d−1) 4
+d=2 d=2 d=3 d=3
+3n n
+Следователно f(0) > n− = .
+4 4
+Сега ще докажем, че съществува m ∈ N, за което f(m) = 0. Нека p ,p ,...,p са различ-
+1 2 n
+нипростичисла. Тогаваот Китайскататеоремазаостатъците съществува естествено число
+m, за което m+i ≡ 0 (mod p2) за i = 1,2,...,n. Така за този избор на m имаме f(m) = 0.
+i
+Остава да отбележим, че f(x+1)−f(x) ∈ {−1,0,1} за всяко x ∈ N . Оттук тъй като
+0
+(cid:106)n(cid:107) (cid:106)n(cid:107) (cid:106)n(cid:107)
+f(0) > и f(m) = 0 < , то съществува a ∈ {1,2,...,m−1}, за което f(a) = .
+4 4 4
+Оценяване. (7 точки) 1 т. за |f(n+1)−f(n)| ≤ 1; 2 т. за f(0) > n/4; 2 т. за намиране на
+m, за което f(m) = 0; 2 т. за довършване.
+Задача 6. Нека X ,X ,...,X са n ≥ 2 дадени точки в равнината и r > 0 е реално
+0 1 n−1
+число. Ани и Боби играят следната игра: Ани построява свързан граф с върхове в точките
+X ,X ,...,X , т.е. свързва някои от точките с ребра, така че от всяка от дадените точки
+0 1 n−1
+да може да се стигне до всяка друга, движейки се по ребра. След това Ани записва във
+всеки връх X неотрицателно реално число r , i = 0,1,...,n−1, така че
+(cid:80)n−1r
+= 1. Боби
+i i i=0 i
+избира различни върхове X = X ,X ,...,X така че X и X са свързани с ребро за
+i0 0 i1 i
+k
+ij ij+1
+k
+1 (cid:88)
+всяко j = 0,1,...,k−1. Боби печели, ако r ≥ r; в противен случай печели Ани.
+k+1
+ij
+j=0
+В зависимост от n, определете най-голямото възможно r, за което Боби има печеливша
+стратегия.
+(cid:40)
+4 , ако n е нечетно,
+Отговор. r = (n+1)2
+4 , ако n е четно.
+n(n+2)
+Решение.Първиподход(ИляБогданов).АкоАнизамениграфаснякоеотнеговитепокрива-
+щидървета,товащенамалиопциитенаБобизаизборнапътищавграфа,затоваприемаме,
+че тя построява дърво с корен в X върху дадените точки.
+0
+Сега, да приемем че тя е построила дърво и е присвоила числа r на върховете съгласно
+i
+изискванията. Ще покажем как да променим тези числа така, че задачата на Боби да не
+стане по-лесна.
+Нека разгледаме всяко листо X , при i > 0, и му присвоим сумата от числата по пътя
+i
+от X до X ; като заменим всички останали числа с нули. Тогава сумата на Боби по всеки
+0 i
+път с начало X не се увеличава. От друга страна, сумата на числата не намалява. Ако е
+0
+нужно, после Ани намалява числата при листата, така че да изпълни условията за сумата.
+Задачата вече се поставя така: Нека е дадено дърво с n върха и корен в X . Нека
+0
+L ,...,L са листата на това дърво, различни от корена, и нека d е броят на върхове-
+1 k i
+те по пътя от X до L . Трябва да изберем неотрицателни числа s ,...,s , чиято сума е 1,
+0 i 1 k
+така че да минимизираме величината
+s
+i
+r = max .
+1≤i≤k d i
+
+Нека d = max d . Без да губим общност, ще считаме, че d = d . Тогава пътят от X до
+i i 1 0
+L съдържа d−1 върха, различни от тези на L , така че k ≤ n−(d−1). Следователно
+1 i
+k k
+1 (cid:88) s i 1 (cid:88) 1 1 1
+r ≥ ≥ s = ≥ ≥ .
+k d dk
+i
+dk d(n−d+1)
+(cid:4)n+1(cid:5)
+·
+(cid:6)n+1(cid:7)
+i=1 i i=1 2 2
+Равенството се достига, ако d =
+(cid:6)n+1(cid:7)
+, и графът се състои от път с дължина d−1, като
+2
+единият му край е X , а към другия край са свързани n−d+1 =
+(cid:4)n+1(cid:5)
+листа. На всяко
+0 2
+от тези листа трябва да се присвои числото 1/(n−d+1), а на всички останали върхове да
+се присвоят нули.
+Втори подход. Ани построява свързан граф G върху върховете V = {X ,X ,...,X }.
+0 1 n−1
+Обърнете внимание, че премахването на всяко ребро, което оставя G свързан, намалява
+опциите на Боби за избор на път. Следователно, приемаме, че Ани изгражда покриващо
+дърво върху V. Нека означим с T едно такова дърво върху V, с корен в v = X . Нека
+0 0
+(cid:80)
+f : V → [0,1] e функция, която удовлетворява f(v) = 1. За всеки път P в T да
+v∈V
+означим:
+1 (cid:88)
+A(f,P) = f(v).
+|V(P)|
+v∈V(P)
+Нека u бъде връх от V, който не е листо в T, и u′ бъде листо на T, такова че u да лежи
+на пътя от v до u′. Дефинираме f′ : V → [0,1] като функция, която съвпада с f във
+0
+всички върхове, освен в u и u′, като f′(u) = 0 и f′(u′) = f(u′)+f(u). Обърнете внимание,
+че A(f′,P) ≤ A(f,P) за всеки път P. Това означава, че Ани може да разглежда само тези
+функции f, които приемат стойност 0 във върховете, които не са листа. По същия начин
+може да приемем, че f(v ) = 0.
+0
+НекаL(T)бъдемножествотоотлистатанаT (приемаме,чеv ∈/ L(T)).Завсякоu ∈ L(T)
+0
+да означим с p(u) броя на върховете на пътя от v до u. Трябва да минимизираме
+0
+(cid:26) (cid:27)
+f(u)
+M(f,T) := max : u ∈ L(T) (1)
+p(u)
+(cid:80)
+по всички f : L(V) → [0,1] с условието f(u) = 1.
+u
+Тези функции формират затворено множество в компактното пространство [0,1]L(V),
+така че те формират компактно множество. Тъй като M зависи непрекъснато от f, мини-
+мумът се достига при някоя функция f. Ако
+f(u1)
+>
+f(u2)
+за някои u ,u ∈ L(T), можем
+p(u1) p(u2) 1 2
+да построим функция f така, че M(f ,T) < M(f,T), като намалим f(u ) с подходяща
+0 0 1
+стойност и увеличим f(u ) със същата стойност. Следователно, за функцията f, която ми-
+2
+f(u)
+нимизира(1),стойността трябвадаееднаисъщазавсичкиu ∈ L(T).Такаполучаваме:
+p(u)
+(cid:40) p(u)
+ако u ∈ L(T)
+f(u) = (cid:80) v∈L(T) p(v)
+0 иначе,
+което дава
+1
+m(T) := minM(f,T) = . (2)
+(cid:80)
+f p(v)
+v∈L(T)
+
+Остава да изчислим m := minm(T), тоест да посочим покриващо дърво T върху V, с
+T
+(cid:88)
+корен в v , за което p(v) да е максимално възможно. Нека T минимизира (2), и нека
+0
+v∈L(T)
+P := v v ...v бъде най-дългият път в T. Ако някой връх от v ,v ,...,v , да кажем v ,
+0 2 k 0 1 k−2 s
+е инцидентен с ребро, което не принадлежи на P, можем да вземем поддървото, с корен в
+v , което не съдържа ребра от P, и да го преместим в v (вижте фигурата).
+s k−1
+Резултатът е дърво T′ с m(T′) < m(T), което противоречи на избора на T. Следователно,
+deg v = 1 и deg (v ) = 2, за i = 1,2,...,k −2. Тъй като P е най-дългият път, то v е
+T 0 T i k−1
+свързан с всички останали върхове от V, които не са в {v ,...,v }. От тук:
+0 k−1
+1 1
+m(T) = = .
+(cid:80)
+p(v) (n−k)(k+1)
+v∈L(T)
+Лесно се вижда, че m(T) достига своя минимум при k =
+(cid:4)n+1(cid:5)
+и тази стойност е
+2
+(cid:40)
+4 ако n е нечетно,
+m(n) = (n+1)2
+4 ако n е четно.
+n(n+2)
+Взаключение,най-малкатавъзможнастойностнаM(f,T),коятоАниможедапостигне,
+е m(n). Следователно, Боби печели, тогава и само тогава, когато r ≤ m(n), а най-голямото
+такова r е r = m(n).
+Оценяване. (7 точки) 1 т. за показване, че построеният граф трябва да е дърво; 1 т.
+за доказване, че ненулевите числа трябва да са в листата на дървото; 2 т. за доказване,
+че дървото, минимизиращо максималната усреднена величина, е път, в който последният
+връх е свързан с всички останали листа; 3 т. за довършване.
+Задачите са предложени от:
+4 – Александър Иванов; 5 – Кристиян Василев; 6 – Драгомир Грозев.

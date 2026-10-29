@@ -1,0 +1,101 @@
+{
+  "pdf": "OLI-3-Национален кръг-1997-9-12 кл-sol",
+  "problems": [
+    {
+      "num": 1,
+      "year": 1997,
+      "grade": null,
+      "round": "nacionalen",
+      "statement": "Consider the polynomial\n\n$$P_n(x) = \\binom{n}{2} + \\binom{n}{5}x + \\binom{n}{8}x^2 + \\cdots + \\binom{n}{3k+2}x^k,$$\n\nwhere $n \\geq 2$ is a natural number and $k = \\left[\\frac{n-2}{3}\\right]$.\n\n(a) Prove that $P_{n+3}(x) = 3P_{n+2}(x) - 3P_{n+1}(x) + (x+1)P_n(x)$.\n(b) Find all integer numbers $a$ such that $P_n(a^3)$ is divisible by $3^{\\lfloor\\frac{n-1}{2}\\rfloor}$ for all $n \\geq 2$.",
+      "solution": null,
+      "answer": null,
+      "page": 1,
+      "pdf": "OLI-3-Национален кръг-1997-9-12 кл-sol",
+      "chunk": 1,
+      "grade_range": [
+        9,
+        12
+      ]
+    },
+    {
+      "num": 2,
+      "year": 1997,
+      "grade": null,
+      "round": "nacionalen",
+      "statement": "Let $M$ be the centroid of $\\triangle ABC$. Prove the inequality\n\n$$\\sin\\angle CAM + \\sin\\angle CBM \\leq \\frac{2}{\\sqrt{3}}$$\n\n(a) if the circumscribed circle of $\\triangle AMC$ is tangent to the line $AB$;\n(b) for any $\\triangle ABC$.",
+      "solution": null,
+      "answer": null,
+      "page": 1,
+      "pdf": "OLI-3-Национален кръг-1997-9-12 кл-sol",
+      "chunk": 1,
+      "grade_range": [
+        9,
+        12
+      ]
+    },
+    {
+      "num": 3,
+      "year": 1997,
+      "grade": null,
+      "round": "nacionalen",
+      "statement": "Let $n$ and $m$ be natural numbers such that $m+i = a_i b_i^2$ for $i = 1, 2, \\ldots, n$, where $a_i$ and $b_i$ are natural numbers and $a_i$ is not divisible by a square of a prime number. Find all $n$ for which there exists an $m$ such that $a_1 + a_2 + \\cdots + a_n = 12$.",
+      "solution": null,
+      "answer": null,
+      "page": 1,
+      "pdf": "OLI-3-Национален кръг-1997-9-12 кл-sol",
+      "chunk": 1,
+      "grade_range": [
+        9,
+        12
+      ]
+    },
+    {
+      "num": 4,
+      "year": 1997,
+      "grade": null,
+      "round": "nacionalen",
+      "statement": "Let $a$, $b$ and $c$ be positive numbers such that $abc = 1$. Prove the inequality\n\n$$\\frac{1}{1+a+b} + \\frac{1}{1+b+c} + \\frac{1}{1+c+a} \\leq \\frac{1}{2+a} + \\frac{1}{2+b} + \\frac{1}{2+c}.$$",
+      "solution": null,
+      "answer": null,
+      "page": 1,
+      "pdf": "OLI-3-Национален кръг-1997-9-12 кл-sol",
+      "chunk": 1,
+      "grade_range": [
+        9,
+        12
+      ]
+    },
+    {
+      "num": 5,
+      "year": 1997,
+      "grade": null,
+      "round": "nacionalen",
+      "statement": "Given a $\\triangle ABC$ with bisectors $BM$ and $CN$ ($M \\in AC$, $N \\in AB$). The ray $\\overrightarrow{MN}$ intersects the circumcircle of $\\triangle ABC$ at point $D$. Prove that\n\n$$\\frac{1}{BD} = \\frac{1}{AD} + \\frac{1}{CD}.$$",
+      "solution": null,
+      "answer": null,
+      "page": 1,
+      "pdf": "OLI-3-Национален кръг-1997-9-12 кл-sol",
+      "chunk": 1,
+      "grade_range": [
+        9,
+        12
+      ]
+    },
+    {
+      "num": 6,
+      "year": 1997,
+      "grade": null,
+      "round": "nacionalen",
+      "statement": "Let $X$ be a set of $n+1$ elements, $n \\geq 2$. Ordered $n$-tuples $(a_1, a_2, \\ldots, a_n)$ and $(b_1, b_2, \\ldots, b_n)$ formed from distinct elements of $X$ are called 'disjoint' if distinct indices $i$ and $j$ exist such that $a_i = b_j$. Find the maximal number of $n$-tuples any two of which are 'disjoint'.",
+      "solution": null,
+      "answer": null,
+      "page": 1,
+      "pdf": "OLI-3-Национален кръг-1997-9-12 кл-sol",
+      "chunk": 1,
+      "grade_range": [
+        9,
+        12
+      ]
+    }
+  ]
+}

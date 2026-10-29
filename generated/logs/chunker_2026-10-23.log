@@ -1,0 +1,1305 @@
+2026-10-23 18:12:44,122 [PDF_CHUNKER] INFO Заредени 164 STEPS точки
+2026-10-23 18:12:44,123 [PDF_CHUNKER] INFO Classify model: openai/gpt-oss-120b ($0.0005/call)
+2026-10-23 18:12:44,153 [PDF_CHUNKER] INFO Намерени 236 PDF-а
+2026-10-23 18:12:44,153 [PDF_CHUNKER] INFO Нов ден — рестарт на бюджета
+2026-10-23 18:12:44,158 [PDF_CHUNKER] INFO 
+[1/236] BMC_2003-2006.pdf
+2026-10-23 18:12:44,159 [PDF_CHUNKER] INFO 
+═══ BMC_2003-2006 ═══
+2026-10-23 18:12:45,030 [PDF_CHUNKER] INFO [BMC_2003-2006.pdf] pypdf: 220p, 44 chars
+2026-10-23 18:12:45,031 [PDF_CHUNKER] INFO [BMC_2003-2006.pdf] 44 chars < 50 → OCR fallback
+2026-10-23 18:12:45,057 [PDF_CHUNKER] INFO [BMC_2003-2006.pdf] OCR cache: 220p
+2026-10-23 18:12:45,057 [PDF_CHUNKER] INFO [BMC_2003-2006.pdf] OCR: 446815 chars (vs Python: 44)
+2026-10-23 18:12:45,058 [PDF_CHUNKER] INFO [BMC_2003-2006] 73 chunks, 292 pages
+2026-10-23 18:12:45,256 [PDF_CHUNKER] INFO [BMC_2003-2006] 653 existing problems
+2026-10-23 18:12:45,257 [PDF_CHUNKER] INFO [BMC_2003-2006] chunk 1 skip
+2026-10-23 18:12:45,257 [PDF_CHUNKER] INFO [BMC_2003-2006] chunk 2 skip
+2026-10-23 18:12:45,258 [PDF_CHUNKER] INFO [BMC_2003-2006] chunk 3 skip
+2026-10-23 18:12:45,258 [PDF_CHUNKER] INFO [BMC_2003-2006] chunk 4 skip
+2026-10-23 18:12:45,259 [PDF_CHUNKER] INFO [BMC_2003-2006] chunk 5 skip
+2026-10-23 18:12:45,259 [PDF_CHUNKER] INFO [BMC_2003-2006] chunk 6 skip
+2026-10-23 18:12:45,259 [PDF_CHUNKER] INFO [BMC_2003-2006] chunk 7 skip
+2026-10-23 18:12:45,259 [PDF_CHUNKER] INFO [BMC_2003-2006] chunk 8 skip
+2026-10-23 18:12:45,261 [PDF_CHUNKER] INFO [BMC_2003-2006] chunk 9 skip
+2026-10-23 18:12:45,261 [PDF_CHUNKER] INFO [BMC_2003-2006] chunk 10 skip
+2026-10-23 18:12:45,261 [PDF_CHUNKER] INFO [BMC_2003-2006] chunk 11 skip
+2026-10-23 18:12:45,262 [PDF_CHUNKER] INFO [BMC_2003-2006] chunk 12 skip
+2026-10-23 18:12:45,262 [PDF_CHUNKER] INFO [BMC_2003-2006] chunk 13 skip
+2026-10-23 18:12:45,263 [PDF_CHUNKER] INFO [BMC_2003-2006] chunk 14 skip
+2026-10-23 18:12:45,263 [PDF_CHUNKER] INFO [BMC_2003-2006] chunk 15 skip
+2026-10-23 18:12:45,264 [PDF_CHUNKER] INFO [BMC_2003-2006] chunk 16 skip
+2026-10-23 18:12:45,264 [PDF_CHUNKER] INFO [BMC_2003-2006] chunk 17 skip
+2026-10-23 18:12:45,264 [PDF_CHUNKER] INFO [BMC_2003-2006] chunk 18 skip
+2026-10-23 18:12:45,265 [PDF_CHUNKER] INFO [BMC_2003-2006] chunk 19 skip
+2026-10-23 18:12:45,265 [PDF_CHUNKER] INFO [BMC_2003-2006] chunk 20 skip
+2026-10-23 18:12:45,266 [PDF_CHUNKER] INFO [BMC_2003-2006] chunk 21 skip
+2026-10-23 18:12:45,267 [PDF_CHUNKER] INFO [BMC_2003-2006] chunk 22 skip
+2026-10-23 18:12:45,267 [PDF_CHUNKER] INFO [BMC_2003-2006] chunk 23 skip
+2026-10-23 18:12:45,268 [PDF_CHUNKER] INFO [BMC_2003-2006] chunk 24 skip
+2026-10-23 18:12:45,269 [PDF_CHUNKER] INFO [BMC_2003-2006] chunk 25 skip
+2026-10-23 18:12:45,269 [PDF_CHUNKER] INFO [BMC_2003-2006] chunk 26 skip
+2026-10-23 18:12:45,270 [PDF_CHUNKER] INFO [BMC_2003-2006] chunk 27 skip
+2026-10-23 18:12:45,270 [PDF_CHUNKER] INFO [BMC_2003-2006] chunk 28 skip
+2026-10-23 18:12:45,271 [PDF_CHUNKER] INFO [BMC_2003-2006] chunk 29 skip
+2026-10-23 18:12:45,271 [PDF_CHUNKER] INFO [BMC_2003-2006] chunk 30 skip
+2026-10-23 18:12:45,272 [PDF_CHUNKER] INFO [BMC_2003-2006] chunk 31 skip
+2026-10-23 18:12:45,272 [PDF_CHUNKER] INFO [BMC_2003-2006] chunk 32 skip
+2026-10-23 18:12:45,272 [PDF_CHUNKER] INFO [BMC_2003-2006] chunk 33 skip
+2026-10-23 18:12:45,273 [PDF_CHUNKER] INFO [BMC_2003-2006] chunk 34 skip
+2026-10-23 18:12:45,273 [PDF_CHUNKER] INFO [BMC_2003-2006] chunk 35 skip
+2026-10-23 18:12:45,275 [PDF_CHUNKER] INFO [BMC_2003-2006] chunk 36 skip
+2026-10-23 18:12:45,275 [PDF_CHUNKER] INFO [BMC_2003-2006] chunk 37 skip
+2026-10-23 18:12:45,275 [PDF_CHUNKER] INFO [BMC_2003-2006] chunk 38 skip
+2026-10-23 18:12:45,276 [PDF_CHUNKER] INFO [BMC_2003-2006] chunk 39 skip
+2026-10-23 18:12:45,277 [PDF_CHUNKER] INFO [BMC_2003-2006] chunk 40 skip
+2026-10-23 18:12:45,277 [PDF_CHUNKER] INFO [BMC_2003-2006] chunk 41 skip
+2026-10-23 18:12:45,278 [PDF_CHUNKER] INFO [BMC_2003-2006] chunk 42 skip
+2026-10-23 18:12:45,278 [PDF_CHUNKER] INFO [BMC_2003-2006] chunk 43 skip
+2026-10-23 18:12:45,279 [PDF_CHUNKER] INFO [BMC_2003-2006] chunk 44 skip
+2026-10-23 18:12:45,280 [PDF_CHUNKER] INFO [BMC_2003-2006] chunk 45 skip
+2026-10-23 18:12:45,281 [PDF_CHUNKER] INFO [BMC_2003-2006] chunk 46 skip
+2026-10-23 18:12:45,281 [PDF_CHUNKER] INFO [BMC_2003-2006] chunk 47 skip
+2026-10-23 18:12:45,281 [PDF_CHUNKER] INFO [BMC_2003-2006] chunk 48 skip
+2026-10-23 18:12:45,281 [PDF_CHUNKER] INFO [BMC_2003-2006] chunk 49 skip
+2026-10-23 18:12:45,282 [PDF_CHUNKER] INFO [BMC_2003-2006] chunk 50 skip
+2026-10-23 18:13:15,287 [PDF_CHUNKER] INFO [BMC_2003-2006-151] extract... 30s
+2026-10-23 18:13:39,938 [PDF_CHUNKER] INFO [BMC_2003-2006] chunk 151-154: 9 problems (54s)
+2026-10-23 18:14:09,982 [PDF_CHUNKER] INFO [BMC_2003-2006-154] extract... 30s
+2026-10-23 18:14:29,444 [PDF_CHUNKER] INFO [BMC_2003-2006] chunk 154-157: 6 problems (49s)
+2026-10-23 18:14:59,474 [PDF_CHUNKER] INFO [BMC_2003-2006-157] extract... 30s
+2026-10-23 18:15:21,569 [PDF_CHUNKER] INFO [BMC_2003-2006] chunk 157-160: 6 problems (52s)
+2026-10-23 18:15:51,615 [PDF_CHUNKER] INFO [BMC_2003-2006-160] extract... 30s
+2026-10-23 18:16:11,663 [PDF_CHUNKER] INFO [BMC_2003-2006] chunk 160-163: 8 problems (50s)
+2026-10-23 18:16:39,998 [PDF_CHUNKER] INFO Заредени 164 STEPS точки
+2026-10-23 18:16:39,999 [PDF_CHUNKER] INFO Classify model: openai/gpt-oss-120b ($0.0005/call)
+2026-10-23 18:16:40,032 [PDF_CHUNKER] INFO Намерени 236 PDF-а
+2026-10-23 18:16:40,033 [PDF_CHUNKER] INFO Филтър 'OLI-2': 127 PDF-а
+2026-10-23 18:16:40,034 [PDF_CHUNKER] INFO 
+[1/127] OLI-2-Областен кръг-1995-10 кл-probs.pdf
+2026-10-23 18:16:40,034 [PDF_CHUNKER] INFO 
+═══ OLI-2-Областен кръг-1995-10 кл-probs ═══
+2026-10-23 18:16:40,078 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1995-10 кл-probs.pdf] pymupdf: 1p, 29 chars
+2026-10-23 18:16:40,079 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1995-10 кл-probs.pdf] 29 chars < 50 → OCR fallback
+2026-10-23 18:16:40,101 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1995-10 кл-probs.pdf] OCR cache: 1p
+2026-10-23 18:16:40,102 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1995-10 кл-probs.pdf] OCR: 1724 chars (vs Python: 29)
+2026-10-23 18:16:40,103 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1995-10 кл-probs] 1 chunks, 1 pages
+2026-10-23 18:16:58,189 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1995-10 кл-probs] chunk 1-1: 6 problems (18s)
+2026-10-23 18:16:58,202 [PDF_CHUNKER] INFO ✓ [OLI-2-Областен кръг-1995-10 кл-probs] 6 problems (deduped) → C:\Users\denis\Downloads\Материали Олимпиада МАТ\generated\cache\extracted\OLI-2-Областен кръг-1995-10 кл-probs\all_problems.json
+2026-10-23 18:16:58,203 [PDF_CHUNKER] INFO 
+[2/127] OLI-2-Областен кръг-1995-10 кл-sol.pdf
+2026-10-23 18:16:58,204 [PDF_CHUNKER] INFO 
+═══ OLI-2-Областен кръг-1995-10 кл-sol ═══
+2026-10-23 18:16:58,256 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1995-10 кл-sol.pdf] pymupdf: 3p, 87 chars
+2026-10-23 18:16:58,256 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1995-10 кл-sol] 1 chunks, 3 pages
+2026-10-23 18:17:02,576 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1995-10 кл-sol] chunk 1-3: 0 problems (4s)
+2026-10-23 18:17:02,656 [PDF_CHUNKER] INFO ✓ [OLI-2-Областен кръг-1995-10 кл-sol] 0 problems (deduped) → C:\Users\denis\Downloads\Материали Олимпиада МАТ\generated\cache\extracted\OLI-2-Областен кръг-1995-10 кл-sol\all_problems.json
+2026-10-23 18:17:02,669 [PDF_CHUNKER] INFO 
+[3/127] OLI-2-Областен кръг-1995-11 кл-probs.pdf
+2026-10-23 18:17:02,673 [PDF_CHUNKER] INFO 
+═══ OLI-2-Областен кръг-1995-11 кл-probs ═══
+2026-10-23 18:17:02,739 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1995-11 кл-probs.pdf] pymupdf: 1p, 29 chars
+2026-10-23 18:17:02,744 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1995-11 кл-probs.pdf] 29 chars < 50 → OCR fallback
+2026-10-23 18:17:02,772 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1995-11 кл-probs.pdf] OCR cache: 1p
+2026-10-23 18:17:02,782 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1995-11 кл-probs.pdf] OCR: 1724 chars (vs Python: 29)
+2026-10-23 18:17:02,792 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1995-11 кл-probs] 1 chunks, 1 pages
+2026-10-23 18:17:22,538 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1995-11 кл-probs] chunk 1-1: 6 problems (19s)
+2026-10-23 18:17:22,553 [PDF_CHUNKER] INFO ✓ [OLI-2-Областен кръг-1995-11 кл-probs] 6 problems (deduped) → C:\Users\denis\Downloads\Материали Олимпиада МАТ\generated\cache\extracted\OLI-2-Областен кръг-1995-11 кл-probs\all_problems.json
+2026-10-23 18:17:22,554 [PDF_CHUNKER] INFO 
+[4/127] OLI-2-Областен кръг-1995-11 кл-sol.pdf
+2026-10-23 18:17:22,555 [PDF_CHUNKER] INFO 
+═══ OLI-2-Областен кръг-1995-11 кл-sol ═══
+2026-10-23 18:17:22,607 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1995-11 кл-sol.pdf] pymupdf: 3p, 87 chars
+2026-10-23 18:17:22,608 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1995-11 кл-sol] 1 chunks, 3 pages
+2026-10-23 18:17:27,175 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1995-11 кл-sol] chunk 1-3: 0 problems (4s)
+2026-10-23 18:17:27,185 [PDF_CHUNKER] INFO ✓ [OLI-2-Областен кръг-1995-11 кл-sol] 0 problems (deduped) → C:\Users\denis\Downloads\Материали Олимпиада МАТ\generated\cache\extracted\OLI-2-Областен кръг-1995-11 кл-sol\all_problems.json
+2026-10-23 18:17:27,187 [PDF_CHUNKER] INFO 
+[5/127] OLI-2-Областен кръг-1996-10 кл-probs.pdf
+2026-10-23 18:17:27,187 [PDF_CHUNKER] INFO 
+═══ OLI-2-Областен кръг-1996-10 кл-probs ═══
+2026-10-23 18:17:27,209 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1996-10 кл-probs.pdf] pymupdf: 1p, 29 chars
+2026-10-23 18:17:27,210 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1996-10 кл-probs.pdf] 29 chars < 50 → OCR fallback
+2026-10-23 18:17:27,235 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1996-10 кл-probs.pdf] OCR cache: 1p
+2026-10-23 18:17:27,235 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1996-10 кл-probs.pdf] OCR: 1887 chars (vs Python: 29)
+2026-10-23 18:17:27,236 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1996-10 кл-probs] 1 chunks, 1 pages
+2026-10-23 18:17:45,021 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1996-10 кл-probs] chunk 1-1: 6 problems (17s)
+2026-10-23 18:17:45,033 [PDF_CHUNKER] INFO ✓ [OLI-2-Областен кръг-1996-10 кл-probs] 6 problems (deduped) → C:\Users\denis\Downloads\Материали Олимпиада МАТ\generated\cache\extracted\OLI-2-Областен кръг-1996-10 кл-probs\all_problems.json
+2026-10-23 18:17:45,034 [PDF_CHUNKER] INFO 
+[6/127] OLI-2-Областен кръг-1996-10 кл-sol.pdf
+2026-10-23 18:17:45,034 [PDF_CHUNKER] INFO 
+═══ OLI-2-Областен кръг-1996-10 кл-sol ═══
+2026-10-23 18:17:45,084 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1996-10 кл-sol.pdf] pymupdf: 4p, 116 chars
+2026-10-23 18:17:45,084 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1996-10 кл-sol] 1 chunks, 4 pages
+2026-10-23 18:17:49,129 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1996-10 кл-sol] chunk 1-4: 0 problems (4s)
+2026-10-23 18:17:49,142 [PDF_CHUNKER] INFO ✓ [OLI-2-Областен кръг-1996-10 кл-sol] 0 problems (deduped) → C:\Users\denis\Downloads\Материали Олимпиада МАТ\generated\cache\extracted\OLI-2-Областен кръг-1996-10 кл-sol\all_problems.json
+2026-10-23 18:17:49,143 [PDF_CHUNKER] INFO 
+[7/127] OLI-2-Областен кръг-1996-11 кл-probs.pdf
+2026-10-23 18:17:49,143 [PDF_CHUNKER] INFO 
+═══ OLI-2-Областен кръг-1996-11 кл-probs ═══
+2026-10-23 18:17:49,166 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1996-11 кл-probs.pdf] pymupdf: 1p, 29 chars
+2026-10-23 18:17:49,166 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1996-11 кл-probs.pdf] 29 chars < 50 → OCR fallback
+2026-10-23 18:17:49,171 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1996-11 кл-probs.pdf] OCR cache: 1p
+2026-10-23 18:17:49,172 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1996-11 кл-probs.pdf] OCR: 1887 chars (vs Python: 29)
+2026-10-23 18:17:49,172 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1996-11 кл-probs] 1 chunks, 1 pages
+2026-10-23 18:18:05,328 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1996-11 кл-probs] chunk 1-1: 6 problems (16s)
+2026-10-23 18:18:05,340 [PDF_CHUNKER] INFO ✓ [OLI-2-Областен кръг-1996-11 кл-probs] 6 problems (deduped) → C:\Users\denis\Downloads\Материали Олимпиада МАТ\generated\cache\extracted\OLI-2-Областен кръг-1996-11 кл-probs\all_problems.json
+2026-10-23 18:18:05,341 [PDF_CHUNKER] INFO 
+[8/127] OLI-2-Областен кръг-1996-11 кл-sol.pdf
+2026-10-23 18:18:05,341 [PDF_CHUNKER] INFO 
+═══ OLI-2-Областен кръг-1996-11 кл-sol ═══
+2026-10-23 18:18:05,390 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1996-11 кл-sol.pdf] pymupdf: 4p, 116 chars
+2026-10-23 18:18:05,391 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1996-11 кл-sol] 1 chunks, 4 pages
+2026-10-23 18:18:07,923 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1996-11 кл-sol] chunk 1-4: 0 problems (2s)
+2026-10-23 18:18:07,934 [PDF_CHUNKER] INFO ✓ [OLI-2-Областен кръг-1996-11 кл-sol] 0 problems (deduped) → C:\Users\denis\Downloads\Материали Олимпиада МАТ\generated\cache\extracted\OLI-2-Областен кръг-1996-11 кл-sol\all_problems.json
+2026-10-23 18:18:07,935 [PDF_CHUNKER] INFO 
+[9/127] OLI-2-Областен кръг-1997-10 кл-probs.pdf
+2026-10-23 18:18:07,936 [PDF_CHUNKER] INFO 
+═══ OLI-2-Областен кръг-1997-10 кл-probs ═══
+2026-10-23 18:18:07,960 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1997-10 кл-probs.pdf] pymupdf: 1p, 29 chars
+2026-10-23 18:18:07,960 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1997-10 кл-probs.pdf] 29 chars < 50 → OCR fallback
+2026-10-23 18:18:07,986 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1997-10 кл-probs.pdf] OCR cache: 1p
+2026-10-23 18:18:07,986 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1997-10 кл-probs.pdf] OCR: 1352 chars (vs Python: 29)
+2026-10-23 18:18:07,987 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1997-10 кл-probs] 1 chunks, 1 pages
+2026-10-23 18:18:21,041 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1997-10 кл-probs] chunk 1-1: 6 problems (13s)
+2026-10-23 18:18:21,053 [PDF_CHUNKER] INFO ✓ [OLI-2-Областен кръг-1997-10 кл-probs] 6 problems (deduped) → C:\Users\denis\Downloads\Материали Олимпиада МАТ\generated\cache\extracted\OLI-2-Областен кръг-1997-10 кл-probs\all_problems.json
+2026-10-23 18:18:21,055 [PDF_CHUNKER] INFO 
+[10/127] OLI-2-Областен кръг-1997-10 кл-sol.pdf
+2026-10-23 18:18:21,055 [PDF_CHUNKER] INFO 
+═══ OLI-2-Областен кръг-1997-10 кл-sol ═══
+2026-10-23 18:18:21,110 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1997-10 кл-sol.pdf] pymupdf: 5p, 145 chars
+2026-10-23 18:18:21,113 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1997-10 кл-sol] 1 chunks, 5 pages
+2026-10-23 18:18:24,007 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1997-10 кл-sol] chunk 1-5: 0 problems (2s)
+2026-10-23 18:18:24,020 [PDF_CHUNKER] INFO ✓ [OLI-2-Областен кръг-1997-10 кл-sol] 0 problems (deduped) → C:\Users\denis\Downloads\Материали Олимпиада МАТ\generated\cache\extracted\OLI-2-Областен кръг-1997-10 кл-sol\all_problems.json
+2026-10-23 18:18:24,021 [PDF_CHUNKER] INFO 
+[11/127] OLI-2-Областен кръг-1997-11 кл-probs.pdf
+2026-10-23 18:18:24,022 [PDF_CHUNKER] INFO 
+═══ OLI-2-Областен кръг-1997-11 кл-probs ═══
+2026-10-23 18:18:24,049 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1997-11 кл-probs.pdf] pymupdf: 1p, 29 chars
+2026-10-23 18:18:24,049 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1997-11 кл-probs.pdf] 29 chars < 50 → OCR fallback
+2026-10-23 18:18:24,054 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1997-11 кл-probs.pdf] OCR cache: 1p
+2026-10-23 18:18:24,054 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1997-11 кл-probs.pdf] OCR: 1352 chars (vs Python: 29)
+2026-10-23 18:18:24,055 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1997-11 кл-probs] 1 chunks, 1 pages
+2026-10-23 18:18:36,984 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1997-11 кл-probs] chunk 1-1: 6 problems (12s)
+2026-10-23 18:18:37,001 [PDF_CHUNKER] INFO ✓ [OLI-2-Областен кръг-1997-11 кл-probs] 6 problems (deduped) → C:\Users\denis\Downloads\Материали Олимпиада МАТ\generated\cache\extracted\OLI-2-Областен кръг-1997-11 кл-probs\all_problems.json
+2026-10-23 18:18:37,004 [PDF_CHUNKER] INFO 
+[12/127] OLI-2-Областен кръг-1997-11 кл-sol.pdf
+2026-10-23 18:18:37,005 [PDF_CHUNKER] INFO 
+═══ OLI-2-Областен кръг-1997-11 кл-sol ═══
+2026-10-23 18:18:37,074 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1997-11 кл-sol.pdf] pymupdf: 5p, 145 chars
+2026-10-23 18:18:37,075 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1997-11 кл-sol] 1 chunks, 5 pages
+2026-10-23 18:19:01,287 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1997-11 кл-sol] chunk 1-5: 0 problems (24s)
+2026-10-23 18:19:01,301 [PDF_CHUNKER] INFO ✓ [OLI-2-Областен кръг-1997-11 кл-sol] 0 problems (deduped) → C:\Users\denis\Downloads\Материали Олимпиада МАТ\generated\cache\extracted\OLI-2-Областен кръг-1997-11 кл-sol\all_problems.json
+2026-10-23 18:19:01,301 [PDF_CHUNKER] INFO 
+[13/127] OLI-2-Областен кръг-1998-10 кл-probs.pdf
+2026-10-23 18:19:01,303 [PDF_CHUNKER] INFO 
+═══ OLI-2-Областен кръг-1998-10 кл-probs ═══
+2026-10-23 18:19:01,330 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1998-10 кл-probs.pdf] pymupdf: 1p, 29 chars
+2026-10-23 18:19:01,330 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1998-10 кл-probs.pdf] 29 chars < 50 → OCR fallback
+2026-10-23 18:19:01,359 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1998-10 кл-probs.pdf] OCR cache: 1p
+2026-10-23 18:19:01,360 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1998-10 кл-probs.pdf] OCR: 1547 chars (vs Python: 29)
+2026-10-23 18:19:01,360 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1998-10 кл-probs] 1 chunks, 1 pages
+2026-10-23 18:19:17,039 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1998-10 кл-probs] chunk 1-1: 6 problems (15s)
+2026-10-23 18:19:17,055 [PDF_CHUNKER] INFO ✓ [OLI-2-Областен кръг-1998-10 кл-probs] 6 problems (deduped) → C:\Users\denis\Downloads\Материали Олимпиада МАТ\generated\cache\extracted\OLI-2-Областен кръг-1998-10 кл-probs\all_problems.json
+2026-10-23 18:19:17,056 [PDF_CHUNKER] INFO 
+[14/127] OLI-2-Областен кръг-1998-10 кл-sol.pdf
+2026-10-23 18:19:17,057 [PDF_CHUNKER] INFO 
+═══ OLI-2-Областен кръг-1998-10 кл-sol ═══
+2026-10-23 18:19:17,116 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1998-10 кл-sol.pdf] pymupdf: 4p, 116 chars
+2026-10-23 18:19:17,116 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1998-10 кл-sol] 1 chunks, 4 pages
+2026-10-23 18:19:20,110 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1998-10 кл-sol] chunk 1-4: 0 problems (2s)
+2026-10-23 18:19:20,124 [PDF_CHUNKER] INFO ✓ [OLI-2-Областен кръг-1998-10 кл-sol] 0 problems (deduped) → C:\Users\denis\Downloads\Материали Олимпиада МАТ\generated\cache\extracted\OLI-2-Областен кръг-1998-10 кл-sol\all_problems.json
+2026-10-23 18:19:20,125 [PDF_CHUNKER] INFO 
+[15/127] OLI-2-Областен кръг-1998-11 кл-probs.pdf
+2026-10-23 18:19:20,125 [PDF_CHUNKER] INFO 
+═══ OLI-2-Областен кръг-1998-11 кл-probs ═══
+2026-10-23 18:19:20,153 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1998-11 кл-probs.pdf] pymupdf: 1p, 29 chars
+2026-10-23 18:19:20,154 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1998-11 кл-probs.pdf] 29 chars < 50 → OCR fallback
+2026-10-23 18:19:20,158 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1998-11 кл-probs.pdf] OCR cache: 1p
+2026-10-23 18:19:20,159 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1998-11 кл-probs.pdf] OCR: 1547 chars (vs Python: 29)
+2026-10-23 18:19:20,159 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1998-11 кл-probs] 1 chunks, 1 pages
+2026-10-23 18:19:35,266 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1998-11 кл-probs] chunk 1-1: 6 problems (15s)
+2026-10-23 18:19:35,280 [PDF_CHUNKER] INFO ✓ [OLI-2-Областен кръг-1998-11 кл-probs] 6 problems (deduped) → C:\Users\denis\Downloads\Материали Олимпиада МАТ\generated\cache\extracted\OLI-2-Областен кръг-1998-11 кл-probs\all_problems.json
+2026-10-23 18:19:35,281 [PDF_CHUNKER] INFO 
+[16/127] OLI-2-Областен кръг-1998-11 кл-sol.pdf
+2026-10-23 18:19:35,281 [PDF_CHUNKER] INFO 
+═══ OLI-2-Областен кръг-1998-11 кл-sol ═══
+2026-10-23 18:19:35,327 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1998-11 кл-sol.pdf] pymupdf: 4p, 116 chars
+2026-10-23 18:19:35,327 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1998-11 кл-sol] 1 chunks, 4 pages
+2026-10-23 18:19:38,544 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1998-11 кл-sol] chunk 1-4: 0 problems (3s)
+2026-10-23 18:19:38,559 [PDF_CHUNKER] INFO ✓ [OLI-2-Областен кръг-1998-11 кл-sol] 0 problems (deduped) → C:\Users\denis\Downloads\Материали Олимпиада МАТ\generated\cache\extracted\OLI-2-Областен кръг-1998-11 кл-sol\all_problems.json
+2026-10-23 18:19:38,559 [PDF_CHUNKER] INFO 
+[17/127] OLI-2-Областен кръг-1999-10 кл-probs.pdf
+2026-10-23 18:19:38,559 [PDF_CHUNKER] INFO 
+═══ OLI-2-Областен кръг-1999-10 кл-probs ═══
+2026-10-23 18:19:38,596 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1999-10 кл-probs.pdf] pymupdf: 1p, 29 chars
+2026-10-23 18:19:38,596 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1999-10 кл-probs.pdf] 29 chars < 50 → OCR fallback
+2026-10-23 18:19:38,620 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1999-10 кл-probs.pdf] OCR cache: 1p
+2026-10-23 18:19:38,621 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1999-10 кл-probs.pdf] OCR: 1474 chars (vs Python: 29)
+2026-10-23 18:19:38,621 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1999-10 кл-probs] 1 chunks, 1 pages
+2026-10-23 18:19:50,992 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1999-10 кл-probs] chunk 1-1: 6 problems (12s)
+2026-10-23 18:19:51,013 [PDF_CHUNKER] INFO ✓ [OLI-2-Областен кръг-1999-10 кл-probs] 6 problems (deduped) → C:\Users\denis\Downloads\Материали Олимпиада МАТ\generated\cache\extracted\OLI-2-Областен кръг-1999-10 кл-probs\all_problems.json
+2026-10-23 18:19:51,014 [PDF_CHUNKER] INFO 
+[18/127] OLI-2-Областен кръг-1999-10 кл-sol.pdf
+2026-10-23 18:19:51,015 [PDF_CHUNKER] INFO 
+═══ OLI-2-Областен кръг-1999-10 кл-sol ═══
+2026-10-23 18:19:51,055 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1999-10 кл-sol.pdf] pymupdf: 3p, 87 chars
+2026-10-23 18:19:51,055 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1999-10 кл-sol] 1 chunks, 3 pages
+2026-10-23 18:19:54,414 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1999-10 кл-sol] chunk 1-3: 0 problems (3s)
+2026-10-23 18:19:54,426 [PDF_CHUNKER] INFO ✓ [OLI-2-Областен кръг-1999-10 кл-sol] 0 problems (deduped) → C:\Users\denis\Downloads\Материали Олимпиада МАТ\generated\cache\extracted\OLI-2-Областен кръг-1999-10 кл-sol\all_problems.json
+2026-10-23 18:19:54,427 [PDF_CHUNKER] INFO 
+[19/127] OLI-2-Областен кръг-1999-11 кл-probs.pdf
+2026-10-23 18:19:54,427 [PDF_CHUNKER] INFO 
+═══ OLI-2-Областен кръг-1999-11 кл-probs ═══
+2026-10-23 18:19:54,459 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1999-11 кл-probs.pdf] pymupdf: 1p, 29 chars
+2026-10-23 18:19:54,459 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1999-11 кл-probs.pdf] 29 chars < 50 → OCR fallback
+2026-10-23 18:19:54,464 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1999-11 кл-probs.pdf] OCR cache: 1p
+2026-10-23 18:19:54,464 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1999-11 кл-probs.pdf] OCR: 1474 chars (vs Python: 29)
+2026-10-23 18:19:54,464 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1999-11 кл-probs] 1 chunks, 1 pages
+2026-10-23 18:20:07,522 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1999-11 кл-probs] chunk 1-1: 6 problems (13s)
+2026-10-23 18:20:07,533 [PDF_CHUNKER] INFO ✓ [OLI-2-Областен кръг-1999-11 кл-probs] 6 problems (deduped) → C:\Users\denis\Downloads\Материали Олимпиада МАТ\generated\cache\extracted\OLI-2-Областен кръг-1999-11 кл-probs\all_problems.json
+2026-10-23 18:20:07,534 [PDF_CHUNKER] INFO 
+[20/127] OLI-2-Областен кръг-1999-11 кл-sol.pdf
+2026-10-23 18:20:07,534 [PDF_CHUNKER] INFO 
+═══ OLI-2-Областен кръг-1999-11 кл-sol ═══
+2026-10-23 18:20:07,574 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1999-11 кл-sol.pdf] pymupdf: 3p, 87 chars
+2026-10-23 18:20:07,575 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1999-11 кл-sol] 1 chunks, 3 pages
+2026-10-23 18:20:10,185 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1999-11 кл-sol] chunk 1-3: 0 problems (2s)
+2026-10-23 18:20:10,200 [PDF_CHUNKER] INFO ✓ [OLI-2-Областен кръг-1999-11 кл-sol] 0 problems (deduped) → C:\Users\denis\Downloads\Материали Олимпиада МАТ\generated\cache\extracted\OLI-2-Областен кръг-1999-11 кл-sol\all_problems.json
+2026-10-23 18:20:10,200 [PDF_CHUNKER] INFO 
+[21/127] OLI-2-Областен кръг-2000-10 кл-probs.pdf
+2026-10-23 18:20:10,202 [PDF_CHUNKER] INFO 
+═══ OLI-2-Областен кръг-2000-10 кл-probs ═══
+2026-10-23 18:20:10,243 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2000-10 кл-probs.pdf] pymupdf: 1p, 24 chars
+2026-10-23 18:20:10,243 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2000-10 кл-probs.pdf] 24 chars < 50 → OCR fallback
+2026-10-23 18:20:10,332 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2000-10 кл-probs.pdf] OCR cache: 1p
+2026-10-23 18:20:10,333 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2000-10 кл-probs.pdf] OCR: 1561 chars (vs Python: 24)
+2026-10-23 18:20:10,333 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2000-10 кл-probs] 1 chunks, 1 pages
+2026-10-23 18:20:27,852 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2000-10 кл-probs] chunk 1-1: 6 problems (17s)
+2026-10-23 18:20:27,864 [PDF_CHUNKER] INFO ✓ [OLI-2-Областен кръг-2000-10 кл-probs] 6 problems (deduped) → C:\Users\denis\Downloads\Материали Олимпиада МАТ\generated\cache\extracted\OLI-2-Областен кръг-2000-10 кл-probs\all_problems.json
+2026-10-23 18:20:27,865 [PDF_CHUNKER] INFO 
+[22/127] OLI-2-Областен кръг-2000-10 кл-sol.pdf
+2026-10-23 18:20:27,865 [PDF_CHUNKER] INFO 
+═══ OLI-2-Областен кръг-2000-10 кл-sol ═══
+2026-10-23 18:20:27,925 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2000-10 кл-sol.pdf] pymupdf: 4p, 96 chars
+2026-10-23 18:20:27,925 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2000-10 кл-sol] 1 chunks, 4 pages
+2026-10-23 18:20:36,705 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2000-10 кл-sol] chunk 1-4: 0 problems (8s)
+2026-10-23 18:20:36,718 [PDF_CHUNKER] INFO ✓ [OLI-2-Областен кръг-2000-10 кл-sol] 0 problems (deduped) → C:\Users\denis\Downloads\Материали Олимпиада МАТ\generated\cache\extracted\OLI-2-Областен кръг-2000-10 кл-sol\all_problems.json
+2026-10-23 18:20:36,718 [PDF_CHUNKER] INFO 
+[23/127] OLI-2-Областен кръг-2000-11 кл-probs.pdf
+2026-10-23 18:20:36,719 [PDF_CHUNKER] INFO 
+═══ OLI-2-Областен кръг-2000-11 кл-probs ═══
+2026-10-23 18:20:36,745 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2000-11 кл-probs.pdf] pymupdf: 1p, 24 chars
+2026-10-23 18:20:36,745 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2000-11 кл-probs.pdf] 24 chars < 50 → OCR fallback
+2026-10-23 18:20:36,749 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2000-11 кл-probs.pdf] OCR cache: 1p
+2026-10-23 18:20:36,750 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2000-11 кл-probs.pdf] OCR: 1561 chars (vs Python: 24)
+2026-10-23 18:20:36,750 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2000-11 кл-probs] 1 chunks, 1 pages
+2026-10-23 18:21:05,489 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2000-11 кл-probs] chunk 1-1: 6 problems (28s)
+2026-10-23 18:21:05,500 [PDF_CHUNKER] INFO ✓ [OLI-2-Областен кръг-2000-11 кл-probs] 6 problems (deduped) → C:\Users\denis\Downloads\Материали Олимпиада МАТ\generated\cache\extracted\OLI-2-Областен кръг-2000-11 кл-probs\all_problems.json
+2026-10-23 18:21:05,501 [PDF_CHUNKER] INFO 
+[24/127] OLI-2-Областен кръг-2000-11 кл-sol.pdf
+2026-10-23 18:21:05,502 [PDF_CHUNKER] INFO 
+═══ OLI-2-Областен кръг-2000-11 кл-sol ═══
+2026-10-23 18:21:05,562 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2000-11 кл-sol.pdf] pymupdf: 4p, 96 chars
+2026-10-23 18:21:05,563 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2000-11 кл-sol] 1 chunks, 4 pages
+2026-10-23 18:21:14,187 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2000-11 кл-sol] chunk 1-4: 0 problems (8s)
+2026-10-23 18:21:14,198 [PDF_CHUNKER] INFO ✓ [OLI-2-Областен кръг-2000-11 кл-sol] 0 problems (deduped) → C:\Users\denis\Downloads\Материали Олимпиада МАТ\generated\cache\extracted\OLI-2-Областен кръг-2000-11 кл-sol\all_problems.json
+2026-10-23 18:21:14,198 [PDF_CHUNKER] INFO 
+[25/127] OLI-2-Областен кръг-2001-10 кл-probs.pdf
+2026-10-23 18:21:14,198 [PDF_CHUNKER] INFO 
+═══ OLI-2-Областен кръг-2001-10 кл-probs ═══
+2026-10-23 18:21:14,224 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2001-10 кл-probs.pdf] pymupdf: 1p, 24 chars
+2026-10-23 18:21:14,225 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2001-10 кл-probs.pdf] 24 chars < 50 → OCR fallback
+2026-10-23 18:21:14,253 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2001-10 кл-probs.pdf] OCR cache: 1p
+2026-10-23 18:21:14,253 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2001-10 кл-probs.pdf] OCR: 1619 chars (vs Python: 24)
+2026-10-23 18:21:14,255 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2001-10 кл-probs] 1 chunks, 1 pages
+2026-10-23 18:21:33,085 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2001-10 кл-probs] chunk 1-1: 6 problems (18s)
+2026-10-23 18:21:33,097 [PDF_CHUNKER] INFO ✓ [OLI-2-Областен кръг-2001-10 кл-probs] 6 problems (deduped) → C:\Users\denis\Downloads\Материали Олимпиада МАТ\generated\cache\extracted\OLI-2-Областен кръг-2001-10 кл-probs\all_problems.json
+2026-10-23 18:21:33,098 [PDF_CHUNKER] INFO 
+[26/127] OLI-2-Областен кръг-2001-10 кл-sol.pdf
+2026-10-23 18:21:33,098 [PDF_CHUNKER] INFO 
+═══ OLI-2-Областен кръг-2001-10 кл-sol ═══
+2026-10-23 18:21:33,158 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2001-10 кл-sol.pdf] pymupdf: 4p, 96 chars
+2026-10-23 18:21:33,159 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2001-10 кл-sol] 1 chunks, 4 pages
+2026-10-23 18:21:36,067 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2001-10 кл-sol] chunk 1-4: 0 problems (2s)
+2026-10-23 18:21:36,078 [PDF_CHUNKER] INFO ✓ [OLI-2-Областен кръг-2001-10 кл-sol] 0 problems (deduped) → C:\Users\denis\Downloads\Материали Олимпиада МАТ\generated\cache\extracted\OLI-2-Областен кръг-2001-10 кл-sol\all_problems.json
+2026-10-23 18:21:36,079 [PDF_CHUNKER] INFO 
+[27/127] OLI-2-Областен кръг-2001-11 кл-probs.pdf
+2026-10-23 18:21:36,079 [PDF_CHUNKER] INFO 
+═══ OLI-2-Областен кръг-2001-11 кл-probs ═══
+2026-10-23 18:21:36,107 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2001-11 кл-probs.pdf] pymupdf: 1p, 24 chars
+2026-10-23 18:21:36,107 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2001-11 кл-probs.pdf] 24 chars < 50 → OCR fallback
+2026-10-23 18:21:36,133 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2001-11 кл-probs.pdf] OCR cache: 1p
+2026-10-23 18:21:36,133 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2001-11 кл-probs.pdf] OCR: 1619 chars (vs Python: 24)
+2026-10-23 18:21:36,133 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2001-11 кл-probs] 1 chunks, 1 pages
+2026-10-23 18:31:29,175 [PDF_CHUNKER] INFO Заредени 164 STEPS точки
+2026-10-23 18:31:29,175 [PDF_CHUNKER] INFO Classify model: openai/gpt-oss-120b ($0.0005/call)
+2026-10-23 18:31:29,212 [PDF_CHUNKER] INFO Намерени 236 PDF-а
+2026-10-23 18:31:29,214 [PDF_CHUNKER] INFO Филтър '1995-10 кл-sol': 1 PDF-а
+2026-10-23 18:31:29,214 [PDF_CHUNKER] INFO 
+[1/1] OLI-2-Областен кръг-1995-10 кл-sol.pdf
+2026-10-23 18:31:29,214 [PDF_CHUNKER] INFO 
+═══ OLI-2-Областен кръг-1995-10 кл-sol ═══
+2026-10-23 18:31:29,267 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1995-10 кл-sol.pdf] pymupdf: 3p, 87 chars
+2026-10-23 18:31:29,268 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1995-10 кл-sol] 1 chunks, 3 pages
+2026-10-23 18:31:29,269 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1995-10 кл-sol] 0 existing problems
+2026-10-23 18:31:32,478 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1995-10 кл-sol] chunk 1-3: 0 problems (3s)
+2026-10-23 18:31:32,491 [PDF_CHUNKER] INFO ✓ [OLI-2-Областен кръг-1995-10 кл-sol] 0 problems (deduped) → C:\Users\denis\Downloads\Материали Олимпиада МАТ\generated\cache\extracted\OLI-2-Областен кръг-1995-10 кл-sol\all_problems.json
+2026-10-23 18:44:43,017 [PDF_CHUNKER] INFO Заредени 164 STEPS точки
+2026-10-23 18:44:43,017 [PDF_CHUNKER] INFO Classify model: openai/gpt-oss-120b ($0.0005/call)
+2026-10-23 18:44:43,041 [PDF_CHUNKER] INFO Намерени 236 PDF-а
+2026-10-23 18:44:43,041 [PDF_CHUNKER] INFO Филтър '1995-10 кл-sol': 1 PDF-а
+2026-10-23 18:44:43,042 [PDF_CHUNKER] INFO 
+[1/1] OLI-2-Областен кръг-1995-10 кл-sol.pdf
+2026-10-23 18:44:43,042 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1995-10 кл-sol] skip (done)
+2026-10-23 18:45:35,250 [PDF_CHUNKER] INFO Заредени 164 STEPS точки
+2026-10-23 18:45:35,251 [PDF_CHUNKER] INFO Classify model: openai/gpt-oss-120b ($0.0005/call)
+2026-10-23 18:45:35,282 [PDF_CHUNKER] INFO Намерени 236 PDF-а
+2026-10-23 18:45:35,283 [PDF_CHUNKER] INFO Филтър '1995-10 кл-sol': 1 PDF-а
+2026-10-23 18:45:35,283 [PDF_CHUNKER] INFO 
+[1/1] OLI-2-Областен кръг-1995-10 кл-sol.pdf
+2026-10-23 18:45:35,284 [PDF_CHUNKER] INFO 
+═══ OLI-2-Областен кръг-1995-10 кл-sol ═══
+2026-10-23 18:45:35,375 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1995-10 кл-sol.pdf] pymupdf: 3p, 87 chars
+2026-10-23 18:45:35,375 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1995-10 кл-sol.pdf] 87 chars (29/p) → OCR fallback
+2026-10-23 18:45:35,378 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1995-10 кл-sol.pdf] OCR cache: 3p
+2026-10-23 18:45:35,378 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1995-10 кл-sol.pdf] OCR: 7894 chars (vs Python: 87)
+2026-10-23 18:45:35,379 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1995-10 кл-sol] 1 chunks, 3 pages
+2026-10-23 18:45:35,380 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1995-10 кл-sol] 0 existing problems
+2026-10-23 18:46:05,384 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1995-10 кл-sol-1] extract... 30s
+2026-10-23 18:46:24,182 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1995-10 кл-sol] chunk 1-3: 6 problems (48s)
+2026-10-23 18:46:24,194 [PDF_CHUNKER] INFO ✓ [OLI-2-Областен кръг-1995-10 кл-sol] 6 problems (deduped) → C:\Users\denis\Downloads\Материали Олимпиада МАТ\generated\cache\extracted\OLI-2-Областен кръг-1995-10 кл-sol\all_problems.json
+2026-10-23 18:51:25,139 [PDF_CHUNKER] INFO Заредени 164 STEPS точки
+2026-10-23 18:51:25,140 [PDF_CHUNKER] INFO Classify model: openai/gpt-oss-120b ($0.0005/call)
+2026-10-23 18:51:25,196 [PDF_CHUNKER] INFO Намерени 236 PDF-а
+2026-10-23 18:51:25,198 [PDF_CHUNKER] INFO Филтър 'OLI-2,OLI-3': 215 PDF-а
+2026-10-23 18:51:25,199 [PDF_CHUNKER] INFO 
+[1/215] OLI-2-Областен кръг-1995-10 кл-probs.pdf
+2026-10-23 18:51:25,199 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1995-10 кл-probs] skip (done)
+2026-10-23 18:51:25,200 [PDF_CHUNKER] INFO 
+[2/215] OLI-2-Областен кръг-1995-10 кл-sol.pdf
+2026-10-23 18:51:25,201 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1995-10 кл-sol] skip (done)
+2026-10-23 18:51:25,206 [PDF_CHUNKER] INFO 
+[3/215] OLI-2-Областен кръг-1995-11 кл-probs.pdf
+2026-10-23 18:51:25,207 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1995-11 кл-probs] skip (done)
+2026-10-23 18:51:25,208 [PDF_CHUNKER] INFO 
+[4/215] OLI-2-Областен кръг-1995-11 кл-sol.pdf
+2026-10-23 18:51:25,210 [PDF_CHUNKER] INFO 
+═══ OLI-2-Областен кръг-1995-11 кл-sol ═══
+2026-10-23 18:51:25,405 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1995-11 кл-sol.pdf] pymupdf: 3p, 87 chars
+2026-10-23 18:51:25,406 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1995-11 кл-sol.pdf] 87 chars (29/p) → OCR fallback
+2026-10-23 18:51:25,483 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1995-11 кл-sol.pdf] OCR cache: 3p
+2026-10-23 18:51:25,483 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1995-11 кл-sol.pdf] OCR: 7894 chars (vs Python: 87)
+2026-10-23 18:51:25,484 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1995-11 кл-sol] 1 chunks, 3 pages
+2026-10-23 18:51:25,501 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1995-11 кл-sol] 0 existing problems
+2026-10-23 18:51:55,507 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1995-11 кл-sol-1] extract... 30s
+2026-10-23 18:52:14,063 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1995-11 кл-sol] chunk 1-3: 6 problems (48s)
+2026-10-23 18:52:14,077 [PDF_CHUNKER] INFO ✓ [OLI-2-Областен кръг-1995-11 кл-sol] 6 problems (deduped) → C:\Users\denis\Downloads\Материали Олимпиада МАТ\generated\cache\extracted\OLI-2-Областен кръг-1995-11 кл-sol\all_problems.json
+2026-10-23 18:52:14,078 [PDF_CHUNKER] INFO 
+[5/215] OLI-2-Областен кръг-1996-10 кл-probs.pdf
+2026-10-23 18:52:14,078 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1996-10 кл-probs] skip (done)
+2026-10-23 18:52:14,078 [PDF_CHUNKER] INFO 
+[6/215] OLI-2-Областен кръг-1996-10 кл-sol.pdf
+2026-10-23 18:52:14,079 [PDF_CHUNKER] INFO 
+═══ OLI-2-Областен кръг-1996-10 кл-sol ═══
+2026-10-23 18:52:14,169 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1996-10 кл-sol.pdf] pymupdf: 4p, 116 chars
+2026-10-23 18:52:14,169 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1996-10 кл-sol.pdf] 116 chars (29/p) → OCR fallback
+2026-10-23 18:52:14,238 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1996-10 кл-sol.pdf] OCR cache: 4p
+2026-10-23 18:52:14,239 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1996-10 кл-sol.pdf] OCR: 11885 chars (vs Python: 116)
+2026-10-23 18:52:14,239 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1996-10 кл-sol] 1 chunks, 4 pages
+2026-10-23 18:52:14,258 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1996-10 кл-sol] 0 existing problems
+2026-10-23 18:52:44,262 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1996-10 кл-sol-1] extract... 30s
+2026-10-23 18:53:14,265 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1996-10 кл-sol-1] extract... 60s
+2026-10-23 18:53:19,065 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1996-10 кл-sol] chunk 1-4: 6 problems (64s)
+2026-10-23 18:53:19,078 [PDF_CHUNKER] INFO ✓ [OLI-2-Областен кръг-1996-10 кл-sol] 6 problems (deduped) → C:\Users\denis\Downloads\Материали Олимпиада МАТ\generated\cache\extracted\OLI-2-Областен кръг-1996-10 кл-sol\all_problems.json
+2026-10-23 18:53:19,078 [PDF_CHUNKER] INFO 
+[7/215] OLI-2-Областен кръг-1996-11 кл-probs.pdf
+2026-10-23 18:53:19,078 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1996-11 кл-probs] skip (done)
+2026-10-23 18:53:19,079 [PDF_CHUNKER] INFO 
+[8/215] OLI-2-Областен кръг-1996-11 кл-sol.pdf
+2026-10-23 18:53:19,079 [PDF_CHUNKER] INFO 
+═══ OLI-2-Областен кръг-1996-11 кл-sol ═══
+2026-10-23 18:53:19,151 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1996-11 кл-sol.pdf] pymupdf: 4p, 116 chars
+2026-10-23 18:53:19,152 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1996-11 кл-sol.pdf] 116 chars (29/p) → OCR fallback
+2026-10-23 18:53:19,224 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1996-11 кл-sol.pdf] OCR cache: 4p
+2026-10-23 18:53:19,225 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1996-11 кл-sol.pdf] OCR: 11885 chars (vs Python: 116)
+2026-10-23 18:53:19,225 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1996-11 кл-sol] 1 chunks, 4 pages
+2026-10-23 18:53:19,242 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1996-11 кл-sol] 0 existing problems
+2026-10-23 18:53:49,257 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1996-11 кл-sol-1] extract... 30s
+2026-10-23 18:54:19,260 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1996-11 кл-sol-1] extract... 60s
+2026-10-23 18:54:22,019 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1996-11 кл-sol] chunk 1-4: 6 problems (62s)
+2026-10-23 18:54:22,029 [PDF_CHUNKER] INFO ✓ [OLI-2-Областен кръг-1996-11 кл-sol] 6 problems (deduped) → C:\Users\denis\Downloads\Материали Олимпиада МАТ\generated\cache\extracted\OLI-2-Областен кръг-1996-11 кл-sol\all_problems.json
+2026-10-23 18:54:22,029 [PDF_CHUNKER] INFO 
+[9/215] OLI-2-Областен кръг-1997-10 кл-probs.pdf
+2026-10-23 18:54:22,030 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1997-10 кл-probs] skip (done)
+2026-10-23 18:54:22,030 [PDF_CHUNKER] INFO 
+[10/215] OLI-2-Областен кръг-1997-10 кл-sol.pdf
+2026-10-23 18:54:22,031 [PDF_CHUNKER] INFO 
+═══ OLI-2-Областен кръг-1997-10 кл-sol ═══
+2026-10-23 18:54:22,102 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1997-10 кл-sol.pdf] pymupdf: 5p, 145 chars
+2026-10-23 18:54:22,103 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1997-10 кл-sol.pdf] 145 chars (29/p) → OCR fallback
+2026-10-23 18:54:22,155 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1997-10 кл-sol.pdf] OCR cache: 5p
+2026-10-23 18:54:22,155 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1997-10 кл-sol.pdf] OCR: 9238 chars (vs Python: 145)
+2026-10-23 18:54:22,155 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1997-10 кл-sol] 1 chunks, 5 pages
+2026-10-23 18:54:22,168 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1997-10 кл-sol] 0 existing problems
+2026-10-23 18:54:52,182 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1997-10 кл-sol-1] extract... 30s
+2026-10-23 18:55:14,139 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1997-10 кл-sol] chunk 1-5: 6 problems (51s)
+2026-10-23 18:55:14,150 [PDF_CHUNKER] INFO ✓ [OLI-2-Областен кръг-1997-10 кл-sol] 6 problems (deduped) → C:\Users\denis\Downloads\Материали Олимпиада МАТ\generated\cache\extracted\OLI-2-Областен кръг-1997-10 кл-sol\all_problems.json
+2026-10-23 18:55:14,150 [PDF_CHUNKER] INFO 
+[11/215] OLI-2-Областен кръг-1997-11 кл-probs.pdf
+2026-10-23 18:55:14,151 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1997-11 кл-probs] skip (done)
+2026-10-23 18:55:14,151 [PDF_CHUNKER] INFO 
+[12/215] OLI-2-Областен кръг-1997-11 кл-sol.pdf
+2026-10-23 18:55:14,152 [PDF_CHUNKER] INFO 
+═══ OLI-2-Областен кръг-1997-11 кл-sol ═══
+2026-10-23 18:55:14,240 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1997-11 кл-sol.pdf] pymupdf: 5p, 145 chars
+2026-10-23 18:55:14,240 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1997-11 кл-sol.pdf] 145 chars (29/p) → OCR fallback
+2026-10-23 18:55:14,295 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1997-11 кл-sol.pdf] OCR cache: 5p
+2026-10-23 18:55:14,296 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1997-11 кл-sol.pdf] OCR: 9238 chars (vs Python: 145)
+2026-10-23 18:55:14,296 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1997-11 кл-sol] 1 chunks, 5 pages
+2026-10-23 18:55:14,312 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1997-11 кл-sol] 0 existing problems
+2026-10-23 18:55:44,323 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1997-11 кл-sol-1] extract... 30s
+2026-10-23 18:56:06,329 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1997-11 кл-sol] chunk 1-5: 6 problems (52s)
+2026-10-23 18:56:06,342 [PDF_CHUNKER] INFO ✓ [OLI-2-Областен кръг-1997-11 кл-sol] 6 problems (deduped) → C:\Users\denis\Downloads\Материали Олимпиада МАТ\generated\cache\extracted\OLI-2-Областен кръг-1997-11 кл-sol\all_problems.json
+2026-10-23 18:56:06,342 [PDF_CHUNKER] INFO 
+[13/215] OLI-2-Областен кръг-1998-10 кл-probs.pdf
+2026-10-23 18:56:06,343 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1998-10 кл-probs] skip (done)
+2026-10-23 18:56:06,343 [PDF_CHUNKER] INFO 
+[14/215] OLI-2-Областен кръг-1998-10 кл-sol.pdf
+2026-10-23 18:56:06,343 [PDF_CHUNKER] INFO 
+═══ OLI-2-Областен кръг-1998-10 кл-sol ═══
+2026-10-23 18:56:06,407 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1998-10 кл-sol.pdf] pymupdf: 4p, 116 chars
+2026-10-23 18:56:06,407 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1998-10 кл-sol.pdf] 116 chars (29/p) → OCR fallback
+2026-10-23 18:56:06,453 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1998-10 кл-sol.pdf] OCR cache: 4p
+2026-10-23 18:56:06,453 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1998-10 кл-sol.pdf] OCR: 7611 chars (vs Python: 116)
+2026-10-23 18:56:06,455 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1998-10 кл-sol] 1 chunks, 4 pages
+2026-10-23 18:56:06,469 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1998-10 кл-sol] 0 existing problems
+2026-10-23 18:56:36,483 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1998-10 кл-sol-1] extract... 30s
+2026-10-23 18:56:43,923 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1998-10 кл-sol] chunk 1-4: 6 problems (37s)
+2026-10-23 18:56:43,934 [PDF_CHUNKER] INFO ✓ [OLI-2-Областен кръг-1998-10 кл-sol] 6 problems (deduped) → C:\Users\denis\Downloads\Материали Олимпиада МАТ\generated\cache\extracted\OLI-2-Областен кръг-1998-10 кл-sol\all_problems.json
+2026-10-23 18:56:43,935 [PDF_CHUNKER] INFO 
+[15/215] OLI-2-Областен кръг-1998-11 кл-probs.pdf
+2026-10-23 18:56:43,935 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1998-11 кл-probs] skip (done)
+2026-10-23 18:56:43,935 [PDF_CHUNKER] INFO 
+[16/215] OLI-2-Областен кръг-1998-11 кл-sol.pdf
+2026-10-23 18:56:43,935 [PDF_CHUNKER] INFO 
+═══ OLI-2-Областен кръг-1998-11 кл-sol ═══
+2026-10-23 18:56:44,000 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1998-11 кл-sol.pdf] pymupdf: 4p, 116 chars
+2026-10-23 18:56:44,001 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1998-11 кл-sol.pdf] 116 chars (29/p) → OCR fallback
+2026-10-23 18:56:44,049 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1998-11 кл-sol.pdf] OCR cache: 4p
+2026-10-23 18:56:44,050 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1998-11 кл-sol.pdf] OCR: 7638 chars (vs Python: 116)
+2026-10-23 18:56:44,050 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1998-11 кл-sol] 1 chunks, 4 pages
+2026-10-23 18:56:44,066 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1998-11 кл-sol] 0 existing problems
+2026-10-23 18:57:14,079 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1998-11 кл-sol-1] extract... 30s
+2026-10-23 18:57:19,771 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1998-11 кл-sol] chunk 1-4: 6 problems (35s)
+2026-10-23 18:57:19,784 [PDF_CHUNKER] INFO ✓ [OLI-2-Областен кръг-1998-11 кл-sol] 6 problems (deduped) → C:\Users\denis\Downloads\Материали Олимпиада МАТ\generated\cache\extracted\OLI-2-Областен кръг-1998-11 кл-sol\all_problems.json
+2026-10-23 18:57:19,784 [PDF_CHUNKER] INFO 
+[17/215] OLI-2-Областен кръг-1999-10 кл-probs.pdf
+2026-10-23 18:57:19,785 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1999-10 кл-probs] skip (done)
+2026-10-23 18:57:19,785 [PDF_CHUNKER] INFO 
+[18/215] OLI-2-Областен кръг-1999-10 кл-sol.pdf
+2026-10-23 18:57:19,785 [PDF_CHUNKER] INFO 
+═══ OLI-2-Областен кръг-1999-10 кл-sol ═══
+2026-10-23 18:57:19,846 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1999-10 кл-sol.pdf] pymupdf: 3p, 87 chars
+2026-10-23 18:57:19,846 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1999-10 кл-sol.pdf] 87 chars (29/p) → OCR fallback
+2026-10-23 18:57:19,866 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1999-10 кл-sol.pdf] OCR cache: 3p
+2026-10-23 18:57:19,867 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1999-10 кл-sol.pdf] OCR: 6173 chars (vs Python: 87)
+2026-10-23 18:57:19,867 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1999-10 кл-sol] 1 chunks, 3 pages
+2026-10-23 18:57:19,882 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1999-10 кл-sol] 0 existing problems
+2026-10-23 18:57:49,895 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1999-10 кл-sol-1] extract... 30s
+2026-10-23 18:57:52,223 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1999-10 кл-sol] chunk 1-3: 6 problems (32s)
+2026-10-23 18:57:52,235 [PDF_CHUNKER] INFO ✓ [OLI-2-Областен кръг-1999-10 кл-sol] 6 problems (deduped) → C:\Users\denis\Downloads\Материали Олимпиада МАТ\generated\cache\extracted\OLI-2-Областен кръг-1999-10 кл-sol\all_problems.json
+2026-10-23 18:57:52,235 [PDF_CHUNKER] INFO 
+[19/215] OLI-2-Областен кръг-1999-11 кл-probs.pdf
+2026-10-23 18:57:52,236 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1999-11 кл-probs] skip (done)
+2026-10-23 18:57:52,236 [PDF_CHUNKER] INFO 
+[20/215] OLI-2-Областен кръг-1999-11 кл-sol.pdf
+2026-10-23 18:57:52,237 [PDF_CHUNKER] INFO 
+═══ OLI-2-Областен кръг-1999-11 кл-sol ═══
+2026-10-23 18:57:52,317 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1999-11 кл-sol.pdf] pymupdf: 3p, 87 chars
+2026-10-23 18:57:52,318 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1999-11 кл-sol.pdf] 87 chars (29/p) → OCR fallback
+2026-10-23 18:57:52,322 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1999-11 кл-sol.pdf] OCR cache: 3p
+2026-10-23 18:57:52,323 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1999-11 кл-sol.pdf] OCR: 6173 chars (vs Python: 87)
+2026-10-23 18:57:52,323 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1999-11 кл-sol] 1 chunks, 3 pages
+2026-10-23 18:57:52,344 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1999-11 кл-sol] 0 existing problems
+2026-10-23 18:58:22,347 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1999-11 кл-sol-1] extract... 30s
+2026-10-23 18:58:24,506 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1999-11 кл-sol] chunk 1-3: 6 problems (32s)
+2026-10-23 18:58:24,517 [PDF_CHUNKER] INFO ✓ [OLI-2-Областен кръг-1999-11 кл-sol] 6 problems (deduped) → C:\Users\denis\Downloads\Материали Олимпиада МАТ\generated\cache\extracted\OLI-2-Областен кръг-1999-11 кл-sol\all_problems.json
+2026-10-23 18:58:24,518 [PDF_CHUNKER] INFO 
+[21/215] OLI-2-Областен кръг-2000-10 кл-probs.pdf
+2026-10-23 18:58:24,518 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2000-10 кл-probs] skip (done)
+2026-10-23 18:58:24,519 [PDF_CHUNKER] INFO 
+[22/215] OLI-2-Областен кръг-2000-10 кл-sol.pdf
+2026-10-23 18:58:24,519 [PDF_CHUNKER] INFO 
+═══ OLI-2-Областен кръг-2000-10 кл-sol ═══
+2026-10-23 18:58:24,610 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2000-10 кл-sol.pdf] pymupdf: 4p, 96 chars
+2026-10-23 18:58:24,624 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2000-10 кл-sol.pdf] 96 chars (24/p) → OCR fallback
+2026-10-23 18:58:24,767 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2000-10 кл-sol.pdf] OCR cache: 4p
+2026-10-23 18:58:24,768 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2000-10 кл-sol.pdf] OCR: 8107 chars (vs Python: 96)
+2026-10-23 18:58:24,768 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2000-10 кл-sol] 1 chunks, 4 pages
+2026-10-23 18:58:24,784 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2000-10 кл-sol] 0 existing problems
+2026-10-23 18:58:54,797 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2000-10 кл-sol-1] extract... 30s
+2026-10-23 18:59:10,386 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2000-10 кл-sol] chunk 1-4: 6 problems (45s)
+2026-10-23 18:59:10,418 [PDF_CHUNKER] INFO ✓ [OLI-2-Областен кръг-2000-10 кл-sol] 6 problems (deduped) → C:\Users\denis\Downloads\Материали Олимпиада МАТ\generated\cache\extracted\OLI-2-Областен кръг-2000-10 кл-sol\all_problems.json
+2026-10-23 18:59:10,419 [PDF_CHUNKER] INFO 
+[23/215] OLI-2-Областен кръг-2000-11 кл-probs.pdf
+2026-10-23 18:59:10,420 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2000-11 кл-probs] skip (done)
+2026-10-23 18:59:10,420 [PDF_CHUNKER] INFO 
+[24/215] OLI-2-Областен кръг-2000-11 кл-sol.pdf
+2026-10-23 18:59:10,420 [PDF_CHUNKER] INFO 
+═══ OLI-2-Областен кръг-2000-11 кл-sol ═══
+2026-10-23 18:59:10,524 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2000-11 кл-sol.pdf] pymupdf: 4p, 96 chars
+2026-10-23 18:59:10,525 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2000-11 кл-sol.pdf] 96 chars (24/p) → OCR fallback
+2026-10-23 18:59:10,620 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2000-11 кл-sol.pdf] OCR cache: 4p
+2026-10-23 18:59:10,621 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2000-11 кл-sol.pdf] OCR: 8107 chars (vs Python: 96)
+2026-10-23 18:59:10,621 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2000-11 кл-sol] 1 chunks, 4 pages
+2026-10-23 18:59:10,642 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2000-11 кл-sol] 0 existing problems
+2026-10-23 18:59:40,653 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2000-11 кл-sol-1] extract... 30s
+2026-10-23 18:59:55,036 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2000-11 кл-sol] chunk 1-4: 6 problems (44s)
+2026-10-23 18:59:55,051 [PDF_CHUNKER] INFO ✓ [OLI-2-Областен кръг-2000-11 кл-sol] 6 problems (deduped) → C:\Users\denis\Downloads\Материали Олимпиада МАТ\generated\cache\extracted\OLI-2-Областен кръг-2000-11 кл-sol\all_problems.json
+2026-10-23 18:59:55,052 [PDF_CHUNKER] INFO 
+[25/215] OLI-2-Областен кръг-2001-10 кл-probs.pdf
+2026-10-23 18:59:55,052 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2001-10 кл-probs] skip (done)
+2026-10-23 18:59:55,053 [PDF_CHUNKER] INFO 
+[26/215] OLI-2-Областен кръг-2001-10 кл-sol.pdf
+2026-10-23 18:59:55,053 [PDF_CHUNKER] INFO 
+═══ OLI-2-Областен кръг-2001-10 кл-sol ═══
+2026-10-23 18:59:55,146 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2001-10 кл-sol.pdf] pymupdf: 4p, 96 chars
+2026-10-23 18:59:55,146 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2001-10 кл-sol.pdf] 96 chars (24/p) → OCR fallback
+2026-10-23 18:59:55,170 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2001-10 кл-sol.pdf] OCR cache: 4p
+2026-10-23 18:59:55,171 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2001-10 кл-sol.pdf] OCR: 11335 chars (vs Python: 96)
+2026-10-23 18:59:55,171 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2001-10 кл-sol] 1 chunks, 4 pages
+2026-10-23 18:59:55,189 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2001-10 кл-sol] 0 existing problems
+2026-10-23 19:00:25,206 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2001-10 кл-sol-1] extract... 30s
+2026-10-23 19:00:55,212 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2001-10 кл-sol-1] extract... 60s
+2026-10-23 19:01:01,636 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2001-10 кл-sol] chunk 1-4: 6 problems (66s)
+2026-10-23 19:01:01,649 [PDF_CHUNKER] INFO ✓ [OLI-2-Областен кръг-2001-10 кл-sol] 6 problems (deduped) → C:\Users\denis\Downloads\Материали Олимпиада МАТ\generated\cache\extracted\OLI-2-Областен кръг-2001-10 кл-sol\all_problems.json
+2026-10-23 19:01:01,650 [PDF_CHUNKER] INFO 
+[27/215] OLI-2-Областен кръг-2001-11 кл-probs.pdf
+2026-10-23 19:01:01,650 [PDF_CHUNKER] INFO 
+═══ OLI-2-Областен кръг-2001-11 кл-probs ═══
+2026-10-23 19:01:01,695 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2001-11 кл-probs.pdf] pymupdf: 1p, 24 chars
+2026-10-23 19:01:01,695 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2001-11 кл-probs.pdf] 24 chars (24/p) → OCR fallback
+2026-10-23 19:01:01,724 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2001-11 кл-probs.pdf] OCR cache: 1p
+2026-10-23 19:01:01,726 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2001-11 кл-probs.pdf] OCR: 1619 chars (vs Python: 24)
+2026-10-23 19:01:01,726 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2001-11 кл-probs] 1 chunks, 1 pages
+2026-10-23 19:01:21,966 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2001-11 кл-probs] chunk 1-1: 6 problems (20s)
+2026-10-23 19:01:21,978 [PDF_CHUNKER] INFO ✓ [OLI-2-Областен кръг-2001-11 кл-probs] 6 problems (deduped) → C:\Users\denis\Downloads\Материали Олимпиада МАТ\generated\cache\extracted\OLI-2-Областен кръг-2001-11 кл-probs\all_problems.json
+2026-10-23 19:01:21,979 [PDF_CHUNKER] INFO 
+[28/215] OLI-2-Областен кръг-2001-11 кл-sol.pdf
+2026-10-23 19:01:21,979 [PDF_CHUNKER] INFO 
+═══ OLI-2-Областен кръг-2001-11 кл-sol ═══
+2026-10-23 19:01:22,065 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2001-11 кл-sol.pdf] pymupdf: 4p, 96 chars
+2026-10-23 19:01:22,065 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2001-11 кл-sol.pdf] 96 chars (24/p) → OCR fallback
+2026-10-23 19:01:22,086 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2001-11 кл-sol.pdf] OCR cache: 4p
+2026-10-23 19:01:22,086 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2001-11 кл-sol.pdf] OCR: 11335 chars (vs Python: 96)
+2026-10-23 19:01:22,086 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2001-11 кл-sol] 1 chunks, 4 pages
+2026-10-23 19:01:52,099 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2001-11 кл-sol-1] extract... 30s
+2026-10-23 19:02:22,102 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2001-11 кл-sol-1] extract... 60s
+2026-10-23 19:02:31,457 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2001-11 кл-sol] chunk 1-4: 6 problems (69s)
+2026-10-23 19:02:31,473 [PDF_CHUNKER] INFO ✓ [OLI-2-Областен кръг-2001-11 кл-sol] 6 problems (deduped) → C:\Users\denis\Downloads\Материали Олимпиада МАТ\generated\cache\extracted\OLI-2-Областен кръг-2001-11 кл-sol\all_problems.json
+2026-10-23 19:02:31,474 [PDF_CHUNKER] INFO 
+[29/215] OLI-2-Областен кръг-2002-10 кл-probs.pdf
+2026-10-23 19:02:31,475 [PDF_CHUNKER] INFO 
+═══ OLI-2-Областен кръг-2002-10 кл-probs ═══
+2026-10-23 19:02:31,531 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2002-10 кл-probs.pdf] pymupdf: 1p, 24 chars
+2026-10-23 19:02:31,532 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2002-10 кл-probs.pdf] 24 chars (24/p) → OCR fallback
+2026-10-23 19:02:31,559 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2002-10 кл-probs.pdf] OCR cache: 1p
+2026-10-23 19:02:31,559 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2002-10 кл-probs.pdf] OCR: 1477 chars (vs Python: 24)
+2026-10-23 19:02:31,560 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2002-10 кл-probs] 1 chunks, 1 pages
+2026-10-23 19:02:46,614 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2002-10 кл-probs] chunk 1-1: 6 problems (15s)
+2026-10-23 19:02:46,626 [PDF_CHUNKER] INFO ✓ [OLI-2-Областен кръг-2002-10 кл-probs] 6 problems (deduped) → C:\Users\denis\Downloads\Материали Олимпиада МАТ\generated\cache\extracted\OLI-2-Областен кръг-2002-10 кл-probs\all_problems.json
+2026-10-23 19:02:46,627 [PDF_CHUNKER] INFO 
+[30/215] OLI-2-Областен кръг-2002-10 кл-sol.pdf
+2026-10-23 19:02:46,627 [PDF_CHUNKER] INFO 
+═══ OLI-2-Областен кръг-2002-10 кл-sol ═══
+2026-10-23 19:02:46,759 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2002-10 кл-sol.pdf] pymupdf: 4p, 96 chars
+2026-10-23 19:02:46,759 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2002-10 кл-sol.pdf] 96 chars (24/p) → OCR fallback
+2026-10-23 19:02:46,797 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2002-10 кл-sol.pdf] OCR cache: 4p
+2026-10-23 19:02:46,797 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2002-10 кл-sol.pdf] OCR: 8327 chars (vs Python: 96)
+2026-10-23 19:02:46,798 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2002-10 кл-sol] 1 chunks, 4 pages
+2026-10-23 19:03:16,815 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2002-10 кл-sol-1] extract... 30s
+2026-10-23 19:03:36,097 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2002-10 кл-sol] chunk 1-4: 6 problems (49s)
+2026-10-23 19:03:36,109 [PDF_CHUNKER] INFO ✓ [OLI-2-Областен кръг-2002-10 кл-sol] 6 problems (deduped) → C:\Users\denis\Downloads\Материали Олимпиада МАТ\generated\cache\extracted\OLI-2-Областен кръг-2002-10 кл-sol\all_problems.json
+2026-10-23 19:03:36,109 [PDF_CHUNKER] INFO 
+[31/215] OLI-2-Областен кръг-2002-11 кл-probs.pdf
+2026-10-23 19:03:36,110 [PDF_CHUNKER] INFO 
+═══ OLI-2-Областен кръг-2002-11 кл-probs ═══
+2026-10-23 19:03:36,151 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2002-11 кл-probs.pdf] pymupdf: 1p, 24 chars
+2026-10-23 19:03:36,151 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2002-11 кл-probs.pdf] 24 chars (24/p) → OCR fallback
+2026-10-23 19:03:36,170 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2002-11 кл-probs.pdf] OCR cache: 1p
+2026-10-23 19:03:36,172 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2002-11 кл-probs.pdf] OCR: 1475 chars (vs Python: 24)
+2026-10-23 19:03:36,172 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2002-11 кл-probs] 1 chunks, 1 pages
+2026-10-23 19:03:51,600 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2002-11 кл-probs] chunk 1-1: 6 problems (15s)
+2026-10-23 19:03:51,617 [PDF_CHUNKER] INFO ✓ [OLI-2-Областен кръг-2002-11 кл-probs] 6 problems (deduped) → C:\Users\denis\Downloads\Материали Олимпиада МАТ\generated\cache\extracted\OLI-2-Областен кръг-2002-11 кл-probs\all_problems.json
+2026-10-23 19:03:51,617 [PDF_CHUNKER] INFO 
+[32/215] OLI-2-Областен кръг-2002-11 кл-sol.pdf
+2026-10-23 19:03:51,619 [PDF_CHUNKER] INFO 
+═══ OLI-2-Областен кръг-2002-11 кл-sol ═══
+2026-10-23 19:03:51,710 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2002-11 кл-sol.pdf] pymupdf: 4p, 96 chars
+2026-10-23 19:03:51,710 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2002-11 кл-sol.pdf] 96 chars (24/p) → OCR fallback
+2026-10-23 19:03:51,744 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2002-11 кл-sol.pdf] OCR cache: 4p
+2026-10-23 19:03:51,744 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2002-11 кл-sol.pdf] OCR: 8330 chars (vs Python: 96)
+2026-10-23 19:03:51,745 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2002-11 кл-sol] 1 chunks, 4 pages
+2026-10-23 19:04:21,753 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2002-11 кл-sol-1] extract... 30s
+2026-10-23 19:04:37,342 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2002-11 кл-sol] chunk 1-4: 6 problems (45s)
+2026-10-23 19:04:37,353 [PDF_CHUNKER] INFO ✓ [OLI-2-Областен кръг-2002-11 кл-sol] 6 problems (deduped) → C:\Users\denis\Downloads\Материали Олимпиада МАТ\generated\cache\extracted\OLI-2-Областен кръг-2002-11 кл-sol\all_problems.json
+2026-10-23 19:04:37,353 [PDF_CHUNKER] INFO 
+[33/215] OLI-2-Областен кръг-2003-10 кл-probs.pdf
+2026-10-23 19:04:37,354 [PDF_CHUNKER] INFO 
+═══ OLI-2-Областен кръг-2003-10 кл-probs ═══
+2026-10-23 19:04:37,671 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2003-10 кл-probs.pdf] pymupdf: 1p, 1604 chars
+2026-10-23 19:04:37,671 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2003-10 кл-probs] 1 chunks, 1 pages
+2026-10-23 19:04:50,622 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2003-10 кл-probs] chunk 1-1: 6 problems (12s)
+2026-10-23 19:04:50,632 [PDF_CHUNKER] INFO ✓ [OLI-2-Областен кръг-2003-10 кл-probs] 6 problems (deduped) → C:\Users\denis\Downloads\Материали Олимпиада МАТ\generated\cache\extracted\OLI-2-Областен кръг-2003-10 кл-probs\all_problems.json
+2026-10-23 19:04:50,633 [PDF_CHUNKER] INFO 
+[34/215] OLI-2-Областен кръг-2003-10 кл-sol.pdf
+2026-10-23 19:04:50,634 [PDF_CHUNKER] INFO 
+═══ OLI-2-Областен кръг-2003-10 кл-sol ═══
+2026-10-23 19:04:51,455 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2003-10 кл-sol.pdf] pymupdf: 3p, 4236 chars
+2026-10-23 19:04:51,455 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2003-10 кл-sol] 1 chunks, 3 pages
+2026-10-23 19:04:51,472 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2003-10 кл-sol] 6 existing problems
+2026-10-23 19:05:21,484 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2003-10 кл-sol-1] extract... 30s
+2026-10-23 19:05:25,802 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2003-10 кл-sol] chunk 1-3: 6 problems (34s)
+2026-10-23 19:05:25,815 [PDF_CHUNKER] INFO ✓ [OLI-2-Областен кръг-2003-10 кл-sol] 6 problems (deduped) → C:\Users\denis\Downloads\Материали Олимпиада МАТ\generated\cache\extracted\OLI-2-Областен кръг-2003-10 кл-sol\all_problems.json
+2026-10-23 19:05:25,816 [PDF_CHUNKER] INFO 
+[35/215] OLI-2-Областен кръг-2003-11 кл-probs.pdf
+2026-10-23 19:05:25,816 [PDF_CHUNKER] INFO 
+═══ OLI-2-Областен кръг-2003-11 кл-probs ═══
+2026-10-23 19:05:26,118 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2003-11 кл-probs.pdf] pymupdf: 1p, 1604 chars
+2026-10-23 19:05:26,118 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2003-11 кл-probs] 1 chunks, 1 pages
+2026-10-23 19:05:38,956 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2003-11 кл-probs] chunk 1-1: 6 problems (12s)
+2026-10-23 19:05:38,968 [PDF_CHUNKER] INFO ✓ [OLI-2-Областен кръг-2003-11 кл-probs] 6 problems (deduped) → C:\Users\denis\Downloads\Материали Олимпиада МАТ\generated\cache\extracted\OLI-2-Областен кръг-2003-11 кл-probs\all_problems.json
+2026-10-23 19:05:38,968 [PDF_CHUNKER] INFO 
+[36/215] OLI-2-Областен кръг-2003-11 кл-sol.pdf
+2026-10-23 19:05:38,968 [PDF_CHUNKER] INFO 
+═══ OLI-2-Областен кръг-2003-11 кл-sol ═══
+2026-10-23 19:05:39,910 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2003-11 кл-sol.pdf] pymupdf: 3p, 4236 chars
+2026-10-23 19:05:39,910 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2003-11 кл-sol] 1 chunks, 3 pages
+2026-10-23 19:06:09,927 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2003-11 кл-sol-1] extract... 30s
+2026-10-23 19:06:15,431 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2003-11 кл-sol] chunk 1-3: 6 problems (35s)
+2026-10-23 19:06:15,443 [PDF_CHUNKER] INFO ✓ [OLI-2-Областен кръг-2003-11 кл-sol] 6 problems (deduped) → C:\Users\denis\Downloads\Материали Олимпиада МАТ\generated\cache\extracted\OLI-2-Областен кръг-2003-11 кл-sol\all_problems.json
+2026-10-23 19:06:15,444 [PDF_CHUNKER] INFO 
+[37/215] OLI-2-Областен кръг-2004-10 кл-probs.pdf
+2026-10-23 19:06:15,444 [PDF_CHUNKER] INFO 
+═══ OLI-2-Областен кръг-2004-10 кл-probs ═══
+2026-10-23 19:06:16,779 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2004-10 кл-probs.pdf] pdfplumber: 3p, 5623 chars
+2026-10-23 19:06:16,780 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2004-10 кл-probs] 1 chunks, 3 pages
+2026-10-23 19:06:46,791 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2004-10 кл-probs-1] extract... 30s
+2026-10-23 19:07:05,209 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2004-10 кл-probs] chunk 1-3: 18 problems (48s)
+2026-10-23 19:07:05,223 [PDF_CHUNKER] INFO ✓ [OLI-2-Областен кръг-2004-10 кл-probs] 18 problems (deduped) → C:\Users\denis\Downloads\Материали Олимпиада МАТ\generated\cache\extracted\OLI-2-Областен кръг-2004-10 кл-probs\all_problems.json
+2026-10-23 19:07:05,223 [PDF_CHUNKER] WARNING ⚠ Бюджет достигнат на 38/215
+2026-10-23 19:28:21,923 [PDF_CHUNKER] INFO Заредени 164 STEPS точки
+2026-10-23 19:28:21,923 [PDF_CHUNKER] INFO Classify model: openai/gpt-oss-120b ($0.0005/call)
+2026-10-23 19:28:21,949 [PDF_CHUNKER] INFO Намерени 236 PDF-а
+2026-10-23 19:28:21,950 [PDF_CHUNKER] INFO Филтър 'OLI-2,OLI-3': 215 PDF-а
+2026-10-23 19:28:21,950 [PDF_CHUNKER] INFO 
+[1/215] OLI-2-Областен кръг-1995-10 кл-probs.pdf
+2026-10-23 19:28:21,951 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1995-10 кл-probs] skip (done)
+2026-10-23 19:28:21,951 [PDF_CHUNKER] INFO 
+[2/215] OLI-2-Областен кръг-1995-10 кл-sol.pdf
+2026-10-23 19:28:21,951 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1995-10 кл-sol] skip (done)
+2026-10-23 19:28:21,952 [PDF_CHUNKER] INFO 
+[3/215] OLI-2-Областен кръг-1995-11 кл-probs.pdf
+2026-10-23 19:28:21,952 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1995-11 кл-probs] skip (done)
+2026-10-23 19:28:21,952 [PDF_CHUNKER] INFO 
+[4/215] OLI-2-Областен кръг-1995-11 кл-sol.pdf
+2026-10-23 19:28:21,952 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1995-11 кл-sol] skip (done)
+2026-10-23 19:28:21,953 [PDF_CHUNKER] INFO 
+[5/215] OLI-2-Областен кръг-1996-10 кл-probs.pdf
+2026-10-23 19:28:21,953 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1996-10 кл-probs] skip (done)
+2026-10-23 19:28:21,953 [PDF_CHUNKER] INFO 
+[6/215] OLI-2-Областен кръг-1996-10 кл-sol.pdf
+2026-10-23 19:28:21,953 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1996-10 кл-sol] skip (done)
+2026-10-23 19:28:21,954 [PDF_CHUNKER] INFO 
+[7/215] OLI-2-Областен кръг-1996-11 кл-probs.pdf
+2026-10-23 19:28:21,954 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1996-11 кл-probs] skip (done)
+2026-10-23 19:28:21,954 [PDF_CHUNKER] INFO 
+[8/215] OLI-2-Областен кръг-1996-11 кл-sol.pdf
+2026-10-23 19:28:21,955 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1996-11 кл-sol] skip (done)
+2026-10-23 19:28:21,955 [PDF_CHUNKER] INFO 
+[9/215] OLI-2-Областен кръг-1997-10 кл-probs.pdf
+2026-10-23 19:28:21,955 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1997-10 кл-probs] skip (done)
+2026-10-23 19:28:21,956 [PDF_CHUNKER] INFO 
+[10/215] OLI-2-Областен кръг-1997-10 кл-sol.pdf
+2026-10-23 19:28:21,957 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1997-10 кл-sol] skip (done)
+2026-10-23 19:28:21,957 [PDF_CHUNKER] INFO 
+[11/215] OLI-2-Областен кръг-1997-11 кл-probs.pdf
+2026-10-23 19:28:21,957 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1997-11 кл-probs] skip (done)
+2026-10-23 19:28:21,957 [PDF_CHUNKER] INFO 
+[12/215] OLI-2-Областен кръг-1997-11 кл-sol.pdf
+2026-10-23 19:28:21,958 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1997-11 кл-sol] skip (done)
+2026-10-23 19:28:21,958 [PDF_CHUNKER] INFO 
+[13/215] OLI-2-Областен кръг-1998-10 кл-probs.pdf
+2026-10-23 19:28:21,958 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1998-10 кл-probs] skip (done)
+2026-10-23 19:28:21,959 [PDF_CHUNKER] INFO 
+[14/215] OLI-2-Областен кръг-1998-10 кл-sol.pdf
+2026-10-23 19:28:21,959 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1998-10 кл-sol] skip (done)
+2026-10-23 19:28:21,959 [PDF_CHUNKER] INFO 
+[15/215] OLI-2-Областен кръг-1998-11 кл-probs.pdf
+2026-10-23 19:28:21,959 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1998-11 кл-probs] skip (done)
+2026-10-23 19:28:21,960 [PDF_CHUNKER] INFO 
+[16/215] OLI-2-Областен кръг-1998-11 кл-sol.pdf
+2026-10-23 19:28:21,960 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1998-11 кл-sol] skip (done)
+2026-10-23 19:28:21,960 [PDF_CHUNKER] INFO 
+[17/215] OLI-2-Областен кръг-1999-10 кл-probs.pdf
+2026-10-23 19:28:21,962 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1999-10 кл-probs] skip (done)
+2026-10-23 19:28:21,963 [PDF_CHUNKER] INFO 
+[18/215] OLI-2-Областен кръг-1999-10 кл-sol.pdf
+2026-10-23 19:28:21,963 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1999-10 кл-sol] skip (done)
+2026-10-23 19:28:21,964 [PDF_CHUNKER] INFO 
+[19/215] OLI-2-Областен кръг-1999-11 кл-probs.pdf
+2026-10-23 19:28:21,964 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1999-11 кл-probs] skip (done)
+2026-10-23 19:28:21,965 [PDF_CHUNKER] INFO 
+[20/215] OLI-2-Областен кръг-1999-11 кл-sol.pdf
+2026-10-23 19:28:21,965 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-1999-11 кл-sol] skip (done)
+2026-10-23 19:28:21,965 [PDF_CHUNKER] INFO 
+[21/215] OLI-2-Областен кръг-2000-10 кл-probs.pdf
+2026-10-23 19:28:21,965 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2000-10 кл-probs] skip (done)
+2026-10-23 19:28:21,967 [PDF_CHUNKER] INFO 
+[22/215] OLI-2-Областен кръг-2000-10 кл-sol.pdf
+2026-10-23 19:28:21,967 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2000-10 кл-sol] skip (done)
+2026-10-23 19:28:21,968 [PDF_CHUNKER] INFO 
+[23/215] OLI-2-Областен кръг-2000-11 кл-probs.pdf
+2026-10-23 19:28:21,968 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2000-11 кл-probs] skip (done)
+2026-10-23 19:28:21,968 [PDF_CHUNKER] INFO 
+[24/215] OLI-2-Областен кръг-2000-11 кл-sol.pdf
+2026-10-23 19:28:21,968 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2000-11 кл-sol] skip (done)
+2026-10-23 19:28:21,969 [PDF_CHUNKER] INFO 
+[25/215] OLI-2-Областен кръг-2001-10 кл-probs.pdf
+2026-10-23 19:28:21,970 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2001-10 кл-probs] skip (done)
+2026-10-23 19:28:21,971 [PDF_CHUNKER] INFO 
+[26/215] OLI-2-Областен кръг-2001-10 кл-sol.pdf
+2026-10-23 19:28:21,971 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2001-10 кл-sol] skip (done)
+2026-10-23 19:28:21,973 [PDF_CHUNKER] INFO 
+[27/215] OLI-2-Областен кръг-2001-11 кл-probs.pdf
+2026-10-23 19:28:21,973 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2001-11 кл-probs] skip (done)
+2026-10-23 19:28:21,973 [PDF_CHUNKER] INFO 
+[28/215] OLI-2-Областен кръг-2001-11 кл-sol.pdf
+2026-10-23 19:28:21,974 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2001-11 кл-sol] skip (done)
+2026-10-23 19:28:21,974 [PDF_CHUNKER] INFO 
+[29/215] OLI-2-Областен кръг-2002-10 кл-probs.pdf
+2026-10-23 19:28:21,974 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2002-10 кл-probs] skip (done)
+2026-10-23 19:28:21,974 [PDF_CHUNKER] INFO 
+[30/215] OLI-2-Областен кръг-2002-10 кл-sol.pdf
+2026-10-23 19:28:21,975 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2002-10 кл-sol] skip (done)
+2026-10-23 19:28:21,975 [PDF_CHUNKER] INFO 
+[31/215] OLI-2-Областен кръг-2002-11 кл-probs.pdf
+2026-10-23 19:28:21,975 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2002-11 кл-probs] skip (done)
+2026-10-23 19:28:21,976 [PDF_CHUNKER] INFO 
+[32/215] OLI-2-Областен кръг-2002-11 кл-sol.pdf
+2026-10-23 19:28:21,976 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2002-11 кл-sol] skip (done)
+2026-10-23 19:28:21,976 [PDF_CHUNKER] INFO 
+[33/215] OLI-2-Областен кръг-2003-10 кл-probs.pdf
+2026-10-23 19:28:21,977 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2003-10 кл-probs] skip (done)
+2026-10-23 19:28:21,977 [PDF_CHUNKER] INFO 
+[34/215] OLI-2-Областен кръг-2003-10 кл-sol.pdf
+2026-10-23 19:28:21,978 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2003-10 кл-sol] skip (done)
+2026-10-23 19:28:21,978 [PDF_CHUNKER] INFO 
+[35/215] OLI-2-Областен кръг-2003-11 кл-probs.pdf
+2026-10-23 19:28:21,979 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2003-11 кл-probs] skip (done)
+2026-10-23 19:28:21,979 [PDF_CHUNKER] INFO 
+[36/215] OLI-2-Областен кръг-2003-11 кл-sol.pdf
+2026-10-23 19:28:21,979 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2003-11 кл-sol] skip (done)
+2026-10-23 19:28:21,980 [PDF_CHUNKER] INFO 
+[37/215] OLI-2-Областен кръг-2004-10 кл-probs.pdf
+2026-10-23 19:28:21,980 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2004-10 кл-probs] skip (done)
+2026-10-23 19:28:21,980 [PDF_CHUNKER] INFO 
+[38/215] OLI-2-Областен кръг-2004-10 кл-sol.pdf
+2026-10-23 19:28:21,981 [PDF_CHUNKER] INFO 
+═══ OLI-2-Областен кръг-2004-10 кл-sol ═══
+2026-10-23 19:28:24,983 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2004-10 кл-sol.pdf] pypdf: 3p, 9295 chars
+2026-10-23 19:28:24,984 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2004-10 кл-sol] 1 chunks, 3 pages
+2026-10-23 19:28:55,002 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2004-10 кл-sol-1] extract... 30s
+2026-10-23 19:29:21,894 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2004-10 кл-sol] chunk 1-3: 10 problems (56s)
+2026-10-23 19:29:21,912 [PDF_CHUNKER] INFO ✓ [OLI-2-Областен кръг-2004-10 кл-sol] 10 problems (deduped) → C:\Users\denis\Downloads\Материали Олимпиада МАТ\generated\cache\extracted\OLI-2-Областен кръг-2004-10 кл-sol\all_problems.json
+2026-10-23 19:29:21,913 [PDF_CHUNKER] INFO 
+[39/215] OLI-2-Областен кръг-2004-11 кл-probs.pdf
+2026-10-23 19:29:21,913 [PDF_CHUNKER] INFO 
+═══ OLI-2-Областен кръг-2004-11 кл-probs ═══
+2026-10-23 19:29:22,918 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2004-11 кл-probs.pdf] pypdf: 1p, 4786 chars
+2026-10-23 19:29:22,919 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2004-11 кл-probs] 1 chunks, 1 pages
+2026-10-23 19:29:52,932 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2004-11 кл-probs-1] extract... 30s
+2026-10-23 19:30:04,643 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2004-11 кл-probs] chunk 1-1: 20 problems (41s)
+2026-10-23 19:30:04,659 [PDF_CHUNKER] INFO ✓ [OLI-2-Областен кръг-2004-11 кл-probs] 19 problems (deduped) → C:\Users\denis\Downloads\Материали Олимпиада МАТ\generated\cache\extracted\OLI-2-Областен кръг-2004-11 кл-probs\all_problems.json
+2026-10-23 19:30:04,660 [PDF_CHUNKER] INFO 
+[40/215] OLI-2-Областен кръг-2004-11 кл-sol.pdf
+2026-10-23 19:30:04,660 [PDF_CHUNKER] INFO 
+═══ OLI-2-Областен кръг-2004-11 кл-sol ═══
+2026-10-23 19:30:07,179 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2004-11 кл-sol.pdf] pypdf: 3p, 10784 chars
+2026-10-23 19:30:07,180 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2004-11 кл-sol] 1 chunks, 3 pages
+2026-10-23 19:30:37,186 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2004-11 кл-sol-1] extract... 30s
+2026-10-23 19:30:51,824 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2004-11 кл-sol] chunk 1-3: 9 problems (44s)
+2026-10-23 19:30:51,840 [PDF_CHUNKER] INFO ✓ [OLI-2-Областен кръг-2004-11 кл-sol] 9 problems (deduped) → C:\Users\denis\Downloads\Материали Олимпиада МАТ\generated\cache\extracted\OLI-2-Областен кръг-2004-11 кл-sol\all_problems.json
+2026-10-23 19:30:51,841 [PDF_CHUNKER] INFO 
+[41/215] OLI-2-Областен кръг-2005-10 кл-probs.pdf
+2026-10-23 19:30:51,842 [PDF_CHUNKER] INFO 
+═══ OLI-2-Областен кръг-2005-10 кл-probs ═══
+2026-10-23 19:30:52,899 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2005-10 кл-probs.pdf] pypdf: 1p, 4844 chars
+2026-10-23 19:30:52,900 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2005-10 кл-probs] 1 chunks, 1 pages
+2026-10-23 19:31:22,917 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2005-10 кл-probs-1] extract... 30s
+2026-10-23 19:31:24,381 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2005-10 кл-probs] chunk 1-1: 13 problems (31s)
+2026-10-23 19:31:24,394 [PDF_CHUNKER] INFO ✓ [OLI-2-Областен кръг-2005-10 кл-probs] 13 problems (deduped) → C:\Users\denis\Downloads\Материали Олимпиада МАТ\generated\cache\extracted\OLI-2-Областен кръг-2005-10 кл-probs\all_problems.json
+2026-10-23 19:31:24,395 [PDF_CHUNKER] INFO 
+[42/215] OLI-2-Областен кръг-2005-10 кл-sol.pdf
+2026-10-23 19:31:24,395 [PDF_CHUNKER] INFO 
+═══ OLI-2-Областен кръг-2005-10 кл-sol ═══
+2026-10-23 19:31:26,801 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2005-10 кл-sol.pdf] pdfplumber: 2p, 9878 chars
+2026-10-23 19:31:26,801 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2005-10 кл-sol] 1 chunks, 2 pages
+2026-10-23 19:31:56,816 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2005-10 кл-sol-1] extract... 30s
+2026-10-23 19:32:26,830 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2005-10 кл-sol-1] extract... 60s
+2026-10-23 19:32:29,005 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2005-10 кл-sol] chunk 1-2: 12 problems (62s)
+2026-10-23 19:32:29,018 [PDF_CHUNKER] INFO ✓ [OLI-2-Областен кръг-2005-10 кл-sol] 12 problems (deduped) → C:\Users\denis\Downloads\Материали Олимпиада МАТ\generated\cache\extracted\OLI-2-Областен кръг-2005-10 кл-sol\all_problems.json
+2026-10-23 19:32:29,018 [PDF_CHUNKER] INFO 
+[43/215] OLI-2-Областен кръг-2005-11 кл-probs.pdf
+2026-10-23 19:32:29,020 [PDF_CHUNKER] INFO 
+═══ OLI-2-Областен кръг-2005-11 кл-probs ═══
+2026-10-23 19:32:30,038 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2005-11 кл-probs.pdf] pypdf: 1p, 4755 chars
+2026-10-23 19:32:30,038 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2005-11 кл-probs] 1 chunks, 1 pages
+2026-10-23 19:33:00,053 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2005-11 кл-probs-1] extract... 30s
+2026-10-23 19:33:17,236 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2005-11 кл-probs] chunk 1-1: 18 problems (47s)
+2026-10-23 19:33:17,251 [PDF_CHUNKER] INFO ✓ [OLI-2-Областен кръг-2005-11 кл-probs] 18 problems (deduped) → C:\Users\denis\Downloads\Материали Олимпиада МАТ\generated\cache\extracted\OLI-2-Областен кръг-2005-11 кл-probs\all_problems.json
+2026-10-23 19:33:17,251 [PDF_CHUNKER] INFO 
+[44/215] OLI-2-Областен кръг-2005-11 кл-sol.pdf
+2026-10-23 19:33:17,251 [PDF_CHUNKER] INFO 
+═══ OLI-2-Областен кръг-2005-11 кл-sol ═══
+2026-10-23 19:33:22,774 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2005-11 кл-sol.pdf] pdfplumber: 3p, 21343 chars
+2026-10-23 19:33:22,774 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2005-11 кл-sol] 1 chunks, 3 pages
+2026-10-23 19:33:22,798 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2005-11 кл-sol] 13 existing problems
+2026-10-23 19:33:52,804 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2005-11 кл-sol-1] extract... 30s
+2026-10-23 19:34:22,819 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2005-11 кл-sol-1] extract... 60s
+2026-10-23 19:34:52,834 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2005-11 кл-sol-1] extract... 90s
+2026-10-23 19:34:53,068 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2005-11 кл-sol] chunk 1-3: 14 problems (90s)
+2026-10-23 19:34:53,082 [PDF_CHUNKER] INFO ✓ [OLI-2-Областен кръг-2005-11 кл-sol] 14 problems (deduped) → C:\Users\denis\Downloads\Материали Олимпиада МАТ\generated\cache\extracted\OLI-2-Областен кръг-2005-11 кл-sol\all_problems.json
+2026-10-23 19:34:53,082 [PDF_CHUNKER] INFO 
+[45/215] OLI-2-Областен кръг-2006-10 кл-probs.pdf
+2026-10-23 19:34:53,083 [PDF_CHUNKER] INFO 
+═══ OLI-2-Областен кръг-2006-10 кл-probs ═══
+2026-10-23 19:34:53,109 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2006-10 кл-probs.pdf] pymupdf: 1p, 24 chars
+2026-10-23 19:34:53,110 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2006-10 кл-probs.pdf] 24 chars (24/p) → OCR fallback
+2026-10-23 19:34:53,128 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2006-10 кл-probs.pdf] OCR cache: 1p
+2026-10-23 19:34:53,129 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2006-10 кл-probs.pdf] OCR: 1581 chars (vs Python: 24)
+2026-10-23 19:34:53,129 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2006-10 кл-probs] 1 chunks, 1 pages
+2026-10-23 19:35:18,162 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2006-10 кл-probs] chunk 1-1: 7 problems (25s)
+2026-10-23 19:35:18,175 [PDF_CHUNKER] INFO ✓ [OLI-2-Областен кръг-2006-10 кл-probs] 7 problems (deduped) → C:\Users\denis\Downloads\Материали Олимпиада МАТ\generated\cache\extracted\OLI-2-Областен кръг-2006-10 кл-probs\all_problems.json
+2026-10-23 19:35:18,176 [PDF_CHUNKER] INFO 
+[46/215] OLI-2-Областен кръг-2006-10 кл-sol.pdf
+2026-10-23 19:35:18,176 [PDF_CHUNKER] INFO 
+═══ OLI-2-Областен кръг-2006-10 кл-sol ═══
+2026-10-23 19:35:18,223 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2006-10 кл-sol.pdf] pymupdf: 3p, 72 chars
+2026-10-23 19:35:18,224 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2006-10 кл-sol.pdf] 72 chars (24/p) → OCR fallback
+2026-10-23 19:35:18,255 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2006-10 кл-sol.pdf] OCR cache: 3p
+2026-10-23 19:35:18,256 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2006-10 кл-sol.pdf] OCR: 5582 chars (vs Python: 72)
+2026-10-23 19:35:18,256 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2006-10 кл-sol] 1 chunks, 3 pages
+2026-10-23 19:35:48,273 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2006-10 кл-sol-1] extract... 30s
+2026-10-23 19:35:55,352 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2006-10 кл-sol] chunk 1-3: 7 problems (37s)
+2026-10-23 19:35:55,369 [PDF_CHUNKER] INFO ✓ [OLI-2-Областен кръг-2006-10 кл-sol] 7 problems (deduped) → C:\Users\denis\Downloads\Материали Олимпиада МАТ\generated\cache\extracted\OLI-2-Областен кръг-2006-10 кл-sol\all_problems.json
+2026-10-23 19:35:55,371 [PDF_CHUNKER] INFO 
+[47/215] OLI-2-Областен кръг-2006-11 кл-probs.pdf
+2026-10-23 19:35:55,371 [PDF_CHUNKER] INFO 
+═══ OLI-2-Областен кръг-2006-11 кл-probs ═══
+2026-10-23 19:35:55,402 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2006-11 кл-probs.pdf] pymupdf: 1p, 24 chars
+2026-10-23 19:35:55,402 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2006-11 кл-probs.pdf] 24 chars (24/p) → OCR fallback
+2026-10-23 19:35:55,433 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2006-11 кл-probs.pdf] OCR cache: 1p
+2026-10-23 19:35:55,433 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2006-11 кл-probs.pdf] OCR: 1446 chars (vs Python: 24)
+2026-10-23 19:35:55,433 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2006-11 кл-probs] 1 chunks, 1 pages
+2026-10-23 19:36:25,451 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2006-11 кл-probs-1] extract... 30s
+2026-10-23 19:36:38,462 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2006-11 кл-probs] chunk 1-1: 6 problems (43s)
+2026-10-23 19:36:38,477 [PDF_CHUNKER] INFO ✓ [OLI-2-Областен кръг-2006-11 кл-probs] 6 problems (deduped) → C:\Users\denis\Downloads\Материали Олимпиада МАТ\generated\cache\extracted\OLI-2-Областен кръг-2006-11 кл-probs\all_problems.json
+2026-10-23 19:36:38,478 [PDF_CHUNKER] INFO 
+[48/215] OLI-2-Областен кръг-2006-11 кл-sol.pdf
+2026-10-23 19:36:38,478 [PDF_CHUNKER] INFO 
+═══ OLI-2-Областен кръг-2006-11 кл-sol ═══
+2026-10-23 19:36:38,534 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2006-11 кл-sol.pdf] pymupdf: 4p, 96 chars
+2026-10-23 19:36:38,534 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2006-11 кл-sol.pdf] 96 chars (24/p) → OCR fallback
+2026-10-23 19:36:38,559 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2006-11 кл-sol.pdf] OCR cache: 4p
+2026-10-23 19:36:38,559 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2006-11 кл-sol.pdf] OCR: 6857 chars (vs Python: 96)
+2026-10-23 19:36:38,560 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2006-11 кл-sol] 1 chunks, 4 pages
+2026-10-23 19:37:08,577 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2006-11 кл-sol-1] extract... 30s
+2026-10-23 19:37:24,293 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2006-11 кл-sol] chunk 1-4: 6 problems (45s)
+2026-10-23 19:37:24,311 [PDF_CHUNKER] INFO ✓ [OLI-2-Областен кръг-2006-11 кл-sol] 6 problems (deduped) → C:\Users\denis\Downloads\Материали Олимпиада МАТ\generated\cache\extracted\OLI-2-Областен кръг-2006-11 кл-sol\all_problems.json
+2026-10-23 19:37:24,312 [PDF_CHUNKER] INFO 
+[49/215] OLI-2-Областен кръг-2007-10 кл-probs.pdf
+2026-10-23 19:37:24,313 [PDF_CHUNKER] INFO 
+═══ OLI-2-Областен кръг-2007-10 кл-probs ═══
+2026-10-23 19:37:24,810 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2007-10 кл-probs.pdf] pymupdf: 1p, 1567 chars
+2026-10-23 19:37:24,810 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2007-10 кл-probs] 1 chunks, 1 pages
+2026-10-23 19:37:42,120 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2007-10 кл-probs] chunk 1-1: 7 problems (17s)
+2026-10-23 19:37:42,137 [PDF_CHUNKER] INFO ✓ [OLI-2-Областен кръг-2007-10 кл-probs] 7 problems (deduped) → C:\Users\denis\Downloads\Материали Олимпиада МАТ\generated\cache\extracted\OLI-2-Областен кръг-2007-10 кл-probs\all_problems.json
+2026-10-23 19:37:42,137 [PDF_CHUNKER] INFO 
+[50/215] OLI-2-Областен кръг-2007-10 кл-sol.pdf
+2026-10-23 19:37:42,138 [PDF_CHUNKER] INFO 
+═══ OLI-2-Областен кръг-2007-10 кл-sol ═══
+2026-10-23 19:37:43,532 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2007-10 кл-sol.pdf] pdfplumber: 3p, 7502 chars
+2026-10-23 19:37:43,533 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2007-10 кл-sol] 1 chunks, 3 pages
+2026-10-23 19:38:13,538 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2007-10 кл-sol-1] extract... 30s
+2026-10-23 19:38:40,518 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2007-10 кл-sol] chunk 1-3: 7 problems (56s)
+2026-10-23 19:38:40,535 [PDF_CHUNKER] INFO ✓ [OLI-2-Областен кръг-2007-10 кл-sol] 7 problems (deduped) → C:\Users\denis\Downloads\Материали Олимпиада МАТ\generated\cache\extracted\OLI-2-Областен кръг-2007-10 кл-sol\all_problems.json
+2026-10-23 19:38:40,535 [PDF_CHUNKER] INFO 
+[51/215] OLI-2-Областен кръг-2007-11 кл-probs.pdf
+2026-10-23 19:38:40,536 [PDF_CHUNKER] INFO 
+═══ OLI-2-Областен кръг-2007-11 кл-probs ═══
+2026-10-23 19:38:40,947 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2007-11 кл-probs.pdf] pdfplumber: 1p, 2058 chars
+2026-10-23 19:38:40,948 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2007-11 кл-probs] 1 chunks, 1 pages
+2026-10-23 19:39:00,353 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2007-11 кл-probs] chunk 1-1: 6 problems (19s)
+2026-10-23 19:39:00,367 [PDF_CHUNKER] INFO ✓ [OLI-2-Областен кръг-2007-11 кл-probs] 6 problems (deduped) → C:\Users\denis\Downloads\Материали Олимпиада МАТ\generated\cache\extracted\OLI-2-Областен кръг-2007-11 кл-probs\all_problems.json
+2026-10-23 19:39:00,368 [PDF_CHUNKER] INFO 
+[52/215] OLI-2-Областен кръг-2007-11 кл-sol.pdf
+2026-10-23 19:39:00,368 [PDF_CHUNKER] INFO 
+═══ OLI-2-Областен кръг-2007-11 кл-sol ═══
+2026-10-23 19:39:01,992 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2007-11 кл-sol.pdf] pdfplumber: 4p, 8545 chars
+2026-10-23 19:39:01,992 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2007-11 кл-sol] 1 chunks, 4 pages
+2026-10-23 19:39:32,007 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2007-11 кл-sol-1] extract... 30s
+2026-10-23 19:40:01,260 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2007-11 кл-sol] chunk 1-4: 6 problems (59s)
+2026-10-23 19:40:01,276 [PDF_CHUNKER] INFO ✓ [OLI-2-Областен кръг-2007-11 кл-sol] 6 problems (deduped) → C:\Users\denis\Downloads\Материали Олимпиада МАТ\generated\cache\extracted\OLI-2-Областен кръг-2007-11 кл-sol\all_problems.json
+2026-10-23 19:40:01,276 [PDF_CHUNKER] INFO 
+[53/215] OLI-2-Областен кръг-2008-10 кл-probs.pdf
+2026-10-23 19:40:01,277 [PDF_CHUNKER] INFO 
+═══ OLI-2-Областен кръг-2008-10 кл-probs ═══
+2026-10-23 19:40:01,308 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2008-10 кл-probs.pdf] pymupdf: 1p, 24 chars
+2026-10-23 19:40:01,308 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2008-10 кл-probs.pdf] 24 chars (24/p) → OCR fallback
+2026-10-23 19:40:01,331 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2008-10 кл-probs.pdf] OCR cache: 1p
+2026-10-23 19:40:01,331 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2008-10 кл-probs.pdf] OCR: 1548 chars (vs Python: 24)
+2026-10-23 19:40:01,331 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2008-10 кл-probs] 1 chunks, 1 pages
+2026-10-23 19:40:16,886 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2008-10 кл-probs] chunk 1-1: 6 problems (15s)
+2026-10-23 19:40:16,900 [PDF_CHUNKER] INFO ✓ [OLI-2-Областен кръг-2008-10 кл-probs] 6 problems (deduped) → C:\Users\denis\Downloads\Материали Олимпиада МАТ\generated\cache\extracted\OLI-2-Областен кръг-2008-10 кл-probs\all_problems.json
+2026-10-23 19:40:16,900 [PDF_CHUNKER] INFO 
+[54/215] OLI-2-Областен кръг-2008-10 кл-sol.pdf
+2026-10-23 19:40:16,901 [PDF_CHUNKER] INFO 
+═══ OLI-2-Областен кръг-2008-10 кл-sol ═══
+2026-10-23 19:40:16,946 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2008-10 кл-sol.pdf] pymupdf: 3p, 72 chars
+2026-10-23 19:40:16,947 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2008-10 кл-sol.pdf] 72 chars (24/p) → OCR fallback
+2026-10-23 19:40:16,973 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2008-10 кл-sol.pdf] OCR cache: 3p
+2026-10-23 19:40:16,974 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2008-10 кл-sol.pdf] OCR: 6326 chars (vs Python: 72)
+2026-10-23 19:40:16,974 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2008-10 кл-sol] 1 chunks, 3 pages
+2026-10-23 19:40:46,991 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2008-10 кл-sol-1] extract... 30s
+2026-10-23 19:41:00,790 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2008-10 кл-sol] chunk 1-3: 6 problems (43s)
+2026-10-23 19:41:00,805 [PDF_CHUNKER] INFO ✓ [OLI-2-Областен кръг-2008-10 кл-sol] 6 problems (deduped) → C:\Users\denis\Downloads\Материали Олимпиада МАТ\generated\cache\extracted\OLI-2-Областен кръг-2008-10 кл-sol\all_problems.json
+2026-10-23 19:41:00,806 [PDF_CHUNKER] INFO 
+[55/215] OLI-2-Областен кръг-2008-11 кл-probs.pdf
+2026-10-23 19:41:00,806 [PDF_CHUNKER] INFO 
+═══ OLI-2-Областен кръг-2008-11 кл-probs ═══
+2026-10-23 19:41:00,832 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2008-11 кл-probs.pdf] pymupdf: 1p, 24 chars
+2026-10-23 19:41:00,833 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2008-11 кл-probs.pdf] 24 chars (24/p) → OCR fallback
+2026-10-23 19:41:00,866 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2008-11 кл-probs.pdf] OCR cache: 1p
+2026-10-23 19:41:00,867 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2008-11 кл-probs.pdf] OCR: 1775 chars (vs Python: 24)
+2026-10-23 19:41:00,868 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2008-11 кл-probs] 1 chunks, 1 pages
+2026-10-23 19:41:15,918 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2008-11 кл-probs] chunk 1-1: 6 problems (15s)
+2026-10-23 19:41:15,933 [PDF_CHUNKER] INFO ✓ [OLI-2-Областен кръг-2008-11 кл-probs] 6 problems (deduped) → C:\Users\denis\Downloads\Материали Олимпиада МАТ\generated\cache\extracted\OLI-2-Областен кръг-2008-11 кл-probs\all_problems.json
+2026-10-23 19:41:15,934 [PDF_CHUNKER] INFO 
+[56/215] OLI-2-Областен кръг-2008-11 кл-sol.pdf
+2026-10-23 19:41:15,934 [PDF_CHUNKER] INFO 
+═══ OLI-2-Областен кръг-2008-11 кл-sol ═══
+2026-10-23 19:41:15,984 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2008-11 кл-sol.pdf] pymupdf: 3p, 72 chars
+2026-10-23 19:41:16,008 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2008-11 кл-sol.pdf] 72 chars (24/p) → OCR fallback
+2026-10-23 19:41:16,092 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2008-11 кл-sol.pdf] OCR cache: 3p
+2026-10-23 19:41:16,143 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2008-11 кл-sol.pdf] OCR: 6520 chars (vs Python: 72)
+2026-10-23 19:41:16,145 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2008-11 кл-sol] 1 chunks, 3 pages
+2026-10-23 19:41:46,157 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2008-11 кл-sol-1] extract... 30s
+2026-10-23 19:41:59,624 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2008-11 кл-sol] chunk 1-3: 6 problems (43s)
+2026-10-23 19:41:59,641 [PDF_CHUNKER] INFO ✓ [OLI-2-Областен кръг-2008-11 кл-sol] 6 problems (deduped) → C:\Users\denis\Downloads\Материали Олимпиада МАТ\generated\cache\extracted\OLI-2-Областен кръг-2008-11 кл-sol\all_problems.json
+2026-10-23 19:41:59,642 [PDF_CHUNKER] INFO 
+[57/215] OLI-2-Областен кръг-2009-10 кл-probs.pdf
+2026-10-23 19:41:59,642 [PDF_CHUNKER] INFO 
+═══ OLI-2-Областен кръг-2009-10 кл-probs ═══
+2026-10-23 19:42:00,034 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2009-10 кл-probs.pdf] pymupdf: 2p, 1523 chars
+2026-10-23 19:42:00,034 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2009-10 кл-probs] 1 chunks, 2 pages
+2026-10-23 19:42:11,714 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2009-10 кл-probs] chunk 1-2: 6 problems (11s)
+2026-10-23 19:42:11,728 [PDF_CHUNKER] INFO ✓ [OLI-2-Областен кръг-2009-10 кл-probs] 6 problems (deduped) → C:\Users\denis\Downloads\Материали Олимпиада МАТ\generated\cache\extracted\OLI-2-Областен кръг-2009-10 кл-probs\all_problems.json
+2026-10-23 19:42:11,730 [PDF_CHUNKER] INFO 
+[58/215] OLI-2-Областен кръг-2009-10 кл-sol.pdf
+2026-10-23 19:42:11,730 [PDF_CHUNKER] INFO 
+═══ OLI-2-Областен кръг-2009-10 кл-sol ═══
+2026-10-23 19:42:14,339 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2009-10 кл-sol.pdf] pdfplumber: 3p, 12526 chars
+2026-10-23 19:42:14,340 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2009-10 кл-sol] 1 chunks, 3 pages
+2026-10-23 19:42:44,344 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2009-10 кл-sol-1] extract... 30s
+2026-10-23 19:43:14,353 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2009-10 кл-sol-1] extract... 60s
+2026-10-23 19:43:33,056 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2009-10 кл-sol] chunk 1-3: 13 problems (78s)
+2026-10-23 19:43:33,071 [PDF_CHUNKER] INFO ✓ [OLI-2-Областен кръг-2009-10 кл-sol] 13 problems (deduped) → C:\Users\denis\Downloads\Материали Олимпиада МАТ\generated\cache\extracted\OLI-2-Областен кръг-2009-10 кл-sol\all_problems.json
+2026-10-23 19:43:33,071 [PDF_CHUNKER] INFO 
+[59/215] OLI-2-Областен кръг-2009-11 кл-probs.pdf
+2026-10-23 19:43:33,073 [PDF_CHUNKER] INFO 
+═══ OLI-2-Областен кръг-2009-11 кл-probs ═══
+2026-10-23 19:43:33,478 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2009-11 кл-probs.pdf] pymupdf: 2p, 1983 chars
+2026-10-23 19:43:33,479 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2009-11 кл-probs] 1 chunks, 2 pages
+2026-10-23 19:43:47,872 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2009-11 кл-probs] chunk 1-2: 6 problems (14s)
+2026-10-23 19:43:47,887 [PDF_CHUNKER] INFO ✓ [OLI-2-Областен кръг-2009-11 кл-probs] 6 problems (deduped) → C:\Users\denis\Downloads\Материали Олимпиада МАТ\generated\cache\extracted\OLI-2-Областен кръг-2009-11 кл-probs\all_problems.json
+2026-10-23 19:43:47,887 [PDF_CHUNKER] INFO 
+[60/215] OLI-2-Областен кръг-2009-11 кл-sol.pdf
+2026-10-23 19:43:47,888 [PDF_CHUNKER] INFO 
+═══ OLI-2-Областен кръг-2009-11 кл-sol ═══
+2026-10-23 19:43:51,822 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2009-11 кл-sol.pdf] pdfplumber: 4p, 18878 chars
+2026-10-23 19:43:51,822 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2009-11 кл-sol] 1 chunks, 4 pages
+2026-10-23 19:44:21,835 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2009-11 кл-sol-1] extract... 30s
+2026-10-23 19:44:51,848 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2009-11 кл-sol-1] extract... 60s
+2026-10-23 19:44:57,420 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2009-11 кл-sol] chunk 1-4: 10 problems (65s)
+2026-10-23 19:44:57,437 [PDF_CHUNKER] INFO ✓ [OLI-2-Областен кръг-2009-11 кл-sol] 10 problems (deduped) → C:\Users\denis\Downloads\Материали Олимпиада МАТ\generated\cache\extracted\OLI-2-Областен кръг-2009-11 кл-sol\all_problems.json
+2026-10-23 19:44:57,438 [PDF_CHUNKER] INFO 
+[61/215] OLI-2-Областен кръг-2010-10 кл-probs.pdf
+2026-10-23 19:44:57,438 [PDF_CHUNKER] INFO 
+═══ OLI-2-Областен кръг-2010-10 кл-probs ═══
+2026-10-23 19:44:57,677 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2010-10 кл-probs.pdf] pdfplumber: 2p, 774 chars
+2026-10-23 19:44:57,678 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2010-10 кл-probs] 1 chunks, 2 pages
+2026-10-23 19:45:10,310 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2010-10 кл-probs] chunk 1-2: 3 problems (12s)
+2026-10-23 19:45:10,325 [PDF_CHUNKER] INFO ✓ [OLI-2-Областен кръг-2010-10 кл-probs] 3 problems (deduped) → C:\Users\denis\Downloads\Материали Олимпиада МАТ\generated\cache\extracted\OLI-2-Областен кръг-2010-10 кл-probs\all_problems.json
+2026-10-23 19:45:10,325 [PDF_CHUNKER] INFO 
+[62/215] OLI-2-Областен кръг-2010-10 кл-sol.pdf
+2026-10-23 19:45:10,326 [PDF_CHUNKER] INFO 
+═══ OLI-2-Областен кръг-2010-10 кл-sol ═══
+2026-10-23 19:45:11,703 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2010-10 кл-sol.pdf] pypdf: 7p, 13761 chars
+2026-10-23 19:45:11,704 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2010-10 кл-sol] 1 chunks, 7 pages
+2026-10-23 19:45:11,725 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2010-10 кл-sol] 7 existing problems
+2026-10-23 19:45:41,728 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2010-10 кл-sol-1] extract... 30s
+2026-10-23 19:45:44,276 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2010-10 кл-sol] chunk 1-7: 7 problems (32s)
+2026-10-23 19:45:44,290 [PDF_CHUNKER] INFO ✓ [OLI-2-Областен кръг-2010-10 кл-sol] 7 problems (deduped) → C:\Users\denis\Downloads\Материали Олимпиада МАТ\generated\cache\extracted\OLI-2-Областен кръг-2010-10 кл-sol\all_problems.json
+2026-10-23 19:45:44,291 [PDF_CHUNKER] INFO 
+[63/215] OLI-2-Областен кръг-2010-11 кл-probs.pdf
+2026-10-23 19:45:44,291 [PDF_CHUNKER] INFO 
+═══ OLI-2-Областен кръг-2010-11 кл-probs ═══
+2026-10-23 19:45:44,521 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2010-11 кл-probs.pdf] pdfplumber: 2p, 872 chars
+2026-10-23 19:45:44,521 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2010-11 кл-probs] 1 chunks, 2 pages
+2026-10-23 19:46:04,715 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2010-11 кл-probs] chunk 1-2: 3 problems (20s)
+2026-10-23 19:46:04,730 [PDF_CHUNKER] INFO ✓ [OLI-2-Областен кръг-2010-11 кл-probs] 3 problems (deduped) → C:\Users\denis\Downloads\Материали Олимпиада МАТ\generated\cache\extracted\OLI-2-Областен кръг-2010-11 кл-probs\all_problems.json
+2026-10-23 19:46:04,730 [PDF_CHUNKER] INFO 
+[64/215] OLI-2-Областен кръг-2010-11 кл-sol.pdf
+2026-10-23 19:46:04,731 [PDF_CHUNKER] INFO 
+═══ OLI-2-Областен кръг-2010-11 кл-sol ═══
+2026-10-23 19:46:05,989 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2010-11 кл-sol.pdf] pdfplumber: 4p, 8170 chars
+2026-10-23 19:46:05,989 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2010-11 кл-sol] 1 chunks, 4 pages
+2026-10-23 19:46:35,994 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2010-11 кл-sol-1] extract... 30s
+2026-10-23 19:46:55,956 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2010-11 кл-sol] chunk 1-4: 6 problems (49s)
+2026-10-23 19:46:55,969 [PDF_CHUNKER] INFO ✓ [OLI-2-Областен кръг-2010-11 кл-sol] 6 problems (deduped) → C:\Users\denis\Downloads\Материали Олимпиада МАТ\generated\cache\extracted\OLI-2-Областен кръг-2010-11 кл-sol\all_problems.json
+2026-10-23 19:46:55,970 [PDF_CHUNKER] INFO 
+[65/215] OLI-2-Областен кръг-2011-10 кл-probs.pdf
+2026-10-23 19:46:55,970 [PDF_CHUNKER] INFO 
+═══ OLI-2-Областен кръг-2011-10 кл-probs ═══
+2026-10-23 19:46:56,418 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2011-10 кл-probs.pdf] pymupdf: 2p, 1689 chars
+2026-10-23 19:46:56,419 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2011-10 кл-probs] 1 chunks, 2 pages
+2026-10-23 19:47:09,991 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2011-10 кл-probs] chunk 1-2: 6 problems (13s)
+2026-10-23 19:47:10,007 [PDF_CHUNKER] INFO ✓ [OLI-2-Областен кръг-2011-10 кл-probs] 6 problems (deduped) → C:\Users\denis\Downloads\Материали Олимпиада МАТ\generated\cache\extracted\OLI-2-Областен кръг-2011-10 кл-probs\all_problems.json
+2026-10-23 19:47:10,007 [PDF_CHUNKER] INFO 
+[66/215] OLI-2-Областен кръг-2011-10 кл-sol.pdf
+2026-10-23 19:47:10,007 [PDF_CHUNKER] INFO 
+═══ OLI-2-Областен кръг-2011-10 кл-sol ═══
+2026-10-23 19:47:10,043 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2011-10 кл-sol.pdf] pdfplumber: 3p, 0 chars
+2026-10-23 19:47:10,043 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2011-10 кл-sol.pdf] 0 chars (0/p) → OCR fallback
+2026-10-23 19:47:10,061 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2011-10 кл-sol.pdf] OCR cache: 3p
+2026-10-23 19:47:10,062 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2011-10 кл-sol.pdf] OCR: 8877 chars (vs Python: 0)
+2026-10-23 19:47:10,062 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2011-10 кл-sol] 1 chunks, 3 pages
+2026-10-23 19:47:40,070 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2011-10 кл-sol-1] extract... 30s
+2026-10-23 19:48:00,673 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2011-10 кл-sol] chunk 1-3: 6 problems (50s)
+2026-10-23 19:48:00,688 [PDF_CHUNKER] INFO ✓ [OLI-2-Областен кръг-2011-10 кл-sol] 6 problems (deduped) → C:\Users\denis\Downloads\Материали Олимпиада МАТ\generated\cache\extracted\OLI-2-Областен кръг-2011-10 кл-sol\all_problems.json
+2026-10-23 19:48:00,690 [PDF_CHUNKER] INFO 
+[67/215] OLI-2-Областен кръг-2011-11 кл-probs.pdf
+2026-10-23 19:48:00,690 [PDF_CHUNKER] INFO 
+═══ OLI-2-Областен кръг-2011-11 кл-probs ═══
+2026-10-23 19:48:01,133 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2011-11 кл-probs.pdf] pdfplumber: 2p, 1663 chars
+2026-10-23 19:48:01,134 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2011-11 кл-probs] 1 chunks, 2 pages
+2026-10-23 19:48:17,603 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2011-11 кл-probs] chunk 1-2: 6 problems (16s)
+2026-10-23 19:48:17,619 [PDF_CHUNKER] INFO ✓ [OLI-2-Областен кръг-2011-11 кл-probs] 6 problems (deduped) → C:\Users\denis\Downloads\Материали Олимпиада МАТ\generated\cache\extracted\OLI-2-Областен кръг-2011-11 кл-probs\all_problems.json
+2026-10-23 19:48:17,620 [PDF_CHUNKER] INFO 
+[68/215] OLI-2-Областен кръг-2011-11 кл-sol.pdf
+2026-10-23 19:48:17,621 [PDF_CHUNKER] INFO 
+═══ OLI-2-Областен кръг-2011-11 кл-sol ═══
+2026-10-23 19:48:19,054 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2011-11 кл-sol.pdf] pypdf: 4p, 7801 chars
+2026-10-23 19:48:19,054 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2011-11 кл-sol] 1 chunks, 4 pages
+2026-10-23 19:48:49,070 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2011-11 кл-sol-1] extract... 30s
+2026-10-23 19:49:05,798 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2011-11 кл-sol] chunk 1-4: 7 problems (46s)
+2026-10-23 19:49:05,818 [PDF_CHUNKER] INFO ✓ [OLI-2-Областен кръг-2011-11 кл-sol] 7 problems (deduped) → C:\Users\denis\Downloads\Материали Олимпиада МАТ\generated\cache\extracted\OLI-2-Областен кръг-2011-11 кл-sol\all_problems.json
+2026-10-23 19:49:05,818 [PDF_CHUNKER] INFO 
+[69/215] OLI-2-Областен кръг-2012-10 кл-probs.pdf
+2026-10-23 19:49:05,819 [PDF_CHUNKER] INFO 
+═══ OLI-2-Областен кръг-2012-10 кл-probs ═══
+2026-10-23 19:49:06,189 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2012-10 кл-probs.pdf] pymupdf: 2p, 1702 chars
+2026-10-23 19:49:06,189 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2012-10 кл-probs] 1 chunks, 2 pages
+2026-10-23 19:49:25,384 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2012-10 кл-probs] chunk 1-2: 6 problems (19s)
+2026-10-23 19:49:25,398 [PDF_CHUNKER] INFO ✓ [OLI-2-Областен кръг-2012-10 кл-probs] 6 problems (deduped) → C:\Users\denis\Downloads\Материали Олимпиада МАТ\generated\cache\extracted\OLI-2-Областен кръг-2012-10 кл-probs\all_problems.json
+2026-10-23 19:49:25,399 [PDF_CHUNKER] INFO 
+[70/215] OLI-2-Областен кръг-2012-10 кл-sol.pdf
+2026-10-23 19:49:25,399 [PDF_CHUNKER] INFO 
+═══ OLI-2-Областен кръг-2012-10 кл-sol ═══
+2026-10-23 19:49:25,434 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2012-10 кл-sol.pdf] pdfplumber: 3p, 0 chars
+2026-10-23 19:49:25,435 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2012-10 кл-sol.pdf] 0 chars (0/p) → OCR fallback
+2026-10-23 19:49:25,460 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2012-10 кл-sol.pdf] OCR cache: 3p
+2026-10-23 19:49:25,462 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2012-10 кл-sol.pdf] OCR: 7858 chars (vs Python: 0)
+2026-10-23 19:49:25,462 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2012-10 кл-sol] 1 chunks, 3 pages
+2026-10-23 19:49:25,486 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2012-10 кл-sol] 11 existing problems
+2026-10-23 19:49:55,497 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2012-10 кл-sol-1] extract... 30s
+2026-10-23 19:50:16,265 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2012-10 кл-sol] chunk 1-3: 11 problems (50s)
+2026-10-23 19:50:16,278 [PDF_CHUNKER] INFO ✓ [OLI-2-Областен кръг-2012-10 кл-sol] 11 problems (deduped) → C:\Users\denis\Downloads\Материали Олимпиада МАТ\generated\cache\extracted\OLI-2-Областен кръг-2012-10 кл-sol\all_problems.json
+2026-10-23 19:50:16,278 [PDF_CHUNKER] INFO 
+[71/215] OLI-2-Областен кръг-2012-11 кл-probs.pdf
+2026-10-23 19:50:16,278 [PDF_CHUNKER] INFO 
+═══ OLI-2-Областен кръг-2012-11 кл-probs ═══
+2026-10-23 19:50:16,714 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2012-11 кл-probs.pdf] pymupdf: 2p, 1465 chars
+2026-10-23 19:50:16,715 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2012-11 кл-probs] 1 chunks, 2 pages
+2026-10-23 19:50:30,961 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2012-11 кл-probs] chunk 1-2: 6 problems (14s)
+2026-10-23 19:50:30,974 [PDF_CHUNKER] INFO ✓ [OLI-2-Областен кръг-2012-11 кл-probs] 6 problems (deduped) → C:\Users\denis\Downloads\Материали Олимпиада МАТ\generated\cache\extracted\OLI-2-Областен кръг-2012-11 кл-probs\all_problems.json
+2026-10-23 19:50:30,974 [PDF_CHUNKER] INFO 
+[72/215] OLI-2-Областен кръг-2012-11 кл-sol.pdf
+2026-10-23 19:50:30,975 [PDF_CHUNKER] INFO 
+═══ OLI-2-Областен кръг-2012-11 кл-sol ═══
+2026-10-23 19:50:31,006 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2012-11 кл-sol.pdf] pdfplumber: 3p, 0 chars
+2026-10-23 19:50:31,006 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2012-11 кл-sol.pdf] 0 chars (0/p) → OCR fallback
+2026-10-23 19:50:31,036 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2012-11 кл-sol.pdf] OCR cache: 3p
+2026-10-23 19:50:31,037 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2012-11 кл-sol.pdf] OCR: 8160 chars (vs Python: 0)
+2026-10-23 19:50:31,037 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2012-11 кл-sol] 1 chunks, 3 pages
+2026-10-23 19:51:01,041 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2012-11 кл-sol-1] extract... 30s
+2026-10-23 19:51:18,109 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2012-11 кл-sol] chunk 1-3: 6 problems (47s)
+2026-10-23 19:51:18,124 [PDF_CHUNKER] INFO ✓ [OLI-2-Областен кръг-2012-11 кл-sol] 6 problems (deduped) → C:\Users\denis\Downloads\Материали Олимпиада МАТ\generated\cache\extracted\OLI-2-Областен кръг-2012-11 кл-sol\all_problems.json
+2026-10-23 19:51:18,125 [PDF_CHUNKER] INFO 
+[73/215] OLI-2-Областен кръг-2013-10 кл-probs.pdf
+2026-10-23 19:51:18,125 [PDF_CHUNKER] INFO 
+═══ OLI-2-Областен кръг-2013-10 кл-probs ═══
+2026-10-23 19:51:18,383 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2013-10 кл-probs.pdf] pdfplumber: 1p, 1040 chars
+2026-10-23 19:51:18,384 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2013-10 кл-probs] 1 chunks, 1 pages
+2026-10-23 19:51:28,811 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2013-10 кл-probs] chunk 1-1: 4 problems (10s)
+2026-10-23 19:51:28,824 [PDF_CHUNKER] INFO ✓ [OLI-2-Областен кръг-2013-10 кл-probs] 4 problems (deduped) → C:\Users\denis\Downloads\Материали Олимпиада МАТ\generated\cache\extracted\OLI-2-Областен кръг-2013-10 кл-probs\all_problems.json
+2026-10-23 19:51:28,826 [PDF_CHUNKER] INFO 
+[74/215] OLI-2-Областен кръг-2013-10 кл-sol.pdf
+2026-10-23 19:51:28,826 [PDF_CHUNKER] INFO 
+═══ OLI-2-Областен кръг-2013-10 кл-sol ═══
+2026-10-23 19:51:28,852 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2013-10 кл-sol.pdf] pdfplumber: 3p, 0 chars
+2026-10-23 19:51:28,853 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2013-10 кл-sol.pdf] 0 chars (0/p) → OCR fallback
+2026-10-23 19:51:28,872 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2013-10 кл-sol.pdf] OCR cache: 3p
+2026-10-23 19:51:28,873 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2013-10 кл-sol.pdf] OCR: 6906 chars (vs Python: 0)
+2026-10-23 19:51:28,874 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2013-10 кл-sol] 1 chunks, 3 pages
+2026-10-23 19:51:58,886 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2013-10 кл-sol-1] extract... 30s
+2026-10-23 19:52:06,513 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2013-10 кл-sol] chunk 1-3: 4 problems (37s)
+2026-10-23 19:52:06,529 [PDF_CHUNKER] INFO ✓ [OLI-2-Областен кръг-2013-10 кл-sol] 4 problems (deduped) → C:\Users\denis\Downloads\Материали Олимпиада МАТ\generated\cache\extracted\OLI-2-Областен кръг-2013-10 кл-sol\all_problems.json
+2026-10-23 19:52:06,529 [PDF_CHUNKER] INFO 
+[75/215] OLI-2-Областен кръг-2013-11 кл-probs.pdf
+2026-10-23 19:52:06,530 [PDF_CHUNKER] INFO 
+═══ OLI-2-Областен кръг-2013-11 кл-probs ═══
+2026-10-23 19:52:06,797 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2013-11 кл-probs.pdf] pypdf: 1p, 1390 chars
+2026-10-23 19:52:06,797 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2013-11 кл-probs] 1 chunks, 1 pages
+2026-10-23 19:52:23,410 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2013-11 кл-probs] chunk 1-1: 4 problems (16s)
+2026-10-23 19:52:23,425 [PDF_CHUNKER] INFO ✓ [OLI-2-Областен кръг-2013-11 кл-probs] 4 problems (deduped) → C:\Users\denis\Downloads\Материали Олимпиада МАТ\generated\cache\extracted\OLI-2-Областен кръг-2013-11 кл-probs\all_problems.json
+2026-10-23 19:52:23,425 [PDF_CHUNKER] INFO 
+[76/215] OLI-2-Областен кръг-2013-11 кл-sol.pdf
+2026-10-23 19:52:23,426 [PDF_CHUNKER] INFO 
+═══ OLI-2-Областен кръг-2013-11 кл-sol ═══
+2026-10-23 19:52:23,451 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2013-11 кл-sol.pdf] pdfplumber: 2p, 0 chars
+2026-10-23 19:52:23,452 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2013-11 кл-sol.pdf] 0 chars (0/p) → OCR fallback
+2026-10-23 19:52:23,476 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2013-11 кл-sol.pdf] OCR cache: 2p
+2026-10-23 19:52:23,476 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2013-11 кл-sol.pdf] OCR: 5948 chars (vs Python: 0)
+2026-10-23 19:52:23,477 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2013-11 кл-sol] 1 chunks, 2 pages
+2026-10-23 19:52:53,482 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2013-11 кл-sol-1] extract... 30s
+2026-10-23 19:52:59,383 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2013-11 кл-sol] chunk 1-2: 4 problems (35s)
+2026-10-23 19:52:59,397 [PDF_CHUNKER] INFO ✓ [OLI-2-Областен кръг-2013-11 кл-sol] 4 problems (deduped) → C:\Users\denis\Downloads\Материали Олимпиада МАТ\generated\cache\extracted\OLI-2-Областен кръг-2013-11 кл-sol\all_problems.json
+2026-10-23 19:52:59,397 [PDF_CHUNKER] INFO 
+[77/215] OLI-2-Областен кръг-2014-10 кл-probs.pdf
+2026-10-23 19:52:59,398 [PDF_CHUNKER] INFO 
+═══ OLI-2-Областен кръг-2014-10 кл-probs ═══
+2026-10-23 19:52:59,666 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2014-10 кл-probs.pdf] pdfplumber: 1p, 1291 chars
+2026-10-23 19:52:59,666 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2014-10 кл-probs] 1 chunks, 1 pages
+2026-10-23 19:53:00,391 [PDF_CHUNKER] WARNING [OLI-2-Областен кръг-2014-10 кл-probs-1] [OLI-2-Областен кръг-2014-10 кл-probs-1] 402: {"error":"Spending limit reached. Need a higher limit? hey@mahadk.com"}
+2026-10-23 19:53:09,094 [PDF_CHUNKER] WARNING [OLI-2-Областен кръг-2014-10 кл-probs-1] [OLI-2-Областен кръг-2014-10 кл-probs-1] 402: {"error":"Spending limit reached. Need a higher limit? hey@mahadk.com"}
+2026-10-23 19:53:25,792 [PDF_CHUNKER] WARNING [OLI-2-Областен кръг-2014-10 кл-probs-1] [OLI-2-Областен кръг-2014-10 кл-probs-1] 402: {"error":"Spending limit reached. Need a higher limit? hey@mahadk.com"}
+2026-10-23 19:53:29,683 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2014-10 кл-probs-1] extract... 30s
+2026-10-23 19:53:49,795 [PDF_CHUNKER] ERROR [OLI-2-Областен кръг-2014-10 кл-probs] chunk 1-1 — no response (50s)
+2026-10-23 19:53:49,795 [PDF_CHUNKER] ERROR [OLI-2-Областен кръг-2014-10 кл-probs] chunk 1 FAILED — ще retry следващия път
+2026-10-23 19:53:49,802 [PDF_CHUNKER] WARNING [OLI-2-Областен кръг-2014-10 кл-probs] 1/1 chunks failed — status=partial
+2026-10-23 19:53:49,803 [PDF_CHUNKER] INFO 
+[78/215] OLI-2-Областен кръг-2014-10 кл-sol.pdf
+2026-10-23 19:53:49,803 [PDF_CHUNKER] INFO 
+═══ OLI-2-Областен кръг-2014-10 кл-sol ═══
+2026-10-23 19:53:49,834 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2014-10 кл-sol.pdf] pdfplumber: 3p, 0 chars
+2026-10-23 19:53:49,835 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2014-10 кл-sol.pdf] 0 chars (0/p) → OCR fallback
+2026-10-23 19:53:49,852 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2014-10 кл-sol.pdf] OCR cache: 3p
+2026-10-23 19:53:49,852 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2014-10 кл-sol.pdf] OCR: 6128 chars (vs Python: 0)
+2026-10-23 19:53:49,854 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2014-10 кл-sol] 1 chunks, 3 pages
+2026-10-23 19:53:50,681 [PDF_CHUNKER] WARNING [OLI-2-Областен кръг-2014-10 кл-sol-1] [OLI-2-Областен кръг-2014-10 кл-sol-1] 402: {"error":"Spending limit reached. Need a higher limit? hey@mahadk.com"}
+2026-10-23 19:53:59,429 [PDF_CHUNKER] WARNING [OLI-2-Областен кръг-2014-10 кл-sol-1] [OLI-2-Областен кръг-2014-10 кл-sol-1] 402: {"error":"Spending limit reached. Need a higher limit? hey@mahadk.com"}
+2026-10-23 19:54:16,191 [PDF_CHUNKER] WARNING [OLI-2-Областен кръг-2014-10 кл-sol-1] [OLI-2-Областен кръг-2014-10 кл-sol-1] 402: {"error":"Spending limit reached. Need a higher limit? hey@mahadk.com"}
+2026-10-23 19:54:19,871 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2014-10 кл-sol-1] extract... 30s
+2026-10-23 19:54:40,196 [PDF_CHUNKER] ERROR [OLI-2-Областен кръг-2014-10 кл-sol] chunk 1-3 — no response (50s)
+2026-10-23 19:54:40,197 [PDF_CHUNKER] ERROR [OLI-2-Областен кръг-2014-10 кл-sol] chunk 1 FAILED — ще retry следващия път
+2026-10-23 19:54:40,202 [PDF_CHUNKER] WARNING [OLI-2-Областен кръг-2014-10 кл-sol] 1/1 chunks failed — status=partial
+2026-10-23 19:54:40,202 [PDF_CHUNKER] INFO 
+[79/215] OLI-2-Областен кръг-2014-11 кл-probs.pdf
+2026-10-23 19:54:40,203 [PDF_CHUNKER] INFO 
+═══ OLI-2-Областен кръг-2014-11 кл-probs ═══
+2026-10-23 19:54:40,456 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2014-11 кл-probs.pdf] pymupdf: 1p, 1272 chars
+2026-10-23 19:54:40,457 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2014-11 кл-probs] 1 chunks, 1 pages
+2026-10-23 19:54:41,262 [PDF_CHUNKER] WARNING [OLI-2-Областен кръг-2014-11 кл-probs-1] [OLI-2-Областен кръг-2014-11 кл-probs-1] 402: {"error":"Spending limit reached. Need a higher limit? hey@mahadk.com"}
+2026-10-23 19:54:49,982 [PDF_CHUNKER] WARNING [OLI-2-Областен кръг-2014-11 кл-probs-1] [OLI-2-Областен кръг-2014-11 кл-probs-1] 402: {"error":"Spending limit reached. Need a higher limit? hey@mahadk.com"}
+2026-10-23 19:55:06,707 [PDF_CHUNKER] WARNING [OLI-2-Областен кръг-2014-11 кл-probs-1] [OLI-2-Областен кръг-2014-11 кл-probs-1] 402: {"error":"Spending limit reached. Need a higher limit? hey@mahadk.com"}
+2026-10-23 19:55:10,470 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2014-11 кл-probs-1] extract... 30s
+2026-10-23 19:55:30,711 [PDF_CHUNKER] ERROR [OLI-2-Областен кръг-2014-11 кл-probs] chunk 1-1 — no response (50s)
+2026-10-23 19:55:30,711 [PDF_CHUNKER] ERROR [OLI-2-Областен кръг-2014-11 кл-probs] chunk 1 FAILED — ще retry следващия път
+2026-10-23 19:55:30,716 [PDF_CHUNKER] WARNING [OLI-2-Областен кръг-2014-11 кл-probs] 1/1 chunks failed — status=partial
+2026-10-23 19:55:30,717 [PDF_CHUNKER] INFO 
+[80/215] OLI-2-Областен кръг-2014-11 кл-sol.pdf
+2026-10-23 19:55:30,717 [PDF_CHUNKER] INFO 
+═══ OLI-2-Областен кръг-2014-11 кл-sol ═══
+2026-10-23 19:55:30,746 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2014-11 кл-sol.pdf] pdfplumber: 3p, 0 chars
+2026-10-23 19:55:30,748 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2014-11 кл-sol.pdf] 0 chars (0/p) → OCR fallback
+2026-10-23 19:55:30,773 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2014-11 кл-sol.pdf] OCR cache: 3p
+2026-10-23 19:55:30,774 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2014-11 кл-sol.pdf] OCR: 5996 chars (vs Python: 0)
+2026-10-23 19:55:30,774 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2014-11 кл-sol] 1 chunks, 3 pages
+2026-10-23 19:55:31,486 [PDF_CHUNKER] WARNING [OLI-2-Областен кръг-2014-11 кл-sol-1] [OLI-2-Областен кръг-2014-11 кл-sol-1] 402: {"error":"Spending limit reached. Need a higher limit? hey@mahadk.com"}
+2026-10-23 19:55:40,234 [PDF_CHUNKER] WARNING [OLI-2-Областен кръг-2014-11 кл-sol-1] [OLI-2-Областен кръг-2014-11 кл-sol-1] 402: {"error":"Spending limit reached. Need a higher limit? hey@mahadk.com"}
+2026-10-23 19:55:56,952 [PDF_CHUNKER] WARNING [OLI-2-Областен кръг-2014-11 кл-sol-1] [OLI-2-Областен кръг-2014-11 кл-sol-1] 402: {"error":"Spending limit reached. Need a higher limit? hey@mahadk.com"}
+2026-10-23 19:56:00,782 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2014-11 кл-sol-1] extract... 30s
+2026-10-23 19:56:20,956 [PDF_CHUNKER] ERROR [OLI-2-Областен кръг-2014-11 кл-sol] chunk 1-3 — no response (50s)
+2026-10-23 19:56:20,957 [PDF_CHUNKER] ERROR [OLI-2-Областен кръг-2014-11 кл-sol] chunk 1 FAILED — ще retry следващия път
+2026-10-23 19:56:20,962 [PDF_CHUNKER] WARNING [OLI-2-Областен кръг-2014-11 кл-sol] 1/1 chunks failed — status=partial
+2026-10-23 19:56:20,964 [PDF_CHUNKER] INFO 
+[81/215] OLI-2-Областен кръг-2015-10 кл-probs.pdf
+2026-10-23 19:56:20,964 [PDF_CHUNKER] INFO 
+═══ OLI-2-Областен кръг-2015-10 кл-probs ═══
+2026-10-23 19:56:21,351 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2015-10 кл-probs.pdf] pymupdf: 1p, 938 chars
+2026-10-23 19:56:21,351 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2015-10 кл-probs] 1 chunks, 1 pages
+2026-10-23 19:56:22,072 [PDF_CHUNKER] WARNING [OLI-2-Областен кръг-2015-10 кл-probs-1] [OLI-2-Областен кръг-2015-10 кл-probs-1] 402: {"error":"Spending limit reached. Need a higher limit? hey@mahadk.com"}
+2026-10-23 19:56:30,771 [PDF_CHUNKER] WARNING [OLI-2-Областен кръг-2015-10 кл-probs-1] [OLI-2-Областен кръг-2015-10 кл-probs-1] 402: {"error":"Spending limit reached. Need a higher limit? hey@mahadk.com"}
+2026-10-23 19:56:47,534 [PDF_CHUNKER] WARNING [OLI-2-Областен кръг-2015-10 кл-probs-1] [OLI-2-Областен кръг-2015-10 кл-probs-1] 402: {"error":"Spending limit reached. Need a higher limit? hey@mahadk.com"}
+2026-10-23 19:56:51,363 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2015-10 кл-probs-1] extract... 30s
+2026-10-23 19:57:11,538 [PDF_CHUNKER] ERROR [OLI-2-Областен кръг-2015-10 кл-probs] chunk 1-1 — no response (50s)
+2026-10-23 19:57:11,539 [PDF_CHUNKER] ERROR [OLI-2-Областен кръг-2015-10 кл-probs] chunk 1 FAILED — ще retry следващия път
+2026-10-23 19:57:11,544 [PDF_CHUNKER] WARNING [OLI-2-Областен кръг-2015-10 кл-probs] 1/1 chunks failed — status=partial
+2026-10-23 19:57:11,546 [PDF_CHUNKER] INFO 
+[82/215] OLI-2-Областен кръг-2015-10 кл-sol.pdf
+2026-10-23 19:57:11,546 [PDF_CHUNKER] INFO 
+═══ OLI-2-Областен кръг-2015-10 кл-sol ═══
+2026-10-23 19:57:12,054 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2015-10 кл-sol.pdf] pdfplumber: 3p, 3049 chars
+2026-10-23 19:57:12,054 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2015-10 кл-sol] 1 chunks, 3 pages
+2026-10-23 19:57:12,782 [PDF_CHUNKER] WARNING [OLI-2-Областен кръг-2015-10 кл-sol-1] [OLI-2-Областен кръг-2015-10 кл-sol-1] 402: {"error":"Spending limit reached. Need a higher limit? hey@mahadk.com"}
+2026-10-23 19:57:21,481 [PDF_CHUNKER] WARNING [OLI-2-Областен кръг-2015-10 кл-sol-1] [OLI-2-Областен кръг-2015-10 кл-sol-1] 402: {"error":"Spending limit reached. Need a higher limit? hey@mahadk.com"}
+2026-10-23 19:57:38,188 [PDF_CHUNKER] WARNING [OLI-2-Областен кръг-2015-10 кл-sol-1] [OLI-2-Областен кръг-2015-10 кл-sol-1] 402: {"error":"Spending limit reached. Need a higher limit? hey@mahadk.com"}
+2026-10-23 19:57:42,062 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2015-10 кл-sol-1] extract... 30s
+2026-10-23 19:58:02,193 [PDF_CHUNKER] ERROR [OLI-2-Областен кръг-2015-10 кл-sol] chunk 1-3 — no response (50s)
+2026-10-23 19:58:02,194 [PDF_CHUNKER] ERROR [OLI-2-Областен кръг-2015-10 кл-sol] chunk 1 FAILED — ще retry следващия път
+2026-10-23 19:58:02,198 [PDF_CHUNKER] WARNING [OLI-2-Областен кръг-2015-10 кл-sol] 1/1 chunks failed — status=partial
+2026-10-23 19:58:02,199 [PDF_CHUNKER] INFO 
+[83/215] OLI-2-Областен кръг-2015-11 кл-probs.pdf
+2026-10-23 19:58:02,200 [PDF_CHUNKER] INFO 
+═══ OLI-2-Областен кръг-2015-11 кл-probs ═══
+2026-10-23 19:58:02,473 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2015-11 кл-probs.pdf] pdfplumber: 1p, 1088 chars
+2026-10-23 19:58:02,473 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2015-11 кл-probs] 1 chunks, 1 pages
+2026-10-23 19:58:03,166 [PDF_CHUNKER] WARNING [OLI-2-Областен кръг-2015-11 кл-probs-1] [OLI-2-Областен кръг-2015-11 кл-probs-1] 402: {"error":"Spending limit reached. Need a higher limit? hey@mahadk.com"}
+2026-10-23 19:58:11,890 [PDF_CHUNKER] WARNING [OLI-2-Областен кръг-2015-11 кл-probs-1] [OLI-2-Областен кръг-2015-11 кл-probs-1] 402: {"error":"Spending limit reached. Need a higher limit? hey@mahadk.com"}
+2026-10-23 19:58:28,617 [PDF_CHUNKER] WARNING [OLI-2-Областен кръг-2015-11 кл-probs-1] [OLI-2-Областен кръг-2015-11 кл-probs-1] 402: {"error":"Spending limit reached. Need a higher limit? hey@mahadk.com"}
+2026-10-23 19:58:32,483 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2015-11 кл-probs-1] extract... 30s
+2026-10-23 19:58:52,621 [PDF_CHUNKER] ERROR [OLI-2-Областен кръг-2015-11 кл-probs] chunk 1-1 — no response (50s)
+2026-10-23 19:58:52,621 [PDF_CHUNKER] ERROR [OLI-2-Областен кръг-2015-11 кл-probs] chunk 1 FAILED — ще retry следващия път
+2026-10-23 19:58:52,626 [PDF_CHUNKER] WARNING [OLI-2-Областен кръг-2015-11 кл-probs] 1/1 chunks failed — status=partial
+2026-10-23 19:58:52,626 [PDF_CHUNKER] INFO 
+[84/215] OLI-2-Областен кръг-2015-11 кл-sol.pdf
+2026-10-23 19:58:52,627 [PDF_CHUNKER] INFO 
+═══ OLI-2-Областен кръг-2015-11 кл-sol ═══
+2026-10-23 19:58:53,466 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2015-11 кл-sol.pdf] pymupdf: 4p, 5188 chars
+2026-10-23 19:58:53,466 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2015-11 кл-sol] 1 chunks, 4 pages
+2026-10-23 19:58:54,180 [PDF_CHUNKER] WARNING [OLI-2-Областен кръг-2015-11 кл-sol-1] [OLI-2-Областен кръг-2015-11 кл-sol-1] 402: {"error":"Spending limit reached. Need a higher limit? hey@mahadk.com"}
+2026-10-23 19:59:02,905 [PDF_CHUNKER] WARNING [OLI-2-Областен кръг-2015-11 кл-sol-1] [OLI-2-Областен кръг-2015-11 кл-sol-1] 402: {"error":"Spending limit reached. Need a higher limit? hey@mahadk.com"}
+2026-10-23 19:59:19,643 [PDF_CHUNKER] WARNING [OLI-2-Областен кръг-2015-11 кл-sol-1] [OLI-2-Областен кръг-2015-11 кл-sol-1] 402: {"error":"Spending limit reached. Need a higher limit? hey@mahadk.com"}
+2026-10-23 19:59:23,474 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2015-11 кл-sol-1] extract... 30s
+2026-10-23 19:59:43,647 [PDF_CHUNKER] ERROR [OLI-2-Областен кръг-2015-11 кл-sol] chunk 1-4 — no response (50s)
+2026-10-23 19:59:43,648 [PDF_CHUNKER] ERROR [OLI-2-Областен кръг-2015-11 кл-sol] chunk 1 FAILED — ще retry следващия път
+2026-10-23 19:59:43,653 [PDF_CHUNKER] WARNING [OLI-2-Областен кръг-2015-11 кл-sol] 1/1 chunks failed — status=partial
+2026-10-23 19:59:43,654 [PDF_CHUNKER] INFO 
+[85/215] OLI-2-Областен кръг-2016-10 кл-probs.pdf
+2026-10-23 19:59:43,654 [PDF_CHUNKER] INFO 
+═══ OLI-2-Областен кръг-2016-10 кл-probs ═══
+2026-10-23 19:59:43,930 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2016-10 кл-probs.pdf] pymupdf: 1p, 953 chars
+2026-10-23 19:59:43,930 [PDF_CHUNKER] INFO [OLI-2-Областен кръг-2016-10 кл-probs] 1 chunks, 1 pages
+2026-10-23 19:59:44,629 [PDF_CHUNKER] WARNING [OLI-2-Областен кръг-2016-10 кл-probs-1] [OLI-2-Областен кръг-2016-10 кл-probs-1] 402: {"error":"Spending limit reached. Need a higher limit? hey@mahadk.com"}
+2026-10-23 19:59:53,344 [PDF_CHUNKER] WARNING [OLI-2-Областен кръг-2016-10 кл-probs-1] [OLI-2-Областен кръг-2016-10 кл-probs-1] 402: {"error":"Spending limit reached. Need a higher limit? hey@mahadk.com"}

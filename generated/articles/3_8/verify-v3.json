@@ -1,0 +1,48 @@
+{
+  "verdict": "approve",
+  "score": 10,
+  "issues": [
+    {
+      "severity": "minor",
+      "section": "4.3 Пример 7",
+      "description": "Обяснението за броя на срещанията на квадратичните остатъци (0 веднъж, ненулевите по два пъти) може да бъде по-ясно."
+    },
+    {
+      "severity": "minor",
+      "section": "5. Как да разпознаеш",
+      "description": "Може да се добави още един контрапример (напр. задачи, решаващи се с китайска теорема без квадратични остатъци)."
+    }
+  ],
+  "strengths": [
+    "Изчерпателна покритост на темата с доказани теореми и разнообразни примери",
+    "Реални олимпиадни задачи с точни източници в секция 'Защо е важно' и hard примери",
+    "Ефективна педагогическа структура с CHECK-ове и самооценка"
+  ],
+  "suggestions": [
+    "В Пример 7 да се подчертае изрично, че 0 се среща веднъж, а ненулевите квадрати - по два пъти",
+    "Разширете секция 5 с допълнителен контрапример"
+  ],
+  "math_errors": [],
+  "missing_topics": [],
+  "structure_check": {
+    "section_1_why_important": true,
+    "section_2_objectives": true,
+    "section_3_theory": true,
+    "section_4_examples_3_levels": true,
+    "section_5_recognition": true,
+    "section_6_mistakes": true,
+    "section_7_mastery": true,
+    "section_8_quiz": true,
+    "section_9_recall": true,
+    "check_marks_present": true
+  },
+  "examples_check": {
+    "real_olympiad": true,
+    "easy_count": 3,
+    "medium_count": 3,
+    "hard_count": 3
+  },
+  "verdict_reasoning": "Статията е математически безупречна, напълно покрива структурата, използва реални олимпиадни задачи и примерите са с подходяща трудност. Няма критични недостатъци.",
+  "_tokens": 22332,
+  "_model": "deepseek/deepseek-r1-0528"
+}

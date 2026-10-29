@@ -1,0 +1,48 @@
+{
+  "verdict": "approve",
+  "score": 9,
+  "issues": [
+    {
+      "severity": "minor",
+      "section": "4.1 Пример 1",
+      "description": "Не е достатъчно ясно подчертано, че проверката чрез заместване в оригиналното уравнение е задължителна за всички случаи, не само за конкретни стойности."
+    },
+    {
+      "severity": "minor",
+      "section": "4.2 Пример 4",
+      "description": "Липсва обяснение как се получават корените x₂ = 1 - 3a и x₃ = a - 1 от квадратното уравнение."
+    }
+  ],
+  "strengths": [
+    "Реални олимпиадни примери с точни източници (Областни кръгове 2004, 2009, 2024)",
+    "Отлично покриване на edge cases, особено в Пример 1 и 3",
+    "Ясна структура с CHECK-ове за самопроверка между нивата"
+  ],
+  "suggestions": [
+    "В Пример 1 добави бележка, че условието x ≥ a е необходимо, но не е достатъчно; задължителна е проверка в оригиналното уравнение.",
+    "В Пример 4 добави кратка стъпка за решаване на квадратното уравнение, за да се видят корените x₂ и x₃."
+  ],
+  "math_errors": [],
+  "missing_topics": [],
+  "structure_check": {
+    "section_1_why_important": true,
+    "section_2_objectives": true,
+    "section_3_theory": true,
+    "section_4_examples_3_levels": true,
+    "section_5_recognition": true,
+    "section_6_mistakes": true,
+    "section_7_mastery": true,
+    "section_8_quiz": true,
+    "section_9_recall": true,
+    "check_marks_present": true
+  },
+  "examples_check": {
+    "real_olympiad": true,
+    "easy_count": 3,
+    "medium_count": 3,
+    "hard_count": 3
+  },
+  "verdict_reasoning": "Статията е математически коректна с незначителни пропуски в обясненията, отлично покрива структурата и използва реални олимпиадни примери, което я прави подходяща за обучение.",
+  "_tokens": 19552,
+  "_model": "deepseek/deepseek-r1-0528"
+}

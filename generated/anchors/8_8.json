@@ -1,0 +1,103 @@
+{
+  "point_id": "8.8",
+  "total": 7,
+  "by_difficulty": {
+    "easy": 3,
+    "medium": 4,
+    "hard": 0
+  },
+  "problems": [
+    {
+      "source": "OLI-2-Областен кръг-1995-10 кл · 1995-10 · Зад. 3",
+      "statement": "Let $n > 1$ be an integer. Find the number of the permutations $(a_1, a_2, \\ldots, a_n)$ of the numbers $1, 2, \\ldots, n$ with the following property: there exists only one index $i \\in \\{1, 2, \\ldots, n - 1\\}$ such that $a_i > a_{i+1}$.",
+      "solution": "Solution. Denote by $p_n$ the number of the permutations with the given properties. Obviously, $p_1 = 0$ and $p_2 = 1$. Let $n \\geq 2$. The number of the permutations with $a_n = n$ is equal to $p_{n-1}$. Consider all the permutations $(a_1, a_2, \\ldots, a_n)$ with $a_i = n$, where $1 \\leq i \\leq n-1$ is fixed. Their number is $\\binom{n-1}{i-1}$. Consequently\n\n$$p_n = p_{n-1} + \\sum_{i = 1}^{n - 1} \\binom{n - 1}{i - 1} = p_{n-1} + 2^{n-1} - 1.$$\n\nFrom here\n\n$$\\begin{array}{l} p_n = (2^{n-1} - 1) + (2^{n-2} - 1) + \\dots + (2 - 1) \\\\ = 2^n - n - 1. \\end{array}$$",
+      "answer": "$2^n - n - 1$",
+      "difficulty": "easy",
+      "techniques": [
+        "recurrence_relation",
+        "binary_strings",
+        "combinatorial_counting"
+      ],
+      "confidence": "exact",
+      "reasoning": "Derives recurrence p_n = p_{n-1}+2^{n-1}-1 and sums it; short algebraic manipulation."
+    },
+    {
+      "source": "OLI-2-Областен кръг-1995-11 кл · 1995-11 · Зад. 3",
+      "statement": "Let $n > 1$ be an integer. Find the number of the permutations $(a_1, a_2, \\ldots, a_n)$ of the numbers $1, 2, \\ldots, n$ with the following property: there exists only one index $i \\in \\{1, 2, \\ldots, n - 1\\}$ such that $a_i > a_{i+1}$.",
+      "solution": "Solution. Denote by $p_n$ the number of the permutations with the given properties. Obviously, $p_1 = 0$ and $p_2 = 1$. Let $n \\geq 2$. The number of the permutations with $a_n = n$ is equal to $p_{n-1}$. Consider all the permutations $(a_1, a_2, \\ldots, a_n)$ with $a_i = n$, where $1 \\leq i \\leq n-1$ is fixed. Their number is $\\binom{n-1}{i-1}$. Consequently\n\n$$p_n = p_{n-1} + \\sum_{i = 1}^{n - 1} \\binom{n - 1}{i - 1} = p_{n - 1} + 2^{n - 1} - 1.$$\n\nFrom here\n\n$$\\begin{array}{l} p_n = (2^{n - 1} - 1) + (2^{n - 2} - 1) + \\dots + (2 - 1) \\\\ = 2^n - n - 1. \\\\ \\end{array}$$",
+      "answer": "$2^n - n - 1$.",
+      "difficulty": "easy",
+      "techniques": [
+        "recurrence_relation",
+        "binomial_sum"
+      ],
+      "confidence": "exact",
+      "reasoning": "Derives a recurrence p_n = p_{n-1}+2^{n-1}-1 and sums it; only two logical steps."
+    },
+    {
+      "source": "OLI-2-Областен кръг-1997-11 кл · 1997-11 · Зад. 6",
+      "statement": "Find the number of non-empty sets of Sₙ = {1, 2, ..., n} such that there are no two consecutive numbers in one and the same set.",
+      "solution": "Solution: Denote the required number by $f_n$. It is easy to see that $f_1 = 1$, $f_2 = 2$, $f_3 = 4$.\n\nDivide the subsets of $S_n$ having no two consecutive numbers into two groups—those that do not contain the element $n$ and those that do. Obviously the number of subsets in the first group is $f_{n-1}$.\n\nLet $T$ be a set of the second group. Therefore either $T = \\{n\\}$ or $T = \\{a_1, \\ldots, a_{k-1}, n\\}$, where $k > 1$. It is clear that $a_{k-1} \\neq n - 1$, so $\\{a_1, \\ldots a_{k-1}\\} \\subset S_{n-2}$, whence the number of sets in the second group is $f_{n-2} + 1$. Therefore\n\n$$f_n = f_{n-1} + f_{n-2} + 1.$$\n\nAfter substituting $u_n = f_n + 1$ we get\n\n$$u_1 = 2, u_2 = 3, \\qquad u_n = u_{n-1} + u_{n-2}.$$\n\nTherefore the sequence $\\{u_n\\}_{n=1}^{\\infty}$ coincides with the Fibonacci sequence from its third number onwards. Thus we obtain\n\n$$f_n = \\frac{1}{\\sqrt{5}} \\left( \\left( \\frac{1 + \\sqrt{5}}{2} \\right)^{n+2} - \\left( \\frac{1 - \\sqrt{5}}{2} \\right)^{n+2} \\right) - 1.$$",
+      "answer": "$f_n = \\frac{1}{\\sqrt{5}}\\left(\\left(\\frac{1+\\sqrt{5}}{2}\\right)^{n+2}-\\left(\\frac{1-\\sqrt{5}}{2}\\right)^{n+2}\\right)-1$.",
+      "difficulty": "easy",
+      "techniques": [
+        "recurrence_relations"
+      ],
+      "confidence": "exact",
+      "reasoning": "Derives a simple recurrence fₙ = fₙ₋₁ + fₙ₋₂ + 1 and reduces it to Fibonacci – classic recurrence technique."
+    },
+    {
+      "source": "OLI-2-Областен кръг-1996-11 кл · 1996-11 · Зад. 6",
+      "statement": "A rectangle $m \\times n$ ($m > 1$, $n > 1$) is divided into $mn$ squares $1 \\times 1$ with lines, parallel to its sides. In how many ways could two of the squares be canceled and the remaining part be covered with dominoes $2 \\times 1$?",
+      "solution": "Solution. Denote by $F(m, n)$ the number we are looking for. Since every domino covers exactly two squares, then $F(m, n) = 0$ if $m$ and $n$ are odd.\n\nLet at least one of the numbers $m$ and $n$ be even. We color the squares in two colors — white and black in such a way that every two neighbor squares (with common side) are of different colors (Figure 5). The number $S_0$ of the white squares is equal to the number $S_1$ of the black ones and $S_0 = S_1 = \\frac{mn}{2}$.\n\nEach domino covers one white and one black square. If two white or two black squares are canceled, then it is impossible to cover by dominoes the remaining part of the rectangle. Now we shall show that if one white and one black squares are canceled then the remaining part can be covered by dominoes.\n\nSince $mn$ is even, then $mn = 2t$, where $t \\ge 2$. We make induction with respect to $t$. The case $t = 2$ is obvious. Let $t_0 > 2$ and the proposition is true for all $2 \\le t \\le t_0$. Let $mn = 2(t_0 + 1)$. Denote by $T_1$ the rectangle consisted of the first two rows of the considered rectangle, and by $T_2$ — the rectangle consisted of the remaining rows. If the two canceled squares are in $T_1$ or in $T_2$, then we can cover each of the rectangles by dominoes and consequently we can cover the given rectangle.\n\nLet one of the canceled squares be in $T_1$, and the other — in $T_2$. We place a domino in such a way that it covers one square from $T_1$ and one square from $T_2$. It is also possible that the canceled square from $T_1$ and the covered square from $T_1$ are of different colors. Thus, the canceled square from $T_2$ and the covered square from $T_2$ are of different colors. According to the inductive assumption the remaining part of $T_1$ and the remaining part of $T_2$ can be covered. Thus, the rectangle can be covered too.\n\nFinally one white and one black squares can be chosen in $S_0 \\cdot S_1 = \\left(\\frac{mn}{2}\\right)^2$ ways. Therefore, in this case $F(m, n) = \\frac{m^2 n^2}{4}$.",
+      "answer": "$F(m,n) = 0$ if $m$ and $n$ are both odd; otherwise $F(m,n) = \\frac{m^2n^2}{4}$.",
+      "difficulty": "medium",
+      "techniques": [
+        "parity_coloring",
+        "induction",
+        "tiling"
+      ],
+      "confidence": "exact",
+      "reasoning": "Uses chessboard coloring to show one white‑one black removal is necessary, then inductive tiling construction."
+    },
+    {
+      "source": "OLI-2-Областен кръг-1997-10 кл · 1997-10 · Зад. 6",
+      "statement": "Find the number of non-empty sets of Sₙ = {1, 2, ..., n} such that there are no two consecutive numbers in one and the same set.",
+      "solution": "Solution: Denote the required number by $f_n$. It is easy to see that $f_1 = 1$, $f_2 = 2$, $f_3 = 4$.\n\nDivide the subsets of $S_n$ having no two consecutive numbers into two groups—those that do not contain the element $n$ and those that do. Obviously the number of subsets in the first group is $f_{n-1}$.\n\nLet $T$ be a set of the second group. Therefore either $T = \\{n\\}$ or $T = \\{a_1, \\ldots, a_{k-1}, n\\}$, where $k > 1$. It is clear that $a_{k-1} \\neq n - 1$, so $\\{a_1, \\ldots a_{k-1}\\} \\subset S_{n-2}$, whence the number of sets in the second group is $f_{n-2} + 1$. Therefore\n\n$$f_n = f_{n-1} + f_{n-2} + 1.$$\n\nAfter substituting $u_n = f_n + 1$ we get\n\n$$u_1 = 2, u_2 = 3, \\qquad u_n = u_{n-1} + u_{n-2}.$$\n\nTherefore the sequence $\\{u_n\\}_{n=1}^{\\infty}$ coincides with the Fibonacci sequence from its third number onwards. Thus we obtain\n\n$$f_n = \\frac{1}{\\sqrt{5}} \\left( \\left( \\frac{1 + \\sqrt{5}}{2} \\right)^{n+2} - \\left( \\frac{1 - \\sqrt{5}}{2} \\right)^{n+2} \\right) - 1.$$",
+      "answer": "$f_n = \\frac{1}{\\sqrt{5}} \\left( \\left( \\frac{1 + \\sqrt{5}}{2} \\right)^{n+2} - \\left( \\frac{1 - \\sqrt{5}}{2} \\right)^{n+2} \\right) - 1$.",
+      "difficulty": "medium",
+      "techniques": [
+        "recurrence"
+      ],
+      "confidence": "exact",
+      "reasoning": "Splits subsets by presence of n, obtains fₙ = fₙ₋₁+fₙ₋₂+1, shifts to Fibonacci, and gives closed form."
+    },
+    {
+      "source": "OLI-2-Областен кръг-2011-10 кл · 2011-10 · Зад. 6",
+      "statement": "Една редица от естествени числа x₁, x₂, …, x_k се нарича n-добра, ако x₁ < x₂ < ··· < x_k ≤ n и x_i − i се дели на 3 за всяко i = 1, …, k. Нека a_n е броят на n-добрите редици за фиксирано естествено число n. Да се докаже, че числото a_{n+8} − a_n се дели на 3.",
+      "solution": "Решение. Ако $1, x_2, x_3, \\dots, x_k$ е $n$-добра редица, то $x_2 - 1, x_3 - 1, \\dots, x_k - 1$ е $(n-1)$-добра редица. Вземайки пред вид и редицата с единствен член $x_1 = 1$ получаваме, че броят на $n$-добрите редици, които започват с 1, е $a_{n-1} + 1$. Ако $x_1, x_2, \\dots, x_k$ е $n$-добра редица с $x_1 \\ge 4$, то $x_1 - 3, x_2 - 3, \\dots, x_k - 3$ е $(n-3)$-добра редица. Оттук следва, че броят на $n$-добрите редици, незапочващи с 1, е $a_{n-3}$.\n\nГорните разсъждения показват, че $a_n = a_{n-1} + a_{n-3} + 1$. Пресмятаме първите няколко стойности на $a_n$:\n\n| n | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 |\n| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |\n| a_{n} | 1 | 2 | 3 | 5 | 8 | 12 | 18 | 27 | 40 | 59 | 87 |\n| a_{n} (mod 3) | 1 | 2 | 0 | 2 | 2 | 0 | 0 | 0 | 1 | 2 | 0 |\n\nСега твърдението лесно следва по индукция. Базата за индукцията следва от таблицата. Нека $n \\ge 4$ и $a_{k+8} \\equiv a_k \\pmod 3$ за всяко $k \\le n$. Тогава\n\n$$a_{n+9} = a_{n+8} + a_{n+6} + 1 \\equiv a_n + a_{n-2} + 1 = a_{n+1} \\pmod 3,$$\n\nкоето завършва доказателството.",
+      "answer": null,
+      "difficulty": "medium",
+      "techniques": [
+        "recurrence_relation",
+        "modular_arithmetic"
+      ],
+      "confidence": "exact",
+      "reasoning": "Изводът се базира на рекурентна формула a_n = a_{n-1}+a_{n-3}+1 и проверка по модул 3 – типична за точка 8.8."
+    },
+    {
+      "source": "OLI-3-Национален кръг-1989-9-12 кл · 1989-None · Зад. 2",
+      "statement": "Да се докаже, че редицата с общ член a_n = ∑_{k=1}^{n} {[неразчетено]}^{1−k} е сходяща и да се намери нейната граница.\nЗабележка. Тук със [x] е означена цялата част на числото x, а със {x} — дробната част на това число, т. е. {x} = x − [x].",
+      "solution": "Решение. Да положим t_k = [2^(k−1/2)]. Тъй като t_k < 2^(k−1/2) < 2^k, двоичният запис на числото t_k съдържа най-много k цифри. Нека този запис е t_k = α₁2^(k−1) + α₂2^(k−2) + ... + α_{k−1}2 + α_k, където α_i = 0 или α_i = 1, i = 1, 2, ..., k. Тогава\n{ [2^(k−1/2)]/2 }·2^(1−k) = {t_k/2}/2^(k−1) = {α₁2^(k−2) + α₂2^(k−3) + ... + α_{k−1} + α_k/2}/2^(k−1) = {α_k/2}/2^(k−1) = α_k/2^k.\nСега ще покажем, че за всяко k = 1, 2, ... е в сила равенството t_{k+1} = 2t_k + α_{k−1}. Наистина от t_{k+1} = [2^(k+1−1/2)] = [2·2^(k−1/2)] следва, че t_{k+1} = 2t_k или t_{k+1} = 2t_k + 1. При това първото от тези равенства е в сила, когато t_{k+1} е четно число, а второто — когато t_{k+1} е нечетно. От друга страна, α_{k−1} = 0 или α_{k−1} = 1 в зависимост от това, дали t_{k+1} е четно или нечетно. Следователно t_{k+1} = 2t_k + α_{k+1}.\nНо тогава a_n = α₁/2 + α₂/2² + ... + α_n/2^n = t_n/2^n.\nОт друга страна, 2^(n−1/2)−1 < t_n < 2^(n−1/2), следователно\n1/√2 − 1/2^n < a_n = t_n/2^n < 1/√2.\nОттук получаваме, че дадената редица е сходяща и нейната граница е lim_{n→[неразчетено]} a_n = 1/√2.",
+      "answer": "1/√2",
+      "difficulty": "medium",
+      "techniques": [
+        "binary_representation",
+        "recurrence_relation",
+        "bounding"
+      ],
+      "confidence": "exact",
+      "reasoning": "Transforms floor terms into binary digits, derives recurrence t_{k+1}=2t_k+α, then bounds a_n."
+    }
+  ]
+}

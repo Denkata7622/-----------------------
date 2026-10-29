@@ -1,0 +1,3175 @@
+{
+  "scanned_at": "2026-10-22",
+  "total": 160,
+  "by_status": {
+    "old": 159,
+    "new": 1,
+    "suspicious": 0
+  },
+  "articles": [
+    {
+      "point_id": "10.1",
+      "status": "old",
+      "words": 1964,
+      "sections": 0,
+      "checks": 0,
+      "examples": 0,
+      "has_historical": true,
+      "has_why_important": false,
+      "meta_status": "missing",
+      "meta_version": null,
+      "meta_gen_date": null,
+      "reasons": [
+        "old_structure_historical_section",
+        "too_short_1964w",
+        "too_few_sections_0",
+        "missing_checks_0",
+        "too_few_examples_0"
+      ]
+    },
+    {
+      "point_id": "10.10",
+      "status": "old",
+      "words": 1893,
+      "sections": 0,
+      "checks": 0,
+      "examples": 0,
+      "has_historical": true,
+      "has_why_important": false,
+      "meta_status": "missing",
+      "meta_version": null,
+      "meta_gen_date": null,
+      "reasons": [
+        "old_structure_historical_section",
+        "too_short_1893w",
+        "too_few_sections_0",
+        "missing_checks_0",
+        "too_few_examples_0"
+      ]
+    },
+    {
+      "point_id": "10.11",
+      "status": "old",
+      "words": 1913,
+      "sections": 0,
+      "checks": 0,
+      "examples": 3,
+      "has_historical": true,
+      "has_why_important": false,
+      "meta_status": "missing",
+      "meta_version": null,
+      "meta_gen_date": null,
+      "reasons": [
+        "old_structure_historical_section",
+        "too_short_1913w",
+        "too_few_sections_0",
+        "missing_checks_0",
+        "too_few_examples_3"
+      ]
+    },
+    {
+      "point_id": "10.12",
+      "status": "old",
+      "words": 5893,
+      "sections": 0,
+      "checks": 0,
+      "examples": 0,
+      "has_historical": true,
+      "has_why_important": false,
+      "meta_status": "missing",
+      "meta_version": null,
+      "meta_gen_date": null,
+      "reasons": [
+        "old_structure_historical_section",
+        "too_few_sections_0",
+        "missing_checks_0",
+        "too_few_examples_0"
+      ]
+    },
+    {
+      "point_id": "10.13",
+      "status": "old",
+      "words": 1896,
+      "sections": 0,
+      "checks": 0,
+      "examples": 0,
+      "has_historical": true,
+      "has_why_important": false,
+      "meta_status": "missing",
+      "meta_version": null,
+      "meta_gen_date": null,
+      "reasons": [
+        "old_structure_historical_section",
+        "too_short_1896w",
+        "too_few_sections_0",
+        "missing_checks_0",
+        "too_few_examples_0"
+      ]
+    },
+    {
+      "point_id": "10.14",
+      "status": "old",
+      "words": 5167,
+      "sections": 0,
+      "checks": 0,
+      "examples": 3,
+      "has_historical": true,
+      "has_why_important": false,
+      "meta_status": "missing",
+      "meta_version": null,
+      "meta_gen_date": null,
+      "reasons": [
+        "old_structure_historical_section",
+        "too_few_sections_0",
+        "missing_checks_0",
+        "too_few_examples_3"
+      ]
+    },
+    {
+      "point_id": "10.15",
+      "status": "old",
+      "words": 1227,
+      "sections": 0,
+      "checks": 0,
+      "examples": 0,
+      "has_historical": true,
+      "has_why_important": false,
+      "meta_status": "missing",
+      "meta_version": null,
+      "meta_gen_date": null,
+      "reasons": [
+        "old_structure_historical_section",
+        "too_short_1227w",
+        "too_few_sections_0",
+        "missing_checks_0",
+        "too_few_examples_0"
+      ]
+    },
+    {
+      "point_id": "10.16",
+      "status": "old",
+      "words": 2488,
+      "sections": 0,
+      "checks": 0,
+      "examples": 0,
+      "has_historical": true,
+      "has_why_important": false,
+      "meta_status": "missing",
+      "meta_version": null,
+      "meta_gen_date": null,
+      "reasons": [
+        "old_structure_historical_section",
+        "too_short_2488w",
+        "too_few_sections_0",
+        "missing_checks_0",
+        "too_few_examples_0"
+      ]
+    },
+    {
+      "point_id": "10.17",
+      "status": "old",
+      "words": 1742,
+      "sections": 0,
+      "checks": 0,
+      "examples": 3,
+      "has_historical": true,
+      "has_why_important": false,
+      "meta_status": "missing",
+      "meta_version": null,
+      "meta_gen_date": null,
+      "reasons": [
+        "old_structure_historical_section",
+        "too_short_1742w",
+        "too_few_sections_0",
+        "missing_checks_0",
+        "too_few_examples_3"
+      ]
+    },
+    {
+      "point_id": "10.18",
+      "status": "old",
+      "words": 4199,
+      "sections": 0,
+      "checks": 0,
+      "examples": 3,
+      "has_historical": true,
+      "has_why_important": false,
+      "meta_status": "missing",
+      "meta_version": null,
+      "meta_gen_date": null,
+      "reasons": [
+        "old_structure_historical_section",
+        "too_few_sections_0",
+        "missing_checks_0",
+        "too_few_examples_3"
+      ]
+    },
+    {
+      "point_id": "10.19",
+      "status": "old",
+      "words": 3762,
+      "sections": 0,
+      "checks": 0,
+      "examples": 3,
+      "has_historical": true,
+      "has_why_important": false,
+      "meta_status": "missing",
+      "meta_version": null,
+      "meta_gen_date": null,
+      "reasons": [
+        "old_structure_historical_section",
+        "too_few_sections_0",
+        "missing_checks_0",
+        "too_few_examples_3"
+      ]
+    },
+    {
+      "point_id": "10.2",
+      "status": "old",
+      "words": 2121,
+      "sections": 0,
+      "checks": 0,
+      "examples": 0,
+      "has_historical": true,
+      "has_why_important": false,
+      "meta_status": "missing",
+      "meta_version": null,
+      "meta_gen_date": null,
+      "reasons": [
+        "old_structure_historical_section",
+        "too_short_2121w",
+        "too_few_sections_0",
+        "missing_checks_0",
+        "too_few_examples_0"
+      ]
+    },
+    {
+      "point_id": "10.20",
+      "status": "old",
+      "words": 2318,
+      "sections": 0,
+      "checks": 0,
+      "examples": 0,
+      "has_historical": true,
+      "has_why_important": false,
+      "meta_status": "missing",
+      "meta_version": null,
+      "meta_gen_date": null,
+      "reasons": [
+        "old_structure_historical_section",
+        "too_short_2318w",
+        "too_few_sections_0",
+        "missing_checks_0",
+        "too_few_examples_0"
+      ]
+    },
+    {
+      "point_id": "10.21",
+      "status": "old",
+      "words": 2299,
+      "sections": 0,
+      "checks": 0,
+      "examples": 0,
+      "has_historical": true,
+      "has_why_important": false,
+      "meta_status": "missing",
+      "meta_version": null,
+      "meta_gen_date": null,
+      "reasons": [
+        "old_structure_historical_section",
+        "too_short_2299w",
+        "too_few_sections_0",
+        "missing_checks_0",
+        "too_few_examples_0"
+      ]
+    },
+    {
+      "point_id": "10.22",
+      "status": "old",
+      "words": 2105,
+      "sections": 0,
+      "checks": 0,
+      "examples": 0,
+      "has_historical": true,
+      "has_why_important": false,
+      "meta_status": "missing",
+      "meta_version": null,
+      "meta_gen_date": null,
+      "reasons": [
+        "old_structure_historical_section",
+        "too_short_2105w",
+        "too_few_sections_0",
+        "missing_checks_0",
+        "too_few_examples_0"
+      ]
+    },
+    {
+      "point_id": "10.23",
+      "status": "old",
+      "words": 3153,
+      "sections": 0,
+      "checks": 0,
+      "examples": 0,
+      "has_historical": true,
+      "has_why_important": false,
+      "meta_status": "missing",
+      "meta_version": null,
+      "meta_gen_date": null,
+      "reasons": [
+        "old_structure_historical_section",
+        "too_few_sections_0",
+        "missing_checks_0",
+        "too_few_examples_0"
+      ]
+    },
+    {
+      "point_id": "10.24",
+      "status": "old",
+      "words": 6536,
+      "sections": 0,
+      "checks": 0,
+      "examples": 0,
+      "has_historical": true,
+      "has_why_important": false,
+      "meta_status": "missing",
+      "meta_version": null,
+      "meta_gen_date": null,
+      "reasons": [
+        "old_structure_historical_section",
+        "too_few_sections_0",
+        "missing_checks_0",
+        "too_few_examples_0"
+      ]
+    },
+    {
+      "point_id": "10.25",
+      "status": "old",
+      "words": 3016,
+      "sections": 0,
+      "checks": 0,
+      "examples": 0,
+      "has_historical": true,
+      "has_why_important": false,
+      "meta_status": "missing",
+      "meta_version": null,
+      "meta_gen_date": null,
+      "reasons": [
+        "old_structure_historical_section",
+        "too_few_sections_0",
+        "missing_checks_0",
+        "too_few_examples_0"
+      ]
+    },
+    {
+      "point_id": "10.26",
+      "status": "old",
+      "words": 1980,
+      "sections": 0,
+      "checks": 0,
+      "examples": 0,
+      "has_historical": true,
+      "has_why_important": false,
+      "meta_status": "missing",
+      "meta_version": null,
+      "meta_gen_date": null,
+      "reasons": [
+        "old_structure_historical_section",
+        "too_short_1980w",
+        "too_few_sections_0",
+        "missing_checks_0",
+        "too_few_examples_0"
+      ]
+    },
+    {
+      "point_id": "10.27",
+      "status": "old",
+      "words": 2029,
+      "sections": 0,
+      "checks": 0,
+      "examples": 3,
+      "has_historical": true,
+      "has_why_important": false,
+      "meta_status": "missing",
+      "meta_version": null,
+      "meta_gen_date": null,
+      "reasons": [
+        "old_structure_historical_section",
+        "too_short_2029w",
+        "too_few_sections_0",
+        "missing_checks_0",
+        "too_few_examples_3"
+      ]
+    },
+    {
+      "point_id": "10.28",
+      "status": "old",
+      "words": 2920,
+      "sections": 0,
+      "checks": 0,
+      "examples": 0,
+      "has_historical": true,
+      "has_why_important": false,
+      "meta_status": "missing",
+      "meta_version": null,
+      "meta_gen_date": null,
+      "reasons": [
+        "old_structure_historical_section",
+        "too_few_sections_0",
+        "missing_checks_0",
+        "too_few_examples_0"
+      ]
+    },
+    {
+      "point_id": "10.29",
+      "status": "old",
+      "words": 2031,
+      "sections": 0,
+      "checks": 0,
+      "examples": 0,
+      "has_historical": true,
+      "has_why_important": false,
+      "meta_status": "missing",
+      "meta_version": null,
+      "meta_gen_date": null,
+      "reasons": [
+        "old_structure_historical_section",
+        "too_short_2031w",
+        "too_few_sections_0",
+        "missing_checks_0",
+        "too_few_examples_0"
+      ]
+    },
+    {
+      "point_id": "10.3",
+      "status": "old",
+      "words": 2337,
+      "sections": 0,
+      "checks": 0,
+      "examples": 3,
+      "has_historical": true,
+      "has_why_important": false,
+      "meta_status": "missing",
+      "meta_version": null,
+      "meta_gen_date": null,
+      "reasons": [
+        "old_structure_historical_section",
+        "too_short_2337w",
+        "too_few_sections_0",
+        "missing_checks_0",
+        "too_few_examples_3"
+      ]
+    },
+    {
+      "point_id": "10.30",
+      "status": "old",
+      "words": 1674,
+      "sections": 0,
+      "checks": 0,
+      "examples": 0,
+      "has_historical": true,
+      "has_why_important": false,
+      "meta_status": "missing",
+      "meta_version": null,
+      "meta_gen_date": null,
+      "reasons": [
+        "old_structure_historical_section",
+        "too_short_1674w",
+        "too_few_sections_0",
+        "missing_checks_0",
+        "too_few_examples_0"
+      ]
+    },
+    {
+      "point_id": "10.31",
+      "status": "old",
+      "words": 2469,
+      "sections": 0,
+      "checks": 0,
+      "examples": 3,
+      "has_historical": true,
+      "has_why_important": false,
+      "meta_status": "missing",
+      "meta_version": null,
+      "meta_gen_date": null,
+      "reasons": [
+        "old_structure_historical_section",
+        "too_short_2469w",
+        "too_few_sections_0",
+        "missing_checks_0",
+        "too_few_examples_3"
+      ]
+    },
+    {
+      "point_id": "10.32",
+      "status": "old",
+      "words": 2084,
+      "sections": 0,
+      "checks": 0,
+      "examples": 3,
+      "has_historical": true,
+      "has_why_important": false,
+      "meta_status": "missing",
+      "meta_version": null,
+      "meta_gen_date": null,
+      "reasons": [
+        "old_structure_historical_section",
+        "too_short_2084w",
+        "too_few_sections_0",
+        "missing_checks_0",
+        "too_few_examples_3"
+      ]
+    },
+    {
+      "point_id": "10.4",
+      "status": "old",
+      "words": 1728,
+      "sections": 0,
+      "checks": 0,
+      "examples": 0,
+      "has_historical": true,
+      "has_why_important": false,
+      "meta_status": "missing",
+      "meta_version": null,
+      "meta_gen_date": null,
+      "reasons": [
+        "old_structure_historical_section",
+        "too_short_1728w",
+        "too_few_sections_0",
+        "missing_checks_0",
+        "too_few_examples_0"
+      ]
+    },
+    {
+      "point_id": "10.5",
+      "status": "old",
+      "words": 1797,
+      "sections": 0,
+      "checks": 0,
+      "examples": 0,
+      "has_historical": true,
+      "has_why_important": false,
+      "meta_status": "missing",
+      "meta_version": null,
+      "meta_gen_date": null,
+      "reasons": [
+        "old_structure_historical_section",
+        "too_short_1797w",
+        "too_few_sections_0",
+        "missing_checks_0",
+        "too_few_examples_0"
+      ]
+    },
+    {
+      "point_id": "10.6",
+      "status": "old",
+      "words": 1803,
+      "sections": 0,
+      "checks": 0,
+      "examples": 0,
+      "has_historical": true,
+      "has_why_important": false,
+      "meta_status": "missing",
+      "meta_version": null,
+      "meta_gen_date": null,
+      "reasons": [
+        "old_structure_historical_section",
+        "too_short_1803w",
+        "too_few_sections_0",
+        "missing_checks_0",
+        "too_few_examples_0"
+      ]
+    },
+    {
+      "point_id": "10.7",
+      "status": "old",
+      "words": 2401,
+      "sections": 0,
+      "checks": 0,
+      "examples": 3,
+      "has_historical": true,
+      "has_why_important": false,
+      "meta_status": "missing",
+      "meta_version": null,
+      "meta_gen_date": null,
+      "reasons": [
+        "old_structure_historical_section",
+        "too_short_2401w",
+        "too_few_sections_0",
+        "missing_checks_0",
+        "too_few_examples_3"
+      ]
+    },
+    {
+      "point_id": "10.8",
+      "status": "old",
+      "words": 1773,
+      "sections": 0,
+      "checks": 0,
+      "examples": 0,
+      "has_historical": true,
+      "has_why_important": false,
+      "meta_status": "missing",
+      "meta_version": null,
+      "meta_gen_date": null,
+      "reasons": [
+        "old_structure_historical_section",
+        "too_short_1773w",
+        "too_few_sections_0",
+        "missing_checks_0",
+        "too_few_examples_0"
+      ]
+    },
+    {
+      "point_id": "10.9",
+      "status": "old",
+      "words": 1884,
+      "sections": 0,
+      "checks": 0,
+      "examples": 0,
+      "has_historical": true,
+      "has_why_important": false,
+      "meta_status": "missing",
+      "meta_version": null,
+      "meta_gen_date": null,
+      "reasons": [
+        "old_structure_historical_section",
+        "too_short_1884w",
+        "too_few_sections_0",
+        "missing_checks_0",
+        "too_few_examples_0"
+      ]
+    },
+    {
+      "point_id": "11.1",
+      "status": "old",
+      "words": 2101,
+      "sections": 0,
+      "checks": 0,
+      "examples": 0,
+      "has_historical": true,
+      "has_why_important": false,
+      "meta_status": "missing",
+      "meta_version": null,
+      "meta_gen_date": null,
+      "reasons": [
+        "old_structure_historical_section",
+        "too_short_2101w",
+        "too_few_sections_0",
+        "missing_checks_0",
+        "too_few_examples_0"
+      ]
+    },
+    {
+      "point_id": "11.2",
+      "status": "old",
+      "words": 2283,
+      "sections": 0,
+      "checks": 0,
+      "examples": 3,
+      "has_historical": true,
+      "has_why_important": false,
+      "meta_status": "missing",
+      "meta_version": null,
+      "meta_gen_date": null,
+      "reasons": [
+        "old_structure_historical_section",
+        "too_short_2283w",
+        "too_few_sections_0",
+        "missing_checks_0",
+        "too_few_examples_3"
+      ]
+    },
+    {
+      "point_id": "11.3",
+      "status": "old",
+      "words": 1938,
+      "sections": 0,
+      "checks": 0,
+      "examples": 3,
+      "has_historical": true,
+      "has_why_important": false,
+      "meta_status": "missing",
+      "meta_version": null,
+      "meta_gen_date": null,
+      "reasons": [
+        "old_structure_historical_section",
+        "too_short_1938w",
+        "too_few_sections_0",
+        "missing_checks_0",
+        "too_few_examples_3"
+      ]
+    },
+    {
+      "point_id": "11.4",
+      "status": "old",
+      "words": 1505,
+      "sections": 0,
+      "checks": 0,
+      "examples": 0,
+      "has_historical": true,
+      "has_why_important": false,
+      "meta_status": "missing",
+      "meta_version": null,
+      "meta_gen_date": null,
+      "reasons": [
+        "old_structure_historical_section",
+        "too_short_1505w",
+        "too_few_sections_0",
+        "missing_checks_0",
+        "too_few_examples_0"
+      ]
+    },
+    {
+      "point_id": "12.1",
+      "status": "old",
+      "words": 2420,
+      "sections": 0,
+      "checks": 0,
+      "examples": 0,
+      "has_historical": true,
+      "has_why_important": false,
+      "meta_status": "missing",
+      "meta_version": null,
+      "meta_gen_date": null,
+      "reasons": [
+        "old_structure_historical_section",
+        "too_short_2420w",
+        "too_few_sections_0",
+        "missing_checks_0",
+        "too_few_examples_0"
+      ]
+    },
+    {
+      "point_id": "12.2",
+      "status": "old",
+      "words": 1697,
+      "sections": 0,
+      "checks": 0,
+      "examples": 0,
+      "has_historical": true,
+      "has_why_important": false,
+      "meta_status": "missing",
+      "meta_version": null,
+      "meta_gen_date": null,
+      "reasons": [
+        "old_structure_historical_section",
+        "too_short_1697w",
+        "too_few_sections_0",
+        "missing_checks_0",
+        "too_few_examples_0"
+      ]
+    },
+    {
+      "point_id": "12.3",
+      "status": "old",
+      "words": 2331,
+      "sections": 0,
+      "checks": 0,
+      "examples": 3,
+      "has_historical": true,
+      "has_why_important": false,
+      "meta_status": "missing",
+      "meta_version": null,
+      "meta_gen_date": null,
+      "reasons": [
+        "old_structure_historical_section",
+        "too_short_2331w",
+        "too_few_sections_0",
+        "missing_checks_0",
+        "too_few_examples_3"
+      ]
+    },
+    {
+      "point_id": "13.1",
+      "status": "old",
+      "words": 1702,
+      "sections": 0,
+      "checks": 0,
+      "examples": 0,
+      "has_historical": true,
+      "has_why_important": false,
+      "meta_status": "missing",
+      "meta_version": null,
+      "meta_gen_date": null,
+      "reasons": [
+        "old_structure_historical_section",
+        "too_short_1702w",
+        "too_few_sections_0",
+        "missing_checks_0",
+        "too_few_examples_0"
+      ]
+    },
+    {
+      "point_id": "13.2",
+      "status": "old",
+      "words": 2437,
+      "sections": 0,
+      "checks": 0,
+      "examples": 0,
+      "has_historical": true,
+      "has_why_important": false,
+      "meta_status": "missing",
+      "meta_version": null,
+      "meta_gen_date": null,
+      "reasons": [
+        "old_structure_historical_section",
+        "too_short_2437w",
+        "too_few_sections_0",
+        "missing_checks_0",
+        "too_few_examples_0"
+      ]
+    },
+    {
+      "point_id": "13.3",
+      "status": "old",
+      "words": 2504,
+      "sections": 0,
+      "checks": 0,
+      "examples": 3,
+      "has_historical": true,
+      "has_why_important": false,
+      "meta_status": "missing",
+      "meta_version": null,
+      "meta_gen_date": null,
+      "reasons": [
+        "old_structure_historical_section",
+        "too_few_sections_0",
+        "missing_checks_0",
+        "too_few_examples_3"
+      ]
+    },
+    {
+      "point_id": "13.4",
+      "status": "old",
+      "words": 4831,
+      "sections": 0,
+      "checks": 0,
+      "examples": 0,
+      "has_historical": true,
+      "has_why_important": false,
+      "meta_status": "missing",
+      "meta_version": null,
+      "meta_gen_date": null,
+      "reasons": [
+        "old_structure_historical_section",
+        "too_few_sections_0",
+        "missing_checks_0",
+        "too_few_examples_0"
+      ]
+    },
+    {
+      "point_id": "1.1",
+      "status": "old",
+      "words": 1953,
+      "sections": 0,
+      "checks": 0,
+      "examples": 0,
+      "has_historical": true,
+      "has_why_important": false,
+      "meta_status": "missing",
+      "meta_version": null,
+      "meta_gen_date": null,
+      "reasons": [
+        "old_structure_historical_section",
+        "too_short_1953w",
+        "too_few_sections_0",
+        "missing_checks_0",
+        "too_few_examples_0"
+      ]
+    },
+    {
+      "point_id": "1.10",
+      "status": "old",
+      "words": 1842,
+      "sections": 0,
+      "checks": 0,
+      "examples": 0,
+      "has_historical": true,
+      "has_why_important": false,
+      "meta_status": "missing",
+      "meta_version": null,
+      "meta_gen_date": null,
+      "reasons": [
+        "old_structure_historical_section",
+        "too_short_1842w",
+        "too_few_sections_0",
+        "missing_checks_0",
+        "too_few_examples_0"
+      ]
+    },
+    {
+      "point_id": "1.11",
+      "status": "old",
+      "words": 2251,
+      "sections": 0,
+      "checks": 0,
+      "examples": 3,
+      "has_historical": true,
+      "has_why_important": false,
+      "meta_status": "missing",
+      "meta_version": null,
+      "meta_gen_date": null,
+      "reasons": [
+        "old_structure_historical_section",
+        "too_short_2251w",
+        "too_few_sections_0",
+        "missing_checks_0",
+        "too_few_examples_3"
+      ]
+    },
+    {
+      "point_id": "1.2",
+      "status": "old",
+      "words": 1909,
+      "sections": 0,
+      "checks": 0,
+      "examples": 0,
+      "has_historical": true,
+      "has_why_important": false,
+      "meta_status": "missing",
+      "meta_version": null,
+      "meta_gen_date": null,
+      "reasons": [
+        "old_structure_historical_section",
+        "too_short_1909w",
+        "too_few_sections_0",
+        "missing_checks_0",
+        "too_few_examples_0"
+      ]
+    },
+    {
+      "point_id": "1.3",
+      "status": "old",
+      "words": 2507,
+      "sections": 0,
+      "checks": 0,
+      "examples": 3,
+      "has_historical": true,
+      "has_why_important": false,
+      "meta_status": "missing",
+      "meta_version": null,
+      "meta_gen_date": null,
+      "reasons": [
+        "old_structure_historical_section",
+        "too_few_sections_0",
+        "missing_checks_0",
+        "too_few_examples_3"
+      ]
+    },
+    {
+      "point_id": "1.4",
+      "status": "new",
+      "words": 3611,
+      "sections": 9,
+      "checks": 3,
+      "examples": 8,
+      "has_historical": false,
+      "has_why_important": true,
+      "meta_status": "present",
+      "meta_version": null,
+      "meta_gen_date": "2026-10-20 19:01:25",
+      "reasons": [
+        "new_structure_why_important"
+      ]
+    },
+    {
+      "point_id": "1.5",
+      "status": "old",
+      "words": 2563,
+      "sections": 0,
+      "checks": 0,
+      "examples": 3,
+      "has_historical": true,
+      "has_why_important": false,
+      "meta_status": "missing",
+      "meta_version": null,
+      "meta_gen_date": null,
+      "reasons": [
+        "old_structure_historical_section",
+        "too_few_sections_0",
+        "missing_checks_0",
+        "too_few_examples_3"
+      ]
+    },
+    {
+      "point_id": "1.6",
+      "status": "old",
+      "words": 2406,
+      "sections": 0,
+      "checks": 0,
+      "examples": 0,
+      "has_historical": true,
+      "has_why_important": false,
+      "meta_status": "missing",
+      "meta_version": null,
+      "meta_gen_date": null,
+      "reasons": [
+        "old_structure_historical_section",
+        "too_short_2406w",
+        "too_few_sections_0",
+        "missing_checks_0",
+        "too_few_examples_0"
+      ]
+    },
+    {
+      "point_id": "1.7",
+      "status": "old",
+      "words": 1455,
+      "sections": 0,
+      "checks": 0,
+      "examples": 0,
+      "has_historical": true,
+      "has_why_important": false,
+      "meta_status": "missing",
+      "meta_version": null,
+      "meta_gen_date": null,
+      "reasons": [
+        "old_structure_historical_section",
+        "too_short_1455w",
+        "too_few_sections_0",
+        "missing_checks_0",
+        "too_few_examples_0"
+      ]
+    },
+    {
+      "point_id": "1.8",
+      "status": "old",
+      "words": 2058,
+      "sections": 0,
+      "checks": 0,
+      "examples": 0,
+      "has_historical": true,
+      "has_why_important": false,
+      "meta_status": "missing",
+      "meta_version": null,
+      "meta_gen_date": null,
+      "reasons": [
+        "old_structure_historical_section",
+        "too_short_2058w",
+        "too_few_sections_0",
+        "missing_checks_0",
+        "too_few_examples_0"
+      ]
+    },
+    {
+      "point_id": "1.9",
+      "status": "old",
+      "words": 4128,
+      "sections": 0,
+      "checks": 0,
+      "examples": 0,
+      "has_historical": true,
+      "has_why_important": false,
+      "meta_status": "missing",
+      "meta_version": null,
+      "meta_gen_date": null,
+      "reasons": [
+        "old_structure_historical_section",
+        "too_few_sections_0",
+        "missing_checks_0",
+        "too_few_examples_0"
+      ]
+    },
+    {
+      "point_id": "2.1",
+      "status": "old",
+      "words": 2103,
+      "sections": 0,
+      "checks": 0,
+      "examples": 3,
+      "has_historical": true,
+      "has_why_important": false,
+      "meta_status": "missing",
+      "meta_version": null,
+      "meta_gen_date": null,
+      "reasons": [
+        "old_structure_historical_section",
+        "too_short_2103w",
+        "too_few_sections_0",
+        "missing_checks_0",
+        "too_few_examples_3"
+      ]
+    },
+    {
+      "point_id": "2.10",
+      "status": "old",
+      "words": 1754,
+      "sections": 0,
+      "checks": 0,
+      "examples": 3,
+      "has_historical": true,
+      "has_why_important": false,
+      "meta_status": "missing",
+      "meta_version": null,
+      "meta_gen_date": null,
+      "reasons": [
+        "old_structure_historical_section",
+        "too_short_1754w",
+        "too_few_sections_0",
+        "missing_checks_0",
+        "too_few_examples_3"
+      ]
+    },
+    {
+      "point_id": "2.11",
+      "status": "old",
+      "words": 1972,
+      "sections": 0,
+      "checks": 0,
+      "examples": 3,
+      "has_historical": true,
+      "has_why_important": false,
+      "meta_status": "missing",
+      "meta_version": null,
+      "meta_gen_date": null,
+      "reasons": [
+        "old_structure_historical_section",
+        "too_short_1972w",
+        "too_few_sections_0",
+        "missing_checks_0",
+        "too_few_examples_3"
+      ]
+    },
+    {
+      "point_id": "2.12",
+      "status": "old",
+      "words": 2063,
+      "sections": 0,
+      "checks": 0,
+      "examples": 0,
+      "has_historical": true,
+      "has_why_important": false,
+      "meta_status": "missing",
+      "meta_version": null,
+      "meta_gen_date": null,
+      "reasons": [
+        "old_structure_historical_section",
+        "too_short_2063w",
+        "too_few_sections_0",
+        "missing_checks_0",
+        "too_few_examples_0"
+      ]
+    },
+    {
+      "point_id": "2.2",
+      "status": "old",
+      "words": 1810,
+      "sections": 0,
+      "checks": 0,
+      "examples": 0,
+      "has_historical": true,
+      "has_why_important": false,
+      "meta_status": "missing",
+      "meta_version": null,
+      "meta_gen_date": null,
+      "reasons": [
+        "old_structure_historical_section",
+        "too_short_1810w",
+        "too_few_sections_0",
+        "missing_checks_0",
+        "too_few_examples_0"
+      ]
+    },
+    {
+      "point_id": "2.3",
+      "status": "old",
+      "words": 2328,
+      "sections": 0,
+      "checks": 0,
+      "examples": 0,
+      "has_historical": true,
+      "has_why_important": false,
+      "meta_status": "missing",
+      "meta_version": null,
+      "meta_gen_date": null,
+      "reasons": [
+        "old_structure_historical_section",
+        "too_short_2328w",
+        "too_few_sections_0",
+        "missing_checks_0",
+        "too_few_examples_0"
+      ]
+    },
+    {
+      "point_id": "2.4",
+      "status": "old",
+      "words": 5037,
+      "sections": 0,
+      "checks": 0,
+      "examples": 8,
+      "has_historical": true,
+      "has_why_important": false,
+      "meta_status": "missing",
+      "meta_version": null,
+      "meta_gen_date": null,
+      "reasons": [
+        "old_structure_historical_section",
+        "too_few_sections_0",
+        "missing_checks_0"
+      ]
+    },
+    {
+      "point_id": "2.5",
+      "status": "old",
+      "words": 2433,
+      "sections": 0,
+      "checks": 0,
+      "examples": 0,
+      "has_historical": true,
+      "has_why_important": false,
+      "meta_status": "missing",
+      "meta_version": null,
+      "meta_gen_date": null,
+      "reasons": [
+        "old_structure_historical_section",
+        "too_short_2433w",
+        "too_few_sections_0",
+        "missing_checks_0",
+        "too_few_examples_0"
+      ]
+    },
+    {
+      "point_id": "2.6",
+      "status": "old",
+      "words": 2628,
+      "sections": 0,
+      "checks": 0,
+      "examples": 4,
+      "has_historical": true,
+      "has_why_important": false,
+      "meta_status": "missing",
+      "meta_version": null,
+      "meta_gen_date": null,
+      "reasons": [
+        "old_structure_historical_section",
+        "too_few_sections_0",
+        "missing_checks_0"
+      ]
+    },
+    {
+      "point_id": "2.7",
+      "status": "old",
+      "words": 2119,
+      "sections": 0,
+      "checks": 0,
+      "examples": 3,
+      "has_historical": true,
+      "has_why_important": false,
+      "meta_status": "missing",
+      "meta_version": null,
+      "meta_gen_date": null,
+      "reasons": [
+        "old_structure_historical_section",
+        "too_short_2119w",
+        "too_few_sections_0",
+        "missing_checks_0",
+        "too_few_examples_3"
+      ]
+    },
+    {
+      "point_id": "2.8",
+      "status": "old",
+      "words": 2810,
+      "sections": 0,
+      "checks": 0,
+      "examples": 4,
+      "has_historical": true,
+      "has_why_important": false,
+      "meta_status": "missing",
+      "meta_version": null,
+      "meta_gen_date": null,
+      "reasons": [
+        "old_structure_historical_section",
+        "too_few_sections_0",
+        "missing_checks_0"
+      ]
+    },
+    {
+      "point_id": "2.9",
+      "status": "old",
+      "words": 2643,
+      "sections": 0,
+      "checks": 0,
+      "examples": 0,
+      "has_historical": true,
+      "has_why_important": false,
+      "meta_status": "missing",
+      "meta_version": null,
+      "meta_gen_date": null,
+      "reasons": [
+        "old_structure_historical_section",
+        "too_few_sections_0",
+        "missing_checks_0",
+        "too_few_examples_0"
+      ]
+    },
+    {
+      "point_id": "3.1",
+      "status": "old",
+      "words": 1889,
+      "sections": 0,
+      "checks": 0,
+      "examples": 0,
+      "has_historical": true,
+      "has_why_important": false,
+      "meta_status": "missing",
+      "meta_version": null,
+      "meta_gen_date": null,
+      "reasons": [
+        "old_structure_historical_section",
+        "too_short_1889w",
+        "too_few_sections_0",
+        "missing_checks_0",
+        "too_few_examples_0"
+      ]
+    },
+    {
+      "point_id": "3.10",
+      "status": "old",
+      "words": 1765,
+      "sections": 0,
+      "checks": 0,
+      "examples": 0,
+      "has_historical": true,
+      "has_why_important": false,
+      "meta_status": "missing",
+      "meta_version": null,
+      "meta_gen_date": null,
+      "reasons": [
+        "old_structure_historical_section",
+        "too_short_1765w",
+        "too_few_sections_0",
+        "missing_checks_0",
+        "too_few_examples_0"
+      ]
+    },
+    {
+      "point_id": "3.11",
+      "status": "old",
+      "words": 2226,
+      "sections": 0,
+      "checks": 0,
+      "examples": 0,
+      "has_historical": true,
+      "has_why_important": false,
+      "meta_status": "missing",
+      "meta_version": null,
+      "meta_gen_date": null,
+      "reasons": [
+        "old_structure_historical_section",
+        "too_short_2226w",
+        "too_few_sections_0",
+        "missing_checks_0",
+        "too_few_examples_0"
+      ]
+    },
+    {
+      "point_id": "3.12",
+      "status": "old",
+      "words": 1836,
+      "sections": 0,
+      "checks": 0,
+      "examples": 3,
+      "has_historical": true,
+      "has_why_important": false,
+      "meta_status": "missing",
+      "meta_version": null,
+      "meta_gen_date": null,
+      "reasons": [
+        "old_structure_historical_section",
+        "too_short_1836w",
+        "too_few_sections_0",
+        "missing_checks_0",
+        "too_few_examples_3"
+      ]
+    },
+    {
+      "point_id": "3.2",
+      "status": "old",
+      "words": 1646,
+      "sections": 0,
+      "checks": 0,
+      "examples": 0,
+      "has_historical": true,
+      "has_why_important": false,
+      "meta_status": "missing",
+      "meta_version": null,
+      "meta_gen_date": null,
+      "reasons": [
+        "old_structure_historical_section",
+        "too_short_1646w",
+        "too_few_sections_0",
+        "missing_checks_0",
+        "too_few_examples_0"
+      ]
+    },
+    {
+      "point_id": "3.3",
+      "status": "old",
+      "words": 1856,
+      "sections": 0,
+      "checks": 0,
+      "examples": 0,
+      "has_historical": true,
+      "has_why_important": false,
+      "meta_status": "missing",
+      "meta_version": null,
+      "meta_gen_date": null,
+      "reasons": [
+        "old_structure_historical_section",
+        "too_short_1856w",
+        "too_few_sections_0",
+        "missing_checks_0",
+        "too_few_examples_0"
+      ]
+    },
+    {
+      "point_id": "3.4",
+      "status": "old",
+      "words": 2226,
+      "sections": 0,
+      "checks": 0,
+      "examples": 0,
+      "has_historical": true,
+      "has_why_important": false,
+      "meta_status": "missing",
+      "meta_version": null,
+      "meta_gen_date": null,
+      "reasons": [
+        "old_structure_historical_section",
+        "too_short_2226w",
+        "too_few_sections_0",
+        "missing_checks_0",
+        "too_few_examples_0"
+      ]
+    },
+    {
+      "point_id": "3.5",
+      "status": "old",
+      "words": 2371,
+      "sections": 0,
+      "checks": 0,
+      "examples": 0,
+      "has_historical": true,
+      "has_why_important": false,
+      "meta_status": "missing",
+      "meta_version": null,
+      "meta_gen_date": null,
+      "reasons": [
+        "old_structure_historical_section",
+        "too_short_2371w",
+        "too_few_sections_0",
+        "missing_checks_0",
+        "too_few_examples_0"
+      ]
+    },
+    {
+      "point_id": "3.6",
+      "status": "old",
+      "words": 2592,
+      "sections": 0,
+      "checks": 0,
+      "examples": 0,
+      "has_historical": true,
+      "has_why_important": false,
+      "meta_status": "missing",
+      "meta_version": null,
+      "meta_gen_date": null,
+      "reasons": [
+        "old_structure_historical_section",
+        "too_few_sections_0",
+        "missing_checks_0",
+        "too_few_examples_0"
+      ]
+    },
+    {
+      "point_id": "3.7",
+      "status": "old",
+      "words": 1595,
+      "sections": 0,
+      "checks": 0,
+      "examples": 0,
+      "has_historical": true,
+      "has_why_important": false,
+      "meta_status": "missing",
+      "meta_version": null,
+      "meta_gen_date": null,
+      "reasons": [
+        "old_structure_historical_section",
+        "too_short_1595w",
+        "too_few_sections_0",
+        "missing_checks_0",
+        "too_few_examples_0"
+      ]
+    },
+    {
+      "point_id": "3.8",
+      "status": "old",
+      "words": 2217,
+      "sections": 0,
+      "checks": 0,
+      "examples": 0,
+      "has_historical": true,
+      "has_why_important": false,
+      "meta_status": "missing",
+      "meta_version": null,
+      "meta_gen_date": null,
+      "reasons": [
+        "old_structure_historical_section",
+        "too_short_2217w",
+        "too_few_sections_0",
+        "missing_checks_0",
+        "too_few_examples_0"
+      ]
+    },
+    {
+      "point_id": "3.9",
+      "status": "old",
+      "words": 2094,
+      "sections": 0,
+      "checks": 0,
+      "examples": 0,
+      "has_historical": true,
+      "has_why_important": false,
+      "meta_status": "missing",
+      "meta_version": null,
+      "meta_gen_date": null,
+      "reasons": [
+        "old_structure_historical_section",
+        "too_short_2094w",
+        "too_few_sections_0",
+        "missing_checks_0",
+        "too_few_examples_0"
+      ]
+    },
+    {
+      "point_id": "4.1",
+      "status": "old",
+      "words": 2348,
+      "sections": 0,
+      "checks": 0,
+      "examples": 0,
+      "has_historical": true,
+      "has_why_important": false,
+      "meta_status": "missing",
+      "meta_version": null,
+      "meta_gen_date": null,
+      "reasons": [
+        "old_structure_historical_section",
+        "too_short_2348w",
+        "too_few_sections_0",
+        "missing_checks_0",
+        "too_few_examples_0"
+      ]
+    },
+    {
+      "point_id": "4.10",
+      "status": "old",
+      "words": 2954,
+      "sections": 0,
+      "checks": 0,
+      "examples": 3,
+      "has_historical": true,
+      "has_why_important": false,
+      "meta_status": "missing",
+      "meta_version": null,
+      "meta_gen_date": null,
+      "reasons": [
+        "old_structure_historical_section",
+        "too_few_sections_0",
+        "missing_checks_0",
+        "too_few_examples_3"
+      ]
+    },
+    {
+      "point_id": "4.2",
+      "status": "old",
+      "words": 2171,
+      "sections": 0,
+      "checks": 0,
+      "examples": 3,
+      "has_historical": true,
+      "has_why_important": false,
+      "meta_status": "missing",
+      "meta_version": null,
+      "meta_gen_date": null,
+      "reasons": [
+        "old_structure_historical_section",
+        "too_short_2171w",
+        "too_few_sections_0",
+        "missing_checks_0",
+        "too_few_examples_3"
+      ]
+    },
+    {
+      "point_id": "4.3",
+      "status": "old",
+      "words": 2178,
+      "sections": 0,
+      "checks": 0,
+      "examples": 0,
+      "has_historical": true,
+      "has_why_important": false,
+      "meta_status": "missing",
+      "meta_version": null,
+      "meta_gen_date": null,
+      "reasons": [
+        "old_structure_historical_section",
+        "too_short_2178w",
+        "too_few_sections_0",
+        "missing_checks_0",
+        "too_few_examples_0"
+      ]
+    },
+    {
+      "point_id": "4.4",
+      "status": "old",
+      "words": 2053,
+      "sections": 0,
+      "checks": 0,
+      "examples": 3,
+      "has_historical": true,
+      "has_why_important": false,
+      "meta_status": "missing",
+      "meta_version": null,
+      "meta_gen_date": null,
+      "reasons": [
+        "old_structure_historical_section",
+        "too_short_2053w",
+        "too_few_sections_0",
+        "missing_checks_0",
+        "too_few_examples_3"
+      ]
+    },
+    {
+      "point_id": "4.5",
+      "status": "old",
+      "words": 2052,
+      "sections": 0,
+      "checks": 0,
+      "examples": 0,
+      "has_historical": true,
+      "has_why_important": false,
+      "meta_status": "missing",
+      "meta_version": null,
+      "meta_gen_date": null,
+      "reasons": [
+        "old_structure_historical_section",
+        "too_short_2052w",
+        "too_few_sections_0",
+        "missing_checks_0",
+        "too_few_examples_0"
+      ]
+    },
+    {
+      "point_id": "4.6",
+      "status": "old",
+      "words": 1747,
+      "sections": 0,
+      "checks": 0,
+      "examples": 0,
+      "has_historical": true,
+      "has_why_important": false,
+      "meta_status": "missing",
+      "meta_version": null,
+      "meta_gen_date": null,
+      "reasons": [
+        "old_structure_historical_section",
+        "too_short_1747w",
+        "too_few_sections_0",
+        "missing_checks_0",
+        "too_few_examples_0"
+      ]
+    },
+    {
+      "point_id": "4.7",
+      "status": "old",
+      "words": 2162,
+      "sections": 0,
+      "checks": 0,
+      "examples": 0,
+      "has_historical": true,
+      "has_why_important": false,
+      "meta_status": "missing",
+      "meta_version": null,
+      "meta_gen_date": null,
+      "reasons": [
+        "old_structure_historical_section",
+        "too_short_2162w",
+        "too_few_sections_0",
+        "missing_checks_0",
+        "too_few_examples_0"
+      ]
+    },
+    {
+      "point_id": "4.8",
+      "status": "old",
+      "words": 2955,
+      "sections": 0,
+      "checks": 0,
+      "examples": 0,
+      "has_historical": true,
+      "has_why_important": false,
+      "meta_status": "missing",
+      "meta_version": null,
+      "meta_gen_date": null,
+      "reasons": [
+        "old_structure_historical_section",
+        "too_few_sections_0",
+        "missing_checks_0",
+        "too_few_examples_0"
+      ]
+    },
+    {
+      "point_id": "4.9",
+      "status": "old",
+      "words": 2400,
+      "sections": 0,
+      "checks": 0,
+      "examples": 0,
+      "has_historical": true,
+      "has_why_important": false,
+      "meta_status": "missing",
+      "meta_version": null,
+      "meta_gen_date": null,
+      "reasons": [
+        "old_structure_historical_section",
+        "too_short_2400w",
+        "too_few_sections_0",
+        "missing_checks_0",
+        "too_few_examples_0"
+      ]
+    },
+    {
+      "point_id": "5.1",
+      "status": "old",
+      "words": 2084,
+      "sections": 0,
+      "checks": 0,
+      "examples": 0,
+      "has_historical": true,
+      "has_why_important": false,
+      "meta_status": "missing",
+      "meta_version": null,
+      "meta_gen_date": null,
+      "reasons": [
+        "old_structure_historical_section",
+        "too_short_2084w",
+        "too_few_sections_0",
+        "missing_checks_0",
+        "too_few_examples_0"
+      ]
+    },
+    {
+      "point_id": "5.10",
+      "status": "old",
+      "words": 1837,
+      "sections": 0,
+      "checks": 0,
+      "examples": 0,
+      "has_historical": true,
+      "has_why_important": false,
+      "meta_status": "missing",
+      "meta_version": null,
+      "meta_gen_date": null,
+      "reasons": [
+        "old_structure_historical_section",
+        "too_short_1837w",
+        "too_few_sections_0",
+        "missing_checks_0",
+        "too_few_examples_0"
+      ]
+    },
+    {
+      "point_id": "5.11",
+      "status": "old",
+      "words": 2786,
+      "sections": 0,
+      "checks": 0,
+      "examples": 3,
+      "has_historical": true,
+      "has_why_important": false,
+      "meta_status": "missing",
+      "meta_version": null,
+      "meta_gen_date": null,
+      "reasons": [
+        "old_structure_historical_section",
+        "too_few_sections_0",
+        "missing_checks_0",
+        "too_few_examples_3"
+      ]
+    },
+    {
+      "point_id": "5.12",
+      "status": "old",
+      "words": 1771,
+      "sections": 0,
+      "checks": 0,
+      "examples": 0,
+      "has_historical": true,
+      "has_why_important": false,
+      "meta_status": "missing",
+      "meta_version": null,
+      "meta_gen_date": null,
+      "reasons": [
+        "old_structure_historical_section",
+        "too_short_1771w",
+        "too_few_sections_0",
+        "missing_checks_0",
+        "too_few_examples_0"
+      ]
+    },
+    {
+      "point_id": "5.2",
+      "status": "old",
+      "words": 2746,
+      "sections": 0,
+      "checks": 0,
+      "examples": 3,
+      "has_historical": true,
+      "has_why_important": false,
+      "meta_status": "missing",
+      "meta_version": null,
+      "meta_gen_date": null,
+      "reasons": [
+        "old_structure_historical_section",
+        "too_few_sections_0",
+        "missing_checks_0",
+        "too_few_examples_3"
+      ]
+    },
+    {
+      "point_id": "5.3",
+      "status": "old",
+      "words": 2837,
+      "sections": 0,
+      "checks": 0,
+      "examples": 0,
+      "has_historical": true,
+      "has_why_important": false,
+      "meta_status": "missing",
+      "meta_version": null,
+      "meta_gen_date": null,
+      "reasons": [
+        "old_structure_historical_section",
+        "too_few_sections_0",
+        "missing_checks_0",
+        "too_few_examples_0"
+      ]
+    },
+    {
+      "point_id": "5.4",
+      "status": "old",
+      "words": 1946,
+      "sections": 0,
+      "checks": 0,
+      "examples": 3,
+      "has_historical": true,
+      "has_why_important": false,
+      "meta_status": "missing",
+      "meta_version": null,
+      "meta_gen_date": null,
+      "reasons": [
+        "old_structure_historical_section",
+        "too_short_1946w",
+        "too_few_sections_0",
+        "missing_checks_0",
+        "too_few_examples_3"
+      ]
+    },
+    {
+      "point_id": "5.5",
+      "status": "old",
+      "words": 2101,
+      "sections": 0,
+      "checks": 0,
+      "examples": 0,
+      "has_historical": true,
+      "has_why_important": false,
+      "meta_status": "missing",
+      "meta_version": null,
+      "meta_gen_date": null,
+      "reasons": [
+        "old_structure_historical_section",
+        "too_short_2101w",
+        "too_few_sections_0",
+        "missing_checks_0",
+        "too_few_examples_0"
+      ]
+    },
+    {
+      "point_id": "5.6",
+      "status": "old",
+      "words": 1381,
+      "sections": 0,
+      "checks": 0,
+      "examples": 0,
+      "has_historical": true,
+      "has_why_important": false,
+      "meta_status": "missing",
+      "meta_version": null,
+      "meta_gen_date": null,
+      "reasons": [
+        "old_structure_historical_section",
+        "too_short_1381w",
+        "too_few_sections_0",
+        "missing_checks_0",
+        "too_few_examples_0"
+      ]
+    },
+    {
+      "point_id": "5.7",
+      "status": "old",
+      "words": 1524,
+      "sections": 0,
+      "checks": 0,
+      "examples": 3,
+      "has_historical": true,
+      "has_why_important": false,
+      "meta_status": "missing",
+      "meta_version": null,
+      "meta_gen_date": null,
+      "reasons": [
+        "old_structure_historical_section",
+        "too_short_1524w",
+        "too_few_sections_0",
+        "missing_checks_0",
+        "too_few_examples_3"
+      ]
+    },
+    {
+      "point_id": "5.8",
+      "status": "old",
+      "words": 2782,
+      "sections": 0,
+      "checks": 0,
+      "examples": 3,
+      "has_historical": true,
+      "has_why_important": false,
+      "meta_status": "missing",
+      "meta_version": null,
+      "meta_gen_date": null,
+      "reasons": [
+        "old_structure_historical_section",
+        "too_few_sections_0",
+        "missing_checks_0",
+        "too_few_examples_3"
+      ]
+    },
+    {
+      "point_id": "5.9",
+      "status": "old",
+      "words": 4057,
+      "sections": 0,
+      "checks": 0,
+      "examples": 0,
+      "has_historical": true,
+      "has_why_important": false,
+      "meta_status": "missing",
+      "meta_version": null,
+      "meta_gen_date": null,
+      "reasons": [
+        "old_structure_historical_section",
+        "too_few_sections_0",
+        "missing_checks_0",
+        "too_few_examples_0"
+      ]
+    },
+    {
+      "point_id": "6.1",
+      "status": "old",
+      "words": 1529,
+      "sections": 0,
+      "checks": 0,
+      "examples": 3,
+      "has_historical": true,
+      "has_why_important": false,
+      "meta_status": "missing",
+      "meta_version": null,
+      "meta_gen_date": null,
+      "reasons": [
+        "old_structure_historical_section",
+        "too_short_1529w",
+        "too_few_sections_0",
+        "missing_checks_0",
+        "too_few_examples_3"
+      ]
+    },
+    {
+      "point_id": "6.10",
+      "status": "old",
+      "words": 2229,
+      "sections": 0,
+      "checks": 0,
+      "examples": 0,
+      "has_historical": true,
+      "has_why_important": false,
+      "meta_status": "missing",
+      "meta_version": null,
+      "meta_gen_date": null,
+      "reasons": [
+        "old_structure_historical_section",
+        "too_short_2229w",
+        "too_few_sections_0",
+        "missing_checks_0",
+        "too_few_examples_0"
+      ]
+    },
+    {
+      "point_id": "6.2",
+      "status": "old",
+      "words": 1503,
+      "sections": 0,
+      "checks": 0,
+      "examples": 0,
+      "has_historical": true,
+      "has_why_important": false,
+      "meta_status": "missing",
+      "meta_version": null,
+      "meta_gen_date": null,
+      "reasons": [
+        "old_structure_historical_section",
+        "too_short_1503w",
+        "too_few_sections_0",
+        "missing_checks_0",
+        "too_few_examples_0"
+      ]
+    },
+    {
+      "point_id": "6.3",
+      "status": "old",
+      "words": 1523,
+      "sections": 0,
+      "checks": 0,
+      "examples": 0,
+      "has_historical": true,
+      "has_why_important": false,
+      "meta_status": "missing",
+      "meta_version": null,
+      "meta_gen_date": null,
+      "reasons": [
+        "old_structure_historical_section",
+        "too_short_1523w",
+        "too_few_sections_0",
+        "missing_checks_0",
+        "too_few_examples_0"
+      ]
+    },
+    {
+      "point_id": "6.4",
+      "status": "old",
+      "words": 2477,
+      "sections": 0,
+      "checks": 0,
+      "examples": 3,
+      "has_historical": true,
+      "has_why_important": false,
+      "meta_status": "missing",
+      "meta_version": null,
+      "meta_gen_date": null,
+      "reasons": [
+        "old_structure_historical_section",
+        "too_short_2477w",
+        "too_few_sections_0",
+        "missing_checks_0",
+        "too_few_examples_3"
+      ]
+    },
+    {
+      "point_id": "6.5",
+      "status": "old",
+      "words": 2380,
+      "sections": 0,
+      "checks": 0,
+      "examples": 0,
+      "has_historical": true,
+      "has_why_important": false,
+      "meta_status": "missing",
+      "meta_version": null,
+      "meta_gen_date": null,
+      "reasons": [
+        "old_structure_historical_section",
+        "too_short_2380w",
+        "too_few_sections_0",
+        "missing_checks_0",
+        "too_few_examples_0"
+      ]
+    },
+    {
+      "point_id": "6.6",
+      "status": "old",
+      "words": 2227,
+      "sections": 0,
+      "checks": 0,
+      "examples": 3,
+      "has_historical": true,
+      "has_why_important": false,
+      "meta_status": "missing",
+      "meta_version": null,
+      "meta_gen_date": null,
+      "reasons": [
+        "old_structure_historical_section",
+        "too_short_2227w",
+        "too_few_sections_0",
+        "missing_checks_0",
+        "too_few_examples_3"
+      ]
+    },
+    {
+      "point_id": "6.7",
+      "status": "old",
+      "words": 2381,
+      "sections": 0,
+      "checks": 0,
+      "examples": 3,
+      "has_historical": true,
+      "has_why_important": false,
+      "meta_status": "missing",
+      "meta_version": null,
+      "meta_gen_date": null,
+      "reasons": [
+        "old_structure_historical_section",
+        "too_short_2381w",
+        "too_few_sections_0",
+        "missing_checks_0",
+        "too_few_examples_3"
+      ]
+    },
+    {
+      "point_id": "6.8",
+      "status": "old",
+      "words": 2344,
+      "sections": 0,
+      "checks": 0,
+      "examples": 3,
+      "has_historical": true,
+      "has_why_important": false,
+      "meta_status": "missing",
+      "meta_version": null,
+      "meta_gen_date": null,
+      "reasons": [
+        "old_structure_historical_section",
+        "too_short_2344w",
+        "too_few_sections_0",
+        "missing_checks_0",
+        "too_few_examples_3"
+      ]
+    },
+    {
+      "point_id": "6.9",
+      "status": "old",
+      "words": 2298,
+      "sections": 0,
+      "checks": 0,
+      "examples": 4,
+      "has_historical": true,
+      "has_why_important": false,
+      "meta_status": "missing",
+      "meta_version": null,
+      "meta_gen_date": null,
+      "reasons": [
+        "old_structure_historical_section",
+        "too_short_2298w",
+        "too_few_sections_0",
+        "missing_checks_0"
+      ]
+    },
+    {
+      "point_id": "7.1",
+      "status": "old",
+      "words": 1814,
+      "sections": 0,
+      "checks": 0,
+      "examples": 0,
+      "has_historical": true,
+      "has_why_important": false,
+      "meta_status": "missing",
+      "meta_version": null,
+      "meta_gen_date": null,
+      "reasons": [
+        "old_structure_historical_section",
+        "too_short_1814w",
+        "too_few_sections_0",
+        "missing_checks_0",
+        "too_few_examples_0"
+      ]
+    },
+    {
+      "point_id": "7.2",
+      "status": "old",
+      "words": 2098,
+      "sections": 0,
+      "checks": 0,
+      "examples": 0,
+      "has_historical": true,
+      "has_why_important": false,
+      "meta_status": "missing",
+      "meta_version": null,
+      "meta_gen_date": null,
+      "reasons": [
+        "old_structure_historical_section",
+        "too_short_2098w",
+        "too_few_sections_0",
+        "missing_checks_0",
+        "too_few_examples_0"
+      ]
+    },
+    {
+      "point_id": "7.3",
+      "status": "old",
+      "words": 2325,
+      "sections": 0,
+      "checks": 0,
+      "examples": 0,
+      "has_historical": true,
+      "has_why_important": false,
+      "meta_status": "missing",
+      "meta_version": null,
+      "meta_gen_date": null,
+      "reasons": [
+        "old_structure_historical_section",
+        "too_short_2325w",
+        "too_few_sections_0",
+        "missing_checks_0",
+        "too_few_examples_0"
+      ]
+    },
+    {
+      "point_id": "7.4",
+      "status": "old",
+      "words": 1623,
+      "sections": 0,
+      "checks": 0,
+      "examples": 0,
+      "has_historical": true,
+      "has_why_important": false,
+      "meta_status": "missing",
+      "meta_version": null,
+      "meta_gen_date": null,
+      "reasons": [
+        "old_structure_historical_section",
+        "too_short_1623w",
+        "too_few_sections_0",
+        "missing_checks_0",
+        "too_few_examples_0"
+      ]
+    },
+    {
+      "point_id": "7.5",
+      "status": "old",
+      "words": 1796,
+      "sections": 0,
+      "checks": 0,
+      "examples": 3,
+      "has_historical": true,
+      "has_why_important": false,
+      "meta_status": "missing",
+      "meta_version": null,
+      "meta_gen_date": null,
+      "reasons": [
+        "old_structure_historical_section",
+        "too_short_1796w",
+        "too_few_sections_0",
+        "missing_checks_0",
+        "too_few_examples_3"
+      ]
+    },
+    {
+      "point_id": "7.6",
+      "status": "old",
+      "words": 2727,
+      "sections": 0,
+      "checks": 0,
+      "examples": 3,
+      "has_historical": true,
+      "has_why_important": false,
+      "meta_status": "missing",
+      "meta_version": null,
+      "meta_gen_date": null,
+      "reasons": [
+        "old_structure_historical_section",
+        "too_few_sections_0",
+        "missing_checks_0",
+        "too_few_examples_3"
+      ]
+    },
+    {
+      "point_id": "7.7",
+      "status": "old",
+      "words": 1869,
+      "sections": 0,
+      "checks": 0,
+      "examples": 3,
+      "has_historical": true,
+      "has_why_important": false,
+      "meta_status": "missing",
+      "meta_version": null,
+      "meta_gen_date": null,
+      "reasons": [
+        "old_structure_historical_section",
+        "too_short_1869w",
+        "too_few_sections_0",
+        "missing_checks_0",
+        "too_few_examples_3"
+      ]
+    },
+    {
+      "point_id": "7.8",
+      "status": "old",
+      "words": 2245,
+      "sections": 0,
+      "checks": 0,
+      "examples": 0,
+      "has_historical": true,
+      "has_why_important": false,
+      "meta_status": "missing",
+      "meta_version": null,
+      "meta_gen_date": null,
+      "reasons": [
+        "old_structure_historical_section",
+        "too_short_2245w",
+        "too_few_sections_0",
+        "missing_checks_0",
+        "too_few_examples_0"
+      ]
+    },
+    {
+      "point_id": "7.9",
+      "status": "old",
+      "words": 2183,
+      "sections": 0,
+      "checks": 0,
+      "examples": 0,
+      "has_historical": true,
+      "has_why_important": false,
+      "meta_status": "missing",
+      "meta_version": null,
+      "meta_gen_date": null,
+      "reasons": [
+        "old_structure_historical_section",
+        "too_short_2183w",
+        "too_few_sections_0",
+        "missing_checks_0",
+        "too_few_examples_0"
+      ]
+    },
+    {
+      "point_id": "8.1",
+      "status": "old",
+      "words": 1885,
+      "sections": 0,
+      "checks": 0,
+      "examples": 3,
+      "has_historical": true,
+      "has_why_important": false,
+      "meta_status": "missing",
+      "meta_version": null,
+      "meta_gen_date": null,
+      "reasons": [
+        "old_structure_historical_section",
+        "too_short_1885w",
+        "too_few_sections_0",
+        "missing_checks_0",
+        "too_few_examples_3"
+      ]
+    },
+    {
+      "point_id": "8.10",
+      "status": "old",
+      "words": 1847,
+      "sections": 0,
+      "checks": 0,
+      "examples": 0,
+      "has_historical": true,
+      "has_why_important": false,
+      "meta_status": "missing",
+      "meta_version": null,
+      "meta_gen_date": null,
+      "reasons": [
+        "old_structure_historical_section",
+        "too_short_1847w",
+        "too_few_sections_0",
+        "missing_checks_0",
+        "too_few_examples_0"
+      ]
+    },
+    {
+      "point_id": "8.11",
+      "status": "old",
+      "words": 1446,
+      "sections": 0,
+      "checks": 0,
+      "examples": 3,
+      "has_historical": true,
+      "has_why_important": false,
+      "meta_status": "missing",
+      "meta_version": null,
+      "meta_gen_date": null,
+      "reasons": [
+        "old_structure_historical_section",
+        "too_short_1446w",
+        "too_few_sections_0",
+        "missing_checks_0",
+        "too_few_examples_3"
+      ]
+    },
+    {
+      "point_id": "8.12",
+      "status": "old",
+      "words": 2046,
+      "sections": 0,
+      "checks": 0,
+      "examples": 0,
+      "has_historical": true,
+      "has_why_important": false,
+      "meta_status": "missing",
+      "meta_version": null,
+      "meta_gen_date": null,
+      "reasons": [
+        "old_structure_historical_section",
+        "too_short_2046w",
+        "too_few_sections_0",
+        "missing_checks_0",
+        "too_few_examples_0"
+      ]
+    },
+    {
+      "point_id": "8.13",
+      "status": "old",
+      "words": 1522,
+      "sections": 0,
+      "checks": 0,
+      "examples": 0,
+      "has_historical": true,
+      "has_why_important": false,
+      "meta_status": "missing",
+      "meta_version": null,
+      "meta_gen_date": null,
+      "reasons": [
+        "old_structure_historical_section",
+        "too_short_1522w",
+        "too_few_sections_0",
+        "missing_checks_0",
+        "too_few_examples_0"
+      ]
+    },
+    {
+      "point_id": "8.14",
+      "status": "old",
+      "words": 2267,
+      "sections": 0,
+      "checks": 0,
+      "examples": 0,
+      "has_historical": true,
+      "has_why_important": false,
+      "meta_status": "missing",
+      "meta_version": null,
+      "meta_gen_date": null,
+      "reasons": [
+        "old_structure_historical_section",
+        "too_short_2267w",
+        "too_few_sections_0",
+        "missing_checks_0",
+        "too_few_examples_0"
+      ]
+    },
+    {
+      "point_id": "8.15",
+      "status": "old",
+      "words": 2095,
+      "sections": 0,
+      "checks": 0,
+      "examples": 3,
+      "has_historical": true,
+      "has_why_important": false,
+      "meta_status": "missing",
+      "meta_version": null,
+      "meta_gen_date": null,
+      "reasons": [
+        "old_structure_historical_section",
+        "too_short_2095w",
+        "too_few_sections_0",
+        "missing_checks_0",
+        "too_few_examples_3"
+      ]
+    },
+    {
+      "point_id": "8.2",
+      "status": "old",
+      "words": 2779,
+      "sections": 0,
+      "checks": 0,
+      "examples": 0,
+      "has_historical": true,
+      "has_why_important": false,
+      "meta_status": "missing",
+      "meta_version": null,
+      "meta_gen_date": null,
+      "reasons": [
+        "old_structure_historical_section",
+        "too_few_sections_0",
+        "missing_checks_0",
+        "too_few_examples_0"
+      ]
+    },
+    {
+      "point_id": "8.3",
+      "status": "old",
+      "words": 2029,
+      "sections": 0,
+      "checks": 0,
+      "examples": 0,
+      "has_historical": true,
+      "has_why_important": false,
+      "meta_status": "missing",
+      "meta_version": null,
+      "meta_gen_date": null,
+      "reasons": [
+        "old_structure_historical_section",
+        "too_short_2029w",
+        "too_few_sections_0",
+        "missing_checks_0",
+        "too_few_examples_0"
+      ]
+    },
+    {
+      "point_id": "8.4",
+      "status": "old",
+      "words": 1431,
+      "sections": 0,
+      "checks": 0,
+      "examples": 0,
+      "has_historical": true,
+      "has_why_important": false,
+      "meta_status": "missing",
+      "meta_version": null,
+      "meta_gen_date": null,
+      "reasons": [
+        "old_structure_historical_section",
+        "too_short_1431w",
+        "too_few_sections_0",
+        "missing_checks_0",
+        "too_few_examples_0"
+      ]
+    },
+    {
+      "point_id": "8.5",
+      "status": "old",
+      "words": 1493,
+      "sections": 0,
+      "checks": 0,
+      "examples": 0,
+      "has_historical": true,
+      "has_why_important": false,
+      "meta_status": "missing",
+      "meta_version": null,
+      "meta_gen_date": null,
+      "reasons": [
+        "old_structure_historical_section",
+        "too_short_1493w",
+        "too_few_sections_0",
+        "missing_checks_0",
+        "too_few_examples_0"
+      ]
+    },
+    {
+      "point_id": "8.6",
+      "status": "old",
+      "words": 1744,
+      "sections": 0,
+      "checks": 0,
+      "examples": 0,
+      "has_historical": true,
+      "has_why_important": false,
+      "meta_status": "missing",
+      "meta_version": null,
+      "meta_gen_date": null,
+      "reasons": [
+        "old_structure_historical_section",
+        "too_short_1744w",
+        "too_few_sections_0",
+        "missing_checks_0",
+        "too_few_examples_0"
+      ]
+    },
+    {
+      "point_id": "8.7",
+      "status": "old",
+      "words": 1417,
+      "sections": 0,
+      "checks": 0,
+      "examples": 3,
+      "has_historical": true,
+      "has_why_important": false,
+      "meta_status": "missing",
+      "meta_version": null,
+      "meta_gen_date": null,
+      "reasons": [
+        "old_structure_historical_section",
+        "too_short_1417w",
+        "too_few_sections_0",
+        "missing_checks_0",
+        "too_few_examples_3"
+      ]
+    },
+    {
+      "point_id": "8.8",
+      "status": "old",
+      "words": 1551,
+      "sections": 0,
+      "checks": 0,
+      "examples": 0,
+      "has_historical": true,
+      "has_why_important": false,
+      "meta_status": "missing",
+      "meta_version": null,
+      "meta_gen_date": null,
+      "reasons": [
+        "old_structure_historical_section",
+        "too_short_1551w",
+        "too_few_sections_0",
+        "missing_checks_0",
+        "too_few_examples_0"
+      ]
+    },
+    {
+      "point_id": "8.9",
+      "status": "old",
+      "words": 1557,
+      "sections": 0,
+      "checks": 0,
+      "examples": 0,
+      "has_historical": true,
+      "has_why_important": false,
+      "meta_status": "missing",
+      "meta_version": null,
+      "meta_gen_date": null,
+      "reasons": [
+        "old_structure_historical_section",
+        "too_short_1557w",
+        "too_few_sections_0",
+        "missing_checks_0",
+        "too_few_examples_0"
+      ]
+    },
+    {
+      "point_id": "9.1",
+      "status": "old",
+      "words": 2258,
+      "sections": 0,
+      "checks": 0,
+      "examples": 0,
+      "has_historical": true,
+      "has_why_important": false,
+      "meta_status": "missing",
+      "meta_version": null,
+      "meta_gen_date": null,
+      "reasons": [
+        "old_structure_historical_section",
+        "too_short_2258w",
+        "too_few_sections_0",
+        "missing_checks_0",
+        "too_few_examples_0"
+      ]
+    },
+    {
+      "point_id": "9.10",
+      "status": "old",
+      "words": 2430,
+      "sections": 0,
+      "checks": 0,
+      "examples": 3,
+      "has_historical": true,
+      "has_why_important": false,
+      "meta_status": "missing",
+      "meta_version": null,
+      "meta_gen_date": null,
+      "reasons": [
+        "old_structure_historical_section",
+        "too_short_2430w",
+        "too_few_sections_0",
+        "missing_checks_0",
+        "too_few_examples_3"
+      ]
+    },
+    {
+      "point_id": "9.11",
+      "status": "old",
+      "words": 2495,
+      "sections": 0,
+      "checks": 0,
+      "examples": 3,
+      "has_historical": true,
+      "has_why_important": false,
+      "meta_status": "missing",
+      "meta_version": null,
+      "meta_gen_date": null,
+      "reasons": [
+        "old_structure_historical_section",
+        "too_short_2495w",
+        "too_few_sections_0",
+        "missing_checks_0",
+        "too_few_examples_3"
+      ]
+    },
+    {
+      "point_id": "9.2",
+      "status": "old",
+      "words": 2088,
+      "sections": 0,
+      "checks": 0,
+      "examples": 0,
+      "has_historical": true,
+      "has_why_important": false,
+      "meta_status": "missing",
+      "meta_version": null,
+      "meta_gen_date": null,
+      "reasons": [
+        "old_structure_historical_section",
+        "too_short_2088w",
+        "too_few_sections_0",
+        "missing_checks_0",
+        "too_few_examples_0"
+      ]
+    },
+    {
+      "point_id": "9.3",
+      "status": "old",
+      "words": 2011,
+      "sections": 0,
+      "checks": 0,
+      "examples": 3,
+      "has_historical": true,
+      "has_why_important": false,
+      "meta_status": "missing",
+      "meta_version": null,
+      "meta_gen_date": null,
+      "reasons": [
+        "old_structure_historical_section",
+        "too_short_2011w",
+        "too_few_sections_0",
+        "missing_checks_0",
+        "too_few_examples_3"
+      ]
+    },
+    {
+      "point_id": "9.4",
+      "status": "old",
+      "words": 2248,
+      "sections": 0,
+      "checks": 0,
+      "examples": 0,
+      "has_historical": true,
+      "has_why_important": false,
+      "meta_status": "missing",
+      "meta_version": null,
+      "meta_gen_date": null,
+      "reasons": [
+        "old_structure_historical_section",
+        "too_short_2248w",
+        "too_few_sections_0",
+        "missing_checks_0",
+        "too_few_examples_0"
+      ]
+    },
+    {
+      "point_id": "9.5",
+      "status": "old",
+      "words": 2433,
+      "sections": 0,
+      "checks": 0,
+      "examples": 0,
+      "has_historical": true,
+      "has_why_important": false,
+      "meta_status": "missing",
+      "meta_version": null,
+      "meta_gen_date": null,
+      "reasons": [
+        "old_structure_historical_section",
+        "too_short_2433w",
+        "too_few_sections_0",
+        "missing_checks_0",
+        "too_few_examples_0"
+      ]
+    },
+    {
+      "point_id": "9.6",
+      "status": "old",
+      "words": 2135,
+      "sections": 0,
+      "checks": 0,
+      "examples": 0,
+      "has_historical": true,
+      "has_why_important": false,
+      "meta_status": "missing",
+      "meta_version": null,
+      "meta_gen_date": null,
+      "reasons": [
+        "old_structure_historical_section",
+        "too_short_2135w",
+        "too_few_sections_0",
+        "missing_checks_0",
+        "too_few_examples_0"
+      ]
+    },
+    {
+      "point_id": "9.7",
+      "status": "old",
+      "words": 1628,
+      "sections": 0,
+      "checks": 0,
+      "examples": 0,
+      "has_historical": true,
+      "has_why_important": false,
+      "meta_status": "missing",
+      "meta_version": null,
+      "meta_gen_date": null,
+      "reasons": [
+        "old_structure_historical_section",
+        "too_short_1628w",
+        "too_few_sections_0",
+        "missing_checks_0",
+        "too_few_examples_0"
+      ]
+    },
+    {
+      "point_id": "9.8",
+      "status": "old",
+      "words": 2100,
+      "sections": 0,
+      "checks": 0,
+      "examples": 0,
+      "has_historical": true,
+      "has_why_important": false,
+      "meta_status": "missing",
+      "meta_version": null,
+      "meta_gen_date": null,
+      "reasons": [
+        "old_structure_historical_section",
+        "too_short_2100w",
+        "too_few_sections_0",
+        "missing_checks_0",
+        "too_few_examples_0"
+      ]
+    },
+    {
+      "point_id": "9.9",
+      "status": "old",
+      "words": 1742,
+      "sections": 0,
+      "checks": 0,
+      "examples": 0,
+      "has_historical": true,
+      "has_why_important": false,
+      "meta_status": "missing",
+      "meta_version": null,
+      "meta_gen_date": null,
+      "reasons": [
+        "old_structure_historical_section",
+        "too_short_1742w",
+        "too_few_sections_0",
+        "missing_checks_0",
+        "too_few_examples_0"
+      ]
+    },
+    {
+      "point_id": "R.1",
+      "status": "old",
+      "words": 2159,
+      "sections": 0,
+      "checks": 0,
+      "examples": 0,
+      "has_historical": true,
+      "has_why_important": false,
+      "meta_status": "missing",
+      "meta_version": null,
+      "meta_gen_date": null,
+      "reasons": [
+        "old_structure_historical_section",
+        "too_short_2159w",
+        "too_few_sections_0",
+        "missing_checks_0",
+        "too_few_examples_0"
+      ]
+    },
+    {
+      "point_id": "R.10",
+      "status": "old",
+      "words": 3226,
+      "sections": 0,
+      "checks": 0,
+      "examples": 0,
+      "has_historical": true,
+      "has_why_important": false,
+      "meta_status": "missing",
+      "meta_version": null,
+      "meta_gen_date": null,
+      "reasons": [
+        "old_structure_historical_section",
+        "too_few_sections_0",
+        "missing_checks_0",
+        "too_few_examples_0"
+      ]
+    },
+    {
+      "point_id": "R.11",
+      "status": "old",
+      "words": 2058,
+      "sections": 0,
+      "checks": 0,
+      "examples": 3,
+      "has_historical": true,
+      "has_why_important": false,
+      "meta_status": "missing",
+      "meta_version": null,
+      "meta_gen_date": null,
+      "reasons": [
+        "old_structure_historical_section",
+        "too_short_2058w",
+        "too_few_sections_0",
+        "missing_checks_0",
+        "too_few_examples_3"
+      ]
+    },
+    {
+      "point_id": "R.12",
+      "status": "old",
+      "words": 1857,
+      "sections": 0,
+      "checks": 0,
+      "examples": 0,
+      "has_historical": true,
+      "has_why_important": false,
+      "meta_status": "missing",
+      "meta_version": null,
+      "meta_gen_date": null,
+      "reasons": [
+        "old_structure_historical_section",
+        "too_short_1857w",
+        "too_few_sections_0",
+        "missing_checks_0",
+        "too_few_examples_0"
+      ]
+    },
+    {
+      "point_id": "R.13",
+      "status": "old",
+      "words": 2342,
+      "sections": 0,
+      "checks": 0,
+      "examples": 0,
+      "has_historical": true,
+      "has_why_important": false,
+      "meta_status": "missing",
+      "meta_version": null,
+      "meta_gen_date": null,
+      "reasons": [
+        "old_structure_historical_section",
+        "too_short_2342w",
+        "too_few_sections_0",
+        "missing_checks_0",
+        "too_few_examples_0"
+      ]
+    },
+    {
+      "point_id": "R.14",
+      "status": "old",
+      "words": 2287,
+      "sections": 0,
+      "checks": 0,
+      "examples": 3,
+      "has_historical": true,
+      "has_why_important": false,
+      "meta_status": "missing",
+      "meta_version": null,
+      "meta_gen_date": null,
+      "reasons": [
+        "old_structure_historical_section",
+        "too_short_2287w",
+        "too_few_sections_0",
+        "missing_checks_0",
+        "too_few_examples_3"
+      ]
+    },
+    {
+      "point_id": "R.15",
+      "status": "old",
+      "words": 1347,
+      "sections": 0,
+      "checks": 0,
+      "examples": 0,
+      "has_historical": true,
+      "has_why_important": false,
+      "meta_status": "missing",
+      "meta_version": null,
+      "meta_gen_date": null,
+      "reasons": [
+        "old_structure_historical_section",
+        "too_short_1347w",
+        "too_few_sections_0",
+        "missing_checks_0",
+        "too_few_examples_0"
+      ]
+    },
+    {
+      "point_id": "R.2",
+      "status": "old",
+      "words": 2394,
+      "sections": 0,
+      "checks": 0,
+      "examples": 0,
+      "has_historical": true,
+      "has_why_important": false,
+      "meta_status": "missing",
+      "meta_version": null,
+      "meta_gen_date": null,
+      "reasons": [
+        "old_structure_historical_section",
+        "too_short_2394w",
+        "too_few_sections_0",
+        "missing_checks_0",
+        "too_few_examples_0"
+      ]
+    },
+    {
+      "point_id": "R.3",
+      "status": "old",
+      "words": 1865,
+      "sections": 0,
+      "checks": 0,
+      "examples": 3,
+      "has_historical": true,
+      "has_why_important": false,
+      "meta_status": "missing",
+      "meta_version": null,
+      "meta_gen_date": null,
+      "reasons": [
+        "old_structure_historical_section",
+        "too_short_1865w",
+        "too_few_sections_0",
+        "missing_checks_0",
+        "too_few_examples_3"
+      ]
+    },
+    {
+      "point_id": "R.4",
+      "status": "old",
+      "words": 1706,
+      "sections": 0,
+      "checks": 0,
+      "examples": 0,
+      "has_historical": true,
+      "has_why_important": false,
+      "meta_status": "missing",
+      "meta_version": null,
+      "meta_gen_date": null,
+      "reasons": [
+        "old_structure_historical_section",
+        "too_short_1706w",
+        "too_few_sections_0",
+        "missing_checks_0",
+        "too_few_examples_0"
+      ]
+    },
+    {
+      "point_id": "R.5",
+      "status": "old",
+      "words": 1720,
+      "sections": 0,
+      "checks": 0,
+      "examples": 0,
+      "has_historical": true,
+      "has_why_important": false,
+      "meta_status": "missing",
+      "meta_version": null,
+      "meta_gen_date": null,
+      "reasons": [
+        "old_structure_historical_section",
+        "too_short_1720w",
+        "too_few_sections_0",
+        "missing_checks_0",
+        "too_few_examples_0"
+      ]
+    },
+    {
+      "point_id": "R.6",
+      "status": "old",
+      "words": 2274,
+      "sections": 0,
+      "checks": 0,
+      "examples": 0,
+      "has_historical": true,
+      "has_why_important": false,
+      "meta_status": "missing",
+      "meta_version": null,
+      "meta_gen_date": null,
+      "reasons": [
+        "old_structure_historical_section",
+        "too_short_2274w",
+        "too_few_sections_0",
+        "missing_checks_0",
+        "too_few_examples_0"
+      ]
+    },
+    {
+      "point_id": "R.7",
+      "status": "old",
+      "words": 1529,
+      "sections": 0,
+      "checks": 0,
+      "examples": 0,
+      "has_historical": true,
+      "has_why_important": false,
+      "meta_status": "missing",
+      "meta_version": null,
+      "meta_gen_date": null,
+      "reasons": [
+        "old_structure_historical_section",
+        "too_short_1529w",
+        "too_few_sections_0",
+        "missing_checks_0",
+        "too_few_examples_0"
+      ]
+    },
+    {
+      "point_id": "R.8",
+      "status": "old",
+      "words": 1991,
+      "sections": 0,
+      "checks": 0,
+      "examples": 0,
+      "has_historical": true,
+      "has_why_important": false,
+      "meta_status": "missing",
+      "meta_version": null,
+      "meta_gen_date": null,
+      "reasons": [
+        "old_structure_historical_section",
+        "too_short_1991w",
+        "too_few_sections_0",
+        "missing_checks_0",
+        "too_few_examples_0"
+      ]
+    },
+    {
+      "point_id": "R.9",
+      "status": "old",
+      "words": 1535,
+      "sections": 0,
+      "checks": 0,
+      "examples": 3,
+      "has_historical": true,
+      "has_why_important": false,
+      "meta_status": "missing",
+      "meta_version": null,
+      "meta_gen_date": null,
+      "reasons": [
+        "old_structure_historical_section",
+        "too_short_1535w",
+        "too_few_sections_0",
+        "missing_checks_0",
+        "too_few_examples_3"
+      ]
+    }
+  ]
+}

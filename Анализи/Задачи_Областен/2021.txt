@@ -1,0 +1,583 @@
+### Част 1: ЗАДАЧИ (10 кл)
+
+```js
+// ─── ЗАДАЧИ: 2021-10 ───
+{
+  source_pdf_probs: "Задачи_Минали_Години/OLI-2-Областен кръг-2021-10 кл-probs.pdf",
+  source_pdf_sols:  "Задачи_Минали_Години/OLI-2-Областен кръг-2021-10 кл-sol.pdf",
+  year: 2021,
+  grade: 10,
+  exam_type: "областен",
+  problems: [
+    {
+      num: 1,
+      topic: "Алгебра",
+      subtopic: "Параметрична система, дискриминанта",
+      difficulty: 4,
+      probs_page: 1,
+      sol_page: 1,
+      summary: "Търсят се стойности на a, за които система с xy, y, x, z има единствено решение.",
+      plan_step: 5,
+      plan_point: "5.1",
+      related_points: ["5.4", "7.5"],
+      prerequisites: ["5.1", "5.4"],
+      add_as_task_to: ["5.1", "5.4"],
+      required_knowledge: [
+        { point_id: "5.1", technique: "Дискриминанта и брой корени", why_needed: "Да се осигури единствен корен на квадратното уравнение" },
+        { point_id: "5.4", technique: "Рационални корени/проверка x=-1", why_needed: "За специалния случай, когато един корен е -1" },
+        { point_id: "7.5", technique: "Симетрия на система", why_needed: "За да се фиксира z=0" }
+      ],
+      techniques_not_in_plan: ["Симетрия по z в система"],
+      gap_severity: "minor",
+      estimated_time_minutes: 35,
+      common_pitfalls: "Пропускат случая x=-1 или знака при заместване.",
+      recommended_for_simulation: false,
+      prerequisite_review: "Преговори 5.1 и 5.4."
+    },
+    {
+      num: 2,
+      topic: "Геометрия",
+      subtopic: "Външновписана окръжност, правоъгълен триъгълник",
+      difficulty: 4,
+      probs_page: 1,
+      sol_page: 1,
+      summary: "Доказва се, че QP разполовява OL при външновписана окръжност и CD=r.",
+      plan_step: 1,
+      plan_point: "1.10",
+      related_points: ["1.4", "1.6"],
+      prerequisites: ["1.10", "1.6"],
+      add_as_task_to: ["1.10", "1.4"],
+      required_knowledge: [
+        { point_id: "1.10", technique: "Външновписана окръжност и допирни точки", why_needed: "За да се използват равни допирателни и радиуси" },
+        { point_id: "1.6", technique: "Метрични зависимости в правоъгълен триъгълник", why_needed: "За QO^2=OT*OC и DO^2=OM*OL" },
+        { point_id: "1.4", technique: "Степен на точка/радикална ос", why_needed: "Алтернативно за връзката OT*OC=OM*OL" }
+      ],
+      techniques_not_in_plan: [],
+      gap_severity: "none",
+      estimated_time_minutes: 40,
+      common_pitfalls: "Не се вижда кои триъгълници са правоъгълни и коя е височината към хипотенузата.",
+      recommended_for_simulation: false,
+      prerequisite_review: "Преговори 1.10 и 1.6."
+    },
+    {
+      num: 3,
+      topic: "ТЧ",
+      subtopic: "Прости и съставни числа, рекурсия",
+      difficulty: 4,
+      probs_page: 1,
+      sol_page: 2,
+      summary: "Търсят се n, за които f(n)-1=n^2/4, където f(n) е сумата на непростите < n.",
+      plan_step: 4,
+      plan_point: "4.5",
+      related_points: ["4.6", "8.10"],
+      prerequisites: ["4.5", "8.10"],
+      add_as_task_to: ["4.5", "8.10"],
+      required_knowledge: [
+        { point_id: "4.5", technique: "Прости и съставни числа", why_needed: "За да се оцени f(n) чрез пропускане на простите" },
+        { point_id: "8.10", technique: "Индукция/рекурсия", why_needed: "За f(n+2)-g(n+2) оценките" },
+        { point_id: "4.6", technique: "Суми от естествени числа", why_needed: "За изразяване на g(n)=n^2/4" }
+      ],
+      techniques_not_in_plan: [],
+      gap_severity: "none",
+      estimated_time_minutes: 45,
+      common_pitfalls: "Проверяват само малки n и не доказват, че няма по-големи.",
+      recommended_for_simulation: false,
+      prerequisite_review: "Преговори 4.5 и 8.10."
+    },
+    {
+      num: 4,
+      topic: "Комбинаторика",
+      subtopic: "Инварианти, линейна алгебра над F2",
+      difficulty: 5,
+      probs_page: 1,
+      sol_page: 2,
+      summary: "Пита се колко различни 3x3 таблици с a,b могат да се получат чрез обръщане на съседи.",
+      plan_step: 9,
+      plan_point: "9.8",
+      related_points: ["8.3", "8.9"],
+      prerequisites: ["9.8"],
+      add_as_task_to: ["9.8"],
+      required_knowledge: [
+        { point_id: "9.8", technique: "Инварианти", why_needed: "За да се намерят таблиците, които не променят началното състояние" },
+        { point_id: null, technique: "Векторно пространство над F2", why_needed: "За пресмятане на 2^9/8 орбити" },
+        { point_id: "8.3", technique: "Двойно броене", why_needed: "Алтернативно за броене на орбити" }
+      ],
+      techniques_not_in_plan: ["Линейна алгебра над F2 / факторпространство"],
+      gap_severity: "major",
+      estimated_time_minutes: 50,
+      common_pitfalls: "Мислят, че редът на ходовете има значение, или не намират всичките 8 инвариантни таблици.",
+      recommended_for_simulation: false,
+      prerequisite_review: "Преговори 9.8 и основи на линейна алгебра над F2."
+    }
+  ],
+  difficulty_distribution: { easy: 0, medium: 2, hard: 2 },
+  recommended_action: "add-to-step10",
+  recommended_for_simulation: [1, 2, 3]
+}
+```
+
+### Част 2: ЗАДАЧИ (11 кл)
+
+```js
+// ─── ЗАДАЧИ: 2021-11 ───
+{
+  source_pdf_probs: "Задачи_Минали_Години/OLI-2-Областен кръг-2021-11 кл-probs.pdf",
+  source_pdf_sols:  "Задачи_Минали_Години/OLI-2-Областен кръг-2021-11 кл-sol.pdf",
+  year: 2021,
+  grade: 11,
+  exam_type: "областен",
+  problems: [
+    {
+      num: 1,
+      topic: "Алгебра",
+      subtopic: "Показателно уравнение с параметър",
+      difficulty: 3,
+      probs_page: 1,
+      sol_page: 1,
+      summary: "Търсят се a, за които 4^x+a*2^{x+2}=2^{x-1}+2a има точно едно решение.",
+      plan_step: 5,
+      plan_point: "5.1",
+      related_points: ["5.4", "7.5"],
+      prerequisites: ["5.1", "5.4"],
+      add_as_task_to: ["5.1", "5.4"],
+      required_knowledge: [
+        { point_id: "5.1", technique: "Дискриминанта и знаци на корените", why_needed: "За точно един положителен корен на квадратното уравнение" },
+        { point_id: "7.5", technique: "Полагане y=2^{x-1}", why_needed: "Свеждане до квадратно уравнение" },
+        { point_id: "5.4", technique: "Проверка на гранични случаи", why_needed: "За D=0 и f(0)<0" }
+      ],
+      techniques_not_in_plan: [],
+      gap_severity: "none",
+      estimated_time_minutes: 25,
+      common_pitfalls: "Забравят, че y>0, и броят отрицателни корени.",
+      recommended_for_simulation: true,
+      prerequisite_review: "Преговори 5.1 и 7.5."
+    },
+    {
+      num: 2,
+      topic: "Геометрия",
+      subtopic: "Вписан четириъгълник, подобие, косинусова теорема",
+      difficulty: 4,
+      probs_page: 1,
+      sol_page: 1,
+      summary: "При ∠C=60°, ABPQ вписан с радиус r и дадено условие, да се намери AB/r.",
+      plan_step: 1,
+      plan_point: "1.5",
+      related_points: ["1.6", "1.10", "1.4"],
+      prerequisites: ["1.5", "1.6", "1.10"],
+      add_as_task_to: ["1.5", "1.6"],
+      required_knowledge: [
+        { point_id: "1.5", technique: "Вписани ъгли", why_needed: "За подобието △ABC ~ △PQC" },
+        { point_id: "1.6", technique: "Косинусова теорема", why_needed: "За AP^2 и ∠APC=90°" },
+        { point_id: "1.10", technique: "Вписана окръжност и допирна точка", why_needed: "За BP+AQ-PQ = (a+b-c)/2" },
+        { point_id: "1.4", technique: "Радиус на описана окръжност", why_needed: "За AB/r чрез диаметър" }
+      ],
+      techniques_not_in_plan: [],
+      gap_severity: "none",
+      estimated_time_minutes: 40,
+      common_pitfalls: "Не се разпознава подобието и се бъркат отсечките BP, AQ.",
+      recommended_for_simulation: true,
+      prerequisite_review: "Преговори 1.5, 1.6 и 1.10."
+    },
+    {
+      num: 3,
+      topic: "ТЧ",
+      subtopic: "Непрости числа, суми, индукция",
+      difficulty: 4,
+      probs_page: 1,
+      sol_page: 2,
+      summary: "Търсят се n с f(n)-1=n^2/4, f(n) сума на непростите < n.",
+      plan_step: 4,
+      plan_point: "4.5",
+      related_points: ["4.6", "8.10"],
+      prerequisites: ["4.5", "8.10"],
+      add_as_task_to: ["4.5", "8.10"],
+      required_knowledge: [
+        { point_id: "4.5", technique: "Прости и съставни числа", why_needed: "За да се оцени f(n) и да се намери n=14" },
+        { point_id: "8.10", technique: "Индукция/рекурсия", why_needed: "За f(n+2)-g(n+2) оценките" },
+        { point_id: "4.6", technique: "Суми от естествени числа", why_needed: "За g(n)=n^2/4" }
+      ],
+      techniques_not_in_plan: [],
+      gap_severity: "none",
+      estimated_time_minutes: 45,
+      common_pitfalls: "Спират до n=14 без доказателство за n≥16.",
+      recommended_for_simulation: true,
+      prerequisite_review: "Преговори 4.5 и 8.10."
+    },
+    {
+      num: 4,
+      topic: "Комбинаторика",
+      subtopic: "Инварианти, линейна алгебра над F2",
+      difficulty: 5,
+      probs_page: 1,
+      sol_page: 2,
+      summary: "Колко различни 3x3 таблици с a,b се получават чрез обръщане на съседи.",
+      plan_step: 9,
+      plan_point: "9.8",
+      related_points: ["8.3", "8.9"],
+      prerequisites: ["9.8"],
+      add_as_task_to: ["9.8"],
+      required_knowledge: [
+        { point_id: "9.8", technique: "Инварианти", why_needed: "За намиране на 8-те непроменящи таблици" },
+        { point_id: null, technique: "Векторно пространство над F2", why_needed: "За 2^9/8=64" },
+        { point_id: "8.3", technique: "Двойно броене", why_needed: "Алтернативно за орбити" }
+      ],
+      techniques_not_in_plan: ["Линейна алгебра над F2 / факторпространство"],
+      gap_severity: "major",
+      estimated_time_minutes: 50,
+      common_pitfalls: "Не отчитат, че ходовете са комутативни и са инволютни.",
+      recommended_for_simulation: false,
+      prerequisite_review: "Преговори 9.8 и линейна алгебра над F2."
+    }
+  ],
+  difficulty_distribution: { easy: 1, medium: 2, hard: 1 },
+  recommended_action: "add-to-step10",
+  recommended_for_simulation: [1, 2, 3]
+}
+```
+
+### Част 3: АРХИВ
+
+```js
+{ 
+  id: "10.2021-10", 
+  title: "Областен кръг 2021 – 10 клас",
+  desc: "4 задачи: 1 Алг, 1 Геом, 1 ТЧ, 1 Комб",
+  source: "Областен кръг 2021",
+  pdf: "Задачи_Минали_Години/OLI-2-Областен кръг-2021-10 кл-probs",
+  page: 1,
+  problems_page: 1,
+  solutions_page: 1,
+  tasks: [
+    { label: "Зад 1 — Параметрична система", 
+      pdf: "Задачи_Минали_Години/OLI-2-Областен кръг-2021-10 кл-probs", 
+      page: 1,
+      knowledge: ["5.1", "5.4", "7.5"]
+    },
+    { label: "Зад 2 — Външновписана окръжност", 
+      pdf: "Задачи_Минали_Години/OLI-2-Областен кръг-2021-10 кл-probs", 
+      page: 1,
+      knowledge: ["1.10", "1.6", "1.4"]
+    },
+    { label: "Зад 3 — Непрости числа", 
+      pdf: "Задачи_Минали_Години/OLI-2-Областен кръг-2021-10 кл-probs", 
+      page: 1,
+      knowledge: ["4.5", "8.10", "4.6"]
+    },
+    { label: "Зад 4 — 3x3 таблица с a,b", 
+      pdf: "Задачи_Минали_Години/OLI-2-Областен кръг-2021-10 кл-probs", 
+      page: 1,
+      knowledge: ["9.8", "8.3"]
+    }
+  ],
+  bonus: [
+    { label: "Решения", pdf: "Задачи_Минали_Години/OLI-2-Областен кръг-2021-10 кл-sol" }
+  ],
+  explanation: "Геометрия, ТЧ, Алгебра, Комбинаторика. Доминира инварианти/линейна алгебра над F2."
+}
+```
+
+```js
+{ 
+  id: "10.2021-11", 
+  title: "Областен кръг 2021 – 11 клас",
+  desc: "4 задачи: 1 Алг, 1 Геом, 1 ТЧ, 1 Комб",
+  source: "Областен кръг 2021",
+  pdf: "Задачи_Минали_Години/OLI-2-Областен кръг-2021-11 кл-probs",
+  page: 1,
+  problems_page: 1,
+  solutions_page: 1,
+  tasks: [
+    { label: "Зад 1 — Показателно уравнение с параметър", 
+      pdf: "Задачи_Минали_Години/OLI-2-Областен кръг-2021-11 кл-probs", 
+      page: 1,
+      knowledge: ["5.1", "5.4", "7.5"]
+    },
+    { label: "Зад 2 — Вписан четириъгълник, подобие", 
+      pdf: "Задачи_Минали_Години/OLI-2-Областен кръг-2021-11 кл-probs", 
+      page: 1,
+      knowledge: ["1.5", "1.6", "1.10", "1.4"]
+    },
+    { label: "Зад 3 — Непрости числа", 
+      pdf: "Задачи_Минали_Години/OLI-2-Областен кръг-2021-11 кл-probs", 
+      page: 1,
+      knowledge: ["4.5", "8.10", "4.6"]
+    },
+    { label: "Зад 4 — 3x3 таблица с a,b", 
+      pdf: "Задачи_Минали_Години/OLI-2-Областен кръг-2021-11 кл-probs", 
+      page: 1,
+      knowledge: ["9.8", "8.3"]
+    }
+  ],
+  bonus: [
+    { label: "Решения", pdf: "Задачи_Минали_Години/OLI-2-Областен кръг-2021-11 кл-sol" }
+  ],
+  explanation: "Геометрия, ТЧ, Алгебра, Комбинаторика. Ключово: инварианти и линейна алгебра над F2."
+}
+```
+
+### Част 4: TASKS ЗА ТЕМАТИЧНИ ТОЧКИ
+
+```js
+// Точка 5.1 в STEPS:
+{ id: "5.1",
+  tasks: [
+    { label: "ОИ 2021/10 кл, Зад 1 (Параметрична система)", 
+      pdf: "Задачи_Минали_Години/OLI-2-Областен кръг-2021-10 кл-probs", 
+      page: 1,
+      difficulty: 4,
+      requires_also: ["5.4", "7.5"],
+      prerequisite_review: "Преговори 5.1 и 5.4"
+    },
+    { label: "ОИ 2021/11 кл, Зад 1 (Показателно уравнение)", 
+      pdf: "Задачи_Минали_Години/OLI-2-Областен кръг-2021-11 кл-probs", 
+      page: 1,
+      difficulty: 3,
+      requires_also: ["5.4", "7.5"],
+      prerequisite_review: "Преговори 5.1 и 7.5"
+    }
+  ]
+}
+```
+
+```js
+// Точка 5.4 в STEPS:
+{ id: "5.4",
+  tasks: [
+    { label: "ОИ 2021/10 кл, Зад 1 (Рационален корен x=-1)", 
+      pdf: "Задачи_Минали_Години/OLI-2-Областен кръг-2021-10 кл-probs", 
+      page: 1,
+      difficulty: 4,
+      requires_also: ["5.1", "7.5"],
+      prerequisite_review: "Преговори 5.4"
+    },
+    { label: "ОИ 2021/11 кл, Зад 1 (Гранични случаи)", 
+      pdf: "Задачи_Минали_Години/OLI-2-Областен кръг-2021-11 кл-probs", 
+      page: 1,
+      difficulty: 3,
+      requires_also: ["5.1", "7.5"],
+      prerequisite_review: "Преговори 5.4"
+    }
+  ]
+}
+```
+
+```js
+// Точка 1.10 в STEPS:
+{ id: "1.10",
+  tasks: [
+    { label: "ОИ 2021/10 кл, Зад 2 (Външновписана окръжност)", 
+      pdf: "Задачи_Минали_Години/OLI-2-Областен кръг-2021-10 кл-probs", 
+      page: 1,
+      difficulty: 4,
+      requires_also: ["1.6", "1.4"],
+      prerequisite_review: "Преговори 1.10 и 1.6"
+    },
+    { label: "ОИ 2021/11 кл, Зад 2 (Вписана и описана)", 
+      pdf: "Задачи_Минали_Години/OLI-2-Областен кръг-2021-11 кл-probs", 
+      page: 1,
+      difficulty: 4,
+      requires_also: ["1.5", "1.6", "1.4"],
+      prerequisite_review: "Преговори 1.10 и 1.6"
+    }
+  ]
+}
+```
+
+```js
+// Точка 1.6 в STEPS:
+{ id: "1.6",
+  tasks: [
+    { label: "ОИ 2021/10 кл, Зад 2 (Метрични зависимости)", 
+      pdf: "Задачи_Минали_Години/OLI-2-Областен кръг-2021-10 кл-probs", 
+      page: 1,
+      difficulty: 4,
+      requires_also: ["1.10", "1.4"],
+      prerequisite_review: "Преговори 1.6"
+    },
+    { label: "ОИ 2021/11 кл, Зад 2 (Косинусова теорема)", 
+      pdf: "Задачи_Минали_Години/OLI-2-Областен кръг-2021-11 кл-probs", 
+      page: 1,
+      difficulty: 4,
+      requires_also: ["1.5", "1.10", "1.4"],
+      prerequisite_review: "Преговори 1.6"
+    }
+  ]
+}
+```
+
+```js
+// Точка 1.5 в STEPS:
+{ id: "1.5",
+  tasks: [
+    { label: "ОИ 2021/11 кл, Зад 2 (Вписани ъгли)", 
+      pdf: "Задачи_Минали_Години/OLI-2-Областен кръг-2021-11 кл-probs", 
+      page: 1,
+      difficulty: 4,
+      requires_also: ["1.6", "1.10", "1.4"],
+      prerequisite_review: "Преговори 1.5 и 1.6"
+    }
+  ]
+}
+```
+
+```js
+// Точка 1.4 в STEPS:
+{ id: "1.4",
+  tasks: [
+    { label: "ОИ 2021/10 кл, Зад 2 (Степен/радикална ос)", 
+      pdf: "Задачи_Минали_Години/OLI-2-Областен кръг-2021-10 кл-probs", 
+      page: 1,
+      difficulty: 4,
+      requires_also: ["1.10", "1.6"],
+      prerequisite_review: "Преговори 1.4"
+    },
+    { label: "ОИ 2021/11 кл, Зад 2 (Радиус на описана)", 
+      pdf: "Задачи_Минали_Години/OLI-2-Областен кръг-2021-11 кл-probs", 
+      page: 1,
+      difficulty: 4,
+      requires_also: ["1.5", "1.6", "1.10"],
+      prerequisite_review: "Преговори 1.4"
+    }
+  ]
+}
+```
+
+```js
+// Точка 4.5 в STEPS:
+{ id: "4.5",
+  tasks: [
+    { label: "ОИ 2021/10 кл, Зад 3 (Непрости числа)", 
+      pdf: "Задачи_Минали_Години/OLI-2-Областен кръг-2021-10 кл-probs", 
+      page: 1,
+      difficulty: 4,
+      requires_also: ["4.6", "8.10"],
+      prerequisite_review: "Преговори 4.5 и 8.10"
+    },
+    { label: "ОИ 2021/11 кл, Зад 3 (Непрости числа)", 
+      pdf: "Задачи_Минали_Години/OLI-2-Областен кръг-2021-11 кл-probs", 
+      page: 1,
+      difficulty: 4,
+      requires_also: ["4.6", "8.10"],
+      prerequisite_review: "Преговори 4.5 и 8.10"
+    }
+  ]
+}
+```
+
+```js
+// Точка 8.10 в STEPS:
+{ id: "8.10",
+  tasks: [
+    { label: "ОИ 2021/10 кл, Зад 3 (Индукция/рекурсия)", 
+      pdf: "Задачи_Минали_Години/OLI-2-Областен кръг-2021-10 кл-probs", 
+      page: 1,
+      difficulty: 4,
+      requires_also: ["4.5", "4.6"],
+      prerequisite_review: "Преговори 8.10"
+    },
+    { label: "ОИ 2021/11 кл, Зад 3 (Индукция/рекурсия)", 
+      pdf: "Задачи_Минали_Години/OLI-2-Областен кръг-2021-11 кл-probs", 
+      page: 1,
+      difficulty: 4,
+      requires_also: ["4.5", "4.6"],
+      prerequisite_review: "Преговори 8.10"
+    }
+  ]
+}
+```
+
+```js
+// Точка 9.8 в STEPS:
+{ id: "9.8",
+  tasks: [
+    { label: "ОИ 2021/10 кл, Зад 4 (Инварианти)", 
+      pdf: "Задачи_Минали_Години/OLI-2-Областен кръг-2021-10 кл-probs", 
+      page: 1,
+      difficulty: 5,
+      requires_also: ["8.3"],
+      prerequisite_review: "Преговори 9.8 и линейна алгебра над F2"
+    },
+    { label: "ОИ 2021/11 кл, Зад 4 (Инварианти)", 
+      pdf: "Задачи_Минали_Години/OLI-2-Областен кръг-2021-11 кл-probs", 
+      page: 1,
+      difficulty: 5,
+      requires_also: ["8.3"],
+      prerequisite_review: "Преговори 9.8 и линейна алгебра над F2"
+    }
+  ]
+}
+```
+
+### Част 5: KNOWLEDGE PROFILE ЗА ГОДИНАТА
+
+```js
+// ─── KNOWLEDGE PROFILE: 2021 ───
+{
+  year: 2021,
+  total_problems_analyzed: 8,
+  most_used_points: [
+    { point_id: "5.1", count: 2, examples: [1, 5] },
+    { point_id: "5.4", count: 2, examples: [1, 5] },
+    { point_id: "1.10", count: 2, examples: [2, 6] },
+    { point_id: "1.6", count: 2, examples: [2, 6] },
+    { point_id: "1.4", count: 2, examples: [2, 6] },
+    { point_id: "4.5", count: 2, examples: [3, 7] },
+    { point_id: "8.10", count: 2, examples: [3, 7] },
+    { point_id: "9.8", count: 2, examples: [4, 8] },
+    { point_id: "4.6", count: 2, examples: [3, 7] },
+    { point_id: "8.3", count: 2, examples: [4, 8] },
+    { point_id: "7.5", count: 2, examples: [1, 5] },
+    { point_id: "1.5", count: 1, examples: [6] }
+  ],
+  techniques_used: [
+    "Дискриминанта", "Viet", "Симетрия на система", 
+    "Външновписана окръжност", "Метрични зависимости в правоъгълен триъгълник", 
+    "Косинусова теорема", "Вписани ъгли", "Прости и съставни числа", 
+    "Индукция/рекурсия", "Инварианти", "Линейна алгебра над F2"
+  ],
+  gaps_identified: [
+    { 
+      technique: "Линейна алгебра над F2 / факторпространство", 
+      appeared_in: ["10 кл зад 4", "11 кл зад 4"], 
+      recommendation: "Добави нова точка 9.11 'Линейна алгебра над F2' или я включи в 9.8 като разширение" 
+    },
+    { 
+      technique: "Симетрия по z в система", 
+      appeared_in: ["10 кл зад 1"], 
+      recommendation: "Малък пропуск; може да се отбележи към 9.9 или 7.5" 
+    }
+  ],
+  study_priority: [
+    "9.8 — Инварианти (2 задачи, major gap с F2)",
+    "1.10 — Вписана/външновписана (2 задачи)",
+    "1.6 — Синус/косинус и метрични зависимости (2 задачи)",
+    "5.1 — Дискриминанта/Viet (2 задачи)",
+    "4.5 — Прости числа (2 задачи)",
+    "8.10 — Индукция (2 задачи)"
+  ],
+  summary: "Тази година доминираха геометрия, ТЧ и комбинаторика с по 2 задачи. Ключов пропуск: линейна алгебра над F2 при задачите с инварианти."
+}
+```
+
+### Част 6: RECOMMENDED CHANGES
+
+### RECOMMENDED CHANGES TO index.html
+
+**В STEPS:**
+- [ ] Добави `10.2021-10` и `10.2021-11` в Step 10 (архив на годината)
+- [ ] Актуализирай точка `9.8` с нови задачи от 10.4 и 11.4
+- [ ] Актуализирай точки `5.1`, `5.4`, `1.10`, `1.6`, `1.5`, `1.4`, `4.5`, `8.10` с нови задачи
+- [ ] Създай нова точка `9.11` — „Линейна алгебра над F2“ (major gap)
+
+**В PLAN_PHASES:**
+- [ ] Добави в Week 14–16: симулация с ОИ 2021 (10 и 11 кл.)
+- [ ] Включи „Линейна алгебра над F2“ в седмицата за комбинаторика/инварианти
+
+**Нови точки/стъпки:**
+- [ ] `9.11` — Линейна алгебра над F2: векторни пространства, факторпространства, орбити при инволюции
+- [ ] Разшири `9.8` с подточка за инварианти, породени от линейни оператори над F2
+
+**Друго:**
+- [ ] Идентифицирани gaps: линейна алгебра над F2 (major), симетрия по z в система (minor)
+- [ ] Препоръчани симулации за 11 кл.: Зад 1, 2, 3 от ОИ 2021/11 кл
+- [ ] Препоръчани симулации за 10 кл.: Зад 1, 2, 3 от ОИ 2021/10 кл

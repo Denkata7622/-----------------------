@@ -1,0 +1,174 @@
+{
+  "_meta": {
+    "pdf": "C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\Задачи_Минали_Години\\Национален\\OLI-3-Национален кръг-2004-9-12 кл-probs.pdf",
+    "paired_with": "C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\Задачи_Минали_Години\\Национален\\OLI-3-Национален кръг-2004-9-12 кл-sol.pdf",
+    "level": 2,
+    "type": "probs",
+    "analyzed_at": "2026-10-18T12:01:50.231989",
+    "model": "deepseek/deepseek-v3.2",
+    "text_length": 1727,
+    "paired_text_length": 12406
+  },
+  "problems": [
+    {
+      "num": 1,
+      "topic": "geometry",
+      "theorems": [
+        "Incenter properties",
+        "Circumcenter properties",
+        "Orthocenter properties"
+      ],
+      "techniques": [
+        "angle chasing",
+        "cyclic quadrilaterals",
+        "perpendicular bisectors"
+      ],
+      "concepts": [
+        "incenter",
+        "circumcenter",
+        "orthocenter",
+        "angle bisector",
+        "perpendicular bisector",
+        "cyclic quadrilateral",
+        "angle with perpendicular sides"
+      ],
+      "difficulty": "olympic",
+      "notes": "Non-standard geometry problem connecting incenter, orthocenter, and perpendicular bisectors via angle chasing."
+    },
+    {
+      "num": 2,
+      "topic": "number_theory",
+      "theorems": [
+        "Legendre's formula (for p-adic valuation)"
+      ],
+      "techniques": [
+        "modular arithmetic",
+        "case analysis",
+        "summation manipulation"
+      ],
+      "concepts": [
+        "harmonic numbers",
+        "p-adic valuation (exponent of prime in factorization)",
+        "modular residues",
+        "reduction of fractions"
+      ],
+      "difficulty": "hard",
+      "notes": "Focuses on the exponent of 3 in the numerator of the harmonic sum H_n. Uses specific calculations for n=67 and general pattern for multiples of 3."
+    },
+    {
+      "num": 3,
+      "topic": "combinatorics",
+      "theorems": [
+        "Turán's theorem (implicitly, triangle-free condition)",
+        "Bipartite graph characterization (no odd cycles)"
+      ],
+      "techniques": [
+        "graph theory modeling",
+        "pigeonhole principle",
+        "degree counting",
+        "extremal principle"
+      ],
+      "concepts": [
+        "graph representation (vertices=people, edges=acquaintances)",
+        "triangle-free graph",
+        "odd cycle",
+        "bipartite graph",
+        "minimum degree",
+        "handshaking lemma"
+      ],
+      "difficulty": "olympic",
+      "notes": "Classical graph theory problem. Condition 'among any three, two are unacquainted' means the graph is triangle-free. The bus condition implies the graph is not bipartite (contains an odd cycle). Uses minimal odd cycle and edge counting to bound minimum degree."
+    },
+    {
+      "num": 4,
+      "topic": "combinatorics",
+      "theorems": [],
+      "techniques": [
+        "invariant",
+        "parity argument"
+      ],
+      "concepts": [
+        "word rewriting rules",
+        "invariant (parity of a's on even/odd positions)",
+        "reachability"
+      ],
+      "difficulty": "standard",
+      "notes": "Standard invariant problem. The key is to find an invariant preserved by all rewrite rules (parity of count of 'a's on even positions)."
+    },
+    {
+      "num": 5,
+      "topic": "number_theory",
+      "theorems": [
+        "Pick's theorem",
+        "GCD properties"
+      ],
+      "techniques": [
+        "linear transformations",
+        "geometry of lattice points",
+        "case analysis",
+        "Diophantine conditions"
+      ],
+      "concepts": [
+        "lattice points in parallelogram",
+        "linear transformation determinant (ad-bc)",
+        "greatest common divisor (GCD)",
+        "interior and boundary lattice points",
+        "coprime conditions"
+      ],
+      "difficulty": "olympic",
+      "notes": "Mixes geometry of lattice points (Pick's theorem) and number theory (GCD). The condition ad ≠ bc ensures the parallelogram has non-zero area. The case ad=bc leads to infinitely many solutions, contradicting the finite count (2004)."
+    },
+    {
+      "num": 6,
+      "topic": "combinatorics",
+      "theorems": [
+        "Pigeonhole principle",
+        "Cauchy-Davenport theorem (for integers modulo prime)"
+      ],
+      "techniques": [
+        "pigeonhole principle",
+        "induction",
+        "set addition",
+        "combinatorial reasoning"
+      ],
+      "concepts": [
+        "sumset (A+B modulo p)",
+        "pigeonhole principle",
+        "modular arithmetic",
+        "set intersection/union",
+        "induction on set size"
+      ],
+      "difficulty": "olympic",
+      "notes": "Part (a) is direct pigeonhole principle. Part (b) is a known result about the size of the sumset of two sets modulo a prime (a version of the Cauchy-Davenport theorem). The solution uses a clever inductive argument with shifting and set operations."
+    }
+  ],
+  "unique_concepts": [
+    "incenter",
+    "circumcenter",
+    "orthocenter",
+    "angle bisector",
+    "perpendicular bisector",
+    "cyclic quadrilateral",
+    "angle with perpendicular sides",
+    "harmonic numbers",
+    "p-adic valuation",
+    "modular residues",
+    "graph theory",
+    "triangle-free graph",
+    "odd cycle",
+    "bipartite graph",
+    "minimum degree",
+    "invariant",
+    "parity argument",
+    "word rewriting",
+    "lattice points",
+    "Pick's theorem",
+    "linear transformation determinant",
+    "greatest common divisor (GCD)",
+    "sumset modulo prime",
+    "pigeonhole principle",
+    "Cauchy-Davenport theorem",
+    "induction on sets"
+  ],
+  "confidence": 0.95
+}

@@ -1,0 +1,121 @@
+{
+  "_meta": {
+    "pdf": "C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\Задачи_Минали_Години\\Областен\\OLI-2-Областен кръг-2014-10 кл-probs.pdf",
+    "paired_with": "C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\Задачи_Минали_Години\\Областен\\OLI-2-Областен кръг-2014-10 кл-sol.pdf",
+    "level": 1,
+    "type": "probs",
+    "analyzed_at": "2026-10-18T15:45:29.332707",
+    "model": "deepseek/deepseek-v3.2",
+    "text_length": 1291,
+    "paired_text_length": 0
+  },
+  "problems": [
+    {
+      "num": 1,
+      "topic": "algebra",
+      "theorems": [],
+      "techniques": [
+        "substitution",
+        "inequality_analysis"
+      ],
+      "concepts": [
+        "linear_equations",
+        "linear_inequalities",
+        "parametric_systems",
+        "feasible_region"
+      ],
+      "difficulty": "standard",
+      "notes": "Стандартна задача за съществуване на решение на система от уравнение и неравенство. Решава се чрез изразяване на една променлива и заместване в неравенството."
+    },
+    {
+      "num": 2,
+      "topic": "geometry",
+      "theorems": [
+        "Power_of_a_Point"
+      ],
+      "techniques": [
+        "geometric_construction",
+        "inversion",
+        "homothety"
+      ],
+      "concepts": [
+        "incircle",
+        "circle_through_two_points",
+        "tangent_circles",
+        "radical_axis",
+        "geometric_locus"
+      ],
+      "difficulty": "olympic",
+      "notes": "Задача за построение. Ключовата идея е да се намери геометричното място на центровете на окръжностите, минаващи през A и B и допиращи се до вписаната окръжност. Това може да се сведе до намиране на точки, за които разстоянието до центъра на вписаната окръжност е равно на сума/разлика от радиусите (в зависимост от външно/вътрешно допиране)."
+    },
+    {
+      "num": 3,
+      "topic": "geometry",
+      "theorems": [
+        "Inscribed_Angle",
+        "Cyclic_Quadrilateral",
+        "Pascal",
+        "Radical_Axis"
+      ],
+      "techniques": [
+        "angle_chasing",
+        "proving_collinearity"
+      ],
+      "concepts": [
+        "tangent_circles",
+        "chord_tangent_angle",
+        "parallelogram",
+        "collinear_points",
+        "intersecting_chords_theorem"
+      ],
+      "difficulty": "hard",
+      "notes": "Сложна геометрична задача с допиращи се окръжности и успоредник. Очаква се използване на свойства на вписани ъгли и циклични четириъгълници, за да се докаже, че T лежи на правата PQ. Може да включва теорема на Паскал за конфигурация от точки на окръжност."
+    },
+    {
+      "num": 4,
+      "topic": "combinatorics",
+      "theorems": [],
+      "techniques": [
+        "pigeonhole_principle",
+        "extremal_principle",
+        "construction_example"
+      ],
+      "concepts": [
+        "covering_points_with_lines",
+        "covering_points_with_circles",
+        "minimal_cover",
+        "combinatorial_geometry"
+      ],
+      "difficulty": "olympic",
+      "notes": "Задача от комбинаторната геометрия. Изисква разсъждения за минималния брой прави и окръжности, покриващи дадено множество от точки. Част а) и б) изискват да се прецени съществуването на такова множество, вероятно чрез комбинаторни неравенства или чрез изрично построяване на контрапример."
+    }
+  ],
+  "unique_concepts": [
+    "linear_equations",
+    "linear_inequalities",
+    "parametric_systems",
+    "feasible_region",
+    "incircle",
+    "circle_through_two_points",
+    "tangent_circles",
+    "radical_axis",
+    "geometric_locus",
+    "Power_of_a_Point",
+    "geometric_construction",
+    "Inscribed_Angle",
+    "Cyclic_Quadrilateral",
+    "chord_tangent_angle",
+    "parallelogram",
+    "collinear_points",
+    "intersecting_chords_theorem",
+    "Pascal",
+    "covering_points_with_lines",
+    "covering_points_with_circles",
+    "minimal_cover",
+    "combinatorial_geometry",
+    "pigeonhole_principle",
+    "extremal_principle",
+    "construction_example"
+  ],
+  "confidence": 0.9
+}

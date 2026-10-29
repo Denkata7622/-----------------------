@@ -1,0 +1,156 @@
+{
+  "_meta": {
+    "pdf": "C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\Задачи_Минали_Години\\Национален\\OLI-3-Национален кръг-1983-9-12 кл-sol.pdf",
+    "paired_with": null,
+    "level": 2,
+    "type": "sol",
+    "analyzed_at": "2026-10-18T11:32:44.047929",
+    "model": "deepseek/deepseek-v3.2",
+    "text_length": 8867,
+    "paired_text_length": 0
+  },
+  "problems": [
+    {
+      "num": 1,
+      "topic": "number_theory",
+      "theorems": [],
+      "techniques": [
+        "case analysis",
+        "modular arithmetic",
+        "construction",
+        "contradiction"
+      ],
+      "concepts": [
+        "permutations",
+        "modular residues",
+        "prime numbers",
+        "composite numbers",
+        "inverses modulo p"
+      ],
+      "difficulty": "olympic",
+      "notes": "Requires constructing a specific permutation for prime n and handling the special case n=4."
+    },
+    {
+      "num": 2,
+      "topic": "algebra",
+      "theorems": [],
+      "techniques": [
+        "induction",
+        "inequality manipulation",
+        "pairwise comparison"
+      ],
+      "concepts": [
+        "rearrangement inequality",
+        "non-negative numbers",
+        "permutations",
+        "product of pairs"
+      ],
+      "difficulty": "hard",
+      "notes": "Uses an inductive argument with careful pairing and a key inequality derived from the ordering of the numbers."
+    },
+    {
+      "num": 3,
+      "topic": "geometry",
+      "theorems": [],
+      "techniques": [
+        "vector algebra",
+        "parameterization",
+        "area minimization",
+        "coordinate geometry"
+      ],
+      "concepts": [
+        "regular triangular pyramid",
+        "section by a plane",
+        "midpoints",
+        "ratio of segments",
+        "area of quadrilateral",
+        "minimization problem"
+      ],
+      "difficulty": "olympic",
+      "notes": "Part (a) uses vector methods to prove a ratio equality. Part (b) involves expressing the area as a quadratic function and finding its minimum."
+    },
+    {
+      "num": 4,
+      "topic": "geometry",
+      "theorems": [
+        "Pigeonhole Principle"
+      ],
+      "techniques": [
+        "pigeonhole principle",
+        "bounding arguments",
+        "constructive example"
+      ],
+      "concepts": [
+        "packing circles in a square",
+        "distance between centers",
+        "diagonal of a square",
+        "non-overlapping circles"
+      ],
+      "difficulty": "olympic",
+      "notes": "The solution finds a lower bound for the square side using the pigeonhole principle and then shows it's attainable."
+    },
+    {
+      "num": 5,
+      "topic": "algebra",
+      "theorems": [
+        "Rational Root Theorem"
+      ],
+      "techniques": [
+        "assumption of common root",
+        "algebraic manipulation",
+        "elimination",
+        "contradiction"
+      ],
+      "concepts": [
+        "polynomials with rational coefficients",
+        "common complex roots",
+        "irrational numbers",
+        "rational root test"
+      ],
+      "difficulty": "olympic",
+      "notes": "Assumes a common root, derives equations for rational coefficients, and uses the Rational Root Theorem to reach a contradiction."
+    },
+    {
+      "num": 6,
+      "topic": "number_theory",
+      "theorems": [
+        "Kronecker's Approximation Theorem"
+      ],
+      "techniques": [
+        "limit argument",
+        "case analysis (rational/irrational)",
+        "contradiction",
+        "fractional part manipulation"
+      ],
+      "concepts": [
+        "floor function",
+        "fractional parts",
+        "density of fractional parts",
+        "integer and fractional parts decomposition"
+      ],
+      "difficulty": "olympic",
+      "notes": "First proves a+b=c using limits. Then reduces to the case of fractional parts and uses Kronecker's theorem for the irrational case."
+    }
+  ],
+  "unique_concepts": [
+    "permutations",
+    "modular residues",
+    "prime numbers",
+    "inverses modulo p",
+    "rearrangement inequality",
+    "product of pairs",
+    "regular triangular pyramid",
+    "section by a plane",
+    "vector algebra in geometry",
+    "area minimization",
+    "packing circles",
+    "pigeonhole principle in geometry",
+    "polynomial common roots",
+    "Rational Root Theorem",
+    "floor function",
+    "fractional parts",
+    "Kronecker's Approximation Theorem",
+    "density of sequences"
+  ],
+  "confidence": 0.95
+}

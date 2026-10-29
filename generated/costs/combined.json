@@ -1,0 +1,454 @@
+{
+  "generated_at": "2026-10-29T19:08:13",
+  "sources": {
+    "historical": 2622,
+    "live": 7,
+    "combined": 2629
+  },
+  "by_model": {
+    "GPT-6.1 Sol": {
+      "calls": 459,
+      "tokens": 4178092,
+      "cost": 17.044919,
+      "errors": 0,
+      "reasoning_tokens": 0,
+      "cached_tokens": 0,
+      "cost_prompt": 0.0,
+      "cost_completion": 0.0
+    },
+    "R1 0528": {
+      "calls": 244,
+      "tokens": 3237652,
+      "cost": 3.492765,
+      "errors": 12,
+      "reasoning_tokens": 0,
+      "cached_tokens": 0,
+      "cost_prompt": 0.0,
+      "cost_completion": 0.0
+    },
+    "DeepSeek V3.2": {
+      "calls": 793,
+      "tokens": 7207299,
+      "cost": 2.565484,
+      "errors": 0,
+      "reasoning_tokens": 0,
+      "cached_tokens": 0,
+      "cost_prompt": 0.0,
+      "cost_completion": 0.0
+    },
+    "Claude Opus 5.5": {
+      "calls": 15,
+      "tokens": 317893,
+      "cost": 1.903773,
+      "errors": 0,
+      "reasoning_tokens": 0,
+      "cached_tokens": 0,
+      "cost_prompt": 0.0,
+      "cost_completion": 0.0
+    },
+    "Claude Sonnet 5.5": {
+      "calls": 8,
+      "tokens": 385953,
+      "cost": 1.542417,
+      "errors": 0,
+      "reasoning_tokens": 0,
+      "cached_tokens": 0,
+      "cost_prompt": 0.0,
+      "cost_completion": 0.0
+    },
+    "Nano Banana Pro (Gemini 3 Pro Image)": {
+      "calls": 7,
+      "tokens": 13351,
+      "cost": 0.701732,
+      "errors": 2,
+      "reasoning_tokens": 0,
+      "cached_tokens": 0,
+      "cost_prompt": 0.0,
+      "cost_completion": 0.0
+    },
+    "gpt-oss-120b": {
+      "calls": 838,
+      "tokens": 9118887,
+      "cost": 0.632765,
+      "errors": 4,
+      "reasoning_tokens": 0,
+      "cached_tokens": 0,
+      "cost_prompt": 0.0,
+      "cost_completion": 0.0
+    },
+    "GLM 5.3 FlashX": {
+      "calls": 18,
+      "tokens": 707284,
+      "cost": 0.611327,
+      "errors": 0,
+      "reasoning_tokens": 0,
+      "cached_tokens": 0,
+      "cost_prompt": 0.0,
+      "cost_completion": 0.0
+    },
+    "mistral-ocr-latest": {
+      "calls": 109,
+      "tokens": 0,
+      "cost": 0.462,
+      "errors": 0,
+      "reasoning_tokens": 0,
+      "cached_tokens": 0,
+      "cost_prompt": 0.0,
+      "cost_completion": 0.0
+    },
+    "GLM 5.3 Flash": {
+      "calls": 104,
+      "tokens": 1894892,
+      "cost": 0.149632,
+      "errors": 0,
+      "reasoning_tokens": 0,
+      "cached_tokens": 0,
+      "cost_prompt": 0.0,
+      "cost_completion": 0.0
+    },
+    "deepseek/deepseek-r1": {
+      "calls": 5,
+      "tokens": 53465,
+      "cost": 0.08226,
+      "errors": 0,
+      "reasoning_tokens": 0,
+      "cached_tokens": 0,
+      "cost_prompt": 0.0,
+      "cost_completion": 0.0
+    },
+    "deepseek/deepseek-r1-0528": {
+      "calls": 7,
+      "tokens": 80531,
+      "cost": 0.080126,
+      "errors": 0,
+      "reasoning_tokens": 5884,
+      "cached_tokens": 25344,
+      "cost_prompt": 0.029324,
+      "cost_completion": 0.050686
+    },
+    "Claude Opus 4.5": {
+      "calls": 1,
+      "tokens": 13,
+      "cost": 0.000101,
+      "errors": 0,
+      "reasoning_tokens": 0,
+      "cached_tokens": 0,
+      "cost_prompt": 0.0,
+      "cost_completion": 0.0
+    },
+    "Claude Sonnet 4.5": {
+      "calls": 1,
+      "tokens": 13,
+      "cost": 8.7e-05,
+      "errors": 0,
+      "reasoning_tokens": 0,
+      "cached_tokens": 0,
+      "cost_prompt": 0.0,
+      "cost_completion": 0.0
+    },
+    "Claude Sonnet 4.6": {
+      "calls": 1,
+      "tokens": 13,
+      "cost": 6e-05,
+      "errors": 0,
+      "reasoning_tokens": 0,
+      "cached_tokens": 0,
+      "cost_prompt": 0.0,
+      "cost_completion": 0.0
+    },
+    "Claude Haiku 4.5": {
+      "calls": 1,
+      "tokens": 13,
+      "cost": 2e-05,
+      "errors": 0,
+      "reasoning_tokens": 0,
+      "cached_tokens": 0,
+      "cost_prompt": 0.0,
+      "cost_completion": 0.0
+    },
+    "anthropic/claude-sonnet-5.5-20260928": {
+      "calls": 1,
+      "tokens": 0,
+      "cost": 0.0,
+      "errors": 1,
+      "reasoning_tokens": 0,
+      "cached_tokens": 0,
+      "cost_prompt": 0.0,
+      "cost_completion": 0.0
+    },
+    "Claude Sonnet 5.5 (batch)": {
+      "calls": 2,
+      "tokens": 0,
+      "cost": 0.0,
+      "errors": 2,
+      "reasoning_tokens": 0,
+      "cached_tokens": 0,
+      "cost_prompt": 0.0,
+      "cost_completion": 0.0
+    },
+    "z-ai/glm-5.3-flashx-20260918": {
+      "calls": 4,
+      "tokens": 0,
+      "cost": 0.0,
+      "errors": 4,
+      "reasoning_tokens": 0,
+      "cached_tokens": 0,
+      "cost_prompt": 0.0,
+      "cost_completion": 0.0
+    },
+    "z-ai/glm-5.3-flash-20260826": {
+      "calls": 3,
+      "tokens": 0,
+      "cost": 0.0,
+      "errors": 3,
+      "reasoning_tokens": 0,
+      "cached_tokens": 0,
+      "cost_prompt": 0.0,
+      "cost_completion": 0.0
+    },
+    "openai/gpt-6.1-sol-20260929": {
+      "calls": 4,
+      "tokens": 0,
+      "cost": 0.0,
+      "errors": 4,
+      "reasoning_tokens": 0,
+      "cached_tokens": 0,
+      "cost_prompt": 0.0,
+      "cost_completion": 0.0
+    },
+    "deepseek/deepseek-v3.2-20251201": {
+      "calls": 1,
+      "tokens": 0,
+      "cost": 0.0,
+      "errors": 1,
+      "reasoning_tokens": 0,
+      "cached_tokens": 0,
+      "cost_prompt": 0.0,
+      "cost_completion": 0.0
+    },
+    "Claude Sonnet 4.6 (batch)": {
+      "calls": 3,
+      "tokens": 0,
+      "cost": 0.0,
+      "errors": 3,
+      "reasoning_tokens": 0,
+      "cached_tokens": 0,
+      "cost_prompt": 0.0,
+      "cost_completion": 0.0
+    }
+  },
+  "by_day": {
+    "2026-10-14": {
+      "calls": 22,
+      "tokens": 39596,
+      "cost": 0.077149,
+      "errors": 4,
+      "reasoning_tokens": 0,
+      "cached_tokens": 0,
+      "cost_prompt": 0.0,
+      "cost_completion": 0.0
+    },
+    "2026-10-15": {
+      "calls": 244,
+      "tokens": 1686374,
+      "cost": 0.825902,
+      "errors": 3,
+      "reasoning_tokens": 0,
+      "cached_tokens": 0,
+      "cost_prompt": 0.0,
+      "cost_completion": 0.0
+    },
+    "2026-10-16": {
+      "calls": 553,
+      "tokens": 5587577,
+      "cost": 1.370895,
+      "errors": 0,
+      "reasoning_tokens": 0,
+      "cached_tokens": 0,
+      "cost_prompt": 0.0,
+      "cost_completion": 0.0
+    },
+    "2026-10-17": {
+      "calls": 120,
+      "tokens": 1121063,
+      "cost": 0.263867,
+      "errors": 1,
+      "reasoning_tokens": 0,
+      "cached_tokens": 0,
+      "cost_prompt": 0.0,
+      "cost_completion": 0.0
+    },
+    "2026-10-18": {
+      "calls": 164,
+      "tokens": 2095667,
+      "cost": 0.499047,
+      "errors": 0,
+      "reasoning_tokens": 0,
+      "cached_tokens": 0,
+      "cost_prompt": 0.0,
+      "cost_completion": 0.0
+    },
+    "2026-10-19": {
+      "calls": 422,
+      "tokens": 2801166,
+      "cost": 1.794058,
+      "errors": 3,
+      "reasoning_tokens": 0,
+      "cached_tokens": 0,
+      "cost_prompt": 0.0,
+      "cost_completion": 0.0
+    },
+    "2026-10-20": {
+      "calls": 211,
+      "tokens": 717084,
+      "cost": 2.936901,
+      "errors": 0,
+      "reasoning_tokens": 0,
+      "cached_tokens": 0,
+      "cost_prompt": 0.0,
+      "cost_completion": 0.0
+    },
+    "2026-10-21": {
+      "calls": 64,
+      "tokens": 587794,
+      "cost": 2.957416,
+      "errors": 0,
+      "reasoning_tokens": 0,
+      "cached_tokens": 0,
+      "cost_prompt": 0.0,
+      "cost_completion": 0.0
+    },
+    "2026-10-23": {
+      "calls": 51,
+      "tokens": 488079,
+      "cost": 1.492207,
+      "errors": 0,
+      "reasoning_tokens": 0,
+      "cached_tokens": 0,
+      "cost_prompt": 0.0,
+      "cost_completion": 0.0
+    },
+    "2026-10-24": {
+      "calls": 101,
+      "tokens": 710423,
+      "cost": 2.919955,
+      "errors": 0,
+      "reasoning_tokens": 0,
+      "cached_tokens": 0,
+      "cost_prompt": 0.0,
+      "cost_completion": 0.0
+    },
+    "2026-10-25": {
+      "calls": 98,
+      "tokens": 754825,
+      "cost": 2.960469,
+      "errors": 1,
+      "reasoning_tokens": 0,
+      "cached_tokens": 0,
+      "cost_prompt": 0.0,
+      "cost_completion": 0.0
+    },
+    "2026-10-26": {
+      "calls": 249,
+      "tokens": 3846772,
+      "cost": 4.95228,
+      "errors": 5,
+      "reasoning_tokens": 0,
+      "cached_tokens": 0,
+      "cost_prompt": 0.0,
+      "cost_completion": 0.0
+    },
+    "2026-10-27": {
+      "calls": 146,
+      "tokens": 3080249,
+      "cost": 0.791698,
+      "errors": 8,
+      "reasoning_tokens": 0,
+      "cached_tokens": 0,
+      "cost_prompt": 0.0,
+      "cost_completion": 0.0
+    },
+    "2026-10-28": {
+      "calls": 148,
+      "tokens": 3041341,
+      "cost": 4.770182,
+      "errors": 9,
+      "reasoning_tokens": 0,
+      "cached_tokens": 0,
+      "cost_prompt": 0.0,
+      "cost_completion": 0.0
+    },
+    "2026-10-29": {
+      "calls": 36,
+      "tokens": 637341,
+      "cost": 0.657442,
+      "errors": 2,
+      "reasoning_tokens": 5884,
+      "cached_tokens": 25344,
+      "cost_prompt": 0.029324,
+      "cost_completion": 0.050686
+    }
+  },
+  "by_role": {
+    "unknown": {
+      "calls": 2622,
+      "tokens": 27114820,
+      "cost": 29.189342,
+      "errors": 36,
+      "reasoning_tokens": 0,
+      "cached_tokens": 0,
+      "cost_prompt": 0.0,
+      "cost_completion": 0.0
+    },
+    "gen": {
+      "calls": 3,
+      "tokens": 44672,
+      "cost": 0.05414,
+      "errors": 0,
+      "reasoning_tokens": 2329,
+      "cached_tokens": 20992,
+      "cost_prompt": 0.01287,
+      "cost_completion": 0.04127
+    },
+    "ver": {
+      "calls": 1,
+      "tokens": 15404,
+      "cost": 0.013268,
+      "errors": 0,
+      "reasoning_tokens": 2769,
+      "cached_tokens": 4352,
+      "cost_prompt": 0.006045,
+      "cost_completion": 0.007222
+    },
+    "classify": {
+      "calls": 2,
+      "tokens": 20389,
+      "cost": 0.012602,
+      "errors": 0,
+      "reasoning_tokens": 786,
+      "cached_tokens": 0,
+      "cost_prompt": 0.010408,
+      "cost_completion": 0.002194
+    },
+    "test": {
+      "calls": 1,
+      "tokens": 66,
+      "cost": 0.000116,
+      "errors": 0,
+      "reasoning_tokens": 0,
+      "cached_tokens": 0,
+      "cost_prompt": 0.0,
+      "cost_completion": 0.0
+    }
+  },
+  "totals": {
+    "calls": 2629,
+    "tokens": 27195351,
+    "cost": 29.269468,
+    "errors": 36,
+    "reasoning_tokens": 5884,
+    "cached_tokens": 25344,
+    "cost_prompt": 0.029324,
+    "cost_completion": 0.050686
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "verdict": "approve",
+  "score": 8,
+  "issues": [],
+  "strengths": [
+    "Clear definition and rigorous proof that an involution is a bijection",
+    "Comprehensive list of properties, detection tips and extensions",
+    "Includes three fully worked example problems and a set of exercises for practice"
+  ],
+  "suggestions": [
+    "Cite actual olympiad sources for the example problems to strengthen relevance",
+    "Add a concrete non‑linear example (e.g., a Möbius involution) to illustrate the broader class of involutions"
+  ],
+  "math_errors": [],
+  "missing_topics": [],
+  "verdict_reasoning": "The article is mathematically correct, well‑structured and covers the topic thoroughly; only minor improvement needed in providing explicit olympiad references.",
+  "_tokens": 6813
+}

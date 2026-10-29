@@ -1,0 +1,80 @@
+{
+  "pdf": "OLI-2-Областен кръг-2013-10 кл",
+  "problems": [
+    {
+      "num": 1,
+      "year": 2013,
+      "grade": 10,
+      "grade_range": null,
+      "round": "oblasten",
+      "statement": "Да се намерят стойностите на реалния параметър a, за които уравнението\nx³ + ax² − (1 − a)² = 0\nима три различни реални корена x₁, x₂, x₃, изпълняващи неравенството\nx₁/(x₂x₃) + x₂/(x₃x₁) + x₃/(x₁x₂) > 3/2.",
+      "solution": null,
+      "answer": null,
+      "page": 1,
+      "point_id": null,
+      "point_confidence": "off",
+      "alternative_points": [],
+      "difficulty": null,
+      "techniques": [],
+      "reasoning": "не е олимпиадна задача"
+    },
+    {
+      "num": 2,
+      "year": 2013,
+      "grade": 10,
+      "grade_range": null,
+      "round": "oblasten",
+      "statement": "Даден е △ABC с ∠ACB > 90°. Нека CH е височината от върха C (H ∈ AB), а AL е ъглополовящата на ∠BAC (L ∈ BC). Да се намери ∠ALC, ако е известно, че ∠ALC = ∠BHL.",
+      "solution": null,
+      "answer": null,
+      "page": 1,
+      "point_id": "1.4",
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": "medium",
+      "techniques": [
+        "power_of_point",
+        "angle_bisector_theorem",
+        "altitude_properties"
+      ],
+      "reasoning": "Задачата включва ъглополовяща, височина и условието ∠ALC = ∠BHL, което подсказва използването на степен на точка (power of a point) и свойства на ъглополовящата и височината."
+    },
+    {
+      "num": 3,
+      "year": 2013,
+      "grade": 10,
+      "grade_range": null,
+      "round": "oblasten",
+      "statement": "Да се намерят всички естествени числа n, за които 2ⁿ⁺¹ дели 7n! − 3n!.\n(С n! се означава произведението на естествените числа от 1 до n.)",
+      "solution": null,
+      "answer": null,
+      "page": 1,
+      "point_id": null,
+      "point_confidence": "off",
+      "alternative_points": [],
+      "difficulty": null,
+      "techniques": [],
+      "reasoning": "не е олимпиадна задача"
+    },
+    {
+      "num": 4,
+      "year": 2013,
+      "grade": 10,
+      "grade_range": null,
+      "round": "oblasten",
+      "statement": "Нека A(n,k) е броят на k-орките (a₁,...,aₖ) от цели числа, за които е изпълнено\na₁ + ... + aₖ₋₁ ≤ n,\na₁ + ... + aₖ₋₁ + aₖ > n,\n1 ≤ aᵢ ≤ n, i = 1...,k.\nЗа кое k стойността на A(12,k) е максимална?",
+      "solution": null,
+      "answer": null,
+      "page": 1,
+      "point_id": "8.5",
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": "medium",
+      "techniques": [
+        "stars_and_bars",
+        "binomial_coefficients"
+      ],
+      "reasoning": "Задачата изисква преброяване на k‑орки от цели числа, което се решава със \"stars and bars\" (комбинаторика) и използване на биномни коефициенти за броя на съставните решения."
+    }
+  ]
+}

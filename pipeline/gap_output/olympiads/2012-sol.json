@@ -1,0 +1,144 @@
+{
+  "_meta": {
+    "pdf": "C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\Задачи_Минали_Години\\Национален\\OLI-3-Национален кръг-2012-9-12 кл-sol.pdf",
+    "paired_with": null,
+    "level": 2,
+    "type": "sol",
+    "analyzed_at": "2026-10-18T12:11:36.449459",
+    "model": "deepseek/deepseek-v3.2",
+    "text_length": 10299,
+    "paired_text_length": 0
+  },
+  "problems": [
+    {
+      "num": 1,
+      "topic": "number_theory",
+      "theorems": [],
+      "techniques": [
+        "inequality_estimation",
+        "proof_by_contradiction"
+      ],
+      "concepts": [
+        "divisor_count_function_tau",
+        "strictly_increasing_sequence",
+        "perfect_squares",
+        "parity",
+        "bound_on_divisor_count_tau(n)<=2sqrt(n)"
+      ],
+      "difficulty": "olympic",
+      "notes": "Uses a known inequality for the divisor function and a clever bound to reach a contradiction."
+    },
+    {
+      "num": 2,
+      "topic": "combinatorics",
+      "theorems": [],
+      "techniques": [
+        "coloring",
+        "construction",
+        "reduction_to_arithmetic_progression"
+      ],
+      "concepts": [
+        "infinite_monochromatic_geometric_progression",
+        "infinite_monochromatic_arithmetic_progression",
+        "exponent_vector",
+        "sum_of_exponents",
+        "alternating_coloring_in_blocks"
+      ],
+      "difficulty": "olympic",
+      "notes": "Constructs a primary coloring (A) to avoid long monochromatic arithmetic progressions, then uses it to define a secondary coloring (B) via the sum of exponents in prime factorization."
+    },
+    {
+      "num": 3,
+      "topic": "algebra",
+      "theorems": [],
+      "techniques": [
+        "strategy_game",
+        "case_analysis",
+        "sign_analysis",
+        "function_behavior_analysis",
+        "substitution_x_to_1/x"
+      ],
+      "concepts": [
+        "polynomial_with_powers_as_coefficients",
+        "real_roots",
+        "monotonic_function_on_positive_ray",
+        "limits_at_infinity_and_zero",
+        "symmetric_play"
+      ],
+      "difficulty": "olympic",
+      "notes": "A game theory problem on polynomial coefficients. The winning strategy depends on the base a (positive/negative). Uses analysis of polynomial growth and intermediate value property."
+    },
+    {
+      "num": 4,
+      "topic": "combinatorics",
+      "theorems": [],
+      "techniques": [
+        "induction",
+        "constructive_proof"
+      ],
+      "concepts": [
+        "binary_sequences",
+        "triple_partition",
+        "parity_condition_per_coordinate",
+        "even_number_of_ones_in_triple"
+      ],
+      "difficulty": "standard",
+      "notes": "Standard inductive construction for binary sequences of even length."
+    },
+    {
+      "num": 5,
+      "topic": "algebra",
+      "theorems": [],
+      "techniques": [
+        "symmetrization",
+        "algebraic_manipulation",
+        "derivative_test_for_monotonicity"
+      ],
+      "concepts": [
+        "quartic_polynomial",
+        "increasing_function_on_positive_ray",
+        "sign_of_coefficients",
+        "homogeneous_symmetric_inequality",
+        "reduction_to_two_variables"
+      ],
+      "difficulty": "hard",
+      "notes": "Reduces the three-variable inequality to a two-variable one by setting two variables negative. Uses properties of the derivative of the given polynomial."
+    },
+    {
+      "num": 6,
+      "topic": "geometry",
+      "theorems": [],
+      "techniques": [
+        "symmetry",
+        "parallelogram_properties",
+        "central_symmetry",
+        "angle_chasing",
+        "cyclic_quadrilaterals"
+      ],
+      "concepts": [
+        "circumcircle",
+        "orthocenter",
+        "midpoints",
+        "diameter_property",
+        "reflection_across_midpoint",
+        "fixed_point_independent_of_X"
+      ],
+      "difficulty": "olympic",
+      "notes": "Sophisticated geometry problem. The fixed point is the orthocenter H. Solutions use symmetry, parallelogram properties, and cyclic quadrilaterals to show H lies on the circumcircle of the constructed triangle."
+    }
+  ],
+  "unique_concepts": [
+    "divisor_count_function_tau",
+    "bound_on_divisor_count_tau(n)<=2sqrt(n)",
+    "infinite_monochromatic_geometric_progression",
+    "infinite_monochromatic_arithmetic_progression",
+    "exponent_vector_coloring",
+    "strategy_game_on_polynomial_coefficients",
+    "parity_condition_per_coordinate_in_triples",
+    "increasing_quartic_polynomial_inequality",
+    "fixed_orthocenter_in_dynamic_geometry_configuration",
+    "reflection_across_midpoint",
+    "cyclic_quadrilaterals_with_diameter"
+  ],
+  "confidence": 0.95
+}

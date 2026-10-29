@@ -1,0 +1,166 @@
+{
+  "pdf": "OLI-3-Национален кръг-1997-9-12 кл",
+  "problems": [
+    {
+      "num": 1,
+      "grade": null,
+      "year": 1997,
+      "round": "nacionalen",
+      "statement": "Consider the polynomial\n\n$$P_n(x)=\\binom{n}{2}+\\binom{n}{5}x+\\binom{n}{8}x^2+\\cdots+\\binom{n}{3k+2}x^k,$$\n\nwhere $n\\geq 2$ is a natural number and $k=\\left[\\frac{n-2}{3}\\right]$.\n\n(a) Prove that $P_{n+3}(x)=3P_{n+2}(x)-3P_{n+1}(x)+(x+1)P_n(x)$.\n(b) Find all integer numbers $a$ such that $P_n(a^3)$ is divisible by $3^{\\lfloor\\frac{n-1}{2}\\rfloor}$ for all $n\\geq 2$.",
+      "solution": "Solution: (a) Compare the coefficients in front of $x^m$, $0\\leq m\\leq\\left[\\frac{n+1}{3}\\right]$. It suffices to show that\n\n$$\\binom{n+3}{3m+2}=3\\binom{n+2}{3m+2}-3\\binom{n+1}{3m+2}+\\binom{n}{3m+2}+\\binom{n}{3m-1}.$$\n\nUsing the identity $\\binom{a+1}{b}=\\binom{a}{b}+\\binom{a}{b-1}$ we get that\n\n$$\\begin{aligned}\n&\\left(\\binom{n+3}{3m+2}-\\binom{n+2}{3m+2}\\right)-2\\left(\\binom{n+2}{3m+2}-\\binom{n+1}{3m+2}\\right)\\\\\n&\\quad+\\left(\\binom{n+1}{3m+2}-\\binom{n}{3m+2}\\right)-\\binom{n}{3m-1}\\\\\n&=\\binom{n+2}{3m+1}-2\\binom{n+1}{3m+1}+\\binom{n}{3m+1}-\\binom{n}{3m-1}\\\\\n&=\\left(\\binom{n+2}{3m+1}-\\binom{n+1}{3m+1}\\right)-\\left(\\binom{n+1}{3m+1}-\\binom{n}{3m+1}\\right)-\\binom{n}{3m-1}\\\\\n&=\\binom{n+1}{3m}-\\binom{n}{3m}-\\binom{n}{3m-1}\\\\\n&=0.\n\\end{aligned}$$\n\n(b) Suppose $a$ satisfies the condition of (b). Then $P_5(a^3)=10+a^3$ is divisible by 9 and so $a\\equiv -1\\pmod{3}$. On the contrary, let $a\\equiv -1\\pmod{3}$. Now $a^3+1\\equiv 0\\pmod{9}$. Since $P_2(a^3)=1$, $P_3(a^3)=3$ and $P_4(a^3)=6$ it follows by induction from (a) that $P_n(a^3)$ is divisible by $3^{\\left[\\frac{n-1}{2}\\right]}$ for any $n$. Therefore the required values of $a$ are all integer numbers congruent to 2 modulo 3.",
+      "answer": "(b) $a\\equiv 2\\pmod{3}$.",
+      "page": 1,
+      "source": "OLI-3-Национален кръг-1997-9-12 кл · 1997-? · Зад. 1",
+      "point_id": "3.9",
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": "medium",
+      "techniques": [
+        "binomial_identities",
+        "induction",
+        "lte"
+      ],
+      "reasoning": "Recurrence proved by binomial coefficient identities; divisibility uses induction and 3‑adic valuation (LTE).",
+      "_paired": true,
+      "_grade_source": "grade_range",
+      "grade_range": [
+        9,
+        12
+      ]
+    },
+    {
+      "num": 2,
+      "grade": null,
+      "year": 1997,
+      "round": "nacionalen",
+      "statement": "Let $M$ be the centroid of $\\triangle ABC$. Prove the inequality\n\n$$\\sin\\angle CAM+\\sin\\angle CBM\\leq\\frac{2}{\\sqrt{3}}$$\n\n(a) if the circumscribed circle of $\\triangle AMC$ is tangent to the line $AB$;\n(b) for any $\\triangle ABC$.",
+      "solution": "Solution: We use the standard notation for the elements of $\\triangle ABC$. Let $G$ be the midpoint of $AB$.\n\n(a) It follows from the conditions of the problem that\n\n$$\\left(\\frac{c}{2}\\right)^2=GA^2=GM\\cdot GC=\\frac{1}{3}m_c^2=\\frac{1}{12}(2a^2+2b^2-c^2),$$\n\nand therefore $a^2+b^2=2c^2$. Using the median formula we get $m_a=\\frac{\\sqrt{3}}{2}b$ and $m_b=\\frac{\\sqrt{3}}{2}a$. Further\n\n$$A=\\sin\\angle CAM+\\sin\\angle CBM=S\\left(\\frac{1}{bm_a}+\\frac{1}{am_b}\\right)=\\frac{(a^2+b^2)\\sin\\gamma}{\\sqrt{3}ab}.$$\n\nFrom the Cosine Law $a^2+b^2-2ab\\cos\\gamma=c^2=\\frac{a^2+b^2}{2}$, so $a^2+b^2=4ab\\cos\\gamma$. Therefore $A=\\frac{2}{\\sqrt{3}}\\sin 2\\gamma\\leq\\frac{2}{\\sqrt{3}}$.\n\n(b) There are two circles through $C$ and $M$ tangent to the line $AB$. Denote the contact points by $A_1$ and $B_1$ and let $A_1\\in GA^\\to$, $B_1\\in GB^\\to$. Since $G$ is the midpoint of $A_1B_1$ and $CM:MG=2:1$, $M$ must be the centroid of $\\triangle A_1B_1C$. Furthermore it is clear that $\\angle CAM\\leq\\angle CA_1M$ and $\\angle CBM\\leq\\angle CB_1M$. Suppose $\\angle CA_1M\\leq90^\\circ$ and $\\angle CB_1M\\leq90^\\circ$. Now $\\sin\\angle CAM+\\sin\\angle CBM\\leq\\sin\\angle CA_1M+\\sin\\angle CB_1M\\leq\\frac{2}{\\sqrt{3}}$.\n\nIt remains to consider the case $\\angle CA_1M>90^\\circ$, $\\angle CB_1M\\leq90^\\circ$ (the above angles could not both be obtuse). It follows from $\\triangle CA_1M$ that $CM^2>CA_1^2+A_1M^2$, so\n\n$$\\frac{1}{9}(2b_1^2+2a_1^2-c_1^2)>b_1^2+\\frac{1}{9}(2b_1^2+2c_1^2-a_1^2)$$\n\n($a_1,b_1,c_1$ are sides of $\\triangle A_1B_1C$). We know from (a) that $a_1^2+b_1^2=2c_1^2$ and the above inequality becomes $a_1^2>7b_1^2$. Again from (a) we obtain\n\n$$\\sin\\angle CB_1M=\\frac{b_1\\sin\\gamma_1}{a_1\\sqrt{3}}=\\frac{b_1}{a_1\\sqrt{3}}\\sqrt{1-\\left(\\frac{a_1^2+b_1^2}{4a_1b_1}\\right)^2}.$$\n\nSubstituting $\\frac{b_1^2}{a_1^2}=x$ we get that\n\n$$\\sin\\angle CB_1M=\\frac{1}{4\\sqrt{3}}\\sqrt{14x-x^2-1}<\\frac{1}{4\\sqrt{3}}\\sqrt{2-\\frac{1}{49}-1}=\\frac{1}{7}$$\n\nsince $x<\\frac{1}{7}$. Therefore\n\n$$\\sin\\angle CAM+\\sin\\angle CBM<1+\\sin\\angle CB_1M<1+\\frac{1}{7}<\\frac{2}{\\sqrt{3}}.$$\n\nNote: The inequality holds only for $\\triangle ABC$ with angles $\\alpha=22.5^\\circ$, $\\beta=112.5^\\circ$, $\\gamma=45^\\circ$ or $\\alpha=112.5^\\circ$, $\\beta=22.5^\\circ$, $\\gamma=45^\\circ$.",
+      "answer": null,
+      "page": 2,
+      "source": "OLI-3-Национален кръг-1997-9-12 кл · 1997-? · Зад. 2",
+      "point_id": "5.5",
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": "medium",
+      "techniques": [
+        "median_formula",
+        "trig_identity",
+        "inequality"
+      ],
+      "reasoning": "Uses median lengths to express the sines, then reduces to sin 2γ ≤ 1 via basic trig identities.",
+      "_paired": true,
+      "_grade_source": "grade_range",
+      "grade_range": [
+        9,
+        12
+      ]
+    },
+    {
+      "num": 3,
+      "grade": null,
+      "year": 1997,
+      "round": "nacionalen",
+      "statement": "Let $n$ and $m$ be natural numbers such that $m+i=a_i b_i^2$ for $i=1,2,\\ldots,n$, where $a_i$ and $b_i$ are natural numbers and $a_i$ is not divisible by a square of a prime number. Find all $n$ for which there exists an $m$ such that $a_1+a_2+\\cdots+a_n=12$.",
+      "solution": "Solution: It is clear that $n\\leq12$. Since $a_i=1$ if and only if $m+i$ is a perfect square, at most three of the numbers $a_i$ equal 1 (prove it!). It follows now from $a_1+a_2+\\cdots+a_n=12$ that $n\\leq7$.\n\nWe show now that the numbers $a_i$ are pairwise distinct. Assume the contrary and let $m+i=ab_i^2$ and $m+j=ab_j^2$ for some $1\\leq i<j\\leq n$. Therefore $6\\geq n-1\\geq(m+j)-(m+i)=a(b_j^2-b_i^2)$. It is easy to see that the former is true only if $(b_i,b_j,a)=(1,2,2)$ or $(2,3,1)$ and in either case $a_1+a_2+\\cdots+a_n>12$.\n\nAll possible values of $a_i$ are 1, 2, 3, 5, 6, 7, 10 and 11. There are three possibilities for $n$: $n=2$ and $\\{a_1,a_2\\}=\\{1,11\\},\\{2,10\\},\\{5,7\\}$; $n=3$ and $\\{a_1,a_2,a_3\\}=\\{1,5,6\\},\\{2,3,7\\}$; $n=4$ and $\\{a_1,a_2,a_3,a_4\\}=\\{1,2,3,6\\}$. Suppose $n=4$ and $\\{a_1,a_2,a_3,a_4\\}=\\{1,2,3,6\\}$. Now $(6b_1b_2b_3b_4)^2=(m+1)(m+2)(m+3)(m+4)=(m^2+5m+5)^2-1$, which is impossible. Therefore $n=2$ or $n=3$.\n\nIf $n=3$ and $(a_1,a_2,a_3)=(1,5,6)$, then $m=3$ has the required property, and if $n=2$ and $(a_1,a_2)=(11,1)$, then $m=98$ has the required property. (It is not difficult to see that the remaining cases are not feasible.)",
+      "answer": "$n=2$ or $n=3$.",
+      "page": 3,
+      "source": "OLI-3-Национален кръг-1997-9-12 кл · 1997-? · Зад. 3",
+      "point_id": "3.1",
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": "medium",
+      "techniques": [
+        "squarefree_decomposition",
+        "bounding",
+        "diophantine"
+      ],
+      "reasoning": "Writes each m+i as a_i·b_i² with a_i square‑free, bounds the possible a_i and shows only n=2,3 are feasible.",
+      "_paired": true,
+      "_grade_source": "grade_range",
+      "grade_range": [
+        9,
+        12
+      ]
+    },
+    {
+      "num": 4,
+      "grade": null,
+      "year": 1997,
+      "round": "nacionalen",
+      "statement": "Let $a,b$ and $c$ be positive numbers such that $abc=1$. Prove the inequality\n\n$$\\frac{1}{1+a+b}+\\frac{1}{1+b+c}+\\frac{1}{1+c+a}\\leq\\frac{1}{2+a}+\\frac{1}{2+b}+\\frac{1}{2+c}.$$",
+      "solution": "Solution: Let $x=a+b+c$ and $y=\\frac{1}{a}+\\frac{1}{b}+\\frac{1}{c}=ab+bc+ca$ ($abc=1$). It follows from Cauchy's Inequality that $x\\geq3$ and $y\\geq3$. Since both sides of the given inequality are symmetric functions of $a$, $b$ and $c$, we transform the expression as a function of $x$, $y$ and $abc=1$. After simple calculations we get\n\n$$\\frac{3+4x+y+x^2}{2x+y+x^2+xy}\\leq\\frac{12+4x+y}{9+4x+2y},$$\n\nwhich is equivalent to\n\n$$3x^2y+xy^2+6xy-5x^2-y^2-24x-3y-27\\geq0.$$\n\nWrite the last inequality in the form\n\n$$\\left(\\frac{5}{3}x^2y-5x^2\\right)+\\left(\\frac{xy^2}{3}-y^2\\right)+\\left(\\frac{xy^2}{3}-3y\\right)+\\left(\\frac{4}{3}x^2y-12x\\right)+\\left(\\frac{xy^2}{3}-3x\\right)+(3xy-9x)+(3xy-27)\\geq0.$$\n\nWhen $x\\geq3$, $y\\geq3$, all terms in the left hand side are non-negative and the inequality is true. Equality holds when $x=3$, $y=3$, which implies $a=b=c=1$.",
+      "answer": "Equality holds for $a=b=c=1$.",
+      "page": 3,
+      "source": "OLI-3-Национален кръг-1997-9-12 кл · 1997-? · Зад. 4",
+      "point_id": "6.4",
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": "medium",
+      "techniques": [
+        "cauchy_schwarz",
+        "symmetrization"
+      ],
+      "reasoning": "Transforms both sides to symmetric functions of a,b,c and applies Cauchy‑Schwarz to obtain the required inequality.",
+      "_paired": true,
+      "_grade_source": "grade_range",
+      "grade_range": [
+        9,
+        12
+      ]
+    },
+    {
+      "num": 5,
+      "grade": null,
+      "year": 1997,
+      "round": "nacionalen",
+      "statement": "Given a $\\triangle ABC$ with bisectors $BM$ and $CN$ ($M\\in AC$, $N\\in AB$). The ray $MN\\to$ intersects the circumcircle of $\\triangle ABC$ at point $D$. Prove that\n\n$$\\frac{1}{BD}=\\frac{1}{AD}+\\frac{1}{CD}.$$",
+      "solution": "Solution: Let $A_1$, $B_1$ and $C_1$ be the orthogonal projections of $D$ on the lines $BC$, $CA$ and $AB$, respectively. It follows from $\\triangle DAB_1$ and the Sine Law that $DB_1=DA\\cdot\\sin\\angle DAB_1=DA\\cdot\\sin\\angle DAC=\\frac{DA\\cdot DC}{2R}$ ($R$ is the circumradius of $\\triangle ABC$). Analogously $DA_1=\\frac{DB\\cdot DC}{2R}$ and $DC_1=\\frac{DA\\cdot DB}{2R}$. Our equality is now equivalent to $AD\\cdot CD=BD\\cdot CD+AD\\cdot BD$ and so it suffices to prove that\n\n$$DB_1=DA_1+DC_1\\tag{1}$$\n\nDenote by $m$ the distance from $M$ to $AB$ and $BC$ and by $n$ the distance from $N$ to $AC$ and $BC$. Let $\\frac{DM}{MN}=x$ ($x>1$). Further, $\\frac{DB_1}{n}=x$, $\\frac{DC_1}{m}=x-1$ and $\\frac{DA_1-m}{n-m}=x$. Therefore $DB_1=nx$, $DC_1=m(x-1)$ and $DA_1=nx-m(x-1)=DB_1-DC_1$ and (1) holds.",
+      "answer": null,
+      "page": 4,
+      "source": "OLI-3-Национален кръг-1997-9-12 кл · 1997-? · Зад. 5",
+      "point_id": "1.4",
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": "medium",
+      "techniques": [
+        "power_of_a_point",
+        "sine_law",
+        "projection"
+      ],
+      "reasoning": "Projects D onto the sides, uses sine law to express BD, AD, CD and shows DB₁ = DA₁ + DC₁, i.e. a power‑of‑a‑point relation.",
+      "_paired": true,
+      "_grade_source": "grade_range",
+      "grade_range": [
+        9,
+        12
+      ]
+    },
+    {
+      "num": 6,
+      "grade": null,
+      "year": 1997,
+      "round": "nacionalen",
+      "statement": "Let $X$ be a set of $n+1$ elements, $n\\geq2$. Ordered $n$-tuples $(a_1,a_2,\\ldots,a_n)$ and $(b_1,b_2,\\ldots,b_n)$ formed from distinct elements of $X$ are called 'disjoint' if distinct indices $i$ and $j$ exist such that $a_i=b_j$. Find the maximal number of $n$-tuples any two of which are 'disjoint'.",
+      "solution": "Solution: For $n\\geq2$ denote by $A(n+1)$ the maximum number of ordered $n$-tuples such that any two of them are 'disjoint'. Also let $S(X)$ be a set of such $n$-tuples for which $|S(X)|=A(n+1)$. It is clear that for any $\\alpha\\in X$ the following holds:\n\n$$|\\{(a_1,a_2,\\ldots,a_n)\\in S(X)\\mid a_1=\\alpha\\}|\\leq A(n).$$\n\nThus $A(n+1)\\leq(n+1)A(n)$. Therefore\n\n$$A(n+1)\\leq(n+1)n\\ldots A(3).$$\n\nDirect verification shows that $A(3)=3$, so $A(n+1)\\leq\\frac{(n+1)!}{2}$.\n\nWe prove now that $A(n+1)=\\frac{(n+1)!}{2}$ by constructing a set of $\\frac{(n+1)!}{2}$ ordered $n$-tuples, any two of which are 'disjoint'. We may assume that $X=\\{1,2,\\ldots,n+1\\}$. Consider a set $E$ of all even permutations of $1,2,\\ldots,n+1$. (A permutation $(a_1,a_2,\\ldots,a_{n+1})$ is called even if the number of pairs $(i,j)$ such that $i<j$ and $a_i>a_j$ is an even number.) The set\n\n$$\\{(a_1,a_2,\\ldots,a_n)\\mid(a_1,a_2,\\ldots,a_n,a_{n+1})\\in E\\}$$\n\nhas $\\frac{(n+1)!}{2}$ ordered $n$-tuples, any two of which are 'disjoint'.",
+      "answer": "$\\frac{(n+1)!}{2}$.",
+      "page": 4,
+      "source": "OLI-3-Национален кръг-1997-9-12 кл · 1997-? · Зад. 6",
+      "point_id": "8.6",
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": "medium",
+      "techniques": [
+        "permutations",
+        "even_permutations",
+        "induction"
+      ],
+      "reasoning": "Upper bound via counting first coordinates, construction using all even permutations gives (n+1)!/2 tuples.",
+      "_paired": true,
+      "_grade_source": "grade_range",
+      "grade_range": [
+        9,
+        12
+      ]
+    }
+  ]
+}

@@ -1,0 +1,162 @@
+{
+  "_meta": {
+    "pdf": "C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\Задачи_Минали_Години\\Национален\\OLI-3-Национален кръг-2020-9-12 кл-probs.pdf",
+    "paired_with": "C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\Задачи_Минали_Години\\Национален\\OLI-3-Национален кръг-2020-9-12 кл-sol.pdf",
+    "level": 2,
+    "type": "probs",
+    "analyzed_at": "2026-10-16T21:02:12.285226",
+    "model": "deepseek/deepseek-v3.2",
+    "text_length": 27720,
+    "paired_text_length": 16638
+  },
+  "problems": [
+    {
+      "num": 1,
+      "topic": "geometry",
+      "theorems": [
+        "Menelaus",
+        "Thales"
+      ],
+      "techniques": [
+        "proportional segments",
+        "angle chasing",
+        "cyclic quadrilaterals"
+      ],
+      "concepts": [
+        "triangle",
+        "intersecting lines",
+        "inscribed angles",
+        "power of a point",
+        "similar triangles",
+        "sine law"
+      ],
+      "difficulty": "standard",
+      "notes": "Standard olympic geometry problem using Menelaus and angle chasing. Two solutions provided."
+    },
+    {
+      "num": 2,
+      "topic": "algebra",
+      "theorems": [],
+      "techniques": [
+        "summation",
+        "inequality manipulation",
+        "case analysis",
+        "geometric interpretation"
+      ],
+      "concepts": [
+        "real sequences",
+        "absolute value inequalities",
+        "sum of numbers",
+        "coordinate geometry",
+        "area argument"
+      ],
+      "difficulty": "hard",
+      "notes": "Non-standard inequality with two different solutions: one geometric, one algebraic with clever splitting."
+    },
+    {
+      "num": 3,
+      "topic": "number_theory",
+      "theorems": [],
+      "techniques": [
+        "modular arithmetic",
+        "contradiction",
+        "pigeonhole principle"
+      ],
+      "concepts": [
+        "recurrence sequence",
+        "coprime numbers",
+        "modulo properties",
+        "quadratic residues",
+        "set of residues"
+      ],
+      "difficulty": "olympic",
+      "notes": "Requires analyzing a quadratic recurrence modulo a prime divisor, using properties of the map f(x)=x^2-x-1."
+    },
+    {
+      "num": 4,
+      "topic": "number_theory",
+      "theorems": [],
+      "techniques": [
+        "modular arithmetic",
+        "contradiction",
+        "case analysis"
+      ],
+      "concepts": [
+        "binomial coefficients",
+        "Diophantine equation",
+        "quadratic residues modulo 7",
+        "product of consecutive integers"
+      ],
+      "difficulty": "standard",
+      "notes": "Part (a) is an example; part (b) uses modulo 7 analysis of consecutive numbers and quadratic non-residues."
+    },
+    {
+      "num": 5,
+      "topic": "combinatorics",
+      "theorems": [],
+      "techniques": [
+        "graph theory",
+        "induction",
+        "edge coloring",
+        "Hamiltonian cycles",
+        "parity argument"
+      ],
+      "concepts": [
+        "multigraph",
+        "Hamiltonian cycle decomposition",
+        "edge-disjoint cycles",
+        "degree condition",
+        "parity of sets",
+        "graph construction"
+      ],
+      "difficulty": "olympic",
+      "notes": "Advanced graph theory problem. Reduces to proving parity of certain sets of Hamiltonian cycle pairs in 4-regular multigraphs."
+    },
+    {
+      "num": 6,
+      "topic": "algebra",
+      "theorems": [],
+      "techniques": [
+        "limits",
+        "polynomial growth",
+        "digit analysis",
+        "construction",
+        "pigeonhole principle"
+      ],
+      "concepts": [
+        "unbounded sequence",
+        "polynomial function",
+        "floor function",
+        "decimal representation",
+        "block of digits",
+        "density of digits"
+      ],
+      "difficulty": "olympic",
+      "notes": "Very hard problem. Relates growth of polynomial on a sparse sequence to appearance of all n-digit blocks in the digit sequence of its floored values."
+    }
+  ],
+  "unique_concepts": [
+    "Menelaus theorem",
+    "Thales theorem",
+    "cyclic quadrilaterals",
+    "power of a point",
+    "sine law",
+    "summation inequalities",
+    "geometric interpretation of sums",
+    "modular arithmetic",
+    "quadratic residues",
+    "recurrence sequences",
+    "coprime numbers",
+    "binomial coefficients",
+    "Diophantine equations",
+    "graph theory: Hamiltonian cycles",
+    "edge coloring",
+    "multigraph degree",
+    "parity arguments",
+    "polynomial growth",
+    "floor function properties",
+    "digit sequences and blocks",
+    "pigeonhole principle in sequences"
+  ],
+  "confidence": 0.95
+}

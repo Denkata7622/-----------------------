@@ -1,0 +1,166 @@
+```js
+// ─── КНИГА ───
+{
+  file: "Материали_EN/book-8.pdf",
+  title: "Precalculus",
+  author: "Richard Rusczyk",
+  year: 2012,
+  language: "EN",
+  total_pages: 531,
+  topics: ["Trigonometry", "Complex Numbers", "Vectors", "Matrices", "Geometry"],
+  structure: [
+    { 
+      chapter: "Ch 1", 
+      title: "Functions Review", 
+      pages: "15-46", 
+      plan_step: 7, 
+      plan_points: ["7.5"],
+      priority_regional: "low",
+      priority_national: "low"
+    },
+    { 
+      chapter: "Ch 2", 
+      title: "Introduction to Trigonometric Functions", 
+      pages: "47-100", 
+      plan_step: 1, 
+      plan_points: ["1.6","1.7"],
+      priority_regional: "high",
+      priority_national: "high"
+    },
+    { 
+      chapter: "Ch 3", 
+      title: "Trigonometric Identities", 
+      pages: "101-145", 
+      plan_step: 1, 
+      plan_points: ["1.6","2.8","6.1"],
+      priority_regional: "high",
+      priority_national: "high"
+    },
+    { 
+      chapter: "Ch 4", 
+      title: "Applications to Geometry", 
+      pages: "146-175", 
+      plan_step: 1, 
+      plan_points: ["1.1","1.2","1.6","1.7"],
+      priority_regional: "high",
+      priority_national: "high"
+    },
+    { 
+      chapter: "Ch 5", 
+      title: "Parameterization and Trigonometric Coordinate Systems", 
+      pages: "176-209", 
+      plan_step: 2, 
+      plan_points: ["2.3","2.4"],
+      priority_regional: "low",
+      priority_national: "med"
+    },
+    { 
+      chapter: "Ch 6", 
+      title: "Basics of Complex Numbers", 
+      pages: "210-236", 
+      plan_step: 2, 
+      plan_points: ["2.3","2.5"],
+      priority_regional: "med",
+      priority_national: "high"
+    },
+    { 
+      chapter: "Ch 7", 
+      title: "Trigonometry and Complex Numbers", 
+      pages: "237-273", 
+      plan_step: 3, 
+      plan_points: ["3.7","4.5"],
+      priority_regional: "med",
+      priority_national: "high"
+    },
+    { 
+      chapter: "Ch 8", 
+      title: "Geometry of Complex Numbers", 
+      pages: "274-315", 
+      plan_step: 2, 
+      plan_points: ["2.1","2.2","2.3","2.4","2.5","2.6","2.7"],
+      priority_regional: "med",
+      priority_national: "high"
+    },
+    { 
+      chapter: "Ch 9", 
+      title: "Vectors in Two Dimensions", 
+      pages: "316-352", 
+      plan_step: 1, 
+      plan_points: ["1.1","1.4","2.8"],
+      priority_regional: "med",
+      priority_national: "high"
+    },
+    { 
+      chapter: "Ch 10", 
+      title: "Matrices in Two Dimensions", 
+      pages: "353-397", 
+      plan_step: 5, 
+      plan_points: ["5.8"],
+      priority_regional: "low",
+      priority_national: "med"
+    },
+    { 
+      chapter: "Ch 11", 
+      title: "Vectors and Matrices in Three Dimensions, Part 1", 
+      pages: "398-438", 
+      plan_step: 2, 
+      plan_points: ["2.8"],
+      priority_regional: "low",
+      priority_national: "med"
+    },
+    { 
+      chapter: "Ch 12", 
+      title: "Vectors and Matrices in Three Dimensions, Part 2", 
+      pages: "439-480", 
+      plan_step: 2, 
+      plan_points: ["2.8"],
+      priority_regional: "low",
+      priority_national: "med"
+    },
+    { 
+      chapter: "Ch 13", 
+      title: "Vector Geometry", 
+      pages: "481-487", 
+      plan_step: 1, 
+      plan_points: ["1.1","1.4","2.1","2.2","2.4","2.5","2.6"],
+      priority_regional: "med",
+      priority_national: "high"
+    }
+  ],
+  duplicates: [], // CHECK: не мога да проверя без достъп до останалите book-*.pdf файлове
+  recommended_action: "add-as-bonus",
+  best_mapping: [
+    { step_id: 1, point_ids: ["1.1","1.2","1.6","1.7"], chapters: ["Ch 2","Ch 3","Ch 4","Ch 9","Ch 13"], pages: "47-175, 316-352, 481-487" },
+    { step_id: 2, point_ids: ["2.1","2.2","2.3","2.4","2.5","2.6","2.7","2.8"], chapters: ["Ch 5","Ch 6","Ch 8","Ch 11","Ch 12"], pages: "176-315, 398-480" },
+    { step_id: 3, point_ids: ["3.7"], chapters: ["Ch 7"], pages: "237-273" },
+    { step_id: 4, point_ids: ["4.5"], chapters: ["Ch 7"], pages: "237-273" },
+    { step_id: 5, point_ids: ["5.8"], chapters: ["Ch 10"], pages: "353-397" },
+    { step_id: 6, point_ids: ["6.1"], chapters: ["Ch 3"], pages: "101-145" },
+    { step_id: 7, point_ids: ["7.5"], chapters: ["Ch 1"], pages: "15-46" }
+  ]
+}
+```
+
+### RECOMMENDED CHANGES TO index.html
+
+**В STEPS:**
+- [ ] Добавяне на `bonus` към Точка 1.6: `{ label: "Precalculus (Rusczyk) — Trig Functions", pdf: "Материали_EN/book-8", page: 47 }`
+- [ ] Добавяне на `bonus` към Точка 1.7: `{ label: "Precalculus (Rusczyk) — Applications to Geometry", pdf: "Материали_EN/book-8", page: 146 }`
+- [ ] Добавяне на `bonus` към Точка 2.3: `{ label: "Precalculus (Rusczyk) — Complex Numbers", pdf: "Материали_EN/book-8", page: 210 }`
+- [ ] Добавяне на `bonus` към Точка 2.4: `{ label: "Precalculus (Rusczyk) — Geometry of Complex Numbers", pdf: "Материали_EN/book-8", page: 274 }`
+- [ ] Добавяне на `bonus` към Точка 2.5: `{ label: "Precalculus (Rusczyk) — Geometry of Complex Numbers", pdf: "Материали_EN/book-8", page: 274 }`
+- [ ] Добавяне на `bonus` към Точка 3.7: `{ label: "Precalculus (Rusczyk) — Roots of Unity", pdf: "Материали_EN/book-8", page: 237 }`
+- [ ] Добавяне на `bonus` към Точка 5.8: `{ label: "Precalculus (Rusczyk) — Matrices", pdf: "Материали_EN/book-8", page: 353 }`
+- [ ] Добавяне на `bonus` към Точка 7.5: `{ label: "Precalculus (Rusczyk) — Functions Review", pdf: "Материали_EN/book-8", page: 15 }`
+- [ ] Добавяне на `bonus` към Стъпка 11: `{ label: "Precalculus (Rusczyk) — цялата книга", pdf: "Материали_EN/book-8" }`
+
+**В PLAN_PHASES:**
+- [ ] Няма промени в конфигурацията на exam dates
+- [ ] Обновяване на Week 1–6 (Фаза 1): добавяне на "Precalculus Ch 2–4 (Trig + Applications)" като допълнително четиво
+- [ ] Обновяване на Week 7–12 (Фаза 2): добавяне на "Precalculus Ch 6–8 (Complex Numbers + Geometry)" като допълнително четиво
+- [ ] Обновяване на Week 13–17 (Фаза 3): добавяне на "Precalculus Ch 9–13 (Vectors + Matrices)" като допълнително четиво
+
+**Друго:**
+- [ ] Няма дубликати, които да трия (не мога да потвърдя без останалите файлове)
+- [ ] Книгата е EN, но е мощен ресурс за Стъпки 1, 2, 3, 4, 5, 7 — препоръчвам да се използва като допълнително четиво, не като основен сборник
+- [ ] Ако се създава Стъпка 12 (International), тази книга може да е част от нея, но е по-добре като bonus към съществуващите стъпки

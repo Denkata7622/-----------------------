@@ -1,0 +1,148 @@
+{
+  "_meta": {
+    "pdf": "C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\Задачи_Минали_Години\\Областен\\OLI-2-Областен кръг-2009-11 кл-probs.pdf",
+    "paired_with": "C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\Задачи_Минали_Години\\Областен\\OLI-2-Областен кръг-2009-11 кл-sol.pdf",
+    "level": 1,
+    "type": "probs",
+    "analyzed_at": "2026-10-18T12:50:19.992028",
+    "model": "deepseek/deepseek-v3.2",
+    "text_length": 1946,
+    "paired_text_length": 18884
+  },
+  "problems": [
+    {
+      "num": 1,
+      "topic": "algebra",
+      "theorems": [],
+      "techniques": [
+        "substitution",
+        "case analysis",
+        "squaring equations"
+      ],
+      "concepts": [
+        "irrational equations",
+        "domain of equation",
+        "parameter analysis"
+      ],
+      "difficulty": "standard",
+      "notes": "Standard irrational equation with parameter. Requires careful handling of domain (x ≥ a) and squaring."
+    },
+    {
+      "num": 2,
+      "topic": "geometry",
+      "theorems": [
+        "Law of Sines",
+        "formula for inradius r",
+        "formula for circumradius R"
+      ],
+      "techniques": [
+        "trigonometric identities",
+        "angle chasing in cyclic hexagon"
+      ],
+      "concepts": [
+        "triangle geometry",
+        "inscribed and circumscribed circles",
+        "cyclic hexagon",
+        "perimeter equality condition",
+        "sum of sines of angles"
+      ],
+      "difficulty": "olympic",
+      "notes": "Part (a) is a standard trigonometric identity. Part (b) is a non-standard problem linking products of inradii to perimeters of triangles formed by alternating vertices of a cyclic hexagon."
+    },
+    {
+      "num": 3,
+      "topic": "combinatorics",
+      "theorems": [],
+      "techniques": [
+        "graph coloring",
+        "modular arithmetic",
+        "combinatorial design"
+      ],
+      "concepts": [
+        "complete graph",
+        "edge coloring",
+        "round-table seating",
+        "regular polygon",
+        "diametrically opposite seats",
+        "1-factorization of complete graph"
+      ],
+      "difficulty": "olympic",
+      "notes": "Problem reduces to finding a proper edge-coloring of the complete graph K_n with n-1 colors (a 1-factorization). Solution uses modular arithmetic coloring."
+    },
+    {
+      "num": 4,
+      "topic": "algebra",
+      "theorems": [],
+      "techniques": [
+        "substitution",
+        "factorization",
+        "analysis of roots",
+        "geometric progression condition"
+      ],
+      "concepts": [
+        "exponential equations",
+        "cubic equations",
+        "roots in arithmetic progression",
+        "roots in geometric progression",
+        "parameter conditions"
+      ],
+      "difficulty": "hard",
+      "notes": "Substitution y=2^x transforms the exponential equation into a cubic. Condition that original roots are in arithmetic progression translates to the cubic's roots being in geometric progression."
+    },
+    {
+      "num": 5,
+      "topic": "algebra",
+      "theorems": [],
+      "techniques": [
+        "induction",
+        "telescoping sum",
+        "guess and verify"
+      ],
+      "concepts": [
+        "recurrence sequence",
+        "telescoping series",
+        "monotonicity argument"
+      ],
+      "difficulty": "hard",
+      "notes": "The recurrence simplifies to a_n = a_{n-1}^2 + a_{n-1}. The sum telescopes. The problem involves finding the unique initial term a_3 that makes the telescoping sum equal to 1."
+    },
+    {
+      "num": 6,
+      "topic": "number_theory",
+      "theorems": [
+        "properties of gcd",
+        "modular arithmetic mod 8"
+      ],
+      "techniques": [
+        "algebraic manipulation",
+        "gcd analysis",
+        "modular analysis",
+        "infinite descent / parity argument"
+      ],
+      "concepts": [
+        "Pythagorean-like equation",
+        "coprime numbers",
+        "parity",
+        "divisibility by 3",
+        "perfect square condition",
+        "factoring integers"
+      ],
+      "difficulty": "olympic",
+      "notes": "Key step is rewriting a^2+ab+b^2=c^2 as (2c-a+b)(2c+a-b)=3(a+b)^2 and analyzing the gcd of the factors. The condition involves divisibility by 3 and parity."
+    }
+  ],
+  "unique_concepts": [
+    "irrational equations with parameter",
+    "triangle inradius and circumradius formulas",
+    "cyclic hexagon properties",
+    "edge-coloring of complete graphs",
+    "1-factorization",
+    "roots in arithmetic/geometric progression",
+    "exponential to cubic transformation",
+    "telescoping sums with recurrences",
+    "Pythagorean-like diophantine equations",
+    "gcd analysis with factoring",
+    "modular arithmetic (mod 8, mod 3)"
+  ],
+  "confidence": 0.95
+}

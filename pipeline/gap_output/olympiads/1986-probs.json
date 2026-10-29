@@ -1,0 +1,150 @@
+{
+  "_meta": {
+    "pdf": "C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\Задачи_Минали_Години\\Национален\\OLI-3-Национален кръг-1986-9-12 кл-probs.pdf",
+    "paired_with": "C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\Задачи_Минали_Години\\Национален\\OLI-3-Национален кръг-1986-9-12 кл-sol.pdf",
+    "level": 2,
+    "type": "probs",
+    "analyzed_at": "2026-10-18T11:37:18.336965",
+    "model": "deepseek/deepseek-v3.2",
+    "text_length": 1745,
+    "paired_text_length": 10299
+  },
+  "problems": [
+    {
+      "num": 1,
+      "topic": "number_theory",
+      "theorems": [],
+      "techniques": [
+        "modular_arithmetic",
+        "quadratic_discriminant_analysis",
+        "bounding_search"
+      ],
+      "concepts": [
+        "prime_factorization",
+        "modular_residues",
+        "quadratic_forms",
+        "monotonic_functions"
+      ],
+      "difficulty": "standard",
+      "notes": "Standard number theory problem involving checking small primes via modular arithmetic and then searching for the minimal n such that n^2-n+11 is a product of four primes (>=11)."
+    },
+    {
+      "num": 2,
+      "topic": "algebra",
+      "theorems": [],
+      "techniques": [
+        "case_analysis",
+        "inequality_manipulation",
+        "slope_interpretation"
+      ],
+      "concepts": [
+        "quadratic_polynomials",
+        "roots_location",
+        "maximum_of_absolute_value",
+        "derivative_inequalities",
+        "mean_value_idea"
+      ],
+      "difficulty": "hard",
+      "notes": "Non-standard problem. Requires careful analysis of where the maximum of |f(x)| occurs (at endpoints or at the midpoint of roots) and linking it to the derivative's maximum."
+    },
+    {
+      "num": 3,
+      "topic": "geometry",
+      "theorems": [],
+      "techniques": [
+        "spatial_optimization",
+        "trigonometric_parameterization",
+        "function_min_max"
+      ],
+      "concepts": [
+        "regular_tetrahedron",
+        "inscribed_cube",
+        "space_diagonal_on_altitude",
+        "similar_triangles",
+        "trigonometric_functions",
+        "optimization_of_geometric_quantities"
+      ],
+      "difficulty": "olympic",
+      "notes": "Hard 3D geometry optimization. Requires setting up a parameter (angle) and finding the maximum cube side under constraints derived from similar triangles and trig inequalities."
+    },
+    {
+      "num": 4,
+      "topic": "combinatorics",
+      "theorems": [],
+      "techniques": [
+        "induction",
+        "construction_of_examples",
+        "graph_coloring_application"
+      ],
+      "concepts": [
+        "polygon_illumination",
+        "triangulation_of_polygons",
+        "vertex_coloring",
+        "pigeonhole_principle",
+        "existence_of_diagonals"
+      ],
+      "difficulty": "olympic",
+      "notes": "Combinatorial geometry. First part finds minimal n=6 via counterexample. Second part uses triangulation and 3-coloring of vertices (a known lemma) to guarantee two light sources suffice."
+    },
+    {
+      "num": 5,
+      "topic": "geometry",
+      "theorems": [],
+      "techniques": [
+        "transformation_method",
+        "composition_of_maps"
+      ],
+      "concepts": [
+        "similarity_transformations",
+        "rotation",
+        "homothety",
+        "image_of_circle_under_similarity",
+        "union_of_two_circles"
+      ],
+      "difficulty": "standard",
+      "notes": "Standard transformation geometry. The locus is the union of two circles obtained by composing a rotation (by α or -α) and a homothety (factor m) from the original circle."
+    },
+    {
+      "num": 6,
+      "topic": "algebra",
+      "theorems": [],
+      "techniques": [
+        "proof_by_contradiction",
+        "inequality_manipulation",
+        "telescoping_sum",
+        "harmonic_series_divergence"
+      ],
+      "concepts": [
+        "sequence_inequalities",
+        "harmonic_series",
+        "bounded_monotone_sequences",
+        "limit_contradiction"
+      ],
+      "difficulty": "hard",
+      "notes": "Uses assumption all terms are nonnegative, derives inequality leading to boundedness of harmonic series partial sums, contradiction via divergence of S_{2n}-S_n > 1/2."
+    }
+  ],
+  "unique_concepts": [
+    "prime_factorization",
+    "modular_arithmetic",
+    "quadratic_forms",
+    "roots_location",
+    "maximum_of_absolute_value",
+    "derivative_inequalities",
+    "regular_tetrahedron",
+    "inscribed_cube",
+    "space_diagonal",
+    "similar_triangles",
+    "trigonometric_optimization",
+    "polygon_illumination",
+    "triangulation",
+    "vertex_coloring",
+    "similarity_transformations",
+    "rotation",
+    "homothety",
+    "sequence_inequalities",
+    "harmonic_series_divergence",
+    "proof_by_contradiction"
+  ],
+  "confidence": 0.95
+}

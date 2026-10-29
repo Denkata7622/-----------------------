@@ -1,0 +1,112 @@
+const PLAN_PHASES = [
+  // ═══ ФАЗА A: Task 1 — АЛГЕБРА (W1–W6) ═══
+  {
+    num: 1, name: "TASK 1 — АЛГЕБРА MASTERY",
+    weeks: "СЕДМИЦИ 1–6 · 12 ОКТ – 22 НОЕ",
+    goal: "Задача #1 = 7 точки. Мета-техника: полагане + анализ на корени в интервал. Най-голям ROI.",
+    dateRange: ['2026-10-12', '2026-11-22'],
+    weeks_data: [
+      { week: 1, taskType: 1,
+        main: "Domain + Range на полагането (2020, 2023, 2015, 2011)",
+        sec: "FE 7.1 + Геометрия 1.4" },
+      { week: 2, taskType: 1,
+        main: "Decision tree: точно 1 / поне 1 / 2 корена (2023, 2011, 2020, 2000)",
+        sec: "FE 7.1 + Геометрия 1.4" },
+      { week: 3, taskType: 1,
+        main: "Vieta + D ≥ 0 + range check (2014, 2015, 2001, 2005-4)",
+        sec: "FE 7.2 + Геометрия 1.5" },
+      { week: 4, taskType: 1,
+        main: "Trig substitution range + homogeneous (2005, 2016, 2017, 2012)",
+        sec: "FE 7.2 + Геометрия 1.5" },
+      { week: 5, taskType: 1,
+        main: "Кубично/квинтично — guess a root (2025, 2024, 2015)",
+        sec: "FE 7.3 + Геометрия 1.6" },
+      { week: 6, taskType: 1,
+        main: "AP/GP roots + Radical domain + CUMULATIVE #1 (2013, 2022, 2026)",
+        sec: "FE 7.3 + Геометрия 1.6" },
+    ],
+  },
+
+  // ═══ ФАЗА B: Task 2 — ГЕОМЕТРИЯ (W7–W12) ═══
+  {
+    num: 2, name: "TASK 2 — ГЕОМЕТРИЯ TOOLKIT",
+    weeks: "СЕДМИЦИ 7–12 · 23 НОЕ – 3 ЯН",
+    goal: "6 конфигурации + decision tree. Цел: 4-5 точки на Task 2.",
+    dateRange: ['2026-11-23', '2027-01-03'],
+    weeks_data: [
+      { week: 7, taskType: 2,
+        main: "Incircle + excenter (2016-2, 2003-1, 2006-1, 2021-2)",
+        sec: "FE 7.4 + ТЧ 3.1" },
+      { week: 8, taskType: 2,
+        main: "Cyclic quad — decision tree (1997-2, 2013-2, 2019-2, 2001-2)",
+        sec: "FE 7.4 + ТЧ 3.2" },
+      { week: 9, taskType: 2,
+        main: "Orthocenter — 3 конфигурации (2017-2, 2018-3, 2022-2, 2012-2)",
+        sec: "FE 7.5 + ТЧ 3.3" },
+      { week: 10, taskType: 2,
+        main: "Трапец + правилен многоъгълник (2024-2, 2026-2, 2026-10-2, 2014-2)",
+        sec: "FE 7.5 + ТЧ 3.4" },
+      { week: 11, taskType: 2,
+        main: "Допирателни + power of point + CUMULATIVE #2 (2023-2, 2025-2, 2015-2, 2011-2)",
+        sec: "FE 7.6 + ТЧ 3.6" },
+      { week: 12, taskType: 2,
+        main: "Mixed Task 2 + CUMULATIVE #3",
+        sec: "Task 1 поддръжка" },
+    ],
+  },
+
+  // ═══ ФАЗА C: Task 3 + Task 4 (W13–W15) ═══
+  {
+    num: 3, name: "TASK 3 + TASK 4",
+    weeks: "СЕДМИЦИ 13–15 · 4 – 24 ЯН",
+    goal: "Fermat/Euler, 2-adic, делители, спускане + Task 4 double counting.",
+    dateRange: ['2027-01-04', '2027-01-24'],
+    weeks_data: [
+      { week: 13, taskType: 3,
+        main: "Fermat/Euler + 2-adic (2023-3, 2019-3, 2011-3, 2013-3)",
+        sec: "FE 7.7 + Геометрия mixed" },
+      { week: 14, taskType: 3,
+        main: "Делители + точни степени + спускане + sandwiching (2024-3, 2026-10-3, 2021-3, 1998-6, 1999-1)",
+        sec: "FE 7.7 + Геометрия mixed" },
+      { week: 15, taskType: 4,
+        main: "Task 4 — double counting + MINI-MOCK (2010-4, 2012-4, 2023-4, 2024-4)",
+        sec: "FE 7.8 + Геометрия mixed" },
+    ],
+  },
+
+  // ═══ ФАЗА D: Симулации (W16–W17) ═══
+  {
+    num: 4, name: "СИМУЛАЦИИ — ОБЛАСТЕН",
+    weeks: "СЕДМИЦИ 16–17 · 25 ЯН – 7 ФЕВ",
+    goal: "Mock 1 (2018-11, събота) + Mock 2 (2022-11, вторник) + анализ + 2 дни почивка.",
+    dateRange: ['2027-01-25', '2027-02-07'],
+    examMarker: { date: '2027-02-08', label: 'ОБЛАСТЕН КРЪГ', icon: 'flag' },
+    weeks_data: [
+      { week: 16, taskType: 0,
+        main: "Mock 1: 2018-11 (4.5 ч, събота) + 3-дневен анализ",
+        sec: "Слаби теми" },
+      { week: 17, taskType: 0,
+        main: "Mock 2: 2022-11 (4.5 ч, вторник) + анализ + лек преговор + почивка",
+        sec: "Почивка преди изпита" },
+    ],
+  },
+
+  // ═══ ФАЗА E: Национален (W18–W25) ═══
+  {
+    num: 5, name: "НАЦИОНАЛЕН — РАЗШИРЕНИЕ",
+    weeks: "СЕДМИЦИ 18–25 · 8 ФЕВ – 2 АПР",
+    goal: "Advanced geometry, advanced NT, FE напреднало, NOM симулации.",
+    dateRange: ['2027-02-08', '2027-04-02'],
+    examMarker: { date: '2027-04-03', label: 'НАЦИОНАЛЕН КРЪГ', icon: 'award' },
+    weeks_data: [
+      { week: 18, taskType: 0, main: "Анализ на областен + FE 7.1–7.4", sec: "Геометрия mixed" },
+      { week: 19, taskType: 0, main: "Inversion (2.3) + spiral similarity (2.4)", sec: "FE 7.5" },
+      { week: 20, taskType: 0, main: "Poles/polars (2.5) + Pascal (2.6) + Desargues (2.12)", sec: "FE 7.6" },
+      { week: 21, taskType: 0, main: "FE 7.7–7.9", sec: "Геометрия mixed" },
+      { week: 22, taskType: 0, main: "Quadratic residues (3.8) + LTE (3.9) + Pell (3.10)", sec: "FE 7.7" },
+      { week: 23, taskType: 0, main: "Extremal (8.15) + block designs (8.11)", sec: "FE 7.8" },
+      { week: 24, taskType: 0, main: "NOM 2014 симулация (2 дни) + анализ", sec: "—" },
+      { week: 25, taskType: 0, main: "NOM 2015-2016 + лек преговор", sec: "—" },
+    ],
+  },
+];

@@ -1,0 +1,16 @@
+[Стр. 1]
+# XLVIII National Mathematics Olympiad: 3rd round, 17–18 April 1999
+
+**Problem 1.** Find all triples $(x, y, z)$ of natural numbers such that $y$ is a prime number, $y$ and 3 do not divide $z$, and $x^3 - y^3 = z^2$.
+
+**Problem 2.** A convex quadrilateral of area $S$ is inscribed in a circle whose centre is a point interior to the quadrilateral. Prove that the area of the quadrilateral whose vertices are the projections of the point of intersection of the diagonals on the sides does not exceed $\frac{S}{2}$.
+
+**Problem 3.** In a competition 8 judges marked the contestants by *yes* or *no*. It is known that for any two contestants, two judges gave both a *yes*; two judges gave the first one a *yes* and the second one a *no*; two judges gave the first one a *no* and the second one a *yes*, and finally, two judges gave both a *no*. What is the greatest possible number of contestants?
+
+**Problem 4.** Find all pairs $(x, y)$ of integer numbers such that $x^3 = y^3 + 2y^2 + 1$.
+
+**Problem 5.** Let $B_1$ and $C_1$ be points on the sides $AC$ and $AB$ of $\triangle ABC$. The straight lines $BB_1$ and $CC_1$ intersect at point $D$. Prove that the quadrilateral $AB_1DC_1$ is circumscribed if and only if the incircles of $\triangle ABD$ and $\triangle ACD$ are tangent.
+
+**Problem 6.** Each interior point of an equilateral triangle of side 1 lies in one of six circles of the same radius $r$. Prove that $r \geq \frac{\sqrt{3}}{10}$.
+
+Downloaded from Klasirane.com

@@ -1,0 +1,97 @@
+{
+  "pdf": "OLI-2-Областен кръг-2013-10 кл",
+  "problems": [
+    {
+      "num": 1,
+      "grade": 10,
+      "year": 2013,
+      "round": "oblasten",
+      "statement": "Да се намерят стойностите на реалния параметър a, за които уравнението x³ + ax² − (1 − a)² = 0 има три различни реални корена x₁, x₂, x₃, изпълняващи неравенството x₁/(x₂x₃) + x₂/(x₃x₁) + x₃/(x₁x₂) > 3/2.",
+      "solution": "Решение. Имаме\n$$x^3 + ax^2 - (1 - a)^2 = (x - (1 - a))(x^2 + x + (1 - a)) = 0.$$\nАко $D$ е дискриминантата на квадратния тричлен, то от $D > 0$ получаваме $a > 3/4$. Освен това $1 - a$ не трябва да е корен на квадратния тричлен, откъдето $a \\neq 1, 3$. Използвайки формулите на Виет даденото по условие, получаваме\n$$\\frac{x_1}{x_2 x_3} + \\frac{x_2}{x_3 x_1} + \\frac{x_3}{x_1 x_2} = \\frac{x_1^2 + x_2^2 + x_3^2}{x_1 x_2 x_3} = \\frac{a^2}{(1 - a)^2} > \\frac{3}{2},$$\nкоето е изпълнено точно тогава, когато $a \\in (3 - \\sqrt{6}, 3 + \\sqrt{6})$. Така окончателно\n$$a \\in \\left(\\frac{3}{4}, 1\\right) \\cup (1, 3) \\cup (3, 3 + \\sqrt{6}).$$",
+      "answer": "$a \\in \\left(\\frac{3}{4}, 1\\right) \\cup (1, 3) \\cup (3, 3 + \\sqrt{6})$.",
+      "page": 1,
+      "source": "OLI-2-Областен кръг-2013-10 кл · 2013-10 · Зад. 1",
+      "point_id": "5.1",
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": "medium",
+      "techniques": [
+        "vieta_formulas",
+        "discriminant_analysis",
+        "inequality"
+      ],
+      "reasoning": "Solution uses factorisation, Vieta relations and discriminant to get conditions on a, then checks inequality via Vieta.",
+      "_paired": true,
+      "_grade_source": "filename"
+    },
+    {
+      "num": 2,
+      "grade": 10,
+      "year": 2013,
+      "round": "oblasten",
+      "statement": "Даден е △ABC с ∠ACB > 90°. Нека CH е височината от върха C (H ∈ AB), а AL е ъглополовящата на ∠BAC (L ∈ BC). Да се намери ∠ALC, ако е известно, че ∠ALC = ∠BHL.",
+      "solution": "Първо решение. Нека $\\angle ALC = \\angle BHL = \\varphi$ и $P$ е петата на височината от върха $B$ към правата $AC$ ($P \\in AC^\\to$). Четириъгълникът $HBPC$ е вписан в окръжност с диаметър $BC$ и следователно $\\angle BHP = \\angle BCP$. Тогава\n$$\\angle LAP = \\angle BCP - \\varphi = \\angle BHP - \\varphi = \\angle LHP,$$\nт.е. $AHLP$ е вписан четириъгълник. От друга страна, $AL$ е ъглополовяща на $\\measuredangle BAC$ и следователно $L \\in s_{PH}$. Имаме две възможности:\n\nСлучай 1. Ако $s_{PH} \\cap BC$, то $L$ е център на описаната около $HBPC$ окръжност, т.е. $BL = LC$, $AB = AC$. Но $\\measuredangle ACB > 90^\\circ$ и достигаме до противоречие.\n\nСлучай 2. Ако $s_{PH} \\equiv BC$, то $HBPC$ е делтоид и\n$$\\measuredangle CHL = \\measuredangle CPL = \\measuredangle BHL = \\varphi,$$\nт.е. $\\varphi = 45^\\circ$.\n\nВторо решение. Ако използваме стандартните означения за триъгълник, то\n$$\\frac{BL}{LC} = \\frac{S_{BHL}}{S_{CHL}} = \\frac{BH.\\sin\\varphi}{CH.\\cos\\varphi} = \\cot\\beta.\\operatorname{tg}\\varphi = \\cot\\beta.\\operatorname{tg}\\left(\\frac{\\alpha}{2} + \\beta\\right).$$\nОт друга страна,\n$$\\frac{BL}{LC} = \\frac{BA}{AC} = \\frac{\\sin\\gamma}{\\sin\\beta} = \\frac{\\sin(\\alpha + \\beta)}{\\sin\\beta}$$\nи следователно\n$$\\cos\\beta\\sin\\left(\\frac{\\alpha}{2} + \\beta\\right) = \\sin(\\alpha + \\beta)\\cos\\left(\\frac{\\alpha}{2} + \\beta\\right) \\Leftrightarrow 2\\alpha + \\beta = 90^\\circ,$$\nт.е. $\\varphi = 45^\\circ$.\n\nЗабележка. В произволен $\\triangle ABC$ условието $\\measuredangle ALC = \\measuredangle BHL$ е изпълнено тогава и само тогава, когато $\\measuredangle ACB = 90^\\circ + \\measuredangle ABC$.",
+      "answer": "$\\angle ALC = 45^\\circ$.",
+      "page": 1,
+      "source": "OLI-2-Областен кръг-2013-10 кл · 2013-10 · Зад. 2",
+      "point_id": "1.10",
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": "medium",
+      "techniques": [
+        "cyclic_quadrilateral",
+        "angle_bisector",
+        "angle_chasing"
+      ],
+      "reasoning": "Key step is recognising HBPC as cyclic (diameter BC) and using angle‑bisector properties to obtain φ=45°.",
+      "_paired": true,
+      "_grade_source": "filename"
+    },
+    {
+      "num": 3,
+      "grade": 10,
+      "year": 2013,
+      "round": "oblasten",
+      "statement": "Да се намерят всички естествени числа n, за които 2^{n+1} дели 7^{n!} − 3^{n!}.\n(С n! се означава произведението на естествените числа от 1 до n.)",
+      "solution": "Решение. Нека $n! = 2^k.m$, където $m$ е нечетно, а $k$ е цяло неотрицателно число. Тогава\n$$7^{n!} - 3^{n!} = (7^m)^{2^k} - (3^m)^{2^k} = (7^m - 3^m)(7^m + 3^m)(7^{2m} + 3^{2m}) \\dots (7^{2^{k-1}m} + 3^{2^{k-1}m}).$$\nТъй като $7^m + 3^m \\equiv 7^{2m} + 3^{2m} \\equiv \\dots 7^{2^{k-1}m} + 3^{2^{k-1}m} \\equiv 2 \\pmod 4$ и $7^m - 3^m \\equiv 4 \\pmod 8$, то $2^{k+2} \\mid (7^{n!} - 3^{n!})$, но $2^{k+3} \\not\\mid (7^{n!} - 3^{n!})$ и следователно $n + 1 \\leqq k + 2$, т.е. $k \\geqq n - 1$.\n\nОт друга страна, ако $2^t \\leqq n < 2^{t+1}$ ($t \\in \\mathbb{N}_0$), то\n$$k = \\left[\\frac{n}{2}\\right] + \\left[\\frac{n}{2^2}\\right] + \\cdots + \\left[\\frac{n}{2^t}\\right] \\leq \\frac{n}{2} + \\frac{n}{2^2} + \\cdots \\frac{n}{2^t} = n\\left(1 - \\frac{1}{2^t}\\right) \\leq n - 1.$$\nСледователно $k = n - 1$ и $n = 2^t$, където $t \\in \\mathbb{N}_0$.",
+      "answer": "$n = 2^t$, където $t \\in \\mathbb{N}_0$.",
+      "page": 1,
+      "source": "OLI-2-Областен кръг-2013-10 кл · 2013-10 · Зад. 3",
+      "point_id": "3.9",
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": "medium",
+      "techniques": [
+        "lte",
+        "valuation",
+        "factorial_exponent"
+      ],
+      "reasoning": "Uses factorisation of 7^{n!}-3^{n!} and LTE to bound the 2‑adic valuation, leading to n being a power of 2.",
+      "_paired": true,
+      "_grade_source": "filename"
+    },
+    {
+      "num": 4,
+      "grade": 10,
+      "year": 2013,
+      "round": "oblasten",
+      "statement": "Нека A(n,k) е броят на k-орките (a₁,...,aₖ) от цели числа, за които е изпълнено\n a₁ + ... + aₖ₋₁ ≤ n,\n a₁ + ... + aₖ₋₁ + aₖ > n,\n 1 ≤ aᵢ ≤ n, i = 1,...,k.\nЗа кое k стойността на A(12,k) е максимална?",
+      "solution": "Решение. Най-напред да пресметнем броя на $k$-орките $(a_1, \\ldots, a_k)$ от цели числа $1 \\leq a_i \\leq n$, за които $a_1 + \\ldots + a_k \\leq n$. Очевидно тази сума може да взема сойностите $k, k + 1, \\ldots, n$ и следователно броят на тези $k$-орки е\n$$\\binom{k-1}{k-1} + \\binom{k}{k-1} + \\ldots + \\binom{n-1}{k-1} = \\binom{n}{k}.$$\nОттук получаваме, че броят на $k$-орките $(a_1, \\ldots, a_k)$, за които $a_1 + \\ldots + a_{k-1} \\leq n$, $a_1 + \\ldots + a_{k-1} + a_k > n$, $1 \\leq a_i \\leq n$ е\n$$A(n, k) = n\\binom{n}{k-1} - \\binom{n}{k} = \\binom{n}{k}\\left(\\frac{nk}{n-k+1} - 1\\right).$$\nОстава да определим, за кое $k$\n$$A(12, k) = \\binom{12}{k}\\left(\\frac{12k}{13-k} - 1\\right)$$\nе максимално. Тъй като за $1 \\leq k \\leq 6$ и двата множителя растат, то е максимумът се достига за $6 \\leq k \\leq 12$. Имаме\n$$\\frac{A(12, k+1)}{A(12, k)} = \\frac{k(13-k)}{k^2-1}.$$\nТова отношение е по-голямо от 1 за $k = 6$ и по-малко от 1 за $k = 7, \\ldots, 12$. Следователно търсеният максимум се достига за $k = 7$.",
+      "answer": "$k = 7$.",
+      "page": 1,
+      "source": "OLI-2-Областен кръг-2013-10 кл · 2013-10 · Зад. 4",
+      "point_id": "8.5",
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": "medium",
+      "techniques": [
+        "binomial_coefficients",
+        "maximization",
+        "ratio_test"
+      ],
+      "reasoning": "Counts k‑tuples via binomial coefficients, derives A(n,k) formula and compares successive terms to locate maximum at k=7.",
+      "_paired": true,
+      "_grade_source": "filename"
+    }
+  ]
+}

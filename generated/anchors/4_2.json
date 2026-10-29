@@ -1,0 +1,147 @@
+{
+  "point_id": "4.2",
+  "total": 10,
+  "by_difficulty": {
+    "easy": 0,
+    "medium": 8,
+    "hard": 2
+  },
+  "problems": [
+    {
+      "source": "OLI-2-Областен кръг-1995-11 кл · 1995-11 · Зад. 6",
+      "statement": "Find all pairs of positive integers $(x, y)$ for which $\\frac{x^2 + y^2}{x - y}$ is an integer which is a divisor of 1995.",
+      "solution": "Solution. It is enough to find all pairs $(x, y)$ for which $x > y$ and $x^2 + y^2 = k(x - y)$, where $k$ divides 1995 = 3.5.7.19. We shall use the following well-known fact: if $p$ is a prime number of the type $4q + 3$ and if it divides $x^2 + y^2$, then $p$ divides $x$ and $y$. (For $p = 3, 7, 19$ this can be proved directly.) If $k$ is divisible by 3 then $x$ and $y$ are divisible by 3 too. Simplifying by 9 we get an equality $x_1^2 + x_1^2 = k_1(x_1 - y_1)$, where $k_1$ divides 5.7.19. Considering 7 and 19 in an analogous way we get an equality $a^2 + b^2 = 5(a - b)$ (it is not possible to get an equality $a^2 + b^2 = (a - b)$), where $a > b$. From here $(2a - 5)^2 + (2b - 5)^2 = 50$, i.e. $a = 3$, $b = 1$ or $a = 2$, $b = 1$.\n\nThe above considerations imply that the pairs we are looking for are of the type $(3c, c)$, $(2c, c)$, $(c, 3c)$, $(c, 2c)$, where $c = 1, 3, 7, 19, 3.7, 3.19, 7.19, 3.7.19$.",
+      "answer": "$(x,y) = (3c,c), (2c,c), (c,3c), (c,2c)$, where $c \\in \\{1,3,7,19,21,57,133,399\\}$.",
+      "difficulty": "medium",
+      "techniques": [
+        "quadratic_diophantine",
+        "prime_factor_analysis"
+      ],
+      "confidence": "exact",
+      "reasoning": "Transforms the condition into a quadratic Diophantine equation and analyses prime factors of 1995."
+    },
+    {
+      "source": "OLI-2-Областен кръг-1996-11 кл · 1996-11 · Зад. 1",
+      "statement": "Prove that for all positive integers $n \\geq 3$ there exist an odd positive integers $x_n$ and $y_n$, such that\n\n$$7x_n^2 + y_n^2 = 2^n.$$",
+      "solution": "Solution. If $n = 3$ we have $x_3 = y_3 = 1$.\n\nSuppose that for an integer $n \\geq 3$ there are odd positive integers $x_n, y_n$, such that $7x_n^2 + y_n^2 = 2^n$. We shall prove that for each pair\n\n$$\\left(X = \\frac{x_n + y_n}{2}, Y = \\frac{|7x_n - y_n|}{2}\\right) \\quad \\text{and} \\quad \\left(X = \\frac{|x_n - y_n|}{2}, Y = \\frac{7x_n + y_n}{2}\\right)$$\n\nwe have $7X^2 + Y^2 = 2^{n+1}$. Indeed,\n\n$$7 \\left(\\frac{x_n \\pm y_n}{2}\\right)^2 + \\left(\\frac{7x_n \\mp y_n}{2}\\right)^2 = 2 \\left(7x_n^2 + y_n^2\\right) = 2 \\cdot 2^n = 2^{n+1}.$$\n\nSince $x_n$ and $y_n$ are odd, i.e. $x_n = 2k + 1$ and $y_n = 2l + 1$ ($k, l$ are integers), then $\\frac{x_n + y_n}{2} = k + l + 1$ and $\\frac{|x_n - y_n|}{2} = |k - l|$, which shows that one of the numbers $\\frac{x_n + y_n}{2}$ and $\\frac{|x_n - y_n|}{2}$ is odd. Thus, for $n + 1$ there are odd natural numbers $x_{n+1}$ and $y_{n+1}$ with the required property.",
+      "answer": null,
+      "difficulty": "medium",
+      "techniques": [
+        "diophantine_induction",
+        "parity_analysis",
+        "recursive_construction"
+      ],
+      "confidence": "exact",
+      "reasoning": "Solution builds a recurrence (X,Y) from (x_n,y_n) and uses parity to keep numbers odd; classic quadratic Diophantine induction."
+    },
+    {
+      "source": "OLI-2-Областен кръг-1996-11 кл · 1996-11 · Зад. 4",
+      "statement": "The real numbers $a_1, a_2, \\ldots, a_n$ ($n \\geq 3$) form an arithmetic progression. There exists a permutation $a_{i_1}, a_{i_2}, \\ldots, a_{i_n}$ of the same numbers, which is a geometric progression. Find the numbers $a_1, a_2, \\ldots, a_n$, if they are pairwise different and the biggest among them is equal to 1996.",
+      "solution": "Solution. Let $a_1 < a_2 < \\dots < a_n = 1996$ and $q$ be the quotient of the geometric progression $a_{i_1}, a_{i_2}, \\dots, a_{i_n}$. We have $q \\neq 0$ and $q \\neq 1$. The numbers $a_{i_n}, a_{i_{n-1}}, \\dots, a_{i_1}$ form also a geometric progression which quotient is $\\frac{1}{q}$. Thus, we can assume that $|q| > 1$, i.e. $q > 1$ or $q < -1$. Then $|a_{i_1}| < |a_{i_2}| < \\dots < |a_{i_n}|$, from where $a_i \\neq 0$ for all $i$.\n\nMore exactly, either all numbers are positive ($q > 1$) and then $a_{i_1} < a_{i_2} < \\dots < a_{i_n}$, which together with $a_1 < a_2 < \\dots < a_n$ shows that $a_{i_k} = a_k$, i.e. the numbers $a_1, a_2, \\dots, a_n$ form an arithmetic as well as a geometric progression, or the numbers $a_{i_1}, a_{i_2}, \\dots, a_{i_n}$ change their signs alternatively ($q < -1$) and then the positive ones form an increasing geometric progression with quotient $q^2$, and the order is the same as in the arithmetic progression. (The numbers $a_1, a_2, \\dots, a_n$ could not be all negative, because $a_n = 1996 > 0$.)\n\nAssume now that 3 among the numbers $a_1, a_2, \\dots, a_n$ are positive. Then $0 < a_{n-2} < a_{n-1} < a_n$ and they form a geometric as well as an arithmetic progression. Therefore $2a_{n-1} = a_{n-2} + a_n$ and $a_{n-1}^2 = a_{n-2}a_n$. From here $a_{n-2} = a_{n-1} = a_n$, which is a contradiction.\n\nThus at most two among the numbers are positive. Analogously, at most two among the numbers are negative. Consequently, $n \\leq 4$.\n\nLet $n = 4$. Then $a_1 < a_2 < 0 < a_3 < a_4$ and $2a_2 = a_1 + a_3$, $2a_3 = a_2 + a_4$. But $q < -1$ and the geometric progression is either $a_3, a_2, a_4, a_1$ or $a_2, a_3, a_1, a_4$. Let it be $a_3, a_2, a_4, a_1$. Then $a_2 = a_3q$, $a_4 = a_3q^2$ and $a_1 = a_3q^3$. Thus, $2a_3q = a_3q^3 + a_3$ and $2a_3 = a_3q + a_3q^2$. From here $q = 1$, which contradicts to $q < -1$.\n\nSo $n = 3$. There are two possibilities:\n\nI. $a_1 < a_2 < 0 < a_3 = 1996$. Then the geometric progression is $a_2$, $a_3 = a_2q$, $a_1 = a_2q^2$. It follows from $2a_2 = a_1 + a_3$ that $2a_2 = a_2q^2 + a_2q$, i.e. $q^2 + q - 2 = 0$. Thus, $q = -2$, $-2a_2 = 1996$, $a_2 = -998$ and the numbers are $(-3992; -998; 1996)$.\n\nII. $a_1 < 0 < a_2 < a_3 = 1996$. Now the geometric progression is $a_2$, $a_1 = a_2q$, $a_3 = a_2q^2$. From $2a_2 = a_1 + a_3$ we obtain $2a_2 = a_2q + a_2q^2$, i.e. again $q = -2$. Therefore, $a_3 = 4a_2 = 1996$ and $a_2 = 499$. The numbers are $(-998; 499; 1996)$.",
+      "answer": "$n = 3$; $(-3992; -998; 1996)$ or $(-998; 499; 1996)$.",
+      "difficulty": "medium",
+      "techniques": [
+        "ap_gp_relation",
+        "case_analysis",
+        "quadratic_equation"
+      ],
+      "confidence": "exact",
+      "reasoning": "Relates arithmetic and geometric progressions, leads to quadratic equations and a case‑by‑case bound on n."
+    },
+    {
+      "source": "OLI-2-Областен кръг-1997-11 кл · 1997-11 · Зад. 3",
+      "statement": "Prove that the equation\n\n$$x^{2}+y^{2}+z^{2}+3(x+y+z)+5=0$$\n\nhas no solution in rational numbers.",
+      "solution": "Solution: It is easy to see that the equation is equivalent to\n\n$$(2x + 3)^2 + (2y + 3)^2 + (2z + 3)^2 = 7.$$\n\nIt has a solution in rational numbers if and only if there exist integer numbers $a, b, c$ and a natural number $m$ such that\n\n(*) $$a^2 + b^2 + c^2 = 7m^2.$$\n\nSuppose such numbers exist and give $m$ its smallest possible value. There are two cases:\n\n(I) $m = 2n$ is an even number. Now $a^2 + b^2 + c^2$ is divisible by 4. This implies that all numbers $a, b, c$ are even ones, so $a = 2a_1$, $b = 2b_1$, $c = c_1$. It follows now that $a_1^2 + b_1^2 + c_1^2 = 7n^2$, which contradicts the way $m$ have been chosen.\n\n(II) $m = 2n + 1$ is an odd number. Now $m^2 \\equiv 1 \\pmod 8$ and therefore $a^2 + b^2 + c^2 \\equiv 7 \\pmod 8$, which is impossible when $a, b, c$ are integer.",
+      "answer": "The equation has no solution in rational numbers.",
+      "difficulty": "medium",
+      "techniques": [
+        "diophantine_quadratic"
+      ],
+      "confidence": "exact",
+      "reasoning": "Transforms the equation to a sum of three squares equal to 7·m² and uses parity/mod‑8 arguments – a quadratic Diophantine technique."
+    },
+    {
+      "source": "OLI-2-Областен кръг-2011-10 кл · 2011-10 · Зад. 2",
+      "statement": "Да се намерят всички прости числа p, за които съществуват взаимно прости естествени числа a и b, такива, че p(a² + ab + b²) = 1501(a + b).",
+      "solution": "Решение. Ако допуснем, че има просто число $r$, делящо $a + b$ и $a^2 + ab + b^2$, то от $b \\equiv -a \\pmod{r}$ и $0 \\equiv a^2 + ab + b^2 \\equiv a^2 - a^2 + a^2 = a^2 \\pmod{r}$ следва, че $r|a$ и $r|b$, което противоречи на $(a, b) = 1$. Следователно $(a + b, a^2 + ab + b^2) = 1$. Тогава, тъй като $a + b|p(a^2 + ab + b^2)$, то $a + b|p$. Но $a + b > 1$, така че $a + b = p$ и $a^2 + ab + b^2 = 1501$.\n\nОт $1501 = (a + b)^2 - ab = p^2 - ab$ получаваме $p^2 > 1501$ и оттук $p \\ge 39$. Освен това $a$ и $b$ са корени на квадратното уравнение (1) $x^2 - px + p^2 - 1501 = 0$ и трябва дискриминантата $D$ на това уравнение да е неотрицателна. От $D = 6004 - 3p^2 \\ge 0$ получаваме $p^2 \\le 2001$ и значи $p \\le 44$.\n\nПонеже $p$ е просто число, остават възможностите $p = 41$ и $p = 43$. Сега пресмятаме, че при $p = 41$ корените на (1) са 5 и 36 (взаимно прости естествени числа), а при $p = 43$ те не са цели числа. Окончателно, $p = 41$.",
+      "answer": "$p = 41$.",
+      "difficulty": "medium",
+      "techniques": [
+        "diophantine_quadratic",
+        "gcd",
+        "discriminant"
+      ],
+      "confidence": "exact",
+      "reasoning": "Уравнението се редуцира до квадратно диофантово уравнение; се използва Вйет, дискриминант и свойства на прости числа."
+    },
+    {
+      "source": "OLI-2-Областен кръг-2024-11 кл · 2024-11 · Зад. 3",
+      "statement": "Естествено число $n$ се нарича *добро*, ако $n$ има четен брой делители:\n\n$$1 = d_1 < d_2 < \\dots < d_{2k-1} < d_{2k} = n,$$\n\nза които $d_{k+1} - d_k = 2$ и $d_{k+2} - d_{k-1} = 65$. Да се намери най-малкото добро число.",
+      "solution": "Решение. Тъй като dₖ·dₖ₊₁ = dₖ₋₁·dₖ₊₂ = n, то от условието получаваме dₖ² + 2dₖ − n = 0 и dₖ₋₁² + 65dₖ₋₁ − n = 0. Дискриминантите на двата квадратни тричлена трябва да бъдат точни квадрати, откъдето 4 + 4n = t² и 65² + 4n = s². След почленно изваждане намираме s² − t² = 63·67 = 3²·7·67. Следователно s − t = 1, 3, 7, 9, 21, 63 и съответно s + t = 3²·7·67, 3·7·67, 3²·67, 7·67, 3·67, 67. За всеки от случаите получаваме решения съответно s = 65, 111, 239, 305, 705, 2111. При s = 65 получаваме n = 0, което е невъзможно, а при s = 111 получаваме n = 2024. За останалите стойности на s получаваме по-големи n.",
+      "answer": "n = 2024.",
+      "difficulty": "medium",
+      "techniques": [
+        "diophantine_quadratic",
+        "perfect_square_discriminant"
+      ],
+      "confidence": "exact",
+      "reasoning": "От условията се получават две квадратни уравнения, чиито дискриминанти трябва да са точни квадрати – класически подход за диофантови уравнения от втори ред."
+    },
+    {
+      "source": "OLI-3-Национален кръг-2011-9-12 кл · 2011-None · Зад. 1",
+      "statement": "Съществуват ли естествени числа $n$ и $k$, $1 \\le k \\le n-2$, за които $\\binom{n}{k}^2 + \\binom{n}{k+1}^2 = \\binom{n}{k+2}^4$?",
+      "solution": "След разписване на биномните коефициенти и съкращаване, получаваме уравнението\n\n$$1 + \\frac{(n-k)^2}{(k+1)^2} = \\frac{(n-k)^2(n-k-1)^2}{(k+1)^2(k+2)^2} \\binom{n}{k+2}^2.$$\n\nТогава $(k+2)^2 [(k+1)^2 + (n-k)^2] = (n-k)^2(n-k-1)^2 \\binom{n}{k+2}^2$, откъдето лесно следва, че $(k+1)^2 + (n-k)^2$ е точен квадрат на естествено число. Нека $(k+1)^2 + (n-k)^2 = t^2$, където $t \\in \\mathbb{N}$. Тогава\n\n$$(k+2)t = (n-k)(n-k-1)\\binom{n}{k+2} \\ge 2\\binom{n}{k+2}.$$\n\nНо $k+2 \\le n$ и $t = \\sqrt{(k+1)^2 + (n-k)^2} < n+1$, откъдето $(k+2)t \\le n^2$.\n\nНека $3 \\le k+2 \\le n-3$ (лявото неравенство следва от условието). Тогава получаваме $2\\binom{n}{k+2} \\ge 2\\binom{n}{3} = \\frac{n(n-1)(n-2)}{3} > n^2$ при $n \\ge 6$, т.е. уравнението няма решение в този случай.\n\nПри $k+2 = n-2$ получаваме $t^2 = (n-3)^2 + 16$, откъдето $t=5$, $n=6$, $k=2$ и директно се вижда, че нямаме решение. При $k+2 = n-1$ получаваме $t^2 = (n-2)^2 + 9$, откъдето $t=5$, $n=6$, $k=3$ и отново нямаме решение. Следователно отговорът на поставения в задачата въпрос е отрицателен.\n\nЗабележка. Уравнението $x^2 + y^2 = z^4$ има безбройно много решения в естествени числа. Задачата може да се реши и само с оценки в двата случая $\\binom{n}{k+2}^2 \\ge \\sqrt{2}\\binom{n}{k+i}$, $i=0,1$.",
+      "answer": "Не съществуват такива естествени числа $n$ и $k$.",
+      "difficulty": "medium",
+      "techniques": [
+        "diophantine_quadratic",
+        "inequality",
+        "bounding"
+      ],
+      "confidence": "exact",
+      "reasoning": "Разглежда се уравнението като квадратично в биномиални коефициенти, прилагат се оценки и проверка на крайни случаи."
+    },
+    {
+      "source": "OLI-3-Национален кръг-2022-9-12 кл · 2022-None · Зад. 3",
+      "statement": "Нека x > y > 2022 са естествени числа, такива че xy + x + y е точен квадрат. Възможно ли е за всяко естествено z в интервала [x + 3y + 1, 3x + y + 1] числата x + y + z и x² + xy + y² да не са взаимнопрости?",
+      "solution": "Решение. Не е възможно! Да положим k = √(xy + x + y) и z = x + y + 2k + 1. Тъй като y < √(y² + 2y) ≤ √(xy + x + y) = k ≤ √(x² + 2x) < x + 1, следва k ∈ (y, x], откъдето z ∈ (x + 3y + 1, 3x + y + 1]. Лесно се проверява, че xy + yz + zx = (x + y + k)² и xy + yz + zx + x + y + z = (x + y + k + 1)². Да допуснем, че съществува просто число p, за което p | (x + y + z, x² + xy + y²). Тогава x + y ≡ −z (mod p) и значи x² + xy + y² = (x + y)² − xy ≡ −xy − yz − zx (mod p). Така получаваме, че p | xy + yz + zx и p | x + y + z, т.е. p | (x + y + k)² и p | (x + y + k + 1)², което е противоречие.",
+      "answer": "Не е възможно.",
+      "difficulty": "medium",
+      "techniques": [
+        "diophantine_quadratic",
+        "inequality",
+        "gcd_argument"
+      ],
+      "confidence": "exact",
+      "reasoning": "Transforms xy+x+y into a square k², bounds k, then uses gcd to reach contradiction."
+    },
+    {
+      "source": "OLI-2-Областен кръг-1995-10 кл · 1995-10 · Зад. 6",
+      "statement": "Find all pairs of positive integers $(x, y)$ for which $\\frac{x^2 + y^2}{x - y}$ is an integer which is a divisor of 1995.",
+      "solution": "Solution. It is enough to find all pairs $(x, y)$ for which $x > y$ and $x^2 + y^2 = k(x - y)$, where $k$ divides 1995 = 3.5.7.19. We shall use the following well-known fact: if $p$ is a prime number of the type $4q + 3$ and if it divides $x^2 + y^2$, then $p$ divides $x$ and $y$. (For $p = 3, 7, 19$ this can be proved directly.) If $k$ is divisible by 3 then $x$ and $y$ are divisible by 3 too. Simplifying by 9 we get an equality $x_1^2 + x_1^2 = k_1(x_1 - y_1)$, where $k_1$ divides 5.7.19. Considering 7 and 19 in an analogous way we get an equality $a^2 + b^2 = 5(a - b)$ (it is not possible to get an equality $a^2 + b^2 = (a - b)$), where $a > b$. From here $(2a - 5)^2 + (2b - 5)^2 = 50$, i.e. $a = 3$, $b = 1$ or $a = 2$, $b = 1$.\n\nThe above considerations imply that the pairs we are looking for are of the type $(3c, c)$, $(2c, c)$, $(c, 3c)$, $(c, 2c)$, where $c = 1, 3, 7, 19, 3.7, 3.19, 7.19, 3.7.19$.",
+      "answer": "$(x,y) = (3c,c), (2c,c), (c,3c), (c,2c)$, where $c \\in \\{1,3,7,19,3\\cdot7,3\\cdot19,7\\cdot19,3\\cdot7\\cdot19\\}$.",
+      "difficulty": "hard",
+      "techniques": [
+        "diophantine_quadratic",
+        "sum_of_two_squares",
+        "prime_factorization"
+      ],
+      "confidence": "exact",
+      "reasoning": "Transforms the condition into x^2+y^2 = k(x-y) with k|1995, then uses properties of primes 3,7,19 (4q+3) to restrict solutions."
+    },
+    {
+      "source": "OLI-2-Областен кръг-2009-11 кл · 2009-11 · Зад. 6",
+      "statement": "Естествените числа a, b и c са такива, че a² + ab + b² = c² и a и b са взаимнопрости. Да се докаже, че числото |a − b| + 2c е точен квадрат на естествено число тогава и само тогава, когато то не се дели на 3.",
+      "solution": "Решение. Без ограничение можем да считаме, че a > b. Записваме равенството a² + ab + b² = c² във вида\n(2c − a + b)(2c + a − b) = 3(a + b)².\nТъй като a и b са взаимнопрости, то те не са едновременно четни. От a² + ab + b² = c² следва, че c е нечетно число. Нека НОД(2c − a + b, 2c + a − b) = d. Ако p е нечетен прост делител на d, то p² дели 3(a + b)² и значи p дели a + b. Освен това p дели 2c − a + b − (2c + a − b) = 2(b − a) и следователно p дели b − a. Получаваме, че p дели a и b, което е противоречие. Следователно d няма нечетни прости делители и тъй като d дели 4c, (c е нечетно), то d = 1, 2 или 4.\nАко d = 2 или 4 (т.е. a и b са нечетни), то числото c е нечетно и тъй като a² ≡ b² ≡ c² ≡ 1 (mod 8), имаме ab ≡ 7 (mod 8). Оттук и от факта, че всяко от числата a и b дава остатък 1, 3, 5 или 7 при деление на 8, следва, че a + b се дели на 8. Ако d = 2, то 2c − a + b = 2p и 2c + a − b = 2q, като (p, q) = 1 и p + q = 2c е четно число. Следователно p и q са нечетни и равенството (2c − a + b)(2c + a − b) = 3(a + b)² е невъзможно по модул 8.\nАко d = 4, след съкращаване на 4 получаваме ситуация, аналогична на случая d = 1, като при това точният квадрат си остава такъв.\nНека d = 1, т.е. a и b са с различна четност. Тогава числата 2c − a + b и 2c + a − b са нечетни и едното от тях е от вида 3p², а другото е от вида q², където q не се дели на 3, защото иначе 2c − a + b и 2c + a − b не са взаимнопрости. Остава да отбележим, че ако |a − b| + 2c е точен квадрат, то е равно на q² и значи не се дели на 3 и, обратно, ако |a − b| + 2c не се дели на 3, то е равно на q², т.е. е точен квадрат.",
+      "answer": null,
+      "difficulty": "hard",
+      "techniques": [
+        "diophantine_equation",
+        "modular_arithmetic",
+        "factorization"
+      ],
+      "confidence": "exact",
+      "reasoning": "Factor (2c−a+b)(2c+a−b)=3(a+b)^2, analyse parity and residues mod 8."
+    }
+  ]
+}

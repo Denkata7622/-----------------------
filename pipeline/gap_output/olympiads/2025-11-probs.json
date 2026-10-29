@@ -1,0 +1,123 @@
+{
+  "_meta": {
+    "pdf": "C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\Задачи_Минали_Години\\Областен\\OLI-2-Областен кръг-2025-11 кл-probs.pdf",
+    "paired_with": "C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\Задачи_Минали_Години\\Областен\\OLI-2-Областен кръг-2025-11 кл-sol.pdf",
+    "level": 1,
+    "type": "probs",
+    "analyzed_at": "2026-10-16T21:43:05.993300",
+    "model": "deepseek/deepseek-v3.2",
+    "text_length": 4376,
+    "paired_text_length": 0
+  },
+  "problems": [
+    {
+      "num": 1,
+      "topic": "algebra",
+      "theorems": [
+        "Rational Root Theorem",
+        "Descartes' Rule of Signs",
+        "Vieta's formulas"
+      ],
+      "techniques": [
+        "polynomial analysis",
+        "parameter analysis",
+        "substitution",
+        "case analysis"
+      ],
+      "concepts": [
+        "cubic polynomial",
+        "real roots",
+        "positive roots",
+        "geometric progression",
+        "coefficient relationships"
+      ],
+      "difficulty": "standard",
+      "notes": "Задачата изисква намиране на всички реални стойности на параметър k, за които корените на кубично уравнение са положителни реални числа и образуват геометрична прогресия. Трябва да се използват връзките между корените и коефициентите (Виет) и условието за геометрична прогресия."
+    },
+    {
+      "num": 2,
+      "topic": "geometry",
+      "theorems": [
+        "Power of a Point",
+        "Thales' theorem",
+        "Basic Proportionality Theorem"
+      ],
+      "techniques": [
+        "angle chasing",
+        "cyclic quadrilateral properties",
+        "similar triangles"
+      ],
+      "concepts": [
+        "circle tangent to a line",
+        "median",
+        "intersecting chords",
+        "parallel lines",
+        "collinearity or perpendicularity"
+      ],
+      "difficulty": "standard",
+      "notes": "Задачата включва окръжност, минаваща през връх C на триъгълник, допираща се до правата AB в A, пресичаща страната BC в P и медианата CM в Q. Трябва да се докаже, че правата PR (където R е втората пресечна точка на BQ с окръжността) е успоредна на AB. Ключово е използването на степента на точката и подобни триъгълници."
+    },
+    {
+      "num": 3,
+      "topic": "combinatorics",
+      "theorems": [],
+      "techniques": [
+        "pairing",
+        "inequality",
+        "maximization",
+        "permutation analysis"
+      ],
+      "concepts": [
+        "permutation",
+        "absolute value sum",
+        "rearrangement inequality",
+        "odd n"
+      ],
+      "difficulty": "standard",
+      "notes": "Задачата изисква намиране на максималната възможна стойност на сумата от абсолютните разлики |a_i - i| за пермутация на {1,2,...,n}, където n е нечетно. Трябва да се използва подходящо сдвояване или неравенство на преподреждане."
+    },
+    {
+      "num": 4,
+      "topic": "number_theory",
+      "theorems": [
+        "Fermat's Little Theorem",
+        "Euclid's theorem (infinitude of primes)"
+      ],
+      "techniques": [
+        "contradiction",
+        "prime factorization",
+        "modular arithmetic"
+      ],
+      "concepts": [
+        "prime numbers",
+        "divisibility",
+        "order of an element modulo p",
+        "existence proof"
+      ],
+      "difficulty": "hard",
+      "notes": "Задачата изисква доказателство, че за всяко естествено n съществува просто число p < 2^(2n), такова че 2n дели p-1. Това е нетривиална задача от теория на числата, изискваща разсъждения за редици от прости числа и може би използване на теоремата на Дирихле или подобни техники."
+    }
+  ],
+  "unique_concepts": [
+    "cubic polynomial",
+    "real roots",
+    "positive roots",
+    "geometric progression",
+    "coefficient relationships",
+    "circle tangent to a line",
+    "median",
+    "intersecting chords",
+    "parallel lines",
+    "Power of a Point",
+    "permutation",
+    "absolute value sum",
+    "rearrangement inequality",
+    "odd n",
+    "prime numbers",
+    "divisibility",
+    "order of an element modulo p",
+    "existence proof",
+    "Fermat's Little Theorem"
+  ],
+  "confidence": 0.9
+}

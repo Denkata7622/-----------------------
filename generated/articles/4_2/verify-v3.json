@@ -1,0 +1,51 @@
+{
+  "verdict": "approve",
+  "score": 9,
+  "issues": [
+    {
+      "severity": "minor",
+      "section": "4. Примери с решения",
+      "description": "Броят на примерите е малко под препоръчителния: easy (2 вместо 3), medium (3 вместо 3-4), hard (2 вместо 2-3). Все пак качеството е високо."
+    },
+    {
+      "severity": "minor",
+      "section": "8. Самооценка (Quiz)",
+      "description": "Въпрос 2 (Edge case) е прекалено сложен за 'basic' ниво. Препоръчително е да се премести в 'edge_case' или да се добави по-прост въпрос."
+    }
+  ],
+  "strengths": [
+    "Всички примери са от реални олимпиади с точни източници (година, клас, номер на задача).",
+    "Математическата коректност е безупречна — проверени са всички формули и решения с конкретни числа.",
+    "Edge cases са детайлно разгледани (напр. x=y в Пример 2, n=2 в Пример 3).",
+    "Структурата е изцяло спазена, включително CHECK-ове между нивата.",
+    "Секция 'Чести грешки' е практична и добре обоснована."
+  ],
+  "suggestions": [
+    "Добавете още един hard пример за по-пълно покритие (напр. задача от национален кръг).",
+    "В Теорема 2, добавете бележка защо НОД(z-x, z+x)=2 — за по-ясна връзка с параметрите.",
+    "В Самооценка, преместете въпрос 2 в 'edge_case' и добавете по-прост basic въпрос за параметризация."
+  ],
+  "math_errors": [],
+  "missing_topics": [],
+  "structure_check": {
+    "section_1_why_important": true,
+    "section_2_objectives": true,
+    "section_3_theory": true,
+    "section_4_examples_3_levels": true,
+    "section_5_recognition": true,
+    "section_6_mistakes": true,
+    "section_7_mastery": true,
+    "section_8_quiz": true,
+    "section_9_recall": true,
+    "check_marks_present": true
+  },
+  "examples_check": {
+    "real_olympiad": true,
+    "easy_count": 2,
+    "medium_count": 3,
+    "hard_count": 2
+  },
+  "verdict_reasoning": "Статията е математически безупречна, с автентични олимпиадни примери и пълно покритие на структурата. Малките недостатъци не намалят значително качеството.",
+  "_tokens": 15161,
+  "_model": "deepseek/deepseek-r1-0528"
+}

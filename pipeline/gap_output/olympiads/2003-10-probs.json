@@ -1,0 +1,161 @@
+{
+  "_meta": {
+    "pdf": "C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\Задачи_Минали_Години\\Областен\\OLI-2-Областен кръг-2003-10 кл-probs.pdf",
+    "paired_with": "C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\Задачи_Минали_Години\\Областен\\OLI-2-Областен кръг-2003-10 кл-sol.pdf",
+    "level": 1,
+    "type": "probs",
+    "analyzed_at": "2026-10-18T12:30:09.770799",
+    "model": "deepseek/deepseek-v3.2",
+    "text_length": 1578,
+    "paired_text_length": 4102
+  },
+  "problems": [
+    {
+      "num": 1,
+      "topic": "geometry",
+      "theorems": [],
+      "techniques": [
+        "algebraic_manipulation",
+        "system_of_equations"
+      ],
+      "concepts": [
+        "trapezoid",
+        "inscribed_circle",
+        "area",
+        "height",
+        "similar_triangles",
+        "quadratic_equation"
+      ],
+      "difficulty": "standard",
+      "notes": "Uses condition for a quadrilateral to have an inscribed circle (sum of opposite sides equal). Leads to a system from area and geometric properties."
+    },
+    {
+      "num": 2,
+      "topic": "combinatorics",
+      "theorems": [
+        "Pigeonhole_Principle"
+      ],
+      "techniques": [
+        "strategic_construction",
+        "modular_arithmetic",
+        "subset_sums"
+      ],
+      "concepts": [
+        "winning_strategy",
+        "divisibility",
+        "subset_selection",
+        "sums_modulo_prime"
+      ],
+      "difficulty": "olympic",
+      "notes": "The solution splits into two cases based on n. For small n, a specific set (powers of 2) is given. For large n, the Pigeonhole Principle on subset sums modulo 2003 is used."
+    },
+    {
+      "num": 3,
+      "topic": "algebra",
+      "theorems": [],
+      "techniques": [
+        "floor_function_manipulation",
+        "inequalities",
+        "limit_analysis",
+        "substitution"
+      ],
+      "concepts": [
+        "floor_function",
+        "quadratic_equation",
+        "irrational_numbers",
+        "asymptotic_analysis"
+      ],
+      "difficulty": "hard",
+      "notes": "Involves nested floor functions. Solving uses bounding with floor properties, taking limit as n→∞ to find a, then verification by substitution."
+    },
+    {
+      "num": 4,
+      "topic": "geometry",
+      "theorems": [],
+      "techniques": [
+        "parallel_lines",
+        "similar_triangles",
+        "angle_chasing"
+      ],
+      "concepts": [
+        "triangle",
+        "parallel_lines",
+        "similar_triangles",
+        "angle_equality",
+        "intersecting_lines"
+      ],
+      "difficulty": "standard",
+      "notes": "A synthetic geometry proof using similar triangles (ΔCDG ∼ ΔFHC) derived from parallel lines and given equal segments."
+    },
+    {
+      "num": 5,
+      "topic": "algebra",
+      "theorems": [],
+      "techniques": [
+        "symmetry_consideration",
+        "substitution",
+        "system_manipulation",
+        "polynomial_factorization"
+      ],
+      "concepts": [
+        "system_of_equations",
+        "symmetric_polynomials",
+        "real_solutions",
+        "cubic_equation"
+      ],
+      "difficulty": "hard",
+      "notes": "System is symmetric but not fully. Solution involves case y=0 and substitution a=x/y, b=z/y, reducing to a system in a+b and ab, leading to a quartic in u=a+b."
+    },
+    {
+      "num": 6,
+      "topic": "number_theory",
+      "theorems": [
+        "Chinese_Remainder_Theorem"
+      ],
+      "techniques": [
+        "contradiction",
+        "pigeonhole_principle",
+        "modular_analysis",
+        "sum_consideration"
+      ],
+      "concepts": [
+        "good_set_definition",
+        "prime_divisors",
+        "modular_remainders",
+        "sum_of_elements",
+        "infinite_descent_mod_prime"
+      ],
+      "difficulty": "olympic",
+      "notes": "Uses primes dividing differences. Assumes contrary about remainders, constructs k via Chinese Remainder Theorem to force contradiction. Final step uses sum=2003 (prime) to show some remainder appears at least three times."
+    }
+  ],
+  "unique_concepts": [
+    "trapezoid",
+    "inscribed_circle",
+    "area",
+    "height",
+    "similar_triangles",
+    "quadratic_equation",
+    "Pigeonhole_Principle",
+    "winning_strategy",
+    "divisibility",
+    "subset_sums",
+    "sums_modulo_prime",
+    "floor_function",
+    "irrational_numbers",
+    "asymptotic_analysis",
+    "parallel_lines",
+    "angle_equality",
+    "intersecting_lines",
+    "system_of_equations",
+    "symmetric_polynomials",
+    "real_solutions",
+    "cubic_equation",
+    "Chinese_Remainder_Theorem",
+    "good_set_definition",
+    "prime_divisors",
+    "modular_remainders",
+    "sum_of_elements"
+  ],
+  "confidence": 0.95
+}

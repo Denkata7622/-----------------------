@@ -1,0 +1,172 @@
+{
+  "_meta": {
+    "pdf": "C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\Задачи_Минали_Години\\Национален\\OLI-3-Национален кръг-1993-9-12 кл-sol.pdf",
+    "paired_with": null,
+    "level": 2,
+    "type": "sol",
+    "analyzed_at": "2026-10-18T11:49:44.613380",
+    "model": "deepseek/deepseek-v3.2",
+    "text_length": 10715,
+    "paired_text_length": 0
+  },
+  "problems": [
+    {
+      "num": 1,
+      "topic": "algebra",
+      "theorems": [],
+      "techniques": [
+        "substitution",
+        "case analysis",
+        "induction",
+        "parity analysis"
+      ],
+      "concepts": [
+        "functional equations on integers",
+        "odd functions",
+        "integer solutions",
+        "recursive relations"
+      ],
+      "difficulty": "olympic",
+      "notes": "Functional equation with integer domain. Solution involves careful substitution and case analysis leading to three distinct functions."
+    },
+    {
+      "num": 2,
+      "topic": "geometry",
+      "theorems": [
+        "Euler's formula (for distance between circumcenter and orthocenter/incenter?)",
+        "properties of perpendicular bisectors"
+      ],
+      "techniques": [
+        "homothety",
+        "area comparison",
+        "bounding areas with inscribed figures"
+      ],
+      "concepts": [
+        "circumcenters",
+        "midpoints",
+        "homothety",
+        "area inequalities",
+        "perpendicular bisectors"
+      ],
+      "difficulty": "olympic",
+      "notes": "Two solutions provided: one geometric using area containment, another using Euler's formula. The problem reduces to comparing areas of transformed triangles."
+    },
+    {
+      "num": 3,
+      "topic": "combinatorics",
+      "theorems": [
+        "Pigeonhole Principle"
+      ],
+      "techniques": [
+        "case analysis",
+        "contradiction",
+        "graph coloring interpretation"
+      ],
+      "concepts": [
+        "edge coloring",
+        "monochromatic triangles",
+        "combinatorial geometry",
+        "Ramsey-type reasoning"
+      ],
+      "difficulty": "olympic",
+      "notes": "Combinatorial geometry problem on a polyhedron with colored edges. The solution uses a clever case analysis to force a monochromatic triangle."
+    },
+    {
+      "num": 4,
+      "topic": "number_theory",
+      "theorems": [
+        "Pigeonhole Principle"
+      ],
+      "techniques": [
+        "modular arithmetic",
+        "contradiction",
+        "counting arguments"
+      ],
+      "concepts": [
+        "complete residue system",
+        "differences modulo m",
+        "sumsets",
+        "pairwise sums"
+      ],
+      "difficulty": "olympic",
+      "notes": "Problem about representing all residues modulo m as sums of a set of numbers. The solution uses the Pigeonhole Principle on differences."
+    },
+    {
+      "num": 5,
+      "topic": "algebra",
+      "theorems": [],
+      "techniques": [
+        "polynomial identities",
+        "symmetry arguments",
+        "coefficient comparison",
+        "invariance under transformations"
+      ],
+      "concepts": [
+        "bilinear forms",
+        "dot product",
+        "invariance under reflection and rotation",
+        "polynomial representation of geometric quantities"
+      ],
+      "difficulty": "olympic",
+      "notes": "Problem of characterizing a function defined on pairs of points via a polynomial. Solution uses symmetry to deduce the form is essentially the dot product."
+    },
+    {
+      "num": 6,
+      "topic": "combinatorics",
+      "theorems": [],
+      "techniques": [
+        "construction",
+        "counterexample",
+        "case analysis by parity"
+      ],
+      "concepts": [
+        "point configurations in the plane",
+        "unit distances",
+        "graph degree conditions",
+        "regular polygons and translations"
+      ],
+      "difficulty": "olympic",
+      "notes": "Problem about existence of n-point sets where each point has at least three others at distance 1. Solution constructs examples for n≥6 and disproves for n=4,5."
+    }
+  ],
+  "unique_concepts": [
+    "functional equations on integers",
+    "odd functions",
+    "integer solutions",
+    "recursive relations",
+    "circumcenters",
+    "midpoints",
+    "homothety",
+    "area inequalities",
+    "perpendicular bisectors",
+    "Euler's formula",
+    "edge coloring",
+    "monochromatic triangles",
+    "combinatorial geometry",
+    "Ramsey-type reasoning",
+    "complete residue system",
+    "differences modulo m",
+    "sumsets",
+    "pairwise sums",
+    "bilinear forms",
+    "dot product",
+    "invariance under reflection and rotation",
+    "polynomial representation of geometric quantities",
+    "point configurations in the plane",
+    "unit distances",
+    "graph degree conditions",
+    "regular polygons and translations",
+    "Pigeonhole Principle",
+    "case analysis",
+    "construction",
+    "substitution",
+    "induction",
+    "parity analysis",
+    "contradiction",
+    "modular arithmetic",
+    "counting arguments",
+    "symmetry arguments",
+    "coefficient comparison"
+  ],
+  "confidence": 0.95
+}

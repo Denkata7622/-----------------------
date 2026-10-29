@@ -1,0 +1,117 @@
+// ─── ИДЕНТИФИКАЦИЯ ───
+{
+  file: 'Материали_БГ/NOM_2011.pdf',
+  title: 'Национални олимпиади по математика 2011',
+  author: 'Петър Бойваленков, Емил Колев, Николай Николов',
+  year: 2011,
+  language: 'BG',
+  total_pages: 95,
+  topics: ['Геометрия', 'ТЧ', 'Алгебра', 'Комбинаторика'],
+  note: 'Сборник с условия и решения от национални олимпиади: Иран, Китай, Русия, САЩ, Тайван, Туймаада, Жаутиков. По правило NOM_XXXX се анализират само Русия, Китай, Иран, САЩ. Останалите са маркирани като skip.',
+  recommended_action: 'add-as-specific-points'
+}
+
+// ─── ПЪЛНА ТАБЛИЦА ───
+
+| Статия | Стр. теория | Стр. задачи | Plan step | Plan points | Reg. | Nat. | Действие |
+|---|---|---|---|---|---|---|---|
+| Иран | — | 4–5 | 1,3,4,5,6,7,8 | 1.4, 1.10, 3.1, 4.1, 7.5, 8.3, 6.4 | med | high | add-as-bonus |
+| Китай | — | 6–8 | 1,3,5,6,8 | 1.10, 3.1, 6.1, 8.2, 8.3 | high | high | add-as-specific-points |
+| Русия | — | 9–12; 11 кл: 11 | 1,3,4,5,7,9 | 3.1, 5.1, 5.5, 7.5, 9.3, 9.8, 9.10 | high | high | add-as-specific-points |
+| САЩ | — | 12–13 | 1,3,6,8,9 | 1.5, 3.2, 6.1, 8.2, 9.10 | high | high | add-to-step10 |
+| Тайван | — | 13–15 | 1,6,7 | 1.5, 6.1, 7.5 | low | low | skip |
+| Туймаада | — | 16–18 | 1,3,6,7,8,9 | 1.5, 3.1, 6.1, 7.5, 8.3, 9.7 | low | low | skip |
+| Жаутиков | — | 19–20 | 1,2,3,5,7 | 1.5, 2.1, 3.1, 5.1, 7.5 | low | low | skip |
+
+// ─── АКТУАЛИЗАЦИЯ: NOM_2011 ───
+const NOM_2011_UPDATES = [
+  {
+    id: '1.4',
+    tasks: [
+      { label: 'NOM 2011, Иран, Зад 1 (реш. стр.21)', pdf: 'Материали_БГ/NOM_2011', page: 4, difficulty: 4, requires_also: ['1.5'], prerequisite_review: 'Преговори 1.5', required_knowledge: [{ point_id: '1.4', technique: 'Радикална ос', why_needed: 'Доказване на равенство на степени' }] },
+      { label: 'NOM 2011, Иран, Зад 9 (реш. стр.28)', pdf: 'Материали_БГ/NOM_2011', page: 5, difficulty: 4, requires_also: ['1.4'], prerequisite_review: 'Преговори 1.4', required_knowledge: [{ point_id: '1.4', technique: 'Степен на точка', why_needed: 'Ключово за добри прави' }] }
+    ]
+  },
+  {
+    id: '1.10',
+    tasks: [
+      { label: 'NOM 2011, Иран, Зад 6 (реш. стр.25)', pdf: 'Материали_БГ/NOM_2011', page: 4, difficulty: 5, requires_also: ['1.5'], prerequisite_review: 'Преговори 1.5 и 1.10', required_knowledge: [{ point_id: '1.10', technique: 'Вписани/външновписани окръжности', why_needed: 'Ядро на конфигурацията' }] },
+      { label: 'NOM 2011, Китай, Зад 2 (реш. стр.33)', pdf: 'Материали_БГ/NOM_2011', page: 6, difficulty: 4, requires_also: ['1.5'], prerequisite_review: 'Преговори 1.5', required_knowledge: [{ point_id: '1.10', technique: 'Вписана окръжност', why_needed: 'Доказване на център на вписана окръжност' }] },
+      { label: 'NOM 2011, Русия, Зад 11.8 (реш. стр.65)', pdf: 'Материали_БГ/NOM_2011', page: 12, difficulty: 5, requires_also: ['1.5'], prerequisite_review: 'Преговори 1.5 и 1.10', required_knowledge: [{ point_id: '1.10', technique: 'Вписани окръжности', why_needed: 'Доказване на вписаност' }] }
+    ]
+  },
+  {
+    id: '3.1',
+    tasks: [
+      { label: 'NOM 2011, Иран, Зад 4 (реш. стр.23)', pdf: 'Материали_БГ/NOM_2011', page: 4, difficulty: 4, requires_also: ['3.5'], prerequisite_review: 'Преговори 3.1 и 3.5', required_knowledge: [{ point_id: '3.1', technique: 'НОД и делимост', why_needed: 'Описание на добри множества' }] },
+      { label: 'NOM 2011, Русия, Зад 11.1 (реш. стр.63)', pdf: 'Материали_БГ/NOM_2011', page: 11, difficulty: 3, requires_also: [], prerequisite_review: 'Преговори 3.1', required_knowledge: [{ point_id: '3.1', technique: 'Делители', why_needed: 'Основно неравенство за делители' }] },
+      { label: 'NOM 2011, САЩ, Зад 4 (реш. стр.71)', pdf: 'Материали_БГ/NOM_2011', page: 13, difficulty: 4, requires_also: ['3.2'], prerequisite_review: 'Преговори 3.2', required_knowledge: [{ point_id: '3.1', technique: 'Остатъци', why_needed: 'Степен на 4' }] }
+    ]
+  },
+  {
+    id: '5.1',
+    tasks: [
+      { label: 'NOM 2011, Русия, Зад 9.6 (реш. стр.50)', pdf: 'Материали_БГ/NOM_2011', page: 10, difficulty: 4, requires_also: ['5.2'], prerequisite_review: 'Преговори 5.1', required_knowledge: [{ point_id: '5.1', technique: 'Формули на Виет', why_needed: 'Връзка между корени и коефициенти' }] },
+      { label: 'NOM 2011, Русия, Зад 10.2 (реш. стр.54)', pdf: 'Материали_БГ/NOM_2011', page: 10, difficulty: 4, requires_also: ['5.9'], prerequisite_review: 'Преговори 5.1', required_knowledge: [{ point_id: '5.1', technique: 'Квадратен тричлен', why_needed: 'Брой реални корени' }] }
+    ]
+  },
+  {
+    id: '5.5',
+    tasks: [
+      { label: 'NOM 2011, Иран, Зад 8 (реш. стр.27)', pdf: 'Материали_БГ/NOM_2011', page: 5, difficulty: 5, requires_also: ['5.7'], prerequisite_review: 'Преговори 5.5', required_knowledge: [{ point_id: '5.5', technique: 'Неразложими полиноми', why_needed: 'Делимост на стойности' }] },
+      { label: 'NOM 2011, Русия, Зад 9.1 (реш. стр.47)', pdf: 'Материали_БГ/NOM_2011', page: 9, difficulty: 4, requires_also: ['5.1'], prerequisite_review: 'Преговори 5.1', required_knowledge: [{ point_id: '5.5', technique: 'Композиция на полиноми', why_needed: 'Общ корен' }] },
+      { label: 'NOM 2011, Русия, Зад 11.5 (реш. стр.64)', pdf: 'Материали_БГ/NOM_2011', page: 12, difficulty: 5, requires_also: ['5.1'], prerequisite_review: 'Преговори 5.5', required_knowledge: [{ point_id: '5.5', technique: 'Кубични полиноми', why_needed: 'Разположение на корени' }] }
+    ]
+  },
+  {
+    id: '6.1',
+    tasks: [
+      { label: 'NOM 2011, Китай, Зад 1 (реш. стр.33)', pdf: 'Материали_БГ/NOM_2011', page: 6, difficulty: 4, requires_also: ['6.6'], prerequisite_review: 'Преговори 6.1', required_knowledge: [{ point_id: '6.1', technique: 'AM-GM', why_needed: 'Основно неравенство' }] },
+      { label: 'NOM 2011, САЩ, Зад 1 (реш. стр.67)', pdf: 'Материали_БГ/NOM_2011', page: 12, difficulty: 4, requires_also: ['6.4'], prerequisite_review: 'Преговори 6.1', required_knowledge: [{ point_id: '6.1', technique: 'AM-GM', why_needed: 'Доказателство на неравенство' }] }
+    ]
+  },
+  {
+    id: '7.5',
+    tasks: [
+      { label: 'NOM 2011, Иран, Зад 5 (реш. стр.24)', pdf: 'Материали_БГ/NOM_2011', page: 4, difficulty: 5, requires_also: ['7.1'], prerequisite_review: 'Преговори 7.5', required_knowledge: [{ point_id: '7.5', technique: 'Функционални уравнения', why_needed: 'Намиране на всички функции' }] },
+      { label: 'NOM 2011, Иран, Зад 12 (реш. стр.31)', pdf: 'Материали_БГ/NOM_2011', page: 5, difficulty: 5, requires_also: ['3.4'], prerequisite_review: 'Преговори 7.5', required_knowledge: [{ point_id: '7.5', technique: 'Функционални уравнения', why_needed: 'Точен квадрат' }] }
+    ]
+  },
+  {
+    id: '8.3',
+    tasks: [
+      { label: 'NOM 2011, Иран, Зад 3 (реш. стр.22)', pdf: 'Материали_БГ/NOM_2011', page: 4, difficulty: 4, requires_also: ['8.1'], prerequisite_review: 'Преговори 8.3', required_knowledge: [{ point_id: '8.3', technique: 'Двойно броене', why_needed: 'Оценка на интервали' }] },
+      { label: 'NOM 2011, Китай, Зад 3 (реш. стр.34)', pdf: 'Материали_БГ/NOM_2011', page: 6, difficulty: 5, requires_also: ['8.1'], prerequisite_review: 'Преговори 8.3', required_knowledge: [{ point_id: '8.3', technique: 'Двойно броене', why_needed: 'Сборове на множества' }] },
+      { label: 'NOM 2011, САЩ, Зад 6 (реш. стр.72)', pdf: 'Материали_БГ/NOM_2011', page: 13, difficulty: 5, requires_also: ['8.2'], prerequisite_review: 'Преговори 8.3', required_knowledge: [{ point_id: '8.3', technique: 'Двойно броене', why_needed: 'Обединение на множества' }] }
+    ]
+  },
+  {
+    id: '9.8',
+    tasks: [
+      { label: 'NOM 2011, Русия, Зад 11.4 (реш. стр.64)', pdf: 'Материали_БГ/NOM_2011', page: 11, difficulty: 5, requires_also: ['9.7'], prerequisite_review: 'Преговори 9.8', required_knowledge: [{ point_id: '9.8', technique: 'Инварианти', why_needed: 'Ред на автомобилите' }] }
+    ]
+  },
+  {
+    id: '9.10',
+    tasks: [
+      { label: 'NOM 2011, Русия, Зад 11.6 (реш. стр.64)', pdf: 'Материали_БГ/NOM_2011', page: 12, difficulty: 5, requires_also: ['9.8'], prerequisite_review: 'Преговори 9.10', required_knowledge: [{ point_id: '9.10', technique: 'Игри', why_needed: 'Печеливша стратегия' }] },
+      { label: 'NOM 2011, САЩ, Зад 2 (реш. стр.68)', pdf: 'Материали_БГ/NOM_2011', page: 12, difficulty: 5, requires_also: ['9.8'], prerequisite_review: 'Преговори 9.10', required_knowledge: [{ point_id: '9.10', technique: 'Игри', why_needed: 'Инвариант и печеливш връх' }] }
+    ]
+  }
+];
+
+// ─── RECOMMENDED CHANGES TO index.html ───
+
+**В STEPS:**
+- [ ] Добавяне на нови `tasks` в точки: `1.4`, `1.10`, `3.1`, `5.1`, `5.5`, `6.1`, `7.5`, `8.3`, `9.8`, `9.10` (от NOM_2011_UPDATES).
+- [ ] Няма нови точки — всички задачи се вписват в съществуващите 96 точки.
+- [ ] Тайван, Туймаада, Жаутиков — маркирани като `skip` в `all_analyses.md`.
+
+**В all_analyses.md:**
+- [ ] NOM_2011: статус `⏳ ПРЕДСТОИ` → `✅ ГОТОВО`; решение `add-as-specific-points`; забележка: „Анализирани Иран, Китай, Русия, САЩ; Тайван/Туймаада/Жаутиков skip.“
+- [ ] Общо обработени: 23/40 → 24/40.
+- [ ] BG сборници: 0/11 → 1/11.
+
+**Друго:**
+- [ ] Page numbers от `Индекси_страници.txt` съвпадат с реалните PDF страници — без `// CHECK`.
+- [ ] Няма дубликати за изтриване от този файл.

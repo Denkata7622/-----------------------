@@ -1,0 +1,165 @@
+{
+  "_meta": {
+    "pdf": "C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\Задачи_Минали_Години\\Национален\\OLI-3-Национален кръг-2019-9-12 кл-sol.pdf",
+    "paired_with": null,
+    "level": 2,
+    "type": "sol",
+    "analyzed_at": "2026-10-16T21:00:25.579243",
+    "model": "deepseek/deepseek-v3.2",
+    "text_length": 60542,
+    "paired_text_length": 0
+  },
+  "problems": [
+    {
+      "num": 1,
+      "topic": "algebra",
+      "theorems": [],
+      "techniques": [
+        "case analysis",
+        "factorization",
+        "inequality manipulation"
+      ],
+      "concepts": [
+        "quadratic functions",
+        "discriminant",
+        "integer solutions",
+        "roots of quadratic",
+        "composition of functions"
+      ],
+      "difficulty": "olympic",
+      "notes": "Задачата включва разглеждане на различни случаи според дискриминанта на квадратния тричлен и факторизация на съставната функция f(f(x)+x)."
+    },
+    {
+      "num": 2,
+      "topic": "geometry",
+      "theorems": [
+        "Law of Sines",
+        "triangle similarity"
+      ],
+      "techniques": [
+        "symmetry",
+        "midpoint properties",
+        "parallel lines",
+        "distance to line",
+        "trigonometric calculations"
+      ],
+      "concepts": [
+        "orthocenter",
+        "circumcenter",
+        "midsegment",
+        "isosceles trapezoid",
+        "circumradius",
+        "triangle angles",
+        "reflection"
+      ],
+      "difficulty": "olympic",
+      "notes": "Комбинация от синтетична геометрия (подобия, средни отсечки) и тригонометрични изчисления. Използва се, че отсечките XP и AP са равни."
+    },
+    {
+      "num": 3,
+      "topic": "number_theory",
+      "theorems": [],
+      "techniques": [
+        "pigeonhole principle",
+        "contradiction",
+        "bounding",
+        "digit sum analysis",
+        "construction of auxiliary sequence"
+      ],
+      "concepts": [
+        "digit sum in base b",
+        "divisibility",
+        "residue classes",
+        "infinite sequences",
+        "growth rate comparison"
+      ],
+      "difficulty": "olympic",
+      "notes": "Нестандартна задача, използваща сумата на цифрите в база 4038 и свойството за делимост на 2019. Ключово е построяването на помощната редица {b_n}."
+    },
+    {
+      "num": 4,
+      "topic": "combinatorics",
+      "theorems": [],
+      "techniques": [
+        "parity argument",
+        "modular arithmetic",
+        "reduction to simpler case",
+        "construction of example"
+      ],
+      "concepts": [
+        "permutations",
+        "sum of consecutive terms is a perfect square",
+        "modular constraints",
+        "even/odd analysis"
+      ],
+      "difficulty": "olympic",
+      "notes": "Задача за съществуване на пермутация с дадено свойство. Решението показва, че d трябва да е точен квадрат, и дава конструкция за d=1. За d>2 се достига до противоречие чрез анализ на четност и модули."
+    },
+    {
+      "num": 5,
+      "topic": "combinatorics",
+      "theorems": [],
+      "techniques": [
+        "generalization",
+        "upper bound proof",
+        "graph theory modeling (implicit)"
+      ],
+      "concepts": [
+        "diagonals of a convex polygon",
+        "intersection points",
+        "coloring vertices",
+        "avoiding monochromatic cycles"
+      ],
+      "difficulty": "olympic",
+      "notes": "Задачата е формулирана като проблем за оцветяване на върхове на диагонали на изпъкнал многоъгълник, така че да няма едноцветен цикъл. Отговорът е горна граница за броя на оцветяванията."
+    }
+  ],
+  "unique_concepts": [
+    "quadratic functions",
+    "discriminant",
+    "integer solutions",
+    "roots of quadratic",
+    "composition of functions",
+    "orthocenter",
+    "circumcenter",
+    "midsegment",
+    "isosceles trapezoid",
+    "circumradius",
+    "triangle angles",
+    "reflection",
+    "Law of Sines",
+    "triangle similarity",
+    "digit sum in base b",
+    "divisibility",
+    "residue classes",
+    "infinite sequences",
+    "growth rate comparison",
+    "pigeonhole principle",
+    "permutations",
+    "sum of consecutive terms is a perfect square",
+    "modular constraints",
+    "even/odd analysis",
+    "diagonals of a convex polygon",
+    "intersection points",
+    "coloring vertices",
+    "avoiding monochromatic cycles",
+    "case analysis",
+    "factorization",
+    "inequality manipulation",
+    "symmetry",
+    "midpoint properties",
+    "parallel lines",
+    "distance to line",
+    "trigonometric calculations",
+    "contradiction",
+    "bounding",
+    "construction of auxiliary sequence",
+    "parity argument",
+    "modular arithmetic",
+    "reduction to simpler case",
+    "construction of example",
+    "generalization",
+    "upper bound proof"
+  ],
+  "confidence": 0.95
+}

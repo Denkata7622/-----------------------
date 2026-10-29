@@ -1,0 +1,135 @@
+{
+  "_meta": {
+    "pdf": "C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\Задачи_Минали_Години\\Областен\\OLI-2-Областен кръг-2024-11 кл-sol.pdf",
+    "paired_with": null,
+    "level": 1,
+    "type": "sol",
+    "analyzed_at": "2026-10-16T21:39:55.188883",
+    "model": "deepseek/deepseek-v3.2",
+    "text_length": 10650,
+    "paired_text_length": 0
+  },
+  "problems": [
+    {
+      "num": 1,
+      "topic": "algebra",
+      "theorems": [],
+      "techniques": [
+        "substitution",
+        "analysis_of_quadratic_roots",
+        "discriminant_sign",
+        "symmetry"
+      ],
+      "concepts": [
+        "rational_irrational_equations",
+        "real_roots_conditions",
+        "product_and_sum_of_roots",
+        "parameter_analysis"
+      ],
+      "difficulty": "standard",
+      "notes": "Уравнението се разлага на два множителя, всеки даващ отделно уравнение. Анализ на реалност на корените чрез дискриминанта и условия за броя на реалните корени."
+    },
+    {
+      "num": 2,
+      "topic": "geometry",
+      "theorems": [
+        "Pythagorean_theorem",
+        "sine_law",
+        "similar_triangles"
+      ],
+      "techniques": [
+        "angle_chasing",
+        "trigonometric_identities",
+        "area_formula"
+      ],
+      "concepts": [
+        "cyclic_quadrilateral",
+        "isosceles_trapezoid",
+        "right_triangle",
+        "tangent_function",
+        "double_angle_formula"
+      ],
+      "difficulty": "standard",
+      "notes": "Трапецът е вписан => равнобедрен. Използване на тангенс и двойни ъгли за намиране на остър ъгъл, след това синусова теорема и формула за лице на трапец."
+    },
+    {
+      "num": 3,
+      "topic": "number_theory",
+      "theorems": [],
+      "techniques": [
+        "divisor_pairs",
+        "difference_of_squares",
+        "system_of_equations",
+        "integer_solutions"
+      ],
+      "concepts": [
+        "divisors_ordered",
+        "product_of_divisors",
+        "perfect_square_conditions",
+        "factoring_difference_of_squares"
+      ],
+      "difficulty": "olympic",
+      "notes": "Използва се фактът, че произведението на симетрични делители е n. Получава се система от квадратни уравнения, чиито дискриминанти са точни квадрати. Решава се чрез разлагане на разликата на квадрати."
+    },
+    {
+      "num": 4,
+      "topic": "combinatorics",
+      "theorems": [
+        "AM-GM_inequality"
+      ],
+      "techniques": [
+        "double_counting",
+        "pigeonhole_principle",
+        "inequality_manipulation"
+      ],
+      "concepts": [
+        "counting_occurrences",
+        "sum_of_counts",
+        "average_argument"
+      ],
+      "difficulty": "olympic",
+      "notes": "Дефинират се променливи за броя редове и колони, в които се среща всяко число. Използва се AM-GM и двойно броене, след което принципът на Дирихле (или аргумент за средно) води до заключението."
+    },
+    {
+      "num": 5,
+      "topic": "geometry",
+      "theorems": [],
+      "techniques": [
+        "angle_chasing",
+        "auxiliary_construction",
+        "proof_by_contradiction_or_symmetry"
+      ],
+      "concepts": [
+        "incenter",
+        "angle_bisector",
+        "right_angle",
+        "midpoint",
+        "triangle_equality_conditions"
+      ],
+      "difficulty": "hard",
+      "notes": "Задачата изисква доказателство, че при дадено условие за прав ъгъл между центровете на вписаните окръжности, триъгълникът е равнобедрен. Тя е поставена като задача 12.1 (вероятно за 12 клас) и изисква нетривиална геометрична конструкция и разсъждения."
+    }
+  ],
+  "unique_concepts": [
+    "rational_irrational_equations",
+    "real_roots_conditions",
+    "cyclic_quadrilateral",
+    "isosceles_trapezoid",
+    "divisors_ordered",
+    "perfect_square_conditions",
+    "difference_of_squares",
+    "double_counting",
+    "AM-GM_inequality",
+    "pigeonhole_principle",
+    "incenter",
+    "angle_bisector",
+    "right_angle",
+    "midpoint",
+    "trigonometric_identities",
+    "substitution",
+    "system_of_equations",
+    "angle_chasing",
+    "auxiliary_construction"
+  ],
+  "confidence": 0.95
+}

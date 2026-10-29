@@ -1,0 +1,113 @@
+{
+  "_meta": {
+    "pdf": "C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\Задачи_Минали_Години\\Областен\\OLI-2-Областен кръг-2016-10 кл-probs.pdf",
+    "paired_with": "C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\Задачи_Минали_Години\\Областен\\OLI-2-Областен кръг-2016-10 кл-sol.pdf",
+    "level": 1,
+    "type": "probs",
+    "analyzed_at": "2026-10-16T21:15:10.457437",
+    "model": "deepseek/deepseek-v3.2",
+    "text_length": 946,
+    "paired_text_length": 4017
+  },
+  "problems": [
+    {
+      "num": 1,
+      "topic": "algebra",
+      "theorems": [],
+      "techniques": [
+        "substitution",
+        "quadratic equation analysis",
+        "function monotonicity"
+      ],
+      "concepts": [
+        "exponential equations",
+        "quadratic equations",
+        "parameter analysis",
+        "inequalities"
+      ],
+      "difficulty": "standard",
+      "notes": "Standard exponential equation reduced to quadratic with parameter; analysis of root conditions."
+    },
+    {
+      "num": 2,
+      "topic": "geometry",
+      "theorems": [
+        "Power of a point",
+        "Inscribed angles",
+        "Cyclic quadrilateral properties"
+      ],
+      "techniques": [
+        "similar triangles",
+        "angle chasing",
+        "algebraic manipulation"
+      ],
+      "concepts": [
+        "incircle center",
+        "angle bisector",
+        "circumcircle",
+        "similarity",
+        "AD+BD=2DI implies AD=BD=DI"
+      ],
+      "difficulty": "olympic",
+      "notes": "Non-standard combination of angle bisector condition and sum equality leading to equality of sides."
+    },
+    {
+      "num": 3,
+      "topic": "combinatorics",
+      "theorems": [],
+      "techniques": [
+        "recursion",
+        "Fibonacci sequence",
+        "direct checking"
+      ],
+      "concepts": [
+        "permutations with constraints",
+        "recurrence relations",
+        "Fibonacci numbers",
+        "minimal element analysis"
+      ],
+      "difficulty": "olympic",
+      "notes": "Recurrence g(n)=g(n-1)+g(n-2) derived from analyzing the smallest element; solution is Fibonacci numbers."
+    },
+    {
+      "num": 4,
+      "topic": "number_theory",
+      "theorems": [],
+      "techniques": [
+        "exponent triple representation",
+        "antichain in poset",
+        "Dilworth / Sperner type argument"
+      ],
+      "concepts": [
+        "prime factorization",
+        "divisors as triples",
+        "partial order (coordinate-wise)",
+        "maximal antichain",
+        "construction of extremal set"
+      ],
+      "difficulty": "hard",
+      "notes": "Relates to finding largest antichain in a 3D grid; upper bound via chains, construction via linear combination of exponents."
+    }
+  ],
+  "unique_concepts": [
+    "exponential equations",
+    "parameter analysis",
+    "quadratic equations",
+    "incircle center",
+    "circumcircle",
+    "angle bisector",
+    "similar triangles",
+    "power of a point",
+    "cyclic quadrilateral",
+    "permutations with constraints",
+    "recurrence relations",
+    "Fibonacci numbers",
+    "prime factorization",
+    "divisors as exponent triples",
+    "partial order",
+    "antichain",
+    "chain decomposition",
+    "extremal construction"
+  ],
+  "confidence": 0.95
+}

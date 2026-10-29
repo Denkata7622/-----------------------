@@ -1,0 +1,157 @@
+{
+  "_meta": {
+    "pdf": "C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\Задачи_Минали_Години\\Национален\\OLI-3-Национален кръг-1992-9-12 кл-probs.pdf",
+    "paired_with": "C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\Задачи_Минали_Години\\Национален\\OLI-3-Национален кръг-1992-9-12 кл-sol.pdf",
+    "level": 2,
+    "type": "probs",
+    "analyzed_at": "2026-10-18T11:47:57.857880",
+    "model": "deepseek/deepseek-v3.2",
+    "text_length": 2489,
+    "paired_text_length": 14161
+  },
+  "problems": [
+    {
+      "num": 1,
+      "topic": "geometry",
+      "theorems": [],
+      "techniques": [
+        "vector algebra",
+        "coordinate geometry",
+        "dot product"
+      ],
+      "concepts": [
+        "regular tetrahedron",
+        "parallel planes",
+        "centroid",
+        "midpoint",
+        "orthogonality",
+        "vector representation"
+      ],
+      "difficulty": "olympic",
+      "notes": "Uses vector approach to prove angle is constant; relies on properties of regular tetrahedron (edge lengths, angles)."
+    },
+    {
+      "num": 2,
+      "topic": "combinatorics",
+      "theorems": [],
+      "techniques": [
+        "construction",
+        "case analysis",
+        "modular arithmetic"
+      ],
+      "concepts": [
+        "arithmetic progression",
+        "modular residues",
+        "prime numbers",
+        "set construction",
+        "pigeonhole principle (implicit)"
+      ],
+      "difficulty": "olympic",
+      "notes": "Constructs a subset avoiding 41-term APs by removing multiples of 41 and a specific block; uses properties of primes and modular arithmetic."
+    },
+    {
+      "num": 3,
+      "topic": "combinatorics",
+      "theorems": [],
+      "techniques": [
+        "bijection",
+        "counting",
+        "permutations"
+      ],
+      "concepts": [
+        "lattice paths",
+        "grid points",
+        "permutations with constraints",
+        "bijective proof",
+        "combinatorial interpretation"
+      ],
+      "difficulty": "olympic",
+      "notes": "Bijection between point sequences and permutations of colored balls; uses condition of axis-parallel steps."
+    },
+    {
+      "num": 4,
+      "topic": "number_theory",
+      "theorems": [
+        "Fermat's theorem on sums of two squares (implicit)",
+        "properties of primes 4k+3"
+      ],
+      "techniques": [
+        "modular arithmetic",
+        "proof by contradiction",
+        "factorization",
+        "gcd analysis"
+      ],
+      "concepts": [
+        "primes of form 4k+3",
+        "divisibility",
+        "sums of squares",
+        "canonical decomposition",
+        "coprimality",
+        "modular constraints"
+      ],
+      "difficulty": "olympic",
+      "notes": "Uses known lemmas about sums of squares modulo primes 4k+3; involves careful factorization and parity analysis."
+    },
+    {
+      "num": 5,
+      "topic": "geometry",
+      "theorems": [
+        "Menelaus",
+        "Thales",
+        "properties of midlines"
+      ],
+      "techniques": [
+        "ratio chasing",
+        "parallel lines",
+        "trapezoid properties"
+      ],
+      "concepts": [
+        "angle bisectors",
+        "medians",
+        "midpoints",
+        "parallel lines",
+        "trapezoids",
+        "segment equality"
+      ],
+      "difficulty": "olympic",
+      "notes": "Uses angle bisector theorem, Menelaus, and properties of midlines to derive segment equality."
+    },
+    {
+      "num": 6,
+      "topic": "combinatorics",
+      "theorems": [],
+      "techniques": [
+        "induction",
+        "construction",
+        "uniqueness proof"
+      ],
+      "concepts": [
+        "invariants",
+        "recursive construction",
+        "uniqueness",
+        "operation on distributions"
+      ],
+      "difficulty": "olympic",
+      "notes": "Recursive construction of unique initial distribution; uses induction and careful analysis of moves."
+    }
+  ],
+  "unique_concepts": [
+    "regular tetrahedron",
+    "vector algebra",
+    "parallel planes",
+    "arithmetic progression avoidance",
+    "modular residues",
+    "bijection",
+    "lattice paths",
+    "primes 4k+3",
+    "sums of squares",
+    "angle bisector theorem",
+    "Menelaus theorem",
+    "Thales theorem",
+    "midlines",
+    "inductive construction",
+    "invariants",
+    "uniqueness"
+  ],
+  "confidence": 0.95
+}

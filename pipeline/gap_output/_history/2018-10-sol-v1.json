@@ -1,0 +1,113 @@
+{
+  "_meta": {
+    "pdf": "C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\Задачи_Минали_Години\\Областен\\OLI-2-Областен кръг-2018-10 кл-sol.pdf",
+    "paired_with": null,
+    "level": 1,
+    "type": "sol",
+    "analyzed_at": "2026-10-16T21:20:14.821688",
+    "model": "deepseek/deepseek-v3.2",
+    "text_length": 6424,
+    "paired_text_length": 0
+  },
+  "problems": [
+    {
+      "num": 1,
+      "topic": "algebra",
+      "theorems": [],
+      "techniques": [
+        "substitution",
+        "squaring",
+        "case analysis",
+        "checking solutions"
+      ],
+      "concepts": [
+        "quadratic function",
+        "function symmetry (parabola axis)",
+        "domain of equation (|x| ≤ |a|)",
+        "extraneous roots from squaring"
+      ],
+      "difficulty": "standard",
+      "notes": "Equation involves a quadratic function and a composition with a square root. Key insight is that for a quadratic f, f(u)=f(v) implies u=v or u+v=-a (symmetry about vertex)."
+    },
+    {
+      "num": 2,
+      "topic": "algebra",
+      "theorems": [
+        "Polynomial Remainder Theorem"
+      ],
+      "techniques": [
+        "substitution of polynomial roots",
+        "solving system of equations"
+      ],
+      "concepts": [
+        "polynomial division",
+        "remainder of polynomial",
+        "using roots of divisor to find remainder coefficients"
+      ],
+      "difficulty": "standard",
+      "notes": "Standard application of the Remainder Theorem by plugging in the roots of the divisor polynomial."
+    },
+    {
+      "num": 3,
+      "topic": "number_theory",
+      "theorems": [
+        "Chinese Remainder Theorem"
+      ],
+      "techniques": [
+        "pigeonhole principle",
+        "construction of counterexample",
+        "modular arithmetic analysis"
+      ],
+      "concepts": [
+        "coprime numbers",
+        "prime divisibility",
+        "residue classes modulo primes",
+        "parity",
+        "existence proofs and extremal examples"
+      ],
+      "difficulty": "olympic",
+      "notes": "Combinatorial number theory problem. Requires proving an upper bound (n≤9) by constructing a set of 20 numbers where 10 cannot be chosen, and a lower bound (n≥9) by showing 9 can always be chosen using the Pigeonhole Principle and CRT."
+    },
+    {
+      "num": 4,
+      "topic": "geometry",
+      "theorems": [
+        "Cyclic Quadrilaterals",
+        "Inscribed Angle Theorem",
+        "Exterior Angle Theorem"
+      ],
+      "techniques": [
+        "angle chasing",
+        "introducing auxiliary point (I)",
+        "proving concyclic points"
+      ],
+      "concepts": [
+        "tangent-chord angle",
+        "angle bisector",
+        "inscribed circle center (incenter)",
+        "cyclic quadrilaterals",
+        "arc measures"
+      ],
+      "difficulty": "hard",
+      "notes": "Complex geometry problem requiring multiple steps of angle chasing, proving points are concyclic, and identifying the incenter as the intersection of two circumcircles."
+    }
+  ],
+  "unique_concepts": [
+    "quadratic function symmetry",
+    "domain of equation",
+    "extraneous roots from squaring",
+    "Polynomial Remainder Theorem",
+    "polynomial division",
+    "Chinese Remainder Theorem",
+    "pigeonhole principle",
+    "modular residue analysis",
+    "construction of counterexample",
+    "cyclic quadrilaterals",
+    "tangent-chord angle",
+    "angle bisector",
+    "incenter",
+    "concyclic points",
+    "angle chasing"
+  ],
+  "confidence": 0.95
+}

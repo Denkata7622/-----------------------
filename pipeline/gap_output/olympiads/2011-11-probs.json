@@ -1,0 +1,157 @@
+{
+  "_meta": {
+    "pdf": "C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\Задачи_Минали_Години\\Областен\\OLI-2-Областен кръг-2011-11 кл-probs.pdf",
+    "paired_with": "C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\Задачи_Минали_Години\\Областен\\OLI-2-Областен кръг-2011-11 кл-sol.pdf",
+    "level": 1,
+    "type": "probs",
+    "analyzed_at": "2026-10-18T15:38:46.271720",
+    "model": "deepseek/deepseek-v3.2",
+    "text_length": 1665,
+    "paired_text_length": 7676
+  },
+  "problems": [
+    {
+      "num": 1,
+      "topic": "algebra",
+      "theorems": [],
+      "techniques": [
+        "substitution",
+        "quadratic equation analysis",
+        "interval restriction"
+      ],
+      "concepts": [
+        "exponential equations",
+        "trigonometric substitution",
+        "function monotonicity",
+        "quadratic discriminant",
+        "roots in an interval"
+      ],
+      "difficulty": "standard",
+      "notes": "Уравнението се свежда до квадратно чрез заместване t=3^cosx. Ключово е да се намерят условията за един корен в интервала [1/3, 3]."
+    },
+    {
+      "num": 2,
+      "topic": "geometry",
+      "theorems": [
+        "Euler's formula (OI^2 = R(R-2r))",
+        "Law of Sines"
+      ],
+      "techniques": [
+        "angle chasing",
+        "trigonometric manipulation"
+      ],
+      "concepts": [
+        "circumcircle",
+        "incircle",
+        "angle bisector",
+        "cyclic quadrilateral",
+        "isosceles triangle",
+        "trigonometric identities"
+      ],
+      "difficulty": "hard",
+      "notes": "Използва се фактът, че DI = DA (от равни ъгли). След това се изразява r чрез R и sin(γ/2) и се замества във формулата на Ойлер."
+    },
+    {
+      "num": 3,
+      "topic": "number_theory",
+      "theorems": [],
+      "techniques": [
+        "gcd properties",
+        "prime factorization",
+        "combinatorial number theory",
+        "induction (in the converse direction)"
+      ],
+      "concepts": [
+        "binomial coefficients",
+        "divisibility",
+        "greatest common divisor",
+        "prime divisibility in binomial coefficients",
+        "Legendre's formula (implied)"
+      ],
+      "difficulty": "olympic",
+      "notes": "Едната посока (ако gcd=1, то произведението се дели на n) се доказва, като се разглежда всяка степен на просто p в n. Обратната посока изисква конструкция на контрапример (n = p^k - p), ако има просто p, което дели всички a_i."
+    },
+    {
+      "num": 4,
+      "topic": "combinatorics",
+      "theorems": [],
+      "techniques": [
+        "double counting",
+        "pigeonhole principle",
+        "construction of example"
+      ],
+      "concepts": [
+        "set theory",
+        "covering pairs with triples",
+        "lower bound argument",
+        "combinatorial design"
+      ],
+      "difficulty": "standard",
+      "notes": "Долна граница се получава чрез двойно броене, като се фиксира елемент и се преброят двойките, които го съдържат. Горната граница се дава с явна конструкция на 11 множества."
+    },
+    {
+      "num": 5,
+      "topic": "algebra",
+      "theorems": [],
+      "techniques": [
+        "inequality analysis",
+        "case analysis",
+        "contradiction",
+        "substitution"
+      ],
+      "concepts": [
+        "functional equations/inequalities",
+        "constant functions",
+        "bounded functions"
+      ],
+      "difficulty": "hard",
+      "notes": "Условието е нестандартно неравенство. Ключов момент е да се вземе y=0, z=1, за да се ограничи f(x) между f(0) и f(1). След това, ако функцията не е константа, се достига противоречие чрез заместване с y=1/x."
+    },
+    {
+      "num": 6,
+      "topic": "number_theory",
+      "theorems": [
+        "Fermat's theorem on sums of two squares (implied)"
+      ],
+      "techniques": [
+        "induction",
+        "modular arithmetic",
+        "quadratic residues"
+      ],
+      "concepts": [
+        "primes of the form 4k+3",
+        "infinite set of primes",
+        "sequence divisibility",
+        "quadratic residues modulo p",
+        "properties of powers modulo p"
+      ],
+      "difficulty": "olympic",
+      "notes": "Задачата доказва, че за всяко просто p=4k+3 съществува n, такова че p дели n^(2^2011) - a^2. Доказателството използва индукция върху m, за да покаже, че степените 1^(2^m), 2^(2^m), ..., p^(2^m) са квадратичните остатъци по модул p, всеки по два пъти."
+    }
+  ],
+  "unique_concepts": [
+    "exponential equations",
+    "trigonometric substitution",
+    "quadratic discriminant",
+    "roots in an interval",
+    "Euler's formula (OI^2 = R(R-2r))",
+    "Law of Sines",
+    "angle bisector",
+    "cyclic quadrilateral",
+    "gcd properties",
+    "prime factorization",
+    "divisibility of binomial coefficients",
+    "Legendre's formula",
+    "double counting",
+    "covering pairs with triples",
+    "combinatorial design",
+    "functional inequalities",
+    "constant functions",
+    "primes of the form 4k+3",
+    "quadratic residues",
+    "infinite set of primes",
+    "properties of powers modulo p",
+    "Fermat's theorem on sums of two squares"
+  ],
+  "confidence": 0.95
+}

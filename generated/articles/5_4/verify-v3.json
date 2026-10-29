@@ -1,0 +1,48 @@
+{
+  "verdict": "approve",
+  "score": 10,
+  "issues": [
+    {
+      "severity": "minor",
+      "section": "4.3",
+      "description": "В пример 4.3 (задача с параметър) обяснението е малко претрупано и може да обърка учениците. Препоръчително е да се опрости."
+    },
+    {
+      "severity": "minor",
+      "section": "4.4",
+      "description": "Броят на medium примерите е 2, което е под препоръчаните 3-4. Добавянето на още един средно труден пример би било полезно."
+    }
+  ],
+  "strengths": [
+    "Изключително добра математическа коректност - всички формули и примери са проверени и верни.",
+    "Пълно покритие на структурата с всички необходими секции и CHECK-ове.",
+    "Реални олимпиадни примери с точни източници и подходящо ниво за 11 клас."
+  ],
+  "suggestions": [
+    "Опростете обяснението в пример 4.3 (параметричната задача) за по-лесно разбиране.",
+    "Добавете още един средно труден пример за по-добро покритие на нивото."
+  ],
+  "math_errors": [],
+  "missing_topics": [],
+  "structure_check": {
+    "section_1_why_important": true,
+    "section_2_objectives": true,
+    "section_3_theory": true,
+    "section_4_examples_3_levels": true,
+    "section_5_recognition": true,
+    "section_6_mistakes": true,
+    "section_7_mastery": true,
+    "section_8_quiz": true,
+    "section_9_recall": true,
+    "check_marks_present": true
+  },
+  "examples_check": {
+    "real_olympiad": true,
+    "easy_count": 3,
+    "medium_count": 2,
+    "hard_count": 2
+  },
+  "verdict_reasoning": "Статията е математически безупречна, с пълна структура и реални олимпиадни примери. Няма критични грешки, а малките недостатъци не намалят значително качеството.",
+  "_tokens": 16529,
+  "_model": "deepseek/deepseek-r1-0528"
+}

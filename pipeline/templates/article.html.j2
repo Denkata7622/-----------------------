@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{{ meta.title or point_id }}</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=VT323&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+  --bg:#000;--surface:#061006;--surface-2:#0a1a0a;--surface-3:#0f240f;
+  --border:#143014;--border-2:#1f4a1f;
+  --accent:#00ff44;--accent-2:#00cc36;--accent-dim:#0b4a1a;--accent-glow:rgba(0,255,68,0.35);
+  --text:#b8ffb8;--text-2:#7bea7b;--text-3:#4a8a4a;
+  background:var(--bg);color:var(--text);
+  font-family:'JetBrains Mono',monospace;font-size:14px;letter-spacing:.3px;
+  min-height:100vh;line-height:1.7;
+}
+.header{
+  padding:18px 24px;background:var(--surface);border-bottom:1px solid var(--border);
+  display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;
+  position:sticky;top:0;z-index:100;
+}
+.header h1{
+  font-family:'VT323',monospace;font-size:24px;color:var(--accent);
+  text-shadow:0 0 8px var(--accent-glow);letter-spacing:2px;
+}
+.header .meta{color:var(--text-3);font-size:10px;letter-spacing:1.5px;margin-top:4px}
+.header .right{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+.versions{display:flex;gap:4px;background:var(--surface-2);border:1px solid var(--border-2);padding:4px;border-radius:5px}
+.ver-btn{
+  padding:6px 12px;background:transparent;border:1px solid transparent;
+  color:var(--text-3);cursor:pointer;font-family:inherit;font-size:11px;
+  letter-spacing:1.5px;border-radius:3px;transition:all .15s;
+}
+.ver-btn:hover{color:var(--accent);background:var(--surface-3)}
+.ver-btn.active{background:var(--accent);color:#000;box-shadow:0 0 10px var(--accent-glow)}
+.back{color:var(--text-2);text-decoration:none;padding:8px 14px;border:1px solid var(--border-2);border-radius:4px;font-size:11px;letter-spacing:1.5px;transition:all .15s}
+.back:hover{color:var(--accent);border-color:var(--accent)}
+
+.content{
+  max-width:900px;margin:0 auto;padding:32px 24px 80px;
+  font-size:14px;line-height:1.75;
+}
+.content h1,.content h2,.content h3,.content h4{
+  font-family:'VT323',monospace;color:var(--accent);
+  text-shadow:0 0 6px var(--accent-glow);margin:28px 0 12px;
+  letter-spacing:1px;line-height:1.2;
+}
+.content h1{font-size:32px;border-bottom:2px solid var(--accent-dim);padding-bottom:8px}
+.content h2{font-size:24px;border-bottom:1px solid var(--border-2);padding-bottom:6px}
+.content h3{font-size:19px}
+.content h4{font-size:16px}
+.content p{margin:12px 0;color:var(--text)}
+.content strong{color:var(--accent)}
+.content em{color:var(--text-2)}
+.content ul,.content ol{margin:12px 0 12px 24px}
+.content li{margin:4px 0;color:var(--text)}
+.content ul li::marker{color:var(--accent)}
+.content ol li::marker{color:var(--accent);font-weight:600}
+.content blockquote{
+  border-left:3px solid var(--accent);padding:8px 16px;margin:14px 0;
+  background:var(--surface-2);color:var(--text-2);
+  border-radius:0 4px 4px 0;
+}
+.content code{
+  background:var(--surface-3);border:1px solid var(--border-2);
+  padding:1px 6px;border-radius:3px;font-size:13px;color:#ddff00;
+}
+.content pre{
+  background:var(--surface-2);border-left:3px solid var(--accent-dim);
+  padding:14px 16px;border-radius:4px;overflow-x:auto;
+  font-family:'JetBrains Mono',monospace;font-size:12px;line-height:1.6;
+  margin:14px 0;
+}
+.content hr{border:none;border-top:1px dashed var(--border-2);margin:24px 0}
+.content table{width:100%;border-collapse:collapse;margin:16px 0;font-size:12px}
+.content th,.content td{border:1px solid var(--border-2);padding:8px 12px;text-align:left}
+.content th{background:var(--surface-3);color:var(--accent)}
+
+.loading{text-align:center;padding:60px 20px;color:var(--text-3);letter-spacing:2px}
+.error{text-align:center;padding:60px 20px;color:var(--danger);letter-spacing:1px}
+
+.katex{font-size:1.05em !important;color:inherit}
+.katex-display{overflow-x:auto;overflow-y:hidden;padding:6px 0;margin:4px 0}
+
+@media (max-width:700px){
+  .content{padding:20px 14px 60px;font-size:13px}
+  .header{padding:14px}
+  .header h1{font-size:18px}
+  .ver-btn{font-size:10px;padding:5px 8px}
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div>
+    <h1>{{ meta.title or point_id }}</h1>
+    <div class="meta">
+      ID: {{ point_id }}
+      {% if meta.word_count %} · {{ meta.word_count }} думи{% endif %}
+      {% if meta.generated_at %} · {{ meta.generated_at }}{% endif %}
+      {% if meta.generator_model %} · {{ meta.generator_model }}{% endif %}
+    </div>
+  </div>
+  <div class="right">
+    {% if versions %}
+    <div class="versions">
+      {% for v in versions %}
+      <button class="ver-btn {% if v == latest %}active{% endif %}"
+              data-version="{{ v }}">v{{ v }}</button>
+      {% endfor %}
+    </div>
+    {% endif %}
+    <a href="/dashboard" class="back">← DASHBOARD</a>
+  </div>
+</div>
+
+<div class="content" id="content">
+  <div class="loading">LOADING…</div>
+</div>
+
+<script>
+const VERSIONS = {{ versions | tojson }};
+const LATEST = {{ latest | tojson }};
+const POINT_ID = {{ point_id | tojson }};
+
+function renderMarkdown(md) {
+  let html = md
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;');
+  // Headers
+  html = html.replace(/^###### (.+)$/gm, '<h6>$1</h6>');
+  html = html.replace(/^##### (.+)$/gm, '<h5>$1</h5>');
+  html = html.replace(/^#### (.+)$/gm, '<h4>$1</h4>');
+  html = html.replace(/^### (.+)$/gm, '<h3>$1</h3>');
+  html = html.replace(/^## (.+)$/gm, '<h2>$1</h2>');
+  html = html.replace(/^# (.+)$/gm, '<h1>$1</h1>');
+  // Code blocks (fenced)
+  html = html.replace(/```([\s\S]*?)```/g, (_, c) => `<pre>${c.trim()}</pre>`);
+  // Inline code
+  html = html.replace(/`([^`]+)`/g, '<code>$1</code>');
+  // Bold / italic
+  html = html.replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>');
+  html = html.replace(/\*([^*]+)\*/g, '<em>$1</em>');
+  // Blockquote
+  html = html.replace(/^&gt; (.+)$/gm, '<blockquote>$1</blockquote>');
+  // Horizontal rule
+  html = html.replace(/^---$/gm, '<hr>');
+  // Unordered list
+  html = html.replace(/^[-*] (.+)$/gm, '<li>$1</li>');
+  // Ordered list
+  html = html.replace(/^\d+\. (.+)$/gm, '<li>$1</li>');
+  // Group <li> runs into <ul>
+  html = html.replace(/(?:<li>[\s\S]*?<\/li>\s*)+/g, m => '<ul>' + m + '</ul>');
+  // Paragraphs
+  const blocks = html.split(/\n{2,}/);
+  const out = [];
+  for (const block of blocks) {
+    const trimmed = block.trim();
+    if (!trimmed) continue;
+    if (/^<(h[1-6]|ul|ol|pre|blockquote|hr|table)/.test(trimmed)) {
+      out.push(trimmed);
+    } else {
+      out.push('<p>' + trimmed.replace(/\n/g, ' ') + '</p>');
+    }
+  }
+  return out.join('\n');
+}
+
+function renderMath(root) {
+  if (!window.renderMathInElement) return;
+  try {
+    window.renderMathInElement(root, {
+      delimiters: [
+        { left: '$$', right: '$$', display: true },
+        { left: '$', right: '$', display: false },
+        { left: '\\(', right: '\\)', display: false },
+        { left: '\\[', right: '\\]', display: true },
+      ],
+      throwOnError: false,
+      strict: false,
+    });
+  } catch (e) { console.error('KaTeX:', e); }
+}
+
+async function loadVersion(v) {
+  const content = document.getElementById('content');
+  content.innerHTML = '<div class="loading">LOADING v' + v + '…</div>';
+  try {
+    const res = await fetch(`/api/article/${POINT_ID}/v/${v}`);
+    if (!res.ok) throw new Error('HTTP ' + res.status);
+    const data = await res.json();
+    content.innerHTML = renderMarkdown(data.content);
+    document.querySelectorAll('.ver-btn').forEach(b => {
+      b.classList.toggle('active', parseInt(b.dataset.version) === v);
+    });
+    // Give DOM time to settle then render math
+    setTimeout(() => renderMath(content), 50);
+  } catch (e) {
+    content.innerHTML = '<div class="error">ERROR: ' + e.message + '</div>';
+  }
+}
+
+document.querySelectorAll('.ver-btn').forEach(btn => {
+  btn.addEventListener('click', () => loadVersion(parseInt(btn.dataset.version)));
+});
+
+if (LATEST) {
+  loadVersion(LATEST);
+} else {
+  document.getElementById('content').innerHTML = '<div class="error">NO VERSIONS FOUND</div>';
+}
+</script>
+
+</body>
+</html>

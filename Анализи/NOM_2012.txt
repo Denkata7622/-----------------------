@@ -1,0 +1,195 @@
+## NOM_2012 — АНАЛИЗ
+
+### Пълна таблица (релевантни: Иран, Китай, Русия, САЩ)
+
+| Държава/Задача | Стр. условия | Стр. решения | Plan step | Plan points | Reg. | Nat. | Действие |
+|---|---|---|---|---|---|---|---|
+| Иран 1 | 4 | 18 | 8 | 8.5, 3.2 | low | high | add-to-8.5 |
+| Иран 2 | 4 | 18 | 1 | 1.5, 1.10 | med | high | add-to-1.5 |
+| Иран 3 | 4 | 19 | 8 | 8.3, 5.8 | low | high | add-to-8.3 |
+| Иран 4 | 4 | 20 | 8 | 8.3, 9.7 | med | high | add-to-8.3 |
+| Иран 5 | 5 | 21 | 7 | 7.5, 7.2 | low | high | add-to-7.5 |
+| Иран 6 | 5 | 22 | 1 | 1.7, 1.5 | low | high | add-to-1.7 |
+| Иран 7 | 5 | 23 | 9 | 3.1, 9.1 | low | high | add-to-9.1 |
+| Иран 8 | 5 | 23 | 7 | 7.5, 7.1 | low | high | add-to-7.5 |
+| Иран 9 | 5 | 24 | 1 | 1.4, 1.10 | low | high | add-to-1.4 |
+| Иран 10 | 5 | 25 | 6 | 6.1, 6.4 | med | high | add-to-6.4 |
+| Иран 11 | 5 | 25 | 1 | 1.5, 1.6 | low | high | add-to-1.5 |
+| Иран 12 | 6 | 26 | 8 | 8.3, 8.8 | low | high | add-to-8.3 |
+| Иран 13 | 6 | 27 | 9 | 9.9, 1.7 | med | high | add-to-9.9 |
+| Иран 14 | 6 | 29 | 5 | 5.1, 5.2 | low | high | add-to-5.1 |
+| Иран 15 | 6 | 29 | 4 | 4.3, 4.4 | low | high | add-to-4.3 |
+| Иран 16 | 6 | 30 | 3 | 3.3, 5.7 | low | high | add-to-5.7 |
+| Иран 17 | 7 | 31 | 8 | 8.6, 9.1 | low | high | add-to-8.6 |
+| Иран 18 | 7 | 32 | 1 | 1.4, 1.8 | low | high | add-to-1.4 |
+| Китай 1 | 8 | 35 | 1 | 1.5, 1.6 | med | high | add-to-1.5 |
+| Китай 2 | 8 | 36 | 8 | 3.2, 8.3 | low | high | add-to-8.3 |
+| Китай 3 | 8 | 37 | 7 | 3.1, 8.8 | low | high | add-to-8.8 |
+| Китай 4 | 8 | 38 | 6 | 6.1, 6.4 | med | high | add-to-6.4 |
+| Китай 5 | 8 | 39 | 4 | 4.5, 4.4 | low | high | add-to-4.5 |
+| Китай 6 | 9 | 39 | 8 | 8.1, 8.3 | med | high | add-to-8.3 |
+| Русия 9.1 | 9 | 41 | 3 | 3.2, 3.1 | med | high | add-to-3.2 |
+| Русия 9.2 | 9 | 41 | 9 | 9.7, 1.5 | med | high | add-to-9.7 |
+| Русия 9.3 | 9 | 42 | 1 | 1.5, 1.4 | med | high | add-to-1.5 |
+| Русия 9.4 | 9 | 42 | 6 | 6.1, 6.4 | med | high | add-to-6.4 |
+| Русия 9.5 | 9 | 43 | 9 | 9.8 | med | high | add-to-9.8 |
+| Русия 9.6 | 10 | 44 | 1 | 1.10, 1.5 | low | high | add-to-1.10 |
+| Русия 9.7 | 10 | 45 | 9 | 9.8, 3.1 | low | high | add-to-9.8 |
+| Русия 9.8 | 10 | 46 | 9 | 9.1, 8.3 | med | high | add-to-9.1 |
+| Русия 10.1 | 10 | 47 | 3 | 3.2, 3.1 | med | high | add-to-3.2 |
+| Русия 10.2 | 10 | 47 | 1 | 1.10, 1.8 | low | high | add-to-1.10 |
+| Русия 10.3 | 10 | 48 | 6 | 6.1, 6.4 | med | high | add-to-6.4 |
+| Русия 10.4 | 10 | 49 | 5 | 5.7, 8.3 | low | high | add-to-5.7 |
+| Русия 10.6 | 11 | 50 | 3 | 3.1, 4.5 | med | high | add-to-3.1 |
+| Русия 10.7 | 11 | 50 | 5 | 5.1, 8.3 | low | high | add-to-5.1 |
+| Русия 10.8 | 11 | 51 | 1 | 1.10, 1.8 | low | high | add-to-1.10 |
+| Русия 11.1 | 11 | 52 | 8 | 8.3, 9.8 | med | high | add-to-8.3 |
+| Русия 11.3 | 11 | 53 | 9 | 9.7 | low | high | add-to-9.7 |
+| Русия 11.4 | 12 | 54 | 1 | 1.7, 1.10 | low | high | add-to-1.7 |
+| Русия 11.5 | 12 | 54 | 5 | 5.1, 5.2 | low | high | add-to-5.1 |
+| Русия 11.6 | 12 | 55 | 1 | 1.10 | low | high | add-to-1.10 |
+| Русия 11.7 | 12 | 55 | 9 | 9.10 | low | high | add-to-9.10 |
+| Русия 11.8 | 12 | 56 | 4 | 4.8, 3.3 | low | high | add-to-4.8 |
+| САЩ 1 | 13 | 58 | 6 | 6.1, 5.1 | low | high | add-to-6.1 |
+| САЩ 2 | 13 | 58 | 8 | 8.1, 9.7 | med | high | add-to-8.1 |
+| САЩ 3 | 13 | 60 | 7 | 7.6, 3.1 | low | high | add-to-7.6 |
+| САЩ 4 | 13 | 62 | 7 | 7.5, 4.8 | low | high | add-to-7.5 |
+| САЩ 5 | 13 | 63 | 1 | 1.5, 2.3 | low | high | add-to-1.5 |
+| САЩ 6 | 13 | 65 | 6 | 6.4, 8.3 | low | high | add-to-6.4 |
+
+---
+
+```js
+// ─── АКТУАЛИЗАЦИЯ ───
+
+// Точка 1.5 в STEPS[0].points:
+{ id: "1.5",
+  tasks: [
+    { label: "NOM 2012, Иран, Зад 2", pdf: "Материали_БГ/NOM_2012", page: 4, difficulty: 5, requires_also: ["1.10"], prerequisite_review: "Преговори 1.5 и 1.10" },
+    { label: "NOM 2012, Китай, Зад 1", pdf: "Материали_БГ/NOM_2012", page: 8, difficulty: 5, requires_also: ["1.6"], prerequisite_review: "Преговори 1.5 и 1.6" },
+    { label: "NOM 2012, Русия, Зад 9.3", pdf: "Материали_БГ/NOM_2012", page: 9, difficulty: 4, requires_also: ["1.4"], prerequisite_review: "Преговори 1.5 и 1.4" },
+    { label: "NOM 2012, САЩ, Зад 5", pdf: "Материали_БГ/NOM_2012", page: 13, difficulty: 5, requires_also: ["2.3"], prerequisite_review: "Преговори 1.5 и 2.3" }
+  ]
+}
+
+// Точка 1.10 в STEPS[0].points:
+{ id: "1.10",
+  tasks: [
+    { label: "NOM 2012, Русия, Зад 9.6", pdf: "Материали_БГ/NOM_2012", page: 10, difficulty: 5, requires_also: ["1.5"], prerequisite_review: "Преговори 1.10 и 1.5" },
+    { label: "NOM 2012, Русия, Зад 10.2", pdf: "Материали_БГ/NOM_2012", page: 10, difficulty: 5, requires_also: ["1.8"], prerequisite_review: "Преговори 1.10 и 1.8" },
+    { label: "NOM 2012, Русия, Зад 11.6", pdf: "Материали_БГ/NOM_2012", page: 12, difficulty: 5, requires_also: [], prerequisite_review: "Преговори 1.10" }
+  ]
+}
+
+// Точка 3.2 в STEPS[2].points:
+{ id: "3.2",
+  tasks: [
+    { label: "NOM 2012, Русия, Зад 9.1", pdf: "Материали_БГ/NOM_2012", page: 9, difficulty: 4, requires_also: ["3.1"], prerequisite_review: "Преговори 3.2 и 3.1" },
+    { label: "NOM 2012, Русия, Зад 10.1", pdf: "Материали_БГ/NOM_2012", page: 10, difficulty: 4, requires_also: ["3.1"], prerequisite_review: "Преговори 3.2 и 3.1" }
+  ]
+}
+
+// Точка 4.3 в STEPS[3].points:
+{ id: "4.3",
+  tasks: [
+    { label: "NOM 2012, Иран, Зад 15", pdf: "Материали_БГ/NOM_2012", page: 6, difficulty: 5, requires_also: ["4.4"], prerequisite_review: "Преговори 4.3 и 4.4" }
+  ]
+}
+
+// Точка 4.8 в STEPS[3].points:
+{ id: "4.8",
+  tasks: [
+    { label: "NOM 2012, Русия, Зад 11.8", pdf: "Материали_БГ/NOM_2012", page: 12, difficulty: 5, requires_also: ["3.3"], prerequisite_review: "Преговори 4.8 и 3.3" },
+    { label: "NOM 2012, САЩ, Зад 4", pdf: "Материали_БГ/NOM_2012", page: 13, difficulty: 5, requires_also: ["7.5"], prerequisite_review: "Преговори 4.8 и 7.5" }
+  ]
+}
+
+// Точка 5.1 в STEPS[4].points:
+{ id: "5.1",
+  tasks: [
+    { label: "NOM 2012, Иран, Зад 14", pdf: "Материали_БГ/NOM_2012", page: 6, difficulty: 5, requires_also: ["5.2"], prerequisite_review: "Преговори 5.1 и 5.2" },
+    { label: "NOM 2012, Русия, Зад 11.5", pdf: "Материали_БГ/NOM_2012", page: 12, difficulty: 5, requires_also: ["5.2"], prerequisite_review: "Преговори 5.1 и 5.2" }
+  ]
+}
+
+// Точка 6.4 в STEPS[5].points:
+{ id: "6.4",
+  tasks: [
+    { label: "NOM 2012, Иран, Зад 10", pdf: "Материали_БГ/NOM_2012", page: 5, difficulty: 4, requires_also: ["6.1"], prerequisite_review: "Преговори 6.4 и 6.1" },
+    { label: "NOM 2012, Китай, Зад 4", pdf: "Материали_БГ/NOM_2012", page: 8, difficulty: 4, requires_also: ["6.1"], prerequisite_review: "Преговори 6.4 и 6.1" },
+    { label: "NOM 2012, САЩ, Зад 6", pdf: "Материали_БГ/NOM_2012", page: 13, difficulty: 5, requires_also: ["8.3"], prerequisite_review: "Преговори 6.4 и 8.3" }
+  ]
+}
+
+// Точка 7.5 в STEPS[6].points:
+{ id: "7.5",
+  tasks: [
+    { label: "NOM 2012, Иран, Зад 5", pdf: "Материали_БГ/NOM_2012", page: 5, difficulty: 5, requires_also: ["7.2"], prerequisite_review: "Преговори 7.5 и 7.2" },
+    { label: "NOM 2012, Иран, Зад 8", pdf: "Материали_БГ/NOM_2012", page: 5, difficulty: 5, requires_also: ["7.1"], prerequisite_review: "Преговори 7.5 и 7.1" },
+    { label: "NOM 2012, САЩ, Зад 4", pdf: "Материали_БГ/NOM_2012", page: 13, difficulty: 5, requires_also: ["4.8"], prerequisite_review: "Преговори 7.5 и 4.8" }
+  ]
+}
+
+// Точка 8.3 в STEPS[7].points:
+{ id: "8.3",
+  tasks: [
+    { label: "NOM 2012, Иран, Зад 3", pdf: "Материали_БГ/NOM_2012", page: 4, difficulty: 5, requires_also: ["5.8"], prerequisite_review: "Преговори 8.3 и 5.8" },
+    { label: "NOM 2012, Иран, Зад 4", pdf: "Материали_БГ/NOM_2012", page: 4, difficulty: 4, requires_also: ["9.7"], prerequisite_review: "Преговори 8.3 и 9.7" },
+    { label: "NOM 2012, Иран, Зад 12", pdf: "Материали_БГ/NOM_2012", page: 6, difficulty: 5, requires_also: ["8.8"], prerequisite_review: "Преговори 8.3 и 8.8" },
+    { label: "NOM 2012, Китай, Зад 2", pdf: "Материали_БГ/NOM_2012", page: 8, difficulty: 5, requires_also: ["3.2"], prerequisite_review: "Преговори 8.3 и 3.2" },
+    { label: "NOM 2012, Китай, Зад 6", pdf: "Материали_БГ/NOM_2012", page: 9, difficulty: 5, requires_also: ["8.1"], prerequisite_review: "Преговори 8.3 и 8.1" },
+    { label: "NOM 2012, Русия, Зад 11.1", pdf: "Материали_БГ/NOM_2012", page: 11, difficulty: 5, requires_also: ["9.8"], prerequisite_review: "Преговори 8.3 и 9.8" }
+  ]
+}
+
+// Точка 8.5 в STEPS[7].points:
+{ id: "8.5",
+  tasks: [
+    { label: "NOM 2012, Иран, Зад 1", pdf: "Материали_БГ/NOM_2012", page: 4, difficulty: 4, requires_also: ["3.2"], prerequisite_review: "Преговори 8.5 и 3.2" }
+  ],
+  bonus: [
+    { label: "Лукас теорема mod 2 (NOM 2012, Иран, Зад 1)", pdf: "Материали_БГ/NOM_2012", page: 18 }
+  ]
+}
+
+// Точка 9.7 в STEPS[8].points:
+{ id: "9.7",
+  tasks: [
+    { label: "NOM 2012, Русия, Зад 9.2", pdf: "Материали_БГ/NOM_2012", page: 9, difficulty: 4, requires_also: ["1.5"], prerequisite_review: "Преговори 9.7 и 1.5" },
+    { label: "NOM 2012, Русия, Зад 11.3", pdf: "Материали_БГ/NOM_2012", page: 11, difficulty: 5, requires_also: [], prerequisite_review: "Преговори 9.7" }
+  ]
+}
+
+// Точка 9.8 в STEPS[8].points:
+{ id: "9.8",
+  tasks: [
+    { label: "NOM 2012, Русия, Зад 9.5", pdf: "Материали_БГ/NOM_2012", page: 9, difficulty: 4, requires_also: [], prerequisite_review: "Преговори 9.8" },
+    { label: "NOM 2012, Русия, Зад 9.7", pdf: "Материали_БГ/NOM_2012", page: 10, difficulty: 5, requires_also: ["3.1"], prerequisite_review: "Преговори 9.8 и 3.1" }
+  ]
+}
+
+// Точка 9.10 в STEPS[8].points:
+{ id: "9.10",
+  tasks: [
+    { label: "NOM 2012, Русия, Зад 11.7", pdf: "Материали_БГ/NOM_2012", page: 12, difficulty: 5, requires_also: [], prerequisite_review: "Преговори 9.10" }
+  ]
+}
+```
+
+---
+
+### RECOMMENDED CHANGES TO index.html
+
+**В STEPS:**
+- [ ] Добавяне на нови `tasks` в точки: 1.5, 1.10, 3.2, 4.3, 4.8, 5.1, 6.4, 7.5, 8.3, 8.5, 9.7, 9.8, 9.10
+- [ ] Добавяне на `bonus` в точка 8.5 (Лукас теорема mod 2)
+- [ ] Нови техники, които да се маркират като gaps:
+  - Полиномиален метод (Иран 3) → разшири `8.3` или нова точка `8.13`
+  - Функционални неравенства с итерации (Иран 5) → разшири `7.5` (вече в MAJOR gaps)
+  - F2 векторни пространства (не се появява в NOM_2012, но е в MAJOR gaps)
+- [ ] Обновяване на `PLAN_PHASES`: Week 18–25 да включва симулации с NOM_2012 задачи
+
+**Друго:**
+- [ ] NOM_2012 е с висока трудност — подходящ за национален кръг, не за областен.
+- [ ] Всички страници са PDF номера от маркерите `===== Page X =====`.
+- [ ] Игнорирани са Сингапур, Южна Корея, Казахстан (нерелевантни по правилото за NOM).

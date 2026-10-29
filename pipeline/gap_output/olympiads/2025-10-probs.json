@@ -1,0 +1,131 @@
+{
+  "_meta": {
+    "pdf": "C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\Задачи_Минали_Години\\Областен\\OLI-2-Областен кръг-2025-10 кл-probs (1).pdf",
+    "paired_with": "C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\Задачи_Минали_Години\\Областен\\OLI-2-Областен кръг-2025-10 кл-sol (1).pdf",
+    "level": 1,
+    "type": "probs",
+    "analyzed_at": "2026-10-16T21:41:27.678822",
+    "model": "deepseek/deepseek-v3.2",
+    "text_length": 6746,
+    "paired_text_length": 0
+  },
+  "problems": [
+    {
+      "num": 1,
+      "topic": "algebra",
+      "theorems": [],
+      "techniques": [
+        "substitution",
+        "squaring",
+        "polynomial manipulation",
+        "checking extraneous roots"
+      ],
+      "concepts": [
+        "irrational equations",
+        "domain of square root",
+        "polynomial equations",
+        "quadratic equations"
+      ],
+      "difficulty": "standard",
+      "notes": "Standard irrational equation. Requires squaring and solving polynomial equations, then checking for extraneous roots due to the square root."
+    },
+    {
+      "num": 2,
+      "topic": "geometry",
+      "theorems": [
+        "Menelaus",
+        "Ceva",
+        "Radical axis",
+        "Power of a point"
+      ],
+      "techniques": [
+        "cyclic quadrilateral properties",
+        "midpoint theorem",
+        "perpendicular lines",
+        "circle inversion (conceptually)",
+        "angle chasing"
+      ],
+      "concepts": [
+        "cyclic quadrilateral",
+        "midpoints",
+        "perpendicular lines",
+        "circumcircle",
+        "radical axis",
+        "concyclic points",
+        "intersecting chords",
+        "quadrilateral with non-parallel sides"
+      ],
+      "difficulty": "hard",
+      "notes": "Complex geometry problem involving multiple circles, midpoints, and perpendicularity. Likely uses radical axis properties and power of a point to show concyclicity. The condition AD ≠ BC ensures non-degeneracy."
+    },
+    {
+      "num": 3,
+      "topic": "combinatorics",
+      "theorems": [],
+      "techniques": [
+        "pigeonhole principle",
+        "extremal principle",
+        "pairing strategy"
+      ],
+      "concepts": [
+        "tournament scheduling",
+        "pairwise matches",
+        "guaranteeing a condition",
+        "minimum number to force property"
+      ],
+      "difficulty": "olympic",
+      "notes": "Combinatorial problem about arranging match cards. Requires finding the minimal k such that any placement of k cards guarantees every number appears on the front of some card. Classic extremal/pigeonhole reasoning."
+    },
+    {
+      "num": 4,
+      "topic": "number_theory",
+      "theorems": [
+        "Chinese Remainder Theorem",
+        "Fermat's Little Theorem",
+        "Euler's theorem"
+      ],
+      "techniques": [
+        "modular arithmetic",
+        "infinite descent",
+        "contradiction",
+        "prime divisibility"
+      ],
+      "concepts": [
+        "prime numbers",
+        "divisibility",
+        "modular exponentiation",
+        "orders modulo prime",
+        "infinite set of primes"
+      ],
+      "difficulty": "olympic",
+      "notes": "Number theory problem about an infinite set T of primes with a specific divisibility condition. Likely uses properties of orders modulo primes and contradiction to show T must be infinite."
+    }
+  ],
+  "unique_concepts": [
+    "irrational equations",
+    "domain of square root",
+    "polynomial equations",
+    "quadratic equations",
+    "cyclic quadrilateral",
+    "midpoints",
+    "perpendicular lines",
+    "circumcircle",
+    "radical axis",
+    "concyclic points",
+    "intersecting chords",
+    "Menelaus theorem",
+    "Ceva theorem",
+    "power of a point",
+    "tournament scheduling",
+    "pigeonhole principle",
+    "extremal principle",
+    "prime numbers",
+    "divisibility",
+    "modular exponentiation",
+    "orders modulo prime",
+    "infinite set of primes",
+    "Chinese Remainder Theorem",
+    "Fermat's Little Theorem"
+  ],
+  "confidence": 0.95
+}

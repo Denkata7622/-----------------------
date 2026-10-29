@@ -1,0 +1,24 @@
+{
+  "point_id": "2.1",
+  "total": 1,
+  "by_difficulty": {
+    "easy": 0,
+    "medium": 0,
+    "hard": 1
+  },
+  "problems": [
+    {
+      "source": "OLI-3-Национален кръг-1998-9-12 кл · 1998-None · Зад. 3",
+      "statement": "On the sides of a non-obtuse triangle $ABC$ a square, a regular $n$-gon and a regular $m$-gon ($n, m > 5$) are constructed externally, so that their centres are vertices of a regular triangle. Prove that $m = n = 6$ and find the angles of $ABC$.",
+      "solution": "Solution: Let the square, the n-gon and the m-gon be constructed on the sides AB, BC and CA, respectively. Denote their centres by O₁, O₂ and O₃; denote by A₁, B₁ and C₁ the centres of the equilateral triangles constructed externally on BC, CA and AB.\n\nThe lines $O_1C_1, O_2A_1$ and $O_3B_1$ intersect at the circumcentre $O$ of $\\triangle ABC$. Since $\\triangle A_1A_2A_3$ is equilateral, it follows straightforwardly that $\\triangle O_1O_2O_3$ is equilateral if and only if $C_1A_1||O_1O_2, A_1B_1||O_2O_3$ and $B_1C_1||O_1O_3$. This is equivalent to\n\n$$\\frac{OC_1}{C_1O_1} = \\frac{OA_1}{A_1O_2} = \\frac{OB_1}{B_1O_3} = k.$$\n\nOn the other hand,\n\n$$\\begin{array}{l} \\frac{OC_1}{C_1O_1} = \\frac{\\cot C + \\tan 30^\\circ}{\\cot 45^\\circ - \\tan 30^\\circ}, \\\\ \\frac{OA_1}{A_1O_2} = \\frac{\\cot A + \\tan 30^\\circ}{\\cot \\frac{180^\\circ}{n} - \\tan 30^\\circ}, \\\\ \\frac{OB_1}{B_1O_3} = \\frac{\\cot B + \\tan 30^\\circ}{\\cot \\frac{180^\\circ}{m} - \\tan 30^\\circ}. \\end{array}$$\n\nSet $\\cot \\frac{180^\\circ}{n} = x$ and $\\cot \\frac{180^\\circ}{m} = y$. The above identities imply that\n\n$$\\cot A = kx - \\frac{k+1}{\\sqrt{3}}, \\cot B = ky - \\frac{k+1}{\\sqrt{3}}, \\cot C = k - \\frac{k+1}{\\sqrt{3}}.$$\n\nFrom the identity $\\cot A \\cot B + \\cot B \\cot C + \\cot C \\cot A = 1$ we get\n\n$$k = \\frac{2(x+y+1-\\sqrt{3})}{\\sqrt{3}xy + (\\sqrt{3}-2)(x+y) + \\sqrt{3}-2},$$\n\n$$\\cot C = \\frac{x+y-xy+3-2\\sqrt{3}}{\\sqrt{3}xy + (\\sqrt{3}-2)(x+y) + \\sqrt{3}-2}.$$\n\nSince $m, n \\ge 6$ it follows that $x, y \\ge \\sqrt{3}$, i. e. $xy \\ge \\sqrt{3}(x+y)-3$. The inequality $\\cot C \\ge 0$ implies $x+y-xy+3-2\\sqrt{3} \\ge 0$. and therefore $x+y+3-2\\sqrt{3} \\ge xy \\ge \\sqrt{3}(x+y)-3$, i. e. $x+y \\le 2\\sqrt{3}$. This shows that $x=y=\\sqrt{3}$, i. e., $m=n=6$. Hence $\\cot C = 0$, $\\cot A = \\cot B = 1$, so $\\angle C = 90^\\circ, \\angle A = \\angle B = 45^\\circ$.",
+      "answer": "m = n = 6; ∠C = 90°, ∠A = ∠B = 45° (with the square on AB).",
+      "difficulty": "hard",
+      "techniques": [
+        "harmonic_ratio",
+        "trigonometric"
+      ],
+      "confidence": "exact",
+      "reasoning": "Transforms geometric condition into ratios of distances (harmonic division) and solves via cotangent identities, leading to n=m=6."
+    }
+  ]
+}

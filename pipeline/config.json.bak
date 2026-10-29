@@ -1,0 +1,134 @@
+{
+  "generator": {
+    "provider": "openai-compatible",
+    "api_url": "https://ai.hackclub.com/proxy/v1/chat/completions",
+    "api_key": "sk-hc-v1-34cc3c13c2629d51060697b428993eb61bee4ba1e8ae412a7f50639014974ef7",
+    "model": "openai/gpt-oss-120b",
+    "max_tokens": 24000,
+    "temperature": 0.3,
+    "cost_per_call_usd": 0.015
+  },
+  "verifier": {
+    "provider": "openai-compatible",
+    "api_url": "https://ai.hackclub.com/proxy/v1/chat/completions",
+    "api_key": "sk-hc-v1-34cc3c13c2629d51060697b428993eb61bee4ba1e8ae412a7f50639014974ef7",
+    "model": "anthropic/claude-opus-5.5",
+    "max_tokens": 12000,
+    "temperature": 0.05,
+    "cost_per_call_usd": 0.008
+  },
+  "verifier_2": {
+    "provider": "openai-compatible",
+    "api_url": "https://ai.hackclub.com/proxy/v1/chat/completions",
+    "api_key": "sk-hc-v1-34cc3c13c2629d51060697b428993eb61bee4ba1e8ae412a7f50639014974ef7",
+    "model": "deepseek/deepseek-r1-0528",
+    "max_tokens": 12000,
+    "temperature": 0.05,
+    "cost_per_call_usd": 0.008
+  },
+  "verifier_3": {
+    "provider": "openai-compatible",
+    "api_url": "https://ai.hackclub.com/proxy/v1/chat/completions",
+    "api_key": "sk-hc-v1-34cc3c13c2629d51060697b428993eb61bee4ba1e8ae412a7f50639014974ef7",
+    "model": "openai/gpt-oss-120b",
+    "max_tokens": 12000,
+    "temperature": 0.05,
+    "cost_per_call_usd": 0.008
+  },
+  "verifier_backup": {
+    "provider": "openai-compatible",
+    "api_url": "https://ai.hackclub.com/proxy/v1/chat/completions",
+    "api_key": "sk-hc-v1-34cc3c13c2629d51060697b428993eb61bee4ba1e8ae412a7f50639014974ef7",
+    "model": "deepseek/deepseek-v3.2",
+    "max_tokens": 12000,
+    "temperature": 0.05,
+    "cost_per_call_usd": 0.008
+  },
+  "arbiter": {
+    "provider": "openai-compatible",
+    "api_url": "https://ai.hackclub.com/proxy/v1/chat/completions",
+    "api_key": "sk-hc-v1-34cc3c13c2629d51060697b428993eb61bee4ba1e8ae412a7f50639014974ef7",
+    "model": "openai/gpt-6.1-sol-pro",
+    "max_tokens": 8000,
+    "temperature": 0.0,
+    "cost_per_call_usd": 0.015
+  },
+  "escalation": {
+    "provider": "openai-compatible",
+    "api_url": "https://ai.hackclub.com/proxy/v1/chat/completions",
+    "api_key": "sk-hc-v1-34cc3c13c2629d51060697b428993eb61bee4ba1e8ae412a7f50639014974ef7",
+    "model": "openai/gpt-6.1-sol-pro",
+    "max_tokens": 32000,
+    "temperature": 0.2,
+    "cost_per_call_usd": 0.05
+  },
+  "chunker": {
+    "chunk_size_pages": 8,
+    "chunk_overlap_pages": 1,
+    "daily_budget_usd": 3.00,
+    "budget_stop_pct": 0.90,
+    "classify_model": "openai/gpt-oss-120b",
+    "classify_cost_per_call_usd": 0.0005
+  },
+  "ocr": {
+    "enabled": true,
+    "provider": "mistral-ocr",
+    "api_url": "https://ai.hackclub.com/proxy/v1/ocr",
+    "api_key": "sk-hc-v1-34cc3c13c2629d51060697b428993eb61bee4ba1e8ae412a7f50639014974ef7",
+    "model": "mistral-ocr-latest",
+    "cost_per_page_usd": 0.001,
+    "min_text_chars_for_skip": 50
+  },
+  "auditor": {
+    "provider": "openai-compatible",
+    "api_url": "https://ai.hackclub.com/proxy/v1/chat/completions",
+    "api_key": "sk-hc-v1-34cc3c13c2629d51060697b428993eb61bee4ba1e8ae412a7f50639014974ef7",
+    "model": "openai/gpt-6.1-sol",
+    "max_tokens": 800,
+    "temperature": 0.05,
+    "cost_per_call_usd": 0.02
+  },
+  "watch_folders": [
+    "../Задачи_Минали_Години/Областен",
+    "../Задачи_Минали_Години/Национален",
+    "../Материали_БГ",
+    "../Материали_EN"
+  ],
+  "daily_budget_usd": 3.00,
+  "max_verification_retries": 2,
+  "min_verification_score": 7,
+  "enable_verification": true,
+  "max_retries": 3,
+  "retry_delay_sec": 8,
+  "max_concurrent": 4,
+  "tick_interval_sec": 6,
+  "batch_size": 4,
+  "budget_stop_pct": 0.80,
+  "log_level": "INFO",
+  "auto_scan": true,
+  "scan_every_ticks": 10,
+  "html_path": "",
+  "pdf_root": "",
+  "scan_only_with_pdf": false,
+  "scan_skip_with_explanation": false,
+  "gap_analysis": {
+    "enabled": true,
+    "daily_budget_usd": 0.50,
+    "max_concurrent": 2,
+    "poll_interval_sec": 60,
+    "max_retries": 3,
+    "retry_delay_sec": 8,
+    "reanalyze_interval_days": 3,
+    "reanalyze_batch_per_hour": 5,
+    "verify_threshold": 10,
+    "verify_interval_hours": 24,
+    "aggregate_threshold": 5,
+    "min_frequency_for_candidate": 2,
+    "watch_folders": [
+      "../Задачи_Минали_Години/",
+      "../Материали_БГ/"
+    ],
+    "ignore_patterns": ["*_old*", "*_backup*", "*.tmp", "*.bak", "*~*"],
+    "log_level": "INFO"
+  }
+}

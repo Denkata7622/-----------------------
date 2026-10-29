@@ -1,0 +1,194 @@
+{
+  "_meta": {
+    "pdf": "C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\Задачи_Минали_Години\\Национален\\OLI-3-Национален кръг-2021-9-12 кл-sol.pdf",
+    "paired_with": null,
+    "level": 2,
+    "type": "sol",
+    "analyzed_at": "2026-10-16T21:04:15.961608",
+    "model": "deepseek/deepseek-v3.2",
+    "text_length": 13620,
+    "paired_text_length": 0
+  },
+  "problems": [
+    {
+      "num": 1,
+      "topic": "combinatorics",
+      "theorems": [],
+      "techniques": [
+        "counting",
+        "double_counting",
+        "induction"
+      ],
+      "concepts": [
+        "graph theory",
+        "grid graph",
+        "vertices",
+        "edges",
+        "faces",
+        "planar graph",
+        "Euler's formula",
+        "handshaking lemma",
+        "degree of vertices",
+        "bipartite graph"
+      ],
+      "difficulty": "olympic",
+      "notes": "Combinatorial geometry problem on a grid of 4n crosses. Uses graph representation (vertices = crosses, edges = connections). Solution involves counting edges in two ways and induction on n."
+    },
+    {
+      "num": 2,
+      "topic": "geometry",
+      "theorems": [
+        "Menelaus",
+        "Ceva",
+        "Thales",
+        "similar triangles"
+      ],
+      "techniques": [
+        "angle chasing",
+        "trigonometry",
+        "similarity",
+        "cyclic quadrilaterals"
+      ],
+      "concepts": [
+        "circumcircle",
+        "incircle",
+        "incenter",
+        "centroid",
+        "symmedian",
+        "harmonic division",
+        "power of a point",
+        "tangent",
+        "angle bisector",
+        "right triangle",
+        "trigonometric ratios"
+      ],
+      "difficulty": "olympic",
+      "notes": "Complex geometry problem involving circumcircle, incenter, symmedian, and harmonic points. Uses multiple similarity arguments and angle chasing."
+    },
+    {
+      "num": 3,
+      "topic": "algebra",
+      "theorems": [],
+      "techniques": [
+        "substitution",
+        "case analysis",
+        "contradiction",
+        "induction",
+        "functional equation"
+      ],
+      "concepts": [
+        "functional equations",
+        "injective function",
+        "constant function",
+        "multiplicative structure",
+        "real positive functions",
+        "fixed points"
+      ],
+      "difficulty": "olympic",
+      "notes": "Functional equation f(x)f(y+f(x)) = f(xy+1). Solutions are f(x)=1 and f(x)=1/x. Proof involves clever substitutions and case analysis to show constancy for x>1."
+    },
+    {
+      "num": 4,
+      "topic": "number_theory",
+      "theorems": [
+        "infinite pigeonhole principle"
+      ],
+      "techniques": [
+        "pigeonhole principle",
+        "arithmetic progressions",
+        "linear combinations",
+        "diophantine equations"
+      ],
+      "concepts": [
+        "infinite sequences",
+        "divisibility",
+        "arithmetic progressions",
+        "common difference",
+        "gcd",
+        "linear relations",
+        "unbounded sequences"
+      ],
+      "difficulty": "olympic",
+      "notes": "Problem on two increasing sequences of natural numbers with a divisibility condition. Uses the infinite pigeonhole principle to find a constant offset k such that a_i divides b_{i+k} for all i, then analyzes arithmetic progressions."
+    },
+    {
+      "num": 5,
+      "topic": "combinatorics",
+      "theorems": [],
+      "techniques": [
+        "pigeonhole principle",
+        "averaging",
+        "coordinate method",
+        "contradiction"
+      ],
+      "concepts": [
+        "centroid",
+        "vector sum",
+        "finite sets",
+        "coordinate selection",
+        "ordering",
+        "existence proof"
+      ],
+      "difficulty": "olympic",
+      "notes": "Existence problem for a set S of 100 points with a special centroid property. Uses coordinate method and pigeonhole principle on the x-coordinates of subsets of size 10 to derive a contradiction."
+    },
+    {
+      "num": 6,
+      "topic": "geometry",
+      "theorems": [
+        "power of a point",
+        "similar triangles",
+        "cyclic quadrilaterals",
+        "harmonic quadrilateral"
+      ],
+      "techniques": [
+        "angle chasing",
+        "symmetry",
+        "similarity",
+        "trigonometry"
+      ],
+      "concepts": [
+        "circumcircle",
+        "incircle",
+        "incenter",
+        "symmedian point",
+        "harmonic division",
+        "diameter",
+        "tangent",
+        "isogonal conjugate",
+        "arc midpoints"
+      ],
+      "difficulty": "olympic",
+      "notes": "Geometry problem with circumcircle, incenter, and symmedian. Proves AE = BD using cyclic quadrilaterals, harmonic properties, and similarity. Involves symmedian point S and incenter I."
+    }
+  ],
+  "unique_concepts": [
+    "graph theory",
+    "planar graph",
+    "Euler's formula",
+    "handshaking lemma",
+    "circumcircle",
+    "incircle",
+    "incenter",
+    "symmedian",
+    "harmonic division",
+    "power of a point",
+    "functional equations",
+    "infinite sequences",
+    "divisibility",
+    "arithmetic progressions",
+    "pigeonhole principle",
+    "centroid",
+    "vector sum",
+    "cyclic quadrilaterals",
+    "similar triangles",
+    "angle chasing",
+    "coordinate method",
+    "double counting",
+    "induction",
+    "contradiction",
+    "substitution",
+    "trigonometry"
+  ],
+  "confidence": 0.95
+}

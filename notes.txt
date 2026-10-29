@@ -1,0 +1,110 @@
+наистина плана е важен. Или пък не е? може би абсолютния STEPS план е като съдържанието на учебник, а фазовия план е като курс по него, който решава какво ще ползва и какво не? 
+
+
+
+┌─────────────────────────────────────────────────────────────┐
+│  data/                                                       │
+│  ├── steps.js          (160 STEPS точки)                     │
+│  ├── tasks_data.js     (4 tasks с toolkit per task)          │
+│  └── plan_phases.js    (25 седмици, main + secondary)        │
+└─────────────────────────────────────────────────────────────┘
+                            ↑
+                    (никой backend не чете!)
+
+pipeline/
+├── config.py               ← paths (единствен source of truth)
+├── config.json             ← AI models, budgets
+├── personas.py             ← AI personas
+├── prompts.py              ← article prompts
+│
+├── pdf_chunker.py          ← STEPS: чете директно от data/steps.js
+├── pipeline.py             ← STEPS: чете от data/steps.js
+├── problem_generator.py    ← STEPS: чете от data/steps.js  
+├── gap_worker.py           ← STEPS: чете от data/steps.js
+├── daily_verifier.py       ← STEPS: чете от data/steps.js  
+│                          ⚠ hardcoded week→phase logic (НЕ ползва PLAN_PHASES)
+├── master_orchestrator.py  ← чете state files, НЕ знае за план
+│
+└── (липсва plan.py!)       ← никой не чете tasks_data.js / plan_phases.js
+
+
+
+pipeline/plan.py  (≈ 250 реда)
+├── Парсва data/steps.js        → steps_points: dict[id → {title, desc}]
+├── Парсва data/tasks_data.js   → tasks: dict[num → {name, toolkit, ...}]
+├── Парсва data/plan_phases.js  → phases: list[{num, weeks, ...}]
+│
+├── API:
+│   get_all_points()                    → list[160 ids]
+│   get_toolkit(task_num)               → list[ids] (за Task 1 = 1.1-1.11)
+│   get_level_points(level_id)          → list[ids] (за Level 1 = всички regional)
+│   get_priority(level_id)              → list[ids] (union на toolkits ∩ level)
+│   get_task_for_week(week)             → task_num  (от PLAN_PHASES)
+│   get_current_week()                  → int  (дни от planStartDate / 7)
+│   get_current_focus()                 → "Task 1"  (task_for_week + план)
+│   get_exam_dates()                    → {regional, national}
+│
+└── Кешира резултатите при първо извикване
+
+┌──────────────────────────────────────────────────────────┐
+│  STEPS (160 точки)              = Учебник                │
+│  "Какво съществува"                                       │
+└──────────────────────────────────────────────────────────┘
+                         ×
+┌──────────────────────────────────────────────────────────┐
+│  PRIORITIES (2 нива)            = Курс                   │
+│  regional: {1: [...], 2: [...], 3: [...], 4: [...]}      │
+│  national: {1: [...], 2: [...], 3: [...], 4: [...]}      │
+│  "Какво влиза в изпита"                                   │
+└──────────────────────────────────────────────────────────┘
+                         ×
+┌──────────────────────────────────────────────────────────┐
+│  PLAN_PHASES (25 седмици)       = Разписание             │
+│  "Кога"                                                   │
+└──────────────────────────────────────────────────────────┘
+                         ↓
+┌──────────────────────────────────────────────────────────┐
+│  Point Status (derived)         = Напредък               │
+│  {article: new?, anchors: N?, practice: N?, score: N?}   │
+└──────────────────────────────────────────────────────────┘
+
+
+data/
+├── steps.js            ─┐
+├── tasks_data.js       ─┤
+├── plan_phases.js      ─┼──→ plan.py ──→ всички консуматори
+├── priorities.js  (НОВ)─┤
+└── (index.html LEVELS) ─┘
+                            ↑
+                     single source of truth
+                            ↓
+┌───────────────────┬──────────────────────┬─────────────────┐
+│  pdf_chunker.py   │  pipeline.py          │  daily_verifier │
+│  classify ctx     │  --priority auto      │  audit_task()   │
+│                   │  --task 1             │                 │
+├───────────────────┼──────────────────────┼─────────────────┤
+│ problem_gen.py    │  gap_worker.py        │  orchestrator   │
+│  --priority auto  │  coverage check       │  current_focus  │
+└───────────────────┴──────────────────────┴─────────────────┘
+
+┌──────────────────────────────────────────────────┐
+│  point_status.py  (НОВ)                          │
+│  read/write unified status per point             │
+│  (verifier пише, plan/pipeline чете)             │
+└──────────────────────────────────────────────────┘
+
+✅ Plan generation (generate_plan.py) — завършено
+
+🔄 Extraction (pdf_chunker.py) — в ход
+
+⏳ Articles (pipeline.py) — чака
+
+⏳ Problems (problem_generator.py) — чака
+
+master_orchestrator.py — координира --extract → --merge → --classify → --aggregate в цикъл. Може да работи 24/7 във фонов режим.
+
+daily_verifier.py — ежедневен одит (anchors accuracy, articles quality, problem correctness). Пише generated/audit/<date>/.
+
+gap_worker.py — 24/7 следи watch_folders за нови PDF-и, предлага липсващи STEPS теми.
+
+scan_articles.py — класифицира статиите old/new, произвежда regen queue.

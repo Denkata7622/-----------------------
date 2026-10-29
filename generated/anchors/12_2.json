@@ -1,0 +1,66 @@
+{
+  "point_id": "12.2",
+  "total": 4,
+  "by_difficulty": {
+    "easy": 0,
+    "medium": 3,
+    "hard": 1
+  },
+  "problems": [
+    {
+      "source": "OLI-2-Областен кръг-1995-11 кл · 1995-11 · Зад. 5",
+      "statement": "The points $A_1$, $B_1$, $C_1$ lie on the sides $BC$, $CA$, $AB$ of the triangle $ABC$ respectively and the lines $AA_1$, $BB_1$, $CC_1$ have a common point $M$. Prove that if the point $M$ is center of gravity of $\\triangle A_1B_1C_1$, then $M$ is the center of gravity of $\\triangle ABC$.",
+      "solution": "Solution. Let $M$ be the center of gravity of $\\triangle A_1 B_1 C_1$. Let $A_2$ be a point on $MA^-$ such that $B_1 A_1 C_1 A_2$ is a parallelogram. The points $B_2$ and $C_2$ are constructed analogously. Since $A_1 C_1 \\| A_1 B_1 \\| C_1 B_2$, then the points $A_2$, $C_1$, $B_2$ are colinear and $C_1$ is the midpoint of $A_2 B_2$. The same is true for the points $A_2$, $B_1$, $C_2$ and $C_2$, $A_1$, $B_2$. We shall prove that $A_2 = A$, $B_2 = B$ and $C_2 = C$, which will solve the problem.\n\nAssume that $A_2 \\neq A$ and let $A$ be between $A_2$ and $M$. Then $C_2$ is between $C$ and $M$, $B$ is between $B_2$ and $M$ and consequently $A_2$ is between $A$ and $M$, which is a contradiction.",
+      "answer": null,
+      "difficulty": "medium",
+      "techniques": [
+        "barycentric_coordinates",
+        "centroid_properties"
+      ],
+      "confidence": "exact",
+      "reasoning": "Uses centroid (center of gravity) relations and parallelism, naturally expressed with barycentric coordinates."
+    },
+    {
+      "source": "OLI-2-Областен кръг-2012-10 кл · 2012-10 · Зад. 5",
+      "statement": "Даден е △ABC с центрове I_a и I_b на външновписаните окръжности към страните BC и AC съответно. Ако M е среда на страната AB и правите MI_a и MI_b пресичат страните BC и AC съответно в точки Q и P, да се докаже, че правата PQ е успоредна на AB и минава през центъра I на вписаната в △ABC окръжност.",
+      "solution": "Решение. Ако използваме стандартните означения за $\\triangle ABC$, то\n$$\\frac{CP}{PA} = \\frac{S_{CMI_b}}{S_{AMI_b}} = \\frac{\\frac{1}{2}S_{CBI_b} + \\frac{1}{2}S_{CAI_b}}{\\frac{1}{2}S_{ABI_b}} = \\frac{r_b a + r_b b}{r_b c} = \\frac{a + b}{c}.$$\nАналогично $\\frac{CQ}{QB} = \\frac{a+b}{c}$, т.е. $\\frac{CP}{PA} = \\frac{CQ}{QB}$ и следователно $PQ \\parallel AB$. От друга страна, ако $CI \\to$ пресича страната $AB$ в точка $L$, то\n$$\\frac{CI}{IL} = \\frac{CB}{BL} = \\frac{a}{\\frac{ac}{a+b}} = \\frac{a+b}{c}$$\nи следователно $I \\in PQ$.\n\nЗабележка. От теоремата на Пап, приложена за тройките точки $A$, $M$, $B$ и $I_b$, $C$, $I_a$, лесно следва, че $I \\in PQ$ независимо от избора на точката $M$ върху страната $AB$. Да отбележим, че само когато $M$ е среда на $AB$ имаме, че $PQ \\parallel AB$.",
+      "answer": null,
+      "difficulty": "medium",
+      "techniques": [
+        "area_ratios",
+        "excentral_circles",
+        "parallelism"
+      ],
+      "confidence": "exact",
+      "reasoning": "Чрез съотношения на площи се получава CP/PA = CQ/QB, което дава PQ ∥ AB; допълнително се използва, че I лежи върху PQ чрез отношение на отрезъци."
+    },
+    {
+      "source": "OLI-3-Национален кръг-1988-9-12 кл · 1988-None · Зад. 3",
+      "statement": "Нека M е произволна точка в тетраедъра ABCD, а S_A, S_B, S_C и S_D са съответно лицата на триъгълниците BCD, ACD, ABD и ABC. Да се докаже неравенството S_A·MA + S_B·MB + S_C·MC + S_D·MD ≥ 9V, където V е обемът на тетраедъра ABCD. Кога се достига равенство?",
+      "solution": "Решение. Нека A₁, B₁, C₁ и D₁ са петите на перпендикулярите, спуснати съответно от върховете A, B, C и D на тетраедъра към срещуположните им стени. Означаваме с A₂, B₂, C₂ и D₂ проекциите на точката M съответно върху стените BCD, ACD, ABD и ABC на тетраедъра, а с V₁, V₂, V₃ и V₄ — съответно обемите на тетраедрите MBCD, MACD, MABD и MABC (черт. 1). Тогава точките A, M, A₁ и A₂ лежат в една равнина и очевидно AA₁ ≤ AM + MA₂. Следователно\nV = (1/3)S_A·AA₁ ≤ (1/3)S_A(AM + MA₂) = (1/3)S_A·MA + (1/3)S_A·MA₂\nи V ≤ (1/3)S_A·MA + V₁.\nАналогично се доказва, че\nV ≤ (1/3)S_B·MB + V₂,\nV ≤ (1/3)S_C·MC + V₃,\nV ≤ (1/3)S_D·MD + V₄.\nСъбираме почленно тези четири неравенства и като вземем пред вид, че V₁ + V₂ + V₃ + V₄ = V, получаваме\n9V ≤ S_A·MA + S_B·MB + S_C·MC + S_D·MD.\nРавенство може да има само когато точката M лежи на всяка от височините на тетраедъра, т. е. когато ABCD е ортоцентричен тетраедър и M е пресечната точка на височините му.",
+      "answer": "Равенство се достига, когато ABCD е ортоцентричен тетраедър и M е пресечната точка на височините му.",
+      "difficulty": "medium",
+      "techniques": [
+        "volume_decomposition",
+        "barycentric_coordinates",
+        "geometric_inequality"
+      ],
+      "confidence": "exact",
+      "reasoning": "Decomposes tetrahedron volume into four sub‑volumes, relates them to face areas and distances; barycentric view."
+    },
+    {
+      "source": "OLI-3-Национален кръг-1989-9-12 кл · 1989-None · Зад. 5",
+      "statement": "Да се докаже, че перпендикулярите, спуснати от средите на основните ръбове на дадена триъгълна пирамида към срещуположните околни ръбове, се пресичат в една точка тогава и само тогава, когато центърът на описаната около пирамидата сфера, медицентърът на основата и върхът лежат на една права.",
+      "solution": "Решение. Да означим с ABC основата на пирамидата, с D — върха ѝ, а с A₁, B₁, C₁, A₂, B₂, C₂ — съответно средите на ръбовете BC, CA, AB, DA, DB, DC. Ако поставим във всеки връх на пирамидата маса, равна на 1, то точките A₁ и A₂ са съответно центровете на тежестта на системите {B,C} и {A,D}. Тогава средата на [неразчетено] е центърът на тежестта на системата {A,B,C,D}, т.е. тя съвпада с медицентъра G на ABCD (черт. 2). По същия начин се вижда, че G е среда на всяка от отсечките B₁B₂ и C₁C₂. Нека h_A, h_B и h_C са съответно петите на перпендикулярите, спуснати от A₁, B₁, C₁ към DA, DB, DC.\nНека l_A, l_B, l_C са симетралите на отсечките DA, DB, DC, разглеждани съответно в равнините (AA₁D), (BB₁D), (CC₁D). Тъй като G разполовява A₁A₂, B₁B₂ и C₁C₂, централната симетрия σ с център G преобразува A₁ в A₂, B₁ — в B₂ и C₁ — в C₂. Тогава не е трудно да се съобрази, че σ(h_A) = l_A, σ(h_B) = l_[неразчетено] и σ(h_C) = l_C.\nНека h_A, h_B, h_C се пресичат в една точка H. Очевидно H лежи на пресечнината DG на равнините (AA₁D), (BB₁D), (CC₁D). В такъв случай правите l_A = σ(h_A), l_B = σ(h_B), l_C = σ(h_C) се пресичат в точката L = σ(H), която лежи на σ(DG) = DG. Но L е равноотдалечена от върховете на пирамидата ABCD, понеже l_A, l_B, l_C са симетрали на околните ръбове. Следователно L съвпада с центъра на сферата, описана около ABCD. Остава да отбележим, че медицентърът на основата ABC също лежи на DG. Достатъчността е доказана.\nОбратно, нека центърът L на описаната сфера лежи на DG. Тогава точката L е разположена в равнината (AA₁D) и е равноотдалечена от A и D. Ето защо L ∈ l_A и аналогично L ∈ l_B, L ∈ l_C. Получихме, че l_A, l_B и l_C се пресичат в една точка. Следователно h_A = σ(l_A), h_B = σ(l_B), h_C = σ(l_C) също се пресичат в една точка. Задачата е решена.",
+      "answer": null,
+      "difficulty": "hard",
+      "techniques": [
+        "barycentric_coordinates",
+        "symmetry",
+        "centroid"
+      ],
+      "confidence": "exact",
+      "reasoning": "Employs barycentric coordinates of mid‑edge points and central symmetry to obtain the collinearity condition."
+    }
+  ]
+}

@@ -1,0 +1,149 @@
+{
+  "_meta": {
+    "pdf": "C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\Задачи_Минали_Години\\Национален\\OLI-3-Национален кръг-1987-9-12 кл-probs.pdf",
+    "paired_with": "C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\Задачи_Минали_Години\\Национален\\OLI-3-Национален кръг-1987-9-12 кл-sol.pdf",
+    "level": 2,
+    "type": "probs",
+    "analyzed_at": "2026-10-18T11:39:16.764827",
+    "model": "deepseek/deepseek-v3.2",
+    "text_length": 2033,
+    "paired_text_length": 12156
+  },
+  "problems": [
+    {
+      "num": 1,
+      "topic": "algebra",
+      "theorems": [
+        "Vieta's formulas"
+      ],
+      "techniques": [
+        "substitution",
+        "inequality manipulation",
+        "proof by contradiction",
+        "extreme value analysis"
+      ],
+      "concepts": [
+        "polynomial roots",
+        "symmetric sums",
+        "bounds on roots",
+        "transformation of roots (reciprocals)"
+      ],
+      "difficulty": "olympic",
+      "notes": "Non-standard problem involving bounds on roots via symmetric sums and an auxiliary lemma."
+    },
+    {
+      "num": 2,
+      "topic": "geometry",
+      "theorems": [],
+      "techniques": [
+        "pigeonhole principle",
+        "invariance under rotation"
+      ],
+      "concepts": [
+        "rotation",
+        "polygon symmetry",
+        "rational multiples of π",
+        "finite sets"
+      ],
+      "difficulty": "standard",
+      "notes": "Standard application of finiteness of vertices and rotation angles."
+    },
+    {
+      "num": 3,
+      "topic": "geometry",
+      "theorems": [],
+      "techniques": [
+        "orthogonal projection",
+        "maximization under constraint",
+        "inequalities (AM-GM, geometric)"
+      ],
+      "concepts": [
+        "pyramid geometry",
+        "inscribed sphere",
+        "right angles",
+        "perpendicular planes",
+        "area conditions",
+        "optimization"
+      ],
+      "difficulty": "hard",
+      "notes": "Spatial geometry with optimization; uses lemma about inscribed circle in triangle."
+    },
+    {
+      "num": 4,
+      "topic": "number_theory",
+      "theorems": [],
+      "techniques": [
+        "induction",
+        "auxiliary sequence construction",
+        "recurrence relations"
+      ],
+      "concepts": [
+        "integer sequences",
+        "perfect squares",
+        "linear recurrences",
+        "identity verification"
+      ],
+      "difficulty": "standard",
+      "notes": "Standard technique of finding an auxiliary sequence whose squares satisfy the given recurrence."
+    },
+    {
+      "num": 5,
+      "topic": "geometry",
+      "theorems": [
+        "Simson line theorem"
+      ],
+      "techniques": [
+        "auxiliary construction (parallel lines)",
+        "cyclic quadrilaterals",
+        "angle chasing"
+      ],
+      "concepts": [
+        "perpendiculars",
+        "midpoints",
+        "isosceles triangles",
+        "angle bisector",
+        "concyclic points"
+      ],
+      "difficulty": "standard",
+      "notes": "Two approaches: one using cyclic quadrilaterals and angle chasing, another using Simson line theorem."
+    },
+    {
+      "num": 6,
+      "topic": "combinatorics",
+      "theorems": [],
+      "techniques": [
+        "modular arithmetic",
+        "iteration of function",
+        "order of an element modulo n",
+        "case analysis (acute/obtuse)"
+      ],
+      "concepts": [
+        "inscribed triangles",
+        "orthic triangle (via altitudes)",
+        "angle transformation rules",
+        "periodicity",
+        "least common multiple"
+      ],
+      "difficulty": "olympic",
+      "notes": "Complex problem combining geometry, number theory (mod 45, order of 2), and iteration; requires finding minimal period."
+    }
+  ],
+  "unique_concepts": [
+    "Vieta's formulas",
+    "symmetric sums",
+    "rotation symmetry",
+    "rational multiples of π",
+    "orthogonal projection",
+    "inscribed sphere optimization",
+    "recurrence sequences",
+    "perfect squares",
+    "Simson line",
+    "cyclic quadrilaterals",
+    "angle bisector",
+    "modular arithmetic",
+    "order of an element",
+    "angle transformation under altitude intersection",
+    "periodicity in iterative geometric functions"
+  ],
+  "confidence": 0.95
+}

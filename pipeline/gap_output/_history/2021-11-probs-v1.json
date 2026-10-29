@@ -1,0 +1,107 @@
+{
+  "_meta": {
+    "pdf": "C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\Задачи_Минали_Години\\Областен\\OLI-2-Областен кръг-2021-11 кл-probs.pdf",
+    "paired_with": "C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\Задачи_Минали_Години\\Областен\\OLI-2-Областен кръг-2021-11 кл-sol.pdf",
+    "level": 1,
+    "type": "probs",
+    "analyzed_at": "2026-10-16T21:29:57.782249",
+    "model": "deepseek/deepseek-v3.2",
+    "text_length": 1972,
+    "paired_text_length": 0
+  },
+  "problems": [
+    {
+      "num": 1,
+      "topic": "algebra",
+      "theorems": [],
+      "techniques": [
+        "substitution",
+        "exponential_equation_manipulation"
+      ],
+      "concepts": [
+        "exponential equations",
+        "quadratic equations",
+        "parameter analysis"
+      ],
+      "difficulty": "standard",
+      "notes": "Уравнение с параметър и експоненциални функции с основа 2. Решава се с полагане t = 2^x."
+    },
+    {
+      "num": 2,
+      "topic": "geometry",
+      "theorems": [
+        "Law_of_Cosines",
+        "Pythagorean_theorem"
+      ],
+      "techniques": [
+        "trigonometry",
+        "circle_properties",
+        "length_calculation"
+      ],
+      "concepts": [
+        "cyclic quadrilateral",
+        "inscribed circle",
+        "distance from point to line",
+        "right triangle",
+        "angle 60 degrees"
+      ],
+      "difficulty": "hard",
+      "notes": "Сложна геометрична задача с вписана окръжност и цикличен четириъгълник. Изисква намиране на разстояние от точка до права и изразяване на дължини."
+    },
+    {
+      "num": 3,
+      "topic": "number_theory",
+      "theorems": [],
+      "techniques": [
+        "summation",
+        "counting",
+        "inclusion_exclusion"
+      ],
+      "concepts": [
+        "square numbers",
+        "sum of integers",
+        "counting non-square numbers up to n"
+      ],
+      "difficulty": "standard",
+      "notes": "Задача за сумата на всички естествени числа до n, които не са точни квадрати. Изисква намиране на броя на квадратите до n."
+    },
+    {
+      "num": 4,
+      "topic": "combinatorics",
+      "theorems": [],
+      "techniques": [
+        "pigeonhole_principle",
+        "counting",
+        "pairing"
+      ],
+      "concepts": [
+        "3x3 grid",
+        "adjacent cells",
+        "graph coloring or pairing argument"
+      ],
+      "difficulty": "standard",
+      "notes": "Задача за принципа на Дирихле (гълъбината принцип) върху решетка 3x3. Изисква разглеждане на съседни клетки и двойки."
+    }
+  ],
+  "unique_concepts": [
+    "exponential equations",
+    "quadratic equations",
+    "parameter analysis",
+    "cyclic quadrilateral",
+    "inscribed circle",
+    "distance from point to line",
+    "right triangle",
+    "angle 60 degrees",
+    "Law of Cosines",
+    "Pythagorean theorem",
+    "square numbers",
+    "sum of integers",
+    "counting non-square numbers",
+    "inclusion-exclusion",
+    "3x3 grid",
+    "adjacent cells",
+    "pigeonhole principle",
+    "graph coloring/pairing"
+  ],
+  "confidence": 0.9
+}

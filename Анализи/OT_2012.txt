@@ -1,0 +1,177 @@
+| Статия | Автор | Стр. теория | Стр. задачи | Plan step | Plan points | Reg. | Nat. | Действие |
+|---|---|---|---|---|---|---|---|---|
+| Делители на полиноми с цели коефициенти | Александър Иванов | 4-7 | 5-7 | 5,3 | 5.7, 5.5, 3.1, 3.2 | high | high | add-as-bonus/tasks към 5.7, 5.5 |
+| Комбинаторика | Емил Колев | 8-12 | 8-12 | 9,8 | 9.1, 9.3, 9.7, 9.8, 8.1 | high | med | add-as-bonus/tasks към 9.1, 9.3, 9.7, 9.8 |
+| Няколко геометрични неравенства | Николай Белухов | 13-24 | 13-24 | 2,1 | 2.8, 1.5, 1.6, 1.7 | high | high | add-as-specific-points към 2.8 |
+| Неравенства от БОМ и МлБОМ | Николай Николов | 25-33 | 25-33 | 6 | 6.1–6.10 | high | med | add-as-bonus/tasks към 6.1–6.10 |
+| Задачи от RMM 2011-2013 | Петър Бойваленков | 34-44 | 34-44 | 3,4,5,7,8,9,12 | много | med | high | add tasks към конкретни точки |
+| Неравенство на Фишер | Пламен Пенчев | 45-49 | null | 8 | нова 8.13 | low | high | add-as-new-point 8.13 |
+| Полиноми | Рафаел Рафаилов | 50-65 | 50-65 | 5 | 5.1–5.8 | high | high | add-as-bonus/tasks към 5.5, 5.6, 5.8 |
+| Симедиани в триъгълник | Стоян Боев | 66-80 | 66-80 | 2,1 | 2.1, 2.2, 1.3, 1.4 | high | high | add-as-bonus/tasks към 2.2, 2.1 |
+
+```js
+// ─── АКТУАЛИЗАЦИЯ: OT_2012, Иванов ───
+{ id: "5.7",
+  tasks: [
+    { label: "OT_2012, Иванов, Задача 1 (Лема на Шур)", pdf: "Материали_БГ/OT_2012", page: 5, difficulty: 4, requires_also: ["3.1", "3.2"], prerequisite_review: "Преговори 3.1 и 3.2" },
+    { label: "OT_2012, Иванов, Задача 2", pdf: "Материали_БГ/OT_2012", page: 6, difficulty: 4, requires_also: ["3.1", "5.7"], prerequisite_review: "Преговори 5.7" },
+    { label: "OT_2012, Иванов, Задача 3", pdf: "Материали_БГ/OT_2012", page: 7, difficulty: 5, requires_also: ["5.5", "3.1"], prerequisite_review: "Преговори 5.5" },
+    { label: "OT_2012, Иванов, Задача 4", pdf: "Материали_БГ/OT_2012", page: 7, difficulty: 5, requires_also: ["5.5", "3.1"], prerequisite_review: "Преговори 5.5" }
+  ],
+  bonus: [
+    { label: "Делители на стойности на полиноми (Иванов)", pdf: "Материали_БГ/OT_2012", page: 4 }
+  ]
+}
+```
+
+```js
+// ─── АКТУАЛИЗАЦИЯ: OT_2012, Колев ───
+{ id: "9.1",
+  tasks: [
+    { label: "OT_2012, Колев, Задача 1", pdf: "Материали_БГ/OT_2012", page: 8, difficulty: 4, requires_also: ["9.4", "9.7"], prerequisite_review: "Преговори 9.4 и 9.7" },
+    { label: "OT_2012, Колев, Задача 2", pdf: "Материали_БГ/OT_2012", page: 9, difficulty: 4, requires_also: ["9.1"], prerequisite_review: "Преговори 9.1" },
+    { label: "OT_2012, Колев, Задача 3", pdf: "Материали_БГ/OT_2012", page: 9, difficulty: 4, requires_also: ["9.2", "9.3"], prerequisite_review: "Преговори 9.2 и 9.3" },
+    { label: "OT_2012, Колев, Задача 4", pdf: "Материали_БГ/OT_2012", page: 10, difficulty: 4, requires_also: ["9.3"], prerequisite_review: "Преговори 9.3" },
+    { label: "OT_2012, Колев, Задача 5", pdf: "Материали_БГ/OT_2012", page: 10, difficulty: 5, requires_also: ["9.3", "9.8"], prerequisite_review: "Преговори 9.3 и 9.8" },
+    { label: "OT_2012, Колев, Задача 6", pdf: "Материали_БГ/OT_2012", page: 11, difficulty: 5, requires_also: ["9.7"], prerequisite_review: "Преговори 9.7" },
+    { label: "OT_2012, Колев, Задача 7", pdf: "Материали_БГ/OT_2012", page: 12, difficulty: 5, requires_also: ["9.1", "9.7"], prerequisite_review: "Преговори 9.1 и 9.7" }
+  ],
+  bonus: [
+    { label: "Комбинаторика (Колев)", pdf: "Материали_БГ/OT_2012", page: 8 }
+  ]
+}
+```
+
+```js
+// ─── АКТУАЛИЗАЦИЯ: OT_2012, Белухов ───
+{ id: "2.8",
+  tasks: [
+    { label: "OT_2012, Белухов, Ескимос", pdf: "Материали_БГ/OT_2012", page: 14, difficulty: 4, requires_also: ["1.6"], prerequisite_review: "Преговори 1.6" },
+    { label: "OT_2012, Белухов, Задача 1", pdf: "Материали_БГ/OT_2012", page: 15, difficulty: 4, requires_also: ["1.7", "2.8"], prerequisite_review: "Преговори 1.7" },
+    { label: "OT_2012, Белухов, Задача (Квант)", pdf: "Материали_БГ/OT_2012", page: 16, difficulty: 5, requires_also: ["1.5", "2.8"], prerequisite_review: "Преговори 1.5" },
+    { label: "OT_2012, Белухов, Задача (МОМ 1990)", pdf: "Материали_БГ/OT_2012", page: 16, difficulty: 5, requires_also: ["1.5", "1.6"], prerequisite_review: "Преговори 1.5 и 1.6" },
+    { label: "OT_2012, Белухов, Задача (Туймаада 2005)", pdf: "Материали_БГ/OT_2012", page: 17, difficulty: 5, requires_also: ["1.5", "2.8"], prerequisite_review: "Преговори 1.5" },
+    { label: "OT_2012, Белухов, Задача (Ердьош-Мордел)", pdf: "Материали_БГ/OT_2012", page: 18, difficulty: 5, requires_also: ["2.8"], prerequisite_review: "Преговори 2.8" },
+    { label: "OT_2012, Белухов, Задача (Птолемей, ромб)", pdf: "Материали_БГ/OT_2012", page: 19, difficulty: 5, requires_also: ["1.3", "2.8"], prerequisite_review: "Преговори 1.3" },
+    { label: "OT_2012, Белухов, Задача 2", pdf: "Материали_БГ/OT_2012", page: 20, difficulty: 5, requires_also: ["1.7", "2.8"], prerequisite_review: "Преговори 1.7" },
+    { label: "OT_2012, Белухов, Задача 3", pdf: "Материали_БГ/OT_2012", page: 21, difficulty: 5, requires_also: ["1.5", "2.8"], prerequisite_review: "Преговори 1.5" }
+  ],
+  bonus: [
+    { label: "Геометрични неравенства (Белухов)", pdf: "Материали_БГ/OT_2012", page: 13 }
+  ]
+}
+```
+
+```js
+// ─── АКТУАЛИЗАЦИЯ: OT_2012, Николов ───
+{ id: "6.1",
+  tasks: [
+    { label: "OT_2012, Николов, Задача 1 (МлБОМ 2002)", pdf: "Материали_БГ/OT_2012", page: 26, difficulty: 3, requires_also: ["6.1", "6.2"], prerequisite_review: "Преговори 6.1 и 6.2" },
+    { label: "OT_2012, Николов, Задача 2 (МлБОМ 2003)", pdf: "Материали_БГ/OT_2012", page: 27, difficulty: 4, requires_also: ["6.4"], prerequisite_review: "Преговори 6.4" },
+    { label: "OT_2012, Николов, Задача 3 (МлБОМ 2005)", pdf: "Материали_БГ/OT_2012", page: 28, difficulty: 4, requires_also: ["6.1", "6.2"], prerequisite_review: "Преговори 6.1" },
+    { label: "OT_2012, Николов, Задача 4 (МлБОМ 2009)", pdf: "Материали_БГ/OT_2012", page: 28, difficulty: 4, requires_also: ["6.1"], prerequisite_review: "Преговори 6.1" },
+    { label: "OT_2012, Николов, Задача 5 (МлБОМ 2011)", pdf: "Материали_БГ/OT_2012", page: 28, difficulty: 4, requires_also: ["6.1", "6.4"], prerequisite_review: "Преговори 6.4" },
+    { label: "OT_2012, Николов, Задача 6 (МлБОМ 2012)", pdf: "Материали_БГ/OT_2012", page: 29, difficulty: 4, requires_also: ["6.4"], prerequisite_review: "Преговори 6.4" },
+    { label: "OT_2012, Николов, Задача 7 (БОМ 2005)", pdf: "Материали_БГ/OT_2012", page: 29, difficulty: 4, requires_also: ["6.4"], prerequisite_review: "Преговори 6.4" },
+    { label: "OT_2012, Николов, Задача 8 (БОМ 2006)", pdf: "Материали_БГ/OT_2012", page: 31, difficulty: 4, requires_also: ["6.1"], prerequisite_review: "Преговори 6.1" },
+    { label: "OT_2012, Николов, Задача 9 (БОМ 2010)", pdf: "Материали_БГ/OT_2012", page: 31, difficulty: 5, requires_also: ["6.1", "6.4"], prerequisite_review: "Преговори 6.4" },
+    { label: "OT_2012, Николов, Задача 10 (БОМ 2011)", pdf: "Материали_БГ/OT_2012", page: 31, difficulty: 5, requires_also: ["6.4"], prerequisite_review: "Преговори 6.4" },
+    { label: "OT_2012, Николов, Задача 11 (БОМ 2012)", pdf: "Материали_БГ/OT_2012", page: 32, difficulty: 5, requires_also: ["6.4"], prerequisite_review: "Преговори 6.4" },
+    { label: "OT_2012, Николов, Задача 12 (МОМ 2008)", pdf: "Материали_БГ/OT_2012", page: 32, difficulty: 5, requires_also: ["6.1", "6.4"], prerequisite_review: "Преговори 6.4" }
+  ],
+  bonus: [
+    { label: "Неравенства от БОМ и МлБОМ (Николов)", pdf: "Материали_БГ/OT_2012", page: 25 }
+  ]
+}
+```
+
+```js
+// ─── АКТУАЛИЗАЦИЯ: OT_2012, Рафаилов ───
+{ id: "5.5",
+  tasks: [
+    { label: "OT_2012, Рафаилов, Задача 5 (Мейсън-Стотер)", pdf: "Материали_БГ/OT_2012", page: 54, difficulty: 5, requires_also: ["5.5"], prerequisite_review: "Преговори 5.5" },
+    { label: "OT_2012, Рафаилов, Задача 6", pdf: "Материали_БГ/OT_2012", page: 55, difficulty: 5, requires_also: ["5.5"], prerequisite_review: "Преговори 5.5" },
+    { label: "OT_2012, Рафаилов, Задача 7 (Ферма за полиноми)", pdf: "Материали_БГ/OT_2012", page: 56, difficulty: 5, requires_also: ["5.5"], prerequisite_review: "Преговори 5.5" }
+  ],
+  bonus: [
+    { label: "Полиноми (Рафаилов)", pdf: "Материали_БГ/OT_2012", page: 50 }
+  ]
+}
+{ id: "5.6",
+  tasks: [
+    { label: "OT_2012, Рафаилов, Задача 8 (Чебишев)", pdf: "Материали_БГ/OT_2012", page: 56, difficulty: 5, requires_also: ["5.6"], prerequisite_review: "Преговори 5.6" },
+    { label: "OT_2012, Рафаилов, Задача 9", pdf: "Материали_БГ/OT_2012", page: 57, difficulty: 5, requires_also: ["5.6"], prerequisite_review: "Преговори 5.6" }
+  ]
+}
+{ id: "5.8",
+  tasks: [
+    { label: "OT_2012, Рафаилов, Задача 10 (Американска олимпиада 1975)", pdf: "Материали_БГ/OT_2012", page: 58, difficulty: 4, requires_also: ["5.8"], prerequisite_review: "Преговори 5.8" },
+    { label: "OT_2012, Рафаилов, Задача 11 (Шортлист МОМ 1983)", pdf: "Материали_БГ/OT_2012", page: 58, difficulty: 5, requires_also: ["5.8"], prerequisite_review: "Преговори 5.8" },
+    { label: "OT_2012, Рафаилов, Задача 12 (Иранска олимпиада)", pdf: "Материали_БГ/OT_2012", page: 58, difficulty: 5, requires_also: ["5.6", "5.8"], prerequisite_review: "Преговори 5.6 и 5.8" }
+  ]
+}
+```
+
+```js
+// ─── АКТУАЛИЗАЦИЯ: OT_2012, Боев ───
+{ id: "2.2",
+  tasks: [
+    { label: "OT_2012, Боев, Задача 1 (Купата на Колмогоров)", pdf: "Материали_БГ/OT_2012", page: 75, difficulty: 5, requires_also: ["2.2", "1.5"], prerequisite_review: "Преговори 2.2" },
+    { label: "OT_2012, Боев, Задача 2 (МОМ 2012)", pdf: "Материали_БГ/OT_2012", page: 76, difficulty: 5, requires_also: ["2.2", "1.4"], prerequisite_review: "Преговори 2.2" },
+    { label: "OT_2012, Боев, Задача 3 (TST Иран 2006)", pdf: "Материали_БГ/OT_2012", page: 76, difficulty: 5, requires_also: ["2.2", "1.3"], prerequisite_review: "Преговори 2.2" },
+    { label: "OT_2012, Боев, Задача 4", pdf: "Материали_БГ/OT_2012", page: 78, difficulty: 5, requires_also: ["2.2"], prerequisite_review: "Преговори 2.2" },
+    { label: "OT_2012, Боев, Задача 5", pdf: "Материали_БГ/OT_2012", page: 78, difficulty: 5, requires_also: ["2.2", "1.3"], prerequisite_review: "Преговори 2.2" },
+    { label: "OT_2012, Боев, Задача 6", pdf: "Материали_БГ/OT_2012", page: 78, difficulty: 5, requires_also: ["2.2"], prerequisite_review: "Преговори 2.2" },
+    { label: "OT_2012, Боев, Задача 7", pdf: "Материали_БГ/OT_2012", page: 78, difficulty: 5, requires_also: ["2.2", "1.4"], prerequisite_review: "Преговори 2.2" },
+    { label: "OT_2012, Боев, Задача 8", pdf: "Материали_БГ/OT_2012", page: 78, difficulty: 5, requires_also: ["2.2", "1.5"], prerequisite_review: "Преговори 2.2" },
+    { label: "OT_2012, Боев, Задача 9", pdf: "Материали_БГ/OT_2012", page: 79, difficulty: 5, requires_also: ["2.2"], prerequisite_review: "Преговори 2.2" },
+    { label: "OT_2012, Боев, Задача 10", pdf: "Материали_БГ/OT_2012", page: 79, difficulty: 5, requires_also: ["2.2", "1.5"], prerequisite_review: "Преговори 2.2" },
+    { label: "OT_2012, Боев, Задача 11 (БОМ 2009)", pdf: "Материали_БГ/OT_2012", page: 79, difficulty: 5, requires_also: ["2.2", "1.4"], prerequisite_review: "Преговори 2.2" },
+    { label: "OT_2012, Боев, Задача 12", pdf: "Материали_БГ/OT_2012", page: 79, difficulty: 5, requires_also: ["2.2"], prerequisite_review: "Преговори 2.2" },
+    { label: "OT_2012, Боев, Задача 13", pdf: "Материали_БГ/OT_2012", page: 79, difficulty: 5, requires_also: ["2.2", "1.5"], prerequisite_review: "Преговори 2.2" }
+  ],
+  bonus: [
+    { label: "Симедиани в триъгълник (Боев)", pdf: "Материали_БГ/OT_2012", page: 66 }
+  ]
+}
+```
+
+```js
+// ─── НОВА ТОЧКА ───
+{ 
+  id: "8.13",
+  title: "Неравенство на Фишер",
+  desc: "Горна граница за размера на L-интересна фамилия от подмножества.",
+  source: "OT_2012, Пламен Пенчев, Неравенство на Фишер",
+  pdf: "Материали_БГ/OT_2012",
+  page: 45,
+  problems_page: null,
+  solutions_page: null,
+  tasks: [],
+  bonus: [
+    { label: "Пълно доказателство (Пенчев)", pdf: "Материали_БГ/OT_2012", page: 45 }
+  ],
+  explanation: "ФОРМУЛИРОВКА: Нека X = {x1,...,xn}, L = {l1,...,lk} и A = {A1,...,Am} е фамилия от подмножества на X. Ако |Ai ∩ Aj| ∈ L за всички i ≠ j, то |A| ≤ ∑_{i=1}^k C(n,i).\n\nКОГА: Използва се при екстремални задачи за множества с ограничения върху сеченията.\n\nСВОЙСТВА: Специален случай L={1} дава m ≤ n. Общият случай използва полиноми и линейна алгебра.\n\nТРИК: Кодирай множествата като вектори; използвай интерполационен полином g(x) = ∏(x - l_i); сведи до линейна независимост."
+}
+```
+
+### RECOMMENDED CHANGES TO index.html
+
+**В STEPS:**
+- [ ] Добавяне на нова точка `8.13` в `STEPS[7].points` (Неравенство на Фишер)
+- [ ] Добавяне на tasks в `5.7` (Иванов, 4 задачи)
+- [ ] Добавяне на tasks в `9.1` (Колев, 7 задачи)
+- [ ] Добавяне на tasks в `2.8` (Белухов, 9 задачи)
+- [ ] Добавяне на tasks в `6.1` (Николов, 12 задачи)
+- [ ] Добавяне на tasks в `5.5`, `5.6`, `5.8` (Рафаилов, 8 задачи)
+- [ ] Добавяне на tasks в `2.2` (Боев, 13 задачи)
+- [ ] Добавяне на tasks от RMM в съответните точки: 3.5, 4.5, 4.7, 5.7, 5.8, 7.1, 7.3, 8.1, 8.3, 9.7, 12.1
+- [ ] Обновяване на `page` за OT_2012 статии (виж таблицата)
+
+**В PLAN_PHASES:**
+- [ ] Добавяне на OT_2012 като ресурс за Step 2, 5, 6, 8, 9
+
+**Друго:**
+- [ ] Идентифициран gap: Неравенство на Фишер → нова точка 8.13
+- [ ] Идентифициран gap: Мейсън-Стотер → bonus към 5.5
+- [ ] Идентифициран gap: Чебишев екстремални свойства → разширяване на 5.6

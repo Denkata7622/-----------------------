@@ -1,0 +1,77 @@
+{
+  "point_id": "1.3",
+  "total": 5,
+  "by_difficulty": {
+    "easy": 0,
+    "medium": 4,
+    "hard": 1
+  },
+  "problems": [
+    {
+      "source": "OLI-2-Областен кръг-1995-10 кл · 1995-10 · Зад. 2",
+      "statement": "Let $A_1A_2A_3A_4A_5A_6A_7$, $B_1B_2B_3B_4B_5B_6B_7$, $C_1C_2C_3C_4C_5C_6C_7$ be regular heptagons with areas $S_A$, $S_B$ and $S_C$, respectively. Let $A_1A_2 = B_1B_3 = C_1C_4$. Prove that\n\n$$\\frac{1}{2} < \\frac{S_B + S_C}{S_A} < 2 - \\sqrt{2}.$$",
+      "solution": "Solution. Let $A_1A_2 = a$, $A_1A_3 = b$, $A_1A_4 = c$ (Figure 2). By the Ptolomeus theorem for the quadrangle $A_1A_3A_4A_5$ it follows that $ab + ac = bc$, i.e. $\\frac{a}{b} + \\frac{a}{c} = 1$. Since $\\triangle A_1A_2A_3 \\cong \\triangle B_1B_2B_3$, then $\\frac{B_1B_2}{B_1B_3} = \\frac{a}{b}$ and hence $B_1B_2 = \\frac{a^2}{b}$. Analogously $C_1C_2 = \\frac{a^2}{c}$. Therefore $\\frac{S_B + S_C}{S_A} = \\frac{a^2}{b^2} + \\frac{a^2}{c^2}$. Then $\\frac{a^2}{b} + \\frac{a^2}{c} > \\frac{1}{2}(\\frac{a}{b} + \\frac{a}{c})^2 = \\frac{1}{2}$ (equality is not possible because $\\frac{a}{b} \\neq \\frac{a}{c}$). On the other hand\n\n$$\\frac{a^2}{b^2} + \\frac{a^2}{c^2} = \\left(\\frac{a}{b} + \\frac{a}{c}\\right)^2 - \\frac{2a^2}{bc} = 1 - \\frac{2a^2}{bc}. \\tag{1}$$\n\nBy the sine theorem we get $\\frac{a^2}{bc} = \\frac{\\sin^2\\frac{\\pi}{7}}{\\sin^2\\frac{\\pi}{7}\\sin\\frac{4\\pi}{7}} = \\frac{1}{4\\cos\\frac{2\\pi}{7}(1 + \\cos\\frac{2\\pi}{7})}$. Since $\\cos \\frac{2\\pi}{7} < \\cos \\frac{\\pi}{4} = \\frac{\\sqrt{2}}{2}$, then $\\frac{a^2}{bc} > \\frac{1}{4\\frac{\\sqrt{2}}{2}(1 + \\frac{\\sqrt{2}}{2})} = \\sqrt{2} - 1$. From here and from (1) we get the right hand side inequality of the problem.",
+      "answer": null,
+      "difficulty": "medium",
+      "techniques": [
+        "ptolemy_theorem",
+        "law_of_sines",
+        "regular_heptagon"
+      ],
+      "confidence": "exact",
+      "reasoning": "Main step applies Ptolemy theorem to a quadrilateral of the heptagon; then uses sine law to bound the ratio."
+    },
+    {
+      "source": "OLI-2-Областен кръг-1995-11 кл · 1995-11 · Зад. 2",
+      "statement": "Let $A_1A_2A_3A_4A_5A_6A_7$, $B_1B_2B_3B_4B_5B_6B_7$, $C_1C_2C_3C_4C_5C_6C_7$ be regular heptagons with areas $S_A$, $S_B$ and $S_C$, respectively. Let $A_1A_2 = B_1B_3 = C_1C_4$. Prove that\n\n$$\\frac{1}{2} < \\frac{S_B + S_C}{S_A} < 2 - \\sqrt{2}.$$",
+      "solution": "Solution. Let $A_1A_2 = a$, $A_1A_3 = b$, $A_1A_4 = c$ (Figure 2). By the Ptolomeus theorem for the quadrangle $A_1A_3A_4A_5$ it follows that $ab + ac = bc$, i.e. $\\frac{a}{b} + \\frac{a}{c} = 1$. Since $\\triangle A_1A_2A_3 \\cong \\triangle B_1B_2B_3$, then $\\frac{B_1B_2}{B_1B_3} = \\frac{a}{b}$ and hence $B_1B_2 = \\frac{a^2}{b}$. Analogously $C_1C_2 = \\frac{a^2}{c}$. Therefore $\\frac{S_B + S_C}{S_A} = \\frac{a^2}{b^2} + \\frac{a^2}{c^2}$. Then $\\frac{a^2}{b} + \\frac{a^2}{c} > \\frac{1}{2}(\\frac{a}{b} + \\frac{a}{c})^2 = \\frac{1}{2}$ (equality is not possible because $\\frac{a}{b} \\neq \\frac{a}{c}$). On the other hand\n\n$$\\frac{a^2}{b^2} + \\frac{a^2}{c^2} = \\left(\\frac{a}{b} + \\frac{a}{c}\\right)^2 - \\frac{2a^2}{bc} = 1 - \\frac{2a^2}{bc}. \\tag{1}$$\n\nBy the sine theorem we get $\\frac{a^2}{bc} = \\frac{\\sin^2\\frac{\\pi}{7}}{\\sin^2\\frac{\\pi}{7}\\sin\\frac{4\\pi}{7}} = \\frac{1}{4\\cos\\frac{2\\pi}{7}(1 + \\cos\\frac{2\\pi}{7})}$. Since $\\cos \\frac{2\\pi}{7} < \\cos \\frac{\\pi}{4} = \\frac{\\sqrt{2}}{2}$, then $\\frac{a^2}{bc} > \\frac{1}{4\\frac{\\sqrt{2}}{2}(1 + \\frac{\\sqrt{2}}{2})} = \\sqrt{2} - 1$. From here and from (1) we get the right hand side inequality of the problem.",
+      "answer": null,
+      "difficulty": "medium",
+      "techniques": [
+        "ptolemy_theorem",
+        "trigonometric_area_ratio"
+      ],
+      "confidence": "exact",
+      "reasoning": "Key step is applying Ptolemy's theorem to a quadrilateral formed by vertices of the heptagon."
+    },
+    {
+      "source": "OLI-2-Областен кръг-1997-11 кл · 1997-11 · Зад. 2",
+      "statement": "Given a convex quadrilateral ABCD which can be inscribed in a circle. Let F be the intersecting point of diagonals AC and BD and E be the intersecting point of the lines AD and BC. If M and N are the midpoints of AB and CD, prove that\n\n$$\\frac{M N}{E F}=\\frac{1}{2} \\cdot\\left|\\frac{A B}{C D}-\\frac{C D}{A B}\\right| .$$",
+      "solution": "Solution: Let $\\angle AEB = \\gamma$, $EC = c$, $ED = d$, $\\overrightarrow{i} = \\frac{1}{c} \\cdot \\overrightarrow{EC}$ and $\\overrightarrow{j} = \\frac{1}{d} \\cdot \\overrightarrow{ED}$. Since $ABCD$ is an inscribed quadrilateral, $\\frac{AB}{CD} = \\frac{AE}{CE} = \\frac{BE}{DE} = k$. Therefore $\\overrightarrow{EA} = kc\\overrightarrow{j}$ and $\\overrightarrow{EB} = kd\\overrightarrow{i}$. Since $F \\in AC$ and $F \\in BD$ there exist $x$ and $y$ such that\n\n$$\\overrightarrow{EF} = x\\overrightarrow{EA} + (1 - x)\\overrightarrow{EC} = xkc\\overrightarrow{j} + (1 - x)c\\overrightarrow{i}$$\n\nand\n\n$$\\overrightarrow{EF} = y\\overrightarrow{EB} + (1 - y)\\overrightarrow{ED} = ykd\\overrightarrow{i} + (1 - y)d\\overrightarrow{j}.$$\n\nComparing the coefficients of $\\overrightarrow{i}$ and $\\overrightarrow{j}$ in these equalities gives $xkc = (1 - y)d$ and $ykd = (1 - x)c$. This implies $x = \\frac{kd - c}{(k^2 - 1)c}$. Therefore\n\n$$\\overrightarrow{EF} = \\frac{k}{k^2 - 1} \\left( (kd - c)\\overrightarrow{j} + (kc - d)\\overrightarrow{i} \\right)$$\n\nand thus\n\n$$EF^2 = \\left( \\frac{k}{k^2 - 1} \\right)^2 \\left( (kd - c)^2 + (kc - d)^2 + 2(kd - c)(kc - d)\\cos \\gamma \\right).$$\n\nOn the other hand\n\n$$\\begin{aligned} \\overrightarrow{MN} &= \\frac{1}{2} \\cdot \\left( \\overrightarrow{AD} + \\overrightarrow{BC} \\right) = \\frac{1}{2} \\cdot \\left( \\overrightarrow{ED} - \\overrightarrow{EA} + \\overrightarrow{EC} - \\overrightarrow{EB} \\right) \\\\ &= \\frac{1}{2} \\cdot \\left( (d - kc)\\overrightarrow{j} + (c - kd)\\overrightarrow{i} \\right) \\end{aligned}$$\n\nand it follows that\n\n$$MN^2 = \\frac{1}{4} \\cdot \\left( (d - kc)^2 + (c - kd)^2 + 2(d - kc)(c - kd)\\cos \\gamma \\right).$$\n\nTherefore $\\frac{MN^2}{EF^2} = \\frac{1}{4} \\left( \\frac{k^2 - 1}{k} \\right)^2 = \\frac{1}{4} \\left( k - \\frac{1}{k} \\right)^2$ and so\n\n$$\\frac{MN}{EF} = \\frac{1}{2} \\cdot \\left| \\frac{AB}{CD} - \\frac{CD}{AB} \\right|$$",
+      "answer": null,
+      "difficulty": "medium",
+      "techniques": [
+        "ptolemy_theorem"
+      ],
+      "confidence": "exact",
+      "reasoning": "Vector proof relies on the cyclic quadrilateral property AB·CD = AD·BC + AC·BD, i.e. Ptolemy’s theorem."
+    },
+    {
+      "source": "OLI-2-Областен кръг-2001-10 кл · 2001-10 · Зад. 2",
+      "statement": "Диагоналите $AC$ и $BD$ на вписан в окръжност четириъгълник се пресичат в точка $E$. Да се докаже, че ако $\\angle BAD = 60^\\circ$ и $AE = 3CE$, то сумата на две от страните на четириъгълника е равна на сумата на другите му две страни.",
+      "solution": "Решение: Нека $\\angle ABD = x$ и $\\angle CBD = y$. От синусовата теорема получаваме\n$$\\frac{AE}{AB} = \\frac{\\sin x}{\\sin(120^\\circ + y - x)}, \\frac{CE}{BC} = \\frac{\\sin y}{\\sin(60^\\circ + x - y)}$$\nи $$\\frac{AB}{BC} = \\frac{\\sin(120^\\circ - x)}{\\sin(60^\\circ - y)}$$. Следователно $$3 = \\frac{AE}{CE} = \\frac{\\sin x \\cdot \\sin(120^\\circ - x)}{\\sin y \\cdot \\sin(60^\\circ - y)}$$.\nОттук $$3(\\cos(2y - 60^\\circ) - \\cos 60^\\circ) = \\cos(2x - 120^\\circ) - \\cos 120^\\circ$$, т.е.\n$$1 - \\cos(2x - 120^\\circ) = 3(1 - \\cos(2y - 60^\\circ))$$ и значи $$\\sin^2(x - 60^\\circ) = 3\\sin^2(y - 30^\\circ)$$.\nСледователно $$\\sin(x - 60^\\circ) \\cos 60^\\circ = \\pm \\cos 30^\\circ \\sin(y - 30^\\circ)$$,\nт.е. $$\\sin x - \\sin(120^\\circ - x) = \\pm(\\sin y - \\sin(60^\\circ - y))$$. Отново от синусовата теорема получаваме, че $$AD - AB = \\pm(CD - BC)$$, т.е.\n$$AD + BC = AB + CD \\quad \\text{или} \\quad AD + CD = AB + BC.$$",
+      "answer": "$AD + BC = AB + CD$ или $AD + CD = AB + BC$.",
+      "difficulty": "medium",
+      "techniques": [
+        "sine_law",
+        "ptolemy_theorem"
+      ],
+      "confidence": "exact",
+      "reasoning": "Използва синусовата теорема за отношенията на страните и получава равенство, което води до Ptolemy‑овата формула за сумите на страни."
+    },
+    {
+      "source": "OLI-2-Областен кръг-2019-11 кл · 2019-11 · Зад. 4",
+      "statement": "Четириъгълник $ABCD$ е вписан в окръжност $k$ с център $O$, като точката $O$ е вътрешна за четириъгълника. Известно е, че произведението от разстоянията от $O$ до страните $AB$ и $CD$ е равно на произведението от разстоянията от $O$ до страните $AD$ и $BC$. Допирателните към $k$ в точките $B$ и $D$ се пресичат в точка $P$. Да се докаже, че разстоянието от $P$ до правата $AC$ е два пъти по-голямо от разстоянието от $O$ до същата права.",
+      "solution": "Решение. Нека A₁ и C₁ са диаметрално противоположни съответно на точките A и C. Тогава BA₁·DC₁ = BC₁·DA₁ (BA₁ е два пъти по-голямо от разстоянието от O до AB и аналогично за останалите отсечки).\nНека P₁ е пресечната точка на допирателната към k в точка D и правата A₁C₁. От подобието на △A₁P₁D и △DP₁C₁ получаваме:\n(1) P₁A₁/P₁D = A₁D/C₁D.\nСлед повдигане на квадрат и заместване P₁D² = [неразчетено], получаваме:\nP₁A₁/P₁C₁ = (A₁D/C₁D)².\nАналогично, ако P₂ е пресечната точка на допирателната към k в точка B и правата A₁C₁, то\nP₂A₁/P₂C₁ = (A₁B/C₁B)².\nОт (1) следва, че P₁ ≡ P₂ ≡ P. Сега твърдението следва от правоъгълника AC₁A₁C.",
+      "answer": null,
+      "difficulty": "hard",
+      "techniques": [
+        "ptolemy_theorem",
+        "similar_triangles",
+        "circle_geometry"
+      ],
+      "confidence": "exact",
+      "reasoning": "Через диаметрално противоположни точки и подобие получава съотношения, които водят до желаното разстояние."
+    }
+  ]
+}

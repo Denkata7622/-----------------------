@@ -1,0 +1,121 @@
+{
+  "_meta": {
+    "pdf": "C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\Задачи_Минали_Години\\Областен\\OLI-2-Областен кръг-2026-11 кл-probs.pdf",
+    "paired_with": null,
+    "level": 1,
+    "type": "probs",
+    "analyzed_at": "2026-10-16T21:45:34.788032",
+    "model": "deepseek/deepseek-v3.2",
+    "text_length": 1385,
+    "paired_text_length": 0
+  },
+  "problems": [
+    {
+      "num": 1,
+      "topic": "algebra",
+      "theorems": [],
+      "techniques": [
+        "substitution",
+        "rationalization",
+        "factoring",
+        "domain_analysis"
+      ],
+      "concepts": [
+        "irrational_equations",
+        "domain_restrictions",
+        "polynomial_equations",
+        "square_roots"
+      ],
+      "difficulty": "standard",
+      "notes": "Уравнението съдържа корен квадратен, така че трябва да се намери дефиниционната област (4 - x^2 >= 0). Вероятно след рационализация и заместване се свежда до полиномно уравнение."
+    },
+    {
+      "num": 2,
+      "topic": "geometry",
+      "theorems": [
+        "Law_of_Cosines",
+        "Pythagorean_theorem"
+      ],
+      "techniques": [
+        "auxiliary_lines",
+        "coordinate_geometry",
+        "trigonometric_relations"
+      ],
+      "concepts": [
+        "isosceles_trapezoid",
+        "area_of_trapezoid",
+        "angle_chasing",
+        "similar_triangles",
+        "segment_lengths"
+      ],
+      "difficulty": "standard",
+      "notes": "Даден е равнобедрен трапец с ъгъл α и точка E на бедрото, такава че ∠AED = α/4. Трябва да се намери лицето, като се използват тригонометрични зависимости и свойства на трапеца."
+    },
+    {
+      "num": 3,
+      "topic": "number_theory",
+      "theorems": [],
+      "techniques": [
+        "inequality_analysis",
+        "bounding_technique",
+        "discriminant_analysis"
+      ],
+      "concepts": [
+        "quadratic_polynomials",
+        "discriminant",
+        "integer_coefficients",
+        "finite_sets",
+        "evaluation_at_rational_point"
+      ],
+      "difficulty": "olympic",
+      "notes": "Задачата изисква да се докаже, че за фиксирано D (не точен квадрат) и фиксирано рационано число p/q, множеството от квадратни полиноми с целочислени коефициенти, отрицателен водещ коефициент, дискриминанта D и неотрицателна стойност в p/q е крайно. Ключово е да се използват ограничения от условията върху коефициентите."
+    },
+    {
+      "num": 4,
+      "topic": "combinatorics",
+      "theorems": [],
+      "techniques": [
+        "pigeonhole_principle",
+        "path_construction",
+        "extremal_principle",
+        "averaging_argument"
+      ],
+      "concepts": [
+        "grid_paths",
+        "sum_constraints",
+        "permutations_of_numbers",
+        "adjacent_moves",
+        "diagonal_path"
+      ],
+      "difficulty": "hard",
+      "notes": "Комбинаторна задача за път в квадратна таблица n x n, запълнена с числата 1 до n^2. Трябва да се реши дали винаги съществува път от единия ъгъл до противоположния, така че сумата на посещаваните клетки да е под дадена граница (3/2 * n^3 - n^2). Вероятно изисква използване на принципа на Дирихле или конструктивно доказателство."
+    }
+  ],
+  "unique_concepts": [
+    "irrational_equations",
+    "domain_restrictions",
+    "polynomial_equations",
+    "square_roots",
+    "isosceles_trapezoid",
+    "area_of_trapezoid",
+    "angle_chasing",
+    "similar_triangles",
+    "segment_lengths",
+    "Law_of_Cosines",
+    "quadratic_polynomials",
+    "discriminant",
+    "integer_coefficients",
+    "finite_sets",
+    "evaluation_at_rational_point",
+    "grid_paths",
+    "sum_constraints",
+    "permutations_of_numbers",
+    "adjacent_moves",
+    "diagonal_path",
+    "pigeonhole_principle",
+    "path_construction",
+    "extremal_principle",
+    "averaging_argument"
+  ],
+  "confidence": 0.9
+}

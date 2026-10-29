@@ -1,0 +1,407 @@
+### Част 1: ЗАДАЧИ (10 кл)
+```js
+// ─── ЗАДАЧИ: 2025-10 ───
+{
+  source_pdf_probs: "Задачи_Минали_Години/OLI-2-Областен кръг-2025-10 кл-probs.pdf",
+  source_pdf_sols:  "Задачи_Минали_Години/OLI-2-Областен кръг-2025-10 кл-sol.pdf",
+  year: 2025,
+  grade: 10,
+  exam_type: "областен",
+  problems: [
+    {
+      num: 1,
+      topic: "Алгебра",
+      subtopic: "Ирационални уравнения с полагане",
+      difficulty: 3,
+      probs_page: 1,
+      sol_page: 1,
+      summary: "Да се реши уравнението sqrt(x^4 - 2ax^3 + (a^2+1)x^2 - ax - 2) = 3x^2 - 3ax + 7 при a=2 и a=3.",
+      plan_step: 5,
+      plan_point: "5.1",
+      related_points: ["5.4", "7.5"],
+      prerequisites: ["5.1", "5.4"],
+      add_as_task_to: ["5.1"],
+      required_knowledge: [
+        { point_id: "5.1", technique: "Факторизация на полином", why_needed: "Разлагане на израза под корена до (x^2 - ax - 1)(x^2 - ax + 2)" },
+        { point_id: null, technique: "Полагане u = x^2 - ax - 1", why_needed: "Свеждане до квадратно уравнение за u" },
+        { point_id: "5.4", technique: "Решаване на квадратно уравнение", why_needed: "Намиране на x след връщане на полагането" }
+      ],
+      techniques_not_in_plan: ["Решаване на ирационални уравнения чрез полагане"],
+      gap_severity: "minor",
+      estimated_time_minutes: 30,
+      common_pitfalls: "Учениците забравят да проверят допустимите стойности на u и да отхвърлят u = -4 като страничен корен.",
+      recommended_for_simulation: false,
+      prerequisite_review: "Преговори 5.1 и 5.4 преди да опиташ."
+    },
+    {
+      num: 2,
+      topic: "Геометрия",
+      subtopic: "Вписани ъгли и степен на точка",
+      difficulty: 5,
+      probs_page: 1,
+      sol_page: 1,
+      summary: "В вписан четириъгълник ABCD с пресечна точка E на диагоналите, M и N среди на AD и BC. Окръжността (EMN) пресича лъчите DA→ и CB→ в X и Y. Ако EF ⟂ MN, да се докаже, че E е център на описаната окръжност на △FXY.",
+      plan_step: 1,
+      plan_point: "1.5",
+      related_points: ["1.4", "1.9"],
+      prerequisites: ["1.5", "1.4"],
+      add_as_task_to: ["1.5", "1.4"],
+      required_knowledge: [
+        { point_id: "1.5", technique: "Вписани ъгли", why_needed: "За доказване на ъглови равенства около окръжността" },
+        { point_id: "1.4", technique: "Степен на точка", why_needed: "За подобието △AED ~ △BEC и медиани" },
+        { point_id: null, technique: "Медиани в подобни триъгълници", why_needed: "EM и EN са съответни медиани в подобните триъгълници" }
+      ],
+      techniques_not_in_plan: [],
+      gap_severity: "none",
+      estimated_time_minutes: 60,
+      common_pitfalls: "Трудно се забелязва подобието △AED ~ △BEC и че EM, EN са съответни медиани.",
+      recommended_for_simulation: true,
+      prerequisite_review: "Преговори 1.4 и 1.5 преди да опиташ."
+    },
+    {
+      num: 3,
+      topic: "Комбинаторика",
+      subtopic: "Вероятностен метод и покрития",
+      difficulty: 5,
+      probs_page: 1,
+      sol_page: 2,
+      summary: "Турнир от k мача по 2025 гейма. Всяко картонче има номерата на геймовете, спечелени от Аделина от едната страна и от Борис от другата. Да се намери най-малкото k, за което винаги може да се подредят картончетата така, че всяко число 1..2025 да се появи на лицева страна поне веднъж.",
+      plan_step: 8,
+      plan_point: "8.3",
+      related_points: ["8.1", "8.5", "8.9"],
+      prerequisites: ["8.2", "8.3", "8.5"],
+      add_as_task_to: ["8.3", "8.5"],
+      required_knowledge: [
+        { point_id: "8.5", technique: "Биномни коефициенти", why_needed: "За броене на подмножества от {1,...,K}" },
+        { point_id: "8.3", technique: "Двойно броене", why_needed: "За оценка на очакването на θ" },
+        { point_id: null, technique: "Вероятностен метод", why_needed: "Ключов за доказване на съществуване на разположение" }
+      ],
+      techniques_not_in_plan: ["Вероятностен метод"],
+      gap_severity: "major",
+      estimated_time_minutes: 60,
+      common_pitfalls: "Не се сещат за вероятностния метод и оценката E[θ] < 1.",
+      recommended_for_simulation: true,
+      prerequisite_review: "Преговори 8.2, 8.3 и 8.5 преди да опиташ."
+    },
+    {
+      num: 4,
+      topic: "ТЧ",
+      subtopic: "Прости числа и теореми на Ферма/Ойлер",
+      difficulty: 5,
+      probs_page: 1,
+      sol_page: 3,
+      summary: "Крайно или безкрайно е множеството T от прости p, такива че p дели 3m - 2 и 2n - 3 за някои естествени m,n?",
+      plan_step: 3,
+      plan_point: "3.3",
+      related_points: ["3.4", "4.5"],
+      prerequisites: ["3.2", "3.3", "3.4"],
+      add_as_task_to: ["3.3", "3.4"],
+      required_knowledge: [
+        { point_id: "3.3", technique: "Малка теорема на Ферма", why_needed: "За 2^{p-1} ≡ 1 (mod p)" },
+        { point_id: "3.4", technique: "Теорема на Ойлер", why_needed: "За избор на n и показатели" },
+        { point_id: "4.5", technique: "Прости числа", why_needed: "За съществуване на прост делител q ≡ 2 (mod 3)" }
+      ],
+      techniques_not_in_plan: [],
+      gap_severity: "none",
+      estimated_time_minutes: 60,
+      common_pitfalls: "Трудно се конструира n така, че 2n - 3 да има нов прост делител.",
+      recommended_for_simulation: true,
+      prerequisite_review: "Преговори 3.2, 3.3 и 3.4 преди да опиташ."
+    }
+  ],
+  difficulty_distribution: { easy: 0, medium: 1, hard: 3 },
+  recommended_action: "add-to-step10",
+  recommended_for_simulation: [2, 3, 4]
+}
+```
+
+### Част 2: ЗАДАЧИ (11 кл)
+```js
+// ─── ЗАДАЧИ: 2025-11 ───
+{
+  source_pdf_probs: "Задачи_Минали_Години/OLI-2-Областен кръг-2025-11 кл-probs.pdf",
+  source_pdf_sols:  "Задачи_Минали_Години/OLI-2-Областен кръг-2025-11 кл-sol.pdf",
+  year: 2025,
+  grade: 11,
+  exam_type: "областен",
+  problems: [
+    {
+      num: 1,
+      topic: "Алгебра",
+      subtopic: "Полиноми и геометрична прогресия",
+      difficulty: 3,
+      probs_page: 1,
+      sol_page: 1,
+      summary: "Да се намерят всички k, за които корените на 2x^3 - (k^2+6)x^2 + (k^2+k+4)x - k = 0 са реални положителни и образуват геометрична прогресия.",
+      plan_step: 5,
+      plan_point: "5.1",
+      related_points: ["5.4", "5.5"],
+      prerequisites: ["5.1"],
+      add_as_task_to: ["5.1"],
+      required_knowledge: [
+        { point_id: "5.1", technique: "Формули на Виет", why_needed: "За x1*x2 = 1" },
+        { point_id: null, technique: "Свойства на геометрична прогресия", why_needed: "x1, 1, x2 образуват ГП в този ред" }
+      ],
+      techniques_not_in_plan: [],
+      gap_severity: "none",
+      estimated_time_minutes: 25,
+      common_pitfalls: "Не забелязват, че x=1 е корен и че 1 е средният член на ГП.",
+      recommended_for_simulation: true,
+      prerequisite_review: "Преговори 5.1 преди да опиташ."
+    },
+    {
+      num: 2,
+      topic: "Геометрия",
+      subtopic: "Степен на точка и подобие",
+      difficulty: 4,
+      probs_page: 1,
+      sol_page: 1,
+      summary: "Окръжност k минава през C, допира се до AB в A, пресича BC в P и медианата CM в Q. BQ пресича k в R. Да се докаже, че PR || AB.",
+      plan_step: 1,
+      plan_point: "1.4",
+      related_points: ["1.5", "1.6"],
+      prerequisites: ["1.4", "1.5"],
+      add_as_task_to: ["1.4", "1.5"],
+      required_knowledge: [
+        { point_id: "1.4", technique: "Степен на точка", why_needed: "MB^2 = MA^2 = MQ.MC" },
+        { point_id: "1.5", technique: "Вписани ъгли", why_needed: "За ъглови равенства около k" },
+        { point_id: null, technique: "Подобие на триъгълници", why_needed: "△MBQ ∼ △MCB" }
+      ],
+      techniques_not_in_plan: [],
+      gap_severity: "none",
+      estimated_time_minutes: 50,
+      common_pitfalls: "Трудно се вижда, че MQ.MC = MB^2 и подобието △MBQ ∼ △MCB.",
+      recommended_for_simulation: true,
+      prerequisite_review: "Преговори 1.4 и 1.5 преди да опиташ."
+    },
+    {
+      num: 3,
+      topic: "Комбинаторика",
+      subtopic: "Пермутации и максимална сума",
+      difficulty: 3,
+      probs_page: 1,
+      sol_page: 1,
+      summary: "За нечетно n и пермутация a1..an на 1..n да се намери максималната стойност на |a1-1| + ... + |an-n|.",
+      plan_step: 8,
+      plan_point: "8.6",
+      related_points: ["6.7", "8.3"],
+      prerequisites: ["8.6", "6.7"],
+      add_as_task_to: ["8.6", "6.7"],
+      required_knowledge: [
+        { point_id: "8.6", technique: "Пермутации", why_needed: "Основен обект на задачата" },
+        { point_id: "6.7", technique: "Rearrangement", why_needed: "За максимална сума на абсолютни разлики" },
+        { point_id: "8.3", technique: "Двойно броене", why_needed: "Интервално броене на стрелките" }
+      ],
+      techniques_not_in_plan: [],
+      gap_severity: "none",
+      estimated_time_minutes: 30,
+      common_pitfalls: "Не се сещат за интервалната интерпретация и броене на стрелки.",
+      recommended_for_simulation: true,
+      prerequisite_review: "Преговори 8.6 и 6.7 преди да опиташ."
+    },
+    {
+      num: 4,
+      topic: "ТЧ",
+      subtopic: "Прости числа и теорема на Ферма",
+      difficulty: 5,
+      probs_page: 1,
+      sol_page: 2,
+      summary: "Да се докаже, че за всяко естествено n съществува просто p < 2^{2^n}, за което 2^n дели p-1.",
+      plan_step: 3,
+      plan_point: "3.3",
+      related_points: ["3.4", "4.5"],
+      prerequisites: ["3.2", "3.3", "3.4"],
+      add_as_task_to: ["3.3", "3.4"],
+      required_knowledge: [
+        { point_id: "3.3", technique: "Малка теорема на Ферма", why_needed: "2^{p-1} ≡ 1 (mod p)" },
+        { point_id: "3.4", technique: "Теорема на Ойлер", why_needed: "За показатели и делимост" },
+        { point_id: "4.5", technique: "Прости числа", why_needed: "За избор на прост делител p" }
+      ],
+      techniques_not_in_plan: [],
+      gap_severity: "none",
+      estimated_time_minutes: 60,
+      common_pitfalls: "Трудно се конструира p и се доказва, че 2^n | p-1.",
+      recommended_for_simulation: false,
+      prerequisite_review: "Преговори 3.2, 3.3 и 3.4 преди да опиташ."
+    }
+  ],
+  difficulty_distribution: { easy: 0, medium: 2, hard: 2 },
+  recommended_action: "add-to-step10",
+  recommended_for_simulation: [1, 2, 3]
+}
+```
+
+### Част 3: АРХИВ
+```js
+// ─── АРХИВ: 2025-10 ───
+{ 
+  id: "10.20", 
+  title: "Областен кръг 2025 – 10 клас",
+  desc: "4 задачи: 1 Алг, 1 Геом, 1 Комб, 1 ТЧ",
+  source: "Областен кръг 2025",
+  pdf: "Задачи_Минали_Години/OLI-2-Областен кръг-2025-10 кл-probs",
+  page: 1,
+  problems_page: 1,
+  solutions_page: 1,
+  tasks: [
+    { label: "Зад 1 — Ирационални уравнения", pdf: "Задачи_Минали_Години/OLI-2-Областен кръг-2025-10 кл-probs", page: 1, knowledge: ["5.1", "5.4"] },
+    { label: "Зад 2 — Вписани ъгли", pdf: "Задачи_Минали_Години/OLI-2-Областен кръг-2025-10 кл-probs", page: 1, knowledge: ["1.4", "1.5"] },
+    { label: "Зад 3 — Вероятностен метод", pdf: "Задачи_Минали_Години/OLI-2-Областен кръг-2025-10 кл-probs", page: 1, knowledge: ["8.3", "8.5"] },
+    { label: "Зад 4 — Прости числа", pdf: "Задачи_Минали_Години/OLI-2-Областен кръг-2025-10 кл-probs", page: 1, knowledge: ["3.3", "3.4", "4.5"] }
+  ],
+  bonus: [
+    { label: "Решения", pdf: "Задачи_Минали_Години/OLI-2-Областен кръг-2025-10 кл-sol" }
+  ],
+  explanation: "Геометрия: вписани ъгли + степен на точка. ТЧ: Ферма/Ойлер. Комбинаторика: вероятностен метод (липсва в плана). Алгебра: ирационално уравнение с полагане."
+}
+
+// ─── АРХИВ: 2025-11 ───
+{ 
+  id: "10.21", 
+  title: "Областен кръг 2025 – 11 клас",
+  desc: "4 задачи: 1 Алг, 1 Геом, 1 Комб, 1 ТЧ",
+  source: "Областен кръг 2025",
+  pdf: "Задачи_Минали_Години/OLI-2-Областен кръг-2025-11 кл-probs",
+  page: 1,
+  problems_page: 1,
+  solutions_page: 1,
+  tasks: [
+    { label: "Зад 1 — Полиноми и ГП", pdf: "Задачи_Минали_Години/OLI-2-Областен кръг-2025-11 кл-probs", page: 1, knowledge: ["5.1"] },
+    { label: "Зад 2 — Степен на точка", pdf: "Задачи_Минали_Години/OLI-2-Областен кръг-2025-11 кл-probs", page: 1, knowledge: ["1.4", "1.5"] },
+    { label: "Зад 3 — Пермутации", pdf: "Задачи_Минали_Години/OLI-2-Областен кръг-2025-11 кл-probs", page: 1, knowledge: ["8.6", "6.7"] },
+    { label: "Зад 4 — Прости числа", pdf: "Задачи_Минали_Години/OLI-2-Областен кръг-2025-11 кл-probs", page: 1, knowledge: ["3.3", "3.4", "4.5"] }
+  ],
+  bonus: [
+    { label: "Решения", pdf: "Задачи_Минали_Години/OLI-2-Областен кръг-2025-11 кл-sol" }
+  ],
+  explanation: "Алгебра: Виет + ГП. Геометрия: степен на точка + подобие. Комбинаторика: пермутации + rearrangement. ТЧ: Ферма/Ойлер."
+}
+```
+
+### Част 4: TASKS ЗА ТЕМАТИЧНИ ТОЧКИ
+```js
+// ─── АКТУАЛИЗАЦИЯ НА ТОЧКИ ───
+
+// Точка 3.3 в STEPS[2].points:
+{ id: "3.3",
+  tasks: [
+    { label: "ОИ 2025/10 кл, Зад 4 (Прости числа)", pdf: "Задачи_Минали_Години/OLI-2-Областен кръг-2025-10 кл-probs", page: 1, difficulty: 5, requires_also: ["3.4", "4.5"], prerequisite_review: "Преговори 3.2 и 3.4" },
+    { label: "ОИ 2025/11 кл, Зад 4 (Прости числа)", pdf: "Задачи_Минали_Години/OLI-2-Областен кръг-2025-11 кл-probs", page: 1, difficulty: 5, requires_also: ["3.4", "4.5"], prerequisite_review: "Преговори 3.2 и 3.4" }
+  ]
+}
+
+// Точка 3.4 в STEPS[2].points:
+{ id: "3.4",
+  tasks: [
+    { label: "ОИ 2025/10 кл, Зад 4 (Ойлер)", pdf: "Задачи_Минали_Години/OLI-2-Областен кръг-2025-10 кл-probs", page: 1, difficulty: 5, requires_also: ["3.3", "4.5"], prerequisite_review: "Преговори 3.2 и 3.3" },
+    { label: "ОИ 2025/11 кл, Зад 4 (Ойлер)", pdf: "Задачи_Минали_Години/OLI-2-Областен кръг-2025-11 кл-probs", page: 1, difficulty: 5, requires_also: ["3.3", "4.5"], prerequisite_review: "Преговори 3.2 и 3.3" }
+  ]
+}
+
+// Точка 5.1 в STEPS[4].points:
+{ id: "5.1",
+  tasks: [
+    { label: "ОИ 2025/10 кл, Зад 1 (Факторизация)", pdf: "Задачи_Минали_Години/OLI-2-Областен кръг-2025-10 кл-probs", page: 1, difficulty: 3, requires_also: ["5.4"], prerequisite_review: "Преговори 5.4" },
+    { label: "ОИ 2025/11 кл, Зад 1 (Виет и ГП)", pdf: "Задачи_Минали_Години/OLI-2-Областен кръг-2025-11 кл-probs", page: 1, difficulty: 3, requires_also: [], prerequisite_review: "Преговори 5.1" }
+  ]
+}
+
+// Точка 1.4 в STEPS[0].points:
+{ id: "1.4",
+  tasks: [
+    { label: "ОИ 2025/10 кл, Зад 2 (Степен на точка)", pdf: "Задачи_Минали_Години/OLI-2-Областен кръг-2025-10 кл-probs", page: 1, difficulty: 5, requires_also: ["1.5"], prerequisite_review: "Преговори 1.5" },
+    { label: "ОИ 2025/11 кл, Зад 2 (Степен на точка)", pdf: "Задачи_Минали_Години/OLI-2-Областен кръг-2025-11 кл-probs", page: 1, difficulty: 4, requires_also: ["1.5"], prerequisite_review: "Преговори 1.5" }
+  ]
+}
+
+// Точка 1.5 в STEPS[0].points:
+{ id: "1.5",
+  tasks: [
+    { label: "ОИ 2025/10 кл, Зад 2 (Вписани ъгли)", pdf: "Задачи_Минали_Години/OLI-2-Областен кръг-2025-10 кл-probs", page: 1, difficulty: 5, requires_also: ["1.4"], prerequisite_review: "Преговори 1.4" },
+    { label: "ОИ 2025/11 кл, Зад 2 (Вписани ъгли)", pdf: "Задачи_Минали_Години/OLI-2-Областен кръг-2025-11 кл-probs", page: 1, difficulty: 4, requires_also: ["1.4"], prerequisite_review: "Преговори 1.4" }
+  ]
+}
+
+// Точка 8.6 в STEPS[7].points:
+{ id: "8.6",
+  tasks: [
+    { label: "ОИ 2025/11 кл, Зад 3 (Пермутации)", pdf: "Задачи_Минали_Години/OLI-2-Областен кръг-2025-11 кл-probs", page: 1, difficulty: 3, requires_also: ["6.7"], prerequisite_review: "Преговори 6.7" }
+  ]
+}
+
+// Точка 6.7 в STEPS[5].points:
+{ id: "6.7",
+  tasks: [
+    { label: "ОИ 2025/11 кл, Зад 3 (Rearrangement)", pdf: "Задачи_Минали_Години/OLI-2-Областен кръг-2025-11 кл-probs", page: 1, difficulty: 3, requires_also: ["8.6"], prerequisite_review: "Преговори 8.6" }
+  ]
+}
+```
+
+### Част 5: KNOWLEDGE PROFILE ЗА ГОДИНАТА
+```js
+// ─── KNOWLEDGE PROFILE: 2025 ───
+{
+  year: 2025,
+  total_problems_analyzed: 8,
+  most_used_points: [
+    { point_id: "3.3", count: 2, examples: [10.4, 11.4] },
+    { point_id: "3.4", count: 2, examples: [10.4, 11.4] },
+    { point_id: "5.1", count: 2, examples: [10.1, 11.1] },
+    { point_id: "1.4", count: 2, examples: [10.2, 11.2] },
+    { point_id: "1.5", count: 2, examples: [10.2, 11.2] },
+    { point_id: "8.6", count: 1, examples: [11.3] },
+    { point_id: "8.3", count: 1, examples: [10.3] }
+  ],
+  techniques_used: [
+    "Малка теорема на Ферма",
+    "Теорема на Ойлер",
+    "Формули на Виет",
+    "Степен на точка",
+    "Вписани ъгли",
+    "Пермутации",
+    "Rearrangement",
+    "Вероятностен метод"
+  ],
+  gaps_identified: [
+    { 
+      technique: "Вероятностен метод", 
+      appeared_in: ["10 кл зад 3"], 
+      recommendation: "Добави нова точка 8.11 'Вероятностен метод' в Стъпка 8" 
+    },
+    {
+      technique: "Ирационални уравнения с полагане",
+      appeared_in: ["10 кл зад 1"],
+      recommendation: "Малка липса; може да се добави като подточка в 5.4 или 7.5"
+    }
+  ],
+  study_priority: [
+    "3.3 — Малка теорема на Ферма (2 задачи)",
+    "3.4 — Теорема на Ойлер (2 задачи)",
+    "5.1 — Формули на Виет (2 задачи)",
+    "1.4 — Степен на точка (2 задачи)",
+    "1.5 — Вписани ъгли (2 задачи)",
+    "8.3/8.5 — Вероятностен метод (1 задача, major gap)"
+  ],
+  summary: "Тази година доминираха ТЧ (Ферма/Ойлер) и геометрия (степен на точка/вписани ъгли). Липсваща техника: вероятностен метод (major gap)."
+}
+```
+
+### Част 6: RECOMMENDED CHANGES
+```markdown
+### RECOMMENDED CHANGES TO index.html
+
+**В STEPS:**
+- [ ] Добави `10.20` в Step 10 (архив 2025 – 10 клас)
+- [ ] Добави `10.21` в Step 10 (архив 2025 – 11 клас)
+- [ ] Актуализирай точки `3.3`, `3.4`, `5.1`, `1.4`, `1.5`, `8.6`, `6.7` с нови задачи от 2025
+- [ ] Създай нова точка `8.11` в Стъпка 8: „Вероятностен метод“ (major gap от 10 кл зад 3)
+- [ ] (Опц.) Добави подточка в `5.4` или `7.5`: „Ирационални уравнения с полагане“ (minor gap)
+
+**В PLAN_PHASES:**
+- [ ] Обнови Week 16/17: „Симулация ОИ 2025“ (10 и 11 кл)
+- [ ] Добави вероятностен метод в седмицата за Комбинаторика (Стъпка 8)
+
+**Нови точки/стъпки:**
+- [ ] `8.11` — Вероятностен метод (Стъпка 8)
+- [ ] (Опц.) `5.9` — Ирационални уравнения (Стъпка 5)
+```

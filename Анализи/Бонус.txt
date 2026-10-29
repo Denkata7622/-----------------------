@@ -1,0 +1,754 @@
+
+Olympiad PDF analysis
+Rewrite index.html with 17 features
+Merge analyses into all_analyses.md
+NOM 2015-2016
+NOM 2014
+NOM_2013 анализ
+NOM2010 анализ
+OT_2012 анализ
+NOM2012 анализ
+NOM2011 анализ
+OT_2010 analysis
+BMS竞赛分析
+BMC 2003-2006 анализ
+BMO анализ
+BMS анализ
+2026 областен кръг анализ
+2025 областен анализ
+2024 областен кръг анализ
+2023 Olympiad analysis
+2022 областен кръг
+2021 Областен кръг анализ
+2020 областен кръг анализ
+2019 областен кръг анализ
+2018 областен кръг анализ
+2017 Olympiad Analysis
+2016 ОИ анализ
+Book10
+Book analysis
+Book analysis
+Calculus
+Inequalities book analysis
+book9
+Book analysis mismatch
+CP4 Book 2 анализ
+Euclidean Geometry Book Analysis
+Няма PDF
+Олимпиадна книга
+104 NT Problems
+Олимпиада задачи
+NOM_2014_2015_2016
+NOM_2012_2013
+HTML олимпиадна подготовка
+BMS BMC page finder
+NOM2010_2011
+Олимпийски теми 2010 2012
+Extract PDF metadata
+PDF extraction JSON
+Подготовка за национален кръг
+Съвместима сушилня Bosch
+Goku vs Math
+СМБ олимпиада подготовка
+Deutsch Test Antworten
+ESP32 settings array update
+ImageUtil Missing
+AudioFocusFix
+FLAC Conversion Script
+Diagnostic help
+Claude Vertex AI curl analysis
+Fix TypeScript errors in code
+TIDAL code fixes summary
+TIDAL download retry with alternate URL
+Search URL Button Fix
+Filter Script Ran
+Code Filtering Issue
+Add buttons skip delays copy library
+Downloaded vs Not Downloaded
+Skill call
+TypeScript skills and memories management
+Ableton Live free options
+Large JSON import lag fix
+Add Teacher Model
+Replace useEffect with prop processing
+Music Recognition Results
+Vertex AI Fix
+Kacenta Music Crash Fix Request
+Music OCR Pipeline Tech Guide
+Fix TS errors in recognition service
+OCR pairing fix
+Chat Summary
+Android project recovery assistance
+Fix KSP error after package rename
+Audio processing quality verification methods
+User needs context for site prompt
+Обяснение на грешки в конзолата
+Безплатно автоматизирано сваляне на FLAC музика
+Безжично прехвърляне на песни
+Backrooms Movie Not on Stremio Yet
+DIY Communication System Price Breakdown
+Music download integration plan
+Hello. I want to see how smart y
+Olympiad PDF analysis
+The user wants me to process a new batch of PDF files. Let me identify them:
+
+Enumerative_Problems_Final.pdf - has content but seems to be mostly problems, no solutions
+
+Exam_01_Problems.pdf - 3 problems, no solutions
+
+Exam_02_Problems.pdf - 3 problems, no solutions
+
+Functional_Equations_Lecture_01.pdf - 13 problems with solutions
+
+Functional_Equations_Lecture_02.pdf - 10 problems with solutions
+
+Functional_Equations_Lecture_03.pdf - 14 problems with solutions
+
+Induction Problems-2.pdf - numerous problems with solutions
+
+Induction Problems.pdf - numerous problems with solutions
+
+NT_Training_01.pdf - 25 problems, no solutions
+
+NT_Training_02.pdf - 31 problems, no solutions
+
+NT_Training_03.pdf - 23 problems, some content truncated
+
+NT_Training_04.pdf - 28 problems, no solutions
+
+NT_Training_05.pdf - 30 problems, no solutions
+
+Number_Theoretic_Flavor.pdf - many problems, no solutions
+
+Polynomials_Problems_2015-16.pdf - 21 problems, some solutions
+
+These are mostly problem collections from lectures-navid/ folder. Let me organize them according to the schema.
+
+Let me identify each:
+
+Enumerative_Problems_Final.pdf - EN, Number Theory/Combinatorics, ~6 pages, problems only
+
+Exam_01_Problems.pdf - EN, Mixed, 1 page, 3 problems
+
+Exam_02_Problems.pdf - EN, Mixed, 1 page, 3 problems
+
+Functional_Equations_Lecture_01.pdf - EN, Functional Equations, 10 pages
+
+Functional_Equations_Lecture_02.pdf - EN, Functional Equations, 9 pages
+
+Functional_Equations_Lecture_03.pdf - EN, Functional Equations, 12 pages
+
+Induction Problems-2.pdf - EN, Induction/Number Theory, 29 pages
+
+Induction Problems.pdf - EN, Induction, 25 pages
+
+NT_Training_01.pdf - EN, Number Theory, 2 pages, 25 problems
+
+NT_Training_02.pdf - EN, Number Theory, 2 pages, 31 problems
+
+NT_Training_03.pdf - EN, Number Theory, ~3 pages, 23 problems
+
+NT_Training_04.pdf - EN, Number Theory, 3 pages, 28 problems
+
+NT_Training_05.pdf - EN, Number Theory/GCD, 3 pages, 30 problems
+
+Number_Theoretic_Flavor.pdf - EN, Number Theory, 4 pages, ~25 problems
+
+Polynomials_Problems_2015-16.pdf - EN, Polynomials, 3 pages, 21 problems
+
+Now let me map to the plan. According to the context:
+
+These come from lectures-navid/ folder (mentioned in the task description)
+
+NT_Training_01-05 = Number Theory training materials
+
+Polynomials_Problems, Enumerative_Problems, Induction_Problems_1+2, Number_Theoretic_Flavor, Exam_01/02_Problems are all listed
+
+Let me map:
+
+NT_Training_01-05 → Steps 3, 4 (Number Theory)
+
+Polynomials_Problems_2015-16 → Step 5 (Polynomials)
+
+Enumerative_Problems_Final → Step 8, 4 (Combinatorics/NT)
+
+Induction_Problems + Induction_Problems-2 → Step 8.10, 3, 4
+
+Number_Theoretic_Flavor → Steps 3, 4
+
+Functional_Equations_Lecture_01-03 → Step 7
+
+Exam_01/02_Problems → Mixed, Step 10
+
+Now let me create the output per the format. I need to produce:
+
+Table
+
+JS blocks for high priority
+
+New step (if applicable)
+
+Gaps analysis
+
+Recommended changes
+
+Let me be efficient and create the table first, then JS blocks for high priority items.
+
+Given the volume, I should focus on the most impactful mappings.
+
+Let me start writing.
+
+Част 1: ТАБЛИЦА
+Файл	Заглавие	Автор	Език	Тема	Стр.	Plan step	Plan points	Reg.	Nat.	Действие
+Enumerative_Problems_Final.pdf	Enumerative Problems	—	EN	ТЧ/Комбинаторика	6	4, 8	4.4, 4.5, 4.8, 8.3	med	high	add-as-bonus
+Exam_01_Problems.pdf	Exam 01	—	EN	Смесени	1	10	10.1–10.4	high	high	add-as-bonus
+Exam_02_Problems.pdf	Exam 02	—	EN	Смесени	1	7, 9	7.1–7.5, 9.10	med	high	add-as-bonus
+Functional_Equations_Lecture_01.pdf	One Variable Functional Equations	—	EN	ФУ	10	7	7.1, 7.3, 7.5	high	high	add-as-bonus
+Functional_Equations_Lecture_02.pdf	Inserting New Variable	—	EN	ФУ	9	7	7.1, 7.5	high	high	add-as-bonus
+Functional_Equations_Lecture_03.pdf	Additivity and Boundedness	—	EN	ФУ	12	7	7.1, 7.2, 7.5, 7.8	high	high	add-as-bonus
+Induction Problems-2.pdf	Induction Problems 2	—	EN	Индукция/ТЧ	29	3, 4, 8	3.2, 4.4, 8.10	high	high	add-as-bonus
+Induction Problems.pdf	Induction Problems	—	EN	Индукция	25	8	8.10	high	high	add-as-bonus
+NT_Training_01.pdf	NT Training 01	—	EN	ТЧ	2	3, 4	3.1, 3.2, 4.1, 4.4, 4.5	high	high	add-as-bonus
+NT_Training_02.pdf	NT Training 02	—	EN	ТЧ	2	3, 4	3.1, 3.2, 3.3, 4.4, 4.5, 4.6	high	high	add-as-bonus
+NT_Training_03.pdf	NT Training 03	—	EN	ТЧ	3	3, 4	3.1, 3.2, 4.4, 4.8	med	high	add-as-bonus
+NT_Training_04.pdf	NT Training 04	—	EN	ТЧ	3	3, 4	3.1, 3.2, 4.4, 4.5, 4.7	high	high	add-as-bonus
+NT_Training_05.pdf	NT Training 05	—	EN	ТЧ/НОД	3	3	3.1	high	high	add-as-bonus
+Number_Theoretic_Flavor.pdf	Number Theoretic Flavor	—	EN	ТЧ	4	3, 4	3.2, 3.3, 3.7, 4.4, 4.5	med	high	add-as-bonus
+Polynomials_Problems_2015-16.pdf	Polynomials Problems 2015-16	—	EN	Алгебра	3	5	5.1, 5.4, 5.5, 5.7, 5.8	high	high	add-as-bonus
+Част 2: JS БЛОКОВЕ (БЛОК 4 — АКТУАЛИЗАЦИИ)
+js
+// ─── АКТУАЛИЗАЦИИ ЗА ВИСОК ПРИОРИТЕТ ───
+
+// NT_Training_01–05: масови задачи към 3.1, 3.2, 3.3, 4.4, 4.5, 4.6, 4.7
+[1,2,3,4,5].forEach(n => {
+  STEPS[2].points.find(p => p.id === "3.1").bonus.push(
+    { label: `NT Training 0${n}`, pdf: `Бонус/lectures-navid/NT_Training_0${n}`, page: 1 }
+  );
+  STEPS[2].points.find(p => p.id === "3.2").bonus.push(
+    { label: `NT Training 0${n}`, pdf: `Бонус/lectures-navid/NT_Training_0${n}`, page: 1 }
+  );
+});
+STEPS[2].points.find(p => p.id === "3.1").tasks.push(
+  { label: "NT_Training_05, Зад 2 (gcd неравенство)", pdf: "Бонус/lectures-navid/NT_Training_05", page: 1, difficulty: 4, requires_also: ["3.1"], prerequisite_review: "Преговори 3.1" },
+  { label: "NT_Training_05, Зад 11", pdf: "Бонус/lectures-navid/NT_Training_05", page: 2, difficulty: 5, requires_also: ["3.1"], prerequisite_review: "Преговори 3.1" }
+);
+STEPS[2].points.find(p => p.id === "3.3").tasks.push(
+  { label: "NT_Training_02, Зад 3 (Ферма)", pdf: "Бонус/lectures-navid/NT_Training_02", page: 1, difficulty: 3, requires_also: ["3.2"], prerequisite_review: "Преговори 3.2" }
+);
+STEPS[3].points.find(p => p.id === "4.4").tasks.push(
+  { label: "NT_Training_01, Зад 5 (квадрати)", pdf: "Бонус/lectures-navid/NT_Training_01", page: 1, difficulty: 4, requires_also: ["3.2"], prerequisite_review: "Преговори 3.2" },
+  { label: "NT_Training_04, Зад 22", pdf: "Бонус/lectures-navid/NT_Training_04", page: 2, difficulty: 4, requires_also: ["4.4"], prerequisite_review: "Преговори 4.4" }
+);
+STEPS[3].points.find(p => p.id === "4.5").tasks.push(
+  { label: "NT_Training_01, Зад 1 (прости p,q)", pdf: "Бонус/lectures-navid/NT_Training_01", page: 1, difficulty: 4, requires_also: ["3.1"], prerequisite_review: "Преговори 3.1" },
+  { label: "NT_Training_02, Зад 7 (p^3+107)", pdf: "Бонус/lectures-navid/NT_Training_02", page: 1, difficulty: 4, requires_also: ["4.5"], prerequisite_review: "Преговори 4.5" }
+);
+STEPS[3].points.find(p => p.id === "4.7").tasks.push(
+  { label: "NT_Training_04, Зад 7", pdf: "Бонус/lectures-navid/NT_Training_04", page: 1, difficulty: 5, requires_also: ["4.7"], prerequisite_review: "Преговори 4.7" }
+);
+
+// Polynomials_Problems_2015-16: задачи към 5.1, 5.4, 5.5, 5.7, 5.8
+STEPS[4].points.find(p => p.id === "5.1").bonus.push(
+  { label: "Polynomials Problems 2015-16", pdf: "Бонус/lectures-navid/Polynomials_Problems_2015-16", page: 1 }
+);
+STEPS[4].points.find(p => p.id === "5.1").tasks.push(
+  { label: "Polynomials, Зад 17 (f,g рационални)", pdf: "Бонус/lectures-navid/Polynomials_Problems_2015-16", page: 2, difficulty: 5, requires_also: ["5.1"], prerequisite_review: "Преговори 5.1" }
+);
+STEPS[4].points.find(p => p.id === "5.4").tasks.push(
+  { label: "Polynomials, Зад 5 (monic f^3-2)", pdf: "Бонус/lectures-navid/Polynomials_Problems_2015-16", page: 1, difficulty: 4, requires_also: ["5.4"], prerequisite_review: "Преговори 5.4" }
+);
+STEPS[4].points.find(p => p.id === "5.5").tasks.push(
+  { label: "Polynomials, Зад 9 (ирационални)", pdf: "Бонус/lectures-navid/Polynomials_Problems_2015-16", page: 2, difficulty: 5, requires_also: ["5.5"], prerequisite_review: "Преговори 5.5" }
+);
+STEPS[4].points.find(p => p.id === "5.7").tasks.push(
+  { label: "Polynomials, Зад 15 (p(2016) просто)", pdf: "Бонус/lectures-navid/Polynomials_Problems_2015-16", page: 2, difficulty: 5, requires_also: ["5.7"], prerequisite_review: "Преговори 5.7" }
+);
+STEPS[4].points.find(p => p.id === "5.8").tasks.push(
+  { label: "Polynomials, Зад 13 (Lagrange)", pdf: "Бонус/lectures-navid/Polynomials_Problems_2015-16", page: 2, difficulty: 5, requires_also: ["5.8"], prerequisite_review: "Преговори 5.8" }
+);
+
+// Functional_Equations_Lecture_01-03: задачи към 7.1, 7.2, 7.3, 7.5, 7.8
+[1,2,3].forEach(n => {
+  STEPS[6].points.find(p => p.id === "7.5").bonus.push(
+    { label: `Functional Equations Lecture 0${n}`, pdf: `Бонус/lectures-navid/Functional_Equations_Lecture_0${n}`, page: 1 }
+  );
+});
+STEPS[6].points.find(p => p.id === "7.1").tasks.push(
+  { label: "FE Lecture 01, Problem 4 (Vietnam)", pdf: "Бонус/lectures-navid/Functional_Equations_Lecture_01", page: 3, difficulty: 4, requires_also: ["7.1"], prerequisite_review: "Преговори 7.1" },
+  { label: "FE Lecture 03, Problem 11 (AMM)", pdf: "Бонус/lectures-navid/Functional_Equations_Lecture_03", page: 9, difficulty: 4, requires_also: ["7.1"], prerequisite_review: "Преговори 7.1" }
+);
+STEPS[6].points.find(p => p.id === "7.2").tasks.push(
+  { label: "FE Lecture 03, Problem 7 (Korean)", pdf: "Бонус/lectures-navid/Functional_Equations_Lecture_03", page: 5, difficulty: 5, requires_also: ["7.2"], prerequisite_review: "Преговори 7.2" }
+);
+STEPS[6].points.find(p => p.id === "7.3").tasks.push(
+  { label: "FE Lecture 01, Problem 5 (monotone)", pdf: "Бонус/lectures-navid/Functional_Equations_Lecture_01", page: 4, difficulty: 4, requires_also: ["7.3"], prerequisite_review: "Преговори 7.3" }
+);
+STEPS[6].points.find(p => p.id === "7.8").tasks.push(
+  { label: "FE Lecture 01, Problem 12 (Turkish TST)", pdf: "Бонус/lectures-navid/Functional_Equations_Lecture_01", page: 8, difficulty: 5, requires_also: ["7.8"], prerequisite_review: "Преговори 7.8" }
+);
+
+// Induction Problems + Induction Problems-2: задачи към 8.10, 3.2, 4.4
+STEPS[7].points.find(p => p.id === "8.10").bonus.push(
+  { label: "Induction Problems", pdf: "Бонус/lectures-navid/Induction Problems", page: 1 },
+  { label: "Induction Problems 2", pdf: "Бонус/lectures-navid/Induction Problems-2", page: 1 }
+);
+STEPS[7].points.find(p => p.id === "8.10").tasks.push(
+  { label: "Induction Problems, Problem 2 (Полиноми)", pdf: "Бонус/lectures-navid/Induction Problems", page: 5, difficulty: 4, requires_also: ["5.1"], prerequisite_review: "Преговори 5.1" },
+  { label: "Induction Problems-2, Problem 1 (Скакалец)", pdf: "Бонус/lectures-navid/Induction Problems-2", page: 1, difficulty: 5, requires_also: ["3.2"], prerequisite_review: "Преговори 3.2" }
+);
+
+// Exam_01/02: задачи към 10.1–10.4, 7.1–7.5, 9.10
+STEPS[9].points.find(p => p.id === "10.1").bonus.push(
+  { label: "Exam 01 Problems", pdf: "Бонус/lectures-navid/Exam_01_Problems", page: 1 }
+);
+STEPS[9].points.find(p => p.id === "10.1").tasks.push(
+  { label: "Exam 01, Problem 1 (gcd)", pdf: "Бонус/lectures-navid/Exam_01_Problems", page: 1, difficulty: 4, requires_also: ["3.1"], prerequisite_review: "Преговори 3.1" },
+  { label: "Exam 01, Problem 2 (2×2018)", pdf: "Бонус/lectures-navid/Exam_01_Problems", page: 1, difficulty: 4, requires_also: ["8.1"], prerequisite_review: "Преговори 8.1" }
+);
+STEPS[6].points.find(p => p.id === "7.5").tasks.push(
+  { label: "Exam 02, Problem 2 (FE)", pdf: "Бонус/lectures-navid/Exam_02_Problems", page: 1, difficulty: 4, requires_also: ["7.5"], prerequisite_review: "Преговори 7.5" }
+);
+STEPS[8].points.find(p => p.id === "9.10").tasks.push(
+  { label: "Exam 02, Problem 3 (good/perfect group)", pdf: "Бонус/lectures-navid/Exam_02_Problems", page: 1, difficulty: 5, requires_also: ["9.10"], prerequisite_review: "Преговори 9.10" }
+);
+
+// Number_Theoretic_Flavor: задачи към 3.2, 3.3, 3.7, 4.4, 4.5
+STEPS[2].points.find(p => p.id === "3.2").bonus.push(
+  { label: "Number Theoretic Flavor", pdf: "Бонус/lectures-navid/Number_Theoretic_Flavor", page: 1 }
+);
+STEPS[2].points.find(p => p.id === "3.7").tasks.push(
+  { label: "NT Flavor, Problem (primitive roots)", pdf: "Бонус/lectures-navid/Number_Theoretic_Flavor", page: 4, difficulty: 5, requires_also: ["3.7"], prerequisite_review: "Преговори 3.7" }
+);
+STEPS[3].points.find(p => p.id === "4.4").tasks.push(
+  { label: "NT Flavor, Problem (n^2+3)", pdf: "Бонус/lectures-navid/Number_Theoretic_Flavor", page: 3, difficulty: 5, requires_also: ["4.4"], prerequisite_review: "Преговори 4.4" }
+);
+
+// Enumerative_Problems_Final: задачи към 4.4, 4.5, 4.8, 8.3
+STEPS[3].points.find(p => p.id === "4.5").bonus.push(
+  { label: "Enumerative Problems", pdf: "Бонус/lectures-navid/Enumerative_Problems_Final", page: 1 }
+);
+STEPS[3].points.find(p => p.id === "4.5").tasks.push(
+  { label: "Enumerative, Problem (infinitely many n)", pdf: "Бонус/lectures-navid/Enumerative_Problems_Final", page: 1, difficulty: 4, requires_also: ["4.5"], prerequisite_review: "Преговори 4.5" }
+);
+STEPS[3].points.find(p => p.id === "4.8").tasks.push(
+  { label: "Enumerative, Problem (φ sum)", pdf: "Бонус/lectures-navid/Enumerative_Problems_Final", page: 1, difficulty: 4, requires_also: ["4.8"], prerequisite_review: "Преговори 4.8" }
+);
+STEPS[7].points.find(p => p.id === "8.3").tasks.push(
+  { label: "Enumerative, Problem (sum of φ)", pdf: "Бонус/lectures-navid/Enumerative_Problems_Final", page: 1, difficulty: 5, requires_also: ["8.3"], prerequisite_review: "Преговори 8.3" }
+);
+Част 3: НОВА СТЪПКА (НЕ е приложимо)
+Не се препоръчва нова стъпка — всички лекции се вписват в съществуващите 12 стъпки.
+
+Част 4: GAPS АНАЛИЗ
+Нови техники, които НЕ са в 96-те точки и НЕ са в секция 12:
+
+Техника	Среща се в	Честота	Gap severity	Предложение
+Additivity + Boundedness (ФУ)	FE_Lecture_03	1	major	Разшири 7.2 или нова 7.9
+Cauchy functional equation	FE_Lecture_01–03	3	major	Нова точка 7.9
+Inserting new variable (ФУ)	FE_Lecture_02	1	minor	Разшири 7.5
+Sum of digits (S(n))	NT_Training_03	1	minor	Нова точка 3.11
+Self-divisible numbers	NT_Training_03	1	minor	Нова точка 3.12
+gcd/lcm техники	NT_Training_05	1	major	Нова точка 3.13
+Cyclotomic polynomials	Polynomials_Problems	1	minor	Разшири 5.5
+Lagrange interpolation (обратна)	Polynomials_Problems	1	minor	Разшири 5.8
+Rational function integral values	Induction_Problems	1	minor	Нова точка 5.11
+Egyptian fractions	Number_Theoretic_Flavor	1	minor	Нова точка 4.11
+Perfect powers	Number_Theoretic_Flavor	1	minor	Разшири 4.6
+Primitive roots (good for p)	Number_Theoretic_Flavor	1	minor	Разшири 3.7
+Комбинаторни геометрични задачи	Exam_02	1	minor	Разшири 2.8
+Вече в „ИДЕНТИФИЦИРАНИ GAPS“ (секция 12) — маркирани консистентно:
+
+F2 векторни пространства
+
+Тригонометрични уравнения
+
+Разположение на корени на квадратен тричлен
+
+Ирационални уравнения/неравенства с параметър
+
+Функционални неравенства с итерации
+
+Антивериги / Теорема на Спернер
+
+Блок-дизайни
+
+Теорема на Карно
+
+Квадратични форми
+
+Формула на Пик
+
+Вероятностен метод
+
+Реципрочни уравнения
+
+Критерий на Айзенщайн
+
+Теорема за ъглополовящата
+
+Постулат на Бертран
+
+Проекции на множества
+
+Телескопични произведения
+
+Конфигурации от прави и снопове
+
+Симетрия на квадратна функция с параметър
+
+Показателни уравнения с параметър
+
+Геометрична прогресия с параметри
+
+RECOMMENDED CHANGES TO index.html
+В STEPS:
+
+□ Разширяване на STEPS[2].points (3.1, 3.2, 3.3, 3.7) с бонуси и задачи от NT_Training_01–05 и Number_Theoretic_Flavor.
+□ Разширяване на STEPS[3].points (4.4, 4.5, 4.7, 4.8) с бонуси и задачи от NT_Training_01–05, Enumerative_Problems, Number_Theoretic_Flavor.
+□ Разширяване на STEPS[4].points (5.1, 5.4, 5.5, 5.7, 5.8) с бонуси и задачи от Polynomials_Problems_2015-16.
+□ Разширяване на STEPS[6].points (7.1, 7.2, 7.3, 7.5, 7.8) с бонуси и задачи от Functional_Equations_Lecture_01–03 и Exam_02.
+□ Разширяване на STEPS[7].points (8.3, 8.10) с бонуси и задачи от Induction_Problems и Induction_Problems-2.
+□ Разширяване на STEPS[8].points (9.10) с бонус и задача от Exam_02.
+□ Разширяване на STEPS[9].points (10.1) с бонус и задачи от Exam_01.
+□ Добавяне на нови точки: 7.9 (Cauchy FE), 3.11 (Sum of digits), 3.12 (Self-divisible), 3.13 (gcd/lcm техники), 4.11 (Egyptian fractions), 5.11 (Rational function integral values).
+В PLAN_PHASES:
+
+□ Обновяване на Week 7–12: добавяне на „Функционални уравнения — Additivity & Boundedness“.
+□ Обновяване на Week 13–17: добавяне на „NT Training 01–05“ като симулационни материали.
+□ Обновяване на Week 18–25: симулации с Exam_01/02.
+Друго:
+
+□ Проверка на page числата за всички нови bonus и tasks (всички са // CHECK при нужда).
+□ Идентифицирани gaps: Cauchy FE (major), Additivity+Boundedness (major), gcd/lcm техники (major).
+повтори процеса и за тези:
+Трябва да обработя новите PDF файлове, които потребителят е предоставил. Това са:
+
+week1-solutions.pdf
+
+week1-theme.pdf
+
+week2-solutions.pdf
+
+week2-theme.pdf
+
+week3-solutions.pdf
+
+week3-theme.pdf
+
+week4-solutions.pdf
+
+week4-theme.pdf
+
+f_eq_nt_pres-2.pdf
+
+f_eq_nt_pres.pdf
+
+lekcia1-pamp2019.pdf
+
+lekcia2-pamp2019.pdf
+
+lekcia3-pamp2019.pdf
+
+lekcia4-pamp2019.pdf
+
+qrl_pres-1.pdf
+
+Трябва да следвам същия формат като предишния отговор: Част 1 таблица, Част 2 JS блокове, Част 3 нова стъпка (ако е приложимо), Част 4 GAPS анализ, Част 5 RECOMMENDED CHANGES.
+
+Нека анализирам всеки файл:
+
+week1-theme.pdf и week1-solutions.pdf - Тема на седмицата (13-19 април 2020). Задачи: геометрия, полиноми/итерации, комбинаторика/огърлица. Решенията са отделно.
+
+week2-theme.pdf и week2-solutions.pdf - Тема на седмицата (20-26 април 2020). Задачи: геометрия, ТЧ (биномни коефициенти), комбинаторика/графи.
+
+week3-theme.pdf и week3-solutions.pdf - Тема на седмицата (27 април - 3 май 2020). Задачи: функционални уравнения, геометрия/комбинаторика, ТЧ/индукция.
+
+week4-theme.pdf и week4-solutions.pdf - Тема на седмицата (4-10 май 2020). Задачи: ТЧ/сума на цифри, ФУ/инективни функции, геометрия.
+
+f_eq_nt_pres.pdf и f_eq_nt_pres-2.pdf - Целочислени функции и делимост от Илия Бойваленков. Семинар Созопол 2017.
+
+lekcia1-pamp2019.pdf - лекция 1 PAMP 2019. Задачи от Китай и др.
+
+lekcia2-pamp2019.pdf - лекция 2 PAMP 2019.
+
+lekcia3-pamp2019.pdf - лекция 3 PAMP 2019.
+
+lekcia4-pamp2019.pdf - лекция 4 PAMP 2019. Сравнения по прост модул.
+
+qrl_pres-1.pdf - Символ на Лежандър. Квадратичен закон за реципрочност. П. Бойваленков.
+
+Нека ги класифицирам по стъпки и точки.
+
+week1:
+
+Задача 1: Геометрия, ъгли, окръжности. Стъпка 1/2.
+
+Задача 2: Полиноми и итерации. Стъпка 5 (полиноми) и 7 (ФУ/редици).
+
+Задача 3: Комбинаторика, огърлица. Стъпка 8.
+
+week2:
+
+Задача 1: Геометрия, окръжности, хомотетия. Стъпка 1/2.
+
+Задача 2: ТЧ, биномни коефициенти, сравнения. Стъпка 3/4.
+
+Задача 3: Комбинаторика, графи. Стъпка 9.
+
+week3:
+
+Задача 1: Функционални уравнения. Стъпка 7.
+
+Задача 2: Геометрия/комбинаторика. Стъпка 2/9.
+
+Задача 3: ТЧ/индукция. Стъпка 3/8.
+
+week4:
+
+Задача 1: ТЧ, сума на цифри. Стъпка 3/4.
+
+Задача 2: ФУ, инективни функции. Стъпка 7.
+
+Задача 3: Геометрия. Стъпка 1/2.
+
+f_eq_nt_pres: Функции и делимост. Стъпка 3/7.
+lekcia1-4: ТЧ, полиноми, сравнения. Стъпка 3,4,5.
+qrl_pres-1: Квадратични остатъци, Лежандър. Стъпка 3.
+
+Сега да попълня таблицата и JS блоковете. Трябва да следвам схемата.
+
+За RECOMMENDED CHANGES, трябва да предложа добавяне на бонуси и задачи към съответните точки.
+
+Нека започна с таблицата.
+
+Част 1: ТАБЛИЦА
+Файл	Заглавие	Автор	Език	Тема	Стр.	Plan step	Plan points	Reg.	Nat.	Действие
+week1-theme.pdf	Тема на седмицата (13-19 април 2020)	—	BG	Смесени	1	1, 5, 8	1.5, 5.1, 8.1	high	high	add-as-bonus
+week1-solutions.pdf	Тема на седмицата (13-19 април 2020) — решения	—	BG	Смесени	2	1, 5, 8	1.5, 5.1, 8.1	high	high	add-as-bonus
+week2-theme.pdf	Тема на седмицата (20-26 април 2020)	—	BG	Смесени	1	1, 3, 9	1.5, 3.2, 9.1	high	high	add-as-bonus
+week2-solutions.pdf	Тема на седмицата (20-26 април 2020) — решения	—	BG	Смесени	5	1, 3, 9	1.5, 3.2, 9.1	high	high	add-as-bonus
+week3-theme.pdf	Тема на седмицата (27 април – 3 май 2020)	—	BG	Смесени	1	7, 9, 3	7.1, 9.10, 3.2	high	high	add-as-bonus
+week3-solutions.pdf	Тема на седмицата (27 април – 3 май 2020) — решения	—	BG	Смесени	3	7, 9, 3	7.1, 9.10, 3.2	high	high	add-as-bonus
+week4-theme.pdf	Тема на седмицата (4-10 май 2020)	—	BG	Смесени	1	3, 7, 1	3.1, 7.1, 1.5	high	high	add-as-bonus
+week4-solutions.pdf	Тема на седмицата (4-10 май 2020) — решения	—	BG	Смесени	2	3, 7, 1	3.1, 7.1, 1.5	high	high	add-as-bonus
+f_eq_nt_pres.pdf	Целочислени функции и делимост	Илия Бойваленков	BG	ТЧ/ФУ	22	3, 7	3.1, 3.2, 7.1, 7.2, 7.5	high	high	add-as-bonus
+f_eq_nt_pres-2.pdf	Целочислени функции и делимост (II)	Илия Бойваленков	BG	ТЧ/ФУ	22	3, 7	3.1, 3.2, 7.1, 7.2, 7.5	high	high	add-as-bonus
+lekcia1-pamp2019.pdf	Подготовка за МОМ 2019 — лекция 1	—	BG	ТЧ	4	3, 4	3.2, 3.3, 4.1, 4.4, 4.5	high	high	add-as-bonus
+lekcia2-pamp2019.pdf	Подготовка за МОМ 2019 — лекция 2	—	BG	ТЧ/Алгебра	6	3, 4, 5	3.1, 3.2, 4.4, 5.1, 5.4	high	high	add-as-bonus
+lekcia3-pamp2019.pdf	Подготовка за МОМ 2019 — лекция 3	—	BG	ТЧ	2	3, 4	3.1, 3.2, 3.3, 4.4	med	high	add-as-bonus
+lekcia4-pamp2019.pdf	Подготовка за МОМ 2019 — лекция 4	—	BG	ТЧ/Алгебра	4	3, 4, 5	3.2, 3.3, 4.4, 5.1, 5.4	high	high	add-as-bonus
+qrl_pres-1.pdf	Символ на Лежандър. Квадратичен закон за реципрочност	П. Бойваленков	BG	ТЧ	16	3	3.8	med	high	add-as-bonus
+Част 2: JS БЛОКОВЕ (БЛОК 4 — АКТУАЛИЗАЦИИ)
+js
+// ─── АКТУАЛИЗАЦИИ ЗА ВИСОК ПРИОРИТЕТ ───
+
+// week1–week4: седмични теми — бонуси и задачи
+STEPS[0].points.find(p => p.id === "1.5").bonus.push(
+  { label: "Седмична тема 1 — геометрия", pdf: "Бонус/tema-na-sedmicata/week1-theme", page: 1 },
+  { label: "Седмична тема 1 — решения", pdf: "Бонус/tema-na-sedmicata/week1-solutions", page: 1 },
+  { label: "Седмична тема 2 — геометрия", pdf: "Бонус/tema-na-sedmicata/week2-theme", page: 1 },
+  { label: "Седмична тема 2 — решения", pdf: "Бонус/tema-na-sedmicata/week2-solutions", page: 1 },
+  { label: "Седмична тема 4 — геометрия", pdf: "Бонус/tema-na-sedmicata/week4-theme", page: 1 },
+  { label: "Седмична тема 4 — решения", pdf: "Бонус/tema-na-sedmicata/week4-solutions", page: 1 }
+);
+STEPS[0].points.find(p => p.id === "1.5").tasks.push(
+  { label: "week1, Зад 1 (ъглополовящи)", pdf: "Бонус/tema-na-sedmicata/week1-theme", page: 1, difficulty: 4, requires_also: ["1.5"], prerequisite_review: "Преговори 1.5" },
+  { label: "week2, Зад 1 (въртяща хомотетия)", pdf: "Бонус/tema-na-sedmicata/week2-theme", page: 1, difficulty: 5, requires_also: ["1.5"], prerequisite_review: "Преговори 1.5" },
+  { label: "week4, Зад 3 (хомотетия)", pdf: "Бонус/tema-na-sedmicata/week4-theme", page: 1, difficulty: 5, requires_also: ["1.5"], prerequisite_review: "Преговори 1.5" }
+);
+
+STEPS[2].points.find(p => p.id === "3.1").bonus.push(
+  { label: "Целочислени функции и делимост", pdf: "Бонус/lectures-peter/f_eq_nt_pres", page: 1 },
+  { label: "Целочислени функции и делимост (II)", pdf: "Бонус/lectures-peter/f_eq_nt_pres-2", page: 1 },
+  { label: "Подготовка за МОМ 2019 — лекция 3", pdf: "Бонус/lectures-peter/lekcia3-pamp2019", page: 1 }
+);
+STEPS[2].points.find(p => p.id === "3.1").tasks.push(
+  { label: "f_eq_nt_pres, Зад 1 (Румъния 2004)", pdf: "Бонус/lectures-peter/f_eq_nt_pres", page: 3, difficulty: 4, requires_also: ["3.1"], prerequisite_review: "Преговори 3.1" },
+  { label: "f_eq_nt_pres-2, Зад 1 (МОМ 2010)", pdf: "Бонус/lectures-peter/f_eq_nt_pres-2", page: 2, difficulty: 5, requires_also: ["3.1"], prerequisite_review: "Преговори 3.1" },
+  { label: "lekcia3, Зад 2 (3^n || m^3+17)", pdf: "Бонус/lectures-peter/lekcia3-pamp2019", page: 1, difficulty: 5, requires_also: ["3.1"], prerequisite_review: "Преговори 3.1" }
+);
+
+STEPS[2].points.find(p => p.id === "3.2").bonus.push(
+  { label: "Седмична тема 2 — ТЧ", pdf: "Бонус/tema-na-sedmicata/week2-theme", page: 1 },
+  { label: "Седмична тема 3 — ТЧ", pdf: "Бонус/tema-na-sedmicata/week3-theme", page: 1 },
+  { label: "Подготовка за МОМ 2019 — лекция 1", pdf: "Бонус/lectures-peter/lekcia1-pamp2019", page: 1 },
+  { label: "Подготовка за МОМ 2019 — лекция 4", pdf: "Бонус/lectures-peter/lekcia4-pamp2019", page: 1 }
+);
+STEPS[2].points.find(p => p.id === "3.2").tasks.push(
+  { label: "week2, Зад 2 (биномни коефициенти)", pdf: "Бонус/tema-na-sedmicata/week2-theme", page: 1, difficulty: 5, requires_also: ["3.2"], prerequisite_review: "Преговори 3.2" },
+  { label: "week3, Зад 3 (индукция)", pdf: "Бонус/tema-na-sedmicata/week3-theme", page: 1, difficulty: 4, requires_also: ["3.2"], prerequisite_review: "Преговори 3.2" },
+  { label: "lekcia1, Зад 1 (Китай 2008)", pdf: "Бонус/lectures-peter/lekcia1-pamp2019", page: 1, difficulty: 5, requires_also: ["3.2"], prerequisite_review: "Преговори 3.2" },
+  { label: "lekcia4, Зад 1 (p^3|r-s)", pdf: "Бонус/lectures-peter/lekcia4-pamp2019", page: 3, difficulty: 5, requires_also: ["3.2"], prerequisite_review: "Преговори 3.2" }
+);
+
+STEPS[2].points.find(p => p.id === "3.3").tasks.push(
+  { label: "lekcia1, Зад 2 (Китай 2010)", pdf: "Бонус/lectures-peter/lekcia1-pamp2019", page: 1, difficulty: 4, requires_also: ["3.3"], prerequisite_review: "Преговори 3.3" }
+);
+
+STEPS[2].points.find(p => p.id === "3.8").bonus.push(
+  { label: "Символ на Лежандър", pdf: "Бонус/lectures-peter/qrl_pres-1", page: 1 }
+);
+STEPS[2].points.find(p => p.id === "3.8").tasks.push(
+  { label: "qrl_pres, Зад 1 (СПОКО)", pdf: "Бонус/lectures-peter/qrl_pres-1", page: 11, difficulty: 5, requires_also: ["3.8"], prerequisite_review: "Преговори 3.8" },
+  { label: "qrl_pres, Зад 2 (k=2^2^n+1)", pdf: "Бонус/lectures-peter/qrl_pres-1", page: 13, difficulty: 5, requires_also: ["3.8"], prerequisite_review: "Преговори 3.8" }
+);
+
+STEPS[3].points.find(p => p.id === "4.1").bonus.push(
+  { label: "Подготовка за МОМ 2019 — лекция 1", pdf: "Бонус/lectures-peter/lekcia1-pamp2019", page: 1 }
+);
+STEPS[3].points.find(p => p.id === "4.4").bonus.push(
+  { label: "Подготовка за МОМ 2019 — лекция 2", pdf: "Бонус/lectures-peter/lekcia2-pamp2019", page: 1 },
+  { label: "Подготовка за МОМ 2019 — лекция 3", pdf: "Бонус/lectures-peter/lekcia3-pamp2019", page: 1 }
+);
+STEPS[3].points.find(p => p.id === "4.4").tasks.push(
+  { label: "lekcia2, Зад 5 (БОМ 2005)", pdf: "Бонус/lectures-peter/lekcia2-pamp2019", page: 1, difficulty: 4, requires_also: ["4.4"], prerequisite_review: "Преговори 4.4" },
+  { label: "lekcia2, Зад 8 (МОМ шортлист 2006)", pdf: "Бонус/lectures-peter/lekcia2-pamp2019", page: 2, difficulty: 5, requires_also: ["4.4"], prerequisite_review: "Преговори 4.4" }
+);
+
+STEPS[3].points.find(p => p.id === "4.5").tasks.push(
+  { label: "lekcia1, Зад 3 (Китай 2011)", pdf: "Бонус/lectures-peter/lekcia1-pamp2019", page: 1, difficulty: 5, requires_also: ["4.5"], prerequisite_review: "Преговори 4.5" },
+  { label: "lekcia2, Зад 5 (p^2-p+1 куб)", pdf: "Бонус/lectures-peter/lekcia2-pamp2019", page: 1, difficulty: 4, requires_also: ["4.5"], prerequisite_review: "Преговори 4.5" }
+);
+
+STEPS[4].points.find(p => p.id === "5.1").bonus.push(
+  { label: "Седмична тема 1 — полиноми", pdf: "Бонус/tema-na-sedmicata/week1-theme", page: 1 },
+  { label: "Седмична тема 1 — решения", pdf: "Бонус/tema-na-sedmicata/week1-solutions", page: 1 }
+);
+STEPS[4].points.find(p => p.id === "5.1").tasks.push(
+  { label: "week1, Зад 2 (итерации на полином)", pdf: "Бонус/tema-na-sedmicata/week1-theme", page: 1, difficulty: 5, requires_also: ["5.1"], prerequisite_review: "Преговори 5.1" }
+);
+
+STEPS[4].points.find(p => p.id === "5.4").bonus.push(
+  { label: "Подготовка за МОМ 2019 — лекция 2", pdf: "Бонус/lectures-peter/lekcia2-pamp2019", page: 1 }
+);
+
+STEPS[5].points.find(p => p.id === "7.1").bonus.push(
+  { label: "Седмична тема 3 — ФУ", pdf: "Бонус/tema-na-sedmicata/week3-theme", page: 1 },
+  { label: "Седмична тема 3 — решения", pdf: "Бонус/tema-na-sedmicata/week3-solutions", page: 1 },
+  { label: "Седмична тема 4 — ФУ", pdf: "Бонус/tema-na-sedmicata/week4-theme", page: 1 },
+  { label: "Седмична тема 4 — решения", pdf: "Бонус/tema-na-sedmicata/week4-solutions", page: 1 },
+  { label: "Целочислени функции и делимост", pdf: "Бонус/lectures-peter/f_eq_nt_pres", page: 1 },
+  { label: "Целочислени функции и делимост (II)", pdf: "Бонус/lectures-peter/f_eq_nt_pres-2", page: 1 }
+);
+STEPS[5].points.find(p => p.id === "7.1").tasks.push(
+  { label: "week3, Зад 1 (ФУ с дробно-линейни)", pdf: "Бонус/tema-na-sedmicata/week3-theme", page: 1, difficulty: 4, requires_also: ["7.1"], prerequisite_review: "Преговори 7.1" },
+  { label: "week4, Зад 2 (инективна функция)", pdf: "Бонус/tema-na-sedmicata/week4-theme", page: 1, difficulty: 4, requires_also: ["7.1"], prerequisite_review: "Преговори 7.1" },
+  { label: "f_eq_nt_pres-2, Зад 3 (БОМ 2017)", pdf: "Бонус/lectures-peter/f_eq_nt_pres-2", page: 11, difficulty: 4, requires_also: ["7.1"], prerequisite_review: "Преговори 7.1" }
+);
+
+STEPS[5].points.find(p => p.id === "7.2").tasks.push(
+  { label: "f_eq_nt_pres-2, Зад 2 (Иран 2011)", pdf: "Бонус/lectures-peter/f_eq_nt_pres-2", page: 6, difficulty: 5, requires_also: ["7.2"], prerequisite_review: "Преговори 7.2" }
+);
+
+STEPS[5].points.find(p => p.id === "7.5").tasks.push(
+  { label: "f_eq_nt_pres-2, Зад 4 (МОМ шортлист 2007)", pdf: "Бонус/lectures-peter/f_eq_nt_pres-2", page: 14, difficulty: 5, requires_also: ["7.5"], prerequisite_review: "Преговори 7.5" },
+  { label: "f_eq_nt_pres-2, Зад 5 (БОМ 2012)", pdf: "Бонус/lectures-peter/f_eq_nt_pres-2", page: 18, difficulty: 5, requires_also: ["7.5"], prerequisite_review: "Преговори 7.5" }
+);
+
+STEPS[7].points.find(p => p.id === "8.1").bonus.push(
+  { label: "Седмична тема 1 — комбинаторика", pdf: "Бонус/tema-na-sedmicata/week1-theme", page: 1 },
+  { label: "Седмична тема 1 — решения", pdf: "Бонус/tema-na-sedmicata/week1-solutions", page: 1 }
+);
+STEPS[7].points.find(p => p.id === "8.1").tasks.push(
+  { label: "week1, Зад 3 (огърлица)", pdf: "Бонус/tema-na-sedmicata/week1-theme", page: 1, difficulty: 4, requires_also: ["8.1"], prerequisite_review: "Преговори 8.1" }
+);
+
+STEPS[8].points.find(p => p.id === "9.1").bonus.push(
+  { label: "Седмична тема 2 — графи", pdf: "Бонус/tema-na-sedmicata/week2-theme", page: 1 },
+  { label: "Седмична тема 2 — решения", pdf: "Бонус/tema-na-sedmicata/week2-solutions", page: 1 }
+);
+STEPS[8].points.find(p => p.id === "9.1").tasks.push(
+  { label: "week2, Зад 3 (пътища в град)", pdf: "Бонус/tema-na-sedmicata/week2-theme", page: 1, difficulty: 5, requires_also: ["9.1"], prerequisite_review: "Преговори 9.1" }
+);
+
+STEPS[8].points.find(p => p.id === "9.10").bonus.push(
+  { label: "Седмична тема 3 — игри", pdf: "Бонус/tema-na-sedmicata/week3-theme", page: 1 },
+  { label: "Седмична тема 3 — решения", pdf: "Бонус/tema-na-sedmicata/week3-solutions", page: 1 }
+);
+STEPS[8].points.find(p => p.id === "9.10").tasks.push(
+  { label: "week3, Зад 2 (Ана и Боб)", pdf: "Бонус/tema-na-sedmicata/week3-theme", page: 1, difficulty: 5, requires_also: ["9.10"], prerequisite_review: "Преговори 9.10" }
+);
+Част 3: НОВА СТЪПКА (НЕ е приложимо)
+Не се препоръчва нова стъпка — всички лекции се вписват в съществуващите 12 стъпки.
+
+Част 4: GAPS АНАЛИЗ
+Нови техники, които НЕ са в 96-те точки и НЕ са в секция 12:
+
+Техника	Среща се в	Честота	Gap severity	Предложение
+Символ на Лежандър	qrl_pres-1	1	major	Нова точка 3.8 (вече съществува) — разшири
+Квадратичен закон за реципрочност	qrl_pres-1	1	major	Разшири 3.8
+Лема на Айзенщайн	qrl_pres-1	1	minor	Разшири 3.8
+Сравнения по прост модул (полиноми)	lekcia4	1	major	Разшири 5.4 или нова 5.11
+Теорема на Лагранж за сравнения	lekcia4	1	major	Нова точка 3.11
+Сума на цифри (S(n))	week4, NT_Training_03	2	minor	Нова точка 3.12
+Итерации на полином	week1	1	minor	Разшири 5.1
+Въртяща хомотетия	week2, week4	2	minor	Разшири 1.5
+Дробно-линейни ФУ	week3	1	minor	Разшири 7.5
+Инективни функции	week4	1	minor	Разшири 7.2
+Огърлица (циклична редица)	week1	1	minor	Разшири 8.1
+Графи с тегла	week2	1	minor	Разшири 9.1
+Вече в „ИДЕНТИФИЦИРАНИ GAPS“ (секция 12) — маркирани консистентно:
+
+F2 векторни пространства
+
+Тригонометрични уравнения
+
+Разположение на корени на квадратен тричлен
+
+Ирационални уравнения/неравенства с параметър
+
+Функционални неравенства с итерации
+
+Антивериги / Теорема на Спернер
+
+Блок-дизайни
+
+Теорема на Карно
+
+Квадратични форми
+
+Формула на Пик
+
+Вероятностен метод
+
+Реципрочни уравнения
+
+Критерий на Айзенщайн
+
+Теорема за ъглополовящата
+
+Постулат на Бертран
+
+Проекции на множества
+
+Телескопични произведения
+
+Конфигурации от прави и снопове
+
+Симетрия на квадратна функция с параметър
+
+Показателни уравнения с параметър
+
+Геометрична прогресия с параметри
+
+RECOMMENDED CHANGES TO index.html
+В STEPS:
+
+□ Разширяване на STEPS[0].points (1.5) с бонуси и задачи от week1, week2, week4.
+□ Разширяване на STEPS[2].points (3.1, 3.2, 3.3, 3.8) с бонуси и задачи от f_eq_nt_pres, f_eq_nt_pres-2, lekcia1-4, qrl_pres-1.
+□ Разширяване на STEPS[3].points (4.1, 4.4, 4.5) с бонуси и задачи от lekcia1-4.
+□ Разширяване на STEPS[4].points (5.1, 5.4) с бонуси и задачи от week1, lekcia2.
+□ Разширяване на STEPS[5].points (7.1, 7.2, 7.5) с бонуси и задачи от week3, week4, f_eq_nt_pres, f_eq_nt_pres-2.
+□ Разширяване на STEPS[7].points (8.1) с бонус и задача от week1.
+□ Разширяване на STEPS[8].points (9.1, 9.10) с бонуси и задачи от week2, week3.
+□ Добавяне на нови точки: 3.11 (Теорема на Лагранж за сравнения), 3.12 (Сума на цифри), 5.11 (Сравнения по прост модул с полиноми).
+В PLAN_PHASES:
+
+□ Обновяване на Week 1–6: добавяне на „Седмични теми 1–4“ като допълнителни задачи.
+□ Обновяване на Week 7–12: добавяне на „Целочислени функции и делимост“.
+□ Обновяване на Week 13–17: добавяне на „Подготовка за МОМ 2019 — лекции 1–4“.
+□ Обновяване на Week 18–25: симулации с qrl_pres-1.
+Друго:
+
+□ Проверка на page числата за всички нови bonus и tasks.
+□ Идентифицирани gaps: Символ на Лежандър (major), Теорема на Лагранж за сравнения (major), Сравнения по прост модул (major).

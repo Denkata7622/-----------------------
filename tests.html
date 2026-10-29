@@ -1,0 +1,1215 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+<meta charset="UTF-8">
+<title>Test Suite — OLYMPIAD PREP TERMINAL</title>
+<style>
+  body { font-family: 'JetBrains Mono', monospace; background: #000; color: #b8ffb8; padding: 20px; font-size: 14px; }
+  h1 { color: #00ff44; letter-spacing: 2px; margin-bottom: 20px; }
+  #summary { padding: 16px; border: 1px solid #00cc36; border-radius: 6px; margin-bottom: 20px; }
+  #summary.pass { border-color: #00ff44; background: rgba(0,255,68,.05); }
+  #summary.fail { border-color: #ff4444; background: rgba(255,68,68,.05); color: #ff8888; }
+  #summary h2 { margin: 0 0 8px 0; letter-spacing: 2px; }
+  .suite { margin-bottom: 12px; border: 1px solid #1f4a1f; border-radius: 4px; overflow: hidden; }
+  .suite > h3 { padding: 8px 12px; margin: 0; background: #0a1a0a; color: #00ff44; font-size: 13px; letter-spacing: 1px; font-weight: normal; }
+  .suite > h3 .bad { color: #ff8888; }
+  .test { padding: 6px 12px; border-top: 1px solid #143014; font-size: 12px; display: flex; gap: 10px; align-items: flex-start; }
+  .test .icon { width: 16px; flex-shrink: 0; }
+  .test.pass .icon { color: #7dff7d; }
+  .test.fail { background: rgba(255,68,68,.08); }
+  .test.fail .icon { color: #ff4444; }
+  .test.fail .msg { color: #ff8888; font-size: 11px; margin-top: 4px; white-space: pre-wrap; }
+  #loading { text-align: center; padding: 60px; color: #4a8a4a; letter-spacing: 2px; }
+  #loading .spin { display: inline-block; animation: spin 1s linear infinite; }
+  @keyframes spin { to { transform: rotate(360deg); } }
+  button { background: #0a1a0a; color: #00ff44; border: 1px solid #00cc36; padding: 8px 16px; cursor: pointer; font-family: inherit; font-size: 13px; letter-spacing: 1px; border-radius: 4px; margin-bottom: 16px; }
+  button:hover { background: #00ff44; color: #000; }
+</style>
+</head>
+<body>
+  <h1>🧪 OLYMPIAD PREP TERMINAL — TEST SUITE</h1>
+  <div id="loading">▣ Зареждане на приложението <span class="spin">◌</span></div>
+  <div id="summary" style="display:none"></div>
+  <button id="rerunBtn" style="display:none" onclick="location.reload()">↻ ПРЕЗАРЕДИ</button>
+  <div id="results" style="display:none"></div>
+  <iframe id="app" src="index.html" style="display:none"></iframe>
+
+<script>
+/* ═══════════════════════════════════════════════════════════════
+   MINI TEST FRAMEWORK
+   ═══════════════════════════════════════════════════════════════ */
+const testResults = [];
+let currentSuite = null;
+
+function describe(name, fn) {
+  currentSuite = { name, tests: [] };
+  testResults.push(currentSuite);
+  try { fn(); }
+  catch (e) {
+    currentSuite.tests.push({ name: '(describe error)', status: 'fail', error: e.stack || e.message });
+  }
+}
+
+function it(name, fn) {
+  if (!currentSuite) throw new Error('it() outside describe()');
+  const t = { name, status: 'pass', error: null };
+  currentSuite.tests.push(t);
+  try { fn(); }
+  catch (e) { t.status = 'fail'; t.error = e.stack || e.message || String(e); }
+}
+
+function expect(actual) {
+  return {
+    toBe(expected) {
+      if (actual !== expected)
+        throw new Error(`Expected ${JSON.stringify(expected)}, got ${JSON.stringify(actual)}`);
+    },
+    toEqual(expected) {
+      const a = JSON.stringify(actual), b = JSON.stringify(expected);
+      if (a !== b) throw new Error(`Deep equal failed:\n  actual:   ${a}\n  expected: ${b}`);
+    },
+    toBeTruthy() { if (!actual) throw new Error(`Expected truthy, got ${JSON.stringify(actual)}`); },
+    toBeFalsy()  { if (actual)  throw new Error(`Expected falsy, got ${JSON.stringify(actual)}`); },
+    toBeDefined()   { if (actual === undefined) throw new Error(`Expected defined, got undefined`); },
+    toBeUndefined() { if (actual !== undefined) throw new Error(`Expected undefined, got ${JSON.stringify(actual)}`); },
+    toBeNull()      { if (actual !== null) throw new Error(`Expected null, got ${JSON.stringify(actual)}`); },
+    toContain(item) {
+      if (Array.isArray(actual)) {
+        if (!actual.includes(item)) throw new Error(`Array does not contain ${JSON.stringify(item)}`);
+      } else if (typeof actual === 'string') {
+        if (!actual.includes(item)) throw new Error(`String does not contain ${JSON.stringify(item)}`);
+      } else throw new Error(`Cannot check contains on ${typeof actual}`);
+    },
+    toHaveKey(k) {
+      if (!actual || !(k in actual)) throw new Error(`Expected object to have key "${k}"`);
+    },
+    toBeGreaterThan(n)      { if (!(actual > n))  throw new Error(`Expected ${actual} > ${n}`); },
+    toBeLessThan(n)         { if (!(actual < n))  throw new Error(`Expected ${actual} < ${n}`); },
+    toBeLessThanOrEqual(n)  { if (!(actual <= n)) throw new Error(`Expected ${actual} <= ${n}`); },
+    toBeGreaterThanOrEqual(n){ if (!(actual >= n)) throw new Error(`Expected ${actual} >= ${n}`); },
+    toHaveLength(n) {
+      if (!actual || actual.length !== n)
+        throw new Error(`Expected length ${n}, got ${actual && actual.length}`);
+    },
+    toThrow() {
+      let threw = false;
+      try { actual(); } catch (e) { threw = true; }
+      if (!threw) throw new Error('Expected function to throw');
+    },
+  };
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   BOOTSTRAP
+   ═══════════════════════════════════════════════════════════════ */
+const frame = document.getElementById('app');
+let w, doc;
+
+function start() {
+  setTimeout(runAllTests, 150);
+}
+
+if (frame.contentDocument && frame.contentDocument.readyState === 'complete') start();
+else frame.addEventListener('load', start);
+
+/* Reset helper — clean state between tests */
+function reset() {
+  w.Store.state = w.Store.defaults();
+  w.Store.save();
+  w.State.searchQuery = '';
+  w.State.currentModalId = null;
+  w.State.currentIndex = -1;
+  // Ensure clean overlays
+  ['pointModal','quizOverlay','achOverlay','reportOverlay','sheetOverlay','plogOverlay','helpOverlay','paletteOverlay'].forEach(id => {
+    const el = doc.getElementById(id);
+    if (el) el.classList.remove('open');
+  });
+  doc.body.classList.remove('focus-mode');
+  w.Sidebar.render();
+  w.Content.render();
+  w.Stats.update();
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   TESTS
+   ═══════════════════════════════════════════════════════════════ */
+function runAllTests() {
+  w = frame.contentWindow;
+  doc = frame.contentDocument;
+
+  // ═══ CONFIG ═══
+  describe('CONFIG', () => {
+    it('has storeKey defined', () => {
+      expect(w.CONFIG.storeKey).toBeDefined();
+    });
+    it('has 3 themes', () => {
+      expect(w.CONFIG.themes).toHaveLength(3);
+    });
+    it('pomodoro durations are 25/5/15 min', () => {
+      expect(w.CONFIG.pomo.focus).toBe(1500);
+      expect(w.CONFIG.pomo.shortBreak).toBe(300);
+      expect(w.CONFIG.pomo.longBreak).toBe(900);
+    });
+    it('themeLabels covers all themes', () => {
+      w.CONFIG.themes.forEach(t => expect(w.CONFIG.themeLabels).toHaveKey(t));
+    });
+  });
+
+  // ═══ DATA ═══
+  describe('STEPS data integrity', () => {
+    it('has 11 steps', () => expect(w.STEPS).toHaveLength(11));
+    it('step ids are 1..11 in order', () => {
+      expect(w.STEPS.map(s => s.id)).toEqual([1,2,3,4,5,6,7,8,9,10,11]);
+    });
+    it('every step has icon, title, points array', () => {
+      w.STEPS.forEach(s => {
+        expect(s.icon).toBeDefined();
+        expect(s.title).toBeDefined();
+        expect(Array.isArray(s.points)).toBeTruthy();
+        expect(s.points.length).toBeGreaterThan(0);
+      });
+    });
+    it('every point has id/title/desc/source', () => {
+      w.getFlatPoints().forEach(({point}) => {
+        expect(point.id).toBeDefined();
+        expect(point.title).toBeDefined();
+        expect(point.desc).toBeDefined();
+        expect(point.source).toBeDefined();
+      });
+    });
+    it('all point IDs are unique', () => {
+      const ids = w.getFlatPoints().map(x => x.point.id);
+      const uniq = new Set(ids);
+      expect(uniq.size).toBe(ids.length);
+    });
+    it('has >50 total points', () => {
+      expect(w.getFlatPoints().length).toBeGreaterThan(50);
+    });
+    it('every point id has step prefix matching its step', () => {
+      w.STEPS.forEach(step => step.points.forEach(p => {
+        const prefix = p.id.split('.')[0];
+        expect(prefix).toBe(String(step.id));
+      }));
+    });
+  });
+
+  // ═══ UTILS ═══
+  describe('Utils', () => {
+    it('escapeHtml escapes < > " &', () => {
+      expect(w.Utils.escapeHtml('<a>')).toBe('&lt;a&gt;');
+      expect(w.Utils.escapeHtml('a & b')).toBe('a &amp; b');
+      expect(w.Utils.escapeHtml('"x"')).toBe('&quot;x&quot;');
+    });
+    it('todayStr matches YYYY-MM-DD', () => {
+      const s = w.Utils.todayStr();
+      expect(/^\d{4}-\d{2}-\d{2}$/.test(s)).toBeTruthy();
+    });
+    it('fmtTime formats MM:SS', () => {
+      expect(w.Utils.fmtTime(0)).toBe('00:00');
+      expect(w.Utils.fmtTime(59)).toBe('00:59');
+      expect(w.Utils.fmtTime(60)).toBe('01:00');
+      expect(w.Utils.fmtTime(1500)).toBe('25:00');
+      expect(w.Utils.fmtTime(3661)).toBe('61:01');
+    });
+    it('pdfUrl appends .pdf', () => {
+      const u = w.Utils.pdfUrl('path/file');
+      expect(u.includes('.pdf')).toBe(true);
+    });
+    it('pdfUrl adds #page when given', () => {
+      const u = w.Utils.pdfUrl('a/b', 42);
+      expect(u.includes('#page=42')).toBe(true);
+    });
+    it('pdfUrl without page has no #', () => {
+      const u = w.Utils.pdfUrl('a/b');
+      expect(u.includes('#')).toBe(false);
+    });
+    it('pdfUrl encodes cyrillic path segments', () => {
+      const u = w.Utils.pdfUrl('Материали_БГ/OT_2012', 10);
+      expect(u.startsWith('http')).toBe(false);
+      expect(u.includes('%')).toBe(true);
+    });
+    it('pdfUrl returns empty for falsy path', () => {
+      expect(w.Utils.pdfUrl('')).toBe('');
+      expect(w.Utils.pdfUrl(null)).toBe('');
+    });
+  });
+
+  // ═══ STORE ═══
+  describe('Store', () => {
+    it('defaults() returns full shape', () => {
+      const d = w.Store.defaults();
+      ['progress','ui','streak','sessions','dailyLog','quiz','achievements',
+       'bookmarks','problemLog','recentPoints'].forEach(k => expect(d).toHaveKey(k));
+    });
+    it('defaults().dailyGoalMinutes === 120', () => {
+      expect(w.Store.defaults().dailyGoalMinutes).toBe(120);
+    });
+    it('defaults().ui.filter === "all"', () => {
+      expect(w.Store.defaults().ui.filter).toBe('all');
+    });
+    it('defaults().ui.focus === false', () => {
+      expect(w.Store.defaults().ui.focus).toBe(false);
+    });
+    it('getPoint lazily creates entry', () => {
+      reset();
+      const p = w.Store.getPoint('1.1');
+      expect(p.done).toBe(false);
+      expect(p.fav).toBe(false);
+      expect(p.diff).toBeNull();
+      expect(p.notes).toBe('');
+    });
+    it('getPoint returns existing entry', () => {
+      reset();
+      w.Store.state.progress['9.9'] = { done: true, fav: true, diff: 'hard', notes: 'x' };
+      const p = w.Store.getPoint('9.9');
+      expect(p.done).toBe(true);
+      expect(p.fav).toBe(true);
+      expect(p.diff).toBe('hard');
+      expect(p.notes).toBe('x');
+    });
+    it('save + load round-trips state', () => {
+      reset();
+      w.Store.state.dailyGoalMinutes = 42;
+      w.Store.save();
+      const loaded = w.Store.load();
+      expect(loaded.dailyGoalMinutes).toBe(42);
+    });
+    it('resetAll restores defaults', () => {
+      reset();
+      w.Store.state.dailyGoalMinutes = 999;
+      w.Store.state.progress['1.1'] = { done: true };
+      // bypass confirm dialog
+      const origConfirm = w.confirm;
+      w.confirm = () => true;
+      w.Store.resetAll();
+      w.confirm = origConfirm;
+      expect(w.Store.state.dailyGoalMinutes).toBe(120);
+    });
+  });
+
+  // ═══ HELPERS ═══
+  describe('Global helpers', () => {
+    it('getPoint("1.1") returns Менелай', () => {
+      const p = w.getPoint('1.1');
+      expect(p).toBeDefined();
+      expect(p.title).toContain('Менелай');
+    });
+    it('getPoint returns null for unknown id', () => {
+      expect(w.getPoint('999.999')).toBeNull();
+    });
+    it('getFlatPoints returns 3-shape array', () => {
+      const flat = w.getFlatPoints();
+      expect(flat.length).toBeGreaterThan(50);
+      expect(flat[0]).toHaveKey('step');
+      expect(flat[0]).toHaveKey('point');
+    });
+    it('getFlatPoints length equals sum of step points', () => {
+      const sum = w.STEPS.reduce((a, s) => a + s.points.length, 0);
+      expect(w.getFlatPoints().length).toBe(sum);
+    });
+  });
+
+  // ═══ MATCH FILTER ═══
+  describe('matchFilter', () => {
+    it('"all" always true', () => {
+      reset();
+      expect(w.matchFilter({ id: '1.1' })).toBe(true);
+    });
+    it('"done" filters correctly', () => {
+      reset();
+      w.Store.getPoint('1.1').done = true;
+      w.Store.state.ui.filter = 'done';
+      expect(w.matchFilter({ id: '1.1' })).toBe(true);
+      expect(w.matchFilter({ id: '1.2' })).toBe(false);
+    });
+    it('"todo" filters correctly', () => {
+      reset();
+      w.Store.getPoint('1.1').done = true;
+      w.Store.state.ui.filter = 'todo';
+      expect(w.matchFilter({ id: '1.1' })).toBe(false);
+      expect(w.matchFilter({ id: '1.2' })).toBe(true);
+    });
+    it('"fav" filters correctly', () => {
+      reset();
+      w.Store.getPoint('1.1').fav = true;
+      w.Store.state.ui.filter = 'fav';
+      expect(w.matchFilter({ id: '1.1' })).toBe(true);
+      expect(w.matchFilter({ id: '1.2' })).toBe(false);
+    });
+    it('"hard" filters correctly', () => {
+      reset();
+      w.Store.getPoint('1.1').diff = 'hard';
+      w.Store.state.ui.filter = 'hard';
+      expect(w.matchFilter({ id: '1.1' })).toBe(true);
+      expect(w.matchFilter({ id: '1.2' })).toBe(false);
+    });
+  });
+
+  // ═══ STATS ═══
+  describe('Stats', () => {
+    it('done() counts completed', () => {
+      reset();
+      w.Store.getPoint('1.1').done = true;
+      w.Store.getPoint('1.2').done = true;
+      expect(w.Stats.done()).toBe(2);
+    });
+    it('done() zero when empty', () => {
+      reset();
+      expect(w.Stats.done()).toBe(0);
+    });
+    it('stepDone(1) true when all step1 done', () => {
+      reset();
+      w.STEPS[0].points.forEach(p => w.Store.getPoint(p.id).done = true);
+      expect(w.Stats.stepDone(1)).toBe(true);
+    });
+    it('stepDone false for partial', () => {
+      reset();
+      w.Store.getPoint(w.STEPS[0].points[0].id).done = true;
+      expect(w.Stats.stepDone(1)).toBe(false);
+    });
+    it('totalTime sums dailyLog', () => {
+      reset();
+      w.Store.state.dailyLog = { '2025-01-01': { seconds: 100 }, '2025-01-02': { seconds: 200 } };
+      expect(w.Stats.totalTime()).toBe(300);
+    });
+    it('checkStreak initializes count=1', () => {
+      reset();
+      w.Stats.checkStreak();
+      expect(w.Store.state.streak.count).toBe(1);
+      expect(w.Store.state.streak.lastDate).toBe(w.Utils.todayStr());
+    });
+    it('checkStreak idempotent same day', () => {
+      reset();
+      w.Store.state.streak = { count: 5, lastDate: w.Utils.todayStr(), history: {} };
+      w.Stats.checkStreak();
+      expect(w.Store.state.streak.count).toBe(5);
+    });
+    it('update() writes DOM stats', () => {
+      reset();
+      w.Stats.update();
+      expect(doc.getElementById('statTotal').textContent).not.toBe('0');
+      expect(doc.getElementById('statDone').textContent).toBe('0');
+    });
+  });
+
+  // ═══ CONTENT / DOM ═══
+  describe('Content.render', () => {
+    it('renders step elements', () => {
+      reset();
+      const steps = doc.querySelectorAll('#stepsContainer .step');
+      expect(steps.length).toBeGreaterThan(0);
+    });
+    it('renders one point per point id', () => {
+      reset();
+      const count = doc.querySelectorAll('#stepsContainer .point').length;
+      expect(count).toBe(w.getFlatPoints().length);
+    });
+    it('step has header + toggle + badge', () => {
+      reset();
+      const s1 = doc.getElementById('step-1');
+      expect(s1.querySelector('.step-header')).toBeDefined();
+      expect(s1.querySelector('.step-toggle')).toBeDefined();
+      expect(s1.querySelector('.step-badge')).toBeDefined();
+    });
+    it('collapsed state reflected in class', () => {
+      reset();
+      w.Store.state.ui.collapsed[1] = true;
+      w.Content.render();
+      expect(doc.getElementById('step-1').classList.contains('collapsed')).toBe(true);
+    });
+    it('filter "done" shows only done points', () => {
+      reset();
+      w.Store.getPoint('1.1').done = true;
+      w.Store.state.ui.filter = 'done';
+      w.Content.render();
+      const pts = doc.querySelectorAll('#stepsContainer .point');
+      expect(pts.length).toBe(1);
+      expect(pts[0].dataset.pid).toBe('1.1');
+    });
+    it('empty filter shows "no results"', () => {
+      reset();
+      w.Store.state.ui.filter = 'fav'; // nothing is fav
+      w.Content.render();
+      expect(doc.querySelector('#stepsContainer .empty')).toBeDefined();
+    });
+  });
+
+  // ═══ POINT ACTIONS ═══
+  describe('PointActions', () => {
+    it('toggleDone flips done', () => {
+      reset();
+      const before = w.Store.getPoint('1.1').done;
+      w.PointActions.toggleDone('1.1');
+      expect(w.Store.getPoint('1.1').done).toBe(!before);
+    });
+    it('toggleDone updates point DOM', () => {
+      reset();
+      w.Content.render();
+      const chk = doc.querySelector('[data-pid="1.1"] .point-check');
+      expect(chk.classList.contains('checked')).toBe(false);
+      chk.click();
+      expect(chk.classList.contains('checked')).toBe(true);
+    });
+    it('toggleFav flips fav', () => {
+      reset();
+      w.PointActions.toggleFav('1.1', { stopPropagation: () => {} });
+      expect(w.Store.getPoint('1.1').fav).toBe(true);
+    });
+    it('setDiff sets difficulty', () => {
+      reset();
+      w.PointActions.setDiff('1.1', 'hard', { stopPropagation: () => {} });
+      expect(w.Store.getPoint('1.1').diff).toBe('hard');
+    });
+    it('setDiff same twice clears diff', () => {
+      reset();
+      w.PointActions.setDiff('1.1', 'hard', { stopPropagation: () => {} });
+      w.PointActions.setDiff('1.1', 'hard', { stopPropagation: () => {} });
+      expect(w.Store.getPoint('1.1').diff).toBeNull();
+    });
+    it('saveNotes stores value', () => {
+      reset();
+      w.PointActions.saveNotes('1.1', 'my note');
+      expect(w.Store.getPoint('1.1').notes).toBe('my note');
+    });
+    it('toggleExpand adds "expanded" class', () => {
+      reset();
+      w.Content.render();
+      const el = doc.querySelector('[data-pid="1.1"]');
+      expect(el.classList.contains('expanded')).toBe(false);
+      w.PointActions.toggleExpand('1.1');
+      expect(el.classList.contains('expanded')).toBe(true);
+    });
+  });
+
+  // ═══ PREREQS ═══
+  describe('PREREQS', () => {
+    it('all keys are valid point ids', () => {
+      Object.keys(w.PREREQS).forEach(id => {
+        expect(w.getPoint(id)).toBeDefined();
+      });
+    });
+    it('all values are valid point ids', () => {
+      Object.values(w.PREREQS).forEach(arr => {
+        arr.forEach(id => expect(w.getPoint(id)).toBeDefined());
+      });
+    });
+    it('no self-references', () => {
+      Object.entries(w.PREREQS).forEach(([k, arr]) => {
+        expect(arr.includes(k)).toBe(false);
+      });
+    });
+  });
+
+  // ═══ ACHIEVEMENTS ═══
+  describe('Achievements', () => {
+    it('has 20 achievements', () => expect(w.ACHIEVEMENTS).toHaveLength(20));
+    it('each has id/icon/name/desc/check', () => {
+      w.ACHIEVEMENTS.forEach(a => {
+        expect(a.id).toBeDefined();
+        expect(a.icon).toBeDefined();
+        expect(a.name).toBeDefined();
+        expect(a.desc).toBeDefined();
+        expect(typeof a.check).toBe('function');
+      });
+    });
+    it('ids are unique', () => {
+      const ids = w.ACHIEVEMENTS.map(a => a.id);
+      expect(new Set(ids).size).toBe(ids.length);
+    });
+    it('unlocks first-point', () => {
+      reset();
+      w.Store.getPoint('1.1').done = true;
+      w.Achievements.check();
+      expect(w.Store.state.achievements).toContain('first-point');
+    });
+    it('does not duplicate unlock', () => {
+      reset();
+      w.Store.getPoint('1.1').done = true;
+      w.Achievements.check();
+      w.Achievements.check();
+      expect(w.Store.state.achievements.filter(x => x === 'first-point').length).toBe(1);
+    });
+    it('unlocks streak-3 at count >= 3', () => {
+      reset();
+      w.Store.state.streak.count = 3;
+      w.Achievements.check();
+      expect(w.Store.state.achievements).toContain('streak-3');
+    });
+    it('unlocks 10-points at 10 done', () => {
+      reset();
+      w.getFlatPoints().slice(0, 10).forEach(({point}) => {
+        w.Store.getPoint(point.id).done = true;
+      });
+      w.Achievements.check();
+      expect(w.Store.state.achievements).toContain('10-points');
+    });
+    it('open() adds .open to overlay', () => {
+      w.Achievements.open();
+      expect(doc.getElementById('achOverlay').classList.contains('open')).toBe(true);
+      w.Achievements.close();
+    });
+    it('render() writes grid with 20 items', () => {
+      w.Achievements.render();
+      const items = doc.querySelectorAll('#achGrid .ach-item');
+      expect(items).toHaveLength(20);
+    });
+  });
+
+  // ═══ QUIZ ═══
+  describe('Quiz', () => {
+    it('shuffle preserves elements', () => {
+      const s = w.Quiz.shuffle([1,2,3,4,5]);
+      expect(s.slice().sort()).toEqual([1,2,3,4,5]);
+    });
+    it('sm2 correct increases ease & sets nextReview', () => {
+      reset();
+      w.Quiz.sm2('1.1', true);
+      const q = w.Store.state.quiz['1.1'];
+      expect(q.correct).toBe(1);
+      expect(q.ease).toBeGreaterThan(2.5 - 0.01);
+      expect(q.nextReview).toBeGreaterThan(Date.now() - 1000);
+    });
+    it('sm2 wrong resets interval to 1', () => {
+      reset();
+      w.Store.state.quiz['1.1'] = { ease: 2.5, interval: 10, nextReview: 0, attempts: 0, correct: 0 };
+      w.Quiz.sm2('1.1', false);
+      const q = w.Store.state.quiz['1.1'];
+      expect(q.interval).toBe(1);
+      expect(q.ease).toBeLessThan(2.5);
+    });
+    it('buildQueue returns array', () => {
+      reset();
+      w.Quiz.buildQueue();
+      expect(Array.isArray(w.Quiz.queue)).toBeTruthy();
+    });
+    it('open/close toggles overlay', () => {
+      reset();
+      w.Quiz.open();
+      expect(doc.getElementById('quizOverlay').classList.contains('open')).toBe(true);
+      w.Quiz.close();
+      expect(doc.getElementById('quizOverlay').classList.contains('open')).toBe(false);
+    });
+    it('showAnswer reveals answer', () => {
+      reset();
+      w.Quiz.open();
+      w.Quiz.showAnswer();
+      expect(doc.getElementById('quizAnswer').classList.contains('show')).toBe(true);
+      w.Quiz.close();
+    });
+  });
+
+  // ═══ FOCUS ═══
+  describe('Focus', () => {
+    it('toggle adds focus-mode class', () => {
+      reset();
+      w.Focus.toggle();
+      expect(w.Store.state.ui.focus).toBe(true);
+      expect(doc.body.classList.contains('focus-mode')).toBe(true);
+      w.Focus.toggle();
+      expect(w.Store.state.ui.focus).toBe(false);
+      expect(doc.body.classList.contains('focus-mode')).toBe(false);
+    });
+    it('init respects saved focus state', () => {
+      reset();
+      w.Store.state.ui.focus = true;
+      w.Focus.init();
+      expect(doc.body.classList.contains('focus-mode')).toBe(true);
+      w.Store.state.ui.focus = false;
+      doc.body.classList.remove('focus-mode');
+    });
+  });
+
+  // ═══ RECENT ═══
+  describe('Recent', () => {
+    it('track adds id to recentPoints', () => {
+      reset();
+      w.Recent.track('1.1');
+      expect(w.Store.state.recentPoints).toContain('1.1');
+    });
+    it('track sets lastPoint', () => {
+      reset();
+      w.Recent.track('1.5');
+      expect(w.Store.state.lastPoint).toBe('1.5');
+    });
+    it('track deduplicates & moves to front', () => {
+      reset();
+      w.Recent.track('1.1');
+      w.Recent.track('1.2');
+      w.Recent.track('1.1');
+      expect(w.Store.state.recentPoints[0]).toBe('1.1');
+      expect(w.Store.state.recentPoints.filter(x => x === '1.1').length).toBe(1);
+    });
+    it('track caps at 20', () => {
+      reset();
+      for (let i = 0; i < 30; i++) w.Recent.track('point-' + i);
+      expect(w.Store.state.recentPoints.length).toBe(20);
+    });
+    it('toggle opens/closes panel', () => {
+      reset();
+      const panel = doc.getElementById('recentPanel');
+      w.Recent.toggle();
+      expect(panel.classList.contains('open')).toBe(true);
+      w.Recent.toggle();
+      expect(panel.classList.contains('open')).toBe(false);
+    });
+    it('renderPanel shows empty message when no history', () => {
+      reset();
+      w.Recent.renderPanel();
+      expect(doc.querySelector('#recentPanel .recent-empty')).toBeDefined();
+    });
+    it('renderContinue shows button when lastPoint set', () => {
+      reset();
+      w.Recent.track('1.1');
+      const btn = doc.getElementById('continueBtn');
+      expect(btn.classList.contains('show')).toBe(true);
+    });
+  });
+
+  // ═══ RANDOM ═══
+  describe('Random', () => {
+    it('jump does not throw', () => {
+      reset();
+      w.Content.render();
+      w.Random.jump();
+    });
+  });
+
+  // ═══ GOAL ═══
+  describe('Goal', () => {
+    it('setGoal updates state', () => {
+      reset();
+      w.Goal.setGoal(90);
+      expect(w.Store.state.dailyGoalMinutes).toBe(90);
+    });
+    it('_render writes label', () => {
+      reset();
+      w.Goal._render(60 * 60); // 60 min
+      const lbl = doc.getElementById('goalLabel').textContent;
+      expect(lbl).toContain('60');
+      expect(lbl).toContain('120');
+    });
+    it('done class at 100%', () => {
+      reset();
+      w.Goal._render(120 * 60);
+      expect(doc.getElementById('goalFill').classList.contains('done')).toBe(true);
+    });
+    it('no done class below 100%', () => {
+      reset();
+      w.Goal._render(30 * 60);
+      expect(doc.getElementById('goalFill').classList.contains('done')).toBe(false);
+    });
+  });
+
+  // ═══ CALENDAR ═══
+  describe('Calendar', () => {
+    it('render creates 30 cells', () => {
+      reset();
+      w.Calendar.render();
+      expect(doc.querySelectorAll('#calendarGrid .calendar-cell').length).toBe(30);
+    });
+    it('one cell has today class', () => {
+      reset();
+      w.Calendar.render();
+      expect(doc.querySelectorAll('#calendarGrid .calendar-cell.today').length).toBe(1);
+    });
+    it('total shown in hours', () => {
+      reset();
+      w.Calendar.render();
+      expect(doc.getElementById('calTotal').textContent).toContain('ч');
+    });
+  });
+
+  // ═══ FORMULA OF DAY ═══
+  describe('FormulaOfDay', () => {
+    it('pool has entries', () => {
+      expect(w.FormulaOfDay.pool.length).toBeGreaterThan(5);
+    });
+    it('pool point ids all valid', () => {
+      w.FormulaOfDay.pool.forEach(f => {
+        expect(w.getPoint(f.pointId)).toBeDefined();
+      });
+    });
+    it('init sets current', () => {
+      w.FormulaOfDay.init();
+      expect(w.FormulaOfDay.current).toBeDefined();
+      expect(w.FormulaOfDay.current.text).toBeDefined();
+    });
+    it('init writes text into DOM', () => {
+      w.FormulaOfDay.init();
+      expect(doc.getElementById('fodText').textContent.length).toBeGreaterThan(3);
+    });
+    it('deterministic per day', () => {
+      w.Store.state.formulaOfDay = null;
+      w.FormulaOfDay.init();
+      const first = w.FormulaOfDay.current.text;
+      w.FormulaOfDay.init();
+      expect(w.FormulaOfDay.current.text).toBe(first);
+    });
+  });
+
+  // ═══ TIME TRACKER ═══
+  describe('TimeTracker', () => {
+    it('end() without start is a no-op', () => {
+      reset();
+      w.TimeTracker.sessionStart = null;
+      w.TimeTracker.end();
+      expect(Object.keys(w.Store.state.dailyLog).length).toBe(0);
+    });
+    it('short session ignored (<10s)', () => {
+      reset();
+      w.TimeTracker.sessionStart = Date.now() - 100;
+      w.TimeTracker.currentPointId = '1.1';
+      w.TimeTracker.end();
+      expect(Object.keys(w.Store.state.dailyLog).length).toBe(0);
+    });
+    it('long session recorded to dailyLog', () => {
+      reset();
+      w.TimeTracker.sessionStart = Date.now() - 60000;
+      w.TimeTracker.currentPointId = '1.1';
+      w.TimeTracker.end();
+      const today = w.Utils.todayStr();
+      expect(w.Store.state.dailyLog[today]).toBeDefined();
+      expect(w.Store.state.dailyLog[today].seconds).toBeGreaterThanOrEqual(59);
+    });
+    it('session pushed to sessions array', () => {
+      reset();
+      w.TimeTracker.sessionStart = Date.now() - 60000;
+      w.TimeTracker.currentPointId = '1.1';
+      w.TimeTracker.end();
+      expect(w.Store.state.sessions.length).toBeGreaterThan(0);
+      expect(w.Store.state.sessions[0].pointId).toBe('1.1');
+    });
+  });
+
+  // ═══ MODAL ═══
+  describe('Modal', () => {
+    it('open() sets currentModalId', () => {
+      reset();
+      w.Modal.open('1.1');
+      expect(w.State.currentModalId).toBe('1.1');
+      w.Modal.close();
+    });
+    it('open() adds .open class', () => {
+      reset();
+      w.Modal.open('1.1');
+      expect(doc.getElementById('pointModal').classList.contains('open')).toBe(true);
+      w.Modal.close();
+    });
+    it('close() clears currentModalId', () => {
+      reset();
+      w.Modal.open('1.1');
+      w.Modal.close();
+      expect(w.State.currentModalId).toBeNull();
+    });
+    it('renders title/desc/explanation', () => {
+      reset();
+      w.Modal.open('1.1');
+      expect(doc.getElementById('pmTitle').textContent).toContain('Менелай');
+      expect(doc.getElementById('pmDesc').textContent.length).toBeGreaterThan(0);
+      expect(doc.getElementById('pmExplanation').textContent.length).toBeGreaterThan(0);
+      w.Modal.close();
+    });
+    it('renders breadcrumbs', () => {
+      reset();
+      w.Modal.open('1.1');
+      const crumbs = doc.querySelectorAll('.pm-breadcrumbs .crumb');
+      expect(crumbs.length).toBeGreaterThan(0);
+      w.Modal.close();
+    });
+    it('renders prereq chips when point has prereqs', () => {
+      reset();
+      w.Modal.open('3.4'); // has prereqs 3.2, 3.3
+      const chips = doc.querySelectorAll('.prereq-chip');
+      expect(chips.length).toBeGreaterThan(0);
+      w.Modal.close();
+    });
+    it('toggleDone flips done in state', () => {
+      reset();
+      w.Modal.open('1.1');
+      w.Modal.toggleDone();
+      expect(w.Store.getPoint('1.1').done).toBe(true);
+      w.Modal.close();
+    });
+    it('toggleFav flips fav', () => {
+      reset();
+      w.Modal.open('1.1');
+      w.Modal.toggleFav();
+      expect(w.Store.getPoint('1.1').fav).toBe(true);
+      w.Modal.close();
+    });
+    it('setDiff updates meta', () => {
+      reset();
+      w.Modal.open('1.1');
+      w.Modal.setDiff('easy');
+      expect(w.Store.getPoint('1.1').diff).toBe('easy');
+      w.Modal.close();
+    });
+    it('navigate changes current id', () => {
+      reset();
+      w.Modal.open('1.1');
+      w.Modal.navigate(1);
+      expect(w.State.currentModalId).not.toBe('1.1');
+      w.Modal.close();
+    });
+    it('tracks recent on open', () => {
+      reset();
+      w.Modal.open('1.5');
+      expect(w.Store.state.recentPoints).toContain('1.5');
+      w.Modal.close();
+    });
+    it('renderBookmarks shows existing bookmarks', () => {
+      reset();
+      w.Bookmarks.add('1.1', 42, 'My bookmark');
+      w.Modal.open('1.1');
+      expect(doc.getElementById('pmBookmarks')).toBeDefined();
+      w.Modal.close();
+    });
+  });
+
+  // ═══ POMODORO ═══
+  describe('Pomodoro', () => {
+    it('toggle starts running', () => {
+      w.Pomodoro.reset();
+      w.Pomodoro.toggle();
+      expect(w.Pomodoro.running).toBe(true);
+      w.Pomodoro.toggle();
+      expect(w.Pomodoro.running).toBe(false);
+    });
+    it('reset returns to focus mode & full duration', () => {
+      w.Pomodoro.mode = 'shortBreak';
+      w.Pomodoro.remaining = 100;
+      w.Pomodoro.reset();
+      expect(w.Pomodoro.mode).toBe('focus');
+      expect(w.Pomodoro.remaining).toBe(w.CONFIG.pomo.focus);
+    });
+    it('render writes time into DOM', () => {
+      w.Pomodoro.reset();
+      w.Pomodoro.render();
+      expect(doc.getElementById('pomoTime').textContent).toBe('25:00');
+    });
+  });
+
+  // ═══ PALETTE ═══
+  describe('Palette', () => {
+    it('open/close toggles overlay', () => {
+      w.Palette.open();
+      expect(doc.getElementById('paletteOverlay').classList.contains('open')).toBe(true);
+      w.Palette.close();
+      expect(doc.getElementById('paletteOverlay').classList.contains('open')).toBe(false);
+    });
+    it('renderResults finds by title', () => {
+      w.Palette.renderResults('Менелай');
+      expect(doc.querySelectorAll('.palette-item').length).toBeGreaterThan(0);
+    });
+    it('renderResults finds by id', () => {
+      w.Palette.renderResults('3.4');
+      expect(doc.querySelectorAll('.palette-item').length).toBeGreaterThan(0);
+    });
+    it('empty query shows all points (up to 30)', () => {
+      w.Palette.renderResults('');
+      const n = doc.querySelectorAll('.palette-item').length;
+      expect(n).toBeGreaterThan(0);
+      expect(n).toBeLessThanOrEqual(30);
+    });
+    it('nonsense query shows empty message', () => {
+      w.Palette.renderResults('zzzzqqqqxxxx');
+      expect(doc.querySelector('.palette-empty')).toBeDefined();
+    });
+  });
+
+  // ═══ FORMULAS ═══
+  describe('Formulas', () => {
+    it('open/close toggles overlay', () => {
+      w.Formulas.open();
+      expect(doc.getElementById('sheetOverlay').classList.contains('open')).toBe(true);
+      w.Formulas.close();
+      expect(doc.getElementById('sheetOverlay').classList.contains('open')).toBe(false);
+    });
+    it('render fills sections', () => {
+      reset();
+      w.Formulas.render();
+      expect(doc.querySelectorAll('#sheetContent .sheet-section').length).toBeGreaterThan(0);
+    });
+    it('toggleFilter alternates', () => {
+      w.Formulas.filter = 'all';
+      w.Formulas.toggleFilter();
+      expect(w.Formulas.filter).toBe('done');
+      w.Formulas.toggleFilter();
+      expect(w.Formulas.filter).toBe('all');
+    });
+    it('filter "done" with nothing done shows empty', () => {
+      reset();
+      w.Formulas.filter = 'done';
+      w.Formulas.render();
+      expect(doc.querySelector('#sheetContent > div')).toBeDefined();
+      w.Formulas.filter = 'all';
+    });
+  });
+
+  // ═══ PROBLEM LOG ═══
+  describe('ProblemLog', () => {
+    it('add with valid label creates entry', () => {
+      reset();
+      doc.getElementById('plogLabel').value = 'OT_2012 стр. 78';
+      doc.getElementById('plogNote').value = 'need help';
+      doc.getElementById('plogStatus').value = 'solved';
+      w.ProblemLog.add();
+      expect(w.Store.state.problemLog.length).toBe(1);
+      expect(w.Store.state.problemLog[0].label).toBe('OT_2012 стр. 78');
+      expect(w.Store.state.problemLog[0].status).toBe('solved');
+    });
+    it('add with empty label is no-op', () => {
+      reset();
+      doc.getElementById('plogLabel').value = '   ';
+      w.ProblemLog.add();
+      expect(w.Store.state.problemLog.length).toBe(0);
+    });
+    it('add clears form', () => {
+      reset();
+      doc.getElementById('plogLabel').value = 'X';
+      doc.getElementById('plogNote').value = 'Y';
+      w.ProblemLog.add();
+      expect(doc.getElementById('plogLabel').value).toBe('');
+      expect(doc.getElementById('plogNote').value).toBe('');
+    });
+    it('remove deletes entry', () => {
+      reset();
+      w.Store.state.problemLog = [{ label: 'a', note: '', status: 'solved', ts: Date.now() }];
+      w.ProblemLog.remove(0);
+      expect(w.Store.state.problemLog.length).toBe(0);
+    });
+    it('open/close toggles overlay', () => {
+      w.ProblemLog.open();
+      expect(doc.getElementById('plogOverlay').classList.contains('open')).toBe(true);
+      w.ProblemLog.close();
+      expect(doc.getElementById('plogOverlay').classList.contains('open')).toBe(false);
+    });
+  });
+
+  // ═══ BOOKMARKS ═══
+  describe('Bookmarks', () => {
+    it('add creates bookmark', () => {
+      reset();
+      w.Bookmarks.add('1.1', 42, 'My Page');
+      expect(w.Store.state.bookmarks['1.1']).toHaveLength(1);
+      expect(w.Store.state.bookmarks['1.1'][0].page).toBe(42);
+    });
+    it('multiple bookmarks per point', () => {
+      reset();
+      w.Bookmarks.add('1.1', 42, 'A');
+      w.Bookmarks.add('1.1', 43, 'B');
+      expect(w.Store.state.bookmarks['1.1']).toHaveLength(2);
+    });
+    it('remove deletes by index', () => {
+      reset();
+      w.Bookmarks.add('1.1', 42, 'A');
+      w.Bookmarks.add('1.1', 43, 'B');
+      w.Bookmarks.remove('1.1', 0);
+      expect(w.Store.state.bookmarks['1.1']).toHaveLength(1);
+      expect(w.Store.state.bookmarks['1.1'][0].page).toBe(43);
+    });
+    it('bookmarks across points independent', () => {
+      reset();
+      w.Bookmarks.add('1.1', 10, 'a');
+      w.Bookmarks.add('1.2', 20, 'b');
+      expect(w.Store.state.bookmarks['1.1']).toHaveLength(1);
+      expect(w.Store.state.bookmarks['1.2']).toHaveLength(1);
+    });
+  });
+
+  // ═══ REPORT ═══
+  describe('Report', () => {
+    it('open/close toggles overlay', () => {
+      w.Report.open();
+      expect(doc.getElementById('reportOverlay').classList.contains('open')).toBe(true);
+      w.Report.close();
+      expect(doc.getElementById('reportOverlay').classList.contains('open')).toBe(false);
+    });
+    it('render fills stats grid', () => {
+      reset();
+      w.Report.render();
+      expect(doc.querySelectorAll('#reportStats .report-stat').length).toBeGreaterThan(0);
+    });
+    it('render fills tips', () => {
+      reset();
+      w.Report.render();
+      expect(doc.getElementById('reportTips').innerHTML.length).toBeGreaterThan(0);
+    });
+    it('render period has valid date format', () => {
+      reset();
+      w.Report.render();
+      const period = doc.getElementById('reportPeriod').textContent;
+      expect(period.includes('.')).toBe(true);
+    });
+  });
+
+  // ═══ THEME ═══
+  describe('Theme', () => {
+    it('apply sets data-theme for contrast', () => {
+      w.Theme.apply('contrast');
+      expect(doc.body.getAttribute('data-theme')).toBe('contrast');
+    });
+    it('apply green removes data-theme', () => {
+      w.Theme.apply('green');
+      expect(doc.body.hasAttribute('data-theme')).toBe(false);
+    });
+    it('cycle changes theme away from current', () => {
+      w.Theme.apply('green');
+      w.Theme.cycle();
+      const stored = localStorage.getItem(w.CONFIG.themeKey);
+      expect(stored).not.toBe('green');
+      w.Theme.apply('green');
+    });
+    it('cycle wraps around', () => {
+      w.Theme.apply('high');
+      w.Theme.cycle();
+      // Should cycle back to 'green'
+      expect(localStorage.getItem(w.CONFIG.themeKey)).toBe('green');
+    });
+  });
+
+  // ═══ UI ═══
+  describe('UI', () => {
+    it('toggleSidebar toggles collapsed', () => {
+      const sb = doc.getElementById('sidebar');
+      sb.classList.remove('collapsed');
+      w.UI.toggleSidebar();
+      expect(sb.classList.contains('collapsed')).toBe(true);
+      w.UI.toggleSidebar();
+      expect(sb.classList.contains('collapsed')).toBe(false);
+    });
+    it('toggleScanlines flips state & class', () => {
+      reset();
+      w.UI.toggleScanlines();
+      expect(w.Store.state.ui.scanlines).toBe(true);
+      expect(doc.body.classList.contains('scanlines')).toBe(true);
+      w.UI.toggleScanlines();
+      expect(w.Store.state.ui.scanlines).toBe(false);
+      expect(doc.body.classList.contains('scanlines')).toBe(false);
+    });
+  });
+
+  // ═══ HELP ═══
+  describe('Help', () => {
+    it('open/close toggles overlay', () => {
+      w.Help.open();
+      expect(doc.getElementById('helpOverlay').classList.contains('open')).toBe(true);
+      w.Help.close();
+      expect(doc.getElementById('helpOverlay').classList.contains('open')).toBe(false);
+    });
+  });
+
+  // ═══ INTEGRATION ═══
+  describe('Integration scenarios', () => {
+    it('mark point done → sidebar ring updates', () => {
+      reset();
+      w.PointActions.toggleDone('1.1');
+      w.Stats.updateSidebarRings();
+      const ring = doc.querySelector('.nav-step[data-step="1"] .ring span');
+      expect(ring.textContent).toContain('1/');
+    });
+    it('mark all step1 points → step badge shows "done"', () => {
+      reset();
+      w.STEPS[0].points.forEach(p => w.Store.getPoint(p.id).done = true);
+      w.Stats.updateStepBadges();
+      const badge = doc.querySelector('#step-1 .step-badge');
+      expect(badge.classList.contains('done')).toBe(true);
+    });
+    it('opening point 3.4 → prereqs shown as chips', () => {
+      reset();
+      w.Modal.open('3.4');
+      const chips = Array.from(doc.querySelectorAll('.prereq-chip'))
+        .map(el => el.textContent);
+      expect(chips).toContain('3.2');
+      expect(chips).toContain('3.3');
+      w.Modal.close();
+    });
+    it('filter "todo" after completing one → count drops', () => {
+      reset();
+      const before = doc.querySelectorAll('#stepsContainer .point').length;
+      w.Store.getPoint('1.1').done = true;
+      w.Store.state.ui.filter = 'todo';
+      w.Content.render();
+      const after = doc.querySelectorAll('#stepsContainer .point').length;
+      expect(after).toBe(before - 1);
+    });
+    it('search filters points live', () => {
+      reset();
+      w.State.searchQuery = 'Менелай';
+      w.Content.render();
+      const count = doc.querySelectorAll('#stepsContainer .point').length;
+      expect(count).toBeGreaterThanOrEqual(1);
+      expect(count).toBeLessThan(5);
+      w.State.searchQuery = '';
+    });
+    it('all 11 steps render correct number of points', () => {
+      reset();
+      w.STEPS.forEach(step => {
+        const sec = doc.getElementById('step-' + step.id);
+        const pts = sec.querySelectorAll('.point');
+        expect(pts.length).toBe(step.points.length);
+      });
+    });
+    it('data-pid attribute on each point matches its id', () => {
+      reset();
+      doc.querySelectorAll('#stepsContainer .point').forEach(el => {
+        expect(w.getPoint(el.dataset.pid)).toBeDefined();
+      });
+    });
+  });
+
+  renderResults();
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   RESULTS RENDERER
+   ═══════════════════════════════════════════════════════════════ */
+function renderResults() {
+  const loading = document.getElementById('loading');
+  const summary = document.getElementById('summary');
+  const results = document.getElementById('results');
+  const rerunBtn = document.getElementById('rerunBtn');
+
+  loading.style.display = 'none';
+  results.style.display = 'block';
+  summary.style.display = 'block';
+  rerunBtn.style.display = 'inline-block';
+
+  let totalPass = 0, totalFail = 0;
+  let html = '';
+
+  testResults.forEach(suite => {
+    let sPass = 0, sFail = 0;
+    const body = suite.tests.map(t => {
+      if (t.status === 'pass') { sPass++; totalPass++; }
+      else { sFail++; totalFail++; }
+      return `<div class="test ${t.status}">
+        <span class="icon">${t.status === 'pass' ? '✓' : '✗'}</span>
+        <div>
+          <div>${escapeResult(t.name)}</div>
+          ${t.error ? `<div class="msg">${escapeResult(t.error)}</div>` : ''}
+        </div>
+      </div>`;
+    }).join('');
+    const cls = sFail ? 'bad' : '';
+    html += `<div class="suite">
+      <h3>${escapeResult(suite.name)} — <span class="${cls}">${sPass}/${suite.tests.length}${sFail ? ` · ${sFail} FAIL` : ''}</span></h3>
+      ${body}
+    </div>`;
+  });
+
+  summary.className = totalFail === 0 ? 'pass' : 'fail';
+  summary.innerHTML = `<h2>${totalFail === 0 ? '✓ ВСИЧКИ ТЕСТОВЕ МИНАХА' : '✗ ИМА ПРОВАЛИ'}</h2>
+    <div>Passed: <b>${totalPass}</b> / ${totalPass + totalFail}${totalFail ? ` — Failed: <b>${totalFail}</b>` : ''}</div>`;
+
+  results.innerHTML = html;
+}
+
+function escapeResult(s) {
+  return String(s).replace(/[&<>"']/g, c => ({
+    '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
+  }[c]));
+}
+</script>
+</body>
+</html>

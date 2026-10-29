@@ -1,0 +1,38 @@
+{
+  "point_id": "11.6",
+  "total": 2,
+  "by_difficulty": {
+    "easy": 1,
+    "medium": 1,
+    "hard": 0
+  },
+  "problems": [
+    {
+      "source": "OLI-3-Национален кръг-1991-9-12 кл · 1991-None · Зад. 4",
+      "statement": "Нека f(x) е полином от степен n с реални коефициеити, имащ n (не непременно различни) реални корена. Да се докаже, че за всяко x е в сила неравенството\nf(x)f′′(x) ≤ (f′(x))²,\nкъдето с f′(x) и f′′(x) са означени съответно първата и втората [неразчетено] полинома.",
+      "solution": "Решение. Нека x₁, x₂, …, xₙ са корените на полинома, а c — старшият му коефициент. Ясно е, че при x = xᵢ, i = 1, 2, …, n, исканото неравенство е изпълнено. Затова нека x ≠ xᵢ, i = 1, 2, …, n. Тогава\nf(x) = c(x − x₁)(x − x₂)⋯(x − xₙ)\nи\nf′(x) = c(x − x₂)⋯(x − xₙ) + ⋯ + c(x − x₁)⋯(x − xₙ₋₁)\n= f(x)/(x − x₁) + f(x)/(x − x₂) + ⋯ + f(x)/(x − xₙ),\nт. е.\nf′(x)/f(x) = 1/(x − x₁) + 1/(x − x₂) + ⋯ + 1/(x − xₙ).\nОттук следва, че\n(f′(x)/f(x))′ = −(x − x₁)⁻² − (x − x₂)⁻² − ⋯ − (x − xₙ)⁻² < 0,\nа от друга страна\n(f′(x)/f(x))′ = (f′′(x)f(x) − (f′(x))²)/f²(x).\nСледователно f(x)f′′(x) ≤ (f′(x))² за всяко x.",
+      "answer": null,
+      "difficulty": "easy",
+      "techniques": [
+        "log_derivative",
+        "inequality"
+      ],
+      "confidence": "exact",
+      "reasoning": "Writes f′/f as a sum of simple fractions, observes its derivative is negative, which yields f·f″ ≤ (f′)²."
+    },
+    {
+      "source": "OLI-2-Областен кръг-2011-11 кл · 2011-11 · Зад. 1",
+      "statement": "Допирателните към точки A и B от графиката на функцията y = x² се пресичат в точка C така, че △ABC е равностранен. Да се намери дължината на отсечката AB.",
+      "solution": "Решение. Ако A = (a, a²) и B = (b, b²), то съответните допирателни са y − a² = 2a(x − a) и y − b² = 2b(x − b) (понеже (x²)′ = 2x). Тогава за C = (c₁, c₂) имаме, че 2c₁ − a² = 2bc₁ − b², откъдето c₁ = (a + b)/2 и c₂ = ab.\nСега от (a − (a + b)/2)² + (a² − ab)² = AC² = BC² = (b − (a + b)/2)² + (b² − ab)² следва, че |a² − ab| = |b² − ab|. Ако a² − ab = ab − b², то (a − b)² = 0 — противоречие. Значи a² − ab = b² − ab, т.е. a = −b.\nМожем да считаме, че a > 0 и тогава ∠ACB = 60° точно когато ъгълът между допирателната през A и Ox е 60° (защото AB ∥ Ox и AC = BC). Оттук AB = 2a = tan 60° = √3.",
+      "answer": "AB = √3",
+      "difficulty": "medium",
+      "techniques": [
+        "derivative",
+        "tangent_line",
+        "equilateral_triangle"
+      ],
+      "confidence": "exact",
+      "reasoning": "Write tangents at (a,a^2) and (b,b^2) using y‑a^2=2a(x‑a), y‑b^2=2b(x‑b); impose equilateral condition to obtain a=−b and AB=√3."
+    }
+  ]
+}

@@ -1,0 +1,1562 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>OLYMPIAD PREP TERMINAL</title>
+<link href="https://fonts.googleapis.com/css2?family=VT323&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #000;
+  --surface: #061006;
+  --surface-2: #0a1a0a;
+  --surface-3: #0f240f;
+  --surface-4: #142e14;
+  --border: #143014;
+  --border-2: #1f4a1f;
+  --accent: #00ff44;
+  --accent-2: #00cc36;
+  --accent-dim: #0b4a1a;
+  --accent-glow: rgba(0,255,68,0.35);
+  --text: #b8ffb8;
+  --text-2: #7bea7b;
+  --text-3: #4a8a4a;
+  --warn: #ddff00;
+  --danger: #ff4444;
+  --star: #ffdd00;
+  --sidebar-w: 300px;
+  --topbar-h: 56px;
+}
+
+/* ===== THEME: CONTRAST ===== */
+body[data-theme="contrast"] {
+  --surface: #0a0a0a;
+  --surface-2: #101010;
+  --surface-3: #181818;
+  --surface-4: #202020;
+  --border: #1a1a1a;
+  --border-2: #2a2a2a;
+  --text: #f5f5f5;
+  --text-2: #d4d4d4;
+  --text-3: #8a8a8a;
+  --accent-glow: rgba(0,255,102,0.4);
+}
+
+/* ===== THEME: HIGH CONTRAST ===== */
+body[data-theme="high"] {
+  --surface: #000;
+  --surface-2: #0a0a0a;
+  --surface-3: #141414;
+  --surface-4: #1e1e1e;
+  --border: #222;
+  --border-2: #333;
+  --text: #ffffff;
+  --text-2: #e8e8e8;
+  --text-3: #999;
+  --accent: #00ff88;
+  --accent-2: #00e070;
+  --accent-glow: rgba(0,255,136,0.5);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html, body { height: 100%; overflow: hidden; }
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'VT323', 'JetBrains Mono', monospace;
+  font-size: 17px;
+  letter-spacing: 0.5px;
+  -webkit-font-smoothing: antialiased;
+  transition: background 0.2s, color 0.2s;
+}
+body.scanlines::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: repeating-linear-gradient(to bottom, rgba(0,255,68,0) 0px, rgba(0,255,68,0.02) 2px, rgba(0,255,68,0.035) 3px);
+  pointer-events: none;
+  z-index: 9000;
+}
+
+.app { display: flex; height: 100vh; width: 100vw; overflow: hidden; }
+
+/* ===== SIDEBAR ===== */
+.sidebar {
+  width: var(--sidebar-w);
+  background: var(--surface);
+  border-right: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  transition: margin-left 0.25s ease;
+}
+.sidebar.collapsed { margin-left: calc(-1 * var(--sidebar-w)); }
+.sidebar-header {
+  padding: 14px 16px;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.sidebar-header .logo { font-size: 20px; color: var(--accent); text-shadow: 0 0 8px var(--accent-glow); }
+.sidebar-header .title {
+  font-size: 15px; color: var(--accent); letter-spacing: 2px;
+  flex: 1; text-shadow: 0 0 6px var(--accent-glow);
+}
+.sidebar-header .collapse-btn {
+  background: transparent; border: 1px solid var(--border-2);
+  color: var(--text-2); padding: 2px 8px; font-family: inherit;
+  font-size: 14px; cursor: pointer; border-radius: 3px;
+}
+.sidebar-header .collapse-btn:hover { color: var(--accent); border-color: var(--accent); }
+.sidebar-stats {
+  padding: 12px 16px; border-bottom: 1px solid var(--border); background: var(--surface-2);
+}
+.streak-row { display: flex; align-items: center; gap: 8px; margin-bottom: 8px; font-size: 14px; }
+.streak-row .fire { font-size: 18px; }
+.streak-row .streak-num { color: var(--accent); font-size: 20px; text-shadow: 0 0 6px var(--accent-glow); }
+.streak-row .streak-label { color: var(--text-3); font-size: 12px; letter-spacing: 1px; }
+.sidebar-nav { flex: 1; overflow-y: auto; padding: 8px; }
+.sidebar-nav::-webkit-scrollbar { width: 6px; }
+.sidebar-nav::-webkit-scrollbar-track { background: transparent; }
+.sidebar-nav::-webkit-scrollbar-thumb { background: var(--border-2); border-radius: 3px; }
+.nav-step {
+  display: flex; align-items: center; gap: 10px; padding: 8px 10px;
+  border-radius: 4px; cursor: pointer; margin-bottom: 2px;
+  border: 1px solid transparent; transition: all 0.15s;
+  background: none; font-family: inherit; width: 100%; text-align: left;
+}
+.nav-step:hover { background: var(--surface-2); border-color: var(--border-2); }
+.nav-step.active { background: var(--surface-3); border-color: var(--accent-2); }
+.nav-step .num { color: var(--accent); font-size: 15px; min-width: 24px; text-shadow: 0 0 4px var(--accent-glow); }
+.nav-step .label {
+  flex: 1; color: var(--text-2); font-size: 13px; letter-spacing: 0.5px;
+  overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+}
+.nav-step.active .label { color: var(--accent); }
+.nav-step .ring {
+  width: 26px; height: 26px; border-radius: 50%; flex-shrink: 0;
+  display: flex; align-items: center; justify-content: center;
+  position: relative; font-size: 9px;
+  background: conic-gradient(var(--accent) var(--pct, 0%), var(--surface-4) 0);
+}
+.nav-step .ring::before {
+  content: ""; position: absolute; inset: 3px;
+  border-radius: 50%; background: var(--surface);
+}
+.nav-step .ring span { position: relative; z-index: 1; font-size: 9px; color: var(--text-2); }
+
+/* ===== MAIN ===== */
+.main { flex: 1; display: flex; flex-direction: column; min-width: 0; overflow: hidden; }
+
+/* ===== TOPBAR ===== */
+.topbar {
+  height: var(--topbar-h); min-height: var(--topbar-h);
+  display: flex; align-items: center; gap: 10px;
+  padding: 0 16px; background: var(--surface); border-bottom: 1px solid var(--border);
+}
+.menu-toggle {
+  display: none; background: transparent; border: 1px solid var(--border-2);
+  color: var(--text-2); padding: 4px 10px; font-family: inherit;
+  font-size: 16px; cursor: pointer; border-radius: 3px;
+}
+.menu-toggle:hover { color: var(--accent); border-color: var(--accent); }
+.search-wrap {
+  flex: 1; max-width: 460px; position: relative; display: flex; align-items: center;
+  background: var(--surface-2); border: 1px solid var(--border-2);
+  border-radius: 4px; padding: 0 10px; height: 36px;
+  transition: border-color 0.15s;
+}
+.search-wrap:focus-within { border-color: var(--accent); box-shadow: 0 0 0 2px var(--accent-glow); }
+.search-wrap .icon { color: var(--accent); font-size: 15px; margin-right: 6px; }
+.search-wrap input {
+  flex: 1; background: transparent; border: none;
+  color: var(--text); font-family: inherit;
+  font-size: 15px; outline: none; letter-spacing: 0.5px;
+}
+.search-wrap input::placeholder { color: var(--text-3); }
+.search-wrap .kbd-hint {
+  font-size: 11px; color: var(--text-3);
+  border: 1px solid var(--border-2); padding: 1px 5px; border-radius: 3px;
+}
+.search-wrap input:focus ~ .kbd-hint { display: none; }
+.filter-chips { display: flex; gap: 3px; flex-shrink: 0; }
+.chip {
+  background: var(--surface-2); border: 1px solid var(--border-2);
+  color: var(--text-2); padding: 5px 10px; font-family: inherit;
+  font-size: 12px; cursor: pointer; border-radius: 3px;
+  letter-spacing: 1px; transition: all 0.15s; white-space: nowrap;
+}
+.chip:hover { color: var(--accent); border-color: var(--accent); }
+.chip.active { background: var(--accent); color: #000; border-color: var(--accent); box-shadow: 0 0 8px var(--accent-glow); }
+.topbar-right { display: flex; align-items: center; gap: 6px; margin-left: auto; }
+.icon-btn {
+  width: 36px; height: 36px;
+  background: var(--surface-2); border: 1px solid var(--border-2);
+  color: var(--text-2); font-family: inherit; font-size: 15px;
+  cursor: pointer; border-radius: 3px;
+  display: flex; align-items: center; justify-content: center;
+  transition: all 0.15s;
+}
+.icon-btn:hover { color: var(--accent); border-color: var(--accent); }
+.icon-btn.active { background: var(--accent); color: #000; border-color: var(--accent); }
+.theme-btn { font-size: 12px; letter-spacing: 1px; padding: 0 8px; width: auto; min-width: 42px; }
+
+/* ===== STATS BAR ===== */
+.stats-bar {
+  padding: 10px 20px; background: var(--surface-2);
+  border-bottom: 1px solid var(--border);
+  display: flex; align-items: center; gap: 20px;
+  flex-wrap: wrap; font-size: 14px;
+}
+.stat { display: flex; align-items: baseline; gap: 6px; }
+.stat .v { color: var(--accent); font-size: 18px; text-shadow: 0 0 5px var(--accent-glow); }
+.stat .l { color: var(--text-3); font-size: 11px; letter-spacing: 1.5px; }
+.progress-wrap {
+  flex: 1; min-width: 150px; height: 6px;
+  background: var(--surface-4); border-radius: 3px; overflow: hidden; position: relative;
+}
+.progress-fill {
+  height: 100%; background: linear-gradient(90deg, var(--accent-2), var(--accent));
+  border-radius: 3px; transition: width 0.5s cubic-bezier(.4,0,.2,1);
+  box-shadow: 0 0 8px var(--accent-glow);
+}
+
+/* ===== CONTENT ===== */
+.content {
+  flex: 1; overflow-y: auto; padding: 20px;
+  scroll-behavior: smooth;
+}
+.content::-webkit-scrollbar { width: 10px; }
+.content::-webkit-scrollbar-track { background: var(--surface); }
+.content::-webkit-scrollbar-thumb { background: var(--border-2); border-radius: 5px; }
+.content::-webkit-scrollbar-thumb:hover { background: var(--accent-2); }
+
+/* ===== STEP ===== */
+.step {
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: 6px; margin-bottom: 16px; overflow: hidden;
+  scroll-margin-top: 16px;
+}
+.step-header {
+  padding: 14px 18px; display: flex; align-items: center; gap: 12px;
+  cursor: pointer; user-select: none;
+  background: var(--surface-2); border-bottom: 1px solid var(--border);
+  transition: background 0.15s;
+}
+.step-header:hover { background: var(--surface-3); }
+.step-toggle { color: var(--accent); font-size: 13px; transition: transform 0.2s; width: 14px; display: inline-block; }
+.step.collapsed .step-toggle { transform: rotate(-90deg); }
+.step.collapsed .step-body { display: none; }
+.step-num {
+  color: var(--accent); font-size: 22px; min-width: 40px;
+  text-shadow: 0 0 6px var(--accent-glow); letter-spacing: 1px;
+}
+.step-title { flex: 1; font-size: 18px; letter-spacing: 1.5px; color: var(--accent); text-shadow: 0 0 4px var(--accent-glow); }
+.step-badge {
+  font-size: 12px; color: var(--text-2); border: 1px solid var(--border-2);
+  padding: 2px 9px; border-radius: 3px; letter-spacing: 1px;
+  background: var(--surface-4); white-space: nowrap;
+}
+.step-badge.done {
+  background: var(--accent); color: #000;
+  border-color: var(--accent); box-shadow: 0 0 6px var(--accent-glow);
+}
+.step-reset {
+  background: transparent; border: 1px solid transparent;
+  color: var(--text-3); font-family: inherit; font-size: 15px;
+  cursor: pointer; padding: 2px 8px; border-radius: 3px;
+}
+.step-reset:hover { color: var(--danger); border-color: var(--danger); }
+.step-body { padding: 12px; }
+
+/* ===== POINT ===== */
+.point {
+  background: var(--surface-2); border: 1px solid var(--border-2);
+  border-radius: 5px; margin-bottom: 8px;
+  transition: all 0.15s; position: relative; overflow: hidden;
+}
+.point:hover { border-color: var(--accent-2); }
+.point.done { opacity: 0.55; }
+.point.done .point-title { text-decoration: line-through; color: var(--text-3); }
+.point.fav { border-color: var(--star); }
+.point.fav::before {
+  content: ""; position: absolute; left: 0; top: 0; bottom: 0;
+  width: 2px; background: var(--star);
+}
+.point.highlight { animation: highlight 1.2s ease; }
+@keyframes highlight {
+  0%, 100% { background: var(--surface-2); }
+  50% { background: var(--surface-4); box-shadow: 0 0 15px var(--accent-glow); }
+}
+.point-row { padding: 11px 14px; display: flex; gap: 12px; align-items: flex-start; }
+.point-check {
+  flex-shrink: 0; width: 22px; height: 22px;
+  border: 2px solid var(--accent-2); border-radius: 3px;
+  background: var(--surface); color: var(--text-3);
+  font-family: inherit; font-size: 14px; line-height: 1;
+  cursor: pointer; display: flex; align-items: center; justify-content: center;
+  margin-top: 2px; transition: all 0.15s;
+}
+.point-check:hover { border-color: var(--accent); color: var(--accent); }
+.point-check.checked {
+  background: var(--accent); border-color: var(--accent);
+  color: #000; box-shadow: 0 0 8px var(--accent-glow);
+}
+.point-main { flex: 1; min-width: 0; }
+.point-num { font-size: 11px; color: var(--text-3); letter-spacing: 2px; margin-bottom: 2px; }
+.point-title { font-size: 16px; color: var(--text); margin-bottom: 4px; letter-spacing: 0.5px; }
+.point-desc { font-size: 13px; color: var(--text-2); line-height: 1.5; margin-bottom: 8px; }
+.point-tags { display: flex; flex-wrap: wrap; gap: 5px; align-items: center; }
+.tag {
+  font-size: 11px; padding: 2px 7px;
+  background: var(--surface-3); border: 1px solid var(--border-2);
+  border-radius: 3px; color: var(--text-2); letter-spacing: 0.5px;
+}
+.tag.src { color: var(--text-3); }
+.tag.page { color: var(--accent-2); border-color: var(--accent-dim); background: var(--accent-dim); }
+.pdf-btn {
+  font-size: 11px; padding: 3px 9px;
+  background: var(--accent-dim); border: 1px solid var(--accent-2);
+  border-radius: 3px; color: var(--accent);
+  text-decoration: none; letter-spacing: 1px;
+  transition: all 0.15s; display: inline-flex; align-items: center; gap: 4px;
+}
+.pdf-btn:hover { background: var(--accent); color: #000; box-shadow: 0 0 8px var(--accent-glow); }
+.pdf-btn.bonus {
+  background: #1a0a30; border-color: #6a30c0; color: #b88aff;
+}
+.pdf-btn.bonus:hover { background: #6a30c0; color: #fff; }
+.point-actions { display: flex; gap: 3px; flex-shrink: 0; align-items: flex-start; }
+.mini-btn {
+  width: 26px; height: 26px;
+  background: transparent; border: 1px solid var(--border-2);
+  color: var(--text-3); font-family: inherit; font-size: 14px;
+  cursor: pointer; border-radius: 3px;
+  display: flex; align-items: center; justify-content: center;
+  transition: all 0.15s;
+}
+.mini-btn:hover { color: var(--accent); border-color: var(--accent); }
+.mini-btn.active { color: var(--star); border-color: var(--star); }
+.diff-group { display: flex; gap: 2px; }
+.diff-btn {
+  font-size: 10px; width: 20px; height: 26px;
+  background: transparent; border: 1px solid var(--border-2);
+  color: var(--text-3); font-family: inherit;
+  cursor: pointer; border-radius: 3px; transition: all 0.15s;
+}
+.diff-btn:hover { color: var(--accent); border-color: var(--accent); }
+.diff-btn.active.easy { color: #7dff7d; border-color: #7dff7d; background: rgba(125,255,125,0.1); }
+.diff-btn.active.med { color: var(--warn); border-color: var(--warn); background: rgba(221,255,0,0.1); }
+.diff-btn.active.hard { color: var(--danger); border-color: var(--danger); background: rgba(255,68,68,0.1); }
+
+.point-expand {
+  border-top: 1px solid var(--border); background: var(--surface);
+  padding: 0; max-height: 0; overflow: hidden;
+  transition: max-height 0.35s ease;
+}
+.point.expanded .point-expand { max-height: 2000px; }
+.point-expand-inner { padding: 14px; }
+.section-label {
+  font-size: 10px; color: var(--text-3); letter-spacing: 2px;
+  margin-bottom: 6px; text-transform: uppercase;
+}
+.explanation {
+  font-size: 14px; color: var(--text); line-height: 1.7;
+  padding: 10px 14px;
+  background: var(--surface-2);
+  border-left: 2px solid var(--accent-dim);
+  border-radius: 3px; margin-bottom: 12px;
+  white-space: pre-wrap;
+}
+.explanation .ln { color: var(--accent); font-weight: 600; }
+.notes-area {
+  width: 100%; min-height: 80px;
+  background: var(--surface-2); border: 1px solid var(--border-2);
+  color: var(--text); font-family: inherit; font-size: 14px;
+  padding: 8px 10px; border-radius: 3px; resize: vertical;
+  outline: none; line-height: 1.5; transition: border-color 0.15s;
+}
+.notes-area:focus { border-color: var(--accent); box-shadow: 0 0 0 2px var(--accent-glow); }
+.notes-area::placeholder { color: var(--text-3); }
+.bonus-row {
+  margin-top: 10px; padding-top: 10px;
+  border-top: 1px dashed var(--border-2);
+  display: flex; flex-wrap: wrap; gap: 5px;
+}
+.notes-badge {
+  font-size: 10px; color: var(--warn);
+  border: 1px solid var(--warn); padding: 1px 5px;
+  border-radius: 2px; margin-left: 4px; letter-spacing: 1px;
+}
+
+/* ===== POMODORO ===== */
+.pomodoro {
+  position: fixed; bottom: 20px; right: 20px;
+  background: var(--surface); border: 1px solid var(--accent-2);
+  border-radius: 6px; padding: 10px 14px;
+  display: flex; align-items: center; gap: 12px;
+  box-shadow: 0 0 20px var(--accent-glow); z-index: 500; font-size: 14px;
+}
+.pomodoro .time {
+  font-size: 24px; color: var(--accent);
+  text-shadow: 0 0 8px var(--accent-glow);
+  min-width: 72px; text-align: center; letter-spacing: 2px;
+}
+.pomodoro .time.break { color: var(--warn); text-shadow: 0 0 8px rgba(221,255,0,0.5); }
+.pomodoro .mode { font-size: 10px; color: var(--text-3); letter-spacing: 2px; text-align: center; }
+.pomo-btn {
+  width: 30px; height: 30px;
+  background: var(--surface-2); border: 1px solid var(--border-2);
+  color: var(--text-2); font-family: inherit; font-size: 14px;
+  cursor: pointer; border-radius: 3px;
+  display: flex; align-items: center; justify-content: center;
+  transition: all 0.15s;
+}
+.pomo-btn:hover { color: var(--accent); border-color: var(--accent); }
+.pomo-btn.play { background: var(--accent); color: #000; border-color: var(--accent); }
+.pomo-count {
+  font-size: 11px; color: var(--text-3); letter-spacing: 1px;
+  border-left: 1px solid var(--border); padding-left: 12px; text-align: center;
+}
+
+/* ===== PALETTE ===== */
+.palette-overlay {
+  position: fixed; inset: 0; background: rgba(0,0,0,0.75);
+  backdrop-filter: blur(4px); z-index: 2000;
+  display: none; align-items: flex-start; justify-content: center;
+  padding-top: 15vh;
+}
+.palette-overlay.open { display: flex; }
+.palette {
+  width: 90%; max-width: 560px;
+  background: var(--surface); border: 1px solid var(--accent-2);
+  border-radius: 6px; box-shadow: 0 0 40px var(--accent-glow);
+  overflow: hidden;
+}
+.palette-input {
+  width: 100%; background: var(--surface-2); border: none;
+  border-bottom: 1px solid var(--border);
+  color: var(--accent); font-family: inherit; font-size: 18px;
+  padding: 14px 18px; outline: none; letter-spacing: 1px;
+}
+.palette-input::placeholder { color: var(--text-3); }
+.palette-results { max-height: 50vh; overflow-y: auto; }
+.palette-results::-webkit-scrollbar { width: 6px; }
+.palette-results::-webkit-scrollbar-thumb { background: var(--border-2); border-radius: 3px; }
+.palette-item {
+  padding: 10px 18px; cursor: pointer;
+  display: flex; gap: 12px; align-items: center;
+  border-bottom: 1px solid var(--border); transition: background 0.1s;
+}
+.palette-item:hover, .palette-item.selected {
+  background: var(--surface-3); border-left: 3px solid var(--accent);
+  padding-left: 15px;
+}
+.palette-item .pnum { font-size: 12px; color: var(--text-3); min-width: 40px; letter-spacing: 1px; }
+.palette-item .ptitle { flex: 1; font-size: 14px; color: var(--text); }
+.palette-item .pstep { font-size: 11px; color: var(--accent-2); letter-spacing: 1px; }
+.palette-empty { padding: 30px; text-align: center; color: var(--text-3); font-size: 14px; letter-spacing: 2px; }
+
+/* ===== DROPDOWN ===== */
+.dropdown { position: relative; }
+.dropdown-menu {
+  position: absolute; top: calc(100% + 6px); right: 0;
+  background: var(--surface); border: 1px solid var(--accent-2);
+  border-radius: 5px; padding: 6px; min-width: 220px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.6), 0 0 15px var(--accent-glow);
+  z-index: 300; display: none;
+}
+.dropdown-menu.open { display: block; }
+.dropdown-item {
+  display: flex; align-items: center; gap: 10px;
+  padding: 8px 12px; color: var(--text-2);
+  font-family: inherit; font-size: 13px; cursor: pointer;
+  border-radius: 3px; background: transparent; border: none;
+  width: 100%; text-align: left; letter-spacing: 0.5px;
+  transition: all 0.1s;
+}
+.dropdown-item:hover { background: var(--surface-3); color: var(--accent); }
+.dropdown-item .ic { color: var(--accent); min-width: 16px; text-align: center; }
+.dropdown-item.danger { color: var(--danger); }
+.dropdown-item.danger .ic { color: var(--danger); }
+.dropdown-item.danger:hover { background: rgba(255,68,68,0.1); color: var(--danger); }
+.dropdown-sep { height: 1px; background: var(--border); margin: 4px 0; }
+
+/* ===== HELP ===== */
+.help-overlay {
+  position: fixed; inset: 0; background: rgba(0,0,0,0.8);
+  z-index: 2100; display: none; align-items: center; justify-content: center;
+}
+.help-overlay.open { display: flex; }
+.help-box {
+  background: var(--surface); border: 1px solid var(--accent-2);
+  border-radius: 6px; padding: 24px 28px;
+  max-width: 480px; width: 90%; box-shadow: 0 0 30px var(--accent-glow);
+}
+.help-box h2 {
+  color: var(--accent); font-size: 20px; letter-spacing: 2px;
+  margin-bottom: 18px; text-shadow: 0 0 6px var(--accent-glow);
+}
+.help-row {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 8px 0; border-bottom: 1px solid var(--border); font-size: 14px;
+}
+.help-row:last-child { border-bottom: none; }
+.help-row .lbl { color: var(--text-2); }
+.help-row kbd {
+  background: var(--surface-2); border: 1px solid var(--border-2);
+  border-bottom-width: 2px; padding: 2px 8px;
+  border-radius: 3px; color: var(--accent);
+  font-family: inherit; font-size: 12px; letter-spacing: 1px;
+}
+
+/* ===== TOAST ===== */
+.toast {
+  position: fixed; bottom: 24px; left: 50%;
+  transform: translate(-50%, 80px);
+  background: var(--surface); border: 1px solid var(--accent);
+  color: var(--accent); padding: 10px 18px; border-radius: 4px;
+  font-size: 14px; letter-spacing: 1px;
+  box-shadow: 0 0 20px var(--accent-glow);
+  z-index: 3000; opacity: 0; transition: all 0.3s; pointer-events: none;
+}
+.toast.show { transform: translate(-50%, 0); opacity: 1; }
+
+.empty { padding: 60px 20px; text-align: center; color: var(--text-3); letter-spacing: 2px; }
+.empty .big { font-size: 40px; color: var(--accent-2); margin-bottom: 12px; opacity: 0.5; }
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 900px) {
+  .sidebar { position: fixed; top: 0; left: 0; bottom: 0; z-index: 1000; }
+  .sidebar.collapsed { margin-left: calc(-1 * var(--sidebar-w)); }
+  .menu-toggle { display: flex; }
+  .stats-bar { padding: 8px 14px; gap: 12px; }
+  .stat .v { font-size: 15px; }
+  .point-row { padding: 10px 12px; }
+  .point-title { font-size: 15px; }
+  .point-desc { font-size: 12.5px; }
+  .content { padding: 14px; }
+  .pomodoro { bottom: 12px; right: 12px; padding: 8px 11px; }
+  .pomodoro .time { font-size: 20px; min-width: 60px; }
+}
+@media (max-width: 600px) {
+  .filter-chips { overflow-x: auto; max-width: 100%; }
+  .chip { font-size: 11px; padding: 4px 8px; }
+  .search-wrap .kbd-hint { display: none; }
+  .step-title { font-size: 15px; }
+  .step-num { font-size: 18px; min-width: 32px; }
+  .step-badge { font-size: 11px; }
+  .pomodoro .pomo-count { display: none; }
+}
+.kbd-hint.hidden { display: none; }
+</style>
+</head>
+<body>
+
+<div class="app">
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-header">
+      <div class="logo">▣</div>
+      <div class="title">PREP TERMINAL</div>
+      <button class="collapse-btn" onclick="toggleSidebar()" title="Скрий">◀</button>
+    </div>
+    <div class="sidebar-stats">
+      <div class="streak-row">
+        <span class="fire">🔥</span>
+        <span class="streak-num" id="streakNum">0</span>
+        <span class="streak-label">ДНИ ПОРЕД</span>
+      </div>
+    </div>
+    <div class="sidebar-nav" id="sidebarNav"></div>
+  </aside>
+
+  <main class="main">
+    <div class="topbar">
+      <button class="menu-toggle" onclick="toggleSidebar()">☰</button>
+      <div class="search-wrap">
+        <span class="icon">⌕</span>
+        <input type="text" id="searchInput" placeholder="Търси тема, теорема, бележка...">
+        <span class="kbd-hint" id="kbdHint">/</span>
+      </div>
+      <div class="filter-chips" id="filters">
+        <button class="chip active" data-filter="all">ВСИЧКИ</button>
+        <button class="chip" data-filter="todo">ЗА УЧЕНЕ</button>
+        <button class="chip" data-filter="done">ГОТОВИ</button>
+        <button class="chip" data-filter="fav">★</button>
+        <button class="chip" data-filter="hard">⚠ ТРУДНИ</button>
+      </div>
+      <div class="topbar-right">
+        <button class="icon-btn theme-btn" id="themeBtn" onclick="cycleTheme()" title="Смяна на тема (g/c/h)">GREEN</button>
+        <button class="icon-btn" onclick="openPalette()" title="Command Palette (Ctrl+K)">⌘</button>
+        <div class="dropdown">
+          <button class="icon-btn" id="menuBtn" title="Меню">⋯</button>
+          <div class="dropdown-menu" id="menuDropdown">
+            <button class="dropdown-item" onclick="expandAll();closeMenu()"><span class="ic">▾</span> Разгъни всички</button>
+            <button class="dropdown-item" onclick="collapseAll();closeMenu()"><span class="ic">▸</span> Сгъни всички</button>
+            <div class="dropdown-sep"></div>
+            <button class="dropdown-item" onclick="exportProgress();closeMenu()"><span class="ic">↓</span> Експорт (JSON)</button>
+            <button class="dropdown-item" onclick="document.getElementById('importFile').click();closeMenu()"><span class="ic">↑</span> Импорт (JSON)</button>
+            <input type="file" id="importFile" accept=".json" style="display:none" onchange="importProgress(event)">
+            <div class="dropdown-sep"></div>
+            <button class="dropdown-item" id="scanToggleItem" onclick="toggleScanlines();closeMenu()"><span class="ic">◫</span> Scanlines: ИЗКЛ</button>
+            <button class="dropdown-item" onclick="openHelp();closeMenu()"><span class="ic">?</span> Клавишни shortcut-и</button>
+            <div class="dropdown-sep"></div>
+            <button class="dropdown-item danger" onclick="resetAll();closeMenu()"><span class="ic">⌫</span> Нулирай всичко</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="stats-bar">
+      <div class="stat"><span class="v" id="statDone">0</span><span class="l">ГОТОВИ</span></div>
+      <div class="stat"><span class="v" id="statTotal">0</span><span class="l">ОБЩО</span></div>
+      <div class="stat"><span class="v" id="statPercent">0%</span><span class="l">НАПРЕДЪК</span></div>
+      <div class="stat"><span class="v" id="statPomos">0</span><span class="l">ПОМОДОРО</span></div>
+      <div class="progress-wrap"><div class="progress-fill" id="progressFill" style="width:0%"></div></div>
+    </div>
+
+    <div class="content" id="content">
+      <div id="stepsContainer"></div>
+    </div>
+  </main>
+</div>
+
+<div class="pomodoro" id="pomodoro">
+  <div>
+    <div class="time" id="pomoTime">25:00</div>
+    <div class="mode" id="pomoMode">ФОКУС</div>
+  </div>
+  <button class="pomo-btn play" id="pomoPlay" onclick="togglePomodoro()" title="Старт/Пауза (t)">▶</button>
+  <button class="pomo-btn" onclick="resetPomodoro()" title="Рестарт">↺</button>
+  <div class="pomo-count">
+    <div id="pomoDone">0</div>
+    <div style="font-size:9px;letter-spacing:1.5px;">СЕСИИ</div>
+  </div>
+</div>
+
+<div class="palette-overlay" id="paletteOverlay" onclick="if(event.target===this)closePalette()">
+  <div class="palette">
+    <input type="text" class="palette-input" id="paletteInput" placeholder="Скок до точка... (Enter за избор, Esc за затваряне)" autocomplete="off">
+    <div class="palette-results" id="paletteResults"></div>
+  </div>
+</div>
+
+<div class="help-overlay" id="helpOverlay" onclick="if(event.target===this)closeHelp()">
+  <div class="help-box">
+    <h2>⌨ КЛАВИШНИ SHORTCUT-И</h2>
+    <div class="help-row"><span class="lbl">Фокус върху търсене</span><kbd>/</kbd></div>
+    <div class="help-row"><span class="lbl">Command palette</span><kbd>Ctrl + K</kbd></div>
+    <div class="help-row"><span class="lbl">Следваща / предишна точка</span><kbd>J / K</kbd></div>
+    <div class="help-row"><span class="lbl">Маркирай текущата точка</span><kbd>Space</kbd></div>
+    <div class="help-row"><span class="lbl">Отвори бележки на текущата</span><kbd>N</kbd></div>
+    <div class="help-row"><span class="lbl">Помодоро старт/пауза</span><kbd>T</kbd></div>
+    <div class="help-row"><span class="lbl">Смяна на тема</span><kbd>G</kbd></div>
+    <div class="help-row"><span class="lbl">Разгъни / сгъни всички</span><kbd>E / C</kbd></div>
+    <div class="help-row"><span class="lbl">Затвори / изчисти</span><kbd>Esc</kbd></div>
+    <div class="help-row"><span class="lbl">Това меню</span><kbd>?</kbd></div>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script>
+function pdfUrl(path, page) {
+  const url = path.split('/').map(encodeURIComponent).join('/') + '.pdf';
+  return page ? url + '#page=' + page : url;
+}
+
+// ===== DATA =====
+const STEPS = [
+{ id:1, icon:"◆", title:"ГЕОМЕТРИЯ – ОСНОВНИ ТЕОРЕМИ",
+  points:[
+    { id:"1.1", title:"Теорема на Менелай", desc:"Колинеарни точки върху страните на триъгълник", source:"OT_2012, Симедиани (Ст. Боев)", pdf:"Материали_БГ/OT_2012", page:66,
+      explanation:"ФОРМУЛИРОВКА: Нека M, N, P са точки съответно на правите BC, CA, AB (не непременно на отсечките!) на △ABC. Тогава M, N, P са колинеарни ⇔ (BM/MC)·(CN/NA)·(AP/PB) = 1, където отношенията са с ОРИЕНТИРАНИ отсечки (т.е. ако точка е извън отсечката, отношението е отрицателно).\n\nКОГА СЕ ИЗПОЛЗВА: За доказване на колинеарност на три точки (особено когато са на различни страни); за намиране на отношение между отсечки при дадена колинеарност; като част от по-сложни доказателства с хармонично отношение.\n\nКЛЮЧОВИ СВОЙСТВА: (1) Работи и за точки на продълженията - просто внимавай със знаците. (2) Обратната посока (от произведението към колинеарност) е много полезна. (3) Често се комбинира с Чева - двете са двойствени.\n\nВНИМАНИЕ: Класическа грешка е да се използва само за точки на отсечките. Ако условието не казва изрично, приемай най-общия случай и използвай ориентирани отношения.\n\nТИПИЧНА УПОТРЕБА: Когато имаш 3 колинеарни точки и трябва да намериш отношение - записваш произведението = 1 и решаваш за неизвестното." },
+    { id:"1.2", title:"Теорема на Чева", desc:"Конкурентни чевиани; тригонометрична форма", source:"OT_2012, Симедиани", pdf:"Материали_БГ/OT_2012", page:66,
+      explanation:"ФОРМУЛИРОВКА: Нека M ∈ BC, N ∈ CA, P ∈ AB. Отсечките AM, BN, CP са конкурентни (пресичат се в една точка) ⇔ (BM/MC)·(CN/NA)·(AP/PB) = 1 (ориентирани).\n\nТРИГОНОМЕТРИЧНА ФОРМА: AM, BN, CP конкурентни ⇔ (sin∠BAM / sin∠MAC) · (sin∠CBN / sin∠NBA) · (sin∠ACP / sin∠PCB) = 1.\n\nКОГА СЕ ИЗПОЛЗВА: За доказване, че 3 прави се пресичат в една точка; за задачи с медиани, ъглополовящи, височини - всички те са специални чевиани; когато искаш да докажеш, че 3 симедиани се пресичат.\n\nКЛЮЧОВО: Често се комбинира с Менелай. Обърни внимание на тригонометричната форма - тя е полезна, когато знаеш ъгли, а не отсечки.\n\nВНИМАНИЕ: Точно както Менелай, работи с ориентирани отношения. Ако 3 чевиани не са конкурентни, произведението е различно от 1." },
+    { id:"1.3", title:"Теорема на Птолемей", desc:"Вписан четириъгълник; неравенство", source:"OT_2012, Геом. неравенства (Н. Белухов)", pdf:"Материали_БГ/OT_2012", page:13,
+      explanation:"ФОРМУЛИРОВКА (равенство): За вписан четириъгълник ABCD в окръжност: AC · BD = AB · CD + BC · AD.\n\nФОРМУЛИРОВКА (неравенство): За ПРОИЗВОЛЕН четириъгълник ABCD: AC · BD ≤ AB · CD + BC · AD, като равенство ⇔ ABCD е вписан.\n\nКОГА СЕ ИЗПОЛЗВА: За доказване на метрични зависимости в четириъгълници; за намиране на дължини; за доказване на неравенства; често се комбинира с инверсия или спирално подобие.\n\nОБОБЩЕНИЕ: За произволен четириъгълник, неравенството е много полезно - то казва, че вписаният четириъгълник МАКСИМИЗИРА произведението на диагоналите при дадени страни.\n\nСВЪРЗАНИ: Има и тригонометрична форма - AC · BD = AB · CD + BC · AD ⇔ ABCD вписан. Може да се използва и обратно - ако равенството е изпълнено, четириъгълникът е вписан." },
+    { id:"1.4", title:"Степен на точка. Радикална ос", desc:"Инструмент за окръжности", source:"OT_2010, Приложения окръжност (Н. Белухов)", pdf:"Материали_БГ/OT_2010", page:41,
+      explanation:"ОПРЕДЕЛЕНИЕ: Степен на точка P спрямо окръжност k с център O и радиус R е числото Pow(P) = OP² − R². Ако P е външна → положителна; вътрешна → отрицателна; на окръжността → 0.\n\nСВОЙСТВО: Ако права през P пресича k в A, B, то PA · PB = |Pow(P)| (със знак). Ако P е външна и PT е допирателна, то Pow(P) = PT².\n\nРАДИКАЛНА ОС: Множеството от точки с равни степени спрямо 2 окръжности. Винаги е права, перпендикулярна на линията на центровете. Ако окръжностите се пресичат, радикалната ос минава през пресечните точки.\n\nРАДИКАЛЕН ЦЕНТЪР: Три окръжности → три радикални оси, които се пресичат в една точка (радикален център) или са успоредни.\n\nКОГА СЕ ИЗПОЛЗВА: За доказване на пресичане на 3 прави (радикални оси); за намиране на обща хорда; за задачи с перпендикулярност; като евристика - ако видиш 3 окръжности, мисли за радикален център.\n\nТИПИЧЕН ТРИК: Ако искаш да докажеш, че 3 точки са колинеарни - покажи, че лежат на радикалната ос на 2 окръжности." },
+    { id:"1.5", title:"Вписани ъгли, Талес, симетрали", desc:"Базови свойства", source:"BMC_2003-2006, геом. задачи", pdf:"Материали_БГ/BMC_2003-2006", page:1,
+      explanation:"ВПИСАН ЪГЪЛ: Ъгъл с връх на окръжност. Равен на половината от централния ъгъл, който обхваща същата дъга. Всички вписани ъгли, опрени на една дъга, са равни.\n\nТАЛЕС: Ако ∠ABC е опрян на диаметър (т.е. AC е диаметър), то ∠ABC = 90°. Обратно: ако триъгълник има прав ъгъл, центърът на описаната му окръжност е средата на хипотенузата.\n\nСИМЕТРАЛА: Геометрично място на точките, равноотдалечени от A и B. Пресечната точка на симетралите = център на описаната окръжност.\n\nЧЕСТО ИЗПОЛЗВАНИ СЛЕДСТВИЯ: (1) Хорди с равни дъги са равни. (2) Ако два вписани ъгъла са равни, точките са на една окръжност. (3) Ъгъл между хорда и допирателна = вписан ъгъл от другата страна.\n\nВНИМАНИЕ: Когато работиш с окръжности, първо търси вписани ъгли - това често е най-бързият път." },
+    { id:"1.6", title:"Синусова и косинусова теорема", desc:"Олимпийски приложения", source:"BMS_2012-2015", pdf:"Материали_БГ/BMS_2012-2015", page:1,
+      explanation:"СИНУСОВА: a/sin A = b/sin B = c/sin C = 2R, където R е радиусът на описаната окръжност.\n\nКОСИНУСОВА: c² = a² + b² − 2ab cos C. Еквивалентно: cos C = (a² + b² − c²)/(2ab).\n\nПРИЛОЖЕНИЯ В ОЛИМПИАДИ: (1) За намиране на дължини, когато знаеш ъгли. (2) За доказване на ъглови зависимости - превръщаш дължини в ъгли. (3) За медиани: m_a² = (2b² + 2c² − a²)/4. (4) За ъглополовящи: l_a = 2bc cos(A/2)/(b+c). (5) За височини: h_a = 2S/a = c sin B.\n\nЧЕСТ ТРИК: Използвай синусовата теорема, за да превърнеш отношения на страни в отношения на синуси. Това често опростява.\n\nФОРМУЛА ЗА ЛИЦЕ: S = (1/2)ab sin C = abc/(4R) = rs = √(s(s−a)(s−b)(s−c)), където s = (a+b+c)/2." },
+    { id:"1.7", title:"Формули за лице. Херон", desc:"S = pr, S = abc/4R, Херон", source:"BMC_2003-2006", pdf:"Материали_БГ/BMC_2003-2006", page:1,
+      explanation:"ОСНОВНИ ФОРМУЛИ: (1) S = (1/2) · основа · височина. (2) S = (1/2)ab sin C. (3) S = abc / (4R) - особено полезно, когато знаеш R. (4) S = r · s, където r е радиусът на вписаната, s = (a+b+c)/2 - полупериметър. (5) Херон: S = √(s(s−a)(s−b)(s−c)).\n\nРАДИУСИ: r = S/s; R = abc/(4S); r_a = S/(s−a) за външновписана.\n\nКОГА СЕ ИЗПОЛЗВА: За доказване на неравенства (напр. R ≥ 2r); за намиране на дължини при дадена площ; в задачи с вписани/описани окръжности.\n\nПОЛЕЗНИ ТЪЖДЕСТВА: 1/r = 1/r_a + 1/r_b + 1/r_c. r_a · r_b + r_b · r_c + r_c · r_a = s². 4R + r = ...\n\nВНИМАНИЕ: Херон не е практична за числови сметки - използвай го за символни доказателства." },
+    { id:"1.8", title:"Теорема на Ойлер (I,O)", desc:"IO² = R² − 2Rr; окръжност на 9 точки", source:"BMS_2012-2015", pdf:"Материали_БГ/BMS_2012-2015", page:1,
+      explanation:"ТЕОРЕМА НА ОЙЛЕР ЗА I и O: IO² = R² − 2Rr, където I е центърът на вписаната, O - на описаната. Следствие: R ≥ 2r (неравенство на Ойлер).\n\nОЙЛЕРОВА ПРАВА: O (център на описаната), G (медицентър), H (ортоцентър) са колинеарни и OG : GH = 1 : 2. Освен това: OH² = 9R² − (a² + b² + c²).\n\nОКРЪЖНОСТ НА ДЕВЕТТЕ ТОЧКИ: Минава през: средите на страните (3), петите на височините (3), средите на отсечките AH, BH, CH (3). Център: средата на OH; радиус: R/2. Често означавана с N или E.\n\nТОЧКА НА ФОЙЕРБАХ: Окръжността на 9-те точки се допира вътрешно до вписаната и външно до 3-те външновписани.\n\nКОГА СЕ ИЗПОЛЗВА: За задачи с няколко центъра; за доказателство на колинеарност (O, G, H); за намиране на разстояния." },
+    { id:"1.9", title:"Теорема на Микел", desc:"Обща точка на 4 окръжности", source:"OT_2010", pdf:"Материали_БГ/OT_2010", page:41,
+      explanation:"ФОРМУЛИРОВКА: Нека 4 прави образуват пълен четириъгълник (4 триъгълника). Тогава описаните окръжности на тези 4 триъгълника минават през обща точка - точка на Микел.\n\nПО-ОБЩА ВЕРСИЯ: Ако ABC е триъгълник и точките M ∈ BC, N ∈ CA, P ∈ AB, то описаните окръжности на △AMN, △BNP, △CPM минават през обща точка.\n\nКОГА СЕ ИЗПОЛЗВА: Когато имаш 4 прави / 4 окръжности; за доказване на пресичане на окръжности; за намиране на ъгли чрез обща точка.\n\nТРИК: Ако трябва да докажеш, че 2 окръжности се пресичат в конкретна точка, често е по-лесно да намериш трета окръжност през същата точка (Микел).\n\nСВЪРЗАНИ: Спирално подобие (точката на Микел е център на спирално подобие между двойки триъгълници)." },
+    { id:"1.10", title:"Вписана и външновписани окръжности", desc:"Допирни точки, дължини, ъгли", source:"OT_2010 / BMC_2003-2006", pdf:"Материали_БГ/OT_2010", page:41,
+      explanation:"ВПИСАНА ОКРЪЖНОСТ: център I, радиус r. Допирни точки: от върха A до допирните точки на AB и AC разстоянието е s − a (еднакво!). От B: s − b, от C: s − c.\n\nВЪНШНОВПИСАНИ: центрове I_a, I_b, I_c (пресичане на вътрешна и две външни ъглополовящи). Радиуси: r_a = S/(s−a), r_b = S/(s−b), r_c = S/(s−c).\n\nПОЛЕЗНИ ФОРМУЛИ: 1/r = 1/r_a + 1/r_b + 1/r_c. r_a r_b + r_b r_c + r_c r_a = s². r_a r_b r_c = r · s²... Обърни внимание, че I, I_a, I_b, I_c образуват ортоцентрична система.\n\nКЛЮЧОВО: I_a I_b ⊥ CI_c (страни на ортоцентричния триъгълник). I I_a I_b I_c - правоъгълен триъгълник в I.\n\nКОГА СЕ ИЗПОЛЗВА: За неравенства с r, R, s; за задачи с допирни точки; за изчисления на разстояния." }
+  ]
+},
+{ id:2, icon:"◆", title:"ГЕОМЕТРИЯ – НАПРЕДНАЛИ",
+  points:[
+    { id:"2.1", title:"Хармонично отношение", desc:"Пълна статия", source:"OT_2010, Хармонично отношение (Ст. Боев)", pdf:"Материали_БГ/OT_2010", page:75,
+      explanation:"ОПРЕДЕЛЕНИЕ: 4 точки A, B, C, D на една права са в хармонично отношение (или хармонична четворка), ако (A, B; C, D) = −1, т.е. AC/CB ÷ AD/DB = −1 (ориентирано).\n\nСВОЙСТВА: (1) Средата на AB е спрегната на безкрайността. (2) Ако C, D хармонично спрегнати спрямо A, B, то 2/AB = 1/AC + 1/AD (при подходящи знаци). (3) Пълният четириъгълник дава естествено хармонични четворки.\n\nПРИЛОЖЕНИЯ: (1) Дефиниция на поляра чрез хармонично отношение. (2) Симедианата е изогонална на медианата - и двете пресичат BC в хармонично спрегнати точки спрямо B, C. (3) В задачи с ъглополовящи - вътрешната и външната ъглополовяща на A пресичат BC в хармонично спрегнати точки.\n\nКОГА СЕ ИЗПОЛЗВА: За доказване на пресичане; за намиране на отношения; за дефиниране на поляри.\n\nТИПИЧЕН ТРИК: Ако видиш ъглополовящи, вписана + външновписана окръжност, или симедиана - мисли за хармонично отношение." },
+    { id:"2.2", title:"Симедиани", desc:"Свойства, точка на Лемоан", source:"OT_2012, Симедиани (Ст. Боев)", pdf:"Материали_БГ/OT_2012", page:66,
+      explanation:"ОПРЕДЕЛЕНИЕ: Симедиана от A - правата, изогонална на медианата от A, т.е. симетрична на медианата спрямо ъглополовящата на ∠A. Пресича BC в точка A' такава, че BA'/A'C = c²/b².\n\nКЛЮЧОВИ СВОЙСТВА: (1) 3-те симедиани се пресичат в точката на Лемоан K. (2) Точката на Лемоан е пресечна на допирателните към описаната окръжност в A, B, C (антикомплементарен триъгълник). (3) Разстоянията от K до страните са пропорционални на самите страни. (4) Медианата и симедианата от A са хармонично спрегнати спрямо AB, AC.\n\nСВЪРЗАНИ ТОЧКИ: Точка на Лемоан = изогонално спрегната на медицентъра G.\n\nКОГА СЕ ИЗПОЛЗВА: За задачи с медиани/височини и симетрии; за доказване на пресичане на прави; за задачи с описана окръжност и допирателни.\n\nТИПИЧЕН ТРИК: Ако видиш задача с медиани и симетрия - симедиана. Ако видиш допирателни към описаната окръжност - точката на Лемоан е ключова." },
+    { id:"2.3", title:"Инверсия", desc:"Окръжности в прави", source:"OT_2012 / BMC_2003-2006", pdf:"Материали_БГ/OT_2012", page:66,
+      explanation:"ОПРЕДЕЛЕНИЕ: Инверсия с център O и радиус r: точка X → X' по лъча OX, такава че OX · OX' = r². Точка O не се преобразува.\n\nСВОЙСТВА: (1) Права през O → себе си. (2) Права без O → окръжност през O. (3) Окръжност през O → права без O. (4) Окръжност без O → окръжност без O. (5) Ъгли се запазват (конформно).\n\nПРИЛОЖЕНИЯ: (1) За превръщане на задачи с окръжности в задачи с прави. (2) За задачи с допирателни окръжности (допирателност се запазва). (3) За доказателство на колинеарност/конкурентност. (4) За задачи с Микел.\n\nСТАНДАРТЕН ТРИК: Ако в задачата има обща точка на много окръжности - инвертирай в нея. Тогава окръжностите стават прави.\n\nВНИМАНИЕ: Инверсия не е линейна - дължини се променят. Използвай я само за качествени твърдения (колинеарност, пресичане), не за числови." },
+    { id:"2.4", title:"Спирално подобие", desc:"Ротация + хомотетия", source:"OT_2012", pdf:"Материали_БГ/OT_2012", page:66,
+      explanation:"ОПРЕДЕЛЕНИЕ: Спирално подобие (или рото-хомотетия) с център O и отношение k∠θ: композиция от ротация на ъгъл θ около O и хомотетия с център O и отношение k. Записва се като z → k·e^(iθ) · (z − O) + O в комплексни числа.\n\nСВОЙСТВА: (1) Запазва ъгли (конформно). (2) Преобразува отсечки в отсечки с отношение k. (3) Центърът е фиксирана точка.\n\nКЛЮЧОВА ТЕОРЕМА: Ако AB и CD са отсечки, съществува ЕДИНСТВЕНО спирално подобие, изпращащо A → C и B → D. Центърът му е пресечната точка на описаните окръжности на △ACD и △BCD (или на △ABC и △ABD).\n\nПРИЛОЖЕНИЯ: (1) Точка на Микел = център на спирално подобие. (2) Задачи с два подобни триъгълника. (3) За доказване на ъгли между отсечки.\n\nТИПИЧЕН ТРИК: Когато задача казва 'два подобни триъгълника с обща точка', центърът на спиралното подобие е ключът." },
+    { id:"2.5", title:"Полюси и поляри", desc:"За окръжност", source:"OT_2010, Хармонично отношение", pdf:"Материали_БГ/OT_2010", page:75,
+      explanation:"ОПРЕДЕЛЕНИЕ: За окръжност k и точка P, полярата на P е правата p, съдържаща допирните точки на допирателните от P към k. Обратно, P е полюсът на p.\n\nСВОЙСТВО ЗА ХАРМОНИЧНОСТ: Ако права през P пресича k в A, B и полярата p в Q, то (P, Q; A, B) = −1.\n\nДВОЙСТВЕНОСТ: Точка P → права p. Ако P ∈ k, полярата е допирателната. Ако P е центърът, полярата е безкрайност.\n\nТЕОРЕМА ЗА ЛА ПОЛ: Ако 2 точки са спрегнати (всяка лежи на полярата на другата), то правите, свързващи всеки с центъра, са перпендикулярни.\n\nПРИЛОЖЕНИЯ: (1) За доказване на колинеарност (3 полюса → 3 поляри, които се пресичат). (2) За задачи с допирателни и хорди. (3) За доказване, че точка лежи на права.\n\nТИПИЧЕН ТРИК: Ако видиш задача с допирателни към окръжност, мисли за поляри. Особено когато има 3 допирателни." },
+    { id:"2.6", title:"Теорема на Паскал", desc:"Вписан шестоъгълник", source:"OT_2012 / BMC_2003-2006", pdf:"Материали_БГ/OT_2012", page:66,
+      explanation:"ФОРМУЛИРОВКА: Нека A, B, C, D, E, F са 6 точки на коника (например окръжност). Тогава пресечните точки на AB и DE, BC и EF, CD и FA са колинеарни (права на Паскал).\n\nОБОБЩЕНИЕ: Паскал работи за ВСЯКА коника (елипса, парабола, хипербола), не само окръжност.\n\nИЗРОДЕНИ СЛУЧАИ: Ако 2 точки съвпадат - теоремата се превръща в твърдение за допирателна. Например за ABCDEF с B = C, получаваме: допирателната в B, AB, DE, EF, FA... (различни варианти).\n\nДВОЙСТВЕНО: Теорема на Брианшон.\n\nКОГА СЕ ИЗПОЛЗВА: За доказване на колинеарност на 3 точки; в проективна геометрия; когато имаш 6 точки на окръжност и искаш да докажеш, че 3 пресечни точки са на една права.\n\nВНИМАНИЕ: Доказателството обикновено използва проективна геометрия - в олимпиада може да е трудно директно. По-често се използват изродени случаи." },
+    { id:"2.7", title:"Теорема на Брианшон", desc:"Описан шестоъгълник", source:"OT_2012", pdf:"Материали_БГ/OT_2012", page:66,
+      explanation:"ФОРМУЛИРОВКА: Нека ABCDEF е шестоъгълник, описан около коника (т.е. всяка страна е допирателна). Тогава главните диагонали AD, BE, CF са конкурентни (точка на Брианшон).\n\nДВОЙСТВЕНОСТ: Брианшон е проективно двойствена на Паскал. Заменяш 'точка на коника' с 'допирателна към коника', 'колинеарни' с 'конкурентни'.\n\nИЗРОДЕНИ СЛУЧАИ: Ако някои страни съвпадат - различни твърдения за допирателни.\n\nЧАСТЕН СЛУЧАЙ: За триъгълник - 3 допирателни към вписаната, страните... (може да се формулира).\n\nКОГА СЕ ИЗПОЛЗВА: По-рядко от Паскал в олимпиада, но полезно когато има описан многоъгълник. За задачи с вписана/външновписана окръжност и диагонали." },
+    { id:"2.8", title:"Геометрични неравенства", desc:"Ердьош-Мордел, Птолемей", source:"OT_2012, Геом. неравенства (Н. Белухов)", pdf:"Материали_БГ/OT_2012", page:13,
+      explanation:"НЕРАВЕНСТВО НА ОЙЛЕР: R ≥ 2r за всеки триъгълник.\n\nНЕРАВЕНСТВО НА ЕРДЬОШ-МОРДЕЛ: R + r ≥ 2(r_a + r_b + r_c), където r_a, r_b, r_c са радиусите на външновписаните. Друга форма: 4R + r ≥ 2(r_a + r_b + r_c).\n\nНЕРАВЕНСТВО НА ПТОЛЕМЕЙ: За всеки четириъгълник ABCD: AC · BD ≤ AB · CD + BC · AD.\n\nНЕРАВЕНСТВО НА ВАЙЦЕНБОК: a² + b² + c² ≥ 4√3 · S. Равенство при равностранен.\n\nНЕРАВЕНСТВО ЗА МЕДИАНИ: m_a + m_b + m_c ≥ (3/2)(a + b + c)? - не е точно, но има подобни.\n\nСТРАТЕГИЯ ЗА ДОКАЗВАНЕ: (1) Редуцирай до изрази с r, R, s. (2) Използвай t² = s − a, x = s − b, y = s − c (субституция на Рави). (3) Използвай известни неравенства (AM-GM, Коши, Шур).\n\nЧЕСТА СУБСТИТУЦИЯ: x = s − a, y = s − b, z = s − c, където x, y, z > 0. Тогава a = y+z, b = z+x, c = x+y, s = x+y+z. Площ: S² = s·xyz. r² = xyz/(x+y+z). Много геометрични неравенства стават алгебрични в x, y, z." }
+  ]
+},
+{ id:3, icon:"◆", title:"ТЕОРИЯ НА ЧИСЛАТА – ОСНОВИ",
+  points:[
+    { id:"3.1", title:"Делимост. НОД/НОК", desc:"Базови понятия", source:"OT_2010, ТЧ (П. Бойваленков)", pdf:"Материали_БГ/OT_2010", page:61,
+      explanation:"ОСНОВНА ТЕОРЕМА НА АРИТМЕТИКАТА: Всяко естествено число n > 1 се разлага еднозначно (с точност до реда) на произведение от прости: n = p₁^α₁ p₂^α₂ ... p_k^α_k.\n\nНОД И НОК: НОД(a,b) - най-голям общ делител. НОК(a,b) - най-малко общо кратно. Връзка: НОД(a,b) · НОК(a,b) = a · b.\n\nАЛГОРИТЪМ НА ЕВКЛИД: НОД(a,b) = НОД(b, a mod b). Много бърз - O(log min(a,b)).\n\nСВОЙСТВА: (1) НОД(a, b) = НОД(a − b, b). (2) Ако d = НОД(a,b), съществуват x, y с ax + by = d (теорема на Безу). (3) Ако НОД(a, b) = 1 и a | bc, то a | c (лема на Евклид).\n\nКОГА СЕ ИЗПОЛЗВА: Винаги в ТЧ. Първа стъпка в почти всяка задача - факторизирай или извади НОД.\n\nБОНУС: Много полезно е да мислиш за числата чрез тяхната проста факторизация - p-адична гледна точка." },
+    { id:"3.2", title:"Сравнения по модул", desc:"a ≡ b (mod m)", source:"OT_2010, ТЧ (Ал. Иванов)", pdf:"Материали_БГ/OT_2010", page:3,
+      explanation:"ОПРЕДЕЛЕНИЕ: a ≡ b (mod m) ⇔ m | (a − b). Казваме 'a е сравнение с b по модул m'.\n\nОПЕРАЦИИ: Можеш да събираш, изваждаш, умножаваш: a ≡ b, c ≡ d ⇒ a ± c ≡ b ± d и ac ≡ bd. ДЕЛЕНИЕ е позволено само ако НОД(делител, m) = 1: ако ax ≡ ay (mod m) и НОД(a, m) = 1, то x ≡ y (mod m).\n\nСВОЙСТВА: (1) Рефлексивно, симетрично, транзитивно. (2) Класове по модул m: точно m класа 0, 1, ..., m−1. (3) Ако a ≡ b (mod m) и d | m, то a ≡ b (mod d).\n\nПЪЛНА РЕДУКЦИЯ: Множество {a₁, ..., a_m} с 1:1 покритие на класовете по модул m. Например {0, 1, ..., m−1}.\n\nКОГА СЕ ИЗПОЛЗВА: Навсякъде в ТЧ. Първа идея - сведи задачата до сравнение по подходящ модул. Изборът на модул е ключов.\n\nЧЕСТ ТРИК: Ако трябва да докажеш, че израз е точен квадрат, разгледай възможните квадрати по модул 4, 8, 3, 9, 16, 7, 13." },
+    { id:"3.3", title:"Малка теорема на Ферма", desc:"aᵖ ≡ a (mod p)", source:"OT_2010, ТЧ (Ал. Иванов)", pdf:"Материали_БГ/OT_2010", page:3,
+      explanation:"ФОРМУЛИРОВКА: За просто p и цяло a: a^p ≡ a (mod p). Ако НОД(a, p) = 1 (т.е. p ∤ a), еквивалентно: a^(p−1) ≡ 1 (mod p).\n\nДОКАЗАТЕЛСТВО (за НОД(a,p)=1): Разгледай числата a, 2a, ..., (p−1)a. Всички са различни mod p и нито едно не е 0. Значи образуват пермутация на 1, 2, ..., p−1. Следователно произведението a·2a···(p−1)a ≡ 1·2···(p−1) (mod p). Тоест a^(p−1) · (p−1)! ≡ (p−1)!. Съкрати (p−1)! (НЕ се дели на p) → a^(p−1) ≡ 1.\n\nСЛЕДСТВИЕ: a^p ≡ a (mod p) за всяко a.\n\nПРИЛОЖЕНИЯ: (1) Свеждане на големи степени по модул p: a^n ≡ a^(n mod (p−1)) (за НОД(a,p)=1). (2) Доказване на делимост: p | a^p − a. (3) Ферма е частен случай на Ойлер.\n\nВНИМАНИЕ: Обратното НЕ е вярно - a^(n−1) ≡ 1 (mod n) не означава n просто. Такива n се наричат 'псевдопрости'. Числа на Кармайкъл са контрапримери." },
+    { id:"3.4", title:"Теорема на Ойлер", desc:"a^φ(n) ≡ 1 (mod n)", source:"OT_2010, ТЧ (Ал. Иванов)", pdf:"Материали_БГ/OT_2010", page:3,
+      explanation:"ФУНКЦИЯ НА ОЙЛЕР φ(n): Броят на целите числа в [1, n], взаимно прости с n. Свойства: (1) φ(p) = p − 1 за просто p. (2) φ(p^k) = p^k − p^(k−1) = p^(k−1)(p−1). (3) φ(mn) = φ(m)φ(n) за НОД(m,n) = 1 (мултипликативна). (4) φ(n) = n · ∏(1 − 1/p) по всички прости p | n.\n\nТЕОРЕМА НА ОЙЛЕР: За НОД(a, n) = 1: a^φ(n) ≡ 1 (mod n).\n\nОБОБЩЕНИЕ: За произволно a и n: a^φ(n) + 1 ≡ a (mod n)? - не точно; обобщението е a^(φ(n) + k) ≡ a^k при достатъчно големи k.\n\nПРИЛОЖЕНИЯ: Свеждане на степени по произволен модул (не само прост); работа с криптография (RSA).\n\nЧЕСТА ГРЕШКА: Да се приложи Ойлер без условие НОД(a,n) = 1. Тогава трябва да се внимава с показателя." },
+    { id:"3.5", title:"Теорема на Уилсън", desc:"(p−1)! ≡ −1 (mod p)", source:"OT_2010, ТЧ (П. Бойваленков)", pdf:"Материали_БГ/OT_2010", page:61,
+      explanation:"ФОРМУЛИРОВКА: p е просто ⇔ (p − 1)! ≡ −1 (mod p).\n\nДОКАЗАТЕЛСТВО (посока ⇒): Числата 1, 2, ..., p−1 образуват група по умножение mod p. Всяко число a има обратно a⁻¹. Числата, които са равни на обратните си (a = a⁻¹), са само 1 и p−1 (защото a² ≡ 1 ⇒ a ≡ ±1). Всички останали се групират по двойки (a, a⁻¹), чието произведение е 1. Значи (p−1)! ≡ 1 · (p−1) ≡ −1.\n\nОБРАТНА ПОСОКА: Ако (n−1)! ≡ −1 (mod n) и n е съставно с делител d ∈ (1, n), то d | (n−1)!. Тогава d | (n−1)! + 1 ≡ 0 (mod n)? Противоречие.\n\nПРИЛОЖЕНИЯ: (1) Доказване на простота (непрактично за големи n). (2) Задачи с факториели. (3) Доказателство на други тъждества за биномни коефициенти.\n\nОБОБЩЕНИЕ: За n > 4 съставно: (n − 1)! ≡ 0 (mod n)." },
+    { id:"3.6", title:"Китайска теорема", desc:"Система сравнения", source:"OT_2010, ТЧ (Ал. Иванов)", pdf:"Материали_БГ/OT_2010", page:3,
+      explanation:"ФОРМУЛИРОВКА: Нека m₁, m₂, ..., m_k са взаимно прости (НОД(m_i, m_j) = 1 за i ≠ j). Тогава системата x ≡ a₁ (mod m₁), ..., x ≡ a_k (mod m_k) има единствено решение по модул M = m₁·m₂···m_k.\n\nКОНСТРУКЦИЯ: Решение е x = Σ a_i · M_i · y_i, където M_i = M/m_i и y_i = (M_i)^(−1) mod m_i.\n\nПРИЛОЖЕНИЯ: (1) Свеждане на задача по съставен модул до задачи по прости модули. (2) Работа с големи степени: разложи модула на прости. (3) Задача с 'x ≡ a (mod m₁) и x ≡ b (mod m₂)'. (4) В комбинаторика - задачи с 'модулна аритметика'.\n\nЧЕСТ ТРИК: Когато задача включва 'по модул m · n' с НОД(m,n)=1, разложи на mod m и mod n, реши поотделно, слепи с CRT.\n\nВНИМАНИЕ: CRT не работи, ако модулите не са взаимно прости. Тогава трябва да провериш съвместимостта: a_i ≡ a_j (mod НОД(m_i, m_j)) е необходимо и достатъчно." },
+    { id:"3.7", title:"Показател. Примитивни корени", desc:"Ред на елемент mod n", source:"OT_2010, ТЧ (Ал. Иванов)", pdf:"Материали_БГ/OT_2010", page:3,
+      explanation:"ОПРЕДЕЛЕНИЕ: Ред (показател) на a по модул n (за НОД(a,n)=1) е най-малкото положително k с a^k ≡ 1 (mod n). Означава се ord_n(a).\n\nСВОЙСТВА: (1) ord_n(a) | φ(n). (2) a^k ≡ 1 (mod n) ⇔ ord_n(a) | k. (3) ord_n(a^m) = ord_n(a) / НОД(ord_n(a), m). (4) ord_n(ab) | НОК(ord_n(a), ord_n(b)) с равенство при НОД(ord_n(a), ord_n(b))=1.\n\nПРИМИТИВЕН КОРЕН: a е примитивен корен mod n, ако ord_n(a) = φ(n). Тогава {1, a, a², ..., a^(φ(n)−1)} е пълно множество от взаимно прости с n числа.\n\nСЪЩЕСТВУВАНЕ: Примитивни корени съществуват ⇔ n ∈ {1, 2, 4, p^k, 2p^k}, p нечетно просто.\n\nПРИЛОЖЕНИЯ: (1) Дискретна математика / криптография. (2) Задачи с мултипликативна структура. (3) Доказване на безкрайност на прости в аритметични прогресии (специални случаи).\n\nТИПИЧНА ЗАДАЧА: 'Докажи, че a^m ≡ 1 за всички a mod p ⇒ (p−1) | m'." },
+    { id:"3.8", title:"Квадратични остатъци. Лежандър", desc:"(a/p) = ±1", source:"OT_2010, ТЧ (Ал. Иванов)", pdf:"Материали_БГ/OT_2010", page:3,
+      explanation:"ОПРЕДЕЛЕНИЕ: a е квадратичен остатък по модул просто p (НОД(a,p)=1), ако x² ≡ a (mod p) има решение. В противен случай - не-остатък.\n\nСИМВОЛ НА ЛЕЖАНДЪР: (a/p) = 1 ако a е остатък; −1 ако не е; 0 ако p | a.\n\nОСНОВНИ СВОЙСТВА: (1) (ab/p) = (a/p)(b/p) - мултипликативен. (2) (a/p) ≡ a^((p−1)/2) (mod p) - критерий на Ойлер. (3) (1/p) = 1, (−1/p) = (−1)^((p−1)/2), (2/p) = (−1)^((p²−1)/8).\n\nКВАДРАТИЧЕН ЗАКОН ЗА РЕЦИПРОЧНОСТ: За нечетни прости p ≠ q: (p/q)(q/p) = (−1)^((p−1)(q−1)/4).\n\nПРИЛОЖЕНИЯ: (1) Определяне дали x² ≡ a има решение. (2) Задачи с точни квадрати. (3) Доказване на конкретни твърдения за представимост.\n\nТИПИЧНА ЗАДАЧА: 'Докажи, че -1 е квадратичен остатък mod p ⇔ p ≡ 1 (mod 4)'. Или 'За кои прости p числото 2 е остатък?' Отговор: p ≡ ±1 (mod 8)." },
+    { id:"3.9", title:"p-адични оценки. LTE", desc:"v_p(n); v_p(aⁿ − bⁿ)", source:"OT_2010, ТЧ (П. Бойваленков)", pdf:"Материали_БГ/OT_2010", page:61,
+      explanation:"ОПРЕДЕЛЕНИЕ: v_p(n) = най-голямото k, такова че p^k | n. Това е 'степен на p в n'. Свойства: v_p(mn) = v_p(m) + v_p(n); v_p(m+n) ≥ min(v_p(m), v_p(n)), с равенство при v_p(m) ≠ v_p(n).\n\nLTE (LIFTING THE EXPONENT): За p просто, x, y цели, p | (x − y), p ∤ xy:\n• Ако p е нечетно: v_p(x^n − y^n) = v_p(x − y) + v_p(n).\n• Ако p = 2: по-сложно - v_2(x^n − y^n) = v_2(x − y) + v_2(x + y) + v_2(n) − 1 за четно n.\n\nПРИЛОЖЕНИЯ: (1) Задачи с делимост на разлики на степени. (2) Доказване, че израз НЕ е точен квадрат/куб. (3) Задачи с показатели.\n\nТИПИЧНА ЗАДАЧА: 'Колко е v_p(3^n − 1)?' Ако p | 2 (невъзможно, 3−1=2, p=2) - специално. Или 'Намери най-голямото k с 2^k | 5^n − 3^n'.\n\nЛЕМА ЗА РЪКОСТИСКАНЕ: Ако p | (a − b), то v_p(a^n − b^n) ≥ v_p(a − b) + v_p(n) за p нечетно." },
+    { id:"3.10", title:"Уравнение на Пел", desc:"x² − Dy² = 1", source:"OT_2010, ТЧ (П. Бойваленков)", pdf:"Материали_БГ/OT_2010", page:61,
+      explanation:"ОПРЕДЕЛЕНИЕ: Уравнение x² − Dy² = 1, където D е положително цяло, НЕ е точен квадрат. Търсим решения в цели положителни числа.\n\nСЪЩЕСТВУВАНЕ: Винаги има безкрайно много решения. Най-малкото (x₁, y₁) се нарича ФУНДАМЕНТАЛНО.\n\nСТРУКТУРА НА РЕШЕНИЯТА: Всички решения се получават от формулата x_n + y_n √D = (x₁ + y₁ √D)^n за n = 1, 2, 3, ...\n\nКАК СЕ НАМИРА ФУНДАМЕНТАЛНОТО: Чрез верижни дроби на √D, или чрез опити (за малки D).\n\nПРИЛОЖЕНИЯ: (1) Наближения на √D чрез x/y. (2) Задачи с точни квадрати и специални форми. (3) Конструкции на безкрайни множества.\n\nПРИМЕРИ: D=2: x² − 2y² = 1 има (3,2), (17,12), (99,70), ... D=3: (2,1), (7,4), (26,15), ...\n\nВНИМАНИЕ: За D < 0 обикновено няма много решения (освен тривиални). Работим с D > 0 не квадрат.\n\nОБОБЩЕНО УРАВНЕНИЕ: x² − Dy² = N. По-трудно, но решенията често се получават от едно частно + умножение с решенията на x² − Dy² = 1." }
+  ]
+},
+{ id:4, icon:"◆", title:"ТЕОРИЯ НА ЧИСЛАТА – НАПРЕДНАЛИ",
+  points:[
+    { id:"4.1", title:"Диофантови – линейни", desc:"ax + by = c", source:"OT_2010, ТЧ (П. Бойваленков)", pdf:"Материали_БГ/OT_2010", page:61,
+      explanation:"ФОРМУЛИРОВКА: Уравнение ax + by = c с цели коефициенти. Искаме цели решения (x, y).\n\nУСЛОВИЕ ЗА СЪЩЕСТВУВАНЕ: НОД(a, b) | c. Ако не - няма решение. Ако да - безкрайно много.\n\nОБЩО РЕШЕНИЕ: Нека d = НОД(a, b). Намери едно частно (x₀, y₀) чрез разширен алгоритъм на Евклид. Тогава всички решения: x = x₀ + (b/d)t, y = y₀ − (a/d)t, t ∈ ℤ.\n\nПРИЛОЖЕНИЯ: (1) Задачи с монети/линейни комбинации. (2) Начало на задачи с по-сложни диофантови. (3) Ограничаване на решения в интервал - решаваш неравенства за t.\n\nТИПИЧНА ЗАДАЧА: 'Намери всички цели (x, y) с 5x + 7y = 100'. Или 'Колко решения има в интервала [1, 100]?'\n\nЧЕСТ ТРИК: Сведи до форма с по-малки коефициенти чрез делене на НОД. Работи с модули: ax ≡ c (mod b)." },
+    { id:"4.2", title:"Диофантови – квадратни", desc:"Питагорови тройки", source:"OT_2010, ТЧ (П. Бойваленков)", pdf:"Материали_БГ/OT_2010", page:61,
+      explanation:"ПИТАГОРОВИ ТРОЙКИ: Цели (x, y, z) с x² + y² = z². Примитивни: НОД(x, y, z) = 1.\n\nПАРАМЕТРИЗАЦИЯ: Всички примитивни тройки се дават от x = m² − n², y = 2mn, z = m² + n², където m > n > 0, НОД(m,n) = 1, m и n с различна четност. Обща тройка: умножена по k.\n\nДРУГИ УРАВНЕНИЯ ОТ ТОЗИ ТИП: (1) x² + y² = z² (Питагор). (2) x² − Dy² = 1 (Пел). (3) x² + xy + y² = z² (Айзенщайн).\n\nПРИЛОЖЕНИЯ: (1) Доказване на невъзможност за решения. (2) Задачи с точни квадрати и суми. (3) Безкраен спуск (за x⁴ + y⁴ = z² - Ферма).\n\nЧЕСТ ТРИК: Ако имаш x² + y² = z², параметризирай. Ако имаш x² + y² = z² (mod p), разгледай квадратични остатъци.\n\nБЕЗКРАЕН СПУСК: За x⁴ + y⁴ = z² - Ферма използва безкраен спуск. Ако има решение, има и по-малко. Противоречие." },
+    { id:"4.3", title:"Диофантови – кубични", desc:"x³ + y³ = z³", source:"OT_2010, ТЧ (П. Бойваленков)", pdf:"Материали_БГ/OT_2010", page:61,
+      explanation:"ФЕРМА ЗА n = 3: x³ + y³ = z³ няма нетривиални цели решения. Доказано от Ойлер чрез безкраен спуск в ℤ[ω], ω = e^(2πi/3).\n\nОБЩ СЛУЧАЙ: За n ≥ 3, x^n + y^n = z^n няма нетривиални решения (последна теорема на Ферма).\n\nТЕХНИКИ: (1) Безкраен спуск. (2) Работа в разширения на ℤ (пръстени на алгебрични числа). (3) Сравнения по модул (за конкретни n). (4) Формулата a³ + b³ = (a+b)(a² − ab + b²).\n\nПРИЛОЖЕНИЯ: (1) Задачи с точни кубове. (2) Уравнения от типа x³ + y³ + z³ = 0. (3) Мордел-тип задачи.\n\nТИПИЧНА ЗАДАЧА: 'Докажи, че x³ + 2y³ + 4z³ − 6xyz = 1 има само тривиални решения'.\n\nЧЕСТА ТЕХНИКА: Факторизирай и използвай p-адични оценки. Работи в ℤ[√−3] - пръстен с UFD свойства." },
+    { id:"4.4", title:"Точни квадрати и степени", desc:"Заключване между квадрати", source:"OT_2010, Толкова много квадрати (Н. Събева)", pdf:"Материали_БГ/OT_2010", page:22,
+      explanation:"МЕТОД 'ЗАКЛЮЧВАНЕ МЕЖДУ КВАДРАТИ': Ако n² < x < (n+1)², то x НЕ е точен квадрат. Това работи, когато можеш да намериш долна и горна оценка на израза.\n\nПРИМЕР: За n ≥ 1, √(n² + n) НЕ е цяло (защото n² < n² + n < (n+1)²).\n\nПОДХОДИ: (1) Оценки: намери k с k² < x < (k+1)². (2) Сравнения по модул: квадратите mod 4 са {0, 1}; mod 8 са {0, 1, 4}; mod 9 са {0, 1, 4, 7}. (3) p-адични оценки: ако v_p(x) е нечетно, x не е квадрат. (4) Теория на квадратичните форми.\n\nПРИЛОЖЕНИЯ: (1) Задачи 'докажи, че изразът е точен квадрат'. (2) Задачи 'намери всички n, за които ... е точен квадрат'. (3) Олимпийски задачи - често комбинират с p-адични оценки или оценки.\n\nКЛАСИЧЕСКИ ТРИК: Ако x = P(n) е полином от n, който расте бавно, заключи между последователни квадрати или кубове.\n\nВНИМАНИЕ: Не всички задачи се решават с този метод. Понякога трябва да комбинираш с модулна аритметика или безкраен спуск." },
+    { id:"4.5", title:"Прости числа", desc:"Безкрайност; формули", source:"OT_2010, ТЧ (П. Бойваленков)", pdf:"Материали_БГ/OT_2010", page:61,
+      explanation:"БЕЗКРАЙНОСТ: Безкрайно много прости (Евклид). Доказателство: да допуснем, че p₁, ..., p_n са всички прости. Тогава N = p₁···p_n + 1 е неделимо на никое p_i, значи има нов прост делител. Противоречие.\n\nПРОСТИ ОТ СПЕЦИАЛНИ ФОРМИ: (1) Мерсен: 2^p − 1, просто само когато p е просто (не е достатъчно - p=11 дава съставно 2047 = 23·89). (2) Ферма: 2^(2^n) + 1 - прости за n=0..4, съставни за n=5 (но 641 | 2^32 + 1). (3) Прости във форми k·2^n + 1 - за криптография.\n\nРАЗПРЕДЕЛЕНИЕ: π(x) ~ x / ln x (теорема за простите числа). Между n и 2n винаги има прост (Бертранов постулат). Между p и p+2 - отворен проблем (прости-близнаци).\n\nПРИЛОЖЕНИЯ: (1) Задачи с делимост на изрази от формата 2^n ± 1. (2) Доказване на безкрайност на прости в аритметична прогресия (Дирихле - твърда теорема). (3) Задачи с факториели.\n\nТИПИЧНА ЗАДАЧА: 'Докажи, че има безкрайно много прости p с p ≡ 3 (mod 4)'. Чрез разглеждане на N = 4·(p₁···p_n) − 1.\n\nОБОБЩЕНИЕ: За всяка аритметична прогресия a, a+d, ... с НОД(a, d) = 1 има безкрайно много прости (Дирихле)." },
+    { id:"4.6", title:"Суми на степени", desc:"1ᵏ + 2ᵏ + ... + nᵏ", source:"OT_2010, ТЧ (П. Бойваленков)", pdf:"Материали_БГ/OT_2010", page:61,
+      explanation:"ОСНОВНИ ФОРМУЛИ: (1) ∑i = n(n+1)/2. (2) ∑i² = n(n+1)(2n+1)/6. (3) ∑i³ = (n(n+1)/2)² = (∑i)². (4) ∑i⁴ = n(n+1)(2n+1)(3n² + 3n − 1)/30.\n\nОБЩА ФОРМУЛА: ∑_{i=1}^n i^k = (B_{k+1}(n+1) − B_{k+1}(0))/(k+1), където B са полиноми на Бернули. Или чрез формула на Фаулхабер.\n\nМЕТОДИ ЗА ИЗВЕЖДАНЕ: (1) Индукция. (2) Телескопични суми. (3) Чрез биномна теорема (∑((i+1)^(k+1) − i^(k+1))). (4) Генериращи функции.\n\nПРИЛОЖЕНИЯ: (1) Задачи с делимост на суми. (2) Задачи с точни степени (напр. 'докажи, че 1 + 2 + ... + n е точна степен за някои n'). (3) Формули за суми на Фибоначи и подобни.\n\nТИПИЧНА ЗАДАЧА: 'Докажи, че за всяко n, 1² + 2² + ... + n² не е точен куб' (за n > 1).\n\nЧЕСТ ТРИК: Ако сумата е точен k-ти квадрат/степен, използвай p-адични оценки или оценки." },
+    { id:"4.7", title:"Мултипликативни функции", desc:"φ(n), τ(n), σ(n)", source:"OT_2010, ТЧ (Ал. Иванов)", pdf:"Материали_БГ/OT_2010", page:3,
+      explanation:"ОПРЕДЕЛЕНИЕ: f: ℕ → ℂ е мултипликативна, ако f(mn) = f(m)f(n) за НОД(m, n) = 1. Напълно мултипликативна, ако за всички m, n (без условие).\n\nВАЖНИ ПРИМЕРИ: (1) φ(n) - брой взаимно прости с n в [1, n]. (2) τ(n) = брой делители. (3) σ(n) = сума на делителите. (4) μ(n) - функция на Мьобиус. (5) Лиувил: λ(n) = (−1)^Ω(n) - напълно мултипликативна.\n\nИЗЧИСЛЕНИЕ: Ако n = ∏ p_i^{α_i}, то: φ(n) = ∏ p_i^{α_i − 1}(p_i − 1); τ(n) = ∏(α_i + 1); σ(n) = ∏ (p_i^{α_i + 1} − 1)/(p_i − 1).\n\nФОРМУЛА ЗА ИНВЕРСИЯ НА МЬОБИУС: Ако g(n) = ∑_{d | n} f(d), то f(n) = ∑_{d | n} μ(d) g(n/d).\n\nПРИЛОЖЕНИЯ: (1) Задачи с делители. (2) Доказване на тъждества. (3) Аналитична ТЧ.\n\nТИПИЧНА ЗАДАЧА: 'Намери всички n с φ(n) = 12'. Или 'Докажи, че σ(n) е нечетно ⇔ n е точен квадрат или 2·квадрат'." },
+    { id:"4.8", title:"Факториели и C(n,k)", desc:"p-адични оценки; делимост", source:"OT_2010, ТЧ (П. Бойваленков)", pdf:"Материали_БГ/OT_2010", page:61,
+      explanation:"ФОРМУЛА НА ЛЬОЖАНДЪР: v_p(n!) = ∑_{k ≥ 1} ⌊n/p^k⌋. Еквивалентно: (n − s_p(n))/(p − 1), където s_p(n) е сумата на цифрите на n в база p.\n\nБИНОМНИ КОЕФИЦИЕНТИ: C(n, k) = n!/(k!(n−k)!). C(n, k) е цяло число. Основни свойства: C(n, k) = C(n, n−k); C(n, k) = C(n−1, k−1) + C(n−1, k); C(n, 0) = 1.\n\np-АДИЧНА ОЦЕНКА: v_p(C(n, k)) = (s_p(k) + s_p(n−k) − s_p(n))/(p − 1). Това е полезна формула за делимост.\n\nТЕОРЕМА НА КУМЪР: C(n, k) е нечетно ⇔ k & (n − k) = 0 в двоична (т.е. k е подмножество на n).\n\nПРИЛОЖЕНИЯ: (1) Делимост на C(n, k) на прости. (2) Задачи с факториели - p-адични оценки. (3) Доказателство на тъждества.\n\nТИПИЧНА ЗАДАЧА: 'Намери най-голямото k с 2^k | 100!'. Отговор: ⌊100/2⌋ + ⌊100/4⌋ + ⌊100/8⌋ + ... = 50 + 25 + 12 + 6 + 3 + 1 = 97.\n\nЧЕСТ ТРИК: За задачи с 'n! + 1' или 'n! − 1' - използвай, че всички прости p ≤ n делят n!, значи p ∤ (n! ± 1)." }
+  ]
+},
+{ id:5, icon:"◆", title:"АЛГЕБРА – ПОЛИНОМИ",
+  points:[
+    { id:"5.1", title:"Формули на Виет", desc:"Корени на полином", source:"OT_2012, Полиноми (Р. Рафаилов)", pdf:"Материали_БГ/OT_2012", page:81,
+      explanation:"ЗА КВАДРАТЕН: P(x) = x² + px + q с корени x₁, x₂: x₁ + x₂ = −p, x₁x₂ = q.\n\nЗА КУБИЧЕН: P(x) = x³ + px² + qx + r с корени x₁, x₂, x₃: x₁ + x₂ + x₃ = −p, x₁x₂ + x₂x₃ + x₃x₁ = q, x₁x₂x₃ = −r.\n\nОБЩ СЛУЧАЙ: P(x) = x^n + a_{n−1} x^{n−1} + ... + a₀. Тогава сумата на корените = −a_{n−1}, сумата на произведения по двойки = a_{n−2}, ..., произведението = (−1)^n a₀. Симетрично: σ_k = (−1)^k a_{n−k}.\n\nПРИЛОЖЕНИЯ: (1) Намиране на отношения между корени. (2) Доказване, че полиномът има определен вид корени. (3) Симетрични изрази в корените - изразяване чрез коефициентите.\n\nТИПИЧНА ЗАДАЧА: 'Ако x₁, x₂, x₃ са корени на x³ − 3x + 1, намери x₁² + x₂² + x₃²'. Отговор: (x₁+x₂+x₃)² − 2(x₁x₂ + x₂x₃ + x₃x₁) = 0² − 2(−3) = 6.\n\nВНИМАНИЕ: Формулите на Виет важат и за комплексни корени. Броят на корените (с кратности) = степента." },
+    { id:"5.2", title:"Формули на Нютон", desc:"Суми на степени на корени", source:"OT_2012, Полиноми", pdf:"Материали_БГ/OT_2012", page:81,
+      explanation:"ОПРЕДЕЛЕНИЕ: Нека P(x) = x^n + a₁ x^{n−1} + ... + a_n с корени x₁, ..., x_n. Дефинираме S_k = x₁^k + x₂^k + ... + x_n^k.\n\nФОРМУЛИ НА НЮТОН: S_k + a₁ S_{k−1} + a₂ S_{k−2} + ... + a_{k−1} S_1 + k a_k = 0 за k ≤ n. И S_k + a₁ S_{k−1} + ... + a_n S_{k−n} = 0 за k > n.\n\nСВЪРЗАНИ: С елементарните симетрични полиноми σ_k чрез рекурентни формули. Например S_1 = σ_1, S_2 = σ_1 S_1 − 2σ_2, S_3 = σ_1 S_2 − σ_2 S_1 + 3σ_3, ...\n\nПРИЛОЖЕНИЯ: (1) Намиране на суми на степени на корени. (2) Доказване на тъждества. (3) Изчисляване на големи степени на корени чрез рекурсия.\n\nТИПИЧНА ЗАДАЧА: 'Нека x₁, ..., x_n са корени на P(x). Намери x₁^k + ... + x_n^k в затворен вид'.\n\nПРИМЕР: За x² − x − 1 = 0 с корени φ и ψ: S_k = x₁^k + x₂^k удовлетворява S_k = S_{k−1} + S_{k−2}. Това е рекурсията на Lucas числата.\n\nВРЪЗКА: Формули на Нютон са същността на рекурентните връзки между сумите на степените." },
+    { id:"5.3", title:"Симетрични полиноми", desc:"Елементарни; основна теорема", source:"OT_2012, Полиноми", pdf:"Материали_БГ/OT_2012", page:81,
+      explanation:"СИМЕТРИЧЕН ПОЛИНОМ: P(x₁, ..., x_n) с P = P при всяка пермутация на променливите. Пример: x₁² + x₂² + ... + x_n².\n\nЕЛЕМЕНТАРНИ СИМЕТРИЧНИ: σ_1 = x₁ + x₂ + ... + x_n; σ_2 = ∑ x_i x_j (i<j); ...; σ_n = x₁ x₂ ... x_n.\n\nОСНОВНА ТЕОРЕМА: Всеки симетричен полином с цели коефициенти се изразява ЕДНОЗНАЧНО като полином на σ_1, ..., σ_n.\n\nПРИМЕРИ: x₁² + x₂² + ... = σ_1² − 2σ_2. x₁³ + x₂³ + ... = σ_1³ − 3σ_1 σ_2 + 3σ_3. ∑_{i≠j} x_i² x_j = σ_1 σ_2 − 3σ_3.\n\nПРИЛОЖЕНИЯ: (1) Задачи с корени на полиноми - изразяване на симетрични изрази чрез коефициенти. (2) Доказване на тъждества. (3) Свързване с формули на Нютон.\n\nТИПИЧНА ЗАДАЧА: 'Изрази (x+y+z)³ − 27xyz чрез елементарни'.\n\nЧЕСТ ТРИК: Когато видиш симетричен израз в задачи с корени, изрази го чрез σ-та (коефициентите)." },
+    { id:"5.4", title:"Рационални корени. Гаус", desc:"Полиноми с цели коефициенти", source:"OT_2012, Делители на полиноми (Ал. Иванов)", pdf:"Материали_БГ/OT_2012", page:3,
+      explanation:"ТЕОРЕМА ЗА РАЦИОНАЛНИ КОРЕНИ: Нека P(x) = a_n x^n + ... + a_0 с цели коефициенти. Ако p/q е рационален корен в несъкратим вид, то p | a_0 и q | a_n.\n\nСЛЕДСТВИЕ: Ако a_n = 1 (полином е monic), всеки рационален корен е цяло число и дели a_0.\n\nЛЕМА НА ГАУС: Ако P(x) ∈ ℤ[x] се дели на Q(x) ∈ ℚ[x], то P(x) се дели на Q'(x) ∈ ℤ[x] за някое Q', пропорционален на Q.\n\nСЛЕДСТВИЕ: Ако P(x) е произведение на два полинома с рационални коефициенти, то P(x) е произведение на два полинома с ЦЕЛИ коефициенти (същите степени).\n\nПРИЛОЖЕНИЯ: (1) Търсене на рационални корени - ограничен списък. (2) Доказване, че полиномът е неразложим. (3) Факторизация.\n\nТИПИЧНА ЗАДАЧА: 'Докажи, че x³ − 2 няма рационални корени'. Корени: p/q с p | 2, q | 1. Тестваме ±1, ±2 → нито е корен.\n\nКРИТЕРИЙ НА АЙЗЕНЩАЙН: Ако за P(x) с цели коефициенти съществува просто p с p | a_i за i < n, p ∤ a_n, p² ∤ a_0, то P е неразложим над ℚ." },
+    { id:"5.5", title:"Неразложими полиноми", desc:"Над Z, Q, R, C", source:"OT_2012, Делители на полиноми", pdf:"Материали_БГ/OT_2012", page:3,
+      explanation:"ОСНОВНА ТЕОРЕМА НА АЛГЕБРАТА: Всеки полином от степен n ≥ 1 с комплексни коефициенти има точно n комплексни корена (с кратности). Следствие: неразложимите над ℂ са само линейните.\n\nНАД ℝ: Неразложимите са линейните и квадратните с отрицателна дискриминанта (x² + bx + c с b² − 4c < 0).\n\nНАД ℚ И ℤ: Неразложимите са много по-сложни. Примери: x² − 2 е неразложим над ℚ (корени ±√2 не са рационални). x⁴ − 10x² + 1 е неразложим.\n\nКРИТЕРИИ ЗА НЕРАЗЛОЖИМОСТ: (1) Айзенщайн. (2) Редукция по модул p: ако P mod p е неразложим в 𝔽_p[x], то P е неразложим в ℤ[x]. (3) Рационални корени (за степен ≤ 3). (4) Пермутационни аргументи.\n\nПРИЛОЖЕНИЯ: (1) Доказване, че полином няма корени в ℚ. (2) Намиране на минимални полиноми на алгебрични числа. (3) Теория на Галоа (в 12. клас).\n\nТИПИЧНА ЗАДАЧА: 'Докажи, че x^n − 2 е неразложим над ℚ за всяко n'. Айзенщайн с p = 2: a_n = 1 (не се дели на 2), a_0 = −2 (дели се на 2, но не на 4)." },
+    { id:"5.6", title:"Полиноми на Чебишев", desc:"Tₙ(cos θ) = cos nθ", source:"OT_2012, Полиноми", pdf:"Материали_БГ/OT_2012", page:81,
+      explanation:"ОПРЕДЕЛЕНИЕ: T_n(x) = cos(n · arccos x) за |x| ≤ 1. Оказва се, че това е полином от степен n (чрез формули за cos(nθ) като полином на cos θ).\n\nПРИМЕРИ: T_0 = 1, T_1 = x, T_2 = 2x² − 1, T_3 = 4x³ − 3x, T_4 = 8x⁴ − 8x² + 1.\n\nРЕКУРЕНЦИЯ: T_{n+1}(x) = 2x T_n(x) − T_{n−1}(x).\n\nСВОЙСТВА: (1) Старши коефициент: 2^{n−1} за n ≥ 1. (2) T_n(1) = 1, T_n(−1) = (−1)^n. (3) Нулите на T_n са cos((2k−1)π / (2n)) за k = 1, ..., n. (4) |T_n(x)| ≤ 1 за x ∈ [−1, 1].\n\nЕКСТРЕМАЛНО СВОЙСТВО: Сред всички полиноми от степен n с водещ коефициент 1, полиномът 2^{1−n} T_n минимизира максималната абсолютна стойност върху [−1, 1]. Равенство: max = 2^{1−n}.\n\nПРИЛОЖЕНИЯ: (1) Екстремални задачи (min-max). (2) Тригонометрични тъждества. (3) Конструкции с тригонометрия. (4) Числени методи (апроксимация)." },
+    { id:"5.7", title:"Делимост на полиноми", desc:"Остатък; Хорнер; НОД", source:"OT_2012, Делители на полиноми", pdf:"Материали_БГ/OT_2012", page:3,
+      explanation:"ТЕОРЕМА ЗА ОСТАТЪКА: Остатъкът от делене на P(x) на (x − a) е P(a). Следствие: (x − a) | P(x) ⇔ P(a) = 0.\n\nОБОБЩЕНА ТЕОРЕМА ЗА ОСТАТЪКА: Остатъкът от делене на P(x) на (x − a)^k е полином от степен < k. Или: (x − a)^k | P(x) ⇔ P(a) = P'(a) = ... = P^{(k−1)}(a) = 0.\n\nСХЕМА НА ХОРНЕР: Ефективен метод за делене на P(x) на (x − a). Използва само коефициентите. Също дава P(a) и коефициентите на частното.\n\nНОД НА ПОЛИНОМИ: Чрез алгоритъм на Евклид: НОД(P, Q) = НОД(Q, P mod Q). Работи над всяко поле.\n\nКРАТНОСТ НА КОРЕН: a е корен с кратност k, ако (x − a)^k | P(x), но (x − a)^{k+1} ∤ P(x). Еквивалентно: P(a) = P'(a) = ... = P^{(k−1)}(a) = 0, P^{(k)}(a) ≠ 0.\n\nПРИЛОЖЕНИЯ: (1) Факторизация. (2) Доказване на неразложимост. (3) Тъждества с полиноми." },
+    { id:"5.8", title:"Интерполация на Лагранж", desc:"Полином през n точки", source:"OT_2012, Полиноми", pdf:"Материали_БГ/OT_2012", page:81,
+      explanation:"ТЕОРЕМА: За n точки (x₁, y₁), ..., (x_n, y_n) с различни x_i съществува ЕДИНСТВЕН полином от степен ≤ n−1, който минава през тях.\n\nФОРМУЛА (Лагранж): P(x) = ∑_{i=1}^n y_i · L_i(x), където L_i(x) = ∏_{j ≠ i} (x − x_j)/(x_i − x_j).\n\nПРИМЕР: През (1, 3), (2, 5), (4, 9): P(x) = 3 · (x−2)(x−4)/((1−2)(1−4)) + 5 · (x−1)(x−4)/((2−1)(2−4)) + 9 · (x−1)(x−2)/((4−1)(4−2)).\n\nПРИЛОЖЕНИЯ: (1) Намиране на полином с дадени стойности. (2) Доказване на тъждества - показваш, че два полинома съвпадат в достатъчно точки. (3) Доказване, че определен полином има корен. (4) Формули за суми (чрез интерполация на ∑_{i=1}^n i^k като полином по n).\n\nТИПИЧНА ЗАДАЧА: 'Докажи, че полиномът P(n) = n^2 + 1 не приема само точни квадрати за n ≥ 1' - понякога се доказва с интерполация и оценки.\n\nЧЕСТ ТРИК: Ако P и Q съвпадат в n+1 точки (за полиноми от степен ≤ n), то P ≡ Q. Използвай това за доказване на тъждества." }
+  ]
+},
+{ id:6, icon:"◆", title:"АЛГЕБРА – НЕРАВЕНСТВА",
+  points:[
+    { id:"6.1", title:"САСГ (AM-GM)", desc:"Аритметично ≥ геометрично", source:"OT_2012, Неравенства (Н. Николов)", pdf:"Материали_БГ/OT_2012", page:25,
+      explanation:"ФОРМУЛИРОВКА: За a₁, ..., a_n ≥ 0: (a₁ + a₂ + ... + a_n)/n ≥ ⁿ√(a₁ a₂ ... a_n). Равенство ⇔ всички a_i са равни.\n\nКОНВЕНЦИЯ: 'средно аритметично ≥ средно геометрично'.\n\nПРОСТИ СЛЕДСТВИЯ: (1) x + 1/x ≥ 2 за x > 0. (2) a/b + b/a ≥ 2. (3) (a+b)(1/a + 1/b) ≥ 4. (4) За a+b+c = const, abc е максимално при a = b = c.\n\nДОКАЗАТЕЛСТВО: Чрез индукция или чрез Йенсен (log е вдлъбната функция).\n\nПРИЛОЖЕНИЯ: Ежедневно. Стандартно оръжие за задачи с 'намери максимум/минимум при дадено условие'.\n\nПОЛЕЗНИ ТЕХНИКИ: (1) Substitution (замяна на променливи). (2) Групиране по двойки. (3) Добавяне на '1' или константа. (4) Умножаване с подходящо.\n\nВНИМАНИЕ: Условието a_i ≥ 0 е критично. За отрицателни числа не работи. Знакът '≥' работи за ВСЕКИ набор от положителни числа." },
+    { id:"6.2", title:"САСХ (AM-HM)", desc:"Аритметично ≥ хармонично", source:"OT_2012, Неравенства", pdf:"Материали_БГ/OT_2012", page:25,
+      explanation:"ФОРМУЛИРОВКА: За положителни a₁, ..., a_n: (a₁ + ... + a_n)/n ≥ n/(1/a₁ + ... + 1/a_n). Равенство ⇔ всички равни.\n\nЧЕСТА ФОРМА: (a₁ + ... + a_n)(1/a₁ + ... + 1/a_n) ≥ n².\n\nСЛЕДСТВИЯ: (1) За 2 числа: (a + b)(1/a + 1/b) ≥ 4. (2) За 3: (a+b+c)(1/a + 1/b + 1/c) ≥ 9.\n\nИЗПОЛЗВАНЕ: Когато изразът съдържа реципрочни стойности или комбинации от типа (сума)·(сума от обратни). Често се използва в задачи с дроби.\n\nВРЪЗКА С AM-GM: HM ≤ GM ≤ AM ≤ QM. Верига. Доказателствата са директни следствия от AM-GM (приложен на подходящи числа).\n\nТИПИЧНА УПОТРЕБА: (1) За задачи 'докажи, че изразът ≥ n²'. (2) За намиране на минимум на суми от дроби. (3) Заедно с Коши (инженерна форма).\n\nЧЕСТ ТРИК: За задачи с 1/a + 1/b, използвай 1/a + 1/b ≥ 4/(a+b). Това е частен случай на AM-HM." },
+    { id:"6.3", title:"САСК (AM-QM)", desc:"Аритметично ≥ квадратично", source:"OT_2012, Неравенства", pdf:"Материали_БГ/OT_2012", page:25,
+      explanation:"ФОРМУЛИРОВКА: За реални a₁, ..., a_n: √((a₁² + ... + a_n²)/n) ≥ (a₁ + ... + a_n)/n. Равенство ⇔ всички равни.\n\nЧЕСТА ФОРМА: n(a₁² + ... + a_n²) ≥ (a₁ + ... + a_n)². (Еквивалентно на инженерна форма на Коши.)\n\nДОКАЗАТЕЛСТВО: От дисперсията: (1/n)∑(a_i − ā)² ≥ 0 ⇔ (1/n)∑a_i² ≥ ā².\n\nПРИЛОЖЕНИЯ: (1) За задачи с квадрати и суми. (2) За минимум на суми от квадрати при фиксирана сума. (3) Като частен случай на Коши.\n\nТИПИЧНА ЗАДАЧА: 'Намери минимума на x² + y² + z² при x + y + z = 1'. Отговор: 1/3 при x = y = z = 1/3 (чрез AM-QM).\n\nЧЕСТ ТРИК: Ако видиш сума от квадрати и сума от първи степени - мисли за AM-QM (или директно Коши).\n\nВЕРИГА: QM ≥ AM ≥ GM ≥ HM. Може да се използва, за да 'превключваш' между различни средни." },
+    { id:"6.4", title:"Коши-Буняковски", desc:"Всички форми", source:"OT_2012, Неравенства", pdf:"Материали_БГ/OT_2012", page:25,
+      explanation:"СТАНДАРТНА ФОРМА: (∑a_i b_i)² ≤ (∑a_i²)(∑b_i²). Равенство ⇔ a и b са пропорционални.\n\nИНЖЕНЕРНА ФОРМА: (∑a_i)² ≤ n ∑a_i². Следствие: (a+b+c)² ≤ 3(a² + b² + c²).\n\nФОРМА ЗА ДРОБИ (Титу-Андрееску): (∑a_i²/x_i) ≥ (∑a_i)²/(∑x_i) за x_i > 0. Това е МНОГО полезно!\n\nПРИМЕР ЗА ФОРМАТА: 1/x + 1/y + 1/z ≥ 9/(x+y+z) за положителни x, y, z.\n\nОБОБЩЕНИЕ: Hölder: (∑a_i b_i c_i)³ ≤ (∑a_i³)(∑b_i³)(∑c_i³). Обобщение на Коши за 3+ редици.\n\nПРИЛОЖЕНИЯ: Ежедневно. Особено полезна е дробната форма.\n\nТИПИЧНА УПОТРЕБА: Задачи 'докажи, че a²/x + b²/y ≥ (a+b)²/(x+y)'. За задачи с дроби - превърни в сбор от квадрати и приложи Коши.\n\nВНИМАНИЕ: Равенство ⇔ a_i / b_i е константа за всички i. Провери това, ако търсиш кога се достига минимум/максимум." },
+    { id:"6.5", title:"Неравенство на Йенсен", desc:"Изпъкнали функции", source:"OT_2012, Неравенства", pdf:"Материали_БГ/OT_2012", page:25,
+      explanation:"ОПРЕДЕЛЕНИЕ: f е изпъкнала на интервал I, ако f((x+y)/2) ≤ (f(x) + f(y))/2 за всички x, y ∈ I. Еквивалентно (при два пъти диференцируема): f''(x) ≥ 0.\n\nНЕРАВЕНСТВО НА ЙЕНСЕН: За изпъкнала f и тегла λ_i > 0 с ∑λ_i = 1: f(∑λ_i x_i) ≤ ∑λ_i f(x_i). За равни тегла: f((x₁+...+x_n)/n) ≤ (f(x₁)+...+f(x_n))/n.\n\nЗА ВДЛЪБНАТА: Обратното неравенство.\n\nПРИМЕРИ ИЗПЪКНАЛИ: x², e^x, x log x (за x > 0), −log x, 1/x (за x > 0).\nПРИМЕРИ ВДЛЪБНАТИ: log x, √x, sin x (на [0, π]).\n\nПРИЛОЖЕНИЯ: (1) Задачи с тригонометрия (sin, cos). (2) Задачи с експоненциали. (3) Доказателство на AM-GM чрез log. (4) Задачи с вероятности.\n\nТИПИЧНА ЗАДАЧА: 'Докажи, че за x, y, z > 0: x log x + y log y + z log z ≥ (x+y+z) log((x+y+z)/3)'. От Йенсен с f = x log x.\n\nВНИМАНИЕ: Провери дали функцията наистина е изпъкнала на разглеждания интервал. Ако не - не работи." },
+    { id:"6.6", title:"Неравенство на Чебишев", desc:"Монотонни редици", source:"OT_2012, Неравенства", pdf:"Материали_БГ/OT_2012", page:25,
+      explanation:"ФОРМУЛИРОВКА: Ако a₁ ≤ a₂ ≤ ... ≤ a_n и b₁ ≤ b₂ ≤ ... ≤ b_n (еднакво монотонни), то (1/n)∑a_i b_i ≥ ((1/n)∑a_i)((1/n)∑b_i). Т.е. n ∑a_i b_i ≥ (∑a_i)(∑b_i).\n\nОБРАТНО: Ако a и b са противоположно монотонни (едната растяща, другата намаляваща), неравенството е в обратна посока: n ∑a_i b_i ≤ (∑a_i)(∑b_i).\n\nПРИМЕР: За a₁ ≤ a₂ и b₁ ≤ b₂: 2(a₁b₁ + a₂b₂) ≥ (a₁ + a₂)(b₁ + b₂). Равенство само при равни.\n\nСВЪРЗАНИ: Rearrangement inequality, суми на Коши.\n\nПРИЛОЖЕНИЯ: (1) Задачи с монотонни редици. (2) Доказателство на други неравенства. (3) Свързване на сума с произведение на средни.\n\nТИПИЧНА ЗАДАЧА: 'За a ≤ b ≤ c: докажи, че a² + b² + c² ≥ ab + bc + ca + нещо'.\n\nЧЕСТ ТРИК: Ако можеш да подредиш числата монотонно и да изразиш израза като сбор от произведения, приложи Чебишев." },
+    { id:"6.7", title:"Rearrangement", desc:"Пренареждане", source:"OT_2012, Неравенства", pdf:"Материали_БГ/OT_2012", page:25,
+      explanation:"ФОРМУЛИРОВКА: Нека a₁ ≤ a₂ ≤ ... ≤ a_n и b₁ ≤ b₂ ≤ ... ≤ b_n. Тогава за всяка пермутация π на {1, ..., n}:\n∑ a_i b_i ≥ ∑ a_i b_{π(i)} ≥ ∑ a_i b_{n+1−i}.\n\nТ.е. сумата е МАКСИМАЛНА при еднаква наредба (еднакво монотонни) и МИНИМАЛНА при обратна наредба.\n\nДОКАЗАТЕЛСТВО: От факта, че (a_i − a_j)(b_i − b_j) ≥ 0 за i < j в еднакво подредени.\n\nПРИЛОЖЕНИЯ: (1) Задачи 'намери максимум/минимум на ∑a_i b_i при пермутации'. (2) Доказателство на Чебишев. (3) Задачи с матрици.\n\nТИПИЧНА ЗАДАЧА: 'Намери max на a·d + b·c + c·b + d·a при a<b<c<d и (a,b,c,d) пермутация на (1,2,3,4)'.\n\nОБОБЩЕНИЕ: Ако две редици имат еднаква наредба, произведението е максимално; обратно - минимално.\n\nЧЕСТ ТРИК: За да ползваш rearrangement, сортирай редиците и намери съответствието. Много задачи се свеждат до това." },
+    { id:"6.8", title:"Неравенство на Мюрхед", desc:"Симетрични суми", source:"OT_2012, Неравенства", pdf:"Материали_БГ/OT_2012", page:25,
+      explanation:"ОПРЕДЕЛЕНИЕ: Нека a, b ∈ ℝ^n. Казваме, че a majorizes b (a ≻ b), ако: (1) ∑a_i = ∑b_i; (2) за всяко k: a₁ + ... + a_k ≥ b₁ + ... + b_k (след сортиране в намаляващ ред).\n\nФОРМУЛИРОВКА: Ако a ≻ b и x₁, ..., x_n > 0, то ∑_{sym} x^a ≥ ∑_{sym} x^b.\n\nТУК: ∑_{sym} x^a означава сумата на всички различни пермутации на монома x₁^{a₁} x₂^{a₂} ... x_n^{a_n}.\n\nПРИМЕР: (3, 0, 0) ≻ (2, 1, 0) ≻ (1, 1, 1). Следствие: ∑x³ ≥ ∑_{sym} x²y ≥ 6xyz. Т.е. x³ + y³ + z³ ≥ x²y + x²z + y²x + y²z + z²x + z²y? Не съвсем - тук трябва да се внимава с множителите.\n\nПРИЛОЖЕНИЯ: (1) Задачи със симетрични неравенства. (2) Доказателство на Шур, AM-GM. (3) Задачи с елементарни симетрични изрази.\n\nТИПИЧНА ЗАДАЧА: 'Докажи, че a³ + b³ + c³ + 3abc ≥ ∑_{sym} a²b' (това е Шур).\n\nЧЕСТ ТРИК: Ако неравенството е симетрично и хомогенно, опитай Мюрхед. Определи majorization и го приложи." },
+    { id:"6.9", title:"Неравенство на Шур", desc:"x³+y³+z³+3xyz ≥ ∑x²y", source:"OT_2012, Неравенства", pdf:"Материали_БГ/OT_2012", page:25,
+      explanation:"ФОРМУЛИРОВКА: За x, y, z ≥ 0: x³ + y³ + z³ + 3xyz ≥ xy(x + y) + yz(y + z) + zx(z + x). Или еквивалентно: x³ + y³ + z³ + 3xyz ≥ ∑_{sym} x²y (симетричната сума с 6 члена).\n\nДРУГА ФОРМА: x(x−y)(x−z) + y(y−z)(y−x) + z(z−x)(z−y) ≥ 0.\n\nОБОБЩЕНИЕ: За r > 0: x^r(x−y)(x−z) + y^r(y−z)(y−x) + z^r(z−x)(z−y) ≥ 0. Това е неравенството на Шур от степен r.\n\nПРИЛОЖЕНИЯ: (1) Често се използва в комбинация с други неравенства. (2) Задачи с три положителни числа. (3) Основа за доказване на по-сложни неравенства.\n\nТИПИЧНА ЗАДАЧА: 'Докажи, че a³ + b³ + c³ + 3abc ≥ ab(a+b) + bc(b+c) + ca(c+a)' - това Е Шур.\n\nЧЕСТА ФОРМА: Задачата 'Докажи, че (a+b+c)³ ≥ 27abc'. Директно AM-GM.\n\nВНИМАНИЕ: Шур е от порядък 3. За степени > 3 има обобщения, но са по-трудни." },
+    { id:"6.10", title:"Бернули, Хьолдер, Минковски", desc:"Класически неравенства", source:"OT_2012, Неравенства", pdf:"Материали_БГ/OT_2012", page:25,
+      explanation:"БЕРНУЛИ: За x ≥ −1 и n ∈ ℕ: (1 + x)^n ≥ 1 + nx. Равенство при x = 0 или n = 1.\nОБОБЩЕНИЕ: За r ≥ 1 и x ≥ −1: (1 + x)^r ≥ 1 + rx. За 0 < r < 1: обратно.\n\nХЬОЛДЕР: За a_i, b_i, c_i ≥ 0: (∑a_i b_i c_i)³ ≤ (∑a_i³)(∑b_i³)(∑c_i³). Обобщение за k редици с показател k.\nОБЩА ФОРМА: (∑a_i b_i)^p ≤ (∑a_i^q)^(p/q) · (∑b_i^r)^(p/r) за 1/p = 1/q + 1/r.\n\nМИНКОВСКИ: (∑(a_i + b_i)^p)^(1/p) ≤ (∑a_i^p)^(1/p) + (∑b_i^p)^(1/p) за p ≥ 1.\nПРИ p = 2: √((a+b)²) ≤ √(a²) + √(b²)? Не - това е тривиално. Правилното е: √(∑(a_i+b_i)²) ≤ √(∑a_i²) + √(∑b_i²). Триъгълно неравенство за L²-норма.\n\nПРИЛОЖЕНИЯ: (1) Хьолдер - като обобщение на Коши, за 3+ редици. (2) Минковски - за задачи с норми, метрики. (3) Бернули - за експоненциални оценки.\n\nТИПИЧНА УПОТРЕБА: Когато Коши не е достатъчно (три множителя), използвай Хьолдер. Когато видиш √(∑(a_i+b_i)²), използвай Минковски." }
+  ]
+},
+{ id:7, icon:"◆", title:"ФУНКЦИОНАЛНИ УРАВНЕНИЯ И РЕДИЦИ",
+  points:[
+    { id:"7.1", title:"Уравнение на Коши", desc:"f(x+y) = f(x) + f(y)", source:"OT_2010, Функц. уравнения (Н. Николов)", pdf:"Материали_БГ/OT_2010", page:51,
+      explanation:"ФОРМУЛИРОВКА: f(x + y) = f(x) + f(y) за всички x, y ∈ ℝ (адитивно).\n\nРЕШЕНИЯ БЕЗ ДОП. УСЛОВИЯ: Съществуват 'патологични' решения (нелинейни), но те са неконструктивни (използват базис на Хемел).\n\nС ДОП. УСЛОВИЯ: (1) Ако f е непрекъсната в точка → f(x) = cx. (2) Ако f е монотонна → f(x) = cx. (3) Ако f е ограничена в интервал → f(x) = cx.\n\nДОКАЗАТЕЛСТВО (при монотонност): (a) f(0) = 0. (b) f(nx) = n f(x) за цяло n. (c) f(x/n) = f(x)/n. (d) f(q) = cq за рационални q, c = f(1). (e) За реално x, приближи с рационални q_n → x. От монотонност: f(q_n) ≤ f(x) ≤ f(q_n') за q_n ≤ x ≤ q_n'. Вземаме граница → f(x) = cx.\n\nСВЪРЗАНИ УРАВНЕНИЯ: (1) Мултипликативно: f(xy) = f(x)f(y) - решения при монотонност: f(x) = x^α. (2) Коши-експоненциално: f(x+y) = f(x)f(y) - при непрекъснатост: f(x) = e^(cx). (3) Йенсен: f((x+y)/2) = (f(x) + f(y))/2.\n\nТИПИЧНА ЗАДАЧА: 'Намери всички f: ℝ → ℝ с f(x+y) = f(x) + f(y) и f ограничена в (0, 1)'. Отговор: f(x) = cx.\n\nЧЕСТ ТРИК: Докажи, че f(q) = cq за рационални, после използвай монотонност/ограниченост за реални." },
+    { id:"7.2", title:"ФУ с ограниченост", desc:"Ограниченост върху интервал", source:"OT_2010, Функц. уравнения", pdf:"Материали_БГ/OT_2010", page:51,
+      explanation:"ТЕОРЕМА: Ако f: ℝ → ℝ е адитивна (f(x+y) = f(x) + f(y)) и е ограничена върху някой интервал с положителна дължина, то f(x) = cx.\n\nИДЕЯ НА ДОКАЗАТЕЛСТВО: (1) Ограничеността в интервал (a, b) се 'пренася' чрез адитивност в ограниченост в (−ε, ε). (2) Ако |f| ≤ M в (−ε, ε), то за произволно x, f(x) ≈ n f(x/n) и |f(x/n)| ≤ M за подходящо n → |f(x)| ≤ n M. Работи с избора на n. (3) Оттам f е непрекъсната в 0, следователно линейна.\n\nВАЖНОСТ: Това е често използвана лема. Ако някак можеш да докажеш ограниченост в интервал - печелиш.\n\nПРИЛОЖЕНИЯ: (1) Функционални уравнения с 'f ограничена'. (2) Уравнения с 'f(x) ≥ 0 за x > 0' (имплицира ограниченост). (3) Уравнения от тип 'f(x+y) = f(x) + f(y) + нещо'.\n\nТИПИЧНА ЗАДАЧА: 'Нека f: ℝ → ℝ с f(x+y) = f(x) + f(y) и f(x) ≥ 0 за x > 0. Намери f'. Отговор: f(x) = cx, c ≥ 0." },
+    { id:"7.3", title:"ФУ с монотонност", desc:"Монотонност + адитивност", source:"OT_2010, Функц. уравнения", pdf:"Материали_БГ/OT_2010", page:51,
+      explanation:"ТЕОРЕМА: Ако f: ℝ → ℝ е адитивна и монотонна (във всяка посока), то f(x) = cx.\n\nИДЕЯ: Нека c = f(1). За рационални q: f(q) = cq (от адитивност). За реално x: използваме, че ℚ е гъсто в ℝ. Вземаме редица q_n ↑ x и r_n ↓ x с q_n, r_n рационални. От монотонност: c q_n = f(q_n) ≤ f(x) ≤ f(r_n) = c r_n. Граница: f(x) = c x.\n\nПО-СЛАБА ВЕРСИЯ: Достатъчно е f да е монотонна на произволен интервал с положителна дължина.\n\nПРИЛОЖЕНИЯ: Същите като при ограниченост, но монотонността е по-често срещано условие в задачи.\n\nТИПИЧНА ЗАДАЧА: 'Нека f: ℝ → ℝ с f(x+y) = f(x) + f(y) и f е растяща. Намери f'. Отговор: f(x) = cx, c ≥ 0.\n\nЧЕСТ ТРИК: Ако f удовлетворява някакво 'неравенство на монотонност' (напр. x < y ⇒ f(x) ≤ f(y)), можеш да я използваш.\n\nОБОБЩЕНИЕ: За функции на по-общи множества (напр. ℚ, ℤ) монотонността също работи, но е нужно да се адаптира." },
+    { id:"7.4", title:"ФУ с инволюция", desc:"f(f(x)) = x", source:"OT_2010, Функц. уравнения", pdf:"Материали_БГ/OT_2010", page:51,
+      explanation:"ОПРЕДЕЛЕНИЕ: Функция f: X → X е инволюция, ако f(f(x)) = x за всички x. Тогава f е биекция и е своя собствена обратна.\n\nПРИМЕРИ: (1) f(x) = −x. (2) f(x) = 1/x (на ℝ\\{0}). (3) f(x) = 1 − x. (4) f(x) = c/x. (5) Всяка симетрия.\n\nСВОЙСТВА: (1) Ако f е инволюция, f е инективна и сюрективна. (2) Фиксираните точки са тези с f(x) = x. (3) f комутира със себе си: f∘f = id.\n\nТЕХНИКИ ЗА РЕШАВАНЕ: (1) Приложи f от двете страни на уравнението. (2) Замести x с f(x) в оригиналното уравнение. (3) Търси фиксирани точки. (4) Ако f(f(x)) = x, то f е инволюция - използвай свойствата.\n\nТИПИЧНА ЗАДАЧА: 'Нека f: ℝ → ℝ е такава, че f(f(x)) = x и f(f(x) + y) = f(x) + f(y). Намери всички f'. Отговор: f(x) = x или f(x) = −x.\n\nЧЕСТ ТРИК: След като приложиш f от двете страни и заместиш, търси симетрия в уравнението." },
+    { id:"7.5", title:"Общи техники за ФУ", desc:"Заместване, инективност", source:"OT_2010, Функц. уравнения", pdf:"Материали_БГ/OT_2010", page:51,
+      explanation:"ОСНОВНИ ТЕХНИКИ: (1) ЗАМЕСТВАНЕ НА КОНКРЕТНИ СТОЙНОСТИ: x = 0, y = 0, x = y, y = −x, x = 1, ... Често 'изваждат' структурата на f.\n(2) ДОКАЗВАНЕ НА ИНЕКТИВНОСТ: Ако f(x) = f(y) води до x = y. Техника: 'приложи f от двете страни на уравнението и опрости'.\n(3) ДОКАЗВАНЕ НА СЮРЕКТИВНОСТ: Ако за всяко y съществува x с f(x) = y. Понякога се доказва чрез образа - намери конкретен израз.\n(4) ОПРЕДЕЛЯНЕ НА f(0): Обикновено от x = y = 0.\n(5) ЧЕТНОСТ/НЕЧЕТНОСТ: Ако f(−x) = f(x) (четна), f(−x) = −f(x) (нечетна).\n\nТИПИЧЕН ПОДХОД: (1) Вземи x = y = 0, намери f(0). (2) Вземи y = −x, x = y. (3) Опитай да докажеш инективност/сюрективност. (4) Замести с 'f(x)' в мястото на 'x' за самозаместване.\n\nТИПИЧНА ЗАДАЧА: 'f(x + f(y)) = f(x) + y за всички x, y. Намери f'. Отговор: f(x) = x.\nРешение: (a) Сюрективност чрез y = f(y) − x. (b) Ако f(a) = f(b), приложи f от двете страни на f(x + a) = f(x) + a, f(x + b) = f(x) + b, замести. (c) Инективност + сюрективност → f е биекция. (d) Извлечи f(x) = x + c, после f(f(y)) = f(y) + c ⇒ ... (e) Проверка." },
+    { id:"7.6", title:"Линейни рекурентни редици", desc:"Характеристично уравнение", source:"BMS_2012-2015", pdf:"Материали_БГ/BMS_2012-2015", page:1,
+      explanation:"ОПРЕДЕЛЕНИЕ: Рекурсия a_{n+k} = c₁ a_{n+k−1} + c₂ a_{n+k−2} + ... + c_k a_n с константи c_i.\n\nХАРАКТЕРИСТИЧНО УРАВНЕНИЕ: r^k = c₁ r^{k−1} + c₂ r^{k−2} + ... + c_k. Нека корените са r₁, ..., r_k (с кратности).\n\nОБЩО РЕШЕНИЕ: Ако корените са различни: a_n = A₁ r₁^n + A₂ r₂^n + ... + A_k r_k^n. Константите A_i се намират от началните условия.\n\nПРИ КРАТНИ КОРЕНИ: Ако r е корен с кратност m, допринася с (A₁ + A₂ n + ... + A_m n^{m−1}) r^n.\n\nПРИМЕР: Фибоначи: a_{n+2} = a_{n+1} + a_n. Характеристично: r² = r + 1, r = (1±√5)/2. Общо: a_n = A φ^n + B ψ^n.\n\nПРИЛОЖЕНИЯ: (1) Задачи с рекурсивно зададени редици. (2) Намиране на затворена формула. (3) Асимптотика.\n\nТИПИЧНА ЗАДАЧА: 'Намери a_n от a_{n+2} = 5a_{n+1} − 6a_n, a_1 = 1, a_2 = 5'.\nРешение: r² − 5r + 6 = 0, r = 2, 3. a_n = A·2^n + B·3^n. От a_1 = 2A + 3B = 1, a_2 = 4A + 9B = 5 → A = −1, B = 1. Т.е. a_n = 3^n − 2^n.\n\nВНИМАНИЕ: Работи, когато характеристичното уравнение има само прости корени, или с кратки формули при кратни." },
+    { id:"7.7", title:"Нелинейни рекурентни редици", desc:"aₙ₊₁ = f(aₙ)", source:"BMS_2012-2015", pdf:"Материали_БГ/BMS_2012-2015", page:1,
+      explanation:"ОБЩ ВИД: a_{n+1} = f(a_n), където f е нелинейна функция.\n\nТЕХНИКИ: (1) ИНВАРИАНТ: Намери функция g с g(a_{n+1}) = g(a_n) за всички n. Тогава g е константа по редицата. (2) МОНОТОННОСТ: Ако f е растяща, редицата е монотонна. (3) ОГРАНИЧЕНОСТ: Докажи, че редицата е ограничена. (4) СХОДИМОСТ: Монотонна + ограничена → сходяща. (5) ГРАНИЦА: Ако L = lim a_n, то L = f(L) (неподвижна точка). (6) ПЕРИОДИЧНОСТ: Докажи a_{n+p} = a_n за някое p.\n\nПРИМЕР: a_{n+1} = √(2 + a_n) с a_1 = 1. Растяща (индукция), ограничена (докажи a_n < 2), граница L = √(2 + L) → L = 2.\n\nТИПИЧНА ЗАДАЧА: 'Нека a_{n+1} = a_n² − 2 с a_0 = 3. Докажи, че a_n = 2cosh(2^n · arccosh(3/2))' - сложна. По-често: 'Намери границата'.\n\nЧЕСТ ТРИК: Ако f(x) = (x² + c)/(2x) (Нютонов метод), има връзка с квадратен корен. Ако f е от вида x → 1/(1+x), може да е периодична.\n\nСТАНДАРТНА ЗАДАЧА: 'a_{n+1} = (a_n + 1)/a_n. Намери a_{2010}'. Решение: разгледай a_{n+2}: a_{n+2} = 1 + 1/a_{n+1} = 1 + a_n/(a_n + 1) = (2a_n + 1)/(a_n + 1). Изчисли a_{n+3}... намери период." },
+    { id:"7.8", title:"Сходимост и граници", desc:"Монотонност + ограниченост", source:"BMS_2012-2015", pdf:"Материали_БГ/BMS_2012-2015", page:1,
+      explanation:"ТЕОРЕМА НА ВАЙЕРЩРАС: Всяка монотонна и ограничена редица е сходяща.\n\nСТАНДАРТНА СХЕМА ЗА ЗАДАЧИ С РЕКУРСИЯ: (1) Докажи по индукция, че a_n ≥ 0 (или друг минимум). (2) Докажи монотонност (обикновено чрез a_{n+1} − a_n или a_{n+1}/a_n). (3) Докажи ограниченост (обикновено чрез индукция). (4) Заключи сходимост. (5) Намери границата L = lim a_n от L = f(L).\n\nПРИМЕР: a_{n+1} = (a_n + 2/a_n)/2, a_1 = 1. Това е Нютонов метод за √2. (1) a_n > 0. (2) a_{n+1} ≥ √2 (AM-GM). (3) a_{n+1} ≤ a_n (за a_n ≥ √2). (4) L = (L + 2/L)/2 → L² = 2 → L = √2.\n\nЧЕСТИ ГРАНИЦИ: (1) Непер: (1 + 1/n)^n → e. (2) Euler-Mascheroni: (1 + 1/2 + ... + 1/n) − ln n → γ. (3) За a_{n+1} = f(a_n) - неподвижна точка.\n\nТИПИЧНА ЗАДАЧА: 'a_{n+1} = √(a_n + 2) с a_1 = 1. Намери lim'. Решение: монотонна растяща, ограничена отгоре с 2, L = √(L+2), L² − L − 2 = 0, L = 2.\n\nВНИМАНИЕ: Не всяка редица е сходяща! Провери монотонност И ограниченост. Иначе може да дивергира или да е неограничена." }
+  ]
+},
+{ id:8, icon:"◆", title:"КОМБИНАТОРИКА – ОСНОВИ",
+  points:[
+    { id:"8.1", title:"Принцип на Дирихле", desc:"Всички форми", source:"OT_2010, Комб. и графи (Ст. Герджиков)", pdf:"Материали_БГ/OT_2010", page:81,
+      explanation:"ОСНОВНА ФОРМА: Ако n + 1 обекта се разпределят в n кутии, поне в една кутия има ≥ 2 обекта.\n\nОБОБЩЕНА ФОРМА: Ако kn + 1 обекта се разпределят в n кутии, поне в една кутия има ≥ k + 1 обекта.\n\nФУНКЦИОНАЛНА ФОРМА: Ако |A| > |B| и f: A → B, то f не е инективна.\n\nПРИМЕРИ: (1) Сред всеки 13 души има 2 с рожден ден в един и същи месец (13 > 12). (2) Сред всеки 5 цели числа има 2 с еднакъв остатък по модул 4. (3) В произволно множество от n+1 числа от {1, ..., 2n} има 2, едното дели другото.\n\nКОГА СЕ ИЗПОЛЗВА: (1) За доказване на съществуване ('има поне един ...'). (2) Когато имаш много обекти и малко 'категории'. (3) В задачи с 'поне 2/3/...'.\n\nТИПИЧЕН ТРИК: Идентифицирай обектите (гълъбите) и категориите (кутиите). Броят на категориите обикновено е по-малък от броя на обектите.\n\nКЛАСИЧЕСКА ЗАДАЧА: 'Докажи, че сред всеки 6 души има 3, които се познават взаимно, или 3, които не се познават' - това е R(3,3) = 6, доказва се с Дирихле." },
+    { id:"8.2", title:"Включване и изключване", desc:"|A∪B∪C| формула", source:"OT_2010, Комб. тъждества (Ем. Колев)", pdf:"Материали_БГ/OT_2010", page:7,
+      explanation:"ФОРМУЛА: За множества A₁, ..., A_n:\n|A₁ ∪ ... ∪ A_n| = ∑|A_i| − ∑|A_i ∩ A_j| + ∑|A_i ∩ A_j ∩ A_k| − ... + (−1)^{n+1}|A₁ ∩ ... ∩ A_n|.\n\nПРИМЕР ЗА 3: |A ∪ B ∪ C| = |A| + |B| + |C| − |A∩B| − |B∩C| − |C∩A| + |A∩B∩C|.\n\nКОМПЛЕМЕНТ: |A₁ ∩ ... ∩ A_n| = |U| − |Ā₁ ∪ ... ∪ Ā_n|, където Ā е комплемент в U.\n\nПРИЛОЖЕНИЯ: (1) Задачи 'колко числа ≤ N се делят на поне едно от ...'. (2) Задачи с 'поне едно свойство'. (3) Броене на пермутации без фиксирани точки (безпорядъци): D_n = n! ∑(−1)^k/k!.\n\nТИПИЧНА ЗАДАЧА: 'Колко числа от 1 до 100 се делят на 2, 3 или 5?' Отговор: 50 + 33 + 20 − 16 − 10 − 6 + 3 = 74.\n\nЧЕСТ ТРИК: За 'се делят на поне едно' - директен PIE. За 'не се делят на никое' - комплемент. За 'се делят на точно k' - чрез PIE с биномни коефициенти.\n\nФОРМУЛА ЗА БЕЗПОРЯДЪЦИ: D_n = n! · ∑_{k=0}^n (−1)^k / k! ≈ n!/e." },
+    { id:"8.3", title:"Двойно броене", desc:"Броене по два начина", source:"OT_2010, Комб. тъждества", pdf:"Материали_БГ/OT_2010", page:7,
+      explanation:"ИДЕЯ: Преброи едно и също множество (или сума) по два различни начина. Резултатът трябва да е еднакъв. Това дава тъждество.\n\nКЛАСИЧЕСКИ ПРИМЕР: Разгледай 'двойки (човек, ръкостискане)'. Сумата на степените = 2 · (брой ръкостискания). Това доказва лемата за ръкостискане: ∑ deg(v) = 2|E|.\n\nДРУГ ПРИМЕР: C(n, 2) = n(n−1)/2. Двоен аргумент: броене на неориентирани двойки = n избора за първи × (n−1) за втори / 2.\n\nПРИЛОЖЕНИЯ: (1) Доказване на тъждества: ∑C(n, k) = 2^n, ∑k·C(n, k) = n · 2^(n−1), ∑C(n, k)² = C(2n, n) (Вандермонд). (2) Задачи с графи (лема за ръкостискане). (3) Задачи със симетрии.\n\nТИПИЧНА УПОТРЕБА: 'Докажи, че сумата на степените е четна' - директно. 'Докажи C(n, k) = C(n, n−k)' - двоен аргумент.\n\nТЕХНИКА: Формулирай множество S по 2 начина. Едното броене може да е чрез суми, другото - директно.\n\nЧЕСТ ТРИК: 'Брои двойки (A, B) където ...'. Избери за A обектите, за B - свойствата." },
+    { id:"8.4", title:"Комбинаторни тъждества", desc:"Биномни коефициенти", source:"OT_2010, Комб. тъждества", pdf:"Материали_БГ/OT_2010", page:7,
+      explanation:"ОСНОВНИ: (1) C(n, k) = C(n−1, k−1) + C(n−1, k) (триъгълник на Паскал). (2) ∑C(n, k) = 2^n. (3) ∑(−1)^k C(n, k) = 0 за n ≥ 1. (4) ∑k · C(n, k) = n · 2^(n−1). (5) ∑C(n, k)² = C(2n, n). (6) C(n, k) = C(n, n−k).\n\nВАНДЕРМОНД: C(m+n, k) = ∑_{i=0}^k C(m, i) C(n, k−i).\n\nОБОБЩЕНИЕ: (x+y)^n = ∑C(n, k) x^k y^{n−k} (биномна теорема).\n\nПРИЛОЖЕНИЯ: (1) Задачи 'намери сумата'. (2) Доказателства чрез двойно броене. (3) Задачи с вероятности.\n\nТИПИЧНА ЗАДАЧА: 'Намери ∑_{k=0}^n k² C(n, k)'. Решение: използвай k² = k(k−1) + k. Тогава ∑k²C(n,k) = ∑k(k−1)C(n,k) + ∑kC(n,k) = n(n−1)2^{n−2} + n·2^{n−1}.\n\nЧЕСТ ТРИК: За суми с полиноми в k, разложи полинома чрез падащи факториели: k(k−1)(k−2)... Тогава ∑k(k−1)...C(n,k) = n(n−1)... · 2^{n−j}." },
+    { id:"8.5", title:"Биномни коефициенти", desc:"Свойства", source:"OT_2010, Комб. тъждества", pdf:"Материали_БГ/OT_2010", page:7,
+      explanation:"ОПРЕДЕЛЕНИЕ: C(n, k) = n! / (k! (n−k)!) за 0 ≤ k ≤ n. Това е броят на k-елементните подмножества на n-елементно множество.\n\nСВОЙСТВА: (1) C(n, 0) = C(n, n) = 1. (2) C(n, k) = 0 за k > n или k < 0. (3) C(n, 1) = n. (4) C(n, 2) = n(n−1)/2. (5) Симетрия: C(n, k) = C(n, n−k).\n\nРЕКУРЕНЦИЯ: C(n, k) = C(n−1, k−1) + C(n−1, k).\n\nПРОИЗВОДЯЩА ФУНКЦИЯ: (1 + x)^n = ∑_{k=0}^n C(n, k) x^k.\n\nМУЛТИМНОЖЕСТВО: Броят на k-елементните мултимножества от n типа е C(n+k−1, k).\n\nРАЗШИРЕНИЕ ЗА РЕАЛНИ: C(x, k) = x(x−1)...(x−k+1)/k! за произволно реално x.\n\nПРИЛОЖЕНИЯ: (1) Комбинаторни доказателства. (2) Числени методи. (3) Генериращи функции.\n\nЧЕСТ ТРИК: Когато видиш произведението n(n−1)...(n−k+1), идентифицирай го като k! · C(n, k)." },
+    { id:"8.6", title:"Пермутации и комбинации", desc:"С/без повторение", source:"OT_2010, Комб. тъждества", pdf:"Материали_БГ/OT_2010", page:7,
+      explanation:"ПЕРМУТАЦИИ БЕЗ ПОВТОРЕНИЕ: Броят на подрежданията на n различни обекта е n!.\n\nПЕРМУТАЦИИ С ПОВТОРЕНИЕ: Броят на подрежданията на n обекта, от които n₁ са от тип 1, n₂ от тип 2, ..., n_k от тип k: n! / (n₁! n₂! ... n_k!).\n\nКОМБИНАЦИИ БЕЗ ПОВТОРЕНИЕ: C(n, k) = n!/(k!(n−k)!) - k-елементни подмножества.\n\nКОМБИНАЦИИ С ПОВТОРЕНИЕ: C(n + k − 1, k) - k-елементни мултимножества от n типа. Еквивалентно: брой решения на x₁ + ... + x_n = k с x_i ≥ 0.\n\nПРИМЕР: 'Колко начина да разпределя 5 топки в 3 кутии?' Отговор: C(5 + 3 − 1, 5) = C(7, 5) = 21.\n\nПРИЛОЖЕНИЯ: (1) Броене на думи. (2) Броене на разпределения. (3) Задачи с урни.\n\nТЕХНИКА: Идентифицирай дали редът е важен (пермутация) или не (комбинация), и дали повторението е разрешено. Това дава 4-те основни формули.\n\nЧЕСТ ТРИК: За пермутации с ограничения (напр. 'A и B не са до'), използвай принципа на включване/изключване или разгледай A, B като блок." },
+    { id:"8.7", title:"Мултимножества", desc:"Комбинации с повторение", source:"OT_2010, Комб. тъждества", pdf:"Материали_БГ/OT_2010", page:7,
+      explanation:"ОПРЕДЕЛЕНИЕ: Мултимножество е 'множество' с повторения. Например {a, a, b, c, c, c}.\n\nБРОЙ НА МУЛТИМНОЖЕСТВАТА: Броят на k-елементните мултимножества от n типа е C(n + k − 1, k). Доказателство чрез 'stars and bars': k звездички и n−1 разделители.\n\nБРОЙ НА ПЕРМУТАЦИИТЕ НА МУЛТИМНОЖЕСТВО: За мултимножество с n₁ от тип 1, ..., n_k от тип k: n!/(n₁! n₂! ... n_k!).\n\nПРИЛОЖЕНИЯ: (1) 'Колко начина да разпределя топки в кутии' - stars and bars. (2) 'Колко решения има x₁ + ... + x_n = k с x_i ≥ 0' - C(n+k−1, k). (3) 'Колко думи от букви ...'.\n\nПРИМЕР: 'Колко начина да разпределя 10 еднакви топки в 4 различни кутии?' Отговор: C(10 + 4 − 1, 10) = C(13, 10) = 286.\n\nС ОГРАНИЧЕНИЯ: 'x_i ≥ 1' → замени x_i' = x_i − 1 → x_i' ≥ 0. 'x_i ≥ a_i' → подобно. 'x_i ≤ b_i' → включване-изключване.\n\nТИПИЧНА ЗАДАЧА: 'Колко различни решения има x+y+z = 10 с x, y, z ≥ 1?' Отговор: нека x' = x−1 и т.н. → x'+y'+z' = 7, → C(9, 7) = 36.\n\nЧЕСТ ТРИК: Всичко с 'разпределения на еднакви обекти в различни кутии' е multiset → stars and bars." },
+    { id:"8.8", title:"Рекурентни връзки", desc:"Фибоначи, Каталан", source:"OT_2010, Релации (Ив. Кортезов)", pdf:"Материали_БГ/OT_2010", page:15,
+      explanation:"ЧИСЛА НА ФИБОНАЧИ: F_1 = 1, F_2 = 1, F_{n+2} = F_{n+1} + F_n. Затворена формула: F_n = (φ^n − ψ^n)/√5, φ = (1+√5)/2, ψ = (1−√5)/2.\n\nСВОЙСТВА НА ФИБОНАЧИ: (1) F_n | F_{mn}. (2) gcd(F_m, F_n) = F_{gcd(m, n)}. (3) F_{m+n} = F_m F_{n+1} + F_{m−1} F_n. (4) F_{n+1} F_{n−1} − F_n² = (−1)^n (Касини). (5) F_n² + F_{n+1}² = F_{2n+1}.\n\nЧИСЛА НА КАТАЛАН: C_n = C(2n, n)/(n+1) = C(2n, n) − C(2n, n+1). Първи стойности: 1, 1, 2, 5, 14, 42, 132, ...\n\nБРОЕНЕ ЧРЕЗ КАТАЛАН: (1) Брой на правилни скоби с n двойки. (2) Брой на пътища от (0,0) до (n,n) без пресичане на диагонала (само над). (3) Брой на бинарни дървета с n върха. (4) Брой на триангулации на (n+2)-ъгълник.\n\nПРИЛОЖЕНИЯ: (1) Задачи 'намери броя на ...' - често се свеждат до Каталан или Фибоначи. (2) Рекурентни връзки в графи.\n\nТИПИЧНА ЗАДАЧА: 'Колко начина да се стигне от (0,0) до (10,10) без да се минава под диагонала?' Отговор: C_10 = 16796.\n\nЧЕСТ ТРИК: Ако видиш 'правилни скоби' или 'път без пресичане' - Каталан. Ако видиш 'F_{n+2} = F_{n+1} + F_n' - Фибоначи." },
+    { id:"8.9", title:"Производящи функции", desc:"Основи", source:"OT_2012, Комбинаторика (Ем. Колев)", pdf:"Материали_БГ/OT_2012", page:13,
+      explanation:"ОПРЕДЕЛЕНИЕ: За редица (a_0, a_1, ...) производяща функция е формалният степенен ред A(x) = ∑a_n x^n.\n\nОПЕРАЦИИ: (1) Събиране: (A + B)(x) = A(x) + B(x). (2) Умножение (Коши): (AB)(x) = ∑(∑a_i b_{n−i}) x^n. (3) Диференциране: A'(x) = ∑n a_n x^{n−1}. (4) Композиция.\n\nОСНОВНИ ФОРМУЛИ: (1) ∑x^n = 1/(1−x). (2) ∑C(n, k) x^k = (1+x)^n. (3) ∑nx^n = x/(1−x)². (4) ∑x^n/n! = e^x. (5) Фибоначи: ∑F_n x^n = x/(1 − x − x²).\n\nТЕХНИКИ: (1) Задача с рекурсия a_n = f(предишни) → напиши A(x), изрази A(x) = g(x)·A(x) + h(x), реши. (2) Задачи с броене → напиши A(x) като произведение на прости ПФ. (3) Коефициентът [x^n] A(x) е отговорът.\n\nПРИМЕР: Редицата на Каталан. C_{n+1} = ∑_{i=0}^n C_i C_{n−i}. ПФ: C(x) = 1 + x C(x)². Решение: C(x) = (1 − √(1 − 4x))/(2x).\n\nПРИЛОЖЕНИЯ: (1) Задачи с рекурсии и броене. (2) Комбинаторни тъждества. (3) Асимптотично поведение.\n\nТИПИЧНА ЗАДАЧА: 'Намери броя на начините да хвърлиш n монети с поне една глава'. ПФ: (1+x)^n − 1, коефициент при x^n е 2^n − 1." },
+    { id:"8.10", title:"Индукция в комбинаториката", desc:"Обикновена, силна, двойна", source:"OT_2010, Релации", pdf:"Материали_БГ/OT_2010", page:15,
+      explanation:"ОБИКНОВЕНА ИНДУКЦИЯ: (1) База: P(1). (2) Стъпка: P(k) ⇒ P(k+1). Заключение: P(n) за всички n.\n\nСИЛНА ИНДУКЦИЯ: (1) База: P(1), ..., P(m). (2) Стъпка: P(1), ..., P(k) ⇒ P(k+1). Еквивалентна на обикновена, но по-удобна.\n\nДВОЙНА ИНДУКЦИЯ (по два параметъра): Доказваш P(m, n) чрез индукция по m+n или по (m, n) лексикографски.\n\nСТРУКТУРНА ИНДУКЦИЯ: За обекти, дефинирани рекурсивно (дървета, формули, изрази).\n\nПРИМЕР (силна): Всяко n ≥ 2 се разлага на прости. База: n = 2. Стъпка: ако n е просто - готово. Иначе n = ab с 1 < a, b < n. По силна индукция a и b се разлагат. → n се разлага.\n\nТИПИЧНА КОМБИНАТОРНА ЗАДАЧА: 'Докажи, че всеки граф с n върха има поне 2 върха с еднаква степен'. Използва се Дирихле, но индукцията също работи.\n\nЗАДАЧА С ДВОЙНА: 'Докажи, че броят на начините да се стигне от (0,0) до (m,n) е C(m+n, m)'. Индукция по m+n.\n\nЧЕСТ ТРИК: При комбинаторни задачи индукцията често е по размера (n, брой върхове, брой елементи). Внимавай с базата - понякога трябва да докажеш няколко начални случая." }
+  ]
+},
+{ id:9, icon:"◆", title:"КОМБИНАТОРИКА – ГРАФИ И ИГРИ",
+  points:[
+    { id:"9.1", title:"Основи на графите", desc:"Върхове, ребра, степени", source:"OT_2010, Комб. и графи (Ст. Герджиков)", pdf:"Материали_БГ/OT_2010", page:81,
+      explanation:"ОПРЕДЕЛЕНИЯ: Граф G = (V, E). V - множество от върхове (вертици), E - множество от ребра (2-елементни подмножества на V).\n\nСТЕПЕН: deg(v) = брой на ребрата, съдържащи v.\n\nЛЕМА ЗА РЪКОСТИСКАНЕ: ∑_{v ∈ V} deg(v) = 2|E|. Следствие: броят на върховете с нечетна степен е четен.\n\nПРИМЕРИ: (1) Пълен граф K_n: всеки връх е свързан с всеки друг. |E| = n(n−1)/2, deg = n−1. (2) Пълен двуделен K_{m,n}: |E| = mn. (3) Цикъл C_n: n върха, n ребра, всеки връх е с deg 2.\n\nСВЪРЗАНОСТ: Графът е свързан, ако между всеки 2 върха има път. Компоненти на свързаност: максимални свързани подграфове.\n\nДОПЪЛНЕНИЕ: Ḡ е граф с V като върхове и ребра - всички 2-елементни подмножества, които не са в E.\n\nПОДГРАФ: (V', E') с V' ⊆ V, E' ⊆ E.\n\nПРИЛОЖЕНИЯ: (1) Моделиране на мрежи, разписания. (2) Задачи 'има ли път от A до B'. (3) Теореми за цветове, турове.\n\nТИПИЧНА ЗАДАЧА: 'Докажи, че в произволна група от n души има 2 с еднакъв брой приятели'. Чрез лемата за ръкостискане + Дирихле." },
+    { id:"9.2", title:"Дървета", desc:"Свързани без цикли", source:"OT_2010, Комб. и графи", pdf:"Материали_БГ/OT_2010", page:81,
+      explanation:"ОПРЕДЕЛЕНИЕ: Дърво е свързан граф без цикли.\n\nХАРАКТЕРИЗАЦИЯ: Следните условия са еквивалентни: (1) G е свързан и без цикли. (2) G е свързан и |E| = |V| − 1. (3) G е без цикли и |E| = |V| − 1. (4) Между всеки 2 върха има точно 1 път. (5) G е минимално свързан.\n\nФОРМУЛА НА КЕЙЛИ: Броят на различните дървета с n етикетирани върха е n^{n−2}.\n\nДЪРВО НА ОБХВАТ: За всеки свързан граф G съществува подграф-дърво, съдържащо всички върхове (spanning tree).\n\nБРОЙ НА ЛИСТАТА (върхове със степен 1): Всяко дърво с n ≥ 2 има поне 2 листа.\n\nПРИЛОЖЕНИЯ: (1) DFS/BFS алгоритми. (2) Задачи с минимална свързаност. (3) Задачи 'колко начина да свържеш n точки без цикъл' - Кейли.\n\nТИПИЧНА ЗАДАЧА: 'Колко различни дървета има с 5 върха?' Отговор: 5^3 = 125 (Кейли).\n\nЧЕСТ ТРИК: Ако в задача се говори за 'свързано без цикъл', 'уникален път', 'минимална свързаност' - дърво.\n\nСВОЙСТВО: Дървото с n върха има n − 1 ребра. Ако граф е свързан и има n−1 ребра, той е дърво." },
+    { id:"9.3", title:"Ойлерови и Хамилтонови пътища", desc:"Условия", source:"OT_2010, Комб. и графи", pdf:"Материали_БГ/OT_2010", page:81,
+      explanation:"ОЙЛЕРОВ ПЪТ: Път, минаващ през ВСЯКО ребро точно веднъж. Ойлеров цикъл: затворен Ойлеров път.\n\nСЪЩЕСТВУВАНЕ: (1) Ойлеров цикъл ⇔ графът е свързан и всички върхове имат четна степен. (2) Ойлеров път (не цикъл) ⇔ свързан и точно 2 върха имат нечетна степен. Тези 2 върха са началото и краят.\n\nХАМИЛТОНОВ ПЪТ: Път, минаващ през ВСЕКИ връх точно веднъж. Хамилтонов цикъл: затворен.\n\nСЪЩЕСТВУВАНЕ НА ХАМИЛТОНОВ: Няма прост критерий! Хамилтонов цикъл е NP-пълен проблем. Някои достатъчни условия: (1) Теорема на Дирак: ако deg(v) ≥ n/2 за всеки връх, графът има Хамилтонов цикъл. (2) Теорема на Оре: ако за всяка несвързана двойка (u, v): deg(u) + deg(v) ≥ n, графът има Хамилтонов цикъл.\n\nПРИЛОЖЕНИЯ: (1) Задачи с 'обиколка'. (2) Проблемът на търговския пътник (TSP). (3) Задачи с шахматна дъска.\n\nТИПИЧНА ЗАДАЧА: 'Обиколете шахматна дъска с кон, всеки път точно веднъж' - Хамилтонов.\n\nЧЕСТ ТРИК: Ойлеровото е лесно проверимо (степени). Хамилтоновото - трудно. Ако задачата иска 'минаване през всеки връх' → Хамилтонов; 'през всяко ребро' → Ойлеров.\n\nПРИМЕР: K_n има Ойлеров цикъл ⇔ n е нечетно. K_n има Хамилтонов цикъл за всяко n ≥ 3." },
+    { id:"9.4", title:"Клики и независими множества", desc:"Максимални клики", source:"OT_2010, Комб. и графи", pdf:"Материали_БГ/OT_2010", page:81,
+      explanation:"КЛИКА: Подмножество S на V, в което всеки 2 върха са свързани с ребро. Т.е. S образува пълен подграф.\n\nЧИСЛО НА КЛИКАТА: ω(G) = размерът на най-голямата клика в G.\n\nНЕЗАВИСИМО МНОЖЕСТВО: Подмножество S на V, в което НИКОИ 2 върха не са свързани. Т.е. S не съдържа ребра.\n\nЧИСЛО НА НЕЗАВИСИМОСТ: α(G) = размерът на най-голямото независимо множество.\n\nВРЪЗКА: α(G) = ω(Ḡ). Независимо множество в G = клика в допълнението.\n\nПРИМЕРИ: (1) K_n: ω = n, α = 1. (2) Пълен двуделен K_{m,n}: ω = 2, α = max(m, n). (3) Цикъл C_n: α = ⌊n/2⌋, ω = 2 или 3 (зависи от n).\n\nПРИЛОЖЕНИЯ: (1) Задачи 'намери максимална група, в която ...'. (2) Задачи с оцветявания (несъседни върхове). (3) Теорема на Рамзи.\n\nТИПИЧНА ЗАДАЧА: 'Докажи, че сред 6 души има 3, които се познават взаимно, ИЛИ 3, които не се познават'. Това е R(3,3) = 6 = твърдение за клика/независимо множество.\n\nЧЕСТ ТРИК: Ако задачата е за 'без взаимни връзки' - независимо множество. Ако е 'всички взаимно свързани' - клика. Връзка чрез допълнение." },
+    { id:"9.5", title:"Теорема на Туран", desc:"Макс. ребра без K_{r+1}", source:"OT_2010, Релации (Ив. Кортезов)", pdf:"Материали_БГ/OT_2010", page:15,
+      explanation:"ФОРМУЛИРОВКА: Максималният брой ребра в граф с n върха, който НЕ съдържа K_{r+1} (пълен подграф на r+1 върха), е:\nex(n, K_{r+1}) = (1 − 1/r) · n²/2.\n\nЕКСТРЕМАЛЕН ГРАФ: Пълният r-делен граф T(n, r) - върховете са разделени на r части, възможно най-равни, и всички ребра между различни части са налични.\n\nПРИМЕР: r = 1 (без K_2, т.е. без ребра): ex = 0. r = 2 (без K_3, двуделен): ex = n²/4. r = 3 (без K_4): ex = n²/3.\n\nОБОБЩЕНИЕ: Теорема на Ердьош-Стоун-Симоновиц за произволен граф H вместо K_{r+1}.\n\nПРИЛОЖЕНИЯ: (1) Задачи 'намери максимален брой ребра без пълен подграф'. (2) Екстремална теория на графи. (3) Комбинаторни задачи 'колко е максимумът'.\n\nТИПИЧНА ЗАДАЧА: 'На граф с 10 върха, който няма триъгълник, колко ребра може да има максимум?' Отговор: ⌊100/4⌋ = 25.\n\nЧЕСТ ТРИК: Ако задачата е 'максимум ребра без да съдържа конкретен пълен подграф', теоремата на Туран е директният отговор.\n\nВНИМАНИЕ: За различни H (не пълни графи), формулировката е по-сложна. За K_{r+1} - горното е точно." },
+    { id:"9.6", title:"Теорема на Рамзи", desc:"R(3,3) = 6", source:"OT_2010, Релации", pdf:"Материали_БГ/OT_2010", page:15,
+      explanation:"ОПРЕДЕЛЕНИЕ: R(s, t) = най-малкото n, такова че всеки граф с n върха има клика от размер s или независимо множество от размер t (независимо от оцветяването).\n\nФОРМУЛИРОВКА: R(s, t) = най-малкото n, такова че при всяко 2-оцветяване на ребрата на K_n в червено/синьо има червено K_s или синьо K_t.\n\nR(3, 3) = 6: Доказателство: в K_6, изберете връх v. Той има 5 съседи; по Дирихле, 3 от тях са свързани с v в същия цвят, да речем червено. Тези 3 върха: или между тях има червено ребро (тогава с v правим червено K_3), или всички техни ребра са сини (тогава синьо K_3).\n\nДРУГИ СТОЙНОСТИ: R(3, 4) = 9, R(3, 5) = 14, R(4, 4) = 18. R(5, 5) - неизвестно (между 43 и 48).\n\nОБОБЩЕНИЕ (многоцветно): R_k(s₁, ..., s_k) - с k цвята.\n\nПРИЛОЖЕНИЯ: (1) Задачи 'докажи, че сред 6 души има 3, които се познават или 3, които не се познават'. (2) Комбинаторни задачи с гарантирано съществуване.\n\nТИПИЧНА ЗАДАЧА: 'Какъв е най-малкият n, за който сред всеки n души има 3, които се познават, или 4, които не се познават?' Отговор: R(3, 4) = 9.\n\nЧЕСТ ТРИК: Ако задачата иска 'гарантирано' съществуване с цветове - Рамзи." },
+    { id:"9.7", title:"Оцветявания на графи", desc:"Хроматично число", source:"OT_2010, Комб. и графи", pdf:"Материали_БГ/OT_2010", page:81,
+      explanation:"ОПРЕДЕЛЕНИЕ: Правилно оцветяване на върховете - всяко ребро свързва върхове с различни цветове. Хроматично число χ(G) = минимален брой цветове.\n\nПРИМЕРИ: (1) χ(K_n) = n. (2) χ(C_n) = 2 ако n е четно, 3 ако нечетно. (3) χ(дърво) ≤ 2. (4) χ(двуделен граф) ≤ 2. (5) χ(планарен) ≤ 4 (теорема за 4-те цвята).\n\nТЕОРЕМА НА БРУКС: χ(G) ≤ Δ(G) освен ако G е пълен или нечетен цикъл. Тук Δ = максимална степен.\n\nТЕОРЕМА ЗА 4 ЦВЯТА: Всеки планарен граф има χ ≤ 4.\n\nСВЪРЗАНО С НЕЗАВИСИМОСТ: χ(G) ≥ n/α(G). Защото всеки цветови клас е независимо множество.\n\nПРИЛОЖЕНИЯ: (1) Задачи с разписания. (2) Задачи 'минимален брой категории'. (3) Теорема за 4-те цвята.\n\nТИПИЧНА ЗАДАЧА: 'Оцветете карта на Европа с минимален брой цветове' - χ за планарния граф на границите.\n\nЧЕСТ ТРИК: Горната граница често е Δ + 1 (жаден алгоритъм). За специални класове (двуделни, планарни) има по-добри граници.\n\nГРАФЪТ Е ДВУДЕЛЕН ⇔ χ ≤ 2 ⇔ няма нечетен цикъл." },
+    { id:"9.8", title:"Игри – инварианти/моноварианти", desc:"Печеливши стратегии", source:"BMS_2012-2015, игри", pdf:"Материали_БГ/BMS_2012-2015", page:1,
+      explanation:"ИНВАРИАНТ: Величина, която НЕ се променя при никой ход. Използва се за доказване на невъзможност ('никога няма да стигнем до X').\n\nМОНОВАРИАНТ: Величина, която се променя МОНОТОННО (само намалява или само расте) при всеки ход. Използва се за доказване, че играта свършва или за печеливша стратегия.\n\nПРИМЕР ЗА ИНВАРИАНТ: Игра с числа, при която всеки ход замени (a, b) с (a+b, b). Сумата a+b не е инвариант, но a+b mod 2 е. Или: нека m = min(a, b) - при ход (a, b) → (a+b, b) новото min може да намалее...\n\nПРИМЕР ЗА МОНОВАРИАНТ: Игра, при която всеки ход намалява сумата на числата. Тогава играта задължително свършва.\n\nПРИЛОЖЕНИЯ: (1) Задачи 'може ли да се стигне до ...'. (2) Задачи с 'игра с числа' или 'шахматна дъска'. (3) Доказване, че някой винаги печели.\n\nТИПИЧНА ЗАДАЧА: 'Игра с купчина от n камъка. Всеки ход премахва 1, 2 или 3. Печели този, който вземе последния. Има ли печеливша стратегия?' - тук се анализират N/P позиции.\n\nЧЕСТ ТРИК: Търси инвариант във формата на 'сума mod k', 'произведение', 'брой на нещо', 'четност'. Ако задачата казва 'докажи, че не може', инвариантът е ключът." },
+    { id:"9.9", title:"Игри – симетрия", desc:"Стратегия на копиране", source:"BMS_2012-2015, игри", pdf:"Материали_БГ/BMS_2012-2015", page:1,
+      explanation:"ИДЕЯ: Ако играта има СИМЕТРИЯ (обикновено в началото), играчът, който може да я поддържа, печели.\n\nMIRROR STRATEGY: Ако конфигурацията има огледална симетрия спрямо някоя точка/права, играчът, който е 'втория', може да отговаря на всеки ход на противника със огледален ход. Това поддържа симетрията и води до победа.\n\nОБИКНОВЕНА РАМКА: (1) Ако началната позиция има централна симетрия (без фиксирана точка), вторият играч печели с огледална стратегия. (2) Ако има фиксирана точка, първият играч първо я заема, после играе огледално.\n\nПРИМЕР: Игра 'който напише последното число в редица 1..n'. Ако n е четно, вторият може да пише 'n − x + 1' срещу всеки ход x. Печели.\n\nПРИМЕР: Шахматна дъска 8×8 без 2 противоположни ъгъла (по диагонал). Може ли да се покрие с домино 2×1? Не - защото дъската няма симетрия. Оцветяване с две шахматни бои - ако всеки цвят има различен брой, не може.\n\nПРИЛОЖЕНИЯ: (1) Игри с дъски. (2) Игри с числа (n, n/2). (3) Покриване с плочки.\n\nТИПИЧНА ЗАДАЧА: 'Аз и ти се редуваме да поставяме монети върху кръгла маса. Не може да се препокриват. Печели този, който последен постави. Кой печели?' - първият поставя в центъра, после огледално.\n\nЧЕСТ ТРИК: Търси симетрия на началната позиция. Ако няма - има ли специална точка (център, ос)? Тогава първият я заема и после имитира." },
+    { id:"9.10", title:"Игри – печеливши стратегии", desc:"Позиционни игри", source:"BMS_2012-2015, игри", pdf:"Материали_БГ/BMS_2012-2015", page:1,
+      explanation:"КЛАСИФИКАЦИЯ НА ПОЗИЦИИ: (1) N-позиция (N = next player win): позиция, от която играчът на ход има печеливша стратегия. (2) P-позиция (P = previous player win): позиция, от която всеки ход води до N-позиция.\n\nПРАВИЛА: (1) Терминална позиция (не може да се играе) е P. (2) Позиция е N ако съществува ход до P. (3) Позиция е P ако ВСЕКИ ход води до N.\n\nСТАНДАРТНА СТРАТЕГИЯ: Изчисли N/P статуса за малки позиции (чрез индукция). После намери правило.\n\nПРИМЕР: Игра с 1 купчина n камъка. Всеки ход премахва 1, 2 или 3. Печели този, който вземе последния. N позиции: n mod 4 ≠ 0. P позиции: n mod 4 = 0. Стратегия: винаги отнеми толкова, че да остане кратно на 4.\n\nПРИМЕР: Игра на Ним (няколко купчини, всеки ход маха от 1 купчина). N/P определени от XOR на размерите: P ⇔ XOR = 0.\n\nПРИЛОЖЕНИЯ: (1) Игри с камъчета. (2) Задачи 'кой печели'. (3) Комбинаторна теория на игрите (Sprague-Grundy).\n\nТИПИЧНА ЗАДАЧА: 'Игра с 2 купчини (a, b). Ход: отнеми от едната купчина ИЛИ от двете по равно. Кой печели?'\n\nЧЕСТ ТРИК: За малки размери изчисли ръчно N/P. Търси периодичност или аритметично правило. За Ним - XOR.\n\nТЕОРЕМА SPRAUGE-GRUNDY: За игри, които се разпадат на независими компоненти, стойността на позицията е XOR на стойностите на компонентите. P ⇔ XOR = 0." }
+  ]
+},
+{ id:10, icon:"◆", title:"СМЕСЕНИ – НАЦИОНАЛНИ КРЪГОВЕ",
+  points:[
+    { id:"10.1", title:"НОМ национален кръг 2012", desc:"11. клас, 6 задачи", source:"BMS_2012-2015", pdf:"Материали_БГ/BMS_2012-2015", page:14,
+      explanation:"ЗАДАЧА 1 (ТЧ/редици, Бойваленков): Редица a_{n+1} = a_n + 2τ(n). Възможно ли е 2 последователни члена да са точни квадрати? Отговор: не. Идея: разгледай mod 4 или оценки.\n\nЗАДАЧА 2 (Комбинаторика, Ал. Иванов): Оцветяване на естествените числа в 2 цвята. Условия: p^n, p^{n+1}, p^{n+2} не са едноцветни; няма безкрайна едноцветна геометрична прогресия. Идея: построи оцветяването рекурсивно.\n\nЗАДАЧА 3 (Игри/полиноми, Н. Николов): Игра с уравнение x⁴ + ⋆x³ + ⋆x² + ⋆x + ⋆ = 0, играчите заменят звездички с цели степени на a. Сашо печели ако уравнението няма реални корени. Идея: печеливша стратегия на Сашо - избор на старши коефициент с подходящ знак.\n\nЗАДАЧА 4 (Комбинаторика, Ем. Колев): Разделяне на ненулевите редици от 0 и 1 с дължина n на тройки с условие. Идея: конструкция чрез XOR / линейна алгебра над 𝔽₂.\n\nЗАДАЧА 5 (Алгебра/неравенства, Н. Николов, О. Мушкаров): Q(x) квадратен тричлен, P(x) = x²Q(x) растяща на (0, ∞). Докажи P(x)+P(y)+P(z) > 0 при x+y+z > 0 и xyz > 0. Идея: използвай, че P е растяща и P(0) = 0, раздели на случаи.\n\nЗАДАЧА 6 (Геометрия, Ст. Боев, Ал. Иванов): △ABC, вътрешна точка X. A₁, B₁, C₁ - втори пресечни точки на AX, BX, CX с описаната. A₂, B₂, C₂ - симетрии на A₁, B₁, C₁ спрямо среди на BC, CA, AB. Докажи, че описаната на △A₂B₂C₂ минава през постоянна точка. Идея: спирално подобие или комплексни числа." },
+    { id:"10.2", title:"НОМ национален кръг 2013", desc:"11. клас, 6 задачи", source:"BMS_2012-2015", pdf:"Материали_БГ/BMS_2012-2015", page:30,
+      explanation:"ЗАДАЧА 1 (ТЧ, Бойваленков): Прости p, q с p^{q+1} + q^{p+1} = □. Идея: разгледай mod 2, после малки случаи. Отговор: (2, 2) или специални двойки.\n\nЗАДАЧА 2 (ФУ, Н. Николов): f: ℝ → ℝ ограничена в (0, 1) и x²f(x) − y²f(y) = (x²−y²)f(x+y) − xy f(x−y). Идея: замести y = 0, y = x, докажи инективност.\n\nЗАДАЧА 3 (Комбинаторика/геометрия, Белухов): Оцветяване на цели точки в 3 цвята. Намери най-малко S такова, че винаги има едноцветен триъгълник с лице S. Идея: използвай решетъчна геометрия.\n\nЗАДАЧА 4 (Тригонометрия/неравенства, Н. Николов): α, β, γ ∈ [0, π/2), tan α + tan β + tan γ ≤ 3 ⇒ cos 2α + cos 2β + cos 2γ ≥ 0. Идея: превърни cos 2x в израз с tan, използвай Коши.\n\nЗАДАЧА 5 (Геометрия, Ал. Иванов): Остроъгълен △ABC с височини AA₁, BB₁, CC₁. Построяваш точки C', B', A' с условия. Докажи, че R, R', R'' са страни на триъгълник с лице S/2. Идея: изрази радиусите чрез тригонометрия, сведи до тъждество.\n\nЗАДАЧА 6 (ТЧ, Ал. Иванов): m ∈ ℕ, p > m просто. Броят на n с m² + n² + p² − 2mn − 2mp − 2np = □ не зависи от p. Идея: изразът е (m−n)² + p² − 2p(m+n) = (m−n)² + (p−m−n)² − 4mn. Задача от тип 'работи по модул'." },
+    { id:"10.3", title:"НОМ национален кръг 2014", desc:"11. клас, 6 задачи", source:"BMS_2012-2015", pdf:"Материали_БГ/BMS_2012-2015", page:46,
+      explanation:"ЗАДАЧА 1 (Геометрия, Витанов, Ем. Колев): Окръжност k, точка A извън нея. BC е диаметър на k. Намери ГМТ на ортоцентъра на △ABC. Идея: свържи с центъра O и A, намери зависимост. Резултат: окръжност или права.\n\nЗАДАЧА 2 (Комбинаторика, Белухов): Шахматна дъска m×n, оцветяване с 4 цвята така че всяко 2×2 да съдържа всички 4 цвята. Намери броя на оцветяванията. Идея: сведи до 2×2 блокове, използвай симетрии. Отговор: 4! · ... зависи от m, n.\n\nЗАДАЧА 3 (Алгебра/геометрия, Ал. Иванов): Във всяка точка на пространството ненулево реално число. Числото в центъра на вписаната сфера на всеки тетраедър = произведението на върховете. Докажи, че всички числа са 1. Идея: разгледай семейства тетраедри с общ център.\n\nЗАДАЧА 4 (ТЧ, Бойваленков): Прости p, q с p² | q³ + 1 и q² | p⁶ − 1. Идея: p² | (q+1)(q²−q+1). Разгледай дали p дели q+1 или q²−q+1. Отговор: няма решения освен тривиални.\n\nЗАДАЧА 5 (ФУ, Н. Николов): f: ℚ⁺ → ℝ⁺ с f(xy) = f(x+y)(f(x)+f(y)). Идея: замести x = y = 1; докажи f е инективна; изрази f(2), f(3); намери противоречие или решение.\n\nЗАДАЧА 6 (Геометрия, Белухов): Вписан четириъгълник ABCD, AC ∩ BD = E, CB ∩ DA = F. Прави през центровете на вписаните окръжности на △ABE, △ABF и аналогичните за C, D - конкурентни на k. Идея: полюси и поляри, симедиани, радикални оси." },
+    { id:"10.4", title:"НОМ национален кръг 2015", desc:"11. клас, 6 задачи", source:"BMS_2012-2015", pdf:"Материали_БГ/BMS_2012-2015", page:61,
+      explanation:"ЗАДАЧА 1 (Геометрия, Ал. Иванов): Вписан ABCDEF. LK пресича AD, BC, AC, BD в M, N, P, Q. Докажи NL·KP·MQ = KM·PN·LQ. Идея: използвай Менелай или хармонично отношение.\n\nЗАДАЧА 2 (Комбинаторика, Белухов): 101 сини клетки в n×n таблица. Единствен начин да се разреже на правоъгълници, всеки с 1 синя. Намери min n. Идея: условие върху сините клетки. Отговор: n = 15 или подобно.\n\nЗАДАЧА 3 (ТЧ/редици, Ал. Иванов): a₁ = 2, a₂ = 12, a_{n+1} = 6a_n − a_{n−1}. Докажи, че никой член не е точна степен (по-висока от 1). Идея: характеристично уравнение, p-адични оценки, модулна редукция.\n\nЗАДАЧА 4 (ФУ/неравенства, Й. Йорданов): f: ℝ⁺ → ℝ⁺ с (i) f(x+y) ≥ f(x) + y, (ii) f(f(x)) ≤ x. Намери всички f. Отговор: f(x) = x. Идея: замести x с f(x), комбинирай неравенствата.\n\nЗАДАЧА 5 (Геометрия, Ал. Иванов, Й. Йорданов): △ABC, точка L ∈ AB, P ∈ AC, Q ∈ BC с PCQL успоредник. Окръжност с център средата M на AB и радиус CM, и окръжност с диаметър CL се пресичат втори път в T. Докажи AQ, BP, LT конкурентни. Идея: спирално подобие, Микел.\n\nЗАДАЧА 6 (Комбинаторика, Белухов): Ученици, рейтинг по 4 теми. Всеки 2 различни по всяка тема. Група 'хубава' ако се подреждат растящо по поне 2 рейтинга. Намери min N с 10 хубави сред всеки N. Идея: теория на Рамзи, многомерни разсъждения." },
+    { id:"10.5", title:"Контролни за БОМ 2012–2015", desc:"6 задачи × 4 години", source:"BMS_2012-2015", pdf:"Материали_БГ/BMS_2012-2015", page:100,
+      explanation:"КАКВО ПРЕДСТАВЛЯВАТ: Контролните за БОМ (Балканска олимпиада) са състезания, на които се избира отборът на България. Ниво: малко под националния кръг, но все още трудно.\n\nСТРУКТУРА: Обикновено 4 задачи за 4 часа или 6 задачи в 2 дни.\n\nТЕМИ: Често смесица - ТЧ, Геометрия, Комбинаторика, Алгебра. По-конкретни от националния кръг, но пак разнообразни.\n\nСТРАТЕГИЯ: Решавай ги под ред. Сравни решенията. Запиши си кои техники са нови.\n\nПОЛЕЗНИ ЗА: (1) Реалистична подготовка за национален кръг. (2) Виждане на стила на българските задачи. (3) Разнообразие от теми.\n\nВНИМАНИЕ: Решавай БЕЗ да гледаш решенията. Време: 4 часа на ден. Запиши какво не си решил и защо." },
+    { id:"10.6", title:"Контролни за МОМ 2012–2015", desc:"6 задачи × 4 години", source:"BMS_2012-2015", pdf:"Материали_БГ/BMS_2012-2015", page:150,
+      explanation:"КАКВО ПРЕДСТАВЛЯВАТ: Контролните за МОМ (Международна олимпиада) - най-трудните български задачи. Използват се за избор на отбора за IMO.\n\nНИВО: Съизмеримо с националния кръг или по-високо. Много трудни задачи.\n\nСТРУКТУРА: Обикновено 6 задачи в 2 дни по 3, 4.5 часа на ден (като IMO).\n\nТЕМИ: Балансирано - 2 геометрия, 2 алгебра/ТЧ, 2 комбинаторика. Високо техническо ниво.\n\nСТРАТЕГИЯ: (1) Използвай ги за СИМУЛАЦИИ. (2) Не очаквай да решиш всичко - 2-3 задачи е добре. (3) Анализирай решенията внимателно.\n\nПОЛЕЗНИ ЗА: (1) Реалистична оценка на нивото. (2) Психологическа подготовка. (3) Техники от най-висок клас.\n\nВНИМАНИЕ: Тези задачи са много по-трудни от националния кръг. Ако не можеш да ги решиш, това е нормално." },
+    { id:"10.7", title:"NOM_2013 – избрани", desc:"Русия, Китай, САЩ, Иран", source:"NOM_2013", pdf:"Материали_БГ/NOM_2013", page:1,
+      explanation:"КАКВО Е NOM: Национални олимпиади по математика на различни страни, събрани в един сборник.\n\nСТИЛОВЕ: (1) РУСИЯ: класически, често с елегантни решения, разнообразни теми. (2) КИТАЙ: технически, често с изчисления и оценки. (3) САЩ: разнообразни, често с комбинаторика и графи. (4) ИРАН: силни в геометрия и ТЧ.\n\nКАК ДА ГИ РЕШАВАШ: (1) Избери 2-3 държави. (2) Реши задачите за 11. клас. (3) Фокус върху геометрия и комбинаторика - там е най-голямата стойност. (4) Сравни с решенията.\n\nПОЛЕЗНИ ЗА: (1) Разнообразие от стилове. (2) Виждане на нови техники. (3) Разширяване на кръгозора.\n\nСТРАТЕГИЯ: Реши 2-3 задачи от всяка страна. Не се опитвай да решиш всичко. По-добре е да разбереш добре 20 задачи, отколкото повърхностно 100." },
+    { id:"10.8", title:"NOM_2014 – избрани", desc:"Русия, Китай, САЩ, Иран", source:"NOM_2014", pdf:"Материали_БГ/NOM_2014", page:1,
+      explanation:"СЪЩОТО КАТО NOM_2013: Избери 2-3 държави, решавай систематично.\n\nДОПЪЛНИТЕЛНО: Сравни стиловете между годините. Забележи кои теми се повтарят (например Русия често има задачи с неравенства, Китай - с ТЧ).\n\nТЕМИ ЗА ФОКУС: Геометрия (винаги има поне 1-2 задачи на олимпиада); Комбинаторика (много разнообразна); ТЧ (особено при Китай и Русия).\n\nВРЕМЕ: По 30-45 мин на задача преди да погледнеш решението. Води си тетрадка с идеи.\n\nПОЛЕЗНИ ЗА: Затвърдяване на наученото от NOM_2013." },
+    { id:"10.9", title:"NOM_2015-2016 – избрани", desc:"Русия, Китай, САЩ, Иран", source:"NOM_2015-2016", pdf:"Материали_БГ/NOM_2015-2016", page:1,
+      explanation:"НАЙ-НОВИТЕ: Задачи от 2015-2016. Използвай ги за последен етап на подготовка.\n\nПРЕДИМСТВО: По-новите задачи често имат 'съвременен' стил - по-конкретни, по-технически, но и по-изчистени откъм излишни детайли.\n\nСИМУЛАЦИИ: Използвай ги като допълнителни симулации. Направи 3 задачи за 4.5 часа без прекъсване.\n\nТЕМИ: Обърни внимание на баланса - ако нещо липсва в предишните години, вероятно е тук.\n\nПОЛЕЗНИ ЗА: Финална подготовка. Сравни с националните кръгове - виж кои техники са универсални." },
+    { id:"10.10", title:"BMC_2003-2006 – избрани", desc:"Национален кръг, контролни", source:"BMC_2003-2006", pdf:"Материали_БГ/BMC_2003-2006", page:1,
+      explanation:"КЛАСИЧЕСКИ ЗАДАЧИ: BMC_2003-2006 е сборник с български състезания от 2003-2006. Класически задачи, много от които вече са 'стандарт'.\n\nСТРУКТУРА: За всяка година: Winter (Зимен), Spring (Пролетен), Regional (Областен), National (Национален), BMO контролни, IMO контролни.\n\nКАК ДА ГИ ИЗПОЛЗВАШ: (1) Реши националните кръгове за твоя клас. (2) Сравни решенията. (3) Използвай ги за допълнителна практика.\n\nПОЛЕЗНИ ЗА: (1) Класически техники. (2) По-стари стилове. (3) Разнообразие.\n\nВНИМАНИЕ: Тези задачи са по-стари, но много от тях са все още релевантни. Особено геометричните." }
+  ]
+},
+{ id:11, icon:"◆", title:"БОНУС – ЛЕКЦИИ И ТЕМИ",
+  points:[
+    { id:"11.1", title:"Лекции на Петър – PAMP 2019", desc:"4 лекции – общ преглед", source:"Бонус/lectures-peter", pdf:"Бонус/lectures-peter/lekcia1-pamp2019", page:1,
+      explanation:"КАКВО СА: 4 лекции от PAMP 2019 (Petar's Applied Mathematics Program). Общ преглед на олимпийски теми.\n\nСЪДЪРЖАНИЕ: Обикновено покриват широка гама от теми - геометрия, комбинаторика, алгебра, ТЧ. Подходящи за преговор или запълване на дупки.\n\nКАК ДА ГИ ИЗПОЛЗВАШ: (1) Прочети всяка лекция. (2) Реши задачите. (3) Запиши си ключовите идеи. (4) Свържи с материала от други стъпки.\n\nПОЛЕЗНИ ЗА: Общ преглед. Ако нещо в основния план не е ясно, тук може да намериш алтернативно обяснение." },
+    { id:"11.2", title:"Тема на седмицата 1–4", desc:"Тема + решения", source:"Бонус/tema-na-sedmicata", pdf:"Бонус/tema-na-sedmicata/week1-theme", page:1,
+      explanation:"КАКВО СА: Седмични теми с решения. Форматът е: една тема (week1-theme) + решения (week1-solutions).\n\nКАК ДА ГИ ИЗПОЛЗВАШ: (1) Прочети темата. (2) Реши задачите САМ. (3) Виж решенията. (4) Анализирай какво си сгрешил.\n\nПОЛЕЗНИ ЗА: Допълнителна практика. Особено ако искаш структурирани задачи по конкретни теми." },
+    { id:"11.3", title:"Теми с лекции (Tema 1–6)", desc:"Различни автори", source:"Теми с Лекции", pdf:"Теми с Лекции/Tema1-MarinHristov", page:1,
+      explanation:"КАКВО СА: 6 теми от различни автори - български олимпийци. Всяка тема покрива конкретна област.\n\nСЪДЪРЖАНИЕ: (1) Tema1-MarinHristov. (2) Tema2-BorislavKirilov (с presentation и solutions). (3) Tema3-PetkoLazarov. (4) Tema4-VeselinMarkovich. (5) Tema5-BozhidarDimitrov. (6) Tema6-Ilias-Bilyana.\n\nКАК ДА ГИ ИЗПОЛЗВАШ: (1) Прочети темата. (2) Реши задачите. (3) Ако има presentation, прегледай го за визуално обяснение.\n\nПОЛЕЗНИ ЗА: Разнообразие. Различни автори имат различни стилове." },
+    { id:"11.4", title:"Допълнителни сборници", desc:"BMO_1984-2006, BMS_2003-2005", source:"Материали_БГ", pdf:"Материали_БГ/BMO_1984-2006", page:1,
+      explanation:"BMO_1984-2006: Сборник с Балкански математически олимпиади от 1984 до 2006. Задачите са на нивото на националния кръг и по-високо.\n\nBMS_2003-2005: Български математически състезания (предишни години). Допълнение към BMC_2003-2006.\n\nКАК ДА ГИ ИЗПОЛЗВАШ: За разнообразие. Ако си изчерпал основните книги, тук има още задачи.\n\nПОЛЕЗНИ ЗА: (1) Разширяване на практиката. (2) Виждане на еволюцията на задачите. (3) Допълнителни симулации." }
+  ]
+}
+];
+
+const STORE_KEY = 'olympiad_v3';
+const LEGACY_KEY = 'olympiad_v2';
+const THEME_KEY = 'olympiad_theme';
+
+function defaultState() {
+  return {
+    progress: {},
+    ui: { filter:'all', collapsed: {}, scanlines:false },
+    streak: { count:0, lastDate:null },
+    pomodoroSessions: 0,
+  };
+}
+let state = loadState();
+let searchQuery = '';
+let currentIndex = -1;
+
+function loadState() {
+  try {
+    const raw = localStorage.getItem(STORE_KEY);
+    if (raw) {
+      const s = JSON.parse(raw);
+      s.progress = s.progress || {};
+      s.ui = s.ui || { filter:'all', collapsed:{}, scanlines:false };
+      s.streak = s.streak || { count:0, lastDate:null };
+      s.pomodoroSessions = s.pomodoroSessions || 0;
+      return s;
+    }
+  } catch(e) {}
+  const legacy2 = localStorage.getItem(LEGACY_KEY);
+  const legacy1 = localStorage.getItem('olympiad_progress');
+  const s = defaultState();
+  try {
+    if (legacy2) {
+      const old = JSON.parse(legacy2);
+      if (old.progress) s.progress = old.progress;
+      if (old.ui) s.ui = old.ui;
+      if (old.streak) s.streak = old.streak;
+      if (old.pomodoroSessions) s.pomodoroSessions = old.pomodoroSessions;
+    } else if (legacy1) {
+      const old = JSON.parse(legacy1);
+      Object.keys(old).forEach(id => {
+        if (old[id]) s.progress[id] = { done:true, fav:false, diff:null, notes:'' };
+      });
+    }
+  } catch(e) {}
+  return s;
+}
+function saveState() {
+  try { localStorage.setItem(STORE_KEY, JSON.stringify(state)); } catch(e) {}
+}
+function getPoint(id) {
+  for (const s of STEPS) for (const p of s.points) if (p.id === id) return p;
+  return null;
+}
+function getPointMeta(id) {
+  if (!state.progress[id]) state.progress[id] = { done:false, fav:false, diff:null, notes:'' };
+  return state.progress[id];
+}
+function getFlatPoints() {
+  const arr = [];
+  for (const s of STEPS) for (const p of s.points) arr.push({ step:s, point:p });
+  return arr;
+}
+
+// ===== THEME =====
+const THEMES = ['green', 'contrast', 'high'];
+const THEME_LABELS = { green:'GREEN', contrast:'SOFT', high:'HIGH' };
+
+function applyTheme(theme) {
+  if (theme === 'green') document.body.removeAttribute('data-theme');
+  else document.body.setAttribute('data-theme', theme);
+  document.getElementById('themeBtn').textContent = THEME_LABELS[theme] || 'GREEN';
+  localStorage.setItem(THEME_KEY, theme);
+}
+function cycleTheme() {
+  const cur = localStorage.getItem(THEME_KEY) || 'green';
+  const idx = THEMES.indexOf(cur);
+  const next = THEMES[(idx + 1) % THEMES.length];
+  applyTheme(next);
+  toast('Тема: ' + THEME_LABELS[next]);
+}
+
+function init() {
+  const savedTheme = localStorage.getItem(THEME_KEY) || 'green';
+  applyTheme(savedTheme);
+  if (state.ui.scanlines) document.body.classList.add('scanlines');
+  document.getElementById('scanToggleItem').innerHTML = '<span class="ic">◫</span> Scanlines: ' + (state.ui.scanlines ? 'ВКЛ' : 'ИЗКЛ');
+  renderSidebar();
+  renderContent();
+  updateStats();
+  renderStreak();
+  setupEvents();
+}
+
+function renderSidebar() {
+  const nav = document.getElementById('sidebarNav');
+  nav.innerHTML = '';
+  STEPS.forEach(step => {
+    const done = step.points.filter(p => getPointMeta(p.id).done).length;
+    const pct = Math.round(done / step.points.length * 100);
+    const btn = document.createElement('button');
+    btn.className = 'nav-step';
+    btn.dataset.step = step.id;
+    btn.innerHTML = `
+      <span class="num">${String(step.id).padStart(2,'0')}</span>
+      <span class="label">${step.title}</span>
+      <span class="ring" style="--pct:${pct}%"><span>${done}/${step.points.length}</span></span>
+    `;
+    btn.addEventListener('click', () => {
+      scrollToStep(step.id);
+      if (window.innerWidth <= 900) document.getElementById('sidebar').classList.add('collapsed');
+    });
+    nav.appendChild(btn);
+  });
+}
+function updateSidebarRings() {
+  document.querySelectorAll('.nav-step').forEach(btn => {
+    const stepId = parseInt(btn.dataset.step);
+    const step = STEPS.find(s => s.id === stepId);
+    if (!step) return;
+    const done = step.points.filter(p => getPointMeta(p.id).done).length;
+    const pct = Math.round(done / step.points.length * 100);
+    btn.querySelector('.ring').style.setProperty('--pct', pct + '%');
+    btn.querySelector('.ring span').textContent = done + '/' + step.points.length;
+  });
+}
+
+function renderContent() {
+  const container = document.getElementById('stepsContainer');
+  container.innerHTML = '';
+  const flat = getFlatPoints();
+  const filter = state.ui.filter;
+  let visible = 0;
+
+  STEPS.forEach(step => {
+    const pts = step.points.filter(p => matchFilter(p) && matchSearch(p));
+    if (pts.length === 0 && (searchQuery || filter !== 'all')) return;
+    visible++;
+
+    const sec = document.createElement('div');
+    sec.className = 'step' + (state.ui.collapsed[step.id] ? ' collapsed' : '');
+    sec.id = 'step-' + step.id;
+
+    const total = step.points.length;
+    const done = step.points.filter(p => getPointMeta(p.id).done).length;
+    const pct = Math.round(done / total * 100);
+
+    sec.innerHTML = `
+      <div class="step-header" onclick="toggleStep(${step.id}, event)">
+        <span class="step-toggle">▾</span>
+        <span class="step-num">${String(step.id).padStart(2,'0')}</span>
+        <span class="step-title">${step.title}</span>
+        <span class="step-badge ${done===total?'done':''}">${done}/${total} · ${pct}%</span>
+        <button class="step-reset" onclick="resetStep(${step.id}, event)" title="Нулирай стъпката">⌫</button>
+      </div>
+      <div class="step-body"></div>
+    `;
+    const body = sec.querySelector('.step-body');
+    pts.forEach(p => body.appendChild(buildPointEl(p, flat)));
+    container.appendChild(sec);
+  });
+
+  if (visible === 0) {
+    container.innerHTML = `<div class="empty"><div class="big">⌕</div><div>НЯМА РЕЗУЛТАТИ</div><div style="margin-top:10px;font-size:13px;">Промени филтъра или търсенето</div></div>`;
+  }
+}
+
+function buildPointEl(p, flat) {
+  const meta = getPointMeta(p.id);
+  const idx = flat.findIndex(x => x.point.id === p.id);
+  const el = document.createElement('div');
+  el.className = 'point';
+  if (meta.done) el.classList.add('done');
+  if (meta.fav) el.classList.add('fav');
+  el.id = 'point-' + p.id.replace('.', '-');
+  el.dataset.pid = p.id;
+  el.dataset.idx = idx;
+
+  const pdfBtn = p.pdf ? `<a href="${pdfUrl(p.pdf, p.page)}" target="_blank" class="pdf-btn" onclick="event.stopPropagation()">▸ PDF${p.page ? ' · стр. ' + p.page : ''}</a>` : '';
+  const pageTag = p.page ? `<span class="tag page">стр. ${p.page}</span>` : '';
+  const notesBadge = meta.notes ? `<span class="notes-badge">✎</span>` : '';
+
+  let bonusHtml = '';
+  if (p.bonus && p.bonus.length) {
+    bonusHtml = `<div class="bonus-row"><span class="section-label" style="margin-right:8px;">ОЩЕ:</span>${p.bonus.map(b => `<a href="${pdfUrl(b.pdf)}" target="_blank" class="pdf-btn bonus" onclick="event.stopPropagation()">▸ ${b.label}</a>`).join('')}</div>`;
+  }
+
+  el.innerHTML = `
+    <div class="point-row">
+      <button class="point-check ${meta.done?'checked':''}" onclick="toggleDone('${p.id}', event)">${meta.done?'✓':''}</button>
+      <div class="point-main">
+        <div class="point-num">ТОЧКА ${p.id}${notesBadge}</div>
+        <div class="point-title">${p.title}</div>
+        <div class="point-desc">${p.desc}</div>
+        <div class="point-tags">
+          <span class="tag src">${p.source}</span>
+          ${pageTag}
+          ${pdfBtn}
+        </div>
+      </div>
+      <div class="point-actions">
+        <div class="diff-group">
+          <button class="diff-btn easy ${meta.diff==='easy'?'active':''}" onclick="setDiff('${p.id}','easy',event)" title="Лесно">E</button>
+          <button class="diff-btn med ${meta.diff==='med'?'active':''}" onclick="setDiff('${p.id}','med',event)" title="Средно">M</button>
+          <button class="diff-btn hard ${meta.diff==='hard'?'active':''}" onclick="setDiff('${p.id}','hard',event)" title="Трудно">H</button>
+        </div>
+        <button class="mini-btn ${meta.fav?'active':''}" onclick="toggleFav('${p.id}', event)" title="Маркирай за преговор">${meta.fav?'★':'☆'}</button>
+        <button class="mini-btn" onclick="toggleExpand('${p.id}', event)" title="Разгъни">▾</button>
+      </div>
+    </div>
+    <div class="point-expand">
+      <div class="point-expand-inner">
+        <div class="section-label">▸ Подробни бележки</div>
+        <div class="explanation">${escapeHtml(p.explanation)}</div>
+        <div class="section-label">▸ Лични бележки</div>
+        <textarea class="notes-area" placeholder="Напиши свои идеи, лема, нещо, което си научил..." oninput="saveNotes('${p.id}', this.value)" onclick="event.stopPropagation()">${escapeHtml(meta.notes||'')}</textarea>
+        ${bonusHtml}
+      </div>
+    </div>
+  `;
+  return el;
+}
+
+function escapeHtml(s) {
+  return String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+}
+function matchFilter(p) {
+  const meta = getPointMeta(p.id);
+  const f = state.ui.filter;
+  if (f === 'all') return true;
+  if (f === 'done') return meta.done;
+  if (f === 'todo') return !meta.done;
+  if (f === 'fav') return meta.fav;
+  if (f === 'hard') return meta.diff === 'hard';
+  return true;
+}
+function matchSearch(p) {
+  if (!searchQuery) return true;
+  const q = searchQuery.toLowerCase();
+  const meta = getPointMeta(p.id);
+  return p.title.toLowerCase().includes(q) ||
+         p.desc.toLowerCase().includes(q) ||
+         p.source.toLowerCase().includes(q) ||
+         p.explanation.toLowerCase().includes(q) ||
+         (meta.notes||'').toLowerCase().includes(q) ||
+         p.id.includes(q);
+}
+
+function toggleDone(id, e) {
+  if (e) e.stopPropagation();
+  const meta = getPointMeta(id);
+  meta.done = !meta.done;
+  if (meta.done) checkStreak();
+  saveState();
+  updatePointEl(id);
+  updateStats();
+  updateSidebarRings();
+  updateStepBadges();
+  if (meta.done) toast('✓ Готово: ' + id);
+}
+function toggleFav(id, e) {
+  e.stopPropagation();
+  const meta = getPointMeta(id);
+  meta.fav = !meta.fav;
+  saveState();
+  updatePointEl(id);
+  if (meta.fav) toast('★ Маркирано за преговор');
+}
+function setDiff(id, diff, e) {
+  e.stopPropagation();
+  const meta = getPointMeta(id);
+  meta.diff = meta.diff === diff ? null : diff;
+  saveState();
+  updatePointEl(id);
+}
+function saveNotes(id, val) {
+  const meta = getPointMeta(id);
+  meta.notes = val;
+  saveState();
+  updatePointEl(id, true);
+}
+function toggleExpand(id, e) {
+  if (e) e.stopPropagation();
+  const el = document.querySelector(`[data-pid="${id}"]`);
+  if (el) el.classList.toggle('expanded');
+}
+function updatePointEl(id, onlyNotesBadge) {
+  const el = document.querySelector(`[data-pid="${id}"]`);
+  if (!el) return;
+  const meta = getPointMeta(id);
+  if (!onlyNotesBadge) {
+    el.classList.toggle('done', meta.done);
+    el.classList.toggle('fav', meta.fav);
+    const chk = el.querySelector('.point-check');
+    chk.classList.toggle('checked', meta.done);
+    chk.textContent = meta.done ? '✓' : '';
+    el.querySelectorAll('.diff-btn').forEach(b => {
+      const isActive = b.classList.contains(meta.diff);
+      b.classList.toggle('active', isActive);
+    });
+    const favBtn = el.querySelectorAll('.mini-btn')[0];
+    if (favBtn) { favBtn.classList.toggle('active', meta.fav); favBtn.textContent = meta.fav ? '★' : '☆'; }
+  }
+  const num = el.querySelector('.point-num');
+  const existing = num.querySelector('.notes-badge');
+  if (meta.notes && !existing) num.insertAdjacentHTML('beforeend', ' <span class="notes-badge">✎</span>');
+  else if (!meta.notes && existing) existing.remove();
+}
+function toggleStep(stepId, e) {
+  if (e && e.target.closest('.step-reset')) return;
+  state.ui.collapsed[stepId] = !state.ui.collapsed[stepId];
+  saveState();
+  const sec = document.getElementById('step-' + stepId);
+  if (sec) sec.classList.toggle('collapsed', state.ui.collapsed[stepId]);
+}
+function resetStep(stepId, e) {
+  e.stopPropagation();
+  if (!confirm('Нулирай всички точки в тази стъпка?')) return;
+  const step = STEPS.find(s => s.id === stepId);
+  step.points.forEach(p => {
+    if (state.progress[p.id]) {
+      state.progress[p.id].done = false;
+      state.progress[p.id].fav = false;
+      state.progress[p.id].diff = null;
+    }
+  });
+  saveState();
+  renderContent();
+  renderSidebar();
+  updateStats();
+  toast('⌫ Стъпката е нулирана');
+}
+function expandAll() {
+  STEPS.forEach(s => state.ui.collapsed[s.id] = false);
+  saveState();
+  document.querySelectorAll('.step').forEach(el => el.classList.remove('collapsed'));
+  document.querySelectorAll('.point').forEach(el => el.classList.add('expanded'));
+}
+function collapseAll() {
+  STEPS.forEach(s => state.ui.collapsed[s.id] = true);
+  saveState();
+  document.querySelectorAll('.step').forEach(el => el.classList.add('collapsed'));
+  document.querySelectorAll('.point').forEach(el => el.classList.remove('expanded'));
+}
+function updateStats() {
+  let total = 0, done = 0;
+  STEPS.forEach(s => s.points.forEach(p => { total++; if (getPointMeta(p.id).done) done++; }));
+  const pct = total ? Math.round(done / total * 100) : 0;
+  document.getElementById('statDone').textContent = done;
+  document.getElementById('statTotal').textContent = total;
+  document.getElementById('statPercent').textContent = pct + '%';
+  document.getElementById('statPomos').textContent = state.pomodoroSessions;
+  document.getElementById('progressFill').style.width = pct + '%';
+}
+function updateStepBadges() {
+  document.querySelectorAll('.step').forEach(sec => {
+    const stepId = parseInt(sec.id.replace('step-',''));
+    const step = STEPS.find(s => s.id === stepId);
+    if (!step) return;
+    const done = step.points.filter(p => getPointMeta(p.id).done).length;
+    const total = step.points.length;
+    const pct = Math.round(done / total * 100);
+    const badge = sec.querySelector('.step-badge');
+    if (badge) {
+      badge.textContent = `${done}/${total} · ${pct}%`;
+      badge.classList.toggle('done', done === total);
+    }
+  });
+}
+function todayStr() {
+  const d = new Date();
+  return d.getFullYear() + '-' + String(d.getMonth()+1).padStart(2,'0') + '-' + String(d.getDate()).padStart(2,'0');
+}
+function checkStreak() {
+  const today = todayStr();
+  if (state.streak.lastDate === today) return;
+  const y = new Date();
+  y.setDate(y.getDate() - 1);
+  const yesterday = y.getFullYear() + '-' + String(y.getMonth()+1).padStart(2,'0') + '-' + String(y.getDate()).padStart(2,'0');
+  if (state.streak.lastDate === yesterday) state.streak.count++;
+  else state.streak.count = 1;
+  state.streak.lastDate = today;
+  saveState();
+  renderStreak();
+}
+function renderStreak() {
+  document.getElementById('streakNum').textContent = state.streak.count || 0;
+}
+function scrollToStep(id) {
+  const el = document.getElementById('step-' + id);
+  if (el) el.scrollIntoView({ behavior:'smooth', block:'start' });
+}
+function scrollToPoint(pid) {
+  const el = document.querySelector(`[data-pid="${pid}"]`);
+  if (!el) return;
+  const sec = el.closest('.step');
+  if (sec && sec.classList.contains('collapsed')) {
+    const sid = parseInt(sec.id.replace('step-',''));
+    state.ui.collapsed[sid] = false;
+    saveState();
+    sec.classList.remove('collapsed');
+  }
+  el.scrollIntoView({ behavior:'smooth', block:'center' });
+  el.classList.add('highlight');
+  el.classList.add('expanded');
+  setTimeout(() => el.classList.remove('highlight'), 1300);
+}
+function navigate(delta) {
+  const flat = getFlatPoints();
+  const visibleIds = flat.filter(x => matchFilter(x.point) && matchSearch(x.point)).map(x => x.point.id);
+  if (visibleIds.length === 0) return;
+  let pos = visibleIds.indexOf(flat[currentIndex]?.point.id);
+  if (pos === -1) pos = 0;
+  else pos = Math.max(0, Math.min(visibleIds.length - 1, pos + delta));
+  const targetId = visibleIds[pos];
+  currentIndex = flat.findIndex(x => x.point.id === targetId);
+  scrollToPoint(targetId);
+}
+function toggleSidebar() {
+  document.getElementById('sidebar').classList.toggle('collapsed');
+}
+function toggleScanlines() {
+  state.ui.scanlines = !state.ui.scanlines;
+  document.body.classList.toggle('scanlines', state.ui.scanlines);
+  document.getElementById('scanToggleItem').innerHTML = '<span class="ic">◫</span> Scanlines: ' + (state.ui.scanlines ? 'ВКЛ' : 'ИЗКЛ');
+  saveState();
+}
+function closeMenu() { document.getElementById('menuDropdown').classList.remove('open'); }
+function exportProgress() {
+  const data = JSON.stringify(state, null, 2);
+  const blob = new Blob([data], { type:'application/json' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = 'olympiad-progress-' + todayStr() + '.json';
+  a.click();
+  URL.revokeObjectURL(url);
+  toast('↓ Експортирано');
+}
+function importProgress(e) {
+  const file = e.target.files[0];
+  if (!file) return;
+  const r = new FileReader();
+  r.onload = ev => {
+    try {
+      const data = JSON.parse(ev.target.result);
+      if (!data.progress) throw new Error('Invalid');
+      state = data;
+      saveState();
+      renderSidebar(); renderContent(); updateStats(); renderStreak();
+      if (state.ui.scanlines) document.body.classList.add('scanlines');
+      toast('↑ Импортирано');
+    } catch(err) { alert('Грешен формат'); }
+  };
+  r.readAsText(file);
+  e.target.value = '';
+}
+function resetAll() {
+  if (!confirm('Нулирай ЦЕЛИЯ прогрес?')) return;
+  state = defaultState();
+  saveState();
+  renderSidebar(); renderContent(); updateStats(); renderStreak();
+  toast('⌫ Всичко е нулирано');
+}
+let toastTimer;
+function toast(msg) {
+  const t = document.getElementById('toast');
+  t.textContent = msg;
+  t.classList.add('show');
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(() => t.classList.remove('show'), 1600);
+}
+
+const POMO = { focus:25*60, shortBreak:5*60, longBreak:15*60, sessions:0, mode:'focus', remaining:25*60, running:false, interval:null };
+function fmtTime(s) {
+  const m = Math.floor(s / 60);
+  const sec = s % 60;
+  return String(m).padStart(2,'0') + ':' + String(sec).padStart(2,'0');
+}
+function renderPomodoro() {
+  document.getElementById('pomoTime').textContent = fmtTime(POMO.remaining);
+  const modeEl = document.getElementById('pomoMode');
+  const timeEl = document.getElementById('pomoTime');
+  if (POMO.mode === 'focus') { modeEl.textContent = 'ФОКУС'; timeEl.classList.remove('break'); }
+  else if (POMO.mode === 'shortBreak') { modeEl.textContent = 'ПОЧИВКА'; timeEl.classList.add('break'); }
+  else { modeEl.textContent = 'ДЪЛГА ПОЧИВКА'; timeEl.classList.add('break'); }
+  document.getElementById('pomoPlay').textContent = POMO.running ? '❚❚' : '▶';
+  document.getElementById('pomoPlay').classList.toggle('play', !POMO.running);
+  document.getElementById('pomoDone').textContent = state.pomodoroSessions;
+}
+function togglePomodoro() {
+  if (POMO.running) { clearInterval(POMO.interval); POMO.running = false; }
+  else { POMO.running = true; POMO.interval = setInterval(tickPomodoro, 1000); }
+  renderPomodoro();
+}
+function tickPomodoro() {
+  POMO.remaining--;
+  if (POMO.remaining <= 0) {
+    clearInterval(POMO.interval);
+    POMO.running = false;
+    if (POMO.mode === 'focus') {
+      state.pomodoroSessions++;
+      saveState();
+      toast('🍅 Помодоро завършено!');
+      POMO.sessions++;
+      POMO.mode = (POMO.sessions % 4 === 0) ? 'longBreak' : 'shortBreak';
+      POMO.remaining = POMO.mode === 'longBreak' ? POMO.longBreak : POMO.shortBreak;
+    } else {
+      toast('▶ Обратно към работа');
+      POMO.mode = 'focus';
+      POMO.remaining = POMO.focus;
+    }
+    updateStats();
+  }
+  renderPomodoro();
+}
+function resetPomodoro() {
+  clearInterval(POMO.interval);
+  POMO.running = false;
+  POMO.mode = 'focus';
+  POMO.remaining = POMO.focus;
+  renderPomodoro();
+}
+function openPalette() {
+  document.getElementById('paletteOverlay').classList.add('open');
+  const inp = document.getElementById('paletteInput');
+  inp.value = '';
+  renderPaletteResults('');
+  setTimeout(() => inp.focus(), 30);
+}
+function closePalette() { document.getElementById('paletteOverlay').classList.remove('open'); }
+function renderPaletteResults(q) {
+  const res = document.getElementById('paletteResults');
+  const flat = getFlatPoints();
+  const query = q.toLowerCase().trim();
+  let matches = flat;
+  if (query) {
+    matches = flat.filter(x =>
+      x.point.title.toLowerCase().includes(query) ||
+      x.point.id.includes(query) ||
+      x.step.title.toLowerCase().includes(query) ||
+      (getPointMeta(x.point.id).notes||'').toLowerCase().includes(query)
+    );
+  }
+  matches = matches.slice(0, 30);
+  if (matches.length === 0) { res.innerHTML = '<div class="palette-empty">НЯМА РЕЗУЛТАТИ</div>'; return; }
+  res.innerHTML = matches.map((x, i) => {
+    const meta = getPointMeta(x.point.id);
+    return `<div class="palette-item ${i===0?'selected':''}" data-pid="${x.point.id}">
+      <span class="pnum">${x.point.id}</span>
+      <span class="ptitle">${meta.done?'✓ ':''}${x.point.title}</span>
+      <span class="pstep">STEP ${x.step.id}</span>
+    </div>`;
+  }).join('');
+  res.querySelectorAll('.palette-item').forEach(el => {
+    el.addEventListener('click', () => { closePalette(); scrollToPoint(el.dataset.pid); });
+  });
+}
+function openHelp() { document.getElementById('helpOverlay').classList.add('open'); }
+function closeHelp() { document.getElementById('helpOverlay').classList.remove('open'); }
+
+function setupEvents() {
+  const searchInp = document.getElementById('searchInput');
+  searchInp.addEventListener('input', e => {
+    searchQuery = e.target.value;
+    document.getElementById('kbdHint').classList.toggle('hidden', !!searchQuery);
+    renderContent();
+  });
+  document.getElementById('filters').addEventListener('click', e => {
+    if (!e.target.classList.contains('chip')) return;
+    document.querySelectorAll('.chip').forEach(c => c.classList.remove('active'));
+    e.target.classList.add('active');
+    state.ui.filter = e.target.dataset.filter;
+    saveState();
+    renderContent();
+  });
+  document.querySelectorAll('.chip').forEach(c => c.classList.toggle('active', c.dataset.filter === state.ui.filter));
+  document.getElementById('menuBtn').addEventListener('click', e => {
+    e.stopPropagation();
+    document.getElementById('menuDropdown').classList.toggle('open');
+  });
+  document.addEventListener('click', () => closeMenu());
+  const palInp = document.getElementById('paletteInput');
+  palInp.addEventListener('input', e => renderPaletteResults(e.target.value));
+  palInp.addEventListener('keydown', e => {
+    const items = document.querySelectorAll('.palette-item');
+    if (e.key === 'Enter') {
+      if (items.length > 0) {
+        const sel = document.querySelector('.palette-item.selected') || items[0];
+        closePalette();
+        scrollToPoint(sel.dataset.pid);
+      }
+    } else if (e.key === 'ArrowDown' || e.key === 'ArrowUp') {
+      e.preventDefault();
+      const cur = document.querySelector('.palette-item.selected');
+      let idx = cur ? Array.from(items).indexOf(cur) : -1;
+      idx += (e.key === 'ArrowDown' ? 1 : -1);
+      if (idx < 0) idx = items.length - 1;
+      if (idx >= items.length) idx = 0;
+      items.forEach(it => it.classList.remove('selected'));
+      items[idx].classList.add('selected');
+      items[idx].scrollIntoView({ block:'nearest' });
+    } else if (e.key === 'Escape') closePalette();
+  });
+  document.addEventListener('keydown', e => {
+    const tag = (e.target.tagName || '').toLowerCase();
+    const inField = tag === 'input' || tag === 'textarea';
+    const paletteOpen = document.getElementById('paletteOverlay').classList.contains('open');
+    const helpOpen = document.getElementById('helpOverlay').classList.contains('open');
+    if (e.key === 'Escape') {
+      if (paletteOpen) { closePalette(); return; }
+      if (helpOpen) { closeHelp(); return; }
+      if (inField) { e.target.blur(); return; }
+      return;
+    }
+    if (helpOpen) return;
+    if (e.ctrlKey && e.key.toLowerCase() === 'k') { e.preventDefault(); openPalette(); return; }
+    if (inField) return;
+    if (e.key === '/') { e.preventDefault(); searchInp.focus(); return; }
+    if (e.key === '?') { openHelp(); return; }
+    if (e.key === 'j' || e.key === 'J') { navigate(1); return; }
+    if (e.key === 'k' || e.key === 'K') { navigate(-1); return; }
+    if (e.key === 't' || e.key === 'T') { togglePomodoro(); return; }
+    if (e.key === 'g' || e.key === 'G') { cycleTheme(); return; }
+    if (e.key === 'e' || e.key === 'E') { expandAll(); return; }
+    if (e.key === 'c' || e.key === 'C') { collapseAll(); return; }
+    if (e.key === ' ') {
+      e.preventDefault();
+      const el = document.elementFromPoint(window.innerWidth/2, window.innerHeight/2);
+      const card = el && el.closest('.point');
+      if (card) {
+        toggleDone(card.dataset.pid);
+        currentIndex = parseInt(card.dataset.idx);
+      }
+      return;
+    }
+    if (e.key === 'n' || e.key === 'N') {
+      const el = document.elementFromPoint(window.innerWidth/2, window.innerHeight/2);
+      const card = el && el.closest('.point');
+      if (card) {
+        card.classList.add('expanded');
+        const ta = card.querySelector('.notes-area');
+        if (ta) ta.focus();
+      }
+      return;
+    }
+  });
+}
+
+init();
+renderPomodoro();
+</script>
+</body>
+</html>

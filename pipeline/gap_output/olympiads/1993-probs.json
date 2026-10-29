@@ -1,0 +1,144 @@
+{
+  "_meta": {
+    "pdf": "C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\Задачи_Минали_Години\\Национален\\OLI-3-Национален кръг-1993-9-12 кл-probs.pdf",
+    "paired_with": "C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\Задачи_Минали_Години\\Национален\\OLI-3-Национален кръг-1993-9-12 кл-sol.pdf",
+    "level": 2,
+    "type": "probs",
+    "analyzed_at": "2026-10-18T11:49:27.819020",
+    "model": "deepseek/deepseek-v3.2",
+    "text_length": 2430,
+    "paired_text_length": 10715
+  },
+  "problems": [
+    {
+      "num": 1,
+      "topic": "algebra",
+      "theorems": [],
+      "techniques": [
+        "substitution",
+        "induction",
+        "case analysis"
+      ],
+      "concepts": [
+        "functional equations on integers",
+        "odd functions",
+        "initial value conditions"
+      ],
+      "difficulty": "olympic",
+      "notes": "Functional equation with integer domain; solution involves careful substitution and induction; multiple cases lead to different periodic functions."
+    },
+    {
+      "num": 2,
+      "topic": "geometry",
+      "theorems": [
+        "Euler's formula (for distance between circumcenter and orthocenter/incenter?)"
+      ],
+      "techniques": [
+        "homothety",
+        "area comparison",
+        "geometric inequalities"
+      ],
+      "concepts": [
+        "circumcenters",
+        "midpoints",
+        "perpendicular bisectors",
+        "rectangle properties",
+        "inscribed figures"
+      ],
+      "difficulty": "olympic",
+      "notes": "Uses homothety to relate triangles; area comparison via inscribed rectangles; alternative solution uses Euler's formula."
+    },
+    {
+      "num": 3,
+      "topic": "combinatorics",
+      "theorems": [],
+      "techniques": [
+        "pigeonhole principle",
+        "case analysis",
+        "contradiction"
+      ],
+      "concepts": [
+        "graph coloring (edges)",
+        "monochromatic triangles",
+        "combinatorial geometry"
+      ],
+      "difficulty": "olympic",
+      "notes": "Ramsey-type problem on a 3D polyhedron; coloring of edges; uses pigeonhole principle on diagonals and vertices."
+    },
+    {
+      "num": 4,
+      "topic": "number_theory",
+      "theorems": [],
+      "techniques": [
+        "pigeonhole principle",
+        "modular arithmetic",
+        "contradiction"
+      ],
+      "concepts": [
+        "complete residue system",
+        "differences and sums modulo m",
+        "combinatorial counting"
+      ],
+      "difficulty": "olympic",
+      "notes": "Shows only n=2 works; uses pigeonhole principle on differences of numbers to prove impossibility for n>=3."
+    },
+    {
+      "num": 5,
+      "topic": "algebra",
+      "theorems": [],
+      "techniques": [
+        "polynomial analysis",
+        "symmetry arguments",
+        "coordinate geometry"
+      ],
+      "concepts": [
+        "dot product",
+        "polynomial identities",
+        "invariance under transformations",
+        "angle condition"
+      ],
+      "difficulty": "olympic",
+      "notes": "Functional defined via polynomial; uses symmetry (reflection, rotation) to deduce form; proves it equals dot product."
+    },
+    {
+      "num": 6,
+      "topic": "combinatorics",
+      "theorems": [],
+      "techniques": [
+        "construction",
+        "case analysis",
+        "contradiction"
+      ],
+      "concepts": [
+        "point sets in plane",
+        "unit distances",
+        "regular polygons",
+        "translations"
+      ],
+      "difficulty": "olympic",
+      "notes": "Finds all n>=6; uses constructions with regular polygons and translations; disproves n=4,5 by geometric arguments."
+    }
+  ],
+  "unique_concepts": [
+    "functional equations on integers",
+    "odd functions",
+    "circumcenters",
+    "homothety",
+    "area comparison",
+    "graph coloring",
+    "monochromatic triangles",
+    "pigeonhole principle",
+    "complete residue system",
+    "modular arithmetic",
+    "polynomial identities",
+    "dot product",
+    "symmetry in coordinates",
+    "point sets with unit distances",
+    "regular polygons",
+    "translations",
+    "geometric constructions",
+    "combinatorial geometry",
+    "Ramsey-type problems"
+  ],
+  "confidence": 0.95
+}

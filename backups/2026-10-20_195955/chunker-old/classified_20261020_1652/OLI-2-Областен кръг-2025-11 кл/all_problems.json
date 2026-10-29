@@ -1,0 +1,83 @@
+{
+  "pdf": "OLI-2-Областен кръг-2025-11 кл",
+  "problems": [
+    {
+      "num": 1,
+      "year": 2025,
+      "grade": 11,
+      "grade_range": null,
+      "round": "oblasten",
+      "statement": "Да се намерят всички стойности на реалния параметър k, за които корените на уравнението 2x³−(k²+6)x²+(k²+k+4)x−k = 0 са реални положителни числа и образуват геометрична прогресия.",
+      "solution": null,
+      "answer": null,
+      "page": 1,
+      "point_id": null,
+      "point_confidence": "off",
+      "alternative_points": [],
+      "difficulty": null,
+      "techniques": [],
+      "reasoning": "не е олимпиадна задача"
+    },
+    {
+      "num": 2,
+      "year": 2025,
+      "grade": 11,
+      "grade_range": null,
+      "round": "oblasten",
+      "statement": "Даден е триъгълник ABC. Окръжност k минава през върха C, допира се до правата AB в точка A, пресича отсечката BC в точка P и медианата CM в точка Q. Правата BQ пресича k в точка R. Да се докаже, че PR е успоредна на AB.",
+      "solution": null,
+      "answer": null,
+      "page": 1,
+      "point_id": "1.4",
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": "hard",
+      "techniques": [
+        "power_of_point",
+        "radical_axis",
+        "similar_triangles"
+      ],
+      "reasoning": "Задачата включва окръжност, която минава през C и допира се до AB в A, както и пресичане с медианата и правата BQ. Основната техника е степен на точка (power of a point) и радикалната ос, които водят до успоредност PR || AB."
+    },
+    {
+      "num": 3,
+      "year": 2025,
+      "grade": 11,
+      "grade_range": null,
+      "round": "oblasten",
+      "statement": "Нека n е нечетно естествено число и a₁, a₂, ..., aₙ е произволна пермутация на числата 1, 2, ..., n. Да се намери най-голямата стойност на израза: |a₁−1| + |a₂−2| + ... + |aₙ−n|.",
+      "solution": null,
+      "answer": null,
+      "page": 1,
+      "point_id": "6.7",
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": "medium",
+      "techniques": [
+        "rearrangement_inequality"
+      ],
+      "reasoning": "Задачата се решава чрез прилагане на неравенството за пренареждане (rearrangement), което дава максималната сума на абсолютните разлики, като се съчетаят най‑големите елементи с най‑малките позиции. Това е единствената съществена техника, съответстваща на точка 6.7."
+    },
+    {
+      "num": 4,
+      "year": 2025,
+      "grade": 11,
+      "grade_range": null,
+      "round": "oblasten",
+      "statement": "Да се докаже, че за всяко естествено число n съществува просто число p < 2²ⁿ, за което 2ⁿ дели p−1.",
+      "solution": null,
+      "answer": null,
+      "page": 1,
+      "point_id": "4.5",
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": "medium",
+      "techniques": [
+        "prime_divisors",
+        "order_of_two_mod_p",
+        "euler_theorem"
+      ],
+      "reasoning": "Задачата изисква да се покаже съществуването на просто число p, за което 2^n дели p‑1. Това се решава чрез разглеждане на прост делител на подходящо конструирано число и използване на свойствата на реда на 2 в групата (Z/pZ)^*, което попада в темата „Прости числа“ (4.5) и включва техники за работа с прост делител и ред на елемент (order_of_two_mod_p) и евентуално Ейлеровата теорема."
+    }
+  ]
+}

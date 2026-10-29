@@ -1,0 +1,385 @@
+{
+  "pdf": "OLI-2-Областен кръг-2004-10 кл",
+  "problems": [
+    {
+      "num": 1,
+      "grade": 10,
+      "year": 2004,
+      "round": "oblasten",
+      "statement": "Да се намерят стойностите на реалния параметър a, за които уравнението [неразчетено] има точно две решения.",
+      "solution": "Повдигаме двете страни на даденото уравнение\n(1) √((4a² − 4a − 1)x² − 2ax + 1) = 1 − ax − x²\nи достигаме до уравнението\nx²(x² + 2ax − 3a² + 4a − 1) = 0\nс корени x₁ = 0, x₂ = 1 − 3a и x₃ = a − 1. Ясно е, че x₁ = 0 е решение на (1) за всяко a. Числото x₂ = 1 − 3a е решение на (1), когато дясната страна на (1) е неотрицателна, т.е.\n1 − a(1 − 3a) − (1 − 3a)² ≥ 0 ⇔ 5a − 6a² ≥ 0 ⇔ a ∈ [0, 5/6].\nАналогично x₃ е решение на (1) при a ∈ [0, 3/2]. Възможни са два случая.\n1. Някои от числата x₁, x₂ и x₃ са равни. Това е изпълнено при a = 1/3, 1/2, 1 и от намереното следва, че a = 1/3 и a = 1/2 са решения на задачата.\n2. Числата x₁, x₂ и x₃ са две по две различни. Тогава лесно следва, че a ∈ (5/6, 3/2] ∖ {1}.\nИ така, a = 1/3, a = 1/2 и a ∈ (5/6, 3/2] ∖ {1}.",
+      "answer": "a ∈ {1/3, 1/2} ∪ ((5/6, 3/2] ∖ {1})",
+      "page": 1,
+      "source": "OLI-2-Областен кръг-2004-10 кл · 2004-10 · Зад. 1",
+      "point_id": "5.11",
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": "medium",
+      "techniques": [
+        "irrational_equation",
+        "parameter_case_analysis"
+      ],
+      "reasoning": "Radical equation with parameter a, case analysis on discriminant gives a‑values for exactly two solutions.",
+      "_paired": true,
+      "_grade_source": "filename"
+    },
+    {
+      "num": 1,
+      "grade": 10,
+      "year": 2004,
+      "round": "oblasten",
+      "statement": "Дадени са уравненията [x]³ + x² = x³ + [x]² и [x³] + x² = x³ + [x²], където [t] е най-голямото цяло число, ненадминаващо t. Да се докаже, че:\nа) целите числа са единствените решения на първото уравнение;\nб) съществува решение на второто уравнение, което не е цяло число.",
+      "solution": "а) Нека x изпълнява [x³] + x² = x³ + [x²]. Тогава за t = [x] и α = x − t ∈ [0, 1) имаме, че [неразчетено] = (t + α)³ − (t + α)² ⇔ α(α² + (3t − 1)α + 3t² − 2t) = 0.\nОттук α = 0 или α е корен на квадратното уравнение в скобите. Във втория случай неговата дискриминанта (3t + 1)(1 − t) трябва да е неотрицателна и понеже t е цяло число, то t = 0 или t = 1. Тогава α = 0, α = 1 или α = −1. Понеже α ∈ [0, 1), отново следва, че α = 0, т.е. x е цяло число.\nб) Полиномът y³ − y² − 1 е от нечетна степен и следователно има поне един реален корен α, който очевидно не е цял (всъщност реалният корен е единствен и лежи в интервала (1, 2)). Тогава [α³] = [α² + 1] = [α²] + 1, откъдето [α³] − [α²] = 1 = α³ − α².",
+      "answer": "а) x е цяло число. б) Реалният корен α ∈ (1, 2) на y³ − y² − 1 удовлетворява [α³] − [α²] = α³ − α² = 1.",
+      "page": 1,
+      "source": "OLI-2-Областен кръг-2004-10 кл · 2004-10 · Зад. 1",
+      "point_id": "5.11",
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": "medium",
+      "techniques": [
+        "floor_function",
+        "integer_solution"
+      ],
+      "reasoning": "Uses representation x=[x]+α, reduces to quadratic in α and checks integer cases.",
+      "_paired": true,
+      "_grade_source": "filename"
+    },
+    {
+      "num": 1,
+      "grade": 10,
+      "year": 2004,
+      "round": "oblasten",
+      "statement": "Да се реши неравенството √(x² − 1) + √(2x² − 3) + x√3 > 0.",
+      "solution": "Неравенството има смисъл при x ∈ (−∞, −√6/2] ∪ [√6/2, +∞). Очевидно всички стойности на x от последния интервал са решения. Нека x ∈ (−∞, −√6/2]. Тогава неравенството е еквивалентно на\n√((x² − 1)(2x² − 3)) > 2 ⇔ 2x⁴ − 5x² − 1 > 0.\nКато вземем предвид решенията на биквадратното неравенство, получаваме в този случай x ∈ (−∞, −√((5 + √33)/2)). И така,\nx ∈ (−∞, −√((5 + √33)/2)) ∪ [√6/2, +∞).",
+      "answer": "x ∈ (−∞, −√((5 + √33)/2)) ∪ [√6/2, +∞)",
+      "page": 2,
+      "source": "OLI-2-Областен кръг-2004-10 кл · 2004-10 · Зад. 1",
+      "point_id": "5.11",
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": "medium",
+      "techniques": [
+        "radical_inequality",
+        "domain_analysis"
+      ],
+      "reasoning": "Transforms inequality, squares, solves resulting quartic and checks domain of x.",
+      "_paired": true,
+      "_grade_source": "filename"
+    },
+    {
+      "num": 2,
+      "grade": 10,
+      "year": 2004,
+      "round": "oblasten",
+      "statement": "Даден е △ABC с медицентър M.\nа) Да се докаже, че cotg ∠AMB = (BC² + CA² − 5AB²)/(12S_ABC).\nб) Да се докаже, че cotg ∠AMB + cotg ∠BMC + cotg ∠CMA ≤ −√3.",
+      "solution": "Ще използваме стандартните означения за елементите на △ABC.\nа) С помощта на косинусова теорема за △AMB имаме\ncos ∠AMB = (AM² + BM² − AB²)/(2AM·MB).\nОттук и от равенството sin ∠AMB = 2S/(3AM·MB) получаваме\ncotg ∠AMB = 3(AM² + BM² − AB²)/(4S) = (a² + b² − 5c²)/(12S)\n(за последното равенство се използва формулата за медианата).\nб) Както в а) се вижда, че\ncotg ∠BMC = (b² + c² − 5a²)/(12S), cotg ∠CMA = (c² + a² − 5b²)/(12S).\nСледователно\ncotg ∠AMB + cotg ∠BMC + cotg ∠CMA = −(a² + b² + c²)/(4S).\nОстава да докажем, че a² + b² + c² ≥ 4S√3. От Хероновата формула получаваме\nS² = p(p − a)(p − b)(p − c) ≤ p((p − a + p − b + p − c)/3)³ = p⁴/27\n(приложихме неравенството между средното аритметично и средното геометрично), откъдето\nS ≤ p²/(3√3) = (a + b + c)²/(12√3) ≤ (a² + b² + c²)/(4√3)\n(приложихме неравенството между средното аритметично и средното квадратично).",
+      "answer": "а) cotg ∠AMB = (a² + b² − 5c²)/(12S). б) cotg ∠AMB + cotg ∠BMC + cotg ∠CMA = −(a² + b² + c²)/(4S) ≤ −√3.",
+      "page": 2,
+      "source": "OLI-2-Областен кръг-2004-10 кл · 2004-10 · Зад. 2",
+      "point_id": "6.1",
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": "medium",
+      "techniques": [
+        "cosine_law",
+        "area_formula",
+        "AM-GM"
+      ],
+      "reasoning": "Applies cosine law to cot ∠AMB, uses area formula and AM‑GM to obtain required bound.",
+      "_paired": true,
+      "_grade_source": "filename"
+    },
+    {
+      "num": 3,
+      "grade": 10,
+      "year": 2004,
+      "round": "oblasten",
+      "statement": "В едно предприятие има m ≥ 1 мъже и j ≥ 1 жени, j < 2004. Всеки пратил на всеки (освен на себе си) по една картичка. Оказало се, че всички картички, пратени от мъже, са колкото картичките, пратени от жени на жени. Намерете всички възможни стойности на j.",
+      "solution": "От условието следва равенството m(m + j − 1) = j(j − 1), откъдето m² = (j − m)(j − 1). Ако p е прост делител на j − m и j − 1, то е делител и на m, а значи и на j, а тогава и на 1. Това противоречие сочи, че j − m и j − 1 са взаимно прости и следователно j − m = u², j − 1 = v² за някои цели неотрицателни u, v. Сега имаме uv = m и u² + uv = j = v² + 1, а от условието 1 ≤ j < 2004 получаваме 0 ≤ v ≤ 44. Следователно трябва да решим уравнението\n(∗) u² + uv = v² + 1\nв цели неотрицателни числа. При v = 0 получаваме u = 1. Да предположим, че двойката (u₀; v₀) е решение на (∗) и v₀ ≥ 1. Тогава u₀ ≥ 1 и щом u₀v₀ ≥ 1, то u₀ ≤ v₀. Да положим v₁ = v₀ − u₀, 0 ≤ v₁ < v₀. Имаме u₀² = v₀(v₀ − u₀) + 1 = (u₀ + v₁)v₁ + 1 = u₀v₁ + v₁² + 1. Да положим u₁ = u₀ − v₁. Тогава\n(u₁ + v₁)² = (u₁ + v₁)v₁ + v₁² + 1 ⇔ u₁² + u₁v₁ = v₁² + 1,\nт.е. получихме ново решение на (∗). Ако v₁ = 0, получаваме u₁ = 1. Нека v₁ ≥ 1; значи u₁ ≥ 1. Тогава полагайки v₂ = v₁ − u₁ < v₁ и u₂ = u₁ − v₂, аналогично получаваме ново решение. Така получаваме редица от неотрицателни цели числа v₀ > v₁ > ···. Единственият начин процесът да прекъсне е на някоя стъпка да се получи vₖ = 0. Тогава uₖ = 1 и като възстановим обратно uₖ₋₁, vₖ₋₁, …, u₀, v₀, получаваме редицата на Фибоначи. Така решения на (∗) са (u; v) = (1; 0), (1; 1), (2; 3), (5; 8), (13; 21), а при следващите решения v > 44. При първото от тях j = v² + 1 = 0² + 1 = 1 и имаме m = uv = 0, което не отговаря на условията. Останалите дават решенията j = 1² + 1 = 2, j = 3² + 1 = 10, j = 8² + 1 = 65 и j = 21² + 1 = 442.",
+      "answer": "j ∈ {2, 10, 65, 442}",
+      "page": 2,
+      "source": "OLI-2-Областен кръг-2004-10 кл · 2004-10 · Зад. 3",
+      "point_id": "3.1",
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": "medium",
+      "techniques": [
+        "diophantine_equation",
+        "Fibonacci_sequence"
+      ],
+      "reasoning": "Derives Diophantine relation m(m+j‑1)=j(j‑1), reduces to Fibonacci‑type recursion.",
+      "_paired": true,
+      "_grade_source": "filename"
+    },
+    {
+      "num": 4,
+      "grade": 10,
+      "year": 2004,
+      "round": "oblasten",
+      "statement": "Нека f(x) = (a² + 4a + 2)x³ + (a³ + 4a² + a + 1)x² + (2a − a²)x + a², където a е реален параметър.\nа) Да се докаже, че f(−a) = 0.\nб) Да се намерят всички стойности на a, за които уравнението f(x) = 0 има три различни реални положителни корена.",
+      "solution": "а) Следва след директно заместване.\nб) Уравнението се записва във вида\n(x + a)((a² + 4a + 2)x² + (1 − a)x + a) = 0, (1)\nоткъдето следва, че a < 0. Освен това квадратният тричлен в (1) трябва да има два различни корена, т.е. D = (1 − a)² − 4a(a² + 4a + 2) > 0 ⇔ (a + 1)(−4a² − 11a + 1) > 0. Решавайки това неравенство и вземайки предвид a < 0, получаваме\na ∈ (−∞, (−11 − √137)/8) ∪ (−1, 0). (2)\nКорените на квадратния тричлен са положителни точно когато a/(a² + 4a + 2) > 0 и −(1 − a)/(a² + 4a + 2) > 0. Оттук a ∈ (−2 − √2, −2 + √2) и пресичайки с (2) получаваме\na ∈ (−2 − √2, (−11 − √137)/8) ∪ (−1, −2 + √2). (3)\nОстава да изключим стойностите на a, за които −a е корен на квадратния тричлен в (1). Имаме (a² + 4a + 2)(−a)² + (1 − a)(−a) + a = 0 ⇔ a²(a² + 4a + 3) = 0 ⇔ a = −3, −1, 0. Окончателно получаваме\na ∈ (−2 − √2, −3) ∪ (−3, (−11 − √137)/8) ∪ (−1, −2 + √2).",
+      "answer": "б) a ∈ (−2 − √2, −3) ∪ (−3, (−11 − √137)/8) ∪ (−1, −2 + √2)",
+      "page": 2,
+      "source": "OLI-2-Областен кръг-2004-10 кл · 2004-10 · Зад. 4",
+      "point_id": "5.1",
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": "medium",
+      "techniques": [
+        "Vieta",
+        "parameter_analysis",
+        "sign_of_roots"
+      ],
+      "reasoning": "Shows f(−a)=0, then uses Vieta and discriminant to locate a for three positive roots.",
+      "_paired": true,
+      "_grade_source": "filename"
+    },
+    {
+      "num": 5,
+      "grade": 10,
+      "year": 2004,
+      "round": "oblasten",
+      "statement": "Нека O е център на описаната окръжност за △ABC, M е средата на страната AB, а G е медицентърът на △ACM. Ако OG ⊥ CM, да се докаже, че △ABC е равнобедрен.",
+      "solution": "Нека означим a⃗ = →OA, b⃗ = →OB, c⃗ = →OC. Имаме →OM = (1/2)(a⃗ + b⃗), значи →OG = (1/6)(3a⃗ + b⃗ + 2c⃗). От друга страна →CM = (1/2)(a⃗ + b⃗ − 2c⃗). Тогава\n0 = →OG·→CM = (3a⃗ + b⃗ + 2c⃗)(a⃗ + b⃗ − 2c⃗) = 3R² + 3a⃗·b⃗ − 6a⃗·c⃗ + a⃗·b⃗ + R² − 2b⃗·c⃗ + 2a⃗·c⃗ + 2b⃗·c⃗ − 4R².\nИ така, 0 = 4a⃗·(b⃗ − c⃗), следователно OA ⟂ BC, т.е. AB = AC.",
+      "answer": "AB = AC",
+      "page": 2,
+      "source": "OLI-2-Областен кръг-2004-10 кл · 2004-10 · Зад. 5",
+      "point_id": "12.1",
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": "medium",
+      "techniques": [
+        "vector_method",
+        "perpendicular_condition"
+      ],
+      "reasoning": "Writes OG and CM as vectors, dot product zero ⇒ OA⊥BC ⇒ AB=AC.",
+      "_paired": true,
+      "_grade_source": "filename"
+    },
+    {
+      "num": 6,
+      "grade": 10,
+      "year": 2004,
+      "round": "oblasten",
+      "statement": "Даден е граф G с 10 върха и 26 ребра. Да се докаже, че G съдържа поне 4 триъгълника.",
+      "solution": "Да означим с V и E съответно множествата от върховете и ребрата на G, а за всеки връх x ∈ V да означим с Γ(x) множеството от върховете на G, които са съседни на x и нека d(x) = |Γ(x)|. Тогава за x, y ∈ V имаме\n|Γ(x) ∩ Γ(y)| = |Γ(x)| + |Γ(y)| − |Γ(x) ∪ Γ(y)| ≥ d(x) + d(y) − |V|.\nСумираме по всички ребра (x, y) ∈ E и получаваме\n3t(G) = ∑_{(x,y)∈E} |Γ(x) ∩ Γ(y)| ≥ ∑_{(x,y)∈E} (d(x) + d(y)) − |V|·|E| = ∑_{x∈V} d²(x) − |V|·|E|\n(тук t(G) е броят на триъгълниците в G). Следователно\n3t(G) ≥ (1/|V|)(∑_{x∈V} d(x))² − |V|·|E| = 4|E|²/|V| − |V|·|E|.\nВ нашия случай имаме |V| = 10, |E| = 26 и от последното неравенство получаваме t(G) ≥ 52/15, т.е. t(G) ≥ 4.",
+      "answer": "t(G) ≥ 4",
+      "page": 2,
+      "source": "OLI-2-Областен кръг-2004-10 кл · 2004-10 · Зад. 6",
+      "point_id": "9.1",
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": "medium",
+      "techniques": [
+        "graph_theory",
+        "counting_triangles",
+        "degree_sum"
+      ],
+      "reasoning": "Uses double counting of common neighbours to bound number of triangles in G.",
+      "_paired": true,
+      "_grade_source": "filename"
+    },
+    {
+      "num": 2,
+      "grade": 10,
+      "year": 2004,
+      "round": "oblasten",
+      "statement": "Върху бедрата AC и BC на равнобедрения △ABC са взети съответно точки A₁ и B₁ така, че 4AA₁·BB₁ = AB². Да се докаже, че ъглополовящите на ∠AA₁B₁ и ∠BB₁A₁ се пресичат върху правата AB.",
+      "solution": null,
+      "answer": null,
+      "page": 1,
+      "source": "OLI-2-Областен кръг-2004-10 кл · 2004-10 · Зад. 2",
+      "point_id": "2.10",
+      "point_confidence": "exact",
+      "difficulty": "medium",
+      "techniques": [
+        "angle_bisector_theorem",
+        "isosceles_triangle"
+      ],
+      "reasoning": "Geometric configuration with points on legs of an isosceles triangle, requires angle‑bisector theorem.",
+      "_no_solution": true
+    },
+    {
+      "num": 3,
+      "grade": 10,
+      "year": 2004,
+      "round": "oblasten",
+      "statement": "Да се докаже, че 9/10 ≤ a/(1+bc) + b/(1+ca) + c/(1+ab) < 1, където a, b и c са положителни числа така, че a+b+c = 1.",
+      "solution": null,
+      "answer": null,
+      "page": 1,
+      "source": "OLI-2-Областен кръг-2004-10 кл · 2004-10 · Зад. 3",
+      "point_id": "6.1",
+      "point_confidence": "exact",
+      "difficulty": "medium",
+      "techniques": [
+        "inequality",
+        "AM-GM",
+        "Cauchy-Schwarz"
+      ],
+      "reasoning": "Bounds a/(1+bc)+… using AM‑GM or C‑S under a+b+c=1.",
+      "_no_solution": true
+    },
+    {
+      "num": 4,
+      "grade": 10,
+      "year": 2004,
+      "round": "oblasten",
+      "statement": "Да се реши в цели числа уравнението x³ + 10x − 1 = y³ + 6y².",
+      "solution": null,
+      "answer": null,
+      "page": 1,
+      "source": "OLI-2-Областен кръг-2004-10 кл · 2004-10 · Зад. 4",
+      "point_id": "3.1",
+      "point_confidence": "exact",
+      "difficulty": "hard",
+      "techniques": [
+        "cubic_diophantine",
+        "factorization"
+      ],
+      "reasoning": "Integer solutions of x³+10x−1 = y³+6y² require non‑trivial factorisation and bounding.",
+      "_no_solution": true
+    },
+    {
+      "num": 5,
+      "grade": 10,
+      "year": 2004,
+      "round": "oblasten",
+      "statement": "Даден е квадрат n × n (n ≥ 2), съставен от n² единични квадратчета, всяко от които е оцветено в бяло или черно така, че за всеки правоъгълник (от най-малко четири квадратчета) в квадрата поне две от единичните квадратчета в четирите му ъгъла са разноцветни. Да се намери възможно най-голямата стойност на n.",
+      "solution": null,
+      "answer": null,
+      "page": 1,
+      "source": "OLI-2-Областен кръг-2004-10 кл · 2004-10 · Зад. 5",
+      "point_id": "8.1",
+      "point_confidence": "exact",
+      "difficulty": "hard",
+      "techniques": [
+        "pigeonhole_principle",
+        "grid_coloring"
+      ],
+      "reasoning": "Extremal combinatorial problem on coloured n×n board, solved via Dirichlet principle.",
+      "_no_solution": true
+    },
+    {
+      "num": 1,
+      "grade": 10,
+      "year": 2004,
+      "round": "oblasten",
+      "statement": "За кои стойности на x ∈ (−π, π) числата 2^{sin x}, [неразчетено] и 2^{cos x} са последователни членове на геометрична прогресия?",
+      "solution": null,
+      "answer": null,
+      "page": 2,
+      "source": "OLI-2-Областен кръг-2004-10 кл · 2004-10 · Зад. 1",
+      "point_id": "5.10",
+      "point_confidence": "exact",
+      "difficulty": "medium",
+      "techniques": [
+        "trigonometric_equation",
+        "geometric_progression"
+      ],
+      "reasoning": "Find x such that 2^{sin x}, …, 2^{cos x} are consecutive terms of a GP.",
+      "_no_solution": true
+    },
+    {
+      "num": 2,
+      "grade": 10,
+      "year": 2004,
+      "round": "oblasten",
+      "statement": "Допирателните към описаната около остроъгълния триъгълник ABC окръжност, построени в точките A и B, се пресичат в точка D. Ако M е среда на AB, докажете, че ∠ACM = ∠BCD.",
+      "solution": null,
+      "answer": null,
+      "page": 2,
+      "source": "OLI-2-Областен кръг-2004-10 кл · 2004-10 · Зад. 2",
+      "point_id": "2.5",
+      "point_confidence": "exact",
+      "difficulty": "medium",
+      "techniques": [
+        "poles_and_polar",
+        "angle_chasing"
+      ],
+      "reasoning": "Tangents to circumcircle intersect; use polar theory to relate angles.",
+      "_no_solution": true
+    },
+    {
+      "num": 3,
+      "grade": 10,
+      "year": 2004,
+      "round": "oblasten",
+      "statement": "Равнина разполовява обема на триъгълна пирамида ABCD и пресича ръбовете AB и CD в точки M и N така, че AM/BM = CN/DN = 1/6. Да се докаже, че равнината минава през средите на ръбовете AC и BD.",
+      "solution": null,
+      "answer": null,
+      "page": 3,
+      "source": "OLI-2-Областен кръг-2004-10 кл · 2004-10 · Зад. 3",
+      "point_id": "1.1",
+      "point_confidence": "exact",
+      "difficulty": "medium",
+      "techniques": [
+        "Menelaus",
+        "mass_points"
+      ],
+      "reasoning": "Plane cuts pyramid with given ratios; Menelaus (or mass points) shows it passes through midpoints.",
+      "_no_solution": true
+    },
+    {
+      "num": 4,
+      "grade": 10,
+      "year": 2004,
+      "round": "oblasten",
+      "statement": "Нека E е пресечната точка на диагоналите AC и BD на вписан в окръжност четириъгълник ABCD. Ако AC = BC, AD = 5, BE = 12 и DE = 3, да се намери ∠BCD.",
+      "solution": null,
+      "answer": null,
+      "page": 3,
+      "source": "OLI-2-Областен кръг-2004-10 кл · 2004-10 · Зад. 4",
+      "point_id": "1.10",
+      "point_confidence": "exact",
+      "difficulty": "medium",
+      "techniques": [
+        "cyclic_quadrilateral",
+        "law_of_cosines"
+      ],
+      "reasoning": "Cyclic quadrilateral with given side data; use law of cosines and cyclic properties to find ∠BCD.",
+      "_no_solution": true
+    },
+    {
+      "num": 5,
+      "grade": 10,
+      "year": 2004,
+      "round": "oblasten",
+      "statement": "Множество A от естествени числа, по-малки от 2 000 000, ще наричаме „добро“, ако 2000 ∈ A и a дели b за всеки a, b ∈ A, a < b.\nа) Колко най-много елемента може да има едно „добро“ множество?\nб) Да се намери броят на „добрите“ множества с максимален брой елементи.",
+      "solution": null,
+      "answer": null,
+      "page": 3,
+      "source": "OLI-2-Областен кръг-2004-10 кл · 2004-10 · Зад. 5",
+      "point_id": "3.1",
+      "point_confidence": "exact",
+      "difficulty": "medium",
+      "techniques": [
+        "divisibility",
+        "set_chain"
+      ],
+      "reasoning": "‘Good’ sets defined by divisibility chain; maximal size follows from divisor lattice.",
+      "_no_solution": true
+    },
+    {
+      "num": 6,
+      "grade": 10,
+      "year": 2004,
+      "round": "oblasten",
+      "statement": "Да се намерят всички неконстантни полиноми P(x) и Q(x) с реални коефициенти такива, че\nP(x)Q(x+1) = P(x+2004)Q(x)\nза произволно реално число x.",
+      "solution": null,
+      "answer": null,
+      "page": 3,
+      "source": "OLI-2-Областен кръг-2004-10 кл · 2004-10 · Зад. 6",
+      "point_id": "5.8",
+      "point_confidence": "exact",
+      "difficulty": "hard",
+      "techniques": [
+        "polynomial_functional_equation",
+        "degree_analysis"
+      ],
+      "reasoning": "Functional equation for P,Q; analyse degrees and roots to describe all non‑constant solutions.",
+      "_no_solution": true
+    }
+  ]
+}

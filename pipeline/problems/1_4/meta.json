@@ -1,0 +1,14 @@
+{
+  "point_id": "1.4",
+  "generated_at": "2026-10-19T17:38:54.615194",
+  "verified_at": "2026-10-19T17:38:54.615194",
+  "model_gen": "openai/gpt-6.1-sol",
+  "model_ver1": "deepseek/deepseek-v3.2",
+  "model_ver2": "deepseek/deepseek-r1-0528",
+  "model_arbiter": "anthropic/claude-sonnet-5.5",
+  "cost_usd": 0.166,
+  "calls": 12,
+  "duration_sec": 490.9,
+  "retries": 0,
+  "arbiter_used": false
+}

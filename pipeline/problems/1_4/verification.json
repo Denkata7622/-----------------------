@@ -1,0 +1,135 @@
+{
+  "point_id": "1.4",
+  "verified_at": "2026-10-19T17:38:54.615194",
+  "verifier_model": "",
+  "results": {
+    "1": {
+      "score": 8.5,
+      "solvable": true,
+      "solution_correct": true,
+      "topic_match": "exact",
+      "difficulty_calibrated": true,
+      "hints_quality": 8,
+      "issues": [],
+      "can_ship": true,
+      "verifier_agreement": true,
+      "v1_score": 9,
+      "v2_score": 8
+    },
+    "2": {
+      "score": 8.0,
+      "solvable": true,
+      "solution_correct": true,
+      "topic_match": "exact",
+      "difficulty_calibrated": true,
+      "hints_quality": 7,
+      "issues": [],
+      "can_ship": true,
+      "verifier_agreement": true,
+      "v1_score": 8,
+      "v2_score": 8
+    },
+    "3": {
+      "score": 7.0,
+      "solvable": true,
+      "solution_correct": true,
+      "topic_match": "exact",
+      "difficulty_calibrated": false,
+      "hints_quality": 6,
+      "issues": [
+        "Трудността е medium, не easy. Решението изисква координати и Питагор, което е повече от 5-8 мин."
+      ],
+      "can_ship": true,
+      "verifier_agreement": true,
+      "v1_score": 7,
+      "v2_score": 7
+    },
+    "4": {
+      "score": 8.0,
+      "solvable": true,
+      "solution_correct": true,
+      "topic_match": "exact",
+      "difficulty_calibrated": true,
+      "hints_quality": 8,
+      "issues": [],
+      "can_ship": true,
+      "verifier_agreement": true,
+      "v1_score": 8,
+      "v2_score": 8
+    },
+    "5": {
+      "score": 8.5,
+      "solvable": true,
+      "solution_correct": true,
+      "topic_match": "exact",
+      "difficulty_calibrated": true,
+      "hints_quality": 8,
+      "issues": [],
+      "can_ship": true,
+      "verifier_agreement": true,
+      "v1_score": 9,
+      "v2_score": 8
+    },
+    "6": {
+      "score": 8.5,
+      "solvable": true,
+      "solution_correct": true,
+      "topic_match": "exact",
+      "difficulty_calibrated": true,
+      "hints_quality": 8,
+      "issues": [],
+      "can_ship": true,
+      "verifier_agreement": true,
+      "v1_score": 9,
+      "v2_score": 8
+    },
+    "7": {
+      "score": 8.5,
+      "solvable": true,
+      "solution_correct": true,
+      "topic_match": "exact",
+      "difficulty_calibrated": true,
+      "hints_quality": 7,
+      "issues": [],
+      "can_ship": true,
+      "verifier_agreement": true,
+      "v1_score": 8,
+      "v2_score": 9
+    },
+    "8": {
+      "score": 9.0,
+      "solvable": true,
+      "solution_correct": true,
+      "topic_match": "exact",
+      "difficulty_calibrated": true,
+      "hints_quality": 9,
+      "issues": [],
+      "can_ship": true,
+      "verifier_agreement": true,
+      "v1_score": 10,
+      "v2_score": 8
+    },
+    "9": {
+      "score": 8.5,
+      "solvable": true,
+      "solution_correct": true,
+      "topic_match": "exact",
+      "difficulty_calibrated": true,
+      "hints_quality": 8,
+      "issues": [],
+      "can_ship": true,
+      "verifier_agreement": true,
+      "v1_score": 9,
+      "v2_score": 8
+    }
+  },
+  "summary": {
+    "avg_score": 8.3,
+    "shipped": 9,
+    "rejected": 0,
+    "arbiter_used": false,
+    "dual_verified": true,
+    "agree_count": 9,
+    "disagreement_count": 0
+  }
+}

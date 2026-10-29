@@ -1,0 +1,276 @@
+{
+  "_meta": {
+    "pdf": "C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\Материали_БГ\\NOM_2011.pdf",
+    "paired_with": null,
+    "level": 2,
+    "type": "combined",
+    "analyzed_at": "2026-10-16T21:53:45.314137",
+    "model": "deepseek/deepseek-v3.2",
+    "text_length": 154916,
+    "paired_text_length": 0
+  },
+  "problems": [
+    {
+      "num": 1,
+      "topic": "geometry",
+      "theorems": [
+        "Power of a Point",
+        "Tangent-Chord Theorem"
+      ],
+      "techniques": [
+        "radical axis",
+        "angle chasing",
+        "auxiliary construction"
+      ],
+      "concepts": [
+        "orthocenter",
+        "circle with diameter",
+        "midpoints",
+        "tangent lines",
+        "radical axis of a point and a circle"
+      ],
+      "difficulty": "hard",
+      "notes": "Key step is constructing circle with diameter AH and recognizing MD, ME as tangents. Uses radical axis property to conclude TM=TA."
+    },
+    {
+      "num": 2,
+      "topic": "number_theory",
+      "theorems": [],
+      "techniques": [
+        "parity argument",
+        "construction",
+        "double factorial manipulation"
+      ],
+      "concepts": [
+        "arithmetic progression",
+        "product sequences",
+        "parity constraints",
+        "existence proof"
+      ],
+      "difficulty": "olympic",
+      "notes": "Even n impossible due to ordering contradiction. For odd n, a clever construction using double factorials and a scaling factor yields natural numbers."
+    },
+    {
+      "num": 3,
+      "topic": "combinatorics",
+      "theorems": [],
+      "techniques": [
+        "double counting",
+        "pigeonhole principle",
+        "multiset analysis"
+      ],
+      "concepts": [
+        "intervals on a line",
+        "set inclusion (antichain-like condition)",
+        "endpoint counting",
+        "extremal combinatorics"
+      ],
+      "difficulty": "hard",
+      "notes": "Problem about a family of intervals with a specific containment condition. Proof uses analysis of left and right endpoints via multisets."
+    },
+    {
+      "num": 4,
+      "topic": "number_theory",
+      "theorems": [],
+      "techniques": [
+        "case analysis",
+        "exhaustion",
+        "gcd properties",
+        "divisibility arguments"
+      ],
+      "concepts": [
+        "good sets (special triple condition)",
+        "greatest common divisor = 1",
+        "element dividing product of two others",
+        "finite set classification"
+      ],
+      "difficulty": "olympic",
+      "notes": "Requires finding all 3-element subsets of N with specific gcd and divisibility properties. Likely leads to a specific characterization."
+    },
+    {
+      "num": 5,
+      "topic": "algebra",
+      "theorems": [],
+      "techniques": [
+        "substitution",
+        "injectivity/surjectivity analysis",
+        "Cauchy-type functional equation"
+      ],
+      "concepts": [
+        "surjective functions R->R",
+        "functional equations",
+        "finding fixed points or special values"
+      ],
+      "difficulty": "olympic",
+      "notes": "Standard but tricky functional equation on reals. Solution likely involves proving linearity or a specific form using surjectivity."
+    },
+    {
+      "num": 6,
+      "topic": "geometry",
+      "theorems": [
+        "Desargues",
+        "Inversion",
+        "Radical Axis",
+        "Angle Bisector Theorem"
+      ],
+      "techniques": [
+        "inversion",
+        "homothety",
+        "radical axis/center",
+        "angle chasing"
+      ],
+      "concepts": [
+        "tangent circles",
+        "incircle of triangle",
+        "angle bisector",
+        "circle packing (Apollonian circles)",
+        "homothety centers"
+      ],
+      "difficulty": "olympic",
+      "notes": "Complex geometry problem involving a chain of tangent circles. Likely solved using inversion centered at O or homothety."
+    },
+    {
+      "num": 7,
+      "topic": "geometry",
+      "theorems": [
+        "Viviani's Theorem"
+      ],
+      "techniques": [
+        "area method",
+        "coordinate geometry",
+        "optimization"
+      ],
+      "concepts": [
+        "distances to sides of equilateral triangle",
+        "sum of distances constant (Viviani)",
+        "locus of points",
+        "square root sum condition"
+      ],
+      "difficulty": "hard",
+      "notes": "Extension of Viviani's theorem. Locus is likely a specific curve (e.g., arc of a circle or line) inside the triangle."
+    },
+    {
+      "num": 8,
+      "topic": "algebra",
+      "theorems": [
+        "Freshman's Dream (mod p)",
+        "Binomial Theorem mod p"
+      ],
+      "techniques": [
+        "polynomial divisibility",
+        "modular arithmetic",
+        "basis representation",
+        "induction"
+      ],
+      "concepts": [
+        "polynomials over integers",
+        "divisibility by prime powers",
+        "representing polynomials in base (x^p - x)",
+        "finite field properties"
+      ],
+      "difficulty": "olympic",
+      "notes": "Advanced polynomial divisibility problem. Uses the fact that over F_p, x^p ≡ x, and builds representation in powers of (x^p - x)."
+    },
+    {
+      "num": 9,
+      "topic": "geometry",
+      "theorems": [],
+      "techniques": [
+        "linearity of distance",
+        "pigeonhole principle",
+        "parameter counting"
+      ],
+      "concepts": [
+        "distance from point to line",
+        "splitting set of points into two groups",
+        "balanced sum of distances",
+        "family of lines through a point"
+      ],
+      "difficulty": "olympic",
+      "notes": "Combinatorial geometry. 'Good' line defined by balancing weighted distances. Proof shows infinitely many such lines pass through n+1 points."
+    },
+    {
+      "num": 10,
+      "topic": "algebra",
+      "theorems": [
+        "Cauchy-Schwarz Inequality",
+        "AM-GM Inequality"
+      ],
+      "techniques": [
+        "substitution",
+        "symmetry",
+        "Lagrange multipliers",
+        "homogenization"
+      ],
+      "concepts": [
+        "inequality optimization",
+        "symmetric expressions",
+        "nested radicals",
+        "finding minimal constant"
+      ],
+      "difficulty": "olympic",
+      "notes": "Hard inequality with nested square roots. Goal is to find minimal k such that inequality holds for all reals a,b,c,d."
+    },
+    {
+      "num": 11,
+      "topic": "geometry",
+      "theorems": [
+        "Apollonius Circle",
+        "Miquel Point",
+        "Spiral Similarity"
+      ],
+      "techniques": [
+        "locus method",
+        "fixed point theorem",
+        "coordinate geometry with complex numbers"
+      ],
+      "concepts": [
+        "equidistant points",
+        "midpoints of sides",
+        "locus of points with given distances to three points",
+        "intersection of loci"
+      ],
+      "difficulty": "hard",
+      "notes": "P and P' have same distances to vertices of triangle and midpoints of opposite sides. Locus arguments show PP' passes through a fixed point (likely centroid or circumcenter)."
+    },
+    {
+      "num": 12,
+      "topic": "number_theory",
+      "theorems": [
+        "Infinite Descent",
+        "Quadratic Residues"
+      ],
+      "techniques": [
+        "substitution",
+        "descent",
+        "modular analysis",
+        "considering minimal counterexample"
+      ],
+      "concepts": [
+        "functional equation on N",
+        "perfect squares",
+        "divisibility",
+        "proving identity function"
+      ],
+      "difficulty": "olympic",
+      "notes": "Functional number theory problem. Condition: a f(a) + b f(b) + 2ab is a perfect square for all a,b. Must prove f(a)=a."
+    }
+  ],
+  "unique_concepts": [
+    "Power of a Point",
+    "radical axis",
+    "orthocenter",
+    "arithmetic progression construction",
+    "interval family combinatorics",
+    "good sets (number theory)",
+    "surjective functional equations",
+    "tangent circle chains",
+    "Viviani's theorem extension",
+    "polynomial representation mod p",
+    "balanced distance lines",
+    "nested radical inequality",
+    "locus of equidistant points",
+    "perfect square functional equation"
+  ],
+  "confidence": 0.95
+}

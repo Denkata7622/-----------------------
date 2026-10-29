@@ -1,0 +1,147 @@
+{
+  "point_id": "1.4",
+  "total": 10,
+  "by_difficulty": {
+    "easy": 0,
+    "medium": 8,
+    "hard": 2
+  },
+  "problems": [
+    {
+      "source": "OLI-2-Областен кръг-1999-10 кл · 1999-10 · Зад. 2",
+      "statement": "A convex quadrilateral of area $S$ is inscribed in a circle whose centre is a point interior to the quadrilateral. Prove that the area of the quadrilateral whose vertices are the projections of the point of intersection of the diagonals on the sides does not exceed $\\frac{S}{2}$.",
+      "solution": "Let $ABCD$ be a quadrilateral inscribed in a circle with centre $O$ and radius $R$. Denote by $E$ the point of intersection of $AC$ and $BD$. Denote further by $M, N, P, Q$ and $F$ the projections of $E$ on $AB, BC, CD, DA$ and $MN$, respectively. We know that $MN = BE \\sin \\angle ABC = \\frac{BE \\cdot AC}{2R}$. Also,\n\n$$EF = EM \\sin \\angle EMN = \\frac{AE \\cdot BE \\sin \\angle AEB}{AB} \\sin \\angle CBE.$$\n\nSince $BE \\sin \\angle CBE = CE \\sin \\angle BCE = CE \\frac{AB}{2R}$ and $AE \\cdot CE = R^2 - OE^2$, it follows that $EF = \\frac{R^2 - OE^2}{2R} \\sin \\angle AEB$. Therefore\n\n[неразчетено]\n\nSimilar equalities hold for $S_{\\triangle NEP}, S_{\\triangle PEQ}$ and $S_{\\triangle QEM}$. By combining the above we obtain\n\n$$S_{MNPQ} = \\frac{AC \\cdot BD \\sin \\angle AEB(R^2 - OE^2)}{4R^2} \\leq \\frac{S_{ABCD}}{2},$$\n\nQ. E. D.",
+      "answer": null,
+      "difficulty": "medium",
+      "techniques": [
+        "power_of_a_point",
+        "area_estimate"
+      ],
+      "confidence": "exact",
+      "reasoning": "Uses power of a point (radical axis) for projections and derives area bound."
+    },
+    {
+      "source": "OLI-2-Областен кръг-2005-10 кл · 2005-10 · Зад. 2",
+      "statement": "Във вътрешността на даден ъгъл са построени две окръжности с центрове O₁ и O₂. Окръжностите се допират до раменете на ъгъла и помежду си. Да се докаже, че ако трета окръжност с център върху отсечката O₁O₂ се допира до раменете на ъгъла и минава през една от точките O₁ и O₂, то тя минава и през другата точка.",
+      "solution": "Нека окръжностите са k₁(O₁, r), k₂(O₂, R) и k₃(O, x), като r < x < R. Да построим перпендикуляри от O₁, O и O₂ към едното рамо p на ъгъла. Нека ℓ ∥ p е права през O₁, която пресича OB и O₂C съответно в точки M и N. Тогава △O₁OM ∼ △O₁O₂N и следователно O₁O / O₁O₂ = OM / O₂N.\nИмаме OM = OB − BM = OB − O₁A = x − r, O₂N = O₂C − O₁A = R − r и O₁O₂ = r + R. Ако k₃ минава през O₁, то OO₁ = x и получаваме x/(R + r) = (x − r)/(R − r), откъдето x = r(R + r)/(2r) = (R + r)/2. Ако k₃ минава през O₂, то OO₁ = R + r − x и (R + r − x)/(R + r) = (x − r)/(R − r), откъдето отново x = (r + R)/2. И в двата случая O е среда на O₁O₂ и k₃ минава както през O₁, така и през O₂.",
+      "answer": null,
+      "difficulty": "medium",
+      "techniques": [
+        "radical_axis",
+        "similar_triangles",
+        "homothety"
+      ],
+      "confidence": "exact",
+      "reasoning": "Използва се радикална ос и подобие за доказване, че третата окръжност минава през O₁ и O₂."
+    },
+    {
+      "source": "OLI-2-Областен кръг-2009-10 кл · 2009-10 · Зад. 2",
+      "statement": "Права през върха C пресича диагонала BD, страната AD и продължението на страната AB на успоредника ABCD съответно в точките M, E и F. Да се докаже, че AM е допирателна към описаната около триъгълника AEF окръжност тогава и само тогава, когато ABCD е ромб.",
+      "solution": "Решение. Нека ABCD е ромб. Тогава триъгълниците AMD и CMD са еднакви по първи признак, откъдето ∠DCM = ∠DAM. Но ∠DCM = ∠EFA. Следователно ∠DAM = ∠EFA, т.е. AM е допирателна към описаната около △AEF окръжност.\nНека ∠DAM = ∠EFA. Тогава разглежданите по-горе триъгълници са еднакви, защото имат обща страна, един и същ ъгъл срещу нея и равни височини. Това показва, че радиусите на описаните окръжности са равни, а оттам следва и равенство на ъглите.",
+      "answer": null,
+      "difficulty": "medium",
+      "techniques": [
+        "similar_triangles",
+        "tangent_properties",
+        "radical_axis"
+      ],
+      "confidence": "exact",
+      "reasoning": "Използва се равенство на ъгли от подобни триъгълници и свойството на радикалната ос за допирателна."
+    },
+    {
+      "source": "OLI-3-Национален кръг-1997-9-12 кл · 1997-None · Зад. 5",
+      "statement": "Given a $\\triangle ABC$ with bisectors $BM$ and $CN$ ($M\\in AC$, $N\\in AB$). The ray $MN\\to$ intersects the circumcircle of $\\triangle ABC$ at point $D$. Prove that\n\n$$\\frac{1}{BD}=\\frac{1}{AD}+\\frac{1}{CD}.$$",
+      "solution": "Solution: Let $A_1$, $B_1$ and $C_1$ be the orthogonal projections of $D$ on the lines $BC$, $CA$ and $AB$, respectively. It follows from $\\triangle DAB_1$ and the Sine Law that $DB_1=DA\\cdot\\sin\\angle DAB_1=DA\\cdot\\sin\\angle DAC=\\frac{DA\\cdot DC}{2R}$ ($R$ is the circumradius of $\\triangle ABC$). Analogously $DA_1=\\frac{DB\\cdot DC}{2R}$ and $DC_1=\\frac{DA\\cdot DB}{2R}$. Our equality is now equivalent to $AD\\cdot CD=BD\\cdot CD+AD\\cdot BD$ and so it suffices to prove that\n\n$$DB_1=DA_1+DC_1\\tag{1}$$\n\nDenote by $m$ the distance from $M$ to $AB$ and $BC$ and by $n$ the distance from $N$ to $AC$ and $BC$. Let $\\frac{DM}{MN}=x$ ($x>1$). Further, $\\frac{DB_1}{n}=x$, $\\frac{DC_1}{m}=x-1$ and $\\frac{DA_1-m}{n-m}=x$. Therefore $DB_1=nx$, $DC_1=m(x-1)$ and $DA_1=nx-m(x-1)=DB_1-DC_1$ and (1) holds.",
+      "answer": null,
+      "difficulty": "medium",
+      "techniques": [
+        "power_of_a_point",
+        "sine_law",
+        "projection"
+      ],
+      "confidence": "exact",
+      "reasoning": "Projects D onto the sides, uses sine law to express BD, AD, CD and shows DB₁ = DA₁ + DC₁, i.e. a power‑of‑a‑point relation."
+    },
+    {
+      "source": "OLI-3-Национален кръг-2000-9-12 кл · 2000-None · Зад. 5",
+      "statement": "Точка $D$ е средата на основата $AB$ на остроъгълен равнобедрен $\\triangle ABC$. Нека $E \\not\\equiv D$ е произволна точка върху основата, а $O$ е центърът на описаната около $\\triangle ACE$ окръжност. Да се докаже, че правата през $D$, [неразчетено]",
+      "solution": "Решение: Нека $\\measuredangle ABC = \\measuredangle BAC = \\alpha, G$ е центърът на описаната около $\\triangle ABC$ окръжност, а $F'$ и $F''$ са такива точки върху правата през $B$, успоредна на $AC$, че $OD \\perp DF'$ и $BC \\perp EF''$. Да означим с $H'$ и $H''$ проекциите съответно на $F'$ и $F''$ върху правата $AB$. Понеже $O$ е вътрешна точка за $\\measuredangle ADC$ и $\\measuredangle ACB < 90^\\circ$, то точките $F'$ и $F''$ съществуват и лежат във вътрешността на $\\measuredangle BAC$. Трябва да докажем, че $F' \\equiv F''$, т.е. $F'H' = F''H''$. Нека $O'$ и $G'$ са проекциите съответно на $O$ върху $AB$ и на $G$ върху $OO'$. Понеже $\\triangle DH'F' \\sim \\triangle OO'D$, то $\\frac{DH'}{F'H'} = \\frac{OO'}{DO'}$. От друга страна $\\measuredangle GOG' = \\alpha$ и значи $\\frac{BH'}{F'H'} = \\cotg \\alpha = \\frac{OG'}{GG'}$. Тогава от $GG' = DO', O'G' = DG$ и $\\measuredangle DBG = 2\\alpha - 90^\\circ$ следва, че $F'H' = \\frac{BD.O'D}{GD} = -\\operatorname{tg} 2\\alpha.O'D$. Нека сега $BC \\cap EF'' = I$. Тъй като $\\measuredangle CBF'' = 180^\\circ - 2\\alpha$ и $BE = 2O'D$, то $F''H'' = BF''\\sin \\alpha = \\frac{BI \\sin \\alpha}{\\cos(180^\\circ - 2\\alpha)} = -BE \\frac{\\sin \\alpha \\cos \\alpha}{\\cos 2\\alpha} = -O'D\\operatorname{tg} 2\\alpha = F'H'$. С това задачата е решена.\n\nЗабележка: Твърдението от задачата е вярно и за тъпоъгълен равнобедрен триъгълник, а за правоъгълен трите прави са успоредни.",
+      "answer": null,
+      "difficulty": "medium",
+      "techniques": [
+        "radical_axis",
+        "angle_chasing",
+        "perpendicular_concurrency"
+      ],
+      "confidence": "exact",
+      "reasoning": "Uses the radical axis of circles and angle chasing to prove the three constructed perpendicular lines meet at a single point."
+    },
+    {
+      "source": "OLI-3-Национален кръг-2007-9-12 кл · 2007-None · Зад. 1",
+      "statement": "В четириъгълник ABCD, за който ∠BAD + ∠ADC > 180°, е вписана окръжност с център I. През I е прекарана права, която пресича страните AB и CD съответно в точки X и Y така, че IX = IY. Да се докаже, че AX·DY = BX·CY.",
+      "solution": "Решение. Нека M и N са допирните точки на вписаната окръжност със страните AB и CD. От условието ∠BAD + ∠ADC > 180° следва, че AB ∦ CD и ∠MIN < 180°. Освен това, от IM = IN, ∠IMX = ∠INY и IX = IY, следва, че △IMX ≅ △INY, откъдето ∠IYN = ∠IXM. Ако X ∈ BM и Y ∈ DN (или X ∈ AM и Y ∈ CN), то ∠IYN = ∠IXM означава, [неразчетено — текстът е смесен с чертежа] AX·DY = IY·IX. Аналогично △BIX ∼ △ICY, т.е. BX·CY = IY·IX. Окончателно AX·DY = BX·CY.",
+      "answer": null,
+      "difficulty": "medium",
+      "techniques": [
+        "power_of_a_point",
+        "similar_triangles"
+      ],
+      "confidence": "exact",
+      "reasoning": "Equality AX·DY = BX·CY follows from the power of point I with respect to the incircle and similarity of triangles IMX and INY."
+    },
+    {
+      "source": "OLI-3-Национален кръг-2017-9-12 кл · 2017-None · Зад. 1",
+      "statement": "В изпъкнал четириъгълник ABCD диагоналите AC и BD се пресичат в точка O. Точките A₁, B₁, C₁ и D₁ съответно върху отсечките AO, BO, CO и DO са такива, че AA₁ = CC₁ и BB₁ = DD₁. Нека M и N са вторите пресечни точки съответно на окръжностите, описани около △AOB и △COD и около △AOD и △BOC, а P и Q са вторите пресечни точки съответно на окръжностите, описани около △A₁OB₁ и △C₁OD₁ и около △A₁OD₁ и △B₁OC₁. Да се докаже, че точките M, N, P и Q лежат на една окръжност.",
+      "solution": "Решение. Първи начин. От условието имаме ∠MAC = ∠MBD и ∠MCA = ∠MDB. Следователно △MAC ∼ △MBD. Нека X и Y са средите съответно на AC и BD. Тогава от горното подобие следва, че ∠MXC = ∠MYD. Последното означава, че M лежи на описаната около △OXY окръжност. Аналогично се вижда, че N лежи на същата окръжност.\nТъй като X и Y са средите съответно и на A₁C₁ и B₁D₁, горните разсъждения за четириъгълника A₁B₁C₁D₁ дават, че P и Q също лежат на описаната около △OXY окръжност.\nВтори начин. Да построим през върховете A и C прави, перпендикулярни на AC, а през върховете B и D прави, перпендикулярни на BD. Тези 4 прави определят успоредник, в който точките M и N са петите на перпендикулярите от O към диагоналите му. Следователно M и N лежат на окръжността с диаметър OT, където T е пресечната точка на диагоналите на успоредника. Аналогично се вижда, че точките P и Q лежат на същата окръжност (точките O и T са едни и същи за четириъгълниците ABCD и A₁B₁C₁D₁).",
+      "answer": null,
+      "difficulty": "medium",
+      "techniques": [
+        "radical_axis",
+        "similarity"
+      ],
+      "confidence": "exact",
+      "reasoning": "Uses similarity of triangles and shows M,N,P,Q lie on the circle defined by the radical axis of OXY."
+    },
+    {
+      "source": "OLI-3-Национален кръг-2024-9-12 кл · 2024-None · Зад. 6",
+      "statement": "Окръжността ω с център I се допира до страните AB и AC на △ABC и пресича страната му BC в точките X и Y. Нека Z е пресечната точка на правата през A, успоредна на BC, и правата през I, перпендикулярна на BC. Да се докаже, че окръжностите, описани около △ABC и △XYZ, се допират.",
+      "solution": "Решение. Ако AB = AC, твърдението е очевидно. По-нататък ще считаме, че AB < AC, както и че точките B,X,Y,C лежат в този ред върху страната BC. Нека ω се допира до AC и AB в P и Q съответно, BC ∩ PQ = S и T е точката на Микел за правите AB, BC, CA и PQ (пресечната точка на описаните окръжности около △ABC, △APQ, △BQS и △CPS). Ще докажем, че окръжностите, описани около △ABC и △XYZ, се допират в T.\nТочките A, T, Q, I, P и Z лежат на окръжността с диаметър AI. Имаме\n∠STQ + ∠QTZ = ∠QBC + ∠QAZ = 180°,\nоткъдето S, T и Z лежат на една права. Следователно ST · SZ = SP · SQ = SX · SY и X, Y, Z и T лежат на една окръжност.\nОсвен това\n∠BTX = 180° − ∠XTZ − ∠BTS = ∠XYZ − ∠BQS = ∠XYZ − ∠AQP.\nПо същия начин\n∠CTY = ∠YTZ − ∠CTZ = ∠YXZ − (180° − ∠STC)\n= ∠YXZ − (180° − ∠SPC) = ∠YXZ − ∠SPA.\nТъй като AP = AQ и ZX = ZY, получаваме ∠BTX = ∠CTY. Сега лесно се вижда, че двете окръжности се допират.",
+      "answer": null,
+      "difficulty": "medium",
+      "techniques": [
+        "radical_axis",
+        "circle_tangency"
+      ],
+      "confidence": "exact",
+      "reasoning": "Employs the radical axis (power of a point) and tangency properties of circles to show the circumcircles of ABC and XYZ touch."
+    },
+    {
+      "source": "OLI-3-Национален кръг-1996-9-12 кл · 1996-None · Зад. 5",
+      "statement": "The quadrilateral $ABCD$ is inscribed in a circle. The lines $AB$ and $CD$ meet each other in the point $E$, while the diagonals $AC$ and $BD$ — in the point $F$. The circumcircles of the triangles $AFD$ and $BFC$ have a second common point, which is denoted by $H$. Prove that $\\angle EHF = 90^\\circ$.",
+      "solution": "Solution. Let $O$ be the circumcenter of $ABCD$. We shall prove that $O$ is the second common point of the circumcircles of $\\triangle AHB$ and $\\triangle CHD$. (Since $AB$ and $CD$ are not parallel, then $O \\ne H$.) After that we shall prove that the points $E, H$ and $O$ are colinear and $\\angle OHF = 90^\\circ$.\n\nWe shall consider the possible positions of $H$.\n\nLet $G$ be the common point of $AD$ and $BC$ (these lines are not parallel because the circumcircles of $\\triangle AFD$ and $\\triangle BFC$ are not tangent). It is clear that $H$ is in the interior of $\\angle AGB$.\n\n1) $H$ is in $\\triangle CGD$. Then, $\\angle CHD = \\angle CHF + \\angle DHF = 180^{\\circ} - \\angle CBF + 180^{\\circ} - \\angle DAF = 360^{\\circ} - \\widehat{CD} > 180^{\\circ}$ (from $\\widehat{CD} < \\widehat{AB}$ and $\\widehat{AB} + \\widehat{CD} < 360^{\\circ}$), which is impossible.\n2) $H$ is in $\\triangle CFD$. Then, $\\angle CHD = 360^{\\circ} - \\angle CHF - \\angle DHF = \\angle CBF + \\angle DAF = \\widehat{CD} = \\angle COD$ and $\\angle AHB = \\angle AHF + \\angle BHF = \\angle ADF + \\angle BCF = \\widehat{AB} = \\angle AOB$.\n3) $H$ is in $\\triangle ABF$. Analogously, $\\angle CHD = \\angle COD$ and $\\angle AHB = \\angle AOB$.\n4) $H$ is on $AB$. Again $\\angle CHD = \\angle COD$ and $180^{\\circ} = \\angle AHB = \\angle AOB$. Consequently, $O$ is the midpoint of $AB$.\n5) $H$ is not in $\\triangle ABG$. Then $\\angle CHD = \\angle COD$ and $\\angle AHB = 360^{\\circ} - \\angle AOB$.\n\nNote that in the cases 2), 3) and 5) the points $O$ and $H$ are in one and the same semiplane with respect to the line $AB$ and with respect to the line $CD$. Consequently, the points $A, B, H$ and $O$ are concyclic. We have the same for the points $C, D, H$ and $O$.\n\nNow we shall prove that the line $EH$ passes through the point $O$. Let this line meet the circumcircles of $\\triangle AHB$ and $\\triangle CHD$ at the points $O_1$ and $O_2$, respectively. Since these points lie on the ray $EH^-$, it follows from the equalities $EH.EO_1 = EA.EB = EC.ED = EH.EO_2$ that $O_1 \\equiv O_2 \\equiv O$.\n\nThe points $O$ and $H$ are in one and the same semiplane with respect to $CD$ and we can assume that the quadrilateral $COHD$ is convex. Let $H$ be in $\\triangle CFD$. Then, $\\angle OHF = \\angle FHC - \\angle OHC = 180^\\circ - \\angle FBC - \\angle ODC = 180^\\circ - \\frac{1}{2} \\angle COD - (90^\\circ - \\frac{1}{2} \\angle COD) = 90^\\circ$. The other possibility for $H$ is to be inside $\\angle AGB$ and outside the non-convex quadrilateral $AFBG$.\n\nHence $\\angle OHF = \\angle OHC + \\angle FHC = \\angle ODC + \\angle FBC = 90^\\circ$.",
+      "answer": null,
+      "difficulty": "hard",
+      "techniques": [
+        "radical_axis",
+        "power_of_point",
+        "cyclic_quadrilateral"
+      ],
+      "confidence": "exact",
+      "reasoning": "Identifies O as second intersection of the two circumcircles via radical axis, then proves E, H, O are collinear and ∠OHF=90°."
+    },
+    {
+      "source": "OLI-3-Национален кръг-2012-9-12 кл · 2012-None · Зад. 6",
+      "statement": "Даден е остроъгълен $\\triangle ABC$ и произволна вътрешна точка $X$, различна от центъра на описаната около $\\triangle ABC$ окръжност $k$. Правите $AX$, $BX$ и $CX$ пресичат за втори път $k$ съответно в точките $A_1$, $B_1$ и $C_1$. Нека $A_2$, $B_2$ и $C_2$ са симетричните точки на $A_1$, $B_1$ и $C_1$ относно средите на $BC$, $AC$ и $AB$ съответно. Да се докаже, че описаната около $\\triangle A_2 B_2 C_2$ окръжност минава през постоянна точка, независеща от избора на $X$.",
+      "solution": "Решение. Ще докажем, че търсената постоянна точка е ортоцентърът H на △ABC (в случая, когато X съвпада с центъра на k, точките A₂, B₂ и C₂ съвпадат именно с H). Нека M средата на AB, G е медицентърът на △ABC (G ∈ CM), C′ е симетричната точка на C относно M и правата XG пресича C₂C′ в точката Y. Тъй като четириъгълникът C₂C′C₁C е успоредник, то XG : GY = CG : GC₁ = 1 : 2, т.е. точката Y се определя еднозначно от X.\nОт ∠AHB = 180° − ∠ACB следва, че точките A, C′, B, H и C₂ лежат на една окръжност (симетрична на k относно M). При това тази окръжност е с диаметър HC′, защото\n∠HBC′ = ∠HBA + ∠ABC′ = ∠HBA + ∠BAC = 90°.\nСледователно ∠HC₂Y = 90°, т.е. C₂ лежи на окръжността с диаметър HY. Аналогично A₂ и B₂ лежат на тази окръжност, с което доказателството е завършено.\n\nРешение. Нека O е центърът на k, а O_A, O_B и O_C са симетричните точки на O относно страните BC, CA и AB на △ABC. Тъй като отсечките AO_A, BO_B и CO_C взаимно се разполовяват в точка S, то △ABC и △O_AO_BO_C са централно симетрични относно S. Ще докажем, че при тази централна симетрия правата CC₁ се изобразява в симетралата на отсечката HC₂.\nНека M средата на AB и H_C е симетричната точка на H относно M. От H_CA ∥ BH и H_CB ∥ AH следва, че ∠H_CAC = ∠H_CBC = 90°, т.е. H_C е диаметрално противоположната точка на C в окръжността k и ∠H_CC₁C = 90°. Следователно симетралата на H_CC₁ минава през O и е успоредна на правата CC₁. От друга страна, симетралата на HC₂ е централно симетричен образ на H_CC₁ относно M, т.е. тя минава през O_C и е успоредна на CC₁.\nТака достигаме до извода, че симетралите на HA₂, HB₂ и HC₂ се пресичат в централно симетричния образ на точката X относно S, която се явява център на описаната окръжност около точките A₂, B₂, C₂ и H.\nЗабележка. Твърдението в задачата остава в сила и когато △ABC не е остроъгълен.",
+      "answer": "Постоянната точка е ортоцентърът H на △ABC.",
+      "difficulty": "hard",
+      "techniques": [
+        "radical_axis",
+        "circle_power",
+        "orthocenter"
+      ],
+      "confidence": "exact",
+      "reasoning": "Показва, че описаната окръжност минава през ортоцентъра чрез радикална ос и свойства на диаметъра – геометрия с радикална ос."
+    }
+  ]
+}

@@ -1,0 +1,121 @@
+{
+  "_meta": {
+    "pdf": "C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\Материали_БГ\\BMS_2012-2015.pdf",
+    "paired_with": null,
+    "level": 2,
+    "type": "combined",
+    "analyzed_at": "2026-10-16T21:49:19.305172",
+    "model": "deepseek/deepseek-v3.2",
+    "text_length": 447782,
+    "paired_text_length": 0
+  },
+  "problems": [
+    {
+      "num": 1,
+      "topic": "algebra",
+      "theorems": [],
+      "techniques": [
+        "absolute_value_equations",
+        "linear_equations",
+        "equivalence_of_equations"
+      ],
+      "concepts": [
+        "solving_linear_equations",
+        "absolute_value_properties",
+        "parameter_analysis"
+      ],
+      "difficulty": "standard",
+      "notes": "Задача за намиране на параметър, при който две уравнения са еквивалентни. Включва решаване на линейно уравнение и уравнение с модули."
+    },
+    {
+      "num": 2,
+      "topic": "geometry",
+      "theorems": [
+        "Menelaus",
+        "Ceva",
+        "Angle_Bisector_Theorem"
+      ],
+      "techniques": [
+        "angle_chasing",
+        "trigonometry",
+        "coordinate_geometry"
+      ],
+      "concepts": [
+        "perpendicular_bisectors",
+        "altitude",
+        "angle_measure",
+        "triangle_centers",
+        "similar_triangles"
+      ],
+      "difficulty": "hard",
+      "notes": "Сложна геометрична задача с перпендикулярни ъглополовящи, височина и отношение на отсечки. Изисква прилагане на теореми и вероятно тригонометрия."
+    },
+    {
+      "num": 3,
+      "topic": "number_theory",
+      "theorems": [],
+      "techniques": [
+        "factoring",
+        "modular_arithmetic",
+        "diophantine_equations"
+      ],
+      "concepts": [
+        "prime_numbers",
+        "consecutive_integers",
+        "divisibility",
+        "product_of_numbers"
+      ],
+      "difficulty": "standard",
+      "notes": "Задача за намиране на прости числа, за които даден израз е произведение на две последователни естествени числа. Включва разлагане и анализ на делимост."
+    },
+    {
+      "num": 4,
+      "topic": "combinatorics",
+      "theorems": [],
+      "techniques": [
+        "pigeonhole_principle",
+        "extremal_principle",
+        "construction"
+      ],
+      "concepts": [
+        "grid_problems",
+        "adjacency",
+        "max_min_problems",
+        "covering_conditions"
+      ],
+      "difficulty": "hard",
+      "notes": "Комбинаторна задача за минирана мрежа с условие във всеки 2x2 квадрат. Целта е да се намери минималната възможна максимална стойност на записаните числа. Изисква конструкция и анализ."
+    }
+  ],
+  "unique_concepts": [
+    "solving_linear_equations",
+    "absolute_value_properties",
+    "parameter_analysis",
+    "perpendicular_bisectors",
+    "altitude",
+    "angle_measure",
+    "triangle_centers",
+    "similar_triangles",
+    "Menelaus",
+    "Ceva",
+    "Angle_Bisector_Theorem",
+    "angle_chasing",
+    "trigonometry",
+    "coordinate_geometry",
+    "prime_numbers",
+    "consecutive_integers",
+    "divisibility",
+    "product_of_numbers",
+    "factoring",
+    "modular_arithmetic",
+    "diophantine_equations",
+    "grid_problems",
+    "adjacency",
+    "max_min_problems",
+    "covering_conditions",
+    "pigeonhole_principle",
+    "extremal_principle",
+    "construction"
+  ],
+  "confidence": 0.95
+}

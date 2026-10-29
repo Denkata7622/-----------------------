@@ -1,0 +1,1184 @@
+#!/usr/bin/env python3
+"""
+problem_generator.py — 2-фазов генератор на задачи.
+
+Phase 1: 9 условия в 1 call (AI вижда всичките → калибрира difficulty)
+Phase 2: 3 паралелни call-а за решения (не им трябва сравнение)
+Verify:  AI verifier за всичките 9
+Retry:   само провалените, до 2 пъти
+
+Употреба:
+    python problem_generator.py --point 1.4
+    python problem_generator.py --limit 3
+    python problem_generator.py --redry
+    python problem_generator.py --stats
+    python problem_generator.py --reset --point 1.4
+"""
+import os, re, sys, json, time, logging, argparse, requests, threading
+from pathlib import Path
+from datetime import datetime, date
+from typing import Optional
+import concurrent.futures
+
+from personas import PROBLEM_CREATOR, PROBLEM_REVIEWER
+
+BASE_DIR = Path(__file__).parent.resolve()
+LOG_DIR = BASE_DIR / "logs"
+LOG_DIR.mkdir(exist_ok=True)
+
+logging.basicConfig(
+    level=logging.INFO,
+    format="%(asctime)s [PROBLEM_GEN] %(levelname)s %(message)s",
+    handlers=[
+        logging.FileHandler(LOG_DIR / f"problem_gen_{date.today()}.log", encoding="utf-8"),
+        logging.StreamHandler(sys.stdout),
+    ],
+)
+log = logging.getLogger("problem_gen")
+
+PROBLEMS_DIR = BASE_DIR / "problems"
+PROBLEMS_DIR.mkdir(exist_ok=True)
+OUTPUT_DIR = BASE_DIR / "output"
+HTML_FILE = BASE_DIR.parent / "index.html"
+STATE_FILE = BASE_DIR / "problem_state.json"
+
+
+def load_config():
+    with open(BASE_DIR / "config.json", "r", encoding="utf-8") as f:
+        return json.load(f)
+
+CONFIG = load_config()
+
+
+# ═══════════════════════════════════════════════════════════════
+# HELPERS
+# ═══════════════════════════════════════════════════════════════
+def format_prompt(template: str, **kwargs) -> str:
+    """Заменя САМО точно {key} за известните kwargs. Не се чупи от JSON/LaTeX."""
+    if not kwargs:
+        return template
+    pattern = re.compile(r'\{(' + '|'.join(re.escape(k) for k in kwargs) + r')\}')
+    return pattern.sub(lambda m: str(kwargs[m.group(1)]), template)
+
+def heartbeat(item_id: str, label: str):
+    """Heartbeat thread за видимост при дълги AI call-ове."""
+    stop = threading.Event()
+    def run():
+        t0 = time.time()
+        while not stop.wait(20):
+            log.info(f"[{item_id}] {label}... {int(time.time()-t0)}s")
+    threading.Thread(target=run, daemon=True).start()
+    return stop
+
+def heartbeat(item_id: str, label: str):
+    """Стартира heartbeat thread. Връща stop_event."""
+    stop = threading.Event()
+    def run():
+        t0 = time.time()
+        while not stop.wait(20):
+            log.info(f"[{item_id}] {label}... {int(time.time()-t0)}s")
+    threading.Thread(target=run, daemon=True).start()
+    return stop
+
+
+def parse_json(text: str) -> Optional[dict]:
+    if not text:
+        return None
+    text = text.strip()
+    if text.startswith("```"):
+        text = re.sub(r'^```(?:json)?\s*', '', text)
+        text = re.sub(r'\s*```\s*$', '', text)
+    m = re.search(r'\{.*\}', text, re.DOTALL)
+    if not m:
+        return None
+    try:
+        return json.loads(m.group(0))
+    except Exception:
+        try:
+            return json.loads(re.sub(r',\s*([}\]])', r'\1', m.group(0)))
+        except Exception:
+            return None
+
+
+# ═══════════════════════════════════════════════════════════════
+# AI CLIENT
+# ═══════════════════════════════════════════════════════════════
+class AIClient:
+    def __init__(self, cfg, name="gen"):
+        self.name = name
+        self.url = cfg["api_url"]
+        self.model = cfg["model"]
+        self.max_tokens = cfg["max_tokens"]
+        self.temperature = cfg["temperature"]
+        self.headers = {"Content-Type": "application/json"}
+        if cfg.get("api_key"):
+            self.headers["Authorization"] = f"Bearer {cfg['api_key']}"
+
+    def call(self, system, user, item_id="?", force_json=True):
+        payload = {
+            "model": self.model,
+            "max_tokens": self.max_tokens,
+            "temperature": self.temperature,
+            "messages": [
+                {"role": "system", "content": system},
+                {"role": "user", "content": user},
+            ],
+        }
+        if force_json:
+            payload["response_format"] = {"type": "json_object"}
+
+        for attempt in range(1, 4):
+            try:
+                r = requests.post(self.url, headers=self.headers, json=payload, timeout=300)
+                if r.status_code == 429:
+                    log.warning(f"[{item_id}] 429 — чакам 30с")
+                    time.sleep(30); continue
+                if r.status_code == 400 and force_json:
+                    log.warning(f"[{item_id}] 400 — махам response_format")
+                    payload.pop("response_format", None)
+                    force_json = False
+                    continue
+                if r.status_code >= 500:
+                    time.sleep(8 * attempt); continue
+                if r.status_code >= 400:
+                    log.error(f"[{item_id}] {r.status_code}: {r.text[:300]}")
+                    return None
+                data = r.json()
+                content = data.get("choices", [{}])[0].get("message", {}).get("content", "")
+                return (content or "").strip() or None
+            except Exception as e:
+                log.warning(f"[{item_id}] {e}")
+                time.sleep(8 * attempt)
+        return None
+
+
+# ═══════════════════════════════════════════════════════════════
+# HTML PARSER
+# ═══════════════════════════════════════════════════════════════
+def find_steps_array(html: str) -> Optional[str]:
+    marker = "const STEPS = ["
+    start = html.find(marker)
+    if start == -1:
+        return None
+    start += len("const STEPS = ")
+    depth = 0; in_str = False; quote = None; escape = False
+    for i in range(start, len(html)):
+        c = html[i]
+        if escape: escape = False; continue
+        if in_str:
+            if c == '\\': escape = True
+            elif c == quote: in_str = False
+            continue
+        if c in ('"', "'", '`'):
+            in_str = True; quote = c; continue
+        if c == '[': depth += 1
+        elif c == ']':
+            depth -= 1
+            if depth == 0:
+                return html[start:i+1]
+    return None
+
+
+def find_matching_brace(text: str, start: int) -> int:
+    depth = 0; in_str = False; quote = None; escape = False
+    for i in range(start, len(text)):
+        c = text[i]
+        if escape: escape = False; continue
+        if in_str:
+            if c == '\\': escape = True
+            elif c == quote: in_str = False
+            continue
+        if c in ('"', "'", '`'):
+            in_str = True; quote = c; continue
+        if c == '{': depth += 1
+        elif c == '}':
+            depth -= 1
+            if depth == 0: return i + 1
+    return len(text)
+
+
+def extract_field(block: str, field: str) -> str:
+    m = re.search(rf'\b{field}\s*:\s*`((?:\\.|[^`\\])*)`', block, re.DOTALL)
+    if m:
+        s = m.group(1)
+        s = s.replace('\\`', '`').replace('\\$', '$')
+        s = s.replace('\\\\', '\x00BS\x00')
+        s = s.replace('\\n', '\n').replace('\\t', '\t').replace('\\r', '')
+        s = s.replace('\\"', '"').replace("\\'", "'")
+        s = s.replace('\x00BS\x00', '\\')
+        return s
+    m = re.search(rf'\b{field}\s*:\s*"((?:\\.|[^"\\])*)"', block, re.DOTALL)
+    if m:
+        s = m.group(1)
+        s = s.replace('\\\\', '\x00BS\x00')
+        s = s.replace('\\"', '"').replace('\\n', '\n').replace('\\t', '\t')
+        s = s.replace('\x00BS\x00', '\\')
+        return s
+    m = re.search(rf"\b{field}\s*:\s*'((?:\\.|[^'\\])*)'", block, re.DOTALL)
+    if m:
+        s = m.group(1)
+        s = s.replace('\\\\', '\x00BS\x00')
+        s = s.replace("\\'", "'").replace('\\n', '\n').replace('\\t', '\t')
+        s = s.replace('\x00BS\x00', '\\')
+        return s
+    return ""
+
+
+def extract_task_labels(block: str) -> list:
+    m = re.search(r'\btasks\s*:\s*\[', block)
+    if not m:
+        return []
+    start = m.end() - 1
+    depth = 0; in_str = False; quote = None; escape = False
+    end = len(block)
+    for i in range(start, len(block)):
+        c = block[i]
+        if escape: escape = False; continue
+        if in_str:
+            if c == '\\': escape = True
+            elif c == quote: in_str = False
+            continue
+        if c in ('"', "'", '`'):
+            in_str = True; quote = c; continue
+        if c == '[': depth += 1
+        elif c == ']':
+            depth -= 1
+            if depth == 0:
+                end = i + 1
+                break
+    tasks_str = block[start:end]
+    labels = re.findall(r'\blabel\s*:\s*"((?:\\.|[^"\\])*)"', tasks_str)
+    if not labels:
+        labels = re.findall(r"\blabel\s*:\s*'((?:\\.|[^'\\])*)'", tasks_str)
+    return [re.sub(r'<[^>]+>', '', l).strip() for l in labels]
+
+
+def parse_all_points(html: str) -> dict:
+    steps_str = find_steps_array(html)
+    if not steps_str:
+        log.error("Не намерих STEPS масив")
+        return {}
+    points = {}
+    i = 0
+    while i < len(steps_str):
+        m = re.search(r'\{\s*id\s*:\s*"([^"]+)"\s*,', steps_str[i:])
+        if not m:
+            break
+        point_start = i + m.start()
+        point_id = m.group(1)
+        point_end = find_matching_brace(steps_str, point_start)
+        block = steps_str[point_start:point_end]
+        points[point_id] = {
+            "id": point_id,
+            "title": extract_field(block, "title"),
+            "desc": extract_field(block, "desc"),
+            "explanation": extract_field(block, "explanation"),
+            "deep_explanation": extract_field(block, "deepExplanation"),
+            "tasks": extract_task_labels(block),
+        }
+        i = point_end
+    log.info(f"Намерени {len(points)} точки в HTML")
+    return points
+
+
+def enrich_with_deep_md(point: dict) -> dict:
+    safe_id = point["id"].replace(".", "_")
+    deep_file = OUTPUT_DIR / safe_id / "deep.md"
+    if deep_file.exists():
+        try:
+            text = deep_file.read_text(encoding="utf-8")
+            parts = text.split("---", 1)
+            body = parts[1].strip() if len(parts) == 2 else text
+            point["deep_explanation"] = body
+        except Exception as e:
+            log.warning(f"[{point['id']}] deep.md: {e}")
+    return point
+
+
+# ═══════════════════════════════════════════════════════════════
+# STATE
+# ═══════════════════════════════════════════════════════════════
+class ProblemState:
+    def __init__(self):
+        if STATE_FILE.exists():
+            try:
+                self.data = json.loads(STATE_FILE.read_text(encoding="utf-8"))
+            except Exception:
+                self.data = self._default()
+        else:
+            self.data = self._default()
+
+    def _default(self):
+        return {
+            "processed": {},
+            "budget": {"date": str(date.today()), "spent_usd": 0.0, "calls": 0},
+            "created_at": time.time(),
+        }
+
+    def save(self):
+        tmp = STATE_FILE.with_suffix(".tmp")
+        tmp.write_text(json.dumps(self.data, ensure_ascii=False, indent=2), encoding="utf-8")
+        tmp.replace(STATE_FILE)
+
+    def check_budget_reset(self):
+        today = str(date.today())
+        if self.data["budget"]["date"] != today:
+            log.info("Нов ден — рестарт на бюджета")
+            self.data["budget"] = {"date": today, "spent_usd": 0.0, "calls": 0}
+            self.save()
+
+    def budget_remaining(self) -> float:
+        self.check_budget_reset()
+        return CONFIG["daily_budget_usd"] - self.data["budget"]["spent_usd"]
+
+    def budget_exceeded(self) -> bool:
+        limit = CONFIG["daily_budget_usd"] * CONFIG["budget_stop_pct"]
+        return self.data["budget"]["spent_usd"] >= limit
+
+    def add_cost(self, usd: float):
+        self.data["budget"]["spent_usd"] += usd
+        self.data["budget"]["calls"] += 1
+        self.save()
+
+    def is_done(self, point_id: str) -> bool:
+        return self.data["processed"].get(point_id, {}).get("status") == "done"
+
+    def mark_done(self, point_id: str, cost: float, shipped: int, total: int):
+        self.data["processed"][point_id] = {
+            "status": "done",
+            "cost": cost,
+            "shipped": shipped,
+            "total": total,
+            "ts": time.time(),
+        }
+        self.save()
+
+
+# ═══════════════════════════════════════════════════════════════
+# PROMPTS
+# ═══════════════════════════════════════════════════════════════
+CONDITIONS_PROMPT = PROBLEM_CREATOR + """
+
+═══ КОНТЕКСТ НА ПЛАНА ═══
+- Тема: {title}
+- ID: {point_id}
+- Описание: {desc}
+- Фаза: {phase} ({focus}), седмица {week}/25
+- Дни до областен: {days_to_regional}
+- Дни до национален: {days_to_national}
+
+═══ ТЕОРИЯ (която ученикът вече е чел) ═══
+{deep_explanation}
+
+═══ РЕАЛНИ ОЛИМПИАДНИ ЗАДАЧИ ПО ТЕМАТА ═══
+{source_problems}
+
+═══ ЗАДАЧА: ГЕНЕРИРАЙ САМО УСЛОВИЯТА ═══
+Генерирай ТОЧНО 9 условия (без решения, без hints) с правилна калибрация:
+- 3 easy (5-8 мин, 1-2 стъпки, директно приложение на техниката)
+- 3 medium (15-20 мин, 2-3 стъпки, изисква insight)
+- 3 hard (30+ мин, олимпиадна, може да комбинира техники)
+
+═══ КРИТИЧНО ЗА КАЛИБРАЦИЯТА ═══
+Преди да финализираш, СРАВНИ деветте задачи една с друга:
+- Твоята "easy" наистина ли е по-лесна от твоята "medium"?
+- Твоята "hard" наистина ли е най-трудната?
+- Ако подредиш 9-те по трудност, редът съвпада ли с групите?
+
+За всяка задача добави `difficulty_reasoning` — защо е точно това ниво.
+
+═══ ФОРМАТ (САМО JSON) ═══
+{
+  "problems": [
+    {
+      "num": 1,
+      "difficulty": "easy",
+      "problem": "Условие (LaTeX между $...$)",
+      "estimated_minutes": 5,
+      "difficulty_reasoning": "Защо е easy спрямо останалите 8",
+      "tests_misconception": "Кое недоразумение тества"
+    }
+  ]
+}
+
+ПРАВИЛА:
+- Точно 9 задачи с nums 1..9
+- 3 easy (nums 1-3), 3 medium (nums 4-6), 3 hard (nums 7-9)
+- НЕ включвай решения — само условия
+- НЕ слагай markdown обвивка около JSON-а
+"""
+
+
+SOLUTIONS_PROMPT = """Ти си Стефан Георгиев — учител по математика с 21 години стаж,
+рецензент на сборника "Олимпиада по математика 2010-2020".
+
+Получаваш {n_conditions} задачи от ниво **{difficulty}** по тема "{topic}".
+Условията са вече калибрирани — НЕ ги променяй.
+
+За всяка задача генерирай:
+1. Пълно решение стъпка по стъпка (всяка стъпка обоснована)
+2. Краен отговор (проверим с конкретни числа)
+3. 3 hints:
+   - hint 1: лека посока, без да разкрива техниката
+   - hint 2: конкретна техника/метод
+   - hint 3: почти решение
+
+═══ УСЛОВИЯ ═══
+{conditions_text}
+
+═══ ФОРМАТ (САМО JSON) ═══
+{{
+  "solutions": [
+    {{
+      "num": 1,
+      "solution": "Пълно решение...",
+      "answer": "Краен отговор",
+      "hints": ["hint 1", "hint 2", "hint 3"]
+    }}
+  ]
+}}
+
+ПРАВИЛА:
+- Решението валидно за ВСИЧКИ случаи (провери edge cases: D=0, x=0 и т.н.)
+- Провери отговора с конкретни числа преди да го дадеш
+- Hints водят към решението, не го разкриват веднага
+- LaTeX: $...$ inline
+- НЕ слагай markdown обвивка около JSON-а
+"""
+
+
+VERIFICATION_PROMPT = PROBLEM_REVIEWER + """
+
+═══ КОНТЕКСТ ═══
+Точка: {point_id} — {title}
+Ниво: easy (5-8 мин) / medium (15-20 мин) / hard (30+ мин)
+
+═══ ЗАДАЧИ ЗА ОЦЕНКА ═══
+{problems_json}
+
+═══ ЗА ВСЯКА ЗАДАЧА ═══
+1. РЕШИ Я САМ (в главата си). Провери дали твоето решение съвпада с даденото.
+2. Провери отговора с конкретни числа.
+3. Провери edge cases.
+4. Реши я БЕЗ техниката на урока — ако може, не е по темата.
+5. Виж hints: помагат ли реално?
+
+═══ ФОРМАТ (САМО JSON) ═══
+{
+  "results": {
+    "1": {
+      "score": 8,
+      "solvable": true,
+      "solution_correct": true,
+      "topic_match": "exact",
+      "difficulty_calibrated": true,
+      "hints_quality": 8,
+      "issues": [],
+      "can_ship": true
+    }
+  },
+  "summary": {
+    "avg_score": 7.5,
+    "shipped": 7,
+    "rejected": 2,
+    "recommendation": "ship"
+  }
+}
+
+ПРАВИЛА:
+- solution_correct=false → score max 3, can_ship=false
+- topic_match=off → score max 5, can_ship=false
+- difficulty_calibrated=false → score max 7
+- can_ship = (score>=7 AND solvable AND solution_correct AND topic_match!=off)
+- СТРОГ. Не давай 8+ без основание.
+"""
+
+
+# ═══════════════════════════════════════════════════════════════
+# PHASE 1: CONDITIONS
+# ═══════════════════════════════════════════════════════════════
+def _build_base_context(point: dict, plan_ctx: dict) -> dict:
+    deep = point.get("deep_explanation", "")[:6000]
+    if not deep:
+        deep = point.get("explanation", "")[:3000]
+    if not deep:
+        deep = "(няма теория — генерирай по заглавие и описание)"
+
+    source = "\n".join(f"  • {t}" for t in point.get("tasks", [])[:10])
+    if not source:
+        source = "(няма реални задачи — генерирай типични)"
+
+    return {
+        "title": point["title"],
+        "point_id": point["id"],
+        "desc": point.get("desc", "")[:500],
+        "phase": plan_ctx["phase"],
+        "focus": plan_ctx["focus"],
+        "week": plan_ctx["week"],
+        "days_to_regional": plan_ctx["days_to_regional"],
+        "days_to_national": plan_ctx["days_to_national"],
+        "deep_explanation": deep,
+        "source_problems": source,
+    }
+
+
+def _gen_conditions(ai_gen: AIClient, point: dict, plan_ctx: dict) -> list:
+    """Phase 1: 9 условия в 1 call (AI калибрира difficulty)."""
+    user = format_prompt(CONDITIONS_PROMPT, **_build_base_context(point, plan_ctx))
+
+    log.info(f"[{point['id']}] PHASE 1: генерирам 9 условия...")
+    hb = heartbeat(point["id"], "phase 1")
+    t0 = time.time()
+    try:
+        raw = ai_gen.call(CONDITIONS_PROMPT, user, f"{point['id']}-cond")
+    finally:
+        hb.set()
+    dur = int(time.time() - t0)
+
+    if not raw:
+        log.error(f"[{point['id']}] PHASE 1 failed ({dur}s)")
+        return []
+
+    parsed = parse_json(raw)
+    if not parsed or "problems" not in parsed:
+        log.error(f"[{point['id']}] PHASE 1 JSON parse failed ({dur}s)")
+        return []
+
+    conditions = parsed["problems"]
+    log.info(f"[{point['id']}] PHASE 1 готово: {len(conditions)} условия ({dur}s)")
+
+    # Калибрационен отчет
+    by_diff = {"easy": [], "medium": [], "hard": []}
+    for c in conditions:
+        by_diff.setdefault(c.get("difficulty", "?"), []).append(c.get("num", "?"))
+    log.info(f"[{point['id']}] калибрация: easy={by_diff.get('easy', [])}, "
+             f"medium={by_diff.get('medium', [])}, hard={by_diff.get('hard', [])}")
+
+    # Fill missing (ако AI върне < 9)
+    expected = set(range(1, 10))
+    found = {c.get("num") for c in conditions if isinstance(c.get("num"), int)}
+    missing = expected - found
+    if missing:
+        log.warning(f"[{point['id']}] липсват nums {sorted(missing)} — генерирам ги")
+        extra = _gen_missing_conditions(ai_gen, point, plan_ctx, sorted(missing), conditions)
+        conditions.extend(extra)
+
+    # Sort by num
+    conditions.sort(key=lambda c: c.get("num", 999))
+    return conditions
+
+
+def _gen_missing_conditions(ai_gen, point, plan_ctx, missing_nums, existing):
+    """Допълнителен малък call за липсващи условия."""
+    diff_map = {1:"easy",2:"easy",3:"easy",4:"medium",5:"medium",6:"medium",7:"hard",8:"hard",9:"hard"}
+    missing_desc = ", ".join(f"{n} ({diff_map.get(n, '?')})" for n in missing_nums)
+
+    existing_summary = "\n".join(
+        f"  #{c.get('num')} ({c.get('difficulty')}): {c.get('problem', '')[:80]}"
+        for c in existing[:6]
+    )
+
+    user = format_prompt(CONDITIONS_PROMPT, **_build_base_context(point, plan_ctx)) + f"""
+
+═══ ВЕЧЕ СЪЗДАДЕНИ (не ги дублирай) ═══
+{existing_summary}
+
+═══ ЛИПСВАЩИ ЗАДАЧИ ═══
+Липсват nums: {missing_desc}
+
+Генерирай САМО тези {len(missing_nums)} задачи (със същите nums и difficulty).
+Формат: {{"problems": [...]}}
+"""
+
+    hb = heartbeat(point["id"], "fill missing")
+    try:
+        raw = ai_gen.call(CONDITIONS_PROMPT, user, f"{point['id']}-fill")
+    finally:
+        hb.set()
+
+    if not raw:
+        return []
+    parsed = parse_json(raw)
+    if not parsed or "problems" not in parsed:
+        return []
+    return parsed["problems"]
+
+
+# ═══════════════════════════════════════════════════════════════
+# PHASE 2: SOLUTIONS (parallel by difficulty)
+# ═══════════════════════════════════════════════════════════════
+def _gen_solutions_for_difficulty(ai_gen, point, conditions, difficulty):
+    """Phase 2: решения за всички условия от дадена трудност."""
+    if not conditions:
+        return []
+
+    conds_text = "\n\n".join(
+        f"### Задача {c.get('num')}\n{c.get('problem')}"
+        for c in conditions
+    )
+
+    user = SOLUTIONS_PROMPT.format(
+        n_conditions=len(conditions),
+        difficulty=difficulty,
+        topic=point["title"],
+        conditions_text=conds_text,
+    )
+
+    log.info(f"[{point['id']}] PHASE 2 {difficulty}: {len(conditions)} решения...")
+    t0 = time.time()
+    raw = ai_gen.call(SOLUTIONS_PROMPT, user, f"{point['id']}-{difficulty}-sol")
+    dur = int(time.time() - t0)
+
+    if not raw:
+        log.error(f"[{point['id']}] PHASE 2 {difficulty} failed ({dur}s)")
+        return []
+
+    parsed = parse_json(raw)
+    if not parsed or "solutions" not in parsed:
+        log.error(f"[{point['id']}] PHASE 2 {difficulty} JSON parse failed ({dur}s)")
+        return []
+
+    sols = parsed["solutions"]
+    log.info(f"[{point['id']}] PHASE 2 {difficulty} готово: {len(sols)} решения ({dur}s)")
+    return sols
+
+
+def _gen_missing_solutions(ai_gen, point, missing_conditions):
+    """Регенерира решения за конкретни задачи, които Phase 2 е пропуснал."""
+    if not missing_conditions:
+        return []
+
+    conds_text = "\n\n".join(
+        f"### Задача {c.get('num')}\n{c.get('problem')}"
+        for c in missing_conditions
+    )
+
+    user = SOLUTIONS_PROMPT.format(
+        n_conditions=len(missing_conditions),
+        difficulty="(mixed)",
+        topic=point["title"],
+        conditions_text=conds_text,
+    )
+
+    log.info(f"[{point['id']}] PHASE 2 missing: {len(missing_conditions)} решения...")
+    hb = heartbeat(point["id"], "fill solutions")
+    try:
+        raw = ai_gen.call(SOLUTIONS_PROMPT, user, f"{point['id']}-miss-sol")
+    finally:
+        hb.set()
+
+    if not raw:
+        return []
+    parsed = parse_json(raw)
+    if not parsed or "solutions" not in parsed:
+        return []
+    return parsed["solutions"]
+
+
+def _run_phase2_parallel(ai_gen, point, conditions):
+    """Стартира 3 паралелни call-а (easy/medium/hard) за решения."""
+    by_diff = {"easy": [], "medium": [], "hard": []}
+    for c in conditions:
+        d = c.get("difficulty", "easy")
+        if d not in by_diff:
+            d = "medium"
+        by_diff[d].append(c)
+
+    solutions_by_num = {}
+    log.info(f"[{point['id']}] PHASE 2: стартирам паралелни call-ове...")
+
+    with concurrent.futures.ThreadPoolExecutor(max_workers=3) as pool:
+        futures = {
+            pool.submit(_gen_solutions_for_difficulty, ai_gen, point, conds, diff): diff
+            for diff, conds in by_diff.items() if conds
+        }
+        for fut in concurrent.futures.as_completed(futures):
+            diff = futures[fut]
+            try:
+                sols = fut.result()
+                for s in sols:
+                    if s.get("num"):
+                        solutions_by_num[s["num"]] = s
+            except Exception as e:
+                log.error(f"[{point['id']}] PHASE 2 {diff} exception: {e}")
+
+    # Fill missing
+    missing = [c for c in conditions if c.get("num") not in solutions_by_num]
+    if missing:
+        log.warning(f"[{point['id']}] липсват решения за nums {[c['num'] for c in missing]}")
+        extra = _gen_missing_solutions(ai_gen, point, missing)
+        for s in extra:
+            if s.get("num"):
+                solutions_by_num[s["num"]] = s
+
+    return solutions_by_num
+
+
+def _regen_one_full_problem(ai_gen, point, num, difficulty):
+    """Регенерира 1 задача (условие + решение + hints) — за retry."""
+    user = format_prompt(CONDITIONS_PROMPT, **_build_base_context(point, plan_ctx=get_plan_context())) + f"""
+
+═══ РЕГЕНЕРИРАЙ САМО 1 ЗАДАЧА ═══
+Задача #{num}, difficulty: {difficulty}.
+
+Тази задача беше отхвърлена от verifier. Направи Я ПО-ДОБРА:
+- Ясно условие без скрити предположения
+- Пълно решение с всички edge cases
+- Проверим отговор
+- 3 hints
+
+Формат: {{
+  "problems": [{{
+    "num": {num},
+    "difficulty": "{difficulty}",
+    "problem": "...",
+    "estimated_minutes": N,
+    "solution": "...",
+    "answer": "...",
+    "hints": ["h1", "h2", "h3"],
+    "difficulty_reasoning": "...",
+    "tests_misconception": "..."
+  }}]
+}}
+"""
+
+    log.info(f"[{point['id']}] regen 1 задача #{num} ({difficulty})")
+    hb = heartbeat(point["id"], f"regen #{num}")
+    try:
+        raw = ai_gen.call(CONDITIONS_PROMPT, user, f"{point['id']}-regen-{num}")
+    finally:
+        hb.set()
+
+    if not raw:
+        return None
+    parsed = parse_json(raw)
+    if not parsed or "problems" not in parsed or not parsed["problems"]:
+        return None
+    return parsed["problems"][0]
+
+
+# ═══════════════════════════════════════════════════════════════
+# GENERATE_PROBLEMS — orchestrates Phase 1 + Phase 2
+# ═══════════════════════════════════════════════════════════════
+def generate_problems(ai_gen: AIClient, point: dict, plan_ctx: dict) -> Optional[dict]:
+    """2-фазов генератор."""
+    # Phase 1: условия
+    conditions = _gen_conditions(ai_gen, point, plan_ctx)
+    if not conditions:
+        return None
+
+    # Phase 2: решения (паралелно)
+    solutions_by_num = _run_phase2_parallel(ai_gen, point, conditions)
+
+    # Merge
+    merged = []
+    for c in conditions:
+        num = c.get("num")
+        sol = solutions_by_num.get(num, {})
+        merged.append({
+            "num": num,
+            "difficulty": c.get("difficulty", "?"),
+            "problem": c.get("problem", ""),
+            "estimated_minutes": c.get("estimated_minutes", 10),
+            "difficulty_reasoning": c.get("difficulty_reasoning", ""),
+            "tests_misconception": c.get("tests_misconception", ""),
+            "solution": sol.get("solution", ""),
+            "answer": sol.get("answer", ""),
+            "hints": sol.get("hints", []),
+        })
+
+    # Проверка
+    missing_sol = [p["num"] for p in merged if not p.get("solution")]
+    if missing_sol:
+        log.warning(f"[{point['id']}] без решение: {missing_sol}")
+
+    log.info(f"[{point['id']}] генерирани {len(merged)} задачи (условия + решения)")
+    return {"problems": merged}
+
+
+# ═══════════════════════════════════════════════════════════════
+# VERIFY
+# ═══════════════════════════════════════════════════════════════
+def verify_problems(ai_ver: AIClient, point: dict, problems: list) -> Optional[dict]:
+    compact = []
+    for p in problems:
+        compact.append({
+            "num": p.get("num"),
+            "difficulty": p.get("difficulty"),
+            "problem": p.get("problem", ""),
+            "solution": p.get("solution", ""),
+            "answer": p.get("answer", ""),
+            "hints": p.get("hints", []),
+        })
+
+    user = format_prompt(
+        VERIFICATION_PROMPT,
+        point_id=point["id"],
+        title=point["title"],
+        problems_json=json.dumps(compact, ensure_ascii=False, indent=2),
+    )
+
+    log.info(f"[{point['id']}] верифицирам {len(problems)} задачи...")
+    hb = heartbeat(point["id"], "verify")
+    t0 = time.time()
+    try:
+        raw = ai_ver.call(VERIFICATION_PROMPT, user, point["id"])
+    finally:
+        hb.set()
+    dur = int(time.time() - t0)
+
+    if not raw:
+        return None
+
+    parsed = parse_json(raw)
+    if not parsed or "results" not in parsed:
+        return None
+
+    log.info(f"[{point['id']}] verifier отговор ({dur}s)")
+    return parsed
+
+
+# ═══════════════════════════════════════════════════════════════
+# SAVE
+# ═══════════════════════════════════════════════════════════════
+def save_outputs(point: dict, problems: list, verification: dict, meta: dict):
+    safe_id = point["id"].replace(".", "_")
+    folder = PROBLEMS_DIR / safe_id
+    folder.mkdir(exist_ok=True)
+
+    problems_out = []
+    for p in problems:
+        num = p.get("num")
+        v = verification.get("results", {}).get(str(num), {})
+        problems_out.append({
+            "id": f"{point['id']}-{p.get('difficulty', '?')[:1].upper()}{num}",
+            "num": num,
+            "difficulty": p.get("difficulty", "?"),
+            "problem": p.get("problem", ""),
+            "estimated_minutes": p.get("estimated_minutes", 10),
+            "difficulty_reasoning": p.get("difficulty_reasoning", ""),
+            "status": "shipped" if v.get("can_ship") else "rejected",
+            "verification_score": v.get("score", 0),
+        })
+
+    (folder / "problems.json").write_text(
+        json.dumps({
+            "point_id": point["id"],
+            "point_title": point["title"],
+            "generated_at": meta["generated_at"],
+            "problems": problems_out,
+        }, ensure_ascii=False, indent=2), encoding="utf-8"
+    )
+
+    solutions = {}
+    for p in problems:
+        num = p.get("num")
+        pid = f"{point['id']}-{p.get('difficulty', '?')[:1].upper()}{num}"
+        v = verification.get("results", {}).get(str(num), {})
+        solutions[pid] = {
+            "solution": p.get("solution", ""),
+            "answer": p.get("answer", ""),
+            "hints": p.get("hints", []),
+            "tests_misconception": p.get("tests_misconception", ""),
+            "verified": bool(v.get("can_ship")),
+            "verification_score": v.get("score", 0),
+        }
+
+    (folder / "solutions.json").write_text(
+        json.dumps({"point_id": point["id"], "solutions": solutions}, ensure_ascii=False, indent=2),
+        encoding="utf-8"
+    )
+
+    (folder / "verification.json").write_text(
+        json.dumps({
+            "point_id": point["id"],
+            "verified_at": meta.get("verified_at", meta["generated_at"]),
+            "verifier_model": meta.get("verifier_model", ""),
+            "results": verification.get("results", {}),
+            "summary": verification.get("summary", {}),
+        }, ensure_ascii=False, indent=2), encoding="utf-8"
+    )
+
+    (folder / "meta.json").write_text(json.dumps(meta, ensure_ascii=False, indent=2), encoding="utf-8")
+
+    shipped = sum(1 for p in problems_out if p["status"] == "shipped")
+    log.info(f"✓ [{point['id']}] {shipped}/{len(problems_out)} shipped → {folder}")
+
+
+# ═══════════════════════════════════════════════════════════════
+# PLAN CONTEXT
+# ═══════════════════════════════════════════════════════════════
+def get_plan_context() -> dict:
+    try:
+        html = HTML_FILE.read_text(encoding="utf-8")
+    except Exception:
+        return {"week": 1, "phase": 1, "days_to_regional": 100, "days_to_national": 200, "focus": "unknown"}
+
+    m = re.search(r"planStartDate:\s*new Date\('([^']+)'", html)
+    if not m:
+        return {"week": 1, "phase": 1, "days_to_regional": 100, "days_to_national": 200, "focus": "unknown"}
+
+    start = datetime.fromisoformat(m.group(1))
+    now = datetime.now()
+    week = max(1, (now - start).days // 7 + 1)
+
+    exam_dates = {}
+    for name in ["regional", "nationalStart"]:
+        m2 = re.search(rf"{name}:\s*new Date\('([^']+)'", html)
+        if m2:
+            exam_dates[name] = datetime.fromisoformat(m2.group(1))
+
+    days_reg = (exam_dates.get("regional", now) - now).days if "regional" in exam_dates else 0
+    days_nat = (exam_dates.get("nationalStart", now) - now).days if "nationalStart" in exam_dates else 0
+
+    if week <= 6: phase, focus = 1, "Task 1"
+    elif week <= 12: phase, focus = 2, "Task 2"
+    elif week <= 15: phase, focus = 3, "Task 3+4"
+    elif week <= 17: phase, focus = 4, "Simulations"
+    else: phase, focus = 5, "National"
+
+    return {
+        "week": week, "phase": phase, "focus": focus,
+        "days_to_regional": max(0, days_reg),
+        "days_to_national": max(0, days_nat),
+    }
+
+
+# ═══════════════════════════════════════════════════════════════
+# PROCESS POINT
+# ═══════════════════════════════════════════════════════════════
+def process_point(ai_gen, ai_ver, point, plan_ctx, state, redry=False) -> bool:
+    point_id = point["id"]
+
+    if not redry and state.is_done(point_id):
+        log.info(f"[{point_id}] skip (готово)")
+        return True
+
+    if redry:
+        folder = PROBLEMS_DIR / point_id.replace(".", "_")
+        if folder.exists():
+            for f in folder.glob("*.json"):
+                f.unlink()
+
+    started = time.time()
+    total_cost = 0.0
+    calls = 0
+
+    # Phase 1+2
+    gen_result = generate_problems(ai_gen, point, plan_ctx)
+    if not gen_result:
+        log.error(f"[{point_id}] generation failed")
+        return False
+    total_cost += CONFIG["generator"]["cost_per_call_usd"] * 4  # ~4 calls (phase1 + 3 phase2)
+    calls += 4
+
+    problems = gen_result["problems"]
+    log.info(f"[{point_id}] {len(problems)} задачи генерирани")
+
+    # Verify
+    ver_result = verify_problems(ai_ver, point, problems)
+    if not ver_result:
+        log.error(f"[{point_id}] verification failed")
+        return False
+    total_cost += CONFIG["verifier"]["cost_per_call_usd"]
+    calls += 1
+
+    # Retry loop
+    retries = 0
+    while retries < 2:
+        results = ver_result.get("results", {})
+        failed = [
+            p for p in problems
+            if not results.get(str(p.get("num")), {}).get("can_ship", False)
+        ]
+        if not failed:
+            break
+
+        log.info(f"[{point_id}] retry {retries+1}/2 за {len(failed)} задачи")
+        for fp in failed:
+            num = fp.get("num")
+            difficulty = fp.get("difficulty", "medium")
+            regen = _regen_one_full_problem(ai_gen, point, num, difficulty)
+            total_cost += CONFIG["generator"]["cost_per_call_usd"]
+            calls += 1
+            if not regen:
+                continue
+            # Замести
+            for i, old_p in enumerate(problems):
+                if old_p.get("num") == num:
+                    problems[i] = regen
+                    break
+
+        # Re-verify всички
+        ver_result = verify_problems(ai_ver, point, problems)
+        if ver_result:
+            total_cost += CONFIG["verifier"]["cost_per_call_usd"]
+            calls += 1
+        else:
+            break
+        retries += 1
+
+    duration = time.time() - started
+    meta = {
+        "point_id": point_id,
+        "generated_at": datetime.now().isoformat(),
+        "verified_at": datetime.now().isoformat(),
+        "model_gen": CONFIG["generator"]["model"],
+        "model_ver": CONFIG["verifier"]["model"],
+        "cost_usd": round(total_cost, 4),
+        "calls": calls,
+        "duration_sec": round(duration, 1),
+        "retries": retries,
+    }
+    save_outputs(point, problems, ver_result, meta)
+
+    shipped = sum(1 for r in ver_result.get("results", {}).values() if r.get("can_ship"))
+    total = len(problems)
+    state.mark_done(point_id, total_cost, shipped, total)
+    state.add_cost(total_cost)
+
+    log.info(f"[{point_id}] Готово за {duration:.1f}s | ${total_cost:.4f} | {shipped}/{total} shipped")
+    return True
+
+
+# ═══════════════════════════════════════════════════════════════
+# CLI
+# ═══════════════════════════════════════════════════════════════
+def cmd_stats():
+    if not PROBLEMS_DIR.exists():
+        print("Няма problems/ директория"); return
+
+    folders = [f for f in PROBLEMS_DIR.iterdir() if f.is_dir()]
+    total_problems = total_shipped = 0
+    total_cost = 0.0
+
+    print()
+    print("═" * 65)
+    print(f"  {'POINT':8s}  {'SHIPPED':>8s}  {'TOTAL':>6s}  {'COST':>8s}  STATUS")
+    print("─" * 65)
+
+    for folder in sorted(folders):
+        point_id = folder.name.replace("_", ".")
+        meta_file = folder / "meta.json"
+        ver_file = folder / "verification.json"
+        if not meta_file.exists():
+            status = "no meta"; shipped = total = 0
+        else:
+            try:
+                meta = json.loads(meta_file.read_text(encoding="utf-8"))
+                ver = json.loads(ver_file.read_text(encoding="utf-8")) if ver_file.exists() else {}
+                summary = ver.get("summary", {})
+                shipped = summary.get("shipped", 0)
+                total = shipped + summary.get("rejected", 0)
+                total_cost += meta.get("cost_usd", 0)
+                total_problems += total
+                total_shipped += shipped
+                status = "✓" if shipped >= 7 else ("⚠" if shipped > 0 else "✗")
+            except Exception as e:
+                status = f"error"; shipped = total = 0
+        print(f"  {point_id:8s}  {shipped:>8d}  {total:>6d}  ${total_cost:>7.3f}  {status}")
+
+    print("─" * 65)
+    print(f"  TOTAL: {total_shipped}/{total_problems} shipped | ${total_cost:.3f}")
+    print("═" * 65)
+
+
+def cmd_reset(point_id: Optional[str] = None):
+    if point_id:
+        folder = PROBLEMS_DIR / point_id.replace(".", "_")
+        if folder.exists():
+            for f in folder.glob("*.json"):
+                f.unlink()
+            print(f"✓ Изчистени файлове за {point_id}")
+        state = ProblemState()
+        if point_id in state.data["processed"]:
+            del state.data["processed"][point_id]
+            state.save()
+    else:
+        if PROBLEMS_DIR.exists():
+            import shutil
+            shutil.rmtree(PROBLEMS_DIR)
+            PROBLEMS_DIR.mkdir()
+        STATE_FILE.unlink(missing_ok=True)
+        print("✓ Всичко изчистено")
+
+
+def main():
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--point", default=None)
+    ap.add_argument("--limit", type=int, default=None)
+    ap.add_argument("--redry", action="store_true")
+    ap.add_argument("--stats", action="store_true")
+    ap.add_argument("--reset", action="store_true")
+    args = ap.parse_args()
+
+    if args.stats:
+        cmd_stats(); return
+    if args.reset:
+        cmd_reset(args.point); return
+
+    if not HTML_FILE.exists():
+        log.error(f"Липсва {HTML_FILE}"); sys.exit(1)
+
+    log.info(f"Чета {HTML_FILE}")
+    html = HTML_FILE.read_text(encoding="utf-8")
+    all_points = parse_all_points(html)
+    if not all_points:
+        log.error("Не намерих точки"); sys.exit(1)
+
+    for pid in all_points:
+        all_points[pid] = enrich_with_deep_md(all_points[pid])
+
+    if args.point:
+        if args.point not in all_points:
+            log.error(f"Точка {args.point} не е намерена"); sys.exit(1)
+        points = [all_points[args.point]]
+    else:
+        points = list(all_points.values())
+
+    if args.limit:
+        points = points[:args.limit]
+
+    log.info(f"Ще обработя {len(points)} точки")
+
+    # Override max_tokens — статиите остават 24000
+    gen_cfg = dict(CONFIG["generator"])
+    gen_cfg["max_tokens"] = 10000
+    ver_cfg = dict(CONFIG["verifier"])
+    ver_cfg["max_tokens"] = 12000
+    ai_gen = AIClient(gen_cfg, "gen")
+    ai_ver = AIClient(ver_cfg, "ver")
+
+    state = ProblemState()
+    plan_ctx = get_plan_context()
+
+    log.info(f"Plan: Week {plan_ctx['week']}/25, Phase {plan_ctx['phase']} ({plan_ctx['focus']})")
+    log.info(f"Дни до областен: {plan_ctx['days_to_regional']}, до национален: {plan_ctx['days_to_national']}")
+    log.info(f"Бюджет днес: ${state.budget_remaining():.2f} / ${CONFIG['daily_budget_usd']:.2f}")
+    log.info("═" * 60)
+
+    success = failed = 0
+    for i, point in enumerate(points, 1):
+        if state.budget_exceeded():
+            log.warning("⚠ Бюджет достигнат. Спирам.")
+            break
+        log.info(f"\n[{i}/{len(points)}] {point['id']} — {point['title']}")
+        try:
+            if process_point(ai_gen, ai_ver, point, plan_ctx, state, redry=args.redry):
+                success += 1
+            else:
+                failed += 1
+        except Exception as e:
+            log.exception(f"[{point['id']}] {e}")
+            failed += 1
+
+    log.info("\n" + "═" * 60)
+    log.info(f"КРАЙ: {success} успешни, {failed} грешки")
+    log.info(f"Бюджет: ${state.data['budget']['spent_usd']:.3f} / ${CONFIG['daily_budget_usd']:.2f}")
+    log.info("═" * 60)
+
+    cmd_stats()
+
+
+if __name__ == "__main__":
+    main()

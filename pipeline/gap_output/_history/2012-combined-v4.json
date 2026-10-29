@@ -1,0 +1,122 @@
+{
+  "_meta": {
+    "pdf": "C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\Материали_БГ\\NOM_2012.pdf",
+    "paired_with": null,
+    "level": 2,
+    "type": "combined",
+    "analyzed_at": "2026-10-16T21:54:10.122812",
+    "model": "deepseek/deepseek-v3.2",
+    "text_length": 137879,
+    "paired_text_length": 0
+  },
+  "problems": [
+    {
+      "num": 1,
+      "topic": "number_theory",
+      "theorems": [
+        "Lucas theorem (implicitly)",
+        "Binomial coefficient parity"
+      ],
+      "techniques": [
+        "parity analysis",
+        "induction",
+        "binary representation"
+      ],
+      "concepts": [
+        "binomial coefficients",
+        "modular arithmetic (mod 2)",
+        "properties of 2^k - 1"
+      ],
+      "difficulty": "olympic",
+      "notes": "Focus on parity of binomial coefficients and their differences. Uses known fact that all binomial coefficients of 2^k-1 are odd."
+    },
+    {
+      "num": 2,
+      "topic": "geometry",
+      "theorems": [
+        "Angle bisector theorem (harmonic division)",
+        "Cyclic quadrilaterals",
+        "Inscribed angles"
+      ],
+      "techniques": [
+        "harmonic division",
+        "angle chasing",
+        "using diameters"
+      ],
+      "concepts": [
+        "circumcircle",
+        "incenter",
+        "arc midpoints",
+        "angle bisectors",
+        "harmonic conjugates"
+      ],
+      "difficulty": "olympic",
+      "notes": "Key step is recognizing harmonic division (JEBC) = -1 and proving concyclicity."
+    },
+    {
+      "num": 3,
+      "topic": "combinatorics",
+      "theorems": [
+        "Linear independence of polynomials",
+        "Dimension of polynomial space"
+      ],
+      "techniques": [
+        "polynomial method",
+        "linear independence",
+        "counting arguments"
+      ],
+      "concepts": [
+        "covering points with lines",
+        "polynomial interpolation",
+        "vector space dimension"
+      ],
+      "difficulty": "olympic",
+      "notes": "Classic polynomial method problem. Constructs polynomials for each point and uses dimension bound."
+    },
+    {
+      "num": 4,
+      "topic": "combinatorics",
+      "theorems": [],
+      "techniques": [
+        "double counting",
+        "handshaking lemma (for grid)"
+      ],
+      "concepts": [
+        "grid paths",
+        "Eulerian trail (implicitly)",
+        "counting turns vs straight segments",
+        "cell classification"
+      ],
+      "difficulty": "hard",
+      "notes": "Combinatorial identity on rectangular grid with Hamiltonian cycle on interior vertices."
+    },
+    {
+      "num": 5,
+      "topic": "algebra",
+      "techniques": [
+        "induction",
+        "inequality manipulation",
+        "functional inequalities"
+      ],
+      "concepts": [
+        "subadditivity",
+        "multiplicative functions",
+        "max inequality",
+        "bounding f(n)"
+      ],
+      "difficulty": "olympic",
+      "notes": "Proves subadditivity from multiplicativity and bounded growth condition. Uses f(n) ≤ 2n f(1)."
+    }
+  ],
+  "unique_concepts": [
+    "binomial coefficient parity",
+    "harmonic division",
+    "polynomial method",
+    "grid path combinatorics",
+    "subadditive multiplicative functions",
+    "angle chasing",
+    "linear independence in polynomial spaces",
+    "covering problems with lines"
+  ],
+  "confidence": 0.95
+}

@@ -1,0 +1,209 @@
+{
+  "_meta": {
+    "pdf": "C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\Задачи_Минали_Години\\Национален\\OLI-3-Национален кръг-2018-9-12 кл-sol.pdf",
+    "paired_with": null,
+    "level": 2,
+    "type": "sol",
+    "analyzed_at": "2026-10-16T20:58:38.567716",
+    "model": "deepseek/deepseek-v3.2",
+    "text_length": 19057,
+    "paired_text_length": 0
+  },
+  "problems": [
+    {
+      "num": 1,
+      "topic": "number_theory",
+      "theorems": [],
+      "techniques": [
+        "construction",
+        "modular arithmetic",
+        "summation",
+        "inequality"
+      ],
+      "concepts": [
+        "sum of elements",
+        "subset partition",
+        "odd number of elements",
+        "prime numbers",
+        "mutually prime numbers",
+        "arithmetic progression"
+      ],
+      "difficulty": "olympic",
+      "notes": "Constructive problem: building a set M with an odd number of elements such that the sum of elements is not a perfect square, and the number of good partitions (A,B) is exactly 2^(n-1). Uses a prime p > n(n-1)/2 and an arithmetic progression."
+    },
+    {
+      "num": 2,
+      "topic": "geometry",
+      "theorems": [
+        "Menelaus",
+        "Ceva",
+        "properties of orthocenter",
+        "similar triangles",
+        "homothety"
+      ],
+      "techniques": [
+        "homothety",
+        "parallel lines",
+        "cyclic quadrilateral",
+        "angle chasing"
+      ],
+      "concepts": [
+        "orthocenter",
+        "circumcenter",
+        "circumscribed circle",
+        "inscribed circle",
+        "similar triangles",
+        "homothety center",
+        "parallel lines",
+        "cyclic quadrilateral",
+        "power of a point",
+        "midpoints",
+        "parallelogram"
+      ],
+      "difficulty": "olympic",
+      "notes": "Complex geometry problem involving orthocenters, circumcenters, and homothety. Shows that lines connecting corresponding points are parallel to sides, leading to a cyclic quadrilateral MNPQ."
+    },
+    {
+      "num": 3,
+      "topic": "algebra",
+      "theorems": [
+        "Taylor expansion",
+        "binomial theorem",
+        "inequalities"
+      ],
+      "techniques": [
+        "calculus",
+        "derivatives",
+        "inequality proof",
+        "substitution"
+      ],
+      "concepts": [
+        "function analysis",
+        "derivatives up to third order",
+        "inequality for (1+x)^α",
+        "numerical comparison",
+        "approximation"
+      ],
+      "difficulty": "olympic",
+      "notes": "Proves an inequality by analyzing the function f(x) = (1+x)^α - 1 - αx - ... using derivatives and then applies it with specific x and α to compare (6/5)^√3 and (5/4)^√2."
+    },
+    {
+      "num": 4,
+      "topic": "geometry",
+      "theorems": [
+        "tangent lengths",
+        "similar triangles",
+        "congruent triangles",
+        "properties of incircles"
+      ],
+      "techniques": [
+        "tangent segments",
+        "length calculations",
+        "cyclic quadrilateral",
+        "angle chasing"
+      ],
+      "concepts": [
+        "incircle",
+        "tangent lengths",
+        "cyclic quadrilateral",
+        "inscribed quadrilateral",
+        "power of a point",
+        "sum of opposite sides in circumscribed quadrilateral",
+        "concyclic points"
+      ],
+      "difficulty": "olympic",
+      "notes": "Uses lengths of common external tangents to three incircles and the property AB+CD=BC+DA for a circumscribed quadrilateral to show that points M, I1, I2, I3 are concyclic."
+    },
+    {
+      "num": 5,
+      "topic": "number_theory",
+      "theorems": [
+        "p-adic valuation",
+        "modular arithmetic",
+        "induction"
+      ],
+      "techniques": [
+        "p-adic valuation",
+        "modular arithmetic",
+        "induction",
+        "contradiction",
+        "inequality"
+      ],
+      "concepts": [
+        "p-adic valuation (v_p)",
+        "prime divisors",
+        "mutually prime",
+        "recurrence sequence",
+        "divisibility",
+        "inequality b_n > b_{n-1}^2",
+        "infinite descent in exponents"
+      ],
+      "difficulty": "olympic",
+      "notes": "Shows that for n≥2, there exists a prime p dividing b_n that is coprime to all previous b_i. Uses p-adic valuations and the recurrence b_{n+1}=P(b_n) to derive a contradiction if no such prime exists."
+    },
+    {
+      "num": 6,
+      "topic": "combinatorics",
+      "theorems": [
+        "Dirac's theorem (for Hamiltonian cycle)",
+        "graph theory lemmas"
+      ],
+      "techniques": [
+        "graph construction",
+        "contradiction",
+        "cycle construction",
+        "degree sum condition"
+      ],
+      "concepts": [
+        "graph theory",
+        "Hamiltonian cycle",
+        "degree of vertices",
+        "partition of vertices",
+        "cycle in graph",
+        "adjacency",
+        "maximal non-Hamiltonian graph",
+        "path extension"
+      ],
+      "difficulty": "olympic",
+      "notes": "Graph theory problem. Represents cities as vertices and roads as edges. Uses a lemma: if d(u)+d(v)≥|V| for every non-adjacent pair, then the graph has a Hamiltonian cycle. Constructs a graph H from clusters V_i and shows a cycle of length at least N/2 + M exists."
+    }
+  ],
+  "unique_concepts": [
+    "sum of elements",
+    "subset partition",
+    "odd number of elements",
+    "prime numbers",
+    "mutually prime numbers",
+    "arithmetic progression",
+    "orthocenter",
+    "circumcenter",
+    "circumscribed circle",
+    "inscribed circle",
+    "similar triangles",
+    "homothety",
+    "parallel lines",
+    "cyclic quadrilateral",
+    "power of a point",
+    "midpoints",
+    "parallelogram",
+    "function analysis",
+    "derivatives up to third order",
+    "inequality for (1+x)^α",
+    "numerical comparison",
+    "tangent lengths",
+    "inscribed quadrilateral",
+    "concyclic points",
+    "p-adic valuation (v_p)",
+    "prime divisors",
+    "recurrence sequence",
+    "divisibility",
+    "graph theory",
+    "Hamiltonian cycle",
+    "degree of vertices",
+    "partition of vertices",
+    "cycle in graph",
+    "adjacency",
+    "maximal non-Hamiltonian graph"
+  ],
+  "confidence": 0.95
+}

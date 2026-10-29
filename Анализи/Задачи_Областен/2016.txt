@@ -1,0 +1,433 @@
+### Част 1: ЗАДАЧИ (10 кл)
+
+```js
+// ─── ЗАДАЧИ: 2016-10 ───
+{
+  source_pdf_probs: "Задачи_Минали_Години/OLI-2-Областен кръг-2016-10 кл-probs.pdf",
+  source_pdf_sols:  "Задачи_Минали_Години/OLI-2-Областен кръг-2016-10 кл-sol.pdf",
+  year: 2016,
+  grade: 10,
+  exam_type: "областен",
+  problems: [
+    {
+      num: 1,
+      topic: "Алгебра",
+      subtopic: "Показателно уравнение с параметър",
+      difficulty: 3,
+      probs_page: 1,
+      sol_page: 1,
+      summary: "Да се намерят m, за които уравнението 9^{x^2-x} - m.3^{x^2} + 9^x = 0 има точно две реални решения.",
+      plan_step: 5,
+      plan_point: "5.1",
+      related_points: ["6.1", "7.5"],
+      prerequisites: ["5.1"],
+      add_as_task_to: ["5.1"],
+      required_knowledge: [
+        { point_id: "5.1", technique: "Квадратна функция", why_needed: "След полагане t=3^{x^2-2x} уравнението става t^2 - m t + 1 = 0." },
+        { point_id: null, technique: "Разположение на корени на квадратен тричлен спрямо интервал", why_needed: "Трябва да определим кога квадратът има единствен корен >1/3 или два корена от двете страни на 1/3." }
+      ],
+      techniques_not_in_plan: ["Разположение на корени на квадратен тричлен спрямо интервал"],
+      gap_severity: "minor",
+      estimated_time_minutes: 35,
+      common_pitfalls: "Учениците забравят, че t=3^{x^2-2x} ≥ 1/3 и че t>1/3 дава две решения по x, а t=1/3 — само едно.",
+      recommended_for_simulation: false,
+      prerequisite_review: "Преговори 5.1 и квадратни уравнения с параметър."
+    },
+    {
+      num: 2,
+      topic: "Геометрия",
+      subtopic: "Вписана окръжност и ъглополовяща",
+      difficulty: 4,
+      probs_page: 1,
+      sol_page: 1,
+      summary: "В триъгълник ABC с вписан център I, D от описаната окръжност, DI е ъглополовяща на ∠ADB. Ако AD+BD=2DI, да се докаже AC=BC.",
+      plan_step: 1,
+      plan_point: "1.10",
+      related_points: ["1.5", "1.6", "1.8"],
+      prerequisites: ["1.5", "1.6", "1.10"],
+      add_as_task_to: ["1.10", "1.5"],
+      required_knowledge: [
+        { point_id: "1.10", technique: "Вписана окръжност и инцентър", why_needed: "I е център на вписаната окръжност; използват се ъглополовящите AI и BI." },
+        { point_id: "1.5", technique: "Вписани ъгли", why_needed: "Точки K,L,D са на описаната окръжност; равенства на ъгли." },
+        { point_id: "1.6", technique: "Подобие на триъгълници", why_needed: "Доказва се △ADI ~ △LDK ~ IDB, откъдето AD·BD=DI^2." },
+        { point_id: null, technique: "Неравенство между средно аритметично и средно геометрично", why_needed: "От AD+BD=2DI и AD·BD=DI^2 следва AD=BD=DI." }
+      ],
+      techniques_not_in_plan: ["Неравенство AM-GM в геометричен контекст"],
+      gap_severity: "none",
+      estimated_time_minutes: 50,
+      common_pitfalls: "Трудно се вижда кои триъгълници са подобни; объркване на ъгли при вписани ъгли.",
+      recommended_for_simulation: true,
+      prerequisite_review: "Преговори 1.5, 1.6 и 1.10."
+    },
+    {
+      num: 3,
+      topic: "Комбинаторика",
+      subtopic: "Пермутации с ограничения и рекурсия",
+      difficulty: 3,
+      probs_page: 1,
+      sol_page: 1,
+      summary: "Пермутации на 1..n с a_i<a_{i+2} и a_i<a_{i+3}. Да се намери най-малкото n, за което броят им надхвърля 1000.",
+      plan_step: 8,
+      plan_point: "8.8",
+      related_points: ["8.6", "8.10"],
+      prerequisites: ["8.6", "8.8"],
+      add_as_task_to: ["8.8"],
+      required_knowledge: [
+        { point_id: "8.8", technique: "Рекурентни връзки", why_needed: "Броят g(n) удовлетворява g(n)=g(n-1)+g(n-2)." },
+        { point_id: "8.6", technique: "Пермутации", why_needed: "Разглеждаме пермутации на числата 1..n." },
+        { point_id: "8.10", technique: "Индукция", why_needed: "Доказва се, че g(n)=F_{n+1}." }
+      ],
+      techniques_not_in_plan: [],
+      gap_severity: "none",
+      estimated_time_minutes: 35,
+      common_pitfalls: "Не се досещат да разгледат първите два елемента и да получат рекурсията на Фибоначи.",
+      recommended_for_simulation: false,
+      prerequisite_review: "Преговори 8.6 и 8.8."
+    },
+    {
+      num: 4,
+      topic: "ТЧ",
+      subtopic: "Антиверига в делителна решетка",
+      difficulty: 4,
+      probs_page: 1,
+      sol_page: 2,
+      summary: "Да се намери максималният брой делители на M=2016^n, нито един от които не дели друг.",
+      plan_step: 4,
+      plan_point: "4.7",
+      related_points: ["8.1", "8.3"],
+      prerequisites: ["4.7", "8.3"],
+      add_as_task_to: ["4.7", "8.3"],
+      required_knowledge: [
+        { point_id: "4.7", technique: "Мултипликативни функции и делители", why_needed: "M=2^{5n}·3^{2n}·7^n; делителите се описват с тройки (α,β,γ)." },
+        { point_id: "8.3", technique: "Двойно броене", why_needed: "Оценката (n+1)(2n+1) идва от фиксиране на β,γ." },
+        { point_id: null, technique: "Теорема на Спернер / антиверига в произведение от вериги", why_needed: "Максималната антиверига в делителната решетка." }
+      ],
+      techniques_not_in_plan: ["Антиверига в делителна решетка (Спернер)"],
+      gap_severity: "major",
+      estimated_time_minutes: 45,
+      common_pitfalls: "Бъркат условието 'нито един не дели друг' с 'всички са взаимно прости'.",
+      recommended_for_simulation: true,
+      prerequisite_review: "Преговори 4.7 и 8.3."
+    }
+  ],
+  difficulty_distribution: { easy: 0, medium: 2, hard: 2 },
+  recommended_action: "add-to-step10",
+  recommended_for_simulation: [2, 4]
+}
+```
+
+### Част 2: ЗАДАЧИ (11 кл)
+
+```js
+// ─── ЗАДАЧИ: 2016-11 ───
+{
+  source_pdf_probs: "Задачи_Минали_Години/OLI-2-Областен кръг-2016-11 кл-probs.pdf",
+  source_pdf_sols:  "Задачи_Минали_Години/OLI-2-Областен кръг-2016-11 кл-sol.pdf",
+  year: 2016,
+  grade: 11,
+  exam_type: "областен",
+  problems: [
+    {
+      num: 1,
+      topic: "Алгебра",
+      subtopic: "Тригонометрично уравнение с параметър",
+      difficulty: 3,
+      probs_page: 1,
+      sol_page: 1,
+      summary: "Да се намерят a, за които a sin^2 x - 3 sin x cos x + cos^2 x = 0 има две различни решения в (π/6, π/4).",
+      plan_step: 5,
+      plan_point: "5.1",
+      related_points: ["6.1", "7.5"],
+      prerequisites: ["5.1"],
+      add_as_task_to: ["5.1"],
+      required_knowledge: [
+        { point_id: "5.1", technique: "Квадратна функция", why_needed: "След полагане y=cot x уравнението става y^2-3y+a=0." },
+        { point_id: null, technique: "Тригонометрични уравнения и субституция", why_needed: "y=cot x, x∈(π/6,π/4) ⇒ y∈(1,√3)." },
+        { point_id: null, technique: "Разположение на корени на квадратен тричлен спрямо интервал", why_needed: "Два корена в (1,√3): D>0, f(1)>0, f(√3)>0." }
+      ],
+      techniques_not_in_plan: ["Тригонометрични уравнения", "Субституция cot", "Разположение на корени"],
+      gap_severity: "major",
+      estimated_time_minutes: 30,
+      common_pitfalls: "Забравят да проверят условието корените да са в интервала (1,√3), а не само D>0.",
+      recommended_for_simulation: true,
+      prerequisite_review: "Преговори тригонометрия и квадратни уравнения."
+    },
+    {
+      num: 2,
+      topic: "Геометрия",
+      subtopic: "Вписани окръжности в трапец и средна основа",
+      difficulty: 5,
+      probs_page: 1,
+      sol_page: 1,
+      summary: "В трапец ABCD, AB∥CD, вписаните окръжности в △ABD и △ACD се допират до страни в M,N,P,Q. Да се докаже, че пресечната точка на MN и PQ лежи на средната основа.",
+      plan_step: 1,
+      plan_point: "1.10",
+      related_points: ["1.5", "1.8"],
+      prerequisites: ["1.5", "1.10"],
+      add_as_task_to: ["1.10", "1.5"],
+      required_knowledge: [
+        { point_id: "1.10", technique: "Вписана окръжност и допирни точки", why_needed: "Използват се свойства на допирателни отсечки и ъглополовящи." },
+        { point_id: "1.5", technique: "Вписани ъгли и окръжности", why_needed: "Доказва се, че O,S,N,D лежат на една окръжност." },
+        { point_id: "1.8", technique: "Ъглополовяща и инцентър", why_needed: "Ъглополовящите на ∠BAD и ∠ADC се пресичат на PQ." }
+      ],
+      techniques_not_in_plan: ["Средна основа на трапец в комбинация с вписани окръжности"],
+      gap_severity: "minor",
+      estimated_time_minutes: 60,
+      common_pitfalls: "Много помощни построения; трудно се вижда кои точки са колинеарни/циклични.",
+      recommended_for_simulation: true,
+      prerequisite_review: "Преговори 1.5, 1.8 и 1.10."
+    },
+    {
+      num: 3,
+      topic: "Алгебра",
+      subtopic: "Рекурентна редица и граница",
+      difficulty: 4,
+      probs_page: 1,
+      sol_page: 1,
+      summary: "a_1=t>2, a_{n+1}=a_n^2-2. а) НОД(a_2016,a_1008); б) lim (a_1...a_n)/a_{n+1}.",
+      plan_step: 7,
+      plan_point: "7.7",
+      related_points: ["3.1", "7.6"],
+      prerequisites: ["7.7", "3.1"],
+      add_as_task_to: ["7.7", "3.1"],
+      required_knowledge: [
+        { point_id: "7.7", technique: "Нелинейни рекурсии", why_needed: "Рекурсията a_{n+1}=a_n^2-2 се изучава чрез a_{n+1}^2-4 = a_n^2(a_n^2-4)." },
+        { point_id: "3.1", technique: "НОД и четност", why_needed: "За а) се доказва, че всички членове са нечетни или четни без 4." },
+        { point_id: "7.8", technique: "Граници и телескопични произведения", why_needed: "За б) се използва телескопично произведение." }
+      ],
+      techniques_not_in_plan: ["Телескопично произведение в рекурентна редица"],
+      gap_severity: "minor",
+      estimated_time_minutes: 45,
+      common_pitfalls: "Не се досещат да повдигнат на квадрат и да извадят 4, за да получат телескопиране.",
+      recommended_for_simulation: true,
+      prerequisite_review: "Преговори 7.7, 3.1 и 7.8."
+    },
+    {
+      num: 4,
+      topic: "Алгебра",
+      subtopic: "Функционално неравенство",
+      difficulty: 5,
+      probs_page: 1,
+      sol_page: 2,
+      summary: "f(x^2+y^2) ≥ f(x+y) за всички x,y. Да се докаже f(x)=f(y) за x,y∈(0,2).",
+      plan_step: 7,
+      plan_point: "7.5",
+      related_points: ["7.3", "7.8"],
+      prerequisites: ["7.5", "7.3"],
+      add_as_task_to: ["7.5"],
+      required_knowledge: [
+        { point_id: "7.5", technique: "Общи техники за функционални уравнения/неравенства", why_needed: "Използва се заместване и итерации." },
+        { point_id: "7.3", technique: "Монотонност и ограниченост", why_needed: "Доказва се, че f е константа върху интервали." },
+        { point_id: "7.8", technique: "Сходящи редици", why_needed: "Редиците a_{n+1}=√(2a_n) и b_{n+1}=b_n^2/2 клонят към 2 и 1." }
+      ],
+      techniques_not_in_plan: ["Функционални неравенства с итерации"],
+      gap_severity: "major",
+      estimated_time_minutes: 60,
+      common_pitfalls: "Трудно се конструират редиците, които покриват (0,2).",
+      recommended_for_simulation: true,
+      prerequisite_review: "Преговори 7.5, 7.3 и 7.8."
+    }
+  ],
+  difficulty_distribution: { easy: 0, medium: 1, hard: 3 },
+  recommended_action: "add-to-step10",
+  recommended_for_simulation: [1, 2, 4]
+}
+```
+
+### Част 3: АРХИВ (готов за copy-paste в Step 10)
+
+```js
+// Точка 10.11 в STEPS[9].points:
+{
+  id: "10.11",
+  title: "Областен кръг 2016 – 10. клас",
+  desc: "4 задачи: 1 Геом, 1 ТЧ, 1 Алг, 1 Комб",
+  source: "Областен кръг 2016",
+  pdf: "Задачи_Минали_Години/OLI-2-Областен кръг-2016-10 кл-probs",
+  page: 1,
+  problems_page: 1,
+  solutions_page: 1,
+  tasks: [
+    { label: "Зад 1 — Показателно уравнение с параметър", pdf: "Задачи_Минали_Години/OLI-2-Областен кръг-2016-10 кл-probs", page: 1, knowledge: ["5.1", "6.1"] },
+    { label: "Зад 2 — Вписана окръжност и ъглополовяща", pdf: "Задачи_Минали_Години/OLI-2-Областен кръг-2016-10 кл-probs", page: 1, knowledge: ["1.5", "1.6", "1.10"] },
+    { label: "Зад 3 — Пермутации и рекурсия", pdf: "Задачи_Минали_Години/OLI-2-Областен кръг-2016-10 кл-probs", page: 1, knowledge: ["8.6", "8.8"] },
+    { label: "Зад 4 — Антиверига в делителна решетка", pdf: "Задачи_Минали_Години/OLI-2-Областен кръг-2016-10 кл-probs", page: 1, knowledge: ["4.7", "8.3"] }
+  ],
+  bonus: [
+    { label: "Решения", pdf: "Задачи_Минали_Години/OLI-2-Областен кръг-2016-10 кл-sol" }
+  ],
+  explanation: "Алгебра: показателно уравнение с параметър и полагане. Геометрия: инцентър, вписани ъгли, подобие. Комбинаторика: пермутации с ограничения и рекурсия на Фибоначи. ТЧ: антиверига в делителна решетка (Спернер)."
+}
+
+// Точка 10.12 в STEPS[9].points:
+{
+  id: "10.12",
+  title: "Областен кръг 2016 – 11. клас",
+  desc: "4 задачи: 1 Геом, 0 ТЧ, 3 Алг, 0 Комб",
+  source: "Областен кръг 2016",
+  pdf: "Задачи_Минали_Години/OLI-2-Областен кръг-2016-11 кл-probs",
+  page: 1,
+  problems_page: 1,
+  solutions_page: 1,
+  tasks: [
+    { label: "Зад 1 — Тригонометрично уравнение с параметър", pdf: "Задачи_Минали_Години/OLI-2-Областен кръг-2016-11 кл-probs", page: 1, knowledge: ["5.1"] },
+    { label: "Зад 2 — Вписани окръжности в трапец", pdf: "Задачи_Минали_Години/OLI-2-Областен кръг-2016-11 кл-probs", page: 1, knowledge: ["1.5", "1.10"] },
+    { label: "Зад 3 — Рекурентна редица и граница", pdf: "Задачи_Минали_Години/OLI-2-Областен кръг-2016-11 кл-probs", page: 1, knowledge: ["7.7", "3.1", "7.8"] },
+    { label: "Зад 4 — Функционално неравенство", pdf: "Задачи_Минали_Години/OLI-2-Областен кръг-2016-11 кл-probs", page: 1, knowledge: ["7.5", "7.3"] }
+  ],
+  bonus: [
+    { label: "Решения", pdf: "Задачи_Минали_Години/OLI-2-Областен кръг-2016-11 кл-sol" }
+  ],
+  explanation: "Алгебра: тригонометрично уравнение с параметър и субституция; рекурентна редица с телескопични произведения; функционално неравенство с итерации. Геометрия: вписани окръжности в трапец и средна основа."
+}
+```
+
+### Част 4: TASKS ЗА ТЕМАТИЧНИ ТОЧКИ
+
+```js
+// Точка 5.1 в STEPS[4].points:
+{ id: "5.1",
+  tasks: [
+    { label: "ОИ 2016/10 кл, Зад 1 (Показателно уравнение с параметър)", pdf: "Задачи_Минали_Години/OLI-2-Областен кръг-2016-10 кл-probs", page: 1, difficulty: 3, requires_also: ["6.1"], prerequisite_review: "Преговори 5.1 и квадратни уравнения с параметър." },
+    { label: "ОИ 2016/11 кл, Зад 1 (Тригонометрично уравнение с параметър)", pdf: "Задачи_Минали_Години/OLI-2-Областен кръг-2016-11 кл-probs", page: 1, difficulty: 3, requires_also: ["6.1"], prerequisite_review: "Преговори тригонометрия и квадратни уравнения." }
+  ]
+}
+
+// Точка 1.10 в STEPS[0].points:
+{ id: "1.10",
+  tasks: [
+    { label: "ОИ 2016/10 кл, Зад 2 (Вписана окръжност и ъглополовяща)", pdf: "Задачи_Минали_Години/OLI-2-Областен кръг-2016-10 кл-probs", page: 1, difficulty: 4, requires_also: ["1.5", "1.6"], prerequisite_review: "Преговори 1.5, 1.6 и 1.10." },
+    { label: "ОИ 2016/11 кл, Зад 2 (Вписани окръжности в трапец)", pdf: "Задачи_Минали_Години/OLI-2-Областен кръг-2016-11 кл-probs", page: 1, difficulty: 5, requires_also: ["1.5", "1.8"], prerequisite_review: "Преговори 1.5, 1.8 и 1.10." }
+  ]
+}
+
+// Точка 1.5 в STEPS[0].points:
+{ id: "1.5",
+  tasks: [
+    { label: "ОИ 2016/10 кл, Зад 2 (Вписани ъгли)", pdf: "Задачи_Минали_Години/OLI-2-Областен кръг-2016-10 кл-probs", page: 1, difficulty: 4, requires_also: ["1.6", "1.10"], prerequisite_review: "Преговори 1.5, 1.6 и 1.10." },
+    { label: "ОИ 2016/11 кл, Зад 2 (Вписани ъгли и окръжности)", pdf: "Задачи_Минали_Години/OLI-2-Областен кръг-2016-11 кл-probs", page: 1, difficulty: 5, requires_also: ["1.8", "1.10"], prerequisite_review: "Преговори 1.5, 1.8 и 1.10." }
+  ]
+}
+
+// Точка 8.8 в STEPS[7].points:
+{ id: "8.8",
+  tasks: [
+    { label: "ОИ 2016/10 кл, Зад 3 (Пермутации и рекурсия)", pdf: "Задачи_Минали_Години/OLI-2-Областен кръг-2016-10 кл-probs", page: 1, difficulty: 3, requires_also: ["8.6", "8.10"], prerequisite_review: "Преговори 8.6 и 8.8." }
+  ]
+}
+
+// Точка 4.7 в STEPS[3].points:
+{ id: "4.7",
+  tasks: [
+    { label: "ОИ 2016/10 кл, Зад 4 (Антиверига в делителна решетка)", pdf: "Задачи_Минали_Години/OLI-2-Областен кръг-2016-10 кл-probs", page: 1, difficulty: 4, requires_also: ["8.3"], prerequisite_review: "Преговори 4.7 и 8.3." }
+  ]
+}
+
+// Точка 8.3 в STEPS[7].points:
+{ id: "8.3",
+  tasks: [
+    { label: "ОИ 2016/10 кл, Зад 4 (Двойно броене)", pdf: "Задачи_Минали_Години/OLI-2-Областен кръг-2016-10 кл-probs", page: 1, difficulty: 4, requires_also: ["4.7"], prerequisite_review: "Преговори 4.7 и 8.3." }
+  ]
+}
+
+// Точка 7.7 в STEPS[6].points:
+{ id: "7.7",
+  tasks: [
+    { label: "ОИ 2016/11 кл, Зад 3 (Нелинейни рекурсии)", pdf: "Задачи_Минали_Години/OLI-2-Областен кръг-2016-11 кл-probs", page: 1, difficulty: 4, requires_also: ["3.1", "7.8"], prerequisite_review: "Преговори 7.7, 3.1 и 7.8." }
+  ]
+}
+
+// Точка 3.1 в STEPS[2].points:
+{ id: "3.1",
+  tasks: [
+    { label: "ОИ 2016/11 кл, Зад 3 (НОД и четност)", pdf: "Задачи_Минали_Години/OLI-2-Областен кръг-2016-11 кл-probs", page: 1, difficulty: 4, requires_also: ["7.7"], prerequisite_review: "Преговори 3.1 и 7.7." }
+  ]
+}
+
+// Точка 7.5 в STEPS[6].points:
+{ id: "7.5",
+  tasks: [
+    { label: "ОИ 2016/11 кл, Зад 4 (Функционално неравенство)", pdf: "Задачи_Минали_Години/OLI-2-Областен кръг-2016-11 кл-probs", page: 1, difficulty: 5, requires_also: ["7.3", "7.8"], prerequisite_review: "Преговори 7.5, 7.3 и 7.8." }
+  ]
+}
+
+// Точка 7.8 в STEPS[6].points:
+{ id: "7.8",
+  tasks: [
+    { label: "ОИ 2016/11 кл, Зад 3 (Граници и телескопични произведения)", pdf: "Задачи_Минали_Години/OLI-2-Областен кръг-2016-11 кл-probs", page: 1, difficulty: 4, requires_also: ["7.7"], prerequisite_review: "Преговори 7.7 и 7.8." },
+    { label: "ОИ 2016/11 кл, Зад 4 (Сходящи редици)", pdf: "Задачи_Минали_Години/OLI-2-Областен кръг-2016-11 кл-probs", page: 1, difficulty: 5, requires_also: ["7.5", "7.3"], prerequisite_review: "Преговори 7.5 и 7.3." }
+  ]
+}
+```
+
+### Част 5: KNOWLEDGE PROFILE ЗА ГОДИНАТА
+
+```js
+// ─── KNOWLEDGE PROFILE: 2016 ───
+{
+  year: 2016,
+  total_problems_analyzed: 8,
+  most_used_points: [
+    { point_id: "1.10", count: 2, examples: [10.2, 11.2] },
+    { point_id: "1.5", count: 2, examples: [10.2, 11.2] },
+    { point_id: "5.1", count: 2, examples: [10.1, 11.1] },
+    { point_id: "7.7", count: 1, examples: [11.3] },
+    { point_id: "8.8", count: 1, examples: [10.3] },
+    { point_id: "4.7", count: 1, examples: [10.4] },
+    { point_id: "7.5", count: 1, examples: [11.4] }
+  ],
+  techniques_used: [
+    "Вписани ъгли", "Инцентър", "Подобие на триъгълници", "AM-GM",
+    "Рекурентни редици", "Фибоначи", "Делителна решетка", "Спернер",
+    "Тригонометрични уравнения", "Субституция cot",
+    "Телескопични произведения", "Функционални неравенства", "Итерации"
+  ],
+  gaps_identified: [
+    { technique: "Антиверига в делителна решетка (Спернер)", appeared_in: ["10 кл зад 4"], recommendation: "Добави нова точка 4.9 'Антивериги и теорема на Спернер'" },
+    { technique: "Тригонометрични уравнения", appeared_in: ["11 кл зад 1"], recommendation: "Добави точка в Step 5 или отделна стъпка за тригонометрия" },
+    { technique: "Функционални неравенства с итерации", appeared_in: ["11 кл зад 4"], recommendation: "Разшири 7.5 с функционални неравенства" },
+    { technique: "Разположение на корени на квадратен тричлен", appeared_in: ["10 кл зад 1", "11 кл зад 1"], recommendation: "Добави точка 5.9 'Разположение на корени'" },
+    { technique: "Телескопични произведения в рекурентни редици", appeared_in: ["11 кл зад 3"], recommendation: "Разшири 7.7" }
+  ],
+  study_priority: [
+    "1.10 — Вписана окръжност (2 задачи)",
+    "1.5 — Вписани ъгли (2 задачи)",
+    "5.1 — Квадратна функция (2 задачи)",
+    "7.7 — Нелинейни рекурсии (1 задача)",
+    "8.8 — Рекурсии (1 задача)",
+    "4.7 — Делители (1 задача)"
+  ],
+  summary: "Тази година доминираха геометрията (2 задачи) и алгебрата (3 задачи). Липсващи техники: Спернер, тригонометрични уравнения, функционални неравенства с итерации."
+}
+```
+
+### Част 6: RECOMMENDED CHANGES
+
+```markdown
+### RECOMMENDED CHANGES TO index.html
+
+**В STEPS:**
+- [ ] Добави `10.11` в Step 10 (Областен кръг 2016 – 10. клас)
+- [ ] Добави `10.12` в Step 10 (Областен кръг 2016 – 11. клас)
+- [ ] Актуализирай точка `5.1` с нови tasks: 10.1, 11.1
+- [ ] Актуализирай точка `1.10` с нови tasks: 10.2, 11.2
+- [ ] Актуализирай точка `1.5` с нови tasks: 10.2, 11.2
+- [ ] Актуализирай точка `8.8` с нови tasks: 10.3
+- [ ] Актуализирай точка `4.7` с нови tasks: 10.4
+- [ ] Актуализирай точка `8.3` с нови tasks: 10.4
+- [ ] Актуализирай точка `7.7` с нови tasks: 11.3
+- [ ] Актуализирай точка `3.1` с нови tasks: 11.3
+- [ ] Актуализирай точка `7.5` с нови tasks: 11.4
+- [ ] Актуализирай точка `7.8` с нови tasks: 11.3, 11.4
+- [ ] Актуализирай точка `1.6` с нови tasks: 10.2
+- [ ] Актуализирай точка `1.8` с нови tasks: 10.2, 11.2
+
+**В PLAN_PHASES:**
+- [ ] Обновяване на Week 16: "Симулация ОИ 2016 (10 и 11 кл.)"
+
+**Нови точки/стъпки:**
+- [ ] Предложи нова точка `4.9` — "Антивериги и теорема на Спернер" (major gap)
+- [ ] Предложи нова точка `5.9` — "Разположение на корени на квадратен тричлен" (minor gap)
+- [ ] Предложи нова точка `7.9` — "Функционални неравенства с итерации" (major gap)
+- [ ] Предложи нова точка `5.10` — "Тригонометрични уравнения" (major gap)
+```

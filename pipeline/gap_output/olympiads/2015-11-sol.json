@@ -1,0 +1,132 @@
+{
+  "_meta": {
+    "pdf": "C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\Задачи_Минали_Години\\Областен\\OLI-2-Областен кръг-2015-11 кл-sol.pdf",
+    "paired_with": null,
+    "level": 1,
+    "type": "sol",
+    "analyzed_at": "2026-10-18T15:52:56.846546",
+    "model": "deepseek/deepseek-v3.2",
+    "text_length": 5181,
+    "paired_text_length": 0
+  },
+  "problems": [
+    {
+      "num": 1,
+      "topic": "algebra",
+      "theorems": [],
+      "techniques": [
+        "substitution",
+        "case analysis"
+      ],
+      "concepts": [
+        "exponential equations",
+        "quadratic factorization",
+        "real roots analysis",
+        "function monotonicity"
+      ],
+      "difficulty": "standard",
+      "notes": "Стандартна задача за параметър и брой реални корени на експоненциално уравнение след факторизация."
+    },
+    {
+      "num": 2,
+      "topic": "geometry",
+      "theorems": [
+        "Power of a Point",
+        "Inscribed angles",
+        "Cyclic quadrilaterals"
+      ],
+      "techniques": [
+        "symmetry",
+        "angle chasing",
+        "similar triangles"
+      ],
+      "concepts": [
+        "incenter",
+        "circumcenter",
+        "angle bisector",
+        "diameter",
+        "cyclic quadrilateral",
+        "similar triangles",
+        "symmetry with respect to a line"
+      ],
+      "difficulty": "olympic",
+      "notes": "Класическа олимпиадна геометрична задача с използване на степен на точка и вписани четириъгълници."
+    },
+    {
+      "num": 3,
+      "topic": "algebra",
+      "theorems": [
+        "AM-GM inequality"
+      ],
+      "techniques": [
+        "substitution",
+        "normalization",
+        "inequality summation"
+      ],
+      "concepts": [
+        "rational exponents",
+        "product equal to 1",
+        "power means",
+        "inequality manipulation"
+      ],
+      "difficulty": "olympic",
+      "notes": "Задача за неравенство с положителни числа и произведение 1, свежда се до прилагане на AM-GM."
+    },
+    {
+      "num": 4,
+      "topic": "combinatorics",
+      "theorems": [],
+      "techniques": [
+        "pigeonhole principle",
+        "construction",
+        "contradiction",
+        "inductive construction/analysis"
+      ],
+      "concepts": [
+        "modular arithmetic",
+        "complete residue system",
+        "parity",
+        "digit construction",
+        "recursive reasoning"
+      ],
+      "difficulty": "olympic",
+      "notes": "Комбинаторна задача за минимален брой цифри, използваща пълна система остатъци по модул степен на 2."
+    }
+  ],
+  "unique_concepts": [
+    "exponential equations",
+    "quadratic factorization",
+    "real roots analysis",
+    "function monotonicity",
+    "Power of a Point",
+    "Inscribed angles",
+    "Cyclic quadrilaterals",
+    "incenter",
+    "circumcenter",
+    "angle bisector",
+    "diameter",
+    "cyclic quadrilateral",
+    "similar triangles",
+    "symmetry with respect to a line",
+    "AM-GM inequality",
+    "rational exponents",
+    "product equal to 1",
+    "power means",
+    "inequality manipulation",
+    "modular arithmetic",
+    "complete residue system",
+    "parity",
+    "digit construction",
+    "recursive reasoning",
+    "pigeonhole principle",
+    "construction",
+    "contradiction",
+    "inductive construction/analysis",
+    "substitution",
+    "case analysis",
+    "angle chasing",
+    "normalization",
+    "inequality summation"
+  ],
+  "confidence": 0.95
+}

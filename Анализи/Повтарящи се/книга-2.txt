@@ -1,0 +1,326 @@
+```js
+// ─── КНИГА ───
+{
+  file: "Материали_EN/book-2.pdf",
+  title: "104 Number Theory Problems: From the Training of the USA IMO Team",
+  author: "Titu Andreescu, Dorin Andrica, Zuming Feng",
+  year: 2007,
+  language: "EN",
+  total_pages: 213,
+  topics: ["Number Theory"],
+  structure: [
+    {
+      chapter: "Ch 1.1",
+      title: "Divisibility and Division Algorithm",
+      pages: "13-17",
+      plan_step: 3,
+      plan_points: ["3.1"],
+      priority_regional: "high",
+      priority_national: "high"
+    },
+    {
+      chapter: "Ch 1.2",
+      title: "Primes and Fundamental Theorem of Arithmetic",
+      pages: "17-23",
+      plan_step: 3,
+      plan_points: ["3.1", "4.5"],
+      priority_regional: "high",
+      priority_national: "high"
+    },
+    {
+      chapter: "Ch 1.3",
+      title: "GCD, Euclidean Algorithm, Bézout, LCM",
+      pages: "23-28",
+      plan_step: 3,
+      plan_points: ["3.1", "4.1"],
+      priority_regional: "high",
+      priority_national: "high"
+    },
+    {
+      chapter: "Ch 1.4",
+      title: "Number and Sum of Divisors (τ, σ)",
+      pages: "28-31",
+      plan_step: 4,
+      plan_points: ["4.7"],
+      priority_regional: "med",
+      priority_national: "high"
+    },
+    {
+      chapter: "Ch 1.5",
+      title: "Modular Arithmetic and Residue Classes",
+      pages: "31-37",
+      plan_step: 3,
+      plan_points: ["3.2", "3.6"],
+      priority_regional: "high",
+      priority_national: "high"
+    },
+    {
+      chapter: "Ch 1.6",
+      title: "Wilson, Fermat, Euler Theorems and Totient",
+      pages: "37-45",
+      plan_step: 3,
+      plan_points: ["3.3", "3.4", "3.5"],
+      priority_regional: "high",
+      priority_national: "high"
+    },
+    {
+      chapter: "Ch 1.7",
+      title: "Multiplicative Functions and Möbius Inversion",
+      pages: "45-47",
+      plan_step: 4,
+      plan_points: ["4.7"],
+      priority_regional: "low",
+      priority_national: "high"
+    },
+    {
+      chapter: "Ch 1.8",
+      title: "Linear Diophantine Equations",
+      pages: "47-50",
+      plan_step: 4,
+      plan_points: ["4.1"],
+      priority_regional: "high",
+      priority_national: "high"
+    },
+    {
+      chapter: "Ch 1.9",
+      title: "Numerical Systems and Divisibility Criteria",
+      pages: "50-59",
+      plan_step: 3,
+      plan_points: ["3.2"],
+      priority_regional: "med",
+      priority_national: "med"
+    },
+    {
+      chapter: "Ch 1.10",
+      title: "Floor Function and Hermite Identity",
+      pages: "59-68",
+      plan_step: 3,
+      plan_points: ["3.1", "4.8"],
+      priority_regional: "med",
+      priority_national: "high"
+    },
+    {
+      chapter: "Ch 1.11",
+      title: "Legendre's Function, Factorials, Binomials",
+      pages: "68-75",
+      plan_step: 4,
+      plan_points: ["3.8", "4.8"],
+      priority_regional: "med",
+      priority_national: "high"
+    },
+    {
+      chapter: "Ch 1.12",
+      title: "Fermat, Mersenne, Perfect Numbers",
+      pages: "75-86",
+      plan_step: 4,
+      plan_points: ["4.4", "4.5", "4.7"],
+      priority_regional: "low",
+      priority_national: "high"
+    },
+    {
+      chapter: "Ch 2",
+      title: "Introductory Problems (52 задачи)",
+      pages: "87-94",
+      plan_step: 10,
+      plan_points: ["10.1", "10.2", "10.3", "10.4"],
+      priority_regional: "high",
+      priority_national: "high"
+    },
+    {
+      chapter: "Ch 3",
+      title: "Advanced Problems (52 задачи)",
+      pages: "95-102",
+      plan_step: 10,
+      plan_points: ["10.5", "10.6", "10.7", "10.8", "10.9", "10.10"],
+      priority_regional: "med",
+      priority_national: "high"
+    },
+    {
+      chapter: "Ch 4",
+      title: "Solutions to Introductory Problems",
+      pages: "103-142",
+      plan_step: 10,
+      plan_points: ["10.1", "10.2", "10.3", "10.4"],
+      priority_regional: "med",
+      priority_national: "high"
+    },
+    {
+      chapter: "Ch 5",
+      title: "Solutions to Advanced Problems",
+      pages: "143-199",
+      plan_step: 10,
+      plan_points: ["10.5", "10.6", "10.7", "10.8", "10.9", "10.10"],
+      priority_regional: "low",
+      priority_national: "high"
+    },
+    {
+      chapter: "Glossary",
+      title: "Glossary of Number Theory Terms",
+      pages: "200-206",
+      plan_step: 11,
+      plan_points: ["11.4"],
+      priority_regional: "low",
+      priority_national: "low"
+    },
+    {
+      chapter: "Further Reading",
+      title: "Further Reading (62 заглавия)",
+      pages: "207-211",
+      plan_step: 11,
+      plan_points: ["11.4"],
+      priority_regional: "low",
+      priority_national: "low"
+    },
+    {
+      chapter: "Index",
+      title: "Index",
+      pages: "212-213",
+      plan_step: 11,
+      plan_points: ["11.4"],
+      priority_regional: "low",
+      priority_national: "low"
+    }
+  ],
+  duplicates: [],
+  recommended_action: "add-as-bonus",
+  best_mapping: [
+    { step_id: 3, point_ids: ["3.1", "3.2", "3.3", "3.4", "3.5", "3.6", "3.8"], chapters: ["Ch 1.1", "Ch 1.2", "Ch 1.3", "Ch 1.5", "Ch 1.6", "Ch 1.10", "Ch 1.11"], pages: "13-75" },
+    { step_id: 4, point_ids: ["4.1", "4.4", "4.5", "4.7", "4.8"], chapters: ["Ch 1.4", "Ch 1.7", "Ch 1.8", "Ch 1.11", "Ch 1.12"], pages: "28-86" },
+    { step_id: 10, point_ids: ["10.1", "10.2", "10.3", "10.4"], chapters: ["Ch 2", "Ch 4"], pages: "87-142" },
+    { step_id: 10, point_ids: ["10.5", "10.6", "10.7", "10.8", "10.9", "10.10"], chapters: ["Ch 3", "Ch 5"], pages: "95-199" }
+  ]
+}
+```
+
+```js
+// ─── АКТУАЛИЗАЦИЯ ───
+// Замести САМО следните полета в съществуващите точки:
+
+// Точка 3.1 в STEPS[2].points:
+{ id: "3.1",
+  bonus: [
+    { label: "104 NT Problems — Divisibility, Division Algo", pdf: "Материали_EN/book-2", page: 13 },
+    { label: "104 NT Problems — GCD, Euclidean, Bézout", pdf: "Материали_EN/book-2", page: 23 }
+  ]
+}
+
+// Точка 3.2 в STEPS[2].points:
+{ id: "3.2",
+  bonus: [
+    { label: "104 NT Problems — Modular Arithmetic", pdf: "Материали_EN/book-2", page: 31 },
+    { label: "104 NT Problems — Residue Classes", pdf: "Материали_EN/book-2", page: 35 }
+  ]
+}
+
+// Точка 3.3 в STEPS[2].points:
+{ id: "3.3",
+  bonus: [
+    { label: "104 NT Problems — Fermat's Little Theorem", pdf: "Материали_EN/book-2", page: 39 }
+  ]
+}
+
+// Точка 3.4 в STEPS[2].points:
+{ id: "3.4",
+  bonus: [
+    { label: "104 NT Problems — Euler's Theorem + Totient", pdf: "Материали_EN/book-2", page: 40 }
+  ]
+}
+
+// Точка 3.5 в STEPS[2].points:
+{ id: "3.5",
+  bonus: [
+    { label: "104 NT Problems — Wilson's Theorem", pdf: "Материали_EN/book-2", page: 36 }
+  ]
+}
+
+// Точка 3.8 в STEPS[2].points:
+{ id: "3.8",
+  bonus: [
+    { label: "104 NT Problems — Legendre's Function", pdf: "Материали_EN/book-2", page: 68 }
+  ]
+}
+
+// Точка 4.1 в STEPS[3].points:
+{ id: "4.1",
+  bonus: [
+    { label: "104 NT Problems — Linear Diophantine", pdf: "Материали_EN/book-2", page: 47 }
+  ]
+}
+
+// Точка 4.4 в STEPS[3].points:
+{ id: "4.4",
+  bonus: [
+    { label: "104 NT Problems — Perfect Powers / Squares", pdf: "Материали_EN/book-2", page: 52 }
+  ]
+}
+
+// Точка 4.5 в STEPS[3].points:
+{ id: "4.5",
+  bonus: [
+    { label: "104 NT Problems — Primes, Mersenne, Fermat", pdf: "Материали_EN/book-2", page: 17 },
+    { label: "104 NT Problems — Fermat Numbers", pdf: "Материали_EN/book-2", page: 75 }
+  ]
+}
+
+// Точка 4.7 в STEPS[3].points:
+{ id: "4.7",
+  bonus: [
+    { label: "104 NT Problems — Multiplicative Functions", pdf: "Материали_EN/book-2", page: 45 }
+  ]
+}
+
+// Точка 4.8 в STEPS[3].points:
+{ id: "4.8",
+  bonus: [
+    { label: "104 NT Problems — Legendre, Factorials, Binomials", pdf: "Материали_EN/book-2", page: 68 }
+  ]
+}
+
+// Точка 10.1 в STEPS[9].points:
+{ id: "10.1",
+  tasks: [
+    { label: "Intro Problem 1 (AMC10B 2004)", pdf: "Материали_EN/book-2", page: 87 },
+    { label: "Intro Problem 7 (p, p+ka primes)", pdf: "Материали_EN/book-2", page: 88 },
+    { label: "Intro Problem 9 (lcm+gcd=m+n, Russia 1995)", pdf: "Материали_EN/book-2", page: 88 }
+  ]
+}
+
+// Точка 10.5 в STEPS[9].points:
+{ id: "10.5",
+  tasks: [
+    { label: "Adv Problem 2 (S(x)/S(2x)≤5, MOSP 1998)", pdf: "Материали_EN/book-2", page: 95 },
+    { label: "Adv Problem 10 (lcm inequality, St.Petersburg 2001)", pdf: "Материали_EN/book-2", page: 96 }
+  ]
+}
+```
+
+### RECOMMENDED CHANGES TO index.html
+
+**В STEPS:**
+
+- [ ] Промяна в `STEPS[2].points[0]` (Точка 3.1): нов `bonus` = 104 NT Problems стр. 13 + 23
+- [ ] Промяна в `STEPS[2].points[1]` (Точка 3.2): нов `bonus` = 104 NT Problems стр. 31 + 35
+- [ ] Промяна в `STEPS[2].points[2]` (Точка 3.3): нов `bonus` = 104 NT Problems стр. 39
+- [ ] Промяна в `STEPS[2].points[3]` (Точка 3.4): нов `bonus` = 104 NT Problems стр. 40
+- [ ] Промяна в `STEPS[2].points[4]` (Точка 3.5): нов `bonus` = 104 NT Problems стр. 36
+- [ ] Промяна в `STEPS[2].points[7]` (Точка 3.8): нов `bonus` = 104 NT Problems стр. 68
+- [ ] Промяна в `STEPS[3].points[0]` (Точка 4.1): нов `bonus` = 104 NT Problems стр. 47
+- [ ] Промяна в `STEPS[3].points[3]` (Точка 4.4): нов `bonus` = 104 NT Problems стр. 52
+- [ ] Промяна в `STEPS[3].points[4]` (Точка 4.5): нов `bonus` = 104 NT Problems стр. 17 + 75
+- [ ] Промяна в `STEPS[3].points[6]` (Точка 4.7): нов `bonus` = 104 NT Problems стр. 45
+- [ ] Промяна в `STEPS[3].points[7]` (Точка 4.8): нов `bonus` = 104 NT Problems стр. 68
+- [ ] Промяна в `STEPS[9].points[0]` (Точка 10.1): нов `tasks` = 3 задачи от 104 NT Problems (стр. 87-88)
+- [ ] Промяна в `STEPS[9].points[4]` (Точка 10.5): нов `tasks` = 2 задачи от 104 NT Problems (стр. 95-96)
+
+**В PLAN_PHASES:**
+
+- [ ] Week 3 (Основи/ТЧ): добавяне на "104 NT Problems Ch 1.1–1.6 (стр. 13-47)" като доп. ресурс
+- [ ] Week 4 (ТЧ Основи продължение): добавяне на "104 NT Problems Ch 1.10–1.12 (стр. 59-86)" като доп. ресурс
+- [ ] Week 11-12 (ТЧ Напреднали): добавяне на "104 NT Problems Ch 2-3 (стр. 87-102)" като задачи за симулация
+- [ ] Week 16-17 (Пред-областен): добавяне на "104 NT Problems Ch 4-5 (стр. 103-199)" като решения за самопроверка
+
+**Друго:**
+
+- [ ] Няма дубликати — book-2.pdf е уникален (различен от book-1 = Engel)
+- [ ] Обновяване на `bonus` в Стъпки 3 и 4 — общо 11 нови записа
+- [ ] Няма промени в конфигурацията на exam dates

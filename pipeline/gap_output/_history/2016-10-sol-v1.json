@@ -1,0 +1,119 @@
+{
+  "_meta": {
+    "pdf": "C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\Задачи_Минали_Години\\Областен\\OLI-2-Областен кръг-2016-10 кл-sol.pdf",
+    "paired_with": null,
+    "level": 1,
+    "type": "sol",
+    "analyzed_at": "2026-10-16T21:14:47.104157",
+    "model": "deepseek/deepseek-v3.2",
+    "text_length": 4017,
+    "paired_text_length": 0
+  },
+  "problems": [
+    {
+      "num": 1,
+      "topic": "algebra",
+      "theorems": [],
+      "techniques": [
+        "substitution",
+        "quadratic equation analysis",
+        "case analysis"
+      ],
+      "concepts": [
+        "exponential equations",
+        "quadratic functions",
+        "parameter analysis",
+        "real roots condition",
+        "inequalities"
+      ],
+      "difficulty": "standard",
+      "notes": "Standard exponential equation reduced to quadratic with parameter; analysis of root distribution relative to a boundary."
+    },
+    {
+      "num": 2,
+      "topic": "geometry",
+      "theorems": [
+        "Incenter properties",
+        "Cyclic quadrilateral properties",
+        "Angle bisector theorem (implicitly)"
+      ],
+      "techniques": [
+        "similar triangles",
+        "auxiliary construction (points K, L)",
+        "algebraic manipulation from geometric relations"
+      ],
+      "concepts": [
+        "inscribed circle",
+        "circumscribed circle",
+        "similar triangles",
+        "angle bisector",
+        "chord properties"
+      ],
+      "difficulty": "hard",
+      "notes": "Non-trivial construction needed to establish similarity; uses properties of incenter and cyclic quadrilateral."
+    },
+    {
+      "num": 3,
+      "topic": "combinatorics",
+      "theorems": [],
+      "techniques": [
+        "recursion",
+        "Fibonacci sequence identification",
+        "initial condition analysis"
+      ],
+      "concepts": [
+        "permutations with constraints",
+        "recurrence relations",
+        "Fibonacci numbers",
+        "extremal element analysis (a1)"
+      ],
+      "difficulty": "olympic",
+      "notes": "Elegant reduction to Fibonacci numbers via analyzing the smallest element and recursion."
+    },
+    {
+      "num": 4,
+      "topic": "combinatorics",
+      "theorems": [],
+      "techniques": [
+        "divisor representation",
+        "chain decomposition (Dilworth/antichain)",
+        "extremal construction"
+      ],
+      "concepts": [
+        "prime factorization",
+        "divisors as tuples",
+        "partial order (divisibility)",
+        "antichain in product of chains",
+        "upper bound proof",
+        "explicit construction"
+      ],
+      "difficulty": "olympic",
+      "notes": "Classical problem of finding largest antichain in a product of chains (poset); uses combinatorial reasoning on triples."
+    }
+  ],
+  "unique_concepts": [
+    "exponential equations",
+    "quadratic functions",
+    "parameter analysis",
+    "real roots condition",
+    "inequalities",
+    "inscribed circle",
+    "circumscribed circle",
+    "similar triangles",
+    "angle bisector",
+    "chord properties",
+    "incenter properties",
+    "cyclic quadrilateral properties",
+    "permutations with constraints",
+    "recurrence relations",
+    "Fibonacci numbers",
+    "extremal element analysis",
+    "prime factorization",
+    "divisors as tuples",
+    "partial order (divisibility)",
+    "antichain in product of chains",
+    "upper bound proof",
+    "explicit construction"
+  ],
+  "confidence": 0.95
+}

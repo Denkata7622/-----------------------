@@ -1,0 +1,168 @@
+{
+  "point_id": "1.1",
+  "total": 12,
+  "by_difficulty": {
+    "easy": 0,
+    "medium": 9,
+    "hard": 3
+  },
+  "problems": [
+    {
+      "source": "OLI-2-Областен кръг-1998-10 кл · 1998-10 · Зад. 2",
+      "statement": "Let $ABCD$ be a quadrilateral such that $AD = CD$ and $\\angle DAB = \\angle ABC < 90^\\circ$. The line passing through $D$ and the midpoint of the segment $BC$ intersects the line $AB$ at the point $E$. Prove that $\\angle BEC = \\angle DAC$.",
+      "solution": "Solution: Let $M$ be the midpoint of $BC$ and let $AD$ and $BC$ meet at point $N$ and $AN$ and $EC$ meet at point $P$. It follows from Menelaus' Theorem applied to $\\triangle DMN$ and $\\triangle DEN$ that $DP \\cdot NC \\cdot ME = PN \\cdot CM \\cdot ED$ and $DA \\cdot NB \\cdot ME = AN \\cdot BM \\cdot ED$. Combining the above equalities with $AN = BN$, $BE = CE$ and $AD = CD$, we get $DP \\cdot NC = DC \\cdot PN$. Therefore $CP$ is bisector of $\\angle DCN$.\n\nConsequently $\\angle ACP = \\angle ACD + \\angle DCP = \\frac{1}{2}(\\angle NDC + \\angle DCN) = \\angle NAB$ so $\\angle DCP = \\angle CAB$ and we obtain $\\angle BEC = \\angle ABC - \\angle BCE = \\angle BAD - \\angle DCP = \\angle DAC, Q. E. D.$\n\nNote: The assertion is also true if the condition $\\angle ABC < 90^{\\circ}$ is left out.",
+      "answer": null,
+      "difficulty": "medium",
+      "techniques": [
+        "menelaus_theorem"
+      ],
+      "confidence": "exact",
+      "reasoning": "Solution applies Menelaus twice to two triangles; standard geometric manipulation, ~2‑3 steps."
+    },
+    {
+      "source": "OLI-2-Областен кръг-1998-11 кл · 1998-11 · Зад. 2",
+      "statement": "Let $ABCD$ be a quadrilateral such that $AD = CD$ and $\\angle DAB = \\angle ABC < 90^\\circ$. The line passing through $D$ and the midpoint of the segment $BC$ intersects the line $AB$ at the point $E$. Prove that $\\angle BEC = \\angle DAC$.",
+      "solution": "Solution: Let $M$ be the midpoint of $BC$ and let $AD$ and $BC$ meet at point $N$ and $AN$ and $EC$ meet at point $P$. It follows from Menelaus' Theorem applied to $\\triangle DMN$ and $\\triangle DEN$ that $DP \\cdot NC \\cdot ME = PN \\cdot CM \\cdot ED$ and $DA \\cdot NB \\cdot ME = AN \\cdot BM \\cdot ED$. Combining the above equalities with $AN = BN$, $BE = CE$ and $AD = CD$, we get $DP \\cdot NC = DC \\cdot PN$. Therefore $CP$ is bisector of $\\angle DCN$.\n\nConsequently $\\angle ACP = \\angle ACD + \\angle DCP = \\frac{1}{2}(\\angle NDC + \\angle DCN) = \\angle NAB$ so $\\angle DCP = \\angle CAB$ and we obtain $\\angle BEC = \\angle ABC - \\angle BCE = \\angle BAD - \\angle DCP = \\angle DAC$, Q. E. D.\n\nNote: The assertion is also true if the condition $\\angle ABC < 90^{\\circ}$ is left out.",
+      "answer": null,
+      "difficulty": "medium",
+      "techniques": [
+        "menelaus_theorem",
+        "angle_chasing"
+      ],
+      "confidence": "exact",
+      "reasoning": "Solution applies Menelaus theorem to triangles DMN and DEN, then derives the required angle equality."
+    },
+    {
+      "source": "OLI-2-Областен кръг-2014-11 кл · 2014-11 · Зад. 2",
+      "statement": "Даден е триъгълник ABC, за който BC² + AC² = AC·AB. Да се докаже, че допирната точка на вписаната в △ABC окръжност със страната BC, средата на страната AB и средата на ъглополовящата през върха C лежат на една права.",
+      "solution": "Решение. Ще използваме стандартните означения за елементите на $\\triangle ABC$. Нека $CL$, $L \\in AB$, е ъглополовящата на $\\angle ACB$, а $P$ и $Q$ са съответно средите на $AB$ и $CL$. Тъй като $a^2 + b^2 = bc < b(a + b) = ab + b^2$, то $a < b$, което означава, че $AL > BL$, т.е. точката $P$ е между $A$ и $L$. Следователно $PL = \\frac{c}{2} - \\frac{ca}{a + b} = \\frac{c(b - a)}{2(b + a)}$. Нека правата $PQ$ пресича страната $BC$ в точка $X$. От теоремата на Менелай за $\\triangle LBC$ и правата $PQ$ имаме\n\n$$\\frac{BP}{PL} \\cdot \\frac{LQ}{QC} \\cdot \\frac{CX}{XB} = 1,$$\n\nоткъдето $\\frac{XB}{CX} = \\frac{BP}{PL} = \\frac{b + a}{b - a}$. От $CX + XB = a$ намираме $CX = \\frac{a(b - a)}{2b}$.\n\nАко $T$ е допирната точка на вписаната окръжност със страната $BC$, то $CT = \\frac{a + b - c}{2}$. Равенството $CT = CX$ е еквивалентно на\n\n$$\\frac{a + b - c}{2} = \\frac{a(b - a)}{2b} \\iff a^2 + b^2 = bc.$$",
+      "answer": null,
+      "difficulty": "medium",
+      "techniques": [
+        "menelaus_theorem",
+        "geometry"
+      ],
+      "confidence": "exact",
+      "reasoning": "Explicitly applies Menelaus theorem to triangle LBC and line PQ to derive the required collinearity."
+    },
+    {
+      "source": "OLI-2-Областен кръг-2022-11 кл · 2022-11 · Зад. 2",
+      "statement": "Точките A₁, B₁ и C₁ лежат съответно на страните BC, CA и AB на триъгълника ABC и са такива, че отсечките AA₁, BB₁ и CC₁ се пресичат в точка P. Да се намерят отношенията CB₁ : B₁A и CP : PC₁, при условие че BA₁ : A₁C = 3 : 2 и AP : PA₁ = 5 : 1.",
+      "solution": "Решение. Нека построим отсечка PQ ∥ AB, Q ∈ BC, тогава от теоремата на Талес имаме A₁P/PA = A₁Q/QB = 1/5 и CP/PC₁ = CQ/QB = (CA₁ + A₁Q)/(A₁B − A₁Q). От равенствата A₁Q/QB = 1/5 и CA₁/A₁B = 2/3 получаваме A₁Q = k, A₁B = 6k и CA₁ = 4k, откъдето CP/PC₁ = (CA₁ + A₁Q)/(A₁B − A₁Q) = 5k/5k = 1/1.\nНека построим отсечка PR ∥ AC, R ∈ BC, тогава A₁P/PA = A₁R/RC = 1/5 и BP/PB₁ = BR/RC = (BA₁ + A₁R)/(A₁C − A₁R). От A₁R/RB = 1/5 и CA₁/A₁B = 2/3 имаме A₁R = l, CA₁ = 6l и A₁B = 9l, откъдето BP/PB₁ = (BA₁ + A₁R)/(A₁C − A₁R) = 10l/5l = 2/1.\nНека построим отсечка PT ∥ AB, T ∈ AC, така последователно получаваме B₁P/PB = B₁T/TA = 1/2, CT/TA = CP/PC₁ = 1/1, B₁T = d и TA = CT = 2d, откъдето CB₁/B₁A = (CT − B₁T)/([неразчетено] + B₁T) = d/(3d) = 1/3.",
+      "answer": "CB₁ : B₁A = 1 : 3; CP : PC₁ = 1 : 1.",
+      "difficulty": "medium",
+      "techniques": [
+        "menelaus",
+        "similar_triangles"
+      ],
+      "confidence": "exact",
+      "reasoning": "Introduces parallel lines, uses Menelaus theorem and ratio chasing to obtain required ratios."
+    },
+    {
+      "source": "OLI-3-Национален кръг-1984-9-12 кл · 1984-None · Зад. 2",
+      "statement": "Диагоналите на трапеца ABCD с основи AB и CD се пресичат в точка O с AB/CD = k > 1. Ъглополовящите на ъглите ∠AOB, ∠BOC, ∠COD и ∠DOA пресичат страните AB, BC, CD и DA съответно в точките K, L, M и N. Ако P е пресечната точка на правите KL и MN, а Q - пресечната точка на правите KN и LM, да се пресметне стойността на k при условие, че лицето на трапеца ABCD е равно на лицето на триъгълника OPQ.",
+      "solution": "Решение. Върху правата AC (черт. 1) разглеждаме точка P′, външна за отсечката AC и такава, че AP′/CP′ = AO/CO = k. Понеже (ACP′)(CDM)(DAN) = (AP′/CP′) · (CM/DM) · (DN/AN) = (AO/CO) · (CO/DO) · (DO/AO) = 1, от теоремата на Менелай за триъгълника ACD и правата MN получаваме, че P′ лежи върху MN. Аналогично, P′ лежи и върху KL, т.е. P′ ≡ P и AP/CP = k[неразчетено].\nПо аналогичен начин получаваме, че Q лежи върху правата BD, външна за отсечката BD и BQ/DQ = k.\nИмаме OA = k/(k + 1) · AC и PA = k/(k − 1) · AC. Тогава OP = PA − OA = 2k/(k² − 1) · AC.\nАналогично OQ = 2k/(k² − 1) · BD. Ако S е лицето на трапеца, то S_OPQ/S = (OP · OQ)/(AC · BD) = 4k²/(k² − 1)² = 1, откъдето намираме k² = 3 + 2√2 = (1 + √2)², т.е. k = 1 + √2.",
+      "answer": "k = 1 + √2",
+      "difficulty": "medium",
+      "techniques": [
+        "menelaus_theorem"
+      ],
+      "confidence": "exact",
+      "reasoning": "Solution explicitly uses Menelaus in triangle ACD; geometry with a few algebraic steps."
+    },
+    {
+      "source": "OLI-3-Национален кръг-1988-9-12 кл · 1988-None · Зад. 4",
+      "statement": "Точките A, B и C не лежат на една права. За произволна точка D от лъча AC→ с E и F са означени допирните точки на вписаната в триъгълника ABD окръжност съответно със страните AD и BD. Да се докаже, че когато точката D описва лъча AC→, правата EF минава през постоянна точка.",
+      "solution": "Решение. Върху лъча AC→ намираме точка L така, че AL = AB и означаваме с M средата на отсечката BL (черт. 2). Нека D е точка от лъча AC. Ще докажем, че правата EF минава през точката M.\nНека вектор DA = a⃗, вектор DB = b⃗, DA = a, DB = b, AB = AL = d, a + b + d = 2p. Тогава\nвектор DL = ((a − d)/a)a⃗,\nвектор DF = ((p − d)/b)b⃗\nи\nвектор DM = (1/2)(вектор DB + вектор DL) = (1/2)(b⃗ + ((a − d)/a)a⃗).\nСледователно\nвектор FM = вектор DM − вектор DF = (1/2)b⃗ + ((a − d)/(2a))a⃗ − ((p − d)/b)b⃗ = ((a − d)/2)(a⃗/a − b⃗/b).\nОттук получаваме, че правата FM е перпендикулярна на ъглополовящата на ъгъла ADB. Тъй като и EF е перпендикулярна на тази ъглополовяща, то EF минава през точката M, което и трябваше да се докаже.\nДоказателството, че точките E, F и M лежат на една права, може да се извърши и с теоремата на Менелай, синусовата теорема и по други подобни начини. Точката M може да бъде идентифицирана и като пресечна точка на правата EF с ъглополовящата на ъгъла BAC, например по следния начин:\nЛесно се вижда, че ∠MEA = 90° + (1/2)∠ADB и ∠AOB = 90° + (1/2)∠ADB, където O е центърът на вписаната в триъгълника ABD окръжност. Тогава триъгълниците AME и ABO са подобни (тъй като имат по два съответно равни ъгли). Следователно AM/AB = AE/AO = cos(α/2), където α = ∠BAC, т. е. AM = AB cos(α/2). Оттук получаваме, че положението на точката M върху ъглополовящата на ∠BAC не зависи от положението на точката D върху лъча AC→.",
+      "answer": "Постоянната точка е средата M на BL, където L е точката от лъча AC→ с AL = AB.",
+      "difficulty": "medium",
+      "techniques": [
+        "menelaus_theorem",
+        "vector_geometry"
+      ],
+      "confidence": "exact",
+      "reasoning": "Shows EF passes through a fixed point via Menelaus/angle‑bisector argument expressed in vectors."
+    },
+    {
+      "source": "OLI-3-Национален кръг-1992-9-12 кл · 1992-None · Зад. 5",
+      "statement": "Точките D, E и F са средите съответно на страните AB, BC и CA на триъгълника ABC. Ъглополовящите на ъглите BDC и ADC пресичат правите BC и AC съответно в точките M и N, и правата MN пресича правата CD в точката O. Нека още правите EO и FO пресичат съответно правите AC и BC в точките P и Q. Да се докаже, че CD = PQ.",
+      "solution": "Решение. Като използуваме, че DM и DN са ъглополовящи съответно в △DBC и △ADC (черт. 2), получаваме, че BM/MC = DB/DC и AN/NC = AD/DC. Но AD = DB по условие и значи BM/MC = AN/NC, откъдето според обратната на теоремата на Талес следва, че MN ∥ AB.\nЕто защо AB/MN = AC/CN = BC/CM. Освен това, понеже CD е медиана в △ABC и MN ∥ AB, то O е средата на MN, т. е. [неразчетено]\nПак от BM/MC = DB/DC и от доказаното получаваме\n(DB + DC)/DC = DB/DC + 1 = BM/MC + 1 = (BM + MC)/MC = BC/MC = AB/MN.\nОсвен това EF е средна отсечка в △ABC и EF = (1/2)AB = DB. Така намираме (DB + DC)/DC = 2EF/MN, откъдето\n(1) 1/EF + 1/DC = 2/MN.\nАко сега приложим два пъти теоремата на Менелай за △CMN — веднъж относно правата EP и веднъж — относно FQ — получаваме CP/PN = (OM/NO)·(EC/ME) = EC/ME и CQ/QM = (ON/MO)·(FC/NF) = FC/NF. Но EC/ME = FC/NF, защото EF ∥ MN. Следователно CP/PN = CQ/QM, което показва, че PQ ∥ MN. С други думи, четириъгълникът PQEF е трапец с пресечна точка на диагоналите O. Оттук с непосредствено пресмятане намираме\n(2) 1/EF + 1/PQ = 2/MN.\nОт (1) и (2) следва, че CD = PQ.",
+      "answer": null,
+      "difficulty": "medium",
+      "techniques": [
+        "menelaus_theorem",
+        "parallelism",
+        "similar_triangles"
+      ],
+      "confidence": "exact",
+      "reasoning": "Explicitly applies Menelaus twice to triangles CMN and EPF, the hallmark of the “Теорема на Менелай” step."
+    },
+    {
+      "source": "OLI-3-Национален кръг-2020-9-12 кл · 2020-None · Зад. 1",
+      "statement": "Върху страните на триъгълник ABC са избрани точки P, Q ∈ AB (P е между точките A и Q) и R ∈ BC. Точките M и N са пресечни точки [неразчетено] съответно с отсечките CP и CQ. Ако △APC и △QBC имат равни съответни ъгли, CP = AP, CR = CN и ∠BPC = ∠CRA, да се докаже, че MP + NQ = BR.",
+      "solution": "Решение. Първи начин: От теоремата на Менелай за триъгълник PBC и правата AR получаваме:\n(BR/RC)·(CM/MP)·(PA/AB) = 1,\nоткъдето намираме MP/BR = (CM·PA)/(RC·AB).\nОт теоремата на Менелай за триъгълник QBC и правата AR получаваме:\n(BR/RC)·(CN/NQ)·(QA/AB) = 1,\nоткъдето (тъй като RC = CN) намираме NQ/BR = QA/AB.\nОт горните равенства следва:\n(MP + NQ)/BR = 1 ⇐⇒ QA + (CM·PA)/RC = AB ⇐⇒ (CM·PA)/RC = BQ.\nТъй като BQ = BC последното равенство е еквивалентно на CM·CP = CR·CB.\nТова равенство е вярно понеже от условието ∠BPC = ∠CRA следва, че четириъгълникът PBRM е вписан в окръжност.\nВтори начин: Нека S ∈ BC като QS ∥ NR. От теоремата на Талес следва, че QN = SR и за да докажем твърдението на задачата трябва да докажем, че BS = PM. За целта ще покажем, че △APM ≅ △QSB.\n1. От QS ∥ AM следва, че ∠BQS = ∠MAP.\n2. От ∠QSC = ∠CRA = ∠BPC следва, че ∠BSQ = ∠APM.\n3. Като използваме последователно BQ = BC, синусовата теорема за △PBC, CP = AP и синусовата теорема за △APM получаваме:\nBQ/sin∠BSQ = BQ/sin∠QSC = BC/sin∠BPC = CP/sin∠QBS = AP/sin∠AMP = AM/sin∠APM.\nТъй като ∠BSQ = ∠APM, получаваме BQ = AM.\nСледователно △APM ≅ △QSB, BS = PM и MP + NQ = BR.",
+      "answer": null,
+      "difficulty": "medium",
+      "techniques": [
+        "menelaus_theorem"
+      ],
+      "confidence": "exact",
+      "reasoning": "Solution applies Menelaus theorem twice to triangles PBC and QBC with line AR, yielding MP+NQ=BR."
+    },
+    {
+      "source": "OLI-3-Национален кръг-2024-9-12 кл · 2024-None · Зад. 2",
+      "statement": "Точките M и P върху страните AB и BC на триъгълник ABC са такива, че AM = BC и CP = BM. Нека точка O = AP ∩ CM и ∠ABC = 2∠AOM. Да се намери ∠ABC.",
+      "solution": "Първо решение. Нека ∠ABC = φ. Да означим с a = BC и с b = CP. Тогава a > b, защото точка P лежи върху страната BC. В полуравнината спрямо BC, съдържаща т. A, построяваме точка N такава, че CN ∥ AB и CN = a. Следователно, AMCN е успоредник, ∠PCN = 180° − φ и ∠NAP = ∠AOM = φ/2. От косинусови теореми съответно за триъгълниците MBC, PCN и APB получаваме\nAN² = CM² = a² + b² − 2ab cos φ,\nPN² = a² + b² + 2ab cos φ,\nAP² = (a + b)² + (a − b)² − 2(a² − b²) cos φ = 2a² + 2b² − 2(a² − b²) cos φ.\nОт горните три равенства заключаваме, че:\n(1) AP² = AN² + PN² − 2(a² − b²) cos φ.\nДа означим ∠APN = α и да разгледаме следните два случая:\n1 случай: φ > 90°. Следователно φ/2 > 45°, AN > PN, т.е., α > φ/2 > 45°. Но тогава ∠ANP < 90° и значи AN² + PN² > AP² откъдето 2(a² − b²) cos φ > 0 и φ < 90°. Противоречие!\n2 случай: φ < 90°. Аналогично на първия случай, последователно имаме, че AN < PN, т.е., α < φ/2 < 45°, следователно ∠ANP > 90°, AN² + PN² < AP², 2(a² − b²) cos φ < 0 и значи φ > 90°. Противоречие!\nОкончателно, единствено е възможно φ = 90°. Обратно, при φ = 90° имаме, че AN = PN и AP² = AN² + PN², откъдето △APN е равнобедрен правоъгълен и значи ∠NAP = ∠AOM = 45° = ∠ABC/2. Условието е изпълнено и φ = 90° наистина е решение.\nЗабележка. От по-горе лесно следва, че ∠ABC = 90° ⇔ ∠AOM = 45° (е известен факт с различни доказателства).\nВторо решение. Нека CP = x и BP = y, CO = a и OM = b. Тогава AB = x + y и BM = x. От теоремата на Менелай за △MBC и правата AOP получаваме, че\n(2) (y/x) · (a/b) · ((x + y)/(2x + y)) = 1, т.е. b/a = (y/x) · ((x + y)/(2x + y)).\nНека T е върху BC, като B е между C и T и BT = x. Имаме, че ∠BTM = (1/2)∠ABC = ∠AOM. Следователно MTPO е вписан в окръжност и\nCP · CT = CO · CM, т.е. x(2x + y) = a(a + b).\nТогава\n(3) (a + b)² = x(2x + y)(1 + b/a) = x(2x + y)(1 + (y/x) · ((x + y)/(2x + y))) = x² + (x + y)²\nи значи ∠ABC = 90°.",
+      "answer": "90°",
+      "difficulty": "medium",
+      "techniques": [
+        "menelaus",
+        "cosine_law"
+      ],
+      "confidence": "exact",
+      "reasoning": "First solution applies cosine law; second solution applies Menelaus theorem to obtain φ=90°. Menelaus is the decisive tool."
+    },
+    {
+      "source": "OLI-2-Областен кръг-2007-11 кл · 2007-11 · Зад. 5",
+      "statement": "Нека D е точка от страната AB на △ABC. Означаваме с P и M центровете на вписаните окръжности съответно за △ADC и △BDC, а с Q и N центровете на външновписаните окръжности съответно за △ADC към страната AD и за △BDC към страната BD. Нека K и L са симетричните точки на Q и N спрямо правата AB.\nа) Да се докаже, че правите AB, QN и PM или се пресичат в една точка или са успоредни.\nб) Да се докаже, че ако точките M, P, K, L лежат на една окръжност, то △ABC е равнобедрен.",
+      "solution": "а) Точките P и Q лежат на ъглополовящата на ∠ACD, а точките M и N лежат на ъглополовящата на ∠BCD. Да означим F = CQ ∩ AB и E = CN ∩ AB.\nНека PM пресича AB в точка T. От теоремата на Менелай за △CFE и правата PM получаваме\n(CP · FT · EM)/(PF · TE · MC) = 1.\nТъй като CP/CQ = PF/QF (и двете отношения са равни на r_ADC/r, където r е радиусът на външновписаната окръжност за △ADC към AD), то CP/PF = CQ/QF и аналогично CM/CN = ME/NE, откъдето EM/MC = EN/NC. Следователно\n1 = (CP · FT · EM)/(PF · TE · MC) = (CQ · FT · EN)/(QF · TE · NC),\nкоето по обратната теорема на Менелай за △CFE означава, че N, Q и T лежат на една права. По същия начин, ако NQ пресича AB, то MP също минава през тази точка. Следователно правите PM, AB и QN или са успоредни, или се пресичат в една точка.\nб) Ще покажем, че M, P, K и L лежат на една окръжност тогава и само тогава, когато M, P, Q и N лежат на една окръжност. Ако QN ∥ AB ∥ PM, то и KL ∥ AB. Тъй като QNMP е равнобедрен трапец тогава и само тогава, когато PMLK е равнобедрен трапец, то QNMP е вписан тогава и само тогава, когато PMLK е вписан.\nАко QN, AB и PM се пресичат в точка T, то и KL минава през същата точка. Тъй като TK = TQ и TL = TN, то\nTP · TM = TK · TL ⇔ TP · TM = TQ · TN.\nСледователно M, P, Q и N лежат на една окръжност. Освен това Q, D и M лежат на една права (ъглополовящата на ∠BDC), а N, D и P също лежат на една права (ъглополовящата на ∠ADC). Оттук ∠QAP = ∠QDP = ∠NDM = ∠NBM = 90°, т.е. AQDP и BNDM са вписани четириъгълници. Следователно ∠BAC/2 = ∠DAP = ∠PQD = ∠PNM = ∠DBM = ∠ABC/2, т.е. △ABC е равнобедрен.",
+      "answer": null,
+      "difficulty": "hard",
+      "techniques": [
+        "menelaus",
+        "incenter_excenter",
+        "similarity"
+      ],
+      "confidence": "exact",
+      "reasoning": "Applies Menelaus theorem to several triangles and uses properties of incircles/excircles to prove concurrency or parallelism."
+    },
+    {
+      "source": "OLI-3-Национален кръг-1983-9-12 кл · 1983-None · Зад. 3",
+      "statement": "Дадена е правилна триъгълна пирамида ABCD с основен ръб AB = a и околен ръб AD = b. Точките M и N са средите съответно на ръбовете [неразчетено] и CD. Равнина α минава през MN и пресича ръбовете AD и BC съответно в точките P и Q.\nа) Да се докаже, че AP/AD = BQ/BC.\nб) Да се намери частното AP/AD в случая, когато лицето на четириъгълника MQNP е най-малко.",
+      "solution": "Решение. Нека AP⃗ = tAD⃗, 0 < t < 1 и α = (MNP) (черт. 1).\nа) Разглеждаме точка Q′ върху BC, определена от равенството BQ′⃗ = tBC⃗.\nИмаме MP⃗ = MA⃗+tAD⃗ и MQ′⃗ = MB⃗+tBC⃗.\nТогава (MP⃗+MQ′⃗)/2 = t(AD⃗+BC⃗)/2 = tMN⃗. Но (MP⃗+MQ′⃗)/2 = MS⃗, където S е средата на PQ′. Следователно S лежи върху MN, P — върху α и Q′ е пресечната точка на α и BC, т. е. Q ≡ Q′ и BQ⃗ = tBC⃗.\nб) От MN⃗ = (BC⃗+AD⃗)/2 намираме |MN| = √(a²+b²)/2. Имаме последователно\nPQ⃗ = AB⃗+t(BC⃗+DA⃗) = AB⃗−t(AB⃗+CD⃗) = (1−t)AB⃗−tCD⃗,\nPQ² = (a²+b²)t²−2a²t+a²,\nS_MQNP = |MN|·|PQ|sinφ/2 = √(MN²·PQ²−(MN⃗·PQ⃗)²)/2,\nMN⃗·PQ⃗ = −tMN⃗·CD⃗ = t(a²−b²)/2 и тогава S_MQNP = (a/4)√(4b²t²−2(a²+b²)t+a²+b²).\nМинималната стойност на S_MQNP се достига при t₀ = (a²+b²)/(4b²).\nНепосредствено се съобразява, че t₀ < 1 (защото a² < 3b²).",
+      "answer": "б) AP/AD = (a²+b²)/(4b²).",
+      "difficulty": "hard",
+      "techniques": [
+        "menelaus_theorem",
+        "vector_method",
+        "optimization"
+      ],
+      "confidence": "exact",
+      "reasoning": "Ratio equality follows from Menelaus on transversal MN; minimisation of area uses vector calculus – main tool Menelaus (step 1.1)."
+    },
+    {
+      "source": "OLI-3-Национален кръг-2010-9-12 кл · 2010-None · Зад. 6",
+      "statement": "Даден е $\\triangle ABC$ вписан в окръжност $k$ и нека $D$ е точка върху страната $AB$. Означаваме с $I$ и $J$ центровете на двете окръжности, които се допират до страната $AB$, до отсечката $CD$ и вътрешно до окръжността $k$. Ако точките $A, B, I$ и $J$ лежат на една окръжност, да се докаже, че $D$ е допирната точка на външновписаната окръжност към страната $AB$ на $\\triangle ABC$ с $AB$.",
+      "solution": "Нека окръжността $k$ е с център $O$ и радиус $r$, окръжността с център $I$ е $k_1$ с радиус $r_1$ и се допира до $BD$, $CD$ и $k$ съответно в точките $P$, $R$ и $Q$, а окръжността с център $J$ е $k_2$ с радиус $r_2$ и се допира до $AD$, $CD$ и $k$ съответно в точките $K$, $M$ и $L$.\n\nПърво ще докажем, че $AB \\parallel IJ$, т.е. $ABIJ$ е равнобедрен трапец. Да допуснем противното и нека $IJ$ пресича правата $AB$ в точка $T$. Ако разгледаме $\\triangle IJO$ и точките $T$, $Q$ и $L$ върху страните, то\n\n$$\\frac{IT}{TJ} \\cdot \\frac{JL}{LO} \\cdot \\frac{OQ}{QI} = \\frac{r_1}{r_2} \\cdot \\frac{r_2}{r} \\cdot \\frac{r}{r_1} = 1$$\n\nи от теоремата на Менелай следва, че точките $T$, $Q$ и $L$ лежат на една права. Тогава $TQ.TL = TB.TA$, но по-условие $ABIJ$ е вписан четириъгълник, т.е. $TB.TA = TI.TJ$ и следователно $TQ.TL = TI.TJ$, т.е. $QLJI$ е вписан четириъгълник. От друга страна $\\angle JLQ = \\angle IQL$, т.е. $QLJI$ е равнобедрен трапец и $IJ \\parallel QL$, което е противоречие. Следователно $AB \\parallel IJ$, т.е. $r_1 = r_2$ и $AK = BP$ (1).\n\nОт обобщената теорема на Птолемей, приложена за точките $A$, $B$, $Q$ и $C$ получаваме\n\n$$AB.CR + AC.BP = AP.BC,$$\n\nно $CR = CD - DR = CD - DP = CD - BD + BP$, $AP = AB - BP$ и след заместване в горното равенство достигаме до\n\n$$BP = \\frac{AB(BC + BD - CD)}{AB + BC + AC}. \\quad (2)$$\n\nАналогично\n\n$$AK = \\frac{AB(AC + AD - CD)}{AB + BC + AC}. \\quad (3)$$\n\nНакрая от (1), (2) и (3) получаваме, че $BC + BD = AC + AD$, което е изпълнено точно тогава, когато $D$ е допирната точка на външновписаната окръжност към страната $AB$ на $\\triangle ABC$ с $AB$ и с това доказателството е завършено.\n\nЗабележка. Втората част на задачата може да се реши и синтетично, като се използва далеч неочевидния факт, че за произволна точка $D$ правите $MK$, $PR$ и $IJ$ минават през центъра на вписаната в $\\triangle ABC$ окръжност. Директно с теоремата на Виктор-Тебо ($IJ$ минава през центъра на вписаната в $\\triangle ABC$ окръжност) задачата не може да бъде решена.",
+      "answer": null,
+      "difficulty": "hard",
+      "techniques": [
+        "menelaus",
+        "ptolemy",
+        "circle_geometry"
+      ],
+      "confidence": "exact",
+      "reasoning": "The proof starts with Menelaus’ theorem to obtain AB∥IJ, then applies Ptolemy’s theorem and circle power relations to show D is the external tangency point."
+    }
+  ]
+}

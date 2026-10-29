@@ -1,0 +1,164 @@
+{
+  "_meta": {
+    "pdf": "C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\Задачи_Минали_Години\\Областен\\OLI-2-Областен кръг-2020-11 кл-sol.pdf",
+    "paired_with": null,
+    "level": 1,
+    "type": "sol",
+    "analyzed_at": "2026-10-16T21:26:58.694643",
+    "model": "deepseek/deepseek-v3.2",
+    "text_length": 12635,
+    "paired_text_length": 0
+  },
+  "problems": [
+    {
+      "num": 1,
+      "topic": "algebra",
+      "theorems": [
+        "Cauchy-Schwarz inequality",
+        "AM-GM inequality"
+      ],
+      "techniques": [
+        "summation",
+        "inequality manipulation",
+        "equality case analysis"
+      ],
+      "concepts": [
+        "sequences",
+        "inequalities",
+        "sum of squares"
+      ],
+      "difficulty": "standard",
+      "notes": "Problem involves proving an inequality for sequences and analyzing the equality case. Uses Cauchy-Schwarz and summation techniques."
+    },
+    {
+      "num": 2,
+      "topic": "geometry",
+      "theorems": [
+        "Midsegment theorem",
+        "Inscribed angle theorem",
+        "Cyclic quadrilateral properties"
+      ],
+      "techniques": [
+        "auxiliary points construction",
+        "angle chasing"
+      ],
+      "concepts": [
+        "triangle midpoints",
+        "angle bisector",
+        "cyclic quadrilateral",
+        "circumscribed circle radius",
+        "inscribed triangle"
+      ],
+      "difficulty": "standard",
+      "notes": "Problem involves a triangle with a point on a side satisfying length conditions. Uses midsegments, cyclic quadrilaterals, and angle properties."
+    },
+    {
+      "num": 3,
+      "topic": "algebra",
+      "theorems": [
+        "Vieta's formulas"
+      ],
+      "techniques": [
+        "substitution",
+        "arithmetic and geometric progression conditions"
+      ],
+      "concepts": [
+        "quadratic equations",
+        "roots of equations",
+        "arithmetic progression",
+        "geometric progression"
+      ],
+      "difficulty": "standard",
+      "notes": "Problem links coefficients of a quadratic equation forming a geometric progression with roots forming an arithmetic progression."
+    },
+    {
+      "num": 4,
+      "topic": "algebra",
+      "theorems": [
+        "Vieta's formulas",
+        "Discriminant condition"
+      ],
+      "techniques": [
+        "case analysis",
+        "integer root analysis"
+      ],
+      "concepts": [
+        "quadratic equations",
+        "natural number roots",
+        "discriminant",
+        "system of equations"
+      ],
+      "difficulty": "standard",
+      "notes": "Problem involves two quadratic equations with natural coefficients and conditions on their natural roots."
+    },
+    {
+      "num": 5,
+      "topic": "number_theory",
+      "theorems": [],
+      "techniques": [
+        "coprime assumption",
+        "substitution",
+        "inequality bounding"
+      ],
+      "concepts": [
+        "Diophantine equation",
+        "coprime numbers",
+        "fraction addition to integer",
+        "bounding variables"
+      ],
+      "difficulty": "hard",
+      "notes": "Problem involves finding integer values of an expression with natural numbers. Uses a lemma about sums of irreducible fractions being integer, and a bounding argument."
+    },
+    {
+      "num": 6,
+      "topic": "combinatorics",
+      "theorems": [],
+      "techniques": [
+        "extremal principle",
+        "counting",
+        "set manipulation"
+      ],
+      "concepts": [
+        "binary sequences",
+        "set of sequences closed under operation",
+        "maximal size of subsets",
+        "combinatorial bounds"
+      ],
+      "difficulty": "olympic",
+      "notes": "Abstract combinatorial problem about sets of binary sequences closed under a flipping operation. Involves an extremal argument and careful counting."
+    },
+    {
+      "num": 7,
+      "topic": "algebra",
+      "theorems": [],
+      "techniques": [
+        "derivative analysis",
+        "finding critical points"
+      ],
+      "concepts": [
+        "polynomial functions",
+        "extrema",
+        "increasing/decreasing intervals",
+        "calculus"
+      ],
+      "difficulty": "standard",
+      "notes": "Standard calculus problem: find extrema and monotonicity intervals of a cubic polynomial."
+    }
+  ],
+  "unique_concepts": [
+    "Cauchy-Schwarz inequality",
+    "Midsegment theorem",
+    "Inscribed angle theorem",
+    "Cyclic quadrilateral properties",
+    "Vieta's formulas",
+    "Arithmetic and geometric progression conditions",
+    "Discriminant condition for real/natural roots",
+    "Diophantine equation with coprime numbers",
+    "Fraction addition to integer lemma",
+    "Bounding variables in number theory",
+    "Binary sequences and closure properties",
+    "Extremal combinatorial arguments",
+    "Derivative analysis for polynomial extrema and monotonicity"
+  ],
+  "confidence": 0.95
+}

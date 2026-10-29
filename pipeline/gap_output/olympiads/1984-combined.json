@@ -1,0 +1,1869 @@
+{
+  "_meta": {
+    "pdf": "C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\Материали_БГ\\BMO_1984-2006.pdf",
+    "paired_with": null,
+    "level": 2,
+    "type": "combined",
+    "analyzed_at": "2026-10-16T21:49:02.146608",
+    "model": "deepseek/deepseek-v3.2",
+    "text_length": 214093,
+    "paired_text_length": 0
+  },
+  "problems": [
+    {
+      "num": 1,
+      "topic": "algebra",
+      "theorems": [
+        "AM-HM inequality"
+      ],
+      "techniques": [
+        "substitution",
+        "inequality manipulation"
+      ],
+      "concepts": [
+        "harmonic mean",
+        "arithmetic mean",
+        "sum of reciprocals"
+      ],
+      "difficulty": "standard",
+      "notes": "Standard inequality problem using substitution and AM-HM."
+    },
+    {
+      "num": 2,
+      "topic": "geometry",
+      "theorems": [],
+      "techniques": [
+        "lemma construction",
+        "parallelogram properties"
+      ],
+      "concepts": [
+        "cyclic quadrilateral",
+        "orthocenter",
+        "parallelogram",
+        "similar/congruent figures"
+      ],
+      "difficulty": "hard",
+      "notes": "Requires proving a lemma about orthocenters and parallelograms in cyclic quadrilaterals."
+    },
+    {
+      "num": 3,
+      "topic": "number_theory",
+      "theorems": [
+        "Euler's theorem"
+      ],
+      "techniques": [
+        "divisibility",
+        "modular arithmetic",
+        "exponent properties"
+      ],
+      "concepts": [
+        "decimal representation",
+        "Euler's totient function",
+        "powers of 5",
+        "appending digits"
+      ],
+      "difficulty": "olympic",
+      "notes": "Non-standard problem combining decimal digits and number theory."
+    },
+    {
+      "num": 4,
+      "topic": "algebra",
+      "theorems": [],
+      "techniques": [
+        "system manipulation",
+        "summation",
+        "substitution",
+        "case analysis"
+      ],
+      "concepts": [
+        "symmetric systems",
+        "sign analysis",
+        "ordering variables"
+      ],
+      "difficulty": "hard",
+      "notes": "Requires clever addition of equations and sign analysis based on ordering."
+    },
+    {
+      "num": 5,
+      "topic": "geometry",
+      "theorems": [],
+      "techniques": [
+        "coordinate geometry",
+        "vector geometry",
+        "centroid properties"
+      ],
+      "concepts": [
+        "centroid",
+        "circumcenter",
+        "midpoint",
+        "perpendicular lines",
+        "isosceles triangle"
+      ],
+      "difficulty": "standard",
+      "notes": "Standard geometry problem using centroid and perpendicularity condition."
+    },
+    {
+      "num": 6,
+      "topic": "algebra",
+      "theorems": [],
+      "techniques": [
+        "trigonometric identities",
+        "inequality manipulation",
+        "range analysis"
+      ],
+      "concepts": [
+        "sine and cosine functions",
+        "double-angle formulas",
+        "interval constraints"
+      ],
+      "difficulty": "hard",
+      "notes": "Trigonometric inequality problem requiring manipulation and range deduction."
+    },
+    {
+      "num": 7,
+      "topic": "number_theory",
+      "theorems": [],
+      "techniques": [
+        "coloring",
+        "symmetry",
+        "linear combinations",
+        "existence proof"
+      ],
+      "concepts": [
+        "linear Diophantine equations",
+        "coloring arguments",
+        "symmetric points",
+        "integer lattice"
+      ],
+      "difficulty": "olympic",
+      "notes": "Non-standard combinatorial number theory problem with coloring and symmetry."
+    },
+    {
+      "num": 8,
+      "topic": "combinatorics",
+      "theorems": [
+        "Pigeonhole Principle"
+      ],
+      "techniques": [
+        "graph theory modeling",
+        "pigeonhole principle",
+        "extremal arguments"
+      ],
+      "concepts": [
+        "languages and speakers",
+        "graph of acquaintances",
+        "common language"
+      ],
+      "difficulty": "olympic",
+      "notes": "Classic combinatorial problem often solved via graph theory and pigeonhole principle."
+    },
+    {
+      "num": 9,
+      "topic": "geometry",
+      "theorems": [
+        "Power of a Point"
+      ],
+      "techniques": [
+        "power of a point",
+        "inequality proof",
+        "case analysis for equality"
+      ],
+      "concepts": [
+        "incircle",
+        "circumcircle",
+        "chord lengths",
+        "radius"
+      ],
+      "difficulty": "hard",
+      "notes": "Geometry inequality involving incircle, circumcircle, and power of a point."
+    },
+    {
+      "num": 10,
+      "topic": "geometry",
+      "theorems": [],
+      "techniques": [
+        "3D geometry",
+        "sphere condition",
+        "equal products condition"
+      ],
+      "concepts": [
+        "tetrahedron",
+        "sphere",
+        "concyclic points",
+        "equal power conditions"
+      ],
+      "difficulty": "olympic",
+      "notes": "3D geometry problem requiring proving six points are concyclic on a sphere."
+    },
+    {
+      "num": 11,
+      "topic": "algebra",
+      "theorems": [],
+      "techniques": [
+        "recurrence relations",
+        "integer sequence analysis",
+        "necessary and sufficient conditions"
+      ],
+      "concepts": [
+        "recurrence sequences",
+        "integer sequences",
+        "divisibility conditions"
+      ],
+      "difficulty": "olympic",
+      "notes": "Non-linear recurrence sequence problem with integer condition."
+    },
+    {
+      "num": 12,
+      "topic": "geometry",
+      "theorems": [],
+      "techniques": [
+        "perimeter and area equality",
+        "case analysis",
+        "triangle properties"
+      ],
+      "concepts": [
+        "equal perimeters",
+        "equal areas",
+        "equilateral triangle",
+        "right triangle"
+      ],
+      "difficulty": "hard",
+      "notes": "Geometry problem with two cases based on point location."
+    },
+    {
+      "num": 13,
+      "topic": "algebra",
+      "theorems": [],
+      "techniques": [
+        "functional equations",
+        "substitution",
+        "constant function proof"
+      ],
+      "concepts": [
+        "functional equations",
+        "Cauchy-type equations",
+        "constant functions"
+      ],
+      "difficulty": "standard",
+      "notes": "Standard functional equation leading to constant function."
+    },
+    {
+      "num": 14,
+      "topic": "algebra",
+      "theorems": [],
+      "techniques": [
+        "algebraic manipulation",
+        "squaring",
+        "integer analysis"
+      ],
+      "concepts": [
+        "square roots",
+        "integer values",
+        "system of equations"
+      ],
+      "difficulty": "hard",
+      "notes": "Problem involving square roots being integers, leading to a specific solution."
+    },
+    {
+      "num": 15,
+      "topic": "geometry",
+      "theorems": [
+        "Law of Sines"
+      ],
+      "techniques": [
+        "trigonometric manipulation",
+        "angle bisector theorem",
+        "ratio finding"
+      ],
+      "concepts": [
+        "angle bisector",
+        "side ratios",
+        "trigonometric identities"
+      ],
+      "difficulty": "standard",
+      "notes": "Trigonometry problem to find side ratio using given equation."
+    },
+    {
+      "num": 16,
+      "topic": "geometry",
+      "theorems": [
+        "Power of a Point",
+        "Intersecting Chords Theorem"
+      ],
+      "techniques": [
+        "power of a point",
+        "chord properties",
+        "length calculation"
+      ],
+      "concepts": [
+        "intersecting circles",
+        "chord midpoint",
+        "chord length"
+      ],
+      "difficulty": "standard",
+      "notes": "Geometry problem using power of a point and chord properties."
+    },
+    {
+      "num": 17,
+      "topic": "geometry",
+      "theorems": [
+        "Angle Bisector Theorem",
+        "Area formulas"
+      ],
+      "techniques": [
+        "area ratios",
+        "trigonometry",
+        "angle bisector properties"
+      ],
+      "concepts": [
+        "altitude",
+        "angle bisector",
+        "median",
+        "area of triangle",
+        "angle measures"
+      ],
+      "difficulty": "hard",
+      "notes": "Geometry problem using area ratios and trigonometric relations to find angles."
+    },
+    {
+      "num": 18,
+      "topic": "algebra",
+      "theorems": [],
+      "techniques": [
+        "polynomial functional equation",
+        "substitution",
+        "symmetry"
+      ],
+      "concepts": [
+        "polynomials in two variables",
+        "functional equations",
+        "symmetric forms"
+      ],
+      "difficulty": "olympic",
+      "notes": "Finding all polynomials satisfying a multiplicative functional equation."
+    },
+    {
+      "num": 19,
+      "topic": "geometry",
+      "theorems": [],
+      "techniques": [
+        "3D geometry",
+        "inequality proof",
+        "bounding distance"
+      ],
+      "concepts": [
+        "tetrahedron",
+        "parallel planes",
+        "edge lengths",
+        "distance minimization"
+      ],
+      "difficulty": "hard",
+      "notes": "3D geometry inequality problem bounding the distance between two parallel planes containing a tetrahedron."
+    },
+    {
+      "num": 20,
+      "topic": "number_theory",
+      "theorems": [],
+      "techniques": [
+        "prime factorization",
+        "difference of squares",
+        "consecutive terms analysis"
+      ],
+      "concepts": [
+        "consecutive integers",
+        "prime factors",
+        "difference of primes",
+        "sequence properties"
+      ],
+      "difficulty": "olympic",
+      "notes": "Number theory problem involving consecutive terms of a linear sequence and prime factor differences."
+    },
+    {
+      "num": 21,
+      "topic": "number_theory",
+      "theorems": [],
+      "techniques": [
+        "divisor analysis",
+        "sum of squares equation",
+        "Diophantine equation"
+      ],
+      "concepts": [
+        "divisors",
+        "sum of squares",
+        "Diophantine equation",
+        "small divisors"
+      ],
+      "difficulty": "standard",
+      "notes": "Find n such that sum of squares of first four divisors equals n."
+    },
+    {
+      "num": 22,
+      "topic": "algebra",
+      "theorems": [
+        "Eisenstein's Criterion (concept)"
+      ],
+      "techniques": [
+        "polynomial irreducibility",
+        "contradiction",
+        "substitution"
+      ],
+      "concepts": [
+        "polynomial irreducibility",
+        "prime numbers",
+        "decimal representation"
+      ],
+      "difficulty": "olympic",
+      "notes": "Proving a polynomial derived from a prime's digits is irreducible."
+    },
+    {
+      "num": 23,
+      "topic": "geometry",
+      "theorems": [
+        "Ceva's Theorem",
+        "Menelaus' Theorem"
+      ],
+      "techniques": [
+        "area comparison",
+        "ratio manipulation",
+        "Ceva/Menelaus"
+      ],
+      "concepts": [
+        "centroid",
+        "area inequality",
+        "transversal lines",
+        "triangle areas"
+      ],
+      "difficulty": "hard",
+      "notes": "Geometry inequality involving areas cut by a line through the centroid."
+    },
+    {
+      "num": 24,
+      "topic": "combinatorics",
+      "theorems": [],
+      "techniques": [
+        "extremal set theory",
+        "counting",
+        "upper and lower bounds"
+      ],
+      "concepts": [
+        "set systems",
+        "intersection size",
+        "triple systems",
+        "Fisher's inequality concept"
+      ],
+      "difficulty": "olympic",
+      "notes": "Classic extremal set theory problem with bounds on size of family of 3-sets with pairwise intersection at most 1."
+    },
+    {
+      "num": 25,
+      "topic": "algebra",
+      "theorems": [],
+      "techniques": [
+        "recurrence relations",
+        "modular arithmetic",
+        "pattern finding"
+      ],
+      "concepts": [
+        "linear recurrence",
+        "divisibility by 11",
+        "sequence modulo 11"
+      ],
+      "difficulty": "standard",
+      "notes": "Find n such that a_n divisible by 11, using recurrence modulo 11."
+    },
+    {
+      "num": 26,
+      "topic": "algebra",
+      "theorems": [],
+      "techniques": [
+        "generating functions",
+        "coefficient extraction",
+        "summation manipulation"
+      ],
+      "concepts": [
+        "polynomial squares",
+        "coefficient sums",
+        "generating functions"
+      ],
+      "difficulty": "hard",
+      "notes": "Problem involving sum of half of the coefficients of a square of a polynomial."
+    },
+    {
+      "num": 27,
+      "topic": "geometry",
+      "theorems": [
+        "Euler line",
+        "Pedal triangle properties"
+      ],
+      "techniques": [
+        "pedal triangle construction",
+        "Euler line properties",
+        "incircle contact points"
+      ],
+      "concepts": [
+        "pedal triangle",
+        "Euler line",
+        "orthocenter",
+        "circumcenter",
+        "incircle"
+      ],
+      "difficulty": "olympic",
+      "notes": "Advanced geometry problem linking Euler lines of two related triangles."
+    },
+    {
+      "num": 28,
+      "topic": "combinatorics",
+      "theorems": [],
+      "techniques": [
+        "coloring",
+        "pigeonhole principle",
+        "function construction"
+      ],
+      "concepts": [
+        "integer coloring",
+        "prime differences",
+        "function to finite set"
+      ],
+      "difficulty": "olympic",
+      "notes": "Find minimal size of codomain for a function avoiding same color at prime distance."
+    },
+    {
+      "num": 29,
+      "topic": "geometry",
+      "theorems": [
+        "Inscribed angles",
+        "Cyclic quadrilaterals"
+      ],
+      "techniques": [
+        "angle chasing",
+        "congruent triangles",
+        "parallel lines"
+      ],
+      "concepts": [
+        "circumcircle",
+        "perpendiculars to radii",
+        "angle equality",
+        "parallel lines"
+      ],
+      "difficulty": "hard",
+      "notes": "Complex angle chasing problem with given segment equality condition."
+    },
+    {
+      "num": 30,
+      "topic": "number_theory",
+      "theorems": [
+        "Heron's formula"
+      ],
+      "techniques": [
+        "parametric solutions",
+        "infinite descent",
+        "coprime conditions"
+      ],
+      "concepts": [
+        "Heronian triangles",
+        "integer area",
+        "non-integer altitudes",
+        "coprime sides"
+      ],
+      "difficulty": "olympic",
+      "notes": "Proving existence of infinitely many Heronian triangles with coprime sides but non-integer altitudes."
+    },
+    {
+      "num": 31,
+      "topic": "geometry",
+      "theorems": [],
+      "techniques": [
+        "area comparison",
+        "containment argument",
+        "regular hexagon properties"
+      ],
+      "concepts": [
+        "regular hexagon",
+        "area inequality",
+        "convex polygon containment"
+      ],
+      "difficulty": "standard",
+      "notes": "Area inequality for a convex polygon containing a regular hexagon."
+    },
+    {
+      "num": 32,
+      "topic": "algebra",
+      "theorems": [],
+      "techniques": [
+        "functional equations",
+        "bijection proof by contradiction",
+        "iterative substitution"
+      ],
+      "concepts": [
+        "bijective functions",
+        "functional equations",
+        "contradiction"
+      ],
+      "difficulty": "olympic",
+      "notes": "Prove no bijection satisfies given functional equation."
+    },
+    {
+      "num": 33,
+      "topic": "number_theory",
+      "theorems": [
+        "Fermat's Little Theorem",
+        "Euler's theorem"
+      ],
+      "techniques": [
+        "modular arithmetic",
+        "divisibility",
+        "polynomial factorization"
+      ],
+      "concepts": [
+        "divisibility by fixed number",
+        "modular congruences",
+        "polynomial factors"
+      ],
+      "difficulty": "standard",
+      "notes": "Find n such that expression divisible by 1992 for all m, using factorization and modular arithmetic."
+    },
+    {
+      "num": 34,
+      "topic": "algebra",
+      "theorems": [
+        "AM-GM inequality"
+      ],
+      "techniques": [
+        "inequality proof",
+        "induction",
+        "AM-GM application"
+      ],
+      "concepts": [
+        "factorial inequality",
+        "AM-GM",
+        "binomial coefficients"
+      ],
+      "difficulty": "standard",
+      "notes": "Prove inequality involving factorial and polynomial, likely using AM-GM or induction."
+    },
+    {
+      "num": 35,
+      "topic": "geometry",
+      "theorems": [
+        "Ptolemy's Theorem",
+        "Power of a Point"
+      ],
+      "techniques": [
+        "cyclic quadrilateral properties",
+        "area ratios",
+        "inequality proof"
+      ],
+      "concepts": [
+        "cyclic quadrilateral",
+        "area inequality",
+        "Ptolemy's theorem",
+        "similar triangles"
+      ],
+      "difficulty": "hard",
+      "notes": "Geometry inequality for cyclic quadrilateral and area of triangle."
+    },
+    {
+      "num": 36,
+      "topic": "combinatorics",
+      "theorems": [
+        "Pigeonhole Principle"
+      ],
+      "techniques": [
+        "extremal set theory",
+        "pigeonhole principle",
+        "construction"
+      ],
+      "concepts": [
+        "subset selection",
+        "pairwise coprime triples",
+        "Erdős–Ginzburg–Ziv type"
+      ],
+      "difficulty": "olympic",
+      "notes": "Find minimal f(n) such that any subset of size f(n) contains three pairwise coprime numbers."
+    },
+    {
+      "num": 37,
+      "topic": "algebra",
+      "theorems": [
+        "Cauchy-Schwarz inequality"
+      ],
+      "techniques": [
+        "Lagrange multipliers",
+        "Cauchy-Schwarz",
+        "optimization with constraint"
+      ],
+      "concepts": [
+        "maximization under constraints",
+        "sum of squares",
+        "Cauchy-Schwarz"
+      ],
+      "difficulty": "standard",
+      "notes": "Maximize one variable given sum and sum of squares constraints."
+    },
+    {
+      "num": 38,
+      "topic": "combinatorics",
+      "theorems": [],
+      "techniques": [
+        "counting monotonic numbers",
+        "stars and bars",
+        "digit sequences"
+      ],
+      "concepts": [
+        "monotonic numbers",
+        "non-decreasing digits",
+        "combinations with repetition"
+      ],
+      "difficulty": "standard",
+      "notes": "Count monotonic numbers with up to given digits, a standard combinatorial count."
+    },
+    {
+      "num": 39,
+      "topic": "geometry",
+      "theorems": [
+        "Tangent-secant theorem",
+        "Inscribed angles"
+      ],
+      "techniques": [
+        "angle chasing",
+        "tangent properties",
+        "circle geometry"
+      ],
+      "concepts": [
+        "tangent circles",
+        "common tangent",
+        "midpoint of chord",
+        "angle equality"
+      ],
+      "difficulty": "hard",
+      "notes": "Complex circle geometry problem with three circles and angle equality."
+    },
+    {
+      "num": 40,
+      "topic": "number_theory",
+      "theorems": [
+        "Lifting The Exponent (LTE)"
+      ],
+      "techniques": [
+        "LTE",
+        "prime factorization",
+        "equation in primes"
+      ],
+      "concepts": [
+        "exponential Diophantine equation",
+        "prime powers",
+        "binomial expansions"
+      ],
+      "difficulty": "olympic",
+      "notes": "Solve equation in natural numbers with prime exponent, likely using LTE."
+    },
+    {
+      "num": 41,
+      "topic": "geometry",
+      "theorems": [],
+      "techniques": [
+        "geometric construction",
+        "area equality",
+        "ruler and compass"
+      ],
+      "concepts": [
+        "area construction",
+        "given point inside angle",
+        "line through point"
+      ],
+      "difficulty": "olympic",
+      "notes": "Construction problem: find line through interior point cutting triangle with area equal to square of given segment."
+    },
+    {
+      "num": 42,
+      "topic": "algebra",
+      "theorems": [
+        "Rational Root Theorem"
+      ],
+      "techniques": [
+        "integer root analysis",
+        "contradiction",
+        "modular arithmetic"
+      ],
+      "concepts": [
+        "polynomial with integer coefficients",
+        "integer roots",
+        "unique integer root"
+      ],
+      "difficulty": "standard",
+      "notes": "Prove polynomial has at most one integer root using root analysis and contradiction."
+    },
+    {
+      "num": 43,
+      "topic": "combinatorics",
+      "theorems": [],
+      "techniques": [
+        "maximization",
+        "permutation arrangement",
+        "extremal arrangement"
+      ],
+      "concepts": [
+        "permutations",
+        "sum of absolute differences",
+        "maximizing sum"
+      ],
+      "difficulty": "standard",
+      "notes": "Find maximum of sum of absolute differences in a permutation."
+    },
+    {
+      "num": 44,
+      "topic": "combinatorics",
+      "theorems": [],
+      "techniques": [
+        "graph theory modeling",
+        "extremal graph theory",
+        "construction"
+      ],
+      "concepts": [
+        "acquaintance graph",
+        "common acquaintances",
+        "graph properties"
+      ],
+      "difficulty": "olympic",
+      "notes": "Graph theory problem: find smallest n for a graph with given conditions on common neighbors."
+    },
+    {
+      "num": 45,
+      "topic": "algebra",
+      "theorems": [],
+      "techniques": [
+        "iterative evaluation",
+        "pattern recognition",
+        "telescoping"
+      ],
+      "concepts": [
+        "binary operation",
+        "iterated operation",
+        "trigonometric substitution (hint)",
+        "simplification"
+      ],
+      "difficulty": "standard",
+      "notes": "Evaluate iterated operation, likely simplifies via trigonometric identity or pattern."
+    },
+    {
+      "num": 46,
+      "topic": "geometry",
+      "theorems": [
+        "Power of a Point",
+        "Intersecting Chords Theorem"
+      ],
+      "techniques": [
+        "power of a point",
+        "similar triangles",
+        "ratio manipulation"
+      ],
+      "concepts": [
+        "intersecting circles",
+        "right angle at centers",
+        "chord ratios",
+        "similar triangles"
+      ],
+      "difficulty": "hard",
+      "notes": "Complex circle geometry with right angle condition and ratio proof."
+    },
+    {
+      "num": 47,
+      "topic": "algebra",
+      "theorems": [],
+      "techniques": [
+        "quadratic equation analysis",
+        "discriminant",
+        "integer roots",
+        "non-square condition"
+      ],
+      "concepts": [
+        "quadratic equations",
+        "integer roots",
+        "non-square integers",
+        "parity conditions"
+      ],
+      "difficulty": "hard",
+      "notes": "Prove roots of quadratic are natural numbers but not perfect squares."
+    },
+    {
+      "num": 48,
+      "topic": "combinatorics",
+      "theorems": [],
+      "techniques": [
+        "counting squares in grid",
+        "double counting",
+        "combinatorial identity"
+      ],
+      "concepts": [
+        "integer lattice",
+        "squares in grid",
+        "vertex pairs",
+        "counting configurations"
+      ],
+      "difficulty": "olympic",
+      "notes": "Combinatorial geometry counting pairs of points that are vertices of exactly k squares."
+    },
+    {
+      "num": 49,
+      "topic": "geometry",
+      "theorems": [
+        "Euler's inequality",
+        "Distance formula"
+      ],
+      "techniques": [
+        "vector geometry",
+        "inequality proof",
+        "Euler's formula"
+      ],
+      "concepts": [
+        "centroid",
+        "circumcenter",
+        "distance between centers",
+        "Euler's inequality"
+      ],
+      "difficulty": "standard",
+      "notes": "Prove inequality for distance between centroid and circumcenter using known formula."
+    },
+    {
+      "num": 50,
+      "topic": "number_theory",
+      "theorems": [],
+      "techniques": [
+        "set construction",
+        "divisibility argument",
+        "pigeonhole principle"
+      ],
+      "concepts": [
+        "prime numbers",
+        "set of differences",
+        "divisibility within set"
+      ],
+      "difficulty": "olympic",
+      "notes": "For prime p>5, show set X contains two distinct elements where one divides the other."
+    },
+    {
+      "num": 51,
+      "topic": "geometry",
+      "theorems": [
+        "Ceva's Theorem",
+        "Menelaus' Theorem"
+      ],
+      "techniques": [
+        "midpoint lines",
+        "concurrency",
+        "Ceva/Menelaus application"
+      ],
+      "concepts": [
+        "pentagon",
+        "midpoints",
+        "concurrent lines",
+        "collinearity"
+      ],
+      "difficulty": "hard",
+      "notes": "Geometry problem in pentagon with midpoints and concurrency leading to collinearity."
+    },
+    {
+      "num": 52,
+      "topic": "combinatorics",
+      "theorems": [],
+      "techniques": [
+        "set construction",
+        "binary representation",
+        "sumset properties"
+      ],
+      "concepts": [
+        "subset of integers",
+        "sum of two elements",
+        "constructive existence"
+      ],
+      "difficulty": "olympic",
+      "notes": "Construct subset A of size at most 2012 within large interval with given sum property."
+    },
+    {
+      "num": 53,
+      "topic": "geometry",
+      "theorems": [],
+      "techniques": [
+        "vector methods",
+        "sum of squares",
+        "area condition",
+        "square properties"
+      ],
+      "concepts": [
+        "sum of squared distances",
+        "area condition",
+        "square with given center"
+      ],
+      "difficulty": "hard",
+      "notes": "Prove quadrilateral is square given condition on sum of squared distances from interior point to vertices equals twice area."
+    },
+    {
+      "num": 54,
+      "topic": "combinatorics",
+      "theorems": [],
+      "techniques": [
+        "set system analysis",
+        "binary encoding",
+        "lower bound proof"
+      ],
+      "concepts": [
+        "separating sets",
+        "binary vectors",
+        "covering sets"
+      ],
+      "difficulty": "standard",
+      "notes": "Prove 2^m >= n for set system that separates every pair of elements."
+    },
+    {
+      "num": 55,
+      "topic": "geometry",
+      "theorems": [
+        "Radical axis",
+        "Menelaus' Theorem",
+        "Ceva's Theorem"
+      ],
+      "techniques": [
+        "circle geometry",
+        "radical axis",
+        "concurrency proof"
+      ],
+      "concepts": [
+        "tangent circles",
+        "common tangents",
+        "concurrent lines",
+        "radical center"
+      ],
+      "difficulty": "olympic",
+      "notes": "Complex circle geometry with three circles and concurrency of three lines."
+    },
+    {
+      "num": 56,
+      "topic": "algebra",
+      "theorems": [],
+      "techniques": [
+        "functional equations",
+        "injectivity/surjectivity",
+        "substitution"
+      ],
+      "concepts": [
+        "functional equations",
+        "involutive functions",
+        "Cauchy-type equations"
+      ],
+      "difficulty": "olympic",
+      "notes": "Find all functions satisfying given functional equation, likely linear."
+    },
+    {
+      "num": 57,
+      "topic": "number_theory",
+      "theorems": [],
+      "techniques": [
+        "floor function analysis",
+        "counting distinct values",
+        "interval counting"
+      ],
+      "concepts": [
+        "floor function",
+        "sequence of floors",
+        "distinct terms"
+      ],
+      "difficulty": "standard",
+      "notes": "Count distinct terms in sequence of floors of squares divided by fixed number."
+    },
+    {
+      "num": 58,
+      "topic": "algebra",
+      "theorems": [],
+      "techniques": [
+        "inequality proof",
+        "rearrangement",
+        "telescoping sum"
+      ],
+      "concepts": [
+        "n-th root inequality",
+        "alternating sum",
+        "rearrangement inequality"
+      ],
+      "difficulty": "hard",
+      "notes": "Prove inequality involving alternating sum of n-th roots."
+    },
+    {
+      "num": 59,
+      "topic": "geometry",
+      "theorems": [],
+      "techniques": [
+        "set theory representation",
+        "decomposition into segments",
+        "existence proof"
+      ],
+      "concepts": [
+        "interior of triangle",
+        "union of segments",
+        "non-overlapping segments"
+      ],
+      "difficulty": "olympic",
+      "notes": "Prove interior of triangle can be represented as union of closed segments with no common points."
+    },
+    {
+      "num": 60,
+      "topic": "number_theory",
+      "theorems": [],
+      "techniques": [
+        "modular arithmetic",
+        "infinite descent",
+        "equation in integers"
+      ],
+      "concepts": [
+        "Diophantine equation",
+        "perfect powers",
+        "modulo analysis"
+      ],
+      "difficulty": "olympic",
+      "notes": "Prove equation m^2 = n^5 - 4 has no integer solutions."
+    },
+    {
+      "num": 61,
+      "topic": "geometry",
+      "theorems": [
+        "Nine-point circle",
+        "Midpoint theorem"
+      ],
+      "techniques": [
+        "circle geometry",
+        "midpoint properties",
+        "perpendicularity proof"
+      ],
+      "concepts": [
+        "nine-point circle",
+        "midpoints of sides",
+        "perpendicular lines",
+        "symmetry"
+      ],
+      "difficulty": "hard",
+      "notes": "Geometry problem involving nine-point circle and perpendicularity."
+    },
+    {
+      "num": 62,
+      "topic": "number_theory",
+      "theorems": [],
+      "techniques": [
+        "counting residues",
+        "polynomial values modulo p",
+        "pigeonhole principle"
+      ],
+      "concepts": [
+        "set of values modulo p",
+        "cubic and quadratic expressions",
+        "residue counting"
+      ],
+      "difficulty": "olympic",
+      "notes": "For prime p with p ≡ 2 mod 3, show at most p-1 elements of set S are divisible by p."
+    },
+    {
+      "num": 63,
+      "topic": "geometry",
+      "theorems": [],
+      "techniques": [
+        "area ratios",
+        "centroid properties",
+        "inequality proof"
+      ],
+      "concepts": [
+        "pedal triangle from centroid",
+        "area inequality",
+        "centroid",
+        "triangle area"
+      ],
+      "difficulty": "hard",
+      "notes": "Prove bounds for area ratio of pedal triangle from centroid to original triangle."
+    },
+    {
+      "num": 64,
+      "topic": "combinatorics",
+      "theorems": [],
+      "techniques": [
+        "double counting",
+        "inequality proof",
+        "sequence and counting function"
+      ],
+      "concepts": [
+        "increasing integer sequence",
+        "counting function",
+        "sum inequality",
+        "double counting"
+      ],
+      "difficulty": "olympic",
+      "notes": "Prove inequality involving sums of sequence and its counting function."
+    },
+    {
+      "num": 65,
+      "topic": "algebra",
+      "theorems": [],
+      "techniques": [
+        "functional equations",
+        "injectivity/surjectivity",
+        "substitution"
+      ],
+      "concepts": [
+        "functional equations",
+        "involutive functions",
+        "Cauchy-type equations"
+      ],
+      "difficulty": "olympic",
+      "notes": "Same as problem 56 (1997), repeated in 2000."
+    },
+    {
+      "num": 66,
+      "topic": "geometry",
+      "theorems": [],
+      "techniques": [
+        "angle bisector properties",
+        "orthogonal projections",
+        "non-intersection proof"
+      ],
+      "concepts": [
+        "angle bisectors",
+        "orthogonal projections",
+        "non-intersecting lines"
+      ],
+      "difficulty": "olympic",
+      "notes": "Prove two angle bisectors do not intersect, using geometry of projections."
+    },
+    {
+      "num": 67,
+      "topic": "combinatorics",
+      "theorems": [],
+      "techniques": [
+        "packing problem",
+        "optimization",
+        "tiling rectangle"
+      ],
+      "concepts": [
+        "rectangle tiling",
+        "packing rectangles",
+        "maximal count"
+      ],
+      "difficulty": "hard",
+      "notes": "Find maximum number of given rectangles that can be cut from a larger rectangle."
+    },
+    {
+      "num": 68,
+      "topic": "number_theory",
+      "theorems": [],
+      "techniques": [
+        "construction",
+        "powers and perfect powers",
+        "set selection"
+      ],
+      "concepts": [
+        "perfect powers",
+        "average of subset",
+        "constructive existence"
+      ],
+      "difficulty": "olympic",
+      "notes": "For any n, construct n-element set such that average of any nonempty subset is a perfect power."
+    },
+    {
+      "num": 69,
+      "topic": "number_theory",
+      "theorems": [],
+      "techniques": [
+        "factorization",
+        "parity analysis",
+        "exponent manipulation"
+      ],
+      "concepts": [
+        "numbers of form 2^n - 1",
+        "factorization",
+        "exponent of 2 in expression"
+      ],
+      "difficulty": "hard",
+      "notes": "Given 2^n - 1 = ab, prove ab - a + b - 1 has form k * 2^m with k odd, m even."
+    },
+    {
+      "num": 70,
+      "topic": "geometry",
+      "theorems": [],
+      "techniques": [
+        "angle condition",
+        "rational side lengths",
+        "regular polygon proof"
+      ],
+      "concepts": [
+        "equiangular pentagon",
+        "rational side lengths",
+        "regular pentagon"
+      ],
+      "difficulty": "olympic",
+      "notes": "Prove equiangular pentagon with rational sides is regular."
+    },
+    {
+      "num": 71,
+      "topic": "algebra",
+      "theorems": [
+        "AM-GM inequality",
+        "Cauchy-Schwarz inequality"
+      ],
+      "techniques": [
+        "inequality manipulation",
+        "Cauchy-Schwarz",
+        "given condition"
+      ],
+      "concepts": [
+        "inequalities",
+        "sum of squares",
+        "product condition"
+      ],
+      "difficulty": "standard",
+      "notes": "Prove inequality a^2+b^2+c^2 >= abc√3 given a+b+c >= abc."
+    },
+    {
+      "num": 72,
+      "topic": "combinatorics",
+      "theorems": [],
+      "techniques": [
+        "puzzle solving",
+        "invariants",
+        "parity argument"
+      ],
+      "concepts": [
+        "3x3x3 cube puzzle",
+        "sliding puzzle",
+        "permutation parity"
+      ],
+      "difficulty": "olympic",
+      "notes": "Determine if a sliding puzzle on 3x3x3 cube can achieve specific permutation of numbered cubes."
+    },
+    {
+      "num": 73,
+      "topic": "combinatorics",
+      "theorems": [],
+      "techniques": [
+        "graph theory",
+        "cycle existence",
+        "minimum degree condition"
+      ],
+      "concepts": [
+        "graph on points",
+        "edges",
+        "cycle of even length",
+        "degree condition"
+      ],
+      "difficulty": "standard",
+      "notes": "Prove existence of even cycle in graph with minimum degree at least 3."
+    },
+    {
+      "num": 74,
+      "topic": "algebra",
+      "theorems": [],
+      "techniques": [
+        "recurrence relations",
+        "perfect square condition",
+        "Diophantine analysis"
+      ],
+      "concepts": [
+        "linear recurrence",
+        "perfect squares",
+        "sequence analysis"
+      ],
+      "difficulty": "olympic",
+      "notes": "Find n such that 1+5 a_n a_{n+1} is a perfect square for given linear recurrence."
+    },
+    {
+      "num": 75,
+      "topic": "geometry",
+      "theorems": [
+        "Radical axis",
+        "Orthocenter properties"
+      ],
+      "techniques": [
+        "orthocenter construction",
+        "circle geometry",
+        "rectangle proof"
+      ],
+      "concepts": [
+        "intersecting circles",
+        "common tangents",
+        "orthocenters",
+        "rectangle"
+      ],
+      "difficulty": "olympic",
+      "notes": "Prove orthocenters of four triangles form a rectangle."
+    },
+    {
+      "num": 76,
+      "topic": "algebra",
+      "theorems": [],
+      "techniques": [
+        "functional inequalities",
+        "iteration",
+        "growth analysis"
+      ],
+      "concepts": [
+        "functional inequalities",
+        "integer functions",
+        "bounds",
+        "iteration"
+      ],
+      "difficulty": "olympic",
+      "notes": "Find all functions f: N -> N satisfying double inequality."
+    },
+    {
+      "num": 77,
+      "topic": "combinatorics",
+      "theorems": [],
+      "techniques": [
+        "construction/non-existence proof",
+        "averaging argument",
+        "divisibility"
+      ],
+      "concepts": [
+        "set of numbers",
+        "sum of subset",
+        "divisibility by 2003"
+      ],
+      "difficulty": "olympic",
+      "notes": "Determine if set of 4004 numbers exists such that sum of any 2003 of them not divisible by 2003."
+    },
+    {
+      "num": 78,
+      "topic": "geometry",
+      "theorems": [
+        "Tangent-secant theorem",
+        "Radical axis"
+      ],
+      "techniques": [
+        "angle chasing",
+        "collinearity proof",
+        "radical axis"
+      ],
+      "concepts": [
+        "tangent to circumcircle",
+        "perpendiculars to sides",
+        "collinearity"
+      ],
+      "difficulty": "hard",
+      "notes": "Prove three points are collinear using tangent and perpendiculars."
+    },
+    {
+      "num": 79,
+      "topic": "algebra",
+      "theorems": [],
+      "techniques": [
+        "functional equations",
+        "system of conditions",
+        "linear function solution"
+      ],
+      "concepts": [
+        "functional equations on Q",
+        "linear functions",
+        "conditions (i),(ii),(iii)"
+      ],
+      "difficulty": "olympic",
+      "notes": "Find all functions f: Q -> R satisfying three given conditions."
+    },
+    {
+      "num": 80,
+      "topic": "geometry",
+      "theorems": [],
+      "techniques": [
+        "lattice points on diagonal",
+        "alternating sum of lengths",
+        "Pick's theorem concept"
+      ],
+      "concepts": [
+        "rectangle grid",
+        "diagonal intersection with grid lines",
+        "alternating sum",
+        "length formula"
+      ],
+      "difficulty": "olympic",
+      "notes": "Prove formula for alternating sum of segment lengths along diagonal of m x n rectangle."
+    },
+    {
+      "num": 81,
+      "topic": "algebra",
+      "theorems": [],
+      "techniques": [
+        "recurrence relations",
+        "pattern finding",
+        "specific term calculation"
+      ],
+      "concepts": [
+        "sequence defined by functional relation",
+        "finding a_n",
+        "linear recurrence derivation"
+      ],
+      "difficulty": "hard",
+      "notes": "Find a_2004 given a_1=3 and functional relation for a_{m+n} and a_{m-n}."
+    },
+    {
+      "num": 82,
+      "topic": "number_theory",
+      "theorems": [],
+      "techniques": [
+        "equation in primes",
+        "exponential Diophantine",
+        "case analysis"
+      ],
+      "concepts": [
+        "primes as base and exponent",
+        "exponential equation",
+        "prime solutions"
+      ],
+      "difficulty": "olympic",
+      "notes": "Solve x^y - y^x = x y^2 - 19 in primes."
+    },
+    {
+      "num": 83,
+      "topic": "geometry",
+      "theorems": [
+        "Nine-point circle",
+        "Incenter-excenter lemma"
+      ],
+      "techniques": [
+        "circle geometry",
+        "incenter condition",
+        "circumcenter condition"
+      ],
+      "concepts": [
+        "circles with centers at midpoints",
+        "second intersections",
+        "incenter of triangle",
+        "circumcenter"
+      ],
+      "difficulty": "olympic",
+      "notes": "Prove equivalence: O is incenter of triangle KLM iff O is circumcenter of triangle ABC."
+    },
+    {
+      "num": 84,
+      "topic": "combinatorics",
+      "theorems": [],
+      "techniques": [
+        "plane partitioning by lines",
+        "integer labeling",
+        "necessary and sufficient condition"
+      ],
+      "concepts": [
+        "arrangement of lines",
+        "labeling regions",
+        "neighboring regions",
+        "sum zero in half-planes"
+      ],
+      "difficulty": "olympic",
+      "notes": "Prove labeling of regions by integers with given conditions is possible iff at least two lines are not parallel."
+    },
+    {
+      "num": 85,
+      "topic": "geometry",
+      "theorems": [
+        "Incircle properties",
+        "Angle bisector theorem"
+      ],
+      "techniques": [
+        "angle chasing",
+        "equilateral triangle condition",
+        "necessary and sufficient proof"
+      ],
+      "concepts": [
+        "incircle contact points",
+        "angle bisectors",
+        "midpoint of side",
+        "equilateral triangle condition"
+      ],
+      "difficulty": "hard",
+      "notes": "Prove triangle XYZ is equilateral iff angle BAC = 60°, using incircle and angle bisectors."
+    },
+    {
+      "num": 86,
+      "topic": "number_theory",
+      "theorems": [],
+      "techniques": [
+        "equation p^2 - p + 1 = n^3",
+        "modular analysis",
+        "factorization"
+      ],
+      "concepts": [
+        "prime numbers",
+        "cubic numbers",
+        "Diophantine equation"
+      ],
+      "difficulty": "olympic",
+      "notes": "Find all primes p such that p^2 - p + 1 is a perfect cube."
+    },
+    {
+      "num": 87,
+      "topic": "algebra",
+      "theorems": [
+        "Cauchy-Schwarz inequality",
+        "AM-GM inequality"
+      ],
+      "techniques": [
+        "inequality proof",
+        "Cauchy-Schwarz",
+        "AM-GM",
+        "completing square"
+      ],
+      "concepts": [
+        "sum of fractions inequality",
+        "extra term with square of difference",
+        "equality condition"
+      ],
+      "difficulty": "hard",
+      "notes": "Prove inequality with fractions and extra term involving (a-b)^2."
+    },
+    {
+      "num": 88,
+      "topic": "combinatorics",
+      "theorems": [],
+      "techniques": [
+        "extremal set theory",
+        "no divisor pairs, no coprime pairs",
+        "maximal size"
+      ],
+      "concepts": [
+        "subset of {1,...,n}",
+        "no divisor pair",
+        "no coprime pair",
+        "maximal size"
+      ],
+      "difficulty": "olympic",
+      "notes": "Find maximum size of subset S of {1,...,n} with no element dividing another and no two coprime."
+    },
+    {
+      "num": 89,
+      "topic": "algebra",
+      "theorems": [
+        "Cauchy-Schwarz inequality",
+        "AM-GM inequality"
+      ],
+      "techniques": [
+        "inequality proof",
+        "substitution",
+        "AM-GM",
+        "Cauchy-Schwarz"
+      ],
+      "concepts": [
+        "symmetric inequality",
+        "fractions with sums",
+        "1+abc in denominator"
+      ],
+      "difficulty": "standard",
+      "notes": "Prove symmetric inequality involving fractions, standard olympic inequality."
+    },
+    {
+      "num": 90,
+      "topic": "geometry",
+      "theorems": [
+        "Ceva's Theorem",
+        "Menelaus' Theorem"
+      ],
+      "techniques": [
+        "parallel chords",
+        "concurrency proof",
+        "Ceva/Menelaus"
+      ],
+      "concepts": [
+        "circumcircle",
+        "parallel chords",
+        "transversal line",
+        "concurrency"
+      ],
+      "difficulty": "hard",
+      "notes": "Prove three lines are concurrent using parallel chords and transversal."
+    },
+    {
+      "num": 91,
+      "topic": "number_theory",
+      "theorems": [],
+      "techniques": [
+        "rational solutions",
+        "system of equations",
+        "symmetric sums"
+      ],
+      "concepts": [
+        "rational numbers",
+        "reciprocal sums",
+        "integer conditions"
+      ],
+      "difficulty": "olympic",
+      "notes": "Find all positive rational triples (m,n,p) such that m+1/(np), n+1/(mp), p+1/(mn) are integers."
+    },
+    {
+      "num": 92,
+      "topic": "number_theory",
+      "theorems": [],
+      "techniques": [
+        "iteration analysis",
+        "periodic sequences",
+        "Collatz-like recurrence"
+      ],
+      "concepts": [
+        "Collatz-type sequence",
+        "periodicity",
+        "parameter m",
+        "initial value a"
+      ],
+      "difficulty": "olympic",
+      "notes": "For given m, find all a such that defined sequence is periodic."
+    }
+  ],
+  "unique_concepts": [
+    "AM-HM inequality",
+    "harmonic mean",
+    "arithmetic mean",
+    "cyclic quadrilateral",
+    "orthocenter",
+    "parallelogram",
+    "Euler's theorem",
+    "decimal representation",
+    "Euler's totient function",
+    "symmetric systems",
+    "sign analysis",
+    "centroid",
+    "circumcenter",
+    "midpoint",
+    "perpendicular lines",
+    "trigonometric identities",
+    "double-angle formulas",
+    "coloring arguments",
+    "linear Diophantine equations",
+    "pigeonhole principle",
+    "graph of acquaintances",
+    "power of a point",
+    "incircle",
+    "circumcircle",
+    "sphere",
+    "concyclic points",
+    "recurrence sequences",
+    "integer sequences",
+    "equal perimeters",
+    "equal areas",
+    "functional equations",
+    "constant functions",
+    "square roots",
+    "integer values",
+    "law of sines",
+    "angle bisector theorem",
+    "intersecting circles",
+    "chord midpoint",
+    "area of triangle",
+    "angle measures",
+    "polynomials in two variables",
+    "tetrahedron",
+    "parallel planes",
+    "prime factors",
+    "difference of primes",
+    "divisors",
+    "sum of squares",
+    "polynomial irreducibility",
+    "Ceva's theorem",
+    "Menelaus' theorem",
+    "area inequality",
+    "set systems",
+    "intersection size",
+    "linear recurrence",
+    "modular arithmetic",
+    "generating functions",
+    "coefficient sums",
+    "Euler line",
+    "pedal triangle",
+    "integer coloring",
+    "prime differences",
+    "angle chasing",
+    "Heronian triangles",
+    "integer area",
+    "regular hexagon",
+    "area inequality",
+    "bijective functions",
+    "Fermat's little theorem",
+    "factorial inequality",
+    "Ptolemy's theorem",
+    "pairwise coprime triples",
+    "Cauchy-Schwarz inequality",
+    "monotonic numbers",
+    "stars and bars",
+    "tangent circles",
+    "common tangent",
+    "Lifting The Exponent (LTE)",
+    "geometric construction",
+    "area construction",
+    "rational root theorem",
+    "permutations",
+    "sum of absolute differences",
+    "acquaintance graph",
+    "binary operation",
+    "iterated operation",
+    "similar triangles",
+    "quadratic equations",
+    "integer roots",
+    "integer lattice",
+    "squares in grid",
+    "Euler's inequality",
+    "set of differences",
+    "divisibility within set",
+    "midpoint lines",
+    "concurrency",
+    "sum of squared distances",
+    "separating sets",
+    "binary encoding",
+    "radical axis",
+    "radical center",
+    "involutive functions",
+    "floor function",
+    "n-th root inequality",
+    "alternating sum",
+    "interior of triangle",
+    "union of segments",
+    "Diophantine equation",
+    "perfect powers",
+    "nine-point circle",
+    "residue counting",
+    "pedal triangle from centroid",
+    "double counting",
+    "packing problem",
+    "rectangle tiling",
+    "perfect powers",
+    "average of subset",
+    "factorization",
+    "exponent of 2",
+    "equiangular pentagon",
+    "rational side lengths",
+    "sliding puzzle",
+    "permutation parity",
+    "graph on points",
+    "cycle of even length",
+    "perfect squares",
+    "orthocenters",
+    "rectangle",
+    "functional inequalities",
+    "bounds",
+    "sum of subset",
+    "divisibility",
+    "tangent to circumcircle",
+    "collinearity",
+    "functional equations on Q",
+    "linear functions",
+    "lattice points on diagonal",
+    "alternating sum",
+    "sequence defined by functional relation",
+    "primes as base and exponent",
+    "nine-point circle",
+    "incenter-excenter lemma",
+    "plane partitioning by lines",
+    "labeling regions",
+    "neighboring regions",
+    "angle bisectors",
+    "midpoint of side",
+    "cubic numbers",
+    "sum of fractions inequality",
+    "subset with no divisor pair, no coprime pair",
+    "symmetric inequality",
+    "parallel chords",
+    "rational solutions",
+    "reciprocal sums",
+    "Collatz-type sequence",
+    "periodicity"
+  ],
+  "confidence": 0.95
+}

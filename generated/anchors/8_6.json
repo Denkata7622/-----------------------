@@ -1,0 +1,79 @@
+{
+  "point_id": "8.6",
+  "total": 5,
+  "by_difficulty": {
+    "easy": 1,
+    "medium": 4,
+    "hard": 0
+  },
+  "problems": [
+    {
+      "source": "OLI-2-Областен кръг-2001-10 кл · 2001-10 · Зад. 6",
+      "statement": "Дадена е колода от 52 различни карти. Разрешени са следните операции:\n\n1. Смяна на местата на горните две карти;\n2. Преместване на горната карта най-отдолу.\n\nДа се докаже, че използвайки тези две операции, картите могат да се подредят в произволен ред.",
+      "solution": "Решение: Първо ще покажем, че можем да сменяме местата на всеки две съседни карти. Наистина, като прилагаме операция 2, можем да придвижим двете карти най-отгоре на колодата. След това разменяме тези две карти (операция 1.) и прилагаме необходимия брой пъти операция 2., за да върнем всички останали карти по местата им.\nДа разгледаме две произволни карти $a_i$ и $a_{i+j}$. Можем да сменим местата на тези две карти като последователно сменяме местата на $a_i$ и $a_{i+1}$ след това $a_i$ и $a_{i+2}$ и т.н. до смяна на местата на $a_i$ и $a_{i+j}$, след което обратно – сменяме местата на $a_{i+j}$ и $a_{i+j-1}$ и т.н. до смяната $a_{i+j}$ и $a_{i+1}$.\nТъй като можем да сменяме местата на две произволни карти, то можем да подредим картите в произволен ред.",
+      "answer": null,
+      "difficulty": "easy",
+      "techniques": [
+        "adjacent_swap_generation",
+        "permutation_group"
+      ],
+      "confidence": "exact",
+      "reasoning": "Показва, че чрез операции 1 и 2 могат да се генерират всички съседни размени, а следователно цялата симетрична група S52."
+    },
+    {
+      "source": "OLI-2-Областен кръг-2001-11 кл · 2001-11 · Зад. 6",
+      "statement": "Дадена е колода от 52 различни карти. Разрешени са следните операции:\n1. Смяна на местата на горните две карти;\n2. Преместване на горната карта най-отдолу.\nДа се докаже, че използвайки тези две операции, картите могат да се подредят в произволен ред.",
+      "solution": "Решение: Първо ще покажем, че можем да сменяме местата на всеки две съседни карти. Наистина, като прилагаме операция 2, можем да придвижим двете карти най-отгоре на колодата. След това разменяме тези две карти (операция 1.) и прилагаме необходимия брой пъти операция 2., за да върнем всички останали карти по местата им.\nДа разгледаме две произволни карти $a_i$ и $a_{i+j}$. Можем да сменим местата на тези две карти като последователно сменяме местата на $a_i$ и $a_{i+1}$ след това $a_i$ и $a_{i+2}$ и т.н. до смяна на местата на $a_i$ и $a_{i+j}$, след което обратно – сменяме местата на $a_{i+j}$ и $a_{i+j-1}$ и т.н. до смяната $a_{i+j}$ и $a_{i+1}$.\nТъй като можем да сменяме местата на две произволни карти, то можем да подредим картите в произволен ред.",
+      "answer": "Картите могат да се подредят в произволен ред.",
+      "difficulty": "medium",
+      "techniques": [
+        "adjacent_swaps",
+        "generating_set",
+        "permutation_group"
+      ],
+      "confidence": "exact",
+      "reasoning": "Показва се, че чрез операции 1 и 2 се получава произволна подмяна на съседни карти, което генерира цялата симетрична група."
+    },
+    {
+      "source": "OLI-3-Национален кръг-1992-9-12 кл · 1992-None · Зад. 3",
+      "statement": "Нека m и n са фиксирани естествени числа и Oxy е координатна система в равнината. Да се намери броят на всички възможни разположения на n + m − 1 точки P₁(x₁, y₁), P₂(x₂, y₂), …, P_{n+m−1}(x_{n+m−1}, y_{n+m−1}) в равнината, за които са изпълнени условията:\n1) Числата xᵢ и yᵢ за i = 1, 2, …, n + m − 1 са цели и 1 ≤ xᵢ ≤ n, 1 ≤ yᵢ ≤ m.\n2) Всяко едно от числата 1, 2, …, n се среща в редицата x₁, x₂, …, x_{n+m−1} и всяко едно от числата 1, 2, …, m се среща в редицата y₁, y₂, …, y_{n+m−1}.\n3) За всяко i = 1, 2, …, n + m − 2 правата PᵢP_{i+1} е успоредна на една оп координатните оси.",
+      "solution": "Решение. Да разгледаме n червени топки, номерирани с числата 1, 2, …, n, и m сини топки, номерирани с числата 1, 2, …, m. Нека Pᵢ(xᵢ, yᵢ), i = 1, 2, …, n + m − 1 е произволен набор от точки в равнината, които удовлетворяват условията 1, 2 и 3. Ще му съпоставим пермутация на множеството от всички топки по следното правило. На първо място поставяме червената топка с номер x₁, на второ — синята топка с номер y₁. Съгласно 3) отсечката P₁P₂ е успоредна на една от координатните оси, следователно е изпълнено точно едно от равенствата x₁ = x₂ и y₁ = y₂.\nАко x₁ ≠ x₂ и y₁ = y₂, на трето място поставяме червената топка с номер x₂; ако x₁ = x₂ и y₁ ≠ y₂, там поставяме синята топка с номер y₂. Продължаваме нататък по същия начин: ако за координатите на точките Pᵢ₋₁ и Pᵢ (2 ≤ i ≤ n + m − 1) имаме xᵢ₋₁ ≠ xᵢ и yᵢ₋₁ = yᵢ, на (i + 1)-во място слагаме червената топка с номер xᵢ; ако xᵢ₋₁ = xᵢ и yᵢ₋₁ ≠ yᵢ, там поставяме синята топка с номер yᵢ. Съгласно 2 всяко от числата 1, 2, …, n (1, 2, …, m) се среща измежду абсцисите (ординатите) на разглежданите точки. Тогава не е трудно да се съобрази, че по описаното правило ще достигнем до еднозначно определено подреждане на всичките n + m на брой червени и сини топки. Ще отбележим само, че например синята топка с номер k, 1 ≤ k ≤ n, бива поставена в първия момент, когато при обхождането на редицата P₁, P₂, …, Pₙ₊ₘ₋₁ достигнем до точка с ордината, равна на k. Такъв момент съществува съгласно 2.\nПостроихме съответствие от множеството A на наборите от точки със свойствата 1), 2 и 3 в множеството B на онези пермутации на разглежданите n + m топки, в които на първите две места има съответно червена и синя топка. Непосредствено се съобразява, че това съответствие е взаимно еднозначно: всяка пермутация от B е съпоставена на единствен набор от A. Нека читателят обмисли сам доказателството на това твърдение, което е почти очевидно, но неприятно за описание и обяснение.\nЩом между множествата A и B има взаимно еднозначно съответствие, елементите на A са толкова, колкото и тези на B. Оттук лесно получаваме отговора на поставения въпрос. Тъй като червените топки са съответно m и n на брой, то първите две топки във всяка пермутация от B могат да се изберат по nm начина. За наредбата на останалите n + m − 2 топки няма никакви ограничения, следователно те могат да се подредят по (n + m − 2)! начина. Ето защо елементите на B са общо nm(n + m − 2)! на брой. Толкова са и възможните разположения на точките P₁, P₂, …, Pₙ₊ₘ₋₁, за които са изпълнени условията 1), 2) и 3).",
+      "answer": "nm(n + m − 2)!",
+      "difficulty": "medium",
+      "techniques": [
+        "bijection",
+        "permutation_counting",
+        "grid_path_representation"
+      ],
+      "confidence": "exact",
+      "reasoning": "Solution builds a bijection between admissible point‑arrays and permutations of coloured balls, a classic combinatorial bijection technique."
+    },
+    {
+      "source": "OLI-3-Национален кръг-1995-9-12 кл · 1995-None · Зад. 5",
+      "statement": "Let $A = \\{1, 2, \\dots, m + n\\}$, where $m$ and $n$ are positive integers and let the function $f : A \\to A$ be defined by the equations:\n\n$$f(i) = i + 1 \\quad \\text{for} \\quad i = 1, 2, \\dots, m - 1, m + 1, \\dots, m + n - 1$$\n\n$$f(m) = 1 \\quad \\text{and} \\quad f(m + n) = m + 1.$$\n\na) Prove that if $m$ and $n$ are odd then there exists a function $g : A \\to A$ such that $g(g(a)) = f(a)$ for all $a \\in A$.\n\nb) Prove that if $m$ is even then $m = n$ iff there exists a function $g : A \\to A$ such that $g(g(a)) = f(a)$ for all $a \\in A$.",
+      "solution": "Solution. a) Let $m = 2p + 1$, $n = 2q + 1$ and $g(i) = p + i + 1$ for $i = 1, 2, \\ldots, p$; $g(i) = q + i + 1$ for $i = m + 1, m + 2, \\ldots, m + q$; $g(2p + 1) = p + 1$; $g(p + 1) = 1$; $g(m + 2q + 1) = m + q + 1$; $g(m + q + 1) = m + 1$. It is easy to check that $g(g(a)) = f(a)$ for all $a \\in A$.\n\nb) Let $m = n$ and $g(i) = m + i$ for $i = 1, 2, \\ldots, m$; $g(m + i) = i + 1$ for $i = 1, 2, \\ldots, m - 1$; $g(2m) = 1$.\n\nFor the converse let $M = \\{1, 2, \\ldots, m\\}$. It follows by the definition of $f$ that the elements of $M$ remain in $M$ after applying the powers of $f$ with respect to superposition. Moreover, these powers scoop out the whole $M$. The same is true for the set $A \\setminus M$. The function $f$ is bijective in $A$ and if there exists $g$ verifying the condition, then $g$ is bijective too. We shall prove that $g(M) \\cap M = \\emptyset$. It follows from the contrary that there exists $i \\in M$ such that $g(i) \\in M$. Consider the sequence $i, g(i), g^2(i), \\ldots$ and the subsequence $i, f(i), f^2(i), \\ldots$. It is easy to see that $g(M) = M$. We deduce that there exists a permutation $a_1, a_2, \\ldots, a_m$ of elements of $M$, such that $g(a_i) = a_{i+1}$ for $i = 1, 2, \\ldots, m - 1$; $g(a_m) = a_1$ and $f(a_{2i-1}) = a_{2i+1}$ for $i = 1, 2, \\ldots, s - 1$; $f(a_{2s-1}) = a_1$, where $m = 2s$. The last contradicts to the properties of $f$ which were mentioned already. Thus $g(M) \\cap M = \\emptyset$. Analogously $g(A \\setminus M) = A \\setminus M$, if $g(i) \\in A \\setminus M$ for $i \\in A \\setminus M$. At last let us observe that when starting from an element of $M$ and applying $g$ we go to $A \\setminus M$, but when applying $g$ for a second time we go back to $M$. The same is true for the set $A \\setminus M$. From here and from the bijectivity of $g$ it follows that $M$ and $A \\setminus M$ have one and the same number of elements, i.e. $n = m$.",
+      "answer": null,
+      "difficulty": "medium",
+      "techniques": [
+        "permutation_square_root",
+        "parity_arguments"
+      ],
+      "confidence": "exact",
+      "reasoning": "Constructs an explicit permutation g with g∘g = f when m,n are odd, and proves necessity of m=n for even m."
+    },
+    {
+      "source": "OLI-3-Национален кръг-1997-9-12 кл · 1997-None · Зад. 6",
+      "statement": "Let $X$ be a set of $n+1$ elements, $n\\geq2$. Ordered $n$-tuples $(a_1,a_2,\\ldots,a_n)$ and $(b_1,b_2,\\ldots,b_n)$ formed from distinct elements of $X$ are called 'disjoint' if distinct indices $i$ and $j$ exist such that $a_i=b_j$. Find the maximal number of $n$-tuples any two of which are 'disjoint'.",
+      "solution": "Solution: For $n\\geq2$ denote by $A(n+1)$ the maximum number of ordered $n$-tuples such that any two of them are 'disjoint'. Also let $S(X)$ be a set of such $n$-tuples for which $|S(X)|=A(n+1)$. It is clear that for any $\\alpha\\in X$ the following holds:\n\n$$|\\{(a_1,a_2,\\ldots,a_n)\\in S(X)\\mid a_1=\\alpha\\}|\\leq A(n).$$\n\nThus $A(n+1)\\leq(n+1)A(n)$. Therefore\n\n$$A(n+1)\\leq(n+1)n\\ldots A(3).$$\n\nDirect verification shows that $A(3)=3$, so $A(n+1)\\leq\\frac{(n+1)!}{2}$.\n\nWe prove now that $A(n+1)=\\frac{(n+1)!}{2}$ by constructing a set of $\\frac{(n+1)!}{2}$ ordered $n$-tuples, any two of which are 'disjoint'. We may assume that $X=\\{1,2,\\ldots,n+1\\}$. Consider a set $E$ of all even permutations of $1,2,\\ldots,n+1$. (A permutation $(a_1,a_2,\\ldots,a_{n+1})$ is called even if the number of pairs $(i,j)$ such that $i<j$ and $a_i>a_j$ is an even number.) The set\n\n$$\\{(a_1,a_2,\\ldots,a_n)\\mid(a_1,a_2,\\ldots,a_n,a_{n+1})\\in E\\}$$\n\nhas $\\frac{(n+1)!}{2}$ ordered $n$-tuples, any two of which are 'disjoint'.",
+      "answer": "$\\frac{(n+1)!}{2}$.",
+      "difficulty": "medium",
+      "techniques": [
+        "permutations",
+        "even_permutations",
+        "induction"
+      ],
+      "confidence": "exact",
+      "reasoning": "Upper bound via counting first coordinates, construction using all even permutations gives (n+1)!/2 tuples."
+    }
+  ]
+}

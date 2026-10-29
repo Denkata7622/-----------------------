@@ -1,0 +1,83 @@
+{
+  "pdf": "OLI-2-Областен кръг-2000-11 кл-probs",
+  "problems": [
+    {
+      "num": 1,
+      "year": 2000,
+      "grade": 11,
+      "round": "nacionalen",
+      "statement": "За кои стойности на реалния параметър $a$ уравнението\n$$9^t - 4a3^t + 4 - a^2 = 0$$\nима точно един корен в интервала $(0, 1)$?",
+      "solution": null,
+      "answer": null,
+      "page": 1,
+      "pdf": "OLI-2-Областен кръг-2000-11 кл-probs",
+      "chunk": 1,
+      "grade_range": null
+    },
+    {
+      "num": 2,
+      "year": 2000,
+      "grade": 11,
+      "round": "nacionalen",
+      "statement": "В $\\triangle ABC$, $CH$ ($H \\in AB$) е височина, а $CM$ и $CN$ ($M, N \\in AB$) са ъглополовящи съответно на ъглите $ACH$ и $BCH$. Центърът на описаната около $\\triangle CMN$ окръжност съвпада с центъра на вписаната в $\\triangle ABC$ окръжност. Да се докаже, че $S_{\\triangle ABC} = \\frac{AN.BM}{2}$.",
+      "solution": null,
+      "answer": null,
+      "page": 1,
+      "pdf": "OLI-2-Областен кръг-2000-11 кл-probs",
+      "chunk": 1,
+      "grade_range": null
+    },
+    {
+      "num": 3,
+      "year": 2000,
+      "grade": 11,
+      "round": "nacionalen",
+      "statement": "Нека $\\{a_n\\}_{n=1}^{\\infty}$ е редица, за която $a_1 = 43$, $a_2 = 142$, $a_{n+1} = 3a_n + a_{n-1}$ при $n \\ge 2$. Да се докаже, че:\nа) за всяко естествено число $n$ числата $a_n$ и $a_{n+1}$ са взаимно прости;\nб) за всяко естествено число $m$ съществуват безбройно много естествени числа $n$, такива че числата $a_n - 1$ и $a_{n+1} - 1$ се делят на $m$.",
+      "solution": null,
+      "answer": null,
+      "page": 1,
+      "pdf": "OLI-2-Областен кръг-2000-11 кл-probs",
+      "chunk": 1,
+      "grade_range": null
+    },
+    {
+      "num": 4,
+      "year": 2000,
+      "grade": 11,
+      "round": "nacionalen",
+      "statement": "Даден е изпъкнал четириъгълник $ABCD$, за който $\\measuredangle BCD = \\measuredangle CDA$. Нека ъглополовящата на ъгъл $ABC$ пресича отсечката $CD$ в точка $E$. Да се докаже, че $\\measuredangle AEB = 90^\\circ$ тогава и само тогава, когато $AB = AD + BC$.",
+      "solution": null,
+      "answer": null,
+      "page": 1,
+      "pdf": "OLI-2-Областен кръг-2000-11 кл-probs",
+      "chunk": 1,
+      "grade_range": null
+    },
+    {
+      "num": 5,
+      "year": 2000,
+      "grade": 11,
+      "round": "nacionalen",
+      "statement": "Да се докаже, че за всеки две реални числа $a$ и $b$ съществува такова число $c \\in (0, 1)$, че\n$$\\left| ac + b + \\frac{1}{c+1} \\right| > \\frac{1}{24}.$$",
+      "solution": null,
+      "answer": null,
+      "page": 1,
+      "pdf": "OLI-2-Областен кръг-2000-11 кл-probs",
+      "chunk": 1,
+      "grade_range": null
+    },
+    {
+      "num": 6,
+      "year": 2000,
+      "grade": 11,
+      "round": "nacionalen",
+      "statement": "Да се намерят всички множества $S$ от четири точки в равнината със свойството: за всеки две окръжности $k_1$ и $k_2$, които имат диаметри с краища в точки от $S$, съществува точка $A \\in S \\cap k_1 \\cap k_2$.",
+      "solution": null,
+      "answer": null,
+      "page": 1,
+      "pdf": "OLI-2-Областен кръг-2000-11 кл-probs",
+      "chunk": 1,
+      "grade_range": null
+    }
+  ]
+}

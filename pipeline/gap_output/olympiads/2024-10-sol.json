@@ -1,0 +1,169 @@
+{
+  "_meta": {
+    "pdf": "C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\Задачи_Минали_Години\\Областен\\OLI-2-Областен кръг-2024-10 кл-sol (1).pdf",
+    "paired_with": null,
+    "level": 1,
+    "type": "sol",
+    "analyzed_at": "2026-10-16T21:37:47.274955",
+    "model": "deepseek/deepseek-v3.2",
+    "text_length": 13243,
+    "paired_text_length": 0
+  },
+  "problems": [
+    {
+      "num": 9.4,
+      "topic": "combinatorics",
+      "theorems": [
+        "Mantel's theorem",
+        "Turán's theorem"
+      ],
+      "techniques": [
+        "graph theory modeling",
+        "bipartite graph",
+        "maximization via AM-GM"
+      ],
+      "concepts": [
+        "complete graph",
+        "bipartite graph",
+        "even cycles",
+        "edge weighting",
+        "optimization"
+      ],
+      "difficulty": "olympic",
+      "notes": "The problem reduces to finding the maximum number of edges of weight 1 in a complete graph with no odd cycles, which forces a bipartite structure. The maximum is achieved by a balanced bipartition."
+    },
+    {
+      "num": 10.1,
+      "topic": "algebra",
+      "theorems": [
+        "Vieta's formulas"
+      ],
+      "techniques": [
+        "substitution",
+        "solving quadratic equations",
+        "arithmetic and geometric progressions"
+      ],
+      "concepts": [
+        "arithmetic progression",
+        "geometric progression",
+        "discriminant",
+        "real roots"
+      ],
+      "difficulty": "standard",
+      "notes": "Standard problem combining arithmetic and geometric progressions and quadratic equations."
+    },
+    {
+      "num": 10.2,
+      "topic": "geometry",
+      "theorems": [],
+      "techniques": [
+        "auxiliary construction",
+        "angle chasing",
+        "midpoint properties",
+        "vector addition"
+      ],
+      "concepts": [
+        "midpoints",
+        "cyclic quadrilaterals",
+        "right angles",
+        "parallelogram",
+        "triangle inequality"
+      ],
+      "difficulty": "hard",
+      "notes": "Non-standard geometry problem requiring clever auxiliary construction (point R) and angle chasing to relate lengths."
+    },
+    {
+      "num": 10.3,
+      "topic": "number_theory",
+      "theorems": [
+        "Pythagorean triples characterization"
+      ],
+      "techniques": [
+        "case analysis",
+        "modular arithmetic",
+        "gcd properties",
+        "infinite descent (implicit)"
+      ],
+      "concepts": [
+        "representation of primes as sums of squares",
+        "modular congruences",
+        "coprime numbers",
+        "probabilistic counting"
+      ],
+      "difficulty": "olympic",
+      "notes": "Deep number theory problem involving representations of primes by quadratic forms. Requires handling cases k=1,2,4 separately with number-theoretic arguments."
+    },
+    {
+      "num": 10.4,
+      "topic": "combinatorics",
+      "theorems": [
+        "Pigeonhole principle"
+      ],
+      "techniques": [
+        "induction",
+        "constructive algorithm",
+        "sums modulo 5",
+        "row/column sums"
+      ],
+      "concepts": [
+        "subrectangle sums",
+        "modular arithmetic",
+        "extremal construction",
+        "lower and upper bounds"
+      ],
+      "difficulty": "olympic",
+      "notes": "Complex combinatorial problem. The key is a lemma (proved by induction and pigeonhole) that in a 1×k array, at least k-4 cells can be covered by disjoint 'good' rectangles. Then applied to column sums and rows."
+    },
+    {
+      "num": 11.1,
+      "topic": "algebra",
+      "theorems": [
+        "Horner's scheme"
+      ],
+      "techniques": [
+        "polynomial factorization",
+        "substitution t=x+1/x",
+        "quadratic discriminant analysis",
+        "analysis of real roots of t and x"
+      ],
+      "concepts": [
+        "symmetric polynomials",
+        "reciprocal equations",
+        "real roots condition",
+        "parameter analysis"
+      ],
+      "difficulty": "hard",
+      "notes": "The equation has an obvious root x=-1. The remaining quartic is reciprocal and reduces to a quadratic in t=x+1/x. The condition for three distinct real roots requires careful analysis of the mapping between t and x."
+    }
+  ],
+  "unique_concepts": [
+    "bipartite graph",
+    "even cycles",
+    "Mantel's theorem",
+    "arithmetic progression",
+    "geometric progression",
+    "Vieta's formulas",
+    "midpoints",
+    "cyclic quadrilaterals",
+    "auxiliary construction",
+    "Pythagorean triples",
+    "representation of primes as sums of squares",
+    "modular congruences",
+    "pigeonhole principle",
+    "induction",
+    "subrectangle sums modulo p",
+    "extremal construction",
+    "polynomial factorization",
+    "reciprocal equations",
+    "substitution t=x+1/x",
+    "graph theory modeling",
+    "optimization via AM-GM",
+    "angle chasing",
+    "vector addition",
+    "gcd properties",
+    "probabilistic counting",
+    "Horner's scheme",
+    "discriminant analysis"
+  ],
+  "confidence": 0.95
+}

@@ -1,0 +1,38 @@
+{
+  "point_id": "1.7",
+  "total": 2,
+  "by_difficulty": {
+    "easy": 0,
+    "medium": 2,
+    "hard": 0
+  },
+  "problems": [
+    {
+      "source": "OLI-2-Областен кръг-1999-11 кл · 1999-11 · Зад. 2",
+      "statement": "A convex quadrilateral of area $S$ is inscribed in a circle whose centre is a point interior to the quadrilateral. Prove that the area of the quadrilateral whose vertices are the projections of the point of intersection of the diagonals on the sides does not exceed $\\frac{S}{2}$.",
+      "solution": "Let $ABCD$ be a quadrilateral inscribed in a circle with centre $O$ and radius $R$. Denote by $E$ the point of intersection of $AC$ and $BD$. Denote further by $M, N, P, Q$ and $F$ the projections of $E$ on $AB, BC, CD, DA$ and $MN$, respectively. We know that $MN = BE \\sin \\angle ABC = \\frac{BE \\cdot AC}{2R}$. Also,\n\n$$EF = EM \\sin \\angle EMN = \\frac{AE \\cdot BE \\sin \\angle AEB}{AB} \\sin \\angle CBE.$$\n\nSince $BE \\sin \\angle CBE = CE \\sin \\angle BCE = CE \\frac{AB}{2R}$ and $AE \\cdot CE = R^2 - OE^2$, it follows that $EF = \\frac{R^2 - OE^2}{2R} \\sin \\angle AEB$. Therefore [неразчетено]\n\nSimilar equalities hold for $S_{\\triangle NEP}, S_{\\triangle PEQ}$ and $S_{\\triangle QEM}$. By combining the above we obtain\n\n$$S_{MNPQ} = \\frac{AC \\cdot BD \\sin \\angle AEB(R^2 - OE^2)}{4R^2} \\leq \\frac{S_{ABCD}}{2},$$\n\nQ. E. D.",
+      "answer": null,
+      "difficulty": "medium",
+      "techniques": [
+        "area_projection",
+        "cyclic_quadrilateral"
+      ],
+      "confidence": "exact",
+      "reasoning": "Свързва проекции на пресечната точка с дължините на страните и използва формули за лице в окръжност, типично за задачи с формули за лице (Херон)."
+    },
+    {
+      "source": "OLI-3-Национален кръг-2023-9-12 кл · 2023-None · Зад. 4",
+      "statement": "Да се докаже, че върху страната AD на изпъкнал четириъгълник ABCD съществува единствена точка M, за която\n√S_ABM + √S_CDM = √S_ABCD,\nтогава и само тогава AB ∥ CD.",
+      "solution": "Решение.\nПърви начин.\nСлед повдигане на квадрат даденото равенство приема вида 2√(S_ABM S_CDM) = S_BCM.\nПърво ще докажем, че ако AB ∥ CD, то\n(1) 2√(S_ABM S_CDM) ≤ S_BCM\nза всяка точка M ∈ [AD], като равенство се достига само в една точка.\nНека AB = a, CD = b, d(M, AB) = x и d(M, CD) = y. Тогава\n(1) ⇔ 2√(axby) ≤ (a + b)(x + y) − ax − by ⇔ (√(ay) − √(bx))² ≥ 0.\nРавенство се достига само ако AM/BM = a/b. По-нататък, нека D′ ∈ AD така, че CD′ ∥ AB. Ако ∠B + ∠C < 180°, то D ∈ (AD′) и от (1) следва, че\n2√(S_ABM S_CDM) < 2√(S_ABM S_CD′M) ≤ S_BCM\nза M ∈ (A, D].\nАко ∠B + ∠C > 180°, то D′ ∈ (AD). Нека f(M) = 2√(S_ABM S_CDM) − S_BCM за M ∈ [AD]. Очевидно f(A) < 0 и f(D) < 0. От друга страна, вече знаем, че има единствена точка M′ ∈ (AD′), за която 2√(S_ABM′ S_CD′M′) = S_BCM′ и значи f(M′) > 0. По непрекъснатост следва, че съществуват точки M₁ ∈ (AM′) и M₂ ∈ (M′D) така, че f(M₁) = f(M₂) = 0. Оттук задачата следва.\nЗабележка. В случая ∠B + ∠C > 180° съществуват точно две точки M₁, M₂ ∈ (AD), за които √S_ABM + √S_CDM = √S_ABCD. Наистина, S_ABM и S_CDM са линейни функции на M ∈ [AD]. Следователно √S_ABM + √S_CDM е строго вдлъбната функция и значи приема дадена стойност най-много два пъти.\nВтори начин.\nЩе използваме, че ако A₁(x₁, y₁), A₂(x₂, y₂) и A₃(x₃, y₃), то удвоеното ориентирано лице на △A₁A₂A₃ е равно на x₁(y₂ − y₃) + x₂(y₃ − y₁) + x₃(y₁ − y₂).\nМожем да считаме, че A(0, 0), B(x₁, y₁), C(x₂, y₂), D(0, 1) и M = (0, m), където x₁, x₂ > 0. Записваме даденото равенство във вида 4S_ABM S_CDM = S_BCM² и получаваме, че\n4x₁x₂m(1 − m) = (Δ + m(x₂ − x₁))²,\nкъдето Δ = x₁y₂ − x₂y₁ = 2S_ABC > 0, т.е.\nm²(x₁ + x₂)² + 2m((x₂ − x₁)Δ − 2x₁x₂) + Δ² = 0.\nТова уравнение има единствено решение m ∈ (0, 1) точно когато\nD₁ = 4x₁x₂(x₁ − Δ)(x₂ + Δ) = 0 ⇔ x₁ = Δ ⇔ x₁/x₂ = y₁/(y₂ − 1) ⇔ AB ∥ CD.",
+      "answer": "AB ∥ CD",
+      "difficulty": "medium",
+      "techniques": [
+        "area_formulas",
+        "inequality",
+        "parallelism"
+      ],
+      "confidence": "exact",
+      "reasoning": "След квадратиране се получава неравенство с площи, което се редуцира до (√(ay)−√(bx))²≥0 → AB∥CD."
+    }
+  ]
+}

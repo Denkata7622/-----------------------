@@ -1,0 +1,75 @@
+{
+  "point_id": "7.3",
+  "total": 5,
+  "by_difficulty": {
+    "easy": 1,
+    "medium": 4,
+    "hard": 0
+  },
+  "problems": [
+    {
+      "source": "OLI-3-Национален кръг-1998-9-12 кл · 1998-None · Зад. 4",
+      "statement": "Let $a_1, a_2, \\ldots, a_n$ be real numbers, not all of them zero. Prove that the equation\n\n$$\\sqrt{1 + a_1 x} + \\sqrt{1 + a_2 x} + \\ldots + \\sqrt{1 + a_n x} = n$$\n\nhas at most one nonzero real root.",
+      "solution": "Solution: The given equation is equivalent to $x \\sum_{i=1}^n \\frac{a_i}{\\sqrt{1+a_ix}} = n$.\n\nSince the function $\\frac{a_i}{\\sqrt{1+a_ix}}$ ($a_i \\ne 0$) is strictly decreasing, it follows that this equation has at most one nonzero root.",
+      "answer": null,
+      "difficulty": "easy",
+      "techniques": [
+        "monotonicity"
+      ],
+      "confidence": "exact",
+      "reasoning": "Shows each term a_i/√(1+a_i x) is strictly decreasing, so the whole sum can cross n at most once."
+    },
+    {
+      "source": "OLI-2-Областен кръг-1998-10 кл · 1998-10 · Зад. 4",
+      "statement": "Let $f(x) = x^3 - 3x + 1$. Find the number of different real solutions of the equation $f(f(x)) = 0$.",
+      "solution": "Solution: Since $f'(x) = 3(x - 1)(x + 1)$ it follows that $f$ is strictly monotone non-decreasing in the intervals $(-\\infty, -1]$ and $[1, \\infty)$ and strictly monotone non-increasing in the interval $[-1, 1]$. Moreover $\\lim_{x \\to \\pm \\infty} f(x) = \\pm \\infty, f(-1) = 3, f(1) = -1, f(3) = 19 > 0$ and so the equation $f(x) = 0$ has three distinct roots $x_1, x_2, x_3$ such that $x_1 < -1 < x_2 < 1 < x_3 < 3$. Therefore $f(x) = x_1$ has only one real root (which is less than $-1$) and $f(x) = x_2$ and $f(x) = x_3$ have three distinct real roots each (one in each of the intervals $(-\\infty, -1), (-1, 1)$ and $(1, \\infty)$). Since the roots of $f(f(x)) = 0$ are exactly the roots of these three equations, we conclude that it has seven distinct real roots.",
+      "answer": "7",
+      "difficulty": "medium",
+      "techniques": [
+        "monotonicity"
+      ],
+      "confidence": "exact",
+      "reasoning": "Analyzes f'(x) to get monotonic intervals, counts pre‑images of roots; uses monotonicity of a function."
+    },
+    {
+      "source": "OLI-2-Областен кръг-1998-11 кл · 1998-11 · Зад. 4",
+      "statement": "Let $f(x) = x^3 - 3x + 1$. Find the number of different real solutions of the equation $f(f(x)) = 0$.",
+      "solution": "Solution: Since $f'(x) = 3(x - 1)(x + 1)$ it follows that $f$ is strictly monotone non-decreasing in the intervals $(-\\infty, -1]$ and $[1, \\infty)$ and strictly monotone non-increasing in the interval $[-1, 1]$. Moreover $\\lim_{x \\to \\pm \\infty} f(x) = \\pm \\infty, f(-1) = 3, f(1) = -1, f(3) = 19 > 0$ and so the equation $f(x) = 0$ has three distinct roots $x_1, x_2, x_3$ such that $x_1 < -1 < x_2 < 1 < x_3 < 3$. Therefore $f(x) = x_1$ has only one real root (which is less than $-1$) and $f(x) = x_2$ and $f(x) = x_3$ have three distinct real roots each (one in each of the intervals $(-\\infty, -1), (-1, 1)$ and $(1, \\infty)$). Since the roots of $f(f(x)) = 0$ are exactly the roots of these three equations, we conclude that it has seven distinct real roots.",
+      "answer": "7 distinct real roots",
+      "difficulty": "medium",
+      "techniques": [
+        "monotonicity",
+        "intermediate_value_theorem",
+        "polynomial_root_analysis"
+      ],
+      "confidence": "exact",
+      "reasoning": "Uses monotonicity of f on three intervals and IVT to count pre‑images of the three simple roots, giving 7 real solutions."
+    },
+    {
+      "source": "OLI-2-Областен кръг-2000-11 кл · 2000-11 · Зад. 5",
+      "statement": "Да се докаже, че за всеки две реални числа $a$ и $b$ съществува такова число $c \\in (0, 1)$, че\n$$\\left| ac + b + \\frac{1}{c+1} \\right| > \\frac{1}{24}.$$",
+      "solution": "Решение: Нека f(x) = ax + 1/(x + 1) и m и M означават съответно най-малката и най-голямата стойност на функцията f в интервала [0, 1]. Понеже f(0) = 1, f(1) = a + 1/2 и f′(x) = a - 1/(x + 1)², възможни са четири случая за разликата M - m.\n\n1. a ≤ 1/4. Тогава f′(x) ≤ 0 за x ∈ [0, 1] и значи M - m = f(0) - f(1) = 1/2 - a ≥ 1/4.\n2. a ≥ 1. Тогава f′(x) ≥ 0 за x ∈ [0, 1] и значи M - m = f(1) - f(0) = a - 1/2 ≥ 1/2.\n3. 1/4 ≤ a ≤ 1. Тогава d = 1/√a - 1 ∈ [0, 1], f′(x) ≤ 0 за x ∈ [0, d] и f′(x) ≥ 0 за x ∈ [d, 1].\n3.1 1/4 ≤ a ≤ 1/2. Понже f(0) ≥ f(1), то M - m = f(0) - f(d) = (1 - √a)² ≥ (1 - √2/2)².\n3.2 1/2 ≤ a ≤ 1. Понже f(1) ≥ f(0), то M - m = f(1) - f(d) = ½(2√a - 1)² ≥ ½(√2 - 1)².\n\nИ в четирите случая M - m > 1/12, което показва, че M + b > 1/24 или m + b < 1/24. Оттук по непрекъснатост следва твърдението от задачата.",
+      "answer": null,
+      "difficulty": "medium",
+      "techniques": [
+        "function_monotonicity",
+        "derivative_analysis"
+      ],
+      "confidence": "exact",
+      "reasoning": "Изследва се функцията f(x)=ax+1/(x+1), намира се максимум‑минус‑минимум чрез производна и се използва непрекъснатост."
+    },
+    {
+      "source": "OLI-3-Национален кръг-2012-9-12 кл · 2012-None · Зад. 5",
+      "statement": "Нека $Q(x)$ е квадратен тричлен, за който функцията $P(x) = x^2 Q(x)$ е растяща в интервала $(0, \\infty)$. Да се докаже, че $P(x) + P(y) + P(z) > 0$ при $x + y + z > 0$ и $xyz > 0$.",
+      "solution": "Решение. Ако x, y, z > 0 неравенството е очевидно, защото P(t) > P(0) = 0 при t > 0. Без ограничение можем да предполагаме, че x, y < 0 и z > 0. Тогава P(z) > P(−x − y) и е достатъчно да докажем, че P(x + y) + P(−x) + P(−y) > 0 за произволни x, y > 0. Нека Q(x) = ax² + bx + c. Тъй като P(x) е растяща функция в интервала (0, ∞), лесно следва, че a > 0 и c ≥ 0 (докажете!). От друга страна,\nP(x + y) + P(−x) + P(−y) = 2a(x⁴ + y⁴ − x²y²) + 2c(x² + y²) + xy(4a(x + y)² + 3b(x + y) + 2c)\nи тъй като x⁴ + y⁴ − x²y² > 0, x² + y² > 0 и xy > 0, достатъчно е да докажем, че 4a(x + y)² + 3b(x + y) + 2c > 0 за x, y > 0. Това неравенство следва от факта, че функцията P(x) е растяща, откъдето\n4a(x + y)³ + 3b(x + y)² + 2c(x + y) = P′(x + y) > 0.",
+      "answer": null,
+      "difficulty": "medium",
+      "techniques": [
+        "monotonicity",
+        "calculus"
+      ],
+      "confidence": "exact",
+      "reasoning": "Използва монотонност на P(x) (производна >0) и алгебрично преобразуване за доказване на неравенството."
+    }
+  ]
+}

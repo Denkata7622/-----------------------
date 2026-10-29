@@ -1,0 +1,77 @@
+{
+  "pdf": "OLI-2-Областен кръг-2006-11 кл-probs",
+  "problems": [
+    {
+      "num": 1,
+      "year": 2006,
+      "grade": 11,
+      "round": "oblasten",
+      "statement": "Нека $k$ е окръжност с диаметър $AB$ и $C \\in k$ е произволна точка. Външновписаните окръжности за $\\triangle ABC$ към страните $AC$ и $BC$ се допират до правата $AB$ съответно в точки $M$ и $N$. Нека $O_1$ и $O_2$ са центровете на описаните около $\\triangle AMC$ и $\\triangle BNC$ окръжности. Да се докаже, че лицето на $\\triangle O_1CO_2$ не зависи от избора на точката $C$.",
+      "solution": null,
+      "answer": null,
+      "page": 1,
+      "pdf": "OLI-2-Областен кръг-2006-11 кл-probs",
+      "chunk": 1
+    },
+    {
+      "num": 2,
+      "year": 2006,
+      "grade": 11,
+      "round": "oblasten",
+      "statement": "Да се докаже, че $t^2(xy + yz + zx) + 2t(x + y + z) + 3 \\ge 0$ за произволни $x, y, z, t \\in [-1, 1]$.",
+      "solution": null,
+      "answer": null,
+      "page": 1,
+      "pdf": "OLI-2-Областен кръг-2006-11 кл-probs",
+      "chunk": 1
+    },
+    {
+      "num": 3,
+      "year": 2006,
+      "grade": 11,
+      "round": "oblasten",
+      "statement": "Нека $S$ е множество от 2006 точки в равнината. Двойка точки $(A, B) \\in S \\times S$ се нарича изолирана, ако кръгът с диаметър $AB$ не съдържа други точки от $S$. Да се намери минималният възможен брой изолирани двойки точки.",
+      "solution": null,
+      "answer": null,
+      "page": 1,
+      "pdf": "OLI-2-Областен кръг-2006-11 кл-probs",
+      "chunk": 1
+    },
+    {
+      "num": 4,
+      "year": 2006,
+      "grade": 11,
+      "round": "oblasten",
+      "statement": "Да се намери най-малкото естествено число $a$, за което системата $\\begin{cases} x + y + z = a \\\\ x^3 + y^3 + z^2 = a \\end{cases}$ няма цели решения.",
+      "solution": null,
+      "answer": null,
+      "page": 1,
+      "pdf": "OLI-2-Областен кръг-2006-11 кл-probs",
+      "chunk": 1
+    },
+    {
+      "num": 5,
+      "year": 2006,
+      "grade": 11,
+      "round": "oblasten",
+      "statement": "Допирателните към описаната около равнобедрен $\\triangle ABC$, $AC = BC$, окръжност $k$ в точките $B$ и $C$ се пресичат в точка $X$. Ако $AX$ пресича $k$ в точка $Y$, да се намери отношението $\\frac{AY}{BY}$.",
+      "solution": null,
+      "answer": null,
+      "page": 1,
+      "pdf": "OLI-2-Областен кръг-2006-11 кл-probs",
+      "chunk": 1
+    },
+    {
+      "num": 6,
+      "year": 2006,
+      "grade": 11,
+      "round": "oblasten",
+      "statement": "Нека $\\{a_n\\}_{n=1}^{\\infty}$ е редица от реални числа, по-малки от 1, за която $a_{n+1}(a_n + 2) = 3$, $n \\ge 1$. Да се докаже, че:\n\nа) $-\\frac{7}{2} < a_n < -2$; б) $a_n = -3$ за всяко $n$.",
+      "solution": null,
+      "answer": null,
+      "page": 1,
+      "pdf": "OLI-2-Областен кръг-2006-11 кл-probs",
+      "chunk": 1
+    }
+  ]
+}

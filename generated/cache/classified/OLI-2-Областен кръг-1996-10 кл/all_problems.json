@@ -1,0 +1,46 @@
+{
+  "pdf": "OLI-2-Областен кръг-1996-10 кл",
+  "problems": [
+    {
+      "num": 1,
+      "grade": 10,
+      "year": 1996,
+      "round": "oblasten",
+      "statement": "Prove that for all positive integers $n \\geq 3$ there exist an odd positive integers $x_n$ and $y_n$, such that\n\n$$7x_n^2 + y_n^2 = 2^n.$$",
+      "solution": "Solution. If $n = 3$ we have $x_3 = y_3 = 1$.\n\nSuppose that for an integer $n \\geq 3$ there are odd positive integers $x_n, y_n$, such that $7x_n^2 + y_n^2 = 2^n$. We shall prove that for each pair\n\n$$\\left(X = \\frac{x_n + y_n}{2}, Y = \\frac{|7x_n - y_n|}{2}\\right) \\quad \\text{and} \\quad \\left(X = \\frac{|x_n - y_n|}{2}, Y = \\frac{7x_n + y_n}{2}\\right)$$\n\nwe have $7X^2 + Y^2 = 2^{n+1}$. Indeed,\n\n$$7 \\left(\\frac{x_n \\pm y_n}{2}\\right)^2 + \\left(\\frac{7x_n \\mp y_n}{2}\\right)^2 = 2 \\left(7x_n^2 + y_n^2\\right) = 2 \\cdot 2^n = 2^{n+1}.$$\n\nSince $x_n$ and $y_n$ are odd, i.e. $x_n = 2k + 1$ and $y_n = 2l + 1$ ($k, l$ are integers), then $\\frac{x_n + y_n}{2} = k + l + 1$ and $\\frac{|x_n - y_n|}{2} = |k - l|$, which shows that one of the numbers $\\frac{x_n + y_n}{2}$ and $\\frac{|x_n - y_n|}{2}$ is odd. Thus, for $n + 1$ there are odd natural numbers $x_{n+1}$ and $y_{n+1}$ with the required property.",
+      "answer": null,
+      "page": 1,
+      "source": "OLI-2-Областен кръг-1996-10 кл · 1996-10 · Зад. 1",
+      "point_id": null,
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": "medium",
+      "techniques": [
+        "induction",
+        "parity"
+      ],
+      "reasoning": "Solution matches the statement for S1; uses",
+      "_paired": true,
+      "_grade_source": "filename"
+    },
+    {
+      "num": 2,
+      "grade": 10,
+      "year": 1996,
+      "round": "oblasten",
+      "statement": "The circles $k_1$ and $k_2$ with centers $O_1$ and $O_2$ respectively are externally tangent at the point $C$, while the circle $k$ with center $O$ is externally tangent to $k_1$ and $k_2$. Let $\\ell$ be the common tangent of $k_1$ and $k_2$ at the point $C$ and let $AB$ be the diameter of $k$, which is perpendicular to $\\ell$, the points $A$ and $O_1$ lie in one and the same semiplane with respect to the line $\\ell$. Prove that the lines $AO_2$, $BO_1$ and $\\ell$ have a common point.",
+      "solution": "Solution. Denote by $r, r_1$ and $r_2$ the radii of $k, k_1$ and $k_2$, by $M$ and $N$ the tangent points of $k$ with $k_1$ and $k_2$, respectively and by $P$ the common point of $\\ell$ and $AB$ (Figure 1).\n\nIt follows from $O_1O_2 \\perp \\ell$ and $AB \\perp \\ell$ that $\\triangle BON \\sim \\triangle CO_2N$. Then $\\angle CNO_2 = \\angle ONB$, and consequently the points $C, N$ and $B$ are colinear. Also, $\\frac{BN}{CN} = \\frac{BO}{CO_2} = \\frac{r}{r_2}$. Analogously, $A, M$ and $C$ are colinear and $\\frac{AM}{MC} = \\frac{r}{r_1}$.\n\nThe lines $AN, BM$ and $\\ell$ have a common point $H$, which is the altitude center of $\\triangle ABC$. By Ceva's theorem we have: $\\frac{AP}{PB} \\cdot \\frac{BN}{NC} \\cdot \\frac{CM}{MA} = \\frac{AP}{PB} \\cdot \\frac{r}{r_2} \\cdot \\frac{r_1}{r} = 1$, from where:\n\n$$\\frac{r_1}{PB} = \\frac{r_2}{AP}. \\tag{1}$$\n\nLet now $D_1$ and $D_2$ be the common points of the line $\\ell$ with the lines $BO_1$ and $AO_2$, respectively. Obviously, $\\triangle O_1CD_1 \\sim \\triangle BPD_1$ (Figure 2), from where $\\frac{CD_1}{D_1P} = \\frac{r_1}{PB}$. Analogously, $\\frac{CD_2}{D_2P} = \\frac{r_2}{AP}$ and according to (1) we have $\\frac{CD_1}{D_1P} = \\frac{CD_2}{D_2P}$, which shows that $D_1 \\equiv D_2$. Thus, the lines $AO_2$, $BO_1$ and $\\ell$ have a common point.",
+      "answer": null,
+      "page": 1,
+      "source": "OLI-2-Областен кръг-1996-10 кл · 1996-10 · Зад. 2",
+      "point_id": "   ",
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": null,
+      "techniques": [],
+      "reasoning": null,
+      "_paired": true,
+      "_grade_source": "filename"
+    }
+  ]
+}

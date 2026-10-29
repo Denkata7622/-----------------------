@@ -1,0 +1,161 @@
+{
+  "_meta": {
+    "pdf": "C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\Задачи_Минали_Години\\Национален\\OLI-3-Национален кръг-2026-9-12 кл-probs.pdf",
+    "paired_with": "C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\Задачи_Минали_Години\\Национален\\OLI-3-Национален кръг-2026-9-12 кл-sol.pdf",
+    "level": 2,
+    "type": "probs",
+    "analyzed_at": "2026-10-16T21:12:20.972301",
+    "model": "deepseek/deepseek-v3.2",
+    "text_length": 2529,
+    "paired_text_length": 17317
+  },
+  "problems": [
+    {
+      "num": 1,
+      "topic": "combinatorics",
+      "theorems": [],
+      "techniques": [
+        "induction",
+        "pigeonhole_principle",
+        "counting"
+      ],
+      "concepts": [
+        "coin_problem",
+        "greedy_representation",
+        "factorial_numbers",
+        "upper_bound_lower_bound"
+      ],
+      "difficulty": "standard",
+      "notes": "Classical coin problem variant with specific multiplicities. The optimal construction uses factorials."
+    },
+    {
+      "num": 2,
+      "topic": "algebra",
+      "theorems": [],
+      "techniques": [
+        "function_monotonicity",
+        "substitution",
+        "inequality_manipulation"
+      ],
+      "concepts": [
+        "real_numbers",
+        "exponent_parity",
+        "product_maximization",
+        "symmetry"
+      ],
+      "difficulty": "standard",
+      "notes": "Analysis of a functional equation to bound ab. Uses monotonicity of f(x)=(x-1)^n/x."
+    },
+    {
+      "num": 3,
+      "topic": "number_theory",
+      "theorems": [
+        "cyclotomic_polynomials",
+        "polynomial_remainder_theorem"
+      ],
+      "techniques": [
+        "polynomial_division",
+        "roots_of_unity",
+        "modular_arithmetic"
+      ],
+      "concepts": [
+        "primitive_roots",
+        "polynomial_identities",
+        "remainder_theorem",
+        "complex_numbers"
+      ],
+      "difficulty": "hard",
+      "notes": "Deep connection with cyclotomic polynomials. Two solutions provided: using roots of unity and a lemma on polynomial congruences."
+    },
+    {
+      "num": 4,
+      "topic": "geometry",
+      "theorems": [
+        "tangent_properties",
+        "inscribed_angles",
+        "angle_bisector_theorem"
+      ],
+      "techniques": [
+        "angle_chasing",
+        "inversion",
+        "directed_angles",
+        "cyclic_quadrilaterals"
+      ],
+      "concepts": [
+        "circumcircle",
+        "tangent_circles",
+        "angle_bisector",
+        "power_of_a_point",
+        "parallel_lines"
+      ],
+      "difficulty": "olympic",
+      "notes": "Complex configuration with multiple circles. Three solutions: synthetic angle chasing, arc measure manipulation, and inversion."
+    },
+    {
+      "num": 5,
+      "topic": "combinatorics",
+      "theorems": [
+        "pigeonhole_principle",
+        "divergence_of_harmonic_series"
+      ],
+      "techniques": [
+        "counting_arguments",
+        "estimating_sums",
+        "double_counting"
+      ],
+      "concepts": [
+        "bounded_differences",
+        "product_sets",
+        "infinite_sequences",
+        "density_arguments"
+      ],
+      "difficulty": "hard",
+      "notes": "Requires clever counting to force a repeated product. Two solutions: one using product bounds and pigeonhole, another using set intersections."
+    },
+    {
+      "num": 6,
+      "topic": "combinatorics",
+      "theorems": [
+        "graph_coloring",
+        "degree_arguments"
+      ],
+      "techniques": [
+        "binary_representation",
+        "xor_operation",
+        "induction",
+        "labeling_construction"
+      ],
+      "concepts": [
+        "hypercube_graph",
+        "edge_labeling",
+        "incoming_outgoing_conditions",
+        "necessary_and_sufficient_conditions"
+      ],
+      "difficulty": "olympic",
+      "notes": "Graph problem on n-dimensional hypercube. Two solutions: one using inductive construction, another using XOR-based coloring and divisibility."
+    }
+  ],
+  "unique_concepts": [
+    "coin_problem",
+    "factorial_numbers",
+    "function_monotonicity",
+    "cyclotomic_polynomials",
+    "roots_of_unity",
+    "polynomial_remainder_theorem",
+    "tangent_circles",
+    "angle_bisector",
+    "inversion",
+    "power_of_a_point",
+    "bounded_differences",
+    "product_sets",
+    "pigeonhole_principle",
+    "divergence_of_harmonic_series",
+    "hypercube_graph",
+    "binary_representation",
+    "xor_operation",
+    "graph_coloring",
+    "edge_labeling",
+    "necessary_and_sufficient_conditions"
+  ],
+  "confidence": 0.95
+}

@@ -1,0 +1,154 @@
+{
+  "pdf": "OLI-2-Областен кръг-2010-10 кл",
+  "problems": [
+    {
+      "num": 2,
+      "grade": 10,
+      "year": 2010,
+      "round": "oblasten",
+      "statement": "Външновписаната окръжност към страната AB на △ABC се допира до AB в точка D. Ако ∠CAB = 2∠CDA, да се намери стойността на отношението AD : BD.",
+      "solution": null,
+      "answer": null,
+      "page": 1,
+      "source": "OLI-2-Областен кръг-2010-10 кл · 2010-10 · Зад. 2",
+      "point_id": "1.10",
+      "point_confidence": "exact",
+      "alternative_points": [],
+      "difficulty": "medium",
+      "techniques": [
+        "external_circle",
+        "angle_chasing"
+      ],
+      "reasoning": "Задачата и решението споделят едно и също описание – външновписана окръжност към AB, ъглово условие и търсено отношение AD:BD.",
+      "_paired": true,
+      "_grade_source": "filename"
+    },
+    {
+      "num": 1,
+      "grade": 10,
+      "year": 2010,
+      "round": "oblasten",
+      "statement": "Да се намерят всички стойности на реалния параметър a, за които корените x₁ и x₂ на уравнението x² + (√(a + 1) − a)x − 1 = 0 са реални и удовлетворяват равенството x₁² + x₂² + a² = 2a(x₁ + x₂) + 2 + √(a³ + a² − 14a + 25).",
+      "solution": "Решение. Уравнението има смисъл и корените му са реални за всяко a ≥ −1. Да означим за краткост g(a) = a³ + a² − 14a + 25. Даденото условие може да се запише във вида (x₁ + x₂ − a)² = √g(a), което е еквивалентно на уравнението a + 1 = √g(a). След повдигане на квадрат получаваме a³ − 16a + 24 = 0 ⇔ (a − 2)(a² + 2a − 12) = 0 с корени a₁ = 2, a₂ = −1 + √13 и a₃ = −1 − √13. Тъй като a₃ < −1 < a₁ < a₂, g(a₁) = (a₁ + 1)² ≥ 0 и g(a₂) = (a₂ + 1)² ≥ 0, то a₁ = 2 и a₂ = −1 + √13 са единствените решения на задачата.",
+      "answer": "a = 2 или a = −1 + √13.",
+      "page": 1,
+      "source": "OLI-2-Областен кръг-2010-10 кл · 2010-10 · Зад. 1",
+      "point_id": "5.11",
+      "point_confidence": "exact",
+      "difficulty": "medium",
+      "techniques": [
+        "vieta_relations",
+        "irrational_equation"
+      ],
+      "reasoning": "Условие за параметър a, използва Виетови формули и преобразуване към иррационално уравнение.",
+      "_orphan": true,
+      "_grade_uncertain": false,
+      "_grade_source": "filename"
+    },
+    {
+      "num": 2,
+      "grade": 10,
+      "year": 2010,
+      "round": "oblasten",
+      "statement": "В даден четириъгълник ABCD може да се впише окръжност k, която се допира до страните AB, BC, CD и DA в точките M, N, P и Q съответно. Нека S е средата на хордата, получена от пресичането на диагонала AC с окръжността k. Да се докаже, че е изпълнено равенството SM · SQ = SN · SP.",
+      "solution": null,
+      "answer": null,
+      "page": 1,
+      "source": "OLI-2-Областен кръг-2010-10 кл · 2010-10 · Зад. 2",
+      "point_id": "1.4",
+      "point_confidence": "exact",
+      "difficulty": "medium",
+      "techniques": [
+        "power_of_a_point",
+        "radical_axis"
+      ],
+      "reasoning": "Твърдението SM·SQ = SN·SP е класически пример за степен на точка (power of a point).",
+      "_orphan": true,
+      "_grade_uncertain": false,
+      "_grade_source": "filename"
+    },
+    {
+      "num": 4,
+      "grade": 10,
+      "year": 2010,
+      "round": "oblasten",
+      "statement": "Да се реши системата\nx + ay² + a²z² = a²,\nx + by² + b²z² = b²,\nx + cy² + c²z² = c²,\nкъдето a, b и c са реални параметри (a ≠ b, b ≠ c, c ≠ a).",
+      "solution": "Решение. Нека един от параметрите, например a, е равен на 0. Тогава x = 0 от първото уравнение, а от другите две уравнения получаваме системата\ny² + bz² = b,\ny² + cz² = c,\nоткъдето лесно намираме y² = 0 и z² = 1, т.е. y = 0 и z = ±1.\nНека сега abc ≠ 0. Тогава след изразяване на z² − 1 от трите уравнения получаваме системата\n(x + ay²)/a² = (x + by²)/b² = (x + cy²)/c².\nСледователно\nx(b² − a²) + ab(b − a)y² = 0,\nx(c² − a²) + ac(c − a)y² = 0,\nкоето е еквивалентно на\nx(a + b) + aby² = 0,\nx(a + c) + acy² = 0.\nВ последната система умножаваме първото уравнение с c, второто с b и ги изваждаме, за да получим ax(c − b) = 0, откъдето x = 0. Тогава y = 0 и z² = 1, т.е. отново достигаме до решенията (x, y, z) = (0, 0, ±1).",
+      "answer": "(x, y, z) = (0, 0, 1) или (0, 0, −1).",
+      "page": 3,
+      "source": "OLI-2-Областен кръг-2010-10 кл · 2010-10 · Зад. 4",
+      "point_id": "5.1",
+      "point_confidence": "exact",
+      "difficulty": "medium",
+      "techniques": [
+        "symmetry",
+        "vieta_relations"
+      ],
+      "reasoning": "Система със симетрични параметри решава се чрез съотношения от Виет и елиминация.",
+      "_orphan": true,
+      "_grade_uncertain": false,
+      "_grade_source": "filename"
+    },
+    {
+      "num": 1,
+      "grade": 10,
+      "year": 2010,
+      "round": "oblasten",
+      "statement": "Да се реши уравнението 20^(x²) · 10^x = 2.",
+      "solution": "Решение. Записваме уравнението във вида 2^(x² − 1) · 10^(x² + x) = 1, което е еквивалентно с уравнението (2^(x − 1) · 10^x)^(x + 1) = 1. Имаме две възможности x + 1 = 0 или 2^(x − 1) · 10^x = 1. При първата достигаме до решението x₁ = −1, а при втората достигаме до уравнението 20^x = 2, което ни води до решението x₂ = log₂₀ 2. Окончателно получаваме решенията x₁ = −1 и x₂ = log₂₀ 2.",
+      "answer": "x = −1 или x = log₂₀ 2.",
+      "page": 5,
+      "source": "OLI-2-Областен кръг-2010-10 кл · 2010-10 · Зад. 1",
+      "point_id": "R.4",
+      "point_confidence": "exact",
+      "difficulty": "easy",
+      "techniques": [
+        "exponential_equation",
+        "logarithms"
+      ],
+      "reasoning": "Преписва уравнението в логаритмична форма и решава директно.",
+      "_orphan": true,
+      "_grade_uncertain": false,
+      "_grade_source": "filename"
+    },
+    {
+      "num": 1,
+      "grade": 10,
+      "year": 2010,
+      "round": "oblasten",
+      "statement": "Да се реши уравнението [неразчетено] (OCR: „20x2 .10x = 2“).",
+      "solution": null,
+      "answer": null,
+      "page": 1,
+      "source": "OLI-2-Областен кръг-2010-10 кл · 2010-10 · Зад. 1",
+      "point_id": null,
+      "point_confidence": "exact",
+      "difficulty": "easy",
+      "techniques": [
+        "polynomial_equation"
+      ],
+      "reasoning": "Условие за уравнение 20x^2·10x=2, но няма съответстващо решение в предоставения набор.",
+      "_no_solution": true
+    },
+    {
+      "num": 3,
+      "grade": 10,
+      "year": 2010,
+      "round": "oblasten",
+      "statement": "Върху успоредните прави a и b са взети съответно точките A₁, A₂, A₃, A₄ и B₁, B₂, B₃, B₄, които са две по две различни. Да се намери минималният възможен брой различни точки, получени при пресичането на отсечките AᵢBⱼ, i = 1, 2, 3, 4; j = 1, 2, 3, 4. (Включително самите точки A₁, A₂, A₃, A₄ и B₁, B₂, B₃, B₄.)",
+      "solution": null,
+      "answer": null,
+      "page": 1,
+      "source": "OLI-2-Областен кръг-2010-10 кл · 2010-10 · Зад. 3",
+      "point_id": "8.6",
+      "point_confidence": "exact",
+      "difficulty": "hard",
+      "techniques": [
+        "combinatorial_counting",
+        "inclusion_exclusion"
+      ],
+      "reasoning": "Търси се минимален брой пресичания между 16 отсечки – типичен комбинаторен проблем.",
+      "_no_solution": true
+    }
+  ]
+}

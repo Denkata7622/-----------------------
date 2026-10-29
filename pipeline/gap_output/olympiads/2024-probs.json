@@ -1,0 +1,147 @@
+{
+  "_meta": {
+    "pdf": "C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\Задачи_Минали_Години\\Национален\\OLI-3-Национален кръг-2024-9-12 кл-probs.pdf",
+    "paired_with": "C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\Задачи_Минали_Години\\Национален\\OLI-3-Национален кръг-2024-9-12 кл-sol.pdf",
+    "level": 2,
+    "type": "probs",
+    "analyzed_at": "2026-10-16T21:09:16.440357",
+    "model": "deepseek/deepseek-v3.2",
+    "text_length": 17085,
+    "paired_text_length": 48193
+  },
+  "problems": [
+    {
+      "num": 1,
+      "topic": "number_theory",
+      "theorems": [
+        "GCD",
+        "Factorization"
+      ],
+      "techniques": [
+        "infinite_descent",
+        "construction_of_arithmetic_progression",
+        "case_analysis"
+      ],
+      "concepts": [
+        "perfect_powers",
+        "coprime_factors",
+        "difference_of_squares",
+        "arithmetic_progression",
+        "infinite_sequence"
+      ],
+      "difficulty": "olympic",
+      "notes": "Задача за съществуване на безкрайна аритметична прогресия, такава че nm-1 да не е степен. Решението използва два случая за четност на n и конструкция на прогресия."
+    },
+    {
+      "num": 2,
+      "topic": "geometry",
+      "theorems": [
+        "Law_of_Cosines",
+        "Menelaus",
+        "Cyclic_Quadrilateral",
+        "Power_of_a_Point"
+      ],
+      "techniques": [
+        "auxiliary_construction",
+        "case_analysis",
+        "trigonometry"
+      ],
+      "concepts": [
+        "parallelogram",
+        "right_triangle",
+        "angle_chasing",
+        "concyclic_points",
+        "angle_bisector_implicit"
+      ],
+      "difficulty": "olympic",
+      "notes": "Задача за намиране на ъгъл в триъгълник с дадени точки. Решението използва допълнителна конструкция и разглежда случаи за ъгъла."
+    },
+    {
+      "num": 3,
+      "topic": "algebra",
+      "theorems": [],
+      "techniques": [
+        "substitution",
+        "proving_surjectivity",
+        "functional_equation",
+        "inverse_function"
+      ],
+      "concepts": [
+        "functional_equations",
+        "surjective_functions",
+        "reciprocal_function",
+        "domain_and_range"
+      ],
+      "difficulty": "olympic",
+      "notes": "Функционално уравнение в положителни реални числа. Решението доказва сюрективност и намира единствено решение f(x)=1/x."
+    },
+    {
+      "num": 4,
+      "topic": "algebra",
+      "theorems": [],
+      "techniques": [
+        "cyclic_sum",
+        "inequality_analysis",
+        "contradiction"
+      ],
+      "concepts": [
+        "cyclic_sequences",
+        "reciprocal_relations",
+        "sign_analysis",
+        "modular_arithmetic_mod_3"
+      ],
+      "difficulty": "olympic",
+      "notes": "Задача за съществуване на реални числа, удовлетворяващи циклично уравнение. Решението използва преобразуване и анализ на знаци, водящ до противоречие поради 3 ∤ 2024."
+    },
+    {
+      "num": 5,
+      "topic": "combinatorics",
+      "theorems": [
+        "Double_Counting",
+        "Handshaking_Lemma"
+      ],
+      "techniques": [
+        "double_counting",
+        "extremal_principle",
+        "construction_with_vector_spaces"
+      ],
+      "concepts": [
+        "set_systems",
+        "intersection_size",
+        "affine_planes_over_finite_fields",
+        "maximal_families",
+        "4-element_subsets"
+      ],
+      "difficulty": "olympic",
+      "notes": "Екстремална комбинаторна задача за максимален размер на семейство от 4-елементни подмножества, чиито сечения са не точно 2. Решението дава конструкция с афинно пространство над F5 и горна оценка."
+    }
+  ],
+  "unique_concepts": [
+    "perfect_powers",
+    "coprime_factors",
+    "arithmetic_progression",
+    "Law_of_Cosines",
+    "Menelaus",
+    "Cyclic_Quadrilateral",
+    "Power_of_a_Point",
+    "parallelogram",
+    "right_triangle",
+    "angle_chasing",
+    "concyclic_points",
+    "functional_equations",
+    "surjective_functions",
+    "reciprocal_function",
+    "cyclic_sequences",
+    "reciprocal_relations",
+    "sign_analysis",
+    "modular_arithmetic_mod_3",
+    "set_systems",
+    "intersection_size",
+    "affine_planes_over_finite_fields",
+    "maximal_families",
+    "4-element_subsets",
+    "double_counting",
+    "extremal_principle"
+  ],
+  "confidence": 0.95
+}

@@ -1,0 +1,116 @@
+{
+  "_meta": {
+    "pdf": "C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\Задачи_Минали_Години\\Областен\\OLI-2-Областен кръг-2017-10 кл-sol.pdf",
+    "paired_with": null,
+    "level": 1,
+    "type": "sol",
+    "analyzed_at": "2026-10-16T21:17:27.776417",
+    "model": "deepseek/deepseek-v3.2",
+    "text_length": 6876,
+    "paired_text_length": 0
+  },
+  "problems": [
+    {
+      "num": 1,
+      "topic": "algebra",
+      "theorems": [],
+      "techniques": [
+        "substitution",
+        "interval_method",
+        "analysis_of_inequality"
+      ],
+      "concepts": [
+        "exponential_inequality",
+        "quadratic_inequality",
+        "integer_solutions",
+        "parameter_analysis"
+      ],
+      "difficulty": "standard",
+      "notes": "Стандартна задача с параметър, включваща заместване и анализ на интервали за намиране на целочислено решение."
+    },
+    {
+      "num": 2,
+      "topic": "geometry",
+      "theorems": [
+        "Thales_theorem",
+        "inscribed_angles",
+        "angle_bisector"
+      ],
+      "techniques": [
+        "cyclic_quadrilaterals",
+        "parallel_lines",
+        "similar_triangles"
+      ],
+      "concepts": [
+        "orthocenter",
+        "circles_with_diameters",
+        "cyclic_quadrilaterals",
+        "parallel_segments",
+        "triangle_similarity"
+      ],
+      "difficulty": "standard",
+      "notes": "Геометрична задача, използваща свойства на вписани ъгли и успоредни отсечки за доказване на подобие."
+    },
+    {
+      "num": 3,
+      "topic": "algebra",
+      "theorems": [],
+      "techniques": [
+        "induction",
+        "floor_function",
+        "sequence_analysis"
+      ],
+      "concepts": [
+        "integer_sequences",
+        "floor_function",
+        "inductive_proof",
+        "square_root_estimates"
+      ],
+      "difficulty": "standard",
+      "notes": "Задача за редица, дефинирана с под и корен. Решението използва индукция и оценка на квадратен корен."
+    },
+    {
+      "num": 4,
+      "topic": "combinatorics",
+      "theorems": [],
+      "techniques": [
+        "double_counting",
+        "combinatorial_design",
+        "inequality_bounding"
+      ],
+      "concepts": [
+        "block_design",
+        "balanced_incomplete_block_design",
+        "double_counting",
+        "combinatorial_inequalities",
+        "configuration_construction"
+      ],
+      "difficulty": "hard",
+      "notes": "Нетривиална комбинаторна задача за блоков дизайн. Изисква конструкция и доказателство за минималния брой чрез двойно преброяване и неравенства."
+    }
+  ],
+  "unique_concepts": [
+    "exponential_inequality",
+    "quadratic_inequality",
+    "integer_solutions",
+    "parameter_analysis",
+    "orthocenter",
+    "circles_with_diameters",
+    "cyclic_quadrilaterals",
+    "parallel_segments",
+    "triangle_similarity",
+    "Thales_theorem",
+    "inscribed_angles",
+    "angle_bisector",
+    "integer_sequences",
+    "floor_function",
+    "inductive_proof",
+    "square_root_estimates",
+    "block_design",
+    "balanced_incomplete_block_design",
+    "double_counting",
+    "combinatorial_inequalities",
+    "configuration_construction"
+  ],
+  "confidence": 0.95
+}

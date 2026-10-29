@@ -1,0 +1,51 @@
+{
+  "point_id": "7.8",
+  "total": 3,
+  "by_difficulty": {
+    "easy": 1,
+    "medium": 2,
+    "hard": 0
+  },
+  "problems": [
+    {
+      "source": "OLI-2-Областен кръг-2019-11 кл · 2019-11 · Зад. 1",
+      "statement": "Дадена е редицата {aₙ}ₙ₌₁^∞, за която:\na₁ = 4/3, aₙ₊₁ = aₙ² − 2aₙ + 2.\nДа се докаже, че редицата {bₖ}ₖ₌₁^∞ с общ член bₖ = ∏ᵏᵢ₌₁ aᵢ е сходяща и да се намери нейната граница при k → ∞.",
+      "solution": "Решение. Да забележим, че от второто равенство за aₙ имаме, че:\naₙ₊₁ − 1 = aₙ² − 2aₙ + 1 = (aₙ − 1)².\nОттук с индукция по n получаваме, че за всяко n ≥ 1:\naₙ − 1 = (a₁ − 1)^(2^(n−1)) = 1/3^(2^(n−1)).\nСледователно aₙ = 1 + 1/3^(2^(n−1)). Това показва, че:\nbₖ = ∏ᵏᵢ₌₁ (1 + 1/3^(2^(i−1))).\nДа умножим двете страни на това равенство с 1 − 1/3 = 1 − 1/3^(2⁰). Тогава с индукция по k получаваме, че:\n(1 − 1/3)bₖ = (1 − 1/3^(2⁰))∏ᵏᵢ₌₁ (1 + 1/3^(2^(i−1))) = 1 − 1/3^(2ᵏ).\nЯсно е, че когато k расте неограничено, 3^(2ᵏ) расте неограничено и клони към +∞. Следователно:\n1 − 1/3^(2ᵏ) → 1 − 0 = 1 при k → ∞.\nОттук следва, че редицата {(2/3)bₖ} е сходяща и клони към 1, което означава, че {bₖ}ₖ₌₁^∞ е сходяща и нейната граница е 3/2.",
+      "answer": "lim при k → ∞ на bₖ = 3/2.",
+      "difficulty": "easy",
+      "techniques": [
+        "telescoping_product",
+        "induction",
+        "limit"
+      ],
+      "confidence": "exact",
+      "reasoning": "Показва, че a_{n+1}-1 = (a_n-1)^2, получава се телескопиращ продукт и граница 3/2."
+    },
+    {
+      "source": "OLI-2-Областен кръг-1997-11 кл · 1997-11 · Зад. 4",
+      "statement": "Find all continuous functions f(x) defined in the set of real numbers and such that\n\n$$f(x)=f\\left(x^{2}+\\frac{1}{4}\\right)$$\n\nfor all real x.",
+      "solution": "Solution: Let $f(x)$ be a function satisfying the conditions of the problem. Obviously $f(x)$ is an even function.\n\nLet $x_0 \\ge 0$. There are two cases:\n\n(I) $0 \\le x_0 \\le \\frac{1}{2}$. Consider the sequence\n\n(1) $$x_0, x_1, \\dots, x_n, \\dots$$\n\ndefined by the equalities $x_{n+1} = x_n^2 + \\frac{1}{4}$.\n\nIt is easy to see by induction that $0 \\le x_n \\le \\frac{1}{2}$ for all $n$. Moreover\n\n$$x_{n+1} - x_n = x_n^2 - x_n + \\frac{1}{4} = \\left(x_n - \\frac{1}{2}\\right)^2 \\ge 0,$$\n\nwhich implies that (1) is a monotone increasing function. Since it is bounded, it follows that it is a convergent function. Let $\\lim_{n\\to\\infty} x_n = \\alpha$.\n\nNow $\\alpha^2 - \\alpha + \\frac{1}{4} = 0$, so $\\alpha = \\frac{1}{2}$.\n\nOn the other hand, since $f(x)$ is a continuous function,\n\n$$\\lim_{n\\to\\infty} f(x_n) = f\\left(\\frac{1}{2}\\right).$$\n\nBut\n\n$$f(x_{n+1}) = f\\left(x_n^2 + \\frac{1}{4}\\right) = f(x_n)$$\n\nfor all $n$. Thus $f(x_0) = f(x_1) = \\cdots$ which means that $f(x_0) = f\\left(\\frac{1}{2}\\right)$ for all $x_0 \\in \\left[0, \\frac{1}{2}\\right]$.\n\n(II) $x_0 > \\frac{1}{2}$. Consider the following sequence:\n\n(2) $x_0, x_1, \\ldots, x_n, \\ldots$\n\ndefined by $x_{n+1} = \\sqrt{x_n - \\frac{1}{4}}$.\n\nAs in the previous case, we show that (2) is a convergent function and $\\lim_{n\\to\\infty} x_n = \\frac{1}{2}$. Further $\\lim_{n\\to\\infty} f(x_n) = f\\left(\\frac{1}{2}\\right)$ and since\n\n$$f(x_{n+1}) = f\\left(x_{n+1}^2 + \\frac{1}{4}\\right) = f(x_n)$$\n\nfor all $n$ we get that $f(x_0) = f\\left(\\frac{1}{2}\\right)$.\n\nTherefore $f(x)$ is a constant function in the interval $[0, +\\infty)$, and since it is even, it is a constant for all $x$.\n\nConversely, any constant function satisfies the conditions of the problem.",
+      "answer": "$f(x)=C$ for all $x\\in\\mathbb{R}$, where $C\\in\\mathbb{R}$ is arbitrary.",
+      "difficulty": "medium",
+      "techniques": [
+        "sequence_convergence"
+      ],
+      "confidence": "exact",
+      "reasoning": "Constructs monotone bounded sequences, finds their limit (½) and uses continuity – convergence of sequences."
+    },
+    {
+      "source": "OLI-3-Национален кръг-2006-9-12 кл · 2006-None · Зад. 6",
+      "statement": "В равнината е дадена точка $O$. Да се намерят всички множества $S$, съдържащи поне две различни точки и такива, че за произволна точка $A \\in S$, $A \\neq O$, окръжността с диаметър $OA$ се съдържа в $S$.",
+      "solution": "Лема. Ако $A \\in S$, то отвореният кръг $k(O, OA)$ лежи в $S$.\n\nДоказателство. Да забележим, че ако $A \\in S$ и $B$ е произволна точка от кръга с диаметър $OA$, то $B \\in S$ (тъй като $B$ принадлежи на окръжността с диаметър $OX$, където $OB \\perp BX$ и $X$ е от окръжността с диаметър $OA$). Нека $B \\in k$ и $\\varphi = \\angle AOB$. За всяко естествено число $n$ полагаме $A_0 = A$ и дефинираме $A_i$, $i = 1, \\dots, n$, така, че $\\angle A_{i-1}OA_i = \\frac{\\varphi}{n}$ и $OA_i = OA_{i-1} \\cos \\frac{\\varphi}{n}$.\n\nТъй като $\\angle OA_i A_{i-1} = 90^\\circ$, от условието по индукция следва, че $A_i \\in S$, $i = 1, \\dots, n$ и, в частност, $A_n \\in k$. Тъй като $B \\in OA^\\to$ и $OB < OA$, твърдението на лемата ще следва, ако покажем, че $\\lim_{n \\to \\infty} OA_n = OA$. За целта е достатъчно да забележим, че $OA_n = OA(\\cos \\frac{\\varphi}{n})^n$ и\n\n$$1 \\geq \\left( \\cos \\frac{\\varphi}{n} \\right)^{2n} = \\left( 1 - \\sin^2 \\frac{\\varphi}{n} \\right)^n \\geq \\left( 1 - \\frac{\\varphi^2}{n^2} \\right)^n \\to 1$$\n\n(докажете!).\n\nОт лемата следва, че ако $S$ е неограничено множество, то $S = \\mathbb{R}^2$. Ако $S$ е ограничено, пак от лемата следва, че ако $r = \\sup_{A \\in S} OA$, то $k(O, r) \\subset S \\subset \\overline{k(O, r)}$.\n\nТогава лесно заключаваме, че търсените множества са $S = \\mathbb{R}^2$ и $S = k \\cup \\gamma$, където $k$ е произволен отворен кръг с център $O$, а $\\gamma$ е произволно множество от точки от окръжността на $k$.",
+      "answer": "$S=\\mathbb{R}^2$ или $S=k\\cup\\gamma$, където $k$ е произволен отворен кръг с център $O$, а $\\gamma$ е произволно множество от точки от окръжността на $k$.",
+      "difficulty": "medium",
+      "techniques": [
+        "geometric_construction",
+        "limit",
+        "induction"
+      ],
+      "confidence": "exact",
+      "reasoning": "Proof uses geometric construction of circles and a limit argument; step 7.8 deals with convergence and limits."
+    }
+  ]
+}

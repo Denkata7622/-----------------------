@@ -1,0 +1,188 @@
+{
+  "_meta": {
+    "pdf": "C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\Задачи_Минали_Години\\Национален\\OLI-3-Национален кръг-2023-9-12 кл-probs.pdf",
+    "paired_with": "C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\Задачи_Минали_Години\\Национален\\OLI-3-Национален кръг-2023-9-12 кл-sol.pdf",
+    "level": 2,
+    "type": "probs",
+    "analyzed_at": "2026-10-16T21:07:30.731250",
+    "model": "deepseek/deepseek-v3.2",
+    "text_length": 15204,
+    "paired_text_length": 44813
+  },
+  "problems": [
+    {
+      "num": 1,
+      "topic": "combinatorics",
+      "theorems": [],
+      "techniques": [
+        "graph theory",
+        "path maximality",
+        "cycle construction",
+        "gcd properties",
+        "counterexample"
+      ],
+      "concepts": [
+        "graph",
+        "vertex degree",
+        "cycle length",
+        "greatest common divisor (gcd)",
+        "bipartite graph",
+        "complete graph",
+        "adjacent vertices",
+        "common edge"
+      ],
+      "difficulty": "olympic",
+      "notes": "Graph theory problem. Key insight: finding two cycles sharing exactly two adjacent vertices forces d | 2. Uses maximal path argument to find such cycles. Possible values d=1 and d=2."
+    },
+    {
+      "num": 2,
+      "topic": "geometry",
+      "theorems": [],
+      "techniques": [
+        "angle chasing",
+        "symmetry",
+        "cyclic quadrilaterals",
+        "parallel lines",
+        "perpendicular bisector"
+      ],
+      "concepts": [
+        "triangle",
+        "excircles",
+        "circumcircle",
+        "arc midpoint",
+        "angle bisector",
+        "parallel lines",
+        "concurrency",
+        "cyclic quadrilateral",
+        "perpendicular lines"
+      ],
+      "difficulty": "olympic",
+      "notes": "Classical geometry concurrency problem. Uses properties of excenters, circumcircle, and arc midpoints. The three lines are parallel to angle bisectors and concur at the circumcenter of the original triangle."
+    },
+    {
+      "num": 3,
+      "topic": "number_theory",
+      "theorems": [],
+      "techniques": [
+        "polynomials",
+        "gcd manipulation",
+        "infinite descent",
+        "contradiction",
+        "modular arithmetic",
+        "complete residue system",
+        "primitive root"
+      ],
+      "concepts": [
+        "polynomial with integer coefficients",
+        "greatest common divisor (gcd)",
+        "complete set of residues",
+        "modular arithmetic",
+        "primitive root",
+        "infinite set",
+        "prime numbers",
+        "factorial"
+      ],
+      "difficulty": "hard",
+      "notes": "Advanced number theory. Uses a lemma about sums of powers over a complete residue system. Shows that if the set of m with bounded gcd(m,g(m)) is infinite, then for each prime p, the subset divisible by p is also infinite, leading to a contradiction for large primes."
+    },
+    {
+      "num": 4,
+      "topic": "geometry",
+      "theorems": [],
+      "techniques": [
+        "area optimization",
+        "coordinate geometry",
+        "quadratic equation discriminant",
+        "function analysis",
+        "triangle inequality",
+        "case analysis"
+      ],
+      "concepts": [
+        "quadrilateral",
+        "area",
+        "parallel sides",
+        "distance from a point to a line",
+        "oriented area",
+        "quadratic equation",
+        "discriminant",
+        "linear function",
+        "convexity"
+      ],
+      "difficulty": "olympic",
+      "notes": "Geometry optimization problem. Two main solutions: synthetic using areas and inequality (AM-GM essentially), and analytic using coordinates. The condition forces AB || CD. Case analysis based on angle sum."
+    },
+    {
+      "num": 5,
+      "topic": "algebra",
+      "theorems": [],
+      "techniques": [
+        "inequality",
+        "induction",
+        "optimization",
+        "parameter fixing",
+        "triangle inequality",
+        "calculus of variations"
+      ],
+      "concepts": [
+        "absolute value",
+        "sum of absolute values",
+        "minimum value",
+        "induction",
+        "linear function",
+        "compact set",
+        "function minimization",
+        "recursive relation"
+      ],
+      "difficulty": "olympic",
+      "notes": "Optimization of an expression involving absolute values of partial sums. Multiple solutions: induction using triangle inequality, direct minimization by fixing parameters, or interpretation via l1-norm of an inverse operator. The minimum is 2^(1-n)."
+    },
+    {
+      "num": 6,
+      "topic": "combinatorics",
+      "theorems": [],
+      "techniques": [
+        "pigeonhole principle",
+        "double counting",
+        "vector representation",
+        "case analysis",
+        "contradiction"
+      ],
+      "concepts": [
+        "scoring system",
+        "pigeonhole principle",
+        "vectors in Z3^5",
+        "coordinate representation",
+        "covering problem",
+        "finite sets"
+      ],
+      "difficulty": "olympic",
+      "notes": "Combinatorial problem about assigning grades. Represents grades as vectors in {0,1,2}^5. Uses pigeonhole principle on the first two coordinates to show that if 25 students have all distinct grade vectors, the 26th can be assigned a vector differing from each of them in at most two subjects. Solution involves counting vectors with specific first two coordinates."
+    }
+  ],
+  "unique_concepts": [
+    "graph theory",
+    "vertex degree",
+    "cycle length",
+    "gcd",
+    "bipartite graph",
+    "complete graph",
+    "angle chasing",
+    "excircles",
+    "circumcircle",
+    "cyclic quadrilateral",
+    "concurrency",
+    "polynomial with integer coefficients",
+    "complete residue system",
+    "modular arithmetic",
+    "primitive root",
+    "area optimization",
+    "oriented area",
+    "discriminant",
+    "absolute value minimization",
+    "induction",
+    "pigeonhole principle",
+    "vector representation",
+    "covering problem"
+  ],
+  "confidence": 0.95
+}

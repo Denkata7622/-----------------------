@@ -1,0 +1,110 @@
+{
+  "_meta": {
+    "pdf": "C:\\Users\\denis\\Downloads\\Материали Олимпиада МАТ\\Задачи_Минали_Години\\Областен\\OLI-2-Областен кръг-2016-11 кл-sol.pdf",
+    "paired_with": null,
+    "level": 1,
+    "type": "sol",
+    "analyzed_at": "2026-10-16T21:16:52.345110",
+    "model": "deepseek/deepseek-v3.2",
+    "text_length": 3750,
+    "paired_text_length": 0
+  },
+  "problems": [
+    {
+      "num": 1,
+      "topic": "algebra",
+      "theorems": [],
+      "techniques": [
+        "substitution",
+        "quadratic function analysis",
+        "root location"
+      ],
+      "concepts": [
+        "trigonometric equations",
+        "cotangent function",
+        "quadratic equation discriminant",
+        "Vieta's formulas",
+        "interval for variable"
+      ],
+      "difficulty": "standard",
+      "notes": "Standard problem of parameter analysis for a trigonometric equation reduced to a quadratic."
+    },
+    {
+      "num": 2,
+      "topic": "geometry",
+      "theorems": [],
+      "techniques": [
+        "angle chasing",
+        "cyclic quadrilaterals",
+        "parallel lines"
+      ],
+      "concepts": [
+        "trapezoid",
+        "incircle",
+        "tangent points",
+        "angle bisector",
+        "midsegment",
+        "concyclic points",
+        "right angles"
+      ],
+      "difficulty": "hard",
+      "notes": "Non-standard geometry problem requiring construction of auxiliary points and angle analysis."
+    },
+    {
+      "num": 3,
+      "topic": "number_theory",
+      "theorems": [],
+      "techniques": [
+        "recurrence relation manipulation",
+        "greatest common divisor analysis",
+        "limit calculation"
+      ],
+      "concepts": [
+        "recurrence sequences",
+        "gcd properties",
+        "parity",
+        "monotonic sequences",
+        "infinite product",
+        "limit of a sequence"
+      ],
+      "difficulty": "olympic",
+      "notes": "Mixed problem combining number theory (gcd) and analysis (limit of a product)."
+    },
+    {
+      "num": 4,
+      "topic": "algebra",
+      "theorems": [],
+      "techniques": [
+        "inequality manipulation",
+        "variable substitution",
+        "induction",
+        "limit of a sequence"
+      ],
+      "concepts": [
+        "functional inequality",
+        "function constancy on an interval",
+        "sequences defined by recurrence",
+        "monotonic sequences",
+        "interval covering"
+      ],
+      "difficulty": "olympic",
+      "notes": "Hard functional problem requiring clever substitution and construction of two sequences to cover an interval."
+    }
+  ],
+  "unique_concepts": [
+    "trigonometric equations",
+    "cotangent substitution",
+    "quadratic root location",
+    "incircle and tangent points",
+    "angle bisector properties",
+    "cyclic quadrilaterals",
+    "trapezoid midsegment",
+    "recurrence sequences",
+    "gcd and parity",
+    "limit of infinite product",
+    "functional inequality",
+    "interval covering with sequences",
+    "function constancy proof"
+  ],
+  "confidence": 0.95
+}
